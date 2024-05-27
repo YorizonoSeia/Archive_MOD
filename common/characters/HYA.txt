@@ -113,54 +113,6 @@ characters={
 			logistics_skill=2
 		}
 	}
-	HYA_Nagusa={ #나구사
-		name = HYA_Nagusa
-		gender = female
-		portraits={
-			civilian={
-				large= "gfx/leaders/HYA/HYA_pot_14.tga"
-				small="gfx/interface/advisors/HYA/HYA_Spot_14.tga"
-			}
-			army={
-				large= "gfx/leaders/HYA/HYA_pot_14.tga"
-				small="gfx/interface/advisors/HYA/HYA_Spot_14.tga"
-			}
-		}
-		country_leader={
-			ideology=moderatism
-			traits={
-				
-			}
-			expire="1965.1.1.1"
-		}
-		field_marshal={
-			traits = {
-				politically_connected
-				infantry_officer
-			}
-			skill=4
-			attack_skill=4
-			defense_skill=3
-			planning_skill=3
-			logistics_skill=2
-		}
-		advisor={	
-			slot = army_chief
-			idea_token = HYA_Nagusa_army_chief
-			allowed = {
-				original_tag = HYA
-			}
-			available = {
-			}
-			traits = {
-				army_chief_old_guard
-			}
-			cost = 50
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-	}
 	HYA_Renge={ #렌게
 		name = HYA_Renge
 		gender = female
@@ -266,6 +218,30 @@ characters={
 			planning_skill=1
 			logistics_skill=1
 		}
+		country_leader={
+			ideology=moderatism
+			traits={
+				
+			}
+			expire="1965.1.1.1"
+		}
+		advisor={	
+			slot = army_chief
+			idea_token = HYA_Yukari_army_chief
+			allowed = {
+				original_tag = HYA
+			}
+			available = {
+			}
+			traits = {
+				army_chief_old_guard
+			}
+			cost = 50
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
 	}
 	HYA_SHIZUKO={ #시즈코
 		name = HYA_SHIZUKO
