@@ -1,73 +1,37 @@
+add_namespace = BLM_hidden_event
 add_namespace = BLM_event
 
 country_event = {
-    id = BLM_event.1 
-    title = BLM_event.1.t
-    desc = BLM_event.1.d
+	id = BLM_hidden_event.1
+	title = BLM_hidden_event.1.t
+	desc = BLM_hidden_event.1.d
+	is_triggered_only = yes
+	hidden = yes
+	trigger = {
+		NOT = {
+			has_country_flag = BLA_update_falg
+		}
+	}
+	immediate = {
+		set_country_flag = BLA_update_falg
+		add_offsite_building = {
+			type = arms_factory
+			level = 1
+		}
+		add_offsite_building = {
+			type = arms_factory
+			level = -1
+		}
+	}
+}
 
-    is_triggered_only = yes 
-
-    option = { 
+country_event = {
+	id = BLM_event.1
+	title = BLM_event.1.t
+	desc = BLM_event.1.d
+	is_triggered_only = yes
+	
+	option = {
 		name = BLM_event.1.a
-  }
-}
-
-country_event = {
-  id = BLM_event.2
-    title = BLM_event.2.t
-    desc = BLM_event.2.d
-
-    is_triggered_only = yes 
-
-    option = { 
-		name = BLM_event.2.a
-  }
-}
-
-country_event = {
-  id = BLM_event.3
-    title = BLM_event.3.t
-    desc = BLM_event.3.d
-
-    is_triggered_only = yes 
-
-    option = { 
-		name = BLM_event.3.a
-  }
-}
-
-country_event = {
-  id = BLM_event.4
-    title = BLM_event.4.t
-    desc = BLM_event.4.d
-
-    is_triggered_only = yes 
-
-    option = { 
-		name = BLM_event.4.a
-  }
-}
-
-country_event = {
-  id = BLM_event.5
-    title = BLM_event.5.t
-    desc = BLM_event.5.d
-
-    is_triggered_only = yes 
-
-    option = { 
-		name = BLM_event.5.a
-  }
-}
-
-country_event = {
-  id = BLM_event.6
-    title = BLM_event.6.t
-    desc = BLM_event.6.d
-
-    is_triggered_only = yes 
-
-    option = { 
-		name = BLM_event.6.a
-  }
+	}
 }

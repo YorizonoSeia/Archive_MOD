@@ -389,6 +389,59 @@ ideas = {
    				factor = 0
    			}
 		}
+		BLM_trade_laws_1 = { #지역 지배 강화
+
+			picture = GFX_idea_BLM_trade_laws_1
+
+			cost = 0
+
+			allowed_to_remove = {
+			}
+
+			allowed = {
+				original_tag = BLM
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				min_export = 0
+				airforce_intel_to_others = 10
+				civilian_intel_to_others = 5
+				navy_intel_to_others = 5
+
+				consumer_goods_expected_value = 0.50
+				production_speed_buildings_factor = -2.00
+			}
+		}
+		BLM_trade_laws_2 = { #밀수입 중점
+
+			picture = GFX_idea_BLM_trade_laws_2
+
+			cost = 100
+
+			allowed_to_remove = {
+			}
+
+			allowed = {
+				original_tag = BLM
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				political_power_cost = 2.0
+				min_export = 0.50
+
+				airforce_intel_to_others = 35
+				army_intel_to_others = 25
+				civilian_intel_to_others = 40
+				navy_intel_to_others = 30
+	
+				consumer_goods_expected_value = 0.25
+				production_speed_buildings_factor = -0.80
+			}
+		}
 		GEI_dimension_tunnel = { #차원 터널
 
 			picture = GFX_idea_GEI_dimension_tunnel

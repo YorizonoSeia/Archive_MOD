@@ -1,25 +1,21 @@
 BLM_black_market = {
-	BLM_is_debug = {
-
-		complete_effect = {
-			add_to_array = {
-				array = BLM_expansion_of_the_black_market_arr
-				value = USA
-			}
-		}
-	}
 	BLM_expansion_of_the_black_market = {
 		icon = generic_operation
 		allowed = {
 			original_tag = BLM
 		}
-
 		target_trigger = {
 			FROM = {
 				exists = yes
-				NOT = { is_in_faction_with = ROOT }
-				NOT = { tag = ROOT }
-				NOT = { has_country_flag = BLM_expansion_of_the_black_market_stop_flag }
+				NOT = {
+					is_in_faction_with = ROOT
+				}
+				NOT = {
+					tag = ROOT
+				}
+				NOT = {
+					has_country_flag = BLM_expansion_of_the_black_market_stop_flag
+				}
 			}
 			OR = {
 				AND = {
@@ -46,21 +42,24 @@ BLM_black_market = {
 				}
 			}
 		}
-
 		available = {
 			FROM = {
 				has_stability < 0.25
 			}
 		}
-
 		visible = {
-			has_idea = BLM_criminal_state
+			has_dynamic_modifier = {
+				modifier = BLM_criminal_state
+			}
 		}
-
-		fire_only_once = yes		
-
+		fire_only_once = yes
 		complete_effect = {
 			custom_effect_tooltip = BLM_expansion_of_the_black_market_tt
+			custom_effect_tooltip = BLM_criminal_state_tt
+			add_to_variable = {
+				BLM_CS_military_factory_donations = 10
+			}
+			country_event = { id = BLM_hidden_event.1 days = 3 }
 		}
 		cost = 10
 		ai_will_do = {

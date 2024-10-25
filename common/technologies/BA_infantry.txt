@@ -211,6 +211,16 @@ technologies = {
 	}
 	kivotos_halo_special_forces  = {
 		
+		allow = {
+			if = {
+				limit = {
+					original_tag = BLM
+					has_idea = BLM_OUTLAWS
+				}
+				NOT = { has_idea = BLM_OUTLAWS }
+			}
+        }
+		
 		show_effect_as_desc = yes
 
 		halo_infantry = {
@@ -291,6 +301,15 @@ technologies = {
 	}
 	kivotos_halo_max_upgrade  = {
 		
+		allow = {
+			if = {
+				limit = {
+					original_tag = BLM
+					has_idea = BLM_OUTLAWS
+				}
+				NOT = { has_idea = BLM_OUTLAWS }
+			}
+        }
 		
 		ai_will_do = {
 			factor = 50
@@ -477,6 +496,16 @@ technologies = {
 		}
 	}
 	mystery_analysis = {
+		
+		allow = {
+			if = {
+				limit = {
+					original_tag = BLM
+					has_idea = BLM_OUTLAWS
+				}
+				NOT = { has_idea = BLM_OUTLAWS }
+			}
+        }
 
 		research_speed_factor = 0.05
 		

@@ -1,5 +1,9 @@
 spriteTypes = {
 	spriteType = {
+		name = "GFX_idea_anarchy"
+		texturefile = "gfx/interface/ideas/anarchy.tga"
+	}
+	spriteType = {
 		name = "GFX_idea_BA_three_major_academies"
 		textureFile = "gfx/interface/ideas/BA_three_major_academies.tga"
 	}
@@ -206,6 +210,14 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_GEI_erosion_army"
 		texturefile = "gfx/interface/ideas/gei/GEI_erosion_army.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BLM_trade_laws_2"
+		texturefile = "gfx/interface/ideas/BLM/BLM_trade_laws_2.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BLM_trade_laws_1"
+		texturefile = "gfx/interface/ideas/BLM/BLM_trade_laws_1.tga"
 	}
 	spriteType = {
 		name = "GFX_idea_GEI_dimension_tunnel"

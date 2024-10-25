@@ -40,10 +40,6 @@ focus_tree = {
         completion_reward = {
             add_political_power = 30
             add_stability = 0.03
-            country_event = {
-                id = BLM_event.2
-                days = 5
-            }
         }
     }
     focus = { #사태 파악
@@ -58,10 +54,6 @@ focus_tree = {
         
         completion_reward = {
             add_stability = 0.03
-            country_event = {
-                id = BLM_event.3
-                days = 5
-            }
         }
     }
     focus = { #세력 결집
@@ -76,10 +68,6 @@ focus_tree = {
 
         completion_reward = {
             add_war_support = 0.03
-            country_event = {
-                id = BLM_event.4
-                days = 5
-            }
         }
     }
     focus = { #시민 통제 강화
@@ -96,10 +84,6 @@ focus_tree = {
             add_popularity = {
                 ideology = neutrality
                 popularity = 0.05
-            }
-            country_event = {
-                id = BLM_event.5
-                days = 5
             }
         }
     }
@@ -120,10 +104,6 @@ focus_tree = {
         }
 
         completion_reward = {
-            country_event = {
-                id = BLM_event.6
-                days = 5
-            }
         }
     }
     focus = {

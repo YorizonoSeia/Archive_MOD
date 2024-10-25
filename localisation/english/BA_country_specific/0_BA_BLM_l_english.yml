@@ -3,11 +3,17 @@
 
 #아아디어
  BLM_OUTLAWS: "이계의 무법자들"
+ BLM_OUTLAWS_tt: "§R고급 신비 기술 연구 불가§!"
  BLM_backward_industry: "낙후된 산업"
+ BLM_backward_research: "연구 시설 없음"
+ BLM_anarchy: "무정부"
 
- BLM_criminal_state: "범죄자 연합체"
- BLM_criminal_state_tooltip: "\n얻은 군수공장: [?BLM_criminal_state_military_factory_donations|.0+]\n얻은 조선소: [?BLM_criminal_state_dockyard_donations|.0+]"
+ BLM_criminal_state: "블랙 마켓"
  BLM_criminal_state_tt: "§Y$BLM_criminal_state$§! 변동치:"
+ BLM_CS_tt:0 "£decision_icon_small §Y결정 해금§! : 블랙 마켓\n"
+
+ BLM_trade_laws_1: "지역 지배 강화"
+ BLM_trade_laws_2: "밀수입 중점"
 
 
 #중점

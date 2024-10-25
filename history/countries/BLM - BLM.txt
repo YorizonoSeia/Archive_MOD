@@ -7,15 +7,26 @@ set_war_support = 0.4
 add_manpower = 50000
 set_convoys = 5
 
-set_variable = { ROOT.halo_infantry_cap = 6 } # 사단 제한, 헤일로 보병의 사단 제한과 같아야 함
+set_variable = { ROOT.halo_infantry_cap = 0 } # 사단 제한, 헤일로 보병의 사단 제한과 같아야 함
 
 set_country_flag = kivotos_research_on
 
+set_variable = { ROOT.halo_militia_cap = 10 } # 사단 제한, 헤일로 보병의 사단 제한과 같아야 함
+
 add_ideas = {
+	volunteer_only
+	BLM_trade_laws_1
+	civilian_economy
 	BLM_OUTLAWS
-	BLM_criminal_state
 	BLM_backward_industry
+	BLM_backward_research
+	BLM_anarchy
 }
+
+add_dynamic_modifier = {
+	modifier = BLM_criminal_state
+}
+set_variable = { BLM_CS_military_factory_donations = 3 }
 
 add_timed_idea = {
     idea = BA_exiles_of_the_future
@@ -28,9 +39,8 @@ set_technology = {
 	gw_artillery = 1 #포
 	tech_recon = 1 #수색
 	tech_support = 1 #지원장비
-	tech_engineers = 1 #공병
-	tech_mountaineers = 1 #산악
 	tech_trucks = 1
+	interwar_antiair = 1
 }
 
 set_politics = {

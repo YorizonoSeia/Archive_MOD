@@ -17,27 +17,11 @@ ideas = {
                 surrender_limit = 2.00
                 opinion_gain_monthly_factor = -2.00
                 opinion_gain_monthly_same_ideology_factor = -2.00
+                custom_modifier_tooltip = BLM_OUTLAWS_tt
             }
             rule = {
 				can_join_factions = no
 			}
-        }
-        BLM_criminal_state = {
-            allowed = {
-                tag = BLM
-                always = no
-            }
-            allowed_civil_war = {
-                always = yes
-            }
-        
-            picture = ITA_devaluated_lira
-            
-            modifier = {
-                consumer_goods_expected_value = 2.00
-                local_building_slots_factor = -2.00
-                production_speed_buildings_factor = -2.00
-            }
         }
         BLM_backward_industry = { #낙후된 산업
             picture = generic_oppression
@@ -53,7 +37,32 @@ ideas = {
                 industrial_capacity_dockyard = -0.20
                 production_factory_efficiency_gain_factor = -0.05
                 production_factory_max_efficiency_factor = -0.10
-                research_speed_factor = -0.25
+            }
+        }
+        BLM_backward_research = { #연구 시설 없음
+            picture = jap_duplicate_research
+            allowed = {
+                tag = BLM
+                always = no
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+                research_speed_factor = -0.80
+            }
+        }
+        BLM_anarchy = { #무정부
+            picture = anarchy
+            allowed = {
+                tag = BLM
+                always = no
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+                political_power_cost = 1.0
             }
         }
     }
