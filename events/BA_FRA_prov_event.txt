@@ -171,6 +171,7 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
+			set_global_flag = STOP_FRA_prepare_war_flag
 			news_event = {
 				id = FRA_prov_event.76
 				days = 3
