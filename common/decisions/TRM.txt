@@ -2207,19 +2207,19 @@ TRN_arius_squad_smash_decision = {
 						has_country_flag = KOM_Kill_Opposition
 					}
 					random_list = {
-						98 = {
+						60 = {
 							country_event = {
 								id = TRN_opposition.21 # 사살
 								days = 1
 							}
 						}
-						1 = {
+						4 = {
 							country_event = {
 								id = TRN_opposition.31 # 체포
 								days = 1
 							}
 						}
-						1 = {
+						36 = {
 							country_event = {
 								id = TRN_opposition.11 # 국외추방
 								days = 1
@@ -2232,19 +2232,19 @@ TRN_arius_squad_smash_decision = {
 						has_country_flag = KOM_Arrest_Opposition
 					}
 					random_list = {
-						98 = {
+						60 = {
 							country_event = {
 								id = TRN_opposition.31 # 체포
 								days = 1
 							}
 						}
-						1 = {
+						4 = {
 							country_event = {
 								id = TRN_opposition.21 # 사살
 								days = 1
 							}
 						}
-						1 = {
+						36 = {
 							country_event = {
 								id = TRN_opposition.11 # 국외추방
 								days = 1
@@ -2331,19 +2331,19 @@ TRN_arius_squad_smash_decision = {
 						has_country_flag = KOM_Kill_Opposition
 					}
 					random_list = {
-						50 = {
+						60 = {
 							country_event = {
 								id = TRN_opposition.23
 								days = 1
 							}
 						}
-						25 = {
+						4 = {
 							country_event = {
 								id = TRN_opposition.33
 								days = 1
 							}
 						}
-						25 = {
+						36 = {
 							country_event = {
 								id = TRN_opposition.13
 								days = 1
@@ -2356,19 +2356,19 @@ TRN_arius_squad_smash_decision = {
 						has_country_flag = KOM_Arrest_Opposition
 					}
 					random_list = {
-						50 = {
+						60 = {
 							country_event = {
 								id = TRN_opposition.33
 								days = 1
 							}
 						}
-						25 = {
+						4 = {
 							country_event = {
 								id = TRN_opposition.23
 								days = 1
 							}
 						}
-						25 = {
+						36 = {
 							country_event = {
 								id = TRN_opposition.13
 								days = 1
@@ -2455,19 +2455,19 @@ TRN_arius_squad_smash_decision = {
 						has_country_flag = KOM_Kill_Opposition
 					}
 					random_list = {
-						50 = {
+						60 = {
 							country_event = {
 								id = TRN_opposition.22
 								days = 1
 							}
 						}
-						25 = {
+						4 = {
 							country_event = {
 								id = TRN_opposition.32
 								days = 1
 							}
 						}
-						25 = {
+						36 = {
 							country_event = {
 								id = TRN_opposition.12
 								days = 1
@@ -2480,21 +2480,46 @@ TRN_arius_squad_smash_decision = {
 						has_country_flag = KOM_Arrest_Opposition
 					}
 					random_list = {
-						50 = {
+						60 = {
 							country_event = {
 								id = TRN_opposition.32
 								days = 1
 							}
 						}
-						25 = {
+						4 = {
 							country_event = {
 								id = TRN_opposition.22
 								days = 1
 							}
 						}
-						25 = {
+						36 = {
 							country_event = {
 								id = TRN_opposition.12
+								days = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = KOM_Exile_Opposition
+					}
+					random_list = {
+						60 = {
+							country_event = {
+								id = TRN_opposition.12
+								days = 1
+							}
+						}
+						4 = {
+							country_event = {
+								id = TRN_opposition.32
+								days = 1
+							}
+						}
+						36 = {
+							country_event = {
+								id = TRN_opposition.22
 								days = 1
 							}
 						}
@@ -2579,19 +2604,19 @@ TRN_arius_squad_smash_decision = {
 						has_country_flag = KOM_Kill_Opposition
 					}
 					random_list = {
-						50 = {
+						60 = {
 							country_event = { 
 								id = TRN_opposition.24
 								days = 1
 							}
 						}
-						25 = {
+						4 = {
 							country_event = {
-								id = komi_opposition.34
+								id = TRN_opposition.34
 								days = 1
 							}
 						}
-						25 = {
+						36 = {
 							country_event = {
 								id = TRN_opposition.14
 								days = 1
@@ -2604,19 +2629,19 @@ TRN_arius_squad_smash_decision = {
 						has_country_flag = KOM_Arrest_Opposition
 					}
 					random_list = {
-						50 = {
+						60 = {
 							country_event = {
 								id = TRN_opposition.34
 								days = 1
 							}
 						}
-						25 = {
+						4 = {
 							country_event = {
 								id = TRN_opposition.24
 								days = 1
 							}
 						}
-						25 = {
+						36 = {
 							country_event = {
 								id = TRN_opposition.14
 								days = 1
