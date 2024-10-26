@@ -2064,6 +2064,9 @@ RED_minori_revolutionary_isolationism = {
 		icon = GFX_decision_POL_organize_strike_two
 		visible = {
 			has_completed_focus = RED_minori_diplo_11
+			FIN = {
+				exists = yes
+			}
 		}
 		cost = 10
 		days_remove = 180
@@ -3572,12 +3575,10 @@ RED_winter_war_cat = {
 		icon = GFX_decision_hol_attract_foreign_investors
 		cost = 200
 		available = {
-			NOT = {
-				TRM = {
-					has_idea = RED_fake_money
-				}
-				RED = {
-					has_idea = RED_fake_money
+			custom_trigger_tooltip = {
+				tooltip = RED_winter_war_fake_money_tt
+				NOT = {
+					has_global_flag = did_fake_money_flag
 				}
 			}
 		}
@@ -3585,12 +3586,6 @@ RED_winter_war_cat = {
 			OR = {
 				has_war_with = RED
 				has_war_with = TRM
-			}
-			custom_trigger_tooltip = {
-				tooltip = RED_winter_war_fake_money_tt
-				NOT = {
-					has_global_flag = did_fake_money_flag
-				}
 			}
 		}
 		allowed = {
@@ -3632,12 +3627,10 @@ RED_winter_war_cat = {
 		icon = GFX_decision_SWE_paid_holidays_policy
 		cost = 200
 		available = {
-			NOT = {
-				TRM = {
-					has_idea = RED_biochemical
-				}
-				RED = {
-					has_idea = RED_biochemical
+			custom_trigger_tooltip = {
+				tooltip = RED_winter_war_biochemical_tt
+				NOT = {
+					has_global_flag = did_biochemical_flag
 				}
 			}
 		}
@@ -3645,12 +3638,6 @@ RED_winter_war_cat = {
 			OR = {
 				has_war_with = RED
 				has_war_with = TRM
-			}
-			custom_trigger_tooltip = {
-				tooltip = RED_winter_war_biochemical_tt
-				NOT = {
-					has_global_flag = did_biochemical_flag
-				}
 			}
 		}
 		allowed = {
@@ -3840,6 +3827,9 @@ RED_population_issue_cat = { #인구문제
 						is_owned_by = RE2
 						is_owned_by = RE3
 						is_owned_by = RE4
+						is_core_of = NOR
+						is_core_of = FIN
+						is_core_of = DEN
 					}
 				}
 				add_manpower = 125000

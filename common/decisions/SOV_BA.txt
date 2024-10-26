@@ -531,16 +531,6 @@ BA_sov_pol_war_decision = {
 		is_good = yes
 		timeout_effect = {
 			add_war_support = 0.1
-			custom_effect_tooltip = BA_sov_pol_war_decision_end_tt
-			hidden_effect = {
-				every_country = {
-					limit = {
-						is_ally_with = SOV
-						has_war_with = POL
-					}
-					white_peace = POL
-				}
-			}
 		}
 		highlight_states = {
 			highlight_state_targets = {

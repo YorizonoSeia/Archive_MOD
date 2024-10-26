@@ -812,7 +812,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = RED_economy_focus_3
-		cost = 5
+		cost = 4
 
 		available = {
    
@@ -918,7 +918,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = RED_economy_focus_3
-		cost = 5
+		cost = 4
 		available = {
    
 			NOT = {
@@ -979,7 +979,7 @@ focus_tree = {
 		x = 2
 		y = 2
 		relative_position_id = RED_economy_focus_3
-		cost = 5
+		cost = 4
 
 		available = {
    
@@ -1010,7 +1010,7 @@ focus_tree = {
 		completion_reward = {
 			add_timed_idea = {
 				idea = RED_first_AEP
-				years = 3
+				years = 2
 			}
 		}
 	}
@@ -1022,7 +1022,7 @@ focus_tree = {
 		x = 1
 		y = 3
 		relative_position_id = RED_economy_focus_3
-		cost = 5
+		cost = 4
 
 		available = {
    
@@ -1070,7 +1070,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = RED_economy_focus_3
-		cost = 5
+		cost = 4
 
 		available = {
    
@@ -1123,7 +1123,7 @@ focus_tree = {
 		x = 4
 		y = 2
 		relative_position_id = RED_economy_focus_3
-		cost = 5
+		cost = 4
 
 		available = {
    
@@ -1234,7 +1234,7 @@ focus_tree = {
 		x = 2
 		y = 4
 		relative_position_id = RED_economy_focus_3
-		cost = 5
+		cost = 4
 
 		available = {
    
@@ -1272,7 +1272,7 @@ focus_tree = {
 		x = 1
 		y = 5
 		relative_position_id = RED_economy_focus_3
-		cost = 5
+		cost = 4
 
 		available = {
    
@@ -1381,7 +1381,7 @@ focus_tree = {
 		x = 0
 		y = 4
 		relative_position_id = RED_economy_focus_3
-		cost = 5
+		cost = 4
 
 		available = {
    
@@ -1457,7 +1457,7 @@ focus_tree = {
 		x = -1
 		y = 6
 		relative_position_id = RED_economy_focus_3
-		cost = 5
+		cost = 4
 
 		available = {
    
@@ -5116,12 +5116,12 @@ focus_tree = {
 # 체리노 축출 루트
 	focus = { # 2월 총파업
 		id = RED_dipose_cherino
-		icon = GFX_focus_generic_workers_and_farmers_rise
+		icon = GFX_focus_generic_workers
 
 		mutually_exclusive = {
 			focus = RED_our_leader_cherino
 		}
-		x = 42
+		x = 32
 		y = 0
 		relative_position_id = RED_our_leader_cherino
 
@@ -5140,7 +5140,7 @@ focus_tree = {
 		}
 
 		offset = {
-			x = -40
+			x = -48
 			y = 0
 			trigger = {
 				has_game_rule = {
@@ -5174,7 +5174,7 @@ focus_tree = {
 		id =  RED_labor_world
 		icon = GFX_focus_ITA_peasants_rise
 		prerequisite = { focus = RED_dipose_cherino }
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = RED_dipose_cherino
 		available = {
@@ -5183,12 +5183,19 @@ focus_tree = {
 			}
 		}
 
-		cost = 4
+		cost = 3
+		ai_will_do = {
+			base = 9999
+		}
 
 		completion_reward = {
-			add_stability = -0.05
-			add_war_support = -0.05
-			add_political_power = 30
+			every_state = {
+				limit = {
+					is_controlled_by_ROOT_or_ally = yes
+				}
+				add_manpower = 80000
+			}
+			RED_population_solve = yes
 			custom_effect_tooltip = RED_labor_world_tt
 		}
 	}
@@ -5196,7 +5203,7 @@ focus_tree = {
 		id =  RED_RMC
 		icon = GFX_focus_SOV_builder_of_the_red_army
 		prerequisite = { focus = RED_dipose_cherino }
-		x = 2
+		x = 3
 		y = 1
 		relative_position_id = RED_dipose_cherino
 		available = {
@@ -5205,11 +5212,17 @@ focus_tree = {
 			}
 		}
 
-		cost = 4
+		cost = 3
+		ai_will_do = {
+			base = 9999
+		}
 
 		completion_reward = {
-			add_command_power = 10
-			army_experience = 10
+			army_experience = 15
+			add_equipment_to_stockpile = {
+				type = kivotos_infantry_equipment
+				amount = 1000
+			}
 			custom_effect_tooltip = RED_RMC_tt
 		}
 	}
@@ -5217,7 +5230,7 @@ focus_tree = {
 		id =  RED_native_leftists
 		icon = GFX_focus_chi_cooperation_with_the_communists
 		prerequisite = { focus = RED_dipose_cherino }
-		x = -2
+		x = -3
 		y = 1
 
 		available = {
@@ -5227,14 +5240,42 @@ focus_tree = {
 		}
 		relative_position_id = RED_dipose_cherino
 
-		cost = 4
+		cost = 3
+		ai_will_do = {
+			base = 9999
+		}
 
 		completion_reward = {
-			add_popularity = {
-				ideology = communism
-				popularity = -0.05
-			}
+			add_command_power = 15
 			custom_effect_tooltip = RED_native_leftists_tt
+		}
+	}
+	focus = { # 상퀼로트에게 부르짖다
+		id =  RED_sans_culotte
+		icon = GFX_focus_generic_workers_and_farmers_rise
+		prerequisite = { focus = RED_dipose_cherino }
+		x = 1
+		y = 1
+
+		available = {
+			NOT = {
+				has_completed_focus = RED_the_threats_abound
+			}
+		}
+		relative_position_id = RED_dipose_cherino
+
+		cost = 3
+		ai_will_do = {
+			base = 9999
+		}
+		completion_reward = {
+			141 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+				}
+			}
 		}
 	}
 	focus = { #'메이데이'
@@ -5244,15 +5285,16 @@ focus_tree = {
 		}
 		bypass = {
 		}
-		prerequisite = { focus = RED_labor_world focus = RED_native_leftists focus = RED_RMC}
+		prerequisite = { focus = RED_labor_world focus = RED_native_leftists focus = RED_RMC focus = RED_sans_culotte}
 		
 		icon = GFX_focus_focus_fra_revolution_utmost
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = RED_labor_world
 		cost = 2
 
 		completion_reward = {
+			set_stability = 0
 			hidden_effect={
 			create_country_leader = {
 				name = RED_revolutionary_committee
@@ -5508,8 +5550,8 @@ focus_tree = {
 		
 		icon = GFX_focus_CHL_union_of_hispanic_republics
 		x = 1
-		y = 2
-		relative_position_id = RED_labor_world
+		y = 1
+		relative_position_id = RED_the_threats_abound
 		cost = 2.9
 
 		available_if_capitulated = yes
@@ -7040,7 +7082,7 @@ focus_tree = {
 			custom_effect_tooltip = RED_advance_publicwork_tt
 			custom_effect_tooltip = RED_rearming_focus_6_tt
 			add_to_variable = {
-				RED_labor_party_dynamic_modifier_industrial_capacity_factory = 0.05
+				RED_labor_party_dynamic_modifier_industrial_capacity_factory = 0.03
 			}
 			add_to_variable = { RED_prepare_of_arms = 1}
 		}
@@ -7165,7 +7207,7 @@ focus_tree = {
 			custom_effect_tooltip = RED_advance_publicwork_tt
 			custom_effect_tooltip = RED_rearming_focus_6_tt
 			add_to_variable = {
-				RED_labor_party_dynamic_modifier_industrial_capacity_factory = 0.05
+				RED_labor_party_dynamic_modifier_industrial_capacity_factory = 0.03
 			}
 			add_to_variable = { RED_prepare_of_arms = 1}
 		}
@@ -7491,6 +7533,9 @@ focus_tree = {
 			}
 			custom_effect_tooltip = RED_advance_publicwork_tt
 			custom_effect_tooltip = RED_army_production_improve_tt
+			add_to_variable = {
+				RED_labor_party_dynamic_modifier_iresearch_speed_factor = 0.025
+			}
 		}
 	}
 
@@ -7502,7 +7547,7 @@ focus_tree = {
 		x = 2
 		y = 2
 		relative_position_id = RED_army_production_improve
-		cost = 5
+		cost = 4
 
 		available = {
 			NOT = {
@@ -7529,7 +7574,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = RED_army_production_improve
-		cost = 5
+		cost = 4
 
 		available = {
 			NOT = {
@@ -7554,7 +7599,7 @@ focus_tree = {
 		x = -2
 		y = 2
 		relative_position_id = RED_army_production_improve
-		cost = 5
+		cost = 4
 
 		available = {
 			NOT = {
@@ -7581,7 +7626,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = RED_army_production_improve
-		cost = 5
+		cost = 4
 
 		available = {
 			NOT = {
@@ -7637,7 +7682,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = RED_army_production_improve
-		cost = 5
+		cost = 4
 
 		available = {
 			NOT = {
@@ -7667,7 +7712,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = RED_artillery
-		cost = 5
+		cost = 4
 
 		available = {
 			NOT = {
@@ -7734,7 +7779,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = RED_the_means_to_wage_war
-		cost = 5
+		cost = 4
 
 		available = {
 			NOT = {
@@ -7806,7 +7851,7 @@ focus_tree = {
 		x = 5
 		y = 0
 		relative_position_id = RED_army_production_improve
-		cost = 5
+		cost = 44
 		prerequisite = {
 			focus = RED_rearming_focus_0
 		}

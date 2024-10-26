@@ -729,6 +729,22 @@ spriteTypes = {
 		textureFile = "gfx/interface/ideas/RED/RED_isolationism.tga"
 	}
 	spriteType = {
+		name = "GFX_idea_RED_press"
+		textureFile = "gfx/interface/ideas/RED/RED_press.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_RED_press_soc"
+		textureFile = "gfx/interface/ideas/RED/RED_press_soc.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_RED_press_col"
+		textureFile = "gfx/interface/ideas/RED/RED_press_col.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_RED_press_hero"
+		textureFile = "gfx/interface/ideas/RED/RED_press_hero.tga"
+	}
+	spriteType = {
 		name = "GFX_idea_Karl_Herman_Frank"
 		textureFile = "gfx/interface/ideas/ABY/CF.tga"
 	}

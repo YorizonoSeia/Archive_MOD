@@ -5,6 +5,7 @@ ideas = {
 			modifier = {
 				monthly_population = -1.2
 				weekly_manpower = -5000
+				recruitable_population_factor = -0.7
 			}
 		}
 		RED_population_saturation = { #포화 상태의 도시
@@ -152,7 +153,7 @@ ideas = {
 				production_factory_max_efficiency_factor = -0.1
 				production_factory_efficiency_gain_factor = 0.1
 				production_speed_industrial_complex_factor = 0.1
-				production_speed_arms_factory_factor = -0.25
+				production_speed_arms_factory_factor = -0.025
 				industrial_capacity_factory = 0.05
 				stability_weekly = 0.001
 			}
@@ -165,7 +166,7 @@ ideas = {
 				production_factory_max_efficiency_factor = -0.1
 				production_factory_efficiency_gain_factor = 0.1
 				production_speed_industrial_complex_factor = 0.1
-				production_speed_arms_factory_factor = -0.25
+				production_speed_arms_factory_factor = -0.025
 				industrial_capacity_factory = 0.05
 				stability_weekly = 0.001
 			}
@@ -178,7 +179,7 @@ ideas = {
 				production_factory_max_efficiency_factor = -0.1
 				production_factory_efficiency_gain_factor = 0.1
 				production_speed_industrial_complex_factor = 0.1
-				production_speed_arms_factory_factor = -0.25
+				production_speed_arms_factory_factor = -0.025
 				industrial_capacity_factory = 0.05
 			}
 		}
@@ -949,14 +950,14 @@ ideas = {
 
 		RED_publishing_idea = { #출판부
 			name = RED_publishing_idea
-			picture = SWE_radiotjanst
+			picture = RED_press
 			modifier = {
 				party_popularity_stability_factor = 0.03
 			}
 		}
 		RED_publishing_idea_soc = { #사회주의 언론
 			name = RED_publishing_idea
-			picture = SWE_radiotjanst
+			picture = RED_press_soc
 			modifier = {
 				party_popularity_stability_factor = 0.03
 			}
@@ -964,68 +965,76 @@ ideas = {
 				RED_socialist_press_trait
 			}
 		}
-		RED_publishing_idea_soc_hero = { #영웅주의 선전
-			name = RED_publishing_idea
-			picture = SWE_radiotjanst
+		RED_publishing_idea_soc_hero = { #출판부 : 영웅주의 선전
+			name = RED_publishing_idea_soc_hero
+			picture = RED_press_hero
 			modifier = {
 				party_popularity_stability_factor = 0.03
+				political_power_factor = 0.10
+				war_support_weekly_factor = 0.30
 			}
 			traits = {
 				RED_socialist_press_trait
-				RED_heroism_propaganda_trait
 			}
 		}
 		RED_publishing_idea_soc_hero_1 = { #영웅주의 선전
-			name = RED_publishing_idea
-			picture = SWE_radiotjanst
+			name = RED_publishing_idea_soc_hero
+			picture = RED_press_hero
 			modifier = {
 				party_popularity_stability_factor = 0.03
+				political_power_factor = 0.10
+				war_support_weekly_factor = 0.30
 			}
 			traits = {
 				RED_socialist_press_trait
-				RED_heroism_propaganda_trait
 				RED_marching_army_trait
 			}
 		}
 		RED_publishing_idea_soc_col = { #집산주의 선전
-			name = RED_publishing_idea
-			picture = SWE_radiotjanst
+			name = RED_publishing_idea_soc_col
+			picture = RED_press_col
 			modifier = {
 				party_popularity_stability_factor = 0.03
+				weekly_manpower = 1000
+				non_core_manpower = 0.05
+				conscription_factor = 0.15
 			}
 			traits = {
 				RED_socialist_press_trait
-				RED_collectivist_propaganda_trait
 			}
 		}
 		RED_publishing_idea_soc_col_1 = { #생산을 위한 투쟁
-			name = RED_publishing_idea
-			picture = SWE_radiotjanst
+			name = RED_publishing_idea_soc_col
+			picture = RED_press_col
 			modifier = {
 				party_popularity_stability_factor = 0.03
+				weekly_manpower = 1000
+				non_core_manpower = 0.05
+				conscription_factor = 0.15
 			}
 			traits = {
 				RED_socialist_press_trait
-				RED_collectivist_propaganda_trait
 				RED_the_production_movement_trait
 			}
 		}
 		RED_publishing_idea_soc_col_2 = { #리얼리즘
-			name = RED_publishing_idea
-			picture = SWE_radiotjanst
+			name = RED_publishing_idea_soc_col
+			picture = RED_press_col
 			modifier = {
 				party_popularity_stability_factor = 0.05
+				weekly_manpower = 1000
+				non_core_manpower = 0.05
+				conscription_factor = 0.15
 				consumer_goods_factor = -0.1
 			}
 			traits = {
 				RED_socialist_press_trait
-				RED_collectivist_propaganda_trait
 				RED_the_production_movement_trait
 			}
 		}
 		RED_publishing_idea_1 = { #편집국 약화
 			name = RED_publishing_idea
-			picture = SWE_radiotjanst
+			picture = RED_press
 			modifier = {
 				party_popularity_stability_factor = 0.03
 				drift_defence_factor = -0.15
@@ -1049,7 +1058,7 @@ ideas = {
 		}
 		RED_publishing_idea_2 = { #상업지 간행 먼저
 			name = RED_publishing_idea
-			picture = SWE_radiotjanst
+			picture = RED_press
 			modifier = {
 				party_popularity_stability_factor = 0.03
 				drift_defence_factor = -0.15
@@ -1058,7 +1067,7 @@ ideas = {
 		}
 		RED_publishing_idea_free = { #자유 언론 먼저
 			name = RED_publishing_idea_free
-			picture = SWE_radiotjanst
+			picture = RED_press
 			modifier = {
 				party_popularity_stability_factor = 0.03
 				drift_defence_factor = -0.3
@@ -1069,7 +1078,7 @@ ideas = {
 		}
 		RED_publishing_idea_free_money = { #자유 언론 + 상업지
 			name = RED_publishing_idea_free
-			picture = SWE_radiotjanst
+			picture = RED_press
 			modifier = {
 				party_popularity_stability_factor = 0.03
 				drift_defence_factor = -0.3
@@ -1081,7 +1090,7 @@ ideas = {
 		}
 		RED_publishing_idea_lenin = { #민주집중제 먼저
 			name = RED_publishing_idea_lenin
-			picture = SWE_radiotjanst
+			picture = RED_press
 			modifier = {
 				party_popularity_stability_factor = 0.05
 				drift_defence_factor = -0.05
@@ -1091,7 +1100,7 @@ ideas = {
 		}
 		RED_publishing_idea_lenin_money = { #민주집중제 + 상업지
 			name = RED_publishing_idea_lenin
-			picture = SWE_radiotjanst
+			picture = RED_press
 			modifier = {
 				party_popularity_stability_factor = 0.05
 				drift_defence_factor = -0.05
