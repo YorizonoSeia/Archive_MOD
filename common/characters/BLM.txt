@@ -16,13 +16,113 @@ characters = {
 			expire="1965.1.1.1"
 		}
         country_leader={
-			ideology = criminal_state
-			expire="1965.1.1.1"
-		}
-        country_leader={
 			ideology = crime_syndicate
 			expire="1965.1.1.1"
             traits = { BLA_crime_syndicate_traits }
+		}
+    }
+	BLM_saori={
+		name=saori
+		portraits={
+			civilian={
+				large="gfx/leaders/ARI/ARI_Joumae_Saori.dds"
+			}
+			army={
+				large="gfx/leaders/ARI/ARI_Joumae_Saori.dds"
+				small= "gfx/interface/advisors/ARI/ARI_tkdhfl.tga"
+			}
+		}
+		field_marshal={
+            visible = {
+                has_country_flag = BLM_saori_flag
+            }
+			traits={ commando infantry_officer }
+			skill=3
+			attack_skill=5
+			defense_skill=4
+			planning_skill=2
+			logistics_skill=1
+		}
+	}
+	BLM_atsuko={
+		name=atsuko
+		portraits={
+			civilian={
+				large="gfx/leaders/ARI/ARI_Hakari_Atsuko.png"
+			}
+			army={
+				large="gfx/leaders/ARI/ARI_Hakari_Atsuko.png"
+				small= "gfx/interface/advisors/ARI/aco.dds"
+			}
+		}
+		corps_commander={
+            visible = {
+                has_country_flag = BLM_atsuko_flag
+            }
+			traits={ commando } 
+			skill=2
+			attack_skill=2
+			defense_skill=5
+			planning_skill=2
+			logistics_skill=3
+		}
+	}
+	BLM_hiyori={
+		name=hiyori
+		portraits={
+			civilian={
+				large="gfx/leaders/ARI/gi.dds"
+			}
+			army={
+				large="gfx/leaders/ARI/gi.dds"
+				small= "gfx/interface/advisors/ARI/gi.dds"
+			}
+		}
+		corps_commander={
+            visible = {
+                has_country_flag = BLM_hiyori_flag
+            }
+			traits={ commando }
+			skill=2
+			attack_skill=3
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=2
+		}
+	}
+	BLM_misaki={
+		name=misaki
+		portraits={
+			civilian={
+				large="gfx/leaders/ARI/misaki.dds"
+			}
+			army={
+				large="gfx/leaders/ARI/misaki.dds"
+				small= "gfx/interface/advisors/ARI/misaki.dds"
+			}
+		}
+		corps_commander={
+            visible = {
+                has_country_flag = BLM_misaki_flag
+            }
+			traits={ commando front_line_general }
+			skill=3
+			attack_skill=5
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=2
+		}
+	}
+    BLM_olier_mordrel = {
+        name = BLM_olier_mordrel
+        portraits = {
+            civilian = {
+                large = "gfx/leaders/BLM/Portrait_Britanny_Olier_Mordrel.tga"
+            }  
+        }
+        country_leader={
+			ideology = criminal_state
+			expire="1965.1.1.1"
 		}
     }
 }

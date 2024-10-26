@@ -1,19 +1,14 @@
 add_namespace = BLM_hidden_event
 add_namespace = BLM_event
+add_namespace = BLM_opposition
 
-country_event = {
+country_event = { #공장 업데이트 - 이게 말이죠, 도네이트로 주어진 공장은 변동이 있어야 반영이 되더라고요??
 	id = BLM_hidden_event.1
 	title = BLM_hidden_event.1.t
 	desc = BLM_hidden_event.1.d
 	is_triggered_only = yes
 	hidden = yes
-	trigger = {
-		NOT = {
-			has_country_flag = BLA_update_falg
-		}
-	}
 	immediate = {
-		set_country_flag = BLA_update_falg
 		add_offsite_building = {
 			type = arms_factory
 			level = 1
@@ -33,5 +28,53 @@ country_event = {
 	
 	option = {
 		name = BLM_event.1.a
+	}
+}
+
+country_event = {
+	id = BLM_opposition.1
+	title = BLM_opposition.1.t
+	desc = BLM_opposition.1.d
+	is_triggered_only = yes
+	
+	option = {
+		name = BLM_opposition.1.a
+		set_country_flag = BLM_saori_flag
+	}
+}
+
+country_event = {
+	id = BLM_opposition.2
+	title = BLM_opposition.2.t
+	desc = BLM_opposition.2.d
+	is_triggered_only = yes
+	
+	option = {
+		name = BLM_opposition.2.a
+		set_country_flag = BLM_misaki_flag
+	}
+}
+
+country_event = {
+	id = BLM_opposition.3
+	title = BLM_opposition.3.t
+	desc = BLM_opposition.3.d
+	is_triggered_only = yes
+	
+	option = {
+		name = BLM_opposition.3.a
+		set_country_flag = BLM_atsuko_flag
+	}
+}
+
+country_event = {
+	id = BLM_opposition.4
+	title = BLM_opposition.4.t
+	desc = BLM_opposition.4.d
+	is_triggered_only = yes
+	
+	option = {
+		name = BLM_opposition.4.a
+		set_country_flag = BLM_hiyori_flag
 	}
 }
