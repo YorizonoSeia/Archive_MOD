@@ -2331,19 +2331,19 @@ TRN_arius_squad_smash_decision = {
 						has_country_flag = KOM_Kill_Opposition
 					}
 					random_list = {
-						98 = {
+						50 = {
 							country_event = {
 								id = TRN_opposition.23
 								days = 1
 							}
 						}
-						1 = {
+						25 = {
 							country_event = {
 								id = TRN_opposition.33
 								days = 1
 							}
 						}
-						1 = {
+						25 = {
 							country_event = {
 								id = TRN_opposition.13
 								days = 1
@@ -2356,19 +2356,19 @@ TRN_arius_squad_smash_decision = {
 						has_country_flag = KOM_Arrest_Opposition
 					}
 					random_list = {
-						98 = {
+						50 = {
 							country_event = {
 								id = TRN_opposition.33
 								days = 1
 							}
 						}
-						1 = {
+						25 = {
 							country_event = {
 								id = TRN_opposition.23
 								days = 1
 							}
 						}
-						1 = {
+						25 = {
 							country_event = {
 								id = TRN_opposition.13
 								days = 1
@@ -2455,19 +2455,19 @@ TRN_arius_squad_smash_decision = {
 						has_country_flag = KOM_Kill_Opposition
 					}
 					random_list = {
-						98 = {
+						50 = {
 							country_event = {
 								id = TRN_opposition.22
 								days = 1
 							}
 						}
-						1 = {
+						25 = {
 							country_event = {
 								id = TRN_opposition.32
 								days = 1
 							}
 						}
-						1 = {
+						25 = {
 							country_event = {
 								id = TRN_opposition.12
 								days = 1
@@ -2480,46 +2480,21 @@ TRN_arius_squad_smash_decision = {
 						has_country_flag = KOM_Arrest_Opposition
 					}
 					random_list = {
-						98 = {
+						50 = {
 							country_event = {
 								id = TRN_opposition.32
 								days = 1
 							}
 						}
-						1 = {
+						25 = {
 							country_event = {
 								id = TRN_opposition.22
 								days = 1
 							}
 						}
-						1 = {
+						25 = {
 							country_event = {
 								id = TRN_opposition.12
-								days = 1
-							}
-						}
-					}
-				}
-				else_if = {
-					limit = {
-						has_country_flag = KOM_Exile_Opposition
-					}
-					random_list = {
-						98 = {
-							country_event = {
-								id = TRN_opposition.12
-								days = 1
-							}
-						}
-						1 = {
-							country_event = {
-								id = TRN_opposition.32
-								days = 1
-							}
-						}
-						1 = {
-							country_event = {
-								id = TRN_opposition.22
 								days = 1
 							}
 						}
@@ -2604,19 +2579,19 @@ TRN_arius_squad_smash_decision = {
 						has_country_flag = KOM_Kill_Opposition
 					}
 					random_list = {
-						98 = {
+						50 = {
 							country_event = { 
 								id = TRN_opposition.24
 								days = 1
 							}
 						}
-						1 = {
+						25 = {
 							country_event = {
 								id = komi_opposition.34
 								days = 1
 							}
 						}
-						1 = {
+						25 = {
 							country_event = {
 								id = TRN_opposition.14
 								days = 1
@@ -2629,46 +2604,21 @@ TRN_arius_squad_smash_decision = {
 						has_country_flag = KOM_Arrest_Opposition
 					}
 					random_list = {
-						98 = {
+						50 = {
 							country_event = {
 								id = TRN_opposition.34
 								days = 1
 							}
 						}
-						1 = {
+						25 = {
 							country_event = {
 								id = TRN_opposition.24
 								days = 1
 							}
 						}
-						1 = {
+						25 = {
 							country_event = {
 								id = TRN_opposition.14
-								days = 1
-							}
-						}
-					}
-				}
-				else_if = {
-					limit = {
-						has_country_flag = KOM_Exile_Opposition
-					}
-					random_list = {
-						98 = {
-							country_event = {
-								id = TRN_opposition.14
-								days = 1
-							}
-						}
-						1 = {
-							country_event = {
-								id = TRN_opposition.34
-								days = 1
-							}
-						}
-						1 = {
-							country_event = {
-								id = TRN_opposition.24
 								days = 1
 							}
 						}
