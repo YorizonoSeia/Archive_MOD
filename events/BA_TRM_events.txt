@@ -3749,62 +3749,8 @@ country_event = { # TNO 팀 항상 감사합니다.. # 히요리 추격 시작
 		set_country_flag = TRN_Hiyori_Active
 	}
 }
-country_event = { # 사오리 사살
-	id = TRN_opposition.21
-	title = TRN_opposition.21.t
-	desc = TRN_opposition.21.d
-	picture = GFX_event_TRN_opposition_21
 
-	is_triggered_only = yes
-
-	option = {
-		name = TRN_opposition.21.2.a
-		country_event = { id = TRN_opposition.5 }
-	}
-}
-country_event = { # 사오리 사살 - 2
-	id = TRN_opposition.5
-	title = TRN_opposition.21.2t
-	desc = TRN_opposition.21.2d
-	picture = GFX_event_TRN_opposition_21
-
-	is_triggered_only = yes
-
-	option = {
-		name = TRN_opposition.21.a
-		add_manpower = -1
-		add_political_power = 5
-	}
-}
-country_event = { #사오리 체포
-	id = TRN_opposition.31
-	title = TRN_opposition.31.t
-	desc = TRN_opposition.31.d
-	picture = GFX_event_trm_event_32
-
-	is_triggered_only = yes
-
-	option = {
-		name = TRN_opposition.31.a
-		country_event = { id = TRN_opposition.35 }
-	}
-}
-country_event = { #사오리 체포
-	id = TRN_opposition.35
-	title = TRN_opposition.31.2.t
-	desc = TRN_opposition.31.2.d
-	picture = GFX_event_trm_event_32
-
-	is_triggered_only = yes
-
-	option = {
-		name = TRN_opposition.31.2.a
-		add_political_power = 10
-		add_stability = 0.01
-		 
-	}
-}
-country_event = { # 사오리 국외추방
+country_event = { # 사오리 탈출
 	id = TRN_opposition.11
 	title = TRN_opposition.11.t
 	desc = TRN_opposition.11.d
@@ -3817,21 +3763,78 @@ country_event = { # 사오리 국외추방
 		country_event = { id = TRN_opposition.112 } 
 	}
 }
-country_event = { # 사오리 국외추방
+country_event = { # 사오리 탈출
 	id = TRN_opposition.112
-	title = TRN_opposition.11.2.t
-	desc = TRN_opposition.11.2.d
+	title = TRN_opposition.112.t
+	desc = TRN_opposition.112.d
 	picture = GFX_event_TRN_opposition_11
 
 	is_triggered_only = yes
 
 	option = {
-		name = TRN_opposition.11.2.a
+		name = TRN_opposition.112.a
+		add_manpower = -1
 		add_political_power = 5
 		 
 	}
 }
-country_event = { # 아츠코 국외추방
+country_event = { # 사오리 사살
+	id = TRN_opposition.21
+	title = TRN_opposition.21.t
+	desc = TRN_opposition.21.d
+	picture = GFX_event_TRN_opposition_21
+
+	is_triggered_only = yes
+
+	option = {
+		name = TRN_opposition.21.a
+		country_event = { id = TRN_opposition.212 }
+	}
+}
+country_event = { # 사오리 사살 - 2
+	id = TRN_opposition.212
+	title = TRN_opposition.212.t
+	desc = TRN_opposition.212.d
+	picture = GFX_event_TRN_opposition_21
+
+	is_triggered_only = yes
+
+	option = {
+		name = TRN_opposition.21.a
+		add_manpower = -1
+		add_political_power = 10
+		add_stability = 0.015
+	}
+}
+country_event = { #사오리 체포
+	id = TRN_opposition.31
+	title = TRN_opposition.31.t
+	desc = TRN_opposition.31.d
+	picture = GFX_event_trm_event_32
+
+	is_triggered_only = yes
+
+	option = {
+		name = TRN_opposition.31.a
+		country_event = { id = TRN_opposition.312 }
+	}
+}
+country_event = { #사오리 체포
+	id = TRN_opposition.312
+	title = TRN_opposition.312.t
+	desc = TRN_opposition.312.d
+	picture = GFX_event_trm_event_32
+
+	is_triggered_only = yes
+
+	option = {
+		name = TRN_opposition.312.a
+		add_political_power = 10
+		add_stability = 0.015
+		 
+	}
+}
+country_event = { # 아츠코 탈출
 	id = TRN_opposition.13
 	title = TRN_opposition.13.t
 	desc = TRN_opposition.13.d
@@ -3841,21 +3844,21 @@ country_event = { # 아츠코 국외추방
 
 	option = {
 		name = TRN_opposition.13.a
-		country_event = TRN_opposition.133
+		country_event = TRN_opposition.132
 	}
 }
-country_event = { # 아츠코 국외추방
-	id = TRN_opposition.133
-	title = TRN_opposition.133.t
-	desc = TRN_opposition.133.d
+country_event = { # 아츠코 탈출
+	id = TRN_opposition.132
+	title = TRN_opposition.132.t
+	desc = TRN_opposition.132.d
 	picture = GFX_event_TRN_opposition_13
 
 	is_triggered_only = yes
 
 	option = {
-		name = TRN_opposition.133.a
-		add_political_power = 10
-		add_stability = 0.015
+		name = TRN_opposition.132.a
+		add_manpower = -1
+		add_political_power = 5
 	}
 }
 country_event = { # 아츠코 사살
@@ -3868,21 +3871,22 @@ country_event = { # 아츠코 사살
 
 	option = {
 		name = TRN_opposition.23.a
-		country_event = TRN_opposition.233
+		country_event = TRN_opposition.232
 	}
 }
 country_event = { # 아츠코 사살
-	id = TRN_opposition.233
-	title = TRN_opposition.233.t
-	desc = TRN_opposition.233.d
+	id = TRN_opposition.232
+	title = TRN_opposition.232.t
+	desc = TRN_opposition.232.d
 	picture = GFX_event_TRN_opposition_32
 
 	is_triggered_only = yes
 
 	option = {
-		name = TRN_opposition.233.a
+		name = TRN_opposition.232.a
 		add_manpower = -1
-		add_political_power = 5
+		add_political_power = 10
+		add_stability = 0.015
 	}
 }
 country_event = { # 아츠코 체포
@@ -3895,24 +3899,24 @@ country_event = { # 아츠코 체포
 
 	option = {
 		name = TRN_opposition.33.a
-		country_event = TRN_opposition.333
+		country_event = TRN_opposition.332
 	}
 }
 country_event = { # 아츠코 체포
-	id = TRN_opposition.333
-	title = TRN_opposition.333.t
-	desc = TRN_opposition.333.d
+	id = TRN_opposition.332
+	title = TRN_opposition.332.t
+	desc = TRN_opposition.332.d
 	picture = GFX_event_trm_event_55
 
 	is_triggered_only = yes
 
 	option = {
-		name = TRN_opposition.333.a
+		name = TRN_opposition.332.a
 		add_political_power = 10
 		add_stability = 0.015
 	}
 }
-country_event = { # 미사키 국외추방
+country_event = { # 미사키 탈출
 	id = TRN_opposition.12
 	title = TRN_opposition.12.t
 	desc = TRN_opposition.12.d
@@ -3925,7 +3929,7 @@ country_event = { # 미사키 국외추방
 		country_event = TRN_opposition.122
 	}
 }
-country_event = { # 미사키 사살(인척하는 자살)
+country_event = { # 미사키 탈출
 	id = TRN_opposition.122
 	title = TRN_opposition.122.t
 	desc = TRN_opposition.122.d
@@ -3935,12 +3939,11 @@ country_event = { # 미사키 사살(인척하는 자살)
 
 	option = {
 		name = TRN_opposition.122.a
-		add_political_power = 10
-		add_stability = 0.015
 		add_manpower = -1
+		add_political_power = 5
 	}
 }
-country_event = { # 미사키 국외탈출
+country_event = { # 미사키 사살(인척하는 자살)
 	id = TRN_opposition.22
 	title = TRN_opposition.22.t
 	desc = TRN_opposition.22.d
@@ -3953,7 +3956,7 @@ country_event = { # 미사키 국외탈출
 		country_event = TRN_opposition.222
 	}
 }
-country_event = { # 미사키 국외탈출
+country_event = { # 미사키 사살 ( 미카 반응 )
 	id = TRN_opposition.222
 	title = TRN_opposition.222.t
 	desc = TRN_opposition.222.d
@@ -3964,7 +3967,8 @@ country_event = { # 미사키 국외탈출
 	option = {
 		name = TRN_opposition.222.a
 		add_manpower = -1
-		add_political_power = 5
+		add_political_power = 10
+		add_stability = 0.015
 	}
 }
 country_event = { # 미사키 체포
@@ -3994,7 +3998,7 @@ country_event = { # 미사키 체포 ( 미카 반응 )
 		add_stability = 0.015
 	}
 }
-country_event = { # 히요리 국외추방
+country_event = { # 히요리 탈출
 	id = TRN_opposition.14
 	title = TRN_opposition.14.t
 	desc = TRN_opposition.14.d
@@ -4007,7 +4011,7 @@ country_event = { # 히요리 국외추방
 		country_event = { id = TRN_opposition.144 }
 	}
 }
-country_event = { # 히요리 국외추방
+country_event = { # 히요리 탈출
 	id = TRN_opposition.144
 	title = TRN_opposition.144.t
 	desc = TRN_opposition.144.d
@@ -4017,8 +4021,8 @@ country_event = { # 히요리 국외추방
 
 	option = {
 		name = TRN_opposition.144.a
-		add_political_power = 10
-		add_stability = 0.015
+		add_manpower = -1
+		add_political_power = 5
 	}
 }
 country_event = { # 히요리 사살
@@ -4045,7 +4049,8 @@ country_event = { # 히요리 사살
 	option = {
 		name = TRN_opposition.244.a
 		add_manpower = -1
-		add_political_power = 5
+		add_political_power = 10
+		add_stability = 0.015
 	}
 }
 country_event = { # 히요리 체포
