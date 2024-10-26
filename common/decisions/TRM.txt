@@ -2500,31 +2500,6 @@ TRN_arius_squad_smash_decision = {
 						}
 					}
 				}
-				else_if = {
-					limit = {
-						has_country_flag = KOM_Exile_Opposition
-					}
-					random_list = {
-						60 = {
-							country_event = {
-								id = TRN_opposition.12
-								days = 1
-							}
-						}
-						4 = {
-							country_event = {
-								id = TRN_opposition.32
-								days = 1
-							}
-						}
-						36 = {
-							country_event = {
-								id = TRN_opposition.22
-								days = 1
-							}
-						}
-					}
-				}
 			}
 		}
 	}
