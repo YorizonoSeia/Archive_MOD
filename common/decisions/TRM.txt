@@ -2333,19 +2333,19 @@ TRN_arius_squad_smash_decision = {
 					random_list = {
 						60 = {
 							country_event = {
-								id = TRN_opposition.23
+								id = TRN_opposition.23 # 사살
 								days = 1
 							}
 						}
 						4 = {
 							country_event = {
-								id = TRN_opposition.33
+								id = TRN_opposition.33 # 체포
 								days = 1
 							}
 						}
 						36 = {
 							country_event = {
-								id = TRN_opposition.13
+								id = TRN_opposition.13 # 국외추방
 								days = 1
 							}
 						}
@@ -2358,19 +2358,19 @@ TRN_arius_squad_smash_decision = {
 					random_list = {
 						60 = {
 							country_event = {
-								id = TRN_opposition.33
+								id = TRN_opposition.33 # 체포
 								days = 1
 							}
 						}
 						4 = {
 							country_event = {
-								id = TRN_opposition.23
+								id = TRN_opposition.23 # 사살
 								days = 1
 							}
 						}
 						36 = {
 							country_event = {
-								id = TRN_opposition.13
+								id = TRN_opposition.13 # 국외추방
 								days = 1
 							}
 						}
@@ -2457,19 +2457,19 @@ TRN_arius_squad_smash_decision = {
 					random_list = {
 						60 = {
 							country_event = {
-								id = TRN_opposition.22
+								id = TRN_opposition.22 # 사살
 								days = 1
 							}
 						}
 						4 = {
 							country_event = {
-								id = TRN_opposition.32
+								id = TRN_opposition.32 # 체포
 								days = 1
 							}
 						}
 						36 = {
 							country_event = {
-								id = TRN_opposition.12
+								id = TRN_opposition.12 # 국외추방
 								days = 1
 							}
 						}
@@ -2482,19 +2482,19 @@ TRN_arius_squad_smash_decision = {
 					random_list = {
 						60 = {
 							country_event = {
-								id = TRN_opposition.32
+								id = TRN_opposition.32 # 체포
 								days = 1
 							}
 						}
 						4 = {
 							country_event = {
-								id = TRN_opposition.22
+								id = TRN_opposition.22 # 사살
 								days = 1
 							}
 						}
 						36 = {
 							country_event = {
-								id = TRN_opposition.12
+								id = TRN_opposition.12 # 국외추방
 								days = 1
 							}
 						}
@@ -2581,19 +2581,19 @@ TRN_arius_squad_smash_decision = {
 					random_list = {
 						60 = {
 							country_event = { 
-								id = TRN_opposition.24
+								id = TRN_opposition.24 # 사살
 								days = 1
 							}
 						}
 						4 = {
 							country_event = {
-								id = TRN_opposition.34
+								id = TRN_opposition.34 # 체포
 								days = 1
 							}
 						}
 						36 = {
 							country_event = {
-								id = TRN_opposition.14
+								id = TRN_opposition.14 # 국외추방
 								days = 1
 							}
 						}
@@ -2606,19 +2606,19 @@ TRN_arius_squad_smash_decision = {
 					random_list = {
 						60 = {
 							country_event = {
-								id = TRN_opposition.34
+								id = TRN_opposition.34 # 체포
 								days = 1
 							}
 						}
 						4 = {
 							country_event = {
-								id = TRN_opposition.24
+								id = TRN_opposition.24 # 사살
 								days = 1
 							}
 						}
 						36 = {
 							country_event = {
-								id = TRN_opposition.14
+								id = TRN_opposition.14 # 국외추방
 								days = 1
 							}
 						}
