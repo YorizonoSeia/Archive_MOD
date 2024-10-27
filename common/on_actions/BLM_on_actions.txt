@@ -1,0 +1,105 @@
+on_actions = {
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = {
+					original_tag = BLM
+					NOT = { has_global_flag = BLM_end_flag }
+				}
+				set_global_flag = BLM_end_flag
+				set_cosmetic_tag = BRI
+				load_focus_tree = generic_focus
+
+				news_event = { id = BA_news.106 hours = 12 }
+
+				set_party_name = {
+					ideology = democratic
+					long_name = democratic
+					name = democratic
+				}
+				set_party_name = {
+					ideology = communism
+					long_name = communism
+					name = communism
+				}
+				set_party_name = {
+					ideology = fascism
+					long_name = fascism
+					name = fascism
+				}
+				set_party_name = {
+					ideology = neutrality
+					long_name = neutrality
+					name = neutrality
+				}
+				add_popularity = {
+					ideology = neutrality
+					popularity = -0.10
+				}
+				if = {
+					limit = { has_character = BLM_Professor }
+					retire_character = BLM_Professor
+				}
+				if = { 
+					limit = { has_character = BLM_olier_mordrel }
+					if = {
+						limit = { can_be_country_leader = BLM_olier_mordrel }
+						promote_character = BLM_olier_mordrel
+					}
+					else = {
+						add_country_leader_role = {
+							character = BLM_olier_mordrel
+							promote_leader = yes
+							country_leader = {
+								ideology = rexism
+								expire = "1999.1.1.1"
+								traits = { ABY_anubis }
+							}
+						}
+					}
+				}
+				else = {
+					if = { 
+						limit = { has_character = BLM_celestin_laine }
+						if = {
+							limit = { can_be_country_leader = BLM_celestin_laine }
+							remove_country_leader_role = {
+								character = BLM_celestin_laine
+								ideology = criminal_state
+							}
+						}
+					}
+				}
+
+				if = {
+					limit = { has_dynamic_modifier = { modifier = BLM_criminal_state } }
+					remove_dynamic_modifier = { modifier = BLM_criminal_state }
+				}
+				if = {
+					limit = { has_idea = BLM_OUTLAWS }
+					remove_ideas = BLM_OUTLAWS
+				}
+				if = {
+					limit = { has_idea = BLM_backward_industry }
+					remove_ideas = BLM_backward_industry
+				}
+				if = {
+					limit = { has_idea = BLM_backward_research }
+					remove_ideas = BLM_backward_research
+				}
+				if = {
+					limit = { has_idea = BLM_anarchy }
+					remove_ideas = BLM_anarchy
+				}
+				if = {
+					limit = { has_dynamic_modifier = { modifier = BLM_criminal_state } }
+					remove_dynamic_modifier = { modifier = BLM_criminal_state }
+				}
+				set_province_name = {
+					id = 3552
+					name = Britanny
+				}
+			}
+		}
+	}
+}

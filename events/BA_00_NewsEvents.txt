@@ -3797,3 +3797,34 @@ news_event = { #붉은겨울 대기근
 		}
 	}
 }
+
+news_event = { #블랙 마켓 붕괴
+	id = BA_news.106
+	title = BA_news.106.t
+	desc = BA_news.106.desc
+	picture = GFX_news_event_indian_famine
+
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = BA_news.106.a
+		trigger = {
+			Kivotos_tag = yes
+			NOT = { original_tag = ITA }
+		}
+	}
+	option = {
+		name = BA_news.106.b
+		trigger = {
+			NOT = { Kivotos_tag = yes }
+			NOT = { original_tag = ITA }
+		}
+	}
+	option = {
+		name = BA_news.106.c
+		trigger = {
+			original_tag = ITA
+		}
+	}
+}

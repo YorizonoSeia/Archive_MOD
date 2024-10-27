@@ -20,6 +20,14 @@ characters = {
 			expire="1965.1.1.1"
             traits = { BLA_crime_syndicate_traits }
 		}
+		field_marshal = {
+			traits={ infantry_officer }
+			skill=1
+			attack_skill=2
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=1
+		}
     }
 	BLM_saori={
 		name=saori
@@ -32,7 +40,8 @@ characters = {
 				small= "gfx/interface/advisors/ARI/ARI_tkdhfl.tga"
 			}
 		}
-		field_marshal={
+        gender = female 
+		corps_commander={
             visible = {
                 has_country_flag = BLM_saori_flag
             }
@@ -55,6 +64,7 @@ characters = {
 				small= "gfx/interface/advisors/ARI/aco.dds"
 			}
 		}
+        gender = female 
 		corps_commander={
             visible = {
                 has_country_flag = BLM_atsuko_flag
@@ -78,6 +88,7 @@ characters = {
 				small= "gfx/interface/advisors/ARI/gi.dds"
 			}
 		}
+        gender = female 
 		corps_commander={
             visible = {
                 has_country_flag = BLM_hiyori_flag
@@ -101,6 +112,7 @@ characters = {
 				small= "gfx/interface/advisors/ARI/misaki.dds"
 			}
 		}
+        gender = female 
 		corps_commander={
             visible = {
                 has_country_flag = BLM_misaki_flag
