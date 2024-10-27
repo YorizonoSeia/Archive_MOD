@@ -120,9 +120,18 @@ characters = {
                 large = "gfx/leaders/BLM/Portrait_Britanny_Olier_Mordrel.tga"
             }  
         }
+    }
+    BLM_celestin_laine = {
+        name = BLM_celestin_laine
+        portraits = {
+            civilian = {
+                large = "gfx/leaders/BLM/Portrait_Britanny_Celestin_Laine.tga"
+            }  
+        }
         country_leader={
 			ideology = criminal_state
 			expire="1965.1.1.1"
+            traits = { fascist_militia_leader }
 		}
     }
 }

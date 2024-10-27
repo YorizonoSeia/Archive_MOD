@@ -57,3 +57,5 @@ set_popularities = {
 }
 
 recruit_character = BLM_Professor
+recruit_character = BLM_celestin_laine
+recruit_character = BLM_olier_mordrel
