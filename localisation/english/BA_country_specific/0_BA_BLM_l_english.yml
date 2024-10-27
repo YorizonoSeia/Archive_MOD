@@ -7,6 +7,8 @@
  BLM_OUTLAWS: "이계의 무법자들"
  BLM_OUTLAWS_tt: "§R고급 신비 기술 연구 불가§!"
  BLM_backward_industry: "낙후된 산업"
+ BLM_backward_industry_1: "조잡한 산업 설비"
+ BLM_backward_industry_2: "범죄 산업"
  BLM_backward_research: "연구 시설 없음"
  BLM_anarchy: "무정부"
 
@@ -19,12 +21,13 @@
 
 
 #중점
+ BLM_dawn_of_bretagne_port: "브르타뉴 항구의 새벽"
+ BLM_crime_division_of_labor: "범죄 분업화"
+ BLM_smuggling_export_industry_expansion: "밀수출 산업 확대"
+ BLM_securing_drug_production_facilities: "마약 생산 시설 확보"
+ BLM_international_crime_port: "국제 범죄항구"
+ 
  BLM_Lawbreakers_of_Otherworld: "이계의 무법자들"
- BLM_ghlehd: "회동"
- BLM_Understanding_the_situation: "사태 파악"
- BLM_tpfur_rufwlq: "세력 걸집"
- BLM_Citizen_Control: "시민 통제 강화"
- BLM_light_in_the_shadows: "어둠 속에서 발하는 빛"
 
 
 

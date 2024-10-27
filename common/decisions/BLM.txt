@@ -55,11 +55,9 @@ BLM_black_market = {
 		fire_only_once = yes
 		complete_effect = {
 			custom_effect_tooltip = BLM_expansion_of_the_black_market_tt
-			custom_effect_tooltip = BLM_criminal_state_tt
-			add_to_variable = {
-				BLM_CS_military_factory_donations = 10
-			}
-			country_event = { id = BLM_hidden_event.1 days = 3 }
+		#	hidden_effect = {
+		#		country_event = { id = BLM_hidden_event.1 days = 3 }
+		#	}
 		}
 		cost = 10
 		ai_will_do = {

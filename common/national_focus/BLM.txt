@@ -10,14 +10,136 @@ focus_tree = {
 		}
 	}
 
+    focus = { #브르타뉴 항구의 새벽
+        id = BLM_dawn_of_bretagne_port
+        icon = GFX_goal_generic_positive_trade_relations
+        x = 14
+        y = 0
+        cost = 5
 
+        completion_reward = {
+			add_tech_bonus = {
+				name = BLM_dawn_of_bretagne_port
+				bonus = 2.0
+				uses = 2
+				category = industry
+			}
+        }
+    }
+
+    focus = { #범죄 분업화
+        id = BLM_crime_division_of_labor
+        icon = GFX_goal_generic_consumer_goods
+        prerequisite = {
+            focus = BLM_dawn_of_bretagne_port
+        }
+        x = -3
+        y = 1
+        relative_position_id = BLM_dawn_of_bretagne_port
+        cost = 5
+
+        completion_reward = {
+            if = {
+                limit = { has_idea = BLM_backward_industry }
+                swap_ideas = {
+                    remove_idea = BLM_backward_industry
+                    add_idea = BLM_backward_industry_1
+                }
+            }
+            else_if = {
+                limit = { has_idea = BLM_backward_industry_1 }
+                swap_ideas = {
+                    remove_idea = BLM_backward_industry_1
+                    add_idea = BLM_backward_industry_2
+                }
+            }
+            else_if = {
+                limit = { has_idea = BLM_backward_industry_2 }
+                remove_ideas = BLM_backward_industry_2
+            }
+        }
+    }
+
+    focus = { #밀수출 산업 확대
+        id = BLM_smuggling_export_industry_expansion
+        icon = GFX_goal_generic_trade
+        prerequisite = {
+            focus = BLM_dawn_of_bretagne_port
+        }
+        mutually_exclusive = {
+            focus = BLM_securing_drug_production_facilities
+        }
+        x = -1
+        y = 1
+        relative_position_id = BLM_dawn_of_bretagne_port
+        cost = 5
+
+        completion_reward = {
+            add_ideas = BLM_smuggling_export_industry_expansion
+        }
+    }
+
+    focus = { #마약 생산 시설 확보
+        id = BLM_securing_drug_production_facilities
+        icon = GFX_goal_generic_construct_civ_factory
+        prerequisite = {
+            focus = BLM_dawn_of_bretagne_port
+        }
+        mutually_exclusive = {
+            focus = BLM_smuggling_export_industry_expansion
+        }
+        x = 1
+        y = 1
+        relative_position_id = BLM_dawn_of_bretagne_port
+        cost = 5
+
+        completion_reward = {
+            random_owned_state = {
+                limit = {
+                    is_core_of = ROOT
+                }
+                add_extra_state_shared_building_slots = 3
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 3
+                }
+            }
+        }
+    }
+
+    focus = { #국제 범죄항구
+        id = BLM_international_crime_port
+        icon = GFX_goal_generic_construct_naval_dockyard
+        prerequisite = {
+            focus = BLM_securing_drug_production_facilities
+            focus = BLM_smuggling_export_industry_expansion
+        }
+        x = 0
+        y = 2
+        relative_position_id = BLM_dawn_of_bretagne_port
+        cost = 5
+
+        completion_reward = {
+            add_political_power = 60
+            random_owned_state = {
+                limit = {
+                    is_core_of = ROOT
+                }
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                }
+            }
+        }
+    }
 
     focus = { #이계의 무법자들
         id = BLM_Lawbreakers_of_Otherworld
         icon = GFX_focus_ITA_moschettieri_del_duce
-        x = 5
+        x = 25
         y = 0
-        cost = 3
+        cost = 5
 
         completion_reward = {
             add_political_power = 50
@@ -26,101 +148,6 @@ focus_tree = {
                 days = 7
             }
         }
-    }
-    focus = {
-        id = BLM_ghlehd #회동
-        icon = GFX_focus_POL_complete_april_constitution
-        x = 5
-        y = 1
-        cost = 2
-        prerequisite = {
-            focus = BLM_Lawbreakers_of_Otherworld
-        }
-
-        completion_reward = {
-            add_political_power = 30
-            add_stability = 0.03
-        }
-    }
-    focus = { #사태 파악
-        id = BLM_Understanding_the_situation
-        icon = GFX_focus_generic_low_cost_housing
-        x = 3
-        y = 2
-        cost = 2
-        prerequisite = {
-            focus = BLM_ghlehd
-        }
-        
-        completion_reward = {
-            add_stability = 0.03
-        }
-    }
-    focus = { #세력 결집
-        id = BLM_tpfur_rufwlq
-        icon = GFX_focus_NOR_empower_sivorg
-        x = 5
-        y = 2
-        cost = 2
-        prerequisite = {
-            focus = BLM_ghlehd
-        }
-
-        completion_reward = {
-            add_war_support = 0.03
-        }
-    }
-    focus = { #시민 통제 강화
-        id = BLM_Citizen_Control
-        icon = GFX_focus_LAT_suspend_constitution_of_latvia
-        x = 7
-        y = 2
-        cost = 2
-        prerequisite = {
-            focus = BLM_ghlehd
-        }
-
-        completion_reward = {
-            add_popularity = {
-                ideology = neutrality
-                popularity = 0.05
-            }
-        }
-    }
-    focus = { #그림자 속의 빛
-        id = BLM_light_in_the_shadows
-        icon = GFX_focus_SWE_counter_revolution
-        x = 5
-        y = 3
-        cost = 2
-        prerequisite = {
-            focus = BLM_Understanding_the_situation
-        }
-        prerequisite = {
-            focus = BLM_tpfur_rufwlq
-        }
-        prerequisite = {
-            focus = BLM_Citizen_Control
-        }
-
-        completion_reward = {
-        }
-    }
-    focus = {
-        id = BLM_Power_struggle
-        icon = GFX_focus_focus_fra_fascist_threat    
-        relative_position_id = BLM_light_in_the_shadows
-        x = 0
-        y = 1
-        cost = 5
-        prerequisite = {
-            focus = BLM_light_in_the_shadows
-        }
-        
-        completion_reward = {
-            
-        }
-    
     }
 
 }
