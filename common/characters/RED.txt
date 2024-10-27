@@ -419,7 +419,7 @@ characters = {
 			}
 		}
 		advisor = {
-			slot = high_command
+			slot = navy_chief
 			idea_token = RED_shigure_hot
 			name = RED_shigure
 			cost = 100
@@ -455,7 +455,7 @@ characters = {
 		}
 		
 		advisor = {
-			slot = high_command
+			slot = air_chief
 			idea_token = RED_meru
 			name = RED_meru
 			cost = 100

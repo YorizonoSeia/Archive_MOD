@@ -30,6 +30,24 @@ BA_highlander = { #하이랜더 철도학원
 		}
 		priority = 100
 	}
+	BA_press_highlander = { #하이랜더 압박
+		icon = GFX_decision_oppression
+		days_remove = 100
+		visible = {
+			controls_state = 6
+			has_idea = BA_highlander_academy_generic
+		}
+		cost = 5
+		complete_effect = {
+			if = {
+				limit = { NOT = { has_country_flag = BA_nationalized_highlander }}
+				custom_effect_tooltip = BA_highlander_invest_small_tt
+				add_to_variable = {
+					BA_highlander_invest = 2
+				}
+			}
+		}
+	}
 	BA_highlander_hide_list = { #목록 숨기기
 		icon = GFX_decision_generic_train
 		priority = -100

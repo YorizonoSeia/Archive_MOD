@@ -2370,6 +2370,10 @@ country_event = { #반파시즘 노동자전선
 		}
 		hidden_effect = {
 			scoped_play_song = march_of_the_defenders
+			country_event = {
+				id = RED_event.30
+				days = 5
+			}
 		}
 	}
 }
@@ -2776,6 +2780,44 @@ country_event = { #인구 문제
 			add_manpower = 1500000
 		}
 		activate_mission = RED_population_issue_no_food
+	}
+}
+country_event = { #주자파
+	id = RED_event.33
+	title = RED_event.33.t
+	desc = RED_event.33.d
+	fire_only_once = yes
+	trigger = {
+		tag = RED
+		democratic > 0.15
+		has_country_flag = BA_ban_democratic_parties_flag
+	}
+	option = {
+		name = RED_event.33.a
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}
+		add_stability = -0.05
+		set_party_name = {
+			ideology = democratic
+			long_name = RED_capitalist_roader_name
+			name = RED_capitalist_roader_name
+		}
+		add_ideas = RED_capitalist_roader
+		clr_country_flag = BA_ban_democratic_parties_flag
+	}
+}
+country_event = { #주자파 해산
+	id = RED_event.34
+	title = RED_event.34.t
+	desc = RED_event.34.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = RED_event.34.a
+		add_stability = 0.05
+		BA_ban_democratic_effect = yes
 	}
 }
 

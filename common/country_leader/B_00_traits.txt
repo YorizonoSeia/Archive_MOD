@@ -3007,11 +3007,9 @@ leader_traits = {
 	}
 	RED_syndicalism_meal = { #급양노조
 		random = no
-		org_loss_at_low_org_factor = -0.1
-		experience_loss_factor = -0.15
-		org_loss_when_moving = -0.05
-		army_morale_factor = 0.05
-		mobilization_speed = 0.1
+		stability_factor = 0.05
+		political_power_gain = 0.1
+		war_support_factor = 0.05
 	}
 	RED_syndicalism_three_day_work = { #주 3일제
 		random = no

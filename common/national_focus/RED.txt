@@ -316,7 +316,7 @@ focus_tree = {
 				}
 			}
 			effect_tooltip = {
-				unlock_national_focus = RED_economy_focus_1
+				unlock_national_focus = RED_rearming_focus_5
 			}
 		}
 	}
@@ -1667,9 +1667,11 @@ focus_tree = {
 			RED_momiji = {
 				remove_trait = {
 					trait = RED_momiji_trait
+					slot = political_advisor
 				}
 				add_trait = {
 					trait = RED_momiji_trait_good
+					slot = political_advisor
 				}
 			}
 		}
@@ -1698,9 +1700,11 @@ focus_tree = {
 			RED_meru = {
 				remove_trait = {
 					trait = RED_meru_trait
+					slot = political_advisor
 				}
 				add_trait = {
 					trait = RED_meru_trait_vanguard
+					slot = political_advisor
 				}
 			}
 		}
@@ -1729,9 +1733,11 @@ focus_tree = {
 			RED_meru = {
 				remove_trait = {
 					trait = RED_meru_trait
+					slot = political_advisor
 				}
 				add_trait = {
 					trait = RED_meru_trait_realism
+					slot = political_advisor
 				}
 			}
 		}
@@ -1759,9 +1765,11 @@ focus_tree = {
 			RED_meru = {
 				remove_trait = {
 					trait = RED_meru_trait
+					slot = political_advisor
 				}
 				add_trait = {
 					trait = RED_meru_trait_money
+					slot = political_advisor
 				}
 			}
 		}
@@ -2738,9 +2746,11 @@ focus_tree = {
 			RED_yakumo = {
 				remove_trait = {
 					trait = RED_yakumo_trait
+					slot = political_advisor
 				}
 				add_trait = {
 					trait = RED_yakumo_trait_hero
+					slot = political_advisor
 				}
 			}
 		}
@@ -2815,9 +2825,11 @@ focus_tree = {
 			RED_yakumo = {
 				remove_trait = {
 					trait = RED_yakumo_trait
+					slot = political_advisor
 				}
 				add_trait = {
 					trait = RED_yakumo_trait_col
+					slot = political_advisor
 				}
 			}
 		}
@@ -2948,9 +2960,11 @@ focus_tree = {
 			RED_takane = {
 				remove_trait = {
 					trait = editor
+					slot = political_advisor
 				}
 				add_trait = {
 					trait = RED_takane_trait_1
+					slot = political_advisor
 				}
 			}
 		}
@@ -2995,9 +3009,11 @@ focus_tree = {
 			RED_takane = {
 				remove_trait = {
 					trait = editor
+					slot = political_advisor
 				}
 				add_trait = {
 					trait = RED_takane_trait_2
+					slot = political_advisor
 				}
 			}
 		}
@@ -6455,12 +6471,12 @@ focus_tree = {
 		id = RED_soldier_union
 		icon = GFX_focus_NORDIC_com_selector_army
 		prerequisite = {
-			focus = RED_mil-ind_complex
+			focus = RED_military_union
 		}
 		relative_position_id = RED_industrial_union
 		cost = 5
-		x = -2
-		y = 4
+		x = -1
+		y = 3
 		completion_reward = {
 			if = {
 				limit = {
@@ -6554,7 +6570,7 @@ focus_tree = {
 			focus = RED_housing_committee
 		}
 		prerequisite = {
-			focus = RED_gun_gaebal
+			focus = RED_soldier_union
 		}
 		relative_position_id = RED_Civilian_factory_union
 		cost = 5
@@ -6583,18 +6599,28 @@ focus_tree = {
 
 		}
 	}
-	focus = { #급양노조
+	focus = { #언론 노조
 		id = RED_gun_gaebal
-		icon = GFX_focus_prc_agrarian_socialism
+		icon = GFX_focus_NORDIC_com_institution_1
 		prerequisite = {
-			focus = RED_military_union
+			focus = RED_mil-ind_complex
 		}
 		relative_position_id = RED_infrastructure_union
 		cost = 5
-		x = -2
-		y = 2
+		x = -3
+		y = 3
 		completion_reward = {
 			add_ideas = RED_meal_union
+			RED_takane = {
+				remove_trait = {
+					trait = editor
+					slot = political_advisor
+				}
+				add_trait = {
+					trait = RED_takane_trait_2
+					slot = political_advisor
+				}
+			}
 		}	
 	}
 	focus = { #노동해방을 향해서
@@ -6603,14 +6629,14 @@ focus_tree = {
 		prerequisite = {
 			focus = RED_revolution_city
 		}prerequisite = {
-			focus = RED_soldier_union
+			focus = RED_gun_gaebal
 		}prerequisite = {
 			focus = RED_combine_of_edu_and_labor
 		}
 		relative_position_id = RED_gun_gaebal
 		cost = 2
-		x = 1
-		y = 2
+		x = 2
+		y = 1
 		completion_reward = {
 			country_event = { id = RED_event.17 days = 3 }
 		}
@@ -7851,7 +7877,7 @@ focus_tree = {
 		x = 5
 		y = 0
 		relative_position_id = RED_army_production_improve
-		cost = 44
+		cost = 4
 		prerequisite = {
 			focus = RED_rearming_focus_0
 		}
@@ -9925,6 +9951,8 @@ focus_tree = {
 							x = 4
 							y = 2
 						}
+					}
+					support = {
 						anti_tank = {
 							x = 0
 							y = 0
@@ -10202,10 +10230,13 @@ focus_tree = {
 							x = 3
 							y = 2
 						}
+					}
+					support = {
 						rocket_artillery = {
 							x = 0
 							y = 0
 						}
+						
 					}
 				}
 				random_owned_controlled_state = {
@@ -10321,10 +10352,13 @@ focus_tree = {
 							x = 3
 							y = 2
 						}
+					}
+					support = {
 						anti_air = {
 							x = 0
 							y = 0
 						}
+						
 					}
 				}
 				random_owned_controlled_state = {

@@ -5849,6 +5849,12 @@ country_event = {
 			id = "RED"
 			value = 80
 		}
+		hidden_effect = {
+			country_event = {
+				id = RED_event.30
+				days = 5
+			}
+		}
 	}
 }
 

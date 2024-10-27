@@ -1,5 +1,15 @@
 ideas = {
     country = {
+		RED_capitalist_roader = { #주자파 결집
+			picture = generic_democratic_drift_bonus
+			modifier = {
+				democratic_drift = 0.02
+				custom_modifier_tooltip = RED_capitalist_roader_tt
+			}
+			cancel = {
+				democratic < 0.05
+			}
+		}
 		RED_famine = { #대기근
 			picture = raj_risk_of_famine
 			modifier = {
@@ -1559,7 +1569,7 @@ ideas = {
 				trade_opinion_factor = 0.1
 			}
 		}
-		RED_meal_union = { #급양노조
+		RED_meal_union = { #언론노조
 			name = RED_gun_gaebal
 			picture = generic_agrarian_reform
 			removal_cost = -1
@@ -1568,11 +1578,9 @@ ideas = {
 				always = no
 			}
 			modifier = {
-				org_loss_at_low_org_factor = -0.1
-				experience_loss_factor = -0.15
-				org_loss_when_moving = -0.05
-				army_morale_factor = 0.05
-				mobilization_speed = 0.1
+				stability_factor = 0.05
+				political_power_gain = 0.1
+				war_support_factor = 0.05
 			}
 		}
 		RED_war_mobil = { #전시 동원

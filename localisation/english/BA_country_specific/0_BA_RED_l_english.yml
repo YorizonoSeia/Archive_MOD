@@ -408,8 +408,8 @@
  RED_Civilian_factory_union_desc: "붉은겨울의 노동자들은 대부분이 제조산업에 종사중입니다. 이들의 요구를 관철하고 이들의 의견을 잘 경청하기 위해선 제조노조의 설립을 적극적으로 추진해야합니다."
  RED_infrastructure_union: "건설노조"
  RED_infrastructure_union_desc: "현 의회의 전신 중 하나인 '붉은겨울 용역부'는 키보토스에 있을 때부터 토목 공사에 일가견이 있는 동아리였습니다. 이들은 건설노조의 설립에 많은 도움을 줄 것입니다."
- RED_gun_gaebal: "급양노조"
- RED_gun_gaebal_desc: "급양부는 체리노 일당의 압제에 맞서 우리와 연대한 동아리였고, 우리 정부에 충성하는 인물들이 많이 존재합니다. 이들의 노고를 치하하며 '급양노조'를 결성하여 이들의 권리를 보장해야 합니다."
+ RED_gun_gaebal: "언론노조"
+ RED_gun_gaebal_desc: ""
  RED_soldier_union: "병사노조"
  RED_soldier_union_desc: "전쟁의 전선에서 싸우는 병사들 또한 불합리한 요구에 반대하고자 연대할 필요가 있습니다. 혁명전쟁의 젊은 영웅들이 주축이 되어 만들어진 병사노조는 병사들의 권익을 위해 투쟁할 것입니다."
  RED_mil-ind_complex: "사무노조"
@@ -830,6 +830,12 @@
  RED_event.32.t: "인구 문제"
  RED_event.32.d: "대전이로 인해 수백만의 학생이 그대로 이곳에 오게 되었습니다. 유감스럽게도, 이곳의 한계는 명확했습니다. 학생들은 도시에서 포화된 인구로 인해 고통받고 있으며, 이는 대규모 소요와 경제, 질서, 행정의 붕괴로 이어질 여지가 충분합니다."
  RED_event.32.a: "어떻게든 해결해야 한다!"
+ RED_event.33.t: "주자파의 결집"
+ RED_event.33.d: "자본주의 노선을 주장하는 주자파들이 성장하고 있는 것이 분명합니다. 우리는 이들을 억제해야 합니다!"
+ RED_event.33.a: "골치아프군."
+ RED_event.34.t: "와해된 주자파"
+ RED_event.34.d: "적극적인 반자본주의 캠페인 덕분에 주자파가 와해되었습니다."
+ RED_event.34.a: "다행이군,"
 
 #이벤트/군정청 붕괴
  RED_instability_system.1.a: "이거 보이면 버그임"
@@ -1123,6 +1129,9 @@
 
  RED_population_saturation: "포화 상태의 도시"
  RED_famine: "대기근"
+ RED_capitalist_roader: "주자파 결집"
+ RED_capitalist_roader_tt: "\n조건 충족시 제거 : §Y민주주의 지지율§!이 §Y5%§! 이하"
+ RED_capitalist_roader_name: "주자파"
 
  RED_fake_money: "위조지폐로 인한 경제 파탄"
  RED_fake_money_tt: "\n조건 충족시 제거 : §Y전쟁 중§!이 아님 또는 §Y총동원령§! 보유"
@@ -1242,7 +1251,7 @@
  RED_prepare_revolutionary_war_7: "혁명전쟁 대비: 사회주의 혁명정신 선전"
  RED_prepare_revolutionary_war_8: "혁명전쟁 대비: 중앙정보위원회 창설"
  RED_agency_name: "중앙정보위원회"
- RED_prepare_revolutionary_war_9: "혁명전쟁 대비: 노동사회과학연구소"
+ RED_prepare_revolutionary_war_9: "혁명전쟁 대비: 혁명방위연구소"
  RED_prepare_revolutionary_war_10: "혁명전쟁 대비: 국방기획"
  RED_prepare_revolutionary_war_11: "혁명전쟁 대비: 동부 해안 요새화"
  RED_prepare_revolutionary_war_12: "혁명전쟁 대비: 서부 해안 요새화"
