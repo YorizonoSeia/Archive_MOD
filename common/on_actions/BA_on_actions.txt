@@ -113,6 +113,14 @@ on_actions = {
             }
 			RED = {
 				country_event = {
+					id = RED_marina_event.7
+					days = 187
+				}
+				country_event = {
+					id = RED_marina_event.4
+					days = 187
+				}
+				country_event = {
 					id = RED_minori_event.4
 					days = 120
 				}

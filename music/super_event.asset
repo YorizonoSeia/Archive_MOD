@@ -148,3 +148,8 @@ music = { # 트리니티 교가
 	file = "super_event/Trinity_school_song.ogg"
 	volume = 0.90
 }
+music = { # 쇼와유신의 노래
+	name = "BA_showa_isin"
+	file = "super_event/showa_isin.ogg"
+	volume = 0.90
+}

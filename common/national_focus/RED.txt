@@ -1839,7 +1839,7 @@ focus_tree = {
 	focus = { # 227호 특별반 회유
 		id = RED_club_focus_4
 
-		icon = GFX_focus_generic_concessions
+		icon = GFX_focus_shigure
 		prerequisite = { focus = RED_club_focus_3 }
 		x = 1
 		y = 3
@@ -1983,7 +1983,7 @@ focus_tree = {
 				}
 				OR = {
 					has_completed_focus = RED_accept_trotskism
-					has_completed_focus = RED_ivan_kupla
+					has_completed_focus = RED_no_error_at_ideology
 				}
 			}
 		}
@@ -2005,7 +2005,7 @@ focus_tree = {
 			focus = RED_our_leader_cherino
 		}
 		mutually_exclusive = {
-			focus = RED_ivan_kupla
+			focus = RED_no_error_at_ideology
 		}
 		available = {
 			NOT = {
@@ -2043,7 +2043,7 @@ focus_tree = {
 					}
 				}
 				NOT = { 
-					has_completed_focus = RED_ivan_kupla 
+					has_completed_focus = RED_no_error_at_ideology 
 					has_completed_focus = RED_dipose_cherino
 				}
 			}
@@ -3926,9 +3926,9 @@ focus_tree = {
 	}
 
 # 마리나 루트
-	focus = { # 이반 쿠팔라
-		id = RED_ivan_kupla
-		icon = GFX_goal_generic_war_with_comintern
+	focus = { # 이념의 무결성을 좇아
+		id = RED_no_error_at_ideology
+		icon = GFX_focus_CHL_union_of_hispanic_republics
 		prerequisite = {
 			focus = RED_our_leader_cherino
 		}
@@ -3936,13 +3936,11 @@ focus_tree = {
 			focus = RED_accept_trotskism
 		}
 		available = {
-			NOT = {
-				has_country_flag = RED_there_is_coup_flag
-			}
+			date < 1936.5.1
 		}
 		x = 22
 		y = 0
-
+		cancelable = no
 		relative_position_id = RED_accept_trotskism
 
 		cost = 5
@@ -3955,7 +3953,7 @@ focus_tree = {
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
 				}
-				has_completed_focus = RED_ivan_kupla
+				has_completed_focus = RED_no_error_at_ideology
 			}
 		}
 
@@ -3977,14 +3975,48 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		select_effect = {
+			country_event = {
+				id = RED_marina_event.1
+				days = 10
+			}
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			mark_focus_tree_layout_dirty = yes
+			add_war_support = 0.05
+		}
+	}
+	focus = { # 이반 쿠팔라
+		id = RED_ivan_kupla
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = {
+			focus = RED_no_error_at_ideology
+		}
+		available = {
+			always = no
+		}
+		x = 0
+		y = 1
+
+		relative_position_id = RED_no_error_at_ideology
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
 
 		available_if_capitulated = yes
 
 		completion_reward = {
-			custom_effect_tooltip = RED_ivan_kupla_tt
-			add_political_power = 75
-			
-            mark_focus_tree_layout_dirty = yes
+			hidden_effect = {
+				country_event = {
+					id = RED_marina_event.8
+					hours = 2
+				}
+			}
 		}
 	}
 	focus = { #강경 수단
@@ -4003,7 +4035,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			#이벤트 발생
-			promote_character = RED_marina
 			set_party_name = {
 				ideology = communism
 				long_name = RedWinterSecurityCommittee

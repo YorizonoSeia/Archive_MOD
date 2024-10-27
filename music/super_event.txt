@@ -284,3 +284,10 @@ music = {
         factor = 0
     }
 }
+music = {
+    song = "BA_showa_isin"
+    chance = {
+        factor = 0
+    }
+}
+

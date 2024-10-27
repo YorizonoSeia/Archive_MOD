@@ -77,6 +77,10 @@ ideas = {
 			}
 			on_remove = {
 				set_country_flag = RED_population_issue_solved_flag
+				country_event = {
+					id = RED_event.35
+					days = 5
+				}
 			}
 		}
 		RED_biochemical = { #살포된 생화학 무기
@@ -1229,6 +1233,31 @@ ideas = {
 				surrender_limit = -0.15
 			}
 		}
+		RED_busy_security_committee = { #분주한 보안위원회
+			picture = generic_communist_army
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			modifier = {
+				political_power_factor = -0.15
+				stability_factor = -0.3
+				war_support_factor = -0.15
+				surrender_limit = -0.15
+			}
+			on_remove = {
+				if = {
+					limit = {
+						NOT = { has_completed_focus = RED_dipose_cherino }
+						NOT = { has_completed_focus = RED_no_error_at_ideology }
+					}
+					country_event = {
+						id = RED_event.28
+						days = 3
+					}
+				}
+			}
+		}
 		RED_threat_of_coup = { #쿠데타의 위협
 			name = RED_threat_of_coup
 
@@ -1247,6 +1276,7 @@ ideas = {
 				if = {
 					limit = {
 						NOT = { has_completed_focus = RED_dipose_cherino }
+						NOT = { has_completed_focus = RED_no_error_at_ideology }
 					}
 					country_event = {
 						id = RED_event.28

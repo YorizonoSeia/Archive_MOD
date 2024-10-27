@@ -202,7 +202,12 @@ characters = {
 				small = "GFX_idea_SOV_lev_trotsky"
 			}
 		}
-		
+		country_leader = {
+			ideology = trotskyism
+			traits = {
+				permanent_revolutionary
+			}
+		}
 		advisor = {
 			slot = political_advisor
 			idea_token = RED_lev_trotsky_pol
@@ -275,7 +280,12 @@ characters = {
 				small= "gfx/interface/advisors/RED/RED_Yakumo.tga"
 			}
 		}
-
+		country_leader = {
+			ideology = stalinism
+			traits = {
+				RED_yakumo_trait
+			}
+		}
 		advisor = {
 			slot = political_advisor
 			idea_token = RED_yakumo
@@ -393,6 +403,9 @@ characters = {
 				small= "gfx/interface/advisors/RED/hehzk.dds"
 			}
 		}
+		country_leader = {
+			ideology = stalinism
+		}
 		corps_commander = {
 			traits = { winter_specialist alcoholic }
 			skill = 1
@@ -453,7 +466,12 @@ characters = {
 				small= "gfx/interface/advisors/RED/meru.dds"
 			}
 		}
-		
+		country_leader = {
+			ideology = stalinism
+			traits = {
+				RED_meru_trait
+			}
+		}
 		advisor = {
 			slot = air_chief
 			idea_token = RED_meru

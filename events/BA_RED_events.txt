@@ -5,6 +5,863 @@ add_namespace = RED_military_government_occupation
 add_namespace = RED_minori_event
 add_namespace = RED_missions
 add_namespace = RED_missions_char
+add_namespace = RED_marina_event
+
+country_event = { #피로한 마리나 - 1
+	id = RED_marina_event.1
+	title = RED_marina_event.1.t
+	desc = RED_marina_event.1.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = RED_marina_event.1.a
+		add_political_power = -1
+		hidden_effect = {
+			country_event = {
+				id = RED_marina_event.2
+				days = 10
+			}
+		}
+	}
+}
+country_event = { #피로한 마리나 - 2
+	id = RED_marina_event.2
+	title = RED_marina_event.2.t
+	desc = RED_marina_event.2.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = RED_marina_event.2.a
+		add_political_power = -1
+		hidden_effect = {
+			country_event = {
+				id = RED_marina_event.3
+				days = 10
+			}
+		}
+	}
+}
+country_event = { #피로한 마리나 - 3
+	id = RED_marina_event.3
+	title = RED_marina_event.3.t
+	desc = RED_marina_event.3.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = RED_marina_event.3.a
+		add_political_power = -1
+		hidden_effect = {
+			country_event = {
+				id = RED_marina_event.5
+				days = 10
+			}
+		}
+	}
+}
+country_event = { #이반 쿠팔라 - 해피해피
+	id = RED_marina_event.4
+	title = RED_marina_event.4.t
+	desc = RED_marina_event.4.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		NOT = {
+			has_completed_focus = RED_no_error_at_ideology
+		}
+	}
+	option = {
+		name = RED_marina_event.4.a
+		add_political_power = 1
+	}
+}
+country_event = { #피로한 마리나 - 4
+	id = RED_marina_event.5
+	title = RED_marina_event.5.t
+	desc = RED_marina_event.5.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = RED_marina_event.5.a
+		swap_ideas = {
+			remove_idea = RED_threat_of_coup
+			add_idea = RED_busy_security_committee
+		}
+		hidden_effect = {
+			country_event = {
+				id = RED_marina_event.6
+				days = 10
+			}
+		}
+	}
+}
+country_event = { #피로한 마리나 - 5
+	id = RED_marina_event.6
+	title = RED_marina_event.6.t
+	desc = RED_marina_event.6.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = RED_marina_event.6.a
+	}
+}
+country_event = { #이반 쿠팔라 - 새드새드
+	id = RED_marina_event.7
+	title = RED_marina_event.7.t
+	desc = RED_marina_event.7.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		has_completed_focus = RED_no_error_at_ideology
+	}
+	option = {
+		name = RED_marina_event.7.a
+		complete_national_focus = RED_ivan_kupla
+	}
+}
+country_event = { #여름 - 1
+	id = RED_marina_event.8
+	title = RED_marina_event.8.t
+	desc = RED_marina_event.8.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		hidden_effect = {
+			scoped_play_song = BA_showa_isin
+		}
+	}
+	option = {
+		name = RED_marina_event.8.a
+		hidden_effect = {
+			country_event = {
+				id = RED_marina_event.9
+				hours = 6
+			}
+		}
+	}
+}
+country_event = { #여름 - 2
+	id = RED_marina_event.9
+	title = RED_marina_event.9.t
+	desc = RED_marina_event.9.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = RED_marina_event.9.a
+		promote_character = RED_marina
+		retire_character = RED_Tomoe
+		set_cosmetic_tag = RED_marina_government
+		set_party_name = {
+			ideology = communism
+			long_name = RED_wartime_judicial_commission
+			name = RED_wartime_judicial_commission
+		}
+		annex_country = {
+			target = RE1
+		}
+		annex_country = {
+			target = RE2
+		}
+		annex_country = {
+			target = RE3
+		}
+		hidden_effect = {
+			country_event = {
+				id = RED_marina_event.10
+				hours = 3
+			}
+		}
+	}
+}
+country_event = { #여름 - 3
+	id = RED_marina_event.10
+	title = RED_marina_event.10.t
+	desc = RED_marina_event.10.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = RED_marina_event.10.a
+		delete_units = {
+			division_template = "Redwinter Garde populaire"
+		}
+		every_state = {
+			limit = {
+				is_owned_by = RED
+				NOT = {
+					state = 141
+				}
+			}
+			set_demilitarized_zone = yes
+		}
+		hidden_effect = {
+			country_event = {
+				id = RED_marina_event.11
+				hours = 1
+			}
+			country_event = {
+				id = RED_marina_event.12
+				hours = 3
+			}
+			country_event = {
+				id = RED_marina_event.13
+				hours = 5
+			}
+			country_event = {
+				id = RED_marina_event.14
+				hours = 7
+			}
+			country_event = {
+				id = RED_marina_event.15
+				hours = 9
+			}
+			country_event = {
+				id = RED_marina_event.16
+				hours = 11
+			}
+			country_event = {
+				id = RED_marina_event.17
+				hours = 13
+			}
+		}
+	}
+}
+country_event = { #용역부 봉기
+	id = RED_marina_event.11
+	title = RED_marina_event.11.t
+	desc = RED_marina_event.11.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = RED_marina_event.11.a 
+		RED_minori = {
+			set_nationality = RE1
+		}
+		RE1 = {
+			set_cosmetic_tag = RE1_public_work
+			transfer_state = 99
+			transfer_state = 912
+			transfer_state = 911
+			transfer_state = 37
+			promote_character = RED_minori
+			hidden_effect = {
+				remove_ideas = RED_democratic_resistancel_idea
+				remove_ideas = RED_military_government_idea_1
+				set_capital = {
+					state = 99
+				}
+				division_template = {
+					priority = 1
+					name = "Red winter army"
+					regiments = {
+						infantry = {
+							x = 0
+							y = 0
+						}
+						infantry = {
+							x = 0
+							y = 1
+						}
+						infantry = {
+							x = 0
+							y = 2
+						}
+						infantry = {
+							x = 1
+							y = 0
+						}
+						infantry = {
+							x = 1
+							y = 1
+						}
+						infantry = {
+							x = 1
+							y = 2
+						}
+						infantry = {
+							x = 2
+							y = 0
+						}
+						infantry = {
+							x = 2
+							y = 1
+						}
+						infantry = {
+							x = 2
+							y = 2
+						}
+					}
+				}
+				every_owned_state = {
+					create_unit = {
+						division = "name = \"Red winter army\" division_template = \"Red winter army\" start_experience_factor = 1 start_equipment_factor = 1"
+						owner = prev
+					}
+					create_unit = {
+						division = "name = \"Red winter army\" division_template = \"Red winter army\" start_experience_factor = 1 start_equipment_factor = 1"
+						owner = prev
+					}
+				}
+				capital_scope = {
+					create_unit = {
+						division = "name = \"Red winter army\" division_template = \"Halo Infantry Division\" start_experience_factor = 1 start_equipment_factor = 1"
+						owner = prev
+					}
+				}
+				capital_scope = {
+					create_unit = {
+						division = "name = \"Red winter army\" division_template = \"Halo Infantry Division\" start_experience_factor = 1 start_equipment_factor = 1"
+						owner = prev
+					}
+				}
+			}
+			every_owned_state = {
+				set_demilitarized_zone = no
+			}
+		}
+	}
+}
+country_event = { #지식해방전선 봉기
+	id = RED_marina_event.12
+	title = RED_marina_event.12.t
+	desc = RED_marina_event.11.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = RED_marina_event.11.a 
+		RED_momiji = {
+			set_nationality = RE5
+		}
+		RED_meru = {
+			set_nationality = RE5
+		}
+		RE5 = {
+			set_cosmetic_tag = RE5_knowledge
+			transfer_state = 913
+			promote_character = RED_meru
+			hidden_effect = {
+				division_template = {
+					priority = 1
+					name = "Red winter army"
+					regiments = {
+						infantry = {
+							x = 0
+							y = 0
+						}
+						infantry = {
+							x = 0
+							y = 1
+						}
+						infantry = {
+							x = 0
+							y = 2
+						}
+						infantry = {
+							x = 1
+							y = 0
+						}
+						infantry = {
+							x = 1
+							y = 1
+						}
+						infantry = {
+							x = 1
+							y = 2
+						}
+						infantry = {
+							x = 2
+							y = 0
+						}
+						infantry = {
+							x = 2
+							y = 1
+						}
+						infantry = {
+							x = 2
+							y = 2
+						}
+					}
+				}
+				every_owned_state = {
+					create_unit = {
+						division = "name = \"Red winter army\" division_template = \"Red winter army\" start_experience_factor = 1 start_equipment_factor = 1"
+						owner = prev
+					}
+					create_unit = {
+						division = "name = \"Red winter army\" division_template = \"Red winter army\" start_experience_factor = 1 start_equipment_factor = 1"
+						owner = prev
+					}
+				}
+				capital_scope = {
+					create_unit = {
+						division = "name = \"Red winter army\" division_template = \"Halo Infantry Division\" start_experience_factor = 1 start_equipment_factor = 1"
+						owner = prev
+					}
+				}
+				capital_scope = {
+					create_unit = {
+						division = "name = \"Red winter army\" division_template = \"Halo Infantry Division\" start_experience_factor = 1 start_equipment_factor = 1"
+						owner = prev
+					}
+				}
+			}
+			every_owned_state = {
+				set_demilitarized_zone = no
+			}
+		}
+	}
+}
+country_event = { #출판부 봉기
+	id = RED_marina_event.13
+	title = RED_marina_event.13.t
+	desc = RED_marina_event.11.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = RED_marina_event.11.a 
+		RED_yakumo = {
+			set_nationality = RE7
+		}
+		RED_takane = {
+			set_nationality = RE7
+		}
+		RE7 = {
+			set_cosmetic_tag = RE7_press
+			transfer_state = 916
+			promote_character = RED_yakumo
+			hidden_effect = {
+				division_template = {
+					priority = 1
+					name = "Red winter army"
+					regiments = {
+						infantry = {
+							x = 0
+							y = 0
+						}
+						infantry = {
+							x = 0
+							y = 1
+						}
+						infantry = {
+							x = 0
+							y = 2
+						}
+						infantry = {
+							x = 1
+							y = 0
+						}
+						infantry = {
+							x = 1
+							y = 1
+						}
+						infantry = {
+							x = 1
+							y = 2
+						}
+						infantry = {
+							x = 2
+							y = 0
+						}
+						infantry = {
+							x = 2
+							y = 1
+						}
+						infantry = {
+							x = 2
+							y = 2
+						}
+					}
+				}
+				every_owned_state = {
+					create_unit = {
+						division = "name = \"Red winter army\" division_template = \"Red winter army\" start_experience_factor = 1 start_equipment_factor = 1"
+						owner = prev
+					}
+					create_unit = {
+						division = "name = \"Red winter army\" division_template = \"Red winter army\" start_experience_factor = 1 start_equipment_factor = 1"
+						owner = prev
+					}
+				}
+				capital_scope = {
+					create_unit = {
+						division = "name = \"Red winter army\" division_template = \"Halo Infantry Division\" start_experience_factor = 1 start_equipment_factor = 1"
+						owner = prev
+					}
+				}
+				capital_scope = {
+					create_unit = {
+						division = "name = \"Red winter army\" division_template = \"Halo Infantry Division\" start_experience_factor = 1 start_equipment_factor = 1"
+						owner = prev
+					}
+				}
+			}
+			every_owned_state = {
+				set_demilitarized_zone = no
+			}
+		}
+	}
+}
+country_event = { #구교사 봉기
+	id = RED_marina_event.14
+	title = RED_marina_event.14.t
+	desc = RED_marina_event.11.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = RED_marina_event.11.a 
+		RED_shigure = {
+			set_nationality = RE3
+		}
+		RED_nodoka = {
+			set_nationality = RE3
+		}
+		RED_shigure_hot = {
+			set_nationality = RE3
+		}
+		RED_nodoka_hot = {
+			set_nationality = RE3
+		}
+		transfer_navy = {
+			target = RE3
+		}
+		RE3 = {
+			remove_ideas = RED_democratic_resistancel_idea
+			remove_ideas = RED_military_government_idea_1
+			set_cosmetic_tag = RE3_227
+			transfer_state = 917
+			transfer_state = 923
+			transfer_state = 918
+			transfer_state = 38
+			promote_character = RED_shigure
+			hidden_effect = {
+				set_capital = {
+					state = 917
+				}
+				division_template = {
+					priority = 1
+					name = "Red winter army"
+					regiments = {
+						infantry = {
+							x = 0
+							y = 0
+						}
+						infantry = {
+							x = 0
+							y = 1
+						}
+						infantry = {
+							x = 0
+							y = 2
+						}
+						infantry = {
+							x = 1
+							y = 0
+						}
+						infantry = {
+							x = 1
+							y = 1
+						}
+						infantry = {
+							x = 1
+							y = 2
+						}
+						infantry = {
+							x = 2
+							y = 0
+						}
+						infantry = {
+							x = 2
+							y = 1
+						}
+						infantry = {
+							x = 2
+							y = 2
+						}
+					}
+				}
+				every_owned_state = {
+					create_unit = {
+						division = "name = \"Red winter army\" division_template = \"Red winter army\" start_experience_factor = 1 start_equipment_factor = 1"
+						owner = prev
+					}
+					create_unit = {
+						division = "name = \"Red winter army\" division_template = \"Red winter army\" start_experience_factor = 1 start_equipment_factor = 1"
+						owner = prev
+					}
+				}
+				capital_scope = {
+					create_unit = {
+						division = "name = \"Red winter army\" division_template = \"Halo Infantry Division\" start_experience_factor = 1 start_equipment_factor = 1"
+						owner = prev
+					}
+				}
+				capital_scope = {
+					create_unit = {
+						division = "name = \"Red winter army\" division_template = \"Halo Infantry Division\" start_experience_factor = 1 start_equipment_factor = 1"
+						owner = prev
+					}
+				}
+			}
+			every_owned_state = {
+				set_demilitarized_zone = no
+			}
+		}
+	}
+}
+country_event = { #노르웨이 소비에트
+	id = RED_marina_event.15
+	title = RED_marina_event.15.t
+	desc = RED_marina_event.11.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = RED_marina_event.11.a 
+		RED_lev_trotsky = {
+			set_nationality = RE2
+		}
+		RE2 = {
+			remove_ideas = RED_democratic_resistancel_idea
+			remove_ideas = RED_military_government_idea_1
+			set_cosmetic_tag = RE2_nor_sov
+			transfer_state = 920
+			transfer_state = 921
+			transfer_state = 142
+			transfer_state = 110
+			transfer_state = 922
+			transfer_state = 143
+			promote_character = RED_lev_trotsky
+			hidden_effect = {
+				division_template = {
+					priority = 1
+					name = "Red winter army"
+					regiments = {
+						infantry = {
+							x = 0
+							y = 0
+						}
+						infantry = {
+							x = 0
+							y = 1
+						}
+						infantry = {
+							x = 0
+							y = 2
+						}
+						infantry = {
+							x = 1
+							y = 0
+						}
+						infantry = {
+							x = 1
+							y = 1
+						}
+						infantry = {
+							x = 1
+							y = 2
+						}
+						infantry = {
+							x = 2
+							y = 0
+						}
+						infantry = {
+							x = 2
+							y = 1
+						}
+						infantry = {
+							x = 2
+							y = 2
+						}
+					}
+				}
+				every_owned_state = {
+					create_unit = {
+						division = "name = \"Red winter army\" division_template = \"Red winter army\" start_experience_factor = 1 start_equipment_factor = 1"
+						owner = prev
+					}
+					create_unit = {
+						division = "name = \"Red winter army\" division_template = \"Red winter army\" start_experience_factor = 1 start_equipment_factor = 1"
+						owner = prev
+					}
+					create_unit = {
+						division = "name = \"Red winter army\" division_template = \"Red winter army\" start_experience_factor = 1 start_equipment_factor = 1"
+						owner = prev
+					}
+					create_unit = {
+						division = "name = \"Red winter army\" division_template = \"Red winter army\" start_experience_factor = 1 start_equipment_factor = 1"
+						owner = prev
+					}
+					create_unit = {
+						division = "name = \"Red winter army\" division_template = \"Red winter army\" start_experience_factor = 1 start_equipment_factor = 1"
+						owner = prev
+					}
+					create_unit = {
+						division = "name = \"Red winter army\" division_template = \"Red winter army\" start_experience_factor = 1 start_equipment_factor = 1"
+						owner = prev
+					}
+				}
+			}
+			every_owned_state = {
+				set_demilitarized_zone = no
+			}
+		}
+	}
+}
+country_event = { #사프미 공동체 봉기
+	id = RED_marina_event.16
+	title = RED_marina_event.16.t
+	desc = RED_marina_event.11.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = RED_marina_event.11.a 
+		SMI = {
+			transfer_state = 666
+			transfer_state = 144
+			transfer_state = 924
+			hidden_effect = {
+				division_template = {
+					priority = 1
+					name = "Red winter army"
+					regiments = {
+						infantry = {
+							x = 0
+							y = 0
+						}
+						infantry = {
+							x = 0
+							y = 1
+						}
+						infantry = {
+							x = 0
+							y = 2
+						}
+						infantry = {
+							x = 1
+							y = 0
+						}
+						infantry = {
+							x = 1
+							y = 1
+						}
+						infantry = {
+							x = 1
+							y = 2
+						}
+						infantry = {
+							x = 2
+							y = 0
+						}
+						infantry = {
+							x = 2
+							y = 1
+						}
+						infantry = {
+							x = 2
+							y = 2
+						}
+					}
+				}
+				every_owned_state = {
+					create_unit = {
+						division = "name = \"Red winter army\" division_template = \"Red winter army\" start_experience_factor = 1 start_equipment_factor = 1"
+						owner = prev
+					}
+				}
+			}
+			every_owned_state = {
+				set_demilitarized_zone = no
+			}
+		}
+	}
+}
+country_event = { #사무국 재건
+	id = RED_marina_event.17
+	title = RED_marina_event.17.t
+	desc = RED_marina_event.11.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = RED_marina_event.11.a 
+		RED_cherino = {
+			set_nationality = RE8
+		}
+		RED_cherino_hot = {
+			set_nationality = RE8
+		}
+		promote_character = RED_cherino
+		RE8 = {
+			transfer_state = 139
+			transfer_state = 140
+			transfer_state = 138
+			transfer_state = 915
+			transfer_state = 919
+			set_cosmetic_tag = RE8_office
+			hidden_effect = {
+				division_template = {
+					priority = 1
+					name = "Red winter army"
+					regiments = {
+						infantry = {
+							x = 0
+							y = 0
+						}
+						infantry = {
+							x = 0
+							y = 1
+						}
+						infantry = {
+							x = 0
+							y = 2
+						}
+						infantry = {
+							x = 1
+							y = 0
+						}
+						infantry = {
+							x = 1
+							y = 1
+						}
+						infantry = {
+							x = 1
+							y = 2
+						}
+						infantry = {
+							x = 2
+							y = 0
+						}
+						infantry = {
+							x = 2
+							y = 1
+						}
+						infantry = {
+							x = 2
+							y = 2
+						}
+					}
+				}
+				every_owned_state = {
+					create_unit = {
+						division = "name = \"Red winter army\" division_template = \"Red winter army\" start_experience_factor = 1 start_equipment_factor = 1"
+						owner = prev
+					}
+					create_unit = {
+						division = "name = \"Red winter army\" division_template = \"Red winter army\" start_experience_factor = 1 start_equipment_factor = 1"
+						owner = prev
+					}
+					create_unit = {
+						division = "name = \"Red winter army\" division_template = \"Red winter army\" start_experience_factor = 1 start_equipment_factor = 1"
+						owner = prev
+					}
+					create_unit = {
+						division = "name = \"Red winter army\" division_template = \"Halo Infantry Division\" start_experience_factor = 1 start_equipment_factor = 1"
+						owner = prev
+					}
+				}
+			}
+			every_owned_state = {
+				set_demilitarized_zone = no
+			}
+		}
+	}
+}
 
 country_event = { #용역부 가담
 	id = RED_minori_event.1
@@ -2818,6 +3675,17 @@ country_event = { #주자파 해산
 		name = RED_event.34.a
 		add_stability = 0.05
 		BA_ban_democratic_effect = yes
+	}
+}
+country_event = { #인구 문제의 해결
+	id = RED_event.35
+	title = RED_event.35.t
+	desc = RED_event.35.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = RED_event.35.a
+		add_stability = 0.05
 	}
 }
 
