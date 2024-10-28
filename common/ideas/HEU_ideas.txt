@@ -720,7 +720,7 @@ ideas = {
 				num_of_controlled_states > 3
 			}
 			modifier = {
-                weekly_manpower = 400
+                weekly_manpower = 800
 				custom_modifier_tooltip = HEU_gehenna_immigrant_tt
 			}
 		}
@@ -793,7 +793,7 @@ ideas = {
 			removal_cost = -1
 		
 			modifier = {
-				weekly_manpower = 400
+				weekly_manpower = 600
 				monthly_population = 0.2
 				stability_factor = -0.05
 			}
@@ -862,5 +862,49 @@ ideas = {
 				production_speed_supply_node_factor = 0.15
 			}
 		}	
+
+		HEU_war_with_TRM_idea = { #트리니티와의 전쟁
+
+			picture = chi_war_of_resistance3
+
+			allowed = {
+				original_tag = HEU
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			targeted_modifier = {
+				tag = TRM
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.1
+			}
+		}
+
+		HEU_war_with_GEH_idea = { #선도부와의 전쟁
+
+			picture = chi_war_of_resistance3
+
+			allowed = {
+				original_tag = HEU
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			targeted_modifier = {
+				tag = GEH
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.1
+			}
+		}
 	}
 }

@@ -1,0 +1,136 @@
+HEU_befriend_GEM = {
+
+    allowed = {
+        original_tag = HEU
+    }
+    enable = {
+		has_global_flag = HEU_GEH_faction
+        GEM = { NOT = { has_completed_focus = GEM_deutsches_reich } }
+    }
+
+    abort_when_not_enabled = yes
+
+    ai_strategy = {
+        type = alliance
+        id = "GEM"
+        value = 200
+    }
+    ai_strategy = {
+        type = befriend
+        id = "GEM"
+        value = 20
+    }
+}
+
+GEM_befriend_HEU = {
+
+    allowed = {
+        original_tag = HEU
+    }
+    enable = {
+		has_global_flag = HEU_GEH_faction
+        GEM = { NOT = { has_completed_focus = GEM_deutsches_reich } }
+    }
+
+    abort_when_not_enabled = yes
+
+    ai_strategy = {
+        type = alliance
+        id = "HEU"
+        value = 200
+    }
+    ai_strategy = {
+        type = befriend
+        id = "HEU"
+        value = 20
+    }
+    ai_strategy = {
+        type = protect
+        id = "HEU"
+        value = 200
+    }
+    ai_strategy = {
+        type = support
+        id = "HEU"
+        value = 100
+    }
+}
+
+HEU_aru_GSC_president = {
+
+    allowed = {
+        original_tag = HEU
+    }
+    enable = {
+		has_completed_focus = HEU_rikuhachima_governemnt
+    }
+
+    abort_when_not_enabled = yes
+
+    ai_strategy = {
+        type = alliance
+        id = "KSP"
+        value = -1000
+    }
+    
+    ai_strategy = {
+        type = alliance
+        id = "COU"
+        value = -1000
+    }
+    
+    ai_strategy = {
+        type = alliance
+        id = "SHE"
+        value = -1000
+    }
+    
+    ai_strategy = {
+        type = antagonize
+        id = "KSP"
+        value = 100
+    }
+    
+    ai_strategy = {
+        type = antagonize
+        id = "COU"
+        value = 100
+    }
+    
+    ai_strategy = {
+        type = antagonize
+        id = "SHE"
+        value = 100
+    }
+}
+
+HEU_aru_GSC_president_II = {
+
+    allowed = {
+        original_tag = HEU
+    }
+    enable = {
+		has_completed_focus = HEU_general_student_council_aru
+    }
+
+    abort_when_not_enabled = yes
+
+    ai_strategy = {
+        type = consider_weak
+        id = "KSP"
+        value = 100
+    }
+    
+    ai_strategy = {
+        type = consider_weak
+        id = "COU"
+        value = 100
+    }
+    
+    ai_strategy = {
+        type = consider_weak
+        id = "SHE"
+        value = 100
+    }
+    
+}

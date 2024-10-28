@@ -626,6 +626,7 @@ characters={
 	HEU_wilhelm_III={
 		portraits={
 			army={
+				large="GFX_portrait_ger_wilhelm_iii"
 				small= "gfx/interface/advisors/HEU/HEU_Wilhelm_III.png"
 			}
 		}

@@ -4855,10 +4855,12 @@ focus_tree = {
 
 		select_effect = {
 			country_event = { id = HEU_event.102 days = 14 }
+			BEL = { country_event = { id = HEU_event.107 days = 21 } }
 			country_event = { id = HEU.flavor_event.1 days = 28 }
 			country_event = { id = HEU.flavor_event.2 days = 36 }
 			country_event = { id = HEU.flavor_event.5 days = 48 }
 			country_event = { id = HEU.flavor_event.6 days = 56 }
+			country_event = { id = HEU.flavor_event.15 days = 100 random_days = 100 }
 		}
 
 		completion_reward = {
@@ -4871,7 +4873,7 @@ focus_tree = {
 		
 		relative_position_id = HEU_road_to_regency
 
-		icon = GFX_goal_GEH_army_flag
+		icon = GFX_goal_HEU_gehenna
 
 		prerequisite = { 
 			focus = HEU_road_to_regency 
@@ -4892,7 +4894,10 @@ focus_tree = {
 		y = 1
 
 		available = { 
-
+            custom_trigger_tooltip = {
+                tooltip = THIS_IS_WIP_TT
+			    has_country_flag = GAEBALJUNG
+            }
 		}
 
 		bypass = {
@@ -4903,13 +4908,383 @@ focus_tree = {
 
 		}
 	}
+	focus = {
+		id = HEU_calm_down_students
+		
+		relative_position_id = HEU_watch_gehenna
+
+		icon = GFX_focus_generic_the_giant_wakes
+
+		prerequisite = { 
+			focus = HEU_watch_gehenna 
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {  }
+
+		cost = 4.00
+
+		x = -2
+		y = 1
+
+		available = { 
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 120
+		}
+	}
+
+	focus = {
+		id = HEU_calm_down_native
+		
+		relative_position_id = HEU_watch_gehenna
+
+		icon = GFX_focus_generic_soviet_politics
+
+		prerequisite = { 
+			focus = HEU_watch_gehenna 
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {  }
+
+		cost = 4.00
+
+		x = 2
+		y = 1
+
+		available = { 
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
+		}
+	}
+
+
+	focus = {
+		id = HEU_negotiations_with_parties
+		
+		relative_position_id = HEU_watch_gehenna
+
+		icon = GFX_focus_SWI_neutrality_on_the_move
+
+		prerequisite = { 
+			focus = HEU_calm_down_students
+		}
+
+		prerequisite = { 
+			focus = HEU_calm_down_native 
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {  }
+
+		cost = 10.00
+
+		x = 0
+		y = 2
+
+		available = { 
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = HEU_civil_rights_act_1
+		
+		relative_position_id = HEU_negotiations_with_parties
+
+		icon = GFX_focus_generic_court
+
+		prerequisite = { 
+			focus = HEU_negotiations_with_parties
+		}
+
+		mutually_exclusive = {
+			focus = HEU_civil_rights_act_2
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {  }
+
+		cost = 10.00
+
+		x = -1
+		y = 1
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = unlock_focuses
+				always = no
+			}
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			HEU_bop_high_increase_effect = yes
+		}
+	}
+
+	focus = {
+		id = HEU_civil_rights_act_2
+		
+		relative_position_id = HEU_negotiations_with_parties
+
+		icon = GFX_focus_BRA_repeale_national_security_law
+
+		prerequisite = { 
+			focus = HEU_negotiations_with_parties
+		}
+
+		mutually_exclusive = {
+			focus = HEU_civil_rights_act_1
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {  }
+
+		cost = 10.00
+
+		x = 1
+		y = 1
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = unlock_focuses
+				always = no
+			}
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			HEU_bop_high_decrease_effect = yes
+		}
+	}
+	focus = {
+		id = HEU_we_still_hope
+		
+		relative_position_id = HEU_negotiations_with_parties
+
+		icon = GFX_goal_generic_national_unity
+
+		prerequisite = { 
+			focus = HEU_civil_rights_act_1
+			focus = HEU_civil_rights_act_2
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		mutually_exclusive = {
+			focus = HEU_no_more_hope
+		}
+
+		search_filters = {  }
+
+		cost = 10.00
+
+		x = -6
+		y = 2
+
+		available = {
+			is_power_balance_in_range = {
+				id = HEU_power_balance
+				range > HEU_hard_boiled_side_low
+			}
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			HEU_bop_high_increase_effect = yes
+			add_popularity = {
+				ideology = communism
+				popularity = 0.4
+			}
+			
+			add_country_leader_role = {
+				character = HEU_aru
+				promote_leader = yes
+				country_leader = {
+					ideology = marxism
+					desc = "HEU_aru_communist_leader_desc"
+					traits = { 
+						HEU_ARU_T1
+						HEU_regent_of_luxembourg
+					}
+				}
+			}
+
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+			
+			add_dynamic_modifier = {
+				modifier = HEU_luxembourgism_idea
+			}
+
+			hidden_effect = {
+				set_party_name = {
+					ideology = neutrality
+					long_name = HEU_benriya_party
+					name = HEU_benriya_party
+				}
+				
+				set_party_name = {
+					ideology = communism
+					long_name = HEU_neutrality_party_long
+					name = HEU_neutrality_party 
+				}
+			}
+		}
+	}
+	
+
+	focus = {
+		id = HEU_no_more_hope
+		
+		relative_position_id = HEU_negotiations_with_parties
+
+		icon = GFX_focus_generic_strike_at_democracy2
+
+		prerequisite = { 
+			focus = HEU_civil_rights_act_1
+			focus = HEU_civil_rights_act_2
+		}
+
+		mutually_exclusive = {
+			focus = HEU_we_still_hope
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {  }
+
+		cost = 10.00
+
+		x = 6
+		y = 2
+
+		available = {
+			is_power_balance_in_range = {
+				id = HEU_power_balance
+				range < HEU_hard_boiled_side_low
+			}
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			HEU_bop_high_decrease_effect = yes
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.4
+			}
+
+			add_country_leader_role = {
+				character = HEU_aru
+				promote_leader = yes
+				country_leader = {
+					ideology = hardboiled_noir
+					desc = "HEU_aru_fascist_leader_desc"
+					traits = { 
+						HEU_ARU_T1
+						HEU_regent_of_luxembourg
+					}
+				}
+			}
+
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
+			
+			add_dynamic_modifier = {
+				modifier = HEU_rikuhachimaism_idea
+			}
+
+			hidden_effect = {
+				BA_ban_democratic_effect = yes
+				
+				set_party_name = {
+					ideology = neutrality
+					long_name = HEU_benriya_party
+					name = HEU_benriya_party
+				}
+
+				swap_ideas = {
+					remove_idea = HEU_grand_duchy_of_luxembourg
+					add_idea = HEU_grand_duchy_of_luxembourg_benriya
+				}
+				remove_ideas = HEU_grand_duchy_of_luxembourg_alt
+				
+				set_party_name = {
+					ideology = fascism
+					long_name = HEU_benriya_party
+					name = HEU_benriya_party
+				}
+			}
+		}
+	}
 
 	focus = {
 		id = HEU_watch_right_wing_party
 		
 		relative_position_id = HEU_road_to_regency
 
-		icon = GFX_focus_BRA_tribunal
+		icon = GFX_goal_HEU_rietspartei
 
 		prerequisite = { 
 			focus = HEU_road_to_regency 
@@ -4931,6 +5306,10 @@ focus_tree = {
 		x = 10
 		y = 1
 
+		select_effect = {
+			country_event = { id = HEU_event.103 days = 10 }
+		}
+
 		available = { 
 
 		}
@@ -4940,7 +5319,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			country_event = { id = HEU_event.109 }
+			HEU_bop_medium_decrease_effect = yes
 		}
 	}
 	focus = {
@@ -4974,6 +5354,11 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			hidden_effect = {
+				country_event = { id = HEU_event.110 }
+				country_event = { id = HEU_event.111 days = 7 }
+			}
+
 			add_political_power = 120
 			add_stability = -0.05
 			HEU_bop_medium_decrease_effect = yes
@@ -5031,6 +5416,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			hidden_effect = {
+				country_event = { id = HEU_event.117 }
+			}
+
 			HEU_bop_medium_decrease_effect = yes
 			add_popularity = {
 				ideology = fascism
@@ -5071,7 +5460,7 @@ focus_tree = {
 		
 		relative_position_id = HEU_watch_right_wing_party
 
-		icon = GFX_focus_generic_military_dictatorship
+		icon = GFX_goal_HEU_aru_rikuhachima_2
 
 		prerequisite = { 
 			focus = HEU_remove_right_wing_party 
@@ -5087,7 +5476,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		cost = 3.00
+		cost = 4.00
 
 		x = 0
 		y = 2
@@ -5100,7 +5489,17 @@ focus_tree = {
 
 		}
 
+		select_effect = {
+			country_event = { id = HEU_event.105 days = 7 }
+			country_event = { id = HEU_event.106 days = 14 }
+		}
+
 		completion_reward = {
+			hidden_effect = {
+				country_event = { id = HEU_event.112 }
+				country_event = { id = HEU_event.114 days = 30 random_days = 30 }
+			}
+
 			HEU_bop_high_decrease_effect = yes
 			add_popularity = {
 				ideology = fascism
@@ -5192,6 +5591,11 @@ focus_tree = {
 
 		completion_reward = {
 			add_war_support = 0.1
+			add_manpower = 30000
+			add_timed_idea = {
+				idea = HEU_war_with_TRM_idea
+				days = 365
+			}
 		}
 	}
 
@@ -5226,6 +5630,11 @@ focus_tree = {
 
 		completion_reward = {
 			add_war_support = 0.1
+			add_manpower = 30000
+			add_timed_idea = {
+				idea = HEU_war_with_GEH_idea
+				days = 365
+			}
 		}
 	}
 	
@@ -5308,7 +5717,7 @@ focus_tree = {
 		
 		relative_position_id = HEU_luxembourg_education_reform
 
-		icon = GFX_goal_generic_major_war
+		icon = GFX_focus_attack_KSP
 
 		prerequisite = { 
 			focus = HEU_luxembourg_education_reform
@@ -5345,7 +5754,7 @@ focus_tree = {
 		
 		relative_position_id = HEU_luxembourg_education_reform
 
-		icon = GFX_goal_generic_major_war
+		icon = GFX_focus_attack_SHE
 
 		prerequisite = { 
 			focus = HEU_luxembourg_education_reform
@@ -5724,7 +6133,7 @@ focus_tree = {
 		
 		relative_position_id = HEU_rikuhachima_governemnt
 
-		icon = GFX_focus_GEH_sword_defending_gehenna
+		icon = GFX_goal_HEU_don_arancino_2
 
 		prerequisite = { 
 			focus = HEU_rikuhachima_governemnt 
@@ -6219,6 +6628,7 @@ focus_tree = {
 		icon = GFX_focus_SOV_women_in_aviation
 
 		prerequisite = { 
+			focus = HEU_negotiations_with_parties 
 			focus = HEU_rikuhachima_governemnt 
 		}
 
@@ -6234,6 +6644,9 @@ focus_tree = {
 		y = 1
 
 		available = {
+			has_dynamic_modifier = {
+				modifier = HEU_rikuhachimaism_idea
+			}
 		}
 
 		search_filters = {  }
@@ -8895,5 +9308,1141 @@ focus_tree = {
 		completion_reward = {
 		}
 	}
+	
+	###############
+	#
+	# 룩셈부르크 흥신소 육군 중점
+	#
+	###############
 
+	focus = { 
+		id = HEU_schuster_line
+		icon = GFX_goal_fortify_the_westwall
+
+		cost = 5.00
+		x = 72
+		y = 16
+
+		available = {
+			controls_state = 8
+		}
+
+		bypass = {
+		}
+
+		allow_branch = {
+			is_debug = yes
+		}
+
+		completion_reward = {
+			8 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 6583
+					instant_build = yes
+				}
+			}
+			country_event = { id = HEU.flavor_event.11 }
+		}
+	}
+
+	focus = {
+		id = HEU_prussian_strategy
+		
+		relative_position_id = HEU_schuster_line
+
+		icon = GFX_focus_generic_full_social_mobilization
+
+		prerequisite = { 
+			focus = HEU_schuster_line 
+		}
+
+		mutually_exclusive = {
+			focus = HEU_benriya_strategy
+		}
+
+		cost = 5.00
+
+		x = -2
+		y = 1
+
+		available = { 
+
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			army_experience = 50
+			add_doctrine_cost_reduction = {
+				name = HEU_prussian_strategy
+				cost_reduction = 0.50
+				category = land_doctrine
+				uses = 1
+			}
+			
+			add_corps_commander_role = {
+				Character = HEU_wilhelm_III
+				traits = {
+					#politically_connected 독일이 망해서 정치적 연결은...
+					media_personality
+					infantry_officer
+				}
+				skill=1
+				attack_skill=1
+				defense_skill=2
+				planning_skill=1
+				logistics_skill=1
+			}
+			
+			hidden_effect = {
+				country_event = { id = HEU.flavor_event.12 }
+			}
+		}
+	}
+
+	focus = {
+		id = HEU_prussian_strategy_2
+		
+		relative_position_id = HEU_prussian_strategy
+
+		icon = GFX_focus_ETH_freedom_at_gunpoint
+
+		prerequisite = { 
+			focus = HEU_prussian_strategy 
+		}
+
+		cost = 8.00
+
+		x = -1
+		y = 1
+
+		available = { 
+
+		}
+
+		bypass = {
+
+		}
+		
+		search_filters = {  }
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1200
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 300
+			}
+
+			mio:HEU_grand_ducal_gendarmerie_organization = {
+				add_mio_funds = 2500
+				add_mio_funds_gain_factor = 0.1
+			}
+			
+			division_template = {
+				name = "Corps des Gendarmes et Volontaires"
+				division_names_group = HEU_INF_01
+				template_counter = 67
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+				}
+				support = {
+					artillery = { x = 0 y = 0 }
+				}
+			}
+
+			capital_scope = {
+				create_unit = {
+					division = "division_template = \"Corps des Gendarmes et Volontaires\" start_experience_factor = 0.5 start_equipment_factor = 1.0"
+					owner = ROOT
+					count = 3
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = HEU_prussian_strategy_3
+		
+		relative_position_id = HEU_prussian_strategy
+
+		icon = GFX_goal_generic_position_armies
+
+		prerequisite = { 
+			focus = HEU_prussian_strategy 
+		}
+
+		cost = 8.00
+
+		x = 1
+		y = 1
+
+		available = { 
+
+		}
+
+		bypass = {
+
+		}
+		
+		search_filters = {  }
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = HEU_prussian_strategy
+				cost_reduction = 0.50
+				category = land_doctrine
+				uses = 1
+			}
+		}
+	}
+
+	focus = {
+		id = HEU_prussian_strategy_4
+		
+		relative_position_id = HEU_prussian_strategy
+
+		icon = GFX_focus_generic_truck
+
+		prerequisite = { 
+			focus = HEU_prussian_strategy 
+		}
+
+		cost = 5.00
+
+		x = 0
+		y = 2
+
+		available = { 
+
+		}
+
+		bypass = {
+
+		}
+		
+		search_filters = {  }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = HEU_benriya_strategy_5
+				bonus = 1.0
+				uses = 2
+				category = artillery
+			}
+
+		}
+	}
+
+	focus = {
+		id = HEU_prussian_strategy_5
+		
+		relative_position_id = HEU_prussian_strategy
+
+		icon = GFX_goal_generic_major_war
+
+		prerequisite = { 
+			focus = HEU_prussian_strategy_2
+		}
+
+		cost = 5.00
+
+		x = -2
+		y = 2
+
+		available = { 
+
+		}
+
+		bypass = {
+
+		}
+		
+		search_filters = {  }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = HEU_benriya_strategy
+		
+		relative_position_id = HEU_schuster_line
+
+		icon = GFX_goal_Perfect_team_first_congress
+
+		prerequisite = { 
+			focus = HEU_schuster_line 
+		}
+
+		mutually_exclusive = {
+			focus = HEU_prussian_strategy
+		}
+
+		cost = 5.00
+
+		x = 2
+		y = 1
+
+		available = { 
+
+		}
+
+		bypass = {
+
+		}
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			army_experience = 50
+			add_doctrine_cost_reduction = {
+				name = HEU_prussian_strategy
+				cost_reduction = 0.50
+				category = land_doctrine
+				uses = 1
+			}
+
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 600
+			}
+			
+			hidden_effect = {
+				country_event = { id = HEU.flavor_event.13 }
+			}
+		}
+	}
+	focus = {
+		id = HEU_benriya_strategy_2
+		
+		relative_position_id = HEU_benriya_strategy
+
+		icon = GFX_goal_generic_army_artillery2
+
+		prerequisite = { 
+			focus = HEU_benriya_strategy 
+		}
+
+		cost = 8.00
+
+		x = -1
+		y = 1
+
+		available = { 
+
+		}
+
+		bypass = {
+
+		}
+		
+		search_filters = {  }
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 800
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 300
+			}
+
+			add_tech_bonus = {
+				name = HEU_benriya_strategy_2
+				bonus = 0.75
+				uses = 2
+				category = support_tech
+			}
+			
+			division_template = {
+				name = "Benriya Artillerie-Division"
+				division_names_group = HEU_INF_01
+				template_counter = 67
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					mot_artillery_brigade = { x = 2 y = 0 }
+				}
+				support = {
+					engineer = { x = 0 y = 0 }
+					artillery = { x = 0 y = 1 }
+				}
+			}
+
+			capital_scope = {
+				create_unit = {
+					division = "division_template = \"Benriya Artillerie-Division\" start_experience_factor = 0.5 start_equipment_factor = 1.0"
+					owner = ROOT
+					count = 2
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = HEU_benriya_strategy_3
+		
+		relative_position_id = HEU_benriya_strategy
+
+		icon = GFX_focus_prc_infiltration
+
+		prerequisite = { 
+			focus = HEU_benriya_strategy 
+		}
+
+		cost = 8.00
+
+		x = 1
+		y = 1
+
+		available = { 
+
+		}
+
+		bypass = {
+
+		}
+		
+		search_filters = {  }
+
+		completion_reward = {
+
+			mio:generic_kivotos_infantry_equipment_organization = {
+				add_mio_funds = 2500
+				add_mio_funds_gain_factor = 0.1
+			}
+
+			add_doctrine_cost_reduction = {
+				name = HEU_benriya_strategy_3
+				cost_reduction = 0.5
+				uses = 2
+				category = special_forces_doctrine
+			}
+
+			add_war_support = 0.1
+		}
+	}
+
+	focus = {
+		id = HEU_benriya_strategy_4
+		
+		relative_position_id = HEU_benriya_strategy
+
+		icon = GFX_focus_generic_little_entente
+
+		prerequisite = { 
+			focus = HEU_benriya_strategy_3 
+		}
+
+		cost = 5.00
+
+		x = 1
+		y = 2
+
+		available = { 
+
+		}
+
+		bypass = {
+
+		}
+		
+		search_filters = {  }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = mystic_engineering_bonus
+				bonus = 1.0
+				uses = 2
+				category = mystic_engineering
+			}
+
+			custom_effect_tooltip = kivotos_halo_add3_tt
+			hidden_effect = {
+				set_variable = { BA_halo_infantry_cap_edit_var = 3 }
+				BA_halo_infantry_cap_edit_effect = yes
+			}
+
+		}
+	}
+
+	focus = {
+		id = HEU_benriya_strategy_5
+		
+		relative_position_id = HEU_benriya_strategy
+
+		icon = GFX_focus_generic_cryptologic_bomb
+
+		prerequisite = { 
+			focus = HEU_benriya_strategy_4
+		}
+
+		prerequisite = { 
+			focus = HEU_benriya_strategy_2
+		}
+
+		cost = 5.00
+
+		x = 0
+		y = 3
+
+		available = { 
+
+		}
+
+		bypass = {
+
+		}
+		
+		search_filters = {  }
+
+		completion_reward = {
+			
+			add_tech_bonus = {
+				name = HEU_benriya_strategy_5
+				bonus = 1.0
+				uses = 2
+				category = artillery
+			}
+
+		}
+	}
+
+	focus = {
+		id = HEU_defence_industry
+		icon = GFX_goal_generic_construct_mil_factory
+
+		prerequisite = { 
+			focus = HEU_prussian_strategy
+			focus = HEU_benriya_strategy
+		}
+
+		x = 0
+		y = 4
+		relative_position_id = HEU_schuster_line
+		cost = 10
+
+		available = {
+			has_full_control_of_state = 8
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			8 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = steel
+					amount = 18
+				}
+			}
+
+			every_military_industrial_organization = {
+				limit = {
+					OR = {
+						is_military_industrial_organization = generic_kivotos_infantry_equipment_organization
+						is_military_industrial_organization = HEU_grand_ducal_gendarmerie_organization
+					}
+				}
+				add_mio_design_team_assign_cost = -0.5
+				add_mio_design_team_change_cost = -0.2
+				add_mio_research_bonus = 0.1
+			}
+		}
+	}
+
+	focus = {
+		id = HEU_benriya_saori 
+		icon = GFX_goal_HEU_saori_jomae #GFX_goal_TRN_Hug_students
+
+		prerequisite = { 
+			focus = HEU_defence_industry
+		}
+
+		x = -2
+		y = 1
+
+		relative_position_id = HEU_defence_industry
+		cost = 5
+
+		available = {
+			NOT = { country_exists = ARI }
+			custom_trigger_tooltip = {
+				tooltip = HEU_saori_not_dead
+				ARI = {
+					has_character = saori
+				}
+			}
+		}
+
+		search_filters = {  }
+
+		completion_reward = {
+			ARI = {
+				saori = { set_nationality = HEU	}
+			}
+		}
+	}
+
+	focus = {
+		id = HEU_benriya_bicycle 
+		icon = GFX_focus_SWE_bicycle
+
+		prerequisite = { 
+			focus = HEU_defence_industry
+		}
+
+		x = 0
+		y = 1
+
+		relative_position_id = HEU_defence_industry
+		cost = 5
+
+		available = {
+		}
+
+		search_filters = {  }
+
+		completion_reward = {
+			set_technology = { bicycle_infantry = 1 }
+		}
+	}
+
+	focus = {
+		id = HEU_benriya_tanks
+		icon = GFX_focus_FIN_salvaged_and_retooled
+
+		prerequisite = { 
+			focus = HEU_defence_industry
+		}
+
+		x = 2
+		y = 1
+
+		relative_position_id = HEU_defence_industry
+
+		cost = 5
+
+		available = {
+		}
+
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+
+			add_tech_bonus = {
+				name = HEU_benriya_tanks
+				bonus = 0.5
+				uses = 1
+				category = cat_mechanized_equipment
+			}
+
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
+				}
+
+				add_tech_bonus = {
+					name = HEU_benriya_tanks
+					bonus = 0.5
+					uses = 2
+					category = cat_light_armor
+				}
+
+				create_equipment_variant = {
+					name = "Renault R35"
+					type = light_tank_chassis_2
+					parent_version = 0
+					modules = {
+						main_armament_slot = tank_close_support_gun
+						turret_type_slot = tank_light_two_man_tank_turret
+						suspension_type_slot = tank_christie_suspension
+						armor_type_slot = tank_welded_armor
+						engine_type_slot = tank_gasoline_engine
+					}
+					upgrades = {
+						tank_nsb_engine_upgrade = 10
+						tank_nsb_armor_upgrade = 2
+					}
+					icon = "GFX_FRA_improved_light_art_medium"
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = HEU_long_range_patrols
+		icon = GFX_focus_FIN_sissi
+
+		prerequisite = { 
+			focus = HEU_benriya_bicycle
+		}
+
+		x = -4
+		y = 2
+
+		relative_position_id = HEU_defence_industry
+		cost = 5
+		available = {
+		}
+
+		search_filters = {  }
+
+		completion_reward = {
+			custom_effect_tooltip = FIN_long_range_patrols_battalion_tt
+
+			hidden_effect = {
+				set_technology = {
+					long_range_patrol_support_tech = 1
+					popup = no
+				}
+			}
+			
+			mio:HEU_grand_ducal_gendarmerie_organization = {
+				add_mio_funds = 500
+			}
+		}
+	}
+
+	focus = {
+		id = HEU_emergency_industry
+		icon = GFX_focus_generic_industry_1
+
+		prerequisite = { 
+			focus = HEU_benriya_bicycle
+		}
+
+		x = 0
+		y = 2
+
+		relative_position_id = HEU_defence_industry
+
+		cost = 10
+
+		available = {
+		}
+
+		search_filters = {  }
+
+		completion_reward = {
+			add_offsite_building = {
+				type = industrial_complex 
+				level = 3
+			}
+			add_offsite_building = {
+				type = arms_factory 
+				level = 5
+			}  
+
+		}
+	}
+
+	focus = {
+		id = HEU_navy_focus_1
+		icon = GFX_goal_generic_navy_battleship
+
+		prerequisite = { 
+			focus = HEU_benriya_bicycle
+		}
+
+		x = 2
+		y = 2
+
+		relative_position_id = HEU_defence_industry
+
+		cost = 10
+
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
+
+		completion_reward = {
+			
+			navy_experience = 100
+			add_tech_bonus = {
+				name = HEU_navy_focus_1
+				bonus = 1 
+				uses = 2 
+				category = naval_equipment
+			}
+			
+			hidden_effect = {
+				country_event = { id = HEU.flavor_event.14 }
+			}
+		}
+	}
+
+	focus = {
+		id = HEU_navy_focus_2
+		icon = GFX_focus_generic_refit_civilian_ships
+
+		prerequisite = { 
+			focus = HEU_navy_focus_1
+		}
+
+		x = 1
+		y = 1
+
+		relative_position_id = HEU_navy_focus_1
+
+		cost = 10
+
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			
+			every_owned_state = {
+				limit = {
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard 
+						size > 1 
+						include_locked = yes  
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {current_nav_added < max_nav_added}
+					}
+					add_to_temp_variable = {current_nav_added = 1}
+					add_extra_state_shared_building_slots = 2 
+					add_building_construction = {
+						type = dockyard 
+						level = 2 
+						instant_build = yes 
+					}
+				}
+			}
+
+			add_tech_bonus = {
+				name = HEU_navy_focus_2
+				bonus = 1 
+				uses = 2 
+				category = naval_equipment
+			}
+		}
+	}
+
+	focus = {
+		id = HEU_navy_focus_3
+		icon = GFX_focus_generic_navy_battleship2
+
+		prerequisite = { 
+			focus = HEU_navy_focus_1
+		}
+
+		x = 3
+		y = 1
+
+		relative_position_id = HEU_navy_focus_1
+
+		cost = 10
+
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
+
+		completion_reward = {
+			navy_experience = 100 
+			add_tech_bonus = {
+				name = HEU_navy_focus_3
+				bonus = 2
+				uses = 3 
+				category = bb_tech
+			}
+		}
+	}
+
+	focus = {
+		id = HEU_navy_focus_4
+		icon = GFX_goal_generic_navy_doctrines_tactics
+
+		prerequisite = { 
+			focus = HEU_navy_focus_2
+		}
+
+		prerequisite = { 
+			focus = HEU_navy_focus_3
+		}
+
+		x = 2
+		y = 2
+
+		relative_position_id = HEU_navy_focus_1
+
+		cost = 10
+
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+			}
+		}
+
+		search_filters = {  }
+
+		completion_reward = {
+			create_navy_leader = {
+				skill = 3
+				traits = { }
+			}
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = naval_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = HEU_city_warfare
+		icon = GFX_goal_medicine
+
+		prerequisite = { 
+			focus = HEU_benriya_bicycle 
+			focus = HEU_benriya_tanks 
+		}
+
+		x = -2
+		y = 2
+
+		relative_position_id = HEU_defence_industry
+
+		cost = 5
+		available = {
+			has_tech = tech_field_hospital
+		}
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 25
+
+			add_tech_bonus = {
+				name = HEU_city_warfare
+				uses = 1 
+				bonus = 1.5 
+				category = hospital_tech
+			}
+
+			show_ideas_tooltip = SWI_saint_bernard_idea_desc
+			hidden_effect = {
+				set_technology = { 
+					SWI_saint_bernard_tech = 1
+					popup = no 
+				 } 
+			}
+		}
+	}
+
+	focus = {
+		id = HEU_hardboiled_warfare
+		icon = GFX_goal_HEU_junsulnote_1
+
+		prerequisite = { 
+			focus = HEU_emergency_industry 
+		}
+
+		prerequisite = { 
+			focus = HEU_city_warfare 
+		}
+
+		x = -3
+		y = 3
+
+		relative_position_id = HEU_defence_industry
+
+		cost = 5
+		available = {
+		}
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = HEU_hardboiled_way
+		icon = GFX_focus_generic_land_reclamation
+
+		prerequisite = { 
+			focus = HEU_emergency_industry 
+		}
+
+		prerequisite = { 
+			focus = HEU_city_warfare 
+		}
+
+		x = -1
+		y = 3
+
+		relative_position_id = HEU_defence_industry
+
+		cost = 5
+		available = {
+		}
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = HEU_hardboiled_charisma
+		icon = GFX_goal_TRN_Hug_students
+
+		prerequisite = { 
+			focus = HEU_emergency_industry 
+		}
+
+		prerequisite = { 
+			focus = HEU_city_warfare 
+		}
+
+		x = 1
+		y = 3
+
+		relative_position_id = HEU_defence_industry
+
+		cost = 5
+		available = {
+			OR = {
+				has_dynamic_modifier = {
+					modifier = HEU_rikuhachimaism_idea
+				}
+				has_dynamic_modifier = {
+					modifier = HEU_luxembourgism_idea
+				}
+			}
+		}
+
+		search_filters = {  }
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = HEU_benriya_rikuhachimaism
+		icon = GFX_goal_generic_axis_build_infantry
+
+		prerequisite = { 
+			focus = HEU_hardboiled_warfare 
+		}
+
+		prerequisite = { 
+			focus = HEU_hardboiled_way 
+		}
+
+		prerequisite = { 
+			focus = HEU_hardboiled_charisma 
+		}
+
+		mutually_exclusive = {
+			focus = HEU_benriya_luxembourgism
+		}
+
+		x = -2
+		y = 4
+
+		relative_position_id = HEU_defence_industry
+
+		cost = 5
+		available = {
+			has_dynamic_modifier = {
+				modifier = HEU_rikuhachimaism_idea
+			}
+		}
+
+		search_filters = {  }
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = HEU_benriya_luxembourgism
+		icon = GFX_goal_generic_military_deal
+
+		prerequisite = { 
+			focus = HEU_hardboiled_warfare 
+		}
+
+		prerequisite = { 
+			focus = HEU_hardboiled_way 
+		}
+
+		prerequisite = { 
+			focus = HEU_hardboiled_charisma 
+		}
+
+		mutually_exclusive = {
+			focus = HEU_benriya_rikuhachimaism
+		}
+
+		x = 0
+		y = 4
+
+		relative_position_id = HEU_defence_industry
+
+		cost = 5
+		available = {
+			has_dynamic_modifier = {
+				modifier = HEU_luxembourgism_idea
+			}
+		}
+
+		search_filters = {  }
+
+		completion_reward = {
+		}
+	}
+	
 }
