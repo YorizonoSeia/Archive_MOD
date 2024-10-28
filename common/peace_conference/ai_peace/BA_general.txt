@@ -2,14 +2,32 @@ peace_ai_desires = {
 	german_liberation_ban = {
 		peace_action_type = { puppet force_government liberate }
 		enable = {
-            is_historical_focus_on = yes
 			FROM = {
 				tag = GER
 			}
 		}
 		ai_desire = -1000
 	}
-
+	kiv_AUS_liberation_ban = {
+		peace_action_type = { puppet force_government liberate }
+		enable = {
+            Kivotos_tag = yes
+			FROM = {
+				tag = AUS
+			}
+		}
+		ai_desire = -500
+	}
+	no_kiv_AUS_liberation_ban = {
+		peace_action_type = { puppet force_government liberate }
+		enable = {
+            NOT = { Kivotos_tag = yes }
+			FROM = {
+				tag = SHA
+			}
+		}
+		ai_desire = -500
+	}
     geh_annex_gem_cores = {
         peace_action_type = take_states
         enable = {
