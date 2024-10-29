@@ -1516,7 +1516,7 @@
 			base = 100
 		}
 		relative_position_id = TRM_newfocus_27
-		x = -2
+		x = -3
 		y = 1
 		completion_reward = {
 			add_stability = 0.1
@@ -1567,7 +1567,7 @@
 			base = 100
 		}
 		relative_position_id = TRM_newfocus_27
-		x = 6
+		x = 7
 		y = 1
 		completion_reward = {
 			create_faction = TRINITY_AXIS_FACTION
@@ -1577,6 +1577,111 @@
 				}
 				country_event = { id = COU_event.3 hours = 8 }
 			}
+		}
+	}
+	focus = {
+		id = TRM_Endsige
+		icon = GFX_goal_TRM_Kivotos_union
+		cost = 8.00
+        prerequisite = {
+            focus = TRM_oetzi
+        }
+		available = {
+			has_war = no
+			custom_trigger_tooltip = {
+				tooltip = TRM_Last_Focus_trigger_tt
+				OR = {
+					controls_state = 7
+					any_country = {
+						controls_state = 7
+						is_subject_of = TRM
+					}
+				}
+				OR = {
+					controls_state = 55
+					any_country = {
+						controls_state = 55
+						is_subject_of = TRM
+					}
+				}
+				OR = {
+					controls_state = 36
+					any_country = {
+						controls_state = 36
+						is_subject_of = TRM
+					}
+				}
+				OR = {
+					controls_state = 141
+					any_country = {
+						controls_state = 141
+						is_subject_of = TRM
+					}
+				}
+				OR = {
+					controls_state = 16
+					any_country = {
+						controls_state = 16
+						is_subject_of = TRM
+					}
+				}
+				OR = {
+					controls_state = 14
+					any_country = {
+						controls_state = 14
+						is_subject_of = TRM
+					}
+				}
+				OR = {
+					controls_state = 4
+					any_country = {
+						controls_state = 4
+						is_subject_of = TRM
+					}
+				}
+				OR = {
+					controls_state = 985
+					any_country = {
+						controls_state = 985
+						is_subject_of = TRM
+					}
+				}
+				OR = {
+					controls_state = 9
+					any_country = {
+						controls_state = 9
+						is_subject_of = TRM
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			base = 3000
+		}
+		x = -3
+		y = 1
+		relative_position_id = TRM_oetzi
+		completion_reward = { # 미카는 신이야..!!
+		    country_event = {
+		    	id = TRM_event.26
+		    }
+		}
+	}
+	focus = { #e대충있어보이는무언가
+		id = TRM_Endsige2
+		icon = GFX_goal_unknown
+		cost = 8.00
+        prerequisite = {
+            focus = TRM_Endsige
+        }
+		available = {
+		}
+		ai_will_do = {
+		}
+		x = 0
+		y = 2
+		relative_position_id = TRM_Endsige
+		completion_reward = {
 		}
 	}
 	focus = {
@@ -2393,104 +2498,6 @@
 		completion_reward = {
 			add_threat = 5
 			news_event = { id = BA_news.7 }
-		}
-	}
-	focus = {
-		id = TRM_Endsige
-		icon = GFX_goal_TRM_Kivotos_union
-		cost = 8.00
-        prerequisite = {
-            focus = TRM_newfocus_28
-        }
-        prerequisite = {
-            focus = TRM_newfocus_26
-        }
-		available = {
-			has_war = no
-			custom_trigger_tooltip = {
-				tooltip = TRM_Last_Focus_trigger_tt
-				OR = {
-					controls_state = 7
-					any_country = {
-						controls_state = 7
-						is_subject_of = TRM
-					}
-				}
-				OR = {
-					controls_state = 55
-					any_country = {
-						controls_state = 55
-						is_subject_of = TRM
-					}
-				}
-				OR = {
-					controls_state = 36
-					any_country = {
-						controls_state = 36
-						is_subject_of = TRM
-					}
-				}
-				OR = {
-					controls_state = 141
-					any_country = {
-						controls_state = 141
-						is_subject_of = TRM
-					}
-				}
-				OR = {
-					controls_state = 16
-					any_country = {
-						controls_state = 16
-						is_subject_of = TRM
-					}
-				}
-				OR = {
-					controls_state = 14
-					any_country = {
-						controls_state = 14
-						is_subject_of = TRM
-					}
-				}
-				OR = {
-					controls_state = 4
-					any_country = {
-						controls_state = 4
-						is_subject_of = TRM
-					}
-				}
-				OR = {
-					controls_state = 985
-					any_country = {
-						controls_state = 985
-						is_subject_of = TRM
-					}
-				}
-				OR = {
-					controls_state = 9
-					any_country = {
-						controls_state = 9
-						is_subject_of = TRM
-					}
-				}
-			}
-		}
-		offset = {
-			x = -8
-			y = 0
-			trigger = {
-				has_completed_focus = TRM_newfocus_7
-			}
-		}
-		ai_will_do = {
-			base = 3000
-		}
-		x = 4
-		y = 0
-		relative_position_id = TRM_newfocus_27
-		completion_reward = { # 미카는 신이야..!!
-		    country_event = {
-		    	id = TRM_event.26
-		    }
 		}
 	}
 	focus = {
@@ -6118,7 +6125,7 @@
 		x = 0
 		y = 2
 		offset = {
-			x = -2
+			x = -3
 			y = 0
 			trigger = {
 				has_completed_focus = TRM_newfocus_7
@@ -6172,10 +6179,10 @@
 			}
 		}
 
-		x = -0
+		x = 0
 		y = 3
 		offset = {
-			x = -2
+			x = -3
 			y = 0
 			trigger = {
 				has_completed_focus = TRM_newfocus_7
