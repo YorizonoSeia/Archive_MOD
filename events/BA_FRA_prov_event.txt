@@ -2164,7 +2164,11 @@ news_event = {
 				limit = {
 					is_ai = no
 				}
-				set_global_flag = BA_Super_Event_Visible
+				set_global_flag = {
+					flag = BA_Super_Event_Visible
+					value = 1
+					days = 15
+				}
 				if = {
 					limit = {
 						FRA = {
@@ -2275,7 +2279,11 @@ news_event = {
 				limit = {
 					is_ai = no
 				}
-				set_global_flag = BA_Super_Event_Visible
+				set_global_flag = {
+					flag = BA_Super_Event_Visible
+					value = 1
+					days = 15
+				}
 				if = {
 					limit = {
 						FRA = {
