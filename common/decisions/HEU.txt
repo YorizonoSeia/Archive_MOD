@@ -882,3 +882,437 @@ propaganda_efforts = {
 		days_remove = 730
 	}
 }
+
+HEU_aru_persona_decision_category = {
+	
+	HEU_aru_persona_schedule = {
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		available = { always = no }
+
+		visible = {
+		}
+
+		ai_will_do = { factor = 0 }
+
+		complete_effect = {
+		}
+	}
+	
+	HEU_aru_persona_schedule_buy = {
+
+		visible = {
+			check_variable = { global.aru_schedule_point < 6 }
+		}
+
+		ai_will_do = { 
+			factor = 100 
+		}
+		
+		fire_only_once = no
+		cost = 5
+
+		days_re_enable = 14
+
+		complete_effect = {
+			add_to_variable = { global.aru_schedule_point = 1 }
+		}
+	}
+	
+	HEU_aru_persona_wisdom = {
+
+		available = { 
+			check_variable = { global.aru_schedule_point > 0 } 
+		}
+
+		visible = {
+			check_variable = { Global.aru_stat_point_array^0 < 100 } 
+		}
+
+		ai_will_do = { 
+			factor = 100 
+		}
+
+		custom_cost_trigger = {
+			check_variable = { global.aru_schedule_point > 0 }
+		}
+
+		custom_cost_text = aru_schedule_1
+		cost = 0
+		
+		fire_only_once = no
+
+		complete_effect = {
+			add_to_variable = { global.aru_schedule_point = -1 }
+			random_list = {
+				10 = {
+					add_to_variable = {
+						global.aru_stat_point_array^0 = 2
+						tooltip = HEU_aru_persona_wisdom_edit_tt
+					}
+				}
+				10 = {
+					add_to_variable = {
+						global.aru_stat_point_array^0 = 3
+						tooltip = HEU_aru_persona_wisdom_edit_tt
+					}
+				}
+				5 = {
+					add_to_variable = {
+						global.aru_stat_point_array^0 = 1
+						tooltip = HEU_aru_persona_wisdom_edit_tt
+					}
+				}
+			}
+			HEU_aru_persona_setting = yes
+		}
+	}
+	
+	HEU_aru_persona_kindness = {
+
+		available = { 
+			check_variable = { global.aru_schedule_point > 0 } 
+		}
+
+		visible = {
+			check_variable = { Global.aru_stat_point_array^1 < 100 } 
+		}
+
+		ai_will_do = { 
+			factor = 100 
+		}
+
+		custom_cost_trigger = {
+			check_variable = { global.aru_schedule_point > 0 }
+		}
+
+		custom_cost_text = aru_schedule_1
+		cost = 0
+		
+		fire_only_once = no
+
+		complete_effect = {
+			add_to_variable = { global.aru_schedule_point = -1 }
+			random_list = {
+				10 = {
+					add_to_variable = {
+						global.aru_stat_point_array^1 = 2
+						tooltip = HEU_aru_persona_kindness_edit_tt
+					}
+				}
+				10 = {
+					add_to_variable = {
+						global.aru_stat_point_array^1 = 3
+						tooltip = HEU_aru_persona_kindness_edit_tt
+					}
+				}
+				5 = {
+					add_to_variable = {
+						global.aru_stat_point_array^1 = 1
+						tooltip = HEU_aru_persona_kindness_edit_tt
+					}
+				}
+			}
+			HEU_aru_persona_setting = yes
+		}
+	}
+	
+	HEU_aru_persona_resolution = {
+
+		available = { 
+			check_variable = { global.aru_schedule_point > 0 } 
+		}
+
+		visible = {
+			check_variable = { Global.aru_stat_point_array^2 < 100 } 
+		}
+
+		ai_will_do = { 
+			factor = 100 
+		}
+
+		custom_cost_trigger = {
+			check_variable = { global.aru_schedule_point > 0 }
+		}
+
+		custom_cost_text = aru_schedule_1
+		cost = 0
+		
+		fire_only_once = no
+
+		complete_effect = {
+			add_to_variable = { global.aru_schedule_point = -1 }
+			random_list = {
+				10 = {
+					add_to_variable = {
+						global.aru_stat_point_array^2 = 2
+						tooltip = HEU_aru_persona_resolution_edit_tt
+					}
+				}
+				10 = {
+					add_to_variable = {
+						global.aru_stat_point_array^2 = 3
+						tooltip = HEU_aru_persona_resolution_edit_tt
+					}
+				}
+				5 = {
+					add_to_variable = {
+						global.aru_stat_point_array^2 = 1
+						tooltip = HEU_aru_persona_resolution_edit_tt
+					}
+				}
+			}
+			HEU_aru_persona_setting = yes
+		}
+	}
+	
+	HEU_aru_persona_charisma = {
+
+		available = { 
+			check_variable = { global.aru_schedule_point > 0 } 
+		}
+
+		visible = {
+			check_variable = { Global.aru_stat_point_array^3 < 100 } 
+		}
+
+		ai_will_do = { 
+			factor = 100 
+		}
+
+		custom_cost_trigger = {
+			check_variable = { global.aru_schedule_point > 0 }
+		}
+
+		custom_cost_text = aru_schedule_1
+		cost = 0
+		
+		fire_only_once = no
+
+		complete_effect = {
+			add_to_variable = { global.aru_schedule_point = -1 }
+			random_list = {
+				10 = {
+					add_to_variable = {
+						global.aru_stat_point_array^3 = 2
+						tooltip = HEU_aru_persona_charisma_edit_tt
+					}
+				}
+				10 = {
+					add_to_variable = {
+						global.aru_stat_point_array^3 = 3
+						tooltip = HEU_aru_persona_charisma_edit_tt
+					}
+				}
+				5 = {
+					add_to_variable = {
+						global.aru_stat_point_array^3 = 1
+						tooltip = HEU_aru_persona_charisma_edit_tt
+					}
+				}
+			}
+			HEU_aru_persona_setting = yes
+		}
+	}
+	
+	#HEU_aru_persona_schedule_study_of_analytical_psychology = {
+#
+	#	available = { 
+	#		check_variable = { global.aru_schedule_point > 0 } 
+	#		custom_trigger_tooltip = {
+	#			tooltip = HEU_aru_persona_wisdom_need_30_tt
+	#			check_variable = { Global.aru_stat_point_array^0 > 29 }
+	#		}
+	#	}
+#
+	#	visible = {
+	#		check_variable = { Global.aru_stat_point_array^0 < 100 } 
+	#	}
+#
+	#	ai_will_do = { 
+	#		factor = 100 
+	#	}
+#
+	#	custom_cost_trigger = {
+	#		check_variable = { global.aru_schedule_point > 0 }
+	#	}
+#
+	#	custom_cost_text = aru_schedule_1
+	#	cost = 0
+	#	
+	#	fire_only_once = no
+#
+	#	complete_effect = {
+	#		add_to_variable = { global.aru_schedule_point = -1 }
+	#	}
+	#}
+	#
+	#HEU_aru_persona_schedule_study_in_trinity = {
+#
+	#	available = { 
+	#		check_variable = { global.aru_schedule_point > 0 } 
+	#	}
+#
+	#	visible = {
+	#		check_variable = { Global.aru_stat_point_array^0 < 100 } 
+	#	}
+#
+	#	ai_will_do = { 
+	#		factor = 100 
+	#	}
+#
+	#	custom_cost_trigger = {
+	#		check_variable = { global.aru_schedule_point > 0 }
+	#	}
+#
+	#	custom_cost_text = aru_schedule_1
+	#	cost = 0
+	#	
+	#	fire_only_once = no
+#
+	#	complete_effect = {
+	#		add_to_variable = { global.aru_schedule_point = -1 }
+	#	}
+	#}
+	#
+	#HEU_aru_persona_schedule_part_time_job = {
+#
+	#	available = { 
+	#		check_variable = { global.aru_schedule_point > 0 } 
+	#	}
+#
+	#	visible = {
+	#		check_variable = { Global.aru_stat_point_array^1 < 100 } 
+	#	}
+#
+	#	ai_will_do = { 
+	#		factor = 100 
+	#	}
+#
+	#	custom_cost_trigger = {
+	#		check_variable = { global.aru_schedule_point > 0 }
+	#	}
+#
+	#	custom_cost_text = aru_schedule_1
+	#	cost = 0
+	#	
+	#	fire_only_once = no
+#
+	#	complete_effect = {
+	#		add_to_variable = { global.aru_schedule_point = -1 }
+	#	}
+	#}
+	#
+	#HEU_aru_persona_schedule_cat = {
+#
+	#	available = { 
+	#		check_variable = { global.aru_schedule_point > 0 } 
+	#	}
+#
+	#	visible = {
+	#		check_variable = { Global.aru_stat_point_array^1 < 100 } 
+	#	}
+#
+	#	ai_will_do = { 
+	#		factor = 100 
+	#	}
+#
+	#	custom_cost_trigger = {
+	#		check_variable = { global.aru_schedule_point > 0 }
+	#	}
+#
+	#	custom_cost_text = aru_schedule_1
+	#	cost = 0
+	#	
+	#	fire_only_once = no
+#
+	#	complete_effect = {
+	#		add_to_variable = { global.aru_schedule_point = -1 }
+	#	}
+	#}
+	#
+	#HEU_aru_persona_schedule_weed = {
+#
+	#	available = { 
+	#		check_variable = { global.aru_schedule_point > 0 } 
+	#	}
+#
+	#	visible = {
+	#		check_variable = { Global.aru_stat_point_array^1 < 100 } 
+	#	}
+#
+	#	ai_will_do = { 
+	#		factor = 100 
+	#	}
+#
+	#	custom_cost_trigger = {
+	#		check_variable = { global.aru_schedule_point > 0 }
+	#	}
+#
+	#	custom_cost_text = aru_schedule_1
+	#	cost = 0
+	#	
+	#	fire_only_once = no
+#
+	#	complete_effect = {
+	#		add_to_variable = { global.aru_schedule_point = -1 }
+	#	}
+	#}
+	#
+	#HEU_aru_persona_schedule_martial_arts_training = {
+#
+	#	available = { 
+	#		check_variable = { global.aru_schedule_point > 0 } 
+	#	}
+#
+	#	visible = {
+	#		check_variable = { Global.aru_stat_point_array^1 < 100 } 
+	#	}
+#
+	#	ai_will_do = { 
+	#		factor = 100 
+	#	}
+#
+	#	custom_cost_trigger = {
+	#		check_variable = { global.aru_schedule_point > 0 }
+	#	}
+#
+	#	custom_cost_text = aru_schedule_1
+	#	cost = 0
+	#	
+	#	fire_only_once = no
+#
+	#	complete_effect = {
+	#		add_to_variable = { global.aru_schedule_point = -1 }
+	#	}
+	#}
+	#
+	#HEU_aru_persona_schedule_patrol = {
+#
+	#	available = { 
+	#		check_variable = { global.aru_schedule_point > 0 } 
+	#	}
+#
+	#	visible = {
+	#		check_variable = { Global.aru_stat_point_array^1 < 100 } 
+	#	}
+#
+	#	ai_will_do = { 
+	#		factor = 100 
+	#	}
+#
+	#	custom_cost_trigger = {
+	#		check_variable = { global.aru_schedule_point > 0 }
+	#	}
+#
+	#	custom_cost_text = aru_schedule_1
+	#	cost = 0
+	#	
+	#	fire_only_once = no
+#
+	#	complete_effect = {
+	#		add_to_variable = { global.aru_schedule_point = -1 }
+	#	}
+	#}
+
+}
