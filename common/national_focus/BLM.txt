@@ -33,7 +33,7 @@ focus_tree = {
         prerequisite = {
             focus = BLM_dawn_of_bretagne_port
         }
-        x = -3
+        x = -4
         y = 1
         relative_position_id = BLM_dawn_of_bretagne_port
         cost = 5
@@ -56,6 +56,73 @@ focus_tree = {
             else_if = {
                 limit = { has_idea = BLM_backward_industry_2 }
                 remove_ideas = BLM_backward_industry_2
+            }
+        }
+    }
+
+    focus = { #신디케이트 형성
+        id = BLM_criminal_syndicate
+        icon = GFX_BLM_criminal_syndicate
+        prerequisite = {
+            focus = BLM_crime_division_of_labor
+        }
+        x = 0
+        y = 1
+        relative_position_id = BLM_crime_division_of_labor
+        cost = 5
+
+        completion_reward = {
+            if = {
+                limit = { has_idea = BLM_backward_industry }
+                swap_ideas = {
+                    remove_idea = BLM_backward_industry
+                    add_idea = BLM_backward_industry_1
+                }
+            }
+            else_if = {
+                limit = { has_idea = BLM_backward_industry_1 }
+                swap_ideas = {
+                    remove_idea = BLM_backward_industry_1
+                    add_idea = BLM_backward_industry_2
+                }
+            }
+            else_if = {
+                limit = { has_idea = BLM_backward_industry_2 }
+                remove_ideas = BLM_backward_industry_2
+            }
+        }
+    }
+
+    focus = { #밀수 무기 연구
+        id = BLM_smuggled_weapons_research
+        icon = GFX_focus_research
+        prerequisite = {
+            focus = BLM_criminal_syndicate
+        }
+        x = 0
+        y = 2
+        relative_position_id = BLM_criminal_syndicate
+        cost = 10
+
+        completion_reward = {
+            add_research_slot = 1
+            if = {
+                limit = { has_idea = BLM_backward_research }
+                swap_ideas = {
+                    remove_idea = BLM_backward_research
+                    add_idea = BLM_backward_research_1
+                }
+            }
+            else_if = {
+                limit = { has_idea = BLM_backward_research_1 }
+                swap_ideas = {
+                    remove_idea = BLM_backward_research_1
+                    add_idea = BLM_backward_research_2
+                }
+            }
+            else_if = {
+                limit = { has_idea = BLM_backward_research_2 }
+                remove_ideas = BLM_backward_research_2
             }
         }
     }
@@ -131,6 +198,231 @@ focus_tree = {
                     level = 2
                 }
             }
+        }
+    }
+
+    focus = { #시칠리아 마피아와 접촉
+        id = BLM_sicilian_mafia_cooperation
+        icon = GFX_focus_ITA_northern_industry
+        prerequisite = {
+            focus = BLM_international_crime_port
+        }
+        x = -2
+        y = 1
+        relative_position_id = BLM_international_crime_port
+        cost = 5
+
+        completion_reward = {
+        }
+    }
+
+    focus = { #발칸 확장
+        id = BLM_balkan_market_expansion
+        icon = GFX_focus_BUL_free_balkan_states
+        prerequisite = {
+            focus = BLM_sicilian_mafia_cooperation
+        }
+        x = -2
+        y = 2
+        relative_position_id = BLM_international_crime_port
+        cost = 5
+
+        completion_reward = {
+        }
+    }
+
+    focus = { #키보토스 범죄 후원
+        id = BLM_kivotos_crime_sponsorship
+        icon = GFX_goal_general_embrace
+        prerequisite = {
+            focus = BLM_international_crime_port
+        }
+        x = 0
+        y = 1
+        relative_position_id = BLM_international_crime_port
+        cost = 5
+
+        completion_reward = {
+        }
+    }
+
+    focus = { #제2시장 장악
+        id = BLM_second_market_domination
+        icon = GFX_focus_generic_industrialists
+        prerequisite = {
+            focus = BLM_kivotos_crime_sponsorship
+        }
+        x = 0
+        y = 2
+        relative_position_id = BLM_international_crime_port
+        cost = 5
+
+        completion_reward = {
+        }
+    }
+
+    focus = { #런던 갱단 접촉
+        id = BLM_london_gang_contact
+        icon = GFX_focus_eng_decolonization
+        prerequisite = {
+            focus = BLM_international_crime_port
+        }
+        x = 2
+        y = 1
+        relative_position_id = BLM_international_crime_port
+        cost = 5
+
+        completion_reward = {
+        }
+    }
+
+    focus = { #대서양 밀수로 확립
+        id = BLM_atlantic_smuggling_route_establishment
+        icon = GFX_focus_generic_refit_civilian_ships
+        prerequisite = {
+            focus = BLM_london_gang_contact
+        }
+        x = 2
+        y = 2
+        relative_position_id = BLM_international_crime_port
+        cost = 5
+
+        completion_reward = {
+        }
+    }
+
+    focus = { #위대한 도약
+        id = BLM_great_leap
+        icon = GFX_focus_generic_industry_3
+        prerequisite = {
+            focus = BLM_balkan_market_expansion
+            focus = BLM_second_market_domination
+            focus = BLM_atlantic_smuggling_route_establishment
+        }
+        available = {
+            num_of_factories > 30
+        }
+        x = 0
+        y = 3
+        relative_position_id = BLM_international_crime_port
+        cost = 5
+
+        completion_reward = {
+        }
+    }
+
+    focus = { #체계적 산업화
+        id = BLM_systematic_industrialization
+        icon = GFX_focus_generic_modernize_industry
+        prerequisite = {
+            focus = BLM_great_leap
+        }
+        prerequisite = {
+            focus = BLM_smuggled_weapons_research
+        }
+        x = -1
+        y = 2
+        relative_position_id = BLM_smuggled_weapons_research
+        cost = 5
+
+        completion_reward = {
+            if = {
+                limit = { has_idea = BLM_backward_industry }
+                swap_ideas = {
+                    remove_idea = BLM_backward_industry
+                    add_idea = BLM_backward_industry_1
+                }
+            }
+            else_if = {
+                limit = { has_idea = BLM_backward_industry_1 }
+                swap_ideas = {
+                    remove_idea = BLM_backward_industry_1
+                    add_idea = BLM_backward_industry_2
+                }
+            }
+            else_if = {
+                limit = { has_idea = BLM_backward_industry_2 }
+                remove_ideas = BLM_backward_industry_2
+            }
+            if = {
+                limit = { has_idea = BLM_backward_research }
+                swap_ideas = {
+                    remove_idea = BLM_backward_research
+                    add_idea = BLM_backward_research_1
+                }
+            }
+            else_if = {
+                limit = { has_idea = BLM_backward_research_1 }
+                swap_ideas = {
+                    remove_idea = BLM_backward_research_1
+                    add_idea = BLM_backward_research_2
+                }
+            }
+            else_if = {
+                limit = { has_idea = BLM_backward_research_2 }
+                remove_ideas = BLM_backward_research_2
+            }
+        }
+    }
+
+    focus = { #범죄 기업
+        id = BLM_crime_enterprise
+        icon = GFX_focus_generic_reorient_production
+        prerequisite = {
+            focus = BLM_great_leap
+        }
+        prerequisite = {
+            focus = BLM_smuggled_weapons_research
+        }
+        x = 1
+        y = 2
+        relative_position_id = BLM_smuggled_weapons_research
+        cost = 5
+
+        completion_reward = {
+            if = {
+                limit = { has_idea = BLM_backward_research }
+                swap_ideas = {
+                    remove_idea = BLM_backward_research
+                    add_idea = BLM_backward_research_1
+                }
+            }
+            else_if = {
+                limit = { has_idea = BLM_backward_research_1 }
+                swap_ideas = {
+                    remove_idea = BLM_backward_research_1
+                    add_idea = BLM_backward_research_2
+                }
+            }
+            else_if = {
+                limit = { has_idea = BLM_backward_research_2 }
+                remove_ideas = BLM_backward_research_2
+            }
+            random_owned_state = {
+                limit = {
+                    is_core_of = ROOT
+                }
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                }
+            }
+        }
+    }
+
+    focus = { #국제범죄산업연대
+        id = BLM_international_crime_industry_alliance
+        icon = GFX_goal_generic_propaganda
+        prerequisite = {
+            focus = BLM_great_leap
+        }
+        x = 0
+        y = 1
+        relative_position_id = BLM_great_leap
+        cost = 5
+
+        completion_reward = {
         }
     }
 

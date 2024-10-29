@@ -80,6 +80,32 @@ ideas = {
                 research_speed_factor = -0.80
             }
         }
+        BLM_backward_research_1 = { #연구 시설 없음
+            picture = jap_duplicate_research
+            allowed = {
+                tag = BLM
+                always = no
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+                research_speed_factor = -0.50
+            }
+        }
+        BLM_backward_research_2 = { #연구 시설 없음
+            picture = jap_duplicate_research
+            allowed = {
+                tag = BLM
+                always = no
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+                research_speed_factor = -0.30
+            }
+        }
         BLM_anarchy = { #무정부
             picture = anarchy
             allowed = {

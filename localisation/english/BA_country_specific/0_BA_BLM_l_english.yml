@@ -10,6 +10,8 @@
  BLM_backward_industry_1: "조잡한 산업 설비"
  BLM_backward_industry_2: "범죄 산업"
  BLM_backward_research: "연구 시설 없음"
+ BLM_backward_research_1: "초보적 역설계 시설"
+ BLM_backward_research_2: "조잡한 연구 설비"
  BLM_anarchy: "무정부"
 
  BLM_criminal_state: "블랙 마켓"
@@ -23,9 +25,21 @@
 #중점
  BLM_dawn_of_bretagne_port: "브르타뉴 항구의 새벽"
  BLM_crime_division_of_labor: "범죄 분업화"
+ BLM_criminal_syndicate: "신디케이트 형성"
+ BLM_smuggled_weapons_research: "밀수 무기 연구"
  BLM_smuggling_export_industry_expansion: "밀수출 산업 확대"
  BLM_securing_drug_production_facilities: "마약 생산 시설 확보"
  BLM_international_crime_port: "국제 범죄항구"
+ BLM_sicilian_mafia_cooperation: "시칠리아 마피아와 협력"
+ BLM_balkan_market_expansion: "발칸 확장"
+ BLM_kivotos_crime_sponsorship: "키보토스 범죄 후원"
+ BLM_second_market_domination: "제2시장 장악"
+ BLM_london_gang_contact: "런던 갱단 접촉"
+ BLM_atlantic_smuggling_route_establishment: "대서양 밀수로 확립"
+ BLM_great_leap: "위대한 도약"
+ BLM_systematic_industrialization: "체계적 산업화"
+ BLM_crime_enterprise: "범죄 기업"
+ BLM_international_crime_industry_alliance: "국제 범죄산업연대"
  
  BLM_Lawbreakers_of_Otherworld: "이계의 무법자들"
 
