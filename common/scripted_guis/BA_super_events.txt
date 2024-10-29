@@ -10,122 +10,194 @@ scripted_gui = {
 		
 		triggers = {
 			BA_Super_Event_Image_asd_visible = {
-				has_global_flag = asd
-			}
-		}
-		triggers = {
-			BA_Super_Event_Image_britain_visible = {
-				has_global_flag = sup_Britain
-			}
-		}
-		triggers = {
-			BA_Super_Event_Image_GER_mil_visible = {
-				has_global_flag = sup_GER_mil
-			}
-		}
-		triggers = {
-			BA_Super_Event_Image_france_visible = {
-				has_global_flag = sup_France
-			}
-		}
-		triggers = {
-			BA_Super_Event_Image_france_com_visible = {
-				has_global_flag = sup_France_com
-			}
-		}
-		triggers = {
-			BA_Super_Event_Image_france_dem_visible = {
-				has_global_flag = sup_France_dem
-			}
-		}
-		triggers = {
-			BA_Super_Event_Image_france_fas_visible = {
-				has_global_flag = sup_France_fas
+				has_global_flag = {
+					flag = BA_Super_Event_Visible
+					value = 1
+				}
 			}
 		}
 		triggers = {
 			BA_Super_Event_Image_aby_cze_union_visible = {
-				has_global_flag = sup_aby_cze_union
+				has_global_flag = {
+					flag = BA_Super_Event_Visible
+					value = 2
+				}
 			}
 		}
 		triggers = {
 			BA_Super_Event_Image_unity_germany_visible = {
-				has_global_flag = sup_untiy_germay
+				has_global_flag = {
+					flag = BA_Super_Event_Visible
+					value = 3
+				}
 			}
 		}
 		triggers = {
 			BA_Super_Event_Image_invasion_another_dimension_visible = {
-				has_global_flag = sup_invasion_another_dimension
+				has_global_flag = {
+					flag = BA_Super_Event_Visible
+					value = 4
+				}
 			}
 		}
 		triggers = {
 			BA_Super_Event_Image_trinity_gehenna_war_visible = {
-				has_global_flag = sup_trinity_gehenna_war
+				has_global_flag = {
+					flag = BA_Super_Event_Visible
+					value = 5
+				}
 			}
 		}
 		triggers = {
 			BA_Super_Event_Image_Kivotos_visible = {
-				has_global_flag = sup_Kivotos
+				has_global_flag = {
+					flag = BA_Super_Event_Visible
+					value = 6
+				}
+			}
+		}
+		triggers = {
+			BA_Super_Event_Image_france_visible = {
+				has_global_flag = {
+					flag = BA_Super_Event_Visible
+					value = 7
+				}
+			}
+		}
+		triggers = {
+			BA_Super_Event_Image_britain_visible = {
+				has_global_flag = {
+					flag = BA_Super_Event_Visible
+					value = 8
+				}
+			}
+		}
+		triggers = {
+			BA_Super_Event_Image_GER_mil_visible = {
+				has_global_flag = {
+					flag = BA_Super_Event_Visible
+					value = 9
+				}
 			}
 		}
 		triggers = {
 			BA_Super_Event_Image_BA_superevent_Middle_Asia_war_visible = {
-				has_global_flag = sup_BA_superevent_Middle_Asia_war
+				has_global_flag = {
+					flag = BA_Super_Event_Visible
+					value = 10
+				}
 			}
 		}
 		triggers = {
 			BA_Super_Event_Image_HUN_BALKAN_visible = {
-				has_global_flag = sup_HUN_BALKAN
+				has_global_flag = {
+					flag = BA_Super_Event_Visible
+					value = 11
+				}
 			}
 		}
 		triggers = {
 			BA_Super_Event_Image_BA_superevent_Key_visible = {
-				has_global_flag = sup_mil_key
+				has_global_flag = {
+					flag = BA_Super_Event_Visible
+					value = 12
+				}
 			}
 		}
 		triggers = {
 			BA_Super_Event_Image_Atrahasis_visible = {
-				has_global_flag = sup_mil_atrahasis
+				has_global_flag = {
+					flag = BA_Super_Event_Visible
+					value = 13
+				}
 			}
 		}
 		triggers = {
 			BA_Super_Event_Image_china_japan_war_visible = {
-				has_global_flag = sup_China_Japan_War
+				has_global_flag = {
+					flag = BA_Super_Event_Visible
+					value = 14
+				}
 			}
 		}
 		triggers = {
 			BA_Super_Event_Image_launch_vehicle_visible = {
-				has_global_flag = sup_launch_vehicle
+				has_global_flag = {
+					flag = BA_Super_Event_Visible
+					value = 15
+				}
 			}
 		}
 		triggers = {
 			BA_Super_Event_Image_BA_airship_crash_visible = {
-				has_global_flag = sup_teaparty_nuked
+				has_global_flag = {
+					flag = BA_Super_Event_Visible
+					value = 16
+				}
 			}
 		}
 		triggers = {
 			BA_Super_Event_Image_sov_pol_war_visible = {
-				has_global_flag = sup_sov_pol_war
+				has_global_flag = {
+					flag = BA_Super_Event_Visible
+					value = 17
+				}
 			}
 		}
 		triggers = {
 			BA_Super_Event_Image_BA_Soviet_Win_visible = {
-				has_global_flag = sup_Soviet_Win
+				has_global_flag = {
+					flag = BA_Super_Event_Visible
+					value = 18
+				}
 			}
 		}
 		triggers = {
 			BA_Super_Event_Image_BA_redwinter_civilwar_visible = {
-				has_global_flag = sup_redwinter_civilwar
+				has_global_flag = {
+					flag = BA_Super_Event_Visible
+					value = 19
+				}
 			}
 		}
 		triggers = {
 			BA_Super_Event_Image_BA_HYA_SHA_war_visible = {
-				has_global_flag = sup_HYA_SHA_war
+				has_global_flag = {
+					flag = BA_Super_Event_Visible
+					value = 20
+				}
 			}
 		}
 		triggers = {
 			BA_Super_Event_Image_united_nations_visible = {
-				has_global_flag = sup_united_nations
+				has_global_flag = {
+					flag = BA_Super_Event_Visible
+					value = 21
+				}
+			}
+		}
+		triggers = {
+			BA_Super_Event_Image_france_com_visible = {
+				has_global_flag = {
+					flag = BA_Super_Event_Visible
+					value = 22
+				}
+			}
+		}
+		triggers = {
+			BA_Super_Event_Image_france_dem_visible = {
+				has_global_flag = {
+					flag = BA_Super_Event_Visible
+					value = 23
+				}
+			}
+		}
+		triggers = {
+			BA_Super_Event_Image_france_fas_visible = {
+				has_global_flag = {
+					flag = BA_Super_Event_Visible
+					value = 24
+				}
 			}
 		}
 		
@@ -136,151 +208,6 @@ scripted_gui = {
 		effects = {
 			blue_sp_event_close_button_click = {
 				clr_global_flag = BA_Super_Event_Visible
-				
-				if = {
-					limit = {
-						has_global_flag = asd
-					}
-					clr_global_flag = asd
-				}
-				if = {
-					limit = {
-						has_global_flag = sup_Britain
-					}
-					clr_global_flag = sup_Britain
-				}
-				if = {
-					limit = {
-						has_global_flag = sup_GER_mil
-					}
-					clr_global_flag = sup_GER_mil
-				}
-				if = {
-					limit = {
-						has_global_flag = sup_France
-					}
-					clr_global_flag = sup_France
-				}
-				if = {
-					limit = {
-						has_global_flag = sup_France_com
-					}
-					clr_global_flag = sup_France_com
-				}
-				if = {
-					limit = {
-						has_global_flag = sup_France_dem
-					}
-					clr_global_flag = sup_France_dem
-				}
-				if = {
-					limit = {
-						has_global_flag = sup_France_fas
-					}
-					clr_global_flag = sup_France_fas
-				}
-				if = {
-					limit = {
-						has_global_flag = sup_aby_cze_union
-					}
-					clr_global_flag = sup_aby_cze_union
-				}
-				if = {
-					limit = {
-						has_global_flag = sup_untiy_germay
-					}
-					clr_global_flag = sup_untiy_germay
-				}
-				if = {
-					limit = {
-						has_global_flag = sup_invasion_another_dimension
-					}
-					clr_global_flag = sup_invasion_another_dimension
-				}
-				if = {
-					limit = {
-						has_global_flag = sup_trinity_gehenna_war
-					}
-					clr_global_flag = sup_trinity_gehenna_war
-				}
-				if = {
-					limit = {
-						has_global_flag = sup_Kivotos
-					}
-					clr_global_flag = sup_Kivotos
-				}
-				if = {
-					limit = {
-						has_global_flag = sup_BA_superevent_Middle_Asia_war
-					}
-					clr_global_flag = sup_BA_superevent_Middle_Asia_war
-				}
-				if = {
-					limit = {
-						has_global_flag = sup_HUN_BALKAN
-					}
-					clr_global_flag = sup_HUN_BALKAN
-				}
-				if = {
-					limit = {
-						has_global_flag = sup_mil_key
-					}
-					clr_global_flag = sup_mil_key
-				}
-				if = {
-					limit = {
-						has_global_flag = sup_mil_atrahasis
-					}
-					clr_global_flag = sup_mil_atrahasis
-				}
-				if = {
-					limit = {
-						has_global_flag = sup_China_Japan_War
-					}
-					clr_global_flag = sup_China_Japan_War
-				}
-				if = {
-					limit = {
-						has_global_flag = sup_launch_vehicle
-					}
-					clr_global_flag = sup_launch_vehicle
-				}
-				if = {
-					limit = {
-						has_global_flag = sup_teaparty_nuked
-					}
-					clr_global_flag = sup_teaparty_nuked
-				}
-				if = {
-					limit = {
-						has_global_flag = sup_sov_pol_war
-					}
-					clr_global_flag = sup_sov_pol_war
-				}
-				if = {
-					limit = {
-						has_global_flag = sup_Soviet_Win
-					}
-					clr_global_flag = sup_Soviet_Win
-				}
-				if = {
-					limit = {
-						has_global_flag = sup_redwinter_civilwar
-					}
-					clr_global_flag = sup_redwinter_civilwar
-				}
-				if = {
-					limit = {
-						has_global_flag = sup_HYA_SHA_war
-					}
-					clr_global_flag = sup_HYA_SHA_war
-				}
-				if = {
-					limit = {
-						has_global_flag = sup_united_nations
-					}
-					clr_global_flag = sup_united_nations
-				}
 			}
 		}
 	}

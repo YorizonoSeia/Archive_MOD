@@ -2164,18 +2164,17 @@ news_event = {
 				limit = {
 					is_ai = no
 				}
-				set_global_flag = {
-					flag = BA_Super_Event_Visible
-					value = 1
-					days = 15
-				}
 				if = {
 					limit = {
 						FRA = {
 							has_government = communism
 						}
 					}
-					set_global_flag = sup_France_com
+					set_global_flag = {
+						flag = BA_Super_Event_Visible
+						value = 22
+						days = 15
+					}
 					scoped_play_song = "BA_internationale_french"
 				}
 				else_if = {
@@ -2184,7 +2183,11 @@ news_event = {
 							has_government = democratic
 						}
 					}
-					set_global_flag = sup_France_dem
+					set_global_flag = {
+						flag = BA_Super_Event_Visible
+						value = 23
+						days = 15
+					}
 					scoped_play_song = "BA_La_Mar"
 				}
 				else_if = {
@@ -2193,11 +2196,19 @@ news_event = {
 							has_government = fascism
 						}
 					}
-					set_global_flag = sup_France_fas
+					set_global_flag = {
+						flag = BA_Super_Event_Visible
+						value = 24
+						days = 15
+					}
 					scoped_play_song = "BA_verdun"
 				}
 				else = {
-					set_global_flag = sup_France
+					set_global_flag = {
+						flag = BA_Super_Event_Visible
+						value = 7
+						days = 15
+					}
 					scoped_play_song = "BA_victory"
 				}
 			}
@@ -2279,18 +2290,17 @@ news_event = {
 				limit = {
 					is_ai = no
 				}
-				set_global_flag = {
-					flag = BA_Super_Event_Visible
-					value = 1
-					days = 15
-				}
 				if = {
 					limit = {
 						FRA = {
 							has_government = communism
 						}
 					}
-					set_global_flag = sup_France_com
+					set_global_flag = {
+						flag = BA_Super_Event_Visible
+						value = 22
+						days = 15
+					}
 					scoped_play_song = "BA_internationale_french"
 				}
 				else_if = {
@@ -2299,7 +2309,11 @@ news_event = {
 							has_government = democratic
 						}
 					}
-					set_global_flag = sup_France_dem
+					set_global_flag = {
+						flag = BA_Super_Event_Visible
+						value = 23
+						days = 15
+					}
 					scoped_play_song = "BA_La_Mar"
 				}
 				else_if = {
@@ -2308,11 +2322,19 @@ news_event = {
 							has_government = fascism
 						}
 					}
-					set_global_flag = sup_France_fas
+					set_global_flag = {
+						flag = BA_Super_Event_Visible
+						value = 24
+						days = 15
+					}
 					scoped_play_song = "BA_verdun"
 				}
 				else = {
-					set_global_flag = sup_France
+					set_global_flag = {
+						flag = BA_Super_Event_Visible
+						value = 7
+						days = 15
+					}
 					scoped_play_song = "BA_victory"
 				}
 			}

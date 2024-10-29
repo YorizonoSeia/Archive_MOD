@@ -21,7 +21,6 @@ country_event = {	#미카의 쿠데타 성공
 			value = 1
 			days = 15
 		}
-        set_global_flag = asd
 	}
 	option = {
 		name = BA_super.1.b
@@ -44,10 +43,9 @@ country_event = {	# 트 - 소 전쟁
 		scoped_play_song = "BA_Russia_Trinity_war"
 		set_global_flag = {
 			flag = BA_Super_Event_Visible
-			value = 1
+			value = 2
 			days = 15
 		}
-		set_global_flag = sup_aby_cze_union
 	}
 	option = {
 		name = BA_super.1.b
@@ -70,11 +68,9 @@ country_event = {	# 1940년 연합법
 		scoped_play_song = "BA_Kyrie_Elesion"
 		set_global_flag = {
 			flag = BA_Super_Event_Visible
-			value = 1
+			value = 3
 			days = 15
 		}
-		set_global_flag = sup_untiy_germay
-
 	}
 	option = {
 		name = BA_super.1.b
@@ -97,11 +93,9 @@ country_event = {	#색채 침입
 		scoped_play_song = "BA_the_planets_mars"
 		set_global_flag = {
 			flag = BA_Super_Event_Visible
-			value = 1
+			value = 4
 			days = 15
 		}
-		set_global_flag = sup_invasion_another_dimension
-
 	}
 	option = {
 		name = BA_super.1.b
@@ -124,11 +118,9 @@ country_event = {	#트리니티 - 게헨나 전쟁
 		scoped_play_song = "BA_fall_schwarz"
 		set_global_flag = {
 			flag = BA_Super_Event_Visible
-			value = 1
+			value = 5
 			days = 15
 		}
-		set_global_flag = sup_trinity_gehenna_war
-
 	}
 	option = {
 		name = BA_super.1.b
@@ -151,11 +143,9 @@ country_event = {	#키보토스
 		scoped_play_song = "BA_piano_concerto_no2_in_c_minor_op18"
 		set_global_flag = {
 			flag = BA_Super_Event_Visible
-			value = 1
+			value = 6
 			days = 15
 		}
-		set_global_flag = sup_Kivotos
-
 	}
 	option = {
 		name = BA_super.1.b
@@ -178,11 +168,9 @@ country_event = {	#프랑스의 본토 수복
 		scoped_play_song = "BA_victory"
 		set_global_flag = {
 			flag = BA_Super_Event_Visible
-			value = 1
+			value = 7
 			days = 15
 		}
-		set_global_flag = sup_France
-
 	}
 	option = {
 		name = BA_super.1.b
@@ -205,7 +193,7 @@ country_event = {	#영국의 카이저 격퇴
 		scoped_play_song = "BA_britain_win"
 		set_global_flag = {
 			flag = BA_Super_Event_Visible
-			value = 1
+			value = 8
 			days = 15
 		}
 		set_global_flag = sup_Britain
@@ -244,7 +232,7 @@ country_event = {	#독일 군사정부 수립
 		scoped_play_song = "BA_WGH"
 		set_global_flag = {
 			flag = BA_Super_Event_Visible
-			value = 1
+			value = 9
 			days = 15
 		}
 		set_global_flag = sup_GER_mil
@@ -282,10 +270,9 @@ country_event = {	# 중동전쟁
 		scoped_play_song = "BA_PaintItBlack"
 		set_global_flag = {
 			flag = BA_Super_Event_Visible
-			value = 1
+			value = 10
 			days = 15
 		}
-		set_global_flag = sup_BA_superevent_Middle_Asia_war
 	}
 	option = {
 		name = BA_super.1.b
@@ -309,10 +296,9 @@ country_event = {	#발칸통일
 		scoped_play_song = "BA_Internationale"
 		set_global_flag = {
 			flag = BA_Super_Event_Visible
-			value = 1
+			value = 11
 			days = 15
 		}
-		set_global_flag = sup_HUN_BALKAN
 	}
 	option = {
 		name = BA_super.1.b
@@ -336,10 +322,9 @@ country_event = {	# 이름 없는 신들의 왕녀
 		scoped_play_song = "BA_final_destination_of_ark"
 		set_global_flag = {
 			flag = BA_Super_Event_Visible
-			value = 1
+			value = 12
 			days = 15
 		}
-		set_global_flag = sup_mil_key
 	}
 	option = {
 		name = BA_super.1.b
@@ -363,10 +348,9 @@ country_event = {	# 아트라하시스의 방주
 		scoped_play_song = "BA_Codex_of_Omen"
 		set_global_flag = {
 			flag = BA_Super_Event_Visible
-			value = 1
+			value = 13
 			days = 15
 		}
-		set_global_flag = sup_mil_atrahasis
 	}
 	option = {
 		name = BA_super.1.b
@@ -386,10 +370,9 @@ country_event = {	# 2차 중일전쟁
 		scoped_play_song = "BA_battotai"
 		set_global_flag = {
 			flag = BA_Super_Event_Visible
-			value = 1
+			value = 14
 			days = 15
 		}
-		set_global_flag = sup_China_Japan_War
 	}
 	option = {
 		name = BA_super.1.b
@@ -409,10 +392,9 @@ country_event = {	# 인공위성
 		scoped_play_song = "BA_Sputnik_Beeping"
 		set_global_flag = {
 			flag = BA_Super_Event_Visible
-			value = 1
+			value = 15
 			days = 15
 		}
-		set_global_flag = sup_launch_vehicle
 	}
 	option = {
 		name = BA_super.1.b
@@ -432,10 +414,9 @@ country_event = {	# 티파티 핵폭발
 		scoped_play_song = "BA_Megalith_Agnus_Dei"
 		set_global_flag = {
 			flag = BA_Super_Event_Visible
-			value = 1
+			value = 16
 			days = 15
 		}
-		set_global_flag = sup_teaparty_nuked
 	}
 	option = {
 		name = BA_super.1.b
@@ -455,10 +436,9 @@ country_event = {	# 제 3차 소폴전쟁
 		scoped_play_song = "BA_red_cavarly"
 		set_global_flag = {
 			flag = BA_Super_Event_Visible
-			value = 1
+			value = 17
 			days = 15
 		}
-		set_global_flag = sup_sov_pol_war
 	}
 	option = {
 		name = BA_super.1.b
@@ -478,10 +458,9 @@ country_event = {	# 소련의 승리
 		scoped_play_song = "BA_soviet_win"
 		set_global_flag = {
 			flag = BA_Super_Event_Visible
-			value = 1
+			value = 18
 			days = 15
 		}
-		set_global_flag = sup_Soviet_Win
 	}
 	option = {
 		name = BA_super.1.b
@@ -501,10 +480,9 @@ country_event = {	# 붉은겨울 내전
 		scoped_play_song = "BA_jap_warsow"
 		set_global_flag = {
 			flag = BA_Super_Event_Visible
-			value = 1
+			value = 19
 			days = 15
 		}
-		set_global_flag = sup_redwinter_civilwar
 	}
 	option = {
 		name = BA_super.1.b
@@ -524,10 +502,9 @@ country_event = {	# 백산전쟁
 		scoped_play_song = "BA_Hohei_no_Honryo"
 		set_global_flag = {
 			flag = BA_Super_Event_Visible
-			value = 1
+			value = 20
 			days = 15
 		}
-		set_global_flag = sup_HYA_SHA_war
 	}
 	option = {
 		name = BA_super.1.b
@@ -544,13 +521,87 @@ country_event = {	# 국제연맹의 부활
 	
 	option = {
 		name = BA_super.1.a
-		scoped_play_song = "BA_united_nations_music"
+		scoped_play_song = "imperterrita" #BA_united_nations_music
 		set_global_flag = {
 			flag = BA_Super_Event_Visible
-			value = 1
+			value = 21
 			days = 15
 		}
-		set_global_flag = sup_united_nations
+	}
+	option = {
+		name = BA_super.1.b
+	}
+}
+country_event = {	#프랑스의 본토 수복
+	id = BA_super.22
+	title = BA_super.22.t
+	desc = BA_super.22.d
+	picture = GFX_report_event_diplomatic_message
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	hidden = yes
+	
+	option = {
+		name = BA_super.1.a
+		scoped_play_song = "BA_internationale_french"
+		set_global_flag = {
+			flag = BA_Super_Event_Visible
+			value = 22
+			days = 15
+		}
+	}
+	option = {
+		name = BA_super.1.b
+	}
+}
+country_event = {	#프랑스의 본토 수복
+	id = BA_super.23
+	title = BA_super.23.t
+	desc = BA_super.23.d
+	picture = GFX_report_event_diplomatic_message
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	hidden = yes
+	
+	option = {
+		name = BA_super.1.a
+		scoped_play_song = "BA_La_Mar"
+		set_global_flag = {
+			flag = BA_Super_Event_Visible
+			value = 23
+			days = 15
+		}
+	}
+	option = {
+		name = BA_super.1.b
+	}
+}
+country_event = {	#프랑스의 본토 수복
+	id = BA_super.24
+	title = BA_super.24.t
+	desc = BA_super.24.d
+	picture = GFX_report_event_diplomatic_message
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	hidden = yes
+	
+	option = {
+		name = BA_super.1.a
+		scoped_play_song = "BA_verdun"
+		set_global_flag = {
+			flag = BA_Super_Event_Visible
+			value = 24
+			days = 15
+		}
 	}
 	option = {
 		name = BA_super.1.b

@@ -4,147 +4,219 @@ defined_text = {
 
     text = {
         trigger = {
-            has_global_flag = asd
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 1
+            }
         }
         localization_key = "BA_Super_Event_asd"
     }
     text = {
         trigger = {
-            has_global_flag = sup_aby_cze_union
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 2
+            }
         }
         localization_key = "sup_aby_cze_union"
     }
     text = {
         trigger = {
-            has_global_flag = sup_untiy_germay
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 3
+            }
         }
         localization_key = "sup_untiy_germay"
     }
     text = {
         trigger = {
-            has_global_flag = sup_invasion_another_dimension
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 4
+            }
         }
         localization_key = "sup_invasion_another_dimension"
     }
     text = {
         trigger = {
-            has_global_flag = sup_trinity_gehenna_war
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 5
+            }
         }
         localization_key = "sup_trinity_gehenna_war"
     }
     text = {
         trigger = {
-            has_global_flag = sup_Kivotos
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 6
+            }
         }
         localization_key = "sup_Kivotos"
     }
     text = {
         trigger = {
-            has_global_flag = sup_France
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 7
+            }
         }
         localization_key = "sup_france"
     }
     text = {
         trigger = {
-            has_global_flag = sup_France_com
-        }
-        localization_key = "sup_france_com"
-    }
-    text = {
-        trigger = {
-            has_global_flag = sup_France_dem
-        }
-        localization_key = "sup_france_dem"
-    }
-    text = {
-        trigger = {
-            has_global_flag = sup_France_fas
-        }
-        localization_key = "sup_france_fas"
-    }
-    text = {
-        trigger = {
-            has_global_flag = sup_Britain
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 8
+            }
         }
         localization_key = "sup_britain"
     }
     text = {
         trigger = {
-            has_global_flag = sup_GER_mil
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 9
+            }
         }
         localization_key = "sup_GER_mil"
     }
     text = {
         trigger = {
-            has_global_flag = sup_BA_superevent_Middle_Asia_war
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 10
+            }
         }
         localization_key = "sup_BA_superevent_Middle_Asia_war"
     }
     text = {
         trigger = {
-            has_global_flag = sup_HUN_BALKAN
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 11
+            }
         }
         localization_key = "sup_HUN_BALKAN"
     }
     text = {
         trigger = {
-            has_global_flag = sup_mil_key
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 12
+            }
         }
         localization_key = "sup_mil_key"
     }
     text = {
         trigger = {
-            has_global_flag = sup_mil_atrahasis
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 13
+            }
         }
         localization_key = "sup_mil_atrahasis"
     }
     text = {
         trigger = {
-            has_global_flag = sup_China_Japan_War
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 14
+            }
         }
         localization_key = "sup_China_Japan_War"
     }
     text = {
         trigger = {
-            has_global_flag = sup_launch_vehicle
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 15
+            }
         }
         localization_key = "sup_launch_vehicle"
     }
     text = {
         trigger = {
-            has_global_flag = sup_teaparty_nuked
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 16
+            }
         }
         localization_key = "sup_teaparty_nuked"
     }
     text = {
         trigger = {
-            has_global_flag = sup_sov_pol_war
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 17
+            }
         }
         localization_key = "sup_sov_pol_war"
     }
     text = {
         trigger = {
-            has_global_flag = sup_Soviet_Win
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 18
+            }
         }
         localization_key = "sup_Soviet_Win"
     }
     text = {
         trigger = {
-            has_global_flag = sup_redwinter_civilwar
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 19
+            }
         }
         localization_key = "sup_redwinter_civilwar"
     }
     text = {
         trigger = {
-            has_global_flag = sup_HYA_SHA_war
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 20
+            }
         }
         localization_key = "sup_HYA_SHA_war"
     }
     text = {
         trigger = {
-            has_global_flag = sup_united_nations
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 21
+            }
         }
         localization_key = "sup_united_nations"
+    }
+    text = {
+        trigger = {
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 22
+            }
+        }
+        localization_key = "sup_france_com"
+    }
+    text = {
+        trigger = {
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 23
+            }
+        }
+        localization_key = "sup_france_dem"
+    }
+    text = {
+        trigger = {
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 24
+            }
+        }
+        localization_key = "sup_france_fas"
     }
 }
 defined_text = {
@@ -152,147 +224,219 @@ defined_text = {
 
     text = {
         trigger = {
-            has_global_flag = asd
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 1
+            }
         }
         localization_key = "sp_event_asd_QUOTE"
     }
     text = {
         trigger = {
-            has_global_flag = sup_aby_cze_union
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 2
+            }
         }
         localization_key = "sup_aby_cze_union_QUOTE"
     }
     text = {
         trigger = {
-            has_global_flag = sup_untiy_germay
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 3
+            }
         }
         localization_key = "sup_untiy_germay_QUOTE"
     }
     text = {
         trigger = {
-            has_global_flag = sup_invasion_another_dimension
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 4
+            }
         }
         localization_key = "sup_invasion_another_dimension_QUOTE"
     }
     text = {
         trigger = {
-            has_global_flag = sup_trinity_gehenna_war
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 5
+            }
         }
         localization_key = "sup_trinity_gehenna_war_QUOTE"
     }
     text = {
         trigger = {
-            has_global_flag = sup_Kivotos
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 6
+            }
         }
         localization_key = "sup_Kivotos_QUOTE"
     }
     text = {
         trigger = {
-            has_global_flag = sup_France
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 7
+            }
         }
         localization_key = "sup_france_QUOTE"
     }
     text = {
         trigger = {
-            has_global_flag = sup_France_com
-        }
-        localization_key = "sup_france_com_QUOTE"
-    }
-    text = {
-        trigger = {
-            has_global_flag = sup_France_dem
-        }
-        localization_key = "sup_france_dem_QUOTE"
-    }
-    text = {
-        trigger = {
-            has_global_flag = sup_France_fas
-        }
-        localization_key = "sup_france_fas_QUOTE"
-    }
-    text = {
-        trigger = {
-            has_global_flag = sup_Britain
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 8
+            }
         }
         localization_key = "sup_britain_QUOTE"
     }
     text = {
         trigger = {
-            has_global_flag = sup_GER_mil
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 9
+            }
         }
         localization_key = "sup_GER_mil_QUOTE"
     }
     text = {
         trigger = {
-            has_global_flag = sup_BA_superevent_Middle_Asia_war
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 10
+            }
         }
         localization_key = "sup_BA_superevent_Middle_Asia_war_QUOTE"
     }
     text = {
         trigger = {
-            has_global_flag = sup_HUN_BALKAN
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 11
+            }
         }
         localization_key = "sup_HUN_BALKAN_QUOTE"
     }
     text = {
         trigger = {
-            has_global_flag = sup_mil_key
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 12
+            }
         }
         localization_key = "sup_mil_key_QUOTE"
     }
     text = {
         trigger = {
-            has_global_flag = sup_mil_atrahasis
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 13
+            }
         }
         localization_key = "sup_mil_atrahasis_QUOTE"
     }
     text = {
         trigger = {
-            has_global_flag = sup_China_Japan_War
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 14
+            }
         }
         localization_key = "sup_China_Japan_War_QUOTE"
     }
     text = {
         trigger = {
-            has_global_flag = sup_launch_vehicle
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 15
+            }
         }
         localization_key = "sup_launch_vehicle_QUOTE"
     }
     text = {
         trigger = {
-            has_global_flag = sup_teaparty_nuked
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 16
+            }
         }
         localization_key = "sup_teaparty_nuked_QUOTE"
     }
     text = {
         trigger = {
-            has_global_flag = sup_sov_pol_war
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 17
+            }
         }
         localization_key = "sup_sov_pol_war_QUOTE"
     }
     text = {
         trigger = {
-            has_global_flag = sup_Soviet_Win
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 18
+            }
         }
         localization_key = "sup_Soviet_Win_QUOTE"
     }
     text = {
         trigger = {
-            has_global_flag = sup_redwinter_civilwar
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 19
+            }
         }
         localization_key = "sup_redwinter_civilwar_QUOTE"
     }
     text = {
         trigger = {
-            has_global_flag = sup_HYA_SHA_war
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 20
+            }
         }
         localization_key = "sup_HYA_SHA_war_QUOTE"
     }
     text = {
         trigger = {
-            has_global_flag = sup_united_nations
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 21
+            }
         }
         localization_key = "sup_united_nations_QUOTE"
+    }
+    text = {
+        trigger = {
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 22
+            }
+        }
+        localization_key = "sup_france_com_QUOTE"
+    }
+    text = {
+        trigger = {
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 23
+            }
+        }
+        localization_key = "sup_france_dem_QUOTE"
+    }
+    text = {
+        trigger = {
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 24
+            }
+        }
+        localization_key = "sup_france_fas_QUOTE"
     }
 }
 defined_text = {
@@ -300,147 +444,219 @@ defined_text = {
 
     text = {
         trigger = {
-            has_global_flag = asd
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 1
+            }
         }
         localization_key = "sp_event_asd_QUOTE_NAME"
     }
     text = {
         trigger = {
-            has_global_flag = sup_aby_cze_union
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 2
+            }
         }
         localization_key = "sup_aby_cze_union_QUOTE_NAME"
     }
     text = {
         trigger = {
-            has_global_flag = sup_untiy_germay
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 3
+            }
         }
         localization_key = "sup_untiy_germay_QUOTE_NAME"
     }
     text = {
         trigger = {
-            has_global_flag = sup_invasion_another_dimension
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 4
+            }
         }
         localization_key = "sup_invasion_another_dimension_QUOTE_NAME"
     }
     text = {
         trigger = {
-            has_global_flag = sup_trinity_gehenna_war
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 5
+            }
         }
         localization_key = "sup_trinity_gehenna_war_QUOTE_NAME"
     }
     text = {
         trigger = {
-            has_global_flag = sup_Kivotos
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 6
+            }
         }
         localization_key = "sup_Kivotos_QUOTE_NAME"
     }
     text = {
         trigger = {
-            has_global_flag = sup_France
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 7
+            }
         }
         localization_key = "sup_france_QUOTE_NAME"
     }
     text = {
         trigger = {
-            has_global_flag = sup_France_com
-        }
-        localization_key = "sup_france_com_QUOTE_NAME"
-    }
-    text = {
-        trigger = {
-            has_global_flag = sup_France_dem
-        }
-        localization_key = "sup_france_dem_QUOTE_NAME"
-    }
-    text = {
-        trigger = {
-            has_global_flag = sup_France_fas
-        }
-        localization_key = "sup_france_fas_QUOTE_NAME"
-    }
-    text = {
-        trigger = {
-            has_global_flag = sup_Britain
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 8
+            }
         }
         localization_key = "sup_britain_QUOTE_NAME"
     }
     text = {
         trigger = {
-            has_global_flag = sup_GER_mil
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 9
+            }
         }
         localization_key = "sup_GER_mil_QUOTE_NAME"
     }
     text = {
         trigger = {
-            has_global_flag = sup_BA_superevent_Middle_Asia_war
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 10
+            }
         }
         localization_key = "sup_BA_superevent_Middle_Asia_war_NAME"
     }
     text = {
         trigger = {
-            has_global_flag = sup_HUN_BALKAN
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 11
+            }
         }
         localization_key = "sup_HUN_BALKAN_QUOTE_NAME"
     }
     text = {
         trigger = {
-            has_global_flag = sup_mil_key
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 12
+            }
         }
         localization_key = "sup_mil_key_QUOTE_NAME"
     }
     text = {
         trigger = {
-            has_global_flag = sup_mil_atrahasis
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 13
+            }
         }
         localization_key = "sup_mil_atrahasis_QUOTE_NAME"
     }
     text = {
         trigger = {
-            has_global_flag = sup_China_Japan_War
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 14
+            }
         }
         localization_key = "sup_China_Japan_War_QUOTE_NAME"
     }
     text = {
         trigger = {
-            has_global_flag = sup_launch_vehicle
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 15
+            }
         }
         localization_key = "sup_launch_vehicle_QUOTE_NAME"
     }
     text = {
         trigger = {
-            has_global_flag = sup_teaparty_nuked
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 16
+            }
         }
         localization_key = "sup_teaparty_nuked_QUOTE_NAME"
     }
     text = {
         trigger = {
-            has_global_flag = sup_sov_pol_war
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 17
+            }
         }
         localization_key = "sup_sov_pol_war_QUOTE_NAME"
     }
     text = {
         trigger = {
-            has_global_flag = sup_Soviet_Win
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 18
+            }
         }
         localization_key = "sup_Soviet_Win_QUOTE_NAME"
     }
     text = {
         trigger = {
-            has_global_flag = sup_redwinter_civilwar
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 19
+            }
         }
         localization_key = "sup_redwinter_civilwar_QUOTE_NAME"
     }
     text = {
         trigger = {
-            has_global_flag = sup_HYA_SHA_war
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 20
+            }
         }
         localization_key = "sup_HYA_SHA_war_QUOTE_NAME"
     }
     text = {
         trigger = {
-            has_global_flag = sup_united_nations
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 21
+            }
         }
         localization_key = "sup_united_nations_QUOTE_NAME"
+    }
+    text = {
+        trigger = {
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 22
+            }
+        }
+        localization_key = "sup_france_com_QUOTE_NAME"
+    }
+    text = {
+        trigger = {
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 23
+            }
+        }
+        localization_key = "sup_france_dem_QUOTE_NAME"
+    }
+    text = {
+        trigger = {
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 24
+            }
+        }
+        localization_key = "sup_france_fas_QUOTE_NAME"
     }
 }
 defined_text = {
@@ -448,147 +664,219 @@ defined_text = {
 
     text = {
         trigger = {
-            has_global_flag = asd
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 1
+            }
         }
         localization_key = "sp_event_asd_REMARK"
     }
     text = {
         trigger = {
-            has_global_flag = sup_aby_cze_union
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 2
+            }
         }
         localization_key = "sup_aby_cze_union_REMARK"
     }
     text = {
         trigger = {
-            has_global_flag = sup_untiy_germay
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 3
+            }
         }
         localization_key = "sup_untiy_germay_REMARK"
     }
     text = {
         trigger = {
-            has_global_flag = sup_invasion_another_dimension
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 4
+            }
         }
         localization_key = "sup_invasion_another_dimension_REMARK"
     }
     text = {
         trigger = {
-            has_global_flag = sup_trinity_gehenna_war
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 5
+            }
         }
         localization_key = "sup_trinity_gehenna_war_REMARK"
     }
     text = {
         trigger = {
-            has_global_flag = sup_Kivotos
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 6
+            }
         }
         localization_key = "sup_Kivotos_REMARK"
     }
     text = {
         trigger = {
-            has_global_flag = sup_France
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 7
+            }
         }
         localization_key = "sup_france_REMARK"
     }
     text = {
         trigger = {
-            has_global_flag = sup_France_com
-        }
-        localization_key = "sup_france_com_REMARK"
-    }
-    text = {
-        trigger = {
-            has_global_flag = sup_France_dem
-        }
-        localization_key = "sup_france_dem_REMARK"
-    }
-    text = {
-        trigger = {
-            has_global_flag = sup_France_fas
-        }
-        localization_key = "sup_france_fas_REMARK"
-    }
-    text = {
-        trigger = {
-            has_global_flag = sup_Britain
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 8
+            }
         }
         localization_key = "sup_britain_REMARK"
     }
     text = {
         trigger = {
-            has_global_flag = sup_GER_mil
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 9
+            }
         }
         localization_key = "sup_GER_mil_REMARK"
     }
     text = {
         trigger = {
-            has_global_flag = sup_BA_superevent_Middle_Asia_war
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 10
+            }
         }
         localization_key = "sup_BA_superevent_Middle_Asia_war_REMARK"
     }
     text = {
         trigger = {
-            has_global_flag = sup_HUN_BALKAN
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 11
+            }
         }
         localization_key = "sup_HUN_BALKAN_REMARK"
     }
     text = {
         trigger = {
-            has_global_flag = sup_mil_key
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 12
+            }
         }
         localization_key = "sup_mil_key_REMARK"
     }
     text = {
         trigger = {
-            has_global_flag = sup_mil_atrahasis
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 13
+            }
         }
         localization_key = "sup_mil_atrahasis_REMARK"
     }
     text = {
         trigger = {
-            has_global_flag = sup_China_Japan_War
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 14
+            }
         }
         localization_key = "sup_China_Japan_War_REMARK"
     }
     text = {
         trigger = {
-            has_global_flag = sup_launch_vehicle
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 15
+            }
         }
         localization_key = "sup_launch_vehicle_REMARK"
     }
     text = {
         trigger = {
-            has_global_flag = sup_teaparty_nuked
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 16
+            }
         }
         localization_key = "sup_teaparty_nuked_REMARK"
     }
     text = {
         trigger = {
-            has_global_flag = sup_sov_pol_war
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 17
+            }
         }
         localization_key = "sup_sov_pol_war_REMARK"
     }
     text = {
         trigger = {
-            has_global_flag = sup_Soviet_Win
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 18
+            }
         }
         localization_key = "sup_Soviet_Win_REMARK"
     }
     text = {
         trigger = {
-            has_global_flag = sup_redwinter_civilwar
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 19
+            }
         }
         localization_key = "sup_redwinter_civilwar_REMARK"
     }
     text = {
         trigger = {
-            has_global_flag = sup_HYA_SHA_war
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 20
+            }
         }
         localization_key = "sup_HYA_SHA_war_REMARK"
     }
     text = {
         trigger = {
-            has_global_flag = sup_united_nations
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 21
+            }
         }
         localization_key = "sup_united_nations_REMARK"
+    }
+    text = {
+        trigger = {
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 22
+            }
+        }
+        localization_key = "sup_france_com_REMARK"
+    }
+    text = {
+        trigger = {
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 23
+            }
+        }
+        localization_key = "sup_france_dem_REMARK"
+    }
+    text = {
+        trigger = {
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 24
+            }
+        }
+        localization_key = "sup_france_fas_REMARK"
     }
 }
 defined_text = {

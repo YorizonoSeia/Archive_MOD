@@ -194,7 +194,6 @@ news_event = { #미카의 집권
 					value = 1
 					days = 15
 				}
-				set_global_flag = asd
 			}
 		}
 		trigger = {
@@ -214,7 +213,6 @@ news_event = { #미카의 집권
 					value = 1
 					days = 15
 				}
-				set_global_flag = asd
 			}
 		}
 		trigger = {
@@ -239,7 +237,6 @@ news_event = { #미카의 집권
 					value = 1
 					days = 15
 				}
-				set_global_flag = asd
 			}
 		}
 		trigger = {
@@ -269,7 +266,6 @@ news_event = { #미카의 집권
 					value = 1
 					days = 15
 				}
-				set_global_flag = asd
 			}
 		}
 		trigger = {
@@ -316,16 +312,15 @@ news_event = { #트리니티 게헨나 전쟁
 			TAG = TRM
 		}
 		hidden_effect = {
-		if = {
-			limit = { is_ai = no }
-			scoped_play_song = "BA_fall_schwarz"
-			set_global_flag = {
-				flag = BA_Super_Event_Visible
-				value = 1
-				days = 15
+			if = {
+				limit = { is_ai = no }
+				scoped_play_song = "BA_fall_schwarz"
+				set_global_flag = {
+					flag = BA_Super_Event_Visible
+					value = 5
+					days = 15
+				}
 			}
-			set_global_flag = sup_trinity_gehenna_war
-		}
 		}
 	}
 	option = {
@@ -335,16 +330,15 @@ news_event = { #트리니티 게헨나 전쟁
 			tag = GEM
 		}
 		hidden_effect = {
-		if = {
-			limit = { is_ai = no }
-			scoped_play_song = "BA_fall_schwarz"
-			set_global_flag = {
-				flag = BA_Super_Event_Visible
-				value = 1
-				days = 15
+			if = {
+				limit = { is_ai = no }
+				scoped_play_song = "BA_fall_schwarz"
+				set_global_flag = {
+					flag = BA_Super_Event_Visible
+					value = 5
+					days = 15
+				}
 			}
-			set_global_flag = sup_trinity_gehenna_war
-		}
 		}
 	}
 	option = {
@@ -357,16 +351,15 @@ news_event = { #트리니티 게헨나 전쟁
 			}
 		}
 		hidden_effect = {
-		if = {
-			limit = { is_ai = no }
-			scoped_play_song = "BA_fall_schwarz"
-			set_global_flag = {
-				flag = BA_Super_Event_Visible
-				value = 1
-				days = 15
+			if = {
+				limit = { is_ai = no }
+				scoped_play_song = "BA_fall_schwarz"
+				set_global_flag = {
+					flag = BA_Super_Event_Visible
+					value = 5
+					days = 15
+				}
 			}
-			set_global_flag = sup_trinity_gehenna_war
-		}
 		}
 	}
 }
@@ -500,10 +493,9 @@ news_event = { # 트리니티 - 소련 전쟁
 				scoped_play_song = "BA_Russia_Trinity_war"
 				set_global_flag = {
 					flag = BA_Super_Event_Visible
-					value = 1
+					value = 2
 					days = 15
 				}
-				set_global_flag = sup_aby_cze_union
 			}
 		}
 		trigger = {
@@ -520,10 +512,9 @@ news_event = { # 트리니티 - 소련 전쟁
 				scoped_play_song = "BA_Russia_Trinity_war"
 				set_global_flag = {
 					flag = BA_Super_Event_Visible
-					value = 1
+					value = 2
 					days = 15
 				}
-				set_global_flag = sup_aby_cze_union
 			}
 		}
 		trigger = {
@@ -540,10 +531,9 @@ news_event = { # 트리니티 - 소련 전쟁
 				scoped_play_song = "BA_Russia_Trinity_war"
 				set_global_flag = {
 					flag = BA_Super_Event_Visible
-					value = 1
+					value = 2
 					days = 15
 				}
-				set_global_flag = sup_aby_cze_union
 			}
 		}
 		trigger = {
@@ -576,10 +566,9 @@ news_event = { # 트리니티의 키보토스(으악 너무 강력해~)
 				scoped_play_song = "BA_piano_concerto_no2_in_c_minor_op18"
 				set_global_flag = {
 					flag = BA_Super_Event_Visible
-					value = 1
+					value = 6
 					days = 15
 				}
-				set_global_flag = sup_Kivotos
 			}
 		}
 		trigger = {
@@ -596,10 +585,9 @@ news_event = { # 트리니티의 키보토스(으악 너무 강력해~)
 				scoped_play_song = "BA_piano_concerto_no2_in_c_minor_op18"
 				set_global_flag = {
 					flag = BA_Super_Event_Visible
-					value = 1
+					value = 6
 					days = 15
 				}
-				set_global_flag = sup_Kivotos
 			}
 		}
 		trigger = {
@@ -816,10 +804,9 @@ news_event = { #색채의 침입
 				scoped_play_song = "BA_the_planets_mars"
 				set_global_flag = {
 					flag = BA_Super_Event_Visible
-					value = 1
+					value = 4
 					days = 15
 				}
-				set_global_flag = sup_invasion_another_dimension
 			}
 		}
 	}
@@ -1102,10 +1089,9 @@ news_event = { #아트라하시스의 방주
 				scoped_play_song = "BA_Codex_of_Omen"
 				set_global_flag = {
 					flag = BA_Super_Event_Visible
-					value = 1
+					value = 13
 					days = 15
 				}
-				set_global_flag = sup_mil_atrahasis
 			}
 		}
 	}
@@ -1130,10 +1116,9 @@ news_event = { #밀레니엄의 붕괴
 				scoped_play_song = "BA_final_destination_of_ark"
 				set_global_flag = {
 					flag = BA_Super_Event_Visible
-					value = 1
+					value = 12
 					days = 15
 				}
-				set_global_flag = sup_mil_key
 			}
 		}
 		name = BA_news.25.a
@@ -1150,10 +1135,9 @@ news_event = { #밀레니엄의 붕괴
 				scoped_play_song = "BA_final_destination_of_ark"
 				set_global_flag = {
 					flag = BA_Super_Event_Visible
-					value = 1
+					value = 12
 					days = 15
 				}
-				set_global_flag = sup_mil_key
 			}
 		}
 		name = BA_news.25.b
@@ -1213,10 +1197,9 @@ news_event = { #밀레니엄 인공위성
 				scoped_play_song = "BA_Sputnik_Beeping"
 				set_global_flag = {
 					flag = BA_Super_Event_Visible
-					value = 1
+					value = 15
 					days = 15
 				}
-				set_global_flag = sup_launch_vehicle
 			}
 		}
 		name = BA_news.27.a
@@ -1235,10 +1218,9 @@ news_event = { #밀레니엄 인공위성
 				scoped_play_song = "BA_Sputnik_Beeping"
 				set_global_flag = {
 					flag = BA_Super_Event_Visible
-					value = 1
+					value = 15
 					days = 15
 				}
-				set_global_flag = sup_launch_vehicle
 			}
 		}
 		name = BA_news.27.b
@@ -1561,10 +1543,9 @@ news_event = { #에덴 핵폭발
 				scoped_play_song = "BA_Megalith_Agnus_Dei"
 				set_global_flag = {
 					flag = BA_Super_Event_Visible
-					value = 1
+					value = 16
 					days = 15
 				}
-				set_global_flag = sup_teaparty_nuked
 			}
 		}
 	}
@@ -1598,10 +1579,9 @@ news_event = { #소폴전쟁
 				scoped_play_song = "BA_red_cavarly"
 				set_global_flag = {
 					flag = BA_Super_Event_Visible
-					value = 1
+					value = 17
 					days = 15
 				}
-				set_global_flag = sup_sov_pol_war
 			}
 		}
 		trigger = {
@@ -1619,10 +1599,9 @@ news_event = { #소폴전쟁
 				scoped_play_song = "BA_red_cavarly"
 				set_global_flag = {
 					flag = BA_Super_Event_Visible
-					value = 1
+					value = 17
 					days = 15
 				}
-				set_global_flag = sup_sov_pol_war
 			}
 		}
 		trigger = {
@@ -1637,10 +1616,9 @@ news_event = { #소폴전쟁
 				scoped_play_song = "BA_red_cavarly"
 				set_global_flag = {
 					flag = BA_Super_Event_Visible
-					value = 1
+					value = 17
 					days = 15
 				}
-				set_global_flag = sup_sov_pol_war
 			}
 			if = {
 				limit = {has_country_flag = SOV_UKR_dokrib_yes}
@@ -1802,10 +1780,9 @@ news_event = { # 소련의 승전
 				scoped_play_song = "BA_soviet_win"
 				set_global_flag = {
 					flag = BA_Super_Event_Visible
-					value = 1
+					value = 18
 					days = 15
 				}
-				set_global_flag = sup_Soviet_Win
 			}
 		}
 	}
@@ -1823,10 +1800,9 @@ news_event = { # 소련의 승전
 				scoped_play_song = "BA_soviet_win"
 				set_global_flag = {
 					flag = BA_Super_Event_Visible
-					value = 1
+					value = 18
 					days = 15
 				}
-				set_global_flag = sup_Soviet_Win
 			}
 		}
 	}
@@ -2702,10 +2678,9 @@ news_event = { #영국 승전
 				scoped_play_song = "BA_britain_win"
 				set_global_flag = {
 					flag = BA_Super_Event_Visible
-					value = 1
+					value = 8
 					days = 15
 				}
-				set_global_flag = sup_Britain
 			}
 		}
 	}
@@ -2861,10 +2836,9 @@ news_event = { #백귀야행 산해경 전쟁
 				scoped_play_song = "BA_Hohei_no_Honryo"
 				set_global_flag = {
 					flag = BA_Super_Event_Visible
-					value = 1
+					value = 20
 					days = 15
 				}
-				set_global_flag = sup_HYA_SHA_war
 			}
 		}
 	}
@@ -2881,10 +2855,9 @@ news_event = { #백귀야행 산해경 전쟁
 				scoped_play_song = "BA_Hohei_no_Honryo"
 				set_global_flag = {
 					flag = BA_Super_Event_Visible
-					value = 1
+					value = 20
 					days = 15
 				}
-				set_global_flag = sup_HYA_SHA_war
 			}
 		}
 	}
@@ -2906,10 +2879,9 @@ news_event = { #백귀야행 산해경 전쟁
 				scoped_play_song = "BA_Hohei_no_Honryo"
 				set_global_flag = {
 					flag = BA_Super_Event_Visible
-					value = 1
+					value = 20
 					days = 15
 				}
-				set_global_flag = sup_HYA_SHA_war
 			}
 		}
 	}
@@ -2937,10 +2909,9 @@ news_event = { #붉은겨울 내전
 				scoped_play_song = "BA_jap_warsow"
 				set_global_flag = {
 					flag = BA_Super_Event_Visible
-					value = 1
+					value = 19
 					days = 15
 				}
-				set_global_flag = sup_redwinter_civilwar
 			}
 		}
 	}
@@ -2960,10 +2931,9 @@ news_event = { #붉은겨울 내전
 				scoped_play_song = "BA_jap_warsow"
 				set_global_flag = {
 					flag = BA_Super_Event_Visible
-					value = 1
+					value = 19
 					days = 15
 				}
-				set_global_flag = sup_redwinter_civilwar
 			}
 		}
 	}
@@ -2986,10 +2956,9 @@ news_event = { #붉은겨울 내전
 				scoped_play_song = "BA_jap_warsow"
 				set_global_flag = {
 					flag = BA_Super_Event_Visible
-					value = 1
+					value = 19
 					days = 15
 				}
-				set_global_flag = sup_redwinter_civilwar
 			}
 		}
 	}
@@ -3539,10 +3508,9 @@ news_event = {
 				scoped_play_song = "imperterrita" #BA_united_nations_music
 				set_global_flag = {
 					flag = BA_Super_Event_Visible
-					value = 1
+					value = 21
 					days = 15
 				}
-				set_global_flag = sup_united_nations
 			}
 		}
 	}
