@@ -655,10 +655,9 @@ on_actions = {
 						}
 					}
 				}
-				else = {
-					FROM.FROM = {
-						add_dynamic_modifier = { modifier = TRM_anti_geh_emotion }
-					}
+				
+				FROM.FROM = {
+					add_dynamic_modifier = { modifier = TRM_anti_geh_emotion }
 				}
 			}
 			if = {
