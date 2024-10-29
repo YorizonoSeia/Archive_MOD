@@ -1,6 +1,16 @@
 spriteTypes = {
 	
 	SpriteType = {
+		name = "GFX_focus_SHE_kibotoseuganggyeongcaeg"
+		texturefile = "gfx/interface/goals/SHE/focus_SHE_kibotoseuganggyeongcaeg.tga"			
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_SHE_kibotoseuyuhwacaeg"
+		texturefile = "gfx/interface/goals/SHE/focus_SHE_kibotoseuyuhwacaeg.tga"			
+	}
+	
+	SpriteType = {
 		name = "GFX_BLM_criminal_syndicate"
 		texturefile = "gfx/interface/goals/BLM/BLM_criminal_syndicate.tga"			
 	}

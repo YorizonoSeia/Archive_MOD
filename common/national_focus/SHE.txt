@@ -522,7 +522,7 @@ focus_tree = {
 
 	focus = {
 		id = SHE_teugisanghwangeulinjeong
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_radar
 		x = 10
 		y = 1
 		cost = 5
@@ -590,7 +590,7 @@ focus_tree = {
 
 	focus = {
 		id = SHE_kibotoseuganggyeongcaeg
-		icon = GFX_goal_unknown
+		icon = GFX_focus_SHE_kibotoseuganggyeongcaeg
 		x = 18
 		y = 3
 		cost = 5
@@ -618,7 +618,7 @@ focus_tree = {
 
 	focus = {
 		id = SHE_kibotoseuyuhwacaeg
-		icon = GFX_goal_unknown
+		icon = GFX_focus_SHE_kibotoseuyuhwacaeg
 		x = 6
 		y = 3
 		cost = 5
@@ -700,23 +700,56 @@ focus_tree = {
 					}
 				}
 				has_completed_focus = SHE_hanayikibotoseu
+				KSP = { is_subject_of = ROOT }
 			}
-			NOT = {
-				is_subject_of = KSP
+			if = {
+				limit = { has_country_flag = ksp_annex_country_fuck }
+				NOT = { has_country_flag = ksp_annex_country_fuck }
 			}
+		}
+		bypass = {
+			controls_state = 34
+		}
+		cancel = {
+			has_country_flag = ksp_annex_country_fuck
 		}
 		prerequisite = { focus = SHE_conghagsaenghoetongjegweoninsu  }
 		will_lead_to_war_with = KSP
+		select_effect = {
+			if = {
+				limit = { KSP = { is_subject_of = ROOT } }
+				KSP = { country_event = { id = SHE_event.8 days = 10 } }
+			}
+		}
 		completion_reward = {
 			if = {
-				limit = {
-					is_in_faction_with = KSP
-				}
+				limit = { KSP = { is_subject_of = ROOT } }
+				custom_effect_tooltip = tooltip_immediate_effect_upon_focus_start
 				KSP = {
-					leave_faction = yes
+					custom_effect_tooltip = needs_approval
+					country_event = { id = SHE_event.8 days = 10 }
+				}
+				custom_effect_tooltip = tooltip_effect_upon_focus_completion
+				annex_country = {
+					target = KSP
+					transfer_troops = yes
 				}
 			}
-			create_wargoal = { type = annex_everything target = KSP }
+			else = {
+				if = {
+					limit = {
+						is_in_faction_with = KSP
+					}
+					KSP = {
+						leave_faction = yes
+						if = {
+							limit = { has_idea = KSP_duties_of_the_police_academy }
+							remove_ideas = KSP_duties_of_the_police_academy
+						}
+					}
+				}
+				create_wargoal = { type = annex_everything target = KSP }
+			}
 			unlock_decision_tooltip = SHE_student_council_absorption_KSP
 		}
 	}
@@ -745,7 +778,7 @@ focus_tree = {
 
 	focus = {
 		id = SHE_hagweongantongsinboggu
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_hydroelectric_energy
 		x = 12
 		y = 7
 		cost = 5
@@ -836,7 +869,7 @@ focus_tree = {
 
 	focus = {
 		id = SHE_kibotoseuyeonhab
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_alliance
 		x = 6
 		y = 5
 		cost = 5
@@ -848,38 +881,21 @@ focus_tree = {
 		prerequisite = { focus = SHE_conghagsaenghoetongjegweoninsu  }
 		prerequisite = { focus = SHE_hyeonjiingwayijeobcog  }
 		completion_reward = {
-			if ={
-				limit = {
-					NOT = {
-
-					}
-				}
-				reverse_add_opinion_modifier = {
-    				target = MIL
-    				modifier = medium_increase
-				}
+			reverse_add_opinion_modifier = {
+				target = MIL
+				modifier = medium_increase
 			}
-			if ={
-				limit = {
-					NOT = {
-
-					}
-				}
-				reverse_add_opinion_modifier = {
-    				target = GEH
-    				modifier = medium_increase
-				}
+			reverse_add_opinion_modifier = {
+				target = GEM
+				modifier = medium_increase
 			}
-			if ={
-				limit = {
-					NOT = {
-
-					}
-				}
-				reverse_add_opinion_modifier = {
-    				target = TRM
-    				modifier = medium_increase
-				}
+			reverse_add_opinion_modifier = {
+				target = GEH
+				modifier = medium_increase
+			}
+			reverse_add_opinion_modifier = {
+				target = TRM
+				modifier = medium_increase
 			}
 		}
 	}

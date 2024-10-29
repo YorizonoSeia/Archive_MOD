@@ -321,91 +321,53 @@ country_event = {
 	id = SHE_event.8
 	title = SHE_event.8.t
 	desc = SHE_event.8.desc
-	picture = GFX_report_event_she_srt_integration
+	picture = GFX_report_event_germany_victory
 	
     is_triggered_only = yes
 	
 	option = { 
 		name = SHE_event.8.a
 		ai_chance = {
-			base = 5
+			base = 4000
 			modifier = {
 				has_army_manpower = {
-   			 		size < 99999
+   			 		size > 10000
 				}	
-				add = 10
+				add = 5
 			}
+		}
+		if = {
+			limit = { has_idea = KSP_duties_of_the_police_academy }
+			remove_ideas = KSP_duties_of_the_police_academy
+		}
+		OVERLORD = {
+			end_puppet = ROOT
+		}
+		leave_faction = yes
+		SHE = {
+			country_event = { id = SHE_event.9 hours = 8 }
+		}
+	}
+	option = { 
+		name = SHE_event.8.b
+		ai_chance = {
+			base = 30
 			modifier = {
-				is_puppet_of = SHE
-				factor = 0
+				has_army_manpower = {
+   			 		size < 10000
+				}	
+				add = 5
 			}
 			modifier = {
 				has_opinion = {
     				target = SHE
     				value < 20
 				}
-				factor = 2
-			}
-			modifier = {
-				has_opinion = {
-    				target = SHE
-    				value < 0
-				}
-				factor = 2
-			}
-		}
-		leave_faction = yes
-		SHE = {
-			country_event = { id = SHE_event.9 }
-		}
-	}
-	option = { 
-		name = SHE_event.8.b
-		ai_chance = {
-			base = 0
-			modifier = {
-				has_army_manpower = {
-   			 		size > 99999
-				}	
-				add = 10
-			}
-			modifier = {
-				any_controlled_state = {
-					is_in_home_area = yes
-					any_neighbor_state = {
-						is_controlled_by = SHE
-					}
-				}
-				add = 30
-			}
-			modifier = {
-				is_puppet_of = SHE
-				add = 200
-			}
-			modifier = {
-				has_opinion = {
-    				target = SHE
-    				value < -15
-				}
 				factor = 0
 			}
-			modifier = {
-				has_opinion = {
-    				target = SHE
-    				value > 30
-				}
-				factor = 2
-			}
-			modifier = {
-				has_opinion = {
-    				target = SHE
-    				value > 80
-				}
-				factor = 2
-			}
 		}
 		SHE = {
-			clr_country_flag = srt_annex_country_fuck
+			clr_country_flag = ksp_annex_country_fuck
 		}
 	}
 }
@@ -413,19 +375,18 @@ country_event = {
 	id = SHE_event.9
 	title = SHE_event.9.t
 	desc = SHE_event.9.desc
-	picture = GFX_report_event_she_srt_integration
+	picture = GFX_report_event_germany_victory
 	
     is_triggered_only = yes
 	
 	option = {
 		name = SHE_event.9.a
 		
-
-		set_country_flag = srt_annex_country_fuck
+		set_country_flag = ksp_annex_country_fuck
 		create_wargoal = {
 			type = take_state_focus
-			target = SRT
-			generator = { 14 }
+			target = KSP
+			generator = { 34 974 977 971 }
 		}
 	}
 }
