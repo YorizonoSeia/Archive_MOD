@@ -609,11 +609,10 @@ on_actions = {
 			}
 			if = {
 				limit = {
-					SOV = {
-						any_core_state = {
-							is_owned_by = SOV
-							is_controlled_by = TRM
-						}
+					original_tag = TRM
+					FROM.FROM = {
+						is_core_of = SOV
+						is_owned_by = SOV
 					}
 				}
 				set_country_flag = SOV_TRM_control
