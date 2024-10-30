@@ -1470,8 +1470,18 @@
 					can_create_factions = yes
 				}
 				news_event = { id = BA_news.3 days = 3 }
-				add_country_leader_trait = TRN_mika_trait_1
-				add_country_leader_trait = TRN_mika_trait_2
+				add_country_leader_role = {
+					character = TRN_alzk
+					promote_leader = yes
+					country_leader = {
+						ideology = pater_nazism
+							desc = "TRINITY_MIKA_DESC"
+							traits = {
+								TRN_mika_trait_1
+								TRN_mika_trait_2
+							}
+						}
+					}
 				remove_ideas = TRM_troll_mika_2
 			}
 			add_days_mission_timeout = {
@@ -1667,12 +1677,48 @@
 		    }
 		}
 	}
-	focus = { #e대충있어보이는무언가
+	focus = { # 미소노 미카의 개인 숭배
 		id = TRM_Endsige2
-		icon = GFX_goal_unknown
-		cost = 8.00
+		icon = GFX_goal_TRM_mika_Idolization
+		cost = 5
         prerequisite = {
             focus = TRM_Endsige
+        }
+		available = {
+		}
+		allow_branch = { has_country_flag = GAEBALJUNG }
+		ai_will_do = {
+		}
+		x = 0
+		y = 2
+		relative_position_id = TRM_Endsige
+		completion_reward = {
+		}
+	}
+	focus = { 
+		id = TRM_Endsige3
+		icon = GFX_goal_unknown
+		cost = 5
+        prerequisite = {
+            focus = TRM_Endsige2
+        }
+		mutually_exclusive = { focus = TRM_Endsige4 }
+		available = {
+		}
+		ai_will_do = {
+		}
+		x = -1
+		y = 1
+		relative_position_id = TRM_Endsige2
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = TRM_Endsige7
+		icon = GFX_goal_TRN_Messiah
+		cost = 5
+        prerequisite = {
+            focus = TRM_Endsige3
         }
 		available = {
 		}
@@ -1680,7 +1726,79 @@
 		}
 		x = 0
 		y = 2
-		relative_position_id = TRM_Endsige
+		relative_position_id = TRM_Endsige3
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = TRM_Endsige4
+		icon = GFX_focus_ger_reichskommisariats
+		cost = 5
+        prerequisite = {
+            focus = TRM_Endsige2
+        }
+		mutually_exclusive = { focus = TRM_Endsige3 }
+		available = {
+		}
+		ai_will_do = {
+		}
+		x = 1
+		y = 1
+		relative_position_id = TRM_Endsige2
+		completion_reward = {
+		}
+	}
+	focus = { 
+		id = TRM_Endsige6
+		icon = GFX_goal_GER_renewed_militarism
+		cost = 5
+        prerequisite = {
+            focus = TRM_Endsige4
+        }
+		available = {
+		}
+		ai_will_do = {
+		}
+		x = 0
+		y = 2
+		relative_position_id = TRM_Endsige4
+		completion_reward = {
+		}
+	}
+	focus = { # 주권자
+		id = TRM_Endsige5
+		icon = GFX_focus_BRA_repeale_national_security_law
+		cost = 5
+        prerequisite = {
+            focus = TRM_Endsige3
+			focus = TRM_Endsige4
+        }
+		available = {
+		}
+		ai_will_do = {
+		}
+		x = 1
+		y = 1
+		relative_position_id = TRM_Endsige3
+		completion_reward = {
+		}
+	}
+	focus = { # 천년 제국
+		id = TRM_Endsige8
+		icon = GFX_goal_unknown
+		cost = 8.00
+        prerequisite = {
+            focus = TRM_Endsige6
+			focus = TRM_Endsige7
+        }
+		prerequisite = { focus = TRM_Endsige5 }
+		available = {
+		}
+		ai_will_do = {
+		}
+		x = 1
+		y = 1
+		relative_position_id = TRM_Endsige7
 		completion_reward = {
 		}
 	}

@@ -841,6 +841,18 @@ spriteTypes = {
 		name = "GFX_goal_TRM_Kivotos_union"
 		texturefile = "gfx/interface/goals/TRN/TRM_Kivotos_union.tga"  
 	}
+	SpriteType = {
+		name = "GFX_goal_TRM_mika_Idolization"
+		texturefile = "gfx/interface/goals/TRN/TRM_mika_Idolization.tga"  
+	}
+	SpriteType = {
+		name = "GFX_goal_TRN_Messiah"
+		texturefile = "gfx/interface/goals/TRN/TRN_Messiah.tga"  
+	}
+	SpriteType = {
+		name = "GFX_goal_GER_renewed_militarism"
+		texturefile = "gfx/interface/goals/TRN/GER_renewed_militarism.tga"  
+	}
 	SpriteType = {  
 		name = "GFX_goal_rising_flag_TRM" 
 		texturefile = "gfx/interface/goals/TRN/rising_flag_TRM.tga"     
