@@ -26,6 +26,27 @@ scripted_gui = {
 				frame = RED_redwinter_rightwing_var
 			}
 		}
+
+        effects = {
+			RED_redwinter_right_wing_button_click = {
+				set_country_flag = RED_zenkyoutou_cat_open_ui_flag
+			}
+		}
+	}
+	
+	RED_zenkyoutou_cat_ui_open_ui = {
+		window_name = "RED_zenkyoutou_cat_open_ui_window"
+		context_type = player_context
+		parent_window_token = decision_tab
+
+		visible = {
+			ROOT = { has_country_flag = RED_zenkyoutou_cat_open_ui_flag }
+		}
+
+        effects = {
+			PB_Megacity_Help_Icon_click = {
+			}
+		}
 	}
 }
 

@@ -1,6 +1,22 @@
 spriteTypes = {
 
 	spriteType = {
+		name = "GFX_RED_redwinter_wing_button"
+		texturefile = "gfx/interface/decisions/icon/RED_redwinter_wing_button.tga"
+		legacy_lazy_load = no
+		noOfFrames = 2
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+
+	spriteType = {
+		name = "GFX_RED_redwinter_organizational_center"
+		texturefile = "gfx/interface/decisions/icon/RED_redwinter_organizational_center.tga"
+		legacy_lazy_load = no
+		noOfFrames = 2
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
+	spriteType = {
 		name = "GFX_RED_game_end_bg"
 		texturefile = "gfx/interface/decisions/icon/game_end_bg.tga"
 		legacy_lazy_load = no
