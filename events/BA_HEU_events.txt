@@ -734,10 +734,6 @@ country_event = { #역쿠데타
 		HEU_nicolas_margue = { retire = yes }
 		HEU_emile_reuter = { retire = yes }
 		HEU_leon_kauffman = { retire = yes }
-
-		hidden_effect = {
-			news_event = { id = HEU_news.2 hours = 3 }
-		}
 	}
 }
 
@@ -1144,6 +1140,7 @@ country_event = { #묘교
 	}
 }
 
+# 룩셈부르크 노트르담 대성당의 폭파
 news_event = {
 	id = HEU_news.1
 	title = HEU_news.1.t
@@ -1168,6 +1165,7 @@ news_event = {
 	}
 }
 
+# 룩셈부르크 연립정부의 붕괴
 news_event = {
 	id = HEU_news.2
 	title = HEU_news.2.t
@@ -1192,6 +1190,7 @@ news_event = {
 	}
 }
 
+# 만마전-룩셈부르크 연합
 news_event = {
 	id = HEU_news.3
 	title = HEU_news.3.t
@@ -1216,6 +1215,237 @@ news_event = {
 		trigger = {
 			NOT = { tag = HEU }
 			NOT = { tag = GEM }
+		}
+	}
+}
+
+# 키보토스 총학생회장을 자칭한 아루
+news_event = {
+	id = HEU_news.4
+	title = HEU_news.4.t
+	desc = HEU_news.4.desc
+	picture = GFX_news_event_generic_sign_treaty1
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = HEU_news.4.a
+		trigger = {
+			tag = HEU
+		}
+	}
+
+	option = {
+		name = HEU_news.4.b
+		trigger = {
+			Kivotos_tag = yes
+			NOT = { tag = HEU }
+		}
+	}
+	option = {
+		name = HEU_news.4.c
+		trigger = {
+			Kivotos_tag = no
+		}
+	}
+}
+
+# 룩셈부르크 시민 결합 법제화
+news_event = {
+	id = HEU_news.5
+	title = HEU_news.5.t
+	desc = HEU_news.5.desc
+	picture = GFX_news_event_generic_sign_treaty1
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = HEU_news.5.a
+		trigger = {
+			tag = HEU
+		}
+	}
+
+	option = {
+		name = HEU_news.5.b
+		trigger = {
+			NOT = { tag = HEU }
+		}
+	}
+}
+
+# 총학생회를 장악한 아루
+news_event = {
+	id = HEU_news.6
+	title = HEU_news.6.t
+	desc = HEU_news.6.desc
+	picture = GFX_news_event_generic_sign_treaty1
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = HEU_news.6.a
+		trigger = {
+			tag = HEU
+		}
+	}
+
+	option = {
+		name = HEU_news.6.b
+		trigger = {
+			NOT = { tag = HEU }
+		}
+	}
+}
+
+# 흥신소에서 사랑을 담아
+news_event = {
+	id = HEU_news.7
+	title = HEU_news.7.t
+	desc = HEU_news.7.desc
+	picture = GFX_event_news_aru
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = HEU_news.7.a
+		trigger = {
+			tag = HEU
+		}
+	}
+
+	option = {
+		name = HEU_news.7.b
+		trigger = {
+			Kivotos_tag = yes
+			NOT = { tag = HEU }
+		}
+	}
+	option = {
+		name = HEU_news.7.c
+		trigger = {
+			Kivotos_tag = no
+		}
+	}
+}
+
+# BLEU의 종막
+news_event = {
+	id = HEU_news.8
+	title = HEU_news.8.t
+	desc = HEU_news.8.desc
+	picture = GFX_news_event_generic_sign_treaty1
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = HEU_news.8.a
+		trigger = {
+			tag = HEU
+		}
+	}
+
+	option = {
+		name = HEU_news.8.b
+		trigger = {
+			NOT = { tag = HEU }
+		}
+	}
+}
+
+# 제[GetYear]년 룩셈부르크 민권법의 통과
+news_event = {
+	id = HEU_news.9
+	title = HEU_news.9.t
+	desc = HEU_news.9.desc
+	picture = GFX_news_event_generic_sign_treaty1
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = HEU_news.9.a
+		trigger = {
+			tag = HEU
+		}
+	}
+
+	option = {
+		name = HEU_news.9.b
+		trigger = {
+			NOT = { tag = HEU }
+		}
+	}
+}
+
+# 리쿠하치마 아루의 마지막 비행
+news_event = {
+	id = HEU_news.10
+	title = HEU_news.10.t
+	desc = HEU_news.10.desc
+	picture = GFX_news_event_generic_ruins
+	
+	major = yes
+	is_triggered_only = yes
+
+
+	option = {
+		name = HEU_news.10.a
+		trigger = {
+			tag = HEU
+		}
+	}
+
+	option = {
+		name = HEU_news.10.b
+		trigger = {
+			Kivotos_tag = yes
+			NOT = { tag = HEU }
+		}
+	}
+
+	option = {
+		name = HEU_news.10.c
+		trigger = {
+			Kivotos_tag = no
+		}
+	}
+}
+
+# 리쿠하치마 아루의 업무 복귀
+news_event = {
+	id = HEU_news.11
+	title = HEU_news.11.t
+	desc = HEU_news.11.desc
+	picture = GFX_news_event_generic_sign_treaty1
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = HEU_news.11.a
+		trigger = {
+			tag = HEU
+		}
+	}
+
+	option = {
+		name = HEU_news.11.b
+		trigger = {
+			Kivotos_tag = yes
+			NOT = { tag = HEU }
+		}
+	}
+
+	option = {
+		name = HEU_news.11.c
+		trigger = {
+			Kivotos_tag = no
 		}
 	}
 }

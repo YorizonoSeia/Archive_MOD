@@ -5496,6 +5496,7 @@ focus_tree = {
 
 		completion_reward = {
 			hidden_effect = {
+				news_event = { id = HEU_news.2 hours = 3 }
 				country_event = { id = HEU_event.112 }
 				country_event = { id = HEU_event.114 days = 30 random_days = 30 }
 			}
@@ -5522,7 +5523,7 @@ focus_tree = {
 		
 		relative_position_id = HEU_rikuhachima_governemnt
 
-		icon = GFX_focus_GEH_sword_defending_gehenna
+		icon = GFX_goal_GEH_pandemonium_society
 
 		prerequisite = { 
 			focus = HEU_rikuhachima_governemnt 
@@ -5565,7 +5566,7 @@ focus_tree = {
 		
 		relative_position_id = HEU_join_gehenna
 
-		icon = GFX_goal_generic_major_war
+		icon = GFX_goal_TRM_invasion_of_devils 
 
 		prerequisite = { 
 			focus = HEU_join_gehenna 
@@ -5604,7 +5605,7 @@ focus_tree = {
 		
 		relative_position_id = HEU_join_gehenna
 
-		icon = GFX_goal_TRM_invasion_of_devils
+		icon = GFX_goal_generic_major_war
 
 		prerequisite = { 
 			focus = HEU_join_gehenna 
@@ -5827,7 +5828,11 @@ focus_tree = {
 				HEU_aru_var_fascism_drift = 0.05
 				tooltip = fascism_drift_factor_tt
 			}
+			add_country_leader_trait = HEU_GSC_trait_1
 
+			hidden_effect = {
+				news_event = { id = HEU_news.4 hours = 3 }
+			}
 		}
 	}
 
@@ -5861,7 +5866,13 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			if = {
+				limit = { has_country_leader_with_trait = HEU_GSC_trait_1 }
+				swap_ruler_traits = {
+					remove = HEU_GSC_trait_1
+					add = HEU_GSC_trait_2
+				}
+			}
 		}
 	}
 
@@ -6065,6 +6076,10 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER}
 
 		completion_reward = {
+			hidden_effect = {
+				news_event = { id = HEU_news.7 hours = 3 }
+			}
+
 			8 = {
 				add_building_construction = {
 					type = anti_air_building
@@ -8121,6 +8136,11 @@ focus_tree = {
 				uses = 2
 				category = industry
 			}
+
+            custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = available_industrial_concern
+			show_ideas_tooltip = HEU_ARBED	
+
 		}
 	}
 
@@ -8204,6 +8224,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			hidden_effect = {
+				news_event = { id = HEU_news.8 hours = 3 }
+			}
+            #custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = available_industrial_concern
+			show_ideas_tooltip = HEU_spuerkeess
 		}
 	}
 	
@@ -8239,6 +8265,9 @@ focus_tree = {
 			NOT = { has_idea = BA_isolation }
 			country_exists = KSP
 			NOT = { has_war_with = KSP }
+			has_dynamic_modifier = {
+				modifier = HEU_luxembourgism_idea
+			}
 		}
 
 		bypass = {
@@ -8246,6 +8275,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			hidden_effect = {
+				news_event = { id = HEU_news.8 hours = 3 }
+			}
+            #custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = available_industrial_concern
+			show_ideas_tooltip = HEU_spuerkeess
 		}
 	}
 
@@ -8277,6 +8312,9 @@ focus_tree = {
 		y = 3
 
 		available = { 
+			has_dynamic_modifier = {
+				modifier = HEU_luxembourgism_idea
+			}
 		}
 
 		bypass = {
@@ -8696,6 +8734,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_country_leader_trait = HEU_gehenna_german_culture_trait
 		}
 	}
 
@@ -8727,6 +8766,9 @@ focus_tree = {
 		y = 3
 
 		available = { 
+			has_dynamic_modifier = {
+				modifier = HEU_rikuhachimaism_idea
+			}
 		}
 
 		bypass = {
@@ -9154,6 +9196,7 @@ focus_tree = {
 				ideology = fascism
 				popularity = 0.1
 			}
+			add_country_leader_trait = HEU_school_of_atheism_trait
 		}
 	}
 	
