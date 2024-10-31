@@ -850,8 +850,16 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/TRN/TRN_Messiah.tga"  
 	}
 	SpriteType = {
-		name = "GFX_goal_GER_renewed_militarism"
-		texturefile = "gfx/interface/goals/TRN/GER_renewed_militarism.tga"  
+		name = "GFX_goal_TRN_towards_national_revolution"
+		texturefile = "gfx/interface/goals/TRN/TRN_towards_national_revolution.tga"  
+	}
+	SpriteType = {
+		name = "GFX_goal_TRN_Sovereign"
+		texturefile = "gfx/interface/goals/TRN/TRN_Sovereign.tga"  
+	}
+	SpriteType = {
+		name = "GFX_goal_TRN_Trinitys_dawn"
+		texturefile = "gfx/interface/goals/TRN/TRN_Trinitys_dawn.tga"  
 	}
 	SpriteType = {  
 		name = "GFX_goal_rising_flag_TRM" 
