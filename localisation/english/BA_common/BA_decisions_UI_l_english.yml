@@ -463,4 +463,39 @@ KSP_annex_cou_decesion_desc: "발키리에 총학생회를 편입시킵니다. �
  RED_redwinter_left_wing_tt: "§Y투쟁 방식§!\n\n§Y투쟁 방식§!은 §t전학공투회의§! 조직의 주된 투쟁 방침을 지휘합니다. §Y투쟁 방침§!에 따라 §Y우리§!의 지휘 아래에 모든 §t전학공투회의§!가 활동하게 될 것입니다.\n\n현재 투쟁 방식: §R적색 테러§!\n§R적색 테러§!는 §t전학공투회의§!의 조직 그 자체를 소모하여 §Y목표 국가§!에 약간의 §Y산업 손상§!과 막대한 §Y안정도§!와 §Y전쟁 지지도§! 피해를 입힙니다. 테러가 성공할 때 마다 §R현장파§!의 §Y영향력§!이 상승합니다."
  RED_redwinter_right_wing_tt: "§Y조직 방침§!\n\n§Y조직 방침§!은 §t전학공투회의§! 조직이 구성되는 방침을 지정합니다. §Y조직 방침§!에 따라 §Y우리§!의 영향력이 닿는 §t전학공투회의§! 조직이 해당 형태로 구성될 것입니다.\n\n현재 투쟁 방식: §R비밀결사§!\n§R비밀결사§!는 §t전학공투회의§!의 조직이 비밀리에 활동하게 됩니다. §Y투쟁§!에 드는 비용이 감소하나, §t전학공투회의§!가 성장하는 속도가 매우 느려집니다. 지속적으로 §R현장파§!의 §Y영향력§!이 상승합니다."
 
- RED_zenkyoutou_UI_text: "투쟁 방침"
+ RED_redwinter_left_wing_text: "[RED_redwinter_leftwing_tt]"
+ RED_redwinter_right_wing_text: "[RED_redwinter_rightwing_tt]"
+
+ RED_zenkyoutou_UI_title_LEFT: "투쟁 방식"
+ RED_zenkyoutou_UI_text_LEFT: "§Y전학공투회의의 투쟁 방식§! 선택"
+
+ RED_redwinter_leftwing_1tt: "§g설정되지 않음§!"
+ RED_redwinter_leftwing_2tt: "적색 테러"
+ RED_redwinter_leftwing_3tt: "사상 학습 투쟁"
+ RED_redwinter_leftwing_4tt: "통일전선전술"
+ RED_redwinter_leftwing_5tt: "대중 시위 조직"
+ RED_redwinter_leftwing_6tt: "파업 유도"
+
+ RED_zenkyoutou_LEFT_1_txt: "§R현장파§!"
+ RED_zenkyoutou_LEFT_2_txt: "§S중앙파§!"
+ RED_zenkyoutou_LEFT_3_txt: "§p민중파§!"
+ RED_zenkyoutou_LEFT_4_txt: "§Y중립§!"
+ RED_zenkyoutou_LEFT_5_txt: "§Y중립§!"
+
+ RED_zenkyoutou_LEFT_1_title: "적색 테러"
+ RED_zenkyoutou_LEFT_2_title: "사상 학습 투쟁"
+ RED_zenkyoutou_LEFT_3_title: "통일전선전술"
+ RED_zenkyoutou_LEFT_4_title: "대중 시위 조직"
+ RED_zenkyoutou_LEFT_5_title: "파업 유도"
+
+ RED_redwinter_rightwing_1tt: "§g설정되지 않음§!"
+ RED_redwinter_rightwing_2tt: "지하 비밀 결사"
+ RED_redwinter_rightwing_3tt: "전위대"
+ RED_redwinter_rightwing_4tt: "대중 단체"
+
+ RED_zenkyoutou_UI_title_RIGHT: "조직 방침"
+ RED_zenkyoutou_UI_text_RIGHT: "§Y전학공투회의의 조직 방침§! 선택"
+
+ RED_zenkyoutou_UI_title_CENTER: "조직의 충성"
+ RED_zenkyoutou_UI_text_CENTER: "§Y전학공투회의의 충성§! 선택"
+

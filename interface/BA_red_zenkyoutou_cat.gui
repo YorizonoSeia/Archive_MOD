@@ -3,7 +3,7 @@ guiTypes = {
 	containerWindowType = {
 		name = "RED_zenkyoutou_cat_ui_window"
 		position = { x = 0 y = 0 }
-		size = { width = 490 height= 300 }
+		size = { width = 490 height= 400 }
 		containerWindowType = {
 			name = "RED_redwinter_progress"
 			position = {
@@ -90,18 +90,48 @@ guiTypes = {
 
 		buttonType = {
 			name = "RED_redwinter_right_wing_button"
-			position = { x = 294 y = 175 }
+			position = { x = 294 y = 195 }
 			spriteType = "GFX_RED_redwinter_wing_button"
 			orientation = LEFT
 			frame = 0
+			pdx_tooltip = RED_redwinter_right_wing_tt
 		}
 
 		buttonType = {
 			name = "RED_redwinter_left_wing_button"
-			position = { x = 0 y = 175 }
+			position = { x = 0 y = 195 }
 			spriteType = "GFX_RED_redwinter_wing_button"
 			orientation = LEFT
 			frame = 0
+			pdx_tooltip = RED_redwinter_left_wing_tt
+		}
+		
+		instantTextBoxType = {
+			name = "RED_redwinter_right_wing_title"
+			position = { x = 117 y = 245 }
+			textureFile = ""
+			font = "hoi_18mbs"
+			borderSize = {x = 0 y = 0}
+			text = "RED_redwinter_right_wing_text"
+			maxWidth = 550
+			maxHeight = 40
+			fixedsize = yes
+			format = center
+			pdx_tooltip = RED_redwinter_right_wing_tt
+		}
+		
+		instantTextBoxType = {
+			name = "RED_redwinter_left_wing_title"
+			position = { x = -178 y = 245 }
+			textureFile = ""
+			font = "hoi_18mbs"
+			borderSize = {x = 0 y = 0}
+			text = "RED_redwinter_left_wing_text"
+			maxWidth = 550
+			maxHeight = 40
+			fixedsize = yes
+			format = center
+			pdx_tooltip = RED_redwinter_left_wing_tt
 		}
 		
 		iconType = {
@@ -113,7 +143,6 @@ guiTypes = {
 			}
 			scale = 1
 			alwaystransparent = yes
-			#pdx_tooltip = RED_redwinter_right_wing_tt
 		}
 		
 		iconType = {
@@ -125,7 +154,6 @@ guiTypes = {
 			}
 			scale = 1
 			alwaystransparent = yes
-			#pdx_tooltip = RED_redwinter_left_wing_tt
 		}
 
 		#buttonType = {
@@ -145,7 +173,7 @@ guiTypes = {
 			orientation = CENTER
 			position = {
 				x = -36
-				y = -170
+				y = -220
 			}
 			scale = 0.90
 			pdx_tooltip = RED_redwinter_progress_tt
@@ -163,37 +191,330 @@ guiTypes = {
 	}
 
 	
-	#containerWindowType = {
-	#	name = "RED_zenkyoutou_cat_open_ui_window"
-    #    position = { x = 0 y = -45}	
-	#	size = { width = 264 height = 200 }
-	#	orientation = CENTER
-	#	moveable = no
-	#	clipping = no
-#
-	#	background = {
-	#		name = "Background"
-	#		quadTextureSprite ="GFX_tiled_window_thin_border2"
-	#	}
-#
-	#	iconType = {
-	#		name = "PB_Megacity_Title_BG"
-	#		spriteType = "GFX_idea_PB_Megacity_Name_BG"
-	#		position = { x= 8 y = 5 }
-	#		scale = 0.95
-	#	}
-#
-	#	instantTextBoxType = {
-	#		name = "title"
-	#		position = { x = 0 y = 15 }
-	#		textureFile = ""
-	#		font = "hoi_18mbs"
-	#		borderSize = {x = 0 y = 0}
-	#		text = "[RED_zenkyoutou_UI_text]"
-	#		maxWidth = 260
-	#		maxHeight = 40
-	#		fixedsize = yes
-	#		format = centre
-	#	}
-	#}
+	containerWindowType = {
+		name = "RED_zenkyoutou_cat_open_ui_window"
+        position = { x = 12 y = 40 }	
+		size = { width = 518 height = 250 }
+		moveable = no
+		clipping = no
+
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_tiled_window_thin_border2"
+		}
+
+		buttonType = {
+			name = "RED_zenkyoutou_close_button"
+			position = { x = 471 y = 10 }
+			quadTextureSprite = "GFX_closebutton"
+			buttonFont = "Main_14_black"
+			pdx_tooltip = "CLOSE"
+		}
+	}
+	
+	containerWindowType = {
+		name = "RED_zenkyoutou_cat_open_ui_LEFT_window"
+
+		
+		instantTextBoxType = {
+			name = "title"
+			position = { x = 30 y = 55 }
+			textureFile = ""
+			font = "hoi_24header"
+			borderSize = {x = 0 y = 0}
+			text = "RED_zenkyoutou_UI_title_LEFT"
+			maxWidth = 550
+			maxHeight = 40
+			fixedsize = yes
+			format = left
+		}
+
+		instantTextBoxType = {
+			name = "subtitle"
+			position = { x = 0 y = 59 }
+			textureFile = ""
+			font = "hoi_18mbs"
+			borderSize = {x = 0 y = 0}
+			text = "RED_zenkyoutou_UI_text_LEFT"
+			maxWidth = 550
+			maxHeight = 40
+			fixedsize = yes
+			format = centre
+		}
+		
+		containerWindowType = {
+			name = "main_box"
+			position = { x = 17 y = 80 }	
+			size = { width = 508 height = 205 }
+			moveable = no
+			clipping = no
+
+			background = {
+				name = "Background"
+				quadTextureSprite ="GFX_tiled_bg"
+			}
+		
+			buttonType = {
+				name = "RED_zenkyoutou_LEFT_1"
+				position = { x = 60 y = 19 }
+				quadTextureSprite = "GFX_sort_button_428x29_button"
+			}
+			buttonType = {
+				name = "RED_zenkyoutou_LEFT_2"
+				position = { x = 60 y = 54 }
+				quadTextureSprite = "GFX_sort_button_428x29_button"
+			}
+			buttonType = {
+				name = "RED_zenkyoutou_LEFT_3"
+				position = { x = 60 y = 89 }
+				quadTextureSprite = "GFX_sort_button_428x29_button"
+			}
+			buttonType = {
+				name = "RED_zenkyoutou_LEFT_4"
+				position = { x = 60 y = 124 }
+				quadTextureSprite = "GFX_sort_button_428x29_button"
+			}
+			buttonType = {
+				name = "RED_zenkyoutou_LEFT_5"
+				position = { x = 60 y = 159 }
+				quadTextureSprite = "GFX_sort_button_428x29_button"
+			}
+		
+			iconType = {
+				name = "RED_zenkyoutou_LEFT_1_select"
+				position = { x = 60 y = 19 }
+				quadTextureSprite = "GFX_RED_sort_button_428x29"
+			}
+			iconType = {
+				name = "RED_zenkyoutou_LEFT_2_select"
+				position = { x = 60 y = 54 }
+				quadTextureSprite = "GFX_RED_sort_button_428x29"
+			}
+			iconType = {
+				name = "RED_zenkyoutou_LEFT_3_select"
+				position = { x = 60 y = 89 }
+				quadTextureSprite = "GFX_RED_sort_button_428x29"
+			}
+			iconType = {
+				name = "RED_zenkyoutou_LEFT_4_select"
+				position = { x = 60 y = 124 }
+				quadTextureSprite = "GFX_RED_sort_button_428x29"
+			}
+			iconType = {
+				name = "RED_zenkyoutou_LEFT_5_select"
+				position = { x = 60 y = 159 }
+				quadTextureSprite = "GFX_RED_sort_button_428x29"
+			}
+
+			instantTextBoxType = {
+				name = "RED_zenkyoutou_LEFT_1_txt"
+				position = { x = 19 y = 22 }
+				textureFile = ""
+				font = "hoi_18mbs"
+				borderSize = {x = 0 y = 0}
+				text = "RED_zenkyoutou_LEFT_1_txt"
+				maxWidth = 40
+				maxHeight = 40
+				fixedsize = yes
+				format = left
+			}
+			instantTextBoxType = {
+				name = "RED_zenkyoutou_LEFT_2_txt"
+				position = { x = 19 y = 57 }
+				textureFile = ""
+				font = "hoi_18mbs"
+				borderSize = {x = 0 y = 0}
+				text = "RED_zenkyoutou_LEFT_2_txt"
+				maxWidth = 40
+				maxHeight = 40
+				fixedsize = yes
+				format = left
+			}
+			instantTextBoxType = {
+				name = "RED_zenkyoutou_LEFT_3_txt"
+				position = { x = 19 y = 92 }
+				textureFile = ""
+				font = "hoi_18mbs"
+				borderSize = {x = 0 y = 0}
+				text = "RED_zenkyoutou_LEFT_3_txt"
+				maxWidth = 40
+				maxHeight = 40
+				fixedsize = yes
+				format = left
+			}
+			instantTextBoxType = {
+				name = "RED_zenkyoutou_LEFT_4_txt"
+				position = { x = 19 y = 127 }
+				textureFile = ""
+				font = "hoi_18mbs"
+				borderSize = {x = 0 y = 0}
+				text = "RED_zenkyoutou_LEFT_4_txt"
+				maxWidth = 40
+				maxHeight = 40
+				fixedsize = yes
+				format = left
+			}
+			instantTextBoxType = {
+				name = "RED_zenkyoutou_LEFT_5_txt"
+				position = { x = 19 y = 162 }
+				textureFile = ""
+				font = "hoi_18mbs"
+				borderSize = {x = 0 y = 0}
+				text = "RED_zenkyoutou_LEFT_5_txt"
+				maxWidth = 40
+				maxHeight = 40
+				fixedsize = yes
+				format = left
+			}
+			
+			instantTextBoxType = {
+				name = "RED_zenkyoutou_LEFT_1_title"
+				position = { x = 100 y = 22 }
+				textureFile = ""
+				font = "hoi_18mbs"
+				borderSize = {x = 0 y = 0}
+				text = "RED_zenkyoutou_LEFT_1_title"
+				maxWidth = 350
+				maxHeight = 40
+				fixedsize = yes
+				format = center
+			}
+			instantTextBoxType = {
+				name = "RED_zenkyoutou_LEFT_2_title"
+				position = { x = 100 y = 57 }
+				textureFile = ""
+				font = "hoi_18mbs"
+				borderSize = {x = 0 y = 0}
+				text = "RED_zenkyoutou_LEFT_2_title"
+				maxWidth = 350
+				maxHeight = 40
+				fixedsize = yes
+				format = center
+			}
+			instantTextBoxType = {
+				name = "RED_zenkyoutou_LEFT_3_title"
+				position = { x = 100 y = 92 }
+				textureFile = ""
+				font = "hoi_18mbs"
+				borderSize = {x = 0 y = 0}
+				text = "RED_zenkyoutou_LEFT_3_title"
+				maxWidth = 350
+				maxHeight = 40
+				fixedsize = yes
+				format = center
+			}
+			instantTextBoxType = {
+				name = "RED_zenkyoutou_LEFT_4_title"
+				position = { x = 100 y = 127 }
+				textureFile = ""
+				font = "hoi_18mbs"
+				borderSize = {x = 0 y = 0}
+				text = "RED_zenkyoutou_LEFT_4_title"
+				maxWidth = 350
+				maxHeight = 40
+				fixedsize = yes
+				format = center
+			}
+			instantTextBoxType = {
+				name = "RED_zenkyoutou_LEFT_5_title"
+				position = { x = 100 y = 162 }
+				textureFile = ""
+				font = "hoi_18mbs"
+				borderSize = {x = 0 y = 0}
+				text = "RED_zenkyoutou_LEFT_5_title"
+				maxWidth = 350
+				maxHeight = 40
+				fixedsize = yes
+				format = center
+			}
+		}
+	}
+	
+	containerWindowType = {
+		name = "RED_zenkyoutou_cat_open_ui_RIGHT_window"
+
+		
+		instantTextBoxType = {
+			name = "title"
+			position = { x = 30 y = 55 }
+			textureFile = ""
+			font = "hoi_24header"
+			borderSize = {x = 0 y = 0}
+			text = "RED_zenkyoutou_UI_title_RIGHT"
+			maxWidth = 550
+			maxHeight = 40
+			fixedsize = yes
+			format = left
+		}
+
+		instantTextBoxType = {
+			name = "subtitle"
+			position = { x = 0 y = 59 }
+			textureFile = ""
+			font = "hoi_18mbs"
+			borderSize = {x = 0 y = 0}
+			text = "RED_zenkyoutou_UI_text_RIGHT"
+			maxWidth = 550
+			maxHeight = 40
+			fixedsize = yes
+			format = centre
+		}
+		
+		containerWindowType = {
+			name = "main_box"
+			position = { x = 17 y = 80 }	
+			size = { width = 508 height = 205 }
+			moveable = no
+			clipping = no
+
+			background = {
+				name = "Background"
+				quadTextureSprite ="GFX_tiled_bg"
+			}
+		}
+	}
+	
+	containerWindowType = {
+		name = "RED_zenkyoutou_cat_open_ui_CENTER_window"
+
+		
+		instantTextBoxType = {
+			name = "title"
+			position = { x = 30 y = 55 }
+			textureFile = ""
+			font = "hoi_24header"
+			borderSize = {x = 0 y = 0}
+			text = "RED_zenkyoutou_UI_title_CENTER"
+			maxWidth = 550
+			maxHeight = 40
+			fixedsize = yes
+			format = left
+		}
+
+		instantTextBoxType = {
+			name = "subtitle"
+			position = { x = 0 y = 59 }
+			textureFile = ""
+			font = "hoi_18mbs"
+			borderSize = {x = 0 y = 0}
+			text = "RED_zenkyoutou_UI_text_CENTER"
+			maxWidth = 550
+			maxHeight = 40
+			fixedsize = yes
+			format = centre
+		}
+		
+		containerWindowType = {
+			name = "main_box"
+			position = { x = 17 y = 80 }	
+			size = { width = 508 height = 205 }
+			moveable = no
+			clipping = no
+
+			background = {
+				name = "Background"
+				quadTextureSprite ="GFX_tiled_bg"
+			}
+		}
+	}
 }

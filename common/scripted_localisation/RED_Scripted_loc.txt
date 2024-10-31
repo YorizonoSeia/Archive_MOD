@@ -314,3 +314,79 @@ defined_text = {
 		localization_key = RED_military_government_9tt
 	}
 }
+defined_text = {
+	name = RED_redwinter_leftwing_tt
+	text = {
+		trigger = {
+			check_variable = { RED_redwinter_leftwing_var = 2 }
+		}
+		localization_key = RED_redwinter_leftwing_2tt
+	}
+	text = {
+		trigger = {
+			check_variable = { RED_redwinter_leftwing_var = 3 }
+		}
+		localization_key = RED_redwinter_leftwing_3tt
+	}
+	text = {
+		trigger = {
+			check_variable = { RED_redwinter_leftwing_var = 4 }
+		}
+		localization_key = RED_redwinter_leftwing_4tt
+	}
+	text = {
+		trigger = {
+			check_variable = { RED_redwinter_leftwing_var = 5 }
+		}
+		localization_key = RED_redwinter_leftwing_5tt
+	}
+	text = {
+		trigger = {
+			check_variable = { RED_redwinter_leftwing_var = 6 }
+		}
+		localization_key = RED_redwinter_leftwing_6tt
+	}
+	text = {
+		trigger = {
+			NOT = {
+				check_variable = { RED_redwinter_leftwing_var = 2 }
+				check_variable = { RED_redwinter_leftwing_var = 3 }
+				check_variable = { RED_redwinter_leftwing_var = 4 }
+				check_variable = { RED_redwinter_leftwing_var = 5 }
+				check_variable = { RED_redwinter_leftwing_var = 6 }
+			}
+		}
+		localization_key = RED_redwinter_leftwing_1tt
+	}
+}
+defined_text = {
+	name = RED_redwinter_rightwing_tt
+	text = {
+		trigger = {
+			check_variable = { RED_redwinter_rightwing_var = 2 }
+		}
+		localization_key = RED_redwinter_rightwing_2tt
+	}
+	text = {
+		trigger = {
+			check_variable = { RED_redwinter_rightwing_var = 3 }
+		}
+		localization_key = RED_redwinter_rightwing_3tt
+	}
+	text = {
+		trigger = {
+			check_variable = { RED_redwinter_rightwing_var = 4 }
+		}
+		localization_key = RED_redwinter_rightwing_4tt
+	}
+	text = {
+		trigger = {
+			NOT = {
+				check_variable = { RED_redwinter_rightwing_var = 2 }
+				check_variable = { RED_redwinter_rightwing_var = 3 }
+				check_variable = { RED_redwinter_rightwing_var = 4 }
+			}
+		}
+		localization_key = RED_redwinter_rightwing_1tt
+	}
+}

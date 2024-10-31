@@ -28,25 +28,209 @@ scripted_gui = {
 		}
 
         effects = {
+			RED_redwinter_organizational_center_click = {
+				if = { 
+					limit = {
+						has_country_flag = RED_zenkyoutou_cat_open_ui_flag
+						check_variable = { RED_zenkyoutou_cat_open_ui_value = 0 }
+					}
+					clr_country_flag = RED_zenkyoutou_cat_open_ui_flag
+				}
+				else = {
+					if = {
+						limit = { NOT = { has_country_flag = RED_zenkyoutou_cat_open_ui_flag } }
+						set_country_flag = RED_zenkyoutou_cat_open_ui_flag
+					}
+				}
+
+				set_variable = { RED_zenkyoutou_cat_open_ui_value = 0 }
+			}
+
+			RED_redwinter_left_wing_button_click = {
+				if = { 
+					limit = {
+						has_country_flag = RED_zenkyoutou_cat_open_ui_flag
+						check_variable = { RED_zenkyoutou_cat_open_ui_value = 1 }
+					}
+					clr_country_flag = RED_zenkyoutou_cat_open_ui_flag
+				}
+				else = {
+					if = {
+						limit = { NOT = { has_country_flag = RED_zenkyoutou_cat_open_ui_flag } }
+						set_country_flag = RED_zenkyoutou_cat_open_ui_flag
+					}
+				}
+
+				set_variable = { RED_zenkyoutou_cat_open_ui_value = 1 }
+			}
+
 			RED_redwinter_right_wing_button_click = {
-				set_country_flag = RED_zenkyoutou_cat_open_ui_flag
+				if = { 
+					limit = {
+						has_country_flag = RED_zenkyoutou_cat_open_ui_flag
+						check_variable = { RED_zenkyoutou_cat_open_ui_value = 2 }
+					}
+					clr_country_flag = RED_zenkyoutou_cat_open_ui_flag
+				}
+				else = {
+					if = {
+						limit = { NOT = { has_country_flag = RED_zenkyoutou_cat_open_ui_flag } }
+						set_country_flag = RED_zenkyoutou_cat_open_ui_flag
+					}
+				}
+
+				set_variable = { RED_zenkyoutou_cat_open_ui_value = 2 }
 			}
 		}
 	}
 	
-	#RED_zenkyoutou_cat_ui_open_ui = {
-	#	window_name = "RED_zenkyoutou_cat_open_ui_window"
-	#	context_type = player_context
-	#	parent_window_token = decision_tab
-	#
-	#	visible = {
-	#		ROOT = { has_country_flag = RED_zenkyoutou_cat_open_ui_flag }
-	#	}
-	#
-    #    effects = {
-	#		PB_Megacity_Help_Icon_click = {
-	#		}
-	#	}
-	#}
+	RED_zenkyoutou_cat_ui_open_ui = {
+		window_name = "RED_zenkyoutou_cat_open_ui_window"
+		context_type = player_context
+		parent_window_token = decision_tab
+	
+		visible = {
+			ROOT = { has_country_flag = RED_zenkyoutou_cat_open_ui_flag }
+		}
+	
+        effects = {
+			RED_zenkyoutou_close_button_click = {
+				if = { 
+					limit = { has_country_flag = RED_zenkyoutou_cat_open_ui_flag }
+					clr_country_flag = RED_zenkyoutou_cat_open_ui_flag
+				}
+			}
+		}
+	}
+	
+	RED_zenkyoutou_cat_ui_open_ui_LEFT = {
+		window_name = "RED_zenkyoutou_cat_open_ui_LEFT_window"
+		context_type = player_context
+		parent_window_token = decision_tab
+	
+		visible = {
+			ROOT = {
+				has_country_flag = RED_zenkyoutou_cat_open_ui_flag
+				check_variable = { RED_zenkyoutou_cat_open_ui_value = 1 }
+			}
+		}
+
+		triggers = {
+			RED_zenkyoutou_LEFT_1_select_visible = {
+				check_variable = { RED_redwinter_leftwing_var = 2 }
+			}
+		}
+		triggers = {
+			RED_zenkyoutou_LEFT_2_select_visible = {
+				check_variable = { RED_redwinter_leftwing_var = 3 }
+			}
+		}
+		triggers = {
+			RED_zenkyoutou_LEFT_3_select_visible = {
+				check_variable = { RED_redwinter_leftwing_var = 4 }
+			}
+		}
+		triggers = {
+			RED_zenkyoutou_LEFT_4_select_visible = {
+				check_variable = { RED_redwinter_leftwing_var = 5 }
+			}
+		}
+		triggers = {
+			RED_zenkyoutou_LEFT_5_select_visible = {
+				check_variable = { RED_redwinter_leftwing_var = 6 }
+			}
+		}
+	
+        effects = {
+			RED_zenkyoutou_LEFT_1_click = {
+				set_variable = { RED_redwinter_leftwing_var = 2 }
+				if = {
+					limit = { has_country_flag = RED_zenkyoutou_cat_open_ui_flag }
+					clr_country_flag = RED_zenkyoutou_cat_open_ui_flag
+				}
+				else = {
+					set_country_flag = RED_zenkyoutou_cat_open_ui_flag
+				}
+			}
+			RED_zenkyoutou_LEFT_2_click = {
+				set_variable = { RED_redwinter_leftwing_var = 3 }
+				if = {
+					limit = { has_country_flag = RED_zenkyoutou_cat_open_ui_flag }
+					clr_country_flag = RED_zenkyoutou_cat_open_ui_flag
+				}
+				else = {
+					set_country_flag = RED_zenkyoutou_cat_open_ui_flag
+				}
+			}
+			RED_zenkyoutou_LEFT_3_click = {
+				set_variable = { RED_redwinter_leftwing_var = 4 }
+				if = {
+					limit = { has_country_flag = RED_zenkyoutou_cat_open_ui_flag }
+					clr_country_flag = RED_zenkyoutou_cat_open_ui_flag
+				}
+				else = {
+					set_country_flag = RED_zenkyoutou_cat_open_ui_flag
+				}
+			}
+			RED_zenkyoutou_LEFT_4_click = {
+				set_variable = { RED_redwinter_leftwing_var = 5 }
+				if = {
+					limit = { has_country_flag = RED_zenkyoutou_cat_open_ui_flag }
+					clr_country_flag = RED_zenkyoutou_cat_open_ui_flag
+				}
+				else = {
+					set_country_flag = RED_zenkyoutou_cat_open_ui_flag
+				}
+			}
+			RED_zenkyoutou_LEFT_5_click = {
+				set_variable = { RED_redwinter_leftwing_var = 6 }
+				if = {
+					limit = { has_country_flag = RED_zenkyoutou_cat_open_ui_flag }
+					clr_country_flag = RED_zenkyoutou_cat_open_ui_flag
+				}
+				else = {
+					set_country_flag = RED_zenkyoutou_cat_open_ui_flag
+				}
+			}
+		}
+	}
+	
+	RED_zenkyoutou_cat_ui_open_ui_RIGHT = {
+		window_name = "RED_zenkyoutou_cat_open_ui_RIGHT_window"
+		context_type = player_context
+		parent_window_token = decision_tab
+	
+		visible = {
+			ROOT = {
+				has_country_flag = RED_zenkyoutou_cat_open_ui_flag
+				check_variable = { RED_zenkyoutou_cat_open_ui_value = 2 }
+			}
+		}
+
+		triggers = {
+		}
+	
+        effects = {
+		}
+	}
+	
+	RED_zenkyoutou_cat_ui_open_ui_CENTER = {
+		window_name = "RED_zenkyoutou_cat_open_ui_CENTER_window"
+		context_type = player_context
+		parent_window_token = decision_tab
+	
+		visible = {
+			ROOT = {
+				has_country_flag = RED_zenkyoutou_cat_open_ui_flag
+				check_variable = { RED_zenkyoutou_cat_open_ui_value = 0 }
+			}
+		}
+
+		triggers = {
+		}
+	
+        effects = {
+		}
+	}
 }
 

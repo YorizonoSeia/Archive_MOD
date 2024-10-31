@@ -1,6 +1,12 @@
 spriteTypes = {
 
 	spriteType = {
+		name = "GFX_RED_sort_button_428x29"
+		texturefile = "gfx/interface/decisions/icon/RED_sort_button_428x29.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
 		name = "GFX_RED_redwinter_wing_button"
 		texturefile = "gfx/interface/decisions/icon/RED_redwinter_wing_button.tga"
 		legacy_lazy_load = no
