@@ -24,6 +24,13 @@ focus_tree = {
 				uses = 2
 				category = industry
 			}
+            set_variable = {
+                BLM_equipment_number_by_invest = 0
+            }
+            set_variable = {
+                BLM_arms_factory_number_by_invest = 0
+            }
+            activate_mission = BLM_criminal_invest_0
         }
     }
 

@@ -1,9 +1,79 @@
 BLM_black_market = {
+	BLM_criminal_invest_0 = { #범죄조직의 투자 - 장비
+		name = BLM_criminal_invest
+		icon = GFX_decision_gre_paying_ifc_debt
+		allowed = {
+			original_tag = BLM
+		}
+		activation = {
+			always = no
+		}
+		available = {
+			always = no
+		}
+		days_mission_timeout = 180
+		timeout_effect = {
+			custom_effect_tooltip = BLM_criminal_invest_tt
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+			}
+			hidden_effect = {
+				random_list = {
+					1 = {
+						activate_mission = BLM_criminal_invest_1
+					}
+					1 = {
+						activate_mission = BLM_criminal_invest_0
+					}
+				}
+				add_to_variable = {
+					BLM_equipment_number_by_invest = 1
+				}
+			}
+		}
+	}
+	BLM_criminal_invest_1 = { #범죄조직의 투자 - 군공
+		name = BLM_criminal_invest
+		icon = GFX_decision_gre_paying_ifc_debt
+		allowed = {
+			original_tag = BLM
+		}
+		activation = {
+			always = no
+		}
+		available = {
+			always = no
+		}
+		days_mission_timeout = 180
+		timeout_effect = {
+			custom_effect_tooltip = BLM_criminal_invest_tt
+			custom_effect_tooltip = BLM_criminal_state_tt
+			custom_effect_tooltip = BLM_criminal_invest_1_tt
+			add_to_variable = {
+				BLM_CS_military_factory_donations = 1
+			}
+			hidden_effect = {
+				random_list = {
+					1 = {
+						activate_mission = BLM_criminal_invest_1
+					}
+					1 = {
+						activate_mission = BLM_criminal_invest_0
+					}
+				}
+				add_to_variable = {
+					BLM_arms_factory_number_by_invest = 1
+				}
+			}
+		}
+	}
 	BLM_expansion_of_the_black_market = {
 		icon = generic_operation
 		allowed = {
 			original_tag = BLM
 		}
+		days_remove = -1
 		target_trigger = {
 			FROM = {
 				exists = yes
@@ -16,19 +86,31 @@ BLM_black_market = {
 				NOT = {
 					has_country_flag = BLM_expansion_of_the_black_market_stop_flag
 				}
+				capital_scope = {
+					is_on_continent = europe
+				}
 			}
 			OR = {
 				AND = {
 					any_country = {
 						exists = yes
+						tag = BLM
 						OR = {
-							tag = BLM
-							has_country_flag = BLM_expansion_of_the_black_market_flag
-						}
-						FROM = {
-							any_owned_state = {
-								any_neighbor_state = {
-									is_owned_by = PREV.PREV.PREV
+							FROM = {
+								any_owned_state = {
+									any_neighbor_state = {
+										is_owned_by = PREV.PREV.PREV
+									}
+								}
+							}
+							any_country = {
+								has_country_flag = BLM_market_expansion_available
+								FROM = {
+									any_owned_state = {
+										any_neighbor_state = {
+											is_owned_by = PREV.PREV
+										}
+									}
 								}
 							}
 						}
@@ -58,6 +140,217 @@ BLM_black_market = {
 		#	hidden_effect = {
 		#		country_event = { id = BLM_hidden_event.1 days = 3 }
 		#	}
+			FROM = {
+				set_country_flag = BLM_black_market_expansioned
+				set_variable = {
+					BLM_black_market_expansion = 3
+				}
+			}
+		}
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	BLM_expansion_of_the_black_market_casino = { #카지노 운영
+		icon = GFX_decision_generic_fundraising
+		allowed = {
+			original_tag = BLM
+		}
+		target_trigger = {
+			FROM = {
+				exists = yes
+				NOT = {
+					is_in_faction_with = ROOT
+				}
+				NOT = {
+					tag = ROOT
+				}
+				NOT = {
+					has_country_flag = BLM_expansion_of_the_black_market_stop_flag
+				}
+				check_variable = {
+					var = BLM_black_market_expansion
+					value = 0
+					compare = greater_than
+				}
+				has_country_flag = BLM_black_market_expansioned
+			}
+		}
+		visible = {
+			has_dynamic_modifier = {
+				modifier = BLM_criminal_state
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			FROM = {
+				set_country_flag = BLM_black_market_expansioned_casino
+			}
+		}
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	BLM_expansion_of_the_black_market_guns = { #불법 총기 판매
+		icon = GFX_decision_generic_industry
+		allowed = {
+			original_tag = BLM
+		}
+		target_trigger = {
+			FROM = {
+				exists = yes
+				NOT = {
+					is_in_faction_with = ROOT
+				}
+				NOT = {
+					tag = ROOT
+				}
+				NOT = {
+					has_country_flag = BLM_expansion_of_the_black_market_stop_flag
+				}
+				check_variable = {
+					var = BLM_black_market_expansion
+					value = 0
+					compare = greater_than
+				}
+				has_country_flag = BLM_black_market_expansioned
+			}
+		}
+		visible = {
+			has_dynamic_modifier = {
+				modifier = BLM_criminal_state
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			FROM = {
+				set_country_flag = BLM_black_market_expansioned_guns
+			}
+		}
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	BLM_expansion_of_the_black_market_drugs = { #마약 유통
+		icon = GFX_decision_generic_research
+		allowed = {
+			original_tag = BLM
+		}
+		target_trigger = {
+			FROM = {
+				exists = yes
+				NOT = {
+					is_in_faction_with = ROOT
+				}
+				NOT = {
+					tag = ROOT
+				}
+				NOT = {
+					has_country_flag = BLM_expansion_of_the_black_market_stop_flag
+				}
+				check_variable = {
+					var = BLM_black_market_expansion
+					value = 0
+					compare = greater_than
+				}
+				has_country_flag = BLM_black_market_expansioned
+			}
+		}
+		visible = {
+			has_dynamic_modifier = {
+				modifier = BLM_criminal_state
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			FROM = {
+				set_country_flag = BLM_black_market_expansioned_drugs
+			}
+		}
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	BLM_expansion_of_the_black_market_bodys = { #인신 매매
+		icon = GFX_decision_eng_blackshirt_march
+		allowed = {
+			original_tag = BLM
+		}
+		target_trigger = {
+			FROM = {
+				exists = yes
+				NOT = {
+					is_in_faction_with = ROOT
+				}
+				NOT = {
+					tag = ROOT
+				}
+				NOT = {
+					has_country_flag = BLM_expansion_of_the_black_market_stop_flag
+				}
+				check_variable = {
+					var = BLM_black_market_expansion
+					value = 0
+					compare = greater_than
+				}
+				has_country_flag = BLM_black_market_expansioned
+			}
+		}
+		visible = {
+			has_dynamic_modifier = {
+				modifier = BLM_criminal_state
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			FROM = {
+				set_country_flag = BLM_black_market_expansioned_bodys
+			}
+		}
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	BLM_expansion_of_the_black_market_office = { #관료 매수
+		icon = GFX_decision_hol_attract_foreign_investors
+		allowed = {
+			original_tag = BLM
+		}
+		target_trigger = {
+			FROM = {
+				exists = yes
+				NOT = {
+					is_in_faction_with = ROOT
+				}
+				NOT = {
+					tag = ROOT
+				}
+				NOT = {
+					has_country_flag = BLM_expansion_of_the_black_market_stop_flag
+				}
+				check_variable = {
+					var = BLM_black_market_expansion
+					value = 0
+					compare = greater_than
+				}
+				has_country_flag = BLM_black_market_expansioned
+			}
+		}
+		visible = {
+			has_dynamic_modifier = {
+				modifier = BLM_criminal_state
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			FROM = {
+				set_country_flag = BLM_black_market_expansioned_office
+			}
 		}
 		cost = 10
 		ai_will_do = {

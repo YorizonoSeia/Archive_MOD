@@ -1,0 +1,88 @@
+defined_text = {
+	name = BLM_expansion_of_the_black_market_tt_modifier
+	text = {
+		trigger = {
+			FROM = {
+				check_variable = {
+					var = BLM_black_market_expansion
+					value = 0
+					compare = greater_than
+				}
+			}
+		}
+		localization_key = "BLM_expansion_of_the_black_market_tt_1"
+	}
+	text = {
+		localization_key = "BLM_expansion_of_the_black_market_tt_2"
+	}
+}
+defined_text = {
+	name = BLM_expansion_of_the_black_market_tt_casino_dt
+	text = {
+		trigger = {
+			FROM = {
+				has_country_flag = BLM_black_market_expansioned_casino
+			}
+		}
+		localization_key = "BLM_expansion_of_the_black_market_tt_casino"
+	}
+	text = {
+		localization_key = ""
+	}
+}
+defined_text = {
+	name = BLM_expansion_of_the_black_market_tt_guns_dt
+	text = {
+		trigger = {
+			FROM = {
+				has_country_flag = BLM_black_market_expansioned_guns
+			}
+		}
+		localization_key = "BLM_expansion_of_the_black_market_tt_guns"
+	}
+	text = {
+		localization_key = ""
+	}
+}
+defined_text = {
+	name = BLM_expansion_of_the_black_market_tt_drugs_dt
+	text = {
+		trigger = {
+			FROM = {
+				has_country_flag = BLM_black_market_expansioned_drugs
+			}
+		}
+		localization_key = "BLM_expansion_of_the_black_market_tt_drugs"
+	}
+	text = {
+		localization_key = ""
+	}
+}
+defined_text = {
+	name = BLM_expansion_of_the_black_market_tt_bodys_dt
+	text = {
+		trigger = {
+			FROM = {
+				has_country_flag = BLM_black_market_expansioned_bodys
+			}
+		}
+		localization_key = "BLM_expansion_of_the_black_market_tt_bodys"
+	}
+	text = {
+		localization_key = ""
+	}
+}
+defined_text = {
+	name = BLM_expansion_of_the_black_market_tt_office_dt
+	text = {
+		trigger = {
+			FROM = {
+				has_country_flag = BLM_black_market_expansioned_office
+			}
+		}
+		localization_key = "BLM_expansion_of_the_black_market_tt_office"
+	}
+	text = {
+		localization_key = ""
+	}
+}

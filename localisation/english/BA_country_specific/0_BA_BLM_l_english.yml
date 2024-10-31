@@ -48,9 +48,32 @@
 
 #디시전
  BLM_black_market: "블랙 마켓"
- BLM_expansion_of_the_black_market: "[FROM.GetName]에 블랙마켓 지부 설립"
+ BLM_criminal_invest_1_tt: "군수공장 공여: §G+1§!"
+ BLM_criminal_invest_tt: "범죄조직에 의해 지금까지 다음을 얻음:\n- §Y보병 장비§!: §G[?BLM_equipment_number_by_invest]k§!\n- §Y군수 공장§!: §G[?BLM_arms_factory_number_by_invest]§!\n\n"
+ BLM_criminal_invest: "범죄조직의 투자"
 
- BLM_expansion_of_the_black_market_tt: "§Y[FROM.GetNameWithFlag]§!과 관련된 §Y블랙 마켓§! 결정들을 해금합니다."
+ BLM_expansion_of_the_black_market: "[FROM.GetName]의 블랙마켓 지부"
+ BLM_expansion_of_the_black_market_tt: "§Y[FROM.GetNameWithFlag]§!과(와) 관련된 §Y블랙 마켓§! 결정들을 해금합니다.\n"
+ BLM_expansion_of_the_black_market_desc: "\n§W[BLM_expansion_of_the_black_market_tt_modifier]§!"
+ BLM_expansion_of_the_black_market_tt_1: "§Y[FROM.GetNameWithFlag]§!에 총 §Y3§!개의 결정을 취할 수 있습니다. 현재 §Y[?FROM.BLM_black_market_expansion]개§!의 결정을 더 취할 수 있습니다.\n\n현재 취해진 결정들 :\n[BLM_expansion_of_the_black_market_tt_casino_dt][BLM_expansion_of_the_black_market_tt_guns_dt][BLM_expansion_of_the_black_market_tt_drugs_dt][BLM_expansion_of_the_black_market_tt_bodys_dt][BLM_expansion_of_the_black_market_tt_office_dt]"
+ BLM_expansion_of_the_black_market_tt_2: "§Y[FROM.GetNameWithFlag]§!에 결정이 전부 취해졌습니다. 이제부터 §Y[FROM.GetNameWithFlag]§!과(와) 인접한 국가에 §Y블랙 마켓 지부§!를 확장할 수 있습니다.\n\n현재 취해진 결정들:\n [BLM_expansion_of_the_black_market_tt_casino_dt][BLM_expansion_of_the_black_market_tt_guns_dt][BLM_expansion_of_the_black_market_tt_drugs_dt][BLM_expansion_of_the_black_market_tt_bodys_dt][BLM_expansion_of_the_black_market_tt_office_dt]"
+
+ BLM_expansion_of_the_black_market_casino: "[FROM.GetName]에서 카지노 운영"
+ BLM_expansion_of_the_black_market_tt_casino: "- §Y카지노§!를 운영하고 있습니다.\n"
+
+ BLM_expansion_of_the_black_market_guns: "[FROM.GetName]에서 불법 총기 판매"
+ BLM_expansion_of_the_black_market_tt_guns: "- §Y불법 총기§!를 판매하고 있습니다.\n"
+
+ BLM_expansion_of_the_black_market_drugs: "[FROM.GetName]에서 마약 유통"
+ BLM_expansion_of_the_black_market_tt_drugs: "- §Y마약§!을 유통하고 있습니다.\n"
+
+ BLM_expansion_of_the_black_market_bodys: "[FROM.GetName]에서 인신 매매"
+ BLM_expansion_of_the_black_market_tt_bodys: "- §Y인신 매매§!를 진행하고 있습니다.\n"
+
+ BLM_expansion_of_the_black_market_office: "[FROM.GetName]에서 관료 매수"
+ BLM_expansion_of_the_black_market_tt_office: "- §Y관료§!를 매수하고 있습니다.\n"
+
+ 
 
 
 
