@@ -2363,6 +2363,85 @@ leader_traits = {
 		planning_speed = 0.10
 	}
 
+	HEU_regent_of_luxembourg_2 = { # 룩셈부르크의 섭정
+		random = no
+		stability_factor = 0.15
+		surrender_limit = 0.05
+		army_infantry_attack_factor = 0.05
+		army_infantry_defence_factor = 0.05
+	}
+
+	HEU_school_of_atheism_trait = { # 대악마
+		random = no
+		stability_factor = -0.05
+		drift_defence_factor = 0.25
+		research_speed_factor = 0.05
+		Weekly_casualties_war_support = 0.002
+		Weekly_convoys_war_support = 0.002
+		Weekly_bombing_war_support = 0.002
+	}
+
+	HEU_GSC_trait_1 = { # 키보토스 총학생회장
+		random = no
+		targeted_modifier = {
+			tag = KSP
+			attack_bonus_against = 0.1
+			defense_bonus_against = 0.1
+		}
+		targeted_modifier = {
+			tag = COU
+			attack_bonus_against = 0.1
+			defense_bonus_against = 0.1
+		}
+		targeted_modifier = {
+			tag = SHE
+			attack_bonus_against = 0.1
+			defense_bonus_against = 0.1
+		}
+	}
+
+	HEU_GSC_trait_2 = { # 키보토스 총학생회장
+		random = no
+		training_time_army_factor = -0.15
+		army_defence_against_major_factor = 0.15
+		offensive_war_stability_factor = 0.1
+		defensive_war_stability_factor = 0.1
+	}
+
+	HEU_gehenna_german_culture_trait = { # 게르만 민족의 수호자
+		random = no
+		resistance_damage_to_garrison = -0.15
+		foreign_subversive_activites = -0.15
+		army_core_attack_factor = 0.05
+		army_core_defence_factor = 0.05
+	}
+
+	HEU_aru_depression_1 = { # 우울증
+		random = no
+		stability_factor = -0.05
+	}
+
+	HEU_aru_depression_2 = { # 우울증
+		random = no
+		stability_factor = -0.15
+	}
+
+	HEU_aru_chroma_1 = { # 중상
+		random = no
+		stability_factor = -0.15
+	}
+
+	HEU_aru_chroma_2 = { # 테러화
+		random = no
+		stability_factor = -0.05
+		army_defence_against_major_factor = 0.15
+		war_support_factor = 0.2
+		modifier_army_sub_unit_category_halo_attack_factor = 0.10
+		modifier_army_sub_unit_category_halo_defence_factor = 0.10
+		army_morale_factor = 0.1
+		army_org_factor = 0.1
+	}
+
 	##아리우스##
 	ARI_betrayer = { #배신자
 		sprite = 13
