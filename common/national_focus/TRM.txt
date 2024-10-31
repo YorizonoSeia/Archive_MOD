@@ -1686,13 +1686,18 @@
         }
 		available = {
 		}
-		allow_branch = { has_country_flag = GAEBALJUNG }
+		allow_branch = { is_debug = yes }
 		ai_will_do = {
 		}
 		x = 0
 		y = 2
 		relative_position_id = TRM_Endsige
 		completion_reward = {
+			add_political_power = 50
+			add_timed_idea = {
+				idea = TRM_Endsige2
+				days = 180
+			}
 		}
 	}
 	focus = { 
@@ -1717,9 +1722,9 @@
 		id = TRM_Endsige7
 		icon = GFX_goal_TRN_Messiah
 		cost = 5
-        prerequisite = {
-            focus = TRM_Endsige3
-        }
+        prerequisite = { focus = TRM_Endsige3 }
+        prerequisite = { focus = TRM_Endsige5 }
+		mutually_exclusive = { focus = TRM_Endsige6 }
 		available = {
 		}
 		ai_will_do = {
@@ -1750,11 +1755,11 @@
 	}
 	focus = { 
 		id = TRM_Endsige6
-		icon = GFX_goal_GER_renewed_militarism
+		icon = GFX_goal_TRN_towards_national_revolution
 		cost = 5
-        prerequisite = {
-            focus = TRM_Endsige4
-        }
+        prerequisite = { focus = TRM_Endsige4 }
+        prerequisite = { focus = TRM_Endsige5 }
+		mutually_exclusive = { focus = TRM_Endsige7 }
 		available = {
 		}
 		ai_will_do = {
@@ -1767,7 +1772,7 @@
 	}
 	focus = { # 주권자
 		id = TRM_Endsige5
-		icon = GFX_focus_BRA_repeale_national_security_law
+		icon = GFX_goal_TRN_Sovereign
 		cost = 5
         prerequisite = {
             focus = TRM_Endsige3
@@ -1785,13 +1790,12 @@
 	}
 	focus = { # 천년 제국
 		id = TRM_Endsige8
-		icon = GFX_goal_unknown
+		icon = GFX_goal_TRN_Trinitys_dawn
 		cost = 8.00
         prerequisite = {
             focus = TRM_Endsige6
 			focus = TRM_Endsige7
         }
-		prerequisite = { focus = TRM_Endsige5 }
 		available = {
 		}
 		ai_will_do = {
