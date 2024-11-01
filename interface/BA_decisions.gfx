@@ -37,6 +37,13 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_RED_redwinter_center"
+		texturefile = "gfx/interface/decisions/icon/RED_redwinter_center.tga"
+		legacy_lazy_load = no
+		noOfFrames = 4
+	}
+
+	spriteType = {
 		name = "GFX_RED_redwinter_right_wing"
 		texturefile = "gfx/interface/decisions/icon/RED_redwinter_right_wing.tga"
 		legacy_lazy_load = no

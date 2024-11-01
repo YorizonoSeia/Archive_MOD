@@ -509,3 +509,11 @@ KSP_annex_cou_decesion_desc: "발키리에 총학생회를 편입시킵니다. �
  RED_zenkyoutou_UI_title_CENTER: "조직의 충성"
  RED_zenkyoutou_UI_text_CENTER: "§Y전학공투회의의 충성§! 선택"
 
+ RED_zenkyoutou_CENTER_1_title: "붉은겨울에 대한 충성"
+ RED_zenkyoutou_CENTER_2_title: "공산주의적 대의"
+ RED_zenkyoutou_CENTER_3_title: "자발적 조직화"
+
+ RED_zenkyoutou_CENTER_1_tt: "조직력: §R-50%§!"
+ RED_zenkyoutou_CENTER_2_tt: "조직력: §R-30%§!"
+ RED_zenkyoutou_CENTER_3_tt: "조직력: §R-10%§!"
+
