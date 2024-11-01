@@ -466,15 +466,20 @@ KSP_annex_cou_decesion_desc: "발키리에 총학생회를 편입시킵니다. �
  RED_redwinter_left_wing_text: "[RED_redwinter_leftwing_tt]"
  RED_redwinter_right_wing_text: "[RED_redwinter_rightwing_tt]"
 
- RED_zenkyoutou_UI_title_LEFT: "투쟁 방식"
- RED_zenkyoutou_UI_text_LEFT: "§Y전학공투회의의 투쟁 방식§! 선택"
-
  RED_redwinter_leftwing_1tt: "§g설정되지 않음§!"
  RED_redwinter_leftwing_2tt: "적색 테러"
  RED_redwinter_leftwing_3tt: "사상 학습 투쟁"
  RED_redwinter_leftwing_4tt: "통일전선전술"
  RED_redwinter_leftwing_5tt: "대중 시위 조직"
  RED_redwinter_leftwing_6tt: "파업 유도"
+
+ RED_redwinter_rightwing_1tt: "§g설정되지 않음§!"
+ RED_redwinter_rightwing_2tt: "지하 비밀 결사"
+ RED_redwinter_rightwing_3tt: "전위대"
+ RED_redwinter_rightwing_4tt: "대중 단체"
+
+ RED_zenkyoutou_UI_title_LEFT: "투쟁 방식"
+ RED_zenkyoutou_UI_text_LEFT: "§Y전학공투회의의 투쟁 방식§! 선택"
 
  RED_zenkyoutou_LEFT_1_txt: "§R현장파§!"
  RED_zenkyoutou_LEFT_2_txt: "§S중앙파§!"
@@ -487,11 +492,6 @@ KSP_annex_cou_decesion_desc: "발키리에 총학생회를 편입시킵니다. �
  RED_zenkyoutou_LEFT_3_title: "통일전선전술"
  RED_zenkyoutou_LEFT_4_title: "대중 시위 조직"
  RED_zenkyoutou_LEFT_5_title: "파업 유도"
-
- RED_redwinter_rightwing_1tt: "§g설정되지 않음§!"
- RED_redwinter_rightwing_2tt: "지하 비밀 결사"
- RED_redwinter_rightwing_3tt: "전위대"
- RED_redwinter_rightwing_4tt: "대중 단체"
 
  RED_zenkyoutou_UI_title_RIGHT: "조직 방침"
  RED_zenkyoutou_UI_text_RIGHT: "§Y전학공투회의의 조직 방침§! 선택"
