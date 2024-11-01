@@ -496,6 +496,16 @@ KSP_annex_cou_decesion_desc: "발키리에 총학생회를 편입시킵니다. �
  RED_zenkyoutou_UI_title_RIGHT: "조직 방침"
  RED_zenkyoutou_UI_text_RIGHT: "§Y전학공투회의의 조직 방침§! 선택"
 
+ RED_zenkyoutou_RIGHT_1_title: "지하 비밀 결사"
+ RED_zenkyoutou_RIGHT_1_desc: "§g지하 비밀 결사는 수면 아래에서 우리의 대의를 위해 투쟁하는 조직 입니다.§!"
+ RED_zenkyoutou_RIGHT_1_tt: "§R현장파§! §Y영향력 상승§!"
+ RED_zenkyoutou_RIGHT_2_title: "전위대"
+ RED_zenkyoutou_RIGHT_2_desc: "§g전위대는 소수의 지도적인 인물들이 전공투의 방향을 향해 대중을 선도하는 단체 입니다.§!"
+ RED_zenkyoutou_RIGHT_2_tt: "§S중앙파§! §Y영향력 상승§!"
+ RED_zenkyoutou_RIGHT_3_title: "대중 단체"
+ RED_zenkyoutou_RIGHT_3_desc: "§g대중 단체는 사회주의적 가치를 널리 퍼뜨리기 위해 다수의 인민들과 연대 하여 큰 규모의 정당을 형성합니다.§!"
+ RED_zenkyoutou_RIGHT_3_tt: "§p민중파§! §Y영향력 상승§!"
+
  RED_zenkyoutou_UI_title_CENTER: "조직의 충성"
  RED_zenkyoutou_UI_text_CENTER: "§Y전학공투회의의 충성§! 선택"
 

@@ -7,6 +7,14 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_RED_zenkyoutou_RIGHT_button"
+		texturefile = "gfx/interface/decisions/icon/RED_zenkyoutou_RIGHT_button.tga"
+		legacy_lazy_load = no
+		noOfFrames = 2
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+
+	spriteType = {
 		name = "GFX_RED_redwinter_wing_button"
 		texturefile = "gfx/interface/decisions/icon/RED_redwinter_wing_button.tga"
 		legacy_lazy_load = no
