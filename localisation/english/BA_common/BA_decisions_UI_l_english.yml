@@ -466,6 +466,10 @@ KSP_annex_cou_decesion_desc: "발키리에 총학생회를 편입시킵니다. �
  RED_redwinter_left_wing_text: "[RED_redwinter_leftwing_tt]"
  RED_redwinter_right_wing_text: "[RED_redwinter_rightwing_tt]"
 
+ RED_redwinter_side_lock_left_tt: "최근 30일 내에 강령을 변경했습니다.\n남은 기간: §Y[?RED_zenkyoutou_LEFT_lock_flag:days_left|Y0]§!일"
+ RED_redwinter_side_lock_right_tt: "최근 30일 내에 강령을 변경했습니다.\n남은 기간: §Y[?RED_zenkyoutou_RIGHT_lock_flag:days_left|Y0]§!일"
+ RED_redwinter_side_lock_center_tt: "최근 30일 내에 강령을 변경했습니다.\n남은 기간: §Y[?RED_zenkyoutou_CENTER_lock_flag:days_left|Y0]§!일"
+
  RED_redwinter_leftwing_1tt: "§g설정되지 않음§!"
  RED_redwinter_leftwing_2tt: "적색 테러"
  RED_redwinter_leftwing_3tt: "사상 학습 투쟁"

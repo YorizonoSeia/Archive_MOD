@@ -437,6 +437,17 @@ guiTypes = {
 				fixedsize = yes
 				format = center
 			}
+		
+			iconType = {
+				name = "RED_redwinter_side_lock"
+				spriteType = GFX_RED_redwinter_side_lock
+				orientation = LEFT
+				position = {
+					x = 2
+					y = 2
+				}
+				pdx_tooltip = RED_redwinter_side_lock_left_tt
+			}
 		}
 	}
 	
@@ -679,6 +690,17 @@ guiTypes = {
 					frame = 2
 				}
 			}
+		
+			iconType = {
+				name = "RED_redwinter_side_lock"
+				spriteType = GFX_RED_redwinter_side_lock
+				orientation = LEFT
+				position = {
+					x = 2
+					y = 2
+				}
+				pdx_tooltip = RED_redwinter_side_lock_right_tt
+			}
 		}
 	}
 	
@@ -905,6 +927,17 @@ guiTypes = {
 					quadTextureSprite = "GFX_RED_zenkyoutou_RIGHT_button"
 					frame = 2
 				}
+			}
+		
+			iconType = {
+				name = "RED_redwinter_side_lock"
+				spriteType = GFX_RED_redwinter_side_lock
+				orientation = LEFT
+				position = {
+					x = 2
+					y = 2
+				}
+				pdx_tooltip = RED_redwinter_side_lock_center_tt
 			}
 		}
 	}

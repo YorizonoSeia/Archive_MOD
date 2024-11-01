@@ -4,8 +4,8 @@ style = {
 	name = FUCKING_focus_style
 
 	unavailable = GFX_focus_unavailable_fucking
-	completed = GFX_focus_can_start_fucking
-	available = GFX_focus_completed_fucking
+	completed = GFX_focus_completed_fucking
+	available = GFX_focus_can_start_fucking
 	current = GFX_focus_current_fucking
 }
 

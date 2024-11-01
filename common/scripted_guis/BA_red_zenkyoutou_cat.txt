@@ -144,56 +144,101 @@ scripted_gui = {
 				check_variable = { RED_redwinter_leftwing_var = 6 }
 			}
 		}
+		triggers = {
+			RED_redwinter_side_lock_visible = {
+				has_country_flag = RED_zenkyoutou_LEFT_lock_flag
+			}
+		}
 	
         effects = {
 			RED_zenkyoutou_LEFT_1_click = {
-				set_variable = { RED_redwinter_leftwing_var = 2 }
 				if = {
-					limit = { has_country_flag = RED_zenkyoutou_cat_open_ui_flag }
-					clr_country_flag = RED_zenkyoutou_cat_open_ui_flag
-				}
-				else = {
-					set_country_flag = RED_zenkyoutou_cat_open_ui_flag
+					limit = { NOT = { has_country_flag = RED_zenkyoutou_LEFT_lock_flag } }
+					set_variable = { RED_redwinter_leftwing_var = 2 }
+					if = {
+						limit = { has_country_flag = RED_zenkyoutou_cat_open_ui_flag }
+						clr_country_flag = RED_zenkyoutou_cat_open_ui_flag
+					}
+					else = {
+						set_country_flag = RED_zenkyoutou_cat_open_ui_flag
+					}
+					set_country_flag = {
+						flag = RED_zenkyoutou_LEFT_lock_flag
+						value = 1
+						days = 30
+					}
 				}
 			}
 			RED_zenkyoutou_LEFT_2_click = {
-				set_variable = { RED_redwinter_leftwing_var = 3 }
 				if = {
-					limit = { has_country_flag = RED_zenkyoutou_cat_open_ui_flag }
-					clr_country_flag = RED_zenkyoutou_cat_open_ui_flag
-				}
-				else = {
-					set_country_flag = RED_zenkyoutou_cat_open_ui_flag
+					limit = { NOT = { has_country_flag = RED_zenkyoutou_LEFT_lock_flag } }
+					set_variable = { RED_redwinter_leftwing_var = 3 }
+					if = {
+						limit = { has_country_flag = RED_zenkyoutou_cat_open_ui_flag }
+						clr_country_flag = RED_zenkyoutou_cat_open_ui_flag
+					}
+					else = {
+						set_country_flag = RED_zenkyoutou_cat_open_ui_flag
+					}
+					set_country_flag = {
+						flag = RED_zenkyoutou_LEFT_lock_flag
+						value = 1
+						days = 30
+					}
 				}
 			}
 			RED_zenkyoutou_LEFT_3_click = {
-				set_variable = { RED_redwinter_leftwing_var = 4 }
 				if = {
-					limit = { has_country_flag = RED_zenkyoutou_cat_open_ui_flag }
-					clr_country_flag = RED_zenkyoutou_cat_open_ui_flag
-				}
-				else = {
-					set_country_flag = RED_zenkyoutou_cat_open_ui_flag
+					limit = { NOT = { has_country_flag = RED_zenkyoutou_LEFT_lock_flag } }
+					set_variable = { RED_redwinter_leftwing_var = 4 }
+					if = {
+						limit = { has_country_flag = RED_zenkyoutou_cat_open_ui_flag }
+						clr_country_flag = RED_zenkyoutou_cat_open_ui_flag
+					}
+					else = {
+						set_country_flag = RED_zenkyoutou_cat_open_ui_flag
+					}
+					set_country_flag = {
+						flag = RED_zenkyoutou_LEFT_lock_flag
+						value = 1
+						days = 30
+					}
 				}
 			}
 			RED_zenkyoutou_LEFT_4_click = {
-				set_variable = { RED_redwinter_leftwing_var = 5 }
 				if = {
-					limit = { has_country_flag = RED_zenkyoutou_cat_open_ui_flag }
-					clr_country_flag = RED_zenkyoutou_cat_open_ui_flag
-				}
-				else = {
-					set_country_flag = RED_zenkyoutou_cat_open_ui_flag
+					limit = { NOT = { has_country_flag = RED_zenkyoutou_LEFT_lock_flag } }
+					set_variable = { RED_redwinter_leftwing_var = 5 }
+					if = {
+						limit = { has_country_flag = RED_zenkyoutou_cat_open_ui_flag }
+						clr_country_flag = RED_zenkyoutou_cat_open_ui_flag
+					}
+					else = {
+						set_country_flag = RED_zenkyoutou_cat_open_ui_flag
+					}
+					set_country_flag = {
+						flag = RED_zenkyoutou_LEFT_lock_flag
+						value = 1
+						days = 30
+					}
 				}
 			}
 			RED_zenkyoutou_LEFT_5_click = {
-				set_variable = { RED_redwinter_leftwing_var = 6 }
 				if = {
-					limit = { has_country_flag = RED_zenkyoutou_cat_open_ui_flag }
-					clr_country_flag = RED_zenkyoutou_cat_open_ui_flag
-				}
-				else = {
-					set_country_flag = RED_zenkyoutou_cat_open_ui_flag
+					limit = { NOT = { has_country_flag = RED_zenkyoutou_LEFT_lock_flag } }
+					set_variable = { RED_redwinter_leftwing_var = 6 }
+					if = {
+						limit = { has_country_flag = RED_zenkyoutou_cat_open_ui_flag }
+						clr_country_flag = RED_zenkyoutou_cat_open_ui_flag
+					}
+					else = {
+						set_country_flag = RED_zenkyoutou_cat_open_ui_flag
+					}
+					set_country_flag = {
+						flag = RED_zenkyoutou_LEFT_lock_flag
+						value = 1
+						days = 30
+					}
 				}
 			}
 		}
@@ -226,36 +271,65 @@ scripted_gui = {
 				check_variable = { RED_redwinter_rightwing_var = 4 }
 			}
 		}
+		triggers = {
+			RED_redwinter_side_lock_visible = {
+				has_country_flag = RED_zenkyoutou_RIGHT_lock_flag
+			}
+		}
 	
         effects = {
 			RED_zenkyoutou_RIGHT_1_button_click = {
-				set_variable = { RED_redwinter_rightwing_var = 2 }
 				if = {
-					limit = { has_country_flag = RED_zenkyoutou_cat_open_ui_flag }
-					clr_country_flag = RED_zenkyoutou_cat_open_ui_flag
-				}
-				else = {
-					set_country_flag = RED_zenkyoutou_cat_open_ui_flag
+					limit = { NOT = { has_country_flag = RED_zenkyoutou_RIGHT_lock_flag } }
+					set_variable = { RED_redwinter_rightwing_var = 2 }
+					if = {
+						limit = { has_country_flag = RED_zenkyoutou_cat_open_ui_flag }
+						clr_country_flag = RED_zenkyoutou_cat_open_ui_flag
+					}
+					else = {
+						set_country_flag = RED_zenkyoutou_cat_open_ui_flag
+					}
+					set_country_flag = {
+						flag = RED_zenkyoutou_RIGHT_lock_flag
+						value = 1
+						days = 30
+					}
 				}
 			}
 			RED_zenkyoutou_RIGHT_2_button_click = {
-				set_variable = { RED_redwinter_rightwing_var = 3 }
 				if = {
-					limit = { has_country_flag = RED_zenkyoutou_cat_open_ui_flag }
-					clr_country_flag = RED_zenkyoutou_cat_open_ui_flag
-				}
-				else = {
-					set_country_flag = RED_zenkyoutou_cat_open_ui_flag
+					limit = { NOT = { has_country_flag = RED_zenkyoutou_RIGHT_lock_flag } }
+					set_variable = { RED_redwinter_rightwing_var = 3 }
+					if = {
+						limit = { has_country_flag = RED_zenkyoutou_cat_open_ui_flag }
+						clr_country_flag = RED_zenkyoutou_cat_open_ui_flag
+					}
+					else = {
+						set_country_flag = RED_zenkyoutou_cat_open_ui_flag
+					}
+					set_country_flag = {
+						flag = RED_zenkyoutou_RIGHT_lock_flag
+						value = 1
+						days = 30
+					}
 				}
 			}
 			RED_zenkyoutou_RIGHT_3_button_click = {
-				set_variable = { RED_redwinter_rightwing_var = 4 }
 				if = {
-					limit = { has_country_flag = RED_zenkyoutou_cat_open_ui_flag }
-					clr_country_flag = RED_zenkyoutou_cat_open_ui_flag
-				}
-				else = {
-					set_country_flag = RED_zenkyoutou_cat_open_ui_flag
+					limit = { NOT = { has_country_flag = RED_zenkyoutou_RIGHT_lock_flag } }
+					set_variable = { RED_redwinter_rightwing_var = 4 }
+					if = {
+						limit = { has_country_flag = RED_zenkyoutou_cat_open_ui_flag }
+						clr_country_flag = RED_zenkyoutou_cat_open_ui_flag
+					}
+					else = {
+						set_country_flag = RED_zenkyoutou_cat_open_ui_flag
+					}
+					set_country_flag = {
+						flag = RED_zenkyoutou_RIGHT_lock_flag
+						value = 1
+						days = 30
+					}
 				}
 			}
 		}
@@ -288,36 +362,65 @@ scripted_gui = {
 				check_variable = { RED_redwinter_center_var = 4 }
 			}
 		}
+		triggers = {
+			RED_redwinter_side_lock_visible = {
+				has_country_flag = RED_zenkyoutou_CENTER_lock_flag
+			}
+		}
 	
         effects = {
 			RED_zenkyoutou_CENTER_1_button_click = {
-				set_variable = { RED_redwinter_center_var = 2 }
 				if = {
-					limit = { has_country_flag = RED_zenkyoutou_cat_open_ui_flag }
-					clr_country_flag = RED_zenkyoutou_cat_open_ui_flag
-				}
-				else = {
-					set_country_flag = RED_zenkyoutou_cat_open_ui_flag
+					limit = { NOT = { has_country_flag = RED_zenkyoutou_CENTER_lock_flag } }
+					set_variable = { RED_redwinter_center_var = 2 }
+					if = {
+						limit = { has_country_flag = RED_zenkyoutou_cat_open_ui_flag }
+						clr_country_flag = RED_zenkyoutou_cat_open_ui_flag
+					}
+					else = {
+						set_country_flag = RED_zenkyoutou_cat_open_ui_flag
+					}
+					set_country_flag = {
+						flag = RED_zenkyoutou_CENTER_lock_flag
+						value = 1
+						days = 30
+					}
 				}
 			}
 			RED_zenkyoutou_CENTER_2_button_click = {
-				set_variable = { RED_redwinter_center_var = 3 }
 				if = {
-					limit = { has_country_flag = RED_zenkyoutou_cat_open_ui_flag }
-					clr_country_flag = RED_zenkyoutou_cat_open_ui_flag
-				}
-				else = {
-					set_country_flag = RED_zenkyoutou_cat_open_ui_flag
+					limit = { NOT = { has_country_flag = RED_zenkyoutou_CENTER_lock_flag } }
+					set_variable = { RED_redwinter_center_var = 3 }
+					if = {
+						limit = { has_country_flag = RED_zenkyoutou_cat_open_ui_flag }
+						clr_country_flag = RED_zenkyoutou_cat_open_ui_flag
+					}
+					else = {
+						set_country_flag = RED_zenkyoutou_cat_open_ui_flag
+					}
+					set_country_flag = {
+						flag = RED_zenkyoutou_CENTER_lock_flag
+						value = 1
+						days = 30
+					}
 				}
 			}
 			RED_zenkyoutou_CENTER_3_button_click = {
-				set_variable = { RED_redwinter_center_var = 4 }
 				if = {
-					limit = { has_country_flag = RED_zenkyoutou_cat_open_ui_flag }
-					clr_country_flag = RED_zenkyoutou_cat_open_ui_flag
-				}
-				else = {
-					set_country_flag = RED_zenkyoutou_cat_open_ui_flag
+					limit = { NOT = { has_country_flag = RED_zenkyoutou_CENTER_lock_flag } }
+					set_variable = { RED_redwinter_center_var = 4 }
+					if = {
+						limit = { has_country_flag = RED_zenkyoutou_cat_open_ui_flag }
+						clr_country_flag = RED_zenkyoutou_cat_open_ui_flag
+					}
+					else = {
+						set_country_flag = RED_zenkyoutou_cat_open_ui_flag
+					}
+					set_country_flag = {
+						flag = RED_zenkyoutou_CENTER_lock_flag
+						value = 1
+						days = 30
+					}
 				}
 			}
 		}
