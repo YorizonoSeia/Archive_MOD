@@ -3393,14 +3393,10 @@ ideas = {
 				modifier_army_sub_unit_category_halo_max_org_factor = 0.1
 				modifier_army_sub_unit_category_halo_org_recovery_cap_factor = 0.1
 				custom_modifier_tooltip = ABY_infantry_minus_attack_tt
-				custom_modifier_tooltip = ABY_infantry_minus_defense_tt
 				hidden_modifier = {
 					modifier_army_sub_unit_infantry_attack_factor = -0.5
-					modifier_army_sub_unit_infantry_defence_factor = -0.5
 					modifier_army_sub_unit_irregular_infantry_attack_factor = -0.5
-					modifier_army_sub_unit_irregular_infantry_defence_factor = -0.5
 					modifier_army_sub_unit_militia_attack_factor = -0.5
-					modifier_army_sub_unit_militia_defence_factor = -0.5
 				}
 			}
 		}
@@ -3440,14 +3436,10 @@ ideas = {
 				modifier_army_sub_unit_category_halo_max_org_factor = 0.1
 				modifier_army_sub_unit_category_halo_org_recovery_cap_factor = 0.1
 				custom_modifier_tooltip = ABY_infantry_minus_attack_tt
-				custom_modifier_tooltip = ABY_infantry_minus_defense_tt
 				hidden_modifier = {
 					modifier_army_sub_unit_infantry_attack_factor = -0.5
-					modifier_army_sub_unit_infantry_defence_factor = -0.5
 					modifier_army_sub_unit_irregular_infantry_attack_factor = -0.5
-					modifier_army_sub_unit_irregular_infantry_defence_factor = -0.5
 					modifier_army_sub_unit_militia_attack_factor = -0.5
-					modifier_army_sub_unit_militia_defence_factor = -0.5
 				}
 			}
 			equipment_bonus = {
