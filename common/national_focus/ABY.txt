@@ -6089,7 +6089,10 @@ focus_tree = {
 		}
 		available = {
 			NOT = {has_country_flag = ABY_flag_wpehvk_tkrjs}
-			neutrality > 0.35
+			OR = {
+				neutrality > 0.35
+				fascism > 0.35
+			}
 			ABY = {
 				is_puppet = no
 			}
