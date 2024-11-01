@@ -837,9 +837,9 @@ leader_traits = {
 		random = no
 		political_power_factor = -0.15
 		stability_factor = 0.05
-		production_lack_of_resource_penalty_factor = -0.3
-		Production_factory_efficiency_gain_factor = -0.1
-		production_factory_start_efficiency_factor = -0.1
+		Production_factory_efficiency_gain_factor = 0.1
+		production_factory_start_efficiency_factor = 0.1
+		production_factory_max_efficiency_factor = 0.1
 	}
  	ABY_trait_dog = { #"맹견"
 		random = no
