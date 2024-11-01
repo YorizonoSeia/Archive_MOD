@@ -16030,7 +16030,6 @@ ABY_descision_category_provisional_government = {
 			NOT = {
 				controls_state = 4
 			}
-			has_war = no
 		}
 
 		visible = {

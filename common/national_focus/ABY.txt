@@ -2356,6 +2356,7 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			custom_effect_tooltip = ABY_description_tt
 			add_war_support = -0.5
 			remove_power_balance = {
 				id = ABY_power_balance
