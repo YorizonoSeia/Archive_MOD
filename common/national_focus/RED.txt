@@ -2050,6 +2050,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			set_party_name = {
+				ideology = communism
+				long_name = RED_RedWinterCommunistParty
+				name = RED_RedWinterCommunistParty
+			}
+
 			custom_effect_tooltip = RED_accept_trotskism_tt
 			hidden_effect = {
 				activate_advisor = RED_lev_trotsky_mil

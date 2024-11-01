@@ -1,6 +1,12 @@
 spriteTypes = {
 
 	spriteType = {
+		name = "GFX_RED_redwinter_side_lock"
+		texturefile = "gfx/interface/decisions/icon/RED_redwinter_side_lock.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
 		name = "GFX_RED_sort_button_428x29"
 		texturefile = "gfx/interface/decisions/icon/RED_sort_button_428x29.dds"
 		legacy_lazy_load = no
@@ -34,6 +40,13 @@ spriteTypes = {
 		name = "GFX_RED_game_end_bg"
 		texturefile = "gfx/interface/decisions/icon/game_end_bg.tga"
 		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_RED_redwinter_center"
+		texturefile = "gfx/interface/decisions/icon/RED_redwinter_center.tga"
+		legacy_lazy_load = no
+		noOfFrames = 4
 	}
 
 	spriteType = {
