@@ -315,6 +315,82 @@ defined_text = {
 	}
 }
 defined_text = {
+	name = RED_redwinter_leftwing_tooltip
+	text = {
+		trigger = {
+			check_variable = { RED_redwinter_leftwing_var = 2 }
+		}
+		localization_key = RED_redwinter_leftwing_2_tooltip
+	}
+	text = {
+		trigger = {
+			check_variable = { RED_redwinter_leftwing_var = 3 }
+		}
+		localization_key = RED_redwinter_leftwing_3_tooltip
+	}
+	text = {
+		trigger = {
+			check_variable = { RED_redwinter_leftwing_var = 4 }
+		}
+		localization_key = RED_redwinter_leftwing_4_tooltip
+	}
+	text = {
+		trigger = {
+			check_variable = { RED_redwinter_leftwing_var = 5 }
+		}
+		localization_key = RED_redwinter_leftwing_5_tooltip
+	}
+	text = {
+		trigger = {
+			check_variable = { RED_redwinter_leftwing_var = 6 }
+		}
+		localization_key = RED_redwinter_leftwing_6_tooltip
+	}
+	text = {
+		trigger = {
+			NOT = {
+				check_variable = { RED_redwinter_leftwing_var = 2 }
+				check_variable = { RED_redwinter_leftwing_var = 3 }
+				check_variable = { RED_redwinter_leftwing_var = 4 }
+				check_variable = { RED_redwinter_leftwing_var = 5 }
+				check_variable = { RED_redwinter_leftwing_var = 6 }
+			}
+		}
+		localization_key = RED_redwinter_leftwing_1_tooltip
+	}
+}
+defined_text = {
+	name = RED_redwinter_rightwing_tooltip
+	text = {
+		trigger = {
+			check_variable = { RED_redwinter_rightwing_var = 2 }
+		}
+		localization_key = RED_redwinter_rightwing_2_tooltip
+	}
+	text = {
+		trigger = {
+			check_variable = { RED_redwinter_rightwing_var = 3 }
+		}
+		localization_key = RED_redwinter_rightwing_3_tooltip
+	}
+	text = {
+		trigger = {
+			check_variable = { RED_redwinter_rightwing_var = 4 }
+		}
+		localization_key = RED_redwinter_rightwing_4_tooltip
+	}
+	text = {
+		trigger = {
+			NOT = {
+				check_variable = { RED_redwinter_rightwing_var = 2 }
+				check_variable = { RED_redwinter_rightwing_var = 3 }
+				check_variable = { RED_redwinter_rightwing_var = 4 }
+			}
+		}
+		localization_key = RED_redwinter_rightwing_1_tooltip
+	}
+}
+defined_text = {
 	name = RED_redwinter_leftwing_tt
 	text = {
 		trigger = {
