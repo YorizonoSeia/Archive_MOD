@@ -3152,7 +3152,10 @@ focus_tree = {
 		bypass = {
 		}
 		completion_reward = {
-			add_ideas = SHA_oldeconomy
+			swap_ideas = {
+				remove_idea = SHA_traditional_protection_idea
+				add_idea = SHA_traditional_protection_idea2
+			}
 			if = {
 				limit = {
 					NOT = {
@@ -3361,8 +3364,8 @@ focus_tree = {
 		prerequisite = { focus = SHA_foc_2-2-9 }
 		#mutually_exclusive = { focus = SHA_foc_2-2- }
 		cost = 10
-		x = 0
-		y = 4
+		x = -1
+		y = 3
 		available = {
 			has_full_control_of_state = 4
 			has_full_control_of_state = 152
@@ -3469,7 +3472,7 @@ focus_tree = {
 		prerequisite = { focus = SHA_foc_2-2-7 }
 		#mutually_exclusive = { focus = SHA_foc_2-2- }
 		cost = 10
-		x = -4
+		x = -3
 		y = 6
 		available = {
 		}
@@ -3518,7 +3521,7 @@ focus_tree = {
 		prerequisite = { focus = SHA_foc_2-2-13 }
 		#mutually_exclusive = { focus = SHA_foc_2-2- }
 		cost = 10
-		x = -4
+		x = -3
 		y = 5
 		available = {
 		}
@@ -3611,8 +3614,8 @@ focus_tree = {
 		prerequisite = { focus = SHA_foc_2-2-9 }
 		#mutually_exclusive = { focus = SHA_foc_2-2- }
 		cost = 10
-		x = 1
-		y = 3
+		x = 0
+		y = 4
 		available = {
 			has_full_control_of_state = 4
 			NOT = {
@@ -3683,7 +3686,7 @@ focus_tree = {
 		prerequisite = { focus = SHA_foc_2-2-13 }
 		#mutually_exclusive = { focus = SHA_foc_2-2- }
 		cost = 10
-		x = -2
+		x = -1
 		y = 5
 		available = {
 		}
@@ -3704,7 +3707,7 @@ focus_tree = {
 		prerequisite = { focus = SHA_foc_2-2-11 }
 		#mutually_exclusive = { focus = SHA_foc_2-2- }
 		cost = 10
-		x = -2
+		x = -1
 		y = 6
 		available = {
 		}
@@ -3715,25 +3718,6 @@ focus_tree = {
 				remove_idea = SHA_aoghkdnjs_idea2
 				add_idea = SHA_aoghkdnjs_idea3
 			}
-		}
-	}
-	focus = { #
-		relative_position_id = SHA_foc_2-2
-		id = SHA_foc_2-2-41
-		icon = GFX_focus_generic_women_in_military
-		prerequisite = { focus = SHA_foc_2-2-38 }
-		#mutually_exclusive = { focus = SHA_foc_2-2- }
-		cost = 5
-		x = -3
-		y = 7
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.10
-			add_war_support = 0.10
 		}
 	}
 	focus = { #
@@ -3767,14 +3751,11 @@ focus_tree = {
 		id = SHA_foc_2-2-12
 		icon = GFX_goal_generic_major_war
 		prerequisite = { focus = SHA_foc_2-2-3 }
-		#mutually_exclusive = { focus = SHA_foc_2-2-39 }
+		mutually_exclusive = { focus = SHA_foc_2-2-39 }
 		cost = 10
-		x = 2
-		y = 2
+		x = 1
+		y = 3
 		available = {
-			NOT = {
-				has_completed_focus = SHA_foc_2-2-8
-			}
 			HYA = {
 				exists = yes
 			}
@@ -3797,14 +3778,11 @@ focus_tree = {
 		id = SHA_foc_2-2-39
 		icon = GFX_goal_molotov_ribbentrop_pact
 		prerequisite = { focus = SHA_foc_2-2-3 }
-		#mutually_exclusive = { focus = SHA_foc_2-2-12 }
+		mutually_exclusive = { focus = SHA_foc_2-2-12 }
 		cost = 10
 		x = 3
 		y = 3
 		available = {
-			NOT = {
-				has_completed_focus = SHA_foc_2-2-8
-			}
 			OR = {
 				is_in_faction = no
 				is_faction_leader = yes
@@ -3844,7 +3822,7 @@ focus_tree = {
 		prerequisite = { focus = SHA_foc_2-2-8 }
 		#mutually_exclusive = { focus = SHA_foc_2-2- }
 		cost = 10
-		x = 1
+		x = 3
 		y = 5
 		available = {
 		}
@@ -4882,8 +4860,16 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_stability = 0.10
-			add_ideas = low_economic_mobilisation
 			add_ideas = limited_exports
+			if = {
+				limit = {
+					has_idea = SHA_traditional_protection_idea2
+				}
+				remove_ideas = SHA_traditional_protection_idea2
+			}
+			else = {
+				remove_ideas = SHA_traditional_protection_idea
+			}
 			set_rule = {
 				can_join_factions = yes
 			}
