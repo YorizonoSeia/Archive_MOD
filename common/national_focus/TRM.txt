@@ -2034,52 +2034,6 @@
 		}
 	}
 	focus = {
-		id = TRM_balkan_diplomacy
-		icon = GFX_focus_generic_balkan_diplomacy
-		cost = 5.00
-		prerequisite = {
-			focus = TRM_oetzi
-		}
-		available = { 
-            is_subject = no
-        }
-		ai_will_do = {
-			base = 500
-			modifier = {
-				factor = 0.5
-				has_war = yes
-			}
-			modifier = {
-				factor = 2
-				has_war = no
-			}
-		}
-		relative_position_id = TRM_oetzi
-		x = 3
-		y = 1
-        completion_reward = {
-            unlock_decision_category_tooltip = TRM_balkan_diplomacy_categories
-
-            activate_targeted_decision = { 
-                tag = ROM 
-                decision = TRM_pressure_country_government_balkan 
-            }
-            activate_targeted_decision = { 
-                tag = BUL
-                decision = TRM_pressure_country_government_balkan 
-            }
-            activate_targeted_decision = { 
-                tag = YUG 
-                decision = TRM_pressure_country_government_balkan 
-            }
-            TRM = {
-                set_variable = { ITA_pressure_government_days = 30 }
-                set_variable = { ITA_pressure_government_cd = 365 }
-                set_variable = { ITA_pressure_country_government_cost = 50 }
-            }
-        }
-	}
-	focus = {
 		id = TMR_support_with_germany #독일인과 접촉
         text = TRM_invite_dignitary
 		icon = GFX_focus_SWI_embrace_rote_drei
@@ -3004,11 +2958,14 @@
             NOT = { is_in_faction_with = SHE }
         }
         bypass = {
-            NOT = {
-                country_exists = COU
-                country_exists = KSP
-                country_exists = SHE
-            }
+			OR = {
+			COU = { is_puppet_of = TRM }
+            	NOT = {
+	                country_exists = COU
+                	country_exists = KSP
+                	country_exists = SHE
+            	}
+			}
 			35 = { state_is_fully_controlled_by_ROOT_or_subject = yes }
         }
 		ai_will_do = {
