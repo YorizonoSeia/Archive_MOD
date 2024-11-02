@@ -134,12 +134,18 @@
  HYA_focus_95:0 "백귀야행 군사통제부"
  HYA_focus_96:0 "유연한 동아리 체제"
  HYA_focus_97:0 "백귀야행국"
- HYA_focus_100:0 "권력 강화"
- HYA_focus_101:0 "동아리 강제 해산"
- HYA_focus_102:0 "인법연구부 예산 확장"
- HYA_focus_103:0 "백귀야행 재교육"
- HYA_focus_104:0 "쿠즈노하 초청"
- HYA_focus_105:0 "화조풍월부 활동 금지"
+ HYA_focus_100:0 "국내 집중"
+ HYA_focus_101:0 "국경 수호"
+ HYA_focus_102:0 "반 개입주의 외교 정책"
+ HYA_focus_103:0 "국경 요새 건설"
+ HYA_focus_104:0 "불개입 조약 추진"
+ HYA_focus_105:0 "발칸 장벽"
+ HYA_focus_106:0 "적성 국가 판별"
+ HYA_focus_107:0 "백귀야행 요새 위원회"
+ 
+ HYA_focus_103_tt: "모든 §Y키보토스 국가§!와 인접한 주의 국경에 §G4§!개의 §Y요새§! 추가:"
+ HYA_focus_105_tt: "모든 §Y남부 유럽 또는 발칸 국가§!와 인접한 주의 국경에 §G4§!개의 §Y요새§! 추가:"
+ HYA_focus_106_tt: "§Y$HYA_focus_103$§! 중점과 §Y$HYA_focus_105$§! 중점으로 요새가 건설된 §Y모든 주§!에 §G4§!개의 §Y요새§! 추가:"
 
  #아이디어
  HYA_merchant_association:0 "상인조합"
@@ -181,6 +187,7 @@
  HYA_a_single_governing_principle:0 "단일한 지배 원칙"
  HYA_anarch_state:0 "아나키즘 사회"
  HYA_anarchist_culture:0 "문화적 아나키즘"
+ HYA_fort_idea:0 "백귀야행 요새 위원회"
  #디시전
  HYA_centralization_power_balance_decisions:0 "학원 권위의 균형"
  HYA_compromise_with_cantons:0 "동아리 협력 강화"
@@ -269,7 +276,7 @@
  HYA_focus_65_tt3:0 "\n§Y$HYA_hyakkayouran_conflict_resolution_council$§! 변동치\n매일 비동맹주의 인기도: §R-0.02§!"
  HYA_focus_66_tt:0 "\n§Y$HYA_hyakkayouran_conflict_resolution_council$§! 변동치\n정치력 획득: §G+5%§!\n이념 변화 방어: §G+5.0%§!"
  HYA_focus_67_tt:0 "\n§Y$HYA_hyakkayouran_conflict_resolution_council$§! 변동치\n경제법 비용: §G-15%§!\n무역법 비용: §G-15%§!\n징병법 비용: §G-15%§!"
- HYA_focus_69_tt:0 "§Y$HYA_centralization_bop$§!이 §Y$HYA_centralization_bop_very_splits$§! 범위의 £GFX_BoP_left_texticon §Y왼쪽§!에 있지 않으면 안정도 불이익 획득:"
+ HYA_focus_69_tt:0 "§Y$HYA_centralization_bop$§!이 §Y$HYA_centralization_bop_very_authority$§! 범위의 £GFX_BoP_left_texticon §Y왼쪽§!에 있지 않으면 안정도 불이익 획득:"
 
  HYA_focus_73_tt:0 "§Y내전§!이 시작되면, §Y우리§!가 군대에서 §G20%§! §Y더 큰 비중을 차지하게 될 것입니다.§!\n\n"
  HYA_focus_74_tt:0 "§Y내전§! 발발 시, §Y4개 보병사단§! 획득.\n\n§Y$HYA_flower_bird_wind_moon_club_dynamic_modifiers$§! 변동치\n사단 조직력: §G+10.0%§!\n육군 조직력 회복: §R-5.00%§!\n\n"
