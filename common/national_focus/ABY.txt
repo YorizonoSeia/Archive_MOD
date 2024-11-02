@@ -2357,7 +2357,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = ABY_description_tt
-			add_war_support = -0.5
+			add_war_support = -0.75
 			remove_power_balance = {
 				id = ABY_power_balance
 			}
@@ -6045,13 +6045,11 @@ focus_tree = {
 				ideology = democratic
 				popularity = 0.25
 			}
-			add_stability = 0.25
-			add_war_support = 0.25
 			if = {
 				limit = {
 					power_balance_value = {
 						id = ABY_power_balance_3
-						value < -0.9
+						value < -0.6
 					}
 					GEI = {
 						has_cosmetic_tag = GEI_The_Colour
@@ -6104,8 +6102,6 @@ focus_tree = {
 				ideology = neutrality
 				popularity = 0.25
 			}
-			add_stability = 0.15
-			add_war_support = 0.1
 			set_politics = {
 				ruling_party = neutrality
 			}
