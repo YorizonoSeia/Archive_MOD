@@ -332,7 +332,6 @@ country_event = { #게헨나 항복 이벤트
 			OR = {
 				exists = no
 				has_capitulated = yes
-				is_in_faction = no
 				is_subject = yes
 			}
 		}
@@ -340,7 +339,6 @@ country_event = { #게헨나 항복 이벤트
 			OR = {
 				exists = no
 				has_capitulated = yes
-				is_in_faction = no
 				is_subject = yes
 			}
 		}
@@ -4197,7 +4195,7 @@ country_event = { # 트리니티의 개쩌는 사업 아이템!
     }
 
 	option = {
-		name = TRN_after_war_event.01.a
+		name = TRN_after_war_event.20.a
 	}
 }
 country_event = {  # 디버그 이벤트
@@ -4382,6 +4380,8 @@ country_event = { # 디버그 이벤트
     trigger = {
         tag = TRM
         has_completed_focus = TRM_newfocus_27
+        has_completed_focus = TRM_Arona_focus
+        has_completed_focus = TRM_heu_focus
         has_war = no
         has_government = fascism
         controls_state = 36
