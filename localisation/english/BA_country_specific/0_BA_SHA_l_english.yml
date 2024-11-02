@@ -116,7 +116,7 @@
  SHA_foc_2:0 "우익 결집"
  SHA_foc_2-1:0 "전통 수호"
 
- SHA_foc_2-2:0 "고립주의"
+ SHA_foc_2-2:0 "고립주의 유지"
  SHA_foc_2-2-1:0 "위협 제거"
  SHA_foc_2-2-2:0 "이계과의 절연"
  SHA_foc_2-2-3:0 "근위대 창설"
@@ -157,7 +157,6 @@
  SHA_foc_2-2-38:0 "사농공상"
  SHA_foc_2-2-39:0 "사대교린"
  SHA_foc_2-2-40:0 "기독교 금지"
- SHA_foc_2-2-41:0 "여성 중심 사회"
  SHA_foc_2-2-42:0 "성인물 철폐"
  SHA_foc_2-2-43:0 "곰 사냥"
 
@@ -263,6 +262,8 @@
  SHA_oldeconomy:0 "쇄국"
  SHA_nojo:0 "전국센가이쿄노동조합총연맹"
  SHA_NONGSANMUL_BANCHUL:0 "농산물 반출"
+ SHA_traditional_protection_idea:0 "전통주의 수호"
+ SHA_traditional_protection_idea2:0 "강한 전통주의 수호"
  SHA_faup_idea:0 "12월 총파업"
  SHA_opera_idea:0 "경극부"
  SHA_opera_idea2:0 "힘을 얻은 경극부"
