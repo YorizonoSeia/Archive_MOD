@@ -535,7 +535,7 @@ country_event = {
 		custom_effect_tooltip = TRN_endsieg_event_tt
         hidden_effect = { 
             news_event = BA_news.9 
-            TRM_endsieg_effect = yes
+            #TRM_endsieg_effect = yes
         }
 	}
 }

@@ -140,6 +140,38 @@ ideas = {
 			}
 		}
 		##산해경##
+		SHA_traditional_protection_idea = {
+			picture = HUN_treaty_of_triannon
+			allowed = {	always = no	}
+			allowed_civil_war = { always = no }
+			modifier = {
+				consumer_goods_factor = 0.15
+				production_speed_industrial_complex_factor = -0.10
+				production_speed_arms_factory_factor = -0.10
+				production_speed_dockyard_factor = -0.10
+				lend_lease_tension = 1.0
+				guarantee_tension = 1.0
+				agency_upgrade_time = 1.0
+				ai_get_ally_desire_factor = -20
+			}
+		}
+		SHA_traditional_protection_idea2 = {
+			picture = HUN_treaty_of_triannon
+			allowed = {	always = no	}
+			allowed_civil_war = { always = no }
+			modifier = {
+				consumer_goods_factor = 0.25
+				production_speed_industrial_complex_factor = -0.15
+				production_speed_arms_factory_factor = -0.15
+				production_speed_dockyard_factor = -0.15
+				lend_lease_tension = 1.0
+				guarantee_tension = 1.0
+				agency_upgrade_time = 1.0
+				max_fuel_factor = -0.25
+				fuel_gain_factor = -0.25
+				ai_get_ally_desire_factor = -40
+			}
+		}
 		SHA_faup_idea = {
 			picture = FRA_factory_strikes
 			allowed = {	always = no	}
