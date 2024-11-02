@@ -6063,6 +6063,10 @@ focus_tree = {
 			remove_power_balance = {
 				id = ABY_power_balance_3
 			}
+			remove_ideas = {
+				ABY_idea_army_inside
+				ABY_idea_politic_inside
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -6120,6 +6124,10 @@ focus_tree = {
 			custom_effect_tooltip = ABY_wpehvk_tt
 			remove_power_balance = {
 				id = ABY_power_balance_3 
+			}
+			remove_ideas = {
+				ABY_idea_army_inside
+				ABY_idea_politic_inside
 			}
 			#중점 완료시 얻는 보상
 		}
@@ -8220,7 +8228,6 @@ focus_tree = {
 			#중점 통과 조건
 		}
 		available = {
-			has_completed_focus = BA_new_world_technology_army2
 			#중점 선행조건
 		}
 
