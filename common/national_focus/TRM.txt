@@ -1672,9 +1672,8 @@
 		y = 1
 		relative_position_id = TRM_oetzi
 		completion_reward = { # 미카는 신이야..!!
-		    country_event = {
-		    	id = TRM_event.26
-		    }
+		    country_event = { id = TRM_event.26 }
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
 	focus = { # 미소노 미카의 개인 숭배
@@ -1686,7 +1685,12 @@
         }
 		available = {
 		}
-		allow_branch = { is_debug = yes }
+		allow_branch = {
+			OR = {
+				has_completed_focus = TRM_Endsige
+				is_debug = yes
+			}
+		}
 		ai_will_do = {
 		}
 		x = 0
@@ -1698,11 +1702,30 @@
 				idea = TRM_Endsige2
 				days = 180
 			}
+			custom_effect_tooltip = TRM_Endsige2_tt
+			hidden_effect = {
+				remove_country_leader_role = {
+					character = TRN_alzk
+					ideology = pater_nazism
+				}
+				add_country_leader_role = {
+					character = TRN_alzk
+					promote_leader = yes
+					country_leader = {
+						ideology = pater_nazism
+						desc = "TRN_alzk_DESC_2"
+						traits = {
+							#TRN_mika_trait_1
+							#TRN_mika_trait_2
+						}
+					}
+				}
+			}
 		}
 	}
 	focus = { 
 		id = TRM_Endsige3
-		icon = GFX_goal_unknown
+		icon = GFX_goal_TRN_serve_to_trinity
 		cost = 5
         prerequisite = {
             focus = TRM_Endsige2
@@ -1716,6 +1739,7 @@
 		y = 1
 		relative_position_id = TRM_Endsige2
 		completion_reward = {
+			add_country_leader_trait = TRN_Leader_of_Trinity
 		}
 	}
 	focus = {
@@ -1733,6 +1757,7 @@
 		y = 2
 		relative_position_id = TRM_Endsige3
 		completion_reward = {
+			add_country_leader_trait = TRN_Messiah
 		}
 	}
 	focus = {
@@ -1751,6 +1776,7 @@
 		y = 1
 		relative_position_id = TRM_Endsige2
 		completion_reward = {
+			add_country_leader_trait = TRN_Germanic_servant
 		}
 	}
 	focus = { 
@@ -1768,6 +1794,8 @@
 		y = 2
 		relative_position_id = TRM_Endsige4
 		completion_reward = {
+			add_country_leader_trait = TRN_national_revolution
+			add_ideas = TRM_Towards_National_Revolution
 		}
 	}
 	focus = { # 주권자
@@ -1786,6 +1814,7 @@
 		y = 1
 		relative_position_id = TRM_Endsige3
 		completion_reward = {
+			add_country_leader_trait = TRN_sovereign
 		}
 	}
 	focus = { # 천년 제국
@@ -1797,6 +1826,10 @@
 			focus = TRM_Endsige7
         }
 		available = {
+			custom_trigger_tooltip = {
+				tooltip = BA_Auto_complete_tt
+				always = no
+			}
 		}
 		ai_will_do = {
 		}
@@ -1804,6 +1837,7 @@
 		y = 1
 		relative_position_id = TRM_Endsige7
 		completion_reward = {
+			custom_effect_tooltip = TRN_ENDSIGE_TT
 		}
 	}
 	focus = {

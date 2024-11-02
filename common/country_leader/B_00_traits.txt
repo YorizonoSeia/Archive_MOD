@@ -1819,6 +1819,56 @@ leader_traits = {
 		stability_factor = 0.15
 		political_power_factor = 0.15
 	}
+	TRN_Leader_of_Trinity = { # 트리니티의 영도자
+		sprite = 13
+		random = no
+		political_power_factor = 0.15
+		fascism_drift = 0.1
+		drift_defence_factor = 0.15
+	}
+	TRN_sovereign = { # 주권자
+		sprite = 13
+		random = no
+		custom_modifier_tooltip = ITA_political_reformer_tt
+		hidden_modifier = {
+			political_advisor_cost_factor = -0.25
+			air_advisor_cost_factor = -0.25
+			army_advisor_cost_factor = -0.25
+			navy_advisor_cost_factor = -0.25
+		}
+		custom_modifier_tooltip = il_duce_laws_cost_tt
+		hidden_modifier = {
+			mobilization_laws_cost_factor = -0.15
+			trade_laws_cost_factor = -0.15
+			economy_cost_factor = -0.15
+		}
+		offensive_war_stability_factor = 0.2
+	}
+	TRN_Messiah = { # 구세주
+		sprite = 13
+		random = no
+		stability_factor = 0.10
+		stability_weekly = 0.001
+		army_core_attack_factor = 0.05
+		compliance_gain = 0.01
+	}
+	TRN_Germanic_servant = { # 게르만 민족의 종복
+		sprite = 13 
+		random = no
+		political_power_factor = 0.05
+		army_defence_factor = 0.1
+		conscription = 0.02
+	}
+	TRN_national_revolution = { # 민족 혁명가
+		sprite = 13 
+		random = no
+		army_attack_factor = 0.15
+		justify_war_goal_time = -0.75
+		annex_cost_factor = -0.2
+		compliance_gain = 0.05
+		mobilization_speed = 0.15
+		master_ideology_drift = 0.1
+	}
 	TRN_mika_trait_1 = {
 		sprite = 13
 		random = no

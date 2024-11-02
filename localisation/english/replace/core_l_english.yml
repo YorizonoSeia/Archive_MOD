@@ -56,3 +56,5 @@
 
  EFFECT_UNLOCK_DECISION:0 "£decision_icon_small §Y결정 해금§!: $NAME$$EFFECT$"
  EFFECT_UNLOCK_DECISION_CATEGORY:0 "£decision_icon_small §Y결정 분류 해금§!: $NAME$"
+ 
+ ITA_political_reformer_tt:1 "  - 모든 고문 비용: §G-25%§!"

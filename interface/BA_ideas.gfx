@@ -4,6 +4,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/anarchy.tga"
 	}
 	spriteType = {
+		name = "GFX_idea_TRM_Endsige2"
+		texturefile = "gfx/interface/ideas/trn/TRN_cult_of_personality.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_TRM_Towards_National_Revolution"
+		texturefile = "gfx/interface/ideas/trn/TRN_towards_national_revolution.tga"
+	}
+	spriteType = {
 		name = "GFX_idea_BA_three_major_academies"
 		textureFile = "gfx/interface/ideas/BA_three_major_academies.tga"
 	}

@@ -3849,21 +3849,6 @@ debug_decisions = {
             complete_national_focus = TRM_domination
 		}
     }
-    TRM_auto_complete_focus_TRM_balkan_diplomacy = {
-		priority = 80
-		allowed = {
-			always = yes
-		}
-
-		visible = {
-			is_ai = no
-			is_debug = yes
-            tag = TRM
-		}
-		complete_effect = {
-            complete_national_focus = TRM_balkan_diplomacy
-		}
-    }
     TRM_auto_focus_last = {
 		priority = 80
 		allowed = {
