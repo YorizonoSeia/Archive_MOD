@@ -1,0 +1,23 @@
+
+# GEI_final_offensive_effect = {
+# 	if = {
+# 		limit = {
+# 			USA = {
+# 				exists = yes
+# 			}
+# 		}
+# 		USA = {
+# 			add_timed_idea = {
+# 				idea = GEI_final_offensive_debuff
+# 				days = 180
+# 			}
+# 		}
+# 		every_state = {
+# 			limit = {
+# 				is_core_of = USA
+# 				is_controlled_by = ROOT
+# 			}
+# 			add_compliance = 20
+# 		}
+# 	}
+# }

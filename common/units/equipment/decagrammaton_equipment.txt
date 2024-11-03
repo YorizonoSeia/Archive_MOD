@@ -39,7 +39,6 @@ equipments = {
 			tungsten = 2
 			aluminium = 2
 			steel = 3
-			oil = 3
 			chromium = 3
 		}
 	}

@@ -105,3 +105,8 @@ entity = {
 	clone = "MIL_AL_1S_infantry_2_entity"
 	name = "MIL_AL_1S_start_infantry_3_entity"
 }
+
+entity = {
+	clone = "MIL_AL_1S_infantry_entity"
+	name = "color_infantry_entity"
+}

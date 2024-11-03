@@ -137,7 +137,54 @@ focus_tree = {
 					
 		}
 		completion_reward = {
-			custom_effect_tooltip = COLOUR_invasion_begins_tt
+			# 기본 효과
+			add_command_power = 100
+			add_war_support = 0.15
+			add_stability = 0.05
+				
+			# 전용 사단 템플릿 해금
+			division_template = {
+				name = "The Color Infantry"
+				is_locked = yes
+				division_names_group = GEI_INF_01
+				regiments = {
+					color_infantry = { x = 0 y = 0 }
+					color_infantry = { x = 0 y = 1 }
+					color_infantry = { x = 0 y = 2 }
+					color_infantry = { x = 1 y = 0 }
+					color_infantry = { x = 1 y = 1 }
+					color_infantry = { x = 1 y = 2 }
+					color_infantry = { x = 2 y = 0 }
+					color_infantry = { x = 2 y = 1 }
+					color_infantry = { x = 2 y = 2 }
+				}
+				support = {
+					engineer = { x = 0 y = 0 }
+					recon = { x = 0 y = 1 }
+				}
+			}
+		
+			# 초기 사단 생성
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				create_unit = {
+					division = "division_template = \"The Color Infantry\" start_experience_factor = 0.7"
+					owner = GEI
+					count = 5
+				}
+			}
+		
+			# 전세계에 영향
+			every_country = {
+				limit = {
+					NOT = { tag = GEI }
+				}
+				add_stability = -0.15
+				add_war_support = -0.10
+				country_event = { id = GEI_event.21 }
+			}		
 		}
 	}
 	#의지의 실현
@@ -159,7 +206,23 @@ focus_tree = {
 					
 		}
 		completion_reward = {
-			
+			add_to_variable = {
+				var = BA_decagrammaton_division_cap
+				value = 2
+			}
+
+			# 대충 데카그라마톤을 생성하는 디시전 추가
+			set_division_template_cap = {
+				division_template = "Decagrammaton Division"	
+				division_cap = BA_decagrammaton_division_cap
+			}
+			create_equipment_variant = {
+				name = GEI_colorized_decagrammaton_part
+				type = decagrammaton_equipment_0
+				parent_version = 1
+				design_team = mio:COLOUR_mystic_orgianzation
+			}
+		
 		}
 	}
 	#지구 관측
@@ -207,7 +270,26 @@ focus_tree = {
 					
 		}
 		completion_reward = {
-			#이건 뭐줘야하지
+			add_research_slot = 1
+			add_tech_bonus = {
+				name = color_researcher_bonus
+				bonus = 1.0
+				uses = 2
+				category = electronics
+			}
+			every_other_country = {
+				limit = {
+					has_war_with = GEI
+				}
+				add_timed_idea = {
+					idea = GEI_research_penalty
+					days = 180
+				}
+				add_timed_idea = {
+					idea = GEI_production_penalty
+					days = 180
+				}
+			}
 		}
 	}
 	#유기체 변질
@@ -228,7 +310,42 @@ focus_tree = {
 					
 		}
 		completion_reward = {
-			#이건 뭐줘야하지
+			division_template = {
+				name = "Colored Human Division"
+				division_names_group = GEI_INF_01
+				regiments = {
+					color_infantry = { x = 0 y = 0 }
+					color_infantry = { x = 0 y = 1 }
+					color_infantry = { x = 0 y = 2 }
+					color_infantry = { x = 1 y = 0 }
+					color_infantry = { x = 1 y = 1 }
+					color_infantry = { x = 1 y = 2 }
+					color_infantry = { x = 2 y = 0 }
+					color_infantry = { x = 2 y = 1 }
+					color_infantry = { x = 2 y = 2 }
+				}
+				support = {
+					engineer = { x = 0 y = 0 }
+				}
+			}
+
+			random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				create_unit = {
+					division = "division_template = \"Colored Human Division\" start_experience_factor = 0.7"
+					owner = GEI
+					count = 5
+				}
+			}
+
+
+			add_ideas = {
+				GEI_reduced_resistance
+				GEI_increased_compliance
+			}
+			unlock_decision_category_tooltip = GEI_color_transformation_category
 		}
 	}
 	#존재의 인식
@@ -249,7 +366,7 @@ focus_tree = {
 					
 		}
 		completion_reward = {
-			#헿
+			add_ideas = GEI_increased_capture_chance
 		}
 	}
 	#인격 말살
@@ -270,7 +387,19 @@ focus_tree = {
 					
 		}
 		completion_reward = {
-			#헿
+			# add_ideas = {
+			# 	GEI_enhanced_occupation
+			# 	GEI_mind_erasure_program
+			# }
+			every_other_country = {
+				limit = {
+					has_war_with = GEI
+				}
+				add_timed_idea = {
+					idea = GEI_stability_penalty
+					days = 270
+				}
+			}
 		}
 	}
 	#의식의 연결
@@ -291,7 +420,10 @@ focus_tree = {
 					
 		}
 		completion_reward = {
-			#헿
+			add_ideas = {
+				GEI_enhanced_intel_network
+				GEI_improved_decryption
+			}
 		}
 	}
 	#'공포' 확산
@@ -311,8 +443,17 @@ focus_tree = {
 						FOCUS_FILTER_ANNEXATION
 					
 		}
+		# COLOUR_insert_terror
 		completion_reward = {
-			#헿
+			every_other_country = {
+				limit = {
+					has_war_with = GEI
+				}
+				add_timed_idea = {
+					idea = GEI_production_penalty
+					days = 270
+				}
+			}
 		}
 	}
 	#초월적 하나의 부품
@@ -335,8 +476,22 @@ focus_tree = {
 						FOCUS_FILTER_ANNEXATION
 					
 		}
+		# COLOUR_the_ones_piece
 		completion_reward = {
-			#헿
+			set_division_template_cap = {			
+				division_template = "Decagrammaton Division"
+				division_cap = 6
+			}
+			create_equipment_variant = {
+				name = GEI_totaly_colorized_decagrammaton
+				type = decagrammaton_equipment_0
+				parent_version = 0
+				upgrades = {
+					tank_nsb_engine_upgrade = 2
+					tank_nsb_armor_upgrade = 2
+				}
+			}
+			add_ideas = GEI_enhanced_conscription
 		}
 	}
 	#지구 기술 침식
@@ -415,6 +570,15 @@ focus_tree = {
 					
 		}
 		completion_reward = {
+			# 싯딤의 상자 디시전
+			#unlock_decision_tooltip = COLOUR_chest_of_sithim_tt
+			100 ={
+				BA_increase_state_category_by_two_levels = yes
+				add_building_construction = {
+					type = infrastructure
+					level = 4
+				}
+			}
 		}
 	}
 	#차원문 너머에서
@@ -431,6 +595,32 @@ focus_tree = {
 		relative_position_id = COLOUR_director_of_color
 		
 		completion_reward = {
+			# 쿠로코 디비전 (예정)
+			unlock_decision_category_tooltip = GEI_dimensional_door_operations
+			add_command_power = 100
+			add_ideas = GEI_dimensional_operations
+			custom_effect_tooltip = GEI_beyond_doors_division_tt
+			hidden_effect = {
+				division_template = {
+					name = "Dimensional Strike Force"
+					division_names_group = GEI_INF_01
+					regiments = {
+						color_infantry = { x = 0 y = 0 }
+						color_infantry = { x = 0 y = 1 }
+						color_infantry = { x = 0 y = 2 }
+						color_infantry = { x = 1 y = 0 }
+						color_infantry = { x = 1 y = 1 }
+						color_infantry = { x = 1 y = 2 }
+						color_infantry = { x = 2 y = 0 }
+						color_infantry = { x = 2 y = 1 }
+						color_infantry = { x = 2 y = 2 }
+					}
+					support = {
+						halo_recon = { x = 0 y = 0 }
+						signal_company = { x = 0 y = 1 }
+					}
+				}
+			}
 		}
 	}
 	#아누비스
@@ -474,6 +664,18 @@ focus_tree = {
 		relative_position_id = COLOUR_anubis
 		
 		completion_reward = {
+			add_ideas = GEI_halo_distortion
+			custom_effect_tooltip = GEI_distorted_halos_effect_tt
+			hidden_effect = {
+				every_enemy_country = {
+					add_timed_idea = {
+						idea = GEI_distorted_halos_debuff
+						days = 180
+					}
+				}
+			}
+			add_war_support = 0.05
+			army_experience = 25
 		}
 	}
 	#학생 테러화
@@ -490,7 +692,38 @@ focus_tree = {
 		relative_position_id = COLOUR_anubis
 		
 		completion_reward = {
-			#헤일로 보병
+			unlock_decision_category_tooltip = GEI_student_terror_operations
+			create_corps_commander = {
+				name = "Corrupted Student Council"
+				portrait_path = "gfx/leaders/GEI/Portrait_Corrupted_Council.dds"
+				traits = { harsh_leader media_personality trait_reckless }
+				skill = 3
+				attack_skill = 4
+				defense_skill = 2
+				planning_skill = 3
+				logistics_skill = 2
+			}
+			division_template = {
+				name = "Terrorized Halo Infantry Division"
+				division_names_group = GEI_INF_01
+				regiments = {
+					halo_infantry = { x = 0 y = 0 }
+					halo_infantry = { x = 0 y = 1 }
+					halo_infantry = { x = 0 y = 2 }
+					halo_infantry = { x = 1 y = 0 }
+					halo_infantry = { x = 1 y = 1 }
+					halo_infantry = { x = 1 y = 2 }
+					halo_infantry = { x = 2 y = 0 }
+					halo_infantry = { x = 2 y = 1 }
+					halo_infantry = { x = 2 y = 2 }
+				}
+				support = {
+					halo_recon = {
+						x = 0
+						y = 0
+					}
+				}
+			}
 		}
 	}
 	#죽음의 여신, 학생
@@ -508,7 +741,26 @@ focus_tree = {
 		relative_position_id = COLOUR_terrorize_students
 		
 		completion_reward = {
-			#
+			add_ideas = GEI_death_goddess
+			hidden_effect = {
+				add_timed_idea = {
+					idea = GEI_goddess_offensive
+					days = 90
+				}
+			}
+			add_command_power = 50
+			unlock_decision_category_tooltip = GEI_death_goddess_powers
+			custom_effect_tooltip = GEI_death_goddess_fear_tt
+			every_enemy_country = {
+				limit = {
+					NOT = { tag = GEI }
+				}
+				add_timed_idea = {
+					idea = GEI_goddess_fear
+					days = 90
+				}
+			}
+
 		}
 	}
 	#기습과 비대칭전
@@ -558,7 +810,37 @@ focus_tree = {
 						FOCUS_FILTER_ANNEXATION
 					
 		}
+		# COLOUR_robbers_war
 		completion_reward = {
+			add_ideas = {
+				GEI_pillaging_operations
+				GEI_resource_extraction
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 2000
+				producer = ROOT
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 500
+				producer = ROOT
+			}
+			custom_effect_tooltip = GEI_robbers_war_effect_tt
+			hidden_effect = {
+				every_enemy_country = {
+					random_owned_controlled_state = {
+						damage_building = {
+							type = industrial_complex
+							damage = 2
+						}
+						damage_building = {
+							type = arms_factory
+							damage = 1
+						}
+					}
+				}
+			}
 		}
 	}
 	#프레나파테스
@@ -599,8 +881,18 @@ focus_tree = {
 		prerequisite = { focus = COLOUR_phrenapates }
 		relative_position_id = COLOUR_phrenapates
 		
+		# COLOUR_the_chief_of_the_colour_army
 		completion_reward = {
+			add_ideas = GEI_colour_sensei_leadership
+			custom_effect_tooltip = GEI_colour_sensei_command_bonus_tt
+			hidden_effect = {
+				add_timed_idea = {
+					idea = GEI_colour_sensei_offensive
+					days = 180
+				}
+			}
 		}
+
 	}
 	#ARONA(프라나)
 	focus = {
@@ -641,6 +933,17 @@ focus_tree = {
 		relative_position_id = COLOUR_ARONA
 		
 		completion_reward = {
+			add_ideas = {
+				GEI_arona_control
+				GEI_tactical_coordination
+			}
+			add_tech_bonus = {
+				name = electronics_bonus
+				bonus = 0.5
+				uses = 2
+				category = electronics
+			}
+			unlock_decision_category_tooltip = GEI_arona_tactical_operations
 		}
 	}
 	#산업 색채화
@@ -657,6 +960,28 @@ focus_tree = {
 		relative_position_id = COLOUR_ARONA
 		
 		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			add_ideas = GEI_color_industry
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
 		}
 	}
 	#조직자, 인공지능
@@ -674,6 +999,23 @@ focus_tree = {
 		relative_position_id = COLOUR_control_tower
 		
 		completion_reward = {
+			add_ideas = {
+				GEI_efficient_organization
+				GEI_arona_production
+			}
+			add_tech_bonus = {
+				name = production_bonus
+				bonus = 0.5
+				uses = 2
+				category = infantry_weapons
+			}
+			custom_effect_tooltip = GEI_arona_production_bonus_tt
+			hidden_effect = {
+				add_timed_idea = {
+					idea = GEI_production_boost
+					days = 180
+				}
+			}
 		}
 	}
 	#진격
@@ -696,6 +1038,29 @@ focus_tree = {
 					
 		}
 		completion_reward = {
+			add_war_support = 0.15
+			add_command_power = 100
+			add_ideas = GEI_coordinated_offensive
+			custom_effect_tooltip = GEI_combined_strike_force_tt
+			hidden_effect = {
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "division_template = \"Decagrammaton Division\" start_experience_factor = 1.0"
+						owner = GEI
+						count = 2
+					}
+					create_unit = {
+						division = "division_template = \"Halo Infantry Division\" start_experience_factor = 1.0"
+						owner = GEI
+						count = 2
+					}
+					create_unit = {
+						division = "division_template = \"Halo Infantry Division\" start_experience_factor = 1.0"
+						owner = GEI
+						count = 2
+					}
+				}
+			}
 		}
 	}
 	#괴전파에 숨어들다
@@ -717,7 +1082,18 @@ focus_tree = {
 					
 		}
 		completion_reward = {
-		#대충 전쟁중인 국가가 라디오 연구했으면 안정도/전쟁지지도나 그런 거 페널티 주기
+			add_ideas = GEI_signal_warfare
+			custom_effect_tooltip = GEI_radio_interference_effect_tt
+			every_enemy_country = {
+				limit = {
+					has_tech = radio
+				}
+				add_timed_idea = {
+					idea = GEI_signal_interference
+					days = 180
+				}
+				country_event = { id = GEI_event.20 }
+			}
 		}
 	}
 	#그늘에서 오는 공포
@@ -738,8 +1114,16 @@ focus_tree = {
 						FOCUS_FILTER_ANNEXATION
 					
 		}
+		# COLOUR_fear_from_the_shadows
 		completion_reward = {
-		#뭐 주지
+			add_ideas = GEI_shadow_operations
+			every_enemy_country = {
+				add_timed_idea = {
+					idea = GEI_shadow_fear
+					days = 180
+				}
+			}
+			unlock_decision_category_tooltip = GEI_shadow_operations
 		}
 	}
 	#멸절, 침식, 동화
@@ -761,7 +1145,60 @@ focus_tree = {
 					
 		}
 		completion_reward = {
-		#음...어...
+			# 핵심지역화 결정 해금
+			unlock_decision_category_tooltip = GEI_color_assimilation_decisions
+			
+			# 점령지 효과
+			add_ideas = {
+				GEI_systematic_genocide
+			}
+			
+			# 점령한 모든 주에 효과 적용
+			every_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					NOT = { is_core_of = ROOT }
+				}
+				add_state_modifier = {
+					modifier = {
+						local_resources = -0.3
+						local_factories = -0.2
+						local_manpower = -0.5
+					}					
+				}
+			}
+			
+			# 전쟁 지지도 증가
+			add_war_support = 0.15
+			
+			# 점령 비용 감소
+			add_ideas = {
+				GEI_reduced_occupation_cost
+			}
+			
+			# 특수 사단 템플릿 해금
+			division_template = {
+				name = "Assimilated Division"
+				division_names_group = GEI_INF_01
+				regiments = {
+					color_infantry = { x = 0 y = 0 }
+					color_infantry = { x = 0 y = 1 }
+					color_infantry = { x = 1 y = 0 }
+					color_infantry = { x = 1 y = 1 }
+				}
+				support = {
+					recon = { x = 0 y = 0 }
+					signal_company = { x = 0 y = 1 }
+				}
+			}
+			
+			# 적국에 대한 디버프
+			every_enemy_country = {
+				add_timed_idea = {
+					idea = GEI_color_terror
+					days = 360
+				}
+			}
 		}
 	}
 	#색채의 부품
@@ -813,7 +1250,33 @@ focus_tree = {
 						FOCUS_FILTER_ANNEXATION
 					
 		}
-		completion_reward = {
+		completion_reward = {			
+			# 각 핵심지역에 공장 건설
+			every_owned_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			# 연구 보너스
+			add_tech_bonus = {
+				name = production_bonus
+				bonus = 0.5
+				uses = 2
+				category = industry
+				category = electronics
+			}			
 		}
 	}
 	#공격
@@ -833,7 +1296,44 @@ focus_tree = {
 						FOCUS_FILTER_ANNEXATION
 					
 		}
+		# COLOUR_attack
 		completion_reward = {
+			add_command_power = 50
+			add_war_support = 0.1
+			
+			# 각 주변국에 대한 전쟁 목표 생성
+			every_neighbor_country = {
+				limit = {
+					NOT = { 
+						tag = GEI 
+						is_ally_with = GEI
+					}
+				}
+				ROOT = {
+					create_wargoal = {
+						target = PREV
+						type = annex_everything
+					}
+				}
+			}
+						
+			# 전역에 특수부대 배치
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				create_unit = {
+					division = "division_template = \"The Color Infantry\" start_experience_factor = 0.7"
+					owner = GEI
+					count = 3
+				}
+			}
+			
+			# 침공 준비 이벤트 발생
+			country_event = { 
+				id = GEI_event.20 
+				days = 1
+			}
 		}
 	}
 	#브리튼 제도 청소
@@ -992,6 +1492,42 @@ focus_tree = {
 					
 		}
 		completion_reward = {
+			add_timed_idea = {
+				idea = GEI_final_offensive_buff
+				days = 180
+			}
+			USA = {
+				add_timed_idea = {
+					idea = GEI_final_offensive_debuff
+					days = 180
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = USA
+					is_controlled_by = ROOT
+				}
+				add_compliance = 20
+				set_state_flag = color_final_offensive
+			}
+			custom_effect_tooltip = GEI_usa_final_offensive_troops_tt
+			hidden_effect = {
+				random_owned_controlled_state = {
+					limit = {
+						is_core_of = USA
+					}
+					create_unit = {
+						division = "division_template = \"Decagrammaton Division\" start_experience_factor = 0.9"
+						owner = GEI
+						count = 3
+					}
+					create_unit = {
+						division = "division_template = \"The Color Infantry\" start_experience_factor = 0.8"
+						owner = GEI
+						count = 5
+					}
+				}
+			}
 		}
 	}
 	#미국 추방
@@ -1050,6 +1586,28 @@ focus_tree = {
 					
 		}
 		completion_reward = {
+			custom_effect_tooltip = GEI_america_resource_bonus_tt
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_core_of = USA
+						is_controlled_by = ROOT
+					}
+					add_resource = {
+						type = oil
+						amount = 8
+					}
+					add_resource = {
+						type = aluminium
+						amount = 4
+					}
+					add_resource = {
+						type = steel
+						amount = 8
+					}
+				}
+			}
+			unlock_decision_category_tooltip = GEI_american_extraction
 		}
 	}
 	#키보토스 공격 진행
@@ -1356,6 +1914,19 @@ focus_tree = {
 					
 		}
 		completion_reward = {
+			set_country_flag = GEI_victory_achieved
+			every_other_country = {
+				limit = {
+					has_war_with = GEI
+				}
+				add_timed_idea = {
+					idea = GEI_reality_erosion_debuff
+					days = -1
+				}
+			}
+			add_ideas = {
+				GEI_reality_manipulation
+			}
 		}
 	}
 }

@@ -3930,3 +3930,27 @@ news_event = { #블랙 마켓 붕괴
 		}
 	}
 }
+
+news_event = {
+    id = BA_news.107
+    title = BA_news.107.t
+    desc = BA_news.107.d
+    picture = GFX_news_event_tank_factory
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        name = BA_news.107.a
+        trigger = {
+            tag = GEI
+        }
+    }
+
+    option = {
+        name = BA_news.107.b
+        trigger = {
+            NOT = { tag = GEI }
+        }
+    }
+}

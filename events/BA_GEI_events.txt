@@ -1615,6 +1615,368 @@ country_event = {
 		set_global_flag = BA_USA_deportation_global_flag
 	}
 }
+
+country_event = {
+    id = GEI_event.28
+    title = GEI_event.28.t
+    desc = GEI_event.28.d
+    picture = GFX_report_event_scientists_lab
+
+    is_triggered_only = yes
+
+    option = {
+        name = GEI_event.28.a
+        add_ideas = GEI_researcher_absorption
+        custom_effect_tooltip = GEI_researcher_absorption_tt
+    }
+}
+
+country_event = {
+    id = GEI_event.29
+    title = GEI_event.29.t
+    desc = GEI_event.29.d
+    picture = GFX_report_event_generic_factory
+
+    is_triggered_only = yes
+
+    option = {
+        name = GEI_event.29.a
+        add_stability = -0.05
+        add_war_support = 0.05
+        add_ideas = GEI_organic_transformation
+    }
+}
+
+country_event = {
+    id = GEI_event.30
+    title = GEI_event.30.t
+    desc = GEI_event.30.d
+    picture = GFX_report_event_generic_rally
+
+    is_triggered_only = yes
+
+    option = {
+        name = GEI_event.30.a
+        add_war_support = 0.05
+        custom_effect_tooltip = GEI_unlock_consciousness_training_tt
+    }
+}
+
+country_event = {
+    id = GEI_event.31
+    title = GEI_event.31.t
+    desc = GEI_event.31.d
+    picture = GFX_report_event_generic_read_write
+
+    is_triggered_only = yes
+
+    option = {
+        name = GEI_event.31.a
+        add_political_power = 50
+        add_command_power = 25
+        custom_effect_tooltip = GEI_network_capabilities_unlocked_tt
+    }
+}
+
+country_event = {
+    id = GEI_event.32
+    title = GEI_event.32.t
+    desc = GEI_event.32.d
+    picture = GFX_report_event_generic_factory
+
+    is_triggered_only = yes
+
+    option = {
+        name = GEI_event.32.a
+        add_stability = -0.05
+        add_war_support = -0.05
+    }
+}
+
+country_event = {
+    id = GEI_event.33
+    title = GEI_event.33.t
+    desc = GEI_event.33.d
+    picture = GFX_report_event_tank_factory
+
+    is_triggered_only = yes
+
+    option = {
+        name = GEI_event.33.a
+        add_war_support = 0.05
+        add_command_power = 30
+        custom_effect_tooltip = GEI_decagrammaton_improvement_complete_tt
+    }
+}
+
+country_event = {
+    id = GEI_event.34
+    title = GEI_event.34.t
+    desc = GEI_event.34.d
+    picture = GFX_report_event_generic_portal
+
+    is_triggered_only = yes
+
+    option = {
+        name = GEI_event.34.a
+        add_war_support = 0.1
+        custom_effect_tooltip = GEI_door_network_established_tt
+    }
+}
+
+country_event = {
+    id = GEI_event.35
+    title = GEI_event.35.t
+    desc = GEI_event.35.d
+    picture = GFX_report_event_enemy_attack
+
+    is_triggered_only = yes
+
+    option = {
+        name = GEI_event.35.a
+        add_stability = -0.05
+        add_war_support = -0.05
+    }
+}
+
+country_event = {
+    id = GEI_event.36
+    title = GEI_event.36.t
+    desc = GEI_event.36.d
+    picture = GFX_report_event_students_transformed
+
+    is_triggered_only = yes
+
+    option = {
+        name = GEI_event.36.a
+        add_stability = -0.05
+        add_war_support = 0.10
+        custom_effect_tooltip = GEI_student_transformation_complete_tt
+    }
+}
+
+country_event = {
+    id = GEI_event.37
+    title = GEI_event.37.t
+    desc = GEI_event.37.d
+    picture = GFX_report_event_halo_corruption
+
+    is_triggered_only = yes
+
+    option = {
+        name = GEI_event.37.a
+        add_stability = -0.10
+        add_war_support = -0.10
+    }
+}
+
+country_event = {
+    id = GEI_event.38
+    title = GEI_event.38.t
+    desc = GEI_event.38.d
+    picture = GFX_report_event_goddess_power
+
+    is_triggered_only = yes
+
+    option = {
+        name = GEI_event.38.a
+        add_command_power = 30
+        army_experience = 20
+    }
+}
+
+country_event = {
+    id = GEI_event.39
+    title = GEI_event.39.t
+    desc = GEI_event.39.d
+    picture = GFX_report_event_goddess_terror
+
+    is_triggered_only = yes
+
+    option = {
+        name = GEI_event.39.a
+        add_stability = -0.15
+        add_war_support = -0.15
+    }
+}
+
+country_event = {
+    id = GEI_event.40
+    title = GEI_event.40.t
+    desc = GEI_event.40.d
+    picture = GFX_report_event_generic_factory
+
+    is_triggered_only = yes
+
+    option = {
+        name = GEI_event.40.a
+        add_war_support = 0.05
+        custom_effect_tooltip = GEI_plunder_operations_unlocked_tt
+    }
+}
+
+country_event = {
+    id = GEI_event.41
+    title = GEI_event.41.t
+    desc = GEI_event.41.d
+    picture = GFX_report_event_military_planning
+
+    is_triggered_only = yes
+
+    option = {
+        name = GEI_event.41.a
+        add_stability = -0.05
+        add_war_support = -0.05
+    }
+}
+
+country_event = {
+    id = GEI_event.42
+    title = GEI_event.42.t
+    desc = GEI_event.42.d
+    picture = GFX_report_event_scientists_lab
+
+    is_triggered_only = yes
+
+    option = {
+        name = GEI_event.42.a
+        add_stability = -0.05
+        add_war_support = -0.08
+        custom_effect_tooltip = GEI_tactical_disadvantage_tt
+    }
+}
+
+# 이벤트
+country_event = {
+    id = GEI_event.43
+    title = GEI_event.43.t
+    desc = GEI_event.43.d
+    picture = GFX_report_event_fascist_speech
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = GEI_event.43.a
+        add_stability = -0.05
+        add_war_support = -0.05
+    }
+}
+
+country_event = {
+    id = GEI_event.44
+    title = GEI_event.44.t
+    desc = GEI_event.44.d
+    picture = GFX_report_event_german_reichstag_gathering
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = GEI_event.44.a
+        add_stability = -0.1
+        add_war_support = -0.1
+    }
+}
+
+country_event = {
+    id = GEI_event.45
+    title = GEI_event.45.t
+    desc = GEI_event.45.d
+    picture = GFX_report_event_soviet_tanks
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = GEI_event.45.a
+        add_stability = -0.15
+        add_war_support = 0.1
+    }
+}
+
+country_event = {
+    id = GEI_event.46
+    title = GEI_event.46.t
+    desc = GEI_event.46.d
+    picture = GFX_report_event_generic_factory
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = GEI_event.46.a
+        random_owned_state = {
+            limit = {
+                is_controlled_by = ROOT
+            }
+            damage_building = {
+                type = industrial_complex
+                damage = 2
+            }
+        }
+    }
+}
+
+country_event = {
+    id = GEI_event.47
+    title = GEI_event.47.t
+    desc = GEI_event.47.d
+    picture = GFX_report_event_generic_factory
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = GEI_event.47.a
+        add_timed_idea = {
+            idea = GEI_resource_depletion
+            days = 180
+        }
+    }
+}
+
+country_event = {
+    id = GEI_event.48
+    title = GEI_event.48.t
+    desc = GEI_event.48.d
+    picture = GFX_report_event_GEI_shadow_terror
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = GEI_event.48.a
+        add_war_support = -0.1
+        add_stability = -0.1
+        custom_effect_tooltip = GEI_shadow_terror_effect_tt
+        hidden_effect = {
+            random_owned_state = {
+                damage_building = {
+                    type = infrastructure
+                    damage = 2
+                }
+            }
+        }
+    }
+}
+
+country_event = {
+    id = GEI_event.49
+    title = GEI_event.49.t
+    desc = GEI_event.49.d
+    picture = GFX_report_event_GEI_reality_distortion
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = GEI_event.49.a
+        add_stability = -0.15
+        add_war_support = -0.15
+        custom_effect_tooltip = GEI_reality_distortion_effect_tt
+        hidden_effect = {
+            add_timed_idea = {
+                idea = GEI_reality_distortion_debuff
+                days = 30
+            }
+        }
+    }
+}
+
 country_event = {
 	id = GEI_event.debug
 	title = mtg_usa_civil_war_fascists.14.t
