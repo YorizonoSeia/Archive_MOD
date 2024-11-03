@@ -134,3 +134,69 @@ HEU_aru_GSC_president_II = {
     }
     
 }
+
+HEU_aru_GSC_president_III = {
+
+    allowed = {
+        original_tag = GEM
+    }
+    enable = {
+		has_completed_focus = HEU_general_student_council_aru
+    }
+
+    abort_when_not_enabled = yes
+
+    ai_strategy = {
+        type = consider_weak
+        id = "KSP"
+        value = 100
+    }
+    
+    ai_strategy = {
+        type = consider_weak
+        id = "COU"
+        value = 100
+    }
+    
+    ai_strategy = {
+        type = consider_weak
+        id = "SHE"
+        value = 100
+    }
+    
+    ai_strategy = {
+        type = alliance
+        id = "KSP"
+        value = -1000
+    }
+    
+    ai_strategy = {
+        type = alliance
+        id = "COU"
+        value = -1000
+    }
+    
+    ai_strategy = {
+        type = alliance
+        id = "SHE"
+        value = -1000
+    }
+    
+    ai_strategy = {
+        type = antagonize
+        id = "KSP"
+        value = 100
+    }
+    
+    ai_strategy = {
+        type = antagonize
+        id = "COU"
+        value = 100
+    }
+    
+    ai_strategy = {
+        type = antagonize
+        id = "SHE"
+        value = 100
+    }
+}

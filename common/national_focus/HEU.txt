@@ -5673,10 +5673,13 @@ focus_tree = {
 			}
 			HEU_bop_medium_decrease_effect = yes
 			
+			custom_effect_tooltip = HEU_modify_rikuhachimaism_intro
 			add_to_variable = {
 				HEU_aru_var_fascism_drift = 0.05
 				tooltip = fascism_drift_factor_tt
 			}
+
+			add_ideas = HEU_pro_rikuhachimaism_idea
 		}
 	}
 	
@@ -5859,7 +5862,12 @@ focus_tree = {
 		y = 2
 
 		available = {
-
+			controls_state = 34
+			controls_state = 35
+			controls_state = 36
+			NOT = { country_exists = KSP }
+			NOT = { country_exists = COU }
+			NOT = { country_exists = SHE }
 		}
 
 		bypass = {
@@ -5873,6 +5881,7 @@ focus_tree = {
 					add = HEU_GSC_trait_2
 				}
 			}
+			add_stability = 0.2
 		}
 	}
 
@@ -6552,6 +6561,7 @@ focus_tree = {
 
 		completion_reward = {
 			
+			custom_effect_tooltip = HEU_modify_rikuhachimaism_intro
 			add_to_variable = {
 				HEU_aru_var_stability_factor = 0.05
 				tooltip = stability_factor_tt
@@ -6559,7 +6569,7 @@ focus_tree = {
 			
 			add_to_variable = {
 				HEU_aru_var_war_support_factor = 0.05
-				tooltip = war_stability_factor_tt
+				tooltip = war_support_factor_tt
 			}
 
 		}
@@ -6631,7 +6641,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			add_stability = 0.1
 		}
 	}
 	
@@ -6751,6 +6761,7 @@ focus_tree = {
 			}
 			add_manpower = 15000
 			
+			custom_effect_tooltip = HEU_modify_rikuhachimaism_intro
 			add_to_variable = {
 				HEU_aru_var_modifier_army_sub_unit_halo_infantry_attack_factor = 0.05
 				#tooltip = stability_factor_tt
@@ -6827,6 +6838,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.05
 			
+			custom_effect_tooltip = HEU_modify_rikuhachimaism_intro
 			add_to_variable = {
 				HEU_aru_var_stability_factor = 0.05
 				tooltip = stability_factor_tt
@@ -7057,9 +7069,10 @@ focus_tree = {
 				category = special_forces_doctrine
 			}
 			
+			custom_effect_tooltip = HEU_modify_rikuhachimaism_intro
 			add_to_variable = {
 				HEU_aru_var_war_support_factor = 0.05
-				tooltip = war_stability_factor_tt
+				tooltip = war_support_factor_tt
 			}
 		}
 	}
@@ -7213,7 +7226,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_stability = 0.05
+			mio:HEU_grand_ducal_gendarmerie_organization = {
+				add_mio_funds = 2500
+				add_mio_funds_gain_factor = 0.1
+			}
 		}
 	}
 
@@ -7458,6 +7474,21 @@ focus_tree = {
 
 		completion_reward = {
 			add_stability = 0.05
+			add_tech_bonus = {
+				name = HEU_emergency_medicine_department_support
+				bonus = 1
+				uses = 1
+				category = support_tech
+			}
+			every_possible_country = {
+				limit = {
+					has_character = GEH_Himuro_Sena
+				}
+				GEH_Himuro_Sena = {
+					set_nationality = ROOT
+				}
+				show_ideas_tooltip = GEH_Himuro_Sena_high_command
+			}
 		}
 	}
 	
@@ -7484,7 +7515,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_stability = 0.05
+			add_tech_bonus = {
+				name = HEU_emergency_medicine_department_support_2
+				uses = 1 
+				bonus = 1.5 
+				category = hospital_tech
+			}
 		}
 	}
 	
@@ -7511,7 +7547,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_stability = 0.05
+			add_stability = 0.15
 		}
 	}
 	
@@ -7538,7 +7574,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_stability = 0.05
+			add_stability = 0.1
+			HEU_aru = {
+				add_planning = 1
+			}
 		}
 	}
 	
@@ -7569,7 +7608,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_stability = 0.05
+			add_offsite_building = {
+				type = industrial_complex
+				level = 3
+			}
 		}
 	}
 	
@@ -7732,6 +7774,13 @@ focus_tree = {
 
 		x = 0
 		y = 1
+		offset = {
+			x = -2
+			y = 0
+			trigger = {
+				NOT = { has_country_flag = HEU_victoria_louise }
+			}
+		}
 
 		available = { 
 			
@@ -7742,8 +7791,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
-		}
+			add_ideas = HEU_gehenna_academy_president_makoto_idea
+		}	
 	}
 	
 	focus = {
@@ -7777,7 +7826,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			add_ideas = HEU_gehenna_academy_president_satsuki_idea
 		}
 	}
 	
@@ -7789,6 +7838,10 @@ focus_tree = {
 		icon = GFX_focus_ger_return_of_the_kaiser
 
 		prerequisite = { focus = HEU_weak_pandemonium_society }
+
+		allow_branch = {
+			has_country_flag = HEU_victoria_louise
+		}
 
 		mutually_exclusive = {
 			focus = HEU_pandemonium_leader_makoto
@@ -7812,7 +7865,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			add_ideas = HEU_gehenna_academy_president_victoria_idea
 		}
 	}
 	
@@ -7882,6 +7935,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = HEU_pandemonium_society_spy
 		}
 	}
 	
@@ -7918,6 +7973,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_ideas = HEU_gehenna_academy_for_aru_idea
 		}
 	}
 	

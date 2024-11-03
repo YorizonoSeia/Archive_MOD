@@ -720,4 +720,68 @@ characters={
 			}
 		}
 	}
+
+	HEU_jean_paul_sartre={
+		portraits={
+			army={
+				large="gfx/leaders/HEU/HEU_sartre.tga"
+				small= "gfx/interface/advisors/HEU/HEU_sartre.tga"
+			}
+		}
+
+
+		advisor={
+			slot = political_advisor
+			idea_token = HEU_jean_paul_sartre
+
+			allowed = {
+				original_tag = HEU
+			}
+
+			available = {
+				has_country_flag = HEU_jean_paul_sartre_recruited_flag
+			}
+
+			traits = {
+				HEU_jean_paul_sartre_trait
+			}
+
+			cost = 50
+
+			ai_will_do = {
+				factor = 24.000
+			}
+		}
+	}
+
+	HEU_pandemonium_society_spy ={
+		portraits={
+			army={
+				small="GFX_idea_SPR_anarchist_council"
+			}
+		}
+
+		advisor={
+			slot = political_advisor
+			idea_token = HEU_pandemonium_society_spy
+
+			allowed = {
+				original_tag = HEU
+			}
+
+			available = {
+				has_completed_focus = HEU_pandemonium_intelligence_network
+			}
+
+			traits = {
+				head_of_intelligence
+			}
+
+			cost = 100
+
+			ai_will_do = {
+				factor = 8.000
+			}
+		}
+	}
 }

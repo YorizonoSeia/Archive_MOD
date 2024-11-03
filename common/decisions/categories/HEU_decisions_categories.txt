@@ -84,3 +84,43 @@ HEU_aru_persona_decision_category = { #
 
 	visible_when_empty = yes
 }
+
+HEU_rikuhachimaism_decision_category = { #68혁명
+    priority = 25
+	allowed = {
+		original_tag = HEU
+	}
+
+    visible = {
+        has_dynamic_modifier = {
+            modifier = HEU_rikuhachimaism_idea
+        }
+    }
+
+    available = {
+    } 
+
+    icon = GFX_decision_category_generic_industry
+
+	visible_when_empty = yes
+}
+
+HEU_aru_GSC_defiance_decision_category = { #총학생회에 대한 도전
+    priority = 33
+	allowed = {
+		original_tag = HEU
+	}
+
+    visible = {
+        has_completed_focus = HEU_general_student_council_aru
+    }
+
+    available = {
+    } 
+
+    icon = GFX_decision_category_usa_intervention_mandate
+
+	picture = GFX_decision_cat_picture_SWI_federal_council
+
+	visible_when_empty = yes
+}

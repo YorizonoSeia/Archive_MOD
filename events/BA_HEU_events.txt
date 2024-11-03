@@ -1140,6 +1140,64 @@ country_event = { #묘교
 	}
 }
 
+country_event = { #장 폴 사르트르의 답장
+	id = HEU.flavor_event.16
+	title = HEU.flavor_event.16.t
+	desc = HEU.flavor_event.16.desc
+	picture = GFX_report_ 
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.flavor_event.16.a 
+
+		hidden_effect = {
+			country_event = { id = HEU.flavor_event.18 days = 30 random_days = 30 }
+		}
+	}
+}
+
+country_event = { #엠마 골드만의 답장
+	id = HEU.flavor_event.17
+	title = HEU.flavor_event.17.t
+	desc = HEU.flavor_event.17.desc
+	picture = GFX_report_ 
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.flavor_event.17.a 
+
+		hidden_effect = {
+			country_event = { id = HEU.flavor_event.19 days = 30 random_days = 30 }
+		}
+	}
+}
+
+country_event = { #장 폴 사르트르 - 룩셈부르크를 거닐며
+	id = HEU.flavor_event.18
+	title = HEU.flavor_event.18.t
+	desc = HEU.flavor_event.18.desc
+	picture = GFX_report_event_generic_peaceful_annexation
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.flavor_event.18.a 
+		add_political_power = 50
+	}
+}
+
+country_event = { #장 폴 사르트르 - 룩셈부르크를 거닐며
+	id = HEU.flavor_event.19
+	title = HEU.flavor_event.19.t
+	desc = HEU.flavor_event.19.desc
+	picture = GFX_report_event_generic_peaceful_annexation
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.flavor_event.19.a 
+		add_political_power = 10
+	}
+}
+
 # 룩셈부르크 노트르담 대성당의 폭파
 news_event = {
 	id = HEU_news.1

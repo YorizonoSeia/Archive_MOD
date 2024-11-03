@@ -906,6 +906,144 @@ ideas = {
 				defense_bonus_against = 0.1
 			}
 		}
+
+		HEU_pro_rikuhachimaism_idea = { #친리쿠하치마주의 운동
+
+			picture = BRA_dasp
+		
+			allowed = {
+				original_tag = HEU
+				always = no
+			}
+		
+			allowed_civil_war = {
+				always = yes
+			}
+		
+			removal_cost = -1
+			
+			modifier = {
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				army_org_factor = 0.1
+				army_org_regain = 0.1
+				supply_consumption_factor = -0.2
+			}
+		}
+
+		HEU_civil_rights_idea = { #민권법
+
+			picture = ARG_maintain_neutrality
+
+			allowed = {
+				original_tag = HEU
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				defensive_war_stability_factor = 0.1
+				conscription_factor = 0.15
+			}
+		}
+
+		HEU_gehenna_academy_president_makoto_idea = { #하누마 마코토
+
+			picture = HEU_makoto_leader
+
+			allowed = {
+				original_tag = HEU
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = 0.2
+			}
+		}
+
+		HEU_gehenna_academy_president_satsuki_idea = { #쿄고쿠 사츠키
+
+			picture = HEU_satsuki_leader
+
+			allowed = {
+				original_tag = HEU
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.07
+			}
+		}
+
+		HEU_gehenna_academy_president_victoria_idea = { #빅토리아 루이제
+
+			picture = HEU_victoria_leader
+
+			allowed = {
+				original_tag = HEU
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				breakthrough_factor = 0.08
+				supply_consumption_factor = -0.05
+			}
+		}
+
+		HEU_gehenna_academy_for_aru_idea = { #아루를 위한 만마전
+
+			picture = GEH_heroism_propaganda
+
+			allowed = { always = no }
+			allowed_civil_war = { always = yes 	} 
+			
+			modifier = {
+				party_popularity_stability_factor = 0.15
+				war_support_factor = 0.1
+				breakthrough_factor = 0.05
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+			}
+
+			rule = {
+				can_create_factions = yes
+			}
+		}
+
+		HEU_pandemonium_intelligence_network_idea = { #만마전 첩보망
+
+			picture = generic_victors_of_ww1
+
+			allowed = { always = no }
+			allowed_civil_war = { always = yes 	} 
+
+			traits = {
+				head_of_intelligence
+			}
+		}
 	}
 	
 	industrial_concern = {

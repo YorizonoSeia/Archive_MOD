@@ -121,16 +121,14 @@ recruit_character = HEU_zenon_bernard
 
 # 기타
 recruit_character = HEU_guillaume_kroll
+recruit_character = HEU_jean_paul_sartre
+recruit_character = HEU_pandemonium_society_spy
 
 # 장군
 recruit_character = HEU_wilhelm_II
 recruit_character = HEU_wilhelm_III
 recruit_character = HEU_emile_speller
 recruit_character = HEU_guillaume_konsbruck
-
-
-
-
 
 set_convoys = 10
 
@@ -151,6 +149,7 @@ add_timed_idea = {
     idea = BA_exiles_of_the_future
     days = 210
 }
+
 add_ideas = {
 	disarmed_nation
 	BA_isolation
