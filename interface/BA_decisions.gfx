@@ -675,4 +675,122 @@ spriteTypes = {
         texturefile = "gfx/interface/decisions/RED_senkyoutou.tga"
         legacy_lazy_load = no
     }
+
+	# 흥신소 68혁명 #
+	spriteType = {
+        name = "GFX_decision_HEU_ban_authoritarianism_0"
+        texturefile = "gfx/interface/decisions/heu_benriya_decisions/decision_HEU_ban_authoritarianism_0.dds"
+        legacy_lazy_load = no
+    }
+	spriteType = {
+        name = "GFX_decision_HEU_ban_authoritarianism_1"
+        texturefile = "gfx/interface/decisions/heu_benriya_decisions/decision_HEU_ban_authoritarianism_1.dds"
+        legacy_lazy_load = no
+    }
+	spriteType = {
+        name = "GFX_decision_HEU_ban_authoritarianism_2"
+        texturefile = "gfx/interface/decisions/heu_benriya_decisions/decision_HEU_ban_authoritarianism_2.dds"
+        legacy_lazy_load = no
+    }
+	spriteType = {
+        name = "GFX_decision_HEU_ban_authoritarianism_3"
+        texturefile = "gfx/interface/decisions/heu_benriya_decisions/decision_HEU_ban_authoritarianism_3.dds"
+        legacy_lazy_load = no
+    }
+
+	spriteType = {
+        name = "GFX_decision_HEU_fist_0"
+        texturefile = "gfx/interface/decisions/heu_benriya_decisions/decision_HEU_fist_0.dds"
+        legacy_lazy_load = no
+    }
+	spriteType = {
+        name = "GFX_decision_HEU_fist_1"
+        texturefile = "gfx/interface/decisions/heu_benriya_decisions/decision_HEU_fist_1.dds"
+        legacy_lazy_load = no
+    }
+	spriteType = {
+        name = "GFX_decision_HEU_fist_2"
+        texturefile = "gfx/interface/decisions/heu_benriya_decisions/decision_HEU_fist_2.dds"
+        legacy_lazy_load = no
+    }
+	spriteType = {
+        name = "GFX_decision_HEU_fist_3"
+        texturefile = "gfx/interface/decisions/heu_benriya_decisions/decision_HEU_fist_3.dds"
+        legacy_lazy_load = no
+    }
+
+	spriteType = {
+        name = "GFX_decision_HEU_gehenna_0"
+        texturefile = "gfx/interface/decisions/heu_benriya_decisions/decision_HEU_gehenna_0.dds"
+        legacy_lazy_load = no
+    }
+	spriteType = {
+        name = "GFX_decision_HEU_gehenna_1"
+        texturefile = "gfx/interface/decisions/heu_benriya_decisions/decision_HEU_gehenna_1.dds"
+        legacy_lazy_load = no
+    }
+	spriteType = {
+        name = "GFX_decision_HEU_gehenna_2"
+        texturefile = "gfx/interface/decisions/heu_benriya_decisions/decision_HEU_gehenna_2.dds"
+        legacy_lazy_load = no
+    }
+	spriteType = {
+        name = "GFX_decision_HEU_gehenna_3"
+        texturefile = "gfx/interface/decisions/heu_benriya_decisions/decision_HEU_gehenna_3.dds"
+        legacy_lazy_load = no
+    }
+
+	spriteType = {
+        name = "GFX_decision_HEU_LGBTQ_rights_0"
+        texturefile = "gfx/interface/decisions/heu_benriya_decisions/decision_HEU_LGBTQ_rights_0.dds"
+        legacy_lazy_load = no
+    }
+	spriteType = {
+        name = "GFX_decision_HEU_LGBTQ_rights_1"
+        texturefile = "gfx/interface/decisions/heu_benriya_decisions/decision_HEU_LGBTQ_rights_1.dds"
+        legacy_lazy_load = no
+    }
+	spriteType = {
+        name = "GFX_decision_HEU_LGBTQ_rights_2"
+        texturefile = "gfx/interface/decisions/heu_benriya_decisions/decision_HEU_LGBTQ_rights_2.dds"
+        legacy_lazy_load = no
+    }
+	spriteType = {
+        name = "GFX_decision_HEU_LGBTQ_rights_3"
+        texturefile = "gfx/interface/decisions/heu_benriya_decisions/decision_HEU_LGBTQ_rights_3.dds"
+        legacy_lazy_load = no
+    }
+
+	spriteType = {
+        name = "GFX_decision_HEU_national_reconciliation_0"
+        texturefile = "gfx/interface/decisions/heu_benriya_decisions/decision_HEU_national_reconciliation_0.dds"
+        legacy_lazy_load = no
+    }
+	spriteType = {
+        name = "GFX_decision_HEU_national_reconciliation_1"
+        texturefile = "gfx/interface/decisions/heu_benriya_decisions/decision_HEU_national_reconciliation_1.dds"
+        legacy_lazy_load = no
+    }
+	spriteType = {
+        name = "GFX_decision_HEU_national_reconciliation_2"
+        texturefile = "gfx/interface/decisions/heu_benriya_decisions/decision_HEU_national_reconciliation_2.dds"
+        legacy_lazy_load = no
+    }
+	spriteType = {
+        name = "GFX_decision_HEU_national_reconciliation_3"
+        texturefile = "gfx/interface/decisions/heu_benriya_decisions/decision_HEU_national_reconciliation_3.dds"
+        legacy_lazy_load = no
+    }
+
+	spriteType = {
+        name = "GFX_decision_HEU_sartre"
+        texturefile = "gfx/interface/decisions/heu_benriya_decisions/decision_HEU_sartre.dds"
+        legacy_lazy_load = no
+    }
+
+	spriteType = {
+        name = "GFX_68_benriya_revolution"
+        texturefile = "gfx/interface/decisions/heu_benriya_decisions/68_benriya_revolution.dds"
+        legacy_lazy_load = no
+    }
 }
