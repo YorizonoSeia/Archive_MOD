@@ -46,6 +46,10 @@ add_equipment_to_stockpile = {
     amount = 300
 }
 
+set_variable = { 
+	var = BA_decagrammaton_division_cap
+	value = 1
+}
 
 if = {
 	limit = {

@@ -10,6 +10,8 @@
  umamusume_desc: "시속 70km로 달리는 우마무스메 보병."
  tokiwadai_infantry: "초능력자 부대"
  tokiwadai_infantry_desc: "초능력자로 이루어진 부대."
+ color_infantry: "색채 보병"
+ color_infantry_desc: "색채로 이루어진 보병."
  #지원중대#
  halo_recon: "헤일로 수색중대"
  halo_recon_desc: "헤일로로 보호받는 정찰중대."

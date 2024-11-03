@@ -289,3 +289,450 @@ GEI_the_colour_daa_idea:0 "§0해체§!, §1분석§!, §2적응§!"
 
  POLITICS_HOWARD_PHILLIPS_LOVECRAFT_DESC:0 ""
 
+ # 내용 추가
+ # Focus Effects
+ GEI_invasion_begins_effect:0 "색채의 침공이 시작되었다..."
+ GEI_transform_population_tt:0 "지역 인구를 색채의 존재로 변환하기 시작합니다"
+ GEI_merge_commander_tt:0 "선택된 지휘관이 색채의 의식을 얻습니다"
+
+ # Ideas
+ GEI_invasion_preparation:0 "침공 준비"
+ GEI_invasion_preparation_desc:0 "우리는 대규모 침공을 준비하고 있습니다. 우리의 군대는 색채의 힘으로 강화되고 있습니다."
+ 
+ GEI_researcher_absorption:0 "연구자 흡수"
+ GEI_researcher_absorption_desc:0 "흡수된 연구자들의 지식이 우리의 연구 능력을 향상시킵니다."
+ 
+ GEI_research_penalty:0 "색채의 간섭"
+ GEI_research_penalty_desc:0 "색채의 존재가 우리의 연구 능력을 방해하고 있습니다."
+ 
+ GEI_production_penalty:0 "산업 붕괴"
+ GEI_production_penalty_desc:0 "색채의 영향으로 우리의 산업 생산력이 저하되고 있습니다."
+
+ GEI_organic_transformation:0 "유기체 변형"
+ GEI_organic_transformation_desc:0 "우리는 인간을 색채의 존재로 변형시키고 있습니다."
+
+ GEI_reduced_resistance:0 "저항 약화"
+ GEI_reduced_resistance_desc:0 "색채화된 지역의 저항이 감소하고 있습니다."
+
+ GEI_increased_compliance:0 "순응도 증가"
+ GEI_increased_compliance_desc:0 "주민들이 색채의 존재에 순응하고 있습니다."
+
+ GEI_color_consciousness:0 "색채의 의식"
+ GEI_color_consciousness_desc:0 "우리의 지휘관들이 색채의 의식을 공유하고 있습니다."
+
+ GEI_increased_capture_chance:0 "포획률 증가"
+ GEI_increased_capture_chance_desc:0 "색채화된 장비의 포획 확률이 증가합니다."
+
+ # 색채 네트워크 관련
+ GEI_enhanced_intel_network:0 "강화된 정보망"
+ GEI_enhanced_intel_network_desc:0 "색채의 의식을 통해 강화된 정보 수집 네트워크입니다."
+ 
+ GEI_improved_decryption:0 "향상된 해독 능력"
+ GEI_improved_decryption_desc:0 "색채의 힘으로 암호 해독 능력이 크게 향상되었습니다."
+ 
+ GEI_color_network_synergy:0 "색채 네트워크 시너지"
+ GEI_color_network_synergy_desc:0 "모든 색채화된 개체들이 하나의 네트워크로 연결되어 있습니다."
+ 
+ GEI_color_network_operations:0 "색채 네트워크 작전"
+ GEI_color_network_operations_desc:0 "색채의 네트워크를 통해 다양한 작전을 수행할 수 있습니다."
+ 
+ GEI_establish_color_network:0 "색채 네트워크 구축"
+ GEI_establish_color_network_desc:0 "전 세계적인 색채 네트워크를 구축합니다."
+ 
+ GEI_infiltrate_research_centers:0 "연구 시설 침투"
+ GEI_infiltrate_research_centers_desc:0 "적국의 연구 시설에 색채 네트워크를 침투시킵니다."
+ 
+ GEI_expand_consciousness_network:0 "의식 네트워크 확장"
+ GEI_expand_consciousness_network_desc:0 "더 많은 개체들을 색채의 의식 네트워크에 편입시킵니다."
+
+ GEI_reality_manipulation:0 "현실 조작"
+ GEI_reality_manipulation_desc:0 "색채의 힘을 이용해 현실을 조작합니다."
+
+ # 데카그라마톤 관련
+ GEI_enhanced_conscription:0 "강화된 징용"
+ GEI_enhanced_conscription_desc:0 "색채화된 인구를 효율적으로 동원할 수 있습니다."
+ 
+ GEI_decagrammaton_production:0 "데카그라마톤 생산"
+ GEI_decagrammaton_production_desc:0 "데카그라마톤 부대의 생산이 최적화되었습니다."
+ 
+ GEI_unified_consciousness:0 "통합된 의식"
+ GEI_unified_consciousness_desc:0 "모든 부대가 하나의 의식으로 연결되어 있습니다."
+ 
+ GEI_decagrammaton_development:0 "데카그라마톤 개발"
+ GEI_decagrammaton_development_desc:0 "더 강력한 데카그라마톤 부대를 개발합니다."
+ 
+ GEI_improve_decagrammaton_equipment:0 "데카그라마톤 장비 개선"
+ GEI_improve_decagrammaton_equipment_desc:0 "데카그라마톤의 전투 능력을 향상시킵니다."
+ 
+ GEI_expand_decagrammaton_corps:0 "데카그라마톤 군단 확충"
+ GEI_expand_decagrammaton_corps_desc:0 "더 많은 데카그라마톤 부대를 운용할 수 있게 됩니다."
+
+ GEI_establish_door_network:0 "차원문 네트워크 구축"
+ GEI_establish_door_network_desc:0 "전략적인 차원문 네트워크를 구축합니다."
+
+ GEI_dimensional_strike:0 "차원 강습"
+ GEI_dimensional_strike_desc:0 "차원문을 통해 적의 후방을 기습합니다."
+
+ GEI_expand_door_network:0 "차원문 네트워크 확장"
+ GEI_expand_door_network_desc:0 "차원문 네트워크를 확장하여 작전 범위를 넓힙니다."
+
+ GEI_corrupt_student_council:0 "학생회 타락"
+ GEI_corrupt_student_council_desc:0 "학생회를 색채의 영향 아래 둡니다."
+
+ GEI_establish_terror_squads:0 "테러 부대 설립"
+ GEI_establish_terror_squads_desc:0 "색채화된 학생들로 특수 부대를 조직합니다."
+
+ GEI_spread_death_terror:0 "죽음의 공포 전파"
+ GEI_spread_death_terror_desc:0 "여신의 공포를 적군에게 전파합니다."
+
+ GEI_organize_plunder_teams:0 "약탈 부대 조직"
+ GEI_organize_plunder_teams_desc:0 "전문적인 약탈 부대를 조직합니다."
+
+ GEI_enhance_command_structure:0 "지휘 체계 강화"
+ GEI_enhance_command_structure_desc:0 "색채 선생님의 지휘 체계를 강화합니다."
+
+ GEI_activate_tactical_ai:0 "전술 AI 활성화"
+ GEI_activate_tactical_ai_desc:0 "A.R.O.N.A의 전술 AI 시스템을 가동합니다."
+
+ GEI_optimize_battle_algorithms:0 "전투 알고리즘 최적화"
+ GEI_optimize_battle_algorithms_desc:0 "A.R.O.N.A의 전투 알고리즘을 최적화합니다."
+
+ GEI_optimize_production:0 "생산 최적화"
+ GEI_optimize_production_desc:0 "색채의 힘으로 생산 시설을 최적화합니다."
+
+ GEI_coordinate_strike:0 "조화로운 타격"
+ GEI_coordinate_strike_desc:0 "모든 부대가 하나가 되어 타격합니다."
+
+ GEI_extract_american_resources:0 "미국 자원 추출"
+ GEI_extract_american_resources_desc:0 "미국의 풍부한 자원을 강제로 추출합니다."
+
+ GEI_initiate_shadow_infiltration:0 "그림자 침투 개시"
+ GEI_initiate_shadow_infiltration_desc:0 "적의 내부에 공포를 심어냅니다."
+
+ GEI_accelerate_assimilation:0 "동화 가속화"
+ GEI_accelerate_assimilation_desc:0 "점령지의 색채화를 가속화합니다."
+
+ GEI_distort_reality:0 "현실 왜곡"
+ GEI_distort_reality_desc:0 "색채의 힘으로 현실을 왜곡시킵니다."
+
+ # 차원문 관련
+ GEI_dimensional_operations:0 "차원 작전"
+ GEI_dimensional_operations_desc:0 "차원문을 통한 특수 작전을 수행할 수 있습니다."
+ 
+ GEI_dimensional_warfare:0 "차원 전쟁"
+ GEI_dimensional_warfare_desc:0 "차원문을 활용한 새로운 형태의 전쟁을 수행합니다."
+ 
+ GEI_door_network:0 "차원문 네트워크"
+ GEI_door_network_desc:0 "전략적인 차원문 네트워크가 구축되었습니다."
+ 
+ GEI_dimensional_door_operations:0 "차원문 작전"
+ GEI_dimensional_door_operations_desc:0 "차원문을 통한 다양한 군사 작전을 실행할 수 있습니다."
+
+ # Events
+ GEI_event.28.t:0 "색채의 침공"
+ GEI_event.28.d:0 "정체불명의 현상이 전 세계에 나타나기 시작했다. 이상한 색채의 빛과 실종 사건이 점점 더 빈번해지고 있다."
+ GEI_event.28.a:0 "이것은 좋지 않은 징조다..."
+
+ GEI_event.29.t:0 "연구자들의 실종"
+ GEI_event.29.d:0 "전국의 연구 시설에서 연구원들이 갑자기 사라지는 사건이 발생하고 있다. 남은 것은 이상한 색채의 흔적뿐이다."
+ GEI_event.29.a:0 "우리의 지식이 위험에 처해있다"
+
+ GEI_event.30.t:0 "색채의 변형"
+ GEI_event.30.d:0 "점령지의 주민들이 이상한 변화를 겪고 있다. 그들의 모습이 점점 색채와 닮아가고 있다."
+ GEI_event.30.a:0 "새로운 존재로의 진화다"
+
+ # 이벤트 제목
+ GEI_event.31.t:0 "색채 네트워크 완성"
+ GEI_event.31.d:0 "우리는 마침내 전 세계적인 색채 네트워크 구축을 완료했다. 이제 모든 색채화된 존재들이 하나의 의식으로 연결되어 있다."
+ GEI_event.31.a:0 "우리는 하나가 되었다"
+
+ GEI_event.32.t:0 "연구 시설 침투"
+ GEI_event.32.d:0 "정체불명의 존재가 우리의 연구 시설에 침투했다. 중요한 연구 자료들이 사라지고 있다."
+ GEI_event.32.a:0 "이것을 막아야 한다"
+
+ GEI_event.33.t:0 "데카그라마톤 개선"
+ GEI_event.33.d:0 "새로운 데카그라마톤 장비의 개발이 완료되었다. 이전보다 더욱 강력한 전투력을 발휘할 것이다."
+ GEI_event.33.a:0 "완벽한 진화다"
+
+ GEI_event.34.t:0 "차원문 네트워크 구축"
+ GEI_event.34.d:0 "차원문 네트워크가 성공적으로 구축되었다. 이제 우리는 어디든 순식간에 도달할 수 있다."
+ GEI_event.34.a:0 "공간의 제약은 없다"
+
+ GEI_event.35.t:0 "차원문을 통한 기습"
+ GEI_event.35.d:0 "갑자기 나타난 차원문을 통해 적군이 우리 영토 깊숙이 침투했다."
+ GEI_event.35.a:0 "이런 위협에 대비할 방법이 없다"
+
+ GEI_event.36.t:0 "학생회의 타락"
+ GEI_event.36.d:0 "색채의 영향력이 학생회 전체에 퍼졌다. 이제 그들은 우리의 의지를 실현하는 완벽한 도구가 되었다."
+ GEI_event.36.a:0 "이제 학교는 우리 것이다"
+
+ GEI_event.37.t:0 "헤일로의 부패"
+ GEI_event.37.d:0 "정체불명의 색채가 우리 학생들의 헤일로를 부패시키고 있다. 그들의 전투력이 급격히 저하되고 있다."
+ GEI_event.37.a:0 "이 부패를 멈춰야 한다"
+
+ GEI_event.38.t:0 "여신의 힘 발현"
+ GEI_event.38.d:0 "죽음의 여신이 자신의 모든 힘을 해방했다. 우리 군대는 이전과는 비교할 수 없는 강력한 힘을 얻었다."
+ GEI_event.38.a:0 "승리는 우리 것이다"
+
+ GEI_event.39.t:0 "죽음의 공포"
+ GEI_event.39.d:0 "죽음의 여신이 퍼뜨리는 공포가 우리 군대를 마비시키고 있다. 병사들의 사기가 급격히 저하되고 있다."
+ GEI_event.39.a:0 "이 공포를 이겨내야 한다"
+
+ GEI_event.40.t:0 "약탈 부대 조직 완료"
+ GEI_event.40.d:0 "전문적인 약탈 부대의 조직이 완료되었다. 이제 우리는 더욱 효율적으로 적의 자원을 탈취할 수 있을 것이다."
+ GEI_event.40.a:0 "모든 것을 가져와라"
+
+ GEI_event.41.t:0 "군사 시설 피습"
+ GEI_event.41.d:0 "정체불명의 색채 부대가 우리의 군사 시설을 습격했다. 상당한 양의 장비와 자원이 탈취되었다."
+ GEI_event.41.a:0 "우리의 전력이 약화되었다"
+
+ GEI_event.42.t:0 "전술 AI의 분석"
+ GEI_event.42.d:0 "적의 첨단 AI 시스템이 우리의 전술을 완벽하게 분석하고 있다. 우리의 모든 움직임이 예측되고 있다."
+ GEI_event.42.a:0 "이런 상대는 처음이다"
+
+ GEI_event.43.t:0 "그림자가 드리워지다"
+ GEI_event.43.d:0 "정체불명의 그림자가 우리 국경을 넘어 침투하고 있습니다. 보이지 않는 적의 존재가 우리 국민들을 공포에 떨게 만들고 있습니다."
+ GEI_event.43.a:0 "이 공포를 멈춰야 한다"
+ 
+ GEI_event.44.t:0 "산업 시설의 색채화"
+ GEI_event.44.d:0 "우리의 공장들이 이상한 색으로 물들어가고 있습니다. 노동자들은 혼란스러워하고 있으며, 생산 라인이 서서히 마비되어 가고 있습니다."
+ GEI_event.44.a:0 "통제불능이다"
+ 
+ GEI_event.45.t:0 "최후의 공세"
+ GEI_event.45.d:0 "색채의 군대가 전례 없는 규모로 공세를 개시했습니다. 하늘은 이상한 색으로 물들었고, 우리의 방어선은 순식간에 무너지고 있습니다."
+ GEI_event.45.a:0 "이것이 끝이 될 것인가"
+
+ GEI_event.46.t:0 "산업 시설 붕괴"
+ GEI_event.46.d:0 "색채화된 산업 시설들이 과부하로 인해 붕괴하기 시작했습니다. 생산 라인이 마비되고 노동자들은 공황 상태에 빠졌습니다."
+ GEI_event.46.a:0 "통제할 수 없다"
+
+ GEI_event.47.t:0 "자원의 고갈"
+ GEI_event.47.d:0 "무분별한 자원 추출로 인해 광산과 유전이 고갈되기 시작했습니다. 지하 구조가 불안정해지고 있습니다."
+ GEI_event.47.a:0 "더 많은 자원이 필요하다"
+
+ GEI_event.48.t:0 "그림자가 스며들다"
+ GEI_event.48.d:0 "이상한 그림자가 우리 영토에 스며들고 있습니다. 보이지 않는 공포가 우리 국민들을 덮치고 있습니다."
+ GEI_event.48.a:0 "이 공포를 멈춰야 한다"
+
+ GEI_event.49.t:0 "현실이 흔들리다"
+ GEI_event.49.d:0 "현실이 왜곡되기 시작했습니다. 우리가 알던 세계가 무너지고 있습니다."
+ GEI_event.49.a:0 "이것은 악몽인가"
+
+ GEI_researcher_absorption_operations:0 "연구자 흡수 작전"
+ GEI_researcher_absorption_operations_desc:0 "우리는 적의 연구자들을 흡수하여 그들의 지식을 획득할 수 있습니다."
+
+ GEI_color_transformation_category:0 "색채 변형"
+ GEI_color_transformation_category_desc:0 "지역 주민들을 색채의 존재로 변형시킬 수 있습니다."
+
+ GEI_merge_with_color_category:0 "색채와의 융합"
+ GEI_merge_with_color_category_desc:0 "우리의 지휘관들을 색채의 의식과 융합시킬 수 있습니다."
+
+ GEI_extract_research_data:0 "연구 데이터 추출"
+ GEI_extract_research_data_desc:0 "적의 연구 시설에서 데이터를 추출합니다."
+
+ GEI_begin_mass_transformation:0 "대규모 변형 시작"
+ GEI_begin_mass_transformation_desc:0 "점령지 주민들의 대규모 변형을 시작합니다."
+
+ GEI_establish_transformation_center:0 "변형 센터 설립"
+ GEI_establish_transformation_center_desc:0 "주민들을 효율적으로 변형시키기 위한 시설을 설립합니다."
+
+ GEI_enhance_military_leadership:0 "군사 지도부 강화"
+ GEI_enhance_military_leadership_desc:0 "지휘관들에게 색채의 의식을 부여합니다."
+
+ GEI_establish_consciousness_training:0 "의식 훈련 확립"
+ GEI_establish_consciousness_training_desc:0 "모든 지휘관들을 위한 색채 의식 훈련 프로그램을 수립합니다."
+
+ GEI_halo_distortion:0 "뒤틀린 헤일로"
+ GEI_halo_distortion_desc:0 "순수했던 헤일로가 색채의 영향으로 뒤틀려 더욱 강력한 힘을 발휘합니다."
+ 
+ GEI_distorted_halos_debuff:0 "헤일로 왜곡"
+ GEI_distorted_halos_debuff_desc:0 "색채에 의해 헤일로가 왜곡되어 전투력이 크게 저하되었습니다."
+ 
+ GEI_terrorized_students:0 "테러화된 학생들"
+ GEI_terrorized_students_desc:0 "색채의 영향으로 학생들이 공포의 도구로 변모했습니다."
+ 
+ GEI_student_terror_campaign:0 "학생 테러 캠페인"
+ GEI_student_terror_campaign_desc:0 "테러화된 학생들을 통해 체계적인 공포 작전을 수행합니다."
+ 
+ GEI_death_goddess:0 "죽음의 여신"
+ GEI_death_goddess_desc:0 "색채와 융합된 죽음의 여신이 우리 군대를 강화합니다."
+ 
+ GEI_goddess_offensive:0 "여신의 공세"
+ GEI_goddess_offensive_desc:0 "죽음의 여신의 힘으로 강화된 공격력을 얻습니다."
+ 
+ GEI_goddess_fear:0 "여신의 공포"
+ GEI_goddess_fear_desc:0 "죽음의 여신이 퍼뜨리는 공포에 휩싸여 있습니다."
+
+ GEI_student_terror_operations:0 "학생 테러 작전"
+ GEI_student_terror_operations_desc:0 "학생들을 색채의 도구로 변모시키는 작전을 수행합니다."
+ 
+ GEI_death_goddess_powers:0 "죽음의 여신의 힘"
+ GEI_death_goddess_powers_desc:0 "죽음의 여신의 힘을 활용한 특수 작전을 수행합니다."
+  
+ GEI_spread_halo_corruption:0 "헤일로 부패 전파"
+ GEI_spread_halo_corruption_desc:0 "적군의 헤일로를 부패시켜 전투력을 저하시킵니다."
+ 
+ GEI_channel_goddess_power:0 "여신의 힘 발현"
+ GEI_channel_goddess_power_desc:0 "죽음의 여신의 힘을 최대한 끌어냅니다."
+  
+ GEI_summon_death_battalions:0 "죽음의 대대 소환"
+ GEI_summon_death_battalions_desc:0 "여신의 힘으로 강화된 특수 부대를 소환합니다."
+
+ GEI_pillaging_operations:0 "약탈 작전"
+ GEI_pillaging_operations_desc:0 "체계적인 약탈을 통해 전쟁 수행에 필요한 자원을 확보합니다."
+ 
+ GEI_resource_extraction:0 "자원 추출"
+ GEI_resource_extraction_desc:0 "점령지의 자원을 효율적으로 추출하여 우리의 산업을 강화합니다."
+ 
+ GEI_systematic_plunder:0 "체계적 약탈"
+ GEI_systematic_plunder_desc:0 "색채의 약탈 작전이 더욱 체계화되었습니다."
+ 
+ GEI_colour_sensei_leadership:0 "색채 선생님의 지휘"
+ GEI_colour_sensei_leadership_desc:0 "색채화된 선생님의 뛰어난 지휘 능력이 우리 군을 이끕니다."
+ 
+ GEI_colour_sensei_offensive:0 "선생님의 공세"
+ GEI_colour_sensei_offensive_desc:0 "색채 선생님의 지휘 아래 강력한 공세를 펼칩니다."
+ 
+ GEI_arona_control:0 "A.R.O.N.A 통제 시스템"
+ GEI_arona_control_desc:0 "A.R.O.N.A의 첨단 시스템이 전장을 통제합니다."
+ 
+ GEI_tactical_coordination:0 "전술 조정"
+ GEI_tactical_coordination_desc:0 "완벽한 전술적 조율로 전투 효율이 증가합니다."
+
+ # 디시전 카테고리
+ GEI_plunder_operations:0 "약탈 작전"
+ GEI_plunder_operations_desc:0 "적의 자원과 장비를 약탈하여 우리의 힘을 강화합니다."
+ 
+ GEI_sensei_command:0 "선생님의 지휘"
+ GEI_sensei_command_desc:0 "색채 선생님의 지휘 아래 군사 작전을 수행합니다."
+ 
+ GEI_arona_tactical_operations:0 "A.R.O.N.A 전술 작전"
+ GEI_arona_tactical_operations_desc:0 "A.R.O.N.A의 첨단 시스템을 활용하여 전술적 우위를 확보합니다."
+
+ GEI_raid_military_facilities:0 "군사 시설 습격"
+ GEI_raid_military_facilities_desc:0 "적의 군사 시설을 습격하여 장비와 자원을 확보합니다."
+  
+ GEI_color_industry:0 "색채화된 산업"
+ GEI_color_industry_desc:0 "우리의 산업은 색채의 영향으로 더욱 효율적으로 변화했습니다."
+ 
+ GEI_efficient_organization:0 "효율적 조직"
+ GEI_efficient_organization_desc:0 "색채의 힘으로 우리 군대는 더욱 체계적으로 조직되었습니다."
+ 
+ GEI_arona_production:0 "아로나의 생산 관리"
+ GEI_arona_production_desc:0 "아로나의 지원으로 생산 효율이 증가했습니다."
+ 
+ GEI_production_boost:0 "생산력 강화"
+ GEI_production_boost_desc:0 "색채의 힘이 우리의 생산 능력을 크게 향상시켰습니다."
+ 
+ GEI_coordinated_offensive:0 "조화로운 공세"
+ GEI_coordinated_offensive_desc:0 "우리의 공격은 완벽한 조화 속에서 이루어집니다."
+ 
+ GEI_signal_warfare:0 "신호 교란전"
+ GEI_signal_warfare_desc:0 "적의 통신을 교란하고 우리의 정보를 보호합니다."
+ 
+ GEI_final_offensive_buff:0 "최후의 공세"
+ GEI_final_offensive_buff_desc:0 "이것이 마지막 일격이 될 것입니다."
+ 
+ GEI_final_offensive_debuff:0 "색채의 압도적인 공세"
+ GEI_final_offensive_debuff_desc:0 "우리는 색채의 압도적인 힘 앞에 무력합니다."
+
+ GEI_industry_control:0 "산업 통제"
+ GEI_industry_control_desc:0 "색채의 힘으로 산업을 통제하고 변화시킵니다."
+ 
+ GEI_attack_operations:0 "공격 작전"
+ GEI_attack_operations_desc:0 "조직적이고 체계적인 공격을 수행합니다."
+ 
+ GEI_signal_operations:0 "신호 작전"
+ GEI_signal_operations_desc:0 "적의 통신을 교란하고 혼란을 야기합니다."
+ 
+ GEI_shadow_operations:0 "그림자 작전"
+ GEI_shadow_operations_desc:0 "은밀한 작전으로 적의 의지를 꺾습니다."
+ 
+ GEI_american_extraction:0 "미국 자원 추출"
+ GEI_american_extraction_desc:0 "미국의 자원을 우리의 것으로 만듭니다."
+
+ GEI_convert_civilian_industry:0 "민간 산업 전환"
+ GEI_convert_civilian_industry_desc:0 "민간 공장을 군수 공장으로 전환합니다."
+  
+ GEI_intensify_signal_interference:0 "신호 방해 강화"
+ GEI_intensify_signal_interference_desc:0 "적의 통신을 완전히 마비시킵니다."
+ 
+ GEI_shadow_infiltration:0 "그림자 침투"
+ GEI_shadow_infiltration_desc:0 "적의 내부에 공포를 심습니다."
+
+ GEI_efficient_production_control:0 "효율적인 생산 통제"
+ GEI_efficient_production_control_desc:0 "색채의 영향으로 생산 시설의 효율이 극대화되었습니다."
+
+ GEI_military_production_bonus:0 "군수 생산력 강화"
+ GEI_military_production_bonus_desc:0 "군수 물자 생산이 가속화되었습니다."
+
+ GEI_rapid_factory_conversion:0 "신속한 공장 전환"
+ GEI_rapid_factory_conversion_desc:0 "공장의 용도 전환이 더욱 빠르게 이루어집니다."
+
+ GEI_shadow_fear:0 "그림자의 공포"
+ GEI_shadow_fear_desc:0 "보이지 않는 적의 존재가 국민들을 공포에 떨게 합니다."
+
+ GEI_intensified_interference:0 "강화된 신호 방해"
+ GEI_intensified_interference_desc:0 "모든 통신이 교란되어 지휘 체계가 마비되고 있습니다."
+
+ GEI_resource_depletion:0 "자원 고갈"
+ GEI_resource_depletion_desc:0 "색채의 침식으로 인해 지역의 자원이 고갈되고 있습니다."
+
+ GEI_reality_distortion_debuff:0 "현실 왜곡 현상"
+ GEI_reality_distortion_debuff_desc:0 "색채에 의한 현실 왜곡으로 인해 모든 군사 작전이 심각하게 방해받고 있습니다."
+
+ GEI_american_resource_extraction:0 "미국 자원 추출"
+ GEI_american_resource_extraction_desc:0 "미국의 풍부한 자원을 강제로 추출합니다."
+
+ GEI_systematic_genocide:0 "체계적인 대량학살"
+ GEI_systematic_genocide_desc:0 "색채의 힘으로 대량학살을 수행합니다."
+
+ GEI_reduced_occupation_cost:0 "점령 비용 감소"
+ GEI_reduced_occupation_cost_desc:0 "색채의 힘으로 점령 비용이 크게 감소합니다."
+
+ GEI_infiltrated_research:0 "침투된 연구"
+ GEI_infiltrated_research_desc:0 "이 국가는 연구 시설이 침투당했기에 연구력이 감소합니다."
+
+ #Equipment
+ GEI_colorized_decagrammaton_part: "색채화된 데카그라마톤 부품"
+ GEI_colorized_decagrammaton_part_desc: "색채의 힘으로 강화된 데카그라마톤 장비 부품입니다."
+
+ GEI_totaly_colorized_decagrammaton: "완전히 색채화된 데카그라마톤"
+ GEI_totaly_colorized_decagrammaton_desc: "색채의 힘으로 완전히 강화된 데카그라마톤 장비입니다."
+
+ # Tooltips
+ GEI_transformation_center_complete_tt:0 "변형 센터가 완성됩니다"
+ GEI_consciousness_training_complete_tt:0 "의식 훈련 프로그램이 확립됩니다"
+ GEI_unlock_consciousness_training_tt:0 "의식 훈련 결정이 해금됩니다"
+ GEI_color_network_established_tt:0 "§Y색채 네트워크§!가 구축됩니다"
+ GEI_network_capabilities_unlocked_tt:0 "새로운 네트워크 작전들이 해금됩니다"
+ GEI_increased_decagrammaton_cap_tt:0 "데카그라마톤 사단 제한이 증가합니다"
+ GEI_decagrammaton_improvement_complete_tt:0 "데카그라마톤 장비가 개선됩니다"
+ GEI_door_network_established_tt:0 "§Y차원문 네트워크§!가 구축됩니다"
+ GEI_student_council_corrupted_tt:0 "§R학생회가 완전히 타락합니다§!"
+ GEI_student_transformation_complete_tt:0 "이제 학생들을 테러 부대로 활용합니다"
+ GEI_goddess_power_channeled_tt:0 "죽음의 여신의 힘이 발현됩니다"
+ GEI_plunder_teams_ready_tt:0 "약탈 부대가 작전을 개시합니다"
+ GEI_plunder_operations_unlocked_tt:0 "새로운 약탈 작전이 해금됩니다"
+ GEI_enhanced_command_tt:0 "색채 선생님의 지휘 능력이 강화됩니다"
+ GEI_tactical_ai_activated_tt:0 "A.R.O.N.A의 전술 AI가 가동됩니다"
+ GEI_tactical_disadvantage_tt:0 "A.R.O.N.A의 분석으로 인해 적이 전술적 열세에 처합니다"
+ GEI_tactical_bonus:0 "A.R.O.N.A의 전술 분석"
+ GEI_resource_extraction_tt:0 "§R선택된 지역의 기반시설이 피해를 입지만, 추가 자원을 얻을 수 있습니다§!"
+ GEI_distorted_halos_effect_tt:0 "학원도시 국가의 헤일로가 왜곡되어 전투력이 크게 저하됩니다"
+ GEI_america_resource_bonus_tt:0 "미국의 풍부한 자원을 강제로 추출합니다"
+ GEI_usa_final_offensive_troops_tt:0 "§R미국에 최후의 공세를 가합니다!§!"
+ GEI_colour_sensei_leadership_tt:0 "§Y색채 선생님의 뛰어난 지휘 능력이 우리 군을 이끕니다§!"
+ GEI_combined_strike_force_tt:0 "§R색채의 공세가 강해집니다!§!"
+ GEI_death_goddess_fear_tt:0 "§R죽음의 힘으로 적국을 압도합니다§!"
+ GEI_beyond_doors_division_tt:0 "§Y차원문에서 나타난 색채가 세계를 덮습니다§!"
+ GEI_colour_sensei_command_bonus_tt:0 "§Y색채 선생님의 지휘 능력이 일시적으로 강화됩니다§!"
+ GEI_robbers_war_effect_tt:0 "§Y적의 건물에 사보티주를 실행합니다§!"
+
+ GEI_arona_production_bonus_tt:0 "§YA.R.O.N.A의 지원으로 생산 효율이 증가합니다§!"
+
+ GEI_radio_interference_effect_tt:0 "§Y적의 통신을 교란하고 우리의 정보를 보호합니다§!"
+
+ # MIO
+ COLOUR_mystic_orgianzation:0 "신비한 조직"
+ COLOUR_mystic_mio_decagrammaton:0 "데카그라마톤"

@@ -857,5 +857,21 @@ leader_traits = {
 			factor = 0
 		}
 	}
+    GEI_color_consciousness = {
+        type = { land navy }
+        trait_type = status_trait
+        gain_xp = {
+			always = no # not gainable
+		}
+        modifier = {
+            army_leader_start_level = 1
+            experience_gain_factor = 0.1
+            army_org_factor = 0.05
+            navy_org_factor = 0.05
+        }
+        new_commander_weight = {
+			factor = 0
+        }
+    }
 }
     
