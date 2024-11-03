@@ -1,8 +1,43 @@
 ideas = {
     country = {
-		RED_corruption_0 = { #심각한 부패
+		RED_corruption_4 = { #만연한 부패
+			name = RED_corruption_0
 			picture = ARG_political_corruption_modifier
 			modifier = {
+				production_speed_buildings_factor = -0.1
+				recruitable_population_factor = -0.1
+			}
+		}
+		RED_corruption_3 = { #만연한 부패
+			name = RED_corruption_0
+			picture = ARG_political_corruption_modifier
+			modifier = {
+				production_speed_buildings_factor = -0.2
+				recruitable_population_factor = -0.2
+			}
+		}
+		RED_corruption_2 = { #만연한 부패
+			name = RED_corruption_0
+			picture = ARG_political_corruption_modifier
+			modifier = {
+				production_speed_buildings_factor = -0.3
+				recruitable_population_factor = -0.3
+			}
+		}
+		RED_corruption_1 = {  #만연한 부패
+			name = RED_corruption_0
+			picture = ARG_political_corruption_modifier
+			modifier = {
+				production_speed_buildings_factor = -0.4
+				recruitable_population_factor = -0.4
+			}
+		}
+		RED_corruption_0 = { #만연한 부패
+			name = RED_corruption_0
+			picture = ARG_political_corruption_modifier
+			modifier = {
+				production_speed_buildings_factor = -0.5
+				recruitable_population_factor = -0.5
 			}
 		}
 		RED_capitalist_roader = { #주자파 결집

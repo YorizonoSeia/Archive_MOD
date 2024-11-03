@@ -252,8 +252,8 @@
  ARI_german_defectors_1_tt:0 "§Y6 보병§! 대대 및 §Y공병§!, §Y수색§!, §Y포병§! 지원 부대가 주기적으로 창설됩니다.\n"
 
  ARI_german_leadership:0 "ドイツ内務省"
- ARI_exercise_of_executive_orders_tooltip:0 "§Y$ARI_german_leadership$§! 국민정신을 획득하고, §Y우리§!와 §Y우리의 동맹국§!이 §Y구 독일§!의 주를 하나씩 점령할 때 마다 경찰들로 구성된 사단이 창설될 것입니다."
- ARI_german_leadership_tt:0 "§Y6 민병§! 대대 및 §Y수색§! 지원 부대가 §Y우리§!와 §Y우리의 동맹국§!이 §Y구 독일§!의 주를 하나씩 점령할 때 마다 창설됩니다."
+ ARI_exercise_of_executive_orders_tooltip:0 "§Y$ARI_german_leadership$§! 국민정신을 획득하고, §Y우리§!와 §Y우리의 동맹국§!이 §Y구 독일§!의 주를 하나씩 점령할 때마다 경찰들로 구성된 사단이 창설될 것입니다."
+ ARI_german_leadership_tt:0 "§Y6 민병§! 대대 및 §Y수색§! 지원 부대가 §Y우리§!와 §Y우리의 동맹국§!이 §Y구 독일§!의 주를 하나씩 점령할 때마다 창설됩니다."
 
  ARI_arian_liberation_army:0 "アリウス解放軍" 
  ARI_anti_trinity_national_liberation_army:0 "반트리니티 민족해방군"

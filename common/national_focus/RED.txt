@@ -1884,15 +1884,17 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
 			if = {
 				limit = {
 					NOT = {
 						has_country_flag = RED_population_issue_solved_flag
 					}
 				}
-				RED_population_solve = yes
-				every_owned_state = {
-					add_manpower = 200000
+				add_days_mission_timeout = {
+					mission = RED_population_issue_no_food
+					days = 240
 				}
 			}
 		}
@@ -2321,6 +2323,8 @@ focus_tree = {
 				popularity = 0.05
 			}
 			country_event = { id = RED_event.4 hours = 2 random_hours = 10 }
+			custom_effect_tooltip = RED_locals_problem_tt
+			RED_corruption_solve = yes
 		}
 	}
 
@@ -2402,6 +2406,7 @@ focus_tree = {
 				}
 			}
 			unlock_decision_category_tooltip = RED_forced_relocation_policy
+			RED_population_solve = yes
 		}
 	}
 
@@ -2606,7 +2611,7 @@ focus_tree = {
 		x = -10
 		y = 1
 		relative_position_id = RED_redbear_editorial
-		cost = 5
+		cost = 2
 
 		available = {
 			NOT = {
@@ -2626,7 +2631,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = RED_expand_publishing_dep
-		cost = 5
+		cost = 4
 
 		mutually_exclusive = { focus = RED_kill_editorial }
 
@@ -2642,6 +2647,8 @@ focus_tree = {
 				remove_idea = RED_publishing_idea
 				add_idea = RED_publishing_idea_soc
 			}
+			custom_effect_tooltip = RED_kill_editorial_tt
+			RED_corruption_solve = yes
 		}
 	}
 	focus = { #편집국 약화
@@ -2651,7 +2658,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = RED_expand_publishing_dep
-		cost = 5
+		cost = 4
 
 		mutually_exclusive = { focus = RED_socialist_press }
 
@@ -2674,6 +2681,8 @@ focus_tree = {
 				remove_idea = RED_publishing_idea
 				add_idea = RED_publishing_idea_1
 			}
+			custom_effect_tooltip = RED_kill_editorial_tt
+			RED_corruption_solve = yes
 		}
 	}
 
@@ -2684,7 +2693,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = RED_socialist_press
-		cost = 5
+		cost = 4
 
 		mutually_exclusive = { focus = RED_collectivist_propaganda }
 
@@ -2711,7 +2720,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = RED_heroism_propaganda
-		cost = 5
+		cost = 4
 		available = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
@@ -2732,7 +2741,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = RED_marching_army
-		cost = 5
+		cost = 4
 		available = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
@@ -2777,7 +2786,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = RED_socialist_press
-		cost = 5
+		cost = 4
 
 		mutually_exclusive = { focus = RED_heroism_propaganda }
 
@@ -2804,7 +2813,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = RED_collectivist_propaganda
-		cost = 5
+		cost = 4
 		available = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
@@ -2825,7 +2834,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = RED_the_production_movement
-		cost = 5
+		cost = 4
 		available = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
@@ -2856,7 +2865,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = RED_kill_editorial
-		cost = 5
+		cost = 4
 
 		available = {
 			NOT = {
@@ -2878,7 +2887,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = RED_kill_editorial
-		cost = 5
+		cost = 4
 
 		available = {
 			NOT = {
@@ -2900,7 +2909,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = RED_kill_editorial
-		cost = 5
+		cost = 4
 
 		available = {
 			NOT = {
@@ -2942,7 +2951,7 @@ focus_tree = {
 		x = -1
 		y = 3
 		relative_position_id = RED_kill_editorial
-		cost = 5
+		cost = 4
 		mutually_exclusive = {
 			focus = RED_principle_of_democratic_centralism
 		}
@@ -2990,7 +2999,7 @@ focus_tree = {
 		x = 1
 		y = 3
 		relative_position_id = RED_kill_editorial
-		cost = 5
+		cost = 4
 		mutually_exclusive = {
 			focus = RED_free_press
 		}
@@ -3148,6 +3157,8 @@ focus_tree = {
 			every_army_leader = {
 				add_logistics = 1
 			}
+			custom_effect_tooltip = RED_merger_of_educational_institutions_tt
+			RED_corruption_solve = yes
 		}
 	}
 	focus = { #민중정치
@@ -3188,6 +3199,38 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = RED
+					OR = {
+						has_state_category = rural
+						has_state_category = town
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = RED
+					OR = {
+						has_state_category = rural
+						has_state_category = town
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = RED
+					OR = {
+						has_state_category = rural
+						has_state_category = town
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			custom_effect_tooltip = RED_large_administrative_tt
+			RED_corruption_solve = yes
 		}
 	}
 
@@ -3423,6 +3466,8 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			custom_effect_tooltip = RED_strengthen_heavy_industry_tt
+			RED_corruption_solve = yes
 		}
 	}
 	focus = { #모든 권력을 붉은겨울로

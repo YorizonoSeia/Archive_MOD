@@ -9,24 +9,33 @@ RED_debug_eff = {
 	activate_mission = snake_turn
 }
 RED_population_solve = {
-	141 = {
-		add_manpower = -1000000
-	}
-	140 = {
-		add_manpower = -500000
-	}
-	140 = {
-		add_manpower = -500000
-	}
 	if = {
 		limit = {
 			has_idea = RED_population_saturation_4
+		}
+		141 = {
+			add_manpower = -1000000
+		}
+		140 = {
+			add_manpower = -500000
+		}
+		140 = {
+			add_manpower = -500000
 		}
 		remove_ideas = RED_population_saturation_4
 	}
 	if = {
 		limit = {
 			has_idea = RED_population_saturation_3
+		}
+		141 = {
+			add_manpower = -1000000
+		}
+		140 = {
+			add_manpower = -500000
+		}
+		140 = {
+			add_manpower = -500000
 		}
 		swap_ideas = {
 			remove_idea = RED_population_saturation_3
@@ -37,6 +46,15 @@ RED_population_solve = {
 		limit = {
 			has_idea = RED_population_saturation_2
 		}
+		141 = {
+			add_manpower = -1000000
+		}
+		140 = {
+			add_manpower = -500000
+		}
+		140 = {
+			add_manpower = -500000
+		}
 		swap_ideas = {
 			remove_idea = RED_population_saturation_2
 			add_idea = RED_population_saturation_3
@@ -45,6 +63,15 @@ RED_population_solve = {
 	if = {
 		limit = {
 			has_idea = RED_population_saturation_1
+		}
+		141 = {
+			add_manpower = -1000000
+		}
+		140 = {
+			add_manpower = -500000
+		}
+		140 = {
+			add_manpower = -500000
 		}
 		swap_ideas = {
 			remove_idea = RED_population_saturation_1
@@ -55,9 +82,62 @@ RED_population_solve = {
 		limit = {
 			has_idea = RED_population_saturation
 		}
+		141 = {
+			add_manpower = -1000000
+		}
+		140 = {
+			add_manpower = -500000
+		}
+		140 = {
+			add_manpower = -500000
+		}
 		swap_ideas = {
 			remove_idea = RED_population_saturation
 			add_idea = RED_population_saturation_1
+		}
+	}
+}
+RED_corruption_solve = {
+	if = {
+		limit = {
+			has_idea = RED_corruption_4
+		}
+		remove_ideas = RED_corruption_4
+	}
+	else_if = {
+		limit = {
+			has_idea = RED_corruption_3
+		}
+		swap_ideas = {
+			remove_idea = RED_corruption_3
+			add_idea = RED_corruption_4
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = RED_corruption_2
+		}
+		swap_ideas = {
+			remove_idea = RED_corruption_2
+			add_idea = RED_corruption_3
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = RED_corruption_1
+		}
+		swap_ideas = {
+			remove_idea = RED_corruption_1
+			add_idea = RED_corruption_2
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = RED_corruption_0
+		}
+		swap_ideas = {
+			remove_idea = RED_corruption_0
+			add_idea = RED_corruption_1
 		}
 	}
 }
