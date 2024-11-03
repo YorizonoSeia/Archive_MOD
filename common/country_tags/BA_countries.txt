@@ -15,7 +15,6 @@ RE2 = "countries/RED.txt"
 RE3 = "countries/RED.txt"
 RE4 = "countries/RED.txt"
 RE5 = "countries/RED.txt"
-RE6 = "countries/RED.txt"
 RE7 = "countries/RED.txt"
 RE8 = "countries/RED.txt"
 

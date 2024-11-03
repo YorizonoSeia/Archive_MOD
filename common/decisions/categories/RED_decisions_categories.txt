@@ -162,6 +162,7 @@ RED_winter_war_cat = {
 
 RED_population_issue_cat = { #인구 문제
 	icon = GFX_decision_category_CHL_nacista_decisions
+	picture = GFX_decision_cat_picture_chitet
 	priority = 1000
 	visible = {
 		NOT = {

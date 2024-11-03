@@ -1522,8 +1522,8 @@ focus_tree = {
 				limit = { NOT = { has_country_flag = GEM_reorganization_of_the_private_army_flag } }
 				custom_effect_tooltip = GEM_militia_div_cap_2_tt
 				hidden_effect = {
-					add_to_variable = { GEM_pandemonium_legion_cap = 2 }
-					set_division_template_cap = {  division_template = "Pandemonium Legion" division_cap = GEM_pandemonium_legion_cap }
+					add_to_variable = { ROOT.halo_militia_cap = 2 }
+					set_division_template_cap = {  division_template = "Pandemonium Legion" division_cap = ROOT.halo_militia_cap }
 				}
 				random_controlled_state = { #Create a few more Blackshirt Divs
 					limit = {
@@ -2478,8 +2478,8 @@ focus_tree = {
 				limit = { NOT = { has_country_flag = GEM_reorganization_of_the_private_army_flag } }
 				custom_effect_tooltip = GEM_militia_div_cap_4_tt
 				hidden_effect = {
-					add_to_variable = { GEM_pandemonium_legion_cap = 4 }
-					set_division_template_cap = {  division_template = "Pandemonium Legion" division_cap = GEM_pandemonium_legion_cap }
+					add_to_variable = { ROOT.halo_militia_cap = 4 }
+					set_division_template_cap = {  division_template = "Pandemonium Legion" division_cap = ROOT.halo_militia_cap }
 				}
 				random_controlled_state = { #Create a few more Blackshirt Divs
 					limit = {
@@ -2637,8 +2637,8 @@ focus_tree = {
 			}
 			custom_effect_tooltip = GEM_militia_div_cap_4_tt
 			hidden_effect = {
-				add_to_variable = { GEM_pandemonium_legion_cap = 4 }
-				set_division_template_cap = {  division_template = "Pandemonium Legion" division_cap = GEM_pandemonium_legion_cap }
+				add_to_variable = { ROOT.halo_militia_cap = 4 }
+				set_division_template_cap = {  division_template = "Pandemonium Legion" division_cap = ROOT.halo_militia_cap }
 			}
 			random_controlled_state = { #Create a few more Blackshirt Divs
 				limit = {
@@ -2745,8 +2745,8 @@ focus_tree = {
 			}
 			custom_effect_tooltip = GEM_militia_div_cap_4_tt
 			hidden_effect = {
-				add_to_variable = { GEM_pandemonium_legion_cap = 4 }
-				set_division_template_cap = {  division_template = "Pandemonium Legion" division_cap = GEM_pandemonium_legion_cap }
+				add_to_variable = { ROOT.halo_militia_cap = 4 }
+				set_division_template_cap = {  division_template = "Pandemonium Legion" division_cap = ROOT.halo_militia_cap }
 			}
 			random_controlled_state = { #Create a few more Blackshirt Divs
 				limit = {
@@ -2792,8 +2792,8 @@ focus_tree = {
 				}
 				custom_effect_tooltip = GEM_militia_div_cap_12_tt
 				hidden_effect = {
-					add_to_variable = { GEM_pandemonium_legion_cap = 12 }
-					set_division_template_cap = {  division_template = "Pandemonium Legion" division_cap = GEM_pandemonium_legion_cap }
+					add_to_variable = { ROOT.halo_militia_cap = 12 }
+					set_division_template_cap = {  division_template = "Pandemonium Legion" division_cap = ROOT.halo_militia_cap }
 				}
 				random_controlled_state = { #Create a few more Blackshirt Divs
 					limit = {
@@ -2828,8 +2828,8 @@ focus_tree = {
 			else = {
 				custom_effect_tooltip = GEM_militia_div_cap_4_tt
 				hidden_effect = {
-					add_to_variable = { GEM_pandemonium_legion_cap = 4 }
-					set_division_template_cap = {  division_template = "Pandemonium Legion" division_cap = GEM_pandemonium_legion_cap }
+					add_to_variable = { ROOT.halo_militia_cap = 4 }
+					set_division_template_cap = {  division_template = "Pandemonium Legion" division_cap = ROOT.halo_militia_cap }
 				}
 				random_controlled_state = { #Create a few more Blackshirt Divs
 					limit = {

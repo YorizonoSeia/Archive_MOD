@@ -1994,8 +1994,13 @@ focus_tree = {
 		}
 		completion_reward = { 
 			add_political_power = 50
-
 			mark_focus_tree_layout_dirty = yes
+			hidden_effect = {
+				country_event = { 
+					id = RED_event.36
+					days = 6
+				}
+			}
 		}
 	}
 	focus = { # 반소비에트 대안공산주의
@@ -2104,8 +2109,13 @@ focus_tree = {
 		ai_will_do = { base = 15 }
 
 		completion_reward = {
-			add_political_power = 50 
 			add_stability = 0.10
+			hidden_effect = {
+				country_event = {
+					id = RED_event.37
+					days = 6
+				}
+			}
 		}
 	}
 
@@ -2161,8 +2171,6 @@ focus_tree = {
 		ai_will_do = { base = 15 }
 		
 		completion_reward = {
-			add_stability = 0.15
-			add_political_power = 50
 			add_dynamic_modifier = {
 				modifier = RED_the_office_good_dynamic_modifier
 			}
@@ -3162,6 +3170,8 @@ focus_tree = {
 		ai_will_do = { base = 15 }
 
 		completion_reward = {
+			add_stability = 0.15
+			add_political_power = 50
 		}
 	}
 	focus = { #광역 행정

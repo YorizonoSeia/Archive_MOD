@@ -1,5 +1,10 @@
 ideas = {
     country = {
+		RED_corruption_0 = { #심각한 부패
+			picture = ARG_political_corruption_modifier
+			modifier = {
+			}
+		}
 		RED_capitalist_roader = { #주자파 결집
 			picture = generic_democratic_drift_bonus
 			modifier = {

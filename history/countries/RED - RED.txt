@@ -2,7 +2,7 @@ capital = 141
 
 oob = "RED_1936"
 set_variable = {
-    redwinter_halo_militia_cap = 16
+    ROOT.halo_militia_cap = 16
 }
 
 set_autonomy = {

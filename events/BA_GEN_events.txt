@@ -432,7 +432,7 @@ country_event = { #거절
 			
 			set_division_template_cap = {
 				division_template = "Pandemonium Legion"
-				division_cap = GEM_pandemonium_legion_cap
+				division_cap = ROOT.halo_militia_cap
 			}
 		}
 		capital_scope = {

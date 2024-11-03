@@ -982,6 +982,21 @@ country_event = { #엄습하는 반혁명
 			every_core_state = {
 				add_core_of = RE2
 			}
+			RE1 = {
+				set_popularities = {
+					communism = 100
+				}
+			}
+			RE2 = {
+				set_popularities = {
+					communism = 100
+				}
+			}
+			RE3 = {
+				set_popularities = {
+					communism = 100
+				}
+			}
 		}
 	}
 }
@@ -3686,6 +3701,31 @@ country_event = { #인구 문제의 해결
 	option = {
 		name = RED_event.35.a
 		add_stability = 0.05
+	}
+}
+country_event = { #작은 문제점
+	id = RED_event.36
+	title = RED_event.36.t
+	desc = RED_event.36.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = RED_event.36.a
+		add_political_power = -10
+	}
+}
+country_event = { #드러난 부패
+	id = RED_event.37
+	title = RED_event.37.t
+	desc = RED_event.37.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = RED_event.37.a
+		delete_units = {
+			division_template = "Redwinter Garde populaire"
+		}
+		add_ideas = RED_corruption_0
 	}
 }
 

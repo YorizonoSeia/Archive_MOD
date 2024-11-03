@@ -19,7 +19,7 @@ add_to_array = { #키보토스 국가
 
 add_ideas = BA_student_conscription_idea
 
-set_variable = { GEM_pandemonium_legion_cap = 8 } 
+set_variable = { ROOT.halo_militia_cap = 8 } 
 
 set_technology = {
 	kivotos_infantry_weapons = 1
