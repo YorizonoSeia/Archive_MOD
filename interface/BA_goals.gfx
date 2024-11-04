@@ -2143,4 +2143,20 @@ spriteTypes = {
 		name = "GFX_goal_HYA_Kosaka_Wakamo_suspend"
 		textureFile = "gfx/interface/goals/HYA/HYA_Kosaka_Wakamo_suspend.tga"
 	}
+
+	#색채
+	spriteType = {
+		name = "GFX_goal_GEI_invasion"
+		textureFile = "gfx/interface/goals/GEI/GEI_invasion.tga"
+	}
+
+	spriteType = {
+		name = "GFX_goal_GEI_wave_emission"
+		textureFile = "gfx/interface/goals/GEI/GEI_wave_emission.tga"
+	}
+
+	spriteType = {
+		name = "GFX_goal_GEI_purple_light"
+		textureFile = "gfx/interface/goals/GEI/GEI_purple_light.tga"
+	}
 }

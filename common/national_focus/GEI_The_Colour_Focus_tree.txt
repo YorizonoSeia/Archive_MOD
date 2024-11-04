@@ -13,7 +13,7 @@ focus_tree = {
 	#침입
 	focus = {
 		id = COLOUR_invasion
-		icon = GFX_unknown
+		icon = GFX_goal_GEI_invasion
 		x = 10
 		y = 0
 		cost = 5
@@ -55,7 +55,7 @@ focus_tree = {
 	#보라색 빛
 	focus = {
 		id = COLOUR_purple_light
-		icon = GFX_unknown
+		icon = GFX_goal_GEI_purple_light
 		x = 1
 		y = 1
 		cost = 5
@@ -79,7 +79,7 @@ focus_tree = {
 	#파동 방출
 	focus = {
 		id = COLOUR_wave_emission
-		icon = GFX_unknown
+		icon = GFX_goal_GEI_wave_emission
 		x = -1
 		y = 1
 		cost = 5
