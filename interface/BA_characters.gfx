@@ -316,7 +316,7 @@ spriteTypes = {
 	}
 
 
-	# 트리니티
+	# 트리니티 초상화
 	spriteType = {
 		name = "GFX_TRN_Misono_Mika_Portrait_Official"
 		textureFile = "gfx/leaders/TRN/TRN_Misono_Mika_Portrait_2.tga"
@@ -325,16 +325,6 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_TRN_Misono_Mika_Portrait_Official_Portrait"
 		textureFile = "gfx/leaders/TRN/TRN_Misono_Mika_Portrait.tga"
-		legacy_lazy_load = no
-	}
-	spriteType = {
-		name = "GFX_TRN_Misono_Mika_Portrait_Fan_made"
-		textureFile = "gfx/leaders/TRN/TRN_Misono_Mika_Portrait_3.tga"
-		legacy_lazy_load = no
-	}
-	spriteType = {
-		name = "GFX_TRN_Misono_Mika_Portrait_Fan_made_2"
-		textureFile = "gfx/leaders/TRN/TRN_Misono_Mika_Portrait_4.tga"
 		legacy_lazy_load = no
 	}
 	spriteType = {
@@ -347,6 +337,230 @@ spriteTypes = {
 		textureFile = "gfx/leaders/TRN/TRN_Yurizono_Seia_Portrait.tga"
 		legacy_lazy_load = no
 	}
+	spriteType = { # 티파티
+		name = "GFX_TRN_TeaParty_Portarit"
+		textureFile = "gfx/leaders/TRN/A_TRN_TeaParty_Portarit.tga"
+	}
+	spriteType = { # 히나타
+		name = "GFX_TRN_Wakaba_Hinata_Portrait"
+		textureFile = "gfx/leaders/TRN/TRN_Wakaba_Hinata_Portrait.tga"
+	}
+	spriteType = {  # 하스미 
+		name = "GFX_TRN_Hanekawa_Hasumi_Portrait"
+		textureFile = "gfx/leaders/TRN/TRN_Hanekawa_Hasumi_Portrait.tga"
+	}
+	spriteType = { # 미네
+		name = "GFX_TRN_Aomori_Mine_Portrait"
+		textureFile = "gfx/leaders/TRN/TRN_Aomori_Mine_Portrait.tga"
+	}
+	spriteType = {  # 사쿠라코
+		name = "GFX_TRN_Utazumi_Sakurako_Portrait"
+		textureFile = "gfx/leaders/TRN/TRN_Utazumi_Sakurako_Portrait.tga"
+	}
+	spriteType = {  # 아즈사 
+		name = "GFX_TRN_Shirasu_Azusa_Portrait"
+		textureFile = "gfx/leaders/TRN/TRN_Shirasu_Azusa_Portrait.tga"
+	}
+	spriteType = {  # 이치카
+		name = "GFX_TRN_Nakamasa_Ichika_Portrait"
+		textureFile = "gfx/leaders/TRN/TRN_Nakamasa_Ichika_Portrait.tga"
+	}
+	spriteType = {  # 마시로
+		name = "GFX_TRN_Shizuyama_Mashiro_Portrait"
+		textureFile = "gfx/leaders/TRN/TRN_Shizuyama_Mashiro_Portrait.tga"
+	}
+	spriteType = {  # 우이쟝~~
+		name = "GFX_TRN_Kozeki_Ui_Portrait"
+		textureFile = "gfx/leaders/TRN/TRN_Kozeki_Ui_Portrait.tga"
+	}
+	spriteType = {  #시미코
+		name = "GFX_TRN_Enduo_Shimiko_Portrait"
+		textureFile = "gfx/leaders/TRN/TRN_Enduo_Shimiko_Portrait.tga"
+	}
+	spriteType = {  # 카즈사
+		name = "GFX_TRN_Kyoyama_Kazusa_Portrait"
+		textureFile = "gfx/leaders/TRN/TRN_Kyoyama_Kazusa_Portrait.tga"
+	}
+	spriteType = {  # 츠루기
+		name = "GFX_TRN_KenzakiTsurugi_Portrait"
+		textureFile = "gfx/leaders/TRN/TRN_KenzakiTsurugi_Portrait.tga"
+	}
+	spriteType = {  # 코하루
+		name = "GFX_TRN_Shimoe_Koharu_Portrait"
+		textureFile = "gfx/leaders/TRN/TRN_Shimoe_Koharu_Portrait.tga"
+	}
+	spriteType = {  # 히후미
+		name = "GFX_TRN_Ajitani_Hifumi_Portrait"
+		textureFile = "gfx/leaders/TRN/TRN_Ajitani_Hifumi_Portrait.tga"
+	}
+	spriteType = { # 수영복 히후미
+		name = "GFX_TRN_Ajitani_Hifumi_Swim_Portrait"
+		textureFile = "gfx/leaders/TRN/TRN_Ajitani_Hifumi_Swim_Portrait.tga"
+	}
+	spriteType = {  # 나츠
+		name = "GFX_TRN_Yutori_Natsu_Portrait"
+		textureFile = "gfx/leaders/TRN/TRN_Yutori_Natsu_Portrait.tga"
+	}
+	spriteType = {  # 수영복 아즈사
+		name = "GFX_TRN_Shirasu_Azusa_Swim_Portrait"
+		textureFile = "gfx/leaders/TRN/TRN_Shirasu_Azusa_Swim_portrait.tga"
+	}
+	spriteType = {  # 스즈미
+		name = "GFX_TRN_Morizuki_Suzumi_Portrait"
+		textureFile = "gfx/leaders/TRN/TRN_Morizuki_Suzumi_Portrait.tga"
+	}
+	spriteType = {  # 레이사
+		name = "GFX_TRN_Uzawa_Reisa_Portrait"
+		textureFile = "gfx/leaders/TRN/TRN_Uzawa_Reisa_Portrait.tga"
+	}
+	spriteType = {  # 세리나
+		name = "GFX_TRN_Sumi_Serina_Portrait"
+		textureFile = "gfx/leaders/TRN/TRN_Sumi_Serina_Portrait.tga"
+	}
+	spriteType = {  # 하나에
+		name = "GFX_TRN_Asagao_Hanae_Portrait"
+		textureFile = "gfx/leaders/TRN/TRN_Asagao_Hanae_Portrait.tga"
+	}
+	spriteType = {  # 하나코
+		name = "GFX_TRN_Urawa_Hanako_Portrait"
+		textureFile = "gfx/leaders/TRN/TRN_Urawa_Hanako_Portrait.tga"
+	}
+	spriteType = {  # 마리 
+		name = "GFX_TRN_Iochi_Mari_Portrait"
+		textureFile = "gfx/leaders/TRN/TRN_Iochi_Mari_Portrait.tga"
+	}
+	spriteType = {  # 요시미쟝~~
+		name = "GFX_TRN_Ibaraki_Yoshimi_Portrait"
+		textureFile = "gfx/leaders/TRN/TRN_Ibaraki_Yoshimi_Portrait.tga"
+	}
+	spriteType = {  # 아이리
+		name = "GFX_TRN_Kurimura_Airi"
+		textureFile = "gfx/leaders/TRN/TRN_Kurimura_Airi.tga"
+	}
+
+
+	# 트리니티 조언가
+	spriteType = { # 나기사
+		name = "GFX_TRN_Kirifuji_Nagisa_idea"
+		textureFile = "gfx/interface/advisors/TRN/TRN_Kirifuji_Nagisa_idea.tga"
+	}
+	spriteType = { # 세이아
+		name = "GFX_TRN_Yurizono_Seia_idea"
+		textureFile = "gfx/interface/advisors/TRN/TRN_Kirifuji_Nagisa_idea.tga"
+	}
+	spriteType = { # 미카
+		name = "GFX_TRN_Misono_Mika_idea"
+		textureFile = "gfx/interface/advisors/TRN/TRN_Misono_Mika_idea.tga"
+	}
+	spriteType = { # 히나타
+		name = "GFX_TRN_Wakaba_Hinata_idea"
+		textureFile = "gfx/interface/advisors/TRN/TRN_Wakaba_Hinata_idea.tga"
+	}
+	spriteType = { # 하스미
+		name = "GFX_TRN_Hanekawa_Hasumi_idea"
+		textureFile = "gfx/interface/advisors/TRN/TRN_Hanekawa_Hasumi_idea.tga"
+	}
+	spriteType = { # 미네
+		name = "GFX_TRN_Aomori_Mine_idea"
+		textureFile = "gfx/interface/advisors/TRN/TRN_Aomori_Mine.tga"
+	}
+	spriteType = { # 사쿠라코
+		name = "GFX_TRN_Utazumi_Sakurako_idea"
+		textureFile = "gfx/interface/advisors/TRN/TRN_Utazumi_Sakurako_idea.tga"
+	}
+	spriteType = { # 아즈사
+		name = "GFX_TRN_Shirasu_Azusa_idea"
+		textureFile = "gfx/interface/advisors/TRN/TRN_Shirasu_Azusa_idea.tga"
+	}
+	spriteType = { # 이치카
+		name = "GFX_TRN_Ichika_idea"
+		textureFile = "gfx/interface/advisors/TRN/TRN_Ichika_idea.tga"
+	}
+	spriteType = { # 마시로
+		name = "GFX_TRN_Shizuyama_Mashiro_idea"
+		textureFile = "gfx/interface/advisors/TRN/TRN_Shizuyama_Mashiro_idea.tga"
+	}
+	spriteType = { # 우이
+		name = "GFX_TRN_Kozeki_Ui_idea"
+		textureFile = "gfx/interface/advisors/TRN/TRN_Kozeki_Ui_idea.tga"
+	}
+	spriteType = { # 시미코
+		name = "GFX_TRN_Enduo_Shimiko_idea"
+		textureFile = "gfx/interface/advisors/TRN/TRN_Enduo_Shimiko_idea.tga"
+	}
+	spriteType = { # 카즈사
+		name = "GFX_TRN_Kyoyama_Kazusa_idea"
+		textureFile = "gfx/interface/advisors/TRN/TRN_Kyoyama_Kazusa_idea.tga"
+	}
+	spriteType = { # 츠루기
+		name = "GFX_TRN_Kenzaki_Tsurugi_idea"
+		textureFile = "gfx/interface/advisors/TRN/TRN_Kenzaki_Tsurugi_idea.tga"
+	}
+	spriteType = { # 코하루
+		name = "GFX_TRN_Shimoe_Koharu_idea"
+		textureFile = "gfx/interface/advisors/TRN/TRN_Shimoe_Koharu.tga"
+	}
+	spriteType = { # 히후미
+		name = "GFX_TRN_Ajitani_Hifumi_idea"
+		textureFile = "gfx/interface/advisors/TRN/TRN_Ajitani_Hifumi_idea.tga"
+	}
+	spriteType = { # 수영복 히후미
+		name = "GFX_TRN_Ajitani_Hifumi_Swim_idea"
+		textureFile = "gfx/interface/advisors/TRN/TRN_Ajitani_Hifumi_Swim_idea.tga"
+	}
+	spriteType = { # 나츠
+		name = "GFX_TRN_Yutori_Natsu_idea"
+		textureFile = "gfx/interface/advisors/TRN/TRN_Yutori_Natsu_idea.tga"
+	}	
+	spriteType = { # 아즈사
+		name = "GFX_TRN_Shirasu_Azusa_idea"
+		textureFile = "gfx/interface/advisors/TRN/TRN_Shirasu_Azusa_idea.tga"
+	}
+	spriteType = { # 스즈미
+		name = "GFX_TRN_Morizuki_Suzumi_idea"
+		textureFile = "gfx/interface/advisors/TRN/TRN_Morizuki_Suzumi_idea.tga"
+	}
+	spriteType = { # 레이사
+		name = "GFX_TRN_Uzawa_Reisa_idea"
+		textureFile = "gfx/interface/advisors/TRN/TRN_Uzawa_Reisa_idea.tga"
+	}
+	spriteType = { # 세리나
+		name = "GFX_TRN_Sumi_Serina_idea"
+		textureFile = "gfx/interface/advisors/TRN/TRN_Sumi_Serina.tga"
+	}
+	spriteType = { # 하나에
+		name = "GFX_TRN_Asagao_Hanae_idea"
+		textureFile = "gfx/interface/advisors/TRN/TRN_Asagao_Hanae_idea.tga"
+	}
+	spriteType = { # 하나코
+		name = "GFX_TRN_Urawa_Hanako_idea"
+		textureFile = "gfx/interface/advisors/TRN/TRN_Urawa_Hanako_idea.tga"
+	}
+	spriteType = { # 마리
+		name = "GFX_TRN_Iochi_Mari_2_idea"
+		textureFile = "gfx/interface/advisors/TRN/TRN_Iochi_Mari_2_idea.tga"
+	}
+	spriteType = { # 요시미
+		name = "GFX_TRN_Ibaraki_Yoshimi_idea"
+		textureFile = "gfx/interface/advisors/TRN/TRN_Ibaraki_Yoshimi_idea.tga"
+	}
+	spriteType = { # 아이리
+		name = "GFX_TRN_Kurimura_Airi_idea"
+		textureFile = "gfx/interface/advisors/TRN/TRN_Kurimura_Airi_idea.tga"
+	}
+
+	# 2차 창작
+	spriteType = {
+		name = "GFX_TRN_Misono_Mika_Portrait_Fan_made"
+		textureFile = "gfx/leaders/TRN/TRN_Misono_Mika_Portrait_3.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TRN_Misono_Mika_Portrait_Fan_made_2"
+		textureFile = "gfx/leaders/TRN/TRN_Misono_Mika_Portrait_4.tga"
+		legacy_lazy_load = no
+	}
+
 	#### Kon_ka ####
 	spriteType = {
 		name = "GFX_TRN_Misono_Mika_Portrait_Kon_ka"
@@ -363,7 +577,27 @@ spriteTypes = {
 		textureFile = "gfx/leaders/TRN/kon_ka_TRN_Yurizono_Seia_Portrait.tga"
 		legacy_lazy_load = no
 	}
-	#### Kon_ka ####
+	#### 독일 인물 ####	
+	spriteType = { # 
+		name = "GFX_TRN_Schacht_idea"
+		textureFile = "gfx/interface/advisors/TRN/얄마르_샤흐트.tga"
+	}
+
+	spriteType = { # 
+		name = "GFX_Z_TRN_Carl_Schmitt_idea"
+		textureFile = "gfx/interface/advisors/TRN/Z_TRN_Carl_Schmitt_idea.tga"
+	}
+
+	spriteType = { # 
+		name = "GFX_Z_TRM_hans_zehrer_idea"
+		textureFile = "gfx/interface/advisors/TRN/Z_TRM_hans_zehrer.tga"
+	}
+
+	spriteType = { # 
+		name = "GFX_Z_TRM_Fritz_Todt_idea"
+		textureFile = "gfx/interface/advisors/TRN/Z_TRM_Fritz_Todt.tga"
+	}
+
 	spriteType = {
 		name = "GFX_TRN_Otto_han"
 		textureFile = "gfx/leaders/TRN/Z_TRN_Otto_han_Portarit.tga"
@@ -375,6 +609,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_Z_TRM_Hinrich_Lohse_Portarit"
 		textureFile = "gfx/leaders/TRN/Z_TRM_Hinrich_Lohse_Portarit.tga"
+	}
+	spriteType = {  # 지크프리트 카셰
+		name = "GFX_Z_TRN_Siegfried_Kasche_Portrait"
+		textureFile = "gfx/leaders/TRN/Z_TRN_Siegfried_Kasche_Portrait.tga"
 	}
 	spriteType = {
 		name = "GFX_Z_TRM_Erich_Koch_Portrait"

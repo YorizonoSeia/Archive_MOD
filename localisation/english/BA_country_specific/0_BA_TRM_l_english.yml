@@ -1697,6 +1697,7 @@
  TRM_MIL_Reichskommissariat: "밀레니엄 파편화"
  TRM_RED_Reichskommissariat: "붉은겨울 파편화"
  TRM_SPR_Reichskommissariat: "이베리아 반도 평정"
+ TRM_ITA_Reichskommissariat: "이탈리아 반도 분할"
 
 # 아리우스 스쿼드 문제 ###Thx for TNO team###
  TRN_arius_squad_smash_decision: "아리우스 스쿼드 문제"
@@ -1778,7 +1779,6 @@
  TRN_dktkrkdhgkskdp: "아사가오 하나에"
  TRN_dnxkwmal_tkznfkzh: "우타즈미 사쿠라코"
  TRN_dkdhahfl_alsp: "아오모리 미네"
- TRN_Ninomae_Mirai_name: "니노마에 미라이"
  TRN_Carl_Schmitt: "카를 슈미트"
  TRM_hans_zehrer: "한스 프리체"
  TRN_Otto_han_name: "오토 한"

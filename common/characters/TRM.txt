@@ -3,8 +3,12 @@ characters={
 		name=TRN_skrltk
 		portraits={
 			civilian={
-				large="gfx/leaders/TRN/TRN_Kirihuji_Nagisa_Portrait.tga"
-				small="gfx/interface/advisors/TRN/TRN_Kirifuji_Nagisa_idea.tga"
+				large= GFX_TRN_Kirihuji_Nagisa_Official_Portrait
+				small= GFX_TRN_Kirifuji_Nagisa_idea
+			}
+			army={
+				large= GFX_TRN_Kirihuji_Nagisa_Official_Portrait
+				small= GFX_TRN_Kirifuji_Nagisa_idea
 			}
 		}
 		field_marshal = {
@@ -72,6 +76,9 @@ characters={
 			civilian = {
 				large = "gfx/leaders/TRN/Z_TRN_empty_Portrait.tga"
 			}
+			army = {
+				large = "gfx/leaders/TRN/Z_TRN_empty_Portrait.tga"
+			}
 		}
 		country_leader={
 			ideology=tea_party_neutrality_ideology
@@ -88,8 +95,12 @@ characters={
 		name = TRN_tpdldk
 		portraits={
 			civilian={
-				large="gfx/leaders/TRN/TRN_Yurizono_Seia_Portrait.tga"
-				small="gfx/interface/advisors/TRN/TRN_Yurizono_Seia.tga"
+				large= GFX_TRN_Yurizono_Seia_Official_Portrait
+				small= GFX_TRN_Yurizono_Seia_idea
+			}
+			army = {
+				large= GFX_TRN_Yurizono_Seia_Official_Portrait
+				small= GFX_TRN_Yurizono_Seia_idea
 			}
 		}
 		corps_commander={
@@ -134,7 +145,11 @@ characters={
 		portraits={
 			civilian={
 				large= GFX_TRN_Misono_Mika_Portrait_Official
-				small="gfx/interface/advisors/TRN/TRN_Misono_Mika_idea.tga"
+				small= GFX_TRN_Misono_Mika_idea
+			}
+			army={
+				large= GFX_TRN_Misono_Mika_Portrait_Official
+				small= GFX_TRN_Misono_Mika_idea
 			}
 		}
 		gender = female
@@ -178,7 +193,10 @@ characters={
 		name= TRN_tea_party_name
 		portraits={
 			civilian={
-				large = "gfx/leaders/TRN/A_TRN_TeaParty_Portarit.tga"
+				large = GFX_TRN_TeaParty_Portarit
+			}
+			army={
+				large = GFX_TRN_TeaParty_Portarit
 			}
 		}
 		country_leader={
@@ -191,9 +209,13 @@ characters={
 	hinata={ #히나타
 		name=hinata
 		portraits={
+			civilian={
+				large= GFX_TRN_Wakaba_Hinata_Portrait
+				small= GFX_TRN_Wakaba_Hinata_idea
+			}
 			army={
-				large= "gfx/leaders/TRN/TRN_Wakaba_Hinata_Portrait.tga"
-				small= "gfx/interface/advisors/TRN/TRN_Wakaba_Hinata_idea.tga"
+				large= GFX_TRN_Wakaba_Hinata_Portrait
+				small= GFX_TRN_Wakaba_Hinata_idea
 			}
 		}
 		gender = female
@@ -228,8 +250,12 @@ characters={
 		name=TRN_gktmal
 		portraits={
 			army={
-				large= "gfx/leaders/TRN/TRN_Hanekawa_Hasumi_Portrait.tga"
-				small="gfx/interface/advisors/TRN/TRN_Hanekawa_Hasumi_idea.tga"
+				large= GFX_TRN_Hanekawa_Hasumi_Portrait
+				small= GFX_TRN_Hanekawa_Hasumi_idea
+			}
+			civilian={
+				large= GFX_TRN_Hanekawa_Hasumi_Portrait
+				small= GFX_TRN_Hanekawa_Hasumi_idea
 			}
 		}
 		gender = female
@@ -263,8 +289,12 @@ characters={
 		name=TRN_dkdhahfl_alsp
 		portraits={
 			army={
-				large="gfx/leaders/TRN/TRN_Aomori_Mine_Portrait.tga"
-				small="gfx/interface/advisors/TRN/TRN_Aomori_Mine.tga"
+				large= GFX_TRN_Aomori_Mine_Portrait
+				small= GFX_TRN_Aomori_Mine_idea
+			}
+			civilian={
+				large= GFX_TRN_Aomori_Mine_Portrait
+				small= GFX_TRN_Aomori_Mine_idea
 			}
 		}
 		gender = female
@@ -299,9 +329,13 @@ characters={
 	TRN_dnxkwmal_tkznfkzh={ #우타즈미 사쿠라코
 		name=TRN_dnxkwmal_tkznfkzh
 		portraits={
+			civilian={
+				large= GFX_TRN_Utazumi_Sakurako_Portrait
+				small= GFX_TRN_Utazumi_Sakurako_idea
+			}
 			army={
-				large= "gfx/leaders/TRN/TRN_Utazumi_Sakurako_Portrait.tga"
-				small="gfx/interface/advisors/TRN/TRN_Utazumi_Sakurako_idea.tga"
+				large= GFX_TRN_Utazumi_Sakurako_Portrait
+				small= GFX_TRN_Utazumi_Sakurako_idea
 			}
 		}
 		gender = female
@@ -372,8 +406,12 @@ characters={
 		name=TRN_dkwmtk
 		portraits={
 			army={
-				large="gfx/leaders/TRN/TRN_Shirasu_Azusa_Portrait.tga"
-				small="gfx/interface/advisors/TRN/TRN_Shirasu_Azusa_idea.tga"
+				large= GFX_TRN_Shirasu_Azusa_Portrait
+				small= GFX_TRN_Shirasu_Azusa_idea
+			}
+			civilian={
+				large= GFX_TRN_Shirasu_Azusa_Portrait
+				small= GFX_TRN_Shirasu_Azusa_idea
 			}
 		}
 		gender = female
@@ -407,8 +445,12 @@ characters={
 		name=TRN_dlwlzk
 		portraits={
 			army={
-				large="gfx/leaders/TRN/TRN_Nakamasa_Ichika_Portrait.tga"
-				small="gfx/interface/advisors/TRN/TRN_Ichika_idea.tga"
+				large= GFX_TRN_Nakamasa_Ichika_Portrait
+				small= GFX_TRN_Ichika_idea
+			}
+			civilian={
+				large= GFX_TRN_Nakamasa_Ichika_Portrait
+				small= GFX_TRN_Ichika_idea
 			}
 		}
 		gender = female
@@ -441,8 +483,12 @@ characters={
 		name=TRN_aktlfh
 		portraits={
 			army={
-				large= "gfx/leaders/TRN/TRN_Shizuyama_Mashiro_Portrait.tga"
-				small="gfx/interface/advisors/TRN/TRN_Shizuyama_Mashiro_idea.tga"
+				large= GFX_TRN_Shizuyama_Mashiro_Portrait
+				small= GFX_TRN_Shizuyama_Mashiro_idea
+			}
+			civilian={
+				large= GFX_TRN_Shizuyama_Mashiro_Portrait
+				small= GFX_TRN_Shizuyama_Mashiro_idea
 			}
 		}
 		gender = female
@@ -479,8 +525,12 @@ characters={
 		name=uyi
 		portraits={
 			army={
-				large="gfx/leaders/TRN/TRN_Kozeki_Ui_Portrait.tga"
-				small="gfx/interface/advisors/TRN/TRN_Kozeki_Ui_idea.tga"
+				large= GFX_TRN_Kozeki_Ui_Portrait
+				small= GFX_TRN_Kozeki_Ui_idea
+			}
+			civilian={
+				large= GFX_TRN_Kozeki_Ui_Portrait
+				small= GFX_TRN_Kozeki_Ui_idea
 			}
 		}
 		gender = female
@@ -562,8 +612,8 @@ characters={
 		name=TRN_tlalzh
 		portraits={
 			army={
-				large="gfx/leaders/TRN/TRN_Enduo_Shimiko_Portrait.tga"
-				small="gfx/interface/advisors/TRN/TRN_Enduo_Shimiko_idea.tga"
+				large= GFX_TRN_Enduo_Shimiko_Portrait
+				small= GFX_TRN_Enduo_Shimiko_idea
 			}
 		}
 		gender = female
@@ -596,8 +646,8 @@ characters={
 		name=kazusa
 		portraits={
 			army={
-				large="gfx/leaders/TRN/TRN_Kyoyama_Kazusa_Portrait.tga"
-				small="gfx/interface/advisors/TRN/TRN_Kyoyama_Kazusa_idea.tga"
+				large= GFX_TRN_Kyoyama_Kazusa_Portrait
+				small= GFX_TRN_Kyoyama_Kazusa_idea
 			}
 		}
 		gender = female
@@ -651,8 +701,8 @@ characters={
 		name=TRN_cmfnrl
 		portraits={
 			army={
-				large= "gfx/leaders/TRN/TRN_KenzakiTsurugi_Portrait.tga"
-				small="gfx/interface/advisors/TRN/TRN_Kenzaki_Tsurugi_idea.tga"
+				large= GFX_TRN_KenzakiTsurugi_Portrait
+				small= GFX_TRN_Kenzaki_Tsurugi_idea
 			}
 		}
 		gender = female
@@ -705,8 +755,8 @@ characters={
 		name=TRN_zhgkfn
 		portraits={
 			army={
-				large="gfx/leaders/TRN/TRN_Shimoe_Koharu_Portrait.tga"
-				small="gfx/interface/advisors/TRN/TRN_Shimoe_Koharu.tga"
+				large= GFX_TRN_Shimoe_Koharu_Portrait
+				small= GFX_TRN_Shimoe_Koharu_idea
 			}
 		}
 		gender = female
@@ -724,8 +774,8 @@ characters={
 		name=TRN_Hifumi
 		portraits={
 			army={
-				large="gfx/leaders/TRN/TRN_Ajitani_Hifumi_Portrait.tga"
-				small="gfx/interface/advisors/TRN/TRN_Ajitani_Hifumi_idea.tga"
+				large= GFX_TRN_Ajitani_Hifumi_Portrait
+				small= GFX_TRN_Ajitani_Hifumi_idea
 			}
 		}
 		gender = female
@@ -743,8 +793,8 @@ characters={
 		name=hihume
 		portraits={
 			army={
-				large= "gfx/leaders/TRN/TRN_Ajitani_Hifumi_Swim_Portrait.tga"
-				small="gfx/interface/advisors/TRN/TRN_Ajitani_Hifumi_Swim_idea.tga"
+				large= GFX_TRN_Ajitani_Hifumi_Swim_Portrait
+				small= GFX_TRN_Ajitani_Hifumi_Swim_idea
 			}
 		}
 		gender = female
@@ -792,8 +842,8 @@ characters={
 		name=TRN_skcm
 		portraits={
 			army={
-				large="gfx/leaders/TRN/TRN_Yutori_Natsu_Portrait.tga"
-				small="gfx/interface/advisors/TRN/TRN_Yutori_Natsu_idea.tga"
+				large= GFX_TRN_Yutori_Natsu_Portrait
+				small= GFX_TRN_Yutori_Natsu_idea
 			}
 		}
 		gender = female
@@ -811,8 +861,8 @@ characters={
 		name=TRN_dkwmtk
 		portraits={
 			army={
-				large="gfx/leaders/TRN/TRN_Shirasu_Azusa_Swim_portrait.tga"
-				small="gfx/interface/advisors/TRN/TRN_Shirasu_Azusa_idea.tga"
+				large= GFX_TRN_Shirasu_Azusa_Swim_Portrait
+				small= GFX_TRN_Shirasu_Azusa_idea
 			}
 		}
 		gender = female
@@ -828,8 +878,8 @@ characters={
 		name=TRN_tmwmal
 		portraits={
 			army={
-				large="gfx/leaders/TRN/TRN_Morizuki_Suzumi_Portrait.tga"
-				small="gfx/interface/advisors/TRN/TRN_Morizuki_Suzumi_idea.tga"
+				large= GFX_TRN_Morizuki_Suzumi_Portrait
+				small= GFX_TRN_Morizuki_Suzumi_idea
 			}
 		}
 		gender = female
@@ -873,8 +923,8 @@ characters={
 		name=TRN_dnwkdhkfpdltk
 		portraits={
 			army={
-				large="gfx/leaders/TRN/TRN_Uzawa_Reisa_Portrait.tga"
-				small="gfx/interface/advisors/TRN/TRN_Uzawa_Reisa_idea.tga"
+				large= GFX_TRN_Uzawa_Reisa_Portrait
+				small= GFX_TRN_Uzawa_Reisa_idea
 			}
 		}
 		gender = female
@@ -908,8 +958,8 @@ characters={
 		name=TRN_tmaltpflsk
 		portraits={
 			army={
-				large="gfx/leaders/TRN/TRN_Sumi_Serina_Portrait.tga"
-				small="gfx/interface/advisors/TRN/TRN_Sumi_Serina.tga"
+				large= GFX_TRN_Sumi_Serina_Portrait
+				small= GFX_TRN_Sumi_Serina_idea
 			}
 		}
 		gender = female
@@ -926,8 +976,8 @@ characters={
 		name=TRN_dktkrkdhgkskdp
 		portraits={
 			army={
-				large="gfx/leaders/TRN/TRN_Asagao_Hanae_Portrait.tga"
-				small="gfx/interface/advisors/TRN/TRN_Asagao_Hanae_idea.tga"
+				large= GFX_TRN_Asagao_Hanae_Portrait
+				small= GFX_TRN_Asagao_Hanae_idea
 			}
 		}
 		gender = female
@@ -944,8 +994,8 @@ characters={
 		name=TRN_gkskzh
 		portraits={
 			army={
-				large="gfx/leaders/TRN/TRN_Urawa_Hanako_Portrait.tga"
-				small="gfx/interface/advisors/TRN/TRN_Urawa_Hanako_idea.tga"
+				large= GFX_TRN_Urawa_Hanako_Portrait
+				small= GFX_TRN_Urawa_Hanako_idea
 			}
 		}
 		gender = female
@@ -962,8 +1012,8 @@ characters={
 		name=TRN_akfl
 		portraits={
 			army={
-				large = "gfx/leaders/TRN/TRN_Iochi_Mari_Portrait.tga"
-				small="gfx/interface/advisors/TRN/TRN_Iochi_Mari_2_idea.tga"
+				large = GFX_TRN_Iochi_Mari_Portrait
+				small= GFX_TRN_Iochi_Mari_2_idea
 			}
 		}
 		gender = female
@@ -980,8 +1030,8 @@ characters={
 		name=TRN_dytlal
 		portraits={
 			army={
-				large= "gfx/leaders/TRN/TRN_Ibaraki_Yoshimi_Portrait.tga"
-				small="gfx/interface/advisors/TRN/TRN_Ibaraki_Yoshimi_idea.tga"
+				large= GFX_TRN_Ibaraki_Yoshimi_Portrait
+				small= GFX_TRN_Ibaraki_Yoshimi_idea
 			}
 		}
 		gender = female
@@ -1018,8 +1068,8 @@ characters={
 		name=TRN_Kurimura_Airi_name
 		portraits={
 			army={
-				large= "gfx/leaders/TRN/TRN_Kurimura_Airi.tga"
-				small="gfx/interface/advisors/TRN/TRN_Kurimura_Airi_idea.tga"
+				large= GFX_TRN_Kurimura_Airi
+				small= GFX_TRN_Kurimura_Airi_idea
 			}
 		}
 		gender = female
@@ -1052,47 +1102,12 @@ characters={
 			}
 		}
 	}
-	TRN_Ninomae_Mirai={ # 니노마에 미라이(가상 인물)
-		name=TRN_Ninomae_Mirai_name
-		portraits={
-			army={
-				large= "gfx/leaders/TRN/TRN_Kurimura_Airi.tga"
-				small="gfx/interface/advisors/TRN/TRN_Kurimura_Airi_idea.tga"
-			}
-		}
-		gender = female
-		corps_commander={
-			traits={  }
-			skill=1
-			attack_skill=1
-			defense_skill=2
-			planning_skill=1
-			logistics_skill=1
-		}
-		advisor = {
-    		slot = political_advisor
-    		idea_token = TRN_Ninomae_Mirai
-			allowed = {
-				original_tag = TRM
-			}
-			available = {
-				if = { limit = { has_character_flag = TRM_forced_dismissal_flag }
-					NOT = { has_character_flag = TRM_forced_dismissal_flag }
-				}
-			}
-    		traits = { TRM_2nd_person }
-			cost = 0
-			ai_will_do = {
-				factor = 10
-			}
-		}
-	}
 	###독일인 장군###
 	TRN_hjalmar_schacht={
 		name=GER_hjalmar_schacht
 		portraits={
 			army={
-				small="gfx/interface/advisors/TRN/얄마르_샤흐트.tga"
+				small= GFX_TRN_Schacht_idea
 			}
 		}
 	}
@@ -1100,7 +1115,7 @@ characters={
 		name=TRN_Carl_Schmitt
 		portraits={
 			army={
-				small="gfx/interface/advisors/TRN/Z_TRN_Carl_Schmitt_idea.tga"
+				small= GFX_Z_TRN_Carl_Schmitt_idea
 			}
 		}
 		advisor = {
@@ -1125,7 +1140,7 @@ characters={
 		name = TRM_hans_zehrer
 		portraits = {
 			army = {
-				small = "gfx/interface/advisors/TRN/Z_TRM_hans_zehrer.tga"
+				small = GFX_Z_TRM_hans_zehrer_idea
 			}
 		}
 		advisor = {
@@ -1150,7 +1165,7 @@ characters={
 		name = TRM_Fritz_Todt
 		portraits = {
 			army = {
-				small = "gfx/interface/advisors/TRN/Z_TRM_Fritz_Todt.tga"
+				small = GFX_Z_TRM_Fritz_Todt_idea
 			}
 		}
 		advisor = {
@@ -1199,7 +1214,7 @@ characters={
         name = TRM_Moscow_governor_general_name
         portraits={
 			army={
-				large= "gfx/leaders/TRN/Z_TRN_Siegfried_Kasche_Portrait.tga"
+				large= GFX_Z_TRN_Siegfried_Kasche_Portrait
 			}
 		}
     }
