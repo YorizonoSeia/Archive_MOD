@@ -550,7 +550,7 @@ country_event = { # 1차 총회 - 5
 	}
 	
 	option = { 
-		name = hina_assembly.12.a
+		name = hina_assembly.12.c
 		trigger = {
 			has_country_flag = GEH_event_hina_route_flag1
 			has_country_flag = GEH_event_hina_route_flag2
