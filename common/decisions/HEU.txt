@@ -1316,7 +1316,38 @@ HEU_rikuhachimaism_decision_category = {
 
 	HEU_rikuhachimaism_free_female = {
 
-		icon = GFX_decision_HEU_fist_0
+		icon =  {
+			key = GFX_decision_HEU_fist_0
+			trigger = {
+				FROM ={
+					check_variable = { HEU_rikuhachimaism_var^2 = 0 }
+				}
+			}
+		}
+		icon = {
+			key = GFX_decision_HEU_fist_1
+			trigger = {
+				FROM ={
+					check_variable = { HEU_rikuhachimaism_var^2 = 1 }
+				}
+			}
+		}
+		icon = {
+			key = GFX_decision_HEU_fist_2
+			trigger = {
+				FROM ={
+					check_variable = { HEU_rikuhachimaism_var^2 = 2 }
+				}
+			}
+		}
+		icon = {
+			key = GFX_decision_HEU_fist_3
+			trigger = {
+				FROM ={
+					check_variable = { HEU_rikuhachimaism_var^2 = 3 }
+				}
+			}
+		}
 
 		available = {
 
@@ -1344,7 +1375,38 @@ HEU_rikuhachimaism_decision_category = {
 
 	HEU_rikuhachimaism_infrastructure_for_disabled = {
 
-		icon = GFX_decision_HEU_national_reconciliation_0
+		icon =  {
+			key = GFX_decision_HEU_national_reconciliation_0
+			trigger = {
+				FROM ={
+					check_variable = { HEU_rikuhachimaism_var^3 = 0 }
+				}
+			}
+		}
+		icon = {
+			key = GFX_decision_HEU_national_reconciliation_1
+			trigger = {
+				FROM ={
+					check_variable = { HEU_rikuhachimaism_var^3 = 1 }
+				}
+			}
+		}
+		icon = {
+			key = GFX_decision_HEU_national_reconciliation_2
+			trigger = {
+				FROM ={
+					check_variable = { HEU_rikuhachimaism_var^3 = 2 }
+				}
+			}
+		}
+		icon = {
+			key = GFX_decision_HEU_national_reconciliation_3
+			trigger = {
+				FROM ={
+					check_variable = { HEU_rikuhachimaism_var^3 = 3 }
+				}
+			}
+		}
 
 		available = {
 
@@ -1372,7 +1434,38 @@ HEU_rikuhachimaism_decision_category = {
 
 	HEU_rikuhachimaism_LGBTQ_freedom = {
 
-		icon = GFX_decision_HEU_LGBTQ_rights_0
+		icon =  {
+			key = GFX_decision_HEU_LGBTQ_rights_0
+			trigger = {
+				FROM ={
+					check_variable = { HEU_rikuhachimaism_var^4 = 0 }
+				}
+			}
+		}
+		icon = {
+			key = GFX_decision_HEU_LGBTQ_rights_1
+			trigger = {
+				FROM ={
+					check_variable = { HEU_rikuhachimaism_var^4 = 1 }
+				}
+			}
+		}
+		icon = {
+			key = GFX_decision_HEU_LGBTQ_rights_2
+			trigger = {
+				FROM ={
+					check_variable = { HEU_rikuhachimaism_var^4 = 2 }
+				}
+			}
+		}
+		icon = {
+			key = GFX_decision_HEU_LGBTQ_rights_3
+			trigger = {
+				FROM ={
+					check_variable = { HEU_rikuhachimaism_var^4 = 3 }
+				}
+			}
+		}
 
 		available = {
 
@@ -1400,7 +1493,38 @@ HEU_rikuhachimaism_decision_category = {
 
 	HEU_rikuhachimaism_individual_freedom = {
 
-		icon = GFX_decision_HEU_gehenna_0
+		icon =  {
+			key = GFX_decision_HEU_gehenna_0
+			trigger = {
+				FROM ={
+					check_variable = { HEU_rikuhachimaism_var^5 = 0 }
+				}
+			}
+		}
+		icon = {
+			key = GFX_decision_HEU_gehenna_1
+			trigger = {
+				FROM ={
+					check_variable = { HEU_rikuhachimaism_var^5 = 1 }
+				}
+			}
+		}
+		icon = {
+			key = GFX_decision_HEU_gehenna_2
+			trigger = {
+				FROM ={
+					check_variable = { HEU_rikuhachimaism_var^5 = 2 }
+				}
+			}
+		}
+		icon = {
+			key = GFX_decision_HEU_gehenna_3
+			trigger = {
+				FROM ={
+					check_variable = { HEU_rikuhachimaism_var^5 = 3 }
+				}
+			}
+		}
 
 		available = {
 
@@ -1535,7 +1659,7 @@ HEU_rikuhachimaism_decision_category = {
 HEU_aru_GSC_defiance_decision_category = {
 
 	HEU_aru_GSC_defiance_smuggling_of_weapons = {
-		icon = GFX_decision_generic_ignite_civil_war
+		icon = GFX_decision_SWI_consolidate_council_power
 
 		available = {
 			has_war = no
@@ -1943,7 +2067,7 @@ HEU_aru_GSC_defiance_decision_category = {
 	}
 
 	HEU_aru_GSC_defiance_attack_KSP = {
-		icon = GFX_decision_generic_ignite_civil_war
+		icon = GFX_decision_generic_nationalism
 
 		available = {
 			has_war = no
@@ -1992,7 +2116,7 @@ HEU_aru_GSC_defiance_decision_category = {
 	}
 
 	HEU_aru_GSC_defiance_attack_COU = {
-		icon = GFX_decision_generic_ignite_civil_war
+		icon = GFX_decision_generic_nationalism
 
 		available = {
 			has_war = no
@@ -2041,7 +2165,7 @@ HEU_aru_GSC_defiance_decision_category = {
 	}
 
 	HEU_aru_GSC_defiance_attack_SHE = {
-		icon = GFX_decision_generic_ignite_civil_war
+		icon = GFX_decision_generic_nationalism
 
 		available = {
 			has_war = no
@@ -2084,6 +2208,124 @@ HEU_aru_GSC_defiance_decision_category = {
 
 		complete_effect = {
 
+		}
+
+		fire_only_once = yes
+	}
+}
+
+HEU_luxembourg_pandemonium_alliance_decision_category = {
+
+	HEU_exile_proposal_GEM = {
+		icon = infiltrate_state
+
+		available = {
+			has_war_together_with = GEM
+			GEM = {
+				surrender_progress > 0.5
+			}
+			country_exists = GEM
+		}
+
+		visible = {
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		complete_effect = {
+			GEM = { country_event = { id = HEU_event.129 hours = 4 } }
+		}
+
+		fire_only_once = yes
+	}
+
+	HEU_air_force_technical_request_GEM = {
+		icon = GFX_decision_generic_military
+
+		available = {
+			country_exists = GEM
+		}
+
+		visible = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		custom_cost_trigger = {
+			command_power > 24.9
+		}
+
+		custom_cost_text = decision_cost_CP_25
+
+		complete_effect = {
+			add_command_power = -25
+			GEM = { country_event = { id = HEU_event.124 hours = 8 } }
+		}
+
+		fire_only_once = yes
+	}
+
+	HEU_navy_technical_request_GEM = {
+		icon = GFX_decision_generic_military
+
+		available = {
+			country_exists = GEM
+			any_owned_state = {
+				is_coastal = yes
+			}
+		}
+
+		visible = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		custom_cost_trigger = {
+			command_power > 24.9
+		}
+
+		custom_cost_text = decision_cost_CP_25
+
+		complete_effect = {
+			add_command_power = -25
+			GEM = { country_event = { id = HEU_event.125 hours = 8 } }
+		}
+
+		fire_only_once = yes
+	}
+
+	HEU_propagation_of_the_68_revolution_GEM = {
+		icon = GFX_decision_hol_radio_oranje
+
+		available = {
+			country_exists = GEM
+		}
+
+		visible = {
+			has_dynamic_modifier = {
+				modifier = HEU_rikuhachimaism_idea
+			}
+		}
+
+		ai_will_do = {
+			factor = 8
+		}
+
+		cost = 50
+
+		complete_effect = {
+			GEM = { country_event = { id = HEU_event.130 hours = 8 } }
+			
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
 		}
 
 		fire_only_once = yes
