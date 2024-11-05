@@ -13,6 +13,7 @@ guiTypes = {
 		iconType = {
 			name = "Aru_Wisdom_icon"
 			spriteType = "GFX_Aru_Wisdom_icon"
+			pdx_tooltip = "aru_persona_gui_wisdom_tt"
 			position = { x = 302 y = 28 }
 		}
 
@@ -29,6 +30,7 @@ guiTypes = {
 		iconType = {
 			name = "Aru_Kindness_icon"
 			spriteType = "GFX_Aru_Kindness_icon"
+			pdx_tooltip = "aru_persona_gui_kindness_tt"
 			position = { x = 302 y = 148 }
 		}
 
@@ -45,6 +47,7 @@ guiTypes = {
 		iconType = {
 			name = "Aru_Resolution_icon"
 			spriteType = "GFX_Aru_Resolution_icon"
+			pdx_tooltip = "aru_persona_gui_resolution_tt"
 			position = { x = 302 y = 268 }
 		}
 
@@ -61,6 +64,7 @@ guiTypes = {
 		iconType = {
 			name = "Aru_Charisma_icon"
 			spriteType = "GFX_Aru_Charisma_icon"
+			pdx_tooltip = "aru_persona_gui_charisma_tt"
 			position = { x = 302 y = 388 }
 		}
 
