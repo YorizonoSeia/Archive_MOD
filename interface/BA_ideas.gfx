@@ -416,6 +416,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/HEU/HEU_makoto_leader.dds"
 	}
 	spriteType = {
+		name = "GFX_idea_HEU_ARBED"
+		texturefile = "gfx/interface/ideas/HEU/HEU_ARBED.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_HEU_benriya_army"
+		texturefile = "gfx/interface/ideas/HEU/HEU_benriya_army.dds"
+	}
+	spriteType = {
 		name = "GFX_idea_GEM_pandemonium_modifier"
 		texturefile = "gfx/interface/ideas/geh/GEM_pandemonium_modifier.tga"
 	}
