@@ -446,7 +446,7 @@ spriteTypes = {
 	}
 	spriteType = { # 세이아
 		name = "GFX_TRN_Yurizono_Seia_idea"
-		textureFile = "gfx/interface/advisors/TRN/TRN_Kirifuji_Nagisa_idea.tga"
+		textureFile = "gfx/interface/advisors/TRN/TRN_Yurizono_Seia.tga"
 	}
 	spriteType = { # 미카
 		name = "GFX_TRN_Misono_Mika_idea"
