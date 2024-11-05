@@ -3389,15 +3389,6 @@ ideas = {
 				training_time_factor = -0.25
 				MINIMUM_TRAINING_LEVEL = -0.05
 				custom_modifier_tooltip = kivotos_halo_add6_tt
-				modifier_army_sub_unit_category_halo_speed_factor = 0.1
-				modifier_army_sub_unit_category_halo_max_org_factor = 0.1
-				modifier_army_sub_unit_category_halo_org_recovery_cap_factor = 0.1
-				custom_modifier_tooltip = ABY_infantry_minus_attack_tt
-				hidden_modifier = {
-					modifier_army_sub_unit_infantry_attack_factor = -0.5
-					modifier_army_sub_unit_irregular_infantry_attack_factor = -0.5
-					modifier_army_sub_unit_militia_attack_factor = -0.5
-				}
 			}
 		}
 		ABY_idea_abydos_armycountry_2 = {
@@ -3428,25 +3419,6 @@ ideas = {
 				stability_factor = -0.15
 				war_support_factor = 0.1
 				custom_modifier_tooltip = kivotos_halo_add12_tt
-				modifier_army_sub_unit_category_halo_speed_factor = 0.1
-				modifier_army_sub_unit_category_halo_max_org_factor = 0.1
-				modifier_army_sub_unit_category_halo_org_recovery_cap_factor = 0.1
-				custom_modifier_tooltip = ABY_infantry_minus_attack_tt
-				hidden_modifier = {
-					modifier_army_sub_unit_infantry_attack_factor = -0.5
-					modifier_army_sub_unit_irregular_infantry_attack_factor = -0.5
-					modifier_army_sub_unit_militia_attack_factor = -0.5
-				}
-			}
-			equipment_bonus = {
-				infantry_equipment = {
-					build_cost_ic = 8 instant = yes
-					reliability_factor = -0.2
-					defense = 0.5
-					breakthrough = 0.5
-					soft_attack = 1
-					hard_attack = 5
-				}
 			}
 		}
 		ABY_idea_HYA_suspecious = {
@@ -3562,16 +3534,6 @@ ideas = {
 				stability_factor = -0.15
 				war_support_factor = 0.1
 				custom_modifier_tooltip = kivotos_halo_add6_tt
-			}
-			equipment_bonus = {
-				infantry_equipment = {
-					build_cost_ic = 8 instant = yes
-					reliability_factor = -0.2
-					defense = 0.5
-					breakthrough = 0.5
-					soft_attack = 1
-					hard_attack = 5
-				}
 			}
 		}
 		ABY_idea_planning = {
@@ -5065,11 +5027,27 @@ ideas = {
 			removal_cost = -1 
 			# picture = 
 			modifier = {
-				fascism_drift = 0.1
-				war_support_factor = 0.1
-				drift_defence_factor = 0.5
 				modifier_army_sub_unit_category_halo_attack_factor = 0.25
 				modifier_army_sub_unit_category_halo_defence_factor = 0.25
+				modifier_army_sub_unit_category_halo_speed_factor = 0.1
+				modifier_army_sub_unit_category_halo_max_org_factor = 0.1
+				modifier_army_sub_unit_category_halo_org_recovery_cap_factor = 0.1
+				custom_modifier_tooltip = ABY_infantry_minus_attack_tt
+				hidden_modifier = {
+					modifier_army_sub_unit_infantry_attack_factor = -0.75
+					modifier_army_sub_unit_irregular_infantry_attack_factor = -0.75
+					modifier_army_sub_unit_militia_attack_factor = -0.75
+				}
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = 2 instant = yes
+					reliability_factor = -0.2
+					defense = 0.5
+					breakthrough = 0.5
+					soft_attack = 1
+					hard_attack = 5
+				}
 			}
 		}
 	}
@@ -5127,7 +5105,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				industry = 0.15
+				industry = 0.10
 			}
 
 			modifier = {	
@@ -5162,7 +5140,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				industry = 0.15
+				industry = 0.10
 			}
 
 			modifier = {	

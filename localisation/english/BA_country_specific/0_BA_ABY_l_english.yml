@@ -1302,7 +1302,7 @@ ABY_industrial_concern_allow: "다음 효과를 부여하는 산업 업체 사�
 ABY_industrial_concern_improve_1:0 "세인트 네프티스 산업 업체 개선"
 ABY_industrial_concern_improve_2:0 "세인트 네프티스 산업 업체 개선"
 
-ABY_infantry_minus_attack_tt:0 "헤일로 보병 편제를 제외한 모든 보병 편제 공격 §R-50%§!"
+ABY_infantry_minus_attack_tt:0 "헤일로 보병 편제를 제외한 모든 보병 편제 공격 §R-75%§!"
 ABY_infantry_minus_defense_tt:0 "헤일로 보병 편제를 제외한 모든 보병 편제 방어 §R-50%§!"
 ABY_have_cze_aus_tt:0 "§Y오스트리아§!와 §Y체코§!의 모든 §Y핵심주§!를 통제 시 제거"
 ABY_have_cze_aus_slo_tt:0 "§Y오스트리아§!와 §Y체코§!와 §Y슬로바키아§!의 모든 §Y핵심주§!와 §Y알토아디제§!,§Y트렌티노§!,§Y리토랄레§!,§Y이스트리아§!,§Y리에카§!,§Y류블랴냐§!,§Y북슬로베니아§! 주를 통제 시 제거"
@@ -2592,7 +2592,7 @@ ABY_idea_eocordnldnjsghl_first_fin_student_council_4_desc:0 "아비도스 폐교
  ABY_idea_FRA_war:0 "자칼 작전"
  ABY_idea_ITA_war:0 "천명 작전"
 
- ABY_idea_kivotos_nationalism:0 "키보토스 민족주의"
+ ABY_idea_kivotos_nationalism:0 "키보토스형 보병장비"
  ABY_idea_xhdgkqwndml:0 "통합주의"
 
  ABY_idea_eocordnldnjsghl:0 "대책위원회"
@@ -3772,8 +3772,8 @@ ABY_focus_vicegrad_federation_desc:0 ""
 
 ABY_focus_wpehvk_tkrjs:0 "제도파 사건"
 ABY_focus_wpehvk_tkrjs_desc:0 ""
-ABY_focus_kivotos_nationalism:0 "키보토스 민족주의"
-ABY_focus_kivotos_nationalism_desc:0 "우리의 기치는 두 세계의 공존입니다. 하지만 키보토스인 사이의 갈등은 지구인들 사이의 그것보다 더 클지도 모릅니다. 키보토스 민족주의를 통해 우리가 저들에게 뒤떨어지지 않게끔 해야합니다."
+ABY_focus_kivotos_nationalism:0 "헤일로 보병 강화"
+ABY_focus_kivotos_nationalism_desc:0 ""
 ABY_focus_elect_king:0 "근왕파 달래기"
 ABY_focus_elect_king_desc:0 "민주주의는 찬란한 승리를 이룩했으나, 여전히 근왕파는 영향력을 떨치고 있습니다. 군주, 입헌군주의 선출이 그들을 위한 대안이 될 수 있을 겁니다."
 ABY_focus_rhdghkwjstjs:0 "민주주의의 가치 보존"
