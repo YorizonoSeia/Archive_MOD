@@ -885,6 +885,361 @@ country_event = { #독립국가당의 종언
 	}
 }
 
+country_event = { #시민 결합 법제화에 대한 탄원 - 룩셈부르크 공산당
+	id = HEU_event.118
+	title = HEU_event.118.t
+	desc = HEU_event.118.desc
+	picture = GFX_report_event_stalin_meeting
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.118.a 
+		#룩셈부르크 공산당 조언가 은퇴
+		HEU_charles_marx = { retire = yes }
+		HEU_dominique_urbany = { retire = yes }
+		HEU_zenon_bernard = { retire = yes }
+		
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
+	}
+}
+
+country_event = { #시민 결합 법제화에 대한 탄원 - 룩셈부르크 지하교회
+	id = HEU_event.119
+	title = HEU_event.119.t
+	desc = HEU_event.119.desc
+	picture = GFX_report_event_worker_protests
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.119.a 
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.02
+		}
+		
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.05
+		}
+
+		add_stability = -0.05
+	}
+}
+
+country_event = { #시민 결합 법제화에 대한 탄원 - 룩셈부르크 광업 노동 조합
+	id = HEU_event.120
+	title = HEU_event.120.t
+	desc = HEU_event.120.desc
+	picture = GFX_report_event_FIN_petsamo_mine
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.120.a 
+		add_political_power = -100
+		8 = {
+			damage_building = {
+				type = supply_node
+				damage = 0.5
+			}
+			damage_building = {
+				type = rail_way
+				damage = 0.5
+			}
+		}
+
+	}
+}
+
+country_event = { #시민 결합 법제화에 대한 탄원 - 룩셈부르크 헌병대
+	id = HEU_event.121
+	title = HEU_event.121.t
+	desc = HEU_event.121.desc
+	picture = GFX_report_event_por_president_military_inspection
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.121.a 
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.05
+		}
+		add_war_support = -0.05
+	}
+
+	option = { 
+		name = HEU_event.121.b
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.07
+		}
+	}
+}
+
+country_event = { #[HEU.GetName] 측의 공군 기술 공유 요청
+	id = HEU_event.124
+	title = HEU_event.124.t
+	desc = HEU_event.124.desc
+	picture = GFX_report_event_aid_pact
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.124.a 
+	    ai_chance = {
+		    base = 10
+	    }
+		effect_tooltip = {
+			HEU = {
+				add_tech_bonus = {
+					name = HEU_event.127.t
+					bonus = 1.0
+					uses = 2
+					category = light_air
+				}
+				
+				add_doctrine_cost_reduction = {
+					name = HEU_event.127.t
+					cost_reduction = 0.50
+					category = air_doctrine
+					uses = 1
+				}
+			}
+		}
+		add_political_power = 25
+		
+		hidden_effect = {
+			FROM = { country_event = { id = HEU_event.127 hours = 8 } }
+		}
+	}
+
+	option = { 
+		name = HEU_event.124.b
+	    ai_chance = {
+		    base = 2
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0.5
+				num_of_civilian_factories > 5
+			}
+	    }
+
+		hidden_effect = {
+			FROM = { country_event = { id = HEU_event.126 hours = 8 } }
+		}
+	}
+}
+
+country_event = { #[HEU.GetName] 측의 해군 기술 공유 요청
+	id = HEU_event.125
+	title = HEU_event.125.t
+	desc = HEU_event.125.desc
+	picture = GFX_report_event_aid_pact
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.125.a 
+	    ai_chance = {
+		    base = 10
+	    }
+		effect_tooltip = {
+			HEU = {
+				add_tech_bonus = {
+					name = HEU_event.128.t
+					bonus = 1.0
+					uses = 2
+					category = naval_equipment
+				}
+				
+				add_doctrine_cost_reduction = {
+					name = HEU_event.128.t
+					cost_reduction = 0.50
+					category = naval_doctrine
+					uses = 1
+				}
+			}
+		}
+
+		hidden_effect = {
+			FROM = { country_event = { id = HEU_event.128 hours = 8 } }
+		}
+	}
+
+	option = { 
+		name = HEU_event.125.b
+	    ai_chance = {
+		    base = 2
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0.5
+				num_of_civilian_factories > 5
+			}
+	    }
+
+		hidden_effect = {
+			FROM = { country_event = { id = HEU_event.126 hours = 8 } }
+		}
+	}
+}
+
+country_event = { #[FROM.GetName] 측의 기술 공유 요청 거절
+	id = HEU_event.126
+	title = HEU_event.126.t
+	desc = HEU_event.126.desc
+	picture = GFX_report_event_airplane_factory
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.126.a 
+
+	}
+}
+
+country_event = { #[FROM.GetName] 측의 공군 기술 공유
+	id = HEU_event.127
+	title = HEU_event.127.t
+	desc = HEU_event.127.desc
+	picture = GFX_report_event_airplane_factory
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.127.a 
+
+		add_tech_bonus = {
+			name = HEU_event.127.t
+			bonus = 1.0
+			uses = 2
+			category = light_air
+		}
+		
+		add_doctrine_cost_reduction = {
+			name = HEU_event.127.t
+			cost_reduction = 0.50
+			category = air_doctrine
+			uses = 1
+		}
+	}
+}
+
+country_event = { #[FROM.GetName] 측의 해군 기술 공유
+	id = HEU_event.128
+	title = HEU_event.128.t
+	desc = HEU_event.128.desc
+	picture = GFX_report_event_generic_research_lab
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.128.a 
+
+		add_tech_bonus = {
+			name = HEU_event.128.t
+			bonus = 1.0
+			uses = 2
+			category = naval_equipment
+		}
+		
+		add_doctrine_cost_reduction = {
+			name = HEU_event.128.t
+			cost_reduction = 0.50
+			category = naval_doctrine
+			uses = 1
+		}
+	}
+}
+
+country_event = { #[FROM.GetName] 측의 망명 제안
+	id = HEU_event.129
+	title = HEU_event.129.t
+	desc = HEU_event.129.desc
+	picture = GFX_report_event_generic_peaceful_annexation
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.129.a 
+	    ai_chance = {
+		    base = 10
+	    }
+
+		every_country = {
+			limit = { has_war_with = ROOT }
+			HEU = { add_to_war = { targeted_alliance = GEM enemy = PREV hostility_reason = asked_to_join } }
+		}
+
+		HEU = {
+			annex_country = {
+				target = GEM
+				transfer_troops = yes
+			}
+			
+			every_state = {
+				limit = { is_core_of = GEM }
+				add_core_of	= HEU
+				remove_core_of = GEM
+			}
+		}
+
+		custom_effect_tooltip = GAME_OVER_TT
+		
+		hidden_effect = {
+			news_event = {
+				id = HEU_news.12
+			}
+		}
+	}
+	
+	option = { 
+		name = HEU_event.129.b
+	    ai_chance = {
+		    base = 0
+	    }
+		
+	}
+}
+
+country_event = { #리쿠하치마주의 '68혁명'의 확산
+	id = HEU_event.130
+	title = HEU_event.130.t
+	desc = HEU_event.130.desc
+	picture = GFX_report_event_Problem_Solver_68
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.130.a 
+	    ai_chance = {
+		    base = 10
+	    }
+
+		add_ideas = HEU_rikuhachimaism_other_country_idea
+		add_political_power = -25
+	}
+	
+	option = { 
+		name = HEU_event.130.b
+	    ai_chance = {
+		    base = 4
+	    }
+		
+		add_political_power = 25
+	}
+}
 
 country_event = { #우파당 지지자들의 행진
 	id = HEU.flavor_event.1
@@ -1504,6 +1859,39 @@ news_event = {
 		name = HEU_news.11.c
 		trigger = {
 			Kivotos_tag = no
+		}
+	}
+}
+
+# 만마전의 룩셈부르크 망명
+news_event = {
+	id = HEU_news.12
+	title = HEU_news.12.t
+	desc = HEU_news.12.desc
+	picture = GFX_news_event_generic_sign_treaty2
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = HEU_news.12.a
+		trigger = {
+			tag = HEU
+		}
+	}
+
+	option = {
+		name = HEU_news.12.b
+		trigger = {
+			has_war_with = HEU
+		}
+	}
+
+	option = {
+		name = HEU_news.12.c
+		trigger = {
+			NOT = { has_war_with = HEU }
+			NOT = { tag = HEU }
 		}
 	}
 }

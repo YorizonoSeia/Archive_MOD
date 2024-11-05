@@ -1044,6 +1044,19 @@ ideas = {
 				head_of_intelligence
 			}
 		}
+		
+		HEU_rikuhachimaism_other_country_idea = { #리쿠하치마주의 (외국)
+
+			picture = HEU_aru_leader
+
+			allowed = { always = no }
+			allowed_civil_war = { always = yes 	} 
+
+			modifier = {
+				research_speed_factor = 0.05
+				stability_factor = -0.04
+			}
+		}
 	}
 	
 	industrial_concern = {

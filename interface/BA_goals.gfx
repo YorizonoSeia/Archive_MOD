@@ -1,6 +1,26 @@
 spriteTypes = {
 	
 	SpriteType = {
+		name = "GFX_focus_BLM_gang_priority"
+		texturefile = "gfx/interface/goals/BLM/focus_BLM_gang_priority.tga"			
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_BLM_thugs_priority"
+		texturefile = "gfx/interface/goals/BLM/focus_BLM_thugs_priority.tga"			
+	}
+	
+	SpriteType = {
+		name = "GFX_BLM_gang_thugs_domination"
+		texturefile = "gfx/interface/goals/BLM/BLM_gang_thugs_domination.tga"			
+	}
+	
+	SpriteType = {
+		name = "GFX_BLM_bretagne_independent_organization_and_start_of_war"
+		texturefile = "gfx/interface/goals/BLM/BLM_bretagne_independent_organization_and_start_of_war.tga"			
+	}
+
+	SpriteType = {
 		name = "GFX_focus_SHE_kibotoseuganggyeongcaeg"
 		texturefile = "gfx/interface/goals/SHE/focus_SHE_kibotoseuganggyeongcaeg.tga"			
 	}

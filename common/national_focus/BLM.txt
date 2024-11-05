@@ -433,19 +433,224 @@ focus_tree = {
         }
     }
 
-    focus = { #이계의 무법자들
-        id = BLM_Lawbreakers_of_Otherworld
-        icon = GFX_focus_ITA_moschettieri_del_duce
+    focus = { #
+        id = BLM_bretagne_independent_organization_and_start_of_war
+        icon = GFX_BLM_bretagne_independent_organization_and_start_of_war
         x = 25
         y = 0
         cost = 5
 
         completion_reward = {
-            add_political_power = 50
-            country_event = {
-                id = BLM_event.1
-                days = 7
+            add_popularity = {
+                ideology = fascism
+                popularity = -0.10
             }
+        }
+    }
+
+    focus = { #
+        id = BLM_gang_thugs_domination
+        icon = GFX_BLM_gang_thugs_domination
+        prerequisite = {
+            focus = BLM_bretagne_independent_organization_and_start_of_war
+        }
+        x = -1
+        y = 1
+        relative_position_id = BLM_bretagne_independent_organization_and_start_of_war
+        cost = 5
+
+        completion_reward = {
+        }
+    }
+
+    focus = { #
+        id = BLM_sealing_conflicts_in_confusion
+        icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+        prerequisite = {
+            focus = BLM_gang_thugs_domination
+        }
+        x = 0
+        y = 1
+        relative_position_id = BLM_gang_thugs_domination
+        cost = 5
+
+        completion_reward = {
+        }
+    }
+
+    focus = { #
+        id = BLM_gang_priority
+        icon = GFX_focus_BLM_gang_priority
+        mutually_exclusive = {
+            focus = BLM_thugs_priority
+        }
+        x = 7
+        y = 0
+        relative_position_id = BLM_bretagne_independent_organization_and_start_of_war
+        cost = 5
+
+        completion_reward = {
+        }
+    }
+
+    focus = { #
+        id = BLM_thugs_priority
+        icon = GFX_focus_BLM_thugs_priority
+        mutually_exclusive = {
+            focus = BLM_gang_priority
+        }
+        x = 12
+        y = 0
+        relative_position_id = BLM_bretagne_independent_organization_and_start_of_war
+        cost = 5
+
+        completion_reward = {
+        }
+    }
+
+    focus = { #
+        id = BLM_organized_armament_strengthening
+        icon = GFX_goal_generic_production2
+        prerequisite = {
+            focus = BLM_bretagne_independent_organization_and_start_of_war
+            focus = BLM_gang_priority
+            focus = BLM_thugs_priority
+        }
+        x = 3
+        y = 1
+        relative_position_id = BLM_bretagne_independent_organization_and_start_of_war
+        cost = 5
+
+        completion_reward = {
+        }
+    }
+
+    focus = { #
+        id = BLM_return_of_seven_prisoners
+        icon = GFX_focus_rom_parties_end
+        x = -2
+        y = 1
+        relative_position_id = BLM_organized_armament_strengthening
+        cost = 5
+        available = {
+			has_global_flag = KIABOTOS_Escape
+        }
+
+        completion_reward = {
+        }
+    }
+
+    focus = { #
+        id = BLM_bretagne_law
+        icon = GFX_goal_generic_political_pressure
+        prerequisite = {
+            focus = BLM_organized_armament_strengthening
+        }
+        prerequisite = {
+            focus = BLM_return_of_seven_prisoners
+        }
+        x = 0
+        y = 2
+        relative_position_id = BLM_organized_armament_strengthening
+        cost = 5
+
+        completion_reward = {
+        }
+    }
+
+    focus = { #
+        id = BLM_organized_public_security_management
+        icon = GFX_focus_usa_voter_registration_act
+        prerequisite = {
+            focus = BLM_gang_priority
+        }
+        x = -1
+        y = 1
+        relative_position_id = BLM_gang_priority
+        cost = 5
+
+        completion_reward = {
+        }
+    }
+
+    focus = { #
+        id = BLM_suppression_of_skeban_radicals
+        icon = GFX_focus_CZE_german_puppet
+        prerequisite = {
+            focus = BLM_gang_priority
+        }
+        x = 1
+        y = 1
+        relative_position_id = BLM_gang_priority
+        cost = 5
+
+        completion_reward = {
+        }
+    }
+
+    focus = { #
+        id = BLM_mimicking_of_bills
+        icon = GFX_focus_renounce_the_treaty_of_trianon
+        prerequisite = {
+            focus = BLM_organized_public_security_management
+        }
+        prerequisite = {
+            focus = BLM_suppression_of_skeban_radicals
+        }
+        x = 0
+        y = 2
+        relative_position_id = BLM_gang_priority
+        cost = 5
+
+        completion_reward = {
+        }
+    }
+
+    focus = { #
+        id = BLM_free_district_bretagne
+        icon = GFX_focus_SWE_let_fly_all_guns
+        prerequisite = {
+            focus = BLM_thugs_priority
+        }
+        x = -1
+        y = 1
+        relative_position_id = BLM_thugs_priority
+        cost = 5
+
+        completion_reward = {
+        }
+    }
+
+    focus = { #
+        id = BLM_loose_zone_order
+        icon = GFX_focus_hol_abandon_the_gold_standard
+        prerequisite = {
+            focus = BLM_thugs_priority
+        }
+        x = 1
+        y = 1
+        relative_position_id = BLM_thugs_priority
+        cost = 5
+
+        completion_reward = {
+        }
+    }
+
+    focus = { #
+        id = BLM_free_skeban_spirit
+        icon = GFX_focus_spr_masters_of_our_own_fate
+        prerequisite = {
+            focus = BLM_free_district_bretagne
+        }
+        prerequisite = {
+            focus = BLM_loose_zone_order
+        }
+        x = 0
+        y = 2
+        relative_position_id = BLM_thugs_priority
+        cost = 5
+
+        completion_reward = {
         }
     }
 
