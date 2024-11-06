@@ -4836,7 +4836,7 @@ focus_tree = {
 		icon = GFX_goal_HEU_aru_rikuhachima_1
 
 		cost = 10.00
-		x = 15
+		x = 18
 		y = 19
 
 		available = {
@@ -5241,7 +5241,7 @@ focus_tree = {
 					desc = "HEU_aru_fascist_leader_desc"
 					traits = { 
 						HEU_ARU_T1
-						HEU_regent_of_luxembourg
+						HEU_regent_of_luxembourg_2
 					}
 				}
 			}
@@ -5440,7 +5440,7 @@ focus_tree = {
 					desc = "HEU_aru_fascist_leader_desc"
 					traits = { 
 						HEU_ARU_T1
-						HEU_regent_of_luxembourg
+						HEU_regent_of_luxembourg_2
 					}
 				}
 			}
@@ -5491,7 +5491,6 @@ focus_tree = {
 
 		select_effect = {
 			country_event = { id = HEU_event.105 days = 7 }
-			country_event = { id = HEU_event.106 days = 14 }
 		}
 
 		completion_reward = {
@@ -5546,7 +5545,7 @@ focus_tree = {
 
 		bypass = {
 			OR = {
-				NOT = { country_exists = GEH }
+				NOT = { country_exists = GEM }
 				has_war_with = GEM
 				GEM = { is_puppet = yes }
 			}
@@ -5733,7 +5732,7 @@ focus_tree = {
 
 		search_filters = {  }
 
-		cost = 5.00
+		cost = 4.00
 
 		x = -3
 		y = 1
@@ -5770,7 +5769,7 @@ focus_tree = {
 
 		search_filters = {  }
 
-		cost = 5.00
+		cost = 4.00
 
 		x = -1
 		y = 1
@@ -5796,7 +5795,7 @@ focus_tree = {
 		
 		relative_position_id = HEU_luxembourg_education_reform
 
-		icon = GFX_goal_generic_territory_or_war
+		icon = GFX_focus_generic_spread_fascism
 
 		prerequisite = { 
 			focus = HEU_doubt_valkyrie_police_academy
@@ -5827,6 +5826,7 @@ focus_tree = {
 		completion_reward = {
 			add_threat = 3
 			
+			custom_effect_tooltip = HEU_modify_rikuhachimaism_intro
 			add_to_variable = {
 				HEU_aru_var_fascism_drift = 0.05
 				tooltip = fascism_drift_factor_tt
@@ -6345,22 +6345,26 @@ focus_tree = {
 			division_template = { #흥신소 특수작전사령부
 				name = "Benriya Spezialeinsatzkommando" 
 				division_names_group = KIV_SEC_01
-				template_counter = 68
+				#template_counter = 68
 				is_locked = yes
 				force_allow_recruiting = yes
-				division_cap = 12
+				division_cap = 0
 
 				regiments = { 
-					militia = { x = 0 y = 0 }
-					militia = { x = 0 y = 1 }
-					militia = { x = 1 y = 0 }
-					militia = { x = 1 y = 1 }
-					militia = { x = 2 y = 0 }
-					militia = { x = 2 y = 1 }
+					halo_militia = { x = 0 y = 0 }
+					halo_militia = { x = 0 y = 1 }
+					halo_militia = { x = 0 y = 2 }
+					halo_militia = { x = 1 y = 0 }
+					halo_militia = { x = 1 y = 1 }
+					halo_militia = { x = 1 y = 2 }
 				}
 				support = { 
-					engineer = { x = 0 y = 0 }
+					halo_recon = { x = 0 y = 0 }
 				}
+			}
+			set_division_template_cap = {
+				division_template = "Benriya Spezialeinsatzkommando"
+				division_cap = halo_militia_cap
 			}
 
 			capital_scope = {
@@ -6443,11 +6447,17 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			set_division_template_cap = {
-				division_template = "Benriya Spezialeinsatzkommando"
-				division_cap = 24
+			set_variable = {
+				var = halo_militia_cap
+				value = 24
 			}
-			
+			hidden_effect = {
+				set_division_template_cap = {
+					division_template = "Benriya Spezialeinsatzkommando"
+					division_cap = halo_militia_cap
+				}
+			}
+			custom_effect_tooltip = HEU_no_more_evil_tt
 		}
 	}
 
@@ -6764,12 +6774,12 @@ focus_tree = {
 			custom_effect_tooltip = HEU_modify_rikuhachimaism_intro
 			add_to_variable = {
 				HEU_aru_var_modifier_army_sub_unit_halo_infantry_attack_factor = 0.05
-				#tooltip = stability_factor_tt
+				tooltip = HEU_rikuhachimaism_focus_3_1_tt
 			}
 
 			add_to_variable = {
 				HEU_aru_var_modifier_army_sub_unit_halo_infantry_defence_factor = 0.05
-				#tooltip = stability_factor_tt
+				tooltip = HEU_rikuhachimaism_focus_3_2_tt
 			}
 		}
 	}
@@ -7574,7 +7584,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_stability = 0.1
 			HEU_aru = {
 				add_planning = 1
 			}
@@ -7642,7 +7651,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_stability = 0.05
+			add_cic = 2500
 		}
 	}
 	
@@ -8033,7 +8042,10 @@ focus_tree = {
 		y = 4
 
 		available = { 
-			
+			custom_trigger_tooltip = {
+				tooltip = HEU_aru_persona_charisma_need_50_tt
+				check_variable = { Global.aru_stat_point_array^3 > 49 } #카리스마 49 초과
+			}
 		}
 
 		bypass = {
@@ -8070,8 +8082,8 @@ focus_tree = {
 		icon = GFX_focus_CHL_strengthen_the_central_bank
 
 		cost = 5.00
-		x = 45
-		y = 16
+		x = 44
+		y = 19
 
 		available = {
 		}
@@ -9271,10 +9283,17 @@ focus_tree = {
 			focus = HEU_gehenna_labour_council_3 
 		}
 
-		cost = 5.00
+		cost = 10.00
 
 		x = 4
 		y = 4
+
+		select_effect = {
+			country_event = { id = HEU_event.118 days = 14 }
+			country_event = { id = HEU_event.119 days = 28 }
+			country_event = { id = HEU_event.120 days = 36 }
+			country_event = { id = HEU_event.121 days = 49 }
+		}
 
 		available = { 
 			custom_trigger_tooltip = {
@@ -9293,6 +9312,9 @@ focus_tree = {
 		
 		completion_reward = {
 			custom_effect_tooltip = HEU_civil_partnership_tt
+			hidden_effect = {
+				
+			}
 		}
 	}
 	
@@ -9307,8 +9329,8 @@ focus_tree = {
 		icon = GFX_goal_HEU_wjddnjfdkfn
 
 		cost = 2.00
-		x = 62
-		y = 16
+		x = 72
+		y = 19
 
 		available = {
 		}
@@ -9419,8 +9441,8 @@ focus_tree = {
 		icon = GFX_goal_fortify_the_westwall
 
 		cost = 5.00
-		x = 72
-		y = 16
+		x = 60
+		y = 19
 
 		available = {
 			controls_state = 8
@@ -9448,6 +9470,10 @@ focus_tree = {
 				}
 			}
 			country_event = { id = HEU.flavor_event.11 }
+			
+			add_dynamic_modifier = {
+				modifier = HEU_luxembourg_army_dynamic_modifier
+			}
 		}
 	}
 
@@ -9472,6 +9498,10 @@ focus_tree = {
 		y = 1
 
 		available = { 
+			custom_trigger_tooltip = {
+				tooltip = HEU_aru_persona_charisma_need_15_tt
+				check_variable = { Global.aru_stat_point_array^3 > 14 } #카리스마 14 초과
+			}
 
 		}
 
@@ -9502,6 +9532,12 @@ focus_tree = {
 				defense_skill=2
 				planning_skill=1
 				logistics_skill=1
+			}
+
+			custom_effect_tooltip = HEU_modify_luxembourg_army_intro
+			add_to_variable = {
+				HEU_luxembourg_army_training_time_factor = -0.1
+				tooltip = training_time_factor_tt
 			}
 			
 			hidden_effect = {
@@ -9572,6 +9608,14 @@ focus_tree = {
 					count = 3
 				}
 			}
+
+			custom_effect_tooltip = whitespace_tt
+
+			custom_effect_tooltip = HEU_modify_luxembourg_army_intro
+			add_to_variable = {
+				HEU_luxembourg_army_cas_damage_reduction = 0.1
+				tooltip = cas_damage_reduction_tt
+			}
 		}
 	}
 
@@ -9608,6 +9652,14 @@ focus_tree = {
 				category = land_doctrine
 				uses = 1
 			}
+
+			custom_effect_tooltip = whitespace_tt
+
+			custom_effect_tooltip = HEU_modify_luxembourg_army_intro
+			add_to_variable = {
+				HEU_luxembourg_army_terrain_penalty_reduction = -0.1
+				tooltip = terrain_penalty_reduction_tt #편집
+			}
 		}
 	}
 
@@ -9639,10 +9691,11 @@ focus_tree = {
 
 		completion_reward = {
 			add_tech_bonus = {
-				name = HEU_benriya_strategy_5
-				bonus = 1.0
+				name = HEU_prussian_strategy_4
+				bonus = 1
 				uses = 2
-				category = artillery
+				category = motorized_equipment
+				category = cat_mechanized_equipment
 			}
 
 		}
@@ -9665,6 +9718,10 @@ focus_tree = {
 		y = 2
 
 		available = { 
+			custom_trigger_tooltip = {
+				tooltip = HEU_aru_persona_charisma_need_25_tt
+				check_variable = { Global.aru_stat_point_array^3 > 24 } #카리스마 24 초과
+			}
 
 		}
 
@@ -9676,6 +9733,24 @@ focus_tree = {
 
 		completion_reward = {
 			
+			add_tech_bonus = {
+				name = HEU_prussian_strategy_5
+				bonus = 0.75
+				uses = 2
+				category = infantry_tech
+			}
+
+			custom_effect_tooltip = whitespace_tt
+
+			custom_effect_tooltip = HEU_modify_luxembourg_army_intro
+			add_to_variable = {
+				HEU_luxembourg_army_army_infantry_attack_factor = 0.1
+				tooltip = army_infantry_attack_factor_tt #교정
+			}
+			add_to_variable = {
+				HEU_luxembourg_army_army_infantry_defence_factor = 0.1
+				tooltip = army_infantry_defence_factor_tt #교정
+			}
 		}
 	}
 
@@ -9700,6 +9775,10 @@ focus_tree = {
 		y = 1
 
 		available = { 
+			custom_trigger_tooltip = {
+				tooltip = HEU_aru_persona_charisma_need_15_tt
+				check_variable = { Global.aru_stat_point_array^3 > 14 } #카리스마 14 초과
+			}
 
 		}
 
@@ -9718,9 +9797,15 @@ focus_tree = {
 				uses = 1
 			}
 
-			add_equipment_to_stockpile = {
-				type = infantry_equipment
-				amount = 600
+			custom_effect_tooltip = HEU_modify_luxembourg_army_intro
+			add_to_variable = {
+				HEU_luxembourg_army_army_org_factor = 0.1
+				tooltip = army_org_factor_tt
+			}
+
+			add_to_variable = {
+				HEU_aru_var_modifier_army_sub_unit_halo_infantry_attack_factor = 0.05
+				tooltip = HEU_rikuhachimaism_focus_3_1_tt
 			}
 			
 			hidden_effect = {
@@ -9795,6 +9880,18 @@ focus_tree = {
 					count = 2
 				}
 			}
+
+			custom_effect_tooltip = whitespace_tt
+
+			custom_effect_tooltip = HEU_modify_luxembourg_army_intro
+			add_to_variable = {
+				HEU_luxembourg_army_army_artillery_attack_factor = 0.15
+				tooltip = artillery_attack_factor_tt
+			}
+			add_to_variable = {
+				HEU_luxembourg_army_army_artillery_defence_factor = 0.05
+				tooltip = army_artillery_defence_factor_tt
+			}
 		}
 	}
 
@@ -9838,7 +9935,23 @@ focus_tree = {
 				category = special_forces_doctrine
 			}
 
-			add_war_support = 0.1
+			custom_effect_tooltip = whitespace_tt
+
+			custom_effect_tooltip = HEU_modify_luxembourg_army_intro
+			add_to_variable = {
+				HEU_luxembourg_army_army_org_factor = 0.05
+				tooltip = army_org_factor_tt
+			}
+
+			add_to_variable = {
+				HEU_aru_var_modifier_army_sub_unit_halo_infantry_attack_factor = 0.05
+				tooltip = HEU_rikuhachimaism_focus_3_1_tt
+			}
+
+			add_to_variable = {
+				HEU_luxembourg_army_special_forces_cap = 0.1
+				tooltip = special_forces_cap_tt
+			}
 		}
 	}
 
@@ -9906,6 +10019,10 @@ focus_tree = {
 		y = 3
 
 		available = { 
+			custom_trigger_tooltip = {
+				tooltip = HEU_aru_persona_charisma_need_25_tt
+				check_variable = { Global.aru_stat_point_array^3 > 24 } #카리스마 24 초과
+			}
 
 		}
 
@@ -9922,6 +10039,18 @@ focus_tree = {
 				bonus = 1.0
 				uses = 2
 				category = artillery
+			}
+
+			custom_effect_tooltip = whitespace_tt
+
+			custom_effect_tooltip = HEU_modify_luxembourg_army_intro
+			add_to_variable = {
+				HEU_luxembourg_army_army_artillery_attack_factor = 0.05
+				tooltip = artillery_attack_factor_tt
+			}
+			add_to_variable = {
+				HEU_luxembourg_army_army_infantry_attack_factor = 0.1
+				tooltip = army_infantry_attack_factor_tt #교정
 			}
 
 		}
@@ -9977,6 +10106,14 @@ focus_tree = {
 				add_mio_design_team_change_cost = -0.2
 				add_mio_research_bonus = 0.1
 			}
+			
+			add_war_support = 0.1
+
+			custom_effect_tooltip = HEU_modify_luxembourg_army_intro
+			add_to_variable = {
+				HEU_luxembourg_army_breakthrough_factor = 0.1
+				tooltip = breakthrough_factor_tt
+			}
 		}
 	}
 
@@ -9988,7 +10125,7 @@ focus_tree = {
 			focus = HEU_defence_industry
 		}
 
-		x = -2
+		x = -3
 		y = 1
 
 		relative_position_id = HEU_defence_industry
@@ -10001,6 +10138,10 @@ focus_tree = {
 				ARI = {
 					has_character = saori
 				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = HEU_aru_persona_charisma_need_25_tt
+				check_variable = { Global.aru_stat_point_array^3 > 24 } #카리스마 24 초과
 			}
 		}
 
@@ -10021,7 +10162,7 @@ focus_tree = {
 			focus = HEU_defence_industry
 		}
 
-		x = 0
+		x = -1
 		y = 1
 
 		relative_position_id = HEU_defence_industry
@@ -10033,6 +10174,12 @@ focus_tree = {
 		search_filters = {  }
 
 		completion_reward = {
+			custom_effect_tooltip = HEU_modify_luxembourg_army_intro
+			add_to_variable = {
+				HEU_luxembourg_army_supply_consumption_factor = -0.1
+				tooltip = supply_consumption_factor_tt
+			}
+
 			set_technology = { bicycle_infantry = 1 }
 		}
 	}
@@ -10045,7 +10192,7 @@ focus_tree = {
 			focus = HEU_defence_industry
 		}
 
-		x = 2
+		x = 1
 		y = 1
 
 		relative_position_id = HEU_defence_industry
@@ -10058,6 +10205,11 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
+			custom_effect_tooltip = HEU_modify_luxembourg_army_intro
+			add_to_variable = {
+				HEU_luxembourg_army_armor_speed_factor = 0.05
+				tooltip = army_armor_speed_factor_tt #교정
+			}
 
 			add_tech_bonus = {
 				name = HEU_benriya_tanks
@@ -10107,7 +10259,7 @@ focus_tree = {
 			focus = HEU_benriya_bicycle
 		}
 
-		x = -4
+		x = 4
 		y = 2
 
 		relative_position_id = HEU_defence_industry
@@ -10168,7 +10320,7 @@ focus_tree = {
 
 	focus = {
 		id = HEU_navy_focus_1
-		icon = GFX_goal_generic_navy_battleship
+		icon = GFX_focus_generic_naval_discipline #GFX_goal_generic_navy_battleship
 
 		prerequisite = { 
 			focus = HEU_benriya_bicycle
@@ -10401,7 +10553,19 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			army_experience = 25
+			custom_effect_tooltip = HEU_modify_luxembourg_army_intro
+			add_to_variable = {
+				HEU_luxembourg_army_breakthrough_factor = 0.05
+				tooltip = breakthrough_factor_tt
+			}
+			add_to_variable = {
+				HEU_luxembourg_army_heat_attrition_factor = -0.1
+				tooltip = heat_attrition_factor_tt
+			}
+			add_to_variable = {
+				HEU_luxembourg_army_winter_attrition_factor = -0.1
+				tooltip = winter_attrition_factor_tt
+			}
 		}
 	}
 
@@ -10423,13 +10587,28 @@ focus_tree = {
 		relative_position_id = HEU_defence_industry
 
 		cost = 5
+
 		available = {
+			custom_trigger_tooltip = {
+				tooltip = HEU_aru_persona_charisma_need_40_tt
+				check_variable = { Global.aru_stat_point_array^3 > 39 } #카리스마 39 초과
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
 			army_experience = 25
+
+			custom_effect_tooltip = HEU_modify_luxembourg_army_intro
+			add_to_variable = {
+				HEU_luxembourg_army_supply_consumption_factor = -0.15
+				tooltip = supply_consumption_factor_tt #교정
+			}
+			add_to_variable = {
+				HEU_luxembourg_army_army_morale_factor = 0.1
+				tooltip = army_morale_factor_tt
+			}
 		}
 	}
 
@@ -10451,7 +10630,13 @@ focus_tree = {
 		relative_position_id = HEU_defence_industry
 
 		cost = 5
+		
 		available = {
+			custom_trigger_tooltip = {
+				tooltip = HEU_aru_persona_charisma_need_40_tt
+				check_variable = { Global.aru_stat_point_array^3 > 39 } #카리스마 39 초과
+			}
+
 			OR = {
 				has_dynamic_modifier = {
 					modifier = HEU_rikuhachimaism_idea
@@ -10465,6 +10650,12 @@ focus_tree = {
 		search_filters = {  }
 
 		completion_reward = {
+
+			custom_effect_tooltip = HEU_modify_luxembourg_army_intro
+			add_to_variable = {
+				HEU_luxembourg_army_conscription_factor = 0.1
+				tooltip = conscription_factor_tt
+			}
 		}
 	}
 
@@ -10498,11 +10689,25 @@ focus_tree = {
 			has_dynamic_modifier = {
 				modifier = HEU_rikuhachimaism_idea
 			}
+
+			custom_trigger_tooltip = {
+				tooltip = HEU_aru_persona_charisma_need_50_tt
+				check_variable = { Global.aru_stat_point_array^3 > 49 } #카리스마 49 초과
+			}
 		}
 
 		search_filters = {  }
 
 		completion_reward = {
+			custom_effect_tooltip = HEU_modify_luxembourg_army_intro
+			add_to_variable = {
+				HEU_luxembourg_army_dig_in_speed_factor = 0.1
+				tooltip = dig_in_speed_factor_tt
+			}
+			add_to_variable = {
+				HEU_luxembourg_army_breakthrough_factor = 0.05
+				tooltip = breakthrough_factor_tt
+			}
 		}
 	}
 
@@ -10536,12 +10741,410 @@ focus_tree = {
 			has_dynamic_modifier = {
 				modifier = HEU_luxembourgism_idea
 			}
+			
+			custom_trigger_tooltip = {
+				tooltip = HEU_aru_persona_charisma_need_50_tt
+				check_variable = { Global.aru_stat_point_array^3 > 49 } #카리스마 49 초과
+			}
 		}
 
 		search_filters = {  }
 
 		completion_reward = {
+			custom_effect_tooltip = HEU_modify_luxembourg_army_intro
+			add_to_variable = {
+				HEU_luxembourg_army_heat_attrition_factor = -0.1
+				tooltip = heat_attrition_factor_tt
+			}
+			add_to_variable = {
+				HEU_winter_army_winter_attrition_factor = -0.1
+				tooltip = winter_attrition_factor_tt
+			}
+			add_to_variable = {
+				HEU_luxembourg_army_training_time_factor = -0.15
+				tooltip = training_time_factor_tt
+			}
 		}
 	}
 	
+	
+	###############
+	#
+	# 룩셈부르크 흥신소 공군 중점
+	#
+	###############
+
+	focus = { 
+		id = HEU_air_force_focus_1
+		icon = GFX_goal_generic_build_airforce
+
+		cost = 5.00
+		x = 6
+		y = 4
+
+		available = {
+			has_completed_focus = HEU_schuster_line
+		}
+
+		bypass = {
+		}
+
+		allow_branch = {
+			is_debug = yes
+		}
+
+		relative_position_id = HEU_schuster_line
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			air_experience = 50
+			add_tech_bonus = {
+				name = HEU_air_force_focus_1
+				bonus = 1
+				uses = 1
+				category = light_air
+			}
+
+			if = {
+				limit = {
+					controls_state = 8
+				}
+				8 = {
+					add_building_construction = {
+						type = air_base
+						level = 1
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = HEU_air_force_focus_2
+		
+		relative_position_id = HEU_air_force_focus_1
+
+		icon = GFX_focus_SOV_flying_clubs
+
+		prerequisite = { 
+			focus = HEU_air_force_focus_1 
+		}
+
+		mutually_exclusive = {
+			focus = HEU_air_force_focus_3
+		}
+
+		cost = 5.00
+
+		x = -1
+		y = 1
+
+		available = { 
+
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER }
+
+		completion_reward = {
+			add_ace = {
+				type = "fighter_good"
+				name = "Raymond"
+				surname = "Lallemant"
+				callsign = "Cheval" 
+				#https://en.wikipedia.org/wiki/Raymond_Lallemant
+			}
+			add_ace = {
+				type = "fighter_good"
+				name = "Maurice"
+				surname = "Balasse"
+				callsign = "Arthur" 
+				#https://en.wikipedia.org/wiki/Maurice_Balasse
+			}
+
+			add_doctrine_cost_reduction = {
+				name = HEU_air_force_focus_2
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+			if = {
+				limit = {
+					controls_state = 8
+				}
+				8 = {
+					add_building_construction = {
+						type = air_base
+						level = 1
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = HEU_air_force_focus_3
+		
+		relative_position_id = HEU_air_force_focus_1
+
+		icon = GFX_goal_Perfect_team_first_congress
+
+		prerequisite = { 
+			focus = HEU_air_force_focus_1 
+		}
+
+		mutually_exclusive = {
+			focus = HEU_air_force_focus_2
+		}
+
+		cost = 5.00
+
+		x = 1
+		y = 1
+
+		available = { 
+			is_in_faction_with = GEM
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = {  }
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = HEU_air_force_focus_3
+				cost_reduction = 0.5
+				uses = 2
+				category = air_doctrine
+			}
+			if = {
+				limit = {
+					controls_state = 8
+				}
+				8 = {
+					add_building_construction = {
+						type = air_base
+						level = 1
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = HEU_establish_aircraft_industry
+		
+		relative_position_id = HEU_air_force_focus_1
+
+		icon = GFX_focus_generic_air_bases
+
+		prerequisite = { 
+			focus = HEU_air_force_focus_2
+			focus = HEU_air_force_focus_3
+		}
+
+		mutually_exclusive = {
+
+		}
+
+		cost = 5.00
+
+		x = 0
+		y = 2
+
+		available = { 
+
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = {  }
+
+		completion_reward = {
+			capital_scope = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				add_resource = {
+					type = steel
+					amount = 9
+				}
+			}
+			
+			add_tech_bonus = {
+				name = HEU_establish_aircraft_industry
+				bonus = 0.5
+				uses = 2
+				category = air_equipment
+			}
+		}
+	}
+
+	focus = {
+		id = HEU_air_defense
+		
+		relative_position_id = HEU_air_force_focus_1
+
+		icon = GFX_focus_generic_air_defense
+
+		prerequisite = { 
+			focus = HEU_air_force_focus_1 
+		}
+
+		prerequisite = { 
+			focus = HEU_defence_industry 
+		}
+
+		cost = 5.00
+
+		x = -3
+		y = 1
+
+		available = { 
+			controls_state = 8
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = {  }
+
+		completion_reward = {
+			8 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = HEU_air_force_focus_4
+		
+		relative_position_id = HEU_air_force_focus_1
+
+		icon = GFX_focus_generic_armored_air_support
+
+		prerequisite = { 
+			focus = HEU_establish_aircraft_industry 
+		}
+
+		cost = 8.00
+
+		x = 3
+		y = 3
+
+		available = { 
+
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = HEU_air_force_focus_4
+				bonus = 0.75
+				uses = 2
+				category = heavy_air
+			}
+		}
+	}
+
+	focus = {
+		id = HEU_air_force_focus_5
+		
+		relative_position_id = HEU_air_force_focus_1
+
+		icon = GFX_focus_SWE_marauder_bombers
+
+		prerequisite = { 
+			focus = HEU_establish_aircraft_industry 
+		}
+
+		cost = 8.00
+
+		x = 1
+		y = 3
+
+		available = { 
+
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = HEU_air_force_focus_5 
+				bonus = 0.75
+				uses = 2
+				category = medium_air
+			}
+		}
+	}
+
+	focus = {
+		id = HEU_air_force_focus_6
+		
+		relative_position_id = HEU_air_force_focus_1
+
+		icon = GFX_focus_rocketry
+
+		prerequisite = { 
+			focus = HEU_air_force_focus_4 
+		}
+		prerequisite = { 
+			focus = HEU_air_force_focus_5 
+		}
+
+		cost = 10.00
+
+		x = 2
+		y = 4
+
+		available = { 
+			custom_trigger_tooltip = {
+				tooltip = HEU_aru_persona_charisma_need_70_tt
+				check_variable = { Global.aru_stat_point_array^3 > 69 } #카리스마 69 초과
+			}
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = secret_bonus
+				bonus = 0.5
+				uses = 2
+				category = electronics
+				category = nuclear
+				category = rocketry
+			}
+		}
+	}
 }
