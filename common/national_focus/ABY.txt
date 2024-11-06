@@ -11993,6 +11993,15 @@ focus_tree = {
 					set_cosmetic_tag = ABY_czechoslovakia_republic
 				}
 			}
+			every_country = {
+				limit = {
+					has_opinion_modifier = BA_another_demension
+				}
+				remove_opinion_modifier = {
+					target = PREV
+					modifier = BA_another_demension
+				}
+			}
 			add_stability = 0.15
 			9 = {
 				set_state_name = ABY_state_bohemia
