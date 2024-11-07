@@ -9234,21 +9234,11 @@ ABY_descision_category_ennead_puppet = { # 엔네아드 괴뢰
 
 		fire_only_once = yes
 
-		cost = 100
+		cost = 25
 
 		days_remove = 100
 
         remove_effect = {
-			every_state = {
-				limit = {
-					state = 4
-					state = 984
-					state = 152
-					state = 848
-					state = 153
-				}
-				add_core_of = ABY
-			}
 			set_province_name = {
 				id = 732
 				name = ABY_name_abydos_17
@@ -9405,6 +9395,88 @@ ABY_descision_category_ennead_puppet = { # 엔네아드 괴뢰
 					}
 				}
 				add_core_of = ABY
+			}
+        }
+	}
+	ABY_descision_GEH_middle = {
+        priority = 1
+
+        allowed = {
+            tag = ABY
+        }
+
+		visible = {
+			tag = ABY
+			has_country_flag = ABY_flag_ennead
+		}
+
+        available = {
+			any_state = {
+				55 = { is_controlled_by = ABY }
+			}
+        }
+
+		fire_only_once = yes
+
+		cost = 150
+
+		days_remove = 150
+
+        remove_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 55
+					}
+				}
+				add_core_of = ABY
+			}
+			set_province_name = {
+				id = 6488
+				name = ABY_name_abydos_22
+			}
+        }
+	}
+	ABY_descision_TRM_eden = {
+        priority = 1
+
+        allowed = {
+            tag = ABY
+        }
+
+		visible = {
+			tag = ABY
+			has_country_flag = ABY_flag_ennead
+		}
+
+        available = {
+			any_state = {
+				64 = { is_controlled_by = ABY }
+				68 = { is_controlled_by = ABY }
+				86 = { is_controlled_by = ABY }
+			}
+        }
+
+		fire_only_once = yes
+
+		cost = 150
+
+		days_remove = 150
+
+        remove_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 64
+						state = 68
+						state = 86
+					}
+				}
+				add_core_of = ABY
+			}
+			set_province_name = {
+				id = 6521
+				name = ABY_name_abydos_23
 			}
         }
 	}
@@ -10476,6 +10548,88 @@ ABY_descision_category_abydos_puppet = { # 연방조약 괴뢰
 					}
 				}
 				add_core_of = ABY
+			}
+        }
+	}
+	ABY_descision_GEH_middle_2 = {
+        priority = 1
+
+        allowed = {
+            tag = ABY
+        }
+
+		visible = {
+			tag = ABY
+			has_country_flag = ABY_flag_abydos_federation
+		}
+
+        available = {
+			any_state = {
+				55 = { is_controlled_by = ABY }
+			}
+        }
+
+		fire_only_once = yes
+
+		cost = 150
+
+		days_remove = 150
+
+        remove_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 55
+					}
+				}
+				add_core_of = ABY
+			}
+			set_province_name = {
+				id = 6488
+				name = ABY_name_abydos_22
+			}
+        }
+	}
+	ABY_descision_TRM_eden_2 = {
+        priority = 1
+
+        allowed = {
+            tag = ABY
+        }
+
+		visible = {
+			tag = ABY
+			has_country_flag = ABY_flag_abydos_federation
+		}
+
+        available = {
+			any_state = {
+				64 = { is_controlled_by = ABY }
+				68 = { is_controlled_by = ABY }
+				86 = { is_controlled_by = ABY }
+			}
+        }
+
+		fire_only_once = yes
+
+		cost = 150
+
+		days_remove = 150
+
+        remove_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 64
+						state = 68
+						state = 86
+					}
+				}
+				add_core_of = ABY
+			}
+			set_province_name = {
+				id = 6521
+				name = ABY_name_abydos_23
 			}
         }
 	}
