@@ -1865,6 +1865,10 @@
 			}
 			if = {
 				limit = { has_completed_focus = TRM_Endsige3 }
+				unlock_decision_tooltip = TRM_I_AM_LAZY
+				unlock_decision_tooltip = TRM_Balkan_Reichskommissariat
+				unlock_decision_tooltip = TRM_ITA_Reichskommissariat
+				unlock_decision_tooltip = TRM_SPR_Reichskommissariat
 			}
 		}
 	}

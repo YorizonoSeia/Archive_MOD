@@ -3094,7 +3094,10 @@ TRM_kivotos_core_states_categories = {
 	}
 	TRM_SPR_Reichskommissariat = {
 		available = {
-			has_war = no
+			hidden_trigger = {
+				has_completed_focus = TRM_Endsige3
+				has_completed_focus = TRM_Endsige8
+			}
             custom_trigger_tooltip = {
                 tooltip = TRN_Holy_Mandate_Trigger_tt
                 controls_state = 176
@@ -3157,7 +3160,10 @@ TRM_kivotos_core_states_categories = {
                 state = 118
             }
         }
-		visible = { }
+		visible = {
+			has_completed_focus = TRM_Endsige3
+			has_completed_focus = TRM_Endsige8
+		}
 		cost = 100
 		days_remove = 25
 		ai_will_do = { factor = 1 }
@@ -3264,7 +3270,10 @@ TRM_kivotos_core_states_categories = {
                 state = 116
             }
         }
-		visible = { }
+		visible = {
+			has_completed_focus = TRM_Endsige3
+			has_completed_focus = TRM_Endsige8
+		}
 		cost = 100
 		days_remove = 25
 		ai_will_do = { factor = 1 }
@@ -3434,7 +3443,10 @@ TRM_kivotos_core_states_categories = {
                 state = 182
             }
         }
-		visible = { }
+		visible = {
+			has_completed_focus = TRM_Endsige3
+			has_completed_focus = TRM_Endsige8
+		}
 		cost = 100
 		days_remove = 25
 		ai_will_do = { factor = 1 }
@@ -3443,6 +3455,15 @@ TRM_kivotos_core_states_categories = {
 		complete_effect = { }
 		remove_effect = {
 			TRM_Balkan_puppet = yes
+		}
+	}
+	TRM_I_AM_LAZY = {
+		available = {
+			hidden_trigger = { always = no }
+		}
+		visible = {
+			has_completed_focus = TRM_Endsige3
+			has_completed_focus = TRM_Endsige8
 		}
 	}
 }

@@ -1698,6 +1698,9 @@
  TRM_RED_Reichskommissariat: "붉은겨울 파편화"
  TRM_SPR_Reichskommissariat: "이베리아 반도 평정"
  TRM_ITA_Reichskommissariat: "이탈리아 반도 분할"
+ TRM_Balkan_Reichskommissariat: "발칸 반도 평정"
+ TRM_I_AM_LAZY: "딸깍 버튼"
+ TRM_I_AM_LAZY_desc: "사실은 말이죠 모든 지역을 카테고리로 나눈 뒤에 하나하나 신성통치령을 설치하도록 하는게 제 의도였습니다. 그러나 저는 너무 게을렀어요. 그렇기에 저는 간편하고도 확실한 버튼 하나를 꾸욱 눌러 전세계에 차례대로 신성통치령이 설치되도록 하였습니다.\n\n사건을 통해 하나씩 하나씩 박히니 렉은... 아마 안걸릴거에요. 아마."
 
 # 아리우스 스쿼드 문제 ###Thx for TNO team###
  TRN_arius_squad_smash_decision: "아리우스 스쿼드 문제"
