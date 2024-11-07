@@ -11,7 +11,7 @@ BLM_INF_01 =
     # Number reservation system will tie to another group.
 	#link_numbering_with = { YUG_GAR_01 }
 
-	fallback_name = "%d. Prefect Team"
+	fallback_name = "%d. Blackmacket Defence"
 
 	# Names with numbers (only one number per entry). 
 	# It's okay to have gaps in numbering.
@@ -23,5 +23,85 @@ BLM_INF_01 =
 		5 = { "%d. Blackmacket Mercenaries" }
 		9 = { "%d. Capital Defense Division" }
 		15 = { "%d. Blackmacket Guard" }
+    }
+}
+BLM_INF_02 = 
+{
+    name = "Helmet gang"
+
+    for_countries = { BLM }
+
+    can_use = { always = yes }
+
+    division_types = { "halo_militia" }
+
+    # Number reservation system will tie to another group.
+	#link_numbering_with = { YUG_GAR_01 }
+
+	fallback_name = "%d. Helmet gang"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+
+    ordered = 
+    {
+        1 = { "1. Katakata Helmet gang" }
+		2 = { "2. Katakata Helmet gang" }
+		3 = { "1. Gourmet Helmet gang" }
+		4 = { "3. Katakata Helmet gang" }
+		5 = { "2. Gourmet Helmet gang" }
+		6 = { "4. Katakata Helmet gang" }
+		7 = { "5. Katakata Helmet gang" }
+		8 = { "6. Katakata Helmet gang" }
+		9 = { "1. Flap flutter Helmet gang" }
+		10 = { "2. Flap flutter Helmet gang" }
+		11 = { "3. Gourmet Helmet gang" }
+		12 = { "Helmet gang" }
+		13 = { "Helmet gang" }
+		17 = { "1. The rough Helmet gang" }
+		18 = { "2. The rough Helmet gang" }
+		20 = { "Helmet gang" }
+		21 = { "Helmet gang" }
+		22 = { "3. The rough Helmet gang" }
+    }
+}
+BLM_INF_03 = 
+{
+    name = "Skevan"
+
+    for_countries = { BLM }
+
+    can_use = { always = yes }
+
+    division_types = { "halo_infantry" }
+
+    # Number reservation system will tie to another group.
+	#link_numbering_with = { YUG_GAR_01 }
+
+	fallback_name = "%d. Skevan"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+
+    ordered = 
+    {
+        1 = { "1. Alley Skevan" }
+		2 = { "2. Alley Skevan" }
+		3 = { "1. Z Skevan" }
+		4 = { "Skevan" }
+		5 = { "2. Z Skevan" }
+		6 = { "4. Alley Skevan" }
+		7 = { "Skevan" }
+		8 = { "Skevan" }
+		9 = { "Action Group Skevan" }
+		10 = { "Action Group Skevan" }
+		11 = { "3. Z Skevan" }
+		12 = { "Action Group Skevan" }
+		13 = { "Action Group Skevan" }
+		17 = { "Skevan" }
+		18 = { "Skevan" }
+		20 = { "Skevan" }
+		21 = { "Skevan" }
+		22 = { "Skevan" }
     }
 }

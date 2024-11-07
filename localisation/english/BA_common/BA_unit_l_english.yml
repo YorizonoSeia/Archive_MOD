@@ -2,6 +2,8 @@
  #보병#
  halo_infantry: "헤일로 보병"
  halo_infantry_desc: "헤일로로 보호받는 보병."
+ halo_militia: "헤일로 민병"
+ halo_militia_desc: "헤일로로 보호받는 민병."
  halo_special_forces: "헤일로 특수부대"
  halo_special_forces_desc: "정예 헤일로 특수부대."
  low_halo_infantry: "인조 헤일로 보병"

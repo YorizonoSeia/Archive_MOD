@@ -11,7 +11,8 @@ set_variable = { ROOT.halo_infantry_cap = 0 } # 사단 제한, 헤일로 보병�
 
 set_country_flag = kivotos_research_on
 
-set_variable = { ROOT.halo_militia_cap = 10 } # 사단 제한, 헤일로 보병의 사단 제한과 같아야 함
+set_variable = { ROOT.halo_militia_cap = 6 } # 사단 제한, 헤일로 민병의 사단 제한과 같아야 함
+set_variable = { ROOT.halo_militia_cap_skevan = 6 } # 사단 제한, 헤일로 민병의 사단 제한과 같아야 함
 
 add_ideas = {
 	volunteer_only
@@ -58,6 +59,8 @@ set_popularities = {
 }
 
 recruit_character = BLM_Professor
+recruit_character = BLM_Kiyosumi_Akira
+recruit_character = BLM_Kurihama_Akemi
 recruit_character = BLM_atsuko
 recruit_character = BLM_hiyori
 recruit_character = BLM_misaki

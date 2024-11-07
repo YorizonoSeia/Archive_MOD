@@ -205,6 +205,11 @@ focus_tree = {
                     level = 2
                 }
             }
+            if = {
+                limit = { NOT =  { has_global_flag = BLM_event_1_flag } }
+                country_event = { id = BLM_event.1 hours = 12 }
+                custom_effect_tooltip = BLM_event_1_tt
+            }
         }
     }
 
@@ -547,15 +552,17 @@ focus_tree = {
     focus = { #
         id = BLM_bretagne_independent_organization_and_start_of_war
         icon = GFX_BLM_bretagne_independent_organization_and_start_of_war
-        x = 25
+        x = 20
         y = 0
         cost = 5
 
         completion_reward = {
+            add_stability = 0.10
             add_popularity = {
                 ideology = fascism
                 popularity = -0.10
             }
+            news_event = { id = BA_news.108 hours = 8 }
         }
     }
 
@@ -606,6 +613,12 @@ focus_tree = {
                 country_event = { id = BLM_event.1 hours = 12 }
                 custom_effect_tooltip = BLM_event_1_tt
             }
+
+            custom_effect_tooltip = BLM_militia_div_cap_2_tt
+            hidden_effect = {
+                add_to_variable = { ROOT.halo_militia_cap = 2 }
+                set_division_template_cap = {  division_template = "Helmet gang" division_cap = ROOT.halo_militia_cap }
+            }
         }
     }
 
@@ -626,6 +639,12 @@ focus_tree = {
                 country_event = { id = BLM_event.1 hours = 12 }
                 custom_effect_tooltip = BLM_event_1_tt
             }
+            
+            custom_effect_tooltip = BLM_skevan_div_cap_4_tt
+            hidden_effect = {
+                add_to_variable = { ROOT.halo_militia_cap_skevan = 4 }
+                set_division_template_cap = {  division_template = "Skevan" division_cap = ROOT.halo_militia_cap }
+            }
         }
     }
 
@@ -643,6 +662,27 @@ focus_tree = {
         cost = 5
 
         completion_reward = {
+            custom_effect_tooltip = BLM_organized_public_security_management_tt
+            hidden_effect = {
+                add_units_to_division_template = {
+                    template_name = "Helmet gang"
+                    support = { 
+                        artillery = 0
+                    }
+                }
+            }
+
+            custom_effect_tooltip = BLM_militia_div_cap_2_tt
+            hidden_effect = {
+                add_to_variable = { ROOT.halo_militia_cap = 2 }
+                set_division_template_cap = {  division_template = "Helmet gang" division_cap = ROOT.halo_militia_cap }
+            }
+            
+            custom_effect_tooltip = BLM_skevan_div_cap_4_tt
+            hidden_effect = {
+                add_to_variable = { ROOT.halo_militia_cap_skevan = 4 }
+                set_division_template_cap = {  division_template = "Skevan" division_cap = ROOT.halo_militia_cap }
+            }
         }
     }
 
@@ -658,6 +698,7 @@ focus_tree = {
         }
 
         completion_reward = {
+            custom_effect_tooltip = BLM_return_of_seven_prisoners_tt
         }
     }
 
@@ -697,6 +738,15 @@ focus_tree = {
         cost = 5
 
         completion_reward = {
+            custom_effect_tooltip = BLM_organized_public_security_management_tt
+            hidden_effect = {
+                add_units_to_division_template = {
+                    template_name = "Helmet gang"
+                    support = { 
+                        artillery = 0
+                    }
+                }
+            }
         }
     }
 
@@ -712,6 +762,22 @@ focus_tree = {
         cost = 5
 
         completion_reward = {
+            add_war_support = -0.05
+            add_manpower = 11000
+
+			add_tech_bonus = {
+				name = research_production
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+            if = {
+                limit = { has_active_mission = BLM_gang_thugs_war_1 }
+                add_days_mission_timeout = {
+                    mission = BLM_gang_thugs_war_1
+                    days = 75
+                }
+            }
         }
     }
 
@@ -730,6 +796,27 @@ focus_tree = {
         cost = 5
 
         completion_reward = {
+            add_stability = 0.15
+            custom_effect_tooltip = BLM_militia_div_cap_3_tt
+            hidden_effect = {
+                add_to_variable = { ROOT.halo_militia_cap = 3 }
+                set_division_template_cap = {  division_template = "Helmet gang" division_cap = ROOT.halo_militia_cap }
+            }
+			random_controlled_state = { #Create a few more Blackshirt Divs
+				limit = {
+					is_core_of = ROOT
+					is_fully_controlled_by = ROOT
+				}
+				prioritize = { 14 }
+				custom_effect_tooltip = BLM_mimicking_of_bills_tt
+				hidden_effect = {
+					create_unit = {
+						division = "division_template = \"Helmet gang\" start_experience_factor = 0.8 start_equipment_factor = 1.0"
+						owner = ROOT
+						count = 1
+					}
+				}
+			}
         }
     }
 
@@ -745,6 +832,16 @@ focus_tree = {
         cost = 5
 
         completion_reward = {
+            custom_effect_tooltip = BLM_free_district_bretagne_tt
+            hidden_effect = {
+                add_units_to_division_template = {
+                    template_name = "Skevan"
+					regiments = {
+						motorized = 3
+						motorized = 3
+					}
+                }
+            }
         }
     }
 
@@ -760,6 +857,20 @@ focus_tree = {
         cost = 5
 
         completion_reward = {
+            add_war_support = 0.10
+			add_tech_bonus = {
+				name = research_production
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+            if = {
+                limit = { has_active_mission = BLM_gang_thugs_war_1 }
+                add_days_mission_timeout = {
+                    mission = BLM_gang_thugs_war_1
+                    days = 75
+                }
+            }
         }
     }
 
@@ -778,6 +889,26 @@ focus_tree = {
         cost = 5
 
         completion_reward = {
+            custom_effect_tooltip = BLM_skevan_div_cap_3_tt
+            hidden_effect = {
+                add_to_variable = { ROOT.halo_militia_cap_skevan = 3 }
+                set_division_template_cap = {  division_template = "Skevan" division_cap = ROOT.halo_militia_cap }
+            }
+			random_controlled_state = { #Create a few more Blackshirt Divs
+				limit = {
+					is_core_of = ROOT
+					is_fully_controlled_by = ROOT
+				}
+				prioritize = { 14 }
+				custom_effect_tooltip = BLM_free_skeban_spirit_tt
+				hidden_effect = {
+					create_unit = {
+						division = "division_template = \"Skevan\" start_experience_factor = 0.4 start_equipment_factor = 1.0"
+						owner = ROOT
+						count = 2
+					}
+				}
+			}
         }
     }
 

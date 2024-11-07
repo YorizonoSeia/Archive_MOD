@@ -3954,3 +3954,27 @@ news_event = {
         }
     }
 }
+
+news_event = {
+    id = BA_news.108
+    title = BA_news.108.t
+    desc = BA_news.108.d
+    picture = GFX_news_event_038
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        name = BA_news.108.a
+        trigger = {
+            tag = BLM
+        }
+    }
+
+    option = {
+        name = BA_news.108.b
+        trigger = {
+            NOT = { tag = BLM }
+        }
+    }
+}
