@@ -95,27 +95,27 @@ BLM_black_market = {
 					any_country = {
 						exists = yes
 						tag = BLM
-						OR = {
-							FROM = {
-								any_owned_state = {
-									any_neighbor_state = {
-										is_owned_by = PREV.PREV.PREV
-									}
-								}
-							}
-							any_country = {
-								has_country_flag = BLM_market_expansion_available
-								FROM = {
-									any_owned_state = {
-										any_neighbor_state = {
-											is_owned_by = PREV.PREV
-										}
-									}
+						FROM = {
+							any_owned_state = {
+								any_neighbor_state = {
+									is_owned_by = PREV.PREV.PREV
 								}
 							}
 						}
 					}
 				}
+				#AND = {
+				#	any_country = {
+				#		has_country_flag = BLM_market_expansion_available
+				#		FROM = {
+				#			any_owned_state = {
+				#				any_neighbor_state = {
+				#					is_owned_by = PREV.PREV.PREV
+				#				}
+				#			}
+				#		}
+				#	}
+				#}
 				AND = {
 					is_in_array = {
 						array = BLM_expansion_of_the_black_market_arr
@@ -355,6 +355,50 @@ BLM_black_market = {
 		cost = 10
 		ai_will_do = {
 			factor = 10
+		}
+	}
+}
+BLM_gang_thugs_war = {
+	BLM_gang_thugs_war_1 = {
+		
+		priority = 100
+		icon = GFX_decision_revolt
+		activation = {
+			original_tag = BLM
+			always = no
+		}
+
+		available = {
+			always = no
+		}
+
+		is_good = no
+
+		days_mission_timeout = 560
+
+		timeout_effect = {
+			country_event = BLM_event.2
+		}
+	}
+	BLM_gang_thugs_war_2 = {
+		
+		priority = 100
+		icon = GFX_decision_revolt
+		activation = {
+			original_tag = BLM
+			always = no
+		}
+
+		available = {
+			always = no
+		}
+
+		is_good = no
+
+		days_mission_timeout = 180
+
+		timeout_effect = {
+			country_event = BLM_event.2
 		}
 	}
 }

@@ -1,6 +1,11 @@
 spriteTypes = {
 	
 	SpriteType = {
+		name = "GFX_focus_BLM_gang_thugs_war_focus"
+		texturefile = "gfx/interface/goals/BLM/focus_BLM_gang_thugs_war_focus.tga"			
+	}
+	
+	SpriteType = {
 		name = "GFX_focus_BLM_gang_priority"
 		texturefile = "gfx/interface/goals/BLM/focus_BLM_gang_priority.tga"			
 	}

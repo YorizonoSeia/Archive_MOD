@@ -26,6 +26,7 @@ add_ideas = {
 add_dynamic_modifier = {
 	modifier = BLM_criminal_state
 }
+set_variable = { BLM_CS_industrial_factory_donations = 3 }
 set_variable = { BLM_CS_military_factory_donations = 3 }
 
 add_timed_idea = {

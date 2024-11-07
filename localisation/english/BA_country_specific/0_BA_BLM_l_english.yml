@@ -16,10 +16,24 @@
 
  BLM_criminal_state: "블랙 마켓"
  BLM_criminal_state_tt: "§Y$BLM_criminal_state$§! 변동치:"
+ BLM_CS_tt_2IC: "$BLM_criminal_state_tt$\n$MODIFIER_INDUSTRIAL_FACTORY_DONATIONS$: §G+2§!\n\n"
+ BLM_CS_tt_3IC: "$BLM_criminal_state_tt$\n$MODIFIER_INDUSTRIAL_FACTORY_DONATIONS$: §G+3§!\n\n"
+ BLM_CS_tt_2IC2AF: "$BLM_criminal_state_tt$\n$MODIFIER_INDUSTRIAL_FACTORY_DONATIONS$: §G+2§!\n$MODIFIER_MILITARY_FACTORY_DONATIONS$: §G+2§!\n\n"
  BLM_CS_tt:0 "£decision_icon_small §Y결정 해금§! : 블랙 마켓\n"
+ BLM_CS_ITA_tt: "§Y결정 해금§! : §Y[ITA.GetNameWithFlag]§!의 블랙마켓 지부"
+ BLM_CS_YUG_tt: "§Y결정 해금§! : §Y[YUG.GetNameWithFlag]§!의 블랙마켓 지부"
+ BLM_CS_ROM_tt: "§Y결정 해금§! : §Y[ROM.GetNameWithFlag]§!의 블랙마켓 지부"
+ BLM_CS_GRE_tt: "§Y결정 해금§! : §Y[GRE.GetNameWithFlag]§!의 블랙마켓 지부"
+ BLM_CS_TRM_tt: "§Y결정 해금§! : §Y[TRM.GetNameWithFlag]§!의 블랙마켓 지부"
+ BLM_CS_GEM_tt: "§Y결정 해금§! : §Y[GEM.GetNameWithFlag]§!의 블랙마켓 지부"
+ BLM_CS_RED_tt: "§Y결정 해금§! : §Y[RED.GetNameWithFlag]§!의 블랙마켓 지부"
+ BLM_CS_USA_tt: "§Y결정 해금§! : §Y[USA.GetNameWithFlag]§!의 블랙마켓 지부"
+ BLM_CS_126_controller_tt: "§Y결정 해금§! : §Y[126.controller.GetNameWithFlag]§!의 블랙마켓 지부"
 
  BLM_trade_laws_1: "지역 지배 강화"
  BLM_trade_laws_2: "밀수입 중점"
+
+ BLM_gang_thugs_war_idea: "갱단 전쟁"
 
 
 #중점
@@ -57,6 +71,8 @@
  BLM_return_of_seven_prisoners: "일곱 죄수의 귀환"
  BLM_bretagne_law: "브르타뉴 법"
 
+ BLM_gang_thugs_war_focus: "갱단 전쟁"
+
 
 
 
@@ -88,7 +104,9 @@
  BLM_expansion_of_the_black_market_tt_office: "- §Y관료§!를 매수하고 있습니다.\n"
 
  
-
+ BLM_gang_thugs_war: "갱단 전쟁"
+ BLM_gang_thugs_war_1: "심화되는 긴장감"
+ BLM_gang_thugs_war_1_desc: "스케반과 헬멧단 간의 불화는 대전이 이후 일시적인 협력 관계 속에 더 많은 악연이 피어났습니다. 서로의 이권을 침해하는 두 집단의 행보 속에 큰 규모의 항쟁이 피어나려고 하고 있습니다."
 
 
 
@@ -97,8 +115,14 @@
 
 
 #이벤트
- BLM_event.1.t: "그늘진 곳의 지배자들"
- BLM_event.1.d: "X"
+ BLM_event.1.t: "불온한 침묵"
+ BLM_event.1.d: "브르타뉴의 뒷골목과 상점가에는 묘한 정적이 감돌고 있습니다. 이제껏 암묵적인 평화 속에서 각자의 영역을 지켜온 헬멧단과 스케반 간의 긴장이 미묘하게 높아지며, 마치 폭풍 전야와 같은 기운이 도시를 감싸고 있습니다.\n\n소문에 의하면, 양 조직이 블랙 마켓의 수익과 통제권을 둘러싸고 갈등이 점차 격화되고 있으며, 최근 몇 주간 드러난 일련의 도발과 교묘한 경고들이 이들의 관계를 더욱 악화시켰다고 합니다. 헬멧단과 스케반 간에 보이지 않는 권력 다툼이 시작된 것이 아니냐는 속삭임이 어둠 속에서 퍼지고 있습니다.\n\n사람들은 눈에 띄게 긴장한 눈빛으로 주변을 경계하며, 평소라면 어울려 술을 기울이던 장소에도 조심스럽게 발길을 돌립니다. 언제든 터질 듯한 불안감이 가시처럼 도시에 퍼지며, 이제 작은 불씨 하나가 치명적인 결말을 불러올 수 있음을 암시하고 있습니다."
+ BLM_event.1.a: "이런, 좋지 않아."
+ BLM_event_1_tt: "§R갱단 전쟁이 다가옵니다.§!"
+
+ BLM_event.2.t: "갱단 전쟁"
+ BLM_event.2.d: "브르타뉴의 독립운동은 이제 완전히 좌절되었으며, 이계에서 건너온 강력한 범죄 집단이 지배하는 새로운 질서가 이 땅에 깊이 뿌리내리고 있습니다. 브르타뉴의 도시와 항구에는 암암리에 흥성하는 블랙 마켓이 자리잡아, 각종 밀수품과 금지 물품이 자유롭게 거래되고 있습니다. 다양한 범죄 조직들이 이 블랙 마켓의 확산과 번영을 위해 서로 협력하는 가운데, 이 지역은 이제 법과 정의의 손길이 닿지 않는 무법천지가 되어버렸습니다.\n\n그러나 그들 간의 불안한 평화는 오래가지 않았습니다. 헬멧단과 스케반 사이의 갈등이 점차 수면 위로 드러나면서, 양측의 긴장은 한계점을 향해 치닫고 있었습니다. 특히, 헬멧단의 단원 중 한 명이 스케반의 주요 인사를 참수하는 사건이 발생하면서 두 세력 간의 균열은 더 이상 되돌릴 수 없는 수준에 이르렀습니다. 이 사건은 단순한 살해를 넘어 상대 조직에 대한 노골적인 도발로 해석되었고, 잔혹한 보복이 예상되는 가운데, 브르타뉴의 밤은 점차 피로 물들기 시작했습니다.\n\n이제 이 땅은 암중모색하는 음모와 세력 다툼의 장으로 변모하여, 조용하던 거리와 뒷골목에는 살벌한 기운이 감도는 중입니다. 배신과 충돌, 그리고 복수의 악순환 속에서 브르타뉴는 더욱 혼란에 휩싸이며, 과연 이 전쟁의 끝에서 누가 승자가 될 것인지 아무도 예측할 수 없는 상황입니다."
+ BLM_event.2.a: "항쟁이 시작되었군."
  
  BLM_opposition.1.t: "아리우스 학생 망명 : 조마에 사오리"
  BLM_opposition.1.d: "트리니티의 아리우스 분교 진압과 함께 탈출한 몇 명을 이끌고, 아리우스 분교의 잔당이 우리 블랙마켓에 들어온 사실이 방금 알려졌습니다. 그녀는 여러 차례 트리니티의 추격을 피해 국경을 넘어 우리에게 온 것으로 보입니다.\n\n그녀는 우리 측 인물이 직접 만나본 결과, 강을 넘어 트리니티의 추격을 피해 도주한 것으로 보이며, 이후 비슷한 처지의 분교 출신 학생들을 모아 이곳 블랙 마켓으로 온 것으로 보입니다. 그녀는 블랙 마켓의 환경에는 쉽게 적응한 것으로 보입니다."

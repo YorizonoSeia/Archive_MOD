@@ -6,6 +6,7 @@ BLM_criminal_state = {
 	remove_trigger = { 
 	}
 	
+	industrial_factory_donations = BLM_CS_industrial_factory_donations
 	military_factory_donations = BLM_CS_military_factory_donations
 	custom_modifier_tooltip = BLM_CS_tt
 }

@@ -6,8 +6,10 @@ country_event = { #공장 업데이트 - 이게 말이죠, 도네이트로 주�
 	id = BLM_hidden_event.1
 	title = BLM_hidden_event.1.t
 	desc = BLM_hidden_event.1.d
+
 	is_triggered_only = yes
 	hidden = yes
+
 	immediate = {
 		add_offsite_building = {
 			type = arms_factory
@@ -17,6 +19,14 @@ country_event = { #공장 업데이트 - 이게 말이죠, 도네이트로 주�
 			type = arms_factory
 			level = -1
 		}
+		add_offsite_building = {
+			type = industrial_complex
+			level = 1
+		}
+		add_offsite_building = {
+			type = industrial_complex
+			level = -1
+		}
 	}
 }
 
@@ -24,10 +34,30 @@ country_event = {
 	id = BLM_event.1
 	title = BLM_event.1.t
 	desc = BLM_event.1.d
+
 	is_triggered_only = yes
+	immediate = {
+		set_global_flag = BLM_event_1_flag
+	}
 	
 	option = {
 		name = BLM_event.1.a
+		activate_mission = BLM_gang_thugs_war_1
+	}
+}
+
+country_event = {
+	id = BLM_event.2
+	title = BLM_event.2.t
+	desc = BLM_event.2.d
+	is_triggered_only = yes
+	
+	option = {
+		name = BLM_event.2.a
+		activate_mission = BLM_gang_thugs_war_2
+		complete_national_focus = BLM_gang_thugs_war_focus
+		add_stability = -0.10
+		add_ideas = BLM_gang_thugs_war_idea
 	}
 }
 

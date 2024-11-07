@@ -7,3 +7,13 @@ BLM_black_market = {
 	}
 	priority = 100
 }
+
+BLM_gang_thugs_war = {
+	picture = GFX_decision_cat_picture_spr_the_inevitable_civil_war
+	icon = GFX_decision_category_border_conflicts
+
+	allowed = {
+		original_tag = BLM
+	}
+	priority = 200
+}
