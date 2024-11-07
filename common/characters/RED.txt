@@ -426,9 +426,10 @@ characters = {
 		portraits = {
 			civilian = {
 				large="gfx/leaders/RED/RED_Mayoi_Shigure_Onsen_Portrait.tga"
+				small = "gfx/interface/advisors/RED/red_shigure.tga"
 			}
 			army = {
-				small= "gfx/interface/advisors/RED/cpflsh.dds"
+				small= "gfx/interface/advisors/RED/red_shigure.tga"
 			}
 		}
 		advisor = {

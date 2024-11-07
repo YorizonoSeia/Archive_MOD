@@ -3701,6 +3701,7 @@ country_event = { #인구 문제의 해결
 	option = {
 		name = RED_event.35.a
 		add_stability = 0.05
+		activate_mission = RED_population_issue_no_goods
 	}
 }
 country_event = { #작은 문제점
@@ -3726,6 +3727,545 @@ country_event = { #드러난 부패
 			division_template = "Redwinter Garde populaire"
 		}
 		add_ideas = RED_corruption_0
+	}
+}
+country_event = { #산업 호황
+	id = RED_event.38
+	title = RED_event.38.t
+	desc = RED_event.38.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = RED_event.38.a
+		custom_effect_tooltip = RED_event.38_tt
+		if = {
+			limit = {
+				has_completed_focus = RED_economy_focus_18
+				has_completed_focus = RED_economy_focus_13
+				has_completed_focus = RED_economy_focus_12
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = RED
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+		}
+		else = {
+			hidden_effect = {
+				random_list = {
+					1 = {
+						complete_national_focus = RED_economy_focus_3
+						modifier = {
+							add = -1
+							has_completed_focus = RED_economy_focus_3
+						}
+					}
+					1 = {
+						complete_national_focus = RED_economy_focus_5
+						modifier = {
+							add = -1
+							has_completed_focus = RED_economy_focus_5
+						}
+						modifier = {
+							add = -1
+							NOT = {
+								has_completed_focus = RED_economy_focus_3
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_economy_focus_6
+						modifier = {
+							add = -1
+							has_completed_focus = RED_economy_focus_6
+						}
+						modifier = {
+							add = -1
+							NOT = {
+								has_completed_focus = RED_economy_focus_5
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_economy_focus_7
+						modifier = {
+							add = -1
+							has_completed_focus = RED_economy_focus_7
+						}
+						modifier = {
+							add = -1
+							NOT = {
+								has_completed_focus = RED_economy_focus_5
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_economy_focus_8
+						modifier = {
+							add = -1
+							has_completed_focus = RED_economy_focus_8
+						}
+						modifier = {
+							add = -1
+							NOT = {
+								has_completed_focus = RED_economy_focus_3
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_economy_focus_11
+						modifier = {
+							add = -1
+							has_completed_focus = RED_economy_focus_11
+						}
+						modifier = {
+							add = -1
+							NOT = {
+								has_completed_focus = RED_economy_focus_3
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_economy_focus_12
+						modifier = {
+							add = -1
+							has_completed_focus = RED_economy_focus_12
+						}
+						modifier = {
+							add = -1
+							NOT = {
+								has_completed_focus = RED_economy_focus_11
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_economy_focus_13
+						modifier = {
+							add = -1
+							has_completed_focus = RED_economy_focus_13
+						}
+						modifier = {
+							add = -1
+							NOT = {
+								has_completed_focus = RED_economy_focus_11
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_economy_focus_9
+						modifier = {
+							add = -1
+							has_completed_focus = RED_economy_focus_9
+						}
+						modifier = {
+							add = -1
+							OR = {
+								has_completed_focus = RED_the_threats_abound
+								has_completed_focus = RED_trotsky_s_world_revolution
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_economy_focus_10
+						modifier = {
+							add = -1
+							has_completed_focus = RED_economy_focus_10
+						}
+						modifier = {
+							add = -1
+							NOT = {
+								has_completed_focus = RED_economy_focus_9
+							}
+						}
+						modifier = {
+							add = -1
+							OR = {
+								NOT = {
+									has_completed_focus = RED_economy_focus_8
+								}
+								NOT = {
+									has_completed_focus = RED_economy_focus_11
+								}
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_economy_focus_18
+						modifier = {
+							add = -1
+							has_completed_focus = RED_economy_focus_18
+						}
+						modifier = {
+							add = -1
+							OR = {
+								NOT = {
+									has_completed_focus = RED_economy_focus_7
+								}
+								NOT = {
+									has_completed_focus = RED_economy_focus_10
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_completed_focus = RED_economy_focus_18
+				has_completed_focus = RED_economy_focus_13
+				has_completed_focus = RED_economy_focus_12
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = RED
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+		}
+		else = {
+			hidden_effect = {
+				random_list = {
+					1 = {
+						complete_national_focus = RED_economy_focus_3
+						modifier = {
+							add = -1
+							has_completed_focus = RED_economy_focus_3
+						}
+					}
+					1 = {
+						complete_national_focus = RED_economy_focus_5
+						modifier = {
+							add = -1
+							has_completed_focus = RED_economy_focus_5
+						}
+						modifier = {
+							add = -1
+							NOT = {
+								has_completed_focus = RED_economy_focus_3
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_economy_focus_6
+						modifier = {
+							add = -1
+							has_completed_focus = RED_economy_focus_6
+						}
+						modifier = {
+							add = -1
+							NOT = {
+								has_completed_focus = RED_economy_focus_5
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_economy_focus_7
+						modifier = {
+							add = -1
+							has_completed_focus = RED_economy_focus_7
+						}
+						modifier = {
+							add = -1
+							NOT = {
+								has_completed_focus = RED_economy_focus_5
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_economy_focus_8
+						modifier = {
+							add = -1
+							has_completed_focus = RED_economy_focus_8
+						}
+						modifier = {
+							add = -1
+							NOT = {
+								has_completed_focus = RED_economy_focus_3
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_economy_focus_11
+						modifier = {
+							add = -1
+							has_completed_focus = RED_economy_focus_11
+						}
+						modifier = {
+							add = -1
+							NOT = {
+								has_completed_focus = RED_economy_focus_3
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_economy_focus_12
+						modifier = {
+							add = -1
+							has_completed_focus = RED_economy_focus_12
+						}
+						modifier = {
+							add = -1
+							NOT = {
+								has_completed_focus = RED_economy_focus_11
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_economy_focus_13
+						modifier = {
+							add = -1
+							has_completed_focus = RED_economy_focus_13
+						}
+						modifier = {
+							add = -1
+							NOT = {
+								has_completed_focus = RED_economy_focus_11
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_economy_focus_9
+						modifier = {
+							add = -1
+							has_completed_focus = RED_economy_focus_9
+						}
+						modifier = {
+							add = -1
+							OR = {
+								has_completed_focus = RED_the_threats_abound
+								has_completed_focus = RED_trotsky_s_world_revolution
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_economy_focus_10
+						modifier = {
+							add = -1
+							has_completed_focus = RED_economy_focus_10
+						}
+						modifier = {
+							add = -1
+							NOT = {
+								has_completed_focus = RED_economy_focus_9
+							}
+						}
+						modifier = {
+							add = -1
+							OR = {
+								NOT = {
+									has_completed_focus = RED_economy_focus_8
+								}
+								NOT = {
+									has_completed_focus = RED_economy_focus_11
+								}
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_economy_focus_18
+						modifier = {
+							add = -1
+							has_completed_focus = RED_economy_focus_18
+						}
+						modifier = {
+							add = -1
+							OR = {
+								NOT = {
+									has_completed_focus = RED_economy_focus_7
+								}
+								NOT = {
+									has_completed_focus = RED_economy_focus_10
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_completed_focus = RED_economy_focus_18
+				has_completed_focus = RED_economy_focus_13
+				has_completed_focus = RED_economy_focus_12
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = RED
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+		}
+		else = {
+			hidden_effect = {
+				random_list = {
+					1 = {
+						complete_national_focus = RED_economy_focus_3
+						modifier = {
+							add = -1
+							has_completed_focus = RED_economy_focus_3
+						}
+					}
+					1 = {
+						complete_national_focus = RED_economy_focus_5
+						modifier = {
+							add = -1
+							has_completed_focus = RED_economy_focus_5
+						}
+						modifier = {
+							add = -1
+							NOT = {
+								has_completed_focus = RED_economy_focus_3
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_economy_focus_6
+						modifier = {
+							add = -1
+							has_completed_focus = RED_economy_focus_6
+						}
+						modifier = {
+							add = -1
+							NOT = {
+								has_completed_focus = RED_economy_focus_5
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_economy_focus_7
+						modifier = {
+							add = -1
+							has_completed_focus = RED_economy_focus_7
+						}
+						modifier = {
+							add = -1
+							NOT = {
+								has_completed_focus = RED_economy_focus_5
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_economy_focus_8
+						modifier = {
+							add = -1
+							has_completed_focus = RED_economy_focus_8
+						}
+						modifier = {
+							add = -1
+							NOT = {
+								has_completed_focus = RED_economy_focus_3
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_economy_focus_11
+						modifier = {
+							add = -1
+							has_completed_focus = RED_economy_focus_11
+						}
+						modifier = {
+							add = -1
+							NOT = {
+								has_completed_focus = RED_economy_focus_3
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_economy_focus_12
+						modifier = {
+							add = -1
+							has_completed_focus = RED_economy_focus_12
+						}
+						modifier = {
+							add = -1
+							NOT = {
+								has_completed_focus = RED_economy_focus_11
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_economy_focus_13
+						modifier = {
+							add = -1
+							has_completed_focus = RED_economy_focus_13
+						}
+						modifier = {
+							add = -1
+							NOT = {
+								has_completed_focus = RED_economy_focus_11
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_economy_focus_9
+						modifier = {
+							add = -1
+							has_completed_focus = RED_economy_focus_9
+						}
+						modifier = {
+							add = -1
+							OR = {
+								has_completed_focus = RED_the_threats_abound
+								has_completed_focus = RED_trotsky_s_world_revolution
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_economy_focus_10
+						modifier = {
+							add = -1
+							has_completed_focus = RED_economy_focus_10
+						}
+						modifier = {
+							add = -1
+							NOT = {
+								has_completed_focus = RED_economy_focus_9
+							}
+						}
+						modifier = {
+							add = -1
+							OR = {
+								NOT = {
+									has_completed_focus = RED_economy_focus_8
+								}
+								NOT = {
+									has_completed_focus = RED_economy_focus_11
+								}
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_economy_focus_18
+						modifier = {
+							add = -1
+							has_completed_focus = RED_economy_focus_18
+						}
+						modifier = {
+							add = -1
+							OR = {
+								NOT = {
+									has_completed_focus = RED_economy_focus_7
+								}
+								NOT = {
+									has_completed_focus = RED_economy_focus_10
+								}
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
 

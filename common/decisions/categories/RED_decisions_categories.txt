@@ -143,8 +143,9 @@ RED_zenkyoutou_cat = { #전공투
 	visible_when_empty = yes
 }
 
-RED_winter_war_cat = {
+RED_winter_war_cat = { #겨울전쟁
 	icon = GFX_decision_category_border_conflicts
+	picture = GFX_decision_cat_picture_FIN_national_defense
 	priority = 200	
 	visible = {
 		OR = {

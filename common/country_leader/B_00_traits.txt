@@ -3083,6 +3083,22 @@ leader_traits = {
 		industrial_capacity_factory = 0.05
 		industrial_capacity_dockyard = 0.05
 	}
+	RED_cherino_cleaner = { #미화부장
+		random = no
+		stability_factor = 0.01
+	}
+	RED_cherino_meal = { #급식부장
+		random = no
+		local_building_slots_factor = 0.01
+	}
+	RED_cherino_prefect = { #선도부장
+		random = no
+		war_support_factor = 0.01
+	}
+	RED_cherino_gym = { #체육부장
+		random = no
+		army_morale_factor = 0.01
+	}
 		#붉은겨울은 맞는데, 국민정신용 트레잇으로 쓰일 거임
 	RED_syndicalism_politic = { #생디칼리즘 행정
 		random = no

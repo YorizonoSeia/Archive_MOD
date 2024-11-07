@@ -83,6 +83,11 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
+			OR = {
+				has_completed_focus = RED_accept_trotskism
+				has_completed_focus = RED_no_error_at_ideology
+				has_completed_focus = RED_the_threats_abound
+			}
 		}
 		prerequisite = { focus = RED_road_to_south focus = RED_road_to_north }
 
@@ -659,7 +664,7 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-			num_of_controlled_factories > 120
+			num_of_civilian_factories > 100
 		}
 
 		completion_reward = {
@@ -951,7 +956,7 @@ focus_tree = {
 			effect_tooltip = {
 				add_timed_idea = {
 					idea = RED_consumer_goods_production
-					days = 35
+					days = 28
 				}
 			}
 			random_owned_state = {
@@ -1240,17 +1245,6 @@ focus_tree = {
    
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
-			}
-			OR = {
-				RED_knud_kristensen = {
-					is_political_advisor = yes
-				}
-				RED_vilhelm_buhl = {
-					is_political_advisor = yes
-				}
-				RED_ernst_wigforss = {
-					is_political_advisor = yes
-				}
 			}
 			NOT = { OR = {has_idea = RED_first_AEP_1 has_idea = RED_first_AEP} }
 			NOT = {
@@ -1958,7 +1952,9 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = RED_dipose_cherino
 		}
-
+		ai_will_do = {
+			base = 100
+		}
 		allow_branch = {
 			if = {
 				limit = {
@@ -3100,6 +3096,8 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = RED_redwinter_office
+		}
+		prerequisite = {
 			focus = RED_invite_trotskists
 		}
 
@@ -3153,10 +3151,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			army_experience = 15
-			every_army_leader = {
-				add_logistics = 1
-			}
+			add_research_slot = 1
 			custom_effect_tooltip = RED_merger_of_educational_institutions_tt
 			RED_corruption_solve = yes
 		}
@@ -5228,6 +5223,9 @@ focus_tree = {
 
 		mutually_exclusive = {
 			focus = RED_our_leader_cherino
+		}
+		ai_will_do = {
+			base = 100
 		}
 		x = 32
 		y = 0

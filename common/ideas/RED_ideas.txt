@@ -746,6 +746,23 @@ ideas = {
 				communism_acceptance = 25
 			}
 		}
+        RED_the_fourth_international_idea_1 = { # 제4 인터내셔널 국민정신
+			name = RED_the_fourth_international
+
+			picture = fourth_international
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+
+			modifier = {
+				political_power_factor = 0.10
+				communism_acceptance = 25
+				compliance_growth = 0.05
+				non_core_manpower = 0.05
+			}
+		}
 		RED_doomed_army_idea = { # 난잡한 군대
 			name = RED_doomed_army_idea
 

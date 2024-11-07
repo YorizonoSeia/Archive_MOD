@@ -3674,6 +3674,28 @@ RED_winter_war_cat = {
 	}
 }
 RED_population_issue_cat = { #인구문제
+	RED_population_issue_no_goods = { #다가오는 소비재 부족 사태
+		icon = GFX_decision_generic_fundraising
+		activation = {
+			always = no
+		}
+		available = {
+			num_of_civilian_factories > 50
+		}
+		days_mission_timeout = 600
+		is_good = no
+		timeout_effect = {
+			add_stability = -0.35
+		}
+		complete_effect = {
+			hidden_effect = {
+				country_event = {
+					id = RED_event.38
+					days = 5
+				}
+			}
+		}
+	}
 	RED_population_issue_no_food = { #다가오는 식량 부족 사태
 		icon = GFX_decision_POL_organize_strike_two
 		activation = {
@@ -3853,5 +3875,59 @@ RED_population_issue_cat = { #인구문제
 				days = 180
 			}
 		}
+	}
+}
+RED_bop_category = {
+	RED_cherino_become_cleaner = { #미화부장
+		icon = GFX_decision_eng_trade_unions_demand
+		complete_effect = {
+			RED_cherino = {
+				add_country_leader_trait = RED_cherino_cleaner
+			}
+			add_power_balance_value = {
+				id = RED_power_balance
+				value = -0.05
+			}
+		}
+		cost = 5
+	}
+	RED_cherino_become_meal = { #급식부장
+		icon = GFX_decision_eng_trade_unions_demand
+		complete_effect = {
+			RED_cherino = {
+				add_country_leader_trait = RED_cherino_meal
+			}
+			add_power_balance_value = {
+				id = RED_power_balance
+				value = -0.05
+			}
+		}
+		cost = 5
+	}
+	RED_cherino_become_prefect = { #선도부장
+		icon = GFX_decision_eng_trade_unions_demand
+		complete_effect = {
+			RED_cherino = {
+				add_country_leader_trait = RED_cherino_prefect
+			}
+			add_power_balance_value = {
+				id = RED_power_balance
+				value = -0.05
+			}
+		}
+		cost = 5
+	}
+	RED_cherino_become_gym = { #체육부장
+		icon = GFX_decision_eng_trade_unions_demand
+		complete_effect = {
+			RED_cherino = {
+				add_country_leader_trait = RED_cherino_gym
+			}
+			add_power_balance_value = {
+				id = RED_power_balance
+				value = -0.05
+			}
+		}
+		cost = 5
 	}
 }

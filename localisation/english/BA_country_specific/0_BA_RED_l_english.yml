@@ -672,12 +672,12 @@
  RED_worker_republic_tt: "§Y생산을 향한 투쟁§! 국민정신과 §Y농업 기계화§!, §Y주 3일제§! 또는 §Y한정적인 주 3일제§! 국민정신이 §Y생디칼리즘§! 국민정신에 통합됩니다."
  
 #    $RED_redwinter_office_tt$
- RED_the_politburo_effects_tt: "$RED_redwinter_office_tt$$MODIFIER_POLITICAL_POWER_FACTOR$: §R-5.00%§!\n$MODIFIER_SURRENDER_LIMIT$: §G+5.00%§!\n$MODIFIER_STABILITY_OFFENSIVE_WAR_FACTOR$: §G+10.00%§!\n$MODIFIER_STABILITY_DEFENSIVE_WAR_FACTOR$: §G+20.00%§!\n\n"
+ RED_the_politburo_effects_tt: "$RED_redwinter_office_tt$$MODIFIER_POLITICAL_POWER_FACTOR$: §R-5%§!\n$MODIFIER_SURRENDER_LIMIT$: §G+5.00%§!\n$MODIFIER_STABILITY_OFFENSIVE_WAR_FACTOR$: §G+10.00%§!\n$MODIFIER_STABILITY_DEFENSIVE_WAR_FACTOR$: §G+20.00%§!\n\n"
  RED_labor_party_dynamic_modifier_production_factory_efficiency_gain_factor_tt: "$RED_redwinter_office_tt$$MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR$: §R-5.00%§!\n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY_FACTOR$: §G+5.00%§!\n\n"
- RED_system_decentralization_tt: "$RED_redwinter_office_tt$$MODIFIER_POLITICAL_POWER_FACTOR$: §R-5.00%§!\n$MODIFIER_STABILITY_FACTOR$: §G+10.00%§!\n$MODIFIER_WAR_SUPPORT_FACTOR$: §G+10.00%§!\n\n"
+ RED_system_decentralization_tt: "$RED_redwinter_office_tt$$MODIFIER_POLITICAL_POWER_FACTOR$: §R-5%§!\n$MODIFIER_STABILITY_FACTOR$: §G+10.00%§!\n$MODIFIER_WAR_SUPPORT_FACTOR$: §G+10.00%§!\n\n"
  RED_the_politburo_defensive_war_stability_factor_tt: "$RED_redwinter_office_tt$$MODIFIER_STABILITY_DEFENSIVE_WAR_FACTOR$: §G+25.00%§!\n\n"
  RED_cherino_s_systemic_revolution_tt: "$RED_redwinter_office_tt$$MODIFIER_PRODUCTION_SPEED_BUILDINGS_FACTOR$: §G+10.00%§!\n$MODIFIER_GLOBAL_BUILDING_SLOTS_FACTOR$: §G+5.00%§!\n\n"
- RED_party_central_dissolution_tt: "$RED_redwinter_office_tt$$MODIFIER_POLITICAL_POWER_FACTOR$: §R-5.00%§!\n$MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR$: §G+5.00%§!\n$communism_drift$: §G+0.05§!\n\n"
+ RED_party_central_dissolution_tt: "$RED_redwinter_office_tt$$MODIFIER_POLITICAL_POWER_FACTOR$: §R-5%§!\n$MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR$: §G+5.00%§!\n$communism_drift$: §G+0.05§!\n\n"
 
 #    $RED_advance_intel_tt$
  RED_operative_effects1_tt: "$RED_advance_intel_tt$$MODIFIER_OPERATIVE_SLOT$: §G+1§!\n$MODIFIER_INTEL_NETWORK_GAIN$: §G+0.10§!\n\n"
@@ -885,14 +885,19 @@
  RED_event.34.d: "적극적인 반자본주의 캠페인 덕분에 주자파가 와해되었습니다."
  RED_event.34.a: "다행이군,"
  RED_event.35.t: "인구 문제의 해결"
- RED_event.35.d: "대전이로 인해 혼란스러웠지만, 우리는 가까스로 인구 문제를 해결할 수 있었습니다. 학생들은 농촌으로, 작업장으로, 벌목장으로, 제재소로, 광산으로, 그 어디든 일손이 부족한 곳에 가서 민중들을 돕고 있으며, 늘어난 인구는 스칸디나비아 생산을 환하게 비출 원동력이 될 것이 분명합니다!"
- RED_event.35.a: "다행이군."
+ RED_event.35.d: "대전이로 인해 혼란스러웠지만, 우리는 가까스로 인구 문제를 해결할 수 있었습니다. 하지만 아직 끝나지 않았습니다. 그들에게 부족한 것은 식량뿐만이 아니라 생필품과 소비재 또한 마찬가지입니다. 소비재 품귀를 해결하기 위해서 우리는 또한 부단히 노력해야만 합니다."
+ RED_event.35.a: "그들에게 줄 소비재만 있다면 다행이겠군!"
  RED_event.36.t: "작은 문제점"
  RED_event.36.d: "노르웨이 헬겔란트에서의 공세가 완료된 이후, 사무국은 행정 혼란을 최소화하기 위해 행정관료직과 군정사무관직의 규모를 크게 늘렸습니다. 연방학원에의 위협이 소강 상태에 접어든 상태에서, 일부 지역에서 서기들이 전송하는 보고서가 누락되거나, 연락이 두절되는 등의 문제가 있음이 확인되었습니다. 더 정확한 것은 조사를 통해 알아봐야겠지만, 아직까지 큰 문제는 아닌 것으로 보여집니다."
  RED_event.36.a: "서기들의 실무 교육을 강화해야겠군."
  RED_event.37.t: "드러난 부패"
  RED_event.37.d: "충격적인 보고가 사무국에 전달되었습니다. 연방학원의 서기들은 현지인과 결탁해 부정부패를 일삼고 있었고, 군정기관의 행정은 엉망입니다. 각 작업장에서 보고된 보고서에 적힌 생산량은 더 많은 지원을 얻기 위한 거짓이었으며 급양부는 서류상으로만 존재하여 학생들에게의 배식은 전혀 진행되지 않고 있었습니다. 연방학원을 위해 충실히 복무한다고 보고받았던 학생들의 자치적인 민중방위대 사단들은 진작에 와해되었거나, 스스로 해산을 결의하여 사라진 채였으며, 겨울군대에서의 보고서 또한 우리는 신뢰할 수 없습니다!"
  RED_event.37.a: "충격적이군!"
+ RED_event.38.t: "산업 호황"
+ RED_event.38.d: "붉은겨울에의 위기로 다가온 인구 포화 위기는, 기회로서 다시 다가왔습니다. 학생들은 농촌으로, 작업장으로, 벌목장으로, 제재소로, 광산으로, 그 어디든 일손이 부족한 곳에 가서 민중들을 돕고 있으며, 늘어난 인구는 스칸디나비아와 연방학원의 생산을 환하게 비출 원동력이 될 것이 분명합니다!"
+ RED_event.38.a: "다행이군."
+ RED_event.38_tt: "§Y현지 산업 개발안§! 계통의 무작위 세 중점이 완료됩니다! 중점이 전부 완료되어 이 이벤트로 완료하지 못 한 중점의 수만큼 §Y민간공장§!을 받습니다.\n\n"
+ 
 
 #이벤트/군정청 붕괴
  RED_instability_system.1.a: "이거 보이면 버그임"
@@ -1226,6 +1231,13 @@
  politics_RED_tomoe_desc: "용역부장"
  
 #디시전
+ RED_invite_trotskists_dec_cat: "트로츠키주의자 초대"
+ RED_invite_ivan_smirnov_dec: "이반 스미르노프 초대"
+ RED_invite_ivar_smilga_dec: "이바르 스밀가 초대"
+ RED_invite_karl_radek_dec: "카를 라데크 초대"
+ RED_invite_yevgeny_preobrazhensky_dec: "예브게니 프레오브라젠스키 초대"
+ RED_invite_aleksandr_shlyapnikov_dec: "알렉산드르 실랴프니코프 초대"
+
  RED_seek_allies_dec_cat: "동맹 모색"
  RED_seek_allies_dec: "공산주의 동맹 모색"
  RED_anti_sov_diplo_dec: "반소비에트 동맹 모색"
@@ -1368,6 +1380,7 @@
  RED_install_zkt: "[FROM.Controller.getname]에 현지 전공투 설립"
 
  RED_winter_war_cat: "겨울대전"
+ RED_winter_war_cat_desc: ""
  RED_winter_war_fake_money: "위조지폐 발행"
  RED_winter_war_fake_money_tt: "§Y적국§!이 §Y위조지폐§!를 먼저 §Y발행§!했습니다."
  RED_winter_war_biochemical: "생화학 무기 살포"
@@ -1383,6 +1396,7 @@
  RED_population_issue_mobilisation: "해결을 위한 징병제"
  RED_population_issue_import_food: "긴급한 식량 수입"
  RED_population_issue_no_food: "다가오는 식량 부족 사태"
+ RED_population_issue_no_goods: "다가오는 소비재 부족 사태"
  #권력의 균형 
  RED_power_balance: "사무국 권력투쟁"
  RED_cherino_side: "렌카와 체리노"
@@ -1396,3 +1410,8 @@
  RED_tro_1: "$RED_trotsky_side$의 당 내 우위"
  RED_tro_2: "$RED_trotsky_side$의 사무국 전반에서의 우위"
  RED_tro_3: "$RED_trotsky_side$의 영도"
+
+ RED_cherino_become_cleaner: "미화부 장악"
+ RED_cherino_become_meal: "급식부 장악"
+ RED_cherino_become_prefect: "선도부 장악"
+ RED_cherino_become_gym: "체육부 장악"
