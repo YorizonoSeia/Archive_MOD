@@ -89,6 +89,16 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_political_power = 120
+
+			add_popularity = {
+                ideology = fascism
+                popularity = 0.33
+            } 
+
+			add_popularity = {
+                ideology = democratic
+                popularity = 0.33
+            } 
 		}
 	}
 
@@ -111,17 +121,10 @@ focus_tree = {
 			}
 		}
 
-		available = {
-			has_government = communism
-			SOV = { has_government = communism }
-			OR = {
-				is_subject = no
-				is_subject_of = SOV
-			}
-		}
+
 
 		bypass = {
-
+			
 		}
 
 		cancel_if_invalid = yes
@@ -137,13 +140,23 @@ focus_tree = {
 				create_country_leader = {
 					name = "아시하라츠모리 코이토"
 					desc = "POLITICS_WANG_MING_DESC"
-					picture = "GFX_portrait_KAP_wang_ming"
+					picture = "GFX_portrait_KAP_koito"
 					expire = "1965.1.1"
-					ideology = marxism
+					ideology = singican
 					traits = {
 						
 					}
 				}
+
+				set_politics = {
+                    ruling_party = fascism
+                }
+
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.25
+				} 
+
 			}
 		}
 	}
@@ -164,12 +177,7 @@ focus_tree = {
 
 		available = {
 			NOT = {
-				has_war_with = SOV
-			}
-			SOV = { has_government = ROOT }
-			OR = {
-				is_subject = no
-				is_subject_of = SOV
+				has_war_with = JAP
 			}
 		}
 
@@ -183,7 +191,16 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-
+			every_country = {
+				limit = {
+					OR = {
+					TAG = JAP
+					TAG = KAP
+					}
+				}
+				add_stability = 0.1
+				add_war_support = 0.1
+			}
 		}
 	}
 
@@ -202,12 +219,11 @@ focus_tree = {
 		}
 
 		available = {
-			NOT = { has_war_with = SOV }
-			SOV = { has_government = ROOT }
+			NOT = { has_war_with = JAP }
 			OR = {
 				is_subject = no
-				is_subject_of = SOV
-				is_in_faction_with = SOV
+				is_subject_of = JAP
+				is_in_faction_with = JAP
 			}
 		}
 
@@ -221,7 +237,24 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 5
+			}
 
+			add_tech_bonus = {
+				name = KAP_increase_artillery_production
+				bonus = 0.5
+				uses = 3
+				category = industry
+			}
+
+			add_tech_bonus = {
+				name = ITA_brescia_small_arms_industry
+				bonus = 0.75
+				uses = 1
+				category = infantry_weapons
+}
 		}
 	}
 
@@ -240,19 +273,18 @@ focus_tree = {
 		}
 
 		available = {
-			SOV = { has_government = ROOT }
 			NOT = {
-				has_war_with = SOV
+				has_war_with = JAP
 			}
 			OR = {
 				is_subject = no
-				is_subject_of = SOV
+				is_subject_of = JAP
 			}
 			is_in_faction = no
 		}
 
 		bypass = {
-			is_in_faction_with = SOV
+			is_in_faction_with = JAP
 		}
 
 		cancel_if_invalid = yes
@@ -261,7 +293,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			SOV = { country_event = generic.2 }
+			JAP = { country_event = generic.2 }
 		}
 	}
 
