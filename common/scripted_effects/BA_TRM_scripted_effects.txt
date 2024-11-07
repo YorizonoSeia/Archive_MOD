@@ -1073,6 +1073,7 @@ TRM_UKRINE_RK = {
 				original_tag = UKR
 				copy_tag = UKR
 				add_political_power = 100
+				# 우크라이나 지방
                 transfer_state = 93
                 transfer_state = 201
                 transfer_state = 198
@@ -1092,7 +1093,40 @@ TRM_UKRINE_RK = {
                 transfer_state = 137
                 transfer_state = 199
                 transfer_state = 259
-				set_cosmetic_tag = TRN_UKR
+				# 벨라루스 지방
+                transfer_state = 241
+                transfer_state = 194
+                transfer_state = 94
+				# 러시아 지방, 러시아가 우크라이나 한테 주는 주들 (라임 ㅅㅌㅊ)
+		        transfer_state = 224
+        		transfer_state = 222
+        		transfer_state = 258
+		        transfer_state = 218
+		        transfer_state = 245
+		        transfer_state = 265
+		        transfer_state = 257
+        		transfer_state = 220
+        		transfer_state = 240
+        		transfer_state = 260
+        		transfer_state = 245
+        		transfer_state = 218
+
+				every_state = {
+					limit = { is_core_of = PREV }
+					remove_core_of = PREV
+				}
+
+				set_capital = {
+					state = 202 # 크이우 아니다. 키이우도 아니야.
+					remember_old_capital = no
+				}
+				set_cosmetic_tag = TRM_colony_color
+				TRM = {
+					set_autonomy = {
+						target = PREV
+						autonomy_state = autonomy_holy_dminion
+					}
+				}
                 save_global_event_target_as = Trinity_Puppet_UKR
                 TRM = {
                     TRM_Erich_Koch = {
@@ -1106,6 +1140,7 @@ TRM_UKRINE_RK = {
                         ideology = pater_nazism
 			            traits = { 
                             TRM_histroy_loser
+							prince_of_terror
                         }
                     }
                     promote_leader = yes
@@ -1118,47 +1153,73 @@ TRM_BELARUS_RK = {
 				original_tag = BLR
 				copy_tag = BLR
 				add_political_power = 100
+				# 벨라루스
                 transfer_state = 206
                 transfer_state = 204
                 transfer_state = 207
-                transfer_state = 241
                 transfer_state = 96
                 transfer_state = 95
-                transfer_state = 94
-                transfer_state = 97
+				# 리투아니아
+                transfer_state = 189
                 transfer_state = 814
-                transfer_state = 784
                 transfer_state = 11
                 transfer_state = 815
-                transfer_state = 189
-                transfer_state = 190
-                transfer_state = 809
-                transfer_state = 808
-                transfer_state = 12
+                transfer_state = 784 # 현대 기준으로 리투아니아가 실효 지배 중임
+				# 라트비아
                 transfer_state = 810
-                transfer_state = 191
+                transfer_state = 12
+                transfer_state = 808
+                transfer_state = 809
+                transfer_state = 190
+				#에스토니아
                 transfer_state = 13
-                transfer_state = 813
-                transfer_state = 812
                 transfer_state = 811
-                transfer_state = 194
-                set_cosmetic_tag = TRN_BLR 
+                transfer_state = 812
+                transfer_state = 191
+                transfer_state = 813
+				
+				# 러시아가 벨라루스에게 주는 주들 (이것도 라임 좋네 ㅋ)
+		        transfer_state = 210
+		        transfer_state = 263
+		        transfer_state = 244
+		        transfer_state = 208
+		        transfer_state = 209
+
+				set_capital = {
+					state = 206
+					remember_old_capital = no
+				}
+
+				every_state = {
+					limit = { is_core_of = PREV }
+					remove_core_of = PREV
+				}
+				
+                set_cosmetic_tag = TRM_colony_color
                 save_global_event_target_as = Trinity_Puppet_BLR
                 TRM = {
+					puppet = PREV
+					set_autonomy = {
+						target = PREV
+						autonomy_state = autonomy_holy_dminion
+					}
                     TRM_Hinrich_Lohse = {
                         set_nationality = event_target:Trinity_Puppet_BLR
                     }
+                	transfer_state = 97
                 }
                 add_country_leader_role = {
                     character = TRM_Hinrich_Lohse
                     country_leader = {
 				        expire = "1974.6.18"
                         ideology = pater_nazism
-			            traits = { TRM_histroy_loser }
+			            traits = { 
+							TRM_histroy_loser 
+							prince_of_terror
+						}
                     }
                     promote_leader = yes
                 }
-                TRM = { puppet = PREV }
             }
 }
 TRM_RUSSIA_RK = {
@@ -1166,63 +1227,48 @@ TRM_RUSSIA_RK = {
         		original_tag = SOV
         		copy_tag = SOV
         		add_political_power = 100
-        		set_cosmetic_tag = TRN_SOV_Reich
+        		set_cosmetic_tag = TRM_colony_color
+				TRM = {
+					set_autonomy = {
+						target = PREV
+						autonomy_state = autonomy_holy_dminion
+					}
+		        	transfer_state = 195
+				}
                 save_global_event_target_as = Trinity_Puppet_RUS
-        		transfer_state = 219
-        		transfer_state = 242
+
+				transfer_state = 219
+		        transfer_state = 242
 		        transfer_state = 205
 		        transfer_state = 243
 		        transfer_state = 254
 		        transfer_state = 223
 		        transfer_state = 247
 		        transfer_state = 248
-        		transfer_state = 253
-        		transfer_state = 246
-        		transfer_state = 240
-		        transfer_state = 224
-        		transfer_state = 222
-        		transfer_state = 258
-		        transfer_state = 257
-        		transfer_state = 220
-        		transfer_state = 260
-		        transfer_state = 255
-		        transfer_state = 239
-		        transfer_state = 250
-		        transfer_state = 829
-		        transfer_state = 401
-		        transfer_state = 217
-		        transfer_state = 237
-		        transfer_state = 265
-		        transfer_state = 245
-		        transfer_state = 218
-		        transfer_state = 238
-		        transfer_state = 237
-		        transfer_state = 236
-		        transfer_state = 252
+		        transfer_state = 253
+		        transfer_state = 246
 		        transfer_state = 264
-		        transfer_state = 195
-		        transfer_state = 244
-		        transfer_state = 208
-		        transfer_state = 263
-		        transfer_state = 210
-		        transfer_state = 209
+		        transfer_state = 351
+		        transfer_state = 880
+		        transfer_state = 879
+		        transfer_state = 214
+				set_capital = {
+					state = 219
+					remember_old_capital = no
+				}
         		set_party_name = {
 			        ideology = fascism
 			        long_name = "NEN_North_Russia_Rong"
 			        name = "NEN_North_Russia_name"
 		        }
-                every_core_state = {
-                    limit = {
-                        NOT = {
-                            is_controlled_by = PREV
-                        }
-                    }
-                    remove_core_of = PREV
-                }
+				every_state = {
+					limit = { is_core_of = PREV }
+					remove_core_of = PREV
+				}
                 TRM = {
 			        puppet = PREV
                 }
-                if = {
+                if = { # 나기사
                     limit = { has_global_flag = TRM_nasia_is_moscow_governor }
                         event_target:Trinity_Puppet_RUS = {
                         TRM = {
@@ -1246,7 +1292,7 @@ TRM_RUSSIA_RK = {
                     }
                     }
                 }
-                if = {
+                if = { # 지크프리트 카셰
                     limit = { has_global_flag = TRM_Cashe_is_moscow_governor }
                     PREV = {
                         TRM = {
@@ -1261,6 +1307,7 @@ TRM_RUSSIA_RK = {
                                 ideology = pater_nazism
                                 traits = {
                                     TRM_histroy_loser
+									prince_of_terror
                                 }
                             }
                             promote_leader = yes
@@ -1273,6 +1320,7 @@ TRM_KAPKAS_RK = {
 	create_dynamic_country = {
                 copy_tag = GEO
                 original_tag = GEO
+				# 여긴 귀찮으니깐 안적을래.
                 transfer_state = 234
                 transfer_state = 235
                 transfer_state = 232
@@ -1284,22 +1332,31 @@ TRM_KAPKAS_RK = {
                 transfer_state = 231
                 transfer_state = 230
                 transfer_state = 229
-				set_cosmetic_tag = TRN_GEO_Reich
+				# 스탈린그라드 주위
+		        transfer_state = 217
+		        transfer_state = 236
+		        transfer_state = 237
+		        transfer_state = 238
+		        transfer_state = 237
+				set_cosmetic_tag = TRM_colony_color
+
+				
+				every_state = {
+					limit = { is_core_of = PREV }
+					remove_core_of = PREV
+				}
+
+				TRM = {
+					set_autonomy = {
+						target = PREV
+						autonomy_state = autonomy_holy_dminion
+					}
+				}
         		set_party_name = {
 			        ideology = fascism
 			        long_name = "NEN_North_Russia_Rong"
 			        name = "NEN_North_Russia_name"
 		        }
-                every_state = {
-                    limit = { is_controlled_by = PREV }
-                    add_core_of = PREV
-                }
-                every_core_state = {
-                    limit = {
-                        NOT = { is_controlled_by = PREV }
-                    }
-                    remove_core_of = PREV
-                }
                 TRM = { puppet = PREV }
             }
 }
@@ -1315,7 +1372,13 @@ TRM_MIL_RK = {
 				add_state_core = 15
 				add_state_core = 23
 				add_state_core = 14
-				set_cosmetic_tag = TRN_SRT
+				set_cosmetic_tag = TRM_mainland_color
+				TRM = {
+					set_autonomy = {
+						target = PREV
+						autonomy_state = autonomy_holy_dminion
+					}
+				}
             	BA_puppet_on_action_effect = yes
 				hidden_effect = {
 					create_country_leader = {
@@ -1333,6 +1396,10 @@ TRM_MIL_RK = {
                     	id = 3552
                     	name = VICTORY_POINTS_11548
                 	}
+			    	set_province_name = {
+                    	id = 11548
+                    	name = Calais
+                	}
 				}
 				TRC = {
 					transfer_state = 785
@@ -1343,7 +1410,13 @@ TRM_MIL_RK = {
 					transfer_state = 17
 					transfer_state = 972
 					transfer_state = 24
-					set_cosmetic_tag = MIL_TRN
+					set_cosmetic_tag = TRM_mainland_color
+					TRM = {
+						set_autonomy = {
+							target = PREV
+							autonomy_state = autonomy_holy_dminion
+						}
+					}
 					every_state = {
 						limit = {
 							is_controlled_by = TRC
@@ -1372,7 +1445,13 @@ TRM_MIL_RK = {
 				create_dynamic_country = {
 					original_tag = FRA
 					copy_tag = FRA
-					set_cosmetic_tag = TRM_FRA
+					set_cosmetic_tag = TRM_colony_color
+					TRM = {
+						set_autonomy = {
+							target = PREV
+							autonomy_state = autonomy_holy_dminion
+						}
+					}
 					add_political_power = 100
 					transfer_state = 26
 					transfer_state = 20
@@ -1420,7 +1499,13 @@ TRM_RED_RK = {
 				original_tag = NOR
 				copy_tag = NOR
 				add_political_power = 100
-				set_cosmetic_tag = TRN_NOR
+				set_cosmetic_tag = TRM_colony_color
+				TRM = {
+					set_autonomy = {
+						target = PREV
+						autonomy_state = autonomy_holy_dminion
+					}
+				}
 				every_state = {
 					limit = { 
 						OR = {
@@ -1441,32 +1526,11 @@ TRM_RED_RK = {
 							state = 921
 							state = 922
 							state = 916
-							state = 124
+							#state = 124
 						}
 					}
 					transfer_state_to = PREV
 				}
-				every_state = {
-					limit = { is_core_of = SWE }
-					add_core_of = PREV
-				}
-                load_focus_tree = {
-                    tree = generic_focus
-                }
-				create_country_leader = {
-					name = "Josef_Terboven_Name"
-					desc = ""
-					picture = "gfx/leaders/TRN/Z_TRN_Josef_Terboven_Portrait.tga"
-					expire = "1965.1.1"
-					ideology = pater_nazism
-					traits = { }
-				}
-				TRM = { puppet = PREV }
-			}
-			create_dynamic_country = {
-				original_tag = RED
-				copy_tag = RED
-				add_political_power = 100
 				transfer_state = 141
 				transfer_state = 138
 				transfer_state = 139
@@ -1480,30 +1544,31 @@ TRM_RED_RK = {
 				transfer_state = 142
 				transfer_state = 921
 				transfer_state = 922
-				transfer_state = 916
-				transfer_state = 911
-				transfer_state = 99
-				transfer_state = 37
+				transfer_state = 916	
 				transfer_state = 124
-				set_cosmetic_tag = TRN_RED
-                BA_puppet_on_action_effect = yes
-				set_capital = { state = 37 }
-				set_party_name = {
-					ideology = fascism
-					long_name = "fascism_noun"
-					name = "fascism"
+				transfer_state = 910
+				every_owned_state = {
+					remove_core_of = PREV
 				}
+                load_focus_tree = { tree = generic_focus }
 				create_country_leader = {
-					name = "RED_minori"
+					name = "Josef_Terboven_Name"
 					desc = ""
-					picture = "gfx/leaders/RED/RED_Yasumori_Minori_Portrait.tga"
+					picture = "gfx/leaders/TRN/Z_TRN_Josef_Terboven_Portrait.tga"
 					expire = "1965.1.1"
 					ideology = pater_nazism
-					traits = { }
+					traits = {
+						prince_of_terror
+					}
 				}
 				TRM = { puppet = PREV }
 			}
-			TRM = { transfer_state = 912 }
+			TRM = { 
+				transfer_state = 912 
+				transfer_state = 99
+				transfer_state = 911
+				transfer_state = 37
+			}
 }
 TRM_POL_RK = {
             create_dynamic_country = {
@@ -1516,7 +1581,13 @@ TRM_POL_RK = {
 				transfer_state = 88
 				transfer_state = 91
 				transfer_state = 89
-				set_cosmetic_tag = TRN_POL
+				set_cosmetic_tag = TRM_mainland_color
+				TRM = {
+					set_autonomy = {
+						target = PREV
+						autonomy_state = autonomy_holy_dminion
+					}
+				}
                 save_global_event_target_as = Trinity_Puppet_POL
                 TRM = {
                     TRM_Hans_Frank = {
@@ -1572,6 +1643,8 @@ TRM_ditalia_puppet = {
 		transfer_state = 162
 		transfer_state = 157
 		transfer_state = 2
+		transfer_state = 1
+		transfer_state = 846
 		#transfer_state = 117
 		#transfer_state = 849
 		#transfer_state = 156
@@ -1593,8 +1666,20 @@ TRM_ditalia_puppet = {
 			ideology = pater_nazism
 			traits = { }
 		}
-		set_cosmetic_tag = TRN_ITA
-		TRM = { puppet = PREV }
+		20 = { 
+			owner = {
+				transfer_state = 735
+				transfer_state = 981
+			}
+		}
+		set_cosmetic_tag = TRM_colony_color
+		TRM = { 
+			puppet = PREV 
+			set_autonomy = {
+				target = PREV
+				autonomy_state = autonomy_holy_dminion
+			}
+		}
 	}
 	create_dynamic_country = {
 		copy_tag = TTS
@@ -1604,6 +1689,7 @@ TRM_ditalia_puppet = {
 		transfer_state = 849
 		transfer_state = 156
 		transfer_state = 115
+		transfer_state = 114
 		create_country_leader = {
 			name = "TRN_military_junta_name"
 			desc = ""
@@ -1612,13 +1698,14 @@ TRM_ditalia_puppet = {
 			ideology = pater_nazism
 			traits = { }
 		}
-		set_cosmetic_tag = TRN_TTS
-		TRM = { puppet = PREV }
-	}
-	26 = {
-		owner = {
-			transfer_state = 735
-			transfer_state = 981
+		set_cosmetic_tag = TRM_colony_color
+		TRM = { 
+		transfer_state = 116
+			puppet = PREV 
+			set_autonomy = {
+				target = PREV
+				autonomy_state = autonomy_holy_dminion
+			}
 		}
 	}
 	TRM = {
@@ -1652,8 +1739,14 @@ TRM_Balkan_puppet = {
 			transfer_state_to = PREV
 			add_core_of = PREV
 		}
-		set_cosmetic_tag = SER_TRN_PUPPET
-		TRM = { puppet = PREV }
+		set_cosmetic_tag = TRM_colony_color
+		TRM = { 
+			puppet = PREV 
+			set_autonomy = {
+				target = PREV
+				autonomy_state = autonomy_holy_dminion
+			}
+		}
 	}
 	create_dynamic_country = {
 		copy_tag = CRO
@@ -1683,26 +1776,58 @@ TRM_Balkan_puppet = {
 				#
 			}
 		}
-		set_cosmetic_tag = TRN_CRO
-		TRM = { puppet = PREV }
+		set_cosmetic_tag = TRM_colony_color
+		TRM = { 
+			transfer_state = 970
+			transfer_state = 853
+			transfer_state = 102
+			puppet = PREV 
+			set_autonomy = {
+				target = PREV
+				autonomy_state = autonomy_holy_dminion
+			}
+		}
 	}
 	every_state = {
 		limit = {
 			OR = {
 				is_core_of = ALB
-				state = 105
 				state = 802
 			}
 		}
 		transfer_state_to = ALB
 	}
-	ALB = { set_cosmetic_tag = TRN_ALB}
+	ALB = { 
+		set_cosmetic_tag = TRM_colony_color 
+		TRM = {
+			set_autonomy = {
+				target = PREV
+				autonomy_state = autonomy_holy_dminion
+			}
+		}
+	}
+	MNT = {
+		transfer_state = 105
+		set_cosmetic_tag = TRM_colony_color 
+		TRM = {
+			set_autonomy = {
+				target = PREV
+				autonomy_state = autonomy_holy_dminion
+			}
+		}
+	}
 	SLO = {
 		transfer_state = 71
 		transfer_state = 70
 		add_state_core = 71
 		add_state_core = 70
-		set_cosmetic_tag = TRN_SLO
+		set_cosmetic_tag = TRM_colony_color
+		TRM = {
+			set_autonomy = {
+				target = PREV
+				autonomy_state = autonomy_holy_dminion
+			}
+		}
 	}
 	HUN = {
 		transfer_state = 664
@@ -1712,6 +1837,13 @@ TRM_Balkan_puppet = {
 		transfer_state = 45
 		transfer_state = 76
 		transfer_state = 73
+		set_cosmetic_tag = TRM_colony_color
+		TRM = {
+			set_autonomy = {
+				target = PREV
+				autonomy_state = autonomy_holy_dminion
+			}
+		}
 	}
 	ROM = {
 		transfer_state = 82
@@ -1724,6 +1856,13 @@ TRM_Balkan_puppet = {
 		transfer_state = 78
 		transfer_state = 766
 		transfer_state = 834
+		set_cosmetic_tag = TRM_colony_color
+		TRM = {
+			set_autonomy = {
+				target = PREV
+				autonomy_state = autonomy_holy_dminion
+			}
+		}
 	}
 	BUL = {
 		transfer_state = 48
@@ -1735,6 +1874,13 @@ TRM_Balkan_puppet = {
 		transfer_state = 803
 		transfer_state = 731
 		transfer_state = 184
+		hidden_effect = { country_event = { id = TRN_after_war_event.16 days = 02 }  }
+		TRM = {
+			set_autonomy = {
+				target = PREV
+				autonomy_state = autonomy_holy_dminion
+			}
+		}
 	}
 	GRE = {
 		transfer_state = 185
@@ -1742,14 +1888,13 @@ TRM_Balkan_puppet = {
 		transfer_state = 186
 		transfer_state = 187
 		transfer_state = 182
-	}
-	TRM = { 
-		puppet = ALB 
-		puppet = SLO
-		puppet = HUN
-		puppet = ROM
-		puppet = BUL
-		puppet = GRE
+		hidden_effect = { country_event = { id = TRN_after_war_event.16 days = 02 }  }
+		TRM = {
+			set_autonomy = {
+				target = PREV
+				autonomy_state = autonomy_holy_dminion
+			}
+		}
 	}
 }
 TRM_KAI_RK = {
@@ -1774,8 +1919,14 @@ TRM_KAI_RK = {
 			}
 			transfer_state_to = PREV
 		}
-		set_cosmetic_tag = TRM_KAI
-		TRM = { puppet = PREV }
+		set_cosmetic_tag = TRM_mainland_color
+		TRM = { 
+			puppet = PREV 
+			set_autonomy = {
+				target = PREV
+				autonomy_state = autonomy_holy_dminion
+			}
+		}
 		set_party_name = {
 			ideology = fascism
     		long_name = Justice_Task_Force_LONG
@@ -1793,6 +1944,26 @@ TRM_KAI_RK = {
 	IRE = { transfer_state = 119 }
 }
 TRM_Finland_puppet = {
-	FIN = { set_cosmetic_tag = TRN_FIN }
-	TRM = { puppet = FIN }
+	FIN = { set_cosmetic_tag = TRM_colony_color }
+	TRM = { 
+		set_autonomy = {
+			target = FIN
+			autonomy_state = autonomy_holy_dminion
+		}
+	}
+}
+TRM_SWI_RK = {
+	SWI = {
+		set_cosmetic_tag = TRM_mainland_color
+		transfer_state = 845
+		transfer_state = 3
+		transfer_state = 847
+		transfer_state = 151
+	}
+	TRM = {
+		set_autonomy = {
+			target = SWI
+			autonomy_state = autonomy_holy_dminion
+		}
+	}
 }

@@ -907,7 +907,6 @@ ideas = {
 				global_building_slots_factor = 0.1
 				local_resources_factor = 0.1
 				production_speed_buildings_factor = 0.10
-				production_speed_steel_mill_factor = 0.1
 				civilian_intel_to_others = -10
 				war_support_factor = 0.05
 				max_fuel_factor = 0.1

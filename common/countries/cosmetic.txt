@@ -1415,99 +1415,15 @@ MIL_AL_1S_start = {
 	color = rgb { 0 0 0 }
 	color_ui = rgb { 0 0 0 }
 }
-TRN_LUX = {
-	color = rgb { 60 60 60 }
-	color_ui = rgb { 122 145 93 }
-}
-TRN_SRT = {
-	color = rgb { 60 60 60 }
-	color_ui = rgb { 122 145 93 }
-}
-MIL_TRN = {
-	color = rgb { 60 60 60 }
-	color_ui = rgb { 122 145 93 }
-}
-TRM_KAI = {
-	color = rgb { 60 60 60 }
-	color_ui = rgb { 122 145 93 }
-}
 BYA_TWR = {
 	color = rgb { 125 13 24 }
 	color_ui = rgb { 163 17 31 }
 }
-TRN_RED = {
+TRM_mainland_color = { # 신성통치령(진한 애들)
 	color = rgb { 60 60 60 }
 	color_ui = rgb { 122 145 93 }
 }
-TRN_NOR = {
-	color = rgb { 115 115 115 }
-	color_ui = rgb { 122 145 93 }
-}
-TRN_SOV = {
-	color = rgb { 115 115 115 }
-	color_ui = rgb { 122 145 93 }
-}
-TRN_SOV_Reich = {
-	color = rgb { 115 115 115 }
-	color_ui = rgb { 122 145 93 }
-}
-TRN_BLR = {
-	color = rgb { 115 115 115 }
-	color_ui = rgb { 122 145 93 }
-}
-TRN_POL = {
-	color = rgb { 60 60 60 }
-	color_ui = rgb { 122 145 93 }
-}
-TRN_UKR = {
-	color = rgb { 115 115 115 }
-	color_ui = rgb { 122 145 93 }
-}
-TRN_GEO = {
-	color = rgb { 115 115 115 }
-	color_ui = rgb { 122 145 93 }
-}
-TRN_GEO_Reich = {
-	color = rgb { 115 115 115 }
-	color_ui = rgb { 122 145 93 }
-}
-TRN_CRI = {
-	color = rgb { 115 115 115 }
-	color_ui = rgb { 122 145 93 }
-}
-TRM_FRA = {
-	color = rgb { 115 115 115 }
-	color_ui = rgb { 122 145 93 }
-}
-TRN_SPR = {
-	color = rgb { 115 115 115 }
-	color_ui = rgb { 122 145 93 }
-}
-TRN_CRO = {
-	color = rgb { 115 115 115 }
-	color_ui = rgb { 122 145 93 }
-}
-TRN_ALB = {
-	color = rgb { 115 115 115 }
-	color_ui = rgb { 122 145 93 }
-}
-TRN_ITA = {
-	color = rgb { 115 115 115 }
-	color_ui = rgb { 122 145 93 }
-}
-TRN_SLO = {
-	color = rgb { 115 115 115 }
-	color_ui = rgb { 122 145 93 }
-}
-TRN_TTS = {
-	color = rgb { 115 115 115 }
-	color_ui = rgb { 122 145 93 }
-}
-TRN_FIN = {
-	color = rgb { 115 115 115 }
-	color_ui = rgb { 122 145 93 }
-}
-SER_TRN_PUPPET = {
+TRM_colony_color = { # 신성통치령 (연한 애들)
 	color = rgb { 115 115 115 }
 	color_ui = rgb { 122 145 93 }
 }

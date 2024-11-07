@@ -1826,10 +1826,6 @@
 			focus = TRM_Endsige7
         }
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = BA_Auto_complete_tt
-				always = no
-			}
 		}
 		ai_will_do = {
 		}
@@ -1837,7 +1833,39 @@
 		y = 1
 		relative_position_id = TRM_Endsige7
 		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						has_completed_focus = TRM_Endsige4
+						has_completed_focus = TRM_Endsige3
+					}
+				}
 			custom_effect_tooltip = TRN_ENDSIGE_TT
+			}
+			if = {
+				limit = { has_completed_focus = TRM_Endsige4 }
+				set_cosmetic_tag = GER_greater_german_reich
+				every_state = {
+					limit = { BA_is_GER_core = yes  }
+					add_core_of = ROOT
+				}
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = ENG
+							is_core_of = NOR
+							is_core_of = VGE
+							is_core_of = SWE
+							is_core_of = SWI
+							is_core_of = AUS
+						}
+					}
+					add_claim_by = TRM
+				}
+			}
+			if = {
+				limit = { has_completed_focus = TRM_Endsige3 }
+			}
 		}
 	}
 	focus = {
