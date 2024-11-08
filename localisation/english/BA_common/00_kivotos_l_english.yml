@@ -137,6 +137,33 @@ BA_all_country_category_desc:0 "샬레는 총학생회의 초법적 동아리로
  BA_highlander_use_list_show:0 "[BA_highlander_use_COU][BA_highlander_use_SRT][BA_highlander_use_MIL][BA_highlander_use_KAI][BA_highlander_use_KSP][BA_highlander_use_SHE][BA_highlander_use_HEU][BA_highlander_use_GEH][BA_highlander_use_GEM][BA_highlander_use_SHA][BA_highlander_use_ABY][BA_highlander_use_HYA][BA_highlander_use_TRM][BA_highlander_use_ARI][BA_highlander_use_RED]"
 
 
+ BA_kiovotos_spain_event.1.t: "바로 아래의 혼란"
+ BA_kiovotos_spain_event.1.d: "우리의 바로 밑 영토에서 혼란이 일었습니다. 베리타스의 정보에 따르면, [SPR.getname]의 군부가 쿠데타를 일으켰으나 정부와 시민들이 저항군을 조직하여 이에 맞서고 있다고 합니다. 한편, 내전을 피해 우리 영토로 수많은 난민들이 몰려오고 있습니다. 우리는 이를 해결해야 할 필요가 있습니다."
+ BA_kiovotos_spain_event.1.a: "젠장."
+ BA_kiovotos_spain_event.2.t: "난민 문제"
+ BA_kiovotos_spain_event.2.d: "늘어나는 난민들을 가만히 둘 수는 없습니다. 남부의 시민들은 서둘러 이러한 난민들을 추방할 것을 요구하고 있습니다. 한편, 일부 학생 집단들은 이러한 조치가 비인도주의적이라는 담론을 개진하고 있습니다."
+ BA_kiovotos_spain_event.2.a: "전부 추방하자."
+ BA_kiovotos_spain_event.2.b: "이 사태의 책임은 모두 스페인의 군부에게 있음이 분명하다."
+ BA_kiovotos_spain_event.2.c: "스페인 정부의 무능을 직접적으로 타도해야 한다."
+ BA_kiovotos_spain_event.3.t: "간섭위원회 설립 논의"
+ BA_kiovotos_spain_event.3.d: "밀레니엄의 스페인 내전에의 의용군 파견 이후, 다른 키보토스 국가들 또한 제한없이 내전에 개입하려고 시도하고 있습니다. 우리는 키보토스 국가 간의 이념적, 이해적 대립을 저지하고 협력을 유지하기 위해서 이를 조율하고 또 제한하는 간섭위원회를 설치하여 운영할 수 있을 것입니다."
+ BA_kiovotos_spain_event.3.a: "간섭위원회를 설치하자."
+ BA_kiovotos_spain_event.3.b: "굳이 그들을 통제해야 할까?"
+ BA_kiovotos_spain_event.3_tt: "키보토스 협력기구 구성국들의 £GFX_decision_icon_small §Y키보토스 협력기구 탈퇴§!에 드는 £GFX_pol_power 정치력이 20 감소합니다."
+ BA_kiovotos_spain_event.4.t: "간섭위원회 설치"
+ BA_kiovotos_spain_event.4.d: "총학생회 조치에 따라, 키보토스 협력기구 산하에의 간섭위원회 설치가 결정되었습니다. 간섭위원회는 협력기구 구성국들이 스페인 내전에 무분별히 개입하는 것을 방지하기 위한 역할을 수행하며, 의용대를 감찰할 수 있는 권한이 있습니다. 그러나 간섭위원회의 조치만 제대로 이행한다면, 우리는 범위 내의 자유로운 군사 활동이 가능할 것입니다."
+ BA_kiovotos_spain_event.4.a: "발목에 족쇄가 채워졌군."
+ BA_kiovotos_spain_event.5.t: "밀레니엄의 제안"
+ BA_kiovotos_spain_event.5.d: "심화되는 내전에의 개입 속에서, 밀레니엄이 불간섭 타협을 제안했습니다. 간섭위원회 규정을 수정하여 이에 들어가는 자원을 줄이는 대신, 의용대를 최소 규모로 운영하자는 이 제안은 많은 협력기구 구성국에서 갑론을박의 대상이 되고 있습니다."
+ BA_kiovotos_spain_event.5.a: "받아들이자."
+ BA_kiovotos_spain_event.5.b: "주권은 여전히 우리에게 있다."
+ BA_kiovotos_spain_event.6.t: "밀레니엄 저지"
+ BA_kiovotos_spain_event.6.d: "밀레니엄의 멍청한 결정은 그들이 여전히 내전을 종결시키지 못 한 채 상황만 심화시키고 있습니다! 밀레니엄의 비대한 군사력으로 인해 여태까지 군사적 응징을 꺼렸으나, 이제는 다릅니다. 우리는 프랑스 북부 평야를 신속하게 타격하여 이들의 반격 능력을 꺾어내고 밀레니엄의 그릇된 패권주의를 저지할 것입니다!"
+ BA_kiovotos_spain_event.6.a: "진격!"
+ BA_kiovotos_spain_event.6.b: "아냐, 너무 무모해."
+ 
+ BA_interference_committee: "간섭위원회"
+
  ABY_abydos_sandstorm:0 "아비도스 모래바람"
  ABY_abydos_sandstorm_desc:0 "아비도스는 광활한 사막을 보유한 학원이었습니다. 그러나 대전이를 통해 유럽으로 이동하며 아비도스는 매우 작은 학원과 자치구 일부만이 따라왔을 뿐입니다. 그러나, 그 일부의 자치구만으로 유럽 일대에 사막화를 불러오기에는 충분했던 것으로 보여집니다. 생태계가 충분한 시간이 흘러 복원되기 전까지 이 지역에서는 모래바람이 몰아칠 것입니다."
 

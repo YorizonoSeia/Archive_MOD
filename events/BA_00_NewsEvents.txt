@@ -3978,3 +3978,51 @@ news_event = {
         }
     }
 }
+
+news_event = { #밀레니엄의 의용군 파견
+    id = BA_news.109
+    title = BA_news.109.t
+    desc = BA_news.109.d
+    picture = GFX_news_event_saf_civil_war
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        name = BA_news.109.a
+        trigger = {
+            tag = MIL
+        }
+    }
+
+    option = {
+        name = BA_news.109.b
+        trigger = {
+            NOT = { tag = MIL }
+        }
+    }
+}
+
+news_event = { #밀레니엄의 총체적 개입
+    id = BA_news.110
+    title = BA_news.110.t
+    desc = BA_news.110.d
+    picture = GFX_news_event_greek_civil_war
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        name = BA_news.110.a
+        trigger = {
+            tag = MIL
+        }
+    }
+
+    option = {
+        name = BA_news.110.b
+        trigger = {
+            NOT = { tag = MIL }
+        }
+    }
+}

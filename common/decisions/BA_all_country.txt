@@ -902,7 +902,7 @@ BA_kivotos_school_country_category = {
 			}
 		}
 
-		cost = 100
+		cost = global.kivotos_cooperation_organization_withdrawal_cost
 
 		visible = {
 			NOT = { tag = global.kivotos_alliance_leader }

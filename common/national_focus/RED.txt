@@ -2104,7 +2104,7 @@ focus_tree = {
 			}
 			
 		}
-		ai_will_do = { base = 15 }
+		ai_will_do = { base = 100 }
 
 		completion_reward = {
 			add_stability = 0.10
@@ -2130,7 +2130,7 @@ focus_tree = {
 			focus = RED_accept_trotskism
 		}
 
-		ai_will_do = { base = 15 }
+		ai_will_do = { base = 100 }
 
 		available = {
    
@@ -2287,7 +2287,7 @@ focus_tree = {
 			focus = RED_redbear_editorial
 		}
 		
-		ai_will_do = { base = 15 }
+		ai_will_do = { base = 100 }
 
 		completion_reward = {
 			add_ideas = RED_security_idea
@@ -2311,7 +2311,7 @@ focus_tree = {
 			focus = RED_restore_the_security
 		}
 
-		ai_will_do = { base = 15 }
+		ai_will_do = { base = 100 }
 
 		completion_reward = {
 			add_popularity = {
@@ -2344,7 +2344,7 @@ focus_tree = {
 			focus = RED_locals_problem
 		}
 
-		ai_will_do = { base = 15 }
+		ai_will_do = { base = 100 }
 
 		completion_reward = {
 			add_political_power = 120

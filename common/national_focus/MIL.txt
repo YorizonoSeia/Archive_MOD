@@ -8324,10 +8324,10 @@ focus_tree = {
 		}
 	}
 
-	focus = { # 밀레니엄 사이언스 스쿨
+	focus = { #방위 전략
 		id = MIL_millennium_science_school
-		icon = unknown
-		cost = 5.00
+		icon = GFX_focus_SWE_hedgehog_defense
+		cost = 2
 		prerequisite = { focus = MIL_intensified_disagreements }
 		offset = {
 			x = -5
@@ -8343,7 +8343,7 @@ focus_tree = {
 				}
 			}
 		}
-		x = 23
+		x = 24
 		y = 1
 		relative_position_id = MIL_intensified_disagreements
 		completion_reward = {
@@ -8351,7 +8351,7 @@ focus_tree = {
 		}	
 	}
 
-	focus = { # 바로 밑의 혼란
+	focus = { # 바로 아래의 혼란
 		id = MIL_chaos_just_below
 		icon = GFX_focus_BUL_condemn_macedonian_organizations
 		cost = 5.00
@@ -8372,10 +8372,6 @@ focus_tree = {
 			    }
 			}	
 		}
-
-		bypass = {
-			has_global_flag = scw_over
-		}
 		x = -2
 		y = 1
 		relative_position_id = MIL_millennium_science_school
@@ -8386,12 +8382,198 @@ focus_tree = {
 	focus = { # 난민 문제
 		id = MIL_refugee_problem
 		icon = GFX_focus_spr_war_of_independence
-		cost = 5.00
+		cost = 2
 		prerequisite = { focus = MIL_chaos_just_below }
 		x = 0
 		y = 1
+		ai_will_do = {
+			base = 1000
+		}
+		available = {
+			SPR_scw_in_progress = yes
+		}
 		relative_position_id = MIL_chaos_just_below
 		completion_reward = {
+			country_event = {
+				id = BA_kiovotos_spain_event.2
+				days = 3
+			}
+		}	
+	}
+	focus = { # 불간섭 타협
+		id = MIL_non_interference_compromise
+		icon = GFX_goal_generic_major_alliance
+		cost = 2
+		prerequisite = { focus = MIL_refugee_problem }
+		x = 1
+		y = 1
+		mutually_exclusive = {
+			focus = MIL_total_interference
+		}
+		available = {
+			SPR_scw_in_progress = yes
+			has_idea = BA_interference_committee
+		}
+		relative_position_id = MIL_refugee_problem
+		completion_reward = {
+			every_country = {
+				limit = {
+					has_idea = BA_interference_committee
+				}
+				country_event = {
+					id = BA_kiovotos_spain_event.5
+					days = 3
+				}
+			}
+		}	
+	}
+	focus = { # 총체적 개입
+		id = MIL_total_interference
+		icon = GFX_focus_generic_annex_country_2
+		cost = 2
+		prerequisite = { focus = MIL_refugee_problem }
+		x = -1
+		y = 1
+		mutually_exclusive = {
+			focus = MIL_non_interference_compromise
+		}
+		available = {
+			SPR_scw_in_progress = yes
+			OR = {
+				has_idea = MIL_help_SPA
+				has_idea = MIL_help_SPR
+			}
+		}
+		relative_position_id = MIL_refugee_problem
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = MIL_help_SPR
+				}
+				declare_war_on = {
+					target = SPA
+					type = take_claimed_state
+				}
+			}
+			if = {
+				limit = {
+					has_idea = MIL_help_SPR
+				}
+				declare_war_on = {
+					target = SPR
+					type = take_claimed_state
+				}
+			}
+			if = {
+				limit = {
+					SPB = {
+						exists = yes
+					}
+				}
+				declare_war_on = {
+					target = SPB
+					type = take_claimed_state
+				}
+			}
+			if = {
+				limit = {
+					SPC = {
+						exists = yes
+					}
+				}
+				declare_war_on = {
+					target = SPC
+					type = take_claimed_state
+				}
+			}
+			custom_effect_tooltip = MIL_total_interference_tt
+			hidden_effect = {
+				news_event = {
+					id = BA_news.110
+					days = 3
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_global_flag = end_of_the_kivotos_alliance
+						}
+					}
+					if = {
+						limit = {
+							COU = {
+								exists = yes
+							}
+						}
+						COU = {
+							country_event = {
+								id = BA_kiovotos_spain_event.6
+								days = 60
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							SHE = {
+								exists = yes
+							}
+						}
+						SHE = {
+							country_event = {
+								id = BA_kiovotos_spain_event.6
+								days = 60
+							}
+						}
+					}
+				}
+			}
+		}	
+	}
+	focus = { # 스페인 감시
+		id = MIL_spain_process
+		icon = GFX_focus_generic_secret_service_agency
+		cost = 2
+		prerequisite = { focus = MIL_total_interference }
+		x = 1
+		y = 1
+		available = {
+			SPR_scw_in_progress = no
+			custom_trigger_tooltip = {
+				tooltip = MIL_spain_process_tt
+				OR = {
+					AND = {
+						has_country_flag = MIL_helped_spr_flag
+						SPR = {
+							exists = yes
+						}
+					}
+					AND = {
+						has_country_flag = MIL_helped_spa_flag
+						SPA = {
+							exists = yes
+						}
+					}
+				}
+			}
+		}
+		relative_position_id = MIL_total_interference
+		completion_reward = {
+			if = {
+				limit = {
+					SPR = {
+						exists = yes
+					}
+				}
+				set_autonomy = {
+					target = SPR
+					autonomy_state = autonomy_supervised_state
+				}
+			}
+			else = {
+				set_autonomy = {
+					target = SPA
+					autonomy_state = autonomy_supervised_state
+				}
+			}
 		}	
 	}
 

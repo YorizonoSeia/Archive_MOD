@@ -93,6 +93,44 @@ ideas = {
 		}
 	}
 	country = {
+        BA_interference_committee_1 = {
+			name = BA_interference_committee
+            picture = generic_secret_police
+            modifier = {
+                send_volunteer_divisions_required = -0.5
+                send_volunteer_size = 1
+                send_volunteers_tension = -0.5
+            }
+            available = {
+                SPR_scw_in_progress = yes
+				is_in_array = {
+					array = global.kivotos_alliance
+					value = ROOT
+				}
+				NOT = {
+					has_global_flag = end_of_the_kivotos_alliance
+				}
+            }
+        }
+        BA_interference_committee = {
+            picture = generic_secret_police
+            modifier = {
+                send_volunteer_divisions_required = -1
+                send_volunteer_size = 2
+                send_volunteers_tension = -1
+                consumer_goods_factor = 0.03
+            }
+            available = {
+                SPR_scw_in_progress = yes
+				is_in_array = {
+					array = global.kivotos_alliance
+					value = ROOT
+				}
+				NOT = {
+					has_global_flag = end_of_the_kivotos_alliance
+				}
+            }
+        }
 	
 		JBP_state_shintoism = {
 			name = state_shintoism

@@ -1100,6 +1100,11 @@ focus_tree = {
 				exists = no
 			}
 		}
+		available = {
+			EGY = {
+				exists = no
+			}
+		}
 		prerequisite = {
 			focus = SYR_focus_com_31
 		}

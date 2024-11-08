@@ -1133,3 +1133,254 @@ country_event = { #철도 불황
 		}
 	}
 }
+
+add_namespace = BA_kiovotos_spain_event #간섭위원회
+
+
+country_event = { #바로 아래의 혼란
+	id = BA_kiovotos_spain_event.1
+	title = BA_kiovotos_spain_event.1.t
+	desc = BA_kiovotos_spain_event.1.d
+	fire_only_once = yes
+	trigger = {
+		tag = MIL
+		has_global_flag = spanish_civil_war
+	}
+	option = {
+		name = BA_kiovotos_spain_event.1.a
+		complete_national_focus = MIL_chaos_just_below
+		add_ideas = MIL_refugee
+	}
+}
+country_event = { #난민 문제
+	id = BA_kiovotos_spain_event.2
+	title = BA_kiovotos_spain_event.2.t
+	desc = BA_kiovotos_spain_event.2.d
+	is_triggered_only = yes
+	option = { #난민을 모두 추방하자.
+		name = BA_kiovotos_spain_event.2.a
+		remove_ideas = MIL_refugee
+		add_political_power = -30
+		add_stability = -0.05
+		add_war_support = -0.05
+	}
+	option = { #공화파 지원
+		name = BA_kiovotos_spain_event.2.b
+		set_country_flag = MIL_helped_spr_flag
+		ai_chance = {
+			base = 50
+		}
+		trigger = {
+			SPR = {
+				exists = yes
+			}
+		}
+		swap_ideas = {
+			remove_idea = MIL_refugee
+			add_idea = MIL_help_SPR
+		}
+		hidden_effect = {
+			add_ai_strategy = {
+				type = send_volunteers_desire
+				id = SPR
+				value = 999
+			}
+			news_event = {
+				id =  BA_news.109
+				days = 10
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_global_flag = end_of_the_kivotos_alliance
+					}
+				}
+				if = {
+					limit = {
+						COU = {
+							exists = yes
+						}
+					}
+					COU = {
+						country_event = {
+							id = BA_kiovotos_spain_event.3
+							days = 25
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						SHE = {
+							exists = yes
+						}
+					}
+					SHE = {
+						country_event = {
+							id = BA_kiovotos_spain_event.3
+							days = 25
+						}
+						
+					}
+				}
+			}
+		}
+	}
+	option = { #국민파 지원
+		name = BA_kiovotos_spain_event.2.c
+		set_country_flag = MIL_helped_spa_flag
+		trigger = {
+			SPA = {
+				exists = yes
+			}
+		}
+		swap_ideas = {
+			remove_idea = MIL_refugee
+			add_idea = MIL_help_SPA
+		}
+		hidden_effect = {
+			add_ai_strategy = {
+				type = send_volunteers_desire
+				id = SPA
+				value = 999
+			}
+			news_event = {
+				id =  BA_news.109
+				days = 10
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_global_flag = end_of_the_kivotos_alliance
+					}
+				}
+				var:global.kivotos_alliance_leader = {
+					country_event = {
+						id = BA_kiovotos_spain_event.3
+						days = 25
+					}	
+				}
+			}
+		}
+	}
+}
+country_event = { #간섭위원회 - 총학생회
+	id = BA_kiovotos_spain_event.3
+	title = BA_kiovotos_spain_event.3.t
+	desc = BA_kiovotos_spain_event.3.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = { #ㄱㄱ
+		ai_chance = {
+			base = 100
+		}
+		name = BA_kiovotos_spain_event.3.a
+		every_country = {
+			limit = {
+				is_in_array = {
+					array = global.kivotos_alliance
+					value = prev
+				}
+			}
+			country_event = {
+				id = BA_kiovotos_spain_event.4
+				days = 3
+			}
+		}
+	}
+	option = { #ㄴㄴ
+		name = BA_kiovotos_spain_event.3.b
+		custom_effect_tooltip = BA_kiovotos_spain_event.3_tt
+		add_to_variable = {
+			global.kivotos_cooperation_organization_withdrawal_cost = -50
+		}
+	}
+}
+country_event = { #간섭위원회 설치
+	id = BA_kiovotos_spain_event.4
+	title = BA_kiovotos_spain_event.4.t
+	desc = BA_kiovotos_spain_event.4.d
+	fire_only_once = no
+	is_triggered_only = yes
+	option = { #ㄱㄱ
+		ai_chance = {
+			base = 100
+		}
+		name = BA_kiovotos_spain_event.4.a
+		add_ideas = BA_interference_committee
+		hidden_effect = {
+			if = {
+				limit = {
+					OR = {
+						has_government = fascism
+						has_government = neutrality
+					}
+				}
+				add_ai_strategy = {
+					type = send_volunteers_desire
+					id = SPA
+					value = 50
+				}
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = RED_dipose_cherino
+				}
+				add_ai_strategy = {
+					type = send_volunteers_desire
+					id = SPC
+					value = 50
+				}
+			}
+			else = {
+				add_ai_strategy = {
+					type = send_volunteers_desire
+					id = SPR
+					value = 50
+				}
+			}
+		}
+	}
+}
+country_event = { #불간섭 타협
+	id = BA_kiovotos_spain_event.5
+	title = BA_kiovotos_spain_event.5.t
+	desc = BA_kiovotos_spain_event.5.d
+	fire_only_once = no
+	is_triggered_only = yes
+	option = { #ㄱㄱ
+		name = BA_kiovotos_spain_event.5.a
+		swap_ideas = {
+			remove_idea = BA_interference_committee
+			add_idea = BA_interference_committee_1
+		}
+	}
+	option = { #ㅗ
+		name = BA_kiovotos_spain_event.5.b
+	}
+}
+country_event = { #밀레니엄 저지
+	id = BA_kiovotos_spain_event.6
+	title = BA_kiovotos_spain_event.6.t
+	desc = BA_kiovotos_spain_event.6.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		MIL = {
+			has_war = yes
+			SPR_scw_in_progress = yes
+		}
+	}
+	option = { #ㄱㄱ
+		ai_chance = {
+			base = 100
+		}
+		name = BA_kiovotos_spain_event.6.a
+		declare_war_on = {
+			target = MIL
+			type = puppet_wargoal_focus
+		}
+	}
+	option = { #ㄴㄴ
+		name = BA_kiovotos_spain_event.6.b
+	}
+}

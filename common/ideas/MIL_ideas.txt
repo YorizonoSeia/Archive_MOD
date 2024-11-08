@@ -176,6 +176,53 @@ ideas = {
 		}
 	}
     country = { 
+        MIL_refugee = { #난민 문제
+            name = MIL_refugee
+            picture = tfv_can_conscription_crisis
+            modifier = {
+                monthly_population = 0.05
+                stability_factor = -0.05
+                consumer_goods_factor = 0.2
+            }
+        }
+        MIL_help_SPR = {
+            name = MIL_help_SPR
+            picture = SPR_the_popular_front
+            modifier = {
+                monthly_population = 0.05
+                send_volunteer_divisions_required = -1
+                send_volunteer_size = 5
+                send_volunteers_tension = -1
+                consumer_goods_factor = 0.05
+            }
+            targeted_modifier = {
+                tag = SPA
+                attack_bonus_against = 0.05
+                defense_bonus_against = 0.05
+            }
+            available = {
+                SPR_scw_in_progress = yes
+            }
+        }
+        MIL_help_SPA = {
+            name = MIL_help_SPR
+            picture = SPR_nationalist_remnants
+            modifier = {
+                monthly_population = 0.05
+                send_volunteer_divisions_required = -1
+                send_volunteer_size = 5
+                send_volunteers_tension = -1
+                consumer_goods_factor = 0.05
+            }
+            targeted_modifier = {
+                tag = SPR
+                attack_bonus_against = 0.05
+                defense_bonus_against = 0.05
+            }
+            available = {
+                SPR_scw_in_progress = yes
+            }
+        }
         FRA_production_acceleration = { # 생산 가속
             picture = generic_license_production
 
