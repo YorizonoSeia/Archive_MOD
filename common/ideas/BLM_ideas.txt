@@ -1,7 +1,7 @@
 ideas = {
     country = {
         BLM_OUTLAWS = { #이계의 무법자들
-            picture = ITA_new_roman_empire_ns
+            picture = BLM_Lawbreakers_of_the_Otherworld
             allowed = {
                 tag = BLM
                 always = no
@@ -24,7 +24,7 @@ ideas = {
 			}
         }
         BLM_backward_industry = { #낙후된 산업
-            picture = generic_oppression
+            picture = POL_disjointed_industry
             allowed = {
                 tag = BLM
                 always = no
@@ -40,7 +40,7 @@ ideas = {
             }
         }
         BLM_backward_industry_1 = { #낙후된 산업
-            picture = generic_oppression
+            picture = POL_disjointed_industry
             allowed = {
                 tag = BLM
                 always = no
@@ -55,7 +55,7 @@ ideas = {
             }
         }
         BLM_backward_industry_2 = { #낙후된 산업
-            picture = generic_oppression
+            picture = POL_disjointed_industry
             allowed = {
                 tag = BLM
                 always = no
@@ -137,7 +137,7 @@ ideas = {
             }
         }
         BLM_gang_thugs_war_idea = { #갱단 전쟁
-            picture = can_wartime_prices_and_trade_board
+            picture = BLM_gang_thugs_war_idea
             allowed = {
                 tag = BLM
                 always = no

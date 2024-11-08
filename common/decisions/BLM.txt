@@ -398,7 +398,7 @@ BLM_gang_thugs_war = {
 		days_mission_timeout = 180
 
 		timeout_effect = {
-			country_event = BLM_event.2
+			country_event = BLM_event.3
 		}
 	}
 }

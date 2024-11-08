@@ -1,7 +1,7 @@
 BLM_criminal_state = {
 	enable = { always = yes }
 
-	icon = GFX_idea_ITA_devaluated_lira
+	icon = GFX_idea_BLM_criminal_state
 	
 	remove_trigger = { 
 	}

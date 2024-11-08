@@ -1,5 +1,17 @@
 spriteTypes = {
 	spriteType = {
+		name = "GFX_idea_BLM_criminal_state"
+		texturefile = "gfx/interface/ideas/BLM/BLM_criminal_state.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BLM_Lawbreakers_of_the_Otherworld"
+		texturefile = "gfx/interface/ideas/BLM/BLM_Lawbreakers_of_the_Otherworld.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BLM_gang_thugs_war_idea"
+		texturefile = "gfx/interface/ideas/BLM/idea_BLM_gang_thugs_war_idea.tga"
+	}
+	spriteType = {
 		name = "GFX_idea_anarchy"
 		texturefile = "gfx/interface/ideas/anarchy.tga"
 	}

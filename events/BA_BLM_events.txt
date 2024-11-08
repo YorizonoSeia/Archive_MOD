@@ -62,6 +62,75 @@ country_event = {
 }
 
 country_event = {
+	id = BLM_event.3
+	title = BLM_event.3.t
+	desc = {
+		text = BLM_event.3.da
+		trigger = {
+			set_temp_variable = { BLM_point_temp = BLM_gang_point }
+			add_to_temp_variable = { BLM_point_temp = 1 }
+			check_variable = { BLM_thugs_point > BLM_point_temp }
+		}
+	}
+	desc = {
+		text = BLM_event.3.db
+		trigger = {
+			set_temp_variable = { BLM_point_temp = BLM_thugs_point }
+			add_to_temp_variable = { BLM_point_temp = 1 }
+			check_variable = { BLM_gang_point > BLM_point_temp }
+		}
+	}
+	desc = {
+		text = BLM_event.3.dc
+	}
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = { #2점차
+				set_temp_variable = { BLM_point_temp = BLM_gang_point }
+				add_to_temp_variable = { BLM_point_temp = 1 }
+				check_variable = { BLM_thugs_point > BLM_point_temp }
+			}
+			set_global_flag = BLM_skeban_victory_flag
+		}
+		else_if = {
+			limit = { #2점차
+				set_temp_variable = { BLM_point_temp = BLM_thugs_point }
+				add_to_temp_variable = { BLM_point_temp = 1 }
+				check_variable = { BLM_gang_point > BLM_point_temp }
+			}
+			set_global_flag = BLM_gang_victory_flag
+		}
+		else = {
+			
+		}
+	}
+	
+	option = {
+		name = BLM_event.3.a
+		trigger = {
+			has_global_flag = BLM_skeban_victory_flag
+		}
+	}
+	option = {
+		name = BLM_event.3.b
+		trigger = { #2점차
+			has_global_flag = BLM_gang_victory_flag
+		}
+	}
+	option = {
+		name = BLM_event.3.c
+		trigger = {
+			NOT = {
+				has_global_flag = BLM_skeban_victory_flag
+				has_global_flag = BLM_gang_victory_flag
+			}
+		}
+	}
+}
+
+country_event = {
 	id = BLM_opposition.1
 	title = BLM_opposition.1.t
 	desc = BLM_opposition.1.d

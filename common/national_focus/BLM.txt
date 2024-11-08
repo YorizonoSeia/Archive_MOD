@@ -555,6 +555,11 @@ focus_tree = {
         x = 20
         y = 0
         cost = 5
+        available = {
+            NOT = { 
+                has_completed_focus = BLM_bretagne_revolution
+            }
+        }
 
         completion_reward = {
             add_stability = 0.10
@@ -576,6 +581,11 @@ focus_tree = {
         y = 1
         relative_position_id = BLM_bretagne_independent_organization_and_start_of_war
         cost = 5
+        available = {
+            NOT = { 
+                has_completed_focus = BLM_bretagne_revolution
+            }
+        }
 
         completion_reward = {
         }
@@ -591,6 +601,11 @@ focus_tree = {
         y = 1
         relative_position_id = BLM_gang_thugs_domination
         cost = 5
+        available = {
+            NOT = { 
+                has_completed_focus = BLM_bretagne_revolution
+            }
+        }
 
         completion_reward = {
         }
@@ -606,6 +621,12 @@ focus_tree = {
         y = 0
         relative_position_id = BLM_bretagne_independent_organization_and_start_of_war
         cost = 5
+        available = {
+            NOT = { 
+                has_completed_focus = BLM_skeban_victory
+                has_completed_focus = BLM_bretagne_revolution
+            }
+        }
 
         completion_reward = {
             if = {
@@ -619,6 +640,7 @@ focus_tree = {
                 add_to_variable = { ROOT.halo_militia_cap = 2 }
                 set_division_template_cap = {  division_template = "Helmet gang" division_cap = ROOT.halo_militia_cap }
             }
+            add_to_variable = { BLM_gang_point = 1 }
         }
     }
 
@@ -632,6 +654,12 @@ focus_tree = {
         y = 0
         relative_position_id = BLM_bretagne_independent_organization_and_start_of_war
         cost = 5
+        available = {
+            NOT = { 
+                has_completed_focus = BLM_gang_victory
+                has_completed_focus = BLM_bretagne_revolution
+            }
+        }
 
         completion_reward = {
             if = {
@@ -645,6 +673,7 @@ focus_tree = {
                 add_to_variable = { ROOT.halo_militia_cap_skevan = 4 }
                 set_division_template_cap = {  division_template = "Skevan" division_cap = ROOT.halo_militia_cap }
             }
+            add_to_variable = { BLM_thugs_point = 1 }
         }
     }
 
@@ -660,6 +689,11 @@ focus_tree = {
         y = 1
         relative_position_id = BLM_bretagne_independent_organization_and_start_of_war
         cost = 5
+        available = {
+            NOT = { 
+                has_completed_focus = BLM_bretagne_revolution
+            }
+        }
 
         completion_reward = {
             custom_effect_tooltip = BLM_organized_public_security_management_tt
@@ -695,6 +729,9 @@ focus_tree = {
         cost = 5
         available = {
 			has_global_flag = KIABOTOS_Escape
+            NOT = { 
+                has_completed_focus = BLM_bretagne_revolution
+            }
         }
 
         completion_reward = {
@@ -715,6 +752,11 @@ focus_tree = {
         y = 2
         relative_position_id = BLM_organized_armament_strengthening
         cost = 5
+        available = {
+            NOT = { 
+                has_completed_focus = BLM_bretagne_revolution
+            }
+        }
 
         completion_reward = {
             if = {
@@ -736,6 +778,12 @@ focus_tree = {
         y = 1
         relative_position_id = BLM_gang_priority
         cost = 5
+        available = {
+            NOT = { 
+                has_completed_focus = BLM_skeban_victory
+                has_completed_focus = BLM_bretagne_revolution
+            }
+        }
 
         completion_reward = {
             custom_effect_tooltip = BLM_organized_public_security_management_tt
@@ -747,6 +795,7 @@ focus_tree = {
                     }
                 }
             }
+            add_to_variable = { BLM_gang_point = 1 }
         }
     }
 
@@ -760,6 +809,12 @@ focus_tree = {
         y = 1
         relative_position_id = BLM_gang_priority
         cost = 5
+        available = {
+            NOT = { 
+                has_completed_focus = BLM_skeban_victory
+                has_completed_focus = BLM_bretagne_revolution
+            }
+        }
 
         completion_reward = {
             add_war_support = -0.05
@@ -778,6 +833,7 @@ focus_tree = {
                     days = 75
                 }
             }
+            add_to_variable = { BLM_gang_point = 1 }
         }
     }
 
@@ -794,6 +850,12 @@ focus_tree = {
         y = 2
         relative_position_id = BLM_gang_priority
         cost = 5
+        available = {
+            NOT = { 
+                has_completed_focus = BLM_skeban_victory
+                has_completed_focus = BLM_bretagne_revolution
+            }
+        }
 
         completion_reward = {
             add_stability = 0.15
@@ -817,6 +879,7 @@ focus_tree = {
 					}
 				}
 			}
+            add_to_variable = { BLM_gang_point = 1 }
         }
     }
 
@@ -830,6 +893,12 @@ focus_tree = {
         y = 1
         relative_position_id = BLM_thugs_priority
         cost = 5
+        available = {
+            NOT = { 
+                has_completed_focus = BLM_gang_victory
+                has_completed_focus = BLM_bretagne_revolution
+            }
+        }
 
         completion_reward = {
             custom_effect_tooltip = BLM_free_district_bretagne_tt
@@ -842,6 +911,7 @@ focus_tree = {
 					}
                 }
             }
+            add_to_variable = { BLM_thugs_point = 1 }
         }
     }
 
@@ -855,6 +925,12 @@ focus_tree = {
         y = 1
         relative_position_id = BLM_thugs_priority
         cost = 5
+        available = {
+            NOT = { 
+                has_completed_focus = BLM_gang_victory
+                has_completed_focus = BLM_bretagne_revolution
+            }
+        }
 
         completion_reward = {
             add_war_support = 0.10
@@ -871,6 +947,7 @@ focus_tree = {
                     days = 75
                 }
             }
+            add_to_variable = { BLM_thugs_point = 1 }
         }
     }
 
@@ -887,6 +964,12 @@ focus_tree = {
         y = 2
         relative_position_id = BLM_thugs_priority
         cost = 5
+        available = {
+            NOT = { 
+                has_completed_focus = BLM_gang_victory
+                has_completed_focus = BLM_bretagne_revolution
+            }
+        }
 
         completion_reward = {
             custom_effect_tooltip = BLM_skevan_div_cap_3_tt
@@ -909,6 +992,7 @@ focus_tree = {
 					}
 				}
 			}
+            add_to_variable = { BLM_thugs_point = 1 }
         }
     }
 
@@ -930,6 +1014,102 @@ focus_tree = {
             effect_tooltip = {
                 add_stability = -0.10
                 add_ideas = BLM_gang_thugs_war_idea
+            }
+        }
+    }
+
+    focus = { #
+        id = BLM_skeban_victory
+        icon = GFX_focus_BLM_thugs_priority
+        prerequisite = {
+            focus = BLM_gang_thugs_war_focus
+        }
+        mutually_exclusive = {
+            focus = BLM_gang_victory
+            focus = BLM_bretagne_revolution
+        }
+        x = -3
+        y = 1
+        relative_position_id = BLM_gang_thugs_war_focus
+        cost = 5
+        available = {
+            has_global_flag = BLM_skeban_victory_flag
+        }
+
+        completion_reward = {
+            remove_ideas = BLM_gang_thugs_war_idea
+            custom_effect_tooltip = BLM_militia_div_cap__4_tt
+            hidden_effect = {
+                add_to_variable = { ROOT.halo_militia_cap = -4 }
+                set_division_template_cap = {  division_template = "Helmet gang" division_cap = ROOT.halo_militia_cap }
+            }
+        }
+    }
+
+    focus = { #
+        id = BLM_gang_victory
+        icon = GFX_focus_BLM_gang_priority
+        prerequisite = {
+            focus = BLM_gang_thugs_war_focus
+        }
+        mutually_exclusive = {
+            focus = BLM_skeban_victory
+            focus = BLM_bretagne_revolution
+        }
+        x = 5
+        y = 1
+        relative_position_id = BLM_gang_thugs_war_focus
+        cost = 5
+        available = {
+            has_global_flag = BLM_gang_victory_flag
+        }
+
+        completion_reward = {
+            remove_ideas = BLM_gang_thugs_war_idea
+            custom_effect_tooltip = BLM_skevan_div_cap__4_tt
+            hidden_effect = {
+                add_to_variable = { ROOT.halo_militia_cap_skevan = -4 }
+                set_division_template_cap = {  division_template = "Skevan" division_cap = ROOT.halo_militia_cap }
+            }
+        }
+    }
+
+    focus = { #
+        id = BLM_bretagne_revolution
+        icon = GFX_focus_spr_masters_of_our_own_fate
+        prerequisite = {
+            focus = BLM_gang_thugs_war_focus
+        }
+        mutually_exclusive = {
+            focus = BLM_skeban_victory
+            focus = BLM_gang_victory
+        }
+        available = {
+			custom_trigger_tooltip = {
+				tooltip = unlock_focuses
+				always = no
+			}
+        }
+        x = 18
+        y = 1
+        relative_position_id = BLM_gang_thugs_war_focus
+        cost = 5
+
+        completion_reward = {
+            remove_ideas = BLM_gang_thugs_war_idea
+
+            #news_event = { id = BA_news.106 hours = 12 }
+			delete_unit_template_and_units = {
+				division_template = "Helmet gang"
+				disband = yes
+			}
+			delete_unit_template_and_units = {
+				division_template = "Skevan"
+				disband = yes
+			}
+            if = {
+                limit = { has_idea = BLM_anarchy }
+                remove_ideas = BLM_anarchy
             }
         }
     }
