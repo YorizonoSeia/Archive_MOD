@@ -4178,6 +4178,7 @@ country_event = {
 		ROOT = { 
 			set_cosmetic_tag = TRM_colony_color
 			TRM = {
+				puppet = PREV
 				set_autonomy = {
 					target = PREV
 					autonomy_state = autonomy_holy_dminion
