@@ -793,4 +793,10 @@ spriteTypes = {
         texturefile = "gfx/interface/decisions/heu_benriya_decisions/68_benriya_revolution.dds"
         legacy_lazy_load = no
     }
+
+	spriteType = {
+        name = "GFX_problem_solver_68_system"
+        texturefile = "gfx/interface/decisions/heu_benriya_decisions/problem_solver_68_system.dds"
+        legacy_lazy_load = no
+    }
 }
