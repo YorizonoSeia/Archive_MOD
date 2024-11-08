@@ -835,7 +835,7 @@ BA_kivotos_school_country_category = {
 
 		available = {
 			num_of_civilian_factories_available_for_projects > 1
-			NOT = { has_war_with = global.kivotos_alliance }
+			NOT = { has_war_with = global.kivotos_alliance_leader }
 		}
 
 		complete_effect = {
