@@ -284,7 +284,7 @@
  MIL_refugee_problem_desc:0 ""
  MIL_non_interference_compromise: "불간섭 타협"
  MIL_total_interference: "총체적 개입"
- MIL_total_interference_tt: "\n§Y@MIL[MIL.getname]§!에게 §Y스페인 내전§!을 마무리할 §Y60§!일이 주어집니다. 기한 내에 내전을 마무리하지 못 한다면, §Y@[kivotos_alliance_leader] [kivotos_alliance_leader]§!(이)가 이에 개입할 수 있습니다."
+ MIL_total_interference_tt: "\n§Y@MIL[MIL.getname]§!에게 §Y스페인 내전§!을 마무리할 §Y60§!일이 주어집니다. 기한 내에 내전을 마무리하지 못 한다면, §Y[?global.kivotos_alliance_leader.GetNameWithFlag]§!(이)가 이에 개입할 수 있습니다."
  MIL_spain_process: "스페인 감시"
  MIL_spain_process_tt: "지원한 내전 세력이 승리했습니다."
  MIL_intervention_civil_war:0 "스페인 내전 개입"
