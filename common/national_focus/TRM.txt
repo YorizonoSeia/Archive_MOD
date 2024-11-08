@@ -2000,9 +2000,21 @@
 		x = 2
 		y = 0
 		completion_reward = {
-            RED = {
-                country_event = { id = TRM_diplomacy_event.12 }
-            }
+			if = {
+				limit = {
+					OR = {
+						RED = { controls_state = 37 }
+						RE1 = { controls_state = 37 }
+					}
+				}
+				RED = { country_event = TRM_diplomacy_event.12 }
+			}
+			if = {
+				limit = {
+					DEN = { controls_state = 37 }
+				}
+				DEN = { country_event = TRM_diplomacy_event.12 }
+			}
 		}
 	}
 	focus = {
