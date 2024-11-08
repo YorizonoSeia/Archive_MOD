@@ -9353,6 +9353,13 @@ ABY_descision_category_ennead_puppet = { # 엔네아드 괴뢰
 				id = 692
 				name = ABY_name_abydos_14
 			}
+			random_unit_leader = {
+				limit = {
+					is_army_leader = yes
+					is_character = GEH_hina
+				}
+				set_nationality = ABY
+			}
         }
 	}
 	ABY_descision_silesia_annex = {
@@ -10505,6 +10512,13 @@ ABY_descision_category_abydos_puppet = { # 연방조약 괴뢰
 			set_province_name = {
 				id = 692
 				name = ABY_name_abydos_14
+			}
+			random_unit_leader = {
+				limit = {
+					is_army_leader = yes
+					is_character = GEH_hina
+				}
+				set_nationality = ABY
 			}
         }
 	}

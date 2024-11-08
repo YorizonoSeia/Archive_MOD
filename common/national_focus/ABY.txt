@@ -2078,11 +2078,6 @@ focus_tree = {
 			remove_power_balance = {
 				id = ABY_power_balance
 			}
-			custom_effect_tooltip = kivotos_halo_add12_tt
-			hidden_effect = {
-				set_variable = { BA_halo_infantry_cap_edit_var = 12 }
-				BA_halo_infantry_cap_edit_effect = yes
-			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -12593,6 +12588,7 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			custom_effect_tooltip = ABY_zapadoslavia_large_tt
 			if = {
 				limit = {
 					POL = {
@@ -12608,6 +12604,11 @@ focus_tree = {
 						is_core_of = POL
 					}
 					add_core_of = ABY
+				}
+				POL = {
+					every_unit_leader = {
+						set_nationality = ABY
+					}
 				}
 			}
 			if = {
@@ -12626,6 +12627,11 @@ focus_tree = {
 					}
 					add_core_of = ABY
 				}
+				SIL = {
+					every_unit_leader = {
+						set_nationality = ABY
+					}
+				}
 			}
 			if = {
 				limit = {
@@ -12642,6 +12648,11 @@ focus_tree = {
 						is_core_of = DNZ
 					}
 					add_core_of = ABY
+				}
+				DNZ = {
+					every_unit_leader = {
+						set_nationality = ABY
+					}
 				}
 			}
 			if = {
@@ -12660,6 +12671,11 @@ focus_tree = {
 					}
 					add_core_of = ABY
 				}
+				SLO = {
+					every_unit_leader = {
+						set_nationality = ABY
+					}
+				}
 			}
 			if = {
 				limit = {
@@ -12676,6 +12692,11 @@ focus_tree = {
 						is_core_of = PRE
 					}
 					add_core_of = ABY
+				}
+				PRE = {
+					every_unit_leader = {
+						set_nationality = ABY
+					}
 				}
 			}
 			if = {
@@ -12694,6 +12715,11 @@ focus_tree = {
 					}
 					add_core_of = ABY
 				}
+				LIT = {
+					every_unit_leader = {
+						set_nationality = ABY
+					}
+				}
 			}
 			if = {
 				limit = {
@@ -12711,6 +12737,11 @@ focus_tree = {
 					}
 					add_core_of = UKR
 				}
+				UKR = {
+					every_unit_leader = {
+						set_nationality = ABY
+					}
+				}
 			}
 			if = {
 				limit = {
@@ -12727,6 +12758,11 @@ focus_tree = {
 						is_core_of = BLR
 					}
 					add_core_of = ABY
+				}
+				BLR = {
+					every_unit_leader = {
+						set_nationality = ABY
+					}
 				}
 			}
 			set_cosmetic_tag = ABY_zapadoslavia
@@ -12791,6 +12827,11 @@ focus_tree = {
 					}
 					add_core_of = ABY
 				}
+				POL = {
+					every_unit_leader = {
+						set_nationality = ABY
+					}
+				}
 			}
 			if = {
 				limit = {
@@ -12807,6 +12848,11 @@ focus_tree = {
 						is_core_of = SIL
 					}
 					add_core_of = ABY
+				}
+				SIL = {
+					every_unit_leader = {
+						set_nationality = ABY
+					}
 				}
 			}
 			if = {
@@ -12825,6 +12871,11 @@ focus_tree = {
 					}
 					add_core_of = ABY
 				}
+				DNZ = {
+					every_unit_leader = {
+						set_nationality = ABY
+					}
+				}
 			}
 			if = {
 				limit = {
@@ -12841,6 +12892,11 @@ focus_tree = {
 						is_core_of = SLO
 					}
 					add_core_of = ABY
+				}
+				SLO = {
+					every_unit_leader = {
+						set_nationality = ABY
+					}
 				}
 			}
 			if = {
@@ -12859,6 +12915,11 @@ focus_tree = {
 					}
 					add_core_of = ABY
 				}
+				PRE = {
+					every_unit_leader = {
+						set_nationality = ABY
+					}
+				}
 			}
 			if = {
 				limit = {
@@ -12875,6 +12936,11 @@ focus_tree = {
 						is_core_of = LIT
 					}
 					add_core_of = ABY
+				}
+				LIT = {
+					every_unit_leader = {
+						set_nationality = ABY
+					}
 				}
 			}
 			if = {
@@ -12893,6 +12959,11 @@ focus_tree = {
 					}
 					add_core_of = ABY
 				}
+				HUN = {
+					every_unit_leader = {
+						set_nationality = ABY
+					}
+				}
 			}
 			if = {
 				limit = {
@@ -12909,6 +12980,11 @@ focus_tree = {
 						is_core_of = TRA
 					}
 					add_core_of = ABY
+				}
+				TRA = {
+					every_unit_leader = {
+						set_nationality = ABY
+					}
 				}
 			}
 			add_victory_points = {
