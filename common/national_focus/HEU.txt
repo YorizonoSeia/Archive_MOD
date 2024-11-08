@@ -2,7 +2,7 @@ focus_tree = {
 	id = HEU
 	continuous_focus_position = { x = 3600 y = 700 } 
 	shared_focus = BA_new_world_technology
-	shared_focus = GEH_unified_gehenna
+	#shared_focus = GEH_unified_gehenna
 	shared_focus = Eden_formation_of_alliance_treaty_organization
 	country = {
 		factor = 0
@@ -5143,6 +5143,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			set_cosmetic_tag = HEU_luxembourg
 			HEU_bop_high_increase_effect = yes
 			add_popularity = {
 				ideology = communism
@@ -5274,6 +5275,11 @@ focus_tree = {
 					ideology = fascism
 					long_name = HEU_benriya_party
 					name = HEU_benriya_party
+				}
+
+				swap_ruler_traits = {
+					remove = HEU_regent_of_luxembourg
+					add = HEU_regent_of_luxembourg_2
 				}
 			}
 		}
@@ -5498,6 +5504,11 @@ focus_tree = {
 				news_event = { id = HEU_news.2 hours = 3 }
 				country_event = { id = HEU_event.112 }
 				country_event = { id = HEU_event.114 days = 30 random_days = 30 }
+
+				swap_ruler_traits = {
+					remove = HEU_regent_of_luxembourg
+					add = HEU_regent_of_luxembourg_2
+				}
 			}
 
 			HEU_bop_high_decrease_effect = yes
@@ -5835,6 +5846,7 @@ focus_tree = {
 
 			hidden_effect = {
 				news_event = { id = HEU_news.4 hours = 3 }
+				country_event = { id = HEU.flavor_event.27 }
 			}
 		}
 	}
@@ -5874,6 +5886,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			set_cosmetic_tag = HEU_GSC
 			if = {
 				limit = { has_country_leader_with_trait = HEU_GSC_trait_1 }
 				swap_ruler_traits = {
@@ -6537,6 +6550,24 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			random_owned_state = {
+				damage_building = {
+					type = infrastructure
+					damage = 1
+				}
+			}
+			
+			add_stability = 0.1
+			
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.2
+			}
+
+			add_popularity = {
+				ideology = communism
+				popularity = -0.2
+			}
 		}
 	}
 
@@ -6614,7 +6645,16 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = HEU_modify_rikuhachimaism_intro
+			add_to_variable = {
+				HEU_aru_var_war_support_factor = 0.1
+				tooltip = war_support_factor_tt
+			}
 
+			add_to_variable = {
+				HEU_aru_var_conscription_factor = 0.1
+				tooltip = conscription_factor_tt
+			}
 		}
 	}
 
@@ -6645,13 +6685,53 @@ focus_tree = {
 		y = 4
 
 		available = {
+			custom_trigger_tooltip = {
+				tooltip = HEU_aru_persona_resolution_need_70_tt
+				check_variable = { Global.aru_stat_point_array^2 > 69 } #결의 69 초과
+			}
 		}
 
 		bypass = {
 		}
 
 		completion_reward = {
-			add_stability = 0.1
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 900
+			}
+			add_equipment_to_stockpile = {
+				type = kivotos_infantry_equipment
+				amount = 450
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 30
+			}
+			add_equipment_to_stockpile = {
+				type = anti_tank_equipment
+				amount = 60
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 120
+			}
+
+			custom_effect_tooltip = HEU_modify_rikuhachimaism_intro
+			add_to_variable = {
+				HEU_aru_var_stability_factor = 0.05
+				tooltip = stability_factor_tt
+			}
+			
+			add_to_variable = {
+				HEU_aru_var_war_support_factor = 0.05
+				tooltip = war_support_factor_tt
+			}
+
+			custom_effect_tooltip = kivotos_halo_add6_tt
+			hidden_effect = {
+				set_variable = { BA_halo_infantry_cap_edit_var = 6 }
+				BA_halo_infantry_cap_edit_effect = yes
+			}
 		}
 	}
 	
@@ -7098,8 +7178,8 @@ focus_tree = {
 		icon = GFX_goal_GEH_Pax_Gehennia
 
 		cost = 10.00
-		x = 62
-		y = 6
+		x = 54
+		y = 0
 
 		available = {
 			has_country_flag = GEH_unified_gehenna_flag
@@ -7109,7 +7189,7 @@ focus_tree = {
 		}
 
 		allow_branch = {
-			is_debug = yes
+
 		}
 
 		completion_reward = {
@@ -8336,6 +8416,10 @@ focus_tree = {
 			has_dynamic_modifier = {
 				modifier = HEU_luxembourgism_idea
 			}
+            custom_trigger_tooltip = {
+                tooltip = THIS_IS_WIP_TT
+			    has_country_flag = GAEBALJUNG
+            }
 		}
 
 		bypass = {
@@ -9609,7 +9693,7 @@ focus_tree = {
 				}
 			}
 
-			custom_effect_tooltip = whitespace_tt
+			custom_effect_tooltip = tooltip_white_line
 
 			custom_effect_tooltip = HEU_modify_luxembourg_army_intro
 			add_to_variable = {
@@ -9653,7 +9737,7 @@ focus_tree = {
 				uses = 1
 			}
 
-			custom_effect_tooltip = whitespace_tt
+			custom_effect_tooltip = tooltip_white_line
 
 			custom_effect_tooltip = HEU_modify_luxembourg_army_intro
 			add_to_variable = {
@@ -9740,7 +9824,7 @@ focus_tree = {
 				category = infantry_tech
 			}
 
-			custom_effect_tooltip = whitespace_tt
+			custom_effect_tooltip = tooltip_white_line
 
 			custom_effect_tooltip = HEU_modify_luxembourg_army_intro
 			add_to_variable = {
@@ -9881,7 +9965,7 @@ focus_tree = {
 				}
 			}
 
-			custom_effect_tooltip = whitespace_tt
+			custom_effect_tooltip = tooltip_white_line
 
 			custom_effect_tooltip = HEU_modify_luxembourg_army_intro
 			add_to_variable = {
@@ -9935,7 +10019,7 @@ focus_tree = {
 				category = special_forces_doctrine
 			}
 
-			custom_effect_tooltip = whitespace_tt
+			custom_effect_tooltip = tooltip_white_line
 
 			custom_effect_tooltip = HEU_modify_luxembourg_army_intro
 			add_to_variable = {
@@ -10041,7 +10125,7 @@ focus_tree = {
 				category = artillery
 			}
 
-			custom_effect_tooltip = whitespace_tt
+			custom_effect_tooltip = tooltip_white_line
 
 			custom_effect_tooltip = HEU_modify_luxembourg_army_intro
 			add_to_variable = {
@@ -10117,42 +10201,42 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = HEU_benriya_saori 
-		icon = GFX_goal_HEU_saori_jomae #GFX_goal_TRN_Hug_students
-
-		prerequisite = { 
-			focus = HEU_defence_industry
-		}
-
-		x = -3
-		y = 1
-
-		relative_position_id = HEU_defence_industry
-		cost = 5
-
-		available = {
-			NOT = { country_exists = ARI }
-			custom_trigger_tooltip = {
-				tooltip = HEU_saori_not_dead
-				ARI = {
-					has_character = saori
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = HEU_aru_persona_charisma_need_25_tt
-				check_variable = { Global.aru_stat_point_array^3 > 24 } #카리스마 24 초과
-			}
-		}
-
-		search_filters = {  }
-
-		completion_reward = {
-			ARI = {
-				saori = { set_nationality = HEU	}
-			}
-		}
-	}
+	#focus = {
+	#	id = HEU_benriya_saori 
+	#	icon = GFX_goal_HEU_saori_jomae #GFX_goal_TRN_Hug_students
+#
+	#	prerequisite = { 
+	#		focus = HEU_defence_industry
+	#	}
+#
+	#	x = -3
+	#	y = 1
+#
+	#	relative_position_id = HEU_defence_industry
+	#	cost = 5
+#
+	#	available = {
+	#		NOT = { country_exists = ARI }
+	#		custom_trigger_tooltip = {
+	#			tooltip = HEU_saori_not_dead
+	#			ARI = {
+	#				has_character = saori
+	#			}
+	#		}
+	#		custom_trigger_tooltip = {
+	#			tooltip = HEU_aru_persona_charisma_need_25_tt
+	#			check_variable = { Global.aru_stat_point_array^3 > 24 } #카리스마 24 초과
+	#		}
+	#	}
+#
+	#	search_filters = {  }
+#
+	#	completion_reward = {
+	#		ARI = {
+	#			saori = { set_nationality = HEU	}
+	#		}
+	#	}
+	#}
 
 	focus = {
 		id = HEU_benriya_bicycle 
@@ -10891,7 +10975,7 @@ focus_tree = {
 		
 		relative_position_id = HEU_air_force_focus_1
 
-		icon = GFX_goal_Perfect_team_first_congress
+		icon = GFX_goal_GEH_army_flag
 
 		prerequisite = { 
 			focus = HEU_air_force_focus_1 

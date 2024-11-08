@@ -1057,6 +1057,70 @@ ideas = {
 				stability_factor = -0.04
 			}
 		}
+		
+		HEU_to_the_end_idea = { #마지막까지
+
+			picture = received_attache
+
+			allowed = { always = no }
+			allowed_civil_war = { always = yes 	} 
+
+			available = {
+				has_war = yes
+			}
+
+			modifier = {
+				weekly_manpower = 600
+				ai_desired_divisions_factor = 2
+				surrender_limit = 1
+			}
+
+			traits = {
+				cornered_fox
+			}
+		}
+		
+		HEU_red_winter_68_idea = { #68혁명의 붉은겨울 참가자
+
+			picture = trotskyite_plot_nsb_ccp_sov_compatibility
+
+			allowed = { always = no }
+			allowed_civil_war = { always = yes 	} 
+
+			modifier = {
+				communism_drift = 0.02
+				stability_factor = -0.05
+			}
+		}
+		
+		HEU_red_winter_68_yes_idea = { #68혁명의 트로츠키주의 용인
+
+			picture = trotskyite_plot_nsb_ccp_sov_compatibility
+
+			allowed = { always = no }
+			allowed_civil_war = { always = yes 	} 
+
+			modifier = {
+				communism_drift = 0.02
+				communism_acceptance = 50
+				industrial_capacity_factory = 0.05
+			}
+		}
+
+		HEU_financial_difficulties = { #1935년 룩셈부르크 대공황
+
+			picture = usa_great_depression_3
+
+			allowed = { always = no }
+			allowed_civil_war = { always = yes 	} 
+
+			modifier = {
+                consumer_goods_factor = 0.20
+                industrial_capacity_factory = -0.1
+                industrial_capacity_dockyard = -0.1 
+                research_speed_factor = -0.2 
+			}
+		}
 	}
 	
 	industrial_concern = {
@@ -1097,7 +1161,7 @@ ideas = {
 		HEU_ARBED = { 
 			name = HEU_ARBED
 
-			picture = ARG_banco_central_de_la_republica_argentina
+			picture = HEU_ARBED
 
 			allowed = {
 				original_tag = HEU

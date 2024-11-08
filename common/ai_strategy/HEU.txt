@@ -141,7 +141,10 @@ HEU_aru_GSC_president_III = {
         original_tag = GEM
     }
     enable = {
-		has_completed_focus = HEU_general_student_council_aru
+        AND = {
+            HEU = { has_completed_focus = HEU_general_student_council_aru }
+            NOT = { country_exists = TRM }
+        }
     }
 
     abort_when_not_enabled = yes

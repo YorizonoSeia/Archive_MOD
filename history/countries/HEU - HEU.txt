@@ -158,7 +158,7 @@ add_ideas = {
 	civilian_economy
 	HEU_sinloe_wa_uae
 	HEU_gehenna_ui_ablyeog
-	HEU_ja_geum_nan
+	#HEU_financial_difficulties
 	HEU_grand_duchy_of_luxembourg
 	HEU_gehenna_immigrant
 }

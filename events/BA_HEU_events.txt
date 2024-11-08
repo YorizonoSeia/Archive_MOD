@@ -1183,16 +1183,18 @@ country_event = { #[FROM.GetName] 측의 망명 제안
 		}
 
 		HEU = {
-			annex_country = {
-				target = GEM
-				transfer_troops = yes
-			}
-			
 			every_state = {
 				limit = { is_core_of = GEM }
 				add_core_of	= HEU
 				remove_core_of = GEM
 			}
+
+			annex_country = {
+				target = GEM
+				transfer_troops = yes
+			}
+			
+			add_ideas = HEU_to_the_end_idea
 		}
 
 		custom_effect_tooltip = GAME_OVER_TT
@@ -1550,6 +1552,202 @@ country_event = { #장 폴 사르트르 - 룩셈부르크를 거닐며
 	option = { 
 		name = HEU.flavor_event.19.a 
 		add_political_power = 10
+	}
+}
+
+country_event = { #혁명의 불길은 꺼지지 않을 것이다
+	id = HEU.flavor_event.20
+	title = HEU.flavor_event.20.t
+	desc = HEU.flavor_event.20.desc
+	picture = GFX_report_event_german_volunteers
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = HEU
+		has_dynamic_modifier = {
+			modifier = HEU_rikuhachimaism_idea
+		}
+		has_defensive_war = yes
+	}
+
+	option = { 
+		name = HEU.flavor_event.20.a 
+		add_war_support = 0.1
+		add_manpower = 30000
+	}
+}
+
+country_event = { #68혁명 - 지원자인가? 방해꾼인가?
+	id = HEU.flavor_event.21
+	title = HEU.flavor_event.21.t
+	desc = HEU.flavor_event.21.desc
+	picture = GFX_report_event_soviet_tanks_snow
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = HEU
+		has_dynamic_modifier = {
+			modifier = HEU_rikuhachimaism_idea
+		}
+		country_exists = RED
+		NOT = { has_war_with = RED }
+	}
+
+	mean_time_to_happen = {
+		days = 60
+	}
+
+	option = { 
+		name = HEU.flavor_event.21.a 
+		add_political_power = -25
+		add_ideas = HEU_red_winter_68_idea
+
+		hidden_effect = {
+			country_event = { id = HEU.flavor_event.22 days = 30 random_days = 50 }
+			country_event = { id = HEU.flavor_event.26 days = 14 random_days = 21 }
+		}
+	}
+}
+
+country_event = { #붉은겨울 학생들의 수상한 푸딩
+	id = HEU.flavor_event.22
+	title = HEU.flavor_event.22.t
+	desc = HEU.flavor_event.22.desc
+	picture = GFX_report_event_soviet_tanks_snow
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.flavor_event.22.a 
+		add_political_power = -25
+	}
+
+	option = { 
+		name = HEU.flavor_event.22.b
+		add_popularity = {
+			ideology = communism
+			popularity = 0.04
+		}
+	}
+}
+
+country_event = { #우리는 자유를 원한다!
+	id = HEU.flavor_event.23
+	title = HEU.flavor_event.23.t
+	desc = HEU.flavor_event.23.desc
+	picture = GFX_report_event_soviet_tanks_snow
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = HEU
+		has_dynamic_modifier = {
+			modifier = HEU_rikuhachimaism_idea
+		}
+		date > 1937.06.01
+	}
+
+	mean_time_to_happen = {
+		days = 120
+	}
+
+	option = { 
+		name = HEU.flavor_event.23.a 
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.02
+		}
+		add_to_variable = {
+			global.aru_stat_point_array^2 = 3
+			tooltip = HEU_aru_persona_resolution_edit_tt
+		}
+		HEU_aru_persona_setting = yes
+	}
+
+	option = { 
+		name = HEU.flavor_event.23.b
+		add_political_power = -25
+		add_to_variable = {
+			global.aru_stat_point_array^0 = 2
+			tooltip = HEU_aru_persona_wisdom_edit_tt
+		}
+		HEU_aru_persona_setting = yes
+	}
+}
+
+country_event = { #제1차 성소수자 프라이드 퍼레이드
+	id = HEU.flavor_event.24
+	title = HEU.flavor_event.24.t
+	desc = HEU.flavor_event.24.desc
+	picture = GFX_report_event_soviet_tanks_snow
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = HEU
+		has_dynamic_modifier = {
+			modifier = HEU_rikuhachimaism_idea
+		}
+		date > 1938.01.01
+	}
+
+	mean_time_to_happen = {
+		days = 70
+	}
+
+	option = { 
+		name = HEU.flavor_event.24.a 
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.01
+		}
+
+		hidden_effect = {
+			country_event = { id = HEU.flavor_event.25 days = 24 random_days = 18 }
+		}
+	}
+}
+
+country_event = { #키보토스 뮤직 페스티벌
+	id = HEU.flavor_event.25
+	title = HEU.flavor_event.25.t
+	desc = HEU.flavor_event.25.desc
+	picture = GFX_report_event_soviet_tanks_snow
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.flavor_event.25.a 
+		add_manpower = -1
+	}
+}
+
+country_event = { #트로츠키 대 스탈린
+	id = HEU.flavor_event.26
+	title = HEU.flavor_event.26.t
+	desc = HEU.flavor_event.26.desc
+	picture = GFX_report_event_stalin_01
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.flavor_event.26.a 
+		add_popularity = {
+			ideology = communism
+			popularity = -0.01
+		}
+	}
+}
+
+country_event = { #총학생회장 리쿠하치마 아루?
+	id = HEU.flavor_event.27
+	title = HEU.flavor_event.27.t
+	desc = HEU.flavor_event.27.desc
+	picture = GFX_report_event_Problem_Solver_68
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.flavor_event.27.a 
+
 	}
 }
 

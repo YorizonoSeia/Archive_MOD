@@ -1,149 +1,149 @@
 HEU_jageumnan_d = { #자금난 해결
-	HEU_jageumnan_dd_1 = {
-		icon = GFX_decision_generic_decision
-		available = {NOT = {has_country_flag = HEU_jeongchekjinhangjung_flag}}
-		ai_will_do = { factor = 1 }
-		cost = 150
-		days_remove = 90
-		remove_effect = {
-			random_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			clr_country_flag = HEU_jeongchekjinhangjung_flag
-		}
-		complete_effect = {
-			set_country_flag = HEU_jeongchekjinhangjung_flag
-		}
-		modifier = {
-			political_power_factor = -0.25
-		}
-		fire_only_once = no
-	}
-	HEU_jageumnan_dd_2 = {
-		icon = GFX_decision_generic_decision
-		available = {NOT = {has_country_flag = HEU_jeongchekjinhangjung_flag}}
-		ai_will_do = { factor = 1 }
-		cost = 150
-		days_remove = 90
-		remove_effect = {
-			random_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-			clr_country_flag = HEU_jeongchekjinhangjung_flag
-		}
-		complete_effect = {
-			set_country_flag = HEU_jeongchekjinhangjung_flag
-		}
-		modifier = {
-			political_power_factor = -0.25
-		}
-		fire_only_once = no
-	}
-	HEU_jageumnan_dd_3 = {
-		icon = GFX_decision_generic_decision
-		available = {
-			NOT = {has_country_flag = HEU_jeongchekjinhangjung_flag}
-			OR = {
-				has_war = yes
-				has_border_war = yes
-			}
-		}
-		ai_will_do = { factor = 1 }
-		cost = 150
-		days_remove = 90
-		remove_effect = {
-			clr_country_flag = HEU_jeongchekjinhangjung_flag
-		}
-		complete_effect = {
-			set_country_flag = HEU_jeongchekjinhangjung_flag
-		}
-		modifier = {
-			political_power_factor = -0.25
-			army_attack_factor = 0.05
-			army_defence_factor = 0.05
-			army_morale_factor = 0.05
-		}
-		fire_only_once = no
-	}
-	HEU_jageumnan_dd_4 = {
-		icon = GFX_decision_generic_decision
-		available = {NOT = {has_country_flag = HEU_jeongchekjinhangjung_flag}}
-		ai_will_do = { factor = 1 }
-		cost = 150
-		days_remove = 90
-		remove_effect = {
-			clr_country_flag = HEU_jeongchekjinhangjung_flag
-		}
-		complete_effect = {
-			set_country_flag = HEU_jeongchekjinhangjung_flag
-		}
-		modifier = {
-			political_power_factor = -0.25
-			production_speed_buildings_factor = 0.05
-			industrial_capacity_factory = 0.10
-			industrial_capacity_dockyard = 0.10
-		}
-		fire_only_once = no
-	}
-	HEU_jageumnan_d_1 = {
-
-		icon = GFX_decision_generic_merge_plant_materiel
-
-		available = {
-			num_of_civilian_factories_available_for_projects > 3
-		}
-
-		cost = 200
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		days_remove = 90
-
-		visible = {
-			OR = {
-				has_idea = HEU_ja_geum_nan
-				has_idea = HEU_ja_geum_nan2
-				has_idea = HEU_ja_geum_nan3
-			}
-		}
-		remove_effect = {
-			if = {
-				limit = { has_idea = HEU_ja_geum_nan }
-				swap_ideas = {
-					remove_idea = HEU_ja_geum_nan
-					add_idea = HEU_ja_geum_nan2
-				}
-			}
-			else_if = {
-				limit = { has_idea = HEU_ja_geum_nan2 }
-				swap_ideas = {
-					remove_idea = HEU_ja_geum_nan2
-					add_idea = HEU_ja_geum_nan3
-				}
-			}
-			else_if = {
-				limit = { has_idea = HEU_ja_geum_nan3 }
-				remove_ideas = HEU_ja_geum_nan3
-			}
-		}		
-		modifier = {
-			civilian_factory_use = 3
-		}
-		complete_effect = {
-		}
-	}
+	#HEU_jageumnan_dd_1 = {
+	#	icon = GFX_decision_generic_decision
+	#	available = {NOT = {has_country_flag = HEU_jeongchekjinhangjung_flag}}
+	#	ai_will_do = { factor = 1 }
+	#	cost = 150
+	#	days_remove = 90
+	#	remove_effect = {
+	#		random_owned_state = {
+	#			add_extra_state_shared_building_slots = 1
+	#			add_building_construction = {
+	#				type = industrial_complex
+	#				level = 1
+	#				instant_build = yes
+	#			}
+	#		}
+	#		clr_country_flag = HEU_jeongchekjinhangjung_flag
+	#	}
+	#	complete_effect = {
+	#		set_country_flag = HEU_jeongchekjinhangjung_flag
+	#	}
+	#	modifier = {
+	#		political_power_factor = -0.25
+	#	}
+	#	fire_only_once = no
+	#}
+	#HEU_jageumnan_dd_2 = {
+	#	icon = GFX_decision_generic_decision
+	#	available = {NOT = {has_country_flag = HEU_jeongchekjinhangjung_flag}}
+	#	ai_will_do = { factor = 1 }
+	#	cost = 150
+	#	days_remove = 90
+	#	remove_effect = {
+	#		random_owned_state = {
+	#			add_extra_state_shared_building_slots = 1
+	#			add_building_construction = {
+	#				type = arms_factory
+	#				level = 1
+	#				instant_build = yes
+	#			}
+	#		}
+	#		clr_country_flag = HEU_jeongchekjinhangjung_flag
+	#	}
+	#	complete_effect = {
+	#		set_country_flag = HEU_jeongchekjinhangjung_flag
+	#	}
+	#	modifier = {
+	#		political_power_factor = -0.25
+	#	}
+	#	fire_only_once = no
+	#}
+	#HEU_jageumnan_dd_3 = {
+	#	icon = GFX_decision_generic_decision
+	#	available = {
+	#		NOT = {has_country_flag = HEU_jeongchekjinhangjung_flag}
+	#		OR = {
+	#			has_war = yes
+	#			has_border_war = yes
+	#		}
+	#	}
+	#	ai_will_do = { factor = 1 }
+	#	cost = 150
+	#	days_remove = 90
+	#	remove_effect = {
+	#		clr_country_flag = HEU_jeongchekjinhangjung_flag
+	#	}
+	#	complete_effect = {
+	#		set_country_flag = HEU_jeongchekjinhangjung_flag
+	#	}
+	#	modifier = {
+	#		political_power_factor = -0.25
+	#		army_attack_factor = 0.05
+	#		army_defence_factor = 0.05
+	#		army_morale_factor = 0.05
+	#	}
+	#	fire_only_once = no
+	#}
+	#HEU_jageumnan_dd_4 = {
+	#	icon = GFX_decision_generic_decision
+	#	available = {NOT = {has_country_flag = HEU_jeongchekjinhangjung_flag}}
+	#	ai_will_do = { factor = 1 }
+	#	cost = 150
+	#	days_remove = 90
+	#	remove_effect = {
+	#		clr_country_flag = HEU_jeongchekjinhangjung_flag
+	#	}
+	#	complete_effect = {
+	#		set_country_flag = HEU_jeongchekjinhangjung_flag
+	#	}
+	#	modifier = {
+	#		political_power_factor = -0.25
+	#		production_speed_buildings_factor = 0.05
+	#		industrial_capacity_factory = 0.10
+	#		industrial_capacity_dockyard = 0.10
+	#	}
+	#	fire_only_once = no
+	#}
+	#HEU_jageumnan_d_1 = {
+#
+	#	icon = GFX_decision_generic_merge_plant_materiel
+#
+	#	available = {
+	#		num_of_civilian_factories_available_for_projects > 3
+	#	}
+#
+	#	cost = 200
+#
+	#	ai_will_do = {
+	#		factor = 100
+	#	}
+#
+	#	days_remove = 90
+#
+	#	visible = {
+	#		OR = {
+	#			has_idea = HEU_ja_geum_nan
+	#			has_idea = HEU_ja_geum_nan2
+	#			has_idea = HEU_ja_geum_nan3
+	#		}
+	#	}
+	#	remove_effect = {
+	#		if = {
+	#			limit = { has_idea = HEU_ja_geum_nan }
+	#			swap_ideas = {
+	#				remove_idea = HEU_ja_geum_nan
+	#				add_idea = HEU_ja_geum_nan2
+	#			}
+	#		}
+	#		else_if = {
+	#			limit = { has_idea = HEU_ja_geum_nan2 }
+	#			swap_ideas = {
+	#				remove_idea = HEU_ja_geum_nan2
+	#				add_idea = HEU_ja_geum_nan3
+	#			}
+	#		}
+	#		else_if = {
+	#			limit = { has_idea = HEU_ja_geum_nan3 }
+	#			remove_ideas = HEU_ja_geum_nan3
+	#		}
+	#	}		
+	#	modifier = {
+	#		civilian_factory_use = 3
+	#	}
+	#	complete_effect = {
+	#	}
+	#}
 	HEU_jageumnan_d_2 = {
 		icon = GFX_decision_generic_merge_plant_materiel
 		available = {
@@ -1184,7 +1184,7 @@ HEU_rikuhachimaism_decision_category = {
 
 		modifier = {
 			consumer_goods_factor = 0.20 #시민 저항
-			political_power_factor = -0.25
+			political_power_factor = -0.1
 		}
 
 		fire_only_once = yes
@@ -1226,19 +1226,64 @@ HEU_rikuhachimaism_decision_category = {
 		}
 
 		visible = {
-			check_variable = { HEU_rikuhachimaism_var^0 < 4 }
+			check_variable = { HEU_rikuhachimaism_var^0 < 3 }
 		}
 
 		available = {
 
 		}
 
-		ai_will_do = { factor = 15 }
+		ai_will_do = { 
+			base = 10
+			modifier = {
+				add = 25
+				has_political_power > 200
+			}
+			modifier = {
+				add = 15
+				date > 1938.01.01
+			}
+		}
 
 		cost = 40
+
 		days_remove = 45
 
 		remove_effect = {
+			if = {
+				limit = {
+					check_variable = { HEU_rikuhachimaism_var^0 < 1 }
+				}
+				
+				custom_effect_tooltip = HEU_modify_rikuhachimaism_intro
+				add_to_variable = {
+					HEU_aru_var_stability_factor = 0.05
+					tooltip = stability_factor_tt
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { HEU_rikuhachimaism_var^0 < 2 }
+				}
+				
+				custom_effect_tooltip = HEU_modify_rikuhachimaism_intro
+				add_to_variable = {
+					HEU_aru_var_drift_defence_factor = 0.1
+					tooltip = drift_defence_factor_tt
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { HEU_rikuhachimaism_var^0 < 3 }
+				}
+
+				custom_effect_tooltip = HEU_modify_rikuhachimaism_intro
+				add_to_variable = {
+					HEU_aru_var_drift_defence_factor = 0.1
+					tooltip = drift_defence_factor_tt
+				}
+			}
+			custom_effect_tooltip = tooltip_white_line
 			add_to_variable = {
 				HEU_rikuhachimaism_var^0 = 1
 				tooltip = HEU_rikuhachimaism_var_tt
@@ -1246,7 +1291,6 @@ HEU_rikuhachimaism_decision_category = {
 		}
 
 		complete_effect = {
-
 		}
 
 		fire_only_once = no
@@ -1287,29 +1331,77 @@ HEU_rikuhachimaism_decision_category = {
 			}
 		}
 
+		visible = {
+			check_variable = { HEU_rikuhachimaism_var^1 < 3 }
+		}
+
 		available = {
 
 		}
 
-		ai_will_do = { factor = 12 }
+		ai_will_do = { 
+			base = 5
+			modifier = {
+				add = 25
+				has_political_power > 200
+			}
+			modifier = {
+				add = 10
+				date > 1939.01.01
+			}
+		}
 
 		cost = 75
 		days_remove = 90
 
 		remove_effect = {
-			add_to_variable = {
-				HEU_rikuhachimaism_var^0 = 1
-				tooltip = HEU_rikuhachimaism_var_tt
-			}
 		}
 
 		complete_effect = {
+			if = {
+				limit = {
+					check_variable = { HEU_rikuhachimaism_var^1 < 1 }
+				}
+				
+				custom_effect_tooltip = HEU_modify_rikuhachimaism_intro
+				add_to_variable = {
+					HEU_aru_var_non_core_manpower = 0.04
+					tooltip = non_core_manpower_tt
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { HEU_rikuhachimaism_var^1 < 2 }
+				}
+				
+				custom_effect_tooltip = HEU_modify_rikuhachimaism_intro
+				add_to_variable = {
+					HEU_aru_var_non_core_manpower = 0.04
+					tooltip = non_core_manpower_tt
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { HEU_rikuhachimaism_var^1 < 3 }
+				}
 
+				custom_effect_tooltip = HEU_modify_rikuhachimaism_intro
+				add_to_variable = {
+					HEU_aru_var_non_core_manpower = 0.07
+					tooltip = non_core_manpower_tt
+				}
+				
+				add_to_variable = {
+					HEU_aru_var_stability_factor = -0.05
+					tooltip = stability_factor_tt
+				}
+			}
+			custom_effect_tooltip = tooltip_white_line
+			add_to_variable = {
+				HEU_rikuhachimaism_var^1 = 1
+				tooltip = HEU_rikuhachimaism_var_tt
+			}
 		}
-
-		#modifier = {
-		#	political_power_factor = -0.1
-		#}
 
 		fire_only_once = no
 	}
@@ -1349,26 +1441,92 @@ HEU_rikuhachimaism_decision_category = {
 			}
 		}
 
+		visible = {
+			check_variable = { HEU_rikuhachimaism_var^2 < 3 }
+		}
+
 		available = {
 
 		}
 
-		ai_will_do = { factor = 1 }
+		ai_will_do = { 
+			base = 10
+			modifier = {
+				add = 25
+				has_political_power > 200
+			}
+			modifier = {
+				add = 10
+				date > 1939.01.01
+			}
+			modifier = {
+				add = 20
+				has_war = yes
+			}
+		}
 
 		cost = 75
 		days_remove = 90
 
 		remove_effect = {
+			if = {
+				limit = {
+					check_variable = { HEU_rikuhachimaism_var^2 < 1 }
+				}
+				
+				custom_effect_tooltip = HEU_modify_rikuhachimaism_intro
+				add_to_variable = {
+					HEU_aru_var_weekly_manpower = 100
+					tooltip = weekly_manpower_tt
+				}
+
+				add_to_variable = {
+					HEU_aru_var_stability_factor = -0.02
+					tooltip = stability_factor_tt
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { HEU_rikuhachimaism_var^2 < 2 }
+				}
+				
+				custom_effect_tooltip = HEU_modify_rikuhachimaism_intro
+				add_to_variable = {
+					HEU_aru_var_weekly_manpower = 200
+					tooltip = weekly_manpower_tt
+				}
+
+				add_to_variable = {
+					HEU_aru_var_stability_factor = -0.03
+					tooltip = stability_factor_tt
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { HEU_rikuhachimaism_var^2 < 3 }
+				}
+
+				custom_effect_tooltip = HEU_modify_rikuhachimaism_intro
+				add_to_variable = {
+					HEU_aru_var_weekly_manpower = 200
+					tooltip = weekly_manpower_tt
+				}
+				
+				add_to_variable = {
+					HEU_aru_var_stability_factor = -0.05
+					tooltip = stability_factor_tt
+				}
+			}
+			custom_effect_tooltip = tooltip_white_line
+			add_to_variable = {
+				HEU_rikuhachimaism_var^2 = 1
+				tooltip = HEU_rikuhachimaism_var_tt
+			}
 
 		}
 
 		complete_effect = {
-
 		}
-
-		#modifier = {
-		#	political_power_factor = -0.1
-		#}
 
 		fire_only_once = no
 	}
@@ -1408,26 +1566,129 @@ HEU_rikuhachimaism_decision_category = {
 			}
 		}
 
+		visible = {
+			check_variable = { HEU_rikuhachimaism_var^3 < 3 }
+		}
+
 		available = {
 
 		}
 
-		ai_will_do = { factor = 1 }
+		ai_will_do = { 
+			base = 1
+			modifier = {
+				add = 25
+				has_political_power > 200
+			}
+			modifier = {
+				add = 10
+				date > 1939.01.01
+			}
+		}
 
 		cost = 75
 		days_remove = 90
 
 		remove_effect = {
+			if = {
+				limit = {
+					check_variable = { HEU_rikuhachimaism_var^4 < 1 }
+				}
+				
+				custom_effect_tooltip = HEU_modify_rikuhachimaism_intro
+				add_to_variable = {
+					HEU_aru_var_modifier_army_sub_unit_category_halo_org_recovery_cap_factor = 0.03
+					tooltip = HEU_rikuhachimaism_infrastructure_for_disabled_1_tt
+				}
+				
+				random_owned_state = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { HEU_rikuhachimaism_var^4 < 2 }
+				}
+				
+				custom_effect_tooltip = HEU_modify_rikuhachimaism_intro
+				add_to_variable = {
+					HEU_aru_var_modifier_army_sub_unit_category_halo_org_recovery_cap_factor = 0.03
+					tooltip = HEU_rikuhachimaism_infrastructure_for_disabled_1_tt
+				}
+				
+				random_owned_state = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+				
+				random_owned_state = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+
+			}
+			else_if = {
+				limit = {
+					check_variable = { HEU_rikuhachimaism_var^4 < 3 }
+				}
+
+				custom_effect_tooltip = HEU_modify_rikuhachimaism_intro
+				add_to_variable = {
+					HEU_aru_var_modifier_army_sub_unit_category_halo_org_recovery_cap_factor = 0.04
+					tooltip = HEU_rikuhachimaism_infrastructure_for_disabled_2_tt
+				}
+				
+				random_owned_state = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+				
+				random_owned_state = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+				
+				random_owned_state = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+			custom_effect_tooltip = tooltip_white_line
+			add_to_variable = {
+				HEU_rikuhachimaism_var^3 = 1
+				tooltip = HEU_rikuhachimaism_var_tt
+			}
 
 		}
 
 		complete_effect = {
 
 		}
-
-		#modifier = {
-		#	political_power_factor = -0.1
-		#}
 
 		fire_only_once = no
 	}
@@ -1467,26 +1728,101 @@ HEU_rikuhachimaism_decision_category = {
 			}
 		}
 
+		visible = {
+			check_variable = { HEU_rikuhachimaism_var^4 < 3 }
+		}
+
 		available = {
 
 		}
 
-		ai_will_do = { factor = 1 }
+		ai_will_do = { 
+			base = 1
+			modifier = {
+				add = 25
+				has_political_power > 200
+			}
+			modifier = {
+				add = 10
+				date > 1939.01.01
+			}
+		}
 
 		cost = 75
 		days_remove = 90
 
 		remove_effect = {
+			if = {
+				limit = {
+					check_variable = { HEU_rikuhachimaism_var^4 < 1 }
+				}
+				
+				custom_effect_tooltip = HEU_modify_rikuhachimaism_intro
+				add_to_variable = {
+					HEU_aru_var_non_core_manpower = 0.03
+					tooltip = non_core_manpower_tt
+				}
+				add_to_variable = {
+					HEU_aru_var_research_speed_factor = 0.03
+					tooltip = research_speed_factor_tt
+				}
+				
+				add_to_variable = {
+					HEU_aru_var_stability_factor = -0.03
+					tooltip = stability_factor_tt
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { HEU_rikuhachimaism_var^4 < 2 }
+				}
+				
+				custom_effect_tooltip = HEU_modify_rikuhachimaism_intro
+				add_to_variable = {
+					HEU_aru_var_non_core_manpower = 0.03
+					tooltip = non_core_manpower_tt
+				}
+				add_to_variable = {
+					HEU_aru_var_research_speed_factor = 0.03
+					tooltip = research_speed_factor_tt
+				}
+				
+				add_to_variable = {
+					HEU_aru_var_stability_factor = -0.03
+					tooltip = stability_factor_tt
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { HEU_rikuhachimaism_var^4 < 3 }
+				}
+
+				custom_effect_tooltip = HEU_modify_rikuhachimaism_intro
+				add_to_variable = {
+					HEU_aru_var_non_core_manpower = 0.04
+					tooltip = non_core_manpower_tt
+				}
+				add_to_variable = {
+					HEU_aru_var_research_speed_factor = 0.04
+					tooltip = research_speed_factor_tt
+				}
+				
+				add_to_variable = {
+					HEU_aru_var_stability_factor = -0.04
+					tooltip = stability_factor_tt
+				}
+			}
+			custom_effect_tooltip = tooltip_white_line
+			add_to_variable = {
+				HEU_rikuhachimaism_var^4 = 1
+				tooltip = HEU_rikuhachimaism_var_tt
+			}
 
 		}
 
 		complete_effect = {
 
 		}
-
-		#modifier = {
-		#	political_power_factor = -0.1
-		#}
 
 		fire_only_once = no
 	}
@@ -1526,26 +1862,64 @@ HEU_rikuhachimaism_decision_category = {
 			}
 		}
 
+		visible = {
+			check_variable = { HEU_rikuhachimaism_var^5 < 3 }
+		}
+
 		available = {
 
 		}
 
-		ai_will_do = { factor = 1 }
+		ai_will_do = { base = 1 }
 
 		cost = 75
 		days_remove = 90
 
 		remove_effect = {
+			if = {
+				limit = {
+					check_variable = { HEU_rikuhachimaism_var^4 < 1 }
+				}
+				
+				custom_effect_tooltip = HEU_modify_rikuhachimaism_intro
+				add_to_variable = {
+					HEU_aru_var_political_power_factor = 0.03
+					tooltip = political_power_factor_tt
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { HEU_rikuhachimaism_var^4 < 2 }
+				}
+				
+				custom_effect_tooltip = HEU_modify_rikuhachimaism_intro
+				add_to_variable = {
+					HEU_aru_var_political_power_factor = 0.03
+					tooltip = political_power_factor_tt
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { HEU_rikuhachimaism_var^4 < 3 }
+				}
+
+				custom_effect_tooltip = HEU_modify_rikuhachimaism_intro
+				add_to_variable = {
+					HEU_aru_var_political_power_factor = 0.04
+					tooltip = political_power_factor_tt
+				}
+			}
+			custom_effect_tooltip = tooltip_white_line
+			add_to_variable = {
+				HEU_rikuhachimaism_var^5 = 1
+				tooltip = HEU_rikuhachimaism_var_tt
+			}
 
 		}
 
 		complete_effect = {
 
 		}
-
-		#modifier = {
-		#	political_power_factor = -0.1
-		#}
 
 		fire_only_once = no
 	}
@@ -1555,20 +1929,33 @@ HEU_rikuhachimaism_decision_category = {
 		icon = GFX_decision_SOV_left_opposition_state
 
 		available = {
-
+			has_idea = HEU_red_winter_68_idea
 		}
 
-		ai_will_do = { factor = 1 }
+		visible = {
+			has_idea = HEU_red_winter_68_idea
+		}
+
+		ai_will_do = { 
+			base = 0
+			modifier = {
+				add = 5
+				is_historical_focus_on = no
+			}
+			modifier = {
+				add = 10
+				has_political_power > 100
+				is_historical_focus_on = no
+			}
+		}
 
 		cost = 25
-		days_remove = 90
-
-		remove_effect = {
-
-		}
 
 		complete_effect = {
-
+			swap_ideas = {
+				remove_idea = HEU_red_winter_68_idea
+				add_idea = HEU_red_winter_68_yes_idea
+			}
 		}
 
 		fire_only_once = yes
@@ -1579,20 +1966,29 @@ HEU_rikuhachimaism_decision_category = {
 		icon = GFX_decision_SOV_the_anti_soviet_trotskyist_center
 
 		available = {
-
+			has_idea = HEU_red_winter_68_idea
 		}
 
-		ai_will_do = { factor = 1 }
+		visible = {
+			has_idea = HEU_red_winter_68_idea
+		}
+
+		ai_will_do = { 
+			base = 10 
+			modifier = {
+				add = 10
+				has_political_power > 100
+			}
+			modifier = {
+				add = 100
+				is_historical_focus_on = yes
+			}
+		}
 
 		cost = 25
-		days_remove = 90
-
-		remove_effect = {
-
-		}
 
 		complete_effect = {
-
+			remove_ideas = HEU_red_winter_68_idea
 		}
 
 		fire_only_once = yes
@@ -1603,10 +1999,10 @@ HEU_rikuhachimaism_decision_category = {
 		icon = GFX_decision_HEU_sartre
 
 		available = {
-			#date > 1938.01.01
+			date > 1938.01.01
 		}
 
-		ai_will_do = { factor = 12 }
+		ai_will_do = { base = 24 } #역사적 68혁명의 중요 인물
 
 		cost = 50
 
@@ -1636,7 +2032,7 @@ HEU_rikuhachimaism_decision_category = {
 			}
 		}
 
-		ai_will_do = { factor = 12 }
+		ai_will_do = { base = 12 }
 
 		cost = 50
 
@@ -1648,7 +2044,9 @@ HEU_rikuhachimaism_decision_category = {
 			}
 			set_country_flag = IA_emma_goldman_recruited_flag
 			set_country_flag = HEU_emma_goldman_recruited_flag
-			country_event = { id = HEU.flavor_event.17 }
+			hidden_effect = {
+				country_event = { id = HEU.flavor_event.17 }
+			}
 		}
 
 		fire_only_once = yes
@@ -1686,7 +2084,8 @@ HEU_aru_GSC_defiance_decision_category = {
 		complete_effect = {
 		}
 
-		days_remove = 14
+		days_remove = 21
+		days_re_enable = 30
 
 		remove_effect = {
 			add_equipment_to_stockpile = {
@@ -1696,7 +2095,7 @@ HEU_aru_GSC_defiance_decision_category = {
 			}
 			add_popularity = {
 				ideology = neutrality
-				popularity = 0.03
+				popularity = 0.04
 			}
 		}
 
@@ -1767,7 +2166,7 @@ HEU_aru_GSC_defiance_decision_category = {
 
 			add_popularity = {
 				ideology = neutrality
-				popularity = 0.02
+				popularity = 0.03
 			}
 		}
 
@@ -2393,5 +2792,671 @@ HEU_luxembourg_pandemonium_alliance_decision_category = {
 		}
 
 		fire_only_once = yes
+	}
+}
+
+HEU_balance_of_power_category = { #리쿠하치마 아루 BoP
+
+	HEU_bop_love_earth = {
+		icon = GFX_decision_generic_nationalism
+
+		available = {
+			NOT = {
+				has_dynamic_modifier= {
+					modifier = HEU_rikuhachimaism_idea
+				}
+			}
+			NOT = {
+				has_power_balance_modifier = {
+					id = HEU_power_balance
+					modifier = HEU_sympathy_for_the_locals
+				}
+			}
+		}
+
+		visible = {
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 100
+				has_dynamic_modifier= {
+					modifier = HEU_luxembourgism_idea
+				}
+			}
+		}
+
+		days_re_enable = 180
+
+		cost = 50
+
+		complete_effect = {
+			hidden_effect = {
+				remove_all_power_balance_modifiers = {
+					id = HEU_power_balance
+				}
+			}
+			add_power_balance_modifier = {
+				id = HEU_power_balance
+				modifier = HEU_sympathy_for_the_locals
+			}
+		}
+
+		fire_only_once = no
+	}
+
+	HEU_bop_love_kivotos = {
+		icon = GFX_decision_Gehenna_Emblem
+
+		available = {
+			NOT = {
+				has_dynamic_modifier= {
+					modifier = HEU_luxembourgism_idea
+				}
+			}
+			NOT = {
+				has_power_balance_modifier = {
+					id = HEU_power_balance
+					modifier = HEU_sympathy_for_the_kivotos
+				}
+			}
+		}
+
+		visible = {
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 100
+				has_dynamic_modifier= {
+					modifier = HEU_rikuhachimaism_idea
+				}
+			}
+		}
+
+		days_re_enable = 180
+
+		cost = 50
+
+		complete_effect = {
+			hidden_effect = {
+				remove_all_power_balance_modifiers = {
+					id = HEU_power_balance
+				}
+			}
+			add_power_balance_modifier = {
+				id = HEU_power_balance
+				modifier = HEU_sympathy_for_the_kivotos
+			}
+		}
+
+		fire_only_once = no
+	}
+
+	HEU_bop_love_everyone = {
+		icon = GFX_decision_hol_radio_oranje
+
+		available = {
+			OR = {
+				has_power_balance_modifier = {
+					id = HEU_power_balance
+					modifier = HEU_sympathy_for_the_locals
+				}
+
+				has_power_balance_modifier = {
+					id = HEU_power_balance
+					modifier = HEU_sympathy_for_the_kivotos
+				}
+			}
+		}
+
+		visible = {
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+
+		days_re_enable = 180
+
+		cost = 25
+
+		complete_effect = {
+			remove_all_power_balance_modifiers = {
+				id = HEU_power_balance
+			}
+		}
+
+		fire_only_once = no
+	}
+
+	HEU_bop_talk_people = {
+		icon = GFX_decision_generic_political_rally
+
+		available = {
+			has_war = no
+		}
+
+		visible = {
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+
+		cost = 25
+
+		days_re_enable = 30
+
+		complete_effect = {
+			HEU_bop_medium_increase_effect = yes
+		}
+
+		fire_only_once = no
+	}
+
+	HEU_bop_talk_kivotos = {
+		icon = GFX_decision_Gehenna_Emblem
+
+		available = {
+			has_war = no
+		}
+
+		visible = {
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+
+		cost = 25
+
+		days_re_enable = 30
+
+		complete_effect = {
+			HEU_bop_medium_decrease_effect = yes
+		}
+
+		fire_only_once = no
+	}
+
+}
+
+HEU_problem_solver_68_decision_category = { #흥신소 68
+
+	HEU_problem_solver_68_system  = {
+		icon = GFX_decision_gre_paying_ifc_debt
+
+		priority = 99
+
+		allowed = {
+			original_tag = HEU
+		}
+
+		visible = {
+			always = yes
+		}
+
+		is_good = yes
+		available = { hidden_trigger = { always = no } }
+
+		activation = {
+			#has_completed_focus = HEU_luxembourg_benriya_68 
+		}
+
+		days_mission_timeout = 270
+
+		timeout_effect = {
+
+			custom_effect_tooltip = HEU_problem_solver_68_system_tt
+
+			random_state = {
+				limit = {
+					is_controlled_by = ROOT
+					impassable = no
+				}
+				random_list = {
+					seed = random 
+					1.5 = {
+						modifier = {
+							free_building_slots = {
+								building = industrial_complex
+								size < 1
+							}
+							factor = 0
+						}
+						modifier = {
+							ROOT = {
+								has_completed_focus = GUAY_empower_the_land_owners
+							}
+							factor = 2.5
+						}
+						modifier = {
+							has_variable = ROOT.is_literally_not_a_factory
+							add = var:ROOT.is_literally_not_a_factory
+						}
+						if = {
+							limit = {
+								has_variable = ROOT.is_literally_not_a_factory
+							}
+							clear_variable = ROOT.is_literally_not_a_factory
+						}
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+
+						ROOT = { add_to_variable = { built_a_civ = 1 } }
+					}
+					1.5 = {
+						modifier = {
+							free_building_slots = {
+								building = arms_factory
+								size < 1  
+							}
+							factor = 0
+						}
+						modifier = {
+							ROOT = {
+								has_completed_focus = GUAY_empower_the_land_owners
+							}
+							factor = 2.5
+						}
+						modifier = {
+							has_variable = ROOT.is_literally_not_a_factory
+							add = var:ROOT.is_literally_not_a_factory
+						}
+						if = {
+							limit = {
+								has_variable = ROOT.is_literally_not_a_factory
+							}
+							clear_variable = ROOT.is_literally_not_a_factory
+						}
+
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+
+						ROOT = { add_to_variable = { built_a_mil = 1 } }
+					}
+					2 = {
+						modifier = {
+							free_building_slots = {
+								building = dockyard
+								size < 1 
+							}
+							factor = 0
+						}
+						modifier = {
+							ROOT = {
+								any_core_state = {
+									is_coastal = no
+								}
+							}
+							factor = 0
+						}
+						add_building_construction = {
+							type = dockyard
+							level = 1
+							instant_build = yes
+						}
+						modifier = {
+							ROOT = {
+								has_completed_focus = HEU_benriya_local
+							}
+							factor = 2.5
+						}
+						add_to_variable = { ROOT.is_literally_not_a_factory = 0.1 }
+						ROOT = { add_to_variable = { built_a_dockyard = 1 } }
+					}
+					3 = {
+						modifier = {
+							infrastructure > 4
+							factor = 0
+						}
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+						add_to_variable = { ROOT.is_literally_not_a_factory = 0.15 }
+						ROOT = { add_to_variable = { built_a_infra = 1 } }
+					}
+					3 = {
+						modifier = {
+							air_base > 9
+							factor = 0
+						}
+						add_building_construction = {
+							type = air_base
+							level = 1
+							instant_build = yes
+						}
+						add_to_variable = { ROOT.is_literally_not_a_factory = 0.25 }
+						ROOT = { add_to_variable = { built_an_airbase = 1 } }
+					}
+
+					3 = {
+						modifier = {
+							anti_air_building > 4
+							factor = 0
+						}
+
+						modifier = {
+							ROOT = { NOT = {  has_tech = interwar_antiair } }
+							factor = 0
+						}
+						add_building_construction = {
+							type = anti_air_building
+							level = 1
+							instant_build = yes
+						}
+						add_to_variable = { ROOT.is_literally_not_a_factory = 0.2 }
+						ROOT = { add_to_variable = { built_an_aa = 1 } }
+					}
+
+					2 = {
+						modifier = {
+							radar_station > 4
+							factor = 0
+						}
+
+						modifier = { #level 1
+							ROOT = { NOT = {  has_tech = radio_detection } }
+							factor = 0
+						}
+
+						modifier = { #level 2
+							radar_station > 0
+							ROOT = { NOT = {  has_tech = decimetric_radar } }
+							factor = 0
+						}
+
+						modifier = { #level 3
+							radar_station > 2
+							ROOT = { NOT = {  has_tech = improved_decimetric_radar } }
+							factor = 0
+						}
+
+						modifier = { #level 4
+							radar_station > 3
+							ROOT = { NOT = {  has_tech = centimetric_radar } }
+							factor = 0
+						}
+						modifier = { #level 5
+							radar_station > 4
+							ROOT = { NOT = {  has_tech = improved_centimetric_radar } }
+							factor = 0
+						}
+
+						modifier = { #level 6
+							radar_station > 4
+							ROOT = { NOT = {  has_tech = advanced_centimetric_radar } }
+							factor = 0
+						}
+
+						add_building_construction = {
+							type = radar_station
+							level = 1
+							instant_build = yes
+						}
+						add_to_variable = { ROOT.is_literally_not_a_factory = 0.25 }
+						ROOT = { add_to_variable = { built_a_radar = 1 } }
+					}
+
+					0.1 =	{
+						add_building_construction = {
+							type = supply_node
+							province = {
+								all_provinces = yes
+							}
+							level = 1
+							instant_build = yes
+						}
+						add_to_variable = { ROOT.is_literally_not_a_factory = 0.2 }
+						ROOT = { add_to_variable = { built_a_hub = 1 } }
+					}
+
+					2 = {
+						modifier = {
+							free_building_slots = {
+								building = industrial_complex
+								size < 1 
+							}
+							factor = 2
+						}
+						modifier = {
+							ROOT = {
+								has_completed_focus = HEU_benriya_local
+							}
+							factor = 2.5
+						}
+						add_extra_state_shared_building_slots = 1
+						add_to_variable = { ROOT.is_literally_not_a_factory = 0.1 }
+						ROOT = { add_to_variable = { added_slot = 1 } }
+
+					}
+				}
+					
+			}
+			activate_mission = HEU_problem_solver_68_system
+		}
+	}
+
+	HEU_problem_solver_68_haruka = {
+		icon = generic_industry
+		
+		available = {
+			#NOT = { has_country_flag = HEU_problem_solver_68_flag }
+			has_war = no
+			has_stability < 0.49
+		}
+
+		ai_will_do = { factor = 1 }
+
+		cost = 50
+
+		days_remove = 180
+		days_re_enable = 365
+
+		remove_effect = {
+			#clr_country_flag = HEU_problem_solver_68_flag
+		}
+
+		complete_effect = {
+			#set_country_flag = HEU_problem_solver_68_flag
+		}
+
+		modifier = {
+			stability_weekly = 0.01
+			consumer_goods_factor = 0.10
+		}
+
+		fire_only_once = no
+	}
+
+	HEU_problem_solver_68_mutsuki = {
+		icon = generic_prepare_civil_war
+		
+		available = {
+			NOT = { has_country_flag = HEU_problem_solver_68_flag }
+			has_war = no
+		}
+
+		ai_will_do = { factor = 1 }
+
+		cost = 50
+
+		days_remove = 30
+		days_re_enable = 90
+
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 500
+				producer = HEU
+			}
+			add_equipment_to_stockpile = {
+				type = kivotos_infantry_equipment
+				amount = 100
+			}
+			clr_country_flag = HEU_problem_solver_68_flag
+		}
+
+		complete_effect = {
+			set_country_flag = HEU_problem_solver_68_flag
+		}
+
+		modifier = {
+			political_power_factor = -0.25
+		}
+
+		fire_only_once = no
+	}
+	
+	HEU_problem_solver_68_kayoko = {
+		icon = GFX_decision_hol_draw_up_staff_plans
+		
+		available = {
+			NOT = { has_country_flag = HEU_problem_solver_68_flag }
+			has_war = yes
+		}
+
+		ai_will_do = { factor = 1 }
+
+		cost = 50
+
+		days_remove = 30
+		days_re_enable = 90
+
+		remove_effect = {
+			clr_country_flag = HEU_problem_solver_68_flag
+		}
+
+		complete_effect = {
+			set_country_flag = HEU_problem_solver_68_flag
+		}
+
+		modifier = {
+			political_power_factor = -0.25
+			army_attack_factor = 0.05
+			army_defence_factor = 0.05
+			army_morale_factor = 0.05
+		}
+
+		fire_only_once = no
+	}
+
+	HEU_problem_solver_68_aru_1 = {
+		icon = GFX_decision_generic_military
+
+		available = {
+			NOT = { has_country_flag = HEU_problem_solver_68_flag }
+			has_defensive_war = yes
+			
+			custom_trigger_tooltip = {
+				tooltip = HEU_aru_persona_charisma_need_30_tt
+				check_variable = { Global.aru_stat_point_array^3 > 29 } #카리스마 29 초과
+			}
+		}
+
+		ai_will_do = { factor = 1 }
+
+		cost = 25
+
+		days_remove = 30
+		days_re_enable = 120
+
+		remove_effect = {
+			add_manpower = 15000
+			clr_country_flag = HEU_problem_solver_68_flag
+		}
+
+		complete_effect = {
+			set_country_flag = HEU_problem_solver_68_flag
+		}
+
+		modifier = {
+			political_power_factor = -0.25
+		}
+
+		fire_only_once = no
+	}
+	
+	HEU_problem_solver_68_aru_2 = {
+		icon = GFX_decision_generic_factory
+
+		available = {
+			NOT = { has_country_flag = HEU_problem_solver_68_flag }
+		}
+
+		ai_will_do = { factor = 1 }
+
+		cost = 75
+
+		days_remove = 90
+
+		remove_effect = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			clr_country_flag = HEU_problem_solver_68_flag
+		}
+
+		complete_effect = {
+			set_country_flag = HEU_problem_solver_68_flag
+		}
+
+		modifier = {
+			political_power_factor = -0.25
+		}
+
+		fire_only_once = no
+	}
+	
+	HEU_problem_solver_68_aru_3 = {
+		icon = GFX_decision_generic_factory
+
+		available = {
+			NOT = { has_country_flag = HEU_problem_solver_68_flag }
+		}
+
+		ai_will_do = { factor = 1 }
+
+		cost = 75
+
+		days_remove = 90
+
+		remove_effect = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			clr_country_flag = HEU_problem_solver_68_flag
+		}
+
+		complete_effect = {
+			set_country_flag = HEU_problem_solver_68_flag
+		}
+
+		modifier = {
+			political_power_factor = -0.25
+		}
+
+		fire_only_once = no
 	}
 }
