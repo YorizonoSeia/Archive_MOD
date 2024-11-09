@@ -389,6 +389,10 @@ BLM_gang_thugs_war = {
 			always = no
 		}
 
+		cancel_trigger = {
+			NOT = { has_idea = BLM_gang_thugs_war_idea }
+		}
+
 		available = {
 			always = no
 		}
@@ -399,6 +403,169 @@ BLM_gang_thugs_war = {
 
 		timeout_effect = {
 			country_event = BLM_event.3
+		}
+	}
+	BLM_gang_thugs_war_thugs_side_1 = {
+		
+		priority = 99
+		icon = eng_propaganda_campaigns
+		activation = {
+			original_tag = BLM
+			has_idea = BLM_gang_thugs_war_idea
+			has_completed_focus = BLM_return_of_seven_prisoners
+			NOT = {
+				has_country_flag = BLM_gang_thugs_war_thugs_side_1_end_flag
+			}
+		}
+
+		visible = {
+			has_idea = BLM_gang_thugs_war_idea
+		}
+
+		available = {
+			always = no
+		}
+
+		is_good = no
+
+		days_mission_timeout = 180
+
+		timeout_effect = {
+			if = {
+				limit = {
+					NOT = { has_country_flag = BLM_gang_thugs_war_thugs_side_1_first }
+				}
+				set_country_flag = BLM_gang_thugs_war_thugs_side_1_first
+			}
+			custom_effect_tooltip = BLM_gang_thugs_war_thugs_side_up_tt
+            add_to_variable = { BLM_thugs_point = 1 }
+		}
+	}
+	BLM_gang_thugs_war_thugs_side_1_end = {
+		priority = 80
+		icon = generic_independence
+		allowed = {
+			original_tag = BLM
+		}
+
+		visible = {
+			has_idea = BLM_gang_thugs_war_idea
+			has_completed_focus = BLM_return_of_seven_prisoners
+		}
+
+		available = {
+			has_country_flag = BLM_gang_thugs_war_thugs_side_1_first
+		}
+
+		fire_only_once = yes
+
+		cost = 15
+
+		complete_effect = {
+			custom_effect_tooltip = BLM_gang_thugs_war_thugs_side_1_end_tt
+			set_country_flag = BLM_gang_thugs_war_thugs_side_1_end_flag
+		}
+	}
+	BLM_gang_thugs_war_gang_side_1 = {
+		priority = 80
+		icon = generic_independence
+		allowed = {
+			original_tag = BLM
+		}
+
+		visible = {
+			has_idea = BLM_gang_thugs_war_idea
+		}
+
+		days_re_enable = 45
+
+		cost = 30
+
+		complete_effect = {
+			custom_effect_tooltip = BLM_gang_thugs_war_gang_side_up_tt
+            add_to_variable = { BLM_gang_point = 1 }
+		}
+	}
+	BLM_gang_thugs_war_thugs_side_2 = {
+		priority = 80
+		icon = generic_independence
+		allowed = {
+			original_tag = BLM
+		}
+
+		visible = {
+			has_idea = BLM_gang_thugs_war_idea
+		}
+
+		days_re_enable = 45
+
+		cost = 30
+
+		complete_effect = {
+			custom_effect_tooltip = BLM_gang_thugs_war_thugs_side_up_tt
+            add_to_variable = { BLM_thugs_point = 1 }
+		}
+	}
+	BLM_gang_thugs_war_gang_side_2 = {
+		priority = 80
+		icon = generic_independence
+		allowed = {
+			original_tag = BLM
+		}
+
+		visible = {
+			has_idea = BLM_gang_thugs_war_idea
+		}
+
+		days_remove = 14
+		days_re_enable = 30
+
+		cost = 30
+
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 999 }
+		}
+		custom_cost_text = decision_cost_ie_1000
+		
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+			}
+		}
+		remove_effect = {
+			custom_effect_tooltip = BLM_gang_thugs_war_gang_side_up_tt
+            add_to_variable = { BLM_gang_point = 1 }
+		}
+	}
+	BLM_gang_thugs_war_thugs_side_3 = {
+		priority = 80
+		icon = generic_independence
+		allowed = {
+			original_tag = BLM
+		}
+
+		visible = {
+			has_idea = BLM_gang_thugs_war_idea
+		}
+
+		days_remove = 14
+		days_re_enable = 30
+
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 999 }
+		}
+		custom_cost_text = decision_cost_ie_1000
+		
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+			}
+		}
+		remove_effect = {
+			custom_effect_tooltip = BLM_gang_thugs_war_gang_side_up_tt
+            add_to_variable = { BLM_gang_point = 1 }
 		}
 	}
 }

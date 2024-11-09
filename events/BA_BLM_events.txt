@@ -42,6 +42,7 @@ country_event = {
 	
 	option = {
 		name = BLM_event.1.a
+		custom_effect_tooltip = BLM_event_1_tt
 		activate_mission = BLM_gang_thugs_war_1
 	}
 }
@@ -112,11 +113,17 @@ country_event = {
 		trigger = {
 			has_global_flag = BLM_skeban_victory_flag
 		}
+		effect_tooltip = {
+			unlock_national_focus = BLM_skeban_victory
+		}
 	}
 	option = {
 		name = BLM_event.3.b
 		trigger = { #2점차
 			has_global_flag = BLM_gang_victory_flag
+		}
+		effect_tooltip = {
+			unlock_national_focus = BLM_gang_victory
 		}
 	}
 	option = {
@@ -127,6 +134,8 @@ country_event = {
 				has_global_flag = BLM_gang_victory_flag
 			}
 		}
+		add_stability = -0.05
+		add_war_support = -0.05
 	}
 }
 

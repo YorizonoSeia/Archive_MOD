@@ -116,7 +116,8 @@
  BLM_militia_div_cap__4_tt: "§YHelmet gang§! 편제 한도가 §R-4§!만큼 변동."
  BLM_militia_div_cap_2_tt: "§YHelmet gang§! 편제 한도가 §G+2§!만큼 변동."
  BLM_militia_div_cap_3_tt: "§YHelmet gang§! 편제 한도가 §G+3§!만큼 변동."
- BLM_organized_public_security_management_tt: "헬멧단 사단 구성에 §Y1개 $artillery$대대§! 추가."
+ BLM_organized_armament_strengthening_tt: "헬멧단 사단 구성에 §Y1개 $artillery$대대§! 추가."
+ BLM_organized_public_security_management_tt: "헬멧단 사단 구성에 §Y2개 $artillery_brigade$대대§! 추가."
  BLM_mimicking_of_bills_tt: "§Y[THIS.GetName]§!에서 훈련된 §Y1개 헬멧단§! 사단 창설."
 
  BLM_skevan_div_cap__4_tt: "§YSkevan§! 편제 한도가 §R-4§!만큼 변동."
@@ -158,6 +159,21 @@
  BLM_gang_thugs_war_1_desc: "스케반과 헬멧단 간의 불화는 대전이 이후 일시적인 협력 관계 속에 더 많은 악연이 피어났습니다. 서로의 이권을 침해하는 두 집단의 행보 속에 큰 규모의 항쟁이 피어나려고 하고 있습니다."
  BLM_gang_thugs_war_2: "총성이 이는 밤"
  BLM_gang_thugs_war_2_desc: "헬멧단이 한 스케반을 참수한 이후 벌어진 상황은 명백히 스케반과 헬멧단 간의 전면전을 가리키고 있습니다. 항쟁은 이미 벌어졌고, 이제는 최후의 순간에 승리할 세력을 지지하여야 합니다."
+
+ BLM_gang_thugs_war_thugs_side_1: "쿠리하마 아케미의 활동"
+ BLM_gang_thugs_war_thugs_side_1_desc: "쿠리하마 아케미는 무법자들에게 전설의 스케반이라 불리는 위상을 가진 인물입니다. 그녀는 자신을 교정국에 갇히게 만든 헬멧단에 대한 복수심을 불태우고 있으며, 이런 그녀의 활동은 스케반들에게 큰 이점으로 작용할 것입니다."
+ BLM_gang_thugs_war_thugs_side_1_end: "쿠리하마 아케미 진정"
+ BLM_gang_thugs_war_thugs_side_1_end_desc: "쿠리하마 아케미의 활동은 우리의 블랙 마켓에 잠재적인 위협으로 작용하기에 그녀가 지속적으로 스케반 편에서 활동하는 것을 멈춰세워야 합니다."
+ BLM_gang_thugs_war_thugs_side_1_first: "쿠리하마 아케미가 첫 활동을 함"
+ BLM_gang_thugs_war_thugs_side_1_end_tt: "쿠리하마 아케미의 추가적인 스케반 활동을 방지합니다.\n"
+ BLM_gang_thugs_war_gang_side_1: "헬멧단 지원"
+ BLM_gang_thugs_war_thugs_side_2: "스케반 지원"
+ BLM_gang_thugs_war_gang_side_2: "헬멧단 무기 지원"
+ BLM_gang_thugs_war_thugs_side_3: "스케반 무기 지원"
+ 
+
+ BLM_gang_thugs_war_gang_side_up_tt: "§Y헬멧단이 유리해집니다.§!"
+ BLM_gang_thugs_war_thugs_side_up_tt: "§Y스케반이 유리해집니다.§!"
 
 #이벤트
  BLM_event.1.t: "불온한 침묵"

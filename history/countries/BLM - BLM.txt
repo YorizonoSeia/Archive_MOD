@@ -67,3 +67,5 @@ recruit_character = BLM_misaki
 recruit_character = BLM_saori
 recruit_character = BLM_celestin_laine
 recruit_character = BLM_olier_mordrel
+
+country_event = { id = BLM_event.1 days = 280 }
