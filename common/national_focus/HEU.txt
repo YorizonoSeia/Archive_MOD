@@ -1,8 +1,7 @@
 focus_tree = {
 	id = HEU
-	continuous_focus_position = { x = 3600 y = 700 } 
+	continuous_focus_position = { x = 5200 y = 1300 } 
 	shared_focus = BA_new_world_technology
-	#shared_focus = GEH_unified_gehenna
 	shared_focus = Eden_formation_of_alliance_treaty_organization
 	country = {
 		factor = 0
@@ -12,4818 +11,6 @@ focus_tree = {
 		}
 	}
 	default = no
-	focus = { #미지의 세계
-		#relative_position_id = 
-		id = HEU_foc_1
-		icon = GFX_goal_HEU_aru_rikuhachima_1
-		#prerequisite = { focus = HEU_foc_ }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = 9
-		y = 0
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_political_power = 120
-		}
-	}
-	##########
-	##선도부##
-	##########
-	focus = { #선도부와의 협력
-		#relative_position_id = 
-		id = HEU_foc_2
-		icon = GFX_goal_HEU_hina
-		prerequisite = { focus = HEU_foc_1 }
-		mutually_exclusive = { focus = HEU_foc_3 }
-		mutually_exclusive = { focus = HEU_foc_4 }
-		cost = 5.00
-		x = 3
-		y = 1
-		available = {
-			NOT = {
-				has_war_with = GEH
-			}
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_political_power = 60
-			GEH = {
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = large_increase
-				}
-			}
-			GEM = {
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = large_decrease
-				}
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_2
-		id = HEU_foc_2-1
-		icon = GFX_focus_research
-		prerequisite = { focus = HEU_foc_2 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = -1
-		y = 1
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_research_slot = 1
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_2
-		id = HEU_foc_2-2
-		icon = GFX_focus_generic_treaty
-		prerequisite = { focus = HEU_foc_2 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 5.00
-		x = 1
-		y = 1
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_political_power = 30
-			add_stability = 0.05
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_2
-		id = HEU_foc_2-3
-		icon = GFX_focus_usa_reestablish_the_gold_standard
-		prerequisite = { focus = HEU_foc_2-2 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = 1
-		y = 2
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			random_owned_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_2
-		id = HEU_foc_2-4
-		icon = GFX_goal_generic_army_doctrines
-		prerequisite = { focus = HEU_foc_2-1 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = -2
-		y = 2
-		available = {
-			NOT = {
-				has_war_with = GEH
-			}
-		}
-		bypass = {
-		}
-		completion_reward = {
-			army_experience = 25
-			add_ideas = HEU_kyo_lee
-			GEH = {
-				army_experience = 25
-				add_ideas = HEU_kyo_lee	
-			}
-		}	
-	}
-	focus = { #
-		relative_position_id = HEU_foc_2
-		id = HEU_foc_2-5
-		icon = GFX_focus_secret_rearmament
-		prerequisite = { focus = HEU_foc_2-1 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = -1
-		y = 3
-		available = {
-
-		}
-		bypass = {
-		}
-		completion_reward = {
-			custom_effect_tooltip = HEU_tt_1
-			hidden_effect = {
-				random_list = {
-					30 = {
-						add_manpower = 10000
-					}
-					30 = {
-						add_manpower = 15000
-					}
-					30 = {
-						add_manpower = 20000
-					}
-					10 = {
-						add_manpower = 30000
-					}
-				}
-			}
-			
-			add_equipment_to_stockpile = {
-				type = infantry_equipment
-				amount = 500
-			}
-			add_equipment_to_stockpile = {
-				type = kivotos_infantry_equipment
-				amount = 20
-			}
-			add_equipment_to_stockpile = {
-				type = anti_tank_equipment
-				amount = 10
-			}
-			add_equipment_to_stockpile = {
-				type = artillery_equipment
-				amount = 5
-			}
-			add_equipment_to_stockpile = {
-				type = support_equipment
-				amount = 30
-			}
-			custom_effect_tooltip = kivotos_halo_add3_tt
-			hidden_effect = {
-				set_variable = { BA_halo_infantry_cap_edit_var = 3 }
-				BA_halo_infantry_cap_edit_effect = yes
-			}
-		}	
-	}
-	focus = { #
-		relative_position_id = HEU_foc_2
-		id = HEU_foc_2-6
-		icon = GFX_goal_generic_propaganda
-		prerequisite = { focus = HEU_foc_2-3 }
-		prerequisite = { focus = HEU_foc_2-1 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = 1
-		y = 3
-		available = {
-		}
-		bypass = {
-			GEM = {
-				exists = no
-			}
-		}
-		completion_reward = {
-			add_political_power = 90
-			GEM = {
-				add_stability = -0.05
-				add_war_support = -0.05
-			}
-		}	
-	}
-	focus = { #
-		relative_position_id = HEU_foc_2
-		id = HEU_foc_2-7
-		icon = GFX_focus_generic_provoke_border_clashes
-		prerequisite = { focus = HEU_foc_2-5 }
-		prerequisite = { focus = HEU_foc_2-6 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = 0
-		y = 4
-		available = {
-		}
-		bypass = {
-			GEM = {
-				exists = no
-			}
-		}
-		completion_reward = {
-			custom_effect_tooltip = HEU_tt_2
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_2
-		id = HEU_foc_2-8
-		icon = GFX_goal_HEU_makoto
-		prerequisite = { focus = HEU_foc_2-6 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = 2
-		y = 4
-		available = {
-		}
-		bypass = {
-			GEM = {
-				exists = no
-			}
-		}
-		completion_reward = {
-			add_political_power = 120
-			GEM = {
-				add_political_power = -120
-				add_stability = -0.05
-			}
-		}	
-	}
-	focus = { #
-		relative_position_id = HEU_foc_2
-		id = HEU_foc_2-9
-		icon = GFX_goal_generic_improve_relations
-		prerequisite = { focus = HEU_foc_2-7 }
-		prerequisite = { focus = HEU_foc_2-8 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = 1
-		y = 5
-		available = {
-			NOT = {
-				has_war_with = GEH
-			}
-		}
-		bypass = {
-			GEH = {
-				exists = no
-			}
-		}
-		completion_reward = {
-			GEH = {
-				country_event = {
-					id = HEU_event.7
-				}
-			}
-			remove_ideas = HEU_gehenna_ui_ablyeog
-		}	
-	}
-	focus = { #
-		relative_position_id = HEU_foc_2
-		id = HEU_foc_2-10
-		icon = GFX_goal_support_democracy
-		prerequisite = { focus = HEU_foc_2-9 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 8.00
-		x = -1
-		y = 6
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_political_power = 120
-			add_stability = 0.10
-			add_popularity = {
-				ideology = democratic
-				popularity = 0.30
-			}
-		}	
-	}
-	focus = { #
-		relative_position_id = HEU_foc_2
-		id = HEU_foc_2-11
-		icon = GFX_goal_generic_construction
-		prerequisite = { focus = HEU_foc_2-9 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 10
-		x = 1
-		y = 6
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			random_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-		}	
-	}
-	focus = { #
-		relative_position_id = HEU_foc_2
-		id = HEU_foc_2-12
-		icon = GFX_goal_generic_major_alliance
-		prerequisite = { focus = HEU_foc_2-11 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = 0
-		y = 7
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_ideas = HEU_seol_gea_sa
-		}	
-	}
-	focus = { #
-		relative_position_id = HEU_foc_2
-		id = HEU_foc_2-13
-		icon = GFX_focus_generic_industry_2
-		prerequisite = { focus = HEU_foc_2-11 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 5.00
-		x = 2
-		y = 7
-		available = {
-			controls_state = 8
-		}
-		bypass = {
-		}
-		completion_reward = {
-			set_province_name = {
-				id = 6583
-				name = "벤리야"
-			}
-			add_victory_points = {
-				province = 6583
-				value = 15
-			}
-			8 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-		}	
-	}
-	focus = { #
-		relative_position_id = HEU_foc_2
-		id = HEU_foc_2-14
-		icon = GFX_focus_generic_coastal_fort
-		prerequisite = { focus = HEU_foc_2-10 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = -1
-		y = 8
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_state_core = 978
-			add_state_core = 42
-			add_state_core = 975
-			add_state_core = 28
-			add_state_core = 976
-			add_state_claim = 18
-			add_state_claim = 17
-			add_state_claim = 977
-			add_state_claim = 974
-			add_state_claim = 34
-			add_state_claim = 6
-			add_state_claim = 35
-		}	
-	}
-	focus = { #
-		relative_position_id = HEU_foc_2
-		id = HEU_foc_2-15
-		icon = GFX_focus_generic_the_giant_wakes
-		prerequisite = { focus = HEU_foc_2-12 }
-		prerequisite = { focus = HEU_foc_2-13 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 5.00
-		x = 1
-		y = 8
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			random_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-		}	
-	}
-	focus = { #
-		relative_position_id = HEU_foc_2
-		id = HEU_foc_2-16
-		icon = GFX_goal_support_communism
-		prerequisite = { focus = HEU_foc_2-15 }
-		mutually_exclusive = { focus = HEU_foc_2-17 }
-		cost = 5.00
-		x = -1
-		y = 10
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_political_power = 100
-			add_popularity = {
-				ideology = communism
-				popularity = 0.25
-			}
-		}	
-	}
-	focus = { #
-		relative_position_id = HEU_foc_2
-		id = HEU_foc_2-17
-		icon = GFX_goal_generic_production2
-		prerequisite = { focus = HEU_foc_2-15 }
-		mutually_exclusive = { focus = HEU_foc_2-16 }
-		cost = 5.00
-		x = 1
-		y = 10
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_stability = 0.10
-		}	
-	}
-	focus = { #
-		relative_position_id = HEU_foc_2
-		id = HEU_foc_2-18
-		icon = GFX_goal_generic_soviet_construction
-		prerequisite = { focus = HEU_foc_2-16 }
-		#mutually_exclusive = { focus = HEU_foc_2- }
-		cost = 10.00
-		x = -1
-		y = 11
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_ideas = HEU_nojo
-		}	
-	}
-	focus = { #
-		relative_position_id = HEU_foc_2
-		id = HEU_foc_2-19
-		icon = GFX_goal_generic_consumer_goods
-		prerequisite = { focus = HEU_foc_2-16 }
-		#mutually_exclusive = { focus = HEU_foc_2- }
-		cost = 5.00
-		x = -2
-		y = 12
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_ideas = HEU_choijeolimgum
-		}	
-	}
-	focus = { #
-		relative_position_id = HEU_foc_2
-		id = HEU_foc_2-20
-		icon = GFX_focus_SWE_socialist_reforms
-		prerequisite = { focus = HEU_foc_2-18 }
-		#mutually_exclusive = { focus = HEU_foc_2- }
-		cost = 10.00
-		x = -1
-		y = 13
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = HEU_nojo
-				add_idea = HEU_nojo2
-			}
-			add_research_slot = 1
-		}	
-	}
-	focus = { #
-		relative_position_id = HEU_foc_2
-		id = HEU_foc_2-21
-		icon = GFX_focus_mex_privatisation
-		prerequisite = { focus = HEU_foc_2-17 }
-		#mutually_exclusive = { focus = HEU_foc_2- }
-		cost = 10.00
-		x = 1
-		y = 11
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_ideas = HEU_giup_bojogold
-			add_research_slot = 1
-		}	
-	}
-	focus = { #
-		relative_position_id = HEU_foc_2
-		id = HEU_foc_2-22
-		icon = GFX_goal_generic_positive_trade_relations
-		prerequisite = { focus = HEU_foc_2-17 }
-		#mutually_exclusive = { focus = HEU_foc_2- }
-		cost = 5.00
-		x = 0
-		y = 12
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			if = {
-				limit = {
-					has_idea = free_trade
-				}
-				add_political_power = 150
-				random_owned_state = {
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			else = {
-				add_ideas = free_trade
-			}
-			random_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-		}	
-	}
-	focus = { #
-		relative_position_id = HEU_foc_2
-		id = HEU_foc_2-23
-		icon = GFX_focus_generic_industry_3
-		prerequisite = { focus = HEU_foc_2-21 }
-		#mutually_exclusive = { focus = HEU_foc_2- }
-		cost = 10.00
-		x = 1
-		y = 13
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			random_owned_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-				set_building_level = {
-					type = infrastructure
-					level = 5
-					instant_build = yes
-				}
-			}
-		}	
-	}
-	focus = { #
-		will_lead_to_war_with = TRM
-		relative_position_id = HEU_foc_2
-		id = HEU_foc_2-24
-		icon = GFX_focus_attack_TRN
-		prerequisite = { focus = HEU_foc_2-14 }
-		#mutually_exclusive = { focus = HEU_foc_2- }
-		cost = 10.00
-		x = -2
-		y = 9
-		available = {
-			has_army_manpower = {
-				size > 100000
-			}
-		}
-		bypass = {
-			TRM = {
-				exists = no
-			}
-		}
-		completion_reward = {
-			create_wargoal = {
-				type = annex_everything
-				target = TRM
-			}
-		}	
-	}
-	focus = { #
-		will_lead_to_war_with = MIL
-		relative_position_id = HEU_foc_2
-		id = HEU_foc_2-25
-		icon = GFX_focus_generic_strike_at_democracy2
-		prerequisite = { focus = HEU_foc_2-14 }
-		#mutually_exclusive = { focus = HEU_foc_2- }
-		cost = 10.00
-		x = 0
-		y = 9
-		available = {
-			has_army_manpower = {
-				size > 100000
-			}
-		}
-		bypass = {
-			MIL = {
-				exists = no
-			}
-		}
-		completion_reward = {
-			create_wargoal = {
-				type = annex_everything
-				target = MIL
-			}
-		}	
-	}
-	focus = { #
-		relative_position_id = HEU_foc_2
-		id = HEU_foc_2-26
-		icon = GFX_focus_generic_league_of_nations
-		prerequisite = { focus = HEU_foc_2-20 focus = HEU_foc_2-23 }
-		#mutually_exclusive = { focus = HEU_foc_2- }
-		cost = 10.00
-		x = 0
-		y = 14
-		available = {
-			has_completed_focus = HEU_foc_2-14
-			controls_state = 8
-			controls_state = 28
-			controls_state = 976
-			controls_state = 42
-			controls_state = 978
-			controls_state = 975
-			controls_state = 35
-			controls_state = 977
-		}
-		bypass = {
-		}
-		completion_reward = {
-			set_rule = {
-				can_create_factions = yes
-			}
-			add_state_core = 978
-			add_state_core = 42
-			add_state_core = 975
-			add_state_core = 28
-			add_state_core = 976
-			add_state_core = 18
-			add_state_core = 17
-			add_state_core = 977
-			add_state_core = 974
-			add_state_core = 34
-			add_state_core = 6
-			add_state_core = 35
-			custom_effect_tooltip = kivotos_halo_add3_tt
-			hidden_effect = {
-				set_variable = { BA_halo_infantry_cap_edit_var = 3 }
-				BA_halo_infantry_cap_edit_effect = yes
-			}
-		}	
-	}
-	##########
-	##만마전##
-	##########
-	focus = { #만마전과의 협력
-		#relative_position_id = 
-		id = HEU_foc_3
-		icon = GFX_goal_HEU_makoto
-		prerequisite = { focus = HEU_foc_1 }
-		mutually_exclusive = { focus = HEU_foc_2 }
-		mutually_exclusive = { focus = HEU_foc_4 }
-		cost = 5.00
-		x = 9
-		y = 1
-		available = {
-			NOT = {
-				has_war_with = GEM
-			}
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_political_power = 60
-			GEM = {
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = large_increase
-				}
-			}
-			GEH = {
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = large_decrease
-				}
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_3
-		id = HEU_foc_3-1
-		icon = GFX_focus_generic_improve_roads
-		prerequisite = { focus = HEU_foc_3 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = -1
-		y = 1
-		available = {
-			NOT = {
-				has_war_with = GEM
-			}
-		}
-		bypass = {
-			NOT = {
-				HEU = { controls_state = 8 }
-				GEM = {
-					controls_state = 42
-					controls_state = 978
-					controls_state = 55
-				}
-			}
-		}
-		completion_reward = {
-			8 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			42 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			978 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			55 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_3
-		id = HEU_foc_3-2
-		icon = GFX_goal_molotov_ribbentrop_pact
-		prerequisite = { focus = HEU_foc_3 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = 0
-		y = 2
-		available = {
-			NOT = {
-				has_war_with = GEM
-			}
-		}
-		bypass = {
-			GEH = {
-				exists = no
-			}
-		}
-		completion_reward = {
-			GEM = {
-				country_event = {
-					id = HEU_event.1
-				}
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_3
-		id = HEU_foc_3-3
-		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = HEU_foc_3 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = 1
-		y = 1
-		available = {
-			NOT = {
-				has_war_with = GEM
-			}
-		}
-		bypass = {
-		}
-		completion_reward = {
-			army_experience = 25
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.5
-				uses = 1
-				category = land_doctrine
-			}
-			add_tech_bonus = {
-				bonus = 0.5
-				uses = 1
-				category = mystic_engineering
-			}
-			GEM = {	
-				army_experience = 25
-				add_doctrine_cost_reduction = {
-					cost_reduction = 0.5
-					uses = 1
-					category = land_doctrine
-				}
-				add_tech_bonus = {
-					bonus = 0.5
-					uses = 1
-					category = mystic_engineering
-				}
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_3
-		id = HEU_foc_3-4
-		icon = GFX_goal_generic_production
-		prerequisite = { focus = HEU_foc_3-1 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = -1
-		y = 3
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_stability = -0.02
-			add_offsite_building = { type = industrial_complex level = 2 }
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_3
-		id = HEU_foc_3-5
-		icon = GFX_focus_generic_modernize_industry
-		prerequisite = { focus = HEU_foc_2-2 focus = HEU_foc_3-1 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = -2
-		y = 2
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			unlock_decision_tooltip = HEU_jageumnan_d_2
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_3
-		id = HEU_foc_3-6
-		icon = GFX_goal_generic_territory_or_war
-		prerequisite = { focus = HEU_foc_3-3 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = 1
-		y = 3
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			custom_effect_tooltip = HEU_tt_1
-			hidden_effect = {
-				random_list = {
-					30 = {
-						add_manpower = 10000
-					}
-					30 = {
-						add_manpower = 15000
-					}
-					30 = {
-						add_manpower = 20000
-					}
-					10 = {
-						add_manpower = 30000
-					}
-				}
-			}
-			
-			add_equipment_to_stockpile = {
-				type = infantry_equipment
-				amount = 500
-			}
-			add_equipment_to_stockpile = {
-				type = kivotos_infantry_equipment
-				amount = 20
-			}
-			add_equipment_to_stockpile = {
-				type = anti_tank_equipment
-				amount = 10
-			}
-			add_equipment_to_stockpile = {
-				type = artillery_equipment
-				amount = 5
-			}
-			add_equipment_to_stockpile = {
-				type = support_equipment
-				amount = 30
-			}
-		}	
-	}
-	focus = { #
-		relative_position_id = HEU_foc_3
-		id = HEU_foc_3-7
-		icon = GFX_goal_generic_army_doctrines
-		prerequisite = { focus = HEU_foc_3-3 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 8.00
-		x = 2
-		y = 2
-		available = {
-			NOT = {
-				has_war_with = GEM
-			}
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_ideas = HEU_kyo_lee
-			GEM = {
-				add_ideas = HEU_kyo_lee	
-			}
-		}	
-	}
-	focus = { #
-		relative_position_id = HEU_foc_3
-		id = HEU_foc_3-8
-		icon = GFX_goal_HEU_dldhflTangTang
-		prerequisite = { focus = HEU_foc_3-2 }
-		prerequisite = { focus = HEU_foc_3-4 }
-		prerequisite = { focus = HEU_foc_3-6 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = 0
-		y = 4
-		available = {
-			GEH = {
-				has_character = GEH_dldhfl
-			}
-		}
-		bypass = {
-			GEH = { exists = no }
-		}
-		completion_reward = {
-			GEH = {
-				country_event = {
-					id = HEU_event.3
-					hours = 2
-				}
-			}
-		}	
-	}
-	focus = { #
-		relative_position_id = HEU_foc_3
-		id = HEU_foc_3-9
-		icon = GFX_goal_HEU_fnrtpa
-		prerequisite = { focus = HEU_foc_3-8 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 8.00
-		x = 0
-		y = 6
-		available = {
-			controls_state = 8
-		}
-		bypass = {
-		}
-		completion_reward = {
-			set_province_name = {
-				id = 6583
-				name = "벤리야"
-			}
-			add_victory_points = {
-				province = 6583
-				value = 15
-			}
-			8 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			add_research_slot = 1
-		}	
-	}
-	focus = { #
-		relative_position_id = HEU_foc_3
-		id = HEU_foc_3-10
-		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
-		prerequisite = { focus = HEU_foc_3-8 focus = HEU_foc_2-8 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 8.00
-		x = -2
-		y = 5
-		available = {
-			TRM = {
-				threat > 0.01
-			}
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_war_support = 0.10
-			send_embargo = TRM
-			TRM = {
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = large_decrease
-				}
-			}
-		}	
-	}
-	focus = { #
-		relative_position_id = HEU_foc_3
-		id = HEU_foc_3-11
-		icon = GFX_focus_generic_fascist_propaganda
-		prerequisite = { focus = HEU_foc_3-8 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 8.00
-		x = 2
-		y = 5
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_stability = 0.05
-			add_war_support = 0.05
-			add_political_power = 100
-		}	
-	}
-	focus = { #
-		relative_position_id = HEU_foc_3
-		id = HEU_foc_3-12
-		icon = GFX_focus_CZE_german_puppet
-		prerequisite = { focus = HEU_foc_3-9 }
-		prerequisite = { focus = HEU_foc_3-10 }
-		prerequisite = { focus = HEU_foc_3-11 }
-		mutually_exclusive = { focus = HEU_foc_3-13 }
-		cost = 10.00
-		x = -1
-		y = 7
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			GEM = {
-				set_autonomy = {
-					target = HEU
-					autonomous_state = autonomy_dominion
-				}
-			}
-		}	
-	}
-	focus = { #
-		relative_position_id = HEU_foc_3
-		id = HEU_foc_3-13
-		icon = GFX_focus_generic_support_the_left_right
-		prerequisite = { focus = HEU_foc_3-9 }
-		prerequisite = { focus = HEU_foc_3-10 }
-		prerequisite = { focus = HEU_foc_3-11 }
-		mutually_exclusive = { focus = HEU_foc_3-12 }
-		cost = 10.00
-		x = 1
-		y = 7
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			custom_effect_tooltip = HEU_tt_3
-			remove_ideas = HEU_gehenna_ui_ablyeog
-			set_global_flag = HEU_HEU_rnjsfurxnwod_1_yes
-		}	
-	}
-	focus = { #
-		relative_position_id = HEU_foc_3-12
-		id = HEU_foc_3-14
-		icon = GFX_goal_generic_demand_territory
-		prerequisite = { focus = HEU_foc_3-12 }
-		#mutually_exclusive = { focus = HEU_foc_3- }
-		cost = 10.00
-		x = -1
-		y = 1
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = HEU_gehenna_ui_ablyeog
-				add_idea = HEU_gehenna_ui_ablyeog_2
-			}
-		}	
-	}
-	focus = { #
-		relative_position_id = HEU_foc_3-12
-		id = HEU_foc_3-15
-		icon = GFX_focus_NORDIC_dem_capstone_research
-		prerequisite = { focus = HEU_foc_3-14 }
-		#mutually_exclusive = { focus = HEU_foc_3- }
-		cost = 10.00
-		x = -1
-		y = 3
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_research_slot = 1
-		}	
-	}
-	focus = { #
-		relative_position_id = HEU_foc_3-12
-		id = HEU_foc_3-16
-		icon = GFX_goal_generic_intelligence_exchange
-		prerequisite = { focus = HEU_foc_3-12 }
-		#mutually_exclusive = { focus = HEU_foc_3- }
-		cost = 10.00
-		x = 0
-		y = 2
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_stability = 0.10
-		}	
-	}
-	focus = { #
-		relative_position_id = HEU_foc_3-12
-		id = HEU_foc_3-17
-		icon = GFX_focus_generic_fascist_troops
-		prerequisite = { focus = HEU_foc_3-14 }
-		#mutually_exclusive = { focus = HEU_foc_3- }
-		cost = 10.00
-		x = -2
-		y = 2
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_ideas = HEU_gehsik_inhaejeonsul
-			custom_effect_tooltip = kivotos_halo_add3_tt
-			hidden_effect = {
-				set_variable = { BA_halo_infantry_cap_edit_var = 3 }
-				BA_halo_infantry_cap_edit_effect = yes
-			}
-		}	
-	}
-	focus = { #
-		relative_position_id = HEU_foc_3-12
-		id = HEU_foc_3-18
-		icon = GFX_goal_generic_small_arms
-		prerequisite = { focus = HEU_foc_3-15 }
-		prerequisite = { focus = HEU_foc_3-17 }
-		#mutually_exclusive = { focus = HEU_foc_3- }
-		cost = 10.00
-		x = -2
-		y = 4
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			army_experience = 50
-			add_tech_bonus = {
-				bonus = 0.5
-				uses = 1
-				category = mystic_engineering
-			}
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.75
-				category = cat_mass_assault
-				uses = 1
-			}
-			swap_ideas = {
-				remove_idea = HEU_gehsik_inhaejeonsul
-				add_idea = HEU_gehsik_inhaejeonsul2
-			}
-		}	
-	}
-	focus = { #
-		relative_position_id = HEU_foc_3
-		id = HEU_foc_3-19
-		icon = GFX_focus_spr_torchbearers_of_tomorrow
-		prerequisite = { focus = HEU_foc_3-13 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = 1
-		y = 8
-		available = {
-		}
-		bypass = {
-			has_global_flag = HEU_HEU_rnjsfurxnwod_0_yes
-		}
-		completion_reward = {
-			add_to_variable = {
-				var = global.HEU_rnjsfur_heu
-				value = 20
-				tooltip = HEU_tt_6
-			}
-			set_variable = {var = global.HEU_rnjsfur_heu_cha value = global.HEU_rnjsfur_heu}
-			subtract_from_variable = {var = global.HEU_rnjsfur_heu_cha value = global.HEU_rnjsfur_gem}
-		}	
-	}
-	focus = { #
-		relative_position_id = HEU_foc_3
-		id = HEU_foc_3-20
-		icon = GFX_goal_HEU_wjddnjfdkfn
-		prerequisite = { focus = HEU_foc_3-19 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = 1
-		y = 9
-		available = {
-			controls_state = 55
-			has_global_flag = HEU_HEU_rnjsfurxnwod_0_yes
-			GEM = {
-				exists = no
-			}
-		}
-		bypass = {
-		}
-		completion_reward = {
-			set_rule = {
-				can_create_factions = yes
-			}
-			if = {
-				limit = {
-					GEH = {
-						exists = yes
-					}
-				}
-				create_wargoal = {
-					type = annex_everything
-					target = GEH
-				}
-			}
-		}	
-	}
-	focus = { #
-		relative_position_id = HEU_foc_3
-		id = HEU_foc_3-21
-		icon = GFX_focus_generic_conspiracy
-		prerequisite = { focus = HEU_foc_3-20 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 5.00
-		x = 0
-		y = 10
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_opinion_modifier = {
-				target = TRM
-				modifier = HEU_TRM_jinjunghan
-			}	
-			TRM = {
-				add_opinion_modifier = {
-					target = HEU
-					modifier = HEU_TRM_jinjunghan
-				}	
-			}
-			add_state_claim = 64
-		}	
-	}
-	focus = { #
-		relative_position_id = HEU_foc_3
-		id = HEU_foc_3-22
-		icon = GFX_goal_generic_more_territorial_claims
-		prerequisite = { focus = HEU_foc_3-20 focus = HEU_foc_4-19 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = 2
-		y = 10
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_ideas = HEU_aru_yougante
-		}	
-	}
-	focus = { #
-		relative_position_id = HEU_foc_3
-		id = HEU_foc_3-23
-		icon = GFX_focus_SWE_let_fly_all_guns
-		prerequisite = { focus = HEU_foc_3-21 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = 0
-		y = 11
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			hidden_effect = {
-				news_event = {
-					id = BA_news.54
-				}
-			}
-			add_threat = 5
-			TRM = {
-				add_stability = -0.10
-				random_owned_state = {
-					damage_building = {
-						type = infrastructure
-						damage = 1
-					}
-				}
-				random_owned_state = {
-					damage_building = {
-						type = infrastructure
-						damage = 1
-					}
-				}
-				random_owned_state = {
-					damage_building = {
-						type = infrastructure
-						damage = 1
-					}
-				}
-				random_owned_state = {
-					damage_building = {
-						type = infrastructure
-						damage = 1
-					}
-				}
-				random_owned_state = {
-					damage_building = {
-						type = infrastructure
-						damage = 1
-					}
-				}
-			}
-		}	
-	}
-	focus = { #
-		will_lead_to_war_with = TRM
-		relative_position_id = HEU_foc_3
-		id = HEU_foc_3-24
-		icon = GFX_focus_attack_TRN
-		prerequisite = { focus = HEU_foc_3-23 }
-		prerequisite = { focus = HEU_foc_3-22 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = 1
-		y = 12
-		available = {
-			has_army_manpower = {
-				size > 100000
-			}
-		}
-		bypass = {
-			TRM = {
-				exists = no
-			}
-		}
-		completion_reward = {
-			create_wargoal = {
-				type = annex_everything
-				target = TRM
-			}
-		}	
-	}
-	focus = { #
-		relative_position_id = HEU_foc_3
-		id = HEU_foc_3-25
-		icon = GFX_focus_generic_military_mission
-		prerequisite = { focus = HEU_foc_3-23 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = -1
-		y = 12
-		available = {
-			OR = {
-				threat > 0.25
-				has_war = yes
-			}
-		}
-		bypass = {
-		}
-		completion_reward = {
-			if = {
-				limit = {
-					has_idea = tot_economic_mobilisation
-				}
-				add_political_power = 150
-			}
-			else = {
-				add_ideas = tot_economic_mobilisation
-			}
-			add_ideas = HEU_gingup_chong_dong_won
-		}	
-	}
-	focus = { #
-		relative_position_id = HEU_foc_3
-		id = HEU_foc_3-26
-		icon = GFX_focus_generic_full_social_mobilization
-		prerequisite = { focus = HEU_foc_3-25 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = -2
-		y = 13
-		available = {
-			has_idea = tot_economic_mobilisation
-			OR = {
-				threat > 0.50
-				has_war = yes
-			}
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_ideas = HEU_muchabyeol_jingbyeng
-			custom_effect_tooltip = kivotos_halo_add3_tt
-			hidden_effect = {
-				set_variable = { BA_halo_infantry_cap_edit_var = 3 }
-				BA_halo_infantry_cap_edit_effect = yes
-			}
-		}	
-	}
-	focus = { #
-		relative_position_id = HEU_foc_3
-		id = HEU_foc_3-27
-		icon = GFX_focus_SWE_bicycle
-		prerequisite = { focus = HEU_foc_3-25 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = 0
-		y = 13
-		available = {
-			has_idea = tot_economic_mobilisation
-			OR = {
-				threat > 0.50
-				has_war = yes
-			}
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_stability = -0.05
-			add_war_support = -0.10
-			set_technology = { bicycle_infantry = 1 }
-			hidden_effect = {
-				set_rule = {
-					can_use_kamikaze_pilots = yes
-				}
-			}
-			custom_effect_tooltip = kamikaze_focus_tooltip
-		}	
-	}
-	focus = { #
-		relative_position_id = HEU_foc_3
-		id = HEU_foc_3-28
-		icon = GFX_focus_generic_spread_fascism
-		prerequisite = { focus = HEU_foc_3-24 }
-		prerequisite = { focus = HEU_foc_3-27 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = 1
-		y = 14
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = HEU_sinloe_wa_uae
-				add_idea = HEU_sinloe_wa_uae_3
-			}
-		}	
-	}
-	focus = { #
-		relative_position_id = HEU_foc_3
-		id = HEU_foc_3-29
-		icon = GFX_focus_generic_steel
-		prerequisite = { focus = HEU_foc_3-18 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = -3
-		y = 12
-		available = {
-			controls_state = 8
-		}
-		bypass = {
-		}
-		completion_reward = {
-			8 = {
-				add_resource = {
-					type = steel
-					amount = 21
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-		}	
-	}
-	focus = { #
-		relative_position_id = HEU_foc_3
-		id = HEU_foc_3-30
-		icon = GFX_focus_research
-		prerequisite = { focus = HEU_foc_3-22 }
-		prerequisite = { focus = HEU_foc_3-21 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = 2
-		y = 11
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_research_slot = 1
-		}	
-	}
-	##########
-	##우리길##
-	##########
-	focus = { #우리만의 길
-		#relative_position_id = 
-		id = HEU_foc_4
-		icon = GFX_goal_generic_neutrality_focus
-		prerequisite = { focus = HEU_foc_1 }
-		mutually_exclusive = { focus = HEU_foc_2 }
-		mutually_exclusive = { focus = HEU_foc_3 }
-		cost = 5.00
-		x = 15
-		y = 1
-		available = {	
-		}
-		bypass = {
-		}
-		completion_reward = {
-			custom_effect_tooltip = BA_HISTORICAL_CHOICE_TT
-			add_political_power = 60
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_4
-		id = HEU_foc_4-1
-		icon = GFX_focus_generic_full_employment
-		prerequisite = { focus = HEU_foc_4 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = -2
-		y = 1
-		available = {	
-		}
-		bypass = {
-		}
-		completion_reward = {
-			random_owned_state = {
-				add_manpower = 29515
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_4
-		id = HEU_foc_4-2
-		icon = GFX_goal_generic_railroad
-		prerequisite = { focus = HEU_foc_4-1 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 5.00
-		x = -2
-		y = 2
-		available = {	
-			HEU = { controls_state = 8 }
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_stability = 0.05
-			8 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_4
-		id = HEU_foc_4-3
-		icon = GFX_goal_generic_agriculture
-		prerequisite = { focus = HEU_foc_4-2 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = -3
-		y = 3
-		available = {	
-		}
-		bypass = {
-		}
-		completion_reward = {
-			every_state = {
-				limit = {
-					is_fully_controlled_by = HEU
-					is_core_of = HEU
-				}
-				add_extra_state_shared_building_slots = 1
-			}
-			custom_effect_tooltip = HEU_tt_10
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_4
-		id = HEU_foc_4-4
-		icon = GFX_goal_HEU_junsulnote_1
-		prerequisite = { focus = HEU_foc_4-2 }
-		prerequisite = { focus = HEU_foc_4-6 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 8.00
-		x = -1
-		y = 3
-		available = {	
-		}
-		bypass = {
-		}
-		completion_reward = {
-			army_experience = 75
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.50
-				category = cat_mass_assault
-				uses = 1
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_4
-		id = HEU_foc_4-5
-		icon = GFX_goal_generic_propaganda
-		prerequisite = { focus = HEU_foc_4 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = 2
-		y = 2
-		available = {	
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_stability = 0.10
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_4
-		id = HEU_foc_4-6
-		icon = GFX_goal_generic_military_deal
-		prerequisite = { focus = HEU_foc_4 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = 0
-		y = 1
-		available = {	
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_ideas = HEU_big_yongbyeong
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_4
-		id = HEU_foc_4-7
-		icon = GFX_focus_rom_parties_end
-		prerequisite = { focus = HEU_foc_4-5 }
-		prerequisite = { focus = HEU_foc_4-6 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 8.00
-		x = 1
-		y = 3
-		available = {	
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_political_power = 50
-			remove_ideas = HEU_gehenna_ui_ablyeog
-			add_opinion_modifier = {
-				target = GEM
-				modifier = HEU_TRM_jinjunghan
-			}	
-			add_opinion_modifier = {
-				target = GEH
-				modifier = HEU_TRM_jinjunghan
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_4
-		id = HEU_foc_4-8
-		icon = GFX_focus_wonderweapons
-		prerequisite = { focus = HEU_foc_4-4 }
-		prerequisite = { focus = HEU_foc_4-7 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = 0
-		y = 4
-		available = {
-		}
-		bypass = {
-			ABY = { exists = no }
-		}
-		completion_reward = {
-			ABY = {
-				country_event = {
-					id = HEU_event.9
-					hours = 2
-				}
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_4
-		id = HEU_foc_4-9
-		icon = GFX_goal_HEU_dldhflTangTang
-		prerequisite = { focus = HEU_foc_4-8 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = 0
-		y = 5
-		available = {
-			GEH = {
-				has_character = GEH_dldhfl
-			}
-		}
-		bypass = {
-			GEH = { exists = no }
-		}
-		completion_reward = {
-			GEH = {
-				country_event = {
-					id = HEU_event.3
-					hours = 2
-				}
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_4
-		id = HEU_foc_4-10
-		icon = GFX_focus_DEN_heavy_regulations
-		prerequisite = { focus = HEU_foc_4-9 }
-		mutually_exclusive = { focus = HEU_foc_4-11 }
-		cost = 10.00
-		x = -1
-		y = 6
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_ideas = HEU_kangjae_dongwon
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_4
-		id = HEU_foc_4-11
-		icon = GFX_goal_generic_improve_relations
-		prerequisite = { focus = HEU_foc_4-9 }
-		mutually_exclusive = { focus = HEU_foc_4-10 }
-		cost = 10.00
-		x = 1
-		y = 6
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_stability = 0.10
-			add_war_support = 0.10
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_4
-		id = HEU_foc_4-12
-		icon = GFX_focus_research
-		prerequisite = { focus = HEU_foc_4-4 }
-		#mutually_exclusive = { focus = HEU_foc_4- }
-		cost = 10.00
-		x = -2
-		y = 4
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_research_slot = 1
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_4
-		id = HEU_foc_4-13
-		icon = GFX_goal_generic_occupy_states_ongoing_war
-		prerequisite = { focus = HEU_foc_4-9 }
-		#mutually_exclusive = { focus = HEU_foc_4- }
-		cost = 10.00
-		x = 2
-		y = 7
-		available = {
-		}	
-		bypass = {
-		}
-		completion_reward = {
-			every_state = {
-				limit = {
-					is_core_of = GEM
-				}
-				add_claim_by = HEU
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_4
-		id = HEU_foc_4-14
-		icon = GFX_focus_generic_aircraft_production
-		prerequisite = { focus = HEU_foc_4-9 }
-		prerequisite = { focus = HEU_foc_4-12 }
-		#mutually_exclusive = { focus = HEU_foc_4- }
-		cost = 10.00
-		x = -2
-		y = 7
-		available = {
-		}	
-		bypass = {
-		}
-		completion_reward = {
-			unlock_decision_tooltip = HEU_jageumnan_d_2
-			set_province_name = {
-				id = 6583
-				name = "벤리야"
-			}
-			add_victory_points = {
-				province = 6583
-				value = 15
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_4
-		id = HEU_foc_4-15
-		icon = GFX_focus_generic_reorient_production
-		prerequisite = { focus = HEU_foc_4-10 focus = HEU_foc_4-11 }
-		#mutually_exclusive = { focus = HEU_foc_4- }
-		cost = 10.00
-		x = 0
-		y = 7
-		available = {
-		}	
-		bypass = {
-		}
-		completion_reward = {
-			add_timed_idea = {
-				idea = HEU_mugi_gaebal
-				days = 720
-			}
-			add_tech_bonus = {
-				bonus = 0.5
-				uses = 1
-				category = infantry_weapons
-			}
-			add_tech_bonus = {
-				bonus = 0.5
-				uses = 1
-				category = artillery
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_4
-		id = HEU_foc_4-16
-		icon = GFX_goal_medicine
-		prerequisite = { focus = HEU_foc_4-10 focus = HEU_foc_4-11 }
-		mutually_exclusive = { focus = HEU_foc_4-17 }
-		cost = 10.00
-		x = -1
-		y = 8
-		available = {
-		}	
-		bypass = {
-		}
-		completion_reward = {	
-			add_ideas = HEU_cheou_gaeseon
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_4
-		id = HEU_foc_4-17
-		icon = GFX_focus_FIN_parmis_devils
-		prerequisite = { focus = HEU_foc_4-10 focus = HEU_foc_4-11 }
-		mutually_exclusive = { focus = HEU_foc_4-16 }
-		cost = 10.00
-		x = 1
-		y = 8
-		available = {
-		}	
-		bypass = {
-		}
-		completion_reward = {
-			add_ideas = HEU_gangjae_deaminjiwon
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_4
-		id = HEU_foc_4-18
-		icon = GFX_goal_demand_sudetenland
-		prerequisite = { focus = HEU_foc_4-7 }
-		#mutually_exclusive = { focus = HEU_foc_4- }
-		cost = 10.00
-		x = 2
-		y = 5
-		available = {
-		}	
-		bypass = {
-		}
-		completion_reward = {
-			add_war_support = 0.05
-			add_ideas = HEU_1day_1evil
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_4
-		id = HEU_foc_4-19
-		icon = GFX_focus_SOV_the_glory_of_the_red_army_alternative
-		prerequisite = { focus = HEU_foc_4-15 }
-		#mutually_exclusive = { focus = HEU_foc_4- }
-		cost = 10.00
-		x = -2
-		y = 9
-		available = {
-		}	
-		bypass = {
-		}
-		completion_reward = {
-			custom_effect_tooltip = kivotos_halo_add3_tt
-			hidden_effect = {
-				set_variable = { BA_halo_infantry_cap_edit_var = 3 }
-				BA_halo_infantry_cap_edit_effect = yes
-			}
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.50
-				category = cat_mass_assault
-				uses = 2
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_4
-		id = HEU_foc_4-20
-		icon = GFX_goal_generic_fortify_city
-		prerequisite = { focus = HEU_foc_4-15 }
-		#mutually_exclusive = { focus = HEU_foc_4- }
-		cost = 10.00
-		x = 2
-		y = 9
-		available = {
-			controls_state = 8
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_stability = 0.05
-			8 = {
-				add_building_construction = {
-					type = anti_air_building
-					level = 4
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 8
-					province = 6583
-					instant_build = yes
-				}
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_4
-		id = HEU_foc_4-21
-		icon = GFX_focus_SWI_issue_war_bonds
-		prerequisite = { focus = HEU_foc_4-19 }
-		prerequisite = { focus = HEU_foc_4-20 }
-		#mutually_exclusive = { focus = HEU_foc_4- }
-		cost = 10.00
-		x = 0
-		y = 10
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_equipment_to_stockpile = {
-				type = infantry_equipment
-				amount = 900
-			}
-			add_equipment_to_stockpile = {
-				type = kivotos_infantry_equipment
-				amount = 450
-			}
-			add_equipment_to_stockpile = {
-				type = artillery_equipment
-				amount = 30
-			}
-			add_equipment_to_stockpile = {
-				type = anti_tank_equipment
-				amount = 60
-			}
-			add_equipment_to_stockpile = {
-				type = support_equipment
-				amount = 120
-			}
-			add_research_slot = 1
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_4
-		id = HEU_foc_4-22
-		icon = GFX_focus_ETH_freedom_at_gunpoint
-		prerequisite = { focus = HEU_foc_4-19 }
-		#mutually_exclusive = { focus = HEU_foc_4- }
-		cost = 10.00
-		x = -2
-		y = 10
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			if = {
-				limit = {
-					OR = {
-						has_idea = war_economy
-						has_idea = tot_economic_mobilisation
-					}
-				}
-				add_political_power = 150
-			}
-			else = {
-				add_ideas = war_economy
-			}
-			if = {
-				limit = {
-					OR = {
-						has_idea = service_by_requirement
-						has_idea = all_adults_serve
-						has_idea = scraping_the_barrel
-					}
-				}
-				add_political_power = 150
-			}
-			else = {
-				add_ideas = service_by_requirement
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_4
-		id = HEU_foc_4-23
-		icon = GFX_goal_generic_position_armies
-		prerequisite = { focus = HEU_foc_4-20 }
-		#mutually_exclusive = { focus = HEU_foc_4- }
-		cost = 10.00
-		x = 2
-		y = 10
-		available = {
-		}
-		bypass = {
-			GEM = {
-				exists = no
-			}
-			GEH = {
-				exists = no
-			}
-		}
-		completion_reward = {
-			if = {
-				limit = {
-					GEM = {
-						exists = yes
-					}
-				}
-				GEM = {
-					add_stability = -0.10
-					add_war_support = -0.10
-				}
-			}
-			if = {
-				limit = {
-					GEH = {
-						exists = yes
-					}
-				}
-				GEH = {
-					add_stability = -0.10
-					add_war_support = -0.10
-				}
-			}
-			if = {
-				limit = {
-					GEM = {
-						exists = no
-					}
-					GEH = {
-						exists = no
-					}
-				}
-				random_country = {
-					limit = {
-						owns_state = 55
-					}
-					add_stability = -0.10
-					add_war_support = -0.10
-				}
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_4
-		id = HEU_foc_4-24
-		icon = GFX_focus_generic_strike_at_democracy1
-		prerequisite = { focus = HEU_foc_4-21 }
-		prerequisite = { focus = HEU_foc_4-22 }
-		prerequisite = { focus = HEU_foc_4-23 }
-		#mutually_exclusive = { focus = HEU_foc_4- }
-		cost = 10.00
-		x = 0
-		y = 11
-		available = {
-			has_army_manpower = {
-				size > 50000
-			}
-		}
-		bypass = {
-			owns_state = 55
-		}
-		completion_reward = {
-			if = {
-				limit = {
-					GEM = {
-						exists = yes
-					}
-				}
-				create_wargoal = {
-					type = annex_everything
-					target = GEM
-				}
-			}
-			if = {
-				limit = {
-					GEH = {
-						exists = yes
-					}
-				}
-				create_wargoal = {
-					type = annex_everything
-					target = GEH
-				}
-			}
-			if = {
-				limit = {
-					GEM = {
-						exists = no
-					}
-					GEH = {
-						exists = no
-					}
-				}
-				random_country = {
-					limit = {
-						owns_state = 55
-					}
-					HEU = {
-						create_wargoal = {
-							type = annex_everything
-							target = PREV
-						}
-					}
-				}
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_4
-		id = HEU_foc_4-25
-		icon = GFX_goal_GEH_Pax_Gehennia
-		prerequisite = { focus = HEU_foc_4-24 }
-		mutually_exclusive = { focus = HEU_foc_4-26 }
-		cost = 10.00
-		x = -1
-		y = 12
-		available = {
-			has_country_flag = GEH_unified_gehenna_flag
-		}
-		bypass = {
-		}
-		completion_reward = {
-			set_rule = {
-				can_create_factions = yes
-			}
-			add_stability = 0.10
-			HEU_aru = {
-				swap_country_leader_traits = {
-					remove = HEU_ARU_T1
-					add = HEU_ARU_T4
-				}
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_4
-		id = HEU_foc_4-26
-		icon = GFX_goal_TRN_Problem_Solver_68
-		prerequisite = { focus = HEU_foc_4-24 }
-		mutually_exclusive = { focus = HEU_foc_4-25 }
-		cost = 10.00
-		x = 1
-		y = 12
-		available = {
-			has_country_flag = GEH_unified_gehenna_flag
-		}
-		bypass = {
-		}
-		completion_reward = {
-			set_rule = {
-				can_create_factions = yes
-			}
-			add_stability = 0.10
-			swap_ideas = {
-				remove_idea = HEU_sinloe_wa_uae
-				add_idea = HEU_sinloe_wa_uae_2
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_4
-		id = HEU_foc_4-27
-		icon = GFX_goal_generic_army_doctrines
-		prerequisite = { focus = HEU_foc_4-25 }
-		#mutually_exclusive = { focus = HEU_foc_4- }
-		cost = 10.00
-		x = -2
-		y = 14
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			army_experience = 25
-			add_ideas = HEU_gehsik_inhaejeonsul
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.75
-				category = cat_mass_assault
-				uses = 1
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_4
-		id = HEU_foc_4-28
-		icon = GFX_focus_spa_the_spanish_miracle
-		prerequisite = { focus = HEU_foc_4-25 focus = HEU_foc_4-26 }
-		#mutually_exclusive = { focus = HEU_foc_4- }
-		cost = 10.00
-		x = -1
-		y = 13
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			custom_effect_tooltip = HEU_tt_11
-			every_state = {
-				limit = {
-					is_owned_and_controlled_by = HEU
-					is_core_of = HEU
-					infrastructure < 4
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_4
-		id = HEU_foc_4-29
-		icon = GFX_focus_SWI_helvetic_junta
-		prerequisite = { focus = HEU_foc_4-26 }
-		#mutually_exclusive = { focus = HEU_foc_4- }
-		cost = 10.00
-		x = 2
-		y = 14
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_war_support = 0.05
-			add_ideas = HEU_seong_li_ui_yong_byeong_dan
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_4
-		id = HEU_foc_4-30
-		icon = GFX_focus_NORDIC_dem_selector_civilian
-		prerequisite = { focus = HEU_foc_4-25 focus = HEU_foc_4-26 }
-		#mutually_exclusive = { focus = HEU_foc_4- }
-		cost = 10.00
-		x = 0
-		y = 14
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			set_rule = {
-				can_guarantee_other_ideologies = yes
-			}
-			add_threat = -15
-			add_ideas = HEU_beyondthebarrier
-		}
-	}
-	focus = { #
-		will_lead_to_war_with = TRM
-		relative_position_id = HEU_foc_4
-		id = HEU_foc_4-31
-		icon = GFX_focus_attack_TRN
-		prerequisite = { focus = HEU_foc_4-25 focus = HEU_foc_4-26 }
-		#mutually_exclusive = { focus = HEU_foc_4- }
-		cost = 10.00
-		x = 1
-		y = 13
-		available = {
-			has_army_manpower = {
-				size > 500000
-			}
-		}
-		bypass = {
-		}
-		completion_reward = {
-			create_wargoal = {
-				type = annex_everything
-				target = TRM
-			}
-			add_state_core = 60
-			add_state_core = 65
-			add_state_core = 61
-			add_state_core = 62
-			add_state_core = 64
-		}
-	}
-	focus = { #
-		will_lead_to_war_with = FRM
-		relative_position_id = HEU_foc_4
-		id = HEU_foc_4-32
-		icon = GFX_focus_attack_france
-		prerequisite = { focus = HEU_foc_4-13 }
-		#mutually_exclusive = { focus = HEU_foc_4- }
-		cost = 10.00
-		x = 3
-		y = 8
-		available = {
-			has_army_manpower = {
-				size > 50000
-			}
-			FRM = {
-				controls_state = 28
-			}
-		}	
-		bypass = {
-			FRM = {
-				exists = no
-			}
-		}
-		completion_reward = {
-			create_wargoal = {
-				type = annex_everything
-				target = FRM
-			}
-			add_state_core = 28
-			add_state_core = 976
-		}
-	}
-	##########
-	###산업###
-	##########
-	focus = { #
-		#relative_position_id = 
-		id = HEU_foc_5
-		icon = GFX_goal_generic_construction
-		#prerequisite = { focus = HEU_foc_ }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 5.00
-		x = 25
-		y = 0
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 1.0
-				uses = 1
-				category = industry
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-1
-		icon = GFX_focus_NORDIC_com_capstone_civilian
-		prerequisite = { focus = HEU_foc_5 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 5.00
-		x = -4
-		y = 1
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			random_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-1-1
-		icon = GFX_goal_generic_construct_mil_factory
-		prerequisite = { focus = HEU_foc_5-1 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 5.00
-		x = -6
-		y = 2
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_offsite_building = { type = arms_factory level = 2 }
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-1-2
-		icon = GFX_focus_generic_steel
-		prerequisite = { focus = HEU_foc_5-1 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 5.00
-		x = -4
-		y = 2
-		available = {
-			controls_state = 8
-		}
-		bypass = {
-		}
-		completion_reward = {
-			8 = {
-				add_resource = {
-					type = steel
-					amount = 21
-				}
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-1-3
-		icon = GFX_goal_generic_construct_civ_factory
-		prerequisite = { focus = HEU_foc_5-1 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 5.00
-		x = -2
-		y = 2
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_offsite_building = { type = industrial_complex level = 2 }
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-1-4
-		icon = GFX_focus_ICE_state_corporatism
-		prerequisite = { focus = HEU_foc_5-1 }
-		mutually_exclusive = { focus = HEU_foc_5-1-5 }
-		cost = 10.00
-		x = -1
-		y = 3
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			random_owned_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			add_tech_bonus = {
-				bonus = 0.5
-				uses = 3
-				category = industry
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-1-5
-		icon = GFX_focus_generic_combined_arms
-		prerequisite = { focus = HEU_foc_5-1 }
-		mutually_exclusive = { focus = HEU_foc_5-1-4 }
-		cost = 10.00
-		x = -3
-		y = 3
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			random_owned_state = {
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = arms_factory
-					level = 3
-					instant_build = yes
-				}
-			}
-			add_war_support = 0.05
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-1-6
-		icon = GFX_goal_generic_production
-		prerequisite = { focus = HEU_foc_5-1-1 focus = HEU_foc_5-1-2 focus = HEU_foc_5-1-3 }
-		#mutually_exclusive = { focus = HEU_foc_5-1- }
-		cost = 5.00
-		x = -5
-		y = 3
-
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_dynamic_modifier = { modifier = HEU_sanupgongsa }
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-1-7
-		icon = GFX_goal_generic_construct_civilian
-		prerequisite = { focus = HEU_foc_5-1-6 }
-		mutually_exclusive = { focus = HEU_foc_5-1-8 }
-		cost = 10.00
-		x = -6
-		y = 4
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			random_owned_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			add_to_variable = { HEU_sanup_dynamic_consumer_goods_factor = -0.10 }
-			add_to_variable = { HEU_sanup_dynamic_production_speed_industrial_complex_factor = 0.10 }
-			custom_effect_tooltip = HEU_sanup_dynamic1_tt
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-1-8
-		icon = GFX_focus_generic_tank_production
-		prerequisite = { focus = HEU_foc_5-1-6 }
-		mutually_exclusive = { focus = HEU_foc_5-1-7 }
-		cost = 10.00
-		x = -4
-		y = 4
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			random_owned_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			add_to_variable = { HEU_sanup_dynamic_production_speed_arms_factory_factor = 0.10 }
-			add_to_variable = { HEU_sanup_dynamic_industrial_capacity_factory = 0.10 }
-			custom_effect_tooltip = HEU_sanup_dynamic2_tt
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-1-9
-		icon = GFX_focus_research2
-		prerequisite = { focus = HEU_foc_5-1-5 focus = HEU_foc_5-1-4 }
-		#utually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = -2
-		y = 4
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_research_slot = 1
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-1-10
-		icon = GFX_goal_generic_construction
-		prerequisite = { focus = HEU_foc_5-1-7 focus = HEU_foc_5-1-8 }
-		#utually_exclusive = { focus = HEU_foc_ }
-		cost = 5.00
-		x = -5
-		y = 5
-		available = {
-			has_country_flag = GEH_unified_gehenna_flag
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_stability = 0.05
-			add_tech_bonus = {
-				bonus = 1.0
-				uses = 1
-				category = industry
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-1-11
-		icon = GFX_focus_NORDIC_dem_civilian
-		prerequisite = { focus = HEU_foc_5-1-10 }
-		#utually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = -6
-		y = 6
-		available = {
-			NOT = {
-				has_completed_focus = HEU_foc_5-1-14
-			}
-			controls_state = 975
-			controls_state = 51
-			controls_state = 978
-			controls_state = 42
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_to_variable = { HEU_sanup_dynamic_production_speed_industrial_complex_factor = 0.05 }
-			custom_effect_tooltip = HEU_sanup_dynamic3_tt
-			random_list = {
-				1 = {}
-				1 = { 975 = { add_extra_state_shared_building_slots = 1 add_building_construction = {type = industrial_complex level = 1 instant_build = yes}}	}
-			}
-			random_list = {
-				1 = {}
-				1 = { 51 = { add_extra_state_shared_building_slots = 1 add_building_construction = {type = industrial_complex level = 1 instant_build = yes}}	}
-			}
-			random_list = {
-				1 = {}
-				1 = { 978 = { add_extra_state_shared_building_slots = 1 add_building_construction = {type = industrial_complex level = 1 instant_build = yes}}	}
-			}
-			random_list = {
-				1 = {}
-				1 = { 42 = { add_extra_state_shared_building_slots = 1 add_building_construction = {type = industrial_complex level = 1 instant_build = yes}}	}
-			}
-			set_country_flag = HEU_SEOBU_GAEBAL
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-1-12
-		icon = GFX_focus_NORDIC_dem_civilian
-		prerequisite = { focus = HEU_foc_5-1-10 }
-		#utually_exclusive = { focus = HEU_foc_ }
-		cost = 8.00
-		x = -4
-		y = 6
-		available = {
-			NOT = {
-				has_completed_focus = HEU_foc_5-1-14
-			}
-			controls_state = 56
-			controls_state = 57
-			controls_state = 59
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_to_variable = { HEU_sanup_dynamic_production_speed_industrial_complex_factor = 0.05 }
-			custom_effect_tooltip = HEU_sanup_dynamic3_tt
-			random_list = {
-				1 = {}
-				1 = { 56 = { add_extra_state_shared_building_slots = 1 add_building_construction = {type = industrial_complex level = 1 instant_build = yes}}	}
-			}
-			random_list = {
-				1 = {}
-				1 = { 57 = { add_extra_state_shared_building_slots = 1 add_building_construction = {type = industrial_complex level = 1 instant_build = yes}}	}
-			}
-			random_list = {
-				1 = {}
-				1 = { 59 = { add_extra_state_shared_building_slots = 1 add_building_construction = {type = industrial_complex level = 1 instant_build = yes}}	}
-			}
-			set_country_flag = HEU_BUKBU_GAEBAL
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-1-13
-		icon = GFX_focus_NORDIC_dem_civilian
-		prerequisite = { focus = HEU_foc_5-1-10 }
-		#utually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = -2
-		y = 6
-		available = {
-			NOT = {
-				has_completed_focus = HEU_foc_5-1-14
-			}
-			controls_state = 54
-			controls_state = 53
-			controls_state = 52
-			controls_state = 50
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_to_variable = { HEU_sanup_dynamic_production_speed_industrial_complex_factor = 0.05 }
-			custom_effect_tooltip = HEU_sanup_dynamic3_tt
-			random_list = {
-				1 = {}
-				1 = { 54 = { add_extra_state_shared_building_slots = 1 add_building_construction = {type = industrial_complex level = 1 instant_build = yes}}	}
-			}
-			random_list = {
-				1 = {}
-				1 = { 53 = { add_extra_state_shared_building_slots = 1 add_building_construction = {type = industrial_complex level = 1 instant_build = yes}}	}
-			}
-			random_list = {
-				1 = {}
-				1 = { 52 = { add_extra_state_shared_building_slots = 1 add_building_construction = {type = industrial_complex level = 1 instant_build = yes}}	}
-			}
-			random_list = {
-				1 = {}
-				1 = { 50 = { add_extra_state_shared_building_slots = 1 add_building_construction = {type = industrial_complex level = 1 instant_build = yes}}	}
-			}
-			set_country_flag = HEU_NAMBU_GAEBAL
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-1-14
-		icon = GFX_focus_NORDIC_dem_capstone_civilian
-		prerequisite = { focus = HEU_foc_5-1-11 focus = HEU_foc_5-1-12 focus = HEU_foc_5-1-13 }
-		#utually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = -4
-		y = 7
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			custom_effect_tooltip = HEU_tt_14
-			hidden_effect = {
-				if = {
-					limit = {
-						has_country_flag = HEU_SEOBU_GAEBAL
-					}
-					random_list = {
-						1 = {}
-						1 = { 975 = { add_extra_state_shared_building_slots = 1 add_building_construction = {type = industrial_complex level = 1 instant_build = yes}}	}
-					}
-					random_list = {
-						1 = {}
-						1 = { 51 = { add_extra_state_shared_building_slots = 1 add_building_construction = {type = industrial_complex level = 1 instant_build = yes}}	}
-					}
-					random_list = {
-						1 = {}
-						1 = { 978 = { add_extra_state_shared_building_slots = 1 add_building_construction = {type = industrial_complex level = 1 instant_build = yes}}	}
-					}
-					random_list = {
-						1 = {}
-						1 = { 42 = { add_extra_state_shared_building_slots = 1 add_building_construction = {type = industrial_complex level = 1 instant_build = yes}}	}
-					}
-				}
-				if = {
-					limit = {
-						has_country_flag = HEU_BUKBU_GAEBAL
-					}
-					random_list = {
-						1 = {}
-						1 = { 56 = { add_extra_state_shared_building_slots = 1 add_building_construction = {type = industrial_complex level = 1 instant_build = yes}}	}
-					}
-					random_list = {
-						1 = {}
-						1 = { 57 = { add_extra_state_shared_building_slots = 1 add_building_construction = {type = industrial_complex level = 1 instant_build = yes}}	}
-					}
-					random_list = {
-						1 = {}
-						1 = { 59 = { add_extra_state_shared_building_slots = 1 add_building_construction = {type = industrial_complex level = 1 instant_build = yes}}	}
-					}
-				}
-				if = {
-					limit = {
-						has_country_flag = HEU_NAMBU_GAEBAL
-					}
-					random_list = {
-						1 = {}
-						1 = { 54 = { add_extra_state_shared_building_slots = 1 add_building_construction = {type = industrial_complex level = 1 instant_build = yes}}	}
-					}
-					random_list = {
-						1 = {}
-						1 = { 53 = { add_extra_state_shared_building_slots = 1 add_building_construction = {type = industrial_complex level = 1 instant_build = yes}}	}
-					}
-					random_list = {
-						1 = {}
-						1 = { 52 = { add_extra_state_shared_building_slots = 1 add_building_construction = {type = industrial_complex level = 1 instant_build = yes}}	}
-					}
-					random_list = {
-						1 = {}
-						1 = { 50 = { add_extra_state_shared_building_slots = 1 add_building_construction = {type = industrial_complex level = 1 instant_build = yes}}	}
-					}
-				}
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-1-15
-		icon = GFX_focus_NORDIC_dem_capstone_navy
-		prerequisite = { focus = HEU_foc_5-1-7 focus = HEU_foc_5-1-8 }
-		#utually_exclusive = { focus = HEU_foc_ }
-		cost = 5.00
-		x = -3
-		y = 5
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_to_variable = { HEU_sanup_dynamic_production_factory_efficiency_gain_factor = 0.05 }
-			add_to_variable = { HEU_sanup_dynamic_production_factory_max_efficiency_factor = 0.05 }
-			add_to_variable = { HEU_sanup_dynamic_industrial_capacity_factory = 0.05 }
-			custom_effect_tooltip = HEU_sanup_dynamic4_tt
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-1-16
-		icon = GFX_goal_generic_oil_refinery
-		prerequisite = { focus = HEU_foc_5-1-9 }
-		#utually_exclusive = { focus = HEU_foc_ }
-		cost = 5.00
-		x = -1
-		y = 5
-		available = {
-			has_completed_focus = HEU_foc_5-1-6
-		}
-		bypass = {	
-		}
-		completion_reward = {
-			if = {
-				limit = {
-					NOT = {
-						has_tech = fuel_silos
-					}
-				}
-				set_technology = {
-					fuel_silos = 1
-				}
-			}
-			else = {
-				random_owned_state = {	
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = synthetic_refinery
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			if = {
-				limit = {
-					NOT = {
-						has_tech = synth_oil_experiments
-					}
-				}
-				set_technology = {
-					synth_oil_experiments = 1
-				}
-			}
-			else = {
-				random_owned_state = {
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = synthetic_refinery
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			random_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = synthetic_refinery
-					level = 1
-					instant_build = yes
-				}
-			}
-			add_to_variable = { HEU_sanup_dynamic_local_resources_factor = 0.05 }
-			custom_effect_tooltip = HEU_sanup_dynamic5_tt
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-1-17
-		icon = GFX_focus_generic_rubber
-		prerequisite = { focus = HEU_foc_5-1-16 }
-		#utually_exclusive = { focus = HEU_foc_ }
-		cost = 5.00
-		x = 0
-		y = 6
-		available = {
-		}
-		bypass = {	
-		}
-		completion_reward = {
-			random_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = synthetic_refinery
-					level = 1
-					instant_build = yes
-				}
-			}
-        	modify_building_resources = {
-				building = synthetic_refinery
-				resource = rubber
-				amount = 1
-			}
-			add_to_variable = { HEU_sanup_dynamic_local_resources_factor = 0.05 }
-			custom_effect_tooltip = HEU_sanup_dynamic5_tt
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-1-18
-		icon = GFX_goal_generic_construct_infrastructure
-		prerequisite = { focus = HEU_foc_5-1-14 }
-		#utually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = -5
-		y = 8
-		available = {
-			controls_state = 8
-			controls_state = 51
-			controls_state = 55
-			controls_state = 52
-			controls_state = 59
-			controls_state = 54
-		}
-		bypass = {	
-		}
-		completion_reward = {
-			build_railway = {
-				level = 2
-				start_province = 6583
-				target_province = 6469
-			}
-			build_railway = {
-				level = 2
-				start_province = 6583
-				target_province = 6488
-			}
-			build_railway = {
-				level = 2
-				start_province = 6583
-				target_province = 692
-			}
-			build_railway = {
-				level = 2
-				start_province = 6583
-				target_province = 6377
-			}
-			59 = {
-				add_building_construction = {
-					type = supply_node
-					level = 1
-					province = 9375
-					instant_build = yes
-				}
-			}
-			55 = {
-				add_building_construction = {
-					type = supply_node
-					level = 1
-					province = 11445
-					instant_build = yes
-				}
-			}
-		 	54 = {
-				add_building_construction = {
-					type = supply_node
-					level = 1
-					province = 11404
-					instant_build = yes
-				}
-			}
-			51 = {
-				add_building_construction = {
-					type = supply_node
-					level = 1
-					province = 3512
-					instant_build = yes
-				}
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-1-19
-		icon = GFX_focus_SWE_radiotjanst
-		prerequisite = { focus = HEU_foc_5-1-14 }
-		#utually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = -3
-		y = 8
-		available = {
-			has_tech = radio
-		}
-		bypass = {	
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 1.0
-				uses = 2
-				category = electronics
-			}
-			custom_effect_tooltip = HEU_tt_15
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-1-20
-		icon = GFX_focus_generic_mining_industry
-		prerequisite = { focus = HEU_foc_5-1-17 }
-		#utually_exclusive = { focus = HEU_foc_ }
-		cost = 5.00
-		x = -2
-		y = 7
-		available = {
-			controls_state = 51
-			controls_state = 42
-		}
-		bypass = {	
-		}
-		completion_reward = {
-			42 = {
-				add_resource = {
-					type = steel
-					amount = 28
-				}
-			}
-			51 = {
-				add_resource = {
-					type = steel
-					amount = 15
-				}
-			}
-			add_to_variable = { HEU_sanup_dynamic_local_resources_factor = 0.05 }
-			custom_effect_tooltip = HEU_sanup_dynamic5_tt
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-1-21
-		icon = GFX_focus_generic_aluminum
-		prerequisite = { focus = HEU_foc_5-1-17 }
-		#utually_exclusive = { focus = HEU_foc_ }
-		cost = 5.00
-		x = 0
-		y = 7
-		available = {
-			controls_state = 50
-			controls_state = 52
-		}
-		bypass = {	
-		}
-		completion_reward = {
-			50 = {
-				add_resource = {
-					type = aluminium
-					amount = 15
-				}
-			}
-			52 = {
-				add_resource = {
-					type = aluminium
-					amount = 28
-				}
-			}
-			add_to_variable = { HEU_sanup_dynamic_local_resources_factor = 0.05 }
-			custom_effect_tooltip = HEU_sanup_dynamic5_tt
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-1-22
-		icon = GFX_goal_generic_road_construction
-		prerequisite = { focus = HEU_foc_5-1-14 }
-		#utually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = -4
-		y = 9
-		available = {
-			controls_state = 8
-			controls_state = 42
-			controls_state = 55
-			controls_state = 50
-			controls_state = 52
-			controls_state = 51
-			controls_state = 59
-		}
-		bypass = {	
-		}
-		completion_reward = {
-			8 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			42 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			55 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			50 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			52 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			51 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			59 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-1-23
-		icon = GFX_goal_munitions_factories
-		prerequisite = { focus = HEU_foc_5-1-14 }
-		#utually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = -2
-		y = 9
-		available = {
-		}
-		bypass = {	
-		}
-		completion_reward = {
-			random_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-1-24
-		icon = GFX_goal_Military_Mobilisation
-		prerequisite = { focus = HEU_foc_5-1-22 }
-		prerequisite = { focus = HEU_foc_5-1-23 }
-		#utually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = -3
-		y = 10
-		available = {
-		}
-		bypass = {	
-		}
-		completion_reward = {
-			custom_effect_tooltip = HEU_sanup_dynamic6_tt
-			add_to_variable = { HEU_sanup_dynamic_consumer_goods_factor = -0.10 }
-			add_to_variable = {	HEU_sanup_dynamic_industrial_capacity_factory = 0.10 }
-			add_to_variable = { HEU_sanup_dynamic_production_factory_efficiency_gain_factor = 0.05 }
-			add_to_variable = {	HEU_sanup_dynamic_production_factory_max_efficiency_factor = 0.05 }
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-1-25
-		icon = GFX_goal_generic_construct_naval_dockyard
-		prerequisite = { focus = HEU_foc_5-1-20 }
-		prerequisite = { focus = HEU_foc_5-1-21 }
-		#utually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = 0
-		y = 9
-		available = {
-			controls_state = 56
-			controls_state = 59
-		}
-		bypass = {	
-		}
-		completion_reward = {
-			56 = { 
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-			}
-			59 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-			}
-			custom_effect_tooltip = HEU_sanup_dynamic7_tt
-			add_to_variable = {	HEU_sanup_dynamic_production_speed_dockyard_factor = 0.10 }
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-2
-		icon = GFX_goal_generic_axis_build_infantry
-		prerequisite = { focus = HEU_foc_5 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 5.00
-		x = 4
-		y = 1
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			army_experience = 50
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.50
-				category = land_doctrine
-				uses = 1
-			}
-			add_tech_bonus = {
-				bonus = 1.0
-				uses = 1
-				category = mystic_engineering
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-2-1
-		icon = GFX_focus_generic_little_entente
-		prerequisite = { focus = HEU_foc_5-2-2 }
-		mutually_exclusive = { focus = HEU_foc_5-2-7 }
-		cost = 5.00
-		x = 2
-		y = 3
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 1.0
-				uses = 1
-				category = infantry_weapons
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-2-2
-		icon = GFX_focus_generic_full_social_mobilization
-		prerequisite = { focus = HEU_foc_5-2 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = 4
-		y = 2
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			custom_effect_tooltip = HEU_tt_16
-			hidden_effect = {
-				division_template = {
-					name = "Problem Solver Militia"
-					division_names_group = HEU_INF_01
-					regiments = {
-						irregular_infantry = { x = 0 y = 0 }
-						irregular_infantry = { x = 0 y = 1 }
-						irregular_infantry = { x = 0 y = 2 }
-						irregular_infantry = { x = 1 y = 0 }
-						irregular_infantry = { x = 1 y = 1 }
-						irregular_infantry = { x = 1 y = 2 }
-					}
-					support = {
-						engineer = { x = 0 y = 0 }
-						artillery = { x = 0 y = 1 }
-					}
-				}
-				random_owned_controlled_state = {
-					create_unit = {
-						division = "name = \"Problem Solver Militia\" division_template = \"Problem Solver Militia\" start_experience_factor = 0" 
-						owner = HEU
-					}
-					create_unit = {
-						division = "name = \"Problem Solver Militia\" division_template = \"Problem Solver Militia\" start_experience_factor = 0" 
-						owner = HEU
-					}
-					create_unit = {
-						division = "name = \"Problem Solver Militia\" division_template = \"Problem Solver Militia\" start_experience_factor = 0" 
-						owner = HEU
-					}
-					create_unit = {
-						division = "name = \"Problem Solver Militia\" division_template = \"Problem Solver Militia\" start_experience_factor = 0" 
-						owner = HEU
-					}
-				}
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-2-3
-		icon = GFX_goal_generic_army_artillery2
-		prerequisite = { focus = HEU_foc_5-2-1 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 5.00
-		x = 1
-		y = 4
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 1.0
-				uses = 2
-				category = artillery
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-2-4
-		icon = GFX_focus_NORDIC_mon_research
-		prerequisite = { focus = HEU_foc_5-2-1 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = 3
-		y = 4
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			army_experience = 25
-			add_tech_bonus = {
-				bonus = 1.0
-				uses = 2
-				category = mystic_engineering
-			}
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.50
-				category = land_doctrine
-				uses = 1
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-2-5
-		icon = GFX_focus_generic_paratrooper
-		prerequisite = { focus = HEU_foc_5-2 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 5.00
-		x = 1
-		y = 2
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 3.0
-				uses = 1
-				category = para_tech
-			}
-			if = {
-				limit = {
-					NOT = {
-						has_tech = paratroopers
-					}
-				}
-				set_technology = {
-					paratroopers = 1
-				}
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-2-6
-		icon = GFX_goal_generic_small_arms
-		prerequisite = { focus = HEU_foc_5-2-3 }
-		prerequisite = { focus = HEU_foc_5-2-4 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 5.00
-		x = 2
-		y = 5
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			army_experience = 50
-			add_tech_bonus = {
-				ahead_reduction = 2
-				bonus = 1.0
-				uses = 1
-				category = infantry_weapons
-			}
-			add_tech_bonus = {
-				bonus = 0.5
-				uses = 3
-				category = support_tech
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-2-7
-		icon = GFX_goal_generic_build_tank
-		prerequisite = { focus = HEU_foc_5-2-2 }
-		mutually_exclusive = { focus = HEU_foc_5-2-1 }
-		cost = 5.00
-		x = 6
-		y = 3
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 0.5
-				uses = 1
-				category = motorized_equipment
-			}
-			add_tech_bonus = {
-				bonus = 0.5
-				uses = 1
-				category = armor
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-2-8
-		icon = GFX_focus_generic_truck
-		prerequisite = { focus = HEU_foc_5-2-7 }
-		#mutually_exclusive = { focus = HEU_foc_5-2- }
-		cost = 5.00
-		x = 6
-		y = 4
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				ahead_reduction = 2
-				bonus = 1.0
-				uses = 1
-				category = mio_cat_tech_all_motorized_mechanized
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-2-9
-		icon = GFX_focus_NOR_rikstanken
-		prerequisite = { focus = HEU_foc_5-2-8 }
-		mutually_exclusive = { focus = HEU_foc_5-2-10 }
-		cost = 10.00
-		x = 5
-		y = 5
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			army_experience = 50
-			add_tech_bonus = {
-				ahead_reduction = 3
-				bonus = 1.5
-				uses = 1
-				category = cat_light_armor
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-2-10
-		icon = GFX_focus_FIN_foreign_anti_air
-		prerequisite = { focus = HEU_foc_5-2-7 }
-		mutually_exclusive = { focus = HEU_foc_5-2-9 }
-		cost = 10.00
-		x = 7
-		y = 5
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			army_experience = 50
-			add_tech_bonus = {
-				ahead_reduction = 2
-				bonus = 1.0
-				uses = 1
-				category = cat_medium_armor
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-2-11
-		icon = GFX_goal_generic_air_doctrine
-		prerequisite = { focus = HEU_foc_5-2-2 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 5.00
-		x = 4
-		y = 6
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			air_experience = 25
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.5
-				uses = 1
-				category = air_doctrine
-			}
-			random_owned_state = {
-				add_building_construction = {
-					type = air_base
-					level = 2
-				}
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-2-12
-		icon = GFX_goal_generic_air_fighter
-		prerequisite = { focus = HEU_foc_5-2-11 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 5.00
-		x = 3
-		y = 7
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 1.0
-				uses = 1
-				category = light_fighter
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-2-13
-		icon = GFX_focus_generic_air_bases
-		prerequisite = { focus = HEU_foc_5-2-11 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 5.00
-		x = 5
-		y = 7
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			random_owned_state = {
-				add_building_construction = {
-					type = air_base
-					level = 5
-				}
-			}
-			random_owned_state = {
-				add_building_construction = {
-					type = air_base
-					level = 5
-				}
-			}
-			random_owned_state = {
-				add_building_construction = {
-					type = air_base
-					level = 5
-				}
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-2-14
-		icon = GFX_goal_generic_air_fighter2
-		prerequisite = { focus = HEU_foc_5-2-12 }
-		prerequisite = { focus = HEU_foc_5-2-13 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = 4
-		y = 8
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				ahead_reduction = 2
-				bonus = 1.0
-				uses = 1
-				category = light_fighter
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-2-15
-		icon = GFX_goal_generic_CAS
-		prerequisite = { focus = HEU_foc_5-2-14 }
-		mutually_exclusive = { focus = HEU_foc_5-2-16 }
-		cost = 10.00
-		x = 3
-		y = 9
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				ahead_reduction = 2
-				bonus = 1.0
-				uses = 1
-				category = cas_bomber
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-2-16
-		icon = GFX_focus_generic_long_range_aircraft
-		prerequisite = { focus = HEU_foc_5-2-14 }
-		mutually_exclusive = { focus = HEU_foc_5-2-15 }
-		cost = 10.00
-		x = 5
-		y = 9
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				ahead_reduction = 2
-				bonus = 1.0
-				uses = 1
-				category = cat_strategic_bomber
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-2-17
-		icon = GFX_focus_generic_cas_aircraft
-		prerequisite = { focus = HEU_foc_5-2-15 }
-		#mutually_exclusive = { focus = HEU_foc_5-2- }
-		cost = 10.00
-		x = 3
-		y = 10
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 1.0
-				uses = 1
-				category = cat_strategic_bomber
-			}
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.5
-				uses = 1
-				category = air_doctrine
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-2-18
-		icon = GFX_goal_generic_air_bomber
-		prerequisite = { focus = HEU_foc_5-2-16 }
-		#mutually_exclusive = { focus = HEU_foc_5-2- }
-		cost = 10.00
-		x = 5
-		y = 10
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 1.0
-				uses = 1
-				category = cat_strategic_bomber
-			}
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.5
-				uses = 1
-				category = air_doctrine
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-3
-		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = HEU_foc_5 }
-		#mutually_exclusive = { focus = HEU_foc_5-}
-		cost = 5.00
-		x = 9
-		y = 1
-		available = {
-			any_state = {
-				is_controlled_by = HEU
-				is_coastal = yes
-			}
-		}
-		bypass = {
-		}
-		completion_reward = {
-			navy_experience = 50
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.50
-				category = naval_doctrine
-				uses = 1
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-3-1
-		icon = GFX_goal_generic_navy_submarine
-		prerequisite = { focus = HEU_foc_5-3 }
-		#mutually_exclusive = { focus = HEU_foc_5-}
-		cost = 5.00
-		x = 7
-		y = 2
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 1.0
-				uses = 1
-				category = ss_tech
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-3-2
-		icon = GFX_goal_generic_wolf_pack
-		prerequisite = { focus = HEU_foc_5-3-1 }
-		#mutually_exclusive = { focus = HEU_foc_5-}
-		cost = 10.00
-		x = 8
-		y = 4
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 1.0
-				uses = 1
-				category = ss_tech
-			}
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.25
-				uses = 2
-				category = trade_interdiction_tree
-			}
-			add_ideas = GER_modular_construction
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-3-3
-		icon = GFX_goal_generic_navy_cruiser
-		prerequisite = { focus = HEU_foc_5-3 }
-		#mutually_exclusive = { focus = HEU_foc_5-}
-		cost = 5.00
-		x = 11
-		y = 2
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 1.0
-				uses = 1
-				category = dd_tech
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-3-4
-		icon = GFX_focus_generic_destroyer
-		prerequisite = { focus = HEU_foc_5-3-3 }
-		#mutually_exclusive = { focus = HEU_foc_5-}
-		cost = 10.00
-		x = 10
-		y = 4
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 1.0
-				uses = 1
-				category = dd_tech
-			}
-			add_tech_bonus = {
-				bonus = 1.0
-				uses = 1
-				category = cl_tech
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-3-5
-		icon = GFX_goal_generic_navy_doctrines_tactics
-		prerequisite = { focus = HEU_foc_5-3 }
-		#mutually_exclusive = { focus = HEU_foc_5-}
-		cost = 10.00
-		x = 9
-		y = 3
-		available = {
-			has_completed_focus = HEU_foc_5-1-6
-		}
-		bypass = {
-		}
-		completion_reward = {
-			random_owned_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}	
-			}
-			random_owned_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}	
-			}
-			add_to_variable = { HEU_sanup_dynamic_industrial_capacity_dockyard = 0.15 }
-			custom_effect_tooltip = HEU_sanup_dynamic8_tt
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-3-6
-		icon = GFX_goal_generic_amphibious_assault
-		prerequisite = { focus = HEU_foc_5-3-2 focus = HEU_foc_5-3-4 }
-		#mutually_exclusive = { focus = HEU_foc_5-}
-		cost = 8.00
-		x = 9
-		y = 5
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 1.0
-				uses = 1
-				category = tp_tech
-			}
-			add_tech_bonus = {
-				bonus = 1.0
-				uses = 1
-				category = marine_tech
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-3-7
-		icon = GFX_focus_generic_navy_battleship2
-		prerequisite = { focus = HEU_foc_5-3-6 }
-		mutually_exclusive = { focus = HEU_foc_5-3-8 }
-		cost = 10.00
-		x = 8
-		y = 6
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			navy_experience = 50
-			add_tech_bonus = {
-				bonus = 1.0
-				uses = 2
-				category = bb_tech
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-3-8
-		icon = GFX_focus_NORDIC_dem_selector_navy
-		prerequisite = { focus = HEU_foc_5-3-6 }
-		mutually_exclusive = { focus = HEU_foc_5-3-7 }
-		cost = 10.00
-		x = 10
-		y = 6
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			navy_experience = 50
-			add_tech_bonus = {
-				bonus = 1.0
-				uses = 2
-				category = cv_tech
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-3-9
-		icon = GFX_goal_generic_navy_battleship
-		prerequisite = { focus = HEU_foc_5-3-7 }
-		#mutually_exclusive = { focus = HEU_foc_5-3- }
-		cost = 10.00
-		x = 8
-		y = 7
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			if = {
-				limit = {
-					not = { has_dlc = "Man the Guns" }
-				}
-				add_tech_bonus = {
-					bonus = 3.0
-					uses = 1
-					category = shbb_tech	
-				}
-			}
-			else = {
-				if = {
-					limit = {
-						not = { has_tech = ship_hull_super_heavy }
-					}
-					set_technology = {
-						ship_hull_super_heavy = 1
-					}
-				}
-				create_equipment_variant = {
-					name = "Rikuhachima Class"
-					type = ship_hull_super_heavy_1
-					parent_version = 0
-					allow_without_tech = yes #Makes no difference since focus grants appropriate tech (above), but it improves tooltip
-					modules = {
-						fixed_ship_battery_slot = ship_super_heavy_battery_1
-						fixed_ship_anti_air_slot = ship_anti_air_2
-						fixed_ship_fire_control_system_slot = ship_fire_control_system_1
-						fixed_ship_radar_slot = empty
-						fixed_ship_engine_slot = heavy_ship_engine_2
-						fixed_ship_secondaries_slot = ship_secondaries_2
-						fixed_ship_armor_slot = ship_armor_shbb
-						front_1_custom_slot = ship_anti_air_1
-						front_2_custom_slot = empty
-						mid_1_custom_slot = empty
-						mid_2_custom_slot = ship_secondaries_2
-						mid_3_custom_slot = ship_secondaries_2
-						rear_1_custom_slot = ship_super_heavy_battery_1
-						rear_2_custom_slot = ship_airplane_launcher_1
-					}
-				}
-				custom_effect_tooltip = HEU_yamato_tt
-				hidden_effect = {
-					add_equipment_production = {
-						equipment = {
-							type = ship_hull_super_heavy_1
-							creator = "HEU" 
-							version_name = "Rikuhachima Class"
-						}
-						name = "Rikuhachima" 
-						requested_factories = 1
-						progress = 0.80
-						amount = 1
-					}
-					add_equipment_production = {
-						equipment = {
-							type = ship_hull_super_heavy_1
-							creator = "HEU" 
-							version_name = "Rikuhachima Class"
-						}
-						name = "Benriya" 
-						requested_factories = 1
-						progress = 0.80
-						amount = 1
-					}
-				}
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_5
-		id = HEU_foc_5-3-10
-		icon = GFX_goal_generic_navy_carrier
-		prerequisite = { focus = HEU_foc_5-3-8 }
-		#mutually_exclusive = { focus = HEU_foc_5-3- }
-		cost = 10.00
-		x = 10
-		y = 7
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			navy_experience = 50
-			air_experience = 50
-			add_tech_bonus = {
-				bonus = 1.0
-				uses = 1
-				category = naval_air
-			}
-			add_tech_bonus = {
-				ahead_reduction = 2
-				bonus = 1.0
-				uses = 1
-				category = cv_tech
-			}
-		}
-	}
-	##########
-	##하루카##
-	##########
-	focus = { #
-		#relative_position_id = 
-		id = HEU_foc_6
-		icon = GFX_goal_HEU_gkfnzk
-		#prerequisite = { focus = HEU_foc_ }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 5.00
-		x = 21
-		y = 11
-		available = {
-			num_of_controlled_states > 3
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 0.5
-				uses = 1
-				category = industry
-			}
-			random_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_6
-		id = HEU_foc_6-1	
-		icon = GFX_focus_NORDIC_dem_research
-		prerequisite = { focus = HEU_foc_6 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = -2
-		y = 1
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			random_owned_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_6
-		id = HEU_foc_6-2	
-		icon = GFX_focus_generic_field_hostpital
-		prerequisite = { focus = HEU_foc_6-1 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = -1
-		y = 2
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_ideas = HEU_yakcho_bogup
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_6
-		id = HEU_foc_6-3
-		icon = GFX_goal_generic_construction2
-		prerequisite = { focus = HEU_foc_6 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = 2
-		y = 1
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			random_owned_state = {
-				add_extra_state_shared_building_slots = 1
-			}
-			random_owned_state = {
-				add_extra_state_shared_building_slots = 1
-			}
-			random_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_6
-		id = HEU_foc_6-4
-		icon = GFX_goal_generic_consumer_goods
-		prerequisite = { focus = HEU_foc_6-3 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = 1
-		y = 2
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.10
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_6
-		id = HEU_foc_6-5
-		icon = GFX_focus_generic_agricultural_subsidies
-		prerequisite = { focus = HEU_foc_6 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = 0
-		y = 1
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_ideas = HEU_deama_jaebae
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_6
-		id = HEU_foc_6-6
-		icon = GFX_focus_generic_supply_line
-		prerequisite = { focus = HEU_foc_6-5 }
-		prerequisite = { focus = HEU_foc_6-2 }
-		prerequisite = { focus = HEU_foc_6-4 }
-		#mutually_exclusive = { focus = HEU_foc_6- }
-		cost = 10.00
-		x = 0
-		y = 3
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = HEU_deama_jaebae
-				add_idea = HEU_deama_suchul
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_6
-		id = HEU_foc_6-7
-		icon = GFX_focus_SWE_refuge_from_war
-		prerequisite = { focus = HEU_foc_6-6 }
-		mutually_exclusive = { focus = HEU_foc_6-8 }
-		cost = 10.00
-		x = -1
-		y = 4
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_ideas = HEU_deama_ok
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_6
-		id = HEU_foc_6-8
-		icon = GFX_goal_generic_defence
-		prerequisite = { focus = HEU_foc_6-6 }
-		mutually_exclusive = { focus = HEU_foc_6-7 }
-		cost = 10.00
-		x = 1
-		y = 4
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_political_power = 100
-			add_stability = 0.05
-		}
-	}
-	##########
-	###캣맘###
-	##########
-	focus = { #
-		#relative_position_id = 
-		id = HEU_foc_7
-		icon = GFX_goal_HEU_zkdyzh
-		#prerequisite = { focus = HEU_foc_ }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 5.00
-		x = 26
-		y = 11
-		available = {
-			num_of_controlled_states > 3
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_stability = 0.05
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_7
-		id = HEU_foc_7-1
-		icon = GFX_focus_SWI_establish_pro_helvetia
-		prerequisite = { focus = HEU_foc_7 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 5.00
-		x = -1
-		y = 1
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_stability = 0.02
-			add_war_support = 0.05
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_7
-		id = HEU_foc_7-2
-		icon = GFX_focus_generic_industry_1
-		prerequisite = { focus = HEU_foc_7 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = 1
-		y = 1
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			random_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_7
-		id = HEU_foc_7-3
-		icon = GFX_focus_hol_the_foundations_of_defense
-		prerequisite = { focus = HEU_foc_7-1 }
-		prerequisite = { focus = HEU_foc_7-2 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = -1
-		y = 2
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_ideas = HEU_dongmul_boho
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_7
-		id = HEU_foc_7-4
-		icon = GFX_focus_por_concordat
-		prerequisite = { focus = HEU_foc_7-3 }
-		mutually_exclusive = { focus = HEU_foc_7-5 }
-		cost = 10.00
-		x = -2
-		y = 3
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_ideas = HEU_myogyo
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_7
-		id = HEU_foc_7-5
-		icon = GFX_focus_NORDIC_dem_form_alliance
-		prerequisite = { focus = HEU_foc_7-3 }
-		mutually_exclusive = { focus = HEU_foc_7-4 }
-		cost = 10.00
-		x = 0
-		y = 3
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_stability = 0.10
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_7
-		id = HEU_foc_7-6
-		icon = GFX_goal_HEU_catmom
-		prerequisite = { focus = HEU_foc_7-4 focus = HEU_foc_7-5 }
-		#mutually_exclusive = { focus = HEU_foc_7- }
-		cost = 10.00
-		x = -1
-		y = 4
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_political_power = 120
-			add_stability = 0.05
-			add_war_support = 0.10
-		}
-	}
-	##########
-	##ancmzl##
-	##########
-	focus = { #
-		#relative_position_id = 
-		id = HEU_foc_8
-		icon = GFX_goal_HEU_ancmzl
-		#prerequisite = { focus = HEU_foc_ }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 5.00
-		x = 29
-		y = 11
-		available = {
-			num_of_controlled_states > 3
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_war_support = 0.05
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_8
-		id = HEU_foc_8-1
-		icon = GFX_focus_generic_torpedo_production
-		prerequisite = { focus = HEU_foc_8 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = 0
-		y = 1
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_ideas = HEU_serenade
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_8
-		id = HEU_foc_8-2
-		icon = GFX_goal_TRN_nuclear_fission
-		prerequisite = { focus = HEU_foc_8-4 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 1.5
-		x = -1
-		y = 3
-		available = { 
-			has_global_flag = TRM_OTTO_HAN_EVENT
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_political_power = 120
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_8
-		id = HEU_foc_8-3
-		icon = GFX_focus_NORDIC_com_selector_research
-		prerequisite = { focus = HEU_foc_8-2 }
-		prerequisite = { focus = HEU_foc_8-5 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 104.30
-		x = -1
-		y = 4
-		available = { 
-			amount_research_slots > 4
-			num_of_factories > 50
-		}
-		bypass = {
-		}
-		select_effect = {
-			country_event = { id = HEU_event.10 days = 243 }
-			country_event = { id = HEU_event.11 days = 486 }		
-			country_event = { id = HEU_event.12 days = 729 }
-		}
-		completion_reward = {
-			custom_effect_tooltip = HEU_tt_13
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_8
-		id = HEU_foc_8-4
-		icon = GFX_focus_SWE_marauder_bombers
-		prerequisite = { focus = HEU_foc_8-1 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = 0
-		y = 2
-		available = { 
-		}
-		bypass = {
-		}
-		completion_reward = {
-			air_experience = 100
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.75
-				uses = 3
-				category = strategic_destruction_tree
-			}
-		}
-	}
-	focus = { #
-		relative_position_id = HEU_foc_8
-		id = HEU_foc_8-5
-		icon = GFX_focus_generic_jet_planes	
-		prerequisite = { focus = HEU_foc_8-1 }
-		#mutually_exclusive = { focus = HEU_foc_ }
-		cost = 10.00
-		x = 1
-		y = 3
-		available = { 
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 1.0
-				uses = 1
-				ahead_reduction = 2
-				category = rocketry
-			}
-		}
-	}
-	focus = { #
-		id = HEU_foc_9
-		icon = GFX_goal_HEU_benleya
-		prerequisite = { focus = HEU_foc_2-26 focus = HEU_foc_3-28 focus = HEU_foc_4-30 }
-		cost = 10.00
-		x = 10
-		y = 17
-		text_icon = NORDIC_focus_style
-
-		available = {
-			has_war = no
-			controls_state = 55
-			controls_state = 52
-			controls_state = 64
-			num_of_factories > 150
-		}
-		bypass = {
-		}
-		completion_reward = {
-			custom_effect_tooltip = HEU_tt_end
-			set_victory_points = {
-				province = 6583
-				value = 50
-			}
-			add_country_leader_trait = HEU_ARU_T7
-			hidden_effect = {
-				country_event = HEU_event.1000
-				set_portraits = {
-					character = HEU_aru
-					civilian = { large = GFX_HEU_ARU_DRESS_Portrait }
-					army = { large = GFX_HEU_ARU_DRESS_Portrait }
-				}
-				set_portraits = {
-					character = HEU_ancmzl
-					civilian = { large = GFX_HEU_MUTSUKI_DRESS_Portrait }
-					army = { large = GFX_HEU_MUTSUKI_DRESS_Portrait }
-				}
-				set_portraits = {
-					character = HEU_zkdyzh
-					civilian = { large = GFX_HEU_KAYOKO_DRESS_Portrait }
-					army = { large = GFX_HEU_KAYOKO_DRESS_Portrait }
-				}
-				set_portraits = {
-					character = HEU_gkfnzk
-					civilian = { large = GFX_HEU_HARUKA_DRESS_Portrait }
-					army = { large = GFX_HEU_HARUKA_DRESS_Portrait }
-				}
-			}
-		}
-	}
 
 	###############
 	#
@@ -4837,16 +24,12 @@ focus_tree = {
 
 		cost = 10.00
 		x = 18
-		y = 19
+		y = 0
 
 		available = {
 		}
 
 		bypass = {
-		}
-
-		allow_branch = {
-			is_debug = yes
 		}
 
 		ai_will_do = {
@@ -5242,7 +425,7 @@ focus_tree = {
 					desc = "HEU_aru_fascist_leader_desc"
 					traits = { 
 						HEU_ARU_T1
-						HEU_regent_of_luxembourg_2
+						HEU_regent_of_luxembourg
 					}
 				}
 			}
@@ -5269,14 +452,63 @@ focus_tree = {
 					remove_idea = HEU_grand_duchy_of_luxembourg
 					add_idea = HEU_grand_duchy_of_luxembourg_benriya
 				}
+
 				remove_ideas = HEU_grand_duchy_of_luxembourg_alt
-				
+
 				set_party_name = {
 					ideology = fascism
-					long_name = HEU_benriya_party
-					name = HEU_benriya_party
+					long_name = HEU_neutrality_party_long
+					name = HEU_neutrality_party
 				}
+			}
+		}
+	}
 
+	focus = {
+		id = HEU_neutralization_rietspartei
+		
+		relative_position_id = HEU_no_more_hope
+
+		icon = GFX_focus_generic_conspiracy
+
+		prerequisite = { 
+			focus = HEU_no_more_hope
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {  }
+
+		cost = 5.00
+
+		x = -1
+		y = 1
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			HEU_bop_medium_decrease_effect = yes
+
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.2
+			}
+
+			set_party_name = {
+				ideology = fascism
+				long_name = HEU_benriya_party
+				name = HEU_benriya_party
+			}
+
+			hidden_effect = {
 				swap_ruler_traits = {
 					remove = HEU_regent_of_luxembourg
 					add = HEU_regent_of_luxembourg_2
@@ -5284,6 +516,449 @@ focus_tree = {
 			}
 		}
 	}
+	
+	focus = {
+		id = HEU_separation_of_education
+		
+		relative_position_id = HEU_no_more_hope
+
+		icon = GFX_focus_BRA_rio_protocol
+
+		prerequisite = { 
+			focus = HEU_no_more_hope
+		}
+
+		ai_will_do = {
+			factor = 6
+		}
+
+		search_filters = {  }
+
+		cost = 5.00
+
+		x = 1
+		y = 1
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_research_slot = 1
+			HEU_bop_medium_decrease_effect = yes
+		}
+	}
+
+	### 외교 중점 (자립) ###
+
+	focus = {
+		id = HEU_doubt_pandemonium_society
+		
+		relative_position_id = HEU_negotiations_with_parties
+
+		icon = GFX_goal_hmmngshinso_broken
+
+		prerequisite = { 
+			focus = HEU_no_more_hope
+			focus = HEU_we_still_hope
+		}
+
+		ai_will_do = {
+			factor = 6
+		}
+
+		cost = 3.00
+
+		x = 0
+		y = 4
+
+		search_filters = {  }
+
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_core_of = GEM
+				}
+				add_claim_by = HEU
+			}
+
+			custom_effect_tooltip = aru_despair_1_tt
+		}
+	}
+
+	focus = {
+		id = HEU_ally_with_the_devil
+		
+		relative_position_id = HEU_doubt_pandemonium_society
+
+		icon = GFX_goal_TRN_domination
+
+		prerequisite = { 
+			focus = HEU_doubt_pandemonium_society
+		}
+
+		ai_will_do = {
+			factor = 6
+		}
+
+		cost = 2.00
+
+		x = -2
+		y = 1
+
+		search_filters = {  }
+
+		completion_reward = {
+
+		}
+	}
+	
+	focus = {
+		id = HEU_representative_of_the_germanic
+		
+		relative_position_id = HEU_doubt_pandemonium_society
+
+		icon = GFX_focus_ger_reichskommisariats
+
+		prerequisite = { 
+			focus = HEU_doubt_pandemonium_society
+		}
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		cost = 5.00
+
+		x = 0
+		y = 1
+
+		search_filters = {  }
+
+		completion_reward = {
+			set_rule = { can_declare_war_without_wargoal_when_in_war = yes }
+
+			if = {
+				limit = {
+					has_government = communism
+				}
+				add_popularity = {
+					ideology = communism
+					popularity = 0.05
+				}
+			}
+			
+			if = {
+				limit = {
+					has_government = fascism
+				}
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.05
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = HEU_war_industry_alt
+
+		prerequisite = { focus = HEU_doubt_pandemonium_society }
+
+		icon = GFX_goal_generic_small_arms #GFX_goal_generic_army_artillery2
+
+		relative_position_id = HEU_doubt_pandemonium_society
+
+		x = 2
+		y = 1
+
+		cost = 10
+
+		available = {
+			has_war = yes
+		}
+		
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER}
+
+		completion_reward = {
+			#hidden_effect = {
+			#	news_event = { id = HEU_news.7 hours = 3 }
+			#}
+
+			8 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 949
+				}
+			}
+
+			random_owned_controlled_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = HEU_war_industry_flag
+			}
+
+			random_owned_controlled_state = {
+				limit = {
+					NOT = { has_state_flag = HEU_war_industry_flag }
+					ROOT = { has_full_control_of_state = PREV }
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+
+			random_owned_controlled_state = {
+				limit = { has_state_flag = HEU_war_industry_flag }
+				clr_state_flag = HEU_war_industry_flag
+			}
+
+			if = {
+				limit = {
+					NOT = { has_idea = tot_economic_mobilisation }
+					NOT = { has_idea = war_economy }
+				}
+				add_ideas = war_economy
+			}
+			if = {
+				limit = {
+					NOT = { has_idea = scraping_the_barrel }
+					NOT = { has_idea = all_adults_serve }
+					NOT = { has_idea = service_by_requirement }
+				}
+				add_ideas = service_by_requirement
+			}
+		}
+	}
+	
+	#focus = {
+	#	id = HEU_alsace_lorraine
+	#	
+	#	relative_position_id = HEU_doubt_pandemonium_society
+#
+	#	icon = GFX_focus_attack_france
+#
+	#	prerequisite = { 
+	#		focus = HEU_doubt_pandemonium_society
+	#	}
+#
+	#	available = {
+	#		has_army_manpower = {
+	#			size > 50000
+	#		}
+	#		FRM = {
+	#			controls_state = 28
+	#		}
+	#	}	
+	#	bypass = {
+	#		FRM = {
+	#			exists = no
+	#		}
+	#	}
+#
+	#	ai_will_do = {
+	#		factor = 4
+	#	}
+#
+	#	cost = 2.00
+#
+	#	x = 2
+	#	y = 1
+#
+	#	search_filters = {  }
+#
+	#	completion_reward = {
+	#		create_wargoal = {
+	#			type = annex_everything
+	#			target = FRM
+	#		}
+	#		add_state_core = 28
+	#		add_state_core = 976
+	#	}
+	#}
+	
+	focus = {
+		id = HEU_attack_pandemonium_society
+		
+		relative_position_id = HEU_doubt_pandemonium_society
+
+		icon = GFX_focus_attack_GEH
+
+		prerequisite = { 
+			focus = HEU_representative_of_the_germanic
+		}
+
+		available = {
+
+		}	
+
+		bypass = {
+			GEM = {
+				exists = no
+			}
+		}
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		cost = 2.00
+
+		x = -1
+		y = 2
+
+		search_filters = {  }
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = GEM
+			}
+		}
+	}
+
+	focus = {
+		id = HEU_attack_prefect_team
+		
+		relative_position_id = HEU_doubt_pandemonium_society
+
+		icon = GFX_focus_SWE_let_fly_all_guns
+
+		prerequisite = { 
+			focus = HEU_representative_of_the_germanic
+		}
+
+		available = {
+
+		}	
+
+		bypass = {
+			GEH = {
+				exists = no
+			}
+		}
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		cost = 2.00
+
+		x = 1
+		y = 2
+
+		search_filters = {  }
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = GEH
+			}
+			every_state = {
+				limit = {
+					is_core_of = GEH
+				}
+				add_claim_by = HEU
+			}
+		}
+	}
+
+	focus = {
+		id = HEU_attack_trinity
+		
+		relative_position_id = HEU_doubt_pandemonium_society
+
+		icon = GFX_focus_attack_TRN
+
+		prerequisite = { 
+			focus = HEU_attack_pandemonium_society
+			focus = HEU_attack_prefect_team
+		}
+
+		available = {
+
+		}	
+
+		bypass = {
+			TRM = {
+				exists = no
+			}
+		}
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		cost = 2.00
+
+		x = 0
+		y = 3
+
+		search_filters = {  }
+
+		completion_reward = {
+			custom_effect_tooltip = aru_despair_2_tt
+			create_wargoal = {
+				type = annex_everything
+				target = TRM
+			}
+			every_state = {
+				limit = {
+					is_core_of = TRM
+				}
+				add_claim_by = HEU
+			}
+		}
+	}
+
+	focus = {
+		id = HEU_germany_union
+		icon = GFX_goal_TRN_eden_pacts_letsgo
+		cost = 8.00
+
+		relative_position_id = HEU_doubt_pandemonium_society
+
+		prerequisite = { focus = HEU_attack_trinity }
+
+		available = {
+			AND = {
+				NOT = { country_exists = TRM }
+				NOT = { country_exists = GEH }
+				NOT = { country_exists = GEM }
+			}
+			controls_state = 64
+		}
+
+		ai_will_do = {
+			base = 4000
+		}
+
+		x = 0
+		y = 4
+
+		completion_reward = {
+			#add_threat = 5
+			custom_effect_tooltip = aru_despair_3_tt
+		}
+
+	}
+
+	### 역사적 ###
 
 	focus = {
 		id = HEU_watch_right_wing_party
@@ -5848,6 +1523,10 @@ focus_tree = {
 				news_event = { id = HEU_news.4 hours = 3 }
 				country_event = { id = HEU.flavor_event.27 }
 			}
+			
+			unlock_decision_tooltip = HEU_aru_GSC_defiance_attack_KSP
+			unlock_decision_tooltip = HEU_aru_GSC_defiance_attack_COU
+			unlock_decision_tooltip = HEU_aru_GSC_defiance_attack_SHE
 		}
 	}
 
@@ -5863,7 +1542,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 5
+			factor = 100
 		}
 
 		search_filters = {  }
@@ -5894,7 +1573,13 @@ focus_tree = {
 					add = HEU_GSC_trait_2
 				}
 			}
+
 			add_stability = 0.2
+
+			unlock_decision_tooltip = HEU_aru_GSC_annex_core_east_belgium_states
+			unlock_decision_tooltip = HEU_aru_GSC_annex_core_west_belgium_states
+			unlock_decision_tooltip = HEU_aru_GSC_annex_core_south_GSC_states
+			unlock_decision_tooltip = HEU_aru_GSC_annex_core_north_GSC_states
 		}
 	}
 
@@ -5982,18 +1667,25 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 4
+			factor = 2
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
 		}
 
 		search_filters = {  }
 
-		cost = 10.00
+		cost = 3.00
 
 		x = 3
 		y = 1
 
 		available = {
 			country_exists = GEI
+			GEI = {
+				has_country_leader_with_trait = GEI_notion_of_incomprehensibility
+			}
 		}
 
 		bypass = {
@@ -6997,7 +2689,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 4
+			factor = 6
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER }
@@ -7178,7 +2870,7 @@ focus_tree = {
 		icon = GFX_goal_GEH_Pax_Gehennia
 
 		cost = 10.00
-		x = 54
+		x = 78
 		y = 0
 
 		available = {
@@ -8163,16 +3855,12 @@ focus_tree = {
 
 		cost = 5.00
 		x = 44
-		y = 19
+		y = 0
 
 		available = {
 		}
 
 		bypass = {
-		}
-
-		allow_branch = {
-			is_debug = yes
 		}
 
 		ai_will_do = {
@@ -8378,6 +4066,8 @@ focus_tree = {
             #custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = available_industrial_concern
 			show_ideas_tooltip = HEU_spuerkeess
+
+			remove_ideas = HEU_financial_difficulties
 		}
 	}
 	
@@ -8433,6 +4123,8 @@ focus_tree = {
             #custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = available_industrial_concern
 			show_ideas_tooltip = HEU_spuerkeess
+			
+			remove_ideas = HEU_financial_difficulties
 		}
 	}
 
@@ -8879,6 +4571,7 @@ focus_tree = {
 		y = 3
 
 		available = { 
+			industrial_complex > 20
 		}
 
 		bypass = {
@@ -8957,6 +4650,10 @@ focus_tree = {
 
 		cost = 5.00
 
+		ai_will_do = {
+			base = 1
+		}
+
 		x = 0
 		y = 1
 
@@ -9002,6 +4699,10 @@ focus_tree = {
 
 		available = { 
 			controls_state = 8
+		}
+
+		ai_will_do = {
+			base = 1
 		}
 
 		bypass = {
@@ -9122,6 +4823,10 @@ focus_tree = {
 		y = 2
 
 		available = { 
+		}
+
+		ai_will_do = {
+			base = 1
 		}
 
 		bypass = {
@@ -9369,6 +5074,10 @@ focus_tree = {
 
 		cost = 10.00
 
+		ai_will_do = {
+			base = 0
+		}
+
 		x = 4
 		y = 4
 
@@ -9397,7 +5106,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = HEU_civil_partnership_tt
 			hidden_effect = {
-				
+				country_event = { id = HEU_event.131 }
 			}
 		}
 	}
@@ -9526,17 +5235,13 @@ focus_tree = {
 
 		cost = 5.00
 		x = 60
-		y = 19
+		y = 0
 
 		available = {
 			controls_state = 8
 		}
 
 		bypass = {
-		}
-
-		allow_branch = {
-			is_debug = yes
 		}
 
 		completion_reward = {

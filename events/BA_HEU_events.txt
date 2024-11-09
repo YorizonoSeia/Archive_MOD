@@ -926,8 +926,6 @@ country_event = { #시민 결합 법제화에 대한 탄원 - 룩셈부르크 �
 			ideology = neutrality
 			popularity = 0.05
 		}
-
-		add_stability = -0.05
 	}
 }
 
@@ -1240,6 +1238,22 @@ country_event = { #리쿠하치마주의 '68혁명'의 확산
 	    }
 		
 		add_political_power = 25
+	}
+}
+
+country_event = { #룩셈부르크 시민결합
+	id = HEU_event.131
+	title = HEU_event.131.t
+	desc = HEU_event.131.desc
+	picture = GFX_report_event_Problem_Solver_68
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.131.a 
+		add_stability = -0.2
+		add_research_slot = 1
+		#custom_effect_tooltip = HEU_research_6_tt
 	}
 }
 

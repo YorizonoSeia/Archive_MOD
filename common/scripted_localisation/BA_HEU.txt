@@ -1,0 +1,70 @@
+
+defined_text = {
+	name = HEU_doubt_pandemonium_society_desc_text
+	text = {
+		trigger = {
+			FROM = {
+				has_government = fascism
+			}
+		}
+		localization_key = "HEU_doubt_pandemonium_society_desc_text_fascism"
+	}
+	text = {
+		localization_key = "HEU_doubt_pandemonium_society_desc_text_generic"
+	}
+}
+
+defined_text = {
+	name = HEU_representative_of_the_germanic_desc_text
+	text = {
+		trigger = {
+			FROM = {
+				has_government = fascism
+			}
+		}
+		localization_key = "HEU_representative_of_the_germanic_desc_text_fascism"
+	}
+	text = {
+		localization_key = "HEU_representative_of_the_germanic_desc_text_generic"
+	}
+}
+
+defined_text = {
+	name = HEU_attack_pandemonium_society_desc_text
+	text = {
+		trigger = {
+			FROM = {
+				has_government = fascism
+			}
+		}
+		localization_key = "HEU_attack_pandemonium_society_desc_text_fascism"
+	}
+	text = {
+		localization_key = "HEU_attack_pandemonium_society_desc_text_generic"
+	}
+}
+
+
+defined_text = {
+	name = HEU_germany_union_desc_text
+	text = {
+		trigger = {
+			FROM = {
+				has_completed_focus = HEU_germany_union
+			}
+		}
+		localization_key = "HEU_germany_union_desc_text_despair"
+	}
+	text = {
+		trigger = {
+			FROM = {
+				has_government = fascism
+			}
+		}
+		localization_key = "HEU_germany_union_desc_text_fascism"
+	}
+	text = {
+		localization_key = "HEU_germany_union_desc_text_generic"
+	}
+}
+

@@ -1118,7 +1118,7 @@ ideas = {
                 consumer_goods_factor = 0.20
                 industrial_capacity_factory = -0.1
                 industrial_capacity_dockyard = -0.1 
-                research_speed_factor = -0.2 
+                #research_speed_factor = -0.2 
 			}
 		}
 	}

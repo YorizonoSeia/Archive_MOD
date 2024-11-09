@@ -1,887 +1,3 @@
-HEU_jageumnan_d = { #자금난 해결
-	#HEU_jageumnan_dd_1 = {
-	#	icon = GFX_decision_generic_decision
-	#	available = {NOT = {has_country_flag = HEU_jeongchekjinhangjung_flag}}
-	#	ai_will_do = { factor = 1 }
-	#	cost = 150
-	#	days_remove = 90
-	#	remove_effect = {
-	#		random_owned_state = {
-	#			add_extra_state_shared_building_slots = 1
-	#			add_building_construction = {
-	#				type = industrial_complex
-	#				level = 1
-	#				instant_build = yes
-	#			}
-	#		}
-	#		clr_country_flag = HEU_jeongchekjinhangjung_flag
-	#	}
-	#	complete_effect = {
-	#		set_country_flag = HEU_jeongchekjinhangjung_flag
-	#	}
-	#	modifier = {
-	#		political_power_factor = -0.25
-	#	}
-	#	fire_only_once = no
-	#}
-	#HEU_jageumnan_dd_2 = {
-	#	icon = GFX_decision_generic_decision
-	#	available = {NOT = {has_country_flag = HEU_jeongchekjinhangjung_flag}}
-	#	ai_will_do = { factor = 1 }
-	#	cost = 150
-	#	days_remove = 90
-	#	remove_effect = {
-	#		random_owned_state = {
-	#			add_extra_state_shared_building_slots = 1
-	#			add_building_construction = {
-	#				type = arms_factory
-	#				level = 1
-	#				instant_build = yes
-	#			}
-	#		}
-	#		clr_country_flag = HEU_jeongchekjinhangjung_flag
-	#	}
-	#	complete_effect = {
-	#		set_country_flag = HEU_jeongchekjinhangjung_flag
-	#	}
-	#	modifier = {
-	#		political_power_factor = -0.25
-	#	}
-	#	fire_only_once = no
-	#}
-	#HEU_jageumnan_dd_3 = {
-	#	icon = GFX_decision_generic_decision
-	#	available = {
-	#		NOT = {has_country_flag = HEU_jeongchekjinhangjung_flag}
-	#		OR = {
-	#			has_war = yes
-	#			has_border_war = yes
-	#		}
-	#	}
-	#	ai_will_do = { factor = 1 }
-	#	cost = 150
-	#	days_remove = 90
-	#	remove_effect = {
-	#		clr_country_flag = HEU_jeongchekjinhangjung_flag
-	#	}
-	#	complete_effect = {
-	#		set_country_flag = HEU_jeongchekjinhangjung_flag
-	#	}
-	#	modifier = {
-	#		political_power_factor = -0.25
-	#		army_attack_factor = 0.05
-	#		army_defence_factor = 0.05
-	#		army_morale_factor = 0.05
-	#	}
-	#	fire_only_once = no
-	#}
-	#HEU_jageumnan_dd_4 = {
-	#	icon = GFX_decision_generic_decision
-	#	available = {NOT = {has_country_flag = HEU_jeongchekjinhangjung_flag}}
-	#	ai_will_do = { factor = 1 }
-	#	cost = 150
-	#	days_remove = 90
-	#	remove_effect = {
-	#		clr_country_flag = HEU_jeongchekjinhangjung_flag
-	#	}
-	#	complete_effect = {
-	#		set_country_flag = HEU_jeongchekjinhangjung_flag
-	#	}
-	#	modifier = {
-	#		political_power_factor = -0.25
-	#		production_speed_buildings_factor = 0.05
-	#		industrial_capacity_factory = 0.10
-	#		industrial_capacity_dockyard = 0.10
-	#	}
-	#	fire_only_once = no
-	#}
-	#HEU_jageumnan_d_1 = {
-#
-	#	icon = GFX_decision_generic_merge_plant_materiel
-#
-	#	available = {
-	#		num_of_civilian_factories_available_for_projects > 3
-	#	}
-#
-	#	cost = 200
-#
-	#	ai_will_do = {
-	#		factor = 100
-	#	}
-#
-	#	days_remove = 90
-#
-	#	visible = {
-	#		OR = {
-	#			has_idea = HEU_ja_geum_nan
-	#			has_idea = HEU_ja_geum_nan2
-	#			has_idea = HEU_ja_geum_nan3
-	#		}
-	#	}
-	#	remove_effect = {
-	#		if = {
-	#			limit = { has_idea = HEU_ja_geum_nan }
-	#			swap_ideas = {
-	#				remove_idea = HEU_ja_geum_nan
-	#				add_idea = HEU_ja_geum_nan2
-	#			}
-	#		}
-	#		else_if = {
-	#			limit = { has_idea = HEU_ja_geum_nan2 }
-	#			swap_ideas = {
-	#				remove_idea = HEU_ja_geum_nan2
-	#				add_idea = HEU_ja_geum_nan3
-	#			}
-	#		}
-	#		else_if = {
-	#			limit = { has_idea = HEU_ja_geum_nan3 }
-	#			remove_ideas = HEU_ja_geum_nan3
-	#		}
-	#	}		
-	#	modifier = {
-	#		civilian_factory_use = 3
-	#	}
-	#	complete_effect = {
-	#	}
-	#}
-	HEU_jageumnan_d_2 = {
-		icon = GFX_decision_generic_merge_plant_materiel
-		available = {
-
-		}
-		visible = {
-			OR = {
-				has_completed_focus = HEU_foc_3-5
-				has_completed_focus = HEU_foc_4-14
-			}
-		}
-		ai_will_do = {
-			factor = 100
-		}
-		days_remove = 720
-		remove_effect = {
-			random_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-		complete_effect = {
-			add_timed_idea = {
-				idea = HEU_da_si_il_eonaja
-				days = 720
-			}
-		}
-		fire_only_once = yes
-	}
-}
-HEU_rnrrudqnswod = { #국경분쟁
-	HEU_rnrrudqnswod_1 = {
-		icon = GFX_decision_border_war
-		available = {
-			has_border_war = no
-			NOT = {
-				has_country_flag = HEU_rnrrudqnswod_flag
-			}
-			HEU = {controls_state = 8}
-			GEM = {controls_state = 978}
-			GEM = {owns_state = 978}
-		}
-		visible = {
-		}
-		ai_will_do = {
-			factor = 10
-		}
-		cost = 120
-		days_remove = 70
-		highlight_states = {
-			highlight_state_targets = {
-				state = 8
-				state = 978
-			}
-		}
-		remove_effect = {
-			clr_country_flag = HEU_rnrrudqnswod_flag
-			start_border_war = {
-				change_state_after_war = no
-				attacker = {
-					state = 8
-					num_provinces = 4
-					on_win = HEU_event.4
-					on_lose = HEU_event.5
-					on_cancel = HEU_event.6
-				}	
-				defender = {
-					state = 978
-					num_provinces = 4
-					on_win = HEU_event.4
-					on_lose = HEU_event.5
-					on_cancel = HEU_event.6
-				}
-			}
-		}
-		complete_effect = {
-			set_country_flag = HEU_rnrrudqnswod_flag
-			set_variable = {
-				var = var:var_HEU_rnrrudqnswod_state
-				value = 978
-			}
-		}
-		fire_only_once = yes
-	}
-	HEU_rnrrudqnswod_2 = {
-		icon = GFX_decision_border_war
-		available = {
-			has_border_war = no
-			NOT = {
-				has_country_flag = HEU_rnrrudqnswod_flag
-			}
-			HEU = {controls_state = 8}
-			GEM = {controls_state = 42}
-			GEM = {owns_state = 42}
-		}
-		visible = {
-		}
-		ai_will_do = {
-			factor = 10
-		}
-		cost = 120
-		days_remove = 70
-		highlight_states = {
-			highlight_state_targets = {
-				state = 8
-				state = 42
-			}
-		}
-		remove_effect = {
-			clr_country_flag = HEU_rnrrudqnswod_flag
-			start_border_war = {
-				change_state_after_war = no
-				attacker = {
-					state = 8
-					num_provinces = 4
-					on_win = HEU_event.4
-					on_lose = HEU_event.5
-					on_cancel = HEU_event.6
-				}	
-				defender = {
-					state = 42
-					num_provinces = 4
-					on_win = HEU_event.4
-					on_lose = HEU_event.5
-					on_cancel = HEU_event.6
-				}
-			}
-		}
-		complete_effect = {
-			set_country_flag = HEU_rnrrudqnswod_flag
-			set_variable = {
-				var = var:var_HEU_rnrrudqnswod_state
-				value = 42
-			}
-		}
-		fire_only_once = yes
-	}
-	HEU_rnrrudqnswod_3 = {
-		icon = GFX_decision_border_war
-		available = {
-			has_border_war = no
-			NOT = {
-				has_country_flag = HEU_rnrrudqnswod_flag
-			}
-			HEU = {controls_state = 978}
-			GEM = {controls_state = 975}
-			GEM = {owns_state = 975}
-		}
-		visible = {
-		}
-		ai_will_do = {
-			factor = 10
-		}
-		cost = 120
-		days_remove = 70
-		highlight_states = {
-			highlight_state_targets = {
-				state = 978
-				state = 975
-			}
-		}
-		remove_effect = {
-			clr_country_flag = HEU_rnrrudqnswod_flag
-			start_border_war = {
-				change_state_after_war = no
-				attacker = {
-					state = 978
-					num_provinces = 4
-					on_win = HEU_event.4
-					on_lose = HEU_event.5
-					on_cancel = HEU_event.6
-				}	
-				defender = {
-					state = 975
-					num_provinces = 4
-					on_win = HEU_event.4
-					on_lose = HEU_event.5
-					on_cancel = HEU_event.6
-				}
-			}
-		}
-		complete_effect = {
-			set_country_flag = HEU_rnrrudqnswod_flag
-			set_variable = {
-				var = var:var_HEU_rnrrudqnswod_state
-				value = 975
-			}
-		}
-		fire_only_once = yes
-	}
-	HEU_rnrrudqnswod_4 = {
-		icon = GFX_decision_border_war
-		available = {
-			has_border_war = no
-			NOT = {
-				has_country_flag = HEU_rnrrudqnswod_flag
-			}
-			HEU = {controls_state = 8}
-			GEM = {controls_state = 28}
-			GEM = {owns_state = 28}
-		}
-		visible = {
-		}
-		ai_will_do = {
-			factor = 10
-		}
-		cost = 120
-		days_remove = 70
-		highlight_states = {
-			highlight_state_targets = {
-				state = 8
-				state = 28
-			}
-		}
-		remove_effect = {
-			clr_country_flag = HEU_rnrrudqnswod_flag
-			start_border_war = {
-				change_state_after_war = no
-				attacker = {
-					state = 8
-					num_provinces = 4
-					on_win = HEU_event.4
-					on_lose = HEU_event.5
-					on_cancel = HEU_event.6
-				}	
-				defender = {
-					state = 28
-					num_provinces = 4
-					on_win = HEU_event.4
-					on_lose = HEU_event.5
-					on_cancel = HEU_event.6
-				}
-			}
-		}
-		complete_effect = {
-			set_country_flag = HEU_rnrrudqnswod_flag
-			set_variable = {
-				var = var:var_HEU_rnrrudqnswod_state
-				value = 28
-			}
-		}
-		fire_only_once = yes
-	}
-	HEU_rnrrudqnswod_5 = {
-		icon = GFX_decision_border_war
-		available = {
-			has_border_war = no
-			NOT = {
-				has_country_flag = HEU_rnrrudqnswod_flag
-			}
-			HEU = {controls_state = 28}
-			GEM = {controls_state = 976}
-			GEM = {owns_state = 976}
-		}
-		visible = {
-		}
-		ai_will_do = {
-			factor = 10
-		}
-		cost = 120
-		days_remove = 70
-		highlight_states = {
-			highlight_state_targets = {
-				state = 28
-				state = 976
-			}
-		}
-		remove_effect = {
-			clr_country_flag = HEU_rnrrudqnswod_flag
-			start_border_war = {
-				change_state_after_war = no
-				attacker = {
-					state = 28
-					num_provinces = 4
-					on_win = HEU_event.4
-					on_lose = HEU_event.5
-					on_cancel = HEU_event.6
-				}	
-				defender = {
-					state = 976
-					num_provinces = 4
-					on_win = HEU_event.4
-					on_lose = HEU_event.5
-					on_cancel = HEU_event.6
-				}
-			}
-		}
-		complete_effect = {
-			set_country_flag = HEU_rnrrudqnswod_flag
-			set_variable = {
-				var = var:var_HEU_rnrrudqnswod_state
-				value = 976
-			}
-		}
-		fire_only_once = yes
-	}
-}
-
-
-### 권력 투쟁 ###
-HEU_rnjsfurxnwod = {
-	HEU_rnjsfurxnwod_0 = {
-		icon = 	GFX_decision_generic_ignite_civil_war
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = HEU_tt_9
-				check_variable = { 
-					var = global.HEU_rnjsfur_heu
-					value = 50
-					compare = greater_than_or_equals 
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = HEU_tt_8
-				check_variable = { 
-					var = global.HEU_rnjsfur_heu_cha
-					value = 15
-					compare = greater_than_or_equals 
-				}
-			}
-		}
-		visible = {
-			tag = HEU
-		}
-		ai_will_do = {
-			factor = 1000
-		}
-		cost = 300
-		complete_effect = {
-			GEM = {
-				country_event = {
-					id = HEU_event.8
-					hours = 6
-				}
-			}
-			set_global_flag = HEU_HEU_rnjsfurxnwod_0_yes
-		}
-		fire_only_once = yes
-	}
-	HEU_rnjsfurxnwod_1 = {
-		icon = GFX_decision_hol_radio_oranje
-		available = {
-		}
-		visible = {
-		}
-		ai_will_do = {
-			factor = 15
-		}
-		cost = 50
-		days_remove = 30
-		remove_effect = {
-			if = {
-				limit = {
-					tag = GEM
-				}
-				add_to_variable = {
-					var = global.HEU_rnjsfur_gem
-					value = 5
-					tooltip = HEU_tt_4
-				}
-			}
-			else_if = {
-				limit = { 
-					tag = HEU
-				}
-				add_to_variable = {
-					var = global.HEU_rnjsfur_heu
-					value = 5
-					tooltip = HEU_tt_4
-				}
-			}
-			set_variable = {var = global.HEU_rnjsfur_heu_cha value = global.HEU_rnjsfur_heu}
-			subtract_from_variable = {var = global.HEU_rnjsfur_heu_cha value = global.HEU_rnjsfur_gem}
-		}
-		complete_effect = {
-		}
-		fire_only_once = no
-	}
-	HEU_rnjsfurxnwod_2 = {
-		icon = GFX_decision_generic_political_discourse
-		available = {
-		}
-		visible = {
-		}
-		ai_will_do = {
-			factor = 5
-		}
-		cost = 120
-		days_remove = 30
-		remove_effect = {
-			if = {
-				limit = {
-					tag = GEM
-				}
-				add_to_variable = {
-					var = global.HEU_rnjsfur_gem
-					value = 10
-					tooltip = HEU_tt_5
-				}
-			}
-			else_if = {
-				limit = { 
-					tag = HEU
-				}
-				add_to_variable = {
-					var = global.HEU_rnjsfur_heu
-					value = 10
-					tooltip = HEU_tt_5
-				}
-			}
-			set_variable = {var = global.HEU_rnjsfur_heu_cha value = global.HEU_rnjsfur_heu}
-			subtract_from_variable = {var = global.HEU_rnjsfur_heu_cha value = global.HEU_rnjsfur_gem}
-		}
-		complete_effect = {
-		}
-		fire_only_once = no
-	}
-	HEU_rnjsfurxnwod_3 = {
-		icon = GFX_decision_generic_political_discourse
-		available = {
-		}
-		visible = {
-		}
-		ai_will_do = {
-			factor = 5
-		}
-		cost = 150
-		days_remove = 50
-		remove_effect = {
-			if = {
-				limit = {
-					tag = GEM
-				}
-				add_to_variable = {
-					var = global.HEU_rnjsfur_gem
-					value = 20
-					tooltip = HEU_tt_6
-				}
-				HEU = {
-					add_stability = -0.05
-				}
-			}
-			else_if = {
-				limit = { 
-					tag = HEU
-				}
-				add_to_variable = {
-					var = global.HEU_rnjsfur_heu
-					value = 20
-					tooltip = HEU_tt_6
-				}
-				GEM = {
-					add_stability = -0.05
-				}
-			}
-			set_variable = {var = global.HEU_rnjsfur_heu_cha value = global.HEU_rnjsfur_heu}
-			subtract_from_variable = {var = global.HEU_rnjsfur_heu_cha value = global.HEU_rnjsfur_gem}
-		}
-		complete_effect = {
-		}
-		fire_only_once = no
-	}
-	HEU_rnjsfurxnwod_4 = {
-		icon = GFX_decision_eng_propaganda_campaigns
-		available = {
-		}
-		visible = {
-		}
-		ai_will_do = {
-			factor = 10
-		}
-		cost = 50
-		days_remove = 30
-		remove_effect = {
-			if = {
-				limit = {
-					tag = GEM
-				}
-				add_to_variable = {
-					var = global.HEU_rnjsfur_gem
-					value = 5
-					tooltip = HEU_tt_4
-				}
-			}
-			else_if = {
-				limit = { 
-					tag = HEU
-				}
-				add_to_variable = {
-					var = global.HEU_rnjsfur_heu
-					value = 5
-					tooltip = HEU_tt_4
-				}
-			}
-			set_variable = {var = global.HEU_rnjsfur_heu_cha value = global.HEU_rnjsfur_heu}
-			subtract_from_variable = {var = global.HEU_rnjsfur_heu_cha value = global.HEU_rnjsfur_gem}
-		}
-		complete_effect = {
-		}
-		fire_only_once = no
-	}
-	HEU_rnjsfurxnwod_5 = {
-		icon = GFX_decision_eng_propaganda_campaigns
-		available = {
-			has_tech = radio
-		}
-		visible = {
-		}
-		ai_will_do = {
-			factor = 10
-		}
-		cost = 75
-		days_remove = 15
-		remove_effect = {
-			if = {
-				limit = {
-					tag = GEM
-				}
-				add_to_variable = {
-					var = global.HEU_rnjsfur_gem
-					value = 5
-					tooltip = HEU_tt_4
-				}
-			}
-			else_if = {
-				limit = { 
-					tag = HEU
-				}
-				add_to_variable = {
-					var = global.HEU_rnjsfur_heu
-					value = 5
-					tooltip = HEU_tt_4
-				}
-			}
-			set_variable = {var = global.HEU_rnjsfur_heu_cha value = global.HEU_rnjsfur_heu}
-			subtract_from_variable = {var = global.HEU_rnjsfur_heu_cha value = global.HEU_rnjsfur_gem}
-		}
-		complete_effect = {
-		}
-		fire_only_once = no
-	}
-	HEU_rnjsfurxnwod_6 = {
-		icon = GFX_decision_hol_radio_oranje
-		available = {
-		}
-		visible = {
-		}
-		ai_will_do = {
-			factor = 5
-		}
-		cost = 75
-		days_remove = 60
-		remove_effect = {
-			if = {
-				limit = {
-					tag = GEM
-				}
-				add_to_variable = {
-					var = global.HEU_rnjsfur_gem
-					value = 10
-					tooltip = HEU_tt_5
-				}
-				HEU = {
-					add_political_power = 50
-				}
-			}
-			else_if = {
-				limit = { 
-					tag = HEU
-				}
-				add_to_variable = {
-					var = global.HEU_rnjsfur_heu
-					value = 10
-					tooltip = HEU_tt_5
-				}
-				GEM = {
-					add_political_power = 50
-				}
-			}
-			set_variable = {var = global.HEU_rnjsfur_heu_cha value = global.HEU_rnjsfur_heu}
-			subtract_from_variable = {var = global.HEU_rnjsfur_heu_cha value = global.HEU_rnjsfur_gem}
-		}
-		complete_effect = {
-		}
-		fire_only_once = no
-	}
-	HEU_rnjsfurxnwod_7 = {
-		icon = GFX_decision_revolt
-		available = {
-			always = no
-		}
-		activation = {
-			AND = {
-				HEU = {
-					exists = yes
-				}
-				GEM = {
-					exists = yes
-				}
-			}
-			HEU = {
-				has_completed_focus = HEU_foc_3-13
-			}  
-			NOT = {
-				has_global_flag = HEU_HEU_rnjsfurxnwod_0_yes
-			}
-		}
-		is_good = yes
-		timeout_effect = {
-			if = {
-				limit = {
-					tag = GEM
-				}
-				add_to_variable = {
-					var = global.HEU_rnjsfur_gem
-					value = 5
-					tooltip = HEU_tt_4
-				}
-				add_political_power = 50
-			}
-			else_if = {
-				limit = { 
-					tag = HEU
-				}
-				subtract_from_variable = {
-					var = global.HEU_rnjsfur_heu
-					value = 5
-					tooltip = HEU_tt_7
-				}
-			}
-			set_variable = {var = global.HEU_rnjsfur_heu_cha value = global.HEU_rnjsfur_heu}
-			subtract_from_variable = {var = global.HEU_rnjsfur_heu_cha value = global.HEU_rnjsfur_gem}
-		}
-		days_mission_timeout = 180
-		fire_only_once = no
-	}
-}
-propaganda_efforts = {
-	HEU_decision_pa_1 = {
-		icon = GFX_decision_eng_propaganda_campaigns
-		available = {}
-		visible = {
-			has_completed_focus = HEU_foc_5-1-19
-		}
-		ai_will_do = { factor = 100 }
-		cost = 150
-		complete_effect = {
-			set_country_flag = HEU_decision_pa_1_yes
-		}
-		modifier = {
-			production_speed_buildings_factor = 0.05
-			industrial_capacity_factory = 0.05
-		}
-		fire_only_once = yes
-		days_remove = 730
-	}
-	HEU_decision_pa_2 = {
-		icon = GFX_decision_eng_propaganda_campaigns
-		available = {}
-		visible = {
-			has_country_flag = HEU_decision_pa_1_yes
-		}
-		ai_will_do = { factor = 100 }
-		cost = 150
-		complete_effect = {
-			set_country_flag = HEU_decision_pa_2_yes
-		}
-		modifier = {
-			consumer_goods_factor = -0.20
-		}
-		fire_only_once = yes
-		days_remove = 730
-	}
-	HEU_decision_pa_3 = {
-		icon = GFX_decision_eng_propaganda_campaigns
-		available = { has_war = yes }
-		visible = {
-			has_country_flag = HEU_decision_pa_2_yes
-		}
-		ai_will_do = { factor = 100 }
-		cost = 150
-		complete_effect = {
-			set_country_flag = HEU_decision_pa_3_yes
-		}
-		modifier = {
-			war_support_weekly = 0.002
-			army_core_defence_factor = 0.05
-			surrender_limit = 0.15
-		}
-		fire_only_once = yes
-		days_remove = 730
-	}
-	HEU_decision_pa_4 = {
-		icon = GFX_decision_eng_propaganda_campaigns
-		available = { has_war = yes }
-		visible = {
-			has_country_flag = HEU_decision_pa_3_yes
-		}
-		ai_will_do = { factor = 100 }
-		cost = 150
-		complete_effect = {
-		}
-		modifier = {
-			army_attack_factor = 0.10
-			army_speed_factor = 0.20
-		}
-		fire_only_once = yes
-		days_remove = 730
-	}
-}
 
 HEU_aru_persona_decision_category = {
 	
@@ -3458,5 +2574,579 @@ HEU_problem_solver_68_decision_category = { #흥신소 68
 		}
 
 		fire_only_once = no
+	}
+	
+	HEU_problem_solver_68_aru_proposal_mutsuki = {
+		icon = GFX_decision_Gehenna_Emblem
+
+		available = {
+		}
+		
+		visible = {
+			has_completed_focus = HEU_civil_partnership
+			has_completed_focus = HEU_rikuhachimaism_focus_5_2
+			has_completed_focus = HEU_rikuhachimaism_focus_mutsuki
+		}
+
+		ai_will_do = { base = 0 }
+
+		cost = 0
+
+		complete_effect = {
+		}
+
+		fire_only_once = yes
+	}
+	
+	HEU_problem_solver_68_aru_proposal_kayoko = {
+		icon = GFX_decision_Gehenna_Emblem
+
+		available = {
+		}
+		
+		visible = {
+			has_completed_focus = HEU_civil_partnership
+			has_completed_focus = HEU_rikuhachimaism_focus_5_2
+			has_completed_focus = HEU_rikuhachimaism_focus_kayoko
+		}
+
+		ai_will_do = { base = 0 }
+
+		cost = 0
+
+		complete_effect = {
+		}
+
+		fire_only_once = yes
+	}
+	
+	HEU_problem_solver_68_aru_proposal_haruka = {
+		icon = GFX_decision_Gehenna_Emblem
+
+		available = {
+		}
+		
+		visible = {
+			has_completed_focus = HEU_civil_partnership
+			has_completed_focus = HEU_rikuhachimaism_focus_5_2
+			has_completed_focus = HEU_rikuhachimaism_focus_haruka
+		}
+
+		ai_will_do = { base = 0 }
+
+		cost = 0
+
+		complete_effect = {
+		}
+
+		fire_only_once = yes
+	}
+}
+
+HEU_aru_GSC_annex_decision_category = {
+
+	HEU_aru_GSC_annex_persuading_arona = {
+		icon = SWI_expand_covert_operations
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = HEU_aru_persona_wisdom_need_95_tt
+				check_variable = { Global.aru_stat_point_array^0 > 95 } #지혜 94 초과
+			}
+		}
+
+		ai_will_do = { base = 100 }
+
+		cost = 0
+
+		custom_cost_trigger = {
+			command_power > 24.9
+		}
+
+		custom_cost_text = decision_cost_CP_25
+
+		complete_effect = {
+		}
+
+		days_remove = 14
+
+		remove_effect = {
+			add_to_variable = {
+				global.HEU_support_GSC = 70
+				tooltip = HEU_support_GSC_edit_tt
+			}
+			HEU_aru_GSC_annex_setting = yes
+		}
+
+		complete_effect = {
+			add_command_power = -25
+		}
+
+		fire_only_once = yes
+	}
+
+	HEU_aru_GSC_annex_persuading_degrelle = {
+		icon = SWI_expand_covert_operations
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = HEU_aru_persona_resolution_need_75_tt
+				check_variable = { Global.aru_stat_point_array^2 > 74 } #결의 74 초과
+			}
+		}
+
+		ai_will_do = { base = 100 }
+
+		cost = 0
+
+		custom_cost_trigger = {
+			command_power > 24.9
+		}
+
+		custom_cost_text = decision_cost_CP_25
+
+		complete_effect = {
+		}
+
+		days_remove = 14
+
+		remove_effect = {
+			add_to_variable = {
+				global.HEU_support_belgium = 70
+				tooltip = HEU_support_belgium_edit_tt
+			}
+			HEU_aru_GSC_annex_setting = yes
+		}
+
+		complete_effect = {
+			add_command_power = -25
+		}
+
+		fire_only_once = yes
+	}
+
+	HEU_aru_GSC_annex_persuading_GSC_state = {
+		icon = GFX_decision_generic_political_discourse
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = FROM
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+
+		target_trigger = {
+			FROM = {
+				OR = {
+					state = 36
+					state = 7
+					state = 35
+	
+					state = 6
+					state = 29
+				}
+			}
+		}
+
+		state_target = yes
+		   
+		on_map_mode = map_only
+
+		ai_will_do = { base = 100 }
+
+		cost = 15
+
+		#custom_cost_trigger = {
+		#	command_power > 14.9
+		#}
+#
+		#custom_cost_text = decision_cost_CP_15
+
+		days_remove = 14
+
+		remove_effect = {
+			random_list = {
+				10 = {
+					add_to_variable = {
+						global.HEU_support_GSC = 4
+						tooltip = HEU_support_GSC_edit_tt
+					}
+				}
+				10 = {
+					add_to_variable = {
+						global.HEU_support_GSC = 7
+						tooltip = HEU_support_GSC_edit_tt
+					}
+				}
+				5 = {
+					add_to_variable = {
+						global.HEU_support_GSC = 12
+						tooltip = HEU_support_GSC_edit_tt
+					}
+				}
+			}
+			HEU_aru_GSC_annex_setting = yes
+			if = {
+				limit = {
+					FROM = {
+						NOT = { is_core_of = ROOT }
+					}
+				}
+				FROM = {
+					add_compliance = 15
+					add_resistance = -10
+				}
+			}
+		}
+
+		complete_effect = {
+			#add_command_power = -15
+		}
+
+		fire_only_once = no
+	}
+
+	HEU_aru_GSC_annex_persuading_belgium_state = {
+		icon = generic_political_rally
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = FROM
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+
+		target_trigger = {
+			FROM = {
+				OR = {
+					state = 971
+					state = 34
+					state = 974
+					state = 977
+				}
+			}
+		}
+		
+		state_target = yes
+
+		on_map_mode = map_only
+
+		ai_will_do = { 
+			base = 100 
+			modifier = {
+				factor = 0
+				check_variable = { global.HEU_support_belgium > 90 }
+			}
+		}
+
+		cost = 15
+
+		#custom_cost_trigger = {
+		#	command_power > 14.9
+		#}
+#
+		#custom_cost_text = decision_cost_CP_15
+
+		complete_effect = {
+		}
+
+		days_remove = 14
+
+		remove_effect = {
+			random_list = {
+				10 = {
+					add_to_variable = {
+						global.HEU_support_belgium = 4
+						tooltip = HEU_support_belgium_edit_tt
+					}
+				}
+				10 = {
+					add_to_variable = {
+						global.HEU_support_belgium = 7
+						tooltip = HEU_support_belgium_edit_tt
+					}
+				}
+				5 = {
+					add_to_variable = {
+						global.HEU_support_belgium = 12
+						tooltip = HEU_support_belgium_edit_tt
+					}
+				}
+			}
+			HEU_aru_GSC_annex_setting = yes
+			if = {
+				limit = {
+					FROM = {
+						NOT = { is_core_of = ROOT }
+					}
+				}
+				FROM = {
+					add_compliance = 15
+					add_resistance = -10
+				}
+			}
+		}
+
+		complete_effect = {
+		#	add_command_power = -15
+		}
+
+		fire_only_once = no
+	}
+
+	HEU_aru_GSC_annex_core_east_belgium_states = {
+		icon = GFX_decision_Gehenna_Emblem
+
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 974
+				state = 977
+			} 
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = HEU_support_belgium_need_80_tt
+				check_variable = { global.HEU_support_belgium > 79 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = HEU_support_GSC_need_20_tt
+				check_variable = { global.HEU_support_GSC > 19 }
+			}
+		}
+
+		visible = {
+			owns_state = 974
+			owns_state = 977
+		}
+
+		fire_only_once = yes
+		   
+		on_map_mode = map_and_decisions_view
+
+		ai_will_do = { 
+			base = 100 
+			modifier = {
+				factor = 0
+				check_variable = { global.HEU_support_GSC > 90 }
+			}
+		}
+
+		days_remove = 14
+
+		remove_effect = {
+			974 = {
+				add_core_of = ROOT
+			}
+			977 = {
+				add_core_of = ROOT
+			}
+			add_to_variable = {
+				global.HEU_core_GSC = 1
+			}
+		}
+
+		complete_effect = {
+			add_to_variable = {
+				global.HEU_support_GSC = -20
+				tooltip = HEU_support_GSC_edit_tt
+			}
+			add_to_variable = {
+				global.HEU_support_belgium = -80
+				tooltip = HEU_support_belgium_edit_tt
+			}
+			HEU_aru_GSC_annex_setting = yes
+		}
+	}
+
+	HEU_aru_GSC_annex_core_west_belgium_states = {
+		icon = GFX_decision_Gehenna_Emblem
+
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 971
+				state = 34
+			} 
+		}
+
+		visible = {
+			owns_state = 971
+			owns_state = 34
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = HEU_support_belgium_need_80_tt
+				check_variable = { global.HEU_support_belgium > 79 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = HEU_support_GSC_need_20_tt
+				check_variable = { global.HEU_support_GSC > 19 }
+			}
+		}
+		   
+		on_map_mode = map_and_decisions_view
+
+		ai_will_do = { base = 100 }
+
+		cost = 0
+
+		days_remove = 14
+
+		remove_effect = {
+			971 = {
+				add_core_of = ROOT
+			}
+			34 = {
+				add_core_of = ROOT
+			}
+			add_to_variable = {
+				global.HEU_core_GSC = 1
+			}
+		}
+
+		complete_effect = {
+			add_to_variable = {
+				global.HEU_support_GSC = -20
+				tooltip = HEU_support_GSC_edit_tt
+			}
+			add_to_variable = {
+				global.HEU_support_belgium = -80
+				tooltip = HEU_support_belgium_edit_tt
+			}
+			HEU_aru_GSC_annex_setting = yes
+		}
+
+		fire_only_once = yes
+		
+	}
+
+	HEU_aru_GSC_annex_core_south_GSC_states = {
+		icon = GFX_decision_Gehenna_Emblem
+
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 6
+				state = 29
+			} 
+		}
+
+		visible = {
+			owns_state = 6
+			owns_state = 29
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = HEU_support_belgium_need_20_tt
+				check_variable = { global.HEU_support_belgium > 19 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = HEU_support_GSC_need_80_tt
+				check_variable = { global.HEU_support_GSC > 79 }
+			}
+		}
+		   
+		on_map_mode = map_and_decisions_view
+
+		ai_will_do = { base = 100 }
+
+		cost = 0
+
+		days_remove = 14
+
+		remove_effect = {
+			6 = {
+				add_core_of = ROOT
+			}
+			29 = {
+				add_core_of = ROOT
+			}
+			add_to_variable = {
+				global.HEU_core_GSC = 1
+			}
+		}
+
+		complete_effect = {
+			add_to_variable = {
+				global.HEU_support_GSC = -80
+				tooltip = HEU_support_GSC_edit_tt
+			}
+			add_to_variable = {
+				global.HEU_support_belgium = -20
+				tooltip = HEU_support_belgium_edit_tt
+			}
+			HEU_aru_GSC_annex_setting = yes
+		}
+
+		fire_only_once = yes
+	}
+
+	HEU_aru_GSC_annex_core_north_GSC_states = {
+		icon = GFX_decision_Gehenna_Emblem
+
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 7
+				state = 35
+				state = 36
+			} 
+		}
+
+		visible = {
+			owns_state = 7
+			owns_state = 35
+			owns_state = 36
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = HEU_support_belgium_need_20_tt
+				check_variable = { global.HEU_support_belgium > 19 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = HEU_support_GSC_need_80_tt
+				check_variable = { global.HEU_support_GSC > 79 }
+			}
+		}
+		   
+		on_map_mode = map_and_decisions_view
+
+		ai_will_do = { base = 100 }
+
+		cost = 0
+
+		days_remove = 14
+
+		remove_effect = {
+			7 = {
+				add_core_of = ROOT
+			}
+			35 = {
+				add_core_of = ROOT
+			}
+			36 = {
+				add_core_of = ROOT
+			}
+			add_to_variable = {
+				global.HEU_core_GSC = 1
+			}
+		}
+
+		complete_effect = {
+			add_to_variable = {
+				global.HEU_support_GSC = -80
+				tooltip = HEU_support_GSC_edit_tt
+			}
+			add_to_variable = {
+				global.HEU_support_belgium = -20
+				tooltip = HEU_support_belgium_edit_tt
+			}
+			HEU_aru_GSC_annex_setting = yes
+		}
+
+		fire_only_once = yes
 	}
 }
