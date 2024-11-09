@@ -1958,6 +1958,9 @@ HEU_rikuhachimaism_idea = {
 	
 	communism_drift = HEU_aru_var_communism_drift
 	fascism_drift = HEU_aru_var_fascism_drift
+	drift_defence_factor = HEU_aru_var_drift_defence_factor
+	
+	non_core_manpower = HEU_aru_var_non_core_manpower
 }
 
 HEU_luxembourgism_idea = {
@@ -1979,6 +1982,9 @@ HEU_luxembourgism_idea = {
 	
 	communism_drift = HEU_aru_var_communism_drift
 	fascism_drift = HEU_aru_var_fascism_drift
+	drift_defence_factor = HEU_aru_var_drift_defence_factor
+	
+	non_core_manpower = HEU_aru_var_non_core_manpower
 }
 
 HEU_luxembourg_army_dynamic_modifier = { # 룩셈부르크군
