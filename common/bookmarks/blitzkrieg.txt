@@ -166,9 +166,9 @@ bookmarks = {
 				HEU_gehenna_immigrant 
 			}	
 			focuses = {
-				HEU_foc_2-26
-				HEU_foc_3-20
-				HEU_foc_4-25
+				HEU_watch_right_wing_party
+				HEU_one_evil_one_day
+				HEU_general_student_council_aru
 			}			
 		}
 		"ARI"={
