@@ -4201,7 +4201,7 @@ country_event = {  # 디버그 이벤트
 	}
 	option = { #
 		name = TRM_event.1000.b
-		TRM_won_the_gehenna_effect = yes	
+		TRM_POL_RK = yes	
 	}
 	option = { #
 		name = TRM_event.1000.c
