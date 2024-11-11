@@ -18,6 +18,7 @@ characters={
 			defense_skill=2
 			planning_skill=2
 			logistics_skill=5
+			desc = TRN_Nagisa_advisor_desc
 			 
 		}
 		country_leader={
@@ -28,6 +29,7 @@ characters={
 		gender = female
 		advisor = {
     		slot = political_advisor
+			desc = TRN_Nagisa_advisor_desc
     		idea_token = TRN_skrltk
 			can_be_fired = no
 			allowed = {
@@ -51,6 +53,7 @@ characters={
 		advisor={
 			cost = 150
 			slot = theorist
+			desc = TRN_Nagisa_advisor_desc
 			idea_token = TRM_nagisa_theorist
 			ledger = army
 			allowed = {
@@ -122,6 +125,7 @@ characters={
 		gender = female
 		advisor = {
     		slot = political_advisor
+			desc = TRN_Seia_advisor_desc
     		idea_token = TRN_tpdldk
 			can_be_fired = no
 			allowed = {
@@ -160,10 +164,12 @@ characters={
 			defense_skill=4
 			planning_skill=3
 			logistics_skill=3
+			desc = TRN_Mika_advisor_desc
 			 
 		}
 		advisor = {
     		slot = political_advisor
+			desc = TRN_Mika_advisor_desc
     		idea_token = TRN_alzk_political_advisor
 			can_be_fired = no
 			allowed = {
@@ -186,7 +192,7 @@ characters={
 			ideology=tea_party_fascism_ideology
 			traits={ TRM_pater_faction }
 			expire="1965.1.1"
-			desc = "TRINITY_MIKA_DESC"
+			desc = TRINITY_MIKA_DESC
 		}
 	}
 	TRN_tea_party ={ #티파티
@@ -226,10 +232,13 @@ characters={
 			defense_skill=2
 			planning_skill=2
 			logistics_skill=3
+
+			desc = TRN_Hinata_advisor_desc
 		}
 		advisor={
 			cost = 150
 			slot = theorist
+			desc = TRN_Hinata_advisor_desc
 			idea_token = TRM_hinata_theorist
 			ledger = army
 			allowed = {
@@ -267,9 +276,11 @@ characters={
 			planning_skill=4
 			logistics_skill=2
 			 
+			desc = TRN_Hasumi_advisor_desc
 		}
 		advisor={
 			slot = high_command
+			desc = TRN_Hasumi_advisor_desc
 			idea_token = TRN_gktmal_high_command
 			ledger = army
 			allowed = { original_tag = TRM }
@@ -305,9 +316,12 @@ characters={
 			planning_skill=3
 			logistics_skill=3
 			traits={ front_line_general infantry_officer TRN_guhogisadan politically_connected }
+
+			desc = TRN_Mine_advisor_desc
 		}
 		advisor={
 			slot = high_command
+			desc = TRN_Mine_advisor_desc
 			idea_token = TRN_dkdhahfl_alsp_high_command
 			ledger = army
 			allowed = {
@@ -347,9 +361,11 @@ characters={
 			planning_skill=3
 			logistics_skill=4
 			 
+			desc = TRN_Sakurako_advisor_desc
 		}
 		advisor={
 			slot = high_command
+			desc = TRN_Sakurako_advisor_desc
 			idea_token = TRN_sakurako_high_command
 			ledger = army
 			allowed = {
@@ -368,6 +384,7 @@ characters={
 		}
 		advisor={
 			slot = army_chief
+			desc = TRN_Sakurako_advisor_desc
 			idea_token = TRN_sakurako_army_chief
 			ledger = army
 			allowed = {
@@ -385,6 +402,7 @@ characters={
 		}
 		advisor={
 			slot = political_advisor
+			desc = TRN_Sakurako_advisor_desc
 			idea_token = TRN_dnxkwmal_tkznfkzh_political_advisor
 			ledger = army
 			allowed = {
@@ -422,9 +440,20 @@ characters={
 			defense_skill=2
 			planning_skill=2
 			logistics_skill=2
+
+			desc = TRN_Azusa_advisor_desc
+		}
+		navy_leader = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			maneuvering_skill = 4
+			coordination_skill = 4
+			desc = TRN_Azusa_advisor_desc
 		}
 		advisor={
 			slot = high_command
+			desc = TRN_Azusa_advisor_desc
 			idea_token = TRN_dkwmtk_high_command
 			ledger = army
 			allowed = {
@@ -461,9 +490,12 @@ characters={
 			planning_skill=3
 			logistics_skill=2
 			traits={ infantry_officer  }
+
+			desc = TRN_Ichika_advisor_desc
 		}
 		advisor={
 			slot = high_command
+			desc = TRN_Ichika_advisor_desc
 			idea_token = ichika_command
 			ledger = army
 			allowed = { original_tag = TRM }
@@ -499,9 +531,11 @@ characters={
 			planning_skill = 1
 			logistics_skill = 1
 			traits = { infantry_officer }
+			desc = TRN_Mashiro_advisor_desc
 		}
 		advisor={
 			slot = navy_chief
+			desc = TRN_Mashiro_advisor_desc
 			idea_token = TRM_aktlfh
 			ledger = navy
 			allowed = {
@@ -541,6 +575,7 @@ characters={
 			planning_skill=3
 			logistics_skill=4
 			traits = {  }
+			desc = TRN_Kozeki_Ui_advisor_desc
 		}
 		country_leader={
 			ideology=despotism
@@ -549,6 +584,7 @@ characters={
 		}
 		advisor={
 			slot = political_advisor
+			desc = TRN_Kozeki_Ui_advisor_desc
 			idea_token = uyi_political_advisor
 			allowed = {
 				original_tag = TRM
@@ -593,6 +629,7 @@ characters={
 		}
 		advisor={
 			slot = high_command
+			desc = TRN_Kozeki_Ui_advisor_desc
 			idea_token = ui_command
 			ledger = air
 			allowed = { original_tag = TRM }
@@ -624,9 +661,11 @@ characters={
 			defense_skill=2
 			planning_skill=1
 			logistics_skill=1
+			desc = TRN_Shimiko_advisor_desc
 		}
 		advisor={
 			slot = high_command
+			desc = TRN_Shimiko_advisor_desc
 			idea_token = ui_command
 			ledger = air
 			allowed = { original_tag = TRM }
@@ -658,6 +697,7 @@ characters={
 			defense_skill=2
 			planning_skill=1
 			logistics_skill=2
+			desc = TRN_Kazusa_advisor_desc
 		}
 		country_leader={ 
 			ideology=marxism
@@ -666,6 +706,7 @@ characters={
 		}
 		advisor={
 			slot = political_advisor
+			desc = TRN_Kazusa_advisor_desc
 			idea_token = kazusa_political_advisor
 			allowed = {
 				original_tag = TRM
@@ -682,6 +723,7 @@ characters={
 		advisor={
 			cost = 150
 			slot = theorist
+			desc = TRN_Kazusa_advisor_desc
 			idea_token = TRM_kazusa_theorist
 			ledger = army
 			allowed = {
@@ -713,9 +755,11 @@ characters={
 			planning_skill=4
 			logistics_skill=3
 			traits={ career_officer infantry_officer front_line_general politically_connected }
+			desc = TRN_tsurugi_advisor_desc
 		}
 		advisor={	
 			slot = army_chief
+			desc = TRN_tsurugi_advisor_desc
 			idea_token = TRN_cmfnrl_army_chief
 			allowed = {
 				original_tag = TRM
@@ -734,6 +778,7 @@ characters={
 		}
 		advisor={
 			slot = political_advisor
+			desc = TRN_tsurugi_advisor_desc
 			idea_token = TRN_cmfnrl_political_advisor
 			ledger = army
 			allowed = {
@@ -767,6 +812,7 @@ characters={
 			planning_skill=2
 			logistics_skill=2
 			traits={ TRN_pervert infantry_officer }
+			desc = TRN_Koharu_advisor_desc
 		}
 	}
 
@@ -775,7 +821,7 @@ characters={
 		portraits={
 			army={
 				large= GFX_TRN_Ajitani_Hifumi_Portrait
-				small= GFX_TRN_Ajitani_Hifumi_idea
+				small= GFX_TRN_Ajitani_Hifumi_Swim_idea
 			}
 		}
 		gender = female
@@ -786,18 +832,8 @@ characters={
 			defense_skill=3
 			planning_skill=3
 			logistics_skill=3
+			desc = TRN_Hifumi_advisor_desc
 		}
-	}
-
-	hihume={ #히후미 수영
-		name=hihume
-		portraits={
-			army={
-				large= GFX_TRN_Ajitani_Hifumi_Swim_Portrait
-				small= GFX_TRN_Ajitani_Hifumi_Swim_idea
-			}
-		}
-		gender = female
 		navy_leader ={
 			skill=1
 			attack_skill=1
@@ -807,6 +843,7 @@ characters={
 		}
 		advisor={
 			slot = high_command
+			desc = TRN_Hifumi_advisor_desc
 			idea_token = TRN_glgnal_tndudqhr_army_chief
 			ledger = army
 			allowed = {
@@ -823,6 +860,7 @@ characters={
 		advisor={
 			cost = 150
 			slot = theorist
+			desc = TRN_Hifumi_advisor_desc
 			idea_token = glgnal_tndudqhr_theorist
 			ledger = army
 			allowed = {
@@ -837,6 +875,17 @@ characters={
 				blitzkrieg_theorist
 			}
 		}
+	}
+
+	hihume={ #히후미 수영
+		name=hihume
+		portraits={
+			army={
+				large= GFX_TRN_Ajitani_Hifumi_Swim_Portrait
+				small= GFX_TRN_Ajitani_Hifumi_Swim_idea
+			}
+		}
+		gender = female
 	}
 	TRN_skcm={ #나츠
 		name=TRN_skcm
@@ -855,6 +904,7 @@ characters={
 			planning_skill=1
 			logistics_skill=1
 			 
+			desc = TRN_Natsu_advisor_desc
 		}
 	}
 	TRN_Shirasu_Azusa_Swim ={ #아즈사
@@ -866,13 +916,6 @@ characters={
 			}
 		}
 		gender = female
-		navy_leader = {
-			skill = 2
-			attack_skill = 2
-			defense_skill = 2
-			maneuvering_skill = 4
-			coordination_skill = 4
-		}
 	}
 	TRN_tmwmal ={ #스즈미
 		name=TRN_tmwmal
@@ -890,9 +933,11 @@ characters={
 			defense_skill=3
 			planning_skill=3
 			logistics_skill=3
+			desc = TRN_Suzumi_advisor_desc
 		}
 		advisor={
 			slot = political_advisor
+			desc = TRN_Suzumi_advisor_desc
 			idea_token = TRN_tmwmal_political_advisor
 			allowed = {
 				original_tag = TRM
@@ -903,6 +948,7 @@ characters={
 		}
 		advisor={
 			slot = army_chief
+			desc = TRN_Suzumi_advisor_desc
 			idea_token = TRN_tmwmal_army_chief
 			ledger = army
 			allowed = {
@@ -935,9 +981,11 @@ characters={
 			defense_skill=2
 			planning_skill=3
 			logistics_skill=2
+			desc = TRN_Reisa_advisor_desc
 		}
 		advisor={
 			slot = army_chief
+			desc = TRN_Reisa_advisor_desc
 			idea_token = TRN_dnwkdhkfpdltk_army_chief
 			ledger = army
 			allowed = {
@@ -970,6 +1018,7 @@ characters={
 			defense_skill=3
 			planning_skill=2
 			logistics_skill=3
+			desc = TRN_Serina_advisor_desc
 		}
 	}
 	TRN_dktkrkdhgkskdp={ #아가사오 하나에
@@ -988,6 +1037,7 @@ characters={
 			defense_skill=3
 			planning_skill=2
 			logistics_skill=3
+			desc = TRN_Hanae_advisor_desc
 		}
 	}
 	TRN_gkskzh ={ #하나코
@@ -1006,6 +1056,7 @@ characters={
 			defense_skill=4
 			planning_skill=3
 			logistics_skill=3
+			desc = TRN_Hanako_advisor_desc
 		}
 	}
 	TRN_akfl={ #이오치 마리
@@ -1024,6 +1075,7 @@ characters={
 			defense_skill=2
 			planning_skill=1
 			logistics_skill=1
+			desc = TRN_Mari_advisor_desc
 		}
 	}
 	TRN_dytlal={ # 요시미
@@ -1042,9 +1094,11 @@ characters={
 			defense_skill=2
 			planning_skill=1
 			logistics_skill=1
+			desc = TRN_Yoshimi_advisor_desc
 		}
 		advisor={	
 			slot = air_chief
+			desc = TRN_Yoshimi_advisor_desc
 			idea_token = TRM_dytlal
 			ledger = air
 			allowed = {
@@ -1080,9 +1134,11 @@ characters={
 			defense_skill=2
 			planning_skill=1
 			logistics_skill=1
+			desc = TRN_Airi_advisor_desc
 		}
 		advisor={	
 			slot = air_chief
+			desc = TRN_Airi_advisor_desc
 			idea_token = TRM_dkdlfl
 			ledger = air
 			allowed = {
@@ -1094,7 +1150,7 @@ characters={
 				}
 			}
 			traits = {
-                air_chief_ground_support_1
+                air_chief_safety_1
 			}
 			cost = 50
 			ai_will_do = {

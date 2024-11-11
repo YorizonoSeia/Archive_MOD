@@ -1442,6 +1442,9 @@
 			#pater_nazism
 			set_cosmetic_tag = TRINITY_REICH
 			custom_effect_tooltip = steel_reich_tt
+			effect_tooltip = {
+				add_country_leader_trait = TRN_mika_trait_1
+			}
             custom_effect_tooltip = tooltip_white_line
 			add_threat = 5
 			hidden_effect = {
@@ -1478,7 +1481,6 @@
 							desc = "TRINITY_MIKA_DESC"
 							traits = {
 								TRN_mika_trait_1
-								TRN_mika_trait_2
 							}
 						}
 					}
@@ -1886,7 +1888,7 @@
         }
 		ai_will_do = { factor = 1 }
 		relative_position_id = TRM_oetzi
-		x = 5
+		x = 4
 		y = 1
 		completion_reward = {
 			SOU = { add_opinion_modifier = { target = ROOT modifier = pact_against_us } }
@@ -1935,7 +1937,7 @@
 		}
 		relative_position_id = TRM_fucking_communism
 		x = 0
-		y = 2
+		y = 1
 		completion_reward = {
 			hidden_effect = {
 				SOV = { remove_opinion_modifier = { target = ROOT modifier = pact_against_us } }
@@ -2058,7 +2060,7 @@
 		}
 		relative_position_id = TRM_We_need_Denmark_milk
 		x = 0
-		y = 2
+		y = 1
 		completion_reward = {
 				TRM = {
 					create_wargoal = {
@@ -2198,6 +2200,15 @@
                     remove_idea = TRM_kozeki_ui
                 }
             }
+			add_advisor_role = {
+				character = TRN_tlalzh
+				advisor = {
+					slot = air_chief
+					idea_token = TRN_tlalzh_air_chief
+					cost = 100
+					traits = { air_chief_reform_2 }
+				}
+			}
             hidden_effect = {
 				remove_trait = {
 					character = uyi

@@ -75,9 +75,7 @@ political_actions = {
         fire_only_once = yes
 	 	ai_will_do = { base = 10 }
 		available = {
-            TRM = {
-                has_completed_focus = TRN_GO_TO_EAST
-            }
+			TRM = { has_completed_focus = TRN_GO_TO_EAST }
 			surrender_progress > 0.70
 			is_subject = no
 			has_war_with = TRM
@@ -89,7 +87,6 @@ political_actions = {
             }
 		}
 		visible = {
-			surrender_progress > 0.70
 	  		TRM = {
 				controls_state = 195
 				controls_state = 219

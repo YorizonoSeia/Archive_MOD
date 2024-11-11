@@ -533,7 +533,6 @@ country_event = {
 		custom_effect_tooltip = TRN_endsieg_event_tt
         hidden_effect = { 
             news_event = BA_news.9 
-            #TRM_endsieg_effect = yes
         }
 	}
 }
@@ -758,7 +757,17 @@ country_event = {
 	option = { #
 		name = TRM_event.35.a
 		unlock_decision_category_tooltip = TRN_after_war_decisions
-		TRM_won_the_gehenna_effect = yes
+		TRM = {
+			set_global_flag = TRINITY_WON_THE_GEHENNA
+			swap_ideas = {
+				remove_idea = TRM_mika_trinity
+				add_idea = TRM_mika_trinity_2
+			}
+			swap_ruler_traits = {
+				remove = TRN_mika_trait_1
+				add = TRN_mika_trait_3
+			}
+		}
 		#country_event = { id = TRM_event.36 hours = 1 }
 	}
 }
@@ -1589,7 +1598,9 @@ country_event = {  # 미카를 무시하면 안되는 이유;
 	
 	option = { #
 		name = TRM_event.68.a
-		SOV = { retire_country_leader = yes }
+		ai_chance = {
+			base = 70
+		}
 		set_global_flag = SOVIET_LOSE_GLOBAL_FLAG
 		white_peace = POL
 		white_peace = SOV
@@ -1699,8 +1710,8 @@ country_event = {  # 미카를 무시하면 안되는 이유;
 			}
 	option = { #
 		name = TRM_event.68.b
-		SOV = {
-			retire_country_leader = yes
+		ai_chance = {
+			base = 30
 		}
 		# 아무 효과 없지롱
 	}
@@ -4197,7 +4208,6 @@ country_event = {  # 디버그 이벤트
 	
 	option = { #
 		name = TRM_event.1000.a
-		TRM_endsieg_effect = yes	
 	}
 	option = { #
 		name = TRM_event.1000.b
@@ -4511,9 +4521,6 @@ country_event = {  # 디버그 이벤트
 				ideology = pater_nazism
 				desc = "TRN_alzk_DESC_2"
 				traits = {
-					TRN_mika_trait_4 
-					TRM_gloy_leader 
-					TRN_mika_trait_2
 				}
 			}
 			promote_leader = yes
