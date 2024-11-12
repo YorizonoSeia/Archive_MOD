@@ -3,9 +3,9 @@
  ###########################################################
  ###########################################################
 
- NSD_the_SS_went_to_america: "§Y$reinhard_heydrich$§!의 위치:\n         §Y[USA.GetNameWithFlag]§!"
- NSD_the_SS_went_to_arius: "§Y$reinhard_heydrich$§!의 위치:\n         §Y[ARI.GetNameWithFlag]§!"
- NSD_the_SS_went_to_gottland: "§Y$reinhard_heydrich$§!의 위치:\n         §Y[GEN.GetNameWithFlag]§!"
+ NSD_the_SS_went_to_america: "§Y$reinhard_heydrich$§!가 §Y[USA.GetNameWithFlag]§!에 있음"
+ NSD_the_SS_went_to_arius: "§Y$reinhard_heydrich$§!가 §Y[ARI.GetNameWithFlag]§!에 있음"
+ NSD_the_SS_went_to_gottland: "§Y$reinhard_heydrich$§!가 §Y[GEN.GetNameWithFlag]§!에 있음"
  BA_is_GER_core_tt: "해당 주가 §Y독일 주§!임"
 
  BAY_event.1.t:0 "수립된 군사정부"

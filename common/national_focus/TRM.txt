@@ -6366,15 +6366,15 @@
 		relative_position_id = TRN_yurijono_seia_ser
 		completion_reward = {
 			TRN_country_collapse_remove = yes
-			if = { limit = { country_exists = ARI }
+			if = { limit = { country_exists = ARI is_subject = no }
 				create_wargoal = {
 					target = ARI
 					type = annex_everything
 				}
-			}
-			add_timed_idea = {
-				idea = TRM_arius_reclaim
-				days = 180
+				add_timed_idea = {
+					idea = TRM_arius_reclaim
+					days = 180
+				}
 			}
 		}
 

@@ -1107,6 +1107,7 @@ focus_tree = {
 			set_global_flag = NSD_the_SS_went_to_america
 			add_political_power = 120
 			remove_ideas = BA_ARI_tragedy
+			country_event = { id = ARI_event.41 hours = 8 }
 		}
 	}
 
@@ -1134,6 +1135,10 @@ focus_tree = {
 				add_to_variable = { ARI_nazi_party_stability_factor = -0.10 }
 			}
 			add_political_power = 80
+			if = {
+				limit = { has_idea = ARI_political_landscape_changes }
+				remove_ideas = ARI_political_landscape_changes
+			}
 		}
 	}
 
@@ -1256,6 +1261,7 @@ focus_tree = {
 				long_name = ARI_focus_communism_party_long
 				name = ARI_focus_communism_party
 			}
+			remove_ideas = ARI_political_landscape_changes
 		}
 	}
 
@@ -1369,6 +1375,7 @@ focus_tree = {
 				long_name = ARI_parliament_party_long
 				name = ARI_parliament_party
 			}
+			remove_ideas = ARI_political_landscape_changes
 		}
 	}
 
@@ -2992,7 +2999,7 @@ focus_tree = {
 		prerequisite = {
 			focus = ARI_berlin_military_tribunal
 		}
-		cost = 10
+		cost = 5
 		x = -1
 		y = 1
 		relative_position_id = ARI_berlin_military_tribunal
@@ -3023,7 +3030,7 @@ focus_tree = {
 		prerequisite = {
 			focus = ARI_berlin_military_tribunal
 		}
-		cost = 10
+		cost = 5
 		x = 1
 		y = 1
 		relative_position_id = ARI_berlin_military_tribunal
@@ -3047,7 +3054,7 @@ focus_tree = {
 			focus = ARI_intercultural_integration
 			focus = ARI_night_of_the_long_knives
 		}
-		cost = 10
+		cost = 5
 		x = -3
 		y = 1
 		relative_position_id = ARI_night_of_the_long_knives
@@ -3110,7 +3117,7 @@ focus_tree = {
 		prerequisite = {
 			focus = ARI_german_labor_front
 		}
-		cost = 10
+		cost = 5
 		x = 0
 		y = 1
 		relative_position_id = ARI_german_labor_front
@@ -3682,7 +3689,10 @@ focus_tree = {
 
 		available = {
 			is_subject = no
-			has_government = democratic
+			OR = {
+				has_government = democratic
+				has_government = neutrality
+			}
 			custom_trigger_tooltip = {
 				tooltip = NO_end_of_the_kivotos_alliance
 				NOT = { has_global_flag = end_of_the_kivotos_alliance }
@@ -3735,6 +3745,7 @@ focus_tree = {
 			create_dynamic_country = {
 				original_tag = TRM
 				copy_tag = TRM
+				set_country_flag = ARI_arius_administrative_academy_flag
 				ROOT = {
 					every_owned_state = {
 						limit = {
@@ -3771,6 +3782,8 @@ focus_tree = {
 					kill_ideology_leader = neutrality
 					set_cosmetic_tag = ARI_arius_administrative_academy
 					BA_puppet_on_action_effect = yes
+
+					load_focus_tree = generic_focus
 				}
 			}
 			every_country = {
@@ -3804,9 +3817,82 @@ focus_tree = {
 
 		available = {
 			is_subject = no
+			any_country = {
+				original_tag = TRM
+				is_subject_of = ROOT
+			}
 		}
 
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = ARI_reconciliation_of_grievances_1IF1IC }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
 		completion_reward = {
+			random_country = {
+				limit = { 
+					is_subject_of = ARI
+				}
+				random_owned_controlled_state = {
+					limit = {
+						NOT = { state = 85 }
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+						NOT = { has_state_flag = ARI_reconciliation_of_grievances_1IF1IC }
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					set_state_flag = ARI_reconciliation_of_grievances_1IF1IC
+				}
+				random_owned_controlled_state = {
+					limit = {
+						NOT = { state = 85 }
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+						NOT = { has_state_flag = ARI_reconciliation_of_grievances_1IF1IC }
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					set_state_flag = ARI_reconciliation_of_grievances_1IF1IC
+				}
+			}
+			set_province_name = { id = 6558 name = Poznan }
+			set_province_name = { id = 6332 name = Konigsberg }
 		}
 	}
 
@@ -3830,10 +3916,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			set_cosmetic_tag = ARI_arian_prussian_federation
 			every_country = {
 				limit = {
 					original_tag = TRM
 					is_subject_of = ROOT
+					has_country_flag = ARI_arius_administrative_academy_flag
 				}
 				ROOT = {
 					annex_country = {
@@ -3842,6 +3930,7 @@ focus_tree = {
 					}
 				}
 			}
+			country_event = { id = ARI_event.42 hours = 12 }
 		}
 	}
 }

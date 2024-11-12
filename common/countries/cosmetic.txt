@@ -2142,6 +2142,10 @@ ARI_arius_administrative_academy = {
 	color = rgb { 50 50 120 }
 	color_ui = rgb { 70 70 140 }
 }
+ARI_arian_prussian_federation = {
+	color = rgb { 45 45 75 }
+	color_ui = rgb { 45 45 75 }
+}
 ABY_TRM_country = {
 	color = rgb { 60 60 60 }
 	color_ui = rgb { 60 60 60 }

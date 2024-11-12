@@ -20,7 +20,7 @@ characters={
 		}
 		advisor={
 			slot = political_advisor
-			idea_token = ARI_saori_pol
+			idea_token = ARI_saori_political_advisor
 			allowed = {
 				original_tag = ARI
 			}
@@ -33,7 +33,7 @@ characters={
 		}
 		advisor={
 			slot = army_chief
-			idea_token = ARI_saori
+			idea_token = ARI_saori_army_chief
 			allowed = {
 				original_tag = ARI
 			}
@@ -97,7 +97,7 @@ characters={
 			cost = 300
 		}
 		advisor={
-			cost = 150
+			cost = 200
 			slot = high_command
 			idea_token = ARI_atsuko_mil
 			allowed = {
@@ -136,7 +136,7 @@ characters={
 		}
 		advisor={
 			slot = political_advisor
-			idea_token = ARI_hiyori
+			idea_token = ARI_hiyori_political_advisor
 			allowed = {
 				original_tag = ARI
 			}
@@ -148,9 +148,9 @@ characters={
 			}
 		}
 		advisor={
-			cost = 150
+			cost = 100
 			slot = high_command
-			idea_token = ARI_hiyori_
+			idea_token = ARI_hiyori_high_command
 			allowed = {
 				original_tag = ARI
 			}
@@ -183,7 +183,7 @@ characters={
 		}
 		advisor={
 			slot = political_advisor
-			idea_token = ARI_misaki
+			idea_token = ARI_misaki_political_advisor
 			allowed = {
 				original_tag = ARI
 			}
@@ -195,9 +195,9 @@ characters={
 			}
 		}
 		advisor={
-			cost = 150
+			cost = 100
 			slot = high_command
-			idea_token = ARI_misaki
+			idea_token = ARI_misaki_high_command
 			allowed = {
 				original_tag = ARI
 			}

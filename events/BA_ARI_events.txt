@@ -27,7 +27,7 @@ country_event = { #수도 문제
 	}
 }
 
-country_event = { #제2회 공회의
+country_event = { #제2회 공의회
 	id = ARI_event.2
 	title = ARI_event.2.t
 	desc = ARI_event.2.d
@@ -46,6 +46,7 @@ country_event = { #제2회 공회의
 					is_subject_of = ARI
 					has_country_flag = ARI_puppet_state
 				}
+				NOT = { has_country_flag = ARI_arius_administrative_academy_flag }
 			}
 			ARI = {
 				annex_country = {
@@ -716,6 +717,11 @@ country_event = { #아츠코 발견
 		atsuko = {
 			clr_character_flag = Hakari_Atsuko_GEI
 		}
+		remove_trait = {
+			character = atsuko
+			slot = political_advisor
+			trait = ARI_betrayer
+		}
 	}
 }
 country_event = { #걸림
@@ -1137,6 +1143,79 @@ country_event = { #현지 정부 구성 영토 요청 이벤트 - 거절
 	option = {
 		name = ARI_event.40.a
 		add_stability = -0.05
+	}
+}
+country_event = { #아츠코 복권
+	id = ARI_event.41
+	title = ARI_event.41.t
+	desc = ARI_event.41.d
+	picture = GFX_report_event_ast_parliament_house
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ARI_event.41.a
+		add_stability = 0.05
+		if = {
+			limit = { atsuko = { has_trait = ARI_betrayer } }
+			remove_trait = {
+				character = atsuko
+				slot = political_advisor
+				trait = ARI_betrayer
+			}
+		}
+	}
+}
+country_event = { #선거
+	id = ARI_event.42
+	title = ARI_event.42.t
+	desc = ARI_event.42.d
+	picture = GFX_report_event_election_vote
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ARI_event.42.a
+		retire_character = ARI_free_city_of_danzig_parliament
+		set_party_name = {
+			ideology = fascism
+			long_name = fascism
+			name = fascism
+		}
+		set_party_name = {
+			ideology = neutrality
+			long_name = ARI_parliament_atsuko_neutrality_party_long
+			name = ARI_parliament_atsuko_neutrality_party
+		}
+		remove_country_leader_role = {
+			character = saori
+			ideology = fascism_ideology
+		}
+		add_country_leader_role = {
+			character = saori
+			promote_leader = yes
+			country_leader = {
+				ideology = conservatism
+				traits = {
+					industry_reformer
+				}
+			}
+		}
+		custom_effect_tooltip = ARI_event_42_tt
+		set_temp_variable = { tempvar = party_popularity@neutrality }
+		multiply_temp_variable = { tempvar = 0.6 }
+		add_popularity = {
+			ideology = democratic
+			popularity = var:tempvar
+		}
+		set_politics = {
+			ruling_party = democratic
+			election_frequency = 48
+			elections_allowed = yes
+			last_election = "1940.1.1"
+		}
 	}
 }
 country_event = { #경찰여단
