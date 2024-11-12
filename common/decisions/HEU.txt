@@ -2593,6 +2593,7 @@ HEU_problem_solver_68_decision_category = { #흥신소 68
 		cost = 0
 
 		complete_effect = {
+			country_event = { id = HEU_event.133 }
 		}
 
 		fire_only_once = yes
@@ -2615,6 +2616,7 @@ HEU_problem_solver_68_decision_category = { #흥신소 68
 		cost = 0
 
 		complete_effect = {
+			country_event = { id = HEU_event.133 }
 		}
 
 		fire_only_once = yes
@@ -2637,6 +2639,7 @@ HEU_problem_solver_68_decision_category = { #흥신소 68
 		cost = 0
 
 		complete_effect = {
+			country_event = { id = HEU_event.133 }
 		}
 
 		fire_only_once = yes

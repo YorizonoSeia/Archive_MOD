@@ -1253,7 +1253,77 @@ country_event = { #룩셈부르크 시민결합
 		name = HEU_event.131.a 
 		add_stability = -0.2
 		add_research_slot = 1
-		#custom_effect_tooltip = HEU_research_6_tt
+		
+		hidden_effect = {
+			news_event = { id = HEU_news.5 hours = 3 }
+		}
+	}
+}
+
+country_event = { #반지
+	id = HEU_event.133
+	title = HEU_event.133.t
+
+	desc = { 
+		text = HEU_event.133.desc.a
+		trigger = {
+			has_completed_focus = HEU_rikuhachimaism_focus_kayoko
+		}
+	}
+
+	desc = { 
+		text = HEU_event.133.desc.b
+		trigger = {
+			has_completed_focus = HEU_rikuhachimaism_focus_mutsuki
+		}
+	}
+
+	desc = { 
+		text = HEU_event.133.desc.c
+		trigger = {
+			has_completed_focus = HEU_rikuhachimaism_focus_haruka
+		}
+	}
+
+	picture = GFX_report_event_Problem_Solver_68
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.133.a 
+
+		if = {
+			limit = {
+				has_completed_focus = HEU_rikuhachimaism_focus_kayoko
+			}
+			HEU_zkdyzh = {
+				set_character_name = HEU_kayoko_rikuhachima
+				set_character_flag = HEU_aru_bride
+			}
+		}
+		
+		if = {
+			limit = {
+				has_completed_focus = HEU_rikuhachimaism_focus_mutsuki
+			}
+			HEU_ancmzl = {
+				set_character_name = HEU_mutsuki_rikuhachima
+				set_character_flag = HEU_aru_bride
+			}
+		}
+		
+		if = {
+			limit = {
+				has_completed_focus = HEU_rikuhachimaism_focus_haruka
+			}
+			HEU_gkfnzk = {
+				set_character_name = HEU_haruka_rikuhachima
+				set_character_flag = HEU_aru_bride
+			}
+		}
+
+		hidden_effect = {
+			news_event = { id = HEU_news.13 hours = 3 }
+		}
 	}
 }
 
@@ -2103,6 +2173,61 @@ news_event = {
 		name = HEU_news.12.c
 		trigger = {
 			NOT = { has_war_with = HEU }
+			NOT = { tag = HEU }
+		}
+	}
+}
+
+# 만마전의 룩셈부르크 망명
+news_event = {
+	id = HEU_news.13
+	title = HEU_news.13.t
+
+	desc = { 
+		text = HEU_news.13.desc.a
+		trigger = {
+			has_completed_focus = HEU_rikuhachimaism_focus_kayoko
+		}
+	}
+
+	desc = { 
+		text = HEU_news.13.desc.b
+		trigger = {
+			has_completed_focus = HEU_rikuhachimaism_focus_mutsuki
+		}
+	}
+
+	desc = { 
+		text = HEU_news.13.desc.c
+		trigger = {
+			has_completed_focus = HEU_rikuhachimaism_focus_haruka
+		}
+	}
+
+	picture = GFX_event_news_aru
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = HEU_news.13.a
+		trigger = {
+			tag = HEU
+		}
+	}
+
+	option = {
+		name = HEU_news.13.b
+		trigger = {
+			Kivotos_tag = yes
+			NOT = { tag = HEU }
+		}
+	}
+
+	option = {
+		name = HEU_news.13.c
+		trigger = {
+			NOT = { Kivotos_tag = yes }
 			NOT = { tag = HEU }
 		}
 	}
