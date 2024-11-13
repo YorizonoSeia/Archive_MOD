@@ -7708,6 +7708,26 @@ focus_tree = {
 			country_event = {
 				id = ABY_new_event.113
 			}
+			custom_effect_tooltip = BA_kivotos_alliance_remove_to_ROOT
+			remove_from_array = {
+				array = global.kivotos_alliance
+				value = ROOT
+			}
+			if = { 
+				limit = { 
+					is_in_faction_with = global.kivotos_alliance_leader 
+					is_faction_leader = no 
+				}
+				leave_faction = yes
+			}
+			if = { 
+				limit = { 
+					is_in_faction_with = global.kivotos_alliance_leader 
+					is_faction_leader = yes 
+				}
+				remove_from_faction = global.kivotos_alliance_leader
+			}
+			news_event = { id = BA_news.87  hours = 12 }
 		}
 	}
 	focus = {
@@ -8412,9 +8432,9 @@ focus_tree = {
 			country_event = {
 				id = ABY_new_event.119
 			}
-			custom_effect_tooltip = kivotos_halo_add24_tt
+			custom_effect_tooltip = kivotos_halo_add6_tt
 			hidden_effect = {
-				set_variable = { BA_halo_infantry_cap_edit_var = 24 }
+				set_variable = { BA_halo_infantry_cap_edit_var = 6 }
 				BA_halo_infantry_cap_edit_effect = yes
 			}
 			if = {
@@ -8434,6 +8454,170 @@ focus_tree = {
 						}
 					}
 				}
+			}
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
+		id = ABY_focus_TRM_chdehrqn   #중점명
+		icon = GFX_focus_unknown_2
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			focus = ABY_focus_sound_of_win  #이전 중점
+		}
+		mutually_exclusive = {
+			#반대되는 중점
+		}
+		x = 1      #좌표
+		y = 1
+		relative_position_id = ABY_focus_sound_of_win
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			TRM = {
+				all_core_state = {
+					is_controlled_by = ABY
+				}
+			}
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			custom_effect_tooltip = kivotos_halo_add6_tt
+			hidden_effect = {
+				set_variable = { BA_halo_infantry_cap_edit_var = 6 }
+				BA_halo_infantry_cap_edit_effect = yes
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_army_1
+					add_idea = ABY_idea_army_2_1
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					ABY_var_army_attack_factor = 0.1
+				}
+			}
+			set_province_name = {
+				id = 6332
+				name = ABY_name_abydos_25
+			}
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
+		id = ABY_focus_GEH_chdehrqn   #중점명
+		icon = GFX_focus_unknown_2
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			focus = ABY_focus_sound_of_win  #이전 중점
+		}
+		mutually_exclusive = {
+			#반대되는 중점
+		}
+		x = -1      #좌표
+		y = 1
+		relative_position_id = ABY_focus_sound_of_win
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			GEM = {
+				all_core_state = {
+					is_controlled_by = ABY
+				}
+			}
+			GEH = {
+				all_core_state = {
+					is_controlled_by = ABY
+				}
+			}
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			custom_effect_tooltip = kivotos_halo_add6_tt
+			hidden_effect = {
+				set_variable = { BA_halo_infantry_cap_edit_var = 6 }
+				BA_halo_infantry_cap_edit_effect = yes
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_army_1
+					add_idea = ABY_idea_army_2_2
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					ABY_var_army_defence_factor = 0.1
+				}
+			}
+			set_province_name = {
+				id = 6469
+				name = ABY_name_abydos_24
+			}
+			set_province_name = {
+				id = 6377
+				name = ABY_name_abydos_27
+			}
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
+		id = ABY_focus_MIL_chdehrqn   #중점명
+		icon = GFX_focus_unknown_2
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			focus = ABY_focus_sound_of_win  #이전 중점
+		}
+		mutually_exclusive = {
+			#반대되는 중점
+		}
+		x = 0      #좌표
+		y = 2
+		relative_position_id = ABY_focus_sound_of_win
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			MIL = {
+				all_core_state = {
+					is_controlled_by = ABY
+				}
+			}
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			custom_effect_tooltip = kivotos_halo_add6_tt
+			hidden_effect = {
+				set_variable = { BA_halo_infantry_cap_edit_var = 6 }
+				BA_halo_infantry_cap_edit_effect = yes
+			}
+			add_research_slot = 2
+			set_province_name = {
+				id = 11506
+				name = ABY_name_abydos_26
 			}
 			#중점 완료시 얻는 보상
 		}
@@ -9209,6 +9393,26 @@ focus_tree = {
 			RED  = { add_opinion_modifier = { target = ABY modifier = ABY_betray } }
 			MIL  = { add_opinion_modifier = { target = ABY modifier = ABY_betray } }
 			BLM  = { add_opinion_modifier = { target = ABY modifier = ABY_betray } }
+			custom_effect_tooltip = BA_kivotos_alliance_remove_to_ROOT
+			remove_from_array = {
+				array = global.kivotos_alliance
+				value = ROOT
+			}
+			if = { 
+				limit = { 
+					is_in_faction_with = global.kivotos_alliance_leader 
+					is_faction_leader = no 
+				}
+				leave_faction = yes
+			}
+			if = { 
+				limit = { 
+					is_in_faction_with = global.kivotos_alliance_leader 
+					is_faction_leader = yes 
+				}
+				remove_from_faction = global.kivotos_alliance_leader
+			}
+			news_event = { id = BA_news.87  hours = 12 }
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -12034,6 +12238,26 @@ focus_tree = {
 			}
 			delete_unit_template_and_units = { division_template = "ABYDOS National Brigade" }
 			promote_character = ABY_czech_EV_2
+			custom_effect_tooltip = BA_kivotos_alliance_remove_to_ROOT
+			remove_from_array = {
+				array = global.kivotos_alliance
+				value = ROOT
+			}
+			if = { 
+				limit = { 
+					is_in_faction_with = global.kivotos_alliance_leader 
+					is_faction_leader = no 
+				}
+				leave_faction = yes
+			}
+			if = { 
+				limit = { 
+					is_in_faction_with = global.kivotos_alliance_leader 
+					is_faction_leader = yes 
+				}
+				remove_from_faction = global.kivotos_alliance_leader
+			}
+			news_event = { id = BA_news.87  hours = 12 }
 			#중점 완료시 얻는 보상
 		}
 	}

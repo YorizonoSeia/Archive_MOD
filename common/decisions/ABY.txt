@@ -1359,6 +1359,36 @@ ABY_high_school_rebuild = {
         }
     }
 
+    ABY_descision_promote_shiroko = { # ID = 3
+        priority = 1
+
+		cost = 50
+
+        allowed = {
+            tag = ABY
+        }
+
+        visible = {
+			has_country_flag = ABY_flag_abydos_highschool
+            tag = ABY
+			has_completed_focus = ABY_focus_abydos_schoolcountry
+        }
+
+        available = {
+            always = yes
+			NOT = {
+				has_idea = ABY_idea_no_army
+			}
+        }
+
+        remove_effect = {
+			ABYDO_Shiroko = {
+				promote_leader = yes
+			}
+			set_country_flag = ABY_flag_shiroko_marshal
+        }
+    }
+
 	ABY_state_recruit_students = {
 		icon = GFX_decision_eng_trade_unions_support
 
@@ -10705,7 +10735,7 @@ ABY_descision_category_abydos_puppet = { # 연방조약 괴뢰
 							autonomy_state = autonomy_personal_union
 						}
 					}
-					add_ideas = ABY_idea_federation
+					
 				}
 			}
 			
@@ -10780,7 +10810,7 @@ ABY_descision_category_abydos_puppet = { # 연방조약 괴뢰
 							autonomy_state = autonomy_personal_union
 						}
 					}
-					add_ideas = ABY_idea_federation
+					
 				}
 			}
 			set_province_name = {
@@ -10864,7 +10894,7 @@ ABY_descision_category_abydos_puppet = { # 연방조약 괴뢰
 							autonomy_state = autonomy_personal_union
 						}
 					}
-					add_ideas = ABY_idea_federation
+					
 				}
 			}
 			
@@ -10928,7 +10958,7 @@ ABY_descision_category_abydos_puppet = { # 연방조약 괴뢰
 							autonomy_state = autonomy_personal_union
 						}
 					}
-					add_ideas = ABY_idea_federation
+					
 				}
 			}
 			
@@ -11000,7 +11030,7 @@ ABY_descision_category_abydos_puppet = { # 연방조약 괴뢰
 							autonomy_state = autonomy_personal_union
 						}
 					}
-					add_ideas = ABY_idea_federation
+					
 				}
 			}
 			
@@ -11072,7 +11102,7 @@ ABY_descision_category_abydos_puppet = { # 연방조약 괴뢰
 							autonomy_state = autonomy_personal_union
 						}
 					}
-					add_ideas = ABY_idea_federation
+					
 				}
 			}
 			
@@ -11122,7 +11152,7 @@ ABY_descision_category_abydos_puppet = { # 연방조약 괴뢰
 							autonomy_state = autonomy_personal_union
 						}
 					}
-					add_ideas = ABY_idea_federation
+					
 				}
 			}
 			
@@ -11176,7 +11206,7 @@ ABY_descision_category_abydos_puppet = { # 연방조약 괴뢰
 							autonomy_state = autonomy_personal_union
 						}
 					}
-					add_ideas = ABY_idea_federation
+					
 				}
 			}
 			
@@ -11245,7 +11275,7 @@ ABY_descision_category_abydos_puppet = { # 연방조약 괴뢰
 							autonomy_state = autonomy_personal_union
 						}
 					}
-					add_ideas = ABY_idea_federation
+					
 					set_cosmetic_tag = ABY_SCHOOL_1_BUL
 				}
 			}
@@ -11304,7 +11334,7 @@ ABY_descision_category_abydos_puppet = { # 연방조약 괴뢰
 							autonomy_state = autonomy_personal_union
 						}
 					}
-					add_ideas = ABY_idea_federation
+					
 				}
 			}
 			
@@ -11404,7 +11434,7 @@ ABY_descision_category_abydos_puppet = { # 연방조약 괴뢰
 							autonomy_state = autonomy_personal_union
 						}
 					}
-					add_ideas = ABY_idea_federation
+					
 				}
 			}
 			
@@ -11522,7 +11552,7 @@ ABY_descision_category_abydos_puppet = { # 연방조약 괴뢰
 							autonomy_state = autonomy_personal_union
 						}
 					}
-					add_ideas = ABY_idea_federation
+					
 				}
 			}
 			
@@ -11598,7 +11628,7 @@ ABY_descision_category_abydos_puppet = { # 연방조약 괴뢰
 							autonomy_state = autonomy_personal_union
 						}
 					}
-					add_ideas = ABY_idea_federation
+					
 				}
 			}
         }
@@ -11657,7 +11687,7 @@ ABY_descision_category_abydos_puppet = { # 연방조약 괴뢰
 							autonomy_state = autonomy_personal_union
 						}
 					}
-					add_ideas = ABY_idea_federation
+					
 				}
 			}
 			
@@ -11739,7 +11769,7 @@ ABY_descision_category_abydos_puppet = { # 연방조약 괴뢰
 							autonomy_state = autonomy_personal_union
 						}
 					}
-					add_ideas = ABY_idea_federation
+					
 				}
 			}
 			
@@ -11798,7 +11828,7 @@ ABY_descision_category_abydos_puppet = { # 연방조약 괴뢰
 							autonomy_state = autonomy_personal_union
 						}
 					}
-					add_ideas = ABY_idea_federation
+					
 				}
 			}
 			
@@ -11866,7 +11896,7 @@ ABY_descision_category_abydos_puppet = { # 연방조약 괴뢰
 							autonomy_state = autonomy_personal_union
 						}
 					}
-					add_ideas = ABY_idea_federation
+					
 				}
 			}
 			
@@ -11914,7 +11944,7 @@ ABY_descision_category_abydos_puppet = { # 연방조약 괴뢰
 							autonomy_state = autonomy_personal_union
 						}
 					}
-					add_ideas = ABY_idea_federation
+					
 				}
 			}
 			
@@ -11987,7 +12017,7 @@ ABY_descision_category_abydos_puppet = { # 연방조약 괴뢰
 							autonomy_state = autonomy_personal_union
 						}
 					}
-					add_ideas = ABY_idea_federation
+					
 				}
 			}
 			
@@ -12044,7 +12074,7 @@ ABY_descision_category_abydos_puppet = { # 연방조약 괴뢰
 							autonomy_state = autonomy_personal_union
 						}
 					}
-					add_ideas = ABY_idea_federation
+					
 				}
 			}
 			
@@ -12116,7 +12146,7 @@ ABY_descision_category_abydos_puppet = { # 연방조약 괴뢰
 							autonomy_state = autonomy_personal_union
 						}
 					}
-					add_ideas = ABY_idea_federation
+					
 				}
 			}
 			
@@ -12178,7 +12208,7 @@ ABY_descision_category_abydos_puppet = { # 연방조약 괴뢰
 							autonomy_state = autonomy_personal_union
 						}
 					}
-					add_ideas = ABY_idea_federation
+					
 				}
 			}
 			
@@ -12259,7 +12289,7 @@ ABY_descision_category_abydos_puppet = { # 연방조약 괴뢰
 							autonomy_state = autonomy_personal_union
 						}
 					}
-					add_ideas = ABY_idea_federation
+					
 				}
 			}
 			
@@ -12381,7 +12411,7 @@ ABY_descision_category_abydos_puppet = { # 연방조약 괴뢰
 							autonomy_state = autonomy_personal_union
 						}
 					}
-					add_ideas = ABY_idea_federation
+					
 				}
 			}
 			
@@ -12455,7 +12485,7 @@ ABY_descision_category_abydos_puppet = { # 연방조약 괴뢰
 							autonomy_state = autonomy_personal_union
 						}
 					}
-					add_ideas = ABY_idea_federation
+					
 				}
 			}
 			
@@ -12527,7 +12557,7 @@ ABY_descision_category_abydos_puppet = { # 연방조약 괴뢰
 							autonomy_state = autonomy_personal_union
 						}
 					}
-					add_ideas = ABY_idea_federation
+					
 				}
 			}
 			
@@ -12578,7 +12608,7 @@ ABY_descision_category_abydos_puppet = { # 연방조약 괴뢰
 							autonomy_state = autonomy_personal_union
 						}
 					}
-					add_ideas = ABY_idea_federation
+					
 				}
 			}
 			
@@ -12654,7 +12684,7 @@ ABY_descision_category_abydos_puppet = { # 연방조약 괴뢰
 							autonomy_state = autonomy_personal_union
 						}
 					}
-					add_ideas = ABY_idea_federation
+					
 				}
 			}
         }
@@ -12713,7 +12743,7 @@ ABY_descision_category_abydos_puppet = { # 연방조약 괴뢰
 							autonomy_state = autonomy_personal_union
 						}
 					}
-					add_ideas = ABY_idea_federation
+					
 				}
 			}
 			
@@ -12771,7 +12801,7 @@ ABY_descision_category_abydos_puppet = { # 연방조약 괴뢰
 							autonomy_state = autonomy_personal_union
 						}
 					}
-					add_ideas = ABY_idea_federation
+					
 				}
 			}
 			

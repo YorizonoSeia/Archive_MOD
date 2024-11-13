@@ -1704,7 +1704,7 @@ characters={
 		}
 		corps_commander={
 			traits = {
-				reckless adaptable harsh_leader aggressive_assaulter
+				front_line_general reckless adaptable harsh_leader aggressive_assaulter
 			}
 			skill=5
 			attack_skill=5
