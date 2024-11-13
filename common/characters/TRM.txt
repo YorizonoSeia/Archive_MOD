@@ -30,7 +30,7 @@ characters={
 		advisor = {
     		slot = political_advisor
 			desc = TRN_Nagisa_advisor_desc
-    		idea_token = TRN_skrltk
+    		idea_token = TRN_nagisa_political_advisor
 			can_be_fired = no
 			allowed = {
 				original_tag = TRM
@@ -113,6 +113,7 @@ characters={
 			defense_skill=4
 			planning_skill=6
 			logistics_skill=5
+			desc = TRN_Seia_advisor_desc
             visible = {
                 NOT = { has_country_flag = TRM_event_59_flag }
             }
@@ -126,7 +127,7 @@ characters={
 		advisor = {
     		slot = political_advisor
 			desc = TRN_Seia_advisor_desc
-    		idea_token = TRN_tpdldk
+    		idea_token = TRN_Seia_political_advisor
 			can_be_fired = no
 			allowed = {
 				original_tag = TRM

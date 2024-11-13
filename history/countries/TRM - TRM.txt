@@ -290,8 +290,8 @@ add_ideas = {
 	TRM_anti_gehenna_idea
 
 	TRN_alzk_political_advisor
-	TRN_tpdldk
-	TRN_skrltk
+	TRN_Seia_political_advisor
+	TRN_nagisa_political_advisor
 
 	disarmed_nation
 	BA_isolation
