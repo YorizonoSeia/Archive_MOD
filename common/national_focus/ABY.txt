@@ -3554,14 +3554,15 @@ focus_tree = {
 			#중점의 타입
 		}
 		prerequisite = {
-			focus = ABY_focus_doctrine_research   #이전 중점
+			focus = ABY_focus_god_of_war
+			focus = ABY_focus_speed_doctrine   #이전 중점
 		}
 		mutually_exclusive = {
 			    #반대되는 중점
 		}
-		x = 5      #좌표
-		y = 1
-		relative_position_id = ABY_focus_doctrine_research
+		x = 0      #좌표
+		y = 4
+		relative_position_id = ABY_focus_attack_doctrine
 		bypass = {
 			#중점 통과 조건
 		}
