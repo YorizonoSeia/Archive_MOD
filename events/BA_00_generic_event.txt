@@ -1157,6 +1157,7 @@ country_event = { #난민 문제
 	title = BA_kiovotos_spain_event.2.t
 	desc = BA_kiovotos_spain_event.2.d
 	is_triggered_only = yes
+	fire_only_once = yes
 	option = { #난민을 모두 추방하자.
 		name = BA_kiovotos_spain_event.2.a
 		remove_ideas = MIL_refugee
@@ -1182,7 +1183,7 @@ country_event = { #난민 문제
 		hidden_effect = {
 			add_ai_strategy = {
 				type = send_volunteers_desire
-				id = SPR
+				id = SPA
 				value = 999
 			}
 			news_event = {
@@ -1278,7 +1279,7 @@ country_event = { #간섭위원회 - 총학생회
 			limit = {
 				is_in_array = {
 					array = global.kivotos_alliance
-					value = prev
+					value = THIS
 				}
 			}
 			country_event = {
@@ -1334,7 +1335,7 @@ country_event = { #간섭위원회 설치
 			else = {
 				add_ai_strategy = {
 					type = send_volunteers_desire
-					id = SPR
+					id = SPD
 					value = 50
 				}
 			}

@@ -1119,6 +1119,13 @@
  MIL_fucking_nuke_drop.1.b:0 "핵무기 투하 이벤트를 보고 싶지 않아요."
 
 #디시전
+ MIL_science_victory: "별을 쫓다"
+ MIL_science_victory_desc: "ㅈㄱㄴ"
+ MIL_sv_man_rocket: "유인 우주선 발사"
+ MIL_sv_man_rocket_desc: "세계 최초로 사람을 태운 우주선을 발사합니다.\n\n§W현재 성공 확률 : §Y[?MIL_sv_man_rocket_var]%§!§!" 
+ MIL_sv_man_rocket_tt_1: "\n§Y성공 시§!:\n"
+ MIL_sv_man_rocket_tt_2: "\n§Y실패 시§!:\n"
+
  MIL_mechanical_event_robot_production_dec_tt:0 "오토마톤 생산량이 증가됨"
  MIL_mechanical_event_robot_production_dec:0 "로봇 생산 강화" 
  MIL_mechanical_event_robot_production_dec_desc:0 "최근 생물 징병 거부 시위대와 협상 이후 우리는 로봇을 추가적으로 생산하기로 합의했습니다." 

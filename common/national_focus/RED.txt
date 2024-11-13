@@ -21,6 +21,9 @@ focus_tree = {
 		x = -2
 		y = 0
 		cost = 4
+		ai_will_do = {
+			base = 30
+		}
 		available = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
@@ -50,6 +53,9 @@ focus_tree = {
 		y = 0
 		relative_position_id = RED_road_to_south
 		cost = 4
+		ai_will_do = {
+			base = 30
+		}
 		available = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
@@ -79,6 +85,9 @@ focus_tree = {
 		y = 1
 		cost = 4
 		relative_position_id = RED_road_to_south
+		ai_will_do = {
+			base = 300
+		}
 		available = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
@@ -108,6 +117,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = RED_land_research
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 
 		available = {
 			NOT = {
@@ -151,7 +163,7 @@ focus_tree = {
 		cost = 5
 
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 
 		available = {
@@ -1526,6 +1538,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = RED_land_research
 		cost = 2
+		ai_will_do = {
+			base = 300
+		}
 
 		available = {
    
@@ -1777,6 +1792,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = RED_club_focus_0
 		cost = 2
+		ai_will_do = {
+			base = 300
+		}
 
 		available = {
 			NOT = {
@@ -1865,6 +1883,9 @@ focus_tree = {
 		prerequisite = { focus = RED_club_focus_2 }
 		x = 2
 		y = 4
+		ai_will_do = {
+			base = 300
+		}
 		relative_position_id = RED_club_focus_0
 		cost = 2
 
@@ -4029,7 +4050,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
 		select_effect = {
 			country_event = {
@@ -9693,36 +9714,6 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 
 		completion_reward = {
-			division_template = {
-				is_locked = no
-				name = "Regional Defense Division"
-				regiments = { 
-					militia = {
-						x = 0
-						y = 0
-					}
-					militia = {
-						x = 0
-						y = 1
-					}
-					militia = {
-						x = 0
-						y = 2
-					}
-					militia = {
-						x = 1
-						y = 0
-					}
-					militia = {
-						x = 1
-						y = 1
-					}
-					militia = {
-						x = 1
-						y = 2
-					}
-				}
-			}
 			if = {
 				limit = {
 					has_idea = RED_seawall_2
@@ -9746,12 +9737,14 @@ focus_tree = {
 						state = 914
 					}
 				}
-				create_unit = {
-					division = "name = \"Regional Defense Division\" division_template = \"Regional Defense Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
-					owner = RED
+				RED = {
+					add_to_variable = {
+						RED.halo_militia_cap = 1
+					}
+					set_division_template_cap = {  division_template = "Redwinter Garde populaire" division_cap = ROOT.halo_militia_cap }
 				}
 				create_unit = {
-					division = "name = \"Regional Defense Division\" division_template = \"Regional Defense Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
+					division = "name = \"Regional Defense Division\" division_template = \"Redwinter Garde populaire\" start_experience_factor = 0.1 start_equipment_factor = 1"
 					owner = RED
 				}
 			}

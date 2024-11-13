@@ -230,7 +230,7 @@ ideas = {
                 consumer_goods_factor = 0.05
             }
             targeted_modifier = {
-                tag = SPR
+                tag = SPD
                 attack_bonus_against = 0.05
                 defense_bonus_against = 0.05
             }

@@ -4829,6 +4829,7 @@ focus_tree = {
 		relative_position_id = MIL_propulsion_development
 		completion_reward = {
 			country_event = { id = MIL_event.22 hours = 6 }
+			unlock_decision_category_tooltip = MIL_science_victory
 		}	
 	}
 
@@ -8443,6 +8444,7 @@ focus_tree = {
 				has_idea = MIL_help_SPA
 				has_idea = MIL_help_SPR
 			}
+			has_idea = BA_interference_committee
 		}
 		relative_position_id = MIL_refugee_problem
 		completion_reward = {
