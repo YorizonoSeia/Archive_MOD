@@ -243,6 +243,7 @@ focus_tree = {
 
 		completion_reward = {
 			HEU_bop_high_increase_effect = yes
+			add_ideas = HEU_civil_rights_idea
 		}
 	}
 
@@ -1418,7 +1419,7 @@ focus_tree = {
 
 		search_filters = {  }
 
-		cost = 4.00
+		cost = 2.00
 
 		x = -3
 		y = 1
@@ -1455,7 +1456,7 @@ focus_tree = {
 
 		search_filters = {  }
 
-		cost = 4.00
+		cost = 2.00
 
 		x = -1
 		y = 1
@@ -1636,7 +1637,7 @@ focus_tree = {
 
 		search_filters = {  }
 
-		cost = 10.00
+		cost = 6.00
 
 		x = 1
 		y = 1
@@ -1651,7 +1652,10 @@ focus_tree = {
 		search_filters = {  }
 
 		completion_reward = {
-
+			set_rule = {
+				can_create_factions = yes
+			}
+			add_war_support = 0.05
 		}
 	}
 
@@ -1782,6 +1786,10 @@ focus_tree = {
 		y = 4
 
 		cost = 10
+
+		ai_will_do = {
+			base = 3
+		}
 
 		available = {
 			has_war = yes
@@ -4123,7 +4131,7 @@ focus_tree = {
             #custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = available_industrial_concern
 			show_ideas_tooltip = HEU_spuerkeess
-			
+
 			remove_ideas = HEU_financial_difficulties
 		}
 	}
@@ -4651,7 +4659,7 @@ focus_tree = {
 		cost = 5.00
 
 		ai_will_do = {
-			base = 1
+			base = 2
 		}
 
 		x = 0
@@ -4702,7 +4710,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			base = 1
+			base = 2
 		}
 
 		bypass = {
@@ -5121,22 +5129,42 @@ focus_tree = {
 		id = HEU_luxembourg_benriya_68
 		icon = GFX_goal_HEU_wjddnjfdkfn
 
-		cost = 2.00
-		x = 72
-		y = 19
+		cost = 5.00
+		x = 66
+		y = 9
 
 		available = {
+			has_completed_focus = BA_factoriesof_new_world
 		}
 
 		bypass = {
+			NOT = {
+				has_idea = BA_isolation
+			}
+		}
+		
+		ai_will_do = {
+			base = 4
+			modifier = {
+				factor = 10
+				date > 1937.12.01
+			}
 		}
 
 		allow_branch = {
-			is_debug = yes
+
 		}
 
 		completion_reward = {
-
+			if = {
+			    limit = {
+				    has_idea = BA_isolation
+			    }
+			    swap_ideas = {
+				    remove_idea = BA_isolation
+				    add_idea = limited_exports
+			    }
+		    }
 		}
 	}
 
@@ -5151,12 +5179,16 @@ focus_tree = {
 			focus = HEU_luxembourg_benriya_68 
 		}
 
-		cost = 3.00
+		cost = 6.00
 
 		x = 2
 		y = 1
 
 		available = { 
+            custom_trigger_tooltip = {
+                tooltip = THIS_IS_WIP_TT
+			    has_country_flag = GAEBALJUNG
+            }
 		}
 
 		bypass = {
@@ -5164,6 +5196,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = HEU_benriya_construction_tt
 		}
 	}
 
@@ -5178,13 +5211,13 @@ focus_tree = {
 			focus = HEU_luxembourg_benriya_68 
 		}
 
-		cost = 3.00
+		cost = 6.00
 
 		x = 0
 		y = 1
 
 		available = { 
-			controls_state = 8
+
 		}
 
 		bypass = {
@@ -5192,6 +5225,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = HEU_benriya_local_tt
 		}
 	}
 
@@ -5206,13 +5240,13 @@ focus_tree = {
 			focus = HEU_luxembourg_benriya_68 
 		}
 
-		cost = 3.00
+		cost = 6.00
 
 		x = -2
 		y = 1
 
 		available = { 
-			controls_state = 8
+
 		}
 
 		bypass = {
@@ -5220,6 +5254,72 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+			}
+			add_equipment_to_stockpile = {
+				type = kivotos_infantry_equipment
+				amount = 500
+			}
+		}
+	}
+
+	focus = {
+		id = HEU_benriya_level_up_a
+		
+		relative_position_id = HEU_luxembourg_benriya_68
+
+		icon = GFX_focus_SWE_radiotjanst
+
+		prerequisite = { 
+			focus = HEU_benriya_local 
+		}
+
+		cost = 5.00
+
+		x = -1
+		y = 2
+
+		available = { 
+			has_tech = advanced_machine_tools 
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = HEU_aru_persona_level_up_1_tt
+		}
+	}
+
+	focus = {
+		id = HEU_benriya_level_up_b
+		
+		relative_position_id = HEU_luxembourg_benriya_68
+
+		icon = GFX_focus_SWI_helvetic_junta
+
+		prerequisite = { 
+			focus = HEU_benriya_local 
+		}
+
+		cost = 5.00
+
+		x = 1
+		y = 2
+
+		available = { 
+			has_tech = advanced_machine_tools 
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = HEU_aru_persona_level_up_2_tt
 		}
 	}
 	
@@ -6579,7 +6679,7 @@ focus_tree = {
 		}
 
 		allow_branch = {
-			is_debug = yes
+
 		}
 
 		relative_position_id = HEU_schuster_line
