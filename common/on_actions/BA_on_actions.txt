@@ -368,6 +368,13 @@ on_actions = {
 					remove_core_of = ROOT
 				}
 			}
+			if = {
+				limit = { # 항복할때 트리니티가  TRINITY_REICH 태그를 소유중이면 떨굼
+					original_tag = TRM
+					has_cosmetic_tag = TRINITY_REICH
+				}
+				ROOT = { drop_cosmetic_tag = yes }
+			}
 		}
 	}
 	on_state_control_changed = {
