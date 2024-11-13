@@ -8563,15 +8563,19 @@ focus_tree = {
 						exists = yes
 					}
 				}
-				set_autonomy = {
-					target = SPR
-					autonomy_state = autonomy_supervised_state
+				SPR = {
+					add_timed_idea = {
+						idea = MIL_supervise_spain
+						days = 720
+					}
 				}
 			}
 			else = {
-				set_autonomy = {
-					target = SPA
-					autonomy_state = autonomy_supervised_state
+				SPA = {
+					add_timed_idea = {
+						idea = MIL_supervise_spain
+						days = 720
+					}
 				}
 			}
 		}	

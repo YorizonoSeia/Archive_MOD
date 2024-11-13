@@ -130,6 +130,9 @@ ideas = {
 					has_global_flag = end_of_the_kivotos_alliance
 				}
             }
+            rule = {
+                can_send_volunteers = yes
+            }
         }
 	
 		JBP_state_shintoism = {

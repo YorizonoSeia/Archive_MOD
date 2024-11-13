@@ -176,6 +176,18 @@ ideas = {
 		}
 	}
     country = { 
+        MIL_supervise_spain = { #밀레니엄의 감시
+            picture = ast_classify_aliens
+            rule = {
+                can_send_volunteers = no
+                can_not_declare_war = yes
+                can_join_factions = no
+            }
+            targeted_modifier = {
+                tag = MIL
+                cic_to_target_factor = 0.1
+            }
+        }
         MIL_refugee = { #난민 문제
             name = MIL_refugee
             picture = tfv_can_conscription_crisis
@@ -200,6 +212,9 @@ ideas = {
                 attack_bonus_against = 0.05
                 defense_bonus_against = 0.05
             }
+            rule = {
+                can_send_volunteers = yes
+            }
             available = {
                 SPR_scw_in_progress = yes
             }
@@ -218,6 +233,9 @@ ideas = {
                 tag = SPR
                 attack_bonus_against = 0.05
                 defense_bonus_against = 0.05
+            }
+            rule = {
+                can_send_volunteers = yes
             }
             available = {
                 SPR_scw_in_progress = yes

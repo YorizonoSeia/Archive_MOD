@@ -31,6 +31,7 @@ MIL_historical = {
 		MIL_intensified_disagreements
 		MIL_Rio_intensified
 		MIL_strong_control
+		MIL_refugee_problem
 		MIL_reduction_clubs
 		MIL_forced_labor
 		MIL_direct_bodyguards
