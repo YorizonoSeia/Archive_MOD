@@ -705,7 +705,7 @@ country_event = {  # 트리니티 - 게헨나 전쟁 (에덴 결전)
 				}
 				OR = {
 					original_tag = GEA
-					original_tag = GEN
+					original_tag = GEK
 					original_tag = GEF
 				}
 			}
@@ -728,7 +728,7 @@ country_event = {  # 트리니티 - 게헨나 전쟁 (에덴 결전)
 				}
 				NOT = {
 					original_tag = GEA
-					original_tag = GEN
+					original_tag = GEK
 					original_tag = GEF
 				}
 			}

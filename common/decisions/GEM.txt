@@ -367,7 +367,7 @@ GEH_nego_wehrmacht_decisions = {
 					OR = {
 						tag = GEH
 						tag = GEA
-						tag = GEN
+						tag = GEK
 					}
 					exists = yes
 				}
@@ -442,12 +442,12 @@ GEH_nego_wehrmacht_decisions = {
 				}
 				if = {
 					limit = {
-						GEN = {
+						GEK = {
 							exists = yes
-							has_country_flag = GEN_communication_with_the_mainland_flag
+							has_country_flag = GEK_communication_with_the_mainland_flag
 						}
 					}
-					GEN = {
+					GEK = {
 						country_event = { id = GEH_event.7 hours = 8}
 					}
 				}
@@ -461,7 +461,7 @@ GEH_nego_wehrmacht_decisions = {
 			}
 			if = {
 				limit = {
-					FROM = { is_controlled_by = GEN }
+					FROM = { is_controlled_by = GEK }
 				}
 				transfer_state = FROM
 			}
@@ -705,13 +705,13 @@ GEH_nego_wehrmacht_decisions = {
 			factor = 4000
 		}
 		available = {
-			has_country_flag = GEN_communication_with_the_mainland_flag
+			has_country_flag = GEK_communication_with_the_mainland_flag
 		} 
 		
 		cost = 100
 
 		visible = {
-			tag = GEN
+			tag = GEK
 			NOT = {
 				has_country_flag = GEH_negotiation_intervention_flag
 			}
@@ -738,7 +738,7 @@ GEH_nego_wehrmacht_decisions = {
 		days_re_enable = 24
 
 		visible = {
-			tag = GEN
+			tag = GEK
 			has_country_flag = GEH_negotiation_intervention_flag
 		}
 		
@@ -778,7 +778,7 @@ GEH_nego_wehrmacht_decisions = {
 			factor = 4000
 		}
 		visible = {
-			tag = GEN
+			tag = GEK
 			has_country_flag = GEH_negotiation_intervention_flag
 		}
 		available = {
@@ -827,7 +827,7 @@ GEH_nego_wehrmacht_decisions = {
 				limit = {
 					any_state = {
 						is_core_of = GEM
-						is_controlled_by = GEN
+						is_controlled_by = GEK
 					}
 				}
 				transfer_state = FROM
@@ -862,7 +862,7 @@ GEH_nego_wehrmacht_decisions = {
 		cost = 100
 
 		visible = {
-			tag = GEN
+			tag = GEK
 			NOT = {
 				GEM = {
 					has_country_flag = GEH_northern_demands_flag
@@ -920,7 +920,7 @@ GEH_nego_wehrmacht_decisions = {
 		cost = 200
 
 		visible = {
-			tag = GEN
+			tag = GEK
 		}
 		
 		complete_effect = {
@@ -1209,7 +1209,7 @@ war_measures = {
 			any_state = {
 				is_core_of = GEM
 				NOT = {
-					is_controlled_by = GEN
+					is_controlled_by = GEK
 				}
 			}
 			has_civil_war = no
@@ -1225,7 +1225,7 @@ war_measures = {
 
 		visible = {
 			OR = {
-				has_war_with = GEN
+				has_war_with = GEK
 				has_war_with = GEA
 			}
 			NOT = { has_war_with = TRM }
@@ -1236,7 +1236,7 @@ war_measures = {
 				limit = {
 					has_war_with = GEM
 				}
-				country_event = GEN_event.8
+				country_event = GEK_event.8
 			}
 		}
 	}

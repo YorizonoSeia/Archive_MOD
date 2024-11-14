@@ -2588,9 +2588,9 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					country_exists = GEN
+					country_exists = GEK
 				}
-				create_wargoal = { type = annex_everything target = GEN }
+				create_wargoal = { type = annex_everything target = GEK }
 			}
 		}
 	}

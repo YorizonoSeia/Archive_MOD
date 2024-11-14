@@ -92,7 +92,7 @@ USA_historical_plan = {
 
 	    #NATO 창립
 		USA_old_team
-		USA_support_GEN
+		USA_support_GEK
 		USA_attack_TRM
 		USA_support_alies
 		USA_attack_MIL

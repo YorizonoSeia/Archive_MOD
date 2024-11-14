@@ -1263,7 +1263,7 @@ GEH_SHE_puppet = {
 	color = HSV { 0.65 1 0.30 }
 	color_ui = rgb { 10 15 70 }
 }
-GEN_SHE_puppet = {
+GEK_SHE_puppet = {
 	color = HSV { 0.65 1 0.30 }
 	color_ui = rgb { 10 15 70 }
 }
@@ -2254,7 +2254,7 @@ ABY_czech_osterreich = {
 	color = HSV { 0 0 0.4 }
 	color_ui = rgb { 138 155 116 }
 }
-GEN_red = {
+GEK_red = {
 	color = rgb {200 0 0}
 	color_ui = rgb {200 0 0}
 }

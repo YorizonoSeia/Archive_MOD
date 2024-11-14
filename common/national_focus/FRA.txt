@@ -1852,14 +1852,14 @@ focus_tree = {
 			focus = FRA_focus_german_0.5
 		}
 		available = {
-			has_idea = GEN_send_volunteers_idea
+			has_idea = GEK_send_volunteers_idea
 			has_idea = PASTA_signatories_of_the_stresa_idea
 		}
 		completion_reward = {
 			add_political_power = 50
 			add_ai_strategy = {
 				type = send_volunteers_desire
-				id = GEN
+				id = GEK
 				value = 200
 			}
 			add_ai_strategy = {
@@ -1871,7 +1871,7 @@ focus_tree = {
 				idea = FRA_german_scientist
 				days = 720
 			}
-			GEN = {
+			GEK = {
 				country_event = {
 					id = FRA_prov_event.47
 					days = 3
@@ -2076,7 +2076,7 @@ focus_tree = {
 				GEA = {
 					has_war_with = GEH
 				}
-				GEN = {
+				GEK = {
 					has_war_with = TRM
 				}
 			}
@@ -2087,7 +2087,7 @@ focus_tree = {
 					has_war_with = TRM
 					OR = {
 						tag = GEA
-						tag = GEN
+						tag = GEK
 					}
 				}
 				add_ai_strategy = {
@@ -2124,7 +2124,7 @@ focus_tree = {
 						has_war_with = GEM
 					}
 				}
-				GEN = {
+				GEK = {
 					OR = {
 						has_war_with = GEH
 						has_war_with = GEM
@@ -2139,7 +2139,7 @@ focus_tree = {
 						has_war_with = TRM
 						OR = {
 							tag = GEA
-							tag = GEN
+							tag = GEK
 						}
 					}
 					add_ai_strategy = {

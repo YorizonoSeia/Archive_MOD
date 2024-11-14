@@ -1823,7 +1823,7 @@ ideas = {
 					GEA = {
 						has_war = yes
 					}
-					GEN = {
+					GEK = {
 						has_war = yes
 					}
 				}

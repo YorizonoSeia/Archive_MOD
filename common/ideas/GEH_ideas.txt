@@ -1621,7 +1621,7 @@ ideas = {
 				army_attack_speed_factor = 0.1
 			}
 			targeted_modifier = {
-				tag = GEN
+				tag = GEK
 				attack_bonus_against = 0.25
 				defense_bonus_against = 0.25
 			}
@@ -1938,7 +1938,7 @@ ideas = {
 					original_tag = GEH
 					original_tag = TRM
 					original_tag = GEA
-					original_tag = GEN
+					original_tag = GEK
 				}
 			}
 
@@ -1973,7 +1973,7 @@ ideas = {
 					original_tag = GEH
 					original_tag = TRM
 					original_tag = GEA
-					original_tag = GEN
+					original_tag = GEK
 				}
 			}
 
@@ -2013,7 +2013,7 @@ ideas = {
 					original_tag = GEH
 					original_tag = TRM
 					original_tag = GEA
-					original_tag = GEN
+					original_tag = GEK
 				}
 			}
 

@@ -2825,7 +2825,7 @@ country_event = { # 고틀란드냐 전쟁이냐
 			}
 			modifier = {
 				add = 80
-				tag = GEN
+				tag = GEK
 			}
 		}
 		FROM = {

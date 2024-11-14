@@ -1762,7 +1762,7 @@ country_event = {
 						original_tag = RE3
 						original_tag = RE4
 						original_tag = GEI
-						original_tag = GEN
+						original_tag = GEK
 					}
 				}
 			}

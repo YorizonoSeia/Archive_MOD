@@ -690,11 +690,11 @@ country_event = { #라인하르트 하이드리히의 망명
 			every_character = {
 				limit = {
 					OR = {
-						is_character = GEN_konstantin_von_neurath
-						is_character = GEN_paul_hausser
-						is_character = GEN_sepp_dietrich
-						is_character = GEN_felix_steiner
-						is_character = GEN_walter_kruger
+						is_character = GEK_konstantin_von_neurath
+						is_character = GEK_paul_hausser
+						is_character = GEK_sepp_dietrich
+						is_character = GEK_felix_steiner
+						is_character = GEK_walter_kruger
 					}
 				}
 				set_nationality = ROOT

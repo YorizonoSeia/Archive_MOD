@@ -4557,17 +4557,17 @@ focus_tree = {
 			if = {
 				limit = {
 					978 = {
-						is_owned_and_controlled_by = GEN
+						is_owned_and_controlled_by = GEK
 					}
 					975 = {
-						is_owned_and_controlled_by = GEN				
+						is_owned_and_controlled_by = GEK				
 					}
 					51 = {
-						is_owned_and_controlled_by = GEN				
+						is_owned_and_controlled_by = GEK				
 					}
 				}
 				create_wargoal = {
-					target = GEN
+					target = GEK
 					type = annex_everything
 				}
 			}

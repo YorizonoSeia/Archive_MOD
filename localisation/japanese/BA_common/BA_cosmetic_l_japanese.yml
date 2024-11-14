@@ -262,9 +262,9 @@
  greater_SER_DEF:0 "セルビア"
  greater_SER_ADJ:0 "セルビア"
 
- GEN_BAY:0 "ドイツ解放臨時委員会"
- GEN_BAY_DEF:0 "ドイツ解放臨時委員会"
- GEN_BAY_ADJ:0 "ドイツ"
+ GEK_BAY:0 "ドイツ解放臨時委員会"
+ GEK_BAY_DEF:0 "ドイツ解放臨時委員会"
+ GEK_BAY_ADJ:0 "ドイツ"
  
  SWE_fra:0 "スウェーデン社会民主共和国"
  DEN_fra:0 "デンマーク=ノルウェー連邦"
@@ -309,7 +309,7 @@
  SRT_SHE_puppet:0 "SRT特別管理部門"
  MIL_SHE_puppet:0 "ミレニアム管理地区"
  FRA_SHE_puppet:0 "ミレニアム特別管理地区"
- GEN_SHE_puppet:0 "ゲヘナ特別管理地区
+ GEK_SHE_puppet:0 "ゲヘナ特別管理地区
  GEH_SHE_puppet:0 "ゲヘナ管理地区"
  RED_SHE_puppet:0 "レッドウィンター統制区"
  SMI_SHE_puppet:0 "スカンジナビア軍政庁"

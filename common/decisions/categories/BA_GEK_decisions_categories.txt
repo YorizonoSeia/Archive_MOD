@@ -1,0 +1,49 @@
+BA_military_reform = { #군사 개혁
+    priority = 100
+	allowed = {
+		original_tag = KPD
+	}
+    icon = GFX_decision_category_military_operation
+}
+KPD_unify_german = { #독일 수복 전쟁
+	priority = 200
+	icon = GFX_decision_category_generic_communism
+	visible = {
+		#has_completed_focus = KPD_war_of_reconquest_of_germany
+		always = no
+	}
+}
+GEK_attack_gehenna = { #조국해방전쟁
+	priority = 200
+	icon = GFX_decision_category_usa_intervention_mandate
+	allowed = {
+		original_tag = GEK
+	}
+	visible = {
+		has_country_flag = GEK_communication_with_the_mainland_flag
+	}
+}
+
+GER_change_city_names = {
+	allowed = {
+	    OR = {
+			original_tag = GEK
+			original_tag = BAY
+		}
+	}
+	visible = {
+	}
+	priority = 999
+}
+
+GEK_story_archive = {
+	allowed = {
+	    OR = {
+			original_tag = GEK
+			original_tag = BAY
+		}
+	}
+	visible = {
+	}
+	priority = 0
+}

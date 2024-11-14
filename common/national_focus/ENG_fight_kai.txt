@@ -2300,7 +2300,7 @@ focus_tree = {
 					add_opinion_modifier = { target = ENG modifier = ENG_reassessed_continental_committments_bad }
 				}
 			}
-			GEN = {
+			GEK = {
 				if = {
 					limit = {
 						OR = {
@@ -2347,10 +2347,10 @@ focus_tree = {
 		prerequisite = { focus = CAN_isolate_britain_isles }
 		available = {
 			is_subject = no
-			NOT = { country_exists = GEN }
+			NOT = { country_exists = GEK }
 		}
 		bypass = {
-			country_exists = GEN
+			country_exists = GEK
 		}
 		icon = GFX_focus_chi_mission_to_germany
 		x = 0

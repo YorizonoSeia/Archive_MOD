@@ -1193,7 +1193,7 @@ focus_tree = {
 			HOL = {
 				country_event = FRA_prov_event.111
 			}
-			GEN = {
+			GEK = {
 				country_event = FRA_prov_event.111
 			}
 			BEL = {

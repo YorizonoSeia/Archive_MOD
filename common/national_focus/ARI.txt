@@ -1895,7 +1895,7 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = {
-					GEN = {
+					GEK = {
 						is_in_faction = yes
 						NOT = { has_war_with = ARI }
 					}
@@ -1905,8 +1905,8 @@ focus_tree = {
 						is_in_faction = yes
 					}
 					leave_faction = yes
-					GEN = { country_event = { id = generic.2 } }
-					GEN = {
+					GEK = { country_event = { id = generic.2 } }
+					GEK = {
 						ROOT = {
 							add_ai_strategy = {
 								type = alliance
@@ -1925,8 +1925,8 @@ focus_tree = {
 					limit = {
 						is_in_faction = no
 					}
-					GEN = { country_event = { id = generic.2 } }
-					GEN = {
+					GEK = { country_event = { id = generic.2 } }
+					GEK = {
 						ROOT = {
 							add_ai_strategy = {
 								type = alliance
@@ -1946,13 +1946,13 @@ focus_tree = {
 				if = {
 					limit = {
 						is_in_faction = yes
-						GEN = {
+						GEK = {
 							is_in_faction = no
 							NOT = { has_war_with = ARI }
 						}
 					}
-					GEN = { country_event = { id = generic.5 } }
-					GEN = {
+					GEK = { country_event = { id = generic.5 } }
+					GEK = {
 						ROOT = {
 							add_ai_strategy = {
 								type = alliance
@@ -2027,7 +2027,7 @@ focus_tree = {
 				division_template = {
 					name = "Deutsches Freikorps"
 					priority = 1
-					division_names_group = GEN_INF_01
+					division_names_group = GEK_INF_01
 					is_locked = yes
 					regiments = {
 						infantry = { x = 0 y = 0 }
@@ -2209,7 +2209,7 @@ focus_tree = {
 				division_template = {
 					name = "Ordnungspolizei"
 					priority = 1
-					division_names_group = GEN_SS_01
+					division_names_group = GEK_SS_01
 					is_locked = yes
 					regiments = {
 						militia = { x = 0 y = 0 }

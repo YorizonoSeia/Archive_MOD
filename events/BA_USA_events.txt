@@ -858,7 +858,7 @@ country_event = {
 #				}
 #				OR = {
 #					original_tag = GEA
-#					original_tag = GEN
+#					original_tag = GEK
 #					original_tag = GEF
 #				}
 #			}
@@ -881,7 +881,7 @@ country_event = {
 #				}
 #				NOT = {
 #					original_tag = GEA
-#					original_tag = GEN
+#					original_tag = GEK
 #					original_tag = GEF
 #				}
 #			}

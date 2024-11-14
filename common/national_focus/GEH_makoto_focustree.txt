@@ -1164,7 +1164,7 @@ focus_tree = {
 		}
 		available = {
 			NOT = {
-				GEN = { has_country_flag = GEN_win_the_war_GEH_flag }
+				GEK = { has_country_flag = GEK_win_the_war_GEH_flag }
 				has_country_flag = HINA_DISAGREE
 			}
 		}
@@ -1194,8 +1194,8 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					country_exists = GEN
-					has_country_flag = GEN_communication_with_the_mainland_flag
+					country_exists = GEK
+					has_country_flag = GEK_communication_with_the_mainland_flag
 				}
 				country_event = { id = GEH_event.5 hours = 8 }
 			}
@@ -1246,7 +1246,7 @@ focus_tree = {
 				add_dynamic_modifier = {
 					modifier = GEH_ucantusefactory_2
 				}
-				set_state_flag = GEN_state_flag
+				set_state_flag = GEK_state_flag
 			}
 			every_owned_state = {
 				limit = {
@@ -1257,7 +1257,7 @@ focus_tree = {
 				remove_dynamic_modifier = {
 					modifier = GEH_ucantusefactory_2
 				}
-				set_state_flag = GEN_state_flag
+				set_state_flag = GEK_state_flag
 			}
 		}
 
@@ -3039,16 +3039,16 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					GEN = {
+					GEK = {
 						exists = yes
 						has_country_flag = german_navy_unified_flag
 					}
 				}
 				annex_country = {
-					target = GEN
+					target = GEK
 					transfer_troops = yes
 				}
-				GEN = {
+				GEK = {
 					every_character = {
 						set_nationality = ROOT
 					}
@@ -3145,13 +3145,13 @@ focus_tree = {
 			focus = GEM_luftwaffe
 		}
 		available = {
-			country_exists = GEN
+			country_exists = GEK
 		}
 		x = 0
 		y = 1
 		relative_position_id = GEM_luftwaffe
 		completion_reward = {
-			GEN = { country_event = { id = GEH_event.55 hours = 8 } }
+			GEK = { country_event = { id = GEH_event.55 hours = 8 } }
 		}
 	}
 	focus = {
@@ -3820,9 +3820,9 @@ focus_tree = {
 				}
 			}
 			if = {
-				limit = { country_exists = GEN }
+				limit = { country_exists = GEK }
 				reverse_add_opinion_modifier = {
-					target = GEN
+					target = GEK
 					modifier = GEH_german_nationalism
 				}
 			}

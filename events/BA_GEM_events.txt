@@ -67,7 +67,7 @@ country_event = { # 국방군과 협상 - 시작
 		trigger = {
 			OR = {
 				tag = GEA
-				tag = GEN
+				tag = GEK
 			}
 		}
 	}
@@ -78,7 +78,7 @@ country_event = { # 국방군과 협상 - 시작
 				OR = {
 					tag = GEM
 					tag = GEA
-					tag = GEN
+					tag = GEK
 				}
 			}
 		}
@@ -103,7 +103,7 @@ country_event = { # 국방군과 협상 - 시작
 		trigger = {
 			OR = {
 				tag = GEA
-				tag = GEN
+				tag = GEK
 			}
 		}
 		add_stability = 0.05
@@ -117,7 +117,7 @@ country_event = { # 국방군과 협상 - 시작
 				OR = {
 					tag = GEM
 					tag = GEA
-					tag = GEN
+					tag = GEK
 				}
 			}
 		}
@@ -392,7 +392,7 @@ country_event = { # 독일 수립됨
 			type = annex_everything
 		}
 		create_wargoal = {
-			target = GEN
+			target = GEK
 			type = annex_everything
 		}
 		name = GEH_event.14.a
@@ -639,7 +639,7 @@ country_event = { # 협상 끝
 			}
 			if = {
 				limit = {
-					GEN = {
+					GEK = {
 						exists = yes
 						has_country_flag = german_navy_unified_flag
 					}
@@ -650,9 +650,9 @@ country_event = { # 협상 끝
 				}
 				every_state = {
 					limit = {
-						is_core_of = GEN
+						is_core_of = GEK
 					}
-					add_core_of = GEN
+					add_core_of = GEK
 				}
 			}
 			set_cosmetic_tag = GEM_german
@@ -1088,7 +1088,7 @@ country_event = { # 국방군 병합
 	option = { 
 		name = GEH_event.43.a
 		trigger = {
-			tag = GEN
+			tag = GEK
 		}
 		add_stability = -0.10
 		add_war_support = -0.10
@@ -1206,14 +1206,14 @@ country_event = { # 연방 국가 제안
 	option = { 
 		name = GEH_event.46.a
 		trigger = {
-			GEN = {
-				has_completed_focus = GEN_communication_with_the_mainland
+			GEK = {
+				has_completed_focus = GEK_communication_with_the_mainland
 			}
 		}
 		ai_chance = {
 			factor = 20
 		}
-		GEN = {
+		GEK = {
 			country_event = { id = GEH_event.49 hours = 24 }
 		}
 	}
@@ -1406,11 +1406,11 @@ country_event = { # 독일인의 지도자
 	option = { 
 		name = GEH_event.52.a
 		trigger = {
-			has_character = GEN_gerd_von_rundstedt
+			has_character = GEK_gerd_von_rundstedt
 		}
 		if = {
-			limit = { GEN_gerd_von_rundstedt = { has_ideology = nazism } }
-			GEN_gerd_von_rundstedt = {
+			limit = { GEK_gerd_von_rundstedt = { has_ideology = nazism } }
+			GEK_gerd_von_rundstedt = {
 				promote_leader = yes
 				add_country_leader_trait = {
 					trait = GEH_land_officer
@@ -1420,7 +1420,7 @@ country_event = { # 독일인의 지도자
 		}
 		else = {
 			add_country_leader_role = {
-				character = GEN_gerd_von_rundstedt
+				character = GEK_gerd_von_rundstedt
 				promote_leader = yes
 				country_leader = {
 					ideology = nazism
@@ -1434,11 +1434,11 @@ country_event = { # 독일인의 지도자
 	option = { 
 		name = GEH_event.52.b
 		trigger = {
-			has_character = GEN_karl_donitz
+			has_character = GEK_karl_donitz
 		}
 		if = {
-			limit = { GEN_karl_donitz = { has_ideology = nazism } }
-			GEN_karl_donitz = {
+			limit = { GEK_karl_donitz = { has_ideology = nazism } }
+			GEK_karl_donitz = {
 				promote_leader = yes
 				add_country_leader_trait = {
 					trait = GEH_naval_officer
@@ -1448,7 +1448,7 @@ country_event = { # 독일인의 지도자
 		}
 		else = {
 			add_country_leader_role = {
-				character = GEN_karl_donitz
+				character = GEK_karl_donitz
 				promote_leader = yes
 				country_leader = {
 					ideology = nazism
@@ -1463,8 +1463,8 @@ country_event = { # 독일인의 지도자
 		name = GEH_event.52.c
 		trigger = {
 			NOT = {
-				has_character = GEN_gerd_von_rundstedt
-				has_character = GEN_karl_donitz
+				has_character = GEK_gerd_von_rundstedt
+				has_character = GEK_karl_donitz
 			}
 		}
 		if = {
@@ -1567,7 +1567,7 @@ country_event = { # 전쟁해군이 수락함
 			target = FROM
 			transfer_troops = yes	
 		}
-		GEN = {
+		GEK = {
 			every_character = {
 				limit = {
 					NOT = {
@@ -2206,7 +2206,7 @@ country_event = { # 국방군 영향력 올라가는 이벤트
 		NOT = {
 			OR = {
 				country_exists = GEA
-				GEN = {
+				GEK = {
 					has_country_flag = GEH_negotiation_intervention_flag
 				}
 			}

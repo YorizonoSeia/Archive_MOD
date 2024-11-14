@@ -3460,7 +3460,7 @@ focus_tree = {
 	# 독일 지원
 	focus = {
 
-	 id = USA_support_GEN
+	 id = USA_support_GEK
 	 icon = GFX_focus_ger_oppose_hitler
      prerequisite = { focus = USA_old_team }
 		x = 0
@@ -3485,10 +3485,10 @@ focus_tree = {
 	focus = {
 		id = USA_attack_TRM
 		icon = GFX_focus_attack_TRN
-		prerequisite = { focus = USA_support_GEN }
+		prerequisite = { focus = USA_support_GEK }
 		x = -1
 		y = 1
-		relative_position_id = USA_support_GEN
+		relative_position_id = USA_support_GEK
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -3513,10 +3513,10 @@ focus_tree = {
 	focus = {
 		id = USA_attack_GEH
 		icon = GFX_focus_attack_GEH
-		prerequisite = { focus = USA_support_GEN }
+		prerequisite = { focus = USA_support_GEK }
 		x = 1
 		y = 1
-		relative_position_id = USA_support_GEN
+		relative_position_id = USA_support_GEK
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -7081,7 +7081,7 @@ focus_tree = {
 
 	focus = {
 
-		id = USA_war_plan_GEN
+		id = USA_war_plan_GEK
 		icon = GFX_focus_ger_oppose_hitler
 		x = 1
 		y = 2

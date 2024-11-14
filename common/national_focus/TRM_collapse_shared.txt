@@ -251,11 +251,11 @@ shared_focus = {
 			limit = {
 				has_dlc = "Arms Against Tyranny"
 			}
-			mio:GEN_messerschmitt_organization = {
+			mio:GEK_messerschmitt_organization = {
 				add_mio_size = 1
 				add_mio_funds = 500
 			}
-			mio:GEN_junkers_organization = {
+			mio:GEK_junkers_organization = {
 				add_mio_size = 1
 				add_mio_funds = 500
 			}
@@ -1876,25 +1876,25 @@ shared_focus = {
 			if = {
 				limit = {
 					OR = {
-						has_military_industrial_organization = GEN_porsche_organization
-						has_military_industrial_organization = GEN_henschel_organization
-						has_military_industrial_organization = GEN_daimler_benz_organization
+						has_military_industrial_organization = GEK_porsche_organization
+						has_military_industrial_organization = GEK_henschel_organization
+						has_military_industrial_organization = GEK_daimler_benz_organization
 					}
 				}
-				if = { limit = { has_military_industrial_organization = GEN_porsche_organization }
-					mio:GEN_porsche_organization = {
+				if = { limit = { has_military_industrial_organization = GEK_porsche_organization }
+					mio:GEK_porsche_organization = {
 						add_mio_size = 1
 						add_mio_funds = 500
 					}
 				}
-				if = { limit = { has_military_industrial_organization = GEN_henschel_organization }
-					mio:GEN_henschel_organization = {
+				if = { limit = { has_military_industrial_organization = GEK_henschel_organization }
+					mio:GEK_henschel_organization = {
 						add_mio_size = 1
 						add_mio_funds = 500
 					}
 				}
-				if = { limit = { has_military_industrial_organization = GEN_daimler_benz_organization }
-					mio:GEN_daimler_benz_organization = {
+				if = { limit = { has_military_industrial_organization = GEK_daimler_benz_organization }
+					mio:GEK_daimler_benz_organization = {
 						add_mio_size = 1
 						add_mio_funds = 500
 					}
@@ -1999,16 +1999,16 @@ shared_focus = {
 				has_dlc = "Arms Against Tyranny"
 			}
 			custom_effect_tooltip = available_mio_tt
-			show_mio_tooltip = GEN_SOV_morozov_design_bureau_organization
+			show_mio_tooltip = GEK_SOV_morozov_design_bureau_organization
 
-			mio:GEN_SOV_morozov_design_bureau_organization = {
+			mio:GEK_SOV_morozov_design_bureau_organization = {
 				add_mio_size = 1
 				add_mio_funds = 500
 			}
 		}
 		ELSE = {
 			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = GEN_SOV_morozov_design_bureau
+			show_ideas_tooltip = GEK_SOV_morozov_design_bureau
 		}
 	}
 }
@@ -2226,7 +2226,7 @@ shared_focus = {
 		hidden_effect = {
 			division_template = {
 				name = "Experimental Mechanised Division"
-				division_names_group = GEN_MEC_01
+				division_names_group = GEK_MEC_01
 				priority = 2
 				regiments = {
 					light_armor = { x = 0 y = 0 }

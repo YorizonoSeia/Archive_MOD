@@ -108,8 +108,8 @@ spriteTypes = {
 		textureFile = "gfx/interface/ideas/KPD/KPD_LeunaWerke_Walter_Ulbricht.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_GEN_sweden_independent_cooperation"
-		textureFile = "gfx/interface/ideas/gen/GEN_sweden_independent_cooperation.tga"
+		name = "GFX_idea_GEK_sweden_independent_cooperation"
+		textureFile = "gfx/interface/ideas/GEK/GEK_sweden_independent_cooperation.tga"
 	}
 	spriteType = {
 		name = "GFX_idea_KAI_corporate_state"

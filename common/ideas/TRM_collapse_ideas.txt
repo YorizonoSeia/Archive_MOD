@@ -819,14 +819,14 @@ ideas={
 		}
 	}
 	tank_manufacturer = {
-		GEN_SOV_morozov_design_bureau = {
+		GEK_SOV_morozov_design_bureau = {
 			name = morozov_design_bureau
 
 			picture = morozov_design_bureau
 
 			allowed = {
 				OR = {
-					tag = GEN
+					tag = GEK
 					tag = GEA
 					tag = GEF
 					tag = GEM

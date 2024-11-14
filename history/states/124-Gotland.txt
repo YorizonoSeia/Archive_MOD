@@ -7,8 +7,8 @@ state=
 	state_category = small_island
 	
 	history= {
-		owner = GEN
-		add_core_of = GEN
+		owner = GEK
+		add_core_of = GEK
 		add_core_of = SWE
 		buildings = {
 			infrastructure = 3 #was: 6

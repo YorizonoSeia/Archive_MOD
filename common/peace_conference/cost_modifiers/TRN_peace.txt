@@ -15,7 +15,7 @@ peace_action_modifiers = {
                 OR = {
                     is_core_of = GEH
                     is_core_of = GEM
-					is_core_of = GEN
+					is_core_of = GEK
 					is_core_of = GER
                 }
             }

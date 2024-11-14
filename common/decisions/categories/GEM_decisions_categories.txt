@@ -5,7 +5,7 @@ GEH_nego_wehrmacht_decisions = {
 		OR = {
 			original_tag = GEH
 			original_tag = GEM
-			original_tag = GEN
+			original_tag = GEK
 			original_tag = GEA
 			original_tag = TGH
 		}

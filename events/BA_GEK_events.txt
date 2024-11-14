@@ -1,0 +1,675 @@
+add_namespace = GEK_event
+
+
+country_event = { #수상한 함선 나포
+	id = GEK_event.1
+	title = GEK_event.1.t
+	desc = GEK_event.1.desc
+	picture = GFX_event_none_picture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = GEK
+	}
+	mean_time_to_happen = {
+		days = 20
+	}
+	
+	option = { 
+		name = GEK_event.1.a
+		add_stability = -0.05
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 500
+			producer = GER
+		}
+		country_event = { id = GEK_event.2 hours = 12 }
+		custom_effect_tooltip = GEK_get_halo_infantry_tt
+		set_country_flag = kivotos_research_on
+	}
+}
+country_event = { #재활용
+	id = GEK_event.2
+	title = GEK_event.2.t
+	desc = GEK_event.2.desc
+	picture = GFX_event_none_picture
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEK_event.2.a
+		add_stability = 0.05
+		add_war_support = 0.15
+	}
+}
+country_event = { #국방군에서의 교신
+	id = GEK_event.3
+	title = GEK_event.3.t
+	desc = {
+		text = GEK_event.3.desc
+		trigger = {
+			NOT = { has_government = communism }
+		}
+	}
+	desc = {
+		text = GEK_event.3.com_desc
+		trigger = {
+			has_government = communism
+		}
+	}
+	picture = GFX_event_none_picture
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEK_event.3.a
+		trigger = {
+			NOT = { has_government = communism }
+		}
+		add_stability = 0.1
+		add_war_support = 0.15
+		add_political_power = 50
+		set_country_flag = GEK_communication_with_the_mainland_flag
+	}
+	
+	option = { 
+		name = GEK_event.3.b
+		trigger = {
+			has_government = communism
+		}
+		add_stability = -0.05
+		add_war_support = 0.05
+		set_country_flag = GEK_communication_with_the_mainland_flag
+	}
+	
+	option = { 
+		name = GEK_event.3.debug
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			is_debug = yes
+		}
+		set_country_flag = GEK_debug_all_stop
+	}
+	
+	option = { 
+		name = GEK_event.3.debug
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			is_debug = yes
+		}
+		clr_country_flag = GEK_debug_all_stop
+	}
+}
+country_event = { #북부 독일 수립
+	id = GEK_event.4
+	title = GEK_event.4.t
+	desc = { 
+		text = GEK_event.4.desc
+		trigger = {
+			NOT = { has_government = communism }
+			has_country_flag = GEK_communication_with_the_mainland_flag
+		}
+	}
+	desc = { 
+		text = GEK_event.4.com_desc
+		trigger = {
+			has_government = communism
+			has_country_flag = GEK_communication_with_the_mainland_flag
+		}
+	}
+	desc = { 
+		text = GEK_event.4.bad_desc
+		trigger = {
+			NOT = { has_country_flag = GEK_communication_with_the_mainland_flag }
+		}
+	}
+	picture = GFX_event_none_picture
+
+	fire_only_once = yes
+    is_triggered_only = yes
+
+	trigger = {
+		country_exists = GEA
+	}
+
+	option = { 
+		name = GEK_event.4.a
+		trigger = {
+			NOT = { has_government = communism }
+		}
+		every_country = {
+			limit = {
+				has_war_with = GEA
+			}
+			ROOT = {
+				declare_war_on = {
+					target = PREV
+					type = annex_everything
+				}
+			}
+		}
+		every_state = {
+			limit = {
+				is_core_of = GEA
+			}
+			add_core_of = GEK
+		}
+		GEA = {
+			set_country_flag = GEA_absorbed_into_a_specific_country
+			every_character = {
+				limit = {
+					NOT = {
+						has_trait = communist_revolutionary
+						has_trait = democratic_reformer
+						has_trait = fascist_demagogue
+					}
+				}
+				set_nationality = ROOT
+			}
+		}
+		
+		annex_country = {
+			target = GEA
+			transfer_troops = yes
+		}
+		complete_national_focus = GEK_get_in_touch
+
+		if = {
+			limit = {
+				NOT = { has_template = "Nationale Miliz" }
+			}
+			division_template = {
+				name = "Nationale Miliz"
+				priority = 0
+				division_names_group = GER_INF_01
+				regiments = {
+					militia = { x = 0 y = 0 }
+					militia = { x = 0 y = 1 }
+					militia = { x = 0 y = 2 }
+					
+					militia = { x = 1 y = 0 }
+					militia = { x = 1 y = 1 }
+					militia = { x = 1 y = 2 }
+				}
+			}
+		}
+		every_state = {
+			limit = {
+				has_state_flag = GEK_state_flag
+			}
+			create_unit = {
+				division = "division_template = \"Nationale Miliz\" start_experience_factor = 0.1 start_equipment_factor = 0.6" 
+				owner = ROOT
+				allow_spawning_on_enemy_provs = yes
+			}
+			clr_state_flag = GEK_state_flag
+			owner = {
+				hidden_effect = {
+					country_event = { id = GEK_event.11 hours = 8 }
+				}
+			}
+		}
+	}
+
+	option = { 
+		name = GEK_event.4.b
+		trigger = {
+			NOT = { has_government = communism }
+		}
+		ai_chance = {
+			factor = 0
+		}
+		add_war_support = -0.20
+	}
+
+	option = { 
+		name = GEK_event.4.c
+		trigger = {
+			has_government = communism
+		}
+		add_war_support = 0.05
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
+	}
+}
+country_event = { #독일 망명군의 지원 요청
+	id = GEK_event.5
+	title = GEK_event.5.t
+	desc = GEK_event.5.desc
+	picture = GFX_event_none_picture
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEK_event.5.a
+		add_political_power = -50
+		send_equipment = {
+			equipment = infantry_equipment
+			amount = 1000
+			target = FROM
+		}
+		set_country_flag = GEK_volunteers_flag
+		add_timed_idea = {
+			idea = GEK_send_volunteers_idea
+			days = 730
+		}
+		FROM = {
+			country_event = { id = GEK_event.7 hours = 8 } 
+		}
+	}
+	option = { 
+		name = GEK_event.5.b
+		add_political_power = 10
+		FROM = {
+			country_event = { id = GEK_event.6 hours = 8 } 
+		}
+	}
+}
+country_event = { #5-거절
+	id = GEK_event.6
+	title = GEK_event.6.t
+	desc = GEK_event.6.desc
+	picture = GFX_event_none_picture
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEK_event.6.a
+		add_war_support = -0.03
+	}
+}
+country_event = { #5-수락
+	id = GEK_event.7
+	title = GEK_event.7.t
+	desc = GEK_event.7.desc
+	picture = GFX_event_none_picture
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEK_event.7.a
+		add_stability = 0.05
+		add_war_support = 0.05
+	}
+}
+country_event = { #게헨나 항복
+	id = GEK_event.8
+	title = GEK_event.8.t
+	desc = { 
+		text = GEK_event.8.gen_desc
+		trigger = {
+			tag = GEK
+		}
+	}
+	desc = { 
+		text = GEK_event.8.fam_desc
+		trigger = {
+			tag = FRM
+		}
+	}
+	desc = { 
+		text = GEK_event.8.desc
+		trigger = {
+			NOT = {
+				OR = {
+					tag = GEK
+					tag = FRM
+				}
+			}
+		}
+	}
+	picture = GFX_event_GEM_MAKOTO_event
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEK_event.8.a
+		add_war_support = -0.05
+		FROM = {
+			country_event = { id = GEK_event.9 hours = 8 } 
+		}
+	}
+	option = { 
+		name = GEK_event.8.b
+		ai_chance = {
+			factor = 0
+		}
+		add_war_support = 0.10
+		FROM = {
+			country_event = { id = GEK_event.10 hours = 8 } 
+		}
+	}
+}
+country_event = { #수락
+	id = GEK_event.9
+	title = GEK_event.9.t
+	desc = GEK_event.9.desc
+	picture = GFX_event_GEM_MAKOTO_event
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEK_event.9.a
+		add_war_support = -0.03
+		white_peace = FROM
+		if = {
+			limit = {
+				FROM = { tag = GEA }
+			}
+			GEA = {
+				transfer_state = 56
+				transfer_state = 59
+			}
+			GEK = {
+				set_country_flag = GEK_win_the_war_GEH_flag
+			}
+		}
+		if = {
+			limit = {
+				FROM = { tag = GEK }
+			}
+			GEK = {
+				set_country_flag = GEK_win_the_war_GEH_flag
+				transfer_state = 56
+				transfer_state = 59
+			}
+		}
+		if = {
+			limit = {
+				FROM = { tag = FRA }
+			}
+			FRA = {
+				transfer_state = 28
+				transfer_state = 976
+			}
+		}
+	}
+}
+country_event = { #거절
+	id = GEK_event.10
+	title = GEK_event.10.t
+	desc = GEK_event.10.desc
+	picture = GFX_event_GEM_MAKOTO_event
+	
+    is_triggered_only = yes
+	
+	option = {
+		name = GEK_event.10.a
+		trigger = {
+			NOT = { has_country_flag = GEM_reorganization_of_the_private_army_flag }
+		}
+		add_war_support = 0.05
+		if = {
+			limit = {
+				not = { has_template = "Pandemonium Legion" }
+			}
+			
+			division_template = {
+				name = "Pandemonium Legion"
+				division_names_group = GEM_INF_02
+				is_locked = yes
+				force_allow_recruiting = yes
+				division_cap = 8
+				regiments = {
+					halo_militia = { x = 0 y = 0 }
+					halo_militia = { x = 0 y = 1 }
+					halo_militia = { x = 0 y = 2 }
+					halo_militia = { x = 1 y = 0 }
+					halo_militia = { x = 1 y = 1 }
+					halo_militia = { x = 1 y = 2 }
+				}
+				support = {
+					halo_recon = { x = 0 y = 0 }
+				}
+			}
+			
+			set_division_template_cap = {
+				division_template = "Pandemonium Legion"
+				division_cap = ROOT.halo_militia_cap
+			}
+		}
+		capital_scope = {
+			create_unit = {
+				division = "name = \"Pandemonium Legion\" division_template = \"Pandemonium Legion\" start_experience_factor = 0.1" 
+				owner = ROOT
+			}
+			create_unit = {
+				division = "name = \"Pandemonium Legion\" division_template = \"Pandemonium Legion\" start_experience_factor = 0.1 start_equipment_factor = 0.7" 
+				owner = ROOT
+			}
+			create_unit = {
+				division = "name = \"Pandemonium Legion\" division_template = \"Pandemonium Legion\" start_experience_factor = 0.1 start_equipment_factor = 0.3" 
+				owner = ROOT
+			}
+		}
+	}
+	option = {
+		name = GEK_event.10.a
+		trigger = {
+			has_country_flag = GEM_reorganization_of_the_private_army_flag
+		}
+		add_war_support = 0.05
+		add_manpower = 5000
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_0
+			amount = 1200
+		}
+	}
+}
+country_event = { #후방에 민병대 출현
+	id = GEK_event.11
+	title = GEK_event.11.t
+	desc = GEK_event.11.desc
+	picture = GFX_event_none_picture
+	
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEK_event.11.a
+		add_war_support = -0.05
+	}
+}
+country_event = { #올란드 거점
+	id = GEK_event.12
+	title = GEK_event.12.t
+	desc = GEK_event.12.d
+	picture = GFX_report_event_portugal_navy_mutiny_prisoners
+	
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEK_event.12.a
+		add_war_support = 0.05
+		transfer_state = 145
+		add_state_core = 145
+		FIN = {
+			country_event = {
+				id = GEK_event.14
+			}
+		}
+	}
+}
+country_event = { #사레마 점거
+	id = GEK_event.13
+	title = GEK_event.13.t
+	desc = GEK_event.13.d
+	picture = GFX_report_event_ast_navy
+	
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEK_event.12.a
+		add_war_support = 0.05
+		transfer_state = 811
+		add_state_core = 811
+		EST = {
+			country_event = {
+				id = GEK_event.14
+			}
+		}
+	}
+}
+country_event = { #미친독일
+	id = GEK_event.14
+	title = GEK_event.14.t
+	desc = GEK_event.14.d
+	picture = GFX_report_event_ast_navy
+	
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEK_event.14.a
+		add_war_support = -0.05
+	}
+}
+country_event = { #수병들의 처우 개선 요구
+	id = GEK_event.15
+	title = GEK_event.15.t
+	desc = GEK_event.15.d
+	picture = GFX_report_event_portugal_navy_mutiny_prisoners
+	
+	fire_only_once = yes
+	trigger = {
+		tag = GEK
+		date > 1936.4.1
+	}
+	
+	option = { #그들의 요구를 들어주자
+		name = GEK_event.15.a
+		add_political_power = -15
+	}
+	option = { #우리가 왜? ㅋ
+		ai_chance = {
+			base = 0
+		}
+		name = GEK_event.15.b
+		add_political_power = 1
+		add_stability = 0.01
+		hidden_effect = {
+			country_event = {
+				id = GEK_event.16
+				days = 15
+			}
+		}
+	}
+}
+country_event = { #수병반란!
+	id = GEK_event.16
+	title = GEK_event.16.t
+	desc = GEK_event.16.d
+	picture = GFX_report_event_communists_in_riga
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = GEK_event.16.a
+		add_popularity = {
+			ideology = communism
+			popularity = 0.7
+		}
+		set_politics = {
+			ruling_party = communism
+		}
+		set_cosmetic_tag = GEK_red
+	}
+}
+country_event = { #수상한 인물
+	id = GEK_event.17
+	title = GEK_event.17.t
+	desc = GEK_event.17.d
+	picture = GFX_report_event_ARG_coup_consolidating
+	
+	fire_only_once = yes
+	
+	trigger = {
+		if = {
+			limit = {
+				USA = {
+					exists = yes
+					has_capitulated = no
+				}
+			}
+			tag = USA
+		}
+		else_if = {
+			limit = {
+				CAN = {
+					exists = yes
+					has_capitulated = no
+				}
+			}
+			tag = CAN
+		}
+		else_if = {
+			limit = {
+				MEX = {
+					exists = yes
+					has_capitulated = no
+				}
+			}
+			tag = USA
+		}
+		else_if = {
+			limit = {
+				ENG = {
+					exists = yes
+					has_capitulated = no
+				}
+			}
+			tag = ENG
+		}
+		else_if = {
+			limit = {
+				ARG = {
+					exists = yes
+					has_capitulated = no
+				}
+			}
+			tag = ARG
+		}
+		else_if = {
+			limit = {
+				BRA = {
+					exists = yes
+					has_capitulated = no
+				}
+			}
+			tag = BRA
+		}
+		else_if = {
+			limit = {
+				ITA = {
+					exists = yes
+					has_capitulated = no
+				}
+			}
+			tag = ITA
+		}
+		date > 1939.6.1
+		NOT = {
+			has_global_flag = NSD_the_SS_went_to_america
+			has_global_flag = NSD_the_SS_went_to_arius
+			has_global_flag = NSD_the_SS_went_to_gottland
+		}
+	}
+
+	immediate = {
+		set_global_flag = NSD_the_SS_went_to_america
+	}
+	
+	option = {
+		name = GEK_event.17.a
+	}
+}

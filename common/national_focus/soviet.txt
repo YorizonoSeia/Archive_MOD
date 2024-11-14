@@ -7570,7 +7570,7 @@ focus_tree = {
 			custom_effect_tooltip = SOV_will_trigger_a_great_purge_tt
 			hidden_effect = {
 				set_country_flag = SOV_purge_event_unavoidable_flag #No way to avoid this purge. This people are about to be purged and there's nothing you can do for them.
-				SOV_great_purge_army_trial_of_the_generals_effect = yes #TRIAL OF THE GENERALS -> Tukhachevsky
+				SOV_great_purge_army_trial_of_the_generals_effect = yes #TRIAL OF THE GEKERALS -> Tukhachevsky
 			}
 
 			set_country_flag = SOV_stalinist_military_flag #New Generals have more chances of being Stalinists after this

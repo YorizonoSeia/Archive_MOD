@@ -905,7 +905,7 @@ German_never_give_up = { # 독일인은 절대 이렇게 질 인종이 아니다
             tooltip = TRIGGER_IS_IRONMAN
             is_ironman = yes
         }
-        original_tag = GEN
+        original_tag = GEK
     }
     happened = {
         all_state = {
@@ -921,7 +921,7 @@ German_never_give_up = { # 독일인은 절대 이렇게 질 인종이 아니다
                     is_core_of = ENG
                     is_core_of = SOV
                 }
-                is_controlled_by = GEN
+                is_controlled_by = GEK
             }
         }
     }
@@ -960,12 +960,12 @@ So_Who_s_Next = { # 그래서 다음은?
             tooltip = TRIGGER_IS_IRONMAN
             is_ironman = yes
         }
-        original_tag = GEN
+        original_tag = GEK
     }
     happened = {
         all_state = {
             OR = { 
-                is_owned_by = GEN
+                is_owned_by = GEK
                 NOT = { BA_is_GER_core = yes }
             }
         }
@@ -1179,12 +1179,12 @@ The_new_order = { # The new order - Last day of europe
             tooltip = TRIGGER_IS_IRONMAN
             is_ironman = yes
         }
-        original_tag = GEN
+        original_tag = GEK
     }
     happened = {
         all_state = {
             OR = {
-                is_owned_by = GEN
+                is_owned_by = GEK
                 NOT = { is_on_continent = europe }
             }
         }
@@ -1782,7 +1782,7 @@ How_many_Germanys_are_there = { # 독일은 도대체 몇개야?
         }
     }
     happened = {
-        country_exists = GEN
+        country_exists = GEK
         country_exists = TRM
         TRM = {
             has_completed_focus = TRM_newfocus_27

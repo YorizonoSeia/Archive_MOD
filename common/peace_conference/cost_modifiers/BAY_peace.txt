@@ -8,7 +8,7 @@ peace_action_modifiers = {
         peace_action_type = { take_states }
         enable = {
             ROOT = {
-                original_tag = GEN
+                original_tag = GEK
             }
             ROOT.FROM.FROM.FROM = {
                 BA_is_GER_core = yes

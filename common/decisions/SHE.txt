@@ -1084,7 +1084,7 @@ SHE_managing_occupied_territory_category = {
 		}
 
 	}
-	SHE_occupied_territory_GEN = {
+	SHE_occupied_territory_GEK = {
 		icon = GFX_decision_SWI_no_elected_president
 		cost = 25
 		fire_only_once = yes
@@ -1108,10 +1108,10 @@ SHE_managing_occupied_territory_category = {
 		complete_effect = {
 			if = {
 				limit = {
-					country_exists = GEN
+					country_exists = GEK
 				}
 				hidden_effect = {
-					GEN = {
+					GEK = {
 						set_state_controller = 975
 						set_state_controller = 51
 						set_state_controller = 57
@@ -1121,7 +1121,7 @@ SHE_managing_occupied_territory_category = {
 						set_state_controller = 909
 					}
 				}
-				GEN = {
+				GEK = {
 					start_civil_war = {
 						ideology = fascism
 						size = 0
@@ -1144,7 +1144,7 @@ SHE_managing_occupied_territory_category = {
 							set_autonomy = { target = PREV autonomy_state = autonomy_integrated_puppet }
 						}
 						BA_puppet_on_action_effect = yes
-						set_cosmetic_tag = GEN_SHE_puppet
+						set_cosmetic_tag = GEK_SHE_puppet
 						set_country_flag = SHE_puppet_flag
 						set_stability = 0
 						set_party_name = {
@@ -1158,14 +1158,14 @@ SHE_managing_occupied_territory_category = {
 							name = SHE_puppet_party
 						}
 						create_country_leader = {
-							name = SHE_GEN_arona
+							name = SHE_GEK_arona
 							picture = "gfx/leaders/SHE/SHE_Arona_viceroy.dds"
 							expire = "1965.1.1"
 							ideology = fascism_aicontrol
 							traits = { SHE_integrated_system }
 						}
 						create_country_leader = {
-							name = SHE_GEN_arona
+							name = SHE_GEK_arona
 							picture = "gfx/leaders/SHE/SHE_Arona_viceroy.dds"
 							expire = "1965.1.1"
 							ideology = aicontrol
@@ -1175,7 +1175,7 @@ SHE_managing_occupied_territory_category = {
 				}
 			}
 			else = {
-				GEN = {
+				GEK = {
 					transfer_state = 975
 					transfer_state = 51
 					transfer_state = 57
@@ -1191,7 +1191,7 @@ SHE_managing_occupied_territory_category = {
 					add_state_core = 58
 					add_state_core = 909
 					BA_puppet_on_action_effect = yes
-					set_cosmetic_tag = GEN_SHE_puppet
+					set_cosmetic_tag = GEK_SHE_puppet
 					set_country_flag = SHE_puppet_flag
 					set_stability = 0
 					set_party_name = {
@@ -1205,21 +1205,21 @@ SHE_managing_occupied_territory_category = {
 						name = SHE_puppet_party
 					}
 					create_country_leader = {
-						name = SHE_GEN_arona
+						name = SHE_GEK_arona
 						picture = "gfx/leaders/SHE/SHE_Arona_viceroy.dds"
 						expire = "1965.1.1"
 						ideology = fascism_aicontrol
 						traits = { SHE_integrated_system }
 					}
 					create_country_leader = {
-						name = SHE_GEN_arona
+						name = SHE_GEK_arona
 						picture = "gfx/leaders/SHE/SHE_Arona_viceroy.dds"
 						expire = "1965.1.1"
 						ideology = aicontrol
 						traits = { SHE_integrated_system }
 					}
 				}
-				set_autonomy = { target = GEN autonomy_state = autonomy_integrated_puppet }
+				set_autonomy = { target = GEK autonomy_state = autonomy_integrated_puppet }
 			}
 		}
 

@@ -455,8 +455,8 @@ objectTypes = {
 
 objectTypes = {
 	pdxmesh = {
-		name = "GEN_Halo_infantry_rifle_mesh"
-		file = "gfx/models/Halo_infantry/GEN_halo_infantry.mesh"
+		name = "GEK_Halo_infantry_rifle_mesh"
+		file = "gfx/models/Halo_infantry/GEK_halo_infantry.mesh"
 
 		animation = { id = "idle"				type = "GER_infantry_rifle_idle_animation" }
 		animation = { id = "attack"				type = "USA_infantry_rifle_attack_animation" }

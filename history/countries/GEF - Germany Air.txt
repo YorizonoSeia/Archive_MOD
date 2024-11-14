@@ -1,34 +1,34 @@
 ﻿capital = 124
 
 # FINNISH ARMY NS
-set_variable = { GEN_german_nationalism_experience_gain_army_factor = 0.05 }
-set_variable = { GEN_german_nationalism_mobilization_speed = 0.05 }
-set_variable = { GEN_german_nationalism_land_reinforce_rate = 0.05 }
-set_variable = { GEN_german_nationalism_army_spirit_category_type_cost_factor = 0.00 }
-set_variable = { GEN_german_nationalism_army_org_factor = 0.00 }
-set_variable = { GEN_german_nationalism_army_attack_speed_factor = 0.00 }
-set_variable = { GEN_german_nationalism_army_core_attack_factor = 0.15 }
-set_variable = { GEN_german_nationalism_army_core_defence_factor = 0.15 }
-set_variable = { GEN_german_nationalism_army_defence_factor = -0.10 }
-set_variable = { GEN_german_nationalism_army_attack_factor = -0.10 }
-set_variable = { GEN_german_nationalism_army_org_regain = 0.00 }
+set_variable = { GEK_german_nationalism_experience_gain_army_factor = 0.05 }
+set_variable = { GEK_german_nationalism_mobilization_speed = 0.05 }
+set_variable = { GEK_german_nationalism_land_reinforce_rate = 0.05 }
+set_variable = { GEK_german_nationalism_army_spirit_category_type_cost_factor = 0.00 }
+set_variable = { GEK_german_nationalism_army_org_factor = 0.00 }
+set_variable = { GEK_german_nationalism_army_attack_speed_factor = 0.00 }
+set_variable = { GEK_german_nationalism_army_core_attack_factor = 0.15 }
+set_variable = { GEK_german_nationalism_army_core_defence_factor = 0.15 }
+set_variable = { GEK_german_nationalism_army_defence_factor = -0.10 }
+set_variable = { GEK_german_nationalism_army_attack_factor = -0.10 }
+set_variable = { GEK_german_nationalism_army_org_regain = 0.00 }
 
 add_dynamic_modifier = {
-	modifier = GEN_german_nationalism
+	modifier = GEK_german_nationalism
 }
 
 #공군
-recruit_character = GEN_albert_kesselring
+recruit_character = GEK_albert_kesselring
 
-recruit_character = GEN_wolfram_von_richthofen
+recruit_character = GEK_wolfram_von_richthofen
 
-recruit_character = GEN_ritter_von_greim
-recruit_character = GEN_walther_wever
-recruit_character = GEN_erhard_milch
-recruit_character = GEN_ernst_udet
-recruit_character = GEN_hugo_sperrle
+recruit_character = GEK_ritter_von_greim
+recruit_character = GEK_walther_wever
+recruit_character = GEK_erhard_milch
+recruit_character = GEK_ernst_udet
+recruit_character = GEK_hugo_sperrle
 
-recruit_character = GEN_kurt_student
+recruit_character = GEK_kurt_student
 
 
 add_ideas = {
@@ -134,7 +134,7 @@ set_fuel_ratio = 0.8
 			early_battlecruiser = 1
 			transport = 1
 		}
-		#set_naval_oob = "GEN_1936_naval"
+		#set_naval_oob = "GEK_1936_naval"
 	}
 	if = {
 		limit = {
@@ -164,7 +164,7 @@ set_fuel_ratio = 0.8
 			sonar = 1
 			basic_cruiser_armor_scheme = 1
 		}
-		#set_naval_oob = "GEN_1936_naval_mtg"
+		#set_naval_oob = "GEK_1936_naval_mtg"
 	}
 	if = {
 		limit = {
@@ -193,7 +193,7 @@ set_popularities = {
 	fascism = 40
 }
 
-###########이 밑으로는 독일 장비 복사 후 mio:GEN으로 교체
+###########이 밑으로는 독일 장비 복사 후 mio:GEK으로 교체
 
 if = {
 	limit = {
@@ -293,7 +293,7 @@ if = {
 	create_equipment_variant = {
 		name = "Panzer II Ausf. a"
 		type = light_tank_chassis_2
-		design_team = mio:GEN_daimler_benz_organization
+		design_team = mio:GEK_daimler_benz_organization
 		parent_version = 0
 		modules = {
 			main_armament_slot = tank_auto_cannon
@@ -312,7 +312,7 @@ if = {
 	create_equipment_variant = {
 		name = "Panzer II"
 		type = light_tank_chassis_2
-		design_team = mio:GEN_daimler_benz_organization
+		design_team = mio:GEK_daimler_benz_organization
 		parent_version = 1
 		modules = {
 			main_armament_slot = tank_auto_cannon
@@ -601,7 +601,7 @@ if = {
 	create_equipment_variant = {
 		name = "Ju 86"
 		type = medium_plane_airframe_0
-		design_team = mio:GEN_junkers_organization
+		design_team = mio:GEK_junkers_organization
 		modules = {
 			fixed_main_weapon_slot = medium_bomb_bay
 			fixed_auxiliary_weapon_slot_1 = empty
@@ -619,7 +619,7 @@ if = {
 	create_equipment_variant = {
 		name = "He 111"
 		type = medium_plane_airframe_1
-		design_team = mio:GEN_heinkel_organization
+		design_team = mio:GEK_heinkel_organization
 		modules = {
 			fixed_main_weapon_slot = medium_bomb_bay
 			fixed_auxiliary_weapon_slot_1 = medium_bomb_bay
@@ -668,7 +668,7 @@ if = {
 	create_equipment_variant = {
 		name = "Bf 109 D"
 		type = small_plane_airframe_1
-		design_team = mio:GEN_messerschmitt_organization
+		design_team = mio:GEK_messerschmitt_organization
 		modules = {
 			fixed_main_weapon_slot = light_mg_4x
 			engine_type_slot = engine_2_1x
@@ -679,7 +679,7 @@ if = {
 	create_equipment_variant = {
 		name = "Ju 87"
 		type = small_plane_cas_airframe_1
-		design_team = mio:GEN_junkers_organization
+		design_team = mio:GEK_junkers_organization
 		modules = {
 			fixed_main_weapon_slot = bomb_locks
 			engine_type_slot = engine_2_1x
@@ -691,7 +691,7 @@ if = {
 	create_equipment_variant = {
 		name = "Do 22"
 		type = small_plane_naval_bomber_airframe_1
-		design_team = mio:GEN_dornier_organization
+		design_team = mio:GEK_dornier_organization
 		modules = {
 			fixed_main_weapon_slot = torpedo_mounting
 			engine_type_slot = engine_2_1x

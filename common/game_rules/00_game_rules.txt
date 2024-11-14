@@ -23,7 +23,7 @@
 
 allow_wargoals = {
 	name = "RULE_ALLOW_WARGOALS"
-	group = "RULE_GROUP_GENERAL_FOREIGN_POLICY"
+	group = "RULE_GROUP_GEKERAL_FOREIGN_POLICY"
 	icon = "GFX_wargoals"
 	option = {
 		name = "ALWAYS_FREE"
@@ -78,7 +78,7 @@ allow_wargoals = {
 }
 allow_access = {
 	name = "RULE_ALLOW_MILITARY_ACCESS"
-	group = "RULE_GROUP_GENERAL_FOREIGN_POLICY"
+	group = "RULE_GROUP_GEKERAL_FOREIGN_POLICY"
 	icon = "GFX_military_access_docking_rights"
 	default = {
 		name = "FREE"
@@ -99,7 +99,7 @@ allow_access = {
 
 allow_release_nations = {
 	name = "RULE_ALLOW_RELEASE_NATIONS"
-	group = "RULE_GROUP_GENERAL_FOREIGN_POLICY"
+	group = "RULE_GROUP_GEKERAL_FOREIGN_POLICY"
 	icon = "GFX_release_nations"
 	default = {
 		name = "FREE"
@@ -120,7 +120,7 @@ allow_release_nations = {
 
 allow_licensing = {
 	name = "RULE_ALLOW_LICENSING"
-	group = "RULE_GROUP_GENERAL_FOREIGN_POLICY"
+	group = "RULE_GROUP_GEKERAL_FOREIGN_POLICY"
 	required_dlc = "Death or Dishonor"
 	icon = "GFX_production_licenses"
 	option = {
@@ -147,7 +147,7 @@ allow_licensing = {
 
 allow_lend_lease = {
 	name = "RULE_ALLOW_LEND_LEASE"
-	group = "RULE_GROUP_GENERAL_FOREIGN_POLICY"
+	group = "RULE_GROUP_GEKERAL_FOREIGN_POLICY"
 	icon = "GFX_lend_lease"
 	option = {
 		name = "FREE"
@@ -178,7 +178,7 @@ allow_lend_lease = {
 
 allow_volunteers = {
 	name = "RULE_ALLOW_VOLUNTEERS"
-	group = "RULE_GROUP_GENERAL_FOREIGN_POLICY"
+	group = "RULE_GROUP_GEKERAL_FOREIGN_POLICY"
 	icon = "GFX_volunteers"
 	option = {
 		name = "ALWAYS_FREE"
@@ -204,7 +204,7 @@ allow_volunteers = {
 
 allow_guarantees = {
 	name = "RULE_ALLOW_GUARANTEES"
-	group = "RULE_GROUP_GENERAL_FOREIGN_POLICY"
+	group = "RULE_GROUP_GEKERAL_FOREIGN_POLICY"
 	icon = "GFX_guarantee_independence"
 	option = {
 		name = "ALWAYS_FREE"
@@ -230,7 +230,7 @@ allow_guarantees = {
 
 allow_revoke_guarantees = {
 	name = "RULE_ALLOW_REVOKE_GUARANTEES"
-	group = "RULE_GROUP_GENERAL_FOREIGN_POLICY"
+	group = "RULE_GROUP_GEKERAL_FOREIGN_POLICY"
 	icon = "GFX_revoke_guarantees"
 	default = {
 		name = "ALLOWED"
@@ -246,7 +246,7 @@ allow_revoke_guarantees = {
 
 allow_leave_faction = {
 	name = "RULE_ALLOW_LEAVE_FACTION"
-	group = "RULE_GROUP_GENERAL_FOREIGN_POLICY"
+	group = "RULE_GROUP_GEKERAL_FOREIGN_POLICY"
 	icon = "GFX_leave_faction"
 	default = {
 		name = "ALLOWED"
@@ -262,7 +262,7 @@ allow_leave_faction = {
 
 allow_kick_faction = {
 	name = "RULE_ALLOW_KICK_FACTION"
-	group = "RULE_GROUP_GENERAL_FOREIGN_POLICY"
+	group = "RULE_GROUP_GEKERAL_FOREIGN_POLICY"
 	icon = "GFX_kick_from_faction"
 	option = {
 		name = "ALLOWED"
@@ -278,7 +278,7 @@ allow_kick_faction = {
 
 allow_take_over_faction = {
 	name = "RULE_ALLOW_TAKE_OVER_FACTION"
-	group = "RULE_GROUP_GENERAL_FOREIGN_POLICY"
+	group = "RULE_GROUP_GEKERAL_FOREIGN_POLICY"
 	required_dlc = "Man the Guns"
 	icon = "GFX_take_over_faction_leadership"
 	option = {
@@ -360,12 +360,12 @@ allow_paratroopers = {
 	group = "RULE_GROUP_GAMEPLAY"
 	icon = "GFX_paradrops"
 	option = {
-		name = YES
+		name = yes
 		text = "RULE_OPTION_ALLOWED"
 		desc = "RULE_ALLOW_PARATROOPERS_ALLOWED_DESC"
 	}
 	option = {
-		name = NO
+		name = no
 		text = "RULE_OPTION_BLOCKED"
 		desc = "RULE_ALLOW_PARATROOPERS_BLOCKED_DESC"
 	}
@@ -375,7 +375,7 @@ allow_paratroopers = {
 #	name = "RULE_MINIMUM_WIDTH"
 #	group = "RULE_GROUP_DIVISION_TEMPLATES"
 #	option = {
-#		name = NOne
+#		name = none
 #		text = "RULE_OPTION_NONE"
 #		desc = "RULE_MINIMUM_WIDTH_NONE_DESC"
 #	}
@@ -395,7 +395,7 @@ allow_paratroopers = {
 #	name = "RULE_MAXIMUM_WIDTH"
 #	group = "RULE_GROUP_DIVISION_TEMPLATES"
 #	option = {
-#		name = NOne
+#		name = none
 #		text = "RULE_OPTION_NONE"
 #		desc = "RULE_MAXIMUM_WIDTH_NONE_DESC"
 #	}
@@ -483,12 +483,12 @@ allow_scorched_earth = {
 	group = "RULE_GROUP_GAMEPLAY"
 	icon = "GFX_scorched_earth"
 	option = {
-		name = YES
+		name = yes
 		text = "RULE_OPTION_ALLOWED"
 		desc = "RULE_ALLOW_SCORCHED_EARTH_ALLOWED_DESC"
 	}
 	option = {
-		name = NO
+		name = no
 		text = "RULE_OPTION_BLOCKED"
 		desc = "RULE_ALLOW_SCORCHED_EARTH_BLOCKED_DESC"
 	}
@@ -542,12 +542,12 @@ allow_scorched_earth = {
 #	name = "RULE_GER_FACTION_SOVIETS"
 #	group = "RULE_GROUP_COUNTRY_SPECIFIC"
 #	default = {
-#		name = YES
+#		name = yes
 #		text = "RULE_OPTION_ALLOWED"
 #		desc = "RULE_GER_FACTION_SOVIETS_YES_DESC"
 #	}
 #	option = {
-#		name = NO
+#		name = no
 #		text = "RULE_OPTION_BLOCKED"
 #		desc = "RULE_GER_FACTION_SOVIETS_NO_DESC"
 #	}
@@ -589,7 +589,6 @@ allow_scorched_earth = {
 
 GER_ai_behavior = {
 	name = "GER_AI_BEHAVIOR"
-	required_dlc = "Waking the Tiger"
 	group = "RULE_GROUP_AI_BEHAVIOR"
 	default = {
 		name = DEFAULT
@@ -611,6 +610,23 @@ GER_ai_behavior = {
 		name = KAISER
 		text = "RULE_OPTION_KAISER"
 		desc = "RULE_KAISER_GER_AI_DESC"
+	}
+	option = {
+		name = GER_ALT_FASCIST
+		text = "RULE_OPTION_GER_ALT_FASCIST"
+		desc = "RULE_OPTION_GER_ALT_FASCIST_AI_DESC"
+	}
+	option = {
+		required_dlc = "Gotterdammerung"
+		name = GER_COMMUNIST_STALINIST
+		text = "RULE_OPTION_GER_COMMUNIST_STALINIST"
+		desc = "RULE_OPTION_GER_COMMUNIST_STALINIST_AI_DESC"
+	}
+	option = {
+		required_dlc = "Gotterdammerung"
+		name = GER_COMMUNIST_SPARTACUS
+		text = "RULE_OPTION_GER_COMMUNIST_SPARTACUS"
+		desc = "RULE_OPTION_GER_COMMUNIST_SPARTACUS_AI_DESC"
 	}
 	option = {
 		name = RANDOM
@@ -1065,7 +1081,7 @@ RAJ_ai_behavior = {
 		desc = "RULE_OPTION_RANDOM_AI_DESC"
 	}
 }
-#/BA_MOD_FIX 헝가리 중점 수정과 함께 Ai 수정
+
 HUN_ai_behavior = {
 	name = "HUN_AI_BEHAVIOR"
 	group = "RULE_GROUP_AI_BEHAVIOR"
@@ -1075,31 +1091,72 @@ HUN_ai_behavior = {
 		text = "RULE_OPTION_DEFAULT"
 		desc = "RULE_OPTION_DEFAULT_AI_DESC"
 	}
-	#option = {
-		#name = COMMUNIST
-		#text = "RULE_OPTION_COMMUNIST"
-		#desc = "RULE_OPTION_COMMUNIST_HUN_AI_DESC"
-	#}
-	#option = {
-		#name = AUSTRIA_HUNGARY
-		#text = "RULE_OPTION_AUSTRIA_HUNGARY"
-		#desc = "RULE_OPTION_AUSTRIA_HUNGARY_HUN_AI_DESC"
-	#}
-	#option = {
-		#name = DEMOCRATIC
-		#text = "RULE_OPTION_DEMOCRATIC"
-		#desc = "RULE_OPTION_DEMOCRATIC_HUN_AI_DESC"
-	#}
-	#option = {
-		#name = FASCIST_ALTERNATE
-		#text = "RULE_OPTION_FASCIST_ALTERNATE"
-		#desc = "RULE_FASCIST_ALTERNATE_HUN_AI_DESC"
-	#}
+	option = {
+		name = COMMUNIST
+		text = "RULE_OPTION_HUN_COMMUNIST_STALINISM"
+		desc = "RULE_OPTION_COMMUNIST_HUN_AI_DESC"
+	}
+	option = {
+		name = AUSTRIA_HUNGARY
+		text = "RULE_OPTION_AUSTRIA_HUNGARY"
+		desc = "RULE_OPTION_AUSTRIA_HUNGARY_HUN_AI_DESC"
+	}
+	option = {
+		name = DEMOCRATIC
+		text = "RULE_OPTION_HUN_DEMOCRATIC_KING"
+		desc = "RULE_OPTION_DEMOCRATIC_HUN_AI_DESC"
+	}
+	option = {
+		name = FASCIST_ALTERNATE
+		text = "RULE_OPTION_HUN_ROME_PROTOCOLS"
+		desc = "RULE_FASCIST_ALTERNATE_HUN_AI_DESC"
+	}
 	option = {
 		name = FASCIST_HISTORICAL
-		text = "RULE_OPTION_FASCIST_HISTORICAL"
+		text = "RULE_OPTION_HUN_HISTORICAL"
 		desc = "RULE_FASCIST_HUN_AI_DESC"
 		allow_achievements = yes
+	}
+	option = {
+		name = FASCIST_KING
+		text = "RULE_OPTION_HUN_FASCIST_KING"
+		desc = "RULE_FASCIST_ALTERNATE_KING_HUN_AI_DESC"
+	}
+	option = {
+		required_dlc = "Gotterdammerung"
+		name = HABSBURG_HUNGARY
+		text = "RULE_OPTION_HUN_HABSBURG_HUNGARY"
+		desc = "RULE_HABSBURG_HUNGARY_HUN_AI_DESC"
+	}
+	option = {
+		required_dlc = "Gotterdammerung"
+		name = HORTHYIST_KING_HUNGARY
+		text = "RULE_OPTION_HUN_HORTHYIST_KING_HUNGARY"
+		desc = "RULE_HORTHYIST_KING_HUNGARY_HUN_AI_DESC"
+	}
+	option = {
+		required_dlc = "Gotterdammerung"
+		name = REPUBLICAN_DEMOCRACY
+		text = "RULE_OPTION_HUN_REPUBLICAN_DEMOCRACY"
+		desc = "RULE_REPUBLICAN_DEMOCRACY_HUN_AI_DESC"
+	}
+	option = {
+		required_dlc = "Gotterdammerung"
+		name = REPUBLICAN_DEMOCRACY_EXPANSIONIST
+		text = "RULE_OPTION_HUN_REPUBLICAN_DEMOCRACY_EXPANSIONIST"
+		desc = "RULE_REPUBLICAN_DEMOCRACY_EXPANSIONIST_HUN_AI_DESC"
+	}
+	option = {
+		required_dlc = "Gotterdammerung"
+		name = RESTORE_THE_SOCIALIST_REPUBLIC
+		text = "RULE_OPTION_HUN_RESTORE_THE_SOCIALIST_REPUBLIC"
+		desc = "RULE_RESTORE_THE_SOCIALIST_REPUBLIC_HUN_AI_DESC"
+	}
+	option = {
+		required_dlc = "Gotterdammerung"
+		name = ARROW_CROSS_MOVEMENT
+		text = "RULE_OPTION_HUN_ARROW_CROSS_MOVEMENT"
+		desc = "RULE_ARROW_CROSS_MOVEMENT_HUN_AI_DESC"
 	}
 	option = {
 		name = RANDOM
@@ -2394,7 +2451,7 @@ URG_AI_BEHAVIOR = {
 		name = HISTORICAL
 		text = "RULE_OPTION_HISTORICAL"
 		desc = "RULE_OPTION_HISTORICAL_URG_AI_DESC"
-		allow_achievements = no
+		allow_achievements = yes
 	}
 	option = {
 		name = DEMOCRATIC_ALT
@@ -2446,6 +2503,172 @@ PAR_AI_BEHAVIOR = {
 		allow_achievements = no
 	}
 
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM" 
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = no
+	}
+}
+
+AUS_AI_BEHAVIOR = {
+	name = "AUS_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	required_dlc = "Gotterdammerung"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_OPTION_HISTORICAL_AUS_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = AUS_MONARCHIST_PUPPET
+		text = "RULE_OPTION_MONARCHIST_PUPPET_AUS_AI"
+		desc = "RULE_OPTION_MONARCHIST_PUPPET_AUS_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = AUS_MONARCHIST_ANNEX
+		text = "RULE_OPTION_MONARCHIST_ANNEX_AUS_AI"
+		desc = "RULE_OPTION_MONARCHIST_ANNEX_AUS_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = AUS_NEUTRALITY_FEDERATIVE
+		text = "RULE_OPTION_AUS_NEUTRALITY_FEDERATIVE_AI"
+		desc = "RULE_OPTION_AUS_NEUTRALITY_FEDERATIVE_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = AUS_COMMUNIST_SOV_ALIGNED
+		text = "RULE_OPTION_AUS_COMMUNIST_SOV_ALIGNED_AI"
+		desc = "RULE_OPTION_AUS_COMMUNIST_SOV_ALIGNED_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = AUS_COMMUNIST
+		text = "RULE_OPTION_AUS_COMMUNIST_AI"
+		desc = "RULE_OPTION_AUS_COMMUNIST_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = AUS_DEMOCRATIC_FEDERATIVE
+		text = "RULE_OPTION_AUS_DEMOCRATIC_FEDERATIVE_AI"
+		desc = "RULE_OPTION_AUS_DEMOCRATIC_FEDERATIVE_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = AUS_DEMOCRATIC_ALLIES
+		text = "RULE_OPTION_AUS_DEMOCRATIC_ALLIES_AI"
+		desc = "RULE_OPTION_AUS_DEMOCRATIC_ALLIES_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = AUS_DEMOCRATIC_ALPINE_FEDERATION
+		text = "RULE_OPTION_AUS_DEMOCRATIC_ALPINE_FEDERATION_AI"
+		desc = "RULE_OPTION_AUS_DEMOCRATIC_ALPINE_FEDERATION_AI_DESC"
+		allow_achievements = no
+	}
+
+	option = {
+		name = AUS_ANTI_ANSCLUSS_STRESS
+		text = "RULE_OPTION_AUS_ANTI_ANSCLUSS_STRESS_AI"
+		desc = "RULE_OPTION_AUS_ANTI_ANSCLUSS_STRESS_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM" 
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = no
+	}
+}
+
+BEL_AI_BEHAVIOR = {
+	name = "BEL_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	required_dlc = "Gotterdammerung"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_OPTION_HISTORICAL_BEL_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NATIONALIST_FASCIST
+		text = "RULE_OPTION_NATIONALIST_FASCIST_BEL_AI"
+		desc = "RULE_OPTION_NATIONALIST_FASCIST_BEL_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = EXPANSIONIST_FASCIST
+		text = "RULE_OPTION_EXPANSIONIST_FASCIST_BEL_AI"
+		desc = "RULE_OPTION_EXPANSIONIST_FASCIST_BEL_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = DEFENSIVE_DEMOCRAT
+		text = "RULE_OPTION_DEFENSIVE_DEMOCRAT_BEL_AI"
+		desc = "RULE_OPTION_DEFENSIVE_DEMOCRAT_BEL_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = COMMUNIST
+		text = "RULE_OPTION_COMMUNIST_BEL_AI"
+		desc = "RULE_OPTION_COMMUNIST_BEL_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM" 
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = no
+	}
+}
+
+COG_AI_BEHAVIOR = {
+	name = "COG_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	required_dlc = "Gotterdammerung"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_OPTION_HISTORICAL_COG_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COG_DEM_INDEPENDENCE
+		text = "RULE_OPTION_COG_DEM_INDEPENDENCE_AI"
+		desc = "RULE_OPTION_COG_DEM_INDEPENDENCE_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = COG_COM_INDEPENDENCE
+		text = "RULE_OPTION_COG_COM_INDEPENDENCE_AI"
+		desc = "RULE_OPTION_COG_COM_INDEPENDENCE_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = COG_COM_REVOLUTION
+		text = "RULE_OPTION_COG_COM_REVOLUTION_AI"
+		desc = "RULE_OPTION_COG_COM_REVOLUTION_AI_DESC"
+		allow_achievements = no
+	}
 	option = {
 		name = RANDOM
 		text = "RULE_OPTION_RANDOM" 
@@ -2680,7 +2903,6 @@ nordics_fragmentation_status = {
 		desc = "RULE_OPTION_NORDICS_FRAGMENTED_DESC"
 	}
 }
-
 quebec_colonization_status = {
 	name = "QUEBEC_COLONIZATION_STATUS"
 	required_dlc = "Man the Guns"
@@ -2694,6 +2916,21 @@ quebec_colonization_status = {
 		name = FREE_QUEBEC
 		text = "RULE_OPTION_QUEBEC"
 		desc = "RULE_OPTION_QUEBEC_DESC"
+	}
+}
+germany_fragmentation_status = {
+	name = "GERMANY_FRAGMENTATION_STATUS"
+	required_dlc = "Man the Guns"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_GER_FRAGEMNTATION_DESC"
+	}
+	option = {
+		name = GERMANY_FRAGMENTED
+		text = "RULE_OPTION_GERMANY_FRAGMENTED"
+		desc = "RULE_OPTION_GERMANY_FRAGMENTED_DESC"
 	}
 }
 
@@ -2710,7 +2947,7 @@ quebec_colonization_status = {
 
 obsolete_focus_branches_visibility = {
 	name = "OBSOLETE_FOCUS_BRANCHES_VISIBILITY"
-	group = "RULE_GROUP_GENERAL_UI"
+	group = "RULE_GROUP_GEKERAL_UI"
 	default = {
 		name = HIDE
 		text = "RULE_OPTION_HIDE"
@@ -2730,23 +2967,21 @@ obsolete_focus_branches_visibility = {
  #   #   # # #   #         # #   # # # # #
  #   ### # #  ## ###     ##   ##  #  # # ###
 
-#/BA_MOD_FIX 평화 점수를 오버로드한테 넘기는것 같은데 왜 수정한건진 모르겠음
 peace_score_to_overlord = {
 	name = "PEACE_SCORE_TO_OVERLORD"
 	group = "RULE_GROUP_PEACE_SCORE"
-	option = {
+	default = {
 		name = YES
 		text = "RULE_OPTION_YES"
 		desc = "RULE_OPTION_PEACE_SCORE_TO_OVERLORD_YES_DESC"
 		allow_achievements = yes
 	}
-	default = {
+	option = {
 		name = NO
 		text = "RULE_OPTION_NO"
 		desc = "RULE_OPTION_PEACE_SCORE_TO_OVERLORD_NO_DESC"
 	}
 }
-#BA_MOD_FIX/
 
 peace_score_to_faction_leader = {
 	name = "PEACE_SCORE_TO_FACTION_LEADER"

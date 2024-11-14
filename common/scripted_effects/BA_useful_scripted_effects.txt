@@ -423,10 +423,10 @@ BA_mapower_idea_level_up = {
 
 BA_storyarchive_openui_effects = {
 	if = {
-		# GEN 스토리 아카이브
+		# GEK 스토리 아카이브
 		# 조건에 맞춰서 array를 추가해주세요.
 		limit = {
-			original_tag = GEN
+			original_tag = GEK
 			has_country_flag = kivotos_research_on
 			NOT = {
 				check_variable = {
@@ -439,10 +439,10 @@ BA_storyarchive_openui_effects = {
 		}
 	}
 	if = {
-		# GEN 스토리 아카이브
+		# GEK 스토리 아카이브
 		# 조건에 맞춰서 array를 추가해주세요.
 		limit = {
-			original_tag = GEN
+			original_tag = GEK
 			has_country_flag = kivotos_research_on
 			date > 1936.3.1
 			NOT = {
@@ -456,10 +456,10 @@ BA_storyarchive_openui_effects = {
 		}
 	}
 	if = {
-		# GEN 스토리 아카이브
+		# GEK 스토리 아카이브
 		# 조건에 맞춰서 array를 추가해주세요.
 		limit = {
-			original_tag = GEN
+			original_tag = GEK
 			has_country_flag = kivotos_research_on
 			date > 1936.3.15
 			NOT = {
@@ -473,10 +473,10 @@ BA_storyarchive_openui_effects = {
 		}
 	}
 	if = {
-		# GEN 스토리 아카이브
+		# GEK 스토리 아카이브
 		# 조건에 맞춰서 array를 추가해주세요.
 		limit = {
-			original_tag = GEN
+			original_tag = GEK
 			has_country_flag = kivotos_research_on
 			date > 1936.4.1
 			NOT = {
@@ -490,10 +490,10 @@ BA_storyarchive_openui_effects = {
 		}
 	}
 	if = {
-		# GEN 스토리 아카이브
+		# GEK 스토리 아카이브
 		# 조건에 맞춰서 array를 추가해주세요.
 		limit = {
-			original_tag = GEN
+			original_tag = GEK
 			has_country_flag = kivotos_research_on
 			date > 1936.4.15
 			NOT = {
@@ -507,10 +507,10 @@ BA_storyarchive_openui_effects = {
 		}
 	}
 	if = {
-		# GEN 스토리 아카이브
+		# GEK 스토리 아카이브
 		# 조건에 맞춰서 array를 추가해주세요.
 		limit = {
-			original_tag = GEN
+			original_tag = GEK
 			has_country_flag = kivotos_research_on
 			OR = {
 				has_war_with = GEM
@@ -524,18 +524,18 @@ BA_storyarchive_openui_effects = {
 				}
 			}
 		}
-		set_country_flag = GEN_has_war_with_kivotos
+		set_country_flag = GEK_has_war_with_kivotos
 		add_to_array = {
 			story_archive_national_array = 4
 		}
 	}
 	if = {
-		# GEN 스토리 아카이브
+		# GEK 스토리 아카이브
 		# 조건에 맞춰서 array를 추가해주세요.
 		limit = {
-			original_tag = GEN
+			original_tag = GEK
 			has_country_flag = kivotos_research_on
-			has_country_flag = GEN_has_war_with_kivotos
+			has_country_flag = GEK_has_war_with_kivotos
 			date > 1937.7.15
 			NOT = {
 				check_variable = {
@@ -543,18 +543,18 @@ BA_storyarchive_openui_effects = {
 				}
 			}
 		}
-		set_country_flag = GEN_has_war_with_kivotos
+		set_country_flag = GEK_has_war_with_kivotos
 		add_to_array = {
 			story_archive_national_array = 4
 		}
 	}	
 	if = {
-		# GEN 스토리 아카이브
+		# GEK 스토리 아카이브
 		# 조건에 맞춰서 array를 추가해주세요.
 		limit = { 
-			original_tag = GEN
+			original_tag = GEK
 			has_country_flag = kivotos_research_on
-			has_country_flag = GEN_has_war_with_kivotos
+			has_country_flag = GEK_has_war_with_kivotos
 			date > 1938.9.15
 			NOT = {
 				check_variable = {
@@ -562,7 +562,7 @@ BA_storyarchive_openui_effects = {
 				}
 			}
 		}
-		set_country_flag = GEN_has_war_with_kivotos
+		set_country_flag = GEK_has_war_with_kivotos
 		add_to_array = {
 			story_archive_national_array = 4
 		}

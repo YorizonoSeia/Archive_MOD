@@ -35,7 +35,7 @@ peace_ai_desires = {
                 OR = {
                     has_war_with = GEM
                     has_war_with = TRM
-                    has_war_with = GEN
+                    has_war_with = GEK
                     has_war_with = GEA
                 }
                 NOT = { has_war_with = ROOT }
@@ -62,7 +62,7 @@ peace_ai_desires = {
                 OR = {
                     has_war_with = GEH
                     has_war_with = TRM
-                    has_war_with = GEN
+                    has_war_with = GEK
                     has_war_with = GEA
                 }
                 NOT = { has_war_with = ROOT }

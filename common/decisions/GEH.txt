@@ -130,7 +130,7 @@ political_actions = {
                 tooltip = GEH_exile_Wehrmacht_tt
                 OR = {
                     GEA = { controls_state = 59 }
-                    GEN = { controls_state = 59 }
+                    GEK = { controls_state = 59 }
                     GEF = { controls_state = 59 }
                 }
             }
@@ -141,7 +141,7 @@ political_actions = {
                 tooltip = GEH_exile_Wehrmacht_tt
                 OR = {
                     GEA = { controls_state = 59 }
-                    GEN = { controls_state = 59 }
+                    GEK = { controls_state = 59 }
                     GEF = { controls_state = 59 }
                 }
             }
@@ -157,7 +157,7 @@ political_actions = {
                 limit = {
                     controls_state = 59
                     OR = {
-                        tag = GEN
+                        tag = GEK
                         tag = GEA
                         tag = GEF
                     }

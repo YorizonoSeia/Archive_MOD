@@ -110,5 +110,5 @@
 
  TCA_soviet_volunteer_group:0 "$CHI_soviet_volunteer_group$"
 
- GEN_SOV_morozov_design_bureau_organization:0 "$SOV_morozov_design_bureau_organization$"
+ GEK_SOV_morozov_design_bureau_organization:0 "$SOV_morozov_design_bureau_organization$"
  TCA_pursuit_of_harmony_tt:0 "§Y海洛步兵§! 研究解锁。"
