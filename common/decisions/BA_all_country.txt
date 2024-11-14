@@ -1340,7 +1340,7 @@ form_european_union_category = {
 					controls_state = 153
 					controls_state = 152
 					controls_state = 4
-					controls_state = 984
+					controls_state = 986
 				}
 				custom_trigger_tooltip = {
 					tooltip = form_pan_europea_HOL_tt
@@ -1556,14 +1556,14 @@ form_european_union_category = {
 					controls_state = 153
 					controls_state = 152
 					controls_state = 4
-					controls_state = 984
+					controls_state = 986
 				}
 				hidden_effect = {
 					add_state_core = 848
 					add_state_core = 153
 					add_state_core = 152
 					add_state_core = 4
-					add_state_core = 984
+					add_state_core = 986
 				}
 
 				add_war_support = -0.10
@@ -1955,7 +1955,7 @@ form_european_union_category = {
 			controls_state = 153
 			controls_state = 152
 			controls_state = 4
-			controls_state = 984
+			controls_state = 986
 		}
 	
 		visible = {
@@ -1969,7 +1969,7 @@ form_european_union_category = {
 			153 = { add_core_of = ROOT }
 			152 = { add_core_of = ROOT }
 			4 = { add_core_of = ROOT }
-			984 = { add_core_of = ROOT }
+			986 = { add_core_of = ROOT }
 	
 			add_war_support = -0.10
 			add_stability = -0.05

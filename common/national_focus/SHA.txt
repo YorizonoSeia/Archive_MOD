@@ -782,7 +782,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = SHA_ttt_1		
-				controls_state = 984
+				controls_state = 986
 				controls_state = 4
 				controls_state = 152
 				controls_state = 153
@@ -824,7 +824,7 @@ focus_tree = {
 				every_state = {
 					limit = {
 						OR = {
-							state = 984
+							state = 986
 							state = 4
 							state = 152
 							state = 153
@@ -1164,13 +1164,13 @@ focus_tree = {
 		y = 1
 		available = {
 			has_completed_focus = SHA_foc_1-2-10
-			controls_state = 984
-			owns_state = 984
+			controls_state = 986
+			owns_state = 986
 		}
 		bypass = {
 		}
 		completion_reward = {
-			984 = {
+			986 = {
 				set_state_category = large_city
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -1266,7 +1266,7 @@ focus_tree = {
 			has_full_control_of_state = 4
 			has_full_control_of_state = 152
 			has_full_control_of_state = 153
-			has_full_control_of_state = 984
+			has_full_control_of_state = 986
 			has_full_control_of_state = 848
 		}
 		bypass = {
@@ -1305,7 +1305,7 @@ focus_tree = {
 					}
 				}
 			}
-			984 = {
+			986 = {
 				set_building_level = {
 					type = bunker
 					level = 3
@@ -1342,7 +1342,7 @@ focus_tree = {
 			has_full_control_of_state = 4
 			has_full_control_of_state = 152
 			has_full_control_of_state = 153
-			has_full_control_of_state = 984
+			has_full_control_of_state = 986
 			has_full_control_of_state = 848
 		}
 		bypass = {
@@ -1381,7 +1381,7 @@ focus_tree = {
 					}
 				}
 			}
-			984 = {
+			986 = {
 				set_building_level = {
 					type = bunker
 					level = 6
@@ -3051,7 +3051,7 @@ focus_tree = {
 		y = 1
 		available = {
 			has_defensive_war_with = HYA
-			owns_state = 984
+			owns_state = 986
 			surrender_progress > 0.25
 		}
 		bypass = {
@@ -3370,7 +3370,7 @@ focus_tree = {
 			has_full_control_of_state = 4
 			has_full_control_of_state = 152
 			has_full_control_of_state = 153
-			has_full_control_of_state = 984
+			has_full_control_of_state = 986
 			has_full_control_of_state = 848
 			NOT = {
 				has_idea = SHA_BuildYosae_idea
@@ -3431,7 +3431,7 @@ focus_tree = {
 					}
 				}
 			}
-			984 = {
+			986 = {
 				add_building_construction = {
 					type = anti_air_building
 					level = 1
@@ -6898,12 +6898,12 @@ focus_tree = {
 		x = -4
 		y = 2
 		available = {
-			controls_state = 984
+			controls_state = 986
 		}
 		bypass = {
 		}
 		completion_reward = {
-			984 = {
+			986 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex

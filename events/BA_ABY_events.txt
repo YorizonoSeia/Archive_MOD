@@ -1426,7 +1426,7 @@ country_event = {
 		152 = { transfer_state_to = AUS }
 		153 = { transfer_state_to = AUS }
 		848 = { transfer_state_to = AUS }
-		984 = { transfer_state_to = AUS }
+		986 = { transfer_state_to = AUS }
 		972 = { transfer_state_to = AUS }
 		69 = { transfer_state_to = AUS }
 		4 = { transfer_state_to = AUS }
@@ -1446,7 +1446,7 @@ country_event = {
 		152 = { transfer_state_to = AUS }
 		153 = { transfer_state_to = AUS }
 		848 = { transfer_state_to = AUS }
-		984 = { transfer_state_to = AUS }
+		986 = { transfer_state_to = AUS }
 		972 = { transfer_state_to = AUS }
 		69 = { transfer_state_to = AUS }
 		4 = { transfer_state_to = AUS }
@@ -1522,7 +1522,7 @@ country_event = {
 		every_other_country = {
 			limit = {
 				OR = {
-					controls_state = 984
+					controls_state = 986
 					controls_state = 4
 					controls_state = 152
 					controls_state = 848
@@ -4286,7 +4286,7 @@ country_event = {
 	option = {
 		trigger = {
 			4 = { is_controlled_by = ABY }
-			984 = { is_controlled_by = ABY }
+			986 = { is_controlled_by = ABY }
 			153 = { is_controlled_by = ABY }
 			152 = { is_controlled_by = ABY }
 			848 = { is_controlled_by = ABY }
@@ -4294,7 +4294,7 @@ country_event = {
 		name = ABY_new_event.128.b
 		ai_chance = { factor = 100 }
 		set_capital = {
-			state = 984
+			state = 986
 		}
 		set_province_name = {
 			id = 732
@@ -4308,7 +4308,7 @@ country_event = {
 	option = {
 		trigger = {
 			4 = { is_controlled_by = ABY }
-			984 = { is_controlled_by = ABY }
+			986 = { is_controlled_by = ABY }
 			153 = { is_controlled_by = ABY }
 			152 = { is_controlled_by = ABY }
 			848 = { is_controlled_by = ABY }

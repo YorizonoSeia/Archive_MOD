@@ -28,7 +28,7 @@ peace_ai_desires = {
 			}
 			FROM.FROM.FROM = {
 				state = 69
-				state = 984
+				state = 986
 			}
 		}
 		ai_desire = -1200

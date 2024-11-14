@@ -63,7 +63,7 @@ BA_HUN_wprnrxhdgkq = {
 			controls_state = 4
 			controls_state = 152
 			controls_state = 153
-			controls_state = 984
+			controls_state = 986
 			controls_state = 848
 		}
 		visible = {
@@ -76,7 +76,7 @@ BA_HUN_wprnrxhdgkq = {
 				state = 4
 				state = 152
 				state = 153
-				state = 984
+				state = 986
 				state = 848
 			}
 		}
@@ -84,7 +84,7 @@ BA_HUN_wprnrxhdgkq = {
 			add_state_core = 4
 			add_state_core = 152
 			add_state_core = 153
-			add_state_core = 984
+			add_state_core = 986
 			add_state_core = 848
 			add_to_variable = {	BA_HUN_conflict_political_power_factor = -0.10 }
 			add_to_variable = {	BA_HUN_conflict_conscription_factor = -0.20 }

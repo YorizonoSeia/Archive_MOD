@@ -376,7 +376,7 @@ BA_from_southern_kivotos = {
 
 		available = {
 			controls_state = 4
-			controls_state = 984
+			controls_state = 986
 			controls_state = 152
 			controls_state = 153
 			controls_state = 848
@@ -393,7 +393,7 @@ BA_from_southern_kivotos = {
 
 		complete_effect = {
 			add_state_core = 4
-			add_state_core = 984
+			add_state_core = 986
 			add_state_core = 152
 			add_state_core = 153
 			add_state_core = 848

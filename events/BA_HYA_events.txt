@@ -86,10 +86,10 @@ country_event = {
 		if = {
 			limit = {
 				SHA = {
-					owns_state = 984
+					owns_state = 986
 				}
 			}
-			transfer_state = 984
+			transfer_state = 986
 		}
 		if = {
 			limit = {

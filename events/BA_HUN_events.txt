@@ -885,7 +885,7 @@ country_event = { #오헝 재건
 		controls_state = 152
 		controls_state = 153
 		controls_state = 848
-		controls_state = 984
+		controls_state = 986
 	}
 
 	option = { 

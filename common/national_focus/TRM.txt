@@ -2764,7 +2764,7 @@
 			has_army_manpower = { size > 749999 }
 			NOT = { 
 				owns_state = 4
-				owns_state = 984
+				owns_state = 986
 				owns_state = 152
 				owns_state = 153
 				owns_state = 848
@@ -2772,7 +2772,7 @@
         }
         bypass = {
 			controls_state = 4
-			controls_state = 984
+			controls_state = 986
 			controls_state = 152
 			controls_state = 153
 			controls_state = 848
@@ -2799,7 +2799,7 @@
 						has_capitulated = no
 						OR = {
 							owns_state = 4
-							owns_state = 984
+							owns_state = 986
 							owns_state = 152
 							owns_state = 153
 							owns_state = 848
@@ -2819,7 +2819,7 @@
 					NOT = { tag = SHA }
 					OR = {
 						owns_state = 4
-						owns_state = 984
+						owns_state = 986
 						owns_state = 152
 						owns_state = 153
 						owns_state = 848
@@ -2830,7 +2830,7 @@
 						target = PREV
 						type = take_state
 						generator = {
-							4 984 152 153 848
+							4 986 152 153 848
 						}
 					}
 				}
@@ -3008,7 +3008,7 @@
 						OR = {
 							owns_state = 4
 							owns_state = 152
-							owns_state = 984
+							owns_state = 986
 						}
 					} 
 				}
@@ -3016,7 +3016,7 @@
 					type = take_state_focus
 					target = SHA
 					expire = 0
-					generator = { 984 152 4 }
+					generator = { 986 152 4 }
 				}
 			}
 			if = {

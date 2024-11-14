@@ -294,7 +294,7 @@ focus_tree = {
 			create_wargoal = {
 				type = take_state_focus
 				target = SHA
-				generator = { 984 }
+				generator = { 986 }
 			}
 			set_global_flag = GFLAG_BAKSANWAR
 			set_global_flag = GFLAG_BAK_BAKSANWAR
