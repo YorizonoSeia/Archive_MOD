@@ -806,7 +806,7 @@ ARI_restoration_of_germany = {
 		highlight_states = {
 			highlight_state_targets = {
 				state = 28
-				state = 976
+				state = 988
 			}
 		}
 		visible = {
@@ -816,7 +816,7 @@ ARI_restoration_of_germany = {
 		available = {
 			has_completed_focus = ARI_german_lands
 			controls_state = 28
-			controls_state = 976
+			controls_state = 988
 		}
 
 		ai_will_do = {
@@ -840,9 +840,9 @@ ARI_restoration_of_germany = {
 					is_subject_of = ARI
 				}
 				transfer_state = 28
-				transfer_state = 976
+				transfer_state = 988
 				add_state_core = 28
-				add_state_core = 976
+				add_state_core = 988
 			}
 		}
 	}

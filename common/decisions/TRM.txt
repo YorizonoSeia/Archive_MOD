@@ -1771,7 +1771,7 @@ TRN_after_war_decisions = {
 		icon = GFX_decision_eng_blackshirt_march
 		allowed = { }
     	available = {
-            976 = {
+            988 = {
                 NOT = {
                     is_owned_by = ROOT
                 }
@@ -1786,7 +1786,7 @@ TRN_after_war_decisions = {
             base = 100
         }
         visible = { 
-            976 = {
+            988 = {
                 NOT = {
                     is_owned_by = ROOT
                 }
@@ -1810,7 +1810,7 @@ TRN_after_war_decisions = {
             }
             ROOT = {
                 declare_war_on = {
-                    target = 976.owner
+                    target = 988.owner
                     type = annex_everything
                 }
             }

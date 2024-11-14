@@ -52,7 +52,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_full_control_of_state = 28
-				has_full_control_of_state = 976
+				has_full_control_of_state = 988
 			}
 		}
 		completion_reward = {
@@ -65,9 +65,9 @@ focus_tree = {
 				}
 			}
 			else_if = {
-				limit = { has_full_control_of_state = 976 }
+				limit = { has_full_control_of_state = 988 }
 				set_capital = {
-					state = 976
+					state = 988
 					remember_old_capital = no
 				}
 			}
@@ -89,8 +89,8 @@ focus_tree = {
 				}
 			}
 			if = {
-				limit = { has_full_control_of_state = 976 }
-				976 = {
+				limit = { has_full_control_of_state = 988 }
+				988 = {
 					create_unit = {
 						division = "name = \"4. Garnison de la ligne Maginot\" division_template = \"Division d'Infanterie\" start_experience_factor = 0.4 start_equipment_factor = 0.7"
 						owner = ROOT

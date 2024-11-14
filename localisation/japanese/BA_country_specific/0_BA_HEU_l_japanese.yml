@@ -78,7 +78,7 @@
  HEU_rnrrudqnswod_2:0 "§Y[42.GetName]§!地域での国境紛争激化"
  HEU_rnrrudqnswod_3:0 "§Y[975.GetName]§!地域での国境紛争激化"
  HEU_rnrrudqnswod_4:0 "§Y[28.GetName]§!地域での国境紛争激化"
- HEU_rnrrudqnswod_5:0 "§Y[976.GetName]§!地域での国境紛争激化"
+ HEU_rnrrudqnswod_5:0 "§Y[988.GetName]§!地域での国境紛争激化"
  HEU_rnjsfurxnwod:0 "ゲヘナの権力闘争"
  HEU_rnjsfurxnwod_desc:0 "ゲヘナの政治的主導権をめぐる争いが始まりました。私たちは学生の支持を集め、ゲヘナの支配者にならなければならない！\n§R[!]時間がたつにつれて§![GEM.GetNameWithFlag]§Rに有利な方向に支持率が変化するだろう！§!"
  HEU_rnjsfur_gem_icon:0 "[?global.HEU_rnjsfur_gem|0H]"

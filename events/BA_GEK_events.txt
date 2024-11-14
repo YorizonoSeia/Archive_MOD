@@ -387,7 +387,7 @@ country_event = { #수락
 			}
 			FRA = {
 				transfer_state = 28
-				transfer_state = 976
+				transfer_state = 988
 			}
 		}
 	}

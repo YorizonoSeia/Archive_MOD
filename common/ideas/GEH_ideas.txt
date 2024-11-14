@@ -1885,7 +1885,7 @@ ideas = {
 						}
 					}
 				}
-				976 = {
+				988 = {
 					set_building_level = {
 						type = bunker
 						level = 0

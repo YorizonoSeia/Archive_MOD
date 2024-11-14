@@ -1385,7 +1385,7 @@ TRM_THE_NEW_ORDER = {
 				is_core_of = TRM
 				is_core_of = GEM
                 state = 28
-                state = 976
+                state = 988
                 state = 58
                 state = 909
 			}
@@ -2585,7 +2585,7 @@ SOV_WIN_Great_Patriotic_War_2 = {
 				OR ={
 					is_core_of = MIL
 					state = 28
-					state = 976
+					state = 988
 					state = 971
 					state = 29
 					state = 14

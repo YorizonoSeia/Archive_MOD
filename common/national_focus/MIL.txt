@@ -2041,7 +2041,7 @@ focus_tree = {
 		y = 1
 		bypass = {
 			controls_state = 28
-			controls_state = 976
+			controls_state = 988
 		}
 		relative_position_id = MIL_projection_of_force
 		completion_reward = {
@@ -2049,7 +2049,7 @@ focus_tree = {
 				limit = {
 					OR = {
 						controls_state = 28
-						controls_state = 976
+						controls_state = 988
 					}
 					NOT = { tag = ROOT }
 				}
@@ -2069,7 +2069,7 @@ focus_tree = {
 			OR = {
 				AND = {
 					controls_state = 28
-					controls_state = 976
+					controls_state = 988
 					controls_state = 29
 					controls_state = 971
 					controls_state = 14
@@ -2078,7 +2078,7 @@ focus_tree = {
 				}
 				AND = {
 					28 = { is_core_of = ROOT }
-					976 = { is_core_of = ROOT }
+					988 = { is_core_of = ROOT }
 					29 = { is_core_of = ROOT }
 					971 = { is_core_of = ROOT }
 					14 = { is_core_of = ROOT }
@@ -2087,7 +2087,7 @@ focus_tree = {
 				}
 				AND = {
 					28 = { is_claimed_by = ROOT }
-					976 = { is_claimed_by = ROOT }
+					988 = { is_claimed_by = ROOT }
 					29 = { is_claimed_by = ROOT }
 					971 = { is_claimed_by = ROOT }
 					14 = { is_claimed_by = ROOT }
@@ -2104,7 +2104,7 @@ focus_tree = {
 			army_experience = 25
 
 			add_state_claim = 28
-			add_state_claim = 976
+			add_state_claim = 988
 			add_state_claim = 29
 			add_state_claim = 971
 			add_state_claim = 14

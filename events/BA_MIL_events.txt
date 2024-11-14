@@ -2776,9 +2776,9 @@ country_event = { #마지노선 요구
                 AND = {
                     any_country = {
                         NOT = { tag = ROOT }
-                        owns_state = 976
+                        owns_state = 988
                     }
-                    controls_state = 976
+                    controls_state = 988
                 }
             }
         }
@@ -2791,8 +2791,8 @@ country_event = { #마지노선 요구
                         ROOT = { controls_state = 28 }
                     }
                     AND = {
-                        owns_state = 976
-                        ROOT = { controls_state = 976 }
+                        owns_state = 988
+                        ROOT = { controls_state = 988 }
                     }
                 }
             }
@@ -2821,15 +2821,15 @@ country_event = { #마지노선 요구
                     controls_state = 28
                 }
                 AND = {
-                    owns_state = 976
-                    controls_state = 976
+                    owns_state = 988
+                    controls_state = 988
                 }
             }
         }
         every_controlled_state = {
             limit = {
                 state = 28
-                state = 976
+                state = 988
             }
             transfer_state_to = MIL
         }
@@ -2854,7 +2854,7 @@ country_event = { #마지노선 요구 거절
         create_wargoal = {
             target = FROM
             type = take_state
-            generator = { 28 976 }
+            generator = { 28 988 }
             expire = 90
         }
     }

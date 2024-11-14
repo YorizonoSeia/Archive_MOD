@@ -1284,7 +1284,7 @@ form_european_union_category = {
 					controls_state = 971
 					controls_state = 17
 					controls_state = 28
-					controls_state = 976
+					controls_state = 988
 					controls_state = 20
 					controls_state = 32
 					controls_state = 735
@@ -1423,7 +1423,7 @@ form_european_union_category = {
 					controls_state = 971
 					controls_state = 17
 					controls_state = 28
-					controls_state = 976
+					controls_state = 988
 					controls_state = 20
 					controls_state = 32
 					controls_state = 735
@@ -1456,7 +1456,7 @@ form_european_union_category = {
 					add_state_core = 971
 					add_state_core = 17
 					add_state_core = 28
-					add_state_core = 976
+					add_state_core = 988
 					add_state_core = 20
 					add_state_core = 32
 					add_state_core = 735
@@ -1763,7 +1763,7 @@ form_european_union_category = {
 			controls_state = 971
 			controls_state = 17
 			controls_state = 28
-			controls_state = 976
+			controls_state = 988
 			controls_state = 20
 			controls_state = 32
 			controls_state = 735
@@ -1802,7 +1802,7 @@ form_european_union_category = {
 			971 = { add_core_of = ROOT }
 			17 = { add_core_of = ROOT }
 			28 = { add_core_of = ROOT }
-			976 = { add_core_of = ROOT }
+			988 = { add_core_of = ROOT }
 			20 = { add_core_of = ROOT }
 			32 = { add_core_of = ROOT }
 			735 = { add_core_of = ROOT }

@@ -789,7 +789,7 @@ focus_tree = {
 	#			target = FRM
 	#		}
 	#		add_state_core = 28
-	#		add_state_core = 976
+	#		add_state_core = 988
 	#	}
 	#}
 	
