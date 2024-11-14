@@ -10854,7 +10854,7 @@ ABY_descision_category_abydos_puppet = { # 연방조약 괴뢰
 
         available = {
 					controls_state = 88
-					controls_state = 979
+					controls_state = 991
 					controls_state = 10
 					controls_state = 90
 					controls_state = 92
@@ -10876,7 +10876,7 @@ ABY_descision_category_abydos_puppet = { # 연방조약 괴뢰
 						limit = {
 							OR = {
 								state = 88
-								state = 979
+								state = 991
 								state = 10
 								state = 90
 								state = 92
@@ -15704,7 +15704,7 @@ ABY_kivotos_core_states_categories = {
 			    controls_state = 88
 			    controls_state = 91
 			    controls_state = 89
-			    controls_state = 979
+			    controls_state = 991
 			    controls_state = 87
 			    controls_state = 98
             }
@@ -15717,7 +15717,7 @@ ABY_kivotos_core_states_categories = {
                 state = 10
                 state = 91
                 state = 89
-			    state = 979
+			    state = 991
 			    state = 87
 			    state = 98
             }
@@ -15746,7 +15746,7 @@ ABY_kivotos_core_states_categories = {
 				set_cosmetic_tag = ABY_reichskomindante_POL
                 ABY = {
                     puppet = PREV
-			        transfer_state = 979
+			        transfer_state = 991
 			        transfer_state = 87
 			        transfer_state = 98
                 }

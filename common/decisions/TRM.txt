@@ -2640,7 +2640,7 @@ TRM_kivotos_core_states_categories = {
 			    controls_state = 88
 			    controls_state = 91
 			    controls_state = 89
-			    controls_state = 979
+			    controls_state = 991
 			    controls_state = 87
 			    controls_state = 98
             }
@@ -2653,7 +2653,7 @@ TRM_kivotos_core_states_categories = {
                 state = 10
                 state = 91
                 state = 89
-			    state = 979
+			    state = 991
 			    state = 87
 			    state = 98
             }

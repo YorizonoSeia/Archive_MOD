@@ -1379,7 +1379,7 @@ focus_tree = {
 		}
 		bypass = {
 			controls_state = 88
-			controls_state = 979
+			controls_state = 991
 			controls_state = 91
 			controls_state = 89
 		}

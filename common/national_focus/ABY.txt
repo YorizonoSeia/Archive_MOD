@@ -10819,7 +10819,7 @@ focus_tree = {
 					id = ABY_new_event.196
 				}
 			}
-			979 = {
+			991 = {
 				add_core_of = ABY
 			}
 			88 = {

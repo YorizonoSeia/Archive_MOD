@@ -2379,7 +2379,7 @@ FRA_great_FRA = {
 			88 = {
 				is_controlled_by_ROOT_or_ally = yes
 			}
-			979 = {
+			991 = {
 				is_controlled_by_ROOT_or_ally = yes
 			}
 			89 = {
@@ -2398,9 +2398,9 @@ FRA_great_FRA = {
 			hidden_effect = {
 				DNZ = {
 					transfer_state = 88
-					transfer_state = 979
+					transfer_state = 991
 					add_state_core = 88
-					add_state_core = 979
+					add_state_core = 991
 					set_cosmetic_tag = KRA_fra
 					FRA = {
 						set_autonomy = {

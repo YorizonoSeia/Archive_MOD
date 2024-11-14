@@ -413,7 +413,7 @@ BA_HUN_wprnrxhdgkq = {
 		cost = 60
 		available = {
 			controls_state = 88
-			controls_state = 979
+			controls_state = 991
 		}
 		visible = {
 		}
@@ -424,12 +424,12 @@ BA_HUN_wprnrxhdgkq = {
 		highlight_states = {
 			highlight_state_targets = {
 				state = 88
-				state = 979
+				state = 991
 			}
 		}
 		remove_effect = {
 			add_state_core = 88
-			add_state_core = 979
+			add_state_core = 991
 			add_to_variable = {	BA_HUN_conflict_factory_max_efficiency_factor = -0.05 }
 			add_to_variable = {	BA_HUN_conflict_factory_efficiency_gain_factor = -0.10 }
 			custom_effect_tooltip = BA_HUN_conflict_tooltip_11
