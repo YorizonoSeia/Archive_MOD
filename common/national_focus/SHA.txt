@@ -4059,7 +4059,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = SHA_tt_6
-			add_state_core = 69
+			add_state_core = 972
 			add_state_core = 75
 			hidden_effect = {
 				STY = {
@@ -5511,7 +5511,7 @@ focus_tree = {
 		y = 8
 		available = {
 			owns_state = 9
-			owns_state = 69
+			owns_state = 972
 			owns_state = 72
 			owns_state = 74
 			owns_state = 75
@@ -5540,7 +5540,7 @@ focus_tree = {
 		y = 9
 		available = {
 			owns_state = 9
-			owns_state = 69
+			owns_state = 972
 			owns_state = 72
 			owns_state = 74
 			owns_state = 75
@@ -5574,7 +5574,7 @@ focus_tree = {
 				is_controlled_by = ROOT
 				compliance > 35
 			}
-			69 = {
+			972 = {
 				is_owned_by = ROOT
 				is_controlled_by = ROOT
 				compliance > 35
@@ -5597,7 +5597,7 @@ focus_tree = {
 		}
 		bypass = {
             9 = { is_core_of = SHA }
-            69 = { is_core_of = SHA }
+            972 = { is_core_of = SHA }
             72 = { is_core_of = SHA }
             74 = { is_core_of = SHA }
             75 = { is_core_of = SHA }
@@ -5625,7 +5625,7 @@ focus_tree = {
 		y = 9
 		available = {
 			owns_state = 9
-			owns_state = 69
+			owns_state = 972
 			owns_state = 72
 			owns_state = 74
 			owns_state = 75
@@ -5655,7 +5655,7 @@ focus_tree = {
 		y = 11
 		available = {
 			owns_state = 9
-			owns_state = 69
+			owns_state = 972
 			owns_state = 72
 			owns_state = 74
 			owns_state = 75
@@ -5685,7 +5685,7 @@ focus_tree = {
 		y = 11
 		available = {
 			owns_state = 9
-			owns_state = 69
+			owns_state = 972
 			owns_state = 72
 			owns_state = 74
 			owns_state = 75
@@ -5759,7 +5759,7 @@ focus_tree = {
 				is_controlled_by = ROOT
 				compliance > 60
 			}
-			69 = {
+			972 = {
 				is_owned_by = ROOT
 				is_controlled_by = ROOT
 				compliance > 60
@@ -5782,7 +5782,7 @@ focus_tree = {
 		}
 		bypass = {
             9 = { is_core_of = SHA }
-            69 = { is_core_of = SHA }
+            972 = { is_core_of = SHA }
             72 = { is_core_of = SHA }
             74 = { is_core_of = SHA }
             75 = { is_core_of = SHA }
@@ -5879,7 +5879,7 @@ focus_tree = {
 		}
 		bypass = {
 			OR = {
-				owns_state = 985
+				owns_state = 69
 				has_war_with = ABY
 				ABY = {
 					exists = no
@@ -5890,7 +5890,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			add_state_claim = 985
+			add_state_claim = 69
 			create_wargoal = {
 				target = ABY
 				type = take_claimed_state
@@ -5942,7 +5942,7 @@ focus_tree = {
 		y = 7
 		available = {
 			owns_state = 9
-			owns_state = 69
+			owns_state = 972
 			owns_state = 72
 			owns_state = 74
 			owns_state = 75
@@ -6075,10 +6075,10 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = SHA_ttt_10	
-				controls_state = 985
+				controls_state = 69
 				controls_state = 9
 				controls_state = 75
-				controls_state = 69
+				controls_state = 972
 				controls_state = 74
 				controls_state = 72
 			}
@@ -6118,10 +6118,10 @@ focus_tree = {
 				every_state = {
 					limit = {
 						OR = {
-							state = 985
+							state = 69
 							state = 9
 							state = 75
-							state = 69
+							state = 972
 							state = 74
 							state = 72
 							state = 102

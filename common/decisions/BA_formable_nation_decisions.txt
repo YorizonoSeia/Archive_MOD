@@ -380,12 +380,12 @@ BA_from_southern_kivotos = {
 			controls_state = 152
 			controls_state = 153
 			controls_state = 848
-			controls_state = 69
+			controls_state = 972
 			controls_state = 75
 			controls_state = 74
 			controls_state = 72
 			controls_state = 9
-			controls_state = 985
+			controls_state = 69
 			controls_state = 53
 			controls_state = 52
 			controls_state = 54
@@ -397,12 +397,12 @@ BA_from_southern_kivotos = {
 			add_state_core = 152
 			add_state_core = 153
 			add_state_core = 848
-			add_state_core = 69
+			add_state_core = 972
 			add_state_core = 75
 			add_state_core = 74
 			add_state_core = 72
 			add_state_core = 9
-			add_state_core = 985
+			add_state_core = 69
 			add_state_core = 53
 			add_state_core = 52
 			add_state_core = 54
@@ -655,7 +655,7 @@ BA_greater_ABY_category = {
 
 		highlight_states = {
 			highlight_state_targets = { 
-				state = 985
+				state = 69
 				state = 64
 				state = 65
 				state = 67
@@ -748,7 +748,7 @@ BA_greater_ABY_category = {
                 value = 100
                 tooltip = ABY_add_num_of_monthly_students_100_tooltip
             }
-			985 = {add_core_of = ABY}
+			69 = {add_core_of = ABY}
 			64 = {add_core_of = ABY}
 			65 = {add_core_of = ABY}
 			67 = {add_core_of = ABY}

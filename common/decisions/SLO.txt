@@ -5,9 +5,9 @@ political_actions = {
 		allowed = { original_tag = SLO }
 		available = {
 			is_puppet = no
-			controls_state = 985
-			controls_state = 9
 			controls_state = 69
+			controls_state = 9
+			controls_state = 972
 			controls_state = 75
 			controls_state = 74
 			controls_state = 72
@@ -18,9 +18,9 @@ political_actions = {
 		}
 		highlight_states = {
 			highlight_state_targets = {
-				state = 985
-				state = 9
 				state = 69
+				state = 9
+				state = 972
 				state = 75
 				state = 74
 				state = 72
@@ -32,9 +32,9 @@ political_actions = {
 		}
 		complete_effect = {
 			set_cosmetic_tag = SLO_czechoslovakia_tag
-			add_state_core = 985
-			add_state_core = 9
 			add_state_core = 69
+			add_state_core = 9
+			add_state_core = 972
 			add_state_core = 75
 			add_state_core = 74
 			add_state_core = 72
@@ -79,7 +79,7 @@ political_actions = {
 			add_ideas = CZE_skoda_works
 			add_ideas = CZE_divided_nation
 			hidden_effect = {
-				985 = {
+				69 = {
 					set_demilitarized_zone = no
 				}
 			}

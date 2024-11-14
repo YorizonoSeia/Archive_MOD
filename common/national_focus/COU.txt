@@ -1876,9 +1876,9 @@ focus_tree = {
 					}
 				}
 				OR = {
-					controls_state = 985
+					controls_state = 69
 					any_country = {
-						controls_state = 985
+						controls_state = 69
 						is_subject_of = COU
 					}
 				}
@@ -2083,9 +2083,9 @@ focus_tree = {
 				create_dynamic_country = {
 					copy_tag = HYA
 					original_tag = HYA
-					transfer_state = 985
-					transfer_state = 9
 					transfer_state = 69
+					transfer_state = 9
+					transfer_state = 972
 					transfer_state = 75
 					transfer_state = 74
 					transfer_state = 72

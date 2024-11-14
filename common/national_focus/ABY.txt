@@ -351,7 +351,7 @@ focus_tree = {
 			}
 			72 = { add_core_of = ABY }
 			74 = { add_core_of = ABY } 
-			69 = { add_core_of = ABY }
+			972 = { add_core_of = ABY }
 			HYA = {
 				country_event = {
 					id = ABY_new_event.101
@@ -1020,7 +1020,7 @@ focus_tree = {
 				add_to_variable = { ABY_halo_milita_cap = 6 }
 				set_division_template_cap = {  division_template = "ABYDOS National Brigade" division_cap = ABY_halo_milita_cap }
 			}
-			985 = {
+			69 = {
 				create_unit = {
 					division = "name = \"German milita\" division_template = \"German milita\" start_experience_factor = 0 start_equipment_factor = 1"
 					owner = ABY
@@ -1521,7 +1521,7 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
-			985 = {
+			69 = {
 				add_building_construction = {
 					type = supply_node
 					level = 1
@@ -2106,7 +2106,7 @@ focus_tree = {
 			72 = { is_controlled_by = ABY }
 			74 = { is_controlled_by = ABY }
 			75 = { is_controlled_by = ABY }
-			69 = { is_controlled_by = ABY }
+			972 = { is_controlled_by = ABY }
 			NOT = {
 				has_completed_focus = ABY_focus_with_czech
 			}
@@ -4554,7 +4554,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			985 = {
+			69 = {
 				add_extra_state_shared_building_slots = 6
 				add_building_construction = {
 					type = arms_factory
@@ -4619,7 +4619,7 @@ focus_tree = {
 		}
 		available = {
 			controls_state = 9
-			controls_state = 69
+			controls_state = 972
 			controls_state = 72
 			controls_state = 74
 			controls_state = 75#중점 선행조건
@@ -5620,7 +5620,7 @@ focus_tree = {
 					ideology = fascism
 					size = 0.5
 					states = {
-						69 74
+						972 74
 					}
 					keep_all_characters = yes
 				}
@@ -6379,7 +6379,7 @@ focus_tree = {
 					ideology = fascism 
 					size = 0.3
 					states = {
-						69 985 74
+						972 69 74
 					}
 					keep_all_characters = yes
 				}
@@ -7572,7 +7572,7 @@ focus_tree = {
 				16 = {is_controlled_by_ROOT_or_ally = yes}
 				14 = {is_controlled_by_ROOT_or_ally = yes}
 				4 = {is_controlled_by_ROOT_or_ally = yes}
-				985= {is_controlled_by_ROOT_or_ally = yes}
+				69= {is_controlled_by_ROOT_or_ally = yes}
 				9 = {is_controlled_by_ROOT_or_ally = yes}
 			}
 			#중점 선행조건
@@ -8419,7 +8419,7 @@ focus_tree = {
 				controls_state  = 141 # 체리노그라드
 				controls_state  = 16 # 밀레니엄 타워
 				controls_state  = 14 # BLM 특수학원
-				controls_state  = 985 # 아비도스
+				controls_state  = 69 # 아비도스
 			}
 			#중점 선행조건
 		}
@@ -8909,7 +8909,7 @@ focus_tree = {
 				16 = {is_controlled_by_ROOT_or_ally = yes}
 				14 = {is_controlled_by_ROOT_or_ally = yes}
 				4 = {is_controlled_by_ROOT_or_ally = yes}
-				985= {is_controlled_by_ROOT_or_ally = yes}
+				69= {is_controlled_by_ROOT_or_ally = yes}
 				9 = {is_controlled_by_ROOT_or_ally = yes}
 			}
 			#중점 선행조건
@@ -11481,7 +11481,7 @@ focus_tree = {
 			72 = { is_controlled_by = ABY }
 			74 = { is_controlled_by = ABY }
 			75 = { is_controlled_by = ABY }
-			69 = { is_controlled_by = ABY }
+			972 = { is_controlled_by = ABY }
 			has_war = no
 			#중점 선행조건
 		}
@@ -11526,7 +11526,7 @@ focus_tree = {
 			72 = { add_core_of = ABY }
 			74 = { add_core_of = ABY }
 			75 = { add_core_of = ABY }
-			69 = { add_core_of = ABY }
+			972 = { add_core_of = ABY }
 			add_ideas = {
 				ABY_idea_bohemian_problem
 			}
@@ -12156,7 +12156,7 @@ focus_tree = {
 			72 = { is_controlled_by = ABY }
 			74 = { is_controlled_by = ABY }
 			75 = { is_controlled_by = ABY }
-			69 = { is_controlled_by = ABY }
+			972 = { is_controlled_by = ABY }
 			ABY = {
 				has_war = no
 			}
@@ -12498,7 +12498,7 @@ focus_tree = {
 			72 = { is_controlled_by = ABY }
 			74 = { is_controlled_by = ABY }
 			75 = { is_controlled_by = ABY }
-			69 = { is_controlled_by = ABY }
+			972 = { is_controlled_by = ABY }
 			#중점 선행조건
 		}
 
@@ -13825,7 +13825,7 @@ focus_tree = {
 					modifier = ABY_modifier_anti_army_coup
 				}
 			}
-			985 = {
+			69 = {
 				add_dynamic_modifier = {
 					modifier = ABY_modifier_anti_army_coup
 				}
@@ -13840,7 +13840,7 @@ focus_tree = {
 					modifier = ABY_modifier_anti_army_coup
 				}
 			}
-			69 = {
+			972 = {
 				add_dynamic_modifier = {
 					modifier = ABY_modifier_anti_army_coup
 				}
@@ -13879,7 +13879,7 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
-			69 = {
+			972 = {
 				remove_dynamic_modifier = {
 					modifier = ABY_modifier_anti_army_coup
 				}
@@ -14028,7 +14028,7 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
-			985 = {
+			69 = {
 				remove_dynamic_modifier = {
 					modifier = ABY_modifier_anti_army_coup
 				}

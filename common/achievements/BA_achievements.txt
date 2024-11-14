@@ -143,7 +143,7 @@ Kaiser_dream = {
     }
     happened = {
         NOT = { country_exists = ABY }
-        985 = {
+        69 = {
             is_controlled_by = KAI
         }
     }
@@ -1958,7 +1958,7 @@ Czech_Slovakia = { # 체코 '슬로바키아'
         original_tag = SLO
     }
     happened = {
-        owns_state = 985
+        owns_state = 69
         owns_state = 9
         owns_state = 69
         owns_state = 75
@@ -2221,7 +2221,7 @@ Sand_Festival_for_the_Sultan = { # 술탄을 위한 모래축제
     happened = {
         has_global_flag = form_ottoman_empire_flag
         # 주 기준은 모래바람
-        controls_state = 985
+        controls_state = 69
         controls_state = 65
         controls_state = 66
         controls_state = 69

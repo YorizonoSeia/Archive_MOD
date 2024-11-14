@@ -4241,8 +4241,8 @@ focus_tree = {
 			every_state = {
 				limit = {
 					OR = {
-						state = 985
 						state = 69
+						state = 972
 						state = 74
 					}
 				}
@@ -4251,8 +4251,8 @@ focus_tree = {
 			every_country = {
 				limit = {
 					OR = {
-						owns_state = 985
 						owns_state = 69
+						owns_state = 972
 						owns_state = 74
 					}
 				}

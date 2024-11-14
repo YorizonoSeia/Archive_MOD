@@ -132,9 +132,9 @@ BA_HUN_wprnrxhdgkq = {
 		icon = GFX_decision_infiltrate_state
 		cost = 90
 		available = {
-			controls_state = 69
+			controls_state = 972
 			controls_state = 74
-			controls_state = 985
+			controls_state = 69
 		}
 		visible = {
 		}
@@ -144,15 +144,15 @@ BA_HUN_wprnrxhdgkq = {
 		days_remove = 30
 		highlight_states = {
 			highlight_state_targets = {
-				state = 69
+				state = 972
 				state = 74
-				state = 985
+				state = 69
 			}
 		}
 		remove_effect = {
-			add_state_core = 69
+			add_state_core = 972
 			add_state_core = 74
-			add_state_core = 985
+			add_state_core = 69
 			add_to_variable = {	BA_HUN_conflict_stability_factor = -0.10 }
 			add_to_variable = {	BA_HUN_conflict_industrial_capacity_factory = -0.05 }
 			custom_effect_tooltip = BA_HUN_conflict_tooltip_3

@@ -302,7 +302,7 @@ focus_tree = {
 				controls_state  = 141 # 체리노그라드
 				controls_state  = 16 # 밀레니엄 타워
 				controls_state  = 14 # SRT 특수학원
-				controls_state  = 985 # 아비도스
+				controls_state  = 69 # 아비도스
 			}
 			#중점 선행조건
 		}

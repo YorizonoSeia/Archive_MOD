@@ -1310,14 +1310,14 @@ focus_tree = {
 		}
 		bypass = {
 			controls_state = 9
-			controls_state = 985
+			controls_state = 69
 		}
 		completion_reward = {
 			every_country = {
 				limit = {
 					OR = {
 						owns_state = 9
-						owns_state = 985
+						owns_state = 69
 					}
 				}
 			}

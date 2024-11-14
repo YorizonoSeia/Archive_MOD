@@ -2649,10 +2649,10 @@ FRA_great_FRA = {
 					transfer_state = 74
 				}
 				SAX = {
-					transfer_state = 985
+					transfer_state = 69
 				}
 				AUS = {
-					transfer_state = 69
+					transfer_state = 972
 				}
 				HYA = {
 					transfer_state = 9

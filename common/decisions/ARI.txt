@@ -755,8 +755,8 @@ ARI_restoration_of_germany = {
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 985
 				state = 69
+				state = 972
 				state = 74
 			}
 		}
@@ -766,8 +766,8 @@ ARI_restoration_of_germany = {
 		}
 		available = {
 			has_completed_focus = ARI_german_lands
-			controls_state = 985
 			controls_state = 69
+			controls_state = 972
 			controls_state = 74
 		}
 
@@ -791,11 +791,11 @@ ARI_restoration_of_germany = {
 					original_tag = GER
 					is_subject_of = ARI
 				}
-				transfer_state = 985
 				transfer_state = 69
+				transfer_state = 972
 				transfer_state = 74
-				add_state_core = 985
 				add_state_core = 69
+				add_state_core = 972
 				add_state_core = 74
 			}
 		}

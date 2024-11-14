@@ -1221,12 +1221,12 @@ country_event = { # 주데텐란트 내놔
 		}
         effect_tooltip = {
 			TRM = {
-				add_state_claim = 985
+				add_state_claim = 69
 				add_state_claim = 74
 				create_wargoal = {
 					type = take_state_focus
 					target = ABY
-					generator = { 985 74 }
+					generator = { 69 74 }
 				}
 			}
 		}
@@ -1272,7 +1272,7 @@ country_event = { # 주데텐란트 내놔
 		}
 		effect_tooltip = {
 			TRM = {
-				transfer_state = 985
+				transfer_state = 69
 			}
 		}
         hidden_effect = {
@@ -1307,7 +1307,7 @@ country_event = { # 주데텐 - 실패
 	
 	option = { #
 		name = germany.123.a
-		add_state_claim = 985
+		add_state_claim = 69
 		add_state_claim = 74
 		if = {
 			limit = {
@@ -1320,13 +1320,13 @@ country_event = { # 주데텐 - 실패
 			remove_from_faction = ABY
 			remove_from_faction = FROM
 		}
-		985 = {
+		69 = {
 			controller = {
 				TRM = {
 					create_wargoal = {
 						type = take_state_focus
 						target = PREV
-						generator = { 985 74 }
+						generator = { 69 74 }
 					}
 				}
 			}
@@ -1344,8 +1344,8 @@ country_event = { # 주데텐 성공
 	
 	option = { #
 		name = TRM_event.55.a 
-		add_state_core = 985
-		transfer_state = 985
+		add_state_core = 69
+		transfer_state = 69
 	}
 }
 
@@ -5459,7 +5459,7 @@ country_event = {
 		name = TRM_event.369.a
 		TRM = { 
 		annex_country = { target = ABY } 
-		add_state_core = 985
+		add_state_core = 69
 		country_event = { id = TRM_event.370 hours = 8 }
 		}
 	}
@@ -5467,7 +5467,7 @@ country_event = {
 	option = { #
 		name = TRM_event.369.b
 		TRM = { 
-		add_state_claim = 985
+		add_state_claim = 69
 		country_event = { id = TRM_event.371 hours = 8 }
 		}
 	}

@@ -2094,8 +2094,8 @@ focus_tree = {
 						controls_state = 153
 						controls_state = 848
 						controls_state = 984
-						controls_state = 985
 						controls_state = 69
+						controls_state = 972
 						controls_state = 74
 					}
 				}
@@ -3306,8 +3306,8 @@ focus_tree = {
 
 			custom_trigger_tooltip = {
 				tooltip = ARI_greater_germania_tooltip_SUD
-				controls_state = 985
 				controls_state = 69
+				controls_state = 972
 				controls_state = 74
 			}
 		}
@@ -3336,8 +3336,8 @@ focus_tree = {
 				limit = {
 					NOT = { is_core_of = ARI }
 					OR = {
-						state = 985
 						state = 69
+						state = 972
 						state = 74
 					}
 				}

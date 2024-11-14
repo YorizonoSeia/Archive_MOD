@@ -10,7 +10,7 @@ equipments = {
 		
 		defense = 6
 		breakthrough = 7
-		hardness = 0.985
+		hardness = 0.69
 		armor_value = 65
 
 		soft_attack = 4

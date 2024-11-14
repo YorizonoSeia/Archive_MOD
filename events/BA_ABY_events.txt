@@ -1427,8 +1427,8 @@ country_event = {
 		153 = { transfer_state_to = AUS }
 		848 = { transfer_state_to = AUS }
 		984 = { transfer_state_to = AUS }
+		972 = { transfer_state_to = AUS }
 		69 = { transfer_state_to = AUS }
-		985 = { transfer_state_to = AUS }
 		4 = { transfer_state_to = AUS }
 		AUS = {
 			declare_war_on = {
@@ -1447,8 +1447,8 @@ country_event = {
 		153 = { transfer_state_to = AUS }
 		848 = { transfer_state_to = AUS }
 		984 = { transfer_state_to = AUS }
+		972 = { transfer_state_to = AUS }
 		69 = { transfer_state_to = AUS }
-		985 = { transfer_state_to = AUS }
 		4 = { transfer_state_to = AUS }
 		AUS = {
 			declare_war_on = {
@@ -1510,7 +1510,7 @@ country_event = {
 			ideology = fascism
 			size = 0.5
 			states = {
-				69 74
+				972 74
 			}
 			keep_all_characters = yes
 		}
@@ -2028,7 +2028,7 @@ country_event = {
 		}
 		OR = {
 			9 = {is_controlled_by = ABY}
-			69 = {is_controlled_by = ABY}
+			972 = {is_controlled_by = ABY}
 			72 = {is_controlled_by = ABY}
 			74 = {is_controlled_by = ABY}
 			75 = {is_controlled_by = ABY}
@@ -2082,7 +2082,7 @@ country_event = {
 		ai_chance = { factor = 0 }
 		white_peace = HYA
 		74 = { transfer_state_to = HYA }
-		69 = { transfer_state_to = HYA }
+		972 = { transfer_state_to = HYA }
 	}
 }
 
@@ -3324,7 +3324,7 @@ country_event = {
 			level = 5
 			path = { 3585 3418 11432 469 11401 }
 		}
-		985 = {
+		69 = {
 			add_building_construction = {
 				type = supply_node
 				level = 1
@@ -5075,7 +5075,7 @@ country_event = {
 	option = {
 		name = ABY_new_event.153.a
 		ai_chance = { factor = 100 }
-		69 = {
+		972 = {
 			create_unit = {
 				division = "name = \"German milita\" division_template = \"German milita\" start_experience_factor = 0 start_equipment_factor = 1"
 				owner = ABY
@@ -8901,7 +8901,7 @@ country_event = {
 		retire_character = ABYDO_serika
 		retire_character = ABYDO_Hoshino
 		retire_character = ABYDO_Shiroko
-		985 = {
+		69 = {
 			transfer_state_to = ABC
 		}
 		every_state = {
@@ -9046,7 +9046,7 @@ country_event = {
 		retire_character = ABYDO_serika
 		retire_character = ABYDO_Hoshino
 		retire_character = ABYDO_Shiroko
-		985 = {
+		69 = {
 			transfer_state_to = ABC
 		}
 		every_state = {

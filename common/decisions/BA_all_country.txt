@@ -1355,8 +1355,8 @@ form_european_union_category = {
 				}
 				custom_trigger_tooltip = {
 					tooltip = form_pan_europea_CZE_tt
-					controls_state = 985
 					controls_state = 69
+					controls_state = 972
 					controls_state = 9
 					controls_state = 74
 					controls_state = 75
@@ -1601,15 +1601,15 @@ form_european_union_category = {
 			}
 			if = {
 				limit = {
-					controls_state = 985
 					controls_state = 69
+					controls_state = 972
 					controls_state = 9
 					controls_state = 74
 					controls_state = 75
 				}
 				hidden_effect = {
-					add_state_core = 985
 					add_state_core = 69
+					add_state_core = 972
 					add_state_core = 9
 					add_state_core = 74
 					add_state_core = 75
@@ -2061,8 +2061,8 @@ form_european_union_category = {
 		}
 	
 		available = {
-			controls_state = 985   # 주(State) ID들
-			controls_state = 69
+			controls_state = 69   # 주(State) ID들
+			controls_state = 972
 			controls_state = 9
 			controls_state = 74
 			controls_state = 75
@@ -2077,8 +2077,8 @@ form_european_union_category = {
 		complete_effect = {
 			add_political_power = -40
 
-			985 = { add_core_of = ROOT }
 			69 = { add_core_of = ROOT }
+			972 = { add_core_of = ROOT }
 			9 = { add_core_of = ROOT }
 			74 = { add_core_of = ROOT }
 			75 = { add_core_of = ROOT }

@@ -1652,9 +1652,9 @@
 					}
 				}
 				OR = {
-					controls_state = 985
+					controls_state = 69
 					any_country = {
-						controls_state = 985
+						controls_state = 69
 						is_subject_of = TRM
 					}
 				}
@@ -2856,7 +2856,7 @@
         bypass = {
 			OR = {
 				AND = {
-            		owns_state = 985
+            		owns_state = 69
             		owns_state = 74
 				}
 				ABY = { exists = yes }
@@ -2880,7 +2880,7 @@
 		x = 1
 		y = 1
 		completion_reward = {
-			985 = {
+			69 = {
 				owner = { country_event = TRM_event.52 }
 			}
 		}
@@ -2913,7 +2913,7 @@
             is_in_faction_with = SHA
             SHA = {
                 owns_state = 9
-                owns_state = 69
+                owns_state = 972
             }
         }
 		relative_position_id = TRM_sudetenland_or_war
@@ -3022,14 +3022,14 @@
 			if = {
 				limit = {
 					ABY = {
-						owns_state = 985
+						owns_state = 69
 					} 
 				}			
 				create_wargoal = {
 					type = take_state_focus
 					target = ABY
 					expire = 0
-					generator = { 985 }
+					generator = { 69 }
 				}
 			}
 		}
