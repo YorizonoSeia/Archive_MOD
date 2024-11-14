@@ -442,7 +442,7 @@
  HEU_jageumnan_d_2:0 "2개년 계획"
  HEU_jageumnan_d_desc:0 "\n\n\n\n\n£GFX_HEU_rpgpsskdmldkqqkr\n\n\n\n\n\n\n\n\n"§O아하하! 이 정도는 간단하지!§!"\n - §Y리쿠하치마 아루§!\n\n흥신소 68은 다른 세계로 전이된 이후 자금난을 비롯한 여러 문제를 겪고 있습니다. 비록 원래의 키보토스에서도 상황이 녹록지 않았지만요. 그러나 우리는 성공할 의지가 있습니다. 우리 흥신소 68은 반드시 성공적으로 이 세계에서 살아남을 것입니다! 만세!\n"
  HEU_rnrrudqnswod:0 "만마전과의 국경 분쟁"
- HEU_rnrrudqnswod_1:0 "§Y[978.GetName]§! 지역에서의 국경 분쟁 심화"
+ HEU_rnrrudqnswod_1:0 "§Y[990.GetName]§! 지역에서의 국경 분쟁 심화"
  HEU_rnrrudqnswod_2:0 "§Y[42.GetName]§! 지역에서의 국경 분쟁 심화"
  HEU_rnrrudqnswod_3:0 "§Y[975.GetName]§! 지역에서의 국경 분쟁 심화"
  HEU_rnrrudqnswod_4:0 "§Y[28.GetName]§! 지역에서의 국경 분쟁 심화"
@@ -555,7 +555,7 @@
  HEU_aru_GSC_defiance_attack_974:0 "§Y[974.GetName]§! 지역에서의 국경 분쟁 심화"
  HEU_aru_GSC_defiance_attack_974_desc:0 "가장 이상적인 우리의 계획은 전쟁을 시작하기 전 뫼즈 강 동부 지역을 점령하는 것입니다. 기습적 국경 분쟁을 통해 뫼즈 강 동부 지역에 대한 군사 점령을 실시할 수 있습니다. 물론 적들이 방비할 것이기 때문에 같은 지역을 여러번 공세할 수 없을 것입니다. 그리고 운이 나쁘다면, 이것이 전쟁으로 이어질 가능성도 있습니다. 하지만 상관 없습니다! 총학생회장을 자칭한 이상 우리는 이미 전쟁을 각오한 것이나 마찬가지니까요."
 
- HEU_aru_GSC_defiance_attack_977:0 "§Y[977.GetName]§! 지역에서의 국경 분쟁 심화"
+ HEU_aru_GSC_defiance_attack_977:0 "§Y[989.GetName]§! 지역에서의 국경 분쟁 심화"
  HEU_aru_GSC_defiance_attack_977_desc:0 "가장 이상적인 우리의 계획은 전쟁을 시작하기 전 뫼즈 강 동부 지역을 점령하는 것입니다. 기습적 국경 분쟁을 통해 뫼즈 강 동부 지역에 대한 군사 점령을 실시할 수 있습니다. 물론 적들이 방비할 것이기 때문에 같은 지역을 여러번 공세할 수 없을 것입니다. 그리고 운이 나쁘다면, 이것이 전쟁으로 이어질 가능성도 있습니다. 하지만 상관 없습니다! 총학생회장을 자칭한 이상 우리는 이미 전쟁을 각오한 것이나 마찬가지니까요."
 
  HEU_aru_GSC_defiance_attack_KSP:0 "벨기에 압제자 제거" 
