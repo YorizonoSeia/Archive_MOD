@@ -79,7 +79,7 @@ gehenna_unification = {
 			state = 55
 			state = 51
 			state = 975
-			state = 978
+			state = 990
 			state = 42
 			state = 50
 			state = 52
@@ -133,7 +133,7 @@ BA_from_german_reconstruction = {
 			state = 763
 			state = 909
 			state = 975
-			state = 978
+			state = 990
 		}
 	}
 }

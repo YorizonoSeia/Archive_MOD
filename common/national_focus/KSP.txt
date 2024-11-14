@@ -4471,7 +4471,7 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = {
-					978 = {
+					990 = {
 						is_owned_and_controlled_by = GEH
 					}
 					975 = {
@@ -4488,7 +4488,7 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					978 = {
+					990 = {
 						is_owned_and_controlled_by = GEM
 					}
 					975 = {
@@ -4505,7 +4505,7 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					978 = {
+					990 = {
 						is_owned_and_controlled_by = HEU
 					}
 					975 = {
@@ -4522,7 +4522,7 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					978 = {
+					990 = {
 						is_owned_and_controlled_by = GEA
 					}
 					975 = {
@@ -4539,7 +4539,7 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					978 = {
+					990 = {
 						is_owned_and_controlled_by = GER
 					}
 					975 = {
@@ -4556,7 +4556,7 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					978 = {
+					990 = {
 						is_owned_and_controlled_by = GEK
 					}
 					975 = {

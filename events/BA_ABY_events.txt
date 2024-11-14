@@ -5800,7 +5800,7 @@ country_event = {
 		975 = {
 			add_compliance = 20
 		}
-		978 = {
+		990 = {
 			add_compliance = 20
 		}
 		51  = {
@@ -6003,7 +6003,7 @@ country_event = {
 					state = 51
 					state = 42
 					state = 909
-					state = 978
+					state = 990
 					state = 975
 				}
 			}

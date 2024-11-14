@@ -2027,7 +2027,7 @@ FRA_great_FRA = {
 			975 = {
 				is_owned_by = FRA
 			}
-			978 = {
+			990 = {
 				is_owned_by = FRA
 			}
 			42 = {
@@ -2046,7 +2046,7 @@ FRA_great_FRA = {
 			every_state = {
 				limit = {
 					state = 975
-					state = 978
+					state = 990
 					state = 42
 					state = 8
 					state = 977
