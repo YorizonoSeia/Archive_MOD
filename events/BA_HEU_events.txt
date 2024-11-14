@@ -1875,12 +1875,38 @@ news_event = {
 		trigger = {
 			tag = HEU
 		}
+		hidden_effect = {
+			if = {
+				limit = {
+						is_ai = no
+				}
+				scoped_play_song = "BA_protests_of_1968"
+				set_global_flag = {
+					flag = BA_Super_Event_Visible
+					value = 25
+					days = 15
+				}
+			}
+		}
 	}
 
 	option = {
 		name = HEU_news.2.b
 		trigger = {
 			NOT = { tag = HEU }
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+						is_ai = no
+				}
+				scoped_play_song = "BA_protests_of_1968"
+				set_global_flag = {
+					flag = BA_Super_Event_Visible
+					value = 25
+					days = 15
+				}
+			}
 		}
 	}
 }

@@ -115,6 +115,11 @@ spriteTypes = {
 		texturefile = "gfx/super_events/united_nations.png"
 		legacy_lazy_load = no
 	}
+	spriteType = {
+		name = "GFX_sp_event_68_revolutions"
+		texturefile = "gfx/super_events/68_revolutions.dds"
+		legacy_lazy_load = no
+	}
 
 	##### 기본 세팅
 	spriteType = {

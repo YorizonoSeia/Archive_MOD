@@ -290,4 +290,10 @@ music = {
         factor = 0
     }
 }
+music = {
+    song = "BA_protests_of_1968"
+    chance = {
+        factor = 0
+    }
+}
 

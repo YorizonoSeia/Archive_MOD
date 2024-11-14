@@ -607,3 +607,28 @@ country_event = {	#프랑스의 본토 수복
 		name = BA_super.1.b
 	}
 }
+country_event = {	#68혁명
+	id = BA_super.25
+	title = BA_super.25.t
+	desc = BA_super.25.d
+	picture = GFX_report_event_diplomatic_message
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	hidden = yes
+	
+	option = {
+		name = BA_super.1.a
+		scoped_play_song = "BA_protests_of_1968"
+		set_global_flag = {
+			flag = BA_Super_Event_Visible
+			value = 25
+			days = 15
+		}
+	}
+	option = {
+		name = BA_super.1.b
+	}
+}

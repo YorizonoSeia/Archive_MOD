@@ -218,6 +218,15 @@ defined_text = {
         }
         localization_key = "sup_france_fas"
     }
+    text = {
+        trigger = {
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 25
+            }
+        }
+        localization_key = "sup_68_revolutions"
+    }
 }
 defined_text = {
     name = get_BA_Super_Event_quote
@@ -437,6 +446,15 @@ defined_text = {
             }
         }
         localization_key = "sup_france_fas_QUOTE"
+    }
+    text = {
+        trigger = {
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 25
+            }
+        }
+        localization_key = "sup_68_revolutions_QUOTE"
     }
 }
 defined_text = {
@@ -658,6 +676,15 @@ defined_text = {
         }
         localization_key = "sup_france_fas_QUOTE_NAME"
     }
+    text = {
+        trigger = {
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 25
+            }
+        }
+        localization_key = "sup_68_revolutions_NAME"
+    }
 }
 defined_text = {
     name = get_BA_Super_Event_remark
@@ -877,6 +904,15 @@ defined_text = {
             }
         }
         localization_key = "sup_france_fas_REMARK"
+    }
+    text = {
+        trigger = {
+            has_global_flag = {
+                flag = BA_Super_Event_Visible
+                value = 25
+            }
+        }
+        localization_key = "sup_68_revolutions_REMARK"
     }
 }
 defined_text = {

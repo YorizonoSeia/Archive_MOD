@@ -200,6 +200,14 @@ scripted_gui = {
 				}
 			}
 		}
+		triggers = {
+			BA_Super_Event_Image_68_revolutions_visible = {
+				has_global_flag = {
+					flag = BA_Super_Event_Visible
+					value = 25
+				}
+			}
+		}
 		
 		############
 		###BUTTON###

@@ -153,3 +153,8 @@ music = { # 쇼와유신의 노래
 	file = "super_event/showa_isin.ogg"
 	volume = 0.90
 }
+music = {
+	name = "BA_protests_of_1968"
+	file = "super_event/protests_of_1968.ogg"
+	volume =  0.90
+}
