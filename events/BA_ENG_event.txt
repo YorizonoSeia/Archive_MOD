@@ -350,7 +350,7 @@ country_event = {
 				}
 			}
 			MDR = {
-				transfer_state = 983
+				transfer_state = 995
 				every_owned_state = {
 					add_core_of = prev
 				}
