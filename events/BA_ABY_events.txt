@@ -5797,7 +5797,7 @@ country_event = {
 		42  = {
 			add_compliance = 20
 		}
-		975 = {
+		987 = {
 			add_compliance = 20
 		}
 		990 = {
@@ -6004,7 +6004,7 @@ country_event = {
 					state = 42
 					state = 909
 					state = 990
-					state = 975
+					state = 987
 				}
 			}
 			add_core_of = HAN

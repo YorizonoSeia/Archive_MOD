@@ -572,7 +572,7 @@ ARI_restoration_of_germany = {
 				state = 58
 				state = 59
 				state = 909
-				state = 975
+				state = 987
 				state = 990
 			}
 		}
@@ -591,7 +591,7 @@ ARI_restoration_of_germany = {
 			controls_state = 58
 			controls_state = 59
 			controls_state = 909
-			controls_state = 975
+			controls_state = 987
 			controls_state = 990
 		}
 

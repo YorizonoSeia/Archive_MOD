@@ -2024,7 +2024,7 @@ FRA_great_FRA = {
 		}
 		fire_only_once = yes
 		available = {
-			975 = {
+			987 = {
 				is_owned_by = FRA
 			}
 			990 = {
@@ -2045,7 +2045,7 @@ FRA_great_FRA = {
 		remove_effect = {
 			every_state = {
 				limit = {
-					state = 975
+					state = 987
 					state = 990
 					state = 42
 					state = 8

@@ -567,7 +567,7 @@ country_event = { # 협상 끝
 				transfer_state = 56
 				transfer_state = 57
 				transfer_state = 51
-				transfer_state = 975
+				transfer_state = 987
 				
 				add_state_core = 909
 				add_state_core = 58
@@ -576,7 +576,7 @@ country_event = { # 협상 끝
 				add_state_core = 56
 				add_state_core = 57
 				add_state_core = 51
-				add_state_core = 975
+				add_state_core = 987
 				every_owned_state = {
 					limit = {
 						has_dynamic_modifier = {

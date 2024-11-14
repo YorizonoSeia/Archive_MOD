@@ -1331,7 +1331,7 @@ form_european_union_category = {
 					controls_state = 68
 					controls_state = 763
 					controls_state = 909
-					controls_state = 975
+					controls_state = 987
 					controls_state = 990
 				}
 				custom_trigger_tooltip = {
@@ -1512,7 +1512,7 @@ form_european_union_category = {
 					controls_state = 68
 					controls_state = 763
 					controls_state = 909
-					controls_state = 975
+					controls_state = 987
 					controls_state = 990
 				}
 				hidden_effect = {
@@ -1539,7 +1539,7 @@ form_european_union_category = {
 					add_state_core = 68
 					add_state_core = 763
 					add_state_core = 909
-					add_state_core = 975
+					add_state_core = 987
 					add_state_core = 990
 				}
 
@@ -1880,7 +1880,7 @@ form_european_union_category = {
 			controls_state = 68
 			controls_state = 763
 			controls_state = 909
-			controls_state = 975
+			controls_state = 987
 			controls_state = 990
 		}
 
@@ -1914,7 +1914,7 @@ form_european_union_category = {
 			68 = { add_core_of = ROOT }
 			763 = { add_core_of = ROOT }
 			909 = { add_core_of = ROOT }
-			975 = { add_core_of = ROOT }
+			987 = { add_core_of = ROOT }
 			990 = { add_core_of = ROOT }
 
 			add_timed_idea = {
