@@ -8536,7 +8536,7 @@ country_event = {
 			6 = {transfer_state_to = BEL}
 			34 = {transfer_state_to = BEL}
 			974 = {transfer_state_to = BEL}
-			977 = {transfer_state_to = BEL}
+			989 = {transfer_state_to = BEL}
 			BEL = {
 				release = COG
 			}

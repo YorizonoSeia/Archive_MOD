@@ -4380,7 +4380,7 @@ country_event = { # 디버그 이벤트
         controls_state = 971
         controls_state = 34
         controls_state = 974
-        controls_state = 977
+        controls_state = 989
     }
     mean_time_to_happen = {
         days = 2
@@ -4416,7 +4416,7 @@ country_event = { # 디버그 이벤트
 			}
             TRM = { 
                 puppet = PREV 
-                transfer_state = 977
+                transfer_state = 989
 			    transfer_state = 8
             }
         }
@@ -4451,7 +4451,7 @@ country_event = { # 디버그 이벤트
 			}
             TRM = { 
                 puppet = PREV 
-                transfer_state = 977
+                transfer_state = 989
 			    transfer_state = 8
             }
         }

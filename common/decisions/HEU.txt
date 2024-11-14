@@ -1655,16 +1655,16 @@ HEU_aru_GSC_defiance_decision_category = {
 			HEU = {controls_state = 8}
 			OR = {
 				AND = {
-					KSP = {controls_state = 977}
-					KSP = {owns_state = 977}
+					KSP = {controls_state = 989}
+					KSP = {owns_state = 989}
 				}
 				AND = {
-					COU = {controls_state = 977}
-					COU = {owns_state = 977}
+					COU = {controls_state = 989}
+					COU = {owns_state = 989}
 				}
 				AND = {
-					SHE = {controls_state = 977}
-					SHE = {owns_state = 977}
+					SHE = {controls_state = 989}
+					SHE = {owns_state = 989}
 				}
 			}
 		}
@@ -1673,16 +1673,16 @@ HEU_aru_GSC_defiance_decision_category = {
 			HEU = {controls_state = 8}
 			OR = {
 				AND = {
-					KSP = {controls_state = 977}
-					KSP = {owns_state = 977}
+					KSP = {controls_state = 989}
+					KSP = {owns_state = 989}
 				}
 				AND = {
-					COU = {controls_state = 977}
-					COU = {owns_state = 977}
+					COU = {controls_state = 989}
+					COU = {owns_state = 989}
 				}
 				AND = {
-					SHE = {controls_state = 977}
-					SHE = {owns_state = 977}
+					SHE = {controls_state = 989}
+					SHE = {owns_state = 989}
 				}
 			}
 		}
@@ -1705,7 +1705,7 @@ HEU_aru_GSC_defiance_decision_category = {
 		highlight_states = {
 			highlight_state_targets = {
 				state = 8
-				state = 977
+				state = 989
 			}
 		}
 
@@ -1721,7 +1721,7 @@ HEU_aru_GSC_defiance_decision_category = {
 					on_cancel = HEU_event.6
 				}	
 				defender = {
-					state = 977
+					state = 989
 					num_provinces = 4
 					on_win = HEU_event.4
 					on_lose = HEU_event.5
@@ -1737,7 +1737,7 @@ HEU_aru_GSC_defiance_decision_category = {
 			set_country_flag = HEU_GSC_defiance_attack_flag
 			set_variable = {
 				var = var:var_HEU_rnrrudqnswod_state
-				value = 977
+				value = 989
 			}
 			add_command_power = -15
 		}
@@ -2927,7 +2927,7 @@ HEU_aru_GSC_annex_decision_category = {
 					state = 971
 					state = 34
 					state = 974
-					state = 977
+					state = 989
 				}
 			}
 		}
@@ -3005,7 +3005,7 @@ HEU_aru_GSC_annex_decision_category = {
 		highlight_states = {
 			highlight_state_targets = { 
 				state = 974
-				state = 977
+				state = 989
 			} 
 		}
 
@@ -3022,7 +3022,7 @@ HEU_aru_GSC_annex_decision_category = {
 
 		visible = {
 			owns_state = 974
-			owns_state = 977
+			owns_state = 989
 		}
 
 		fire_only_once = yes
@@ -3043,7 +3043,7 @@ HEU_aru_GSC_annex_decision_category = {
 			974 = {
 				add_core_of = ROOT
 			}
-			977 = {
+			989 = {
 				add_core_of = ROOT
 			}
 			add_to_variable = {
