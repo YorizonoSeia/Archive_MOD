@@ -854,7 +854,7 @@ country_event = {
             air_ratio = 0
             capital = 24
             states = {
-                24 27 18 17 23 33 26 20 25 19 806 31 22 32 21 980 851
+                24 27 18 17 23 33 26 20 25 19 806 31 22 32 21 992 851
             }
             keep_all_characters = yes
             PREV = {
@@ -1395,7 +1395,7 @@ country_event = {
                     is_capital = no
                     is_in_home_area = yes
                 }
-				prioritize = { 26 20 22 32 21 980 851 }
+				prioritize = { 26 20 22 32 21 992 851 }
                 create_unit = {
                     division = "division_template = \"French Resistance\" start_experience_factor = 0.7 start_equipment_factor = 0.6" 
                     owner = ROOT
@@ -1410,7 +1410,7 @@ country_event = {
                             is_capital = no
                             is_in_home_area = yes
                         }
-                        prioritize = { 26 20 22 32 21 980 851 }
+                        prioritize = { 26 20 22 32 21 992 851 }
                         create_unit = {
                             division = "division_template = \"French Resistance\" start_experience_factor = 0.7 start_equipment_factor = 0.6" 
                             owner = ROOT
@@ -1425,7 +1425,7 @@ country_event = {
                             is_capital = no
                             is_in_home_area = yes
                         }
-                        prioritize = { 26 20 22 32 21 980 851 }
+                        prioritize = { 26 20 22 32 21 992 851 }
                         create_unit = {
                             division = "division_template = \"French Resistance\" start_experience_factor = 0.7 start_equipment_factor = 0.6" 
                             owner = ROOT
@@ -1438,7 +1438,7 @@ country_event = {
                             is_capital = no
                             is_in_home_area = yes
                         }
-                        prioritize = { 26 20 22 32 21 980 851 }
+                        prioritize = { 26 20 22 32 21 992 851 }
                         create_unit = {
                             division = "division_template = \"French Resistance\" start_experience_factor = 0.7 start_equipment_factor = 0.6" 
                             owner = ROOT
@@ -3533,7 +3533,7 @@ country_event = { #남동부 주 소실
         22 = { set_demilitarized_zone = no }
         32 = { set_demilitarized_zone = no }
         21 = { set_demilitarized_zone = no }
-        980 = { set_demilitarized_zone = no }
+        992 = { set_demilitarized_zone = no }
         851 = { set_demilitarized_zone = no }
 	}
 

@@ -810,7 +810,7 @@ focus_tree = {
 				controls_state = 32
 				controls_state = 851
 				controls_state = 993
-				controls_state = 980
+				controls_state = 992
 				controls_state = 735
 			}
 		}
@@ -843,7 +843,7 @@ focus_tree = {
 							state = 32
 							state = 851
 							state = 993
-							state = 980
+							state = 992
 							state = 735
 						}
 					}
