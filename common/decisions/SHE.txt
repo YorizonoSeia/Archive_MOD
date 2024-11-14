@@ -1043,10 +1043,10 @@ SHE_managing_occupied_territory_category = {
 				if = {
 					limit = {
 						SHE = {
-							has_full_control_of_state = 981
+							has_full_control_of_state = 993
 						}
 					}
-					transfer_state = 981
+					transfer_state = 993
 				}
 				BA_puppet_on_action_effect = yes
 				set_cosmetic_tag = FRA_SHE_puppet

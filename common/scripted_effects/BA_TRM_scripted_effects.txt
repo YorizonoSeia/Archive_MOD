@@ -1669,7 +1669,7 @@ TRM_ditalia_puppet = {
 		20 = { 
 			owner = {
 				transfer_state = 735
-				transfer_state = 981
+				transfer_state = 993
 			}
 		}
 		set_cosmetic_tag = TRM_colony_color

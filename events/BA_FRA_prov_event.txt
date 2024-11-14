@@ -3157,7 +3157,7 @@ country_event = {
 		735 = {
 			remove_core_of = FRA
 		}
-		981 = {
+		993 = {
 			remove_core_of = FRA
 		}
 		add_timed_idea = {
@@ -5245,7 +5245,7 @@ country_event = {
 		735 = {
 			remove_claim_by = FRA
 		}
-		981 = {
+		993 = {
 			remove_claim_by = FRA
 		}
 		set_rule = {
