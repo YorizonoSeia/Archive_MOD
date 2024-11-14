@@ -783,7 +783,7 @@ focus_tree = {
 				}
 				MAI = {
 					transfer_state = 425
-					transfer_state = 982
+					transfer_state = 994
 					transfer_state = 321
 					every_owned_state = {
 						add_core_of = MAI
@@ -1199,7 +1199,7 @@ focus_tree = {
 					level = 1
 				}
 			}
-			982 = {
+			994 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = dockyard
@@ -3564,7 +3564,7 @@ focus_tree = {
 			focus = HND_fas_army_3
 		}
 		available = {
-			982 = {
+			994 = {
 				is_owned_by = HND
 			}
 		}
@@ -3583,7 +3583,7 @@ focus_tree = {
 					level = 1
 				}
 			}
-			982 = {
+			994 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = dockyard

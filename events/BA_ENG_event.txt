@@ -338,7 +338,7 @@ country_event = {
 				transfer_state = 640
 			}
 			MAI = {
-				transfer_state = 982
+				transfer_state = 994
 				every_owned_state = {
 					add_core_of = prev
 				}
