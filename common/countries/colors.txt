@@ -1065,7 +1065,7 @@ RJP = {
 	color = rgb { 158 50 50  }
 	color_ui = rgb {170  10  10}
 }
-BAR = {
+BR2 = {
 	color = rgb { 158 50 50  }
 	color_ui = rgb {170  10  10}
 }

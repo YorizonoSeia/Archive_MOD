@@ -361,7 +361,7 @@ country_event = {
 					add_core_of = prev
 				}
 			}
-			BAR = {
+			BR2 = {
 				transfer_state = 428
 				every_owned_state = {
 					add_core_of = prev
@@ -399,7 +399,7 @@ country_event = {
 					autonomy_state = autonomy_dominion
 				}
 				set_autonomy = {
-					target = BAR
+					target = BR2
 					autonomy_state = autonomy_dominion
 				}
 				set_autonomy = {
@@ -461,7 +461,7 @@ country_event = {
 					popularity = 0.5
 				}
 			}
-			BAR = {
+			BR2 = {
 				add_ideas = RAJ_bun
 				set_politics = {
 					ruling_party = neutrality

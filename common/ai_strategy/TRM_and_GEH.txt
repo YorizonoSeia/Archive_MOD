@@ -185,7 +185,8 @@ GEH_HEU_border = {
 		is_historical_focus_on = yes
 	}
 	abort = {
-		HEU = { has_completed_focus = HEU_foc_2 }
+		#HEU = { has_completed_focus = HEU_foc_2 }
+		always = no
 	}
 	ai_strategy = {
 		type = alliance
@@ -204,7 +205,8 @@ GEM_HEU_border = {
 		is_historical_focus_on = yes
 	}
 	abort = {
-		HEU = { has_completed_focus = HEU_foc_3 }
+		#HEU = { has_completed_focus = HEU_foc_3 }
+		always = no
 	}
 	ai_strategy = {
 		type = alliance

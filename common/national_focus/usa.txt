@@ -3962,7 +3962,7 @@ focus_tree = {
 					free_building_slots = {
 						building = infrastructure
 						size > 2
-						include_locked = yes
+						#include_locked = yes
 					}
 					OR = {
 						region = 117
@@ -3984,7 +3984,7 @@ focus_tree = {
 					free_building_slots = {
 						building = infrastructure
 						size > 2
-						include_locked = yes
+						#include_locked = yes
 					}
 					OR = {
 						region = 117

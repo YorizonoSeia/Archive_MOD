@@ -1,4 +1,4 @@
 animation = {
-	name = "generic_helicopter_idle_animation"
-	file = "generic_helicopter_idle.anim"
+	name = "generic_helicopter_idle_back_animation"
+	file = "generic_helicopter_idle_back.anim"
 }

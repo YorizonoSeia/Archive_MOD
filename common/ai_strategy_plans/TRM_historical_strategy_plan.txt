@@ -99,10 +99,10 @@ TRM_historical = {
 	}
 
 	ideas = {
-		uyi = 10
-        TRN_Carl_Schmitt = 5
-        TRN_gktmal = 5 
-        TRN_cmfnrl = 5
-        export_focus = 3
+		# uyi = 10
+                # TRN_Carl_Schmitt = 5
+                # TRN_gktmal = 5 
+                # TRN_cmfnrl = 5
+                export_focus = 3
 	}
 }
