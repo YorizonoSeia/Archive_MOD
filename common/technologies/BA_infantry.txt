@@ -123,11 +123,6 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		path = {
-			leads_to_tech = mystery_analysis 
-			research_cost_coeff = 1
-		}
-		
 		
 		ai_will_do = {
 			factor = 100
