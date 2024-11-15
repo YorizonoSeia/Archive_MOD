@@ -1555,16 +1555,16 @@ HEU_aru_GSC_defiance_decision_category = {
 			HEU = {controls_state = 8}
 			OR = {
 				AND = {
-					KSP = {controls_state = 974}
-					KSP = {owns_state = 974}
+					KSP = {controls_state = 980}
+					KSP = {owns_state = 980}
 				}
 				AND = {
-					COU = {controls_state = 974}
-					COU = {owns_state = 974}
+					COU = {controls_state = 980}
+					COU = {owns_state = 980}
 				}
 				AND = {
-					SHE = {controls_state = 974}
-					SHE = {owns_state = 974}
+					SHE = {controls_state = 980}
+					SHE = {owns_state = 980}
 				}
 			}
 		}
@@ -1573,16 +1573,16 @@ HEU_aru_GSC_defiance_decision_category = {
 			HEU = {controls_state = 8}
 			OR = {
 				AND = {
-					KSP = {controls_state = 974}
-					KSP = {owns_state = 974}
+					KSP = {controls_state = 980}
+					KSP = {owns_state = 980}
 				}
 				AND = {
-					COU = {controls_state = 974}
-					COU = {owns_state = 974}
+					COU = {controls_state = 980}
+					COU = {owns_state = 980}
 				}
 				AND = {
-					SHE = {controls_state = 974}
-					SHE = {owns_state = 974}
+					SHE = {controls_state = 980}
+					SHE = {owns_state = 980}
 				}
 			}
 		}
@@ -1605,7 +1605,7 @@ HEU_aru_GSC_defiance_decision_category = {
 		highlight_states = {
 			highlight_state_targets = {
 				state = 8
-				state = 974
+				state = 980
 			}
 		}
 
@@ -1621,7 +1621,7 @@ HEU_aru_GSC_defiance_decision_category = {
 					on_cancel = HEU_event.6
 				}	
 				defender = {
-					state = 974
+					state = 980
 					num_provinces = 4
 					on_win = HEU_event.4
 					on_lose = HEU_event.5
@@ -1636,7 +1636,7 @@ HEU_aru_GSC_defiance_decision_category = {
 			set_country_flag = HEU_GSC_defiance_attack_flag
 			set_variable = {
 				var = var:var_HEU_rnrrudqnswod_state
-				value = 974
+				value = 980
 			}
 			add_command_power = -15
 		}
@@ -2382,39 +2382,39 @@ HEU_problem_solver_68_decision_category = { #흥신소 68
 							factor = 0
 						}
 
-						# modifier = { #level 1
-						# 	ROOT = { NOT = {  has_tech = radio_detection } }
-						# 	factor = 0
-						# }
+						modifier = { #level 1
+							ROOT = { NOT = {  has_tech = radio_detection } }
+							factor = 0
+						}
 
-						# modifier = { #level 2
-						# 	radar_station > 0
-						# 	ROOT = { NOT = {  has_tech = decimetric_radar } }
-						# 	factor = 0
-						# }
+						modifier = { #level 2
+							radar_station > 0
+							ROOT = { NOT = {  has_tech = cavity_magnatron } }
+							factor = 0
+						}
 
-						# modifier = { #level 3
-						# 	radar_station > 2
-						# 	ROOT = { NOT = {  has_tech = improved_decimetric_radar } }
-						# 	factor = 0
-						# }
+						#modifier = { #level 3
+						#	radar_station > 2
+						#	ROOT = { NOT = {  has_tech = improved_cavity_magnatron } }
+						#	factor = 0
+						#}
 
-						# modifier = { #level 4
-						# 	radar_station > 3
-						# 	ROOT = { NOT = {  has_tech = centimetric_radar } }
-						# 	factor = 0
-						# }
-						# modifier = { #level 5
-						# 	radar_station > 4
-						# 	ROOT = { NOT = {  has_tech = improved_centimetric_radar } }
-						# 	factor = 0
-						# }
+						modifier = { #level 4
+							radar_station > 3
+							ROOT = { NOT = {  has_tech = centimetric_radar } }
+							factor = 0
+						}
+						modifier = { #level 5
+							radar_station > 4
+							ROOT = { NOT = {  has_tech = phased_array } }
+							factor = 0
+						}
 
-						# modifier = { #level 6
-						# 	radar_station > 4
-						# 	ROOT = { NOT = {  has_tech = advanced_centimetric_radar } }
-						# 	factor = 0
-						# }
+						modifier = { #level 6
+							radar_station > 4
+							ROOT = { NOT = {  has_tech = monopulse_radar } }
+							factor = 0
+						}
 
 						add_building_construction = {
 							type = radar_station
@@ -2778,7 +2778,7 @@ HEU_aru_GSC_annex_decision_category = {
 				global.HEU_support_GSC = 70
 				tooltip = HEU_support_GSC_edit_tt
 			}
-			#HEU_aru_GSC_annex_setting = yes
+			HEU_aru_GSC_annex_setting = yes
 		}
 
 		complete_effect = {
@@ -2818,7 +2818,7 @@ HEU_aru_GSC_annex_decision_category = {
 				global.HEU_support_belgium = 70
 				tooltip = HEU_support_belgium_edit_tt
 			}
-			#HEU_aru_GSC_annex_setting = yes
+			HEU_aru_GSC_annex_setting = yes
 		}
 
 		complete_effect = {
@@ -2889,7 +2889,7 @@ HEU_aru_GSC_annex_decision_category = {
 					}
 				}
 			}
-			#HEU_aru_GSC_annex_setting = yes
+			HEU_aru_GSC_annex_setting = yes
 			if = {
 				limit = {
 					FROM = {
@@ -2924,9 +2924,9 @@ HEU_aru_GSC_annex_decision_category = {
 		target_trigger = {
 			FROM = {
 				OR = {
-					state = 971
+					state = 983
 					state = 34
-					state = 974
+					state = 980
 					state = 989
 				}
 			}
@@ -2978,7 +2978,7 @@ HEU_aru_GSC_annex_decision_category = {
 					}
 				}
 			}
-			#HEU_aru_GSC_annex_setting = yes
+			HEU_aru_GSC_annex_setting = yes
 			if = {
 				limit = {
 					FROM = {
@@ -3004,7 +3004,7 @@ HEU_aru_GSC_annex_decision_category = {
 
 		highlight_states = {
 			highlight_state_targets = { 
-				state = 974
+				state = 980
 				state = 989
 			} 
 		}
@@ -3021,7 +3021,7 @@ HEU_aru_GSC_annex_decision_category = {
 		}
 
 		visible = {
-			owns_state = 974
+			owns_state = 980
 			owns_state = 989
 		}
 
@@ -3040,7 +3040,7 @@ HEU_aru_GSC_annex_decision_category = {
 		days_remove = 14
 
 		remove_effect = {
-			974 = {
+			980 = {
 				add_core_of = ROOT
 			}
 			989 = {
@@ -3060,7 +3060,7 @@ HEU_aru_GSC_annex_decision_category = {
 				global.HEU_support_belgium = -80
 				tooltip = HEU_support_belgium_edit_tt
 			}
-			# = yes
+			HEU_aru_GSC_annex_setting = yes
 		}
 	}
 
@@ -3069,13 +3069,13 @@ HEU_aru_GSC_annex_decision_category = {
 
 		highlight_states = {
 			highlight_state_targets = { 
-				state = 971
+				state = 983
 				state = 34
 			} 
 		}
 
 		visible = {
-			owns_state = 971
+			owns_state = 983
 			owns_state = 34
 		}
 
@@ -3099,7 +3099,7 @@ HEU_aru_GSC_annex_decision_category = {
 		days_remove = 14
 
 		remove_effect = {
-			971 = {
+			983 = {
 				add_core_of = ROOT
 			}
 			34 = {
@@ -3119,7 +3119,7 @@ HEU_aru_GSC_annex_decision_category = {
 				global.HEU_support_belgium = -80
 				tooltip = HEU_support_belgium_edit_tt
 			}
-			#HEU_aru_GSC_annex_setting = yes
+			HEU_aru_GSC_annex_setting = yes
 		}
 
 		fire_only_once = yes
@@ -3181,7 +3181,7 @@ HEU_aru_GSC_annex_decision_category = {
 				global.HEU_support_belgium = -20
 				tooltip = HEU_support_belgium_edit_tt
 			}
-			#HEU_aru_GSC_annex_setting = yes
+			HEU_aru_GSC_annex_setting = yes
 		}
 
 		fire_only_once = yes
@@ -3247,7 +3247,7 @@ HEU_aru_GSC_annex_decision_category = {
 				global.HEU_support_belgium = -20
 				tooltip = HEU_support_belgium_edit_tt
 			}
-			#HEU_aru_GSC_annex_setting = yes
+			HEU_aru_GSC_annex_setting = yes
 		}
 
 		fire_only_once = yes
