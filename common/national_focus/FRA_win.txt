@@ -154,7 +154,7 @@ focus_tree = {
 				idea = FRA_rebuild
 				days = 100
 			}
-			973 = {
+			985 = {
 				BA_increase_state_category_by_one_level = yes
 			}
 			972 = {

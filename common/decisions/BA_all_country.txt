@@ -1276,7 +1276,7 @@ form_european_union_category = {
 					# Albania
 					controls_state = 16
 					controls_state = 972
-					controls_state = 973
+					controls_state = 985
 					controls_state = 24
 					controls_state = 27
 					controls_state = 18
@@ -1415,7 +1415,7 @@ form_european_union_category = {
 				limit = {
 					controls_state = 16
 					controls_state = 972
-					controls_state = 973
+					controls_state = 985
 					controls_state = 24
 					controls_state = 27
 					controls_state = 18
@@ -1448,7 +1448,7 @@ form_european_union_category = {
 				hidden_effect = {
 					add_state_core = 16
 					add_state_core = 972
-					add_state_core = 973
+					add_state_core = 985
 					add_state_core = 24
 					add_state_core = 27
 					add_state_core = 18
@@ -1755,7 +1755,7 @@ form_european_union_category = {
 		available = {
 			controls_state = 16   # 예시 주(State) ID들
 			controls_state = 972
-			controls_state = 973
+			controls_state = 985
 			controls_state = 24
 			controls_state = 27
 			controls_state = 18
@@ -1794,7 +1794,7 @@ form_european_union_category = {
 		complete_effect = {
 			16 = { add_core_of = ROOT }
 			972 = { add_core_of = ROOT }
-			973 = { add_core_of = ROOT }
+			985 = { add_core_of = ROOT }
 			24 = { add_core_of = ROOT }
 			27 = { add_core_of = ROOT }
 			18 = { add_core_of = ROOT }
