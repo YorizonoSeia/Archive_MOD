@@ -1712,7 +1712,7 @@ TRM_ditalia_puppet = {
 		transfer_state = 39
 		transfer_state = 850
 		transfer_state = 853
-		transfer_state = 970
+		transfer_state = 982
 		transfer_state = 736
 		transfer_state = 852
 		transfer_state = 102
@@ -1731,7 +1731,7 @@ TRM_Balkan_puppet = {
 				NOT = {
 					state = 852
 					state = 163
-					state = 970
+					state = 982
 					state = 803
 					state = 45
 				}
@@ -1760,7 +1760,7 @@ TRM_Balkan_puppet = {
 				NOT = {
 					state = 852
 					#state = 163
-					state = 970
+					state = 982
 				}
 			}
 			transfer_state_to = PREV
@@ -1778,7 +1778,7 @@ TRM_Balkan_puppet = {
 		}
 		set_cosmetic_tag = TRM_colony_color
 		TRM = { 
-			transfer_state = 970
+			transfer_state = 982
 			transfer_state = 853
 			transfer_state = 102
 			puppet = PREV 

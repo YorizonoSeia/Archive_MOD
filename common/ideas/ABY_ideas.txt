@@ -5002,7 +5002,7 @@ ideas = {
 				852 = {
 					is_controlled_by_ROOT_or_ally = yes
 				}
-				970 = {
+				982 = {
 					is_controlled_by_ROOT_or_ally = yes
 				}
 				853 = {

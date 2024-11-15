@@ -1667,7 +1667,7 @@ country_event = {
 					OR = {
 						state = 102
 						state = 853
-						state = 970
+						state = 982
 					}
 				}
 			}

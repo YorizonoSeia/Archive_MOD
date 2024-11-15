@@ -10986,7 +10986,7 @@ ABY_descision_category_abydos_puppet = { # 연방조약 괴뢰
 					controls_state = 105
 					controls_state = 804
 					controls_state = 163
-					controls_state = 970
+					controls_state = 982
 					controls_state = 852
 					controls_state = 853
 					controls_state = 736
@@ -11014,7 +11014,7 @@ ABY_descision_category_abydos_puppet = { # 연방조약 괴뢰
 								state = 105
 								state = 804
 								state = 163
-								state = 970
+								state = 982
 								state = 852
 								state = 853
 								state = 736
@@ -16760,7 +16760,7 @@ ABY_descision_category_provisional_government = {
 			853 = {
 				is_controlled_by_ROOT_or_ally = no
 			}
-			970 = {
+			982 = {
 				is_controlled_by_ROOT_or_ally = no
 			}
 			ABY = {
@@ -16786,7 +16786,7 @@ ABY_descision_category_provisional_government = {
 					OR = {
 						controls_state = 102
 						controls_state = 853
-						controls_state = 970
+						controls_state = 982
 					}
 				}
 				country_event = {

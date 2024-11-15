@@ -5066,7 +5066,7 @@ focus_tree = {
 			}
 			OR = {
 				AND = {
-					owns_state = 970
+					owns_state = 982
 					owns_state = 103
 				}
 				AND = {
@@ -5087,11 +5087,11 @@ focus_tree = {
 			remove_ideas = YUG_idea_slovene_nationalism
 			if = {
 				limit = {
-					owns_state = 970
+					owns_state = 982
 					owns_state = 103
 				}
 				ITA = {
-					transfer_state = 970
+					transfer_state = 982
 					transfer_state = 103
 				}
 			}
@@ -6728,7 +6728,7 @@ focus = {
 				has_full_control_of_state = 103
 				has_full_control_of_state = 105
 				has_full_control_of_state = 163
-				has_full_control_of_state = 970
+				has_full_control_of_state = 982
 				has_full_control_of_state = 736
 				has_full_control_of_state = 852
 			}
@@ -6802,7 +6802,7 @@ focus = {
 
 			if = {
 				limit = {
-					970 = {
+					982 = {
 						controller = {
 							OR = {
 								tag = ROOT
@@ -6812,7 +6812,7 @@ focus = {
 						}
 					}
 				}
-				970 = {
+				982 = {
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = dockyard

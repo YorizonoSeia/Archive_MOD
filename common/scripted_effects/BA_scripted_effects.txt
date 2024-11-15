@@ -1474,7 +1474,7 @@ TRM_THE_NEW_ORDER = {
 		transfer_state = 835
 		transfer_state = 836
 		transfer_state = 837
-		transfer_state = 970
+		transfer_state = 982
 		transfer_state = 105
 		puppet = ALB
 		puppet = CRO
@@ -1490,7 +1490,7 @@ TRM_THE_NEW_ORDER = {
 			NOT = {
 				state = 852
 				state = 163
-				state = 970
+				state = 982
 			}
 		}
 		transfer_state_to = CRO
