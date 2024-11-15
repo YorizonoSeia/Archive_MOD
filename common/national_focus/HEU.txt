@@ -48,6 +48,40 @@ focus_tree = {
 
 		completion_reward = {
 			country_event = { id = HEU_event.101 }
+
+			HEU_emile_speller = {
+				add_corps_commander_role = {
+					traits = { infantry_officer }
+					skill = 2
+					attack_skill = 1
+					defense_skill = 2
+					planning_skill = 2
+					logistics_skill = 2
+					legacy_id=-1
+				}				
+			}
+			
+			HEU_guillaume_konsbruck = {
+				add_corps_commander_role = {
+					traits = { cavalry_officer }
+					skill = 2
+					attack_skill = 2
+					defense_skill = 1
+					planning_skill = 2
+					logistics_skill = 2
+					legacy_id=-1
+				}				
+			}
+
+			hidden_effect = {
+				HEU_emile_speller = {
+					add_timed_unit_leader_trait = {
+						trait = wounded
+						days = 600
+					}
+					# 로어상 에밀 슈펠러는 대전이 당시 팔 하나가 절단당했다.
+				}
+			}
 		}
 	}
 
@@ -789,7 +823,7 @@ focus_tree = {
 	#			target = FRM
 	#		}
 	#		add_state_core = 28
-	#		add_state_core = 988
+	#		add_state_core = 976
 	#	}
 	#}
 	
@@ -1434,7 +1468,7 @@ focus_tree = {
 		completion_reward = {
 			971 = { add_claim_by = ROOT }
 			974 = { add_claim_by = ROOT }
-			989 = { add_claim_by = ROOT }
+			977 = { add_claim_by = ROOT }
 			34 = { add_claim_by = ROOT }
 		}
 	}
@@ -5639,6 +5673,11 @@ focus_tree = {
 			add_to_variable = {
 				HEU_luxembourg_army_army_infantry_defence_factor = 0.1
 				tooltip = army_infantry_defence_factor_tt #교정
+			}
+			
+			custom_effect_tooltip = GER_sturmtruppe_battalion_tt
+			hidden_effect = {
+				set_technology = { sturmtruppe_battalion_tech = 1 popup = no }
 			}
 		}
 	}
