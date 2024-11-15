@@ -294,10 +294,10 @@ set_variable = {
 # 	story_archive_national_array = 2
 # }
 
-add_dynamic_modifier = {
-	modifier = SRT_special_forces
-	scope = SRT
-}
+# add_dynamic_modifier = {
+# 	modifier = SRT_special_forces
+# 	scope = SRT
+# }
 
 recruit_character = SRT_MIYAKO
 recruit_character = SRT_SAKI

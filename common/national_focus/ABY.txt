@@ -2721,7 +2721,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			set_technology = { kivotos_helicopter_tech = 1 }
+			# set_technology = { kivotos_helicopter_tech = 1 }
 			create_equipment_variant = {
 				name = "Water Cloud Gunship"
 				type = helicopter_airframe_chassis_1

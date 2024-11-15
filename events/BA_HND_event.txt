@@ -20,7 +20,7 @@ country_event = {
 				OR = {
 					tag = RAJ
 					tag = HDR
-					tag = BAR
+					tag = BR2
 					tag = RJP
 				}
 			}

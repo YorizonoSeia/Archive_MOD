@@ -11,11 +11,11 @@ GEI_unit_production = {
 		always = no
 	}
 
-	ai_strategy = {
-		type = role_ratio
-		id = decagrammaton_armor
-		value = 10
-	}
+	# ai_strategy = {
+	# 	type = role_ratio
+	# 	id = decagrammaton_armor
+	# 	value = 10
+	# }
 }
 GEI_war_with_ENG = {
 	enable = {

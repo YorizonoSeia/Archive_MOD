@@ -850,7 +850,7 @@ focus_tree = {
 		relative_position_id = KAI_future_rubber_synthesis
 
 		available = {
-			has_tech = decimetric_radar
+			#has_tech = decimetric_radar
 		}
 		
 		cost = 10

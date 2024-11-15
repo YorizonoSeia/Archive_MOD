@@ -2382,39 +2382,39 @@ HEU_problem_solver_68_decision_category = { #흥신소 68
 							factor = 0
 						}
 
-						modifier = { #level 1
-							ROOT = { NOT = {  has_tech = radio_detection } }
-							factor = 0
-						}
+						# modifier = { #level 1
+						# 	ROOT = { NOT = {  has_tech = radio_detection } }
+						# 	factor = 0
+						# }
 
-						modifier = { #level 2
-							radar_station > 0
-							ROOT = { NOT = {  has_tech = decimetric_radar } }
-							factor = 0
-						}
+						# modifier = { #level 2
+						# 	radar_station > 0
+						# 	ROOT = { NOT = {  has_tech = decimetric_radar } }
+						# 	factor = 0
+						# }
 
-						modifier = { #level 3
-							radar_station > 2
-							ROOT = { NOT = {  has_tech = improved_decimetric_radar } }
-							factor = 0
-						}
+						# modifier = { #level 3
+						# 	radar_station > 2
+						# 	ROOT = { NOT = {  has_tech = improved_decimetric_radar } }
+						# 	factor = 0
+						# }
 
-						modifier = { #level 4
-							radar_station > 3
-							ROOT = { NOT = {  has_tech = centimetric_radar } }
-							factor = 0
-						}
-						modifier = { #level 5
-							radar_station > 4
-							ROOT = { NOT = {  has_tech = improved_centimetric_radar } }
-							factor = 0
-						}
+						# modifier = { #level 4
+						# 	radar_station > 3
+						# 	ROOT = { NOT = {  has_tech = centimetric_radar } }
+						# 	factor = 0
+						# }
+						# modifier = { #level 5
+						# 	radar_station > 4
+						# 	ROOT = { NOT = {  has_tech = improved_centimetric_radar } }
+						# 	factor = 0
+						# }
 
-						modifier = { #level 6
-							radar_station > 4
-							ROOT = { NOT = {  has_tech = advanced_centimetric_radar } }
-							factor = 0
-						}
+						# modifier = { #level 6
+						# 	radar_station > 4
+						# 	ROOT = { NOT = {  has_tech = advanced_centimetric_radar } }
+						# 	factor = 0
+						# }
 
 						add_building_construction = {
 							type = radar_station
@@ -2778,7 +2778,7 @@ HEU_aru_GSC_annex_decision_category = {
 				global.HEU_support_GSC = 70
 				tooltip = HEU_support_GSC_edit_tt
 			}
-			HEU_aru_GSC_annex_setting = yes
+			#HEU_aru_GSC_annex_setting = yes
 		}
 
 		complete_effect = {
@@ -2818,7 +2818,7 @@ HEU_aru_GSC_annex_decision_category = {
 				global.HEU_support_belgium = 70
 				tooltip = HEU_support_belgium_edit_tt
 			}
-			HEU_aru_GSC_annex_setting = yes
+			#HEU_aru_GSC_annex_setting = yes
 		}
 
 		complete_effect = {
@@ -2889,7 +2889,7 @@ HEU_aru_GSC_annex_decision_category = {
 					}
 				}
 			}
-			HEU_aru_GSC_annex_setting = yes
+			#HEU_aru_GSC_annex_setting = yes
 			if = {
 				limit = {
 					FROM = {
@@ -2978,7 +2978,7 @@ HEU_aru_GSC_annex_decision_category = {
 					}
 				}
 			}
-			HEU_aru_GSC_annex_setting = yes
+			#HEU_aru_GSC_annex_setting = yes
 			if = {
 				limit = {
 					FROM = {
@@ -3060,7 +3060,7 @@ HEU_aru_GSC_annex_decision_category = {
 				global.HEU_support_belgium = -80
 				tooltip = HEU_support_belgium_edit_tt
 			}
-			HEU_aru_GSC_annex_setting = yes
+			# = yes
 		}
 	}
 
@@ -3119,7 +3119,7 @@ HEU_aru_GSC_annex_decision_category = {
 				global.HEU_support_belgium = -80
 				tooltip = HEU_support_belgium_edit_tt
 			}
-			HEU_aru_GSC_annex_setting = yes
+			#HEU_aru_GSC_annex_setting = yes
 		}
 
 		fire_only_once = yes
@@ -3181,7 +3181,7 @@ HEU_aru_GSC_annex_decision_category = {
 				global.HEU_support_belgium = -20
 				tooltip = HEU_support_belgium_edit_tt
 			}
-			HEU_aru_GSC_annex_setting = yes
+			#HEU_aru_GSC_annex_setting = yes
 		}
 
 		fire_only_once = yes
@@ -3247,7 +3247,7 @@ HEU_aru_GSC_annex_decision_category = {
 				global.HEU_support_belgium = -20
 				tooltip = HEU_support_belgium_edit_tt
 			}
-			HEU_aru_GSC_annex_setting = yes
+			#HEU_aru_GSC_annex_setting = yes
 		}
 
 		fire_only_once = yes

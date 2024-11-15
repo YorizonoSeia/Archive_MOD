@@ -81,7 +81,7 @@ on_actions = {
 						autonomy_state = autonomy_dominion
 					}
 					set_autonomy = {
-						target = BAR
+						target = BR2
 						autonomy_state = autonomy_dominion
 					}
 					set_autonomy = {

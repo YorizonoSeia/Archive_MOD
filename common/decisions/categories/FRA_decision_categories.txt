@@ -138,3 +138,11 @@ FRA_ALG_war = { #알제리 독립 전쟁
 	}
 	visible_when_empty = yes 
 }
+
+FRA_vichy_france = {
+	priority = 100
+	icon = GFX_decision_category_generic_political_actions
+	allowed = {
+		original_tag = FRA
+	}
+}

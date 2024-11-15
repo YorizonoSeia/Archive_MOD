@@ -19,22 +19,22 @@ state={
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 3
-			549 = {
-				bunker = 10
+			# 549 = {
+			# 	bunker = 10
 
-			}
-			3629 = {
-				bunker = 10
+			# }
+			# 3629 = {
+			# 	bunker = 10
 
-			}
-			9559 = {
-				bunker = 10
+			# }
+			# 9559 = {
+			# 	bunker = 10
 
-			}
-			11502 = {
-				bunker = 10
+			# }
+			# 11502 = {
+			# 	bunker = 10
 
-			}
+			# }
 			anti_air_building = 5
 			air_base = 5
 

@@ -159,9 +159,9 @@ bookmarks = {
 				HEU_ja_geum_nan
 			}	
 			focuses = {
-				HEU_foc_1
-				HEU_foc_1
-				HEU_foc_1
+				# HEU_foc_1
+				# HEU_foc_1
+				# HEU_foc_1
 			}			
 		}	
 		effect = {
@@ -196,8 +196,8 @@ bookmarks = {
 			available = { has_dlc = "No Step Back" }
 			ideas = {
 				Aftermath_of_the_Second_Soviet_Polish_War
-				SOV_second_five_year_plan_fake_1936_ns
-				SOV_politicized_military
+				# SOV_second_five_year_plan_fake_1936_ns
+				# SOV_politicized_military
 			}
 			focuses = {
 				SOV_behead_the_snake
@@ -292,9 +292,9 @@ bookmarks = {
 				BA_AUS_mangmyeng
 			}
 			focuses = {
-				BA_HUN_focus_13
-				BA_HUN_focus_27
-				BA_HUN_focus_59
+				# BA_HUN_focus_13
+				# BA_HUN_focus_27
+				# BA_HUN_focus_59
 			}
 		}
 		
@@ -671,9 +671,9 @@ bookmarks = {
 			history = "SWI_BLITZKRIEG_DESC"
 			ideology = democratic
 			ideas = {
-				SWI_spirit_of_helvetia_aggressive_war
-				SWI_frontier_defense_plan_idea_3
-				SWI_mountaineer_paratroopers_idea
+				# SWI_spirit_of_helvetia_aggressive_war
+				# SWI_frontier_defense_plan_idea_3
+				# SWI_mountaineer_paratroopers_idea
 			}
 			focuses = {
 				SWI_gotthard_union

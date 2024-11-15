@@ -589,7 +589,7 @@
 				limit = {
 					is_core_of = ROOT
 					is_in_home_area = yes
-					free_building_slots = { building = infrastructure size > 0 include_locked = yes }
+					free_building_slots = { building = infrastructure size > 0 }#include_locked = yes }
 				}
 				add_extra_state_shared_building_slots = 1
 				set_building_level = { type = infrastructure level = 5 }
@@ -599,7 +599,7 @@
 				limit = {
 					is_core_of = ROOT
 					is_in_home_area = yes
-					free_building_slots = { building = infrastructure size > 0 include_locked = yes }
+					free_building_slots = { building = infrastructure size > 0 }#include_locked = yes }
 				}
 				add_extra_state_shared_building_slots = 1
 				set_building_level = { type = infrastructure level = 5 }
@@ -4859,12 +4859,12 @@
 		completion_reward = {
 			custom_effect_tooltip = kivotos_dron_research_on
 			set_country_flag = kivotos_dron_research_on
-			add_tech_bonus = {
-				name = TRN_We_Need_Helicopter
-				ahead_reduction = 1
-				bonus = 0.5
-				technology = kivotos_helicopter_tech
-			}
+			# add_tech_bonus = {
+			# 	name = TRN_We_Need_Helicopter
+			# 	ahead_reduction = 1
+			# 	bonus = 0.5
+			# 	technology = kivotos_helicopter_tech
+			# }
 		}
 	}
 	focus = {
