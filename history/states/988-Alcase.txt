@@ -13,6 +13,9 @@ state={
 		owner = FRM
 		controller = GEM
 		add_core_of = FRM
+		add_dynamic_modifier = {
+			modifier = FRA_maginot_line_dynamic_modifier
+		}
 		#victory_points = { 6529 1 }
 		#victory_points = { 549 1 }
 		victory_points = { 678 5 }

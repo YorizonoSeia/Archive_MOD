@@ -13,28 +13,27 @@ state={
 		owner = FRM
 		controller = GEM
 		add_core_of = FRM
+		add_dynamic_modifier = {
+			modifier = FRA_maginot_line_dynamic_modifier
+		}
 		#victory_points = { 6529 1 }
 		#victory_points = { 549 1 }
 		victory_points = { 9559 10 }
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 3
-			# 549 = {
-			# 	bunker = 10
-
-			# }
-			# 3629 = {
-			# 	bunker = 10
-
-			# }
-			# 9559 = {
-			# 	bunker = 10
-
-			# }
-			# 11502 = {
-			# 	bunker = 10
-
-			# }
+			549 = {
+				bunker = 10
+			}
+			3629 = {
+			 	bunker = 10
+			}
+			9559 = {
+			 	bunker = 10
+			}
+			11502 = {
+			 	bunker = 10
+			}
 			anti_air_building = 5
 			air_base = 5
 
