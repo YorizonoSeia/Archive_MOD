@@ -3055,7 +3055,7 @@ focus_tree = {
 				24 = { set_demilitarized_zone = no }
 				16 = { set_demilitarized_zone = no }
 				985 = { set_demilitarized_zone = no }
-				972 = { set_demilitarized_zone = no }
+				984 = { set_demilitarized_zone = no }
 				set_variable = { global.BA_resistance_n_var = 2 }
 			}
 			if = {
@@ -8187,7 +8187,7 @@ focus_tree = {
 					OR = {
 						state = 16
 						state = 985
-						state = 972
+						state = 984
 						state = 24
 					}
 				}
@@ -9569,7 +9569,7 @@ focus_tree = {
 				24 = { set_demilitarized_zone = no }
 				16 = { set_demilitarized_zone = no }
 				985 = { set_demilitarized_zone = no }
-				972 = { set_demilitarized_zone = no }
+				984 = { set_demilitarized_zone = no }
 				17 = { set_demilitarized_zone = no }
 				18 = { set_demilitarized_zone = no }
 				27 = { set_demilitarized_zone = no }
