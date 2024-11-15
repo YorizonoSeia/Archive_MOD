@@ -120,3 +120,16 @@ HEU_bop_very_low_decrease_effect = {
 		value = -0.05
 	}
 }
+
+HEU_aru_GSC_annex_setting = {
+	clamp_variable = {
+		var = global.HEU_support_belgium
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = global.HEU_support_GSC
+		min = 0
+		max = 100
+	}
+}
