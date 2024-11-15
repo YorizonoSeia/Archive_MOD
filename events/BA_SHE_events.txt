@@ -386,7 +386,7 @@ country_event = {
 		create_wargoal = {
 			type = take_state_focus
 			target = KSP
-			generator = { 34 974 989 971 }
+			generator = { 34 974 989 983 }
 		}
 	}
 }

@@ -2071,7 +2071,7 @@ focus_tree = {
 					controls_state = 28
 					controls_state = 988
 					controls_state = 29
-					controls_state = 971
+					controls_state = 983
 					controls_state = 14
 					controls_state = 735
 					controls_state = 993
@@ -2080,7 +2080,7 @@ focus_tree = {
 					28 = { is_core_of = ROOT }
 					988 = { is_core_of = ROOT }
 					29 = { is_core_of = ROOT }
-					971 = { is_core_of = ROOT }
+					983 = { is_core_of = ROOT }
 					14 = { is_core_of = ROOT }
 					735 = { is_core_of = ROOT }
 					993 = { is_core_of = ROOT }
@@ -2089,7 +2089,7 @@ focus_tree = {
 					28 = { is_claimed_by = ROOT }
 					988 = { is_claimed_by = ROOT }
 					29 = { is_claimed_by = ROOT }
-					971 = { is_claimed_by = ROOT }
+					983 = { is_claimed_by = ROOT }
 					14 = { is_claimed_by = ROOT }
 					735 = { is_claimed_by = ROOT }
 					993 = { is_claimed_by = ROOT }
@@ -2106,7 +2106,7 @@ focus_tree = {
 			add_state_claim = 28
 			add_state_claim = 988
 			add_state_claim = 29
-			add_state_claim = 971
+			add_state_claim = 983
 			add_state_claim = 14
 			add_state_claim = 735
 			add_state_claim = 993
