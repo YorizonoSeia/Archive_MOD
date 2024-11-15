@@ -142,6 +142,10 @@ country_event = { #북부 독일 수립
 		trigger = {
 			NOT = { has_government = communism }
 		}
+		effect_tooltip = {
+			unlock_national_focus = GEAF_develop_modern_maneuver_warfare
+		}
+		set_country_flag = GEAF_develop_modern_maneuver_warfare_flag
 		every_country = {
 			limit = {
 				has_war_with = GEA

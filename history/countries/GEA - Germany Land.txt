@@ -19,7 +19,6 @@ add_dynamic_modifier = {
 
 #지도자
 recruit_character = GEK_gerd_von_rundstedt
-recruit_character = GEK_Walter_von_Reichenau
 
 add_country_leader_role = {
 	character = GEK_gerd_von_rundstedt
@@ -36,11 +35,29 @@ add_country_leader_role = {
 #recruit_character = GEK_victoria
 
 #일반
+recruit_character = GEK_august_von_mackensen
+recruit_character = GEK_werner_von_blomberg
+recruit_character = GEK_gunther_von_kluge
 recruit_character = GEK_walter_model
+recruit_character = GEK_vincenz_muller
+recruit_character = GEK_werner_von_fritsch
+recruit_character = GEK_wilhelm_ritter_von_leeb
+recruit_character = GEK_ewald_von_kleist
+recruit_character = GEK_erwin_rommel
+recruit_character = GEK_erich_von_manstein
+recruit_character = GEK_heinz_guderian
+recruit_character = GEK_wilhelm_list
+recruit_character = GEK_georghans_reinhardt
+recruit_character = GEK_hasso_von_manteuffel
+recruit_character = GEK_johannes_blaskowitz
+recruit_character = GEK_hans_oster
+recruit_character = GEK_hans_kahle
+recruit_character = GEK_arno_von_lenski
+recruit_character = GEK_ferdinand_schorner
+recruit_character = GEK_hans_krebs
+
 recruit_character = GEK_ernsteberhard_hell
 recruit_character = GEK_alfred_jodl
-recruit_character = GEK_erwin_rommel
-recruit_character = GEK_ewald_von_kleist
 recruit_character = GEK_erwin_von_witzleben
 recruit_character = GEK_franz_halder
 recruit_character = GEK_fedor_von_bock
@@ -48,25 +65,12 @@ recruit_character = GEK_gotthard_heinrici
 recruit_character = GEK_friedrich_paulus
 recruit_character = GEK_friedrich_schulz
 recruit_character = GEK_georg_von_kuchler
-recruit_character = GEK_gunther_von_kluge
-recruit_character = GEK_hasso_von_manteuffel
 recruit_character = GEK_hermann_hoth
-recruit_character = GEK_johannes_blaskowitz
 recruit_character = GEK_ludwig_beck
 recruit_character = GEK_maximilian_von_weichs
 recruit_character = GEK_walther_von_brauchitsch
 recruit_character = GEK_wilhelm_canaris
-recruit_character = GEK_hans_oster
-recruit_character = GEK_wilhelm_ritter_von_leeb
-recruit_character = GEK_wilhelm_list
-recruit_character = GEK_werner_von_fritsch
-
-recruit_character = GEK_alexander_von_falkenhausen #Not visible unless recalled from China
-
-#친나치
-recruit_character = GEK_wilhelm_keitel #지도자
-recruit_character = GEK_ferdinand_schorner
-recruit_character = GEK_georghans_reinhardt
+recruit_character = GEK_alexander_von_falkenhausen
 
 add_ideas = {
 	limited_exports

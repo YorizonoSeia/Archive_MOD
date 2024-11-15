@@ -9679,7 +9679,7 @@ focus_tree = {
 		prerequisite = { focus = ITA_strengthen_the_regime focus = ITA_blackshirt_loyalty focus = ITA_setting_course }
 		#/BA_MOD_FIX
 			mutually_exclusive = {
-				focus = ITA_towards_a_greater_italy
+				focus = ITA_mare_nostrum_bba
 				focus = ITA_rise_of_pan_europeanism
 			}
 		#BA_MOD_FIX/
