@@ -1,5 +1,6 @@
 ﻿l_english:
- Eden_alliance_created_already_TT: "에덴 조약기구는 형성되지 않음."
+ Eden_alliance_created_already_TT: "§Y에덴 조약기구§!가 형성됨."
+ Eden_alliance_created_already_TT_NOT: "§Y에덴 조약기구§!가 형성되지 않음."
  Eden_is_joint_focus_member_TT: "§Y에덴 조약기구§!의 일원임"
 
  Eden_formation_of_alliance_treaty_organization: "에덴 조약기구 수립"
@@ -46,3 +47,17 @@
  Eden_modifier_alliance_member:0 "에덴 조약기구"
 
  Eden_research_tech_sharing_name: "에덴 기술국"
+
+ Eden_event.1.t: "[var:global.Eden_alliance_leader.GetName] 측의 에덴 조약기구 통합 시도!"
+ Eden_event.1.desc: "[var:global.Eden_alliance_leader.GetName] 은 에덴 조약기구를 수립한 이후 점차 통합주의적 시각을 제시하기 시작했으며, 이내 에덴 조약기구의 회원국에게 강력한 통합 논의를 추진하기 시작했습니다.\n\n진보적인 학생들은 해당 통합 논의에 열성적인 지지를 보내기 시작했고, 보수적인 기존 학원 지도층은 불편감을 내비치기 시작했습니다."
+ Eden_event.1.a: "그래도 통합은 필수적이다."
+ Eden_event.1.b: "아니, 이는 집단 광기에 불가능하다. 조약기구에서 탈퇴하겠어"
+
+ Eden_event.2.t: "[FROM.GetName] 측의 통합 찬성"
+ Eden_event.2.desc: "에덴 조약기구 통합 안건이라는 이름으로 시작된 거대한 논의에서 [FROM.GetName] 측은 우리의 조약기구 통합 추진에 찬성한다는 입장을 밝혔습니다."
+ Eden_event.2.a: "한 걸음 앞으로."
+
+ Eden_event.3.t: "[FROM.GetName] 측의 조약기구 탈퇴!"
+ Eden_event.3.desc: "에덴 조약기구 통합 안건이라는 이름으로 시작된 거대한 논의에서 [FROM.GetName] 측은 조약기구 통합에 대해 강력하게 비판하였으며, 자국의 자주성 수호라는 목적 아래에 우리의 조약기구에서 탈퇴했습니다."
+ Eden_event.3.a: "우월주의자 놈들."
+ Eden_event.3.b: "저들의 정부는 분명히 비 민주적으로 선출되었다."

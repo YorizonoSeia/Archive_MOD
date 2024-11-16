@@ -57,6 +57,7 @@ Kivotos_tag = {
 		original_tag = RE4
 		original_tag = KAI
 		original_tag = GEI
+		original_tag = BLM
 	}
 }
 Kivotos_school_tag = {

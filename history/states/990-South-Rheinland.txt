@@ -8,6 +8,8 @@ state={
 	history={
 		owner = GEM
 		add_core_of = GEM
+		add_core_of = RHI
+		add_core_of = PRE
 		victory_points = {
 			11435 5 
 		}
@@ -18,8 +20,6 @@ state={
 			air_base = 1
 
 		}
-		#add_core_of = GER
-		add_core_of = PRE
 		
 		add_dynamic_modifier = { modifier = GEH_state_government }
 	}

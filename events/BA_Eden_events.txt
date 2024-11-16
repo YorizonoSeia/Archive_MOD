@@ -1,0 +1,63 @@
+add_namespace = Eden_event
+
+country_event = {
+	id = Eden_event.1
+	title = Eden_event.1.t
+	desc = Eden_event.1.desc
+	picture = GFX_event_Eden_event
+
+	fire_only_once = yes
+    is_triggered_only = yes
+
+	option = {
+		name = Eden_event.1.a
+		var:Eden_alliance_leader = {
+			country_event = { id = Eden_event.2 hours = 8 }
+		}
+	}
+	option = {
+		name = Eden_event.1.b
+		leave_faction = yes
+		var:Eden_alliance_leader = {
+			country_event = { id = Eden_event.3 hours = 8 }
+		}
+	}
+}
+
+country_event = {
+	id = Eden_event.2
+	title = Eden_event.2.t
+	desc = Eden_event.2.desc
+	picture = GFX_event_Eden_event
+
+	fire_only_once = yes
+    is_triggered_only = yes
+
+	option = {
+		name = Eden_event.2.a
+		add_stability = 0.05
+	}
+}
+
+country_event = {
+	id = Eden_event.3
+	title = Eden_event.3.t
+	desc = Eden_event.3.desc
+	picture = GFX_event_Eden_event
+
+	fire_only_once = yes
+    is_triggered_only = yes
+
+	option = {
+		name = Eden_event.3.a
+		add_war_support = 0.05
+	}
+	option = {
+		name = Eden_event.3.b
+		add_war_support = 0.05
+		create_wargoal = {
+			target = FROM
+			type = annex_everything
+		}
+	}
+}

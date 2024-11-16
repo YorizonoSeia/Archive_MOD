@@ -218,11 +218,11 @@ joint_focus = { #에덴 합중국
 	}
 
 	completion_reward_joint_originator = {
-
+		add_political_power = 100
 	}
 
 	completion_reward_joint_member = {
-
+		country_event = { id = Eden_event.1 hours = 8 }
 	}
 
 }
