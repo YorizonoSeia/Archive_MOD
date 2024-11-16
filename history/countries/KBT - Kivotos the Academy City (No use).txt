@@ -111,8 +111,15 @@ set_technology = {
 	experimental_rockets = 1
 	rocket_engines = 1
 	jet_engines = 1
-	improved_rocket_engines = 1
-	advanced_rocket_engines = 1
+}
+complete_special_project = {
+	project = sp:sp_air_jet_engine
+}
+complete_special_project = {
+	project = sp:sp_air_axial_jet_engine
+}
+complete_special_project = {
+	project = sp:sp_air_supersonic_jet
 }
 
 set_convoys = 1200
@@ -131,22 +138,6 @@ add_equipment_to_stockpile = {
 	type = mechanized_equipment_3
 	amount = 1000
 	producer = KBT
-}
-
-create_equipment_variant = {
-	name = "Kivotos-H.034"
-	type = helicopter_airframe_chassis_1
-	parent_version = 0
-	modules = {
-		engine_type_slot = helicopter_engine_1
-		special_type_slot_1 = empty
-		special_type_slot_2 = tank_close_support_gun
-		special_type_slot_3 = tank_close_support_gun
-	}
-	upgrades = {
-		tank_nsb_engine_upgrade = 2
-		tank_nsb_armor_upgrade = 0
-	}
 }
 
 if = {
@@ -222,12 +213,12 @@ if = {
 	}
 	create_equipment_variant = {
 		name = "Kivotos-J.011"
-		type = jet_fighter_equipment_2
+		type = supersonic_fighter_equipment_1
 		upgrades = {
-			plane_gun_upgrade = 3
+			plane_gun_upgrade = 5
 			plane_range_upgrade = 5
-			plane_engine_upgrade = 3
-			plane_reliability_upgrade = 3
+			plane_engine_upgrade = 5
+			plane_reliability_upgrade = 5
 		}
 	}
 }
@@ -255,17 +246,16 @@ if = {
 	}
 	create_equipment_variant = {
 		name = "Kivotos-J.011"
-		type = small_plane_airframe_4
+		type = small_plane_airframe_5
 		parent_version = 0
 		modules = {
 				fixed_main_weapon_slot = aircraft_cannon_2_2x
 				fixed_auxiliary_weapon_slot_1 = aircraft_cannon_2_2x
-				fixed_auxiliary_weapon_slot_2 = bomb_locks
-				fixed_auxiliary_weapon_slot_3 = bomb_locks
-				engine_type_slot = jet_engine_2x
+				fixed_auxiliary_weapon_slot_2 = heavy_mg_4x
+				fixed_auxiliary_weapon_slot_3 = heavy_mg_4x
+				engine_type_slot = jet_engine_axial_2x
 				special_type_slot_1 = cannon_defense_turret
 		}
-		icon = "GFX_USA_jet_plane_2_medium"
 	}
 }
 

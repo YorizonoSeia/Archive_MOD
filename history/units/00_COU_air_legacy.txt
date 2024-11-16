@@ -1,16 +1,10 @@
 ﻿
 air_wings = {
-	64 = {
+	7 = {
 		# 1. Vazduhoplovna Brigada -- Dewotine D.1/9/27 fighters
 		supersonic_fighter_equipment_1 = {
-			owner = "TRM" 
+			owner = "COU" 
 			amount = 100
-			creator = "KBT"
-			version_name = "Kivotos-J.011"
-		}
-		supersonic_fighter_equipment_1 = {
-			owner = "TRM" 
-			amount = 50
 			creator = "KBT"
 			version_name = "Kivotos-J.011"
 		}

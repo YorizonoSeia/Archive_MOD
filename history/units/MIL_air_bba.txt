@@ -2,9 +2,15 @@
 air_wings = {
 	16 = {
 		# 1. Vazduhoplovna Brigada -- Dewotine D.1/9/27 fighters
-		small_plane_airframe_4 = {
+		small_plane_airframe_5 = {
 			owner = "MIL" 
 			amount = 100
+			creator = "KBT"
+			version_name = "Kivotos-J.011"
+		}
+		small_plane_airframe_5 = {
+			owner = "MIL" 
+			amount = 50
 			creator = "KBT"
 			version_name = "Kivotos-J.011"
 		}

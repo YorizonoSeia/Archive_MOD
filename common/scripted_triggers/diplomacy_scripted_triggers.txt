@@ -31,7 +31,7 @@
 #		}
 
 # This specifically overrides the rule check as to whether or not you can guarantee other ideologies
-DIPLOMACY_GUARANTEE_ENABLE_TRIGGER_OVERRIDES_GAME = {
+DIPLOMACY_GUARANTEE_ENABLE_TRIGGER_OVERRIDES_GAME_TRIGGER = {
 	NOT = {
 		has_game_rule = {
 			rule = allow_guarantees
@@ -258,7 +258,7 @@ DIPLOMACY_RELEASE_NATION_ENABLE_TRIGGER = {
 			NOT = { FROM = { tag = RAP } }
 		}
 	}
-	if = {
+	IF = {
 		limit = {
 			OR = {
 				has_game_rule = {
@@ -299,6 +299,40 @@ DIPLOMACY_RELEASE_NATION_ENABLE_TRIGGER = {
 					option = PEACE_ONLY
 				}
 			}
+			original_tag = GER
+		}
+		custom_trigger_tooltip = {
+			tooltip = RULE_ALLOW_RELEASE_NATIONS_NOT_GERMAN_CONSTITUENT_STATES_TOOLTIP
+			NOT = { 
+				FROM = {
+					OR = {
+						tag = PRE 
+						tag = MEK
+						tag = BAY
+						tag = SAX
+						tag = HAN
+						tag = WUR
+						tag = SHL
+						tag = THU
+						tag = HES
+						tag = RHI
+					}
+				} 
+			}
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				has_game_rule = {
+					rule = allow_release_nations
+					option = FREE
+				}
+				has_game_rule = {
+					rule = allow_release_nations
+					option = PEACE_ONLY
+				}
+			}
 			OR = {
 				original_tag = ROM
 				original_tag = HUN
@@ -307,6 +341,28 @@ DIPLOMACY_RELEASE_NATION_ENABLE_TRIGGER = {
 		custom_trigger_tooltip = {
 			tooltip = RULE_ALLOW_RELEASE_NATIONS_NOT_TRANSYLVANIA_TOOLTIP
 			NOT = { FROM = { tag = TRA } }
+		}
+	}
+	IF = {
+		limit = {
+			OR = {
+				has_game_rule = {
+					rule = allow_release_nations
+					option = FREE
+				}
+				has_game_rule = {
+					rule = allow_release_nations
+					option = PEACE_ONLY
+				}
+			}
+			OR = {
+				original_tag = HUN
+				original_tag = CZE
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = RULE_ALLOW_RELEASE_NATIONS_NO_SLOVAKIA_TOOLTIP
+			NOT = { FROM = { tag = SLO } }
 		}
 	}
 	if = {
@@ -526,7 +582,10 @@ DIPLOMACY_RELEASE_NATION_ENABLE_TRIGGER = {
 		}
 		custom_trigger_tooltip = {
 			tooltip = RULE_ALLOW_RELEASE_NATIONS_SOVIET_TOOLTIP
-			has_completed_focus = SOV_autonomous_soviet_republics
+			OR = {
+				has_completed_focus = SOV_autonomous_soviet_republics
+				has_completed_focus = SOV_reconvene_the_zemsky_sobor
+			}
 		}
 	}
 	if = {
@@ -630,7 +689,10 @@ DIPLOMACY_RELEASE_NATION_ENABLE_TRIGGER = {
 		}
 		custom_trigger_tooltip = {
 			tooltip = RULE_ALLOW_RELEASE_NATIONS_SOVIET_TOOLTIP
-			has_completed_focus = SOV_autonomous_soviet_republics
+			OR = {
+				has_completed_focus = SOV_autonomous_soviet_republics
+				has_completed_focus = SOV_reconvene_the_zemsky_sobor
+			}
 		}
 	}
 	if = {
@@ -653,7 +715,7 @@ DIPLOMACY_RELEASE_NATION_ENABLE_TRIGGER = {
 		}
 	}
 	#/BA_MOD_FIX
-	if = { #게헨나의 국방군 해방 금지
+	if = { #게헨나의 국방군, 홀슈타인, 프로이센 해방 금지
 		limit = {
 			has_game_rule = {
 				rule = allow_release_nations
@@ -666,26 +728,14 @@ DIPLOMACY_RELEASE_NATION_ENABLE_TRIGGER = {
 		}
 		custom_trigger_tooltip = {
 			tooltip = RULE_ALLOW_RELEASE_NATIONS_GERMANYARMY_TOOLTIP
-			NOT = { FROM = { tag = GEA } }
-		}
-	}
-	if = { #게헨나의 홀슈타인 해방 금지
-		limit = {
-			has_game_rule = {
-				rule = allow_release_nations
-				option = FREE
-			}
-			OR = { 
-				original_tag = GEM
-				original_tag = GEH
+			NOT = {
+				FROM = { tag = GEA }
+				FROM = { tag = SHL }
+				FROM = { tag = PRE }
 			}
 		}
-		custom_trigger_tooltip = {
-			tooltip = RULE_ALLOW_RELEASE_NATIONS_SHLMANYARMY_TOOLTIP
-			NOT = { FROM = { tag = SHL } }
-		}
 	}
-	if = {
+	if = { #프랑스 해방 금지
 		limit = {
 			has_game_rule = {
 				rule = allow_release_nations
@@ -708,22 +758,6 @@ DIPLOMACY_RELEASE_NATION_ENABLE_TRIGGER = {
 			NOT = { FROM = { tag = VOL } }
 			NOT = { FROM = { tag = IVO } }
 			NOT = { FROM = { tag = MAD } }
-		}
-	}
-	if = { #프랑스 해방 금지
-		limit = {
-			has_game_rule = {
-				rule = allow_release_nations
-				option = FREE
-			}
-			OR = { 
-				original_tag = GEM
-				original_tag = GEH
-			}
-		}
-		custom_trigger_tooltip = {
-			tooltip = RULE_ALLOW_RELEASE_NATIONS_SHLMANYARMY_TOOLTIP
-			NOT = { FROM = { tag = SHL } }
 		}
 	}
 	#BA_MOD_FIX/
@@ -1039,7 +1073,7 @@ DIPLOMACY_REQUEST_LICENSED_PRODUCTION_ENABLE_TRIGGER = {
 		}
 	}
 }
-DIPLOMACY_GEKERATE_WARGOAL_ENABLE_TRIGGER = {
+DIPLOMACY_GENERATE_WARGOAL_ENABLE_TRIGGER = {
 	if = {
 		limit = {
 			has_game_rule = {
@@ -1797,42 +1831,6 @@ game_weight_can_add_communist = {
 }
 
 DIPLOMACY_JOIN_ALLY_ENABLE_TRIGGER = {
-	#/BA_MOD_FIX
-	if = { #세력 회원국 전쟁 호출 금지
-		limit = { check_variable = { modifier@cannot_call_allies_or_join_wars > 0 } }
-		custom_trigger_tooltip = {
-			tooltip = cannot_call_allies_or_join_wars_warning
-			always = no
-		}
-	}
-	else_if = {
-		limit = { check_variable = { FROM.modifier@cannot_call_allies_or_join_wars > 0 } }
-		custom_trigger_tooltip = {
-			tooltip = cannot_call_allies_or_join_wars_warning_FROM
-			always = no
-		}
-	}
-	#BA_MOD_FIX/
-	#/BA_MOD_FIX
-	if = { #평화 조약 비준
-		limit = {
-			has_idea = COU_cooperative_treaty_ratification
-			any_country = {
-				is_in_array = {
-					array = global.kivotos_alliance
-					value = THIS
-				}
-				FROM = {
-					has_war_with = PREV
-				}
-			}
-		}
-		custom_trigger_tooltip = {
-			tooltip = COU_cooperative_treaty_ratification_TT_JOIN
-			always = no
-		}
-	}
-	#/BA_MOD_FIX
 	if = { 
 		limit = {
 			NOT = { has_global_flag = ethiopia_recognized_flag }
@@ -1881,42 +1879,6 @@ DIPLOMACY_JOIN_ALLY_ENABLE_TRIGGER = {
 	}
 }
 DIPLOMACY_CALL_ALLY_ENABLE_TRIGGER = {
-	#/BA_MOD_FIX
-	if = { #세력 회원국 전쟁 호출 금지
-		limit = { check_variable = { modifier@cannot_call_allies_or_join_wars > 0 } }
-		custom_trigger_tooltip = {
-			tooltip = cannot_call_allies_or_join_wars_warning
-			always = no
-		}
-	}
-	else_if = {
-		limit = { check_variable = { FROM.modifier@cannot_call_allies_or_join_wars > 0 } }
-		custom_trigger_tooltip = {
-			tooltip = cannot_call_allies_or_join_wars_warning_FROM
-			always = no
-		}
-	}
-	#BA_MOD_FIX/
-	#/BA_MOD_FIX
-	if = {
-		limit = {
-			FROM = { has_idea = COU_cooperative_treaty_ratification }
-			any_country = {
-				is_in_array = {
-					array = global.kivotos_alliance
-					value = THIS
-				}
-				ROOT = {
-					has_war_with = PREV
-				}
-			}
-		}
-		custom_trigger_tooltip = {
-			tooltip = COU_cooperative_treaty_ratification_TT_JOIN_FROM
-			always = no
-		}
-	}
-	#BA_MOD_FIX/
 	if = { 
 		limit = {
 			NOT = { has_global_flag = ethiopia_recognized_flag }
@@ -1965,43 +1927,6 @@ DIPLOMACY_CALL_ALLY_ENABLE_TRIGGER = {
 	}
 }
 DIPLOMACY_JOIN_FACTION_ENABLE_TRIGGER = {
-	#/BA_MOD_FIX
-	if = { #발키리 세력 변경 금지
-		limit = {
-			original_tag = KSP
-			has_idea = KSP_duties_of_the_police_academy
-			is_in_faction_with = global.kivotos_alliance_leader
-		}
-		custom_trigger_tooltip = {
-			tooltip = BA_DIPLOMACY_NOT_JOIN_FACTION
-			always = no
-		}
-	}
-	if = { #이탈리아-키보토스 동맹 금지
-		limit = {
-			Kivotos_tag = yes
-			FROM = { 
-				original_tag = ITA
-				has_idea = PASTA_human_fascism_idea
-			}
-		}
-		custom_trigger_tooltip = {
-			tooltip = BA_DIPLOMACY_human_fascism
-			always = no
-		}
-	}
-	if = { #이탈리아-키보토스 동맹 금지
-		limit = {
-			original_tag = ITA
-			has_idea = PASTA_human_fascism_idea
-			FROM = { Kivotos_tag = yes }
-		}
-		custom_trigger_tooltip = {
-			tooltip = BA_DIPLOMACY_FROM_human_fascism
-			always = no
-		}
-	}
-	#BA_MOD_FIX/
 	if = { 
 		limit = {
 			has_dlc = "Arms Against Tyranny"
@@ -2017,43 +1942,6 @@ DIPLOMACY_JOIN_FACTION_ENABLE_TRIGGER = {
 	}
 }
 DIPLOMACY_OFFER_JOIN_FACTION_ENABLE_TRIGGER = {
-	#/BA_MOD_FIX
-	if = { #발키리 세력 변경 금지
-		limit = {
-			original_tag = KSP
-			has_idea = KSP_duties_of_the_police_academy
-			is_in_faction_with = global.kivotos_alliance_leader
-		}
-		custom_trigger_tooltip = {
-			tooltip = BA_DIPLOMACY_FROM_NOT_JOIN_FACTION
-			always = no
-		}
-	}
-	if = { #이탈리아-키보토스 동맹 금지
-		limit = {
-			Kivotos_tag = yes
-			FROM = { 
-				original_tag = ITA
-				has_idea = PASTA_human_fascism_idea
-			}
-		}
-		custom_trigger_tooltip = {
-			tooltip = BA_DIPLOMACY_FROM_human_fascism
-			always = no
-		}
-	}
-	if = { #이탈리아-키보토스 동맹 금지
-		limit = {
-			original_tag = ITA
-			has_idea = PASTA_human_fascism_idea
-			FROM = { Kivotos_tag = yes }
-		}
-		custom_trigger_tooltip = {
-			tooltip = BA_DIPLOMACY_human_fascism
-			always = no
-		}
-	}
-	#BA_MOD_FIX/
 	if = { 
 		limit = {
 			has_dlc = "Arms Against Tyranny"
@@ -2069,81 +1957,5 @@ DIPLOMACY_OFFER_JOIN_FACTION_ENABLE_TRIGGER = {
 		}
 	}
 }
-#/BA_MOD_FIX
-DIPLOMACY_CREATE_FACTION_ENABLE_TRIGGER = {
-	if = { #발키리 세력 변경 금지
-		limit = {
-			original_tag = KSP
-			has_idea = KSP_duties_of_the_police_academy
-			is_in_faction_with = global.kivotos_alliance_leader
-		}
-		custom_trigger_tooltip = {
-			tooltip = BA_DIPLOMACY_FROM_NOT_JOIN_FACTION
-			always = no
-		}
-	}
-	if = { #세력 가입 금지 우회 방지
-		limit = {
-			NOT = {
-				FROM = { has_rule = can_join_factions }
-			}
-		}
-		custom_trigger_tooltip = {
-			tooltip = BA_DIPLOMACY_FROM_NOT_CREATE_FACTION
-			always = no
-		}
-	}
-	if = { #세력 가입 금지 우회 방지
-		limit = {
-			NOT = {
-				has_rule = can_join_factions
-			}
-		}
-		custom_trigger_tooltip = {
-			tooltip = BA_DIPLOMACY_NOT_CREATE_FACTION
-			always = no
-		}
-	}
-	if = { #이탈리아-키보토스 동맹 금지
-		limit = {
-			FROM = { 
-				original_tag = ITA
-				has_idea = PASTA_human_fascism_idea
-			}
-		}
-		custom_trigger_tooltip = {
-			tooltip = BA_DIPLOMACY_FROM_human_fascism
-			always = no
-		}
-	}
-	if = { #이탈리아-키보토스 동맹 금지
-		limit = {
-			original_tag = ITA
-			has_idea = PASTA_human_fascism_idea
-		}
-		custom_trigger_tooltip = {
-			tooltip = BA_DIPLOMACY_human_fascism
-			always = no
-		}
-	}
-}
-#BA_MOD_FIX/
 
-#/BA_MOD_FIX
-DIPLOMACY_WAR_ENABLE_TRIGGER = {
-	if = { #조약 간 전쟁 금지
-		limit = {
-			has_idea = COU_cooperative_treaty_ratification
-		}
-		custom_trigger_tooltip = {
-			tooltip = COU_cooperative_treaty_ratification_TT
-			NOT = {
-				is_in_array = {
-					array = global.kivotos_alliance
-					value = FROM
-				}
-			}
-		}
-	}
-}
-#BA_MOD_FIX/
+

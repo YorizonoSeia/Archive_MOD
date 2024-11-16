@@ -217,22 +217,4 @@ add_ideas = {
 	BA_isolation
 }
 
-if = {
-	limit = {
-		has_dlc = "No Step Back"
-	}
-	create_equipment_variant = {
-		name = "AH-64 Apache"
-		type = helicopter_airframe_chassis_1
-		modules = {
-			engine_type_slot = helicopter_engine_2
-			special_type_slot_1 = tank_radio_1
-			special_type_slot_2 = tank_auto_cannon
-			special_type_slot_3 = tank_auto_cannon
-		}
-		icon = "gfx/interface/technologies/KSP_ah_64d.dds"
-	}
-}
-
-
 set_stability = 0.70

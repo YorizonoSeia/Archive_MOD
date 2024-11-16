@@ -1,6 +1,14 @@
 capital = 7
 
 oob = "COU_1936"
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_air_oob = "00_COU_air_bba"
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_air_oob = "00_COU_air_legacy"
+}
 
 set_research_slots = 4
 set_stability = 0.75
@@ -162,22 +170,6 @@ recruit_character = COU_paul_de_groot
 recruit_character = COU_anton_pannekoek
 recruit_character = COU_central_labor_union
 recruit_character = COU_council_democracy
-
-create_equipment_variant = {
-	name = "Kivotos-034"
-	type = helicopter_airframe_chassis_1
-	parent_version = 0
-	modules = {
-		engine_type_slot = helicopter_engine_1
-		special_type_slot_1 = empty
-		special_type_slot_2 = tank_close_support_gun
-		special_type_slot_3 = tank_close_support_gun
-	}
-	upgrades = {
-		tank_nsb_engine_upgrade = 2
-		tank_nsb_armor_upgrade = 0
-	}
-}
 
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }

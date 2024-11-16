@@ -1,6 +1,14 @@
 capital = 36
 
 oob = "SHE_1936"
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_air_oob = "00_COU_air_bba"
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_air_oob = "00_COU_air_legacy"
+}
 
 set_research_slots = 3
 set_stability = 0.45

@@ -2722,17 +2722,6 @@ focus_tree = {
 
 		completion_reward = {
 			# set_technology = { kivotos_helicopter_tech = 1 }
-			create_equipment_variant = {
-				name = "Water Cloud Gunship"
-				type = helicopter_airframe_chassis_1
-				parent_version = 0
-				modules = {
-					engine_type_slot = helicopter_engine_2
-					special_type_slot_1 = tank_radio_1
-					special_type_slot_2 = tank_auto_cannon
-					special_type_slot_3 = tank_auto_cannon
-				}
-			}
 		}
 	}
 	focus = {
