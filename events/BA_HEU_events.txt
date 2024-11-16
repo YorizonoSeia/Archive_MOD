@@ -1184,7 +1184,7 @@ country_event = { #[FROM.GetName] 측의 망명 제안
 			every_state = {
 				limit = { is_core_of = GEM }
 				add_core_of	= HEU
-				remove_core_of = GEM
+				#remove_core_of = GEM
 			}
 
 			annex_country = {
