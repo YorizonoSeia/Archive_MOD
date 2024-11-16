@@ -64,6 +64,24 @@ peace_ai_desires = {
         ai_desire = 1000
     }
 
+    BA_SOV_no_LIT_puppet_ai = {
+        peace_action_type = puppet
+        enable = {
+            original_tag = SOV
+            SOV = {
+                count_triggers = {
+                    amount = 3
+                    owns_state = 189
+                    owns_state = 815
+                    owns_state = 11
+                    owns_state = 814
+                }
+            }
+            ROOT.FROM = { tag = LIT }
+            ROOT.FROM.FROM.FROM = { is_core_of = LIT }
+        }
+        ai_desire = -300
+    }
 
     # Give state 664 to SLO if it exists
     BA_SOV_no_czech_puppet_ai = {
