@@ -33,4 +33,20 @@ peace_ai_desires = {
 		}
 		ai_desire = -1200
 	}
+	SHA_peace_annex_HYA = {
+		peace_action_type = take_states 
+		enable = {
+			ROOT = {
+				original_tag = SHA
+			}
+			ROOT.FROM = {
+				tag = ROOT
+			}
+			FROM.FROM.FROM = {
+				state = 972
+				state = 986
+			}
+		}
+		ai_desire = 400
+	}
 }
