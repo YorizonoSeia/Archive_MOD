@@ -4,7 +4,7 @@ air_wings = {
 		# 1. Vazduhoplovna Brigada -- Dewotine D.1/9/27 fighters
 		small_plane_airframe_5 = {
 			owner = "GEH" 
-			amount = 100
+			amount = 50
 			creator = "KBT"
 			version_name = "Kivotos-J.011"
 		}
