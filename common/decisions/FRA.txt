@@ -1362,7 +1362,7 @@ FRA_prepare_war = {
 				24 = { if = { limit = { is_controlled_by = MIL } set_demilitarized_zone = yes } }
 				16 = { if = { limit = { is_controlled_by = MIL } set_demilitarized_zone = yes } }
 				985 = { if = { limit = { is_controlled_by = MIL } set_demilitarized_zone = yes } }
-				972 = { if = { limit = { is_controlled_by = MIL } set_demilitarized_zone = yes } }
+				984 = { if = { limit = { is_controlled_by = MIL } set_demilitarized_zone = yes } }
 			}
 			set_variable = { global.BA_resistance_n_var = 3 }
 		}

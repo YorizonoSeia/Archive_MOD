@@ -2308,7 +2308,7 @@ RED_minori_revolutionary_isolationism = {
 		available = {
 			owns_state = 4
 			owns_state = 9
-			owns_state = 985
+			owns_state = 972
 			owns_state = 52
 		}
 		cost = 10
