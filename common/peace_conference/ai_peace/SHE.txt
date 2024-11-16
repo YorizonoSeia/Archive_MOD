@@ -9,9 +9,7 @@ peace_ai_desires = {
 				tag = ROOT
 			}
 			FROM.FROM.FROM = {
-				OR = {
-					is_core_of = COU
-				}
+				is_core_of = COU
 			}
 		}
 		ai_desire = 400
@@ -26,9 +24,7 @@ peace_ai_desires = {
 				tag = ROOT
 			}
 			FROM.FROM.FROM = {
-				OR = {
-					is_core_of = KSP
-				}
+				is_core_of = KSP
 			}
 		}
 		ai_desire = 400
