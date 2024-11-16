@@ -5469,30 +5469,7 @@
 		relative_position_id = TRN_nagisa_gyehek
 		prerequisite = { focus = TRN_Have_hand_to_gehhenna }
 		completion_reward = {
-			if = {
-				limit = {
-					GEM = {
-						exists = yes
-						has_capitulated = no
-						is_subject = no
-					}
-				}
-				GEM = {
-					country_event = { id = TRM_event.76 hours = 8 }
-				}
-			}
-			else_if = {
-				limit = {
-					GEH = {
-						exists = yes
-						has_capitulated = no
-						is_subject = no
-					}
-				}
-				GEH = {
-					country_event = { id = TRM_event.76 hours = 8 }
-				}
-			}
+			remove_ideas = TRM_anti_gehenna_idea
 		}
 	}
 
@@ -6654,6 +6631,30 @@
 				reverse_add_opinion_modifier = {
 					target = KSP
 					modifier = eden_treaty_promotion_good
+				}
+			}
+			if = {
+				limit = {
+					GEM = {
+						exists = yes
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				GEM = {
+					country_event = { id = TRM_event.76 hours = 8 }
+				}
+			}
+			else_if = {
+				limit = {
+					GEH = {
+						exists = yes
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				GEH = {
+					country_event = { id = TRM_event.76 hours = 8 }
 				}
 			}
 		}

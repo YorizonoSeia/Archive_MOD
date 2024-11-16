@@ -3,6 +3,11 @@ spriteTypes = {
 # 뉴스 이벤트 사진
 
 	spriteType = {
+		name = "GFX_event_Eden_event"
+		texturefile = "gfx/event_pictures/Eden_event.tga"
+	}
+
+	spriteType = {
 		name = "GFX_event_KAP_declared"
 		texturefile = "gfx/event_pictures/KAP/event_KAP_declared.dds"
 	}
