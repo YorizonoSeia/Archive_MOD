@@ -27,7 +27,7 @@ peace_ai_desires = {
 				tag = ROOT
 			}
 			FROM.FROM.FROM = {
-				state = 69
+				state = 972
 				state = 986
 			}
 		}

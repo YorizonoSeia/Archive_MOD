@@ -12,6 +12,31 @@ peace_action_modifiers = {
             }
             ROOT.FROM.FROM.FROM = {
                 is_core_of = ABY
+                NOT = {
+                    state = 972
+                    state = 986
+                }
+            }
+        }
+        cost_multiplier = 0.25
+    }
+
+    ABY_HYA_annex_country = {
+        category = events_or_focuses
+        peace_action_type = { take_states }
+        enable = {
+			SHA = {
+				NOT = { has_war_with = HYA }
+			}
+            ROOT = {
+                 tag = ABY
+            }
+            ROOT.FROM.FROM.FROM = {
+                is_core_of = ABY
+                OR = {
+                    state = 972
+                    state = 986
+                }
             }
         }
         cost_multiplier = 0.25
