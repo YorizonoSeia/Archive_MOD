@@ -88,7 +88,7 @@ GEH_nego_wehrmacht_decisions = {
 		allowed = {
 		}
 		ai_will_do = {
-			factor = 200
+			factor = 4000
 		}
 		available = {
 		} 
@@ -398,7 +398,7 @@ GEH_nego_wehrmacht_decisions = {
 		}
 		on_map_mode = map_and_decisions_view
 		ai_will_do = {
-			factor = 200
+			factor = 4000
 			modifier = {
 				FROM = { state = 59 }
 				any_state = {
@@ -472,7 +472,7 @@ GEH_nego_wehrmacht_decisions = {
 		allowed = {
 		}
 		ai_will_do = {
-			factor = 200
+			factor = 4000
 		}
 		available = {
 			NOT = {

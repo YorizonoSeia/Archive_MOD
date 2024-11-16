@@ -1,4 +1,21 @@
 peace_ai_desires = {
+	SHE_annex_COU = {
+		peace_action_type = take_states
+		enable = {
+			ROOT = {
+				original_tag = SHE
+			}
+			ROOT.FROM = {
+				tag = ROOT
+			}
+			FROM.FROM.FROM = {
+				OR = {
+					is_core_of = COU
+				}
+			}
+		}
+		ai_desire = 400
+	}
 	SHE_annex_KSP = {
 		peace_action_type = take_states
 		enable = {
