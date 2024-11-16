@@ -2623,7 +2623,7 @@ SHE_student_council_absorption = {
 		cost = 100
 		available = {
 			controls_state = 34
-			controls_state = 974
+			controls_state = 980
 			controls_state = 989
 			controls_state = 983
 		}
@@ -2637,7 +2637,7 @@ SHE_student_council_absorption = {
 		days_remove = 120
 		remove_effect = {
 			add_state_core = 34
-			add_state_core = 974
+			add_state_core = 980
 			add_state_core = 989
 			add_state_core = 983
         }
@@ -2687,6 +2687,31 @@ SHE_student_council_absorption = {
 		days_remove = 30
 		remove_effect = {
 			35 = {
+				add_core_of = ROOT
+				clr_state_flag = SHE_war_cou_flag
+			}
+        }
+
+	}
+	SHE_student_council_absorption_977 = {
+		icon = GFX_decision_generic_break_treaty
+		cost = 25
+		available = {
+			controls_state = 977
+		}
+		visible = {
+			977 = {
+				is_fully_controlled_by = ROOT
+				has_state_flag = SHE_war_cou_flag
+			}
+		}
+		ai_will_do = {
+			base = 100
+		}
+		fire_only_once = yes
+		days_remove = 30
+		remove_effect = {
+			977 = {
 				add_core_of = ROOT
 				clr_state_flag = SHE_war_cou_flag
 			}
