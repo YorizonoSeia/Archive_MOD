@@ -15351,7 +15351,7 @@ focus = {
 	relative_position_id = ITA_potential_allies_in_the_balkans
 	cost = 5
 	available = {
-		has_idea = PASTA_shock_to_daejeon
+		has_idea = PASTA_signatories_of_the_stresa_idea
 		country_exists = SHA
 		NOT = { has_war_with = SHA }
 	}		 
@@ -15655,12 +15655,7 @@ focus = {
 	}
 
 	available = {
-		has_idea = PASTA_shock_to_daejeon
 		NOT = { has_war_with = HUN }
-		custom_trigger_tooltip = {
-			tooltip = ITA_HUN_italy_same_tt
-			HUN = { has_government = ROOT }
-		}
 		HUN = {
 			is_subject = no
 		}

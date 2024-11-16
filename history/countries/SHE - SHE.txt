@@ -10,6 +10,21 @@ if = {
 	set_air_oob = "zzz_COU_air_legacy"
 }
 
+add_breakthrough_progress = {
+	specialization = specialization_land
+	value = 0.4
+}
+
+add_breakthrough_progress = {
+	specialization = specialization_naval
+	value = 0.2
+}
+
+add_breakthrough_progress = {
+	specialization = specialization_air
+	value = 0.5
+}
+
 set_research_slots = 3
 set_stability = 0.45
 set_war_support = 0.55

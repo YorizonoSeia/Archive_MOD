@@ -16,6 +16,16 @@ add_opinion_modifier = {
 }
 save_global_event_target_as = BA_FRA_free_france_event_target
 
+add_breakthrough_progress = {
+	specialization = specialization_land
+	value = 0.5
+}
+
+add_breakthrough_progress = {
+	specialization = specialization_naval
+	value = 0.5
+}
+
 if = {
 	limit = {
 		has_dlc = "Man the Guns"

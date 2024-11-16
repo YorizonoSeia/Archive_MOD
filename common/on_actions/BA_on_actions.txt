@@ -909,6 +909,20 @@ on_actions = {
 				MIL = {
 					complete_national_focus = MIL_Game_2
 				}
+				if = {
+					limit = {
+						any_state = {
+							has_state_flag = PASTA_event_4_flag
+						}
+					}
+					ITA = {
+						create_wargoal = {
+							target = MIL
+							type = take_state
+							generator = { 32 21 992 851 }
+						}
+					}
+				}
 			}
 			if = {
 				limit = {

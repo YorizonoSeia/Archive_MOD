@@ -109,6 +109,10 @@ country_event = {
 		name = PASTA_event.4.b
 		add_war_support = 0.05
 		add_political_power = 10
+		32 = { set_state_flag = PASTA_event_4_flag }
+		21 = { set_state_flag = PASTA_event_4_flag }
+		992 = { set_state_flag = PASTA_event_4_flag }
+		851 = { set_state_flag = PASTA_event_4_flag }
 		
 		ai_chance = {
 			base = 0
@@ -148,7 +152,6 @@ country_event = {
 		name = PASTA_event.6.a
 
 		add_war_support = 0.10
-
 	}
 }
 

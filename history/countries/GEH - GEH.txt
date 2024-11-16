@@ -10,6 +10,21 @@ if = {
 	set_air_oob = "zzz_GEH_air_legacy"
 }
 
+add_breakthrough_progress = {
+	specialization = specialization_land
+	value = 0.8
+}
+
+add_breakthrough_progress = {
+	specialization = specialization_naval
+	value = 0.5
+}
+
+add_breakthrough_progress = {
+	specialization = specialization_air
+	value = 0.2
+}
+
 set_research_slots = 3
 set_stability = 0.5
 set_war_support = 0.7

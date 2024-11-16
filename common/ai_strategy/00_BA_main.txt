@@ -38,7 +38,7 @@ BA_main_italy_does_not_ally_with_kvt_state = {
     ai_strategy = {
         type = alliance
         id = "ITA"
-        value = -170
+        value = -500
     }
 }
 BA_main_limited_alliance_with_kvt_state = {

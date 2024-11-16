@@ -27,6 +27,21 @@ add_to_array = { #키보토스 국가
 	array = global.kivotos_alliance
 }
 
+add_breakthrough_progress = {
+	specialization = specialization_land
+	value = 2.5
+}
+
+add_breakthrough_progress = {
+	specialization = specialization_naval
+	value = 0.8
+}
+
+add_breakthrough_progress = {
+	specialization = specialization_air
+	value = 0.9
+}
+
 set_variable = { MIL_res_down_value = 200 } # 전국 레지스탕스 소탕 비용
 set_variable = { MIL_res_days_var = 70 } # 레지스탕스 필요 시간
 set_variable = { MIL_res_destroy_var = 20 } # 레지스탕스 필요 시간

@@ -7,6 +7,11 @@ set_stability = 0.20
 set_war_support = 0.40
 add_command_power = 10
 
+add_breakthrough_progress = {
+	specialization = specialization_land
+	value = 0.4
+}
+
 set_variable = { HYA_hyakkayouran_conflict_resolution_council_drift_defence_factor = 0.05 }
 set_variable = { HYA_hyakkayouran_conflict_resolution_council_neutrality_drift = 0.02 }
 set_variable = { HYA_hyakkayouran_conflict_resolution_council_max_command_power = 5 }
