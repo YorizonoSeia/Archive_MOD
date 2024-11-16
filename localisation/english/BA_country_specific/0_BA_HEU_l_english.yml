@@ -2028,10 +2028,10 @@
  aru_schedule_1_blocked: "£schedule_ticket_texticon §R1§!"
  aru_schedule_1_tooltip: "이 결정을 위해서는 $aru_schedule_1_blocked$이 필요합니다."
 
- HEU_aru_persona_wisdom_edit_tt:0 "리쿠하치마 아루의 §Y지혜§!가 $RIGHT|+=%%1$ 변화"
- HEU_aru_persona_kindness_edit_tt:0 "리쿠하치마 아루의 §Y상냥함§!이 $RIGHT|+=%%1$ 변화"
- HEU_aru_persona_resolution_edit_tt:0 "리쿠하치마 아루의 §Y결의§!가 $RIGHT|+=%%1$ 변화"
- HEU_aru_persona_charisma_edit_tt:0 "리쿠하치마 아루의 §Y카리스마§!가 $RIGHT|+=%%1$ 변화"
+ HEU_aru_persona_wisdom_edit_tt:0 "리쿠하치마 아루의 §Y지혜§!가 $RIGHT|+=1$ 변화"
+ HEU_aru_persona_kindness_edit_tt:0 "리쿠하치마 아루의 §Y상냥함§!이 $RIGHT|+=1$ 변화"
+ HEU_aru_persona_resolution_edit_tt:0 "리쿠하치마 아루의 §Y결의§!가 $RIGHT|+=1$ 변화"
+ HEU_aru_persona_charisma_edit_tt:0 "리쿠하치마 아루의 §Y카리스마§!가 $RIGHT|+=1$ 변화"
 
  HEU_no_more_evil_tt: "£GFX_unit_halo_infantry_icon_small §C헤일로 민병§!의 §Y편제 제한§!: §G+12§!"
 
@@ -2039,6 +2039,9 @@
  aru_persona_gui_kindness_tt:0 "§Y상냥함§!\n리쿠하치마 아루의 상냥함입니다. 이 점수는 일반 국민들이나 흥신소 68의 사원들에게 리쿠하치마 아루가 얼마나 다정하게 보이는지를 표현하는 점수입니다."
  aru_persona_gui_resolution_tt:0 "§Y결의§!\n리쿠하치마 아루의 결의입니다. 이 점수는 위험한 상황에서 빠른 결단을 내릴 수 있는 단호함과 강한 의지력을 표현하는 점수입니다."
  aru_persona_gui_charisma_tt:0 "§Y카리스마§!\n리쿠하치마 아루의 카리스마입니다. 이 점수는 국민들이나 여러 이해단체, 그리고 군부가 느끼는 아루의 지도력을 표현하는 점수입니다."
+
+ HEU_luxembourgism_idea_tt_NOT: "변동치 미보유: §Y$HEU_luxembourgism_idea$§!"
+ HEU_rikuhachimaism_idea_tt_NOT: "변동치 미보유: §Y$HEU_rikuhachimaism_idea$§!"
 
 #룰
  HEU_AI_BEHAVIOR:0 "@HEU 흥신소 68"
