@@ -1,0 +1,25 @@
+ideas = {
+	country = {
+		KAP_gongsadamang = {
+			picture = KAP_zotdam
+			
+			allowed = {
+				tag = KAP
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = -0.50
+				research_speed_factor = -0.50
+				industry_repair_factor = -0.50
+				industrial_capacity_factory = -0.50
+				custom_modifier_tooltip = 아직안채움 
+			}
+		}
+	}
+}
