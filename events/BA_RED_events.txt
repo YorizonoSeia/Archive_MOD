@@ -975,6 +975,16 @@ country_event = { #엄습하는 반혁명
 		custom_effect_tooltip = RED_minori_event.5_tt
 		activate_mission = RED_aproaching_anti_revolution
 		hidden_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						is_owned_by = RE1
+						is_owned_by = RE2
+						is_owned_by = RE3
+					}
+				}
+				add_claim_by = RED
+			}
 			country_event = {
 				id = RED_minori_event.8
 				days = 7
