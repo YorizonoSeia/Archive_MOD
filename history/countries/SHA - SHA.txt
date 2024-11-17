@@ -22,8 +22,7 @@ add_timed_idea = {
 add_ideas = {
 	disarmed_nation
 	BA_isolation
-	civilian_economy
-	SHA_traditional_protection_idea
+	SHA_isolation_economic
 	SHA_faup_idea
 	SHA_opera_idea
 	SHA_Black_Tortoise_Promenade

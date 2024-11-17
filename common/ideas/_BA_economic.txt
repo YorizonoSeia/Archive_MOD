@@ -240,29 +240,6 @@ ideas = {
 			}
 			cancel_if_invalid = no
 		}
-		SHA_oldeconomy = { #고립
-			picture = undisturbed_isolation
-			allowed = {
-				always = no
-			}
-			removal_cost = -1
-
-			modifier = {
-				consumer_goods_expected_value = 0.40
-				production_speed_industrial_complex_factor = -0.10
-				production_speed_arms_factory_factor = -0.10
-				production_speed_dockyard_factor = -0.10
-				lend_lease_tension = 1
-				guarantee_tension = 1
-				max_fuel_factor = -0.50
-				fuel_gain_factor = -0.50
-				agency_upgrade_time = 1.0
-			}
-			allowed_to_remove = {
-				always = no
-			}
-			cancel_if_invalid = no
-		}
 		KSP_total_correct_economy = {
 			picture = man_five_year_plan_industry
 
@@ -330,6 +307,33 @@ ideas = {
 
 			allowed_to_remove = {
 				always = no
+			}
+		}
+		SHA_isolation_economic = {
+			picture = closed_economy
+			allowed = {
+				always = no
+			}
+			allowed_to_remove = {
+				NOT = {
+					has_government = neutrality
+				}
+			}
+			modifier = {
+				consumer_goods_expected_value = 0.4
+				production_speed_industrial_complex_factor = -0.4
+				production_speed_arms_factory_factor = -0.4
+				production_speed_dockyard_factor = -0.4
+				conversion_cost_civ_to_mil_factor = 0.4
+				conversion_cost_mil_to_civ_factor = 0.4
+				generate_wargoal_tension = 1.00
+				join_faction_tension = 0.20
+				lend_lease_tension = 0.10
+				send_volunteers_tension = 0.20
+				guarantee_tension = 0.5
+				max_fuel_factor = -0.35
+				fuel_gain_factor = -0.5
+				agency_upgrade_time = 0.8
 			}
 		}
 	}

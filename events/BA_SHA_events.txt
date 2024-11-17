@@ -381,22 +381,6 @@ country_event = {
 			}
 		}
 	}
-	option = { 
-		name = SHA_event.13.b
-		set_politics = {
-			ruling_party = communism
-			elections_allowed = yes
-			last_election = "1935.12.17"
-			election_frequency = 48
-		}
-		hidden_effect = {
-			set_popularities = {
-				democratic = 30
-				fascism = 20
-				communism = 50
-			}
-		}
-	}
 }
 country_event = { 
 	id = SHA_event.14
