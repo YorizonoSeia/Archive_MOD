@@ -8462,7 +8462,7 @@ focus_tree = {
 					has_idea = MIL_help_SPR
 				}
 				declare_war_on = {
-					target = SPR
+					target = SPD
 					type = take_claimed_state
 				}
 			}

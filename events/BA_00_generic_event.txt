@@ -1164,12 +1164,15 @@ country_event = { #난민 문제
 		add_political_power = -30
 		add_stability = -0.05
 		add_war_support = -0.05
+		ai_chance = {
+			base = 0
+		}
 	}
 	option = { #공화파 지원
 		name = BA_kiovotos_spain_event.2.b
 		set_country_flag = MIL_helped_spr_flag
 		ai_chance = {
-			base = 50
+			base = 1000
 		}
 		trigger = {
 			SPR = {
@@ -1229,6 +1232,9 @@ country_event = { #난민 문제
 	option = { #국민파 지원
 		name = BA_kiovotos_spain_event.2.c
 		set_country_flag = MIL_helped_spa_flag
+		ai_chance = {
+			base = 0
+		}
 		trigger = {
 			SPA = {
 				exists = yes
@@ -1314,6 +1320,7 @@ country_event = { #간섭위원회 설치
 					OR = {
 						has_government = fascism
 						has_government = neutrality
+						tag = TRM
 					}
 				}
 				add_ai_strategy = {
