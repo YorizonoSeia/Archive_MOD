@@ -424,3 +424,5 @@
 
  helicopter_armor_upgrade:0 "항공 장갑"
  helicopter_engine_upgrade:0 "$tank_engine_upgrade$"
+
+ AI_always_refusal: "§tAI는 대부분의 상황에서 거부할 것입니다.§!"

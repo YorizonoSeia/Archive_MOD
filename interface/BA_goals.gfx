@@ -967,6 +967,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/TRN/TRM_southern_offensive.tga"  
 	}
 	SpriteType = {
+		name = "GFX_goal_TRM_invade_benelux"
+		texturefile = "gfx/interface/goals/TRN/TRM_invade_benelux.tga"  
+	}
+	SpriteType = {
+		name = "GFX_goal_TRM_New_fascism_friend"
+		texturefile = "gfx/interface/goals/TRN/TRM_New_fascism_friend.tga"  
+	}
+	SpriteType = {
 		name = "GFX_goal_TRM_Operation_Description"
 		texturefile = "gfx/interface/goals/TRN/TRM_Operation_Description.tga"  
 	}

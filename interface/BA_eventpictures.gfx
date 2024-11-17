@@ -460,13 +460,17 @@ spriteTypes = {
        texturefile = "gfx/event_pictures/TRM/TRM_event_24.tga"
     }
     spriteType = {
-      name = "GFX_trnstory_4"
+       name = "GFX_trnstory_4"
        texturefile = "gfx/event_pictures/TRM/trnstory_4.tga"
     }
     spriteType = {
       name = "GFX_event_BA_generic_event_13"
        texturefile = "gfx/event_pictures/BA_generic_event_13.tga"
     } 
+    spriteType = {
+       name = "GFX_event_TRM_event_15"
+       texturefile = "gfx/event_pictures/TRM/TRM_event_15.tga"
+    }
     spriteType = {
       name = "GFX_event_BA_Poland_Flag"
        texturefile = "gfx/event_pictures/Poland_Flag.tga"
