@@ -3050,13 +3050,8 @@ focus_tree = {
 		y = 1
 		available = {
 			has_defensive_war_with = HYA
-<<<<<<< Updated upstream
 			owns_state = 986
 			surrender_progress > 0.25
-=======
-			owns_state = 984
-			surrender_progress > 0.40
->>>>>>> Stashed changes
 		}
 		bypass = {
 		}
