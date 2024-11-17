@@ -53,10 +53,13 @@ TRM_historical = {
 
         # 외치 -> 군사 중점 쭉 달리기
         TRM_oetzi
+        TRM_Trinity_Supremacy
         TRN_research_rifle
         TRM_Centralised_Command
-        TRN_threat_up_of_europa
-        TRM_war_with_gehenna # 전쟁 중점
+        TRM_Wehrmacht_absorption # 국방군 흡수
+        TRM_war_preparations # 전쟁 준비
+        TRM_Anti_Gehenna_Pro_Geramny # 반 게헨나, 친 독일
+        TRM_war_with_gehenna # 특별군사작전 Z
         TRN_gunsu_sangsan_bub
         TRN_Contract_with_Mauser
         TRN_military_industrial_complex
@@ -72,6 +75,12 @@ TRM_historical = {
         TRM_Reorganise_Armament_Production
         TRM_Expand_the_Logistics_Corps
         TRM_encourage_radio_use
+        
+        # 남부 공세
+        TRM_southern_offensive
+        TRM_SANHAIJING_offensive
+
+        # 안찍은 군사 중점 2
         TRM_Empower_the_Generals
         TRM_Streamline_Intelligence_Gathering
         TRM_Protectors_of_the_Motherland
