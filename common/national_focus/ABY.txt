@@ -16,7 +16,7 @@ focus_tree = {
 	focus = {
 		id = ABY_focus_call_eocordnldnjsghl    #중점명
 		icon = GFX_focus_ABY_foreclosure
- 		cost = 2.00          #중점 일수(주)
+ 		cost = 3.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
 		}
@@ -47,7 +47,7 @@ focus_tree = {
 	focus = {
 		id = ABY_focus_with_neptis    #중점명
 		icon = GFX_focus_nephtys
- 		cost = 2.00          #중점 일수(주)
+ 		cost = 3.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
 		}
@@ -92,7 +92,7 @@ focus_tree = {
 	focus = {
 		id = ABY_focus_search_hya    #중점명
 		icon = GFX_focus_ETH_peacekeeping_forces
- 		cost = 2.00          #중점 일수(주)
+ 		cost = 3.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
 		}
@@ -137,7 +137,7 @@ focus_tree = {
 	focus = {
 		id = ABY_focus_intact_czech_governmant    #중점명
 		icon = GFX_goal_molotov_ribbentrop_pact
- 		cost = 2.00          #중점 일수(주)
+ 		cost = 3.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
 		}
@@ -320,7 +320,7 @@ focus_tree = {
 	focus = {
 		id = ABY_focus_eoalstjswjs    #중점명
 		icon = GFX_focus_NOR_lurk_in_the_shadows
- 		cost = 2.00          #중점 일수(주)
+ 		cost = 3.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
 		}
@@ -394,7 +394,15 @@ focus_tree = {
 			}
 			custom_effect_tooltip = ABY_new_tt_4
 			set_country_flag = ABY_flag_recuit_czech
+			custom_effect_tooltip = BA_factoriesof_new_world_tt
+			set_country_flag = BA_can_remove_isolation_flag
 			#중점 완료시 얻는 보상
+			69 = {
+				create_unit = {
+					division = "name = \"Czechoslovakia Border Guards\" division_template = \"Czechoslovakia Border Guards\" start_experience_factor = 0.1 start_equipment_factor = 1"
+					owner = ABY
+				}
+			}
 		}
 	}
 	focus = {
@@ -444,7 +452,7 @@ focus_tree = {
 	focus = {
 		id = ABY_focus_german_resistance_make    #중점명
 		icon = GFX_focus_generic_military_mission
- 		cost = 2.00          #중점 일수(주)
+ 		cost = 3.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
 		}
@@ -487,7 +495,7 @@ focus_tree = {
 	focus = {
 		id = ABY_focus_strong_resistance    #중점명
 		icon = GFX_focus_generic_little_entente
- 		cost = 2.00          #중점 일수(주)
+ 		cost = 3.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
 		}
@@ -528,7 +536,7 @@ focus_tree = {
 	focus = {
 		id = ABY_focus_prepare_war    #중점명
 		icon = GFX_focus_ETH_freedom_at_gunpoint
- 		cost = 2.00          #중점 일수(주)
+ 		cost = 3.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
 		}
@@ -576,7 +584,7 @@ focus_tree = {
 	focus = {
 		id = ABY_focus_finish_tjswjs    #중점명
 		icon = GFX_goal_radio_silence
- 		cost = 2.00          #중점 일수(주)
+ 		cost = 3.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
 		}
@@ -622,7 +630,7 @@ focus_tree = {
 	focus = {
 		id = ABY_focus_operation_falling_flower    #중점명
 		icon = GFX_focus_HYA_attck
- 		cost = 2.00          #중점 일수(주)
+ 		cost = 3.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
 		}
@@ -679,9 +687,6 @@ focus_tree = {
 					militia = { x = 0 y = 0 }
 					militia = { x = 0 y = 1 }
 					militia = { x = 0 y = 2 }
-					militia = { x = 1 y = 0 }
-					militia = { x = 1 y = 1 }
-					militia = { x = 1 y = 2 }
 				}
 			}
 			hidden_effect = {
@@ -786,7 +791,7 @@ focus_tree = {
 	focus = {
 		id = ABY_focus_cldks_propblem_improve    #중점명
 		icon = GFX_goal_demand_sudetenland
- 		cost = 2.00          #중점 일수(주)
+ 		cost = 3.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
 		}
@@ -834,7 +839,7 @@ focus_tree = {
 	focus = {
 		id = ABY_focus_no_helmet    #중점명
 		icon = GFX_focus_helmet      #아이콘
- 		cost = 2.00          #중점 일수(주)
+ 		cost = 3.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
 		}
@@ -899,7 +904,7 @@ focus_tree = {
 	focus = {
 		id = ABY_focus_secure    #중점명
 		icon = GFX_focus_DEN_limited_regulations
- 		cost = 2.00          #중점 일수(주)
+ 		cost = 3.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
 		}
@@ -1029,6 +1034,10 @@ focus_tree = {
 					division = "name = \"German milita\" division_template = \"German milita\" start_experience_factor = 0 start_equipment_factor = 1"
 					owner = ABY
 				}
+				create_unit = {
+					division = "name = \"German milita\" division_template = \"German milita\" start_experience_factor = 0 start_equipment_factor = 1"
+					owner = ABY
+				}
 			}
 			
 			#중점 완료시 얻는 보상
@@ -1139,7 +1148,7 @@ focus_tree = {
 	focus = {
 		id = ABY_focus_economy_recuit    #중점명
 		icon = GFX_goal_demand_sudetenland       #아이콘
- 		cost = 2.00          #중점 일수(주)
+ 		cost = 3.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
 		}
@@ -1230,7 +1239,7 @@ focus_tree = {
 	focus = {
 		id = ABY_focus_expend_school    #중점명
 		# icon = GFX_goal_generic_intelligence_exchange       #아이콘
- 		cost = 2.00          #중점 일수(주)
+ 		cost = 3.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
 		}
@@ -1269,7 +1278,7 @@ focus_tree = {
 	focus = {
 		id = ABY_focus_ehfhryxhdqn    #중점명
 		# icon = GFX_goal_generic_intelligence_exchange       #아이콘
- 		cost = 2.00          #중점 일수(주)
+ 		cost = 3.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
 		}
@@ -1381,7 +1390,7 @@ focus_tree = {
 	focus = {
 		id = ABY_focus_rnstktkfudqn    #중점명
 		# icon = GFX_goal_generic_intelligence_exchange       #아이콘
- 		cost = 2.00          #중점 일수(주)
+ 		cost = 3.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
 		}
@@ -1608,7 +1617,7 @@ focus_tree = {
 	focus = {
 		id = ABY_focus_wjsekswl    #중점명
 		icon = GFX_focus_ABY_distributing_flyers       #아이콘
- 		cost = 2.00          #중점 일수(주)
+ 		cost = 3.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
 		}
@@ -1691,7 +1700,7 @@ focus_tree = {
 	focus = {
 		id = ABY_focus_welcome_school    #중점명
 		# icon = GFX_goal_generic_intelligence_exchange       #아이콘
- 		cost = 2.00          #중점 일수(주)
+ 		cost = 3.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
 		}
@@ -1746,7 +1755,7 @@ focus_tree = {
 	focus = {
 		id = ABY_focus_search_student    #중점명
 		icon = GFX_focus_ABY_search_for_students     #아이콘
- 		cost = 2.00          #중점 일수(주)
+ 		cost = 3.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
 		}
@@ -1792,7 +1801,7 @@ focus_tree = {
 	focus = {
 		id = ABY_focus_unite_school    #중점명
 		# icon = GFX_goal_generic_intelligence_exchange       #아이콘
- 		cost = 2.00          #중점 일수(주)
+ 		cost = 3.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
 		}
@@ -1842,7 +1851,7 @@ focus_tree = {
 	focus = {
 		id = ABY_focus_eocordnldnjsghl_improve    #중점명
 		icon = GFX_focus_ARG_strengthening_the_concordancia      #아이콘
- 		cost = 2.00          #중점 일수(주)
+ 		cost = 3.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입 
 		}
@@ -1934,7 +1943,7 @@ focus_tree = {
 	focus = {
 		id = ABY_focus_student_council_main    #중점명
 		icon = GFX_focus_generic_improve_the_administration       #아이콘
- 		cost = 2.00          #중점 일수(주)
+ 		cost = 3.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
 		}
@@ -2227,98 +2236,6 @@ focus_tree = {
 		completion_reward = {
 			country_event = {
 				id = ABY_new_event.107
-			}
-			#중점 완료시 얻는 보상
-		}
-	}
-	focus = {
-		id = ABY_focus_slovakia_problem    #중점명
-		icon = GFX_goal_generic_position_armies
- 		cost = 5.00          #중점 일수(주)
-		search_filters = {
-			#중점의 타입
-		}
-		prerequisite = {
-			focus = ABY_focus_intact_czech_governmant    #이전 중점
-		}
-		mutually_exclusive = {
-			    #반대되는 중점
-		}
-		x = 2     #좌표
-		y = 4
-		relative_position_id = ABY_focus_intact_czech_governmant
-		bypass = {
-			#중점 통과 조건
-		}
-		available = {
-			SLO = {
-				exists = yes
-				any_controlled_state = {
-					any_neighbor_state = {
-						is_controlled_by = ABY
-					}
-				}
-			}
-			#중점 선행조건
-		}
-
-		select_effect = {
-			#중점 시작시 얻는 보상
-		}
-		completion_reward = {
-			SLO = {
-				country_event = {
-					id = ABY_new_event.65
-				}
-			}
-			#중점 완료시 얻는 보상
-		}
-	}
-	focus = {
-		id = ABY_focus_annex_slovakia    #중점명
-		icon = GFX_focus_eng_move_to_secure_the_dominions       #아이콘
- 		cost = 5.00          #중점 일수(주)
-		search_filters = {
-			#중점의 타입
-		}
-		prerequisite = {
-			focus = ABY_focus_slovakia_problem    #이전 중점
-		}
-		mutually_exclusive = {
-			focus = ABY_focus_believe    #반대되는 중점
-		}
-		x = 1     #좌표
-		y = 1
-		relative_position_id = ABY_focus_slovakia_problem
-		bypass = {
-			#중점 통과 조건
-		}
-		available = {
-			has_full_control_of_state = 70
-			has_full_control_of_state = 71
-			70 = { compliance > 35 }
-			71 = { compliance > 35 }
-			#중점 선행조건
-		}
-
-		select_effect = {
-			#중점 시작시 얻는 보상
-		}
-		completion_reward = {
-			70 = { add_core_of = ABY }
-			71 = { add_core_of = ABY }
-			73 = {add_core_of = ABY}
-			664 = {add_core_of = ABY}
-			if = {
-				limit = {
-					ABY = {
-						has_completed_focus = ABY_focus_rebuild_czech
-					}
-
-				}
-				ABY = {
-					set_cosmetic_tag = ABY_czechoslovakia_republic
-				}
 			}
 			#중점 완료시 얻는 보상
 		}
@@ -4800,6 +4717,9 @@ focus_tree = {
 			#중점 통과 조건
 		}
 		available = {
+			NOT = {
+				has_idea = ABY_idea_KAI_cornjs
+			}
 			#중점 선행조건
 		}
 
@@ -5582,12 +5502,12 @@ focus_tree = {
 			#중점 선행조건
 		}
 
-		allow_branch = {
-			OR = {
-				has_completed_focus = ABY_focus_abydos_debug
-				has_completed_focus = ABY_focus_abydos_schoolcountry
-			}
-		}
+		#allow_branch = {
+		#	OR = {
+		#		has_completed_focus = ABY_focus_abydos_debug
+		#		has_completed_focus = ABY_focus_abydos_schoolcountry
+		#	}
+		#}
 
 		completion_reward = {
 			retire_character = ABY_german
@@ -9739,6 +9659,7 @@ focus_tree = {
 		available = {
 			ABY = {
 				is_puppet = no
+				has_war = no
 			}
 			#중점 선행조건
 		}
@@ -9839,8 +9760,8 @@ focus_tree = {
 		}
 		available = {
 			OR = {
-				has_completed_focus = ABY_focus_believe
-				has_completed_focus = ABY_focus_annex_slovakia
+				has_country_flag = ABY_flag_believe
+				has_country_flag = ABY_flag_annex_slovakia
 			}
 			#중점 선행조건
 		}
@@ -9957,6 +9878,7 @@ focus_tree = {
 		available = {
 			ABY = {
 				is_puppet = no
+				has_war = no
 			}
 			#중점 선행조건
 		}
@@ -12161,7 +12083,7 @@ focus_tree = {
 				limit = {
 					ABY = {
 						NOT = {
-							has_completed_focus = ABY_focus_believe
+							has_country_flag = ABY_flag_believe
 						}
 						
 					}
@@ -12174,7 +12096,7 @@ focus_tree = {
 			if = {
 				limit = {
 					ABY = {
-						has_completed_focus = ABY_focus_believe
+						has_country_flag = ABY_flag_believe
 					}
 
 				}
@@ -12395,63 +12317,6 @@ focus_tree = {
 			SWI = {
 				country_event = {
 					id = ABY_new_event.73
-				}
-			}
-			#중점 완료시 얻는 보상
-		}
-	}
-	focus = {
-		id = ABY_focus_believe    #중점명
-		icon = GFX_goal_generic_dangerous_deal      #아이콘
- 		cost = 10.00          #중점 일수(주)
-		search_filters = {
-			#중점의 타입
-		}
-		prerequisite = {
-			focus = ABY_focus_slovakia_problem  #이전 중점
-		}
-		mutually_exclusive = {
-		    focus = ABY_focus_annex_slovakia#반대되는 중점
-		}
-		x = -1      #좌표
-		y = 1
-		relative_position_id = ABY_focus_slovakia_problem
-		bypass = {#중점 통과 조건
-		}
-		available = {
-			SLO = {
-				is_puppet_of = ABY
-			}
-			has_country_flag = ABY_flag_accept_slovakia
-			#중점 선행조건
-		}
-
-		select_effect = {
-			#중점 시작시 얻는 보상
-		}
-		completion_reward = {
-			annex_country = {
-				target = SLO
-				transfer_troops = yes
-			}
-			70 = {add_core_of = ABY}
-			71 = {add_core_of = ABY}
-			73 = {add_core_of = ABY}
-			664 = {add_core_of = ABY}
-			if = {
-				limit = {
-					ABY = {
-						has_completed_focus = ABY_focus_rebuild_czech
-					}
-
-				}
-				ABY = {
-					set_cosmetic_tag = ABY_czechoslovakia_republic
-				}
-			}
-			SLO = {
-				every_unit_leader = {
-					set_nationality = ABY
 				}
 			}
 			#중점 완료시 얻는 보상

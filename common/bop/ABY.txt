@@ -26,7 +26,6 @@ ABY_power_balance = {
 			min = 0.35
 			max = 0.6
 			modifier = {
-				political_power_factor = -0.1
 				production_factory_efficiency_gain_factor = 0.05
 				production_factory_max_efficiency_factor = 0.05
 				industrial_capacity_factory = 0.05
@@ -43,7 +42,6 @@ ABY_power_balance = {
 			modifier = {
 				stability_factor = -0.05
 				war_support_factor = -0.05
-				political_power_factor = -0.2
 				production_factory_efficiency_gain_factor = 0.1
 				production_factory_max_efficiency_factor = 0.1
 				industrial_capacity_factory = 0.1
@@ -60,7 +58,6 @@ ABY_power_balance = {
 			modifier = {
 				stability_factor = -0.10
 				war_support_factor = -0.05
-				political_power_factor = -0.35
 				production_factory_efficiency_gain_factor = 0.2
 				production_factory_max_efficiency_factor = 0.2
 				industrial_capacity_factory = 0.2
@@ -83,7 +80,6 @@ ABY_power_balance = {
 			modifier = {
 				stability_factor = 0.05
 				war_support_factor = 0.05
-				political_power_factor = 0.1
 			}
 			on_activate = {
 			}
@@ -97,7 +93,6 @@ ABY_power_balance = {
 			modifier = {
 				stability_factor = 0.05
 				war_support_factor = 0.1
-				political_power_factor = 0.2
 			}
 			on_activate = {
 			}
@@ -111,7 +106,6 @@ ABY_power_balance = {
 			modifier = {
 				stability_factor = 0.10
 				war_support_factor = 0.15
-				political_power_factor = 0.35
 			}
 			on_activate = {
 			}
