@@ -840,6 +840,7 @@ on_actions = {
 						tag = GEA
 					}
 				}
+				set_global_flag = GEA_started_war_flag
 				GEA = {
 					load_oob = "BAY_event"
 					set_popularities = {
@@ -871,6 +872,14 @@ on_actions = {
 							id = GEK_event.4
 							days = 25
 						}
+					}
+				}
+				GEM = {
+					if = {
+						limit = {
+							has_country_flag = GEH_start_nego
+						}
+						country_event = GEH_event.44
 					}
 				}
 			}

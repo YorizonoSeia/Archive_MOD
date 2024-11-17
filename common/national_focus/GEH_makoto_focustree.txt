@@ -1166,6 +1166,7 @@ focus_tree = {
 			NOT = {
 				GEK = { has_country_flag = GEK_win_the_war_GEH_flag }
 				has_country_flag = HINA_DISAGREE
+				has_global_flag = GEA_started_war_flag
 			}
 		}
 		bypass = {

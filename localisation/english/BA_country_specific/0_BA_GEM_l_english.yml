@@ -583,6 +583,7 @@
 
  HINA_DISAGREE:0 "§Y소라사키 히나§!가 협상안을 §Y거부§!함"
  HINA_DISAGREE_CONTROLLED:0 "§Y소라사키 히나§!가 협상에서 §Y배제§!됨"
+ GEA_started_war_flag:0 "@GEA §Y국방군§!과 @GEM §Y게헨나§!간 전쟁이 발발함."
 
  GEH_negotiation_intervention_flag:0 "§Y게헨나-국방군 협상§!에 §Y개입§!함"
 
