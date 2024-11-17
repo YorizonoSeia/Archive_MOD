@@ -49,4 +49,19 @@ peace_ai_desires = {
 		}
 		ai_desire = 400
 	}
+	ABY_peace_annex_SHA = {
+		peace_action_type = take_states 
+		enable = {
+			ROOT = {
+				original_tag = ABY
+			}
+			ROOT.FROM = {
+				tag = ROOT
+			}
+			FROM.FROM.FROM = {
+				is_core_of = SHA
+			}
+		}
+		ai_desire = 1000
+	}
 }
