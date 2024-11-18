@@ -380,6 +380,7 @@ focus_tree = {
 		id = GEK_GER_government
 		icon = GFX_focus_ger_oppose_hitler
 		available = {
+			NOT = { has_completed_focus = GEK_get_in_touch }
 			any_controlled_state = {
 				BA_is_GER_core = yes
 			}
