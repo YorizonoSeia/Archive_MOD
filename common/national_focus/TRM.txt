@@ -2939,14 +2939,14 @@
 
 		completion_reward = {
 			ITA = {
-				effect_tooltip = {
-					add_opinion_modifier = { target = TRM modifier = medium_increase }
-				}
 				custom_effect_tooltip = generic_invite_to_faction_tt
 				custom_effect_tooltip = tooltip_white_line
 				custom_effect_tooltip = AI_always_refusal
 				hidden_effect = {
-					add_opinion_modifier = { target = TRM modifier = large_decrease }
+					if = { 
+						limit = { ITA = { is_ai = yes } } 
+						add_opinion_modifier = { target = TRM modifier = large_decrease }
+					}
 					country_event = { id = generic.5 days = 04 }
 				}
 			}
@@ -3618,7 +3618,7 @@
 	focus = {
 		id = TRM_fate_of_slovakia
 		icon = GFX_focus_generic_attack_slovakia
-		cost = 5
+		cost = 2
 		available = {
 			is_subject = no
 		}
