@@ -1382,9 +1382,9 @@
  RED_winter_war_cat: "겨울대전"
  RED_winter_war_cat_desc: ""
  RED_winter_war_fake_money: "위조지폐 발행"
- RED_winter_war_fake_money_tt: "§Y적국§!이 §Y위조지폐§!를 먼저 §Y발행§!했습니다."
+ RED_winter_war_fake_money_tt: "§Y적국§!이 §Y위조지폐§!를 아직 §Y발행§!하지 않았습니다."
  RED_winter_war_biochemical: "생화학 무기 살포"
- RED_winter_war_biochemical_tt: "§Y적국§!이 §Y생화학무기§!를 먼저 §Y살포§!했습니다."
+ RED_winter_war_biochemical_tt: "§Y적국§!이 §Y생화학무기§!를 아직 §Y살포§!하지 않았습니다."
 
  RED_population_issue_cat: "인구 문제"
  RED_population_issue_cat_desc: " 수백만에 이르는 학생들이 대전이로 넘어왔습니다. 도시 행정이 포화되고, 현지인들과의 갈등이 심화되고 있습니다. 또한 시간을 지체한다면 잉여 식량이 바닥 나며 기근을 야기할지도 모른다는 행정가들의 경고가 이어지고 있습니다.\n §Y중점§!과 £GFX_decision_icon_small §Y결정§!을 통해 인구를 분산함으로써 우리는 이를 점차적으로 해결할 수 있습니다."

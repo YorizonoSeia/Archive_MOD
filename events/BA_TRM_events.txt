@@ -3517,6 +3517,227 @@ country_event = { # 게헨나내 독일인 소요
 		}
 	}
 }
+country_event = { 	#글라이비츠 중재 - 주데텐 실레시아 요구
+	id = TRMDIP.25
+	title = TRMDIP.25.t
+	desc = TRMDIP.25.desc
+	picture = GFX_report_event_generic_sign_treaty2
+	fire_only_once = yes 
+	is_triggered_only = yes
+	
+	option = {
+		name = TRMDIP.25.a
+		74 = {
+			set_demilitarized_zone = yes
+		}
+		every_country = {
+			limit = {
+				owns_state = 74
+			}
+			country_event = {
+				id = TRMDIP.26
+				days = 2
+			}
+		}
+	}
+}
+country_event = { 	#글라이비츠 중재 - 백귀야행
+	id = TRMDIP.26
+	title = TRMDIP.26.t
+	desc = TRMDIP.26.desc
+	picture = GFX_report_event_generic_sign_treaty2
+	fire_only_once = yes 
+	is_triggered_only = yes
+	
+	option = { #ㅅㅂ ㅇㅋ
+		name = TRMDIP.26.a
+		ai_chance = {
+			base = 10
+		}
+		TRM = {
+			transfer_state = 74
+			add_state_core = 74
+		}
+		POL = {
+			transfer_state = 72
+			add_state_core = 72
+		}
+		74 = {
+			set_demilitarized_zone = no
+		}
+	}
+	option = { #ㅗ
+		name = TRMDIP.26.b
+		74 = {
+			set_demilitarized_zone = no
+		}
+		TRM = {
+			country_event = {
+				id = TRMDIP.27
+				days = 2
+			}
+		}
+	}
+}
+country_event = { 	#글라이비츠 중재 - 거절
+	id = TRMDIP.27
+	title = TRMDIP.27.t
+	desc = TRMDIP.27.desc
+	picture = GFX_report_event_generic_sign_treaty2
+	fire_only_once = yes 
+	is_triggered_only = yes
+	
+	option = { #레츠고 디디씨
+		name = TRMDIP.27.a
+		every_country = {
+			limit = {
+				owns_state = 74
+			}
+			TRM = {
+				declare_war_on = {
+					target = prev
+					type = annex_everything
+				}
+			}
+		}
+		custom_effect_tooltip = TRMDIP.27_tt
+		TRM = {
+			division_template = {
+				name = "Resistance"
+				regiments = {
+					irregular_infantry = {
+						x = 0
+						y = 0
+					}
+					irregular_infantry = {
+						x = 0
+						y = 1
+					}
+					irregular_infantry = {
+						x = 0
+						y = 2
+					}
+				}
+			}
+		}
+		74 = {
+			add_core_of = TRM
+			create_unit = {
+				division = "name = \"Resistance\" division_template = \"Resistance\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+				owner = TRM
+			}
+			create_unit = {
+				division = "name = \"Resistance\" division_template = \"Resistance\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+				owner = TRM
+			}
+			create_unit = {
+				division = "name = \"Resistance\" division_template = \"Resistance\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+				owner = TRM
+			}
+		}
+	}
+	option = { #좀있다
+		name = TRMDIP.27.b
+		every_country = {
+			limit = {
+				owns_state = 74
+			}
+			TRM = {
+				create_wargoal = {
+					target = prev
+					type = annex_everything
+				}
+			}
+		}
+	}
+}
+country_event = { 	#슬로카비아야 말 잘들어라~
+	id = TRMDIP.28
+	title = TRMDIP.28.t
+	desc = TRMDIP.28.desc
+	picture = GFX_report_event_generic_sign_treaty2
+	fire_only_once = yes 
+	is_triggered_only = yes
+	
+	option = { #네
+		name = TRMDIP.28.a
+		ai_chance = {
+			base = 100
+		}
+		TRM = {
+			country_event = {
+				id = TRMDIP.30
+				days = 1
+			}
+		}
+	}
+	option = { #ㅗ
+		name = TRMDIP.28.b
+		TRM = {
+			create_wargoal = {
+				target = SLO
+				type = annex_everything
+			}
+		}
+	}
+}
+country_event = { 	#헝가리 수락 or 거절
+	id = TRMDIP.29
+	title = TRMDIP.29.t
+	desc = TRMDIP.29.desc
+	picture = GFX_report_event_generic_sign_treaty2
+	fire_only_once = yes 
+	is_triggered_only = yes
+	
+	option = { #ㄱㄱ
+		name = TRMDIP.29.a
+		TRM = {
+			add_to_faction = HUN
+		}
+		annex_country = {
+			target = SLO
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+	option = { #ㄴㄴ
+		name = TRMDIP.29.b
+		TRM = {
+			set_autonomy = {
+				target = SLO
+				autonomy_state = autonomy_reichsprotectorate
+			}
+		}
+	}
+}
+country_event = { 	#슬로바키아의 운명
+	id = TRMDIP.30
+	title = TRMDIP.30.t
+	desc = TRMDIP.30.desc
+	picture = GFX_report_event_generic_sign_treaty2
+	fire_only_once = yes 
+	is_triggered_only = yes
+	
+	option = { #괴뢰화를 요구하자.
+		name = TRMDIP.30.a
+		TRM = {
+			set_autonomy = {
+				target = SLO
+				autonomy_state = autonomy_reichsprotectorate
+			}
+		}
+	}
+	option = { #헝가리를 우리와 결속시키자.
+		name = TRMDIP.30.b
+		HUN = {
+			country_event = {
+				id = TRMDIP.29
+				days = 3
+			}
+		}
+	}
+}
 ##############################
 #####IRON SWORD OPERATION#####
 ##############################
