@@ -543,7 +543,9 @@
  TRM_invade_balkan: "발칸 개입"
  TRM_operation_of_Terra_Recta: "테라렉타 작전"
  # 테라 렉타(Terra Recta)"바른 땅"이라는 뜻으로, 트리니티가 이탈리아를 정화하거나 재정비한다는 뉘앙스를 암시.
- TRM_war_with_Millennium: "[MIL.GetAdjective] 측과 전쟁"
+ TRM_Invasion_of_Millennium: "청색 상황"
+ TRM_war_with_Swiss: "타넨바움 작전"
+ TRM_Invasion_of_Poland: "백색 상황"
  TRM_maintain_a_compromise_system: "신 타협 체제"
  TRM_maintain_a_compromise_system_desc: "물론 타협 체제가 완전히 실패했던 것은 아닙니다. 어느 정도 효과를 발휘한 부분도 있었기에, 그 기반을 완전히 버리는 대신, 뒤떨어진 부분을 고치고 허술했던 요소들을 보강해 나간다면, 더 견고하고 현실적인 외교 정책으로 거듭날 가능성도 있습니다. 중요한 것은 실패를 인정하고 앞으로 나아갈 방향을 명확히 정립하는 것입니다."
  TRM_Trinity_Redwinter_Pact: "[RED.GetAdjective] 측과 불가침 조약"
@@ -1724,27 +1726,34 @@
  TRMDIP.25.t: "글라이비츠 중재"
  TRMDIP.25.desc: "주데텐 실레시아에서의 독일인 탄압은 게르만 민족에게 있어서 정말로 가슴 아픈 일입니다. 우리는 지난 1919년에 합의한 민족자결주의 원칙을 수호함으로써 세계평화에 기여할 의지가 충분합니다. 우리는 작금의 체코 지방에서 교란되어 상호 비조응하는 국경선과 민족분포를 올바르게 재정립할 것을 대사관을 통해 상대국에게 정중하게 요청하고, 또한 주데텐 실레시아의 양도를 이끌어낼 것입니다."
  TRMDIP.25.a: "그곳은 우리 영토다."
+
  TRMDIP.26.t: "글라이비츠 중재"
  TRMDIP.26.desc: "[TRM.getname](으)로부터 [74.getname]와 [72.getname]에 대한 영유권을 포기하고 민족자결주의의 원칙에 따른 새 국경선을 정립할 것을 요구받았습니다."
  TRMDIP.26.a: "그들의 의향을 받아들이자."
  TRMDIP.26.b: "터무니 없는 소리!"
+ 
  TRMDIP.27.t: "거절"
  TRMDIP.27.desc: "우리의 중재는 당사국에게 거절당했습니다."
  TRMDIP.27.a: "두 번째 방법을 쓰자."
  TRMDIP.27_tt: "§L주데텐란트의 독일인들이 호응하여 봉기합니다.§!"
- TRMDIP.27.b: "젠장."
+ TRMDIP.27.b: "한 발 물러서자."
+ 
  TRMDIP.28.t: "[TRM.getname]의 최후통첩"
  TRMDIP.28.desc: "[TRM.getname](은)는 [SLO.getname]의 영토를 재조정하기 위한 중재에의 무조건적 수용을 요구하였습니다."
  TRMDIP.28.a: "별 다른 수가 없다."
  TRMDIP.28.b: "맞서 싸우자!"
+ 
  TRMDIP.29.t: "[TRM.getname]의 제안"
  TRMDIP.29.desc: "[TRM.getname] 대사관에서 우리에게 슬로바키아 전역의 행정권을 보장하는 대신 군사 동맹을 요구하였습니다."
  TRMDIP.29.a: "솔깃하군."
  TRMDIP.29.b: "거절하자."
+ 
  TRMDIP.30.t: "슬로바키아의 운명"
  TRMDIP.30.desc: "슬로바키아는 열등한 슬라브 국가이나 독일적 색채가 옅게 나마 남아 있기 때문에 게르만 민족을 대변하는 [TRM.getname]에 의해서 계도되어야만 합니다. 슬로바키아에 보낸 우리의 최후통첩이 수용됨에 따라 우리는 슬로바키아에 친선 정권을 세울 수도 있지만, 헝가리와의 결속을 위해 이를 헝가리에게 넘겨줄 수도 있습니다."
  TRMDIP.30.a: "친선 정권을 세우자."
  TRMDIP.30.b: "헝가리를 우리와 결속시키자."
+
+ TRMDIP.31.d: "[TRM.getname](은)는 같은 파시즘 국가임을 강조하며 세력 초대를 보내왔습니다. 이탈리아는 파시즘 국가가 맞지만 저 외계인들이 주장하는 파시즘과는 거리가 멉니다. 우리가 만약 이들의 초대를 받는다면 강력한 동맹이 세워지겠지만, 우리 국민들은 저들과의 동맹을 원하지 않습니다."
 
 #신성통치령 관리 사건과 결정
  TRM_kivotos_core_states_categories: "신성통치령 설립"

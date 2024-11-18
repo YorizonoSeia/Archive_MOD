@@ -3589,17 +3589,12 @@ country_event = { 	#글라이비츠 중재 - 거절
 	
 	option = { #레츠고 디디씨
 		name = TRMDIP.27.a
-		every_country = {
-			limit = {
-				owns_state = 74
-			}
 			TRM = {
 				declare_war_on = {
-					target = prev
+					target = 74.owner
 					type = annex_everything
 				}
 			}
-		}
 		custom_effect_tooltip = TRMDIP.27_tt
 		TRM = {
 			division_template = {
@@ -3638,17 +3633,7 @@ country_event = { 	#글라이비츠 중재 - 거절
 	}
 	option = { #좀있다
 		name = TRMDIP.27.b
-		every_country = {
-			limit = {
-				owns_state = 74
-			}
-			TRM = {
-				create_wargoal = {
-					target = prev
-					type = annex_everything
-				}
-			}
-		}
+		add_state_claim = 74
 	}
 }
 country_event = { 	#슬로카비아야 말 잘들어라~
@@ -3736,6 +3721,54 @@ country_event = { 	#슬로바키아의 운명
 				days = 3
 			}
 		}
+	}
+}
+country_event = { 	# 이탈리아 전용 세력 초대
+	id = TRMDIP.31
+	title = generic.5.t
+	desc = TRMDIP.31.d
+	picture = GFX_report_event_generic_read_write
+	fire_only_once = yes 
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			save_event_target_as = alliance_applicant
+			FROM = {
+				save_event_target_as = alliance_inviter
+			}
+		}
+	}
+	
+	option = { # 수락한다
+		name = generic.5.a
+		ai_chance = {
+			base = 1
+		}
+		FROM = { 
+			add_to_faction = ROOT
+			country_event = { id = generic.6 hours = 6 } 
+		}
+		add_ai_strategy = {
+			type = alliance
+			id = FROM
+			value = 200
+		}
+		hidden_effect = {
+			set_country_flag = alliance_applicant@ROOT
+			FROM = { set_country_flag = alliance_inviter@ROOT }
+			news_event = { id = news.289 hours = 12 }
+		}
+	}
+	option = { # 거부한다.
+		name = generic.2.f
+		ai_chance = {
+			base = 99
+		}
+		FROM = { 
+			country_event = { id = generic.7 hours = 6 }
+		}
+		
 	}
 }
 ##############################

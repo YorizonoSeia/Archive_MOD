@@ -2927,7 +2927,7 @@
 			focus = TRM_operation_of_Terra_Recta
 		}
 		x = -1
-		y = 4
+		y = 3
 		relative_position_id = TRM_form_Shanhaijing_Eden_axis
 		cost = 5
 		available = {
@@ -2943,14 +2943,8 @@
 		completion_reward = {
 			ITA = {
 				custom_effect_tooltip = generic_invite_to_faction_tt
-				custom_effect_tooltip = tooltip_white_line
-				custom_effect_tooltip = AI_always_refusal
 				hidden_effect = {
-					if = { 
-						limit = { ITA = { is_ai = yes } } 
-						add_opinion_modifier = { target = TRM modifier = large_decrease }
-					}
-					country_event = { id = generic.5 days = 04 }
+					country_event = { id = TRMDIP.31 days = 04 }
 				}
 			}
 		}
@@ -3127,7 +3121,7 @@
 		id = TRM_redwinter_war_goal
 		icon = GFX_goal_redwinter_kill
 		cost = 5.00
-		prerequisite = { focus = TRM_anti_comintern_pact }
+		prerequisite = { focus = TRM_We_need_Denmark_milk }
 		mutually_exclusive = {
 			focus = TRM_alliance_with_the_redwinter
 		}
@@ -3168,9 +3162,9 @@
 				has_war = no
 			}
 		}
-		relative_position_id = TRM_anti_comintern_pact
+		relative_position_id = TRM_We_need_Denmark_milk
 		x = 0
-		y = 2
+		y = 1
 		completion_reward = {
 				TRM = {
 					create_wargoal = {
@@ -3185,7 +3179,7 @@
 	focus = {
 		id = TRM_war_with_the_ussr
 		icon = GFX_focus_attack_soviet
-		cost = 10
+		cost = 20
 		prerequisite = { focus = TRM_redwinter_war_goal }
 		available = {
 			is_subject = no
@@ -3229,7 +3223,7 @@
 			ELSE = {
 				every_country = {
 					limit = { original_tag = SOV }
-					GER = {
+					TRM = {
 						create_wargoal = {
 							type = annex_everything
 							target = PREV
@@ -3364,7 +3358,7 @@
 			base = 200
 		}
 		x = 0
-		y = 3
+		y = 2
 		relative_position_id = TRM_Anti_Gehenna_Pro_Geramny
 		completion_reward ={
 
@@ -3531,7 +3525,7 @@
 		ai_will_do = {
 			base = 200
 		}
-		x = 3
+		x = 2
 		y = 0
 		relative_position_id = TRM_invade_benelux
 		completion_reward ={ 
@@ -3539,9 +3533,9 @@
 	}
 
 	focus = {
-		id = TRM_war_with_Millennium
+		id = TRM_Invasion_of_Millennium
 		icon = GFX_goal_attack_flance
-		cost = 5.00
+		cost = 10.00
 		prerequisite = {
             focus = TRM_invade_benelux
 			focus = TRM_influence_the_benelux
@@ -3557,12 +3551,81 @@
 			}
 		}
 		relative_position_id = TRM_invade_benelux
+
+		will_lead_to_war_with = MIL
 		x = -1
 		y = 1
 		completion_reward = {
             create_wargoal = {
     			type = annex_everything
                 target = 16.controller
+            }
+		}
+	}
+
+	focus = {
+		id = TRM_war_with_Swiss
+		icon = GFX_focus_attack_switzerland
+		cost = 5.00
+		prerequisite = {
+            focus = TRM_invade_benelux
+			focus = TRM_influence_the_benelux
+		}
+		available = {
+			is_subject = no			
+			NOT = { is_in_faction_with = SWI }
+		}
+		bypass = {
+			OR = {
+				NOT = { country_exists = SWI }
+				has_war_with = SWI
+			}
+		}
+		relative_position_id = TRM_invade_benelux
+
+		will_lead_to_war_with = SWI
+		x = 1
+		y = 1
+		completion_reward = {
+            create_wargoal = {
+    			type = annex_everything
+                target = SWI
+            }
+
+			add_timed_idea = {
+				idea = GER_operation_tannenbaum_ns
+				days = 180
+			}
+		}
+	}
+
+	focus = {
+		id = TRM_Invasion_of_Poland
+		icon = GFX_focus_GER_danzig_or_war
+		cost = 5.00
+		prerequisite = {
+            focus = TRM_invade_benelux
+			focus = TRM_influence_the_benelux
+		}
+		available = {
+			is_subject = no			
+			NOT = { is_in_faction_with = POL }
+		}
+		bypass = {
+			OR = {
+				NOT = { country_exists = POL }
+				has_war_with = POL
+			}
+		}
+		relative_position_id = TRM_invade_benelux
+
+		will_lead_to_war_with = POL
+		x = 3
+		y = 1
+		completion_reward = {
+            create_wargoal = {
+    			type = annex_everything
+                target = POL
             }
 		}
 	}
@@ -3681,6 +3744,118 @@
 				days = 180
 			}	
         }
+	}
+
+	focus = {
+		id = TRM_operation_felix
+		text = GER_operation_felix
+		icon = GFX_focus_generic_attack_nationalist_spain_focus
+		prerequisite = { focus = TRM_form_Rome_Eden_axis focus = TRM_operation_of_Terra_Recta }
+		x = -1
+		y = 1
+		relative_position_id = TRM_operation_of_Terra_Recta
+		cost = 10
+
+		available = {
+			is_subject = no
+			any_country_with_original_tag = {
+				original_tag_to_check = SPR
+				exists = yes
+				has_civil_war = no
+			}
+		}
+		
+		bypass = {
+			any_country_with_original_tag = {
+				original_tag_to_check = SPR
+				OR = {
+					is_ally_with = ROOT
+					has_war_with = ROOT
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				OR = {
+					has_government = democratic
+					has_government = communism
+				}
+			}
+		}
+
+		will_lead_to_war_with = SPA
+		will_lead_to_war_with = SPR
+
+		search_filters = { }
+
+		completion_reward = {
+			random_country_with_original_tag = {
+				original_tag_to_check = SPR
+				limit = {
+					exists = yes
+					has_civil_war = no
+				}
+				TRM = {
+					create_wargoal = {
+						type = annex_everything
+						target = PREV
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = TRM_operation_isabella
+		text = GER_operation_isabella
+		icon = GFX_focus_generic_attack_portugal
+
+		prerequisite = { focus = TRM_operation_felix focus = TRM_alliance_with_spain }
+
+		mutually_exclusive = { focus = TRM_alliance_with_portugal }
+
+		x = 0
+		y = 1
+		relative_position_id = TRM_operation_felix
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				OR = {
+					has_government = democratic
+					has_government = communism
+				}
+			}
+		}
+		
+		available = {
+			is_subject = no
+			NOT  = { is_in_faction_with = POR }
+			POR = {
+				exists = yes
+				has_civil_war = no
+				is_subject = no
+			}
+		}
+
+		will_lead_to_war_with = POR
+
+		search_filters = { }
+
+		completion_reward = {
+			TRM = {
+				create_wargoal = {
+					type = annex_everything
+					target = POR
+				}
+			}
+		}
 	}
 
 	focus = {

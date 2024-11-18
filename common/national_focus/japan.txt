@@ -1735,7 +1735,7 @@
 
 	focus = {
 		id = JAP_support_the_kodoha_faction
-		icon = GFX_goal_generic_military_deal
+		icon = GFX_goal_JAP_Kodoha
 		prerequisite = { focus = JAP_nation_of_the_rising_sun }
 		mutually_exclusive = { focus = JAP_opposition_to_the_army focus = JAP_purge_the_kodoha_faction }
 		x = 10
@@ -3317,7 +3317,7 @@
 
 	focus = {
 		id = JAP_national_mobilization_law
-		icon = GFX_goal_generic_axis_build_infantry
+		icon = GFX_goal_JAP_National_Mobilization_Law
 		prerequisite = { focus = JAP_nation_of_the_rising_sun }
 		x = 23
 		y = 1
@@ -4732,7 +4732,7 @@
 
 	focus = {
 		id = JAP_strengthen_civilian_government
-		icon = GFX_goal_support_democracy
+		icon = GFX_goal_JAP_strengthening_democracy
 		mutually_exclusive = { focus = JAP_nation_of_the_rising_sun }
 		x = 30
 		y = 0
