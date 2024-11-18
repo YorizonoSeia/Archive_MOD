@@ -3489,7 +3489,6 @@
 			}
 			if = {
 				limit = { country_exists = COU }
-				COU = { add_opinion_modifier = { target = TRM modifier = BUL_threatening_neighbor } }
 				create_wargoal = {
 					target = COU
 					type = annex_everything 
@@ -3497,7 +3496,6 @@
 			}
 			if = {
 				limit = { country_exists = SHE }
-				SHE = { add_opinion_modifier = { target = TRM modifier = BUL_threatening_neighbor } }
 				create_wargoal = {
 					target = SHE
 					type = annex_everything 
@@ -3505,7 +3503,6 @@
 			}
 			if = {
 				limit = { country_exists = KSP }
-				KSP = { add_opinion_modifier = { target = TRM modifier = BUL_threatening_neighbor } }
 				create_wargoal = {
 					target = KSP
 					type = annex_everything 
