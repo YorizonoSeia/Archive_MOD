@@ -27,6 +27,7 @@ BA_is_GER_core = {
 			state = 909
 			state = 987
 			state = 990
+			state = 978
 		}
 	}
 }

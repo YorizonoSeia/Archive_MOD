@@ -137,7 +137,7 @@ country_event = { #북부 독일 수립
 		country_exists = GEA
 	}
 
-	option = { 
+	option = {
 		name = GEK_event.4.a
 		trigger = {
 			NOT = { has_government = communism }
@@ -181,7 +181,6 @@ country_event = { #북부 독일 수립
 			target = GEA
 			transfer_troops = yes
 		}
-		complete_national_focus = GEK_get_in_touch
 
 		if = {
 			limit = {
@@ -675,5 +674,87 @@ country_event = { #수상한 인물
 	
 	option = {
 		name = GEK_event.17.a
+	}
+}
+country_event = { #북부 독일 수립
+	id = GEK_event.18
+	title = GEK_event.18.t
+	desc = GEK_event.18.desc
+	picture = GFX_event_none_picture
+
+	fire_only_once = yes
+    is_triggered_only = yes
+
+	option = {
+		name = GEK_event.18.a
+		effect_tooltip = {
+			unlock_national_focus = GEAF_develop_modern_maneuver_warfare
+		}
+		set_country_flag = GEAF_develop_modern_maneuver_warfare_flag
+		every_country = {
+			limit = {
+				has_war_with = GEA
+			}
+			ROOT = {
+				declare_war_on = {
+					target = PREV
+					type = annex_everything
+				}
+			}
+		}
+		every_state = {
+			limit = {
+				is_core_of = GEA
+			}
+			add_core_of = GEK
+		}
+		GEA = {
+			set_country_flag = GEA_absorbed_into_a_specific_country
+			every_character = {
+				limit = {
+					NOT = {
+						has_trait = communist_revolutionary
+						has_trait = democratic_reformer
+						has_trait = fascist_demagogue
+					}
+				}
+				set_nationality = ROOT
+			}
+		}
+		
+		annex_country = {
+			target = GEA
+			transfer_troops = yes
+		}
+
+		if = {
+			limit = {
+				NOT = { has_template = "Nationale Miliz" }
+			}
+			division_template = {
+				name = "Nationale Miliz"
+				priority = 0
+				division_names_group = GER_INF_01
+				regiments = {
+					militia = { x = 0 y = 0 }
+					militia = { x = 0 y = 1 }
+					militia = { x = 0 y = 2 }
+					
+					militia = { x = 1 y = 0 }
+					militia = { x = 1 y = 1 }
+					militia = { x = 1 y = 2 }
+				}
+			}
+		}
+		hidden_effect = {
+			load_oob = "BAY_event"
+			set_global_flag = GEA_started_war_flag
+		}
+		
+		custom_effect_tooltip = GEK_event_18_tt
+		every_state = {
+			limit = { has_dynamic_modifier = { modifier = GEH_ucantusefactory_2 } }
+			remove_dynamic_modifier = { modifier = GEH_ucantusefactory_2 }
+		}
 	}
 }

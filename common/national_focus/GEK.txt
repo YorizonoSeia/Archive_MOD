@@ -160,6 +160,7 @@ focus_tree = {
 		relative_position_id = GEK_communication_with_the_mainland
 		available = {
 			date < 1936.6.1
+			NOT = { has_government = communism }
 		}
 		cost = 2
 		search_filters = {
@@ -167,6 +168,13 @@ focus_tree = {
 		}
 		completion_reward = {
 			remove_ideas = GEK_didntknew_without_navy
+			country_event = GEK_event.18
+			every_state = {
+				limit = { has_dynamic_modifier = { modifier = GEH_ucantusefactory } }
+				transfer_state_to = ROOT
+				remove_dynamic_modifier = { modifier = GEH_ucantusefactory }
+			}
+			custom_effect_tooltip = GEK_get_in_touch_tt
 		}
 	}
 	focus = { #상륙!
@@ -180,18 +188,44 @@ focus_tree = {
 			focus = GEK_raise_the_red_flag
 			focus = GEK_GER_government
 		}
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = GEK_raise_the_red_flag
+					has_completed_focus = GEK_GER_government
+					has_completed_focus = GEK_gottland_government_establishment
+				}
+			}
+		}
 		x = 50
 		y = 0
 		available = {
-			always = no
+			has_completed_focus = GEK_get_in_touch
+			any_controlled_state = {
+				BA_is_GER_core = yes
+			}
+			NOT = { has_government = communism }
 		}
 		cost = 2
 		completion_reward = {
 			set_cosmetic_tag = GEK_RM
-			transfer_state = 909
-			set_capital = {
-				state = 909
-				remember_old_capital = no
+			random_owned_controlled_state = {
+				limit = {
+					BA_is_GER_core = yes
+				}
+				prioritize = { 58 }
+				ROOT = {
+					set_capital = {
+						state = PREV
+						remember_old_capital = no
+					}
+				}
 			}
 			hidden_effect = {
                 load_focus_tree = {
@@ -357,12 +391,33 @@ focus_tree = {
 			focus = GEK_RM_focus_0
 		}
 		allow_branch = {
-			NOT = {
-				has_completed_focus = GEK_RM_focus_0
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = GEK_RM_focus_0
+					has_completed_focus = GEK_gottland_government_establishment
+					has_completed_focus = GEK_raise_the_red_flag
+				}
 			}
 		}
-		x = 65
+		x = 15
 		y = 0
+		offset = {
+			x = -15
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = GEK_GER_government
+			}
+		}
+		relative_position_id = GEK_RM_focus_0
 		cost = 2
 		ai_will_do = {
 			factor = 400
@@ -371,6 +426,7 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward = {
+			remove_ideas = GEK_didntknew_without_navy
 			set_cosmetic_tag = GEK_BAY
 			set_country_flag = GEK_win_the_war_GEH_flag
 			set_country_flag = BA_german_claimant_2 #독일 정통성 중간
@@ -809,8 +865,18 @@ focus_tree = {
 			NOT = { has_government = communism }
 		}
 		allow_branch = {
-			NOT = {
-				has_completed_focus = GEK_RM_focus_0
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = GEK_RM_focus_0
+					has_completed_focus = GEK_GER_government
+					has_completed_focus = GEK_raise_the_red_flag
+				}
 			}
 		}
 		mutually_exclusive = {
@@ -818,9 +884,19 @@ focus_tree = {
 			focus = GEK_raise_the_red_flag
 			focus = GEK_RM_focus_0
 		}
-		x = 10
+		x = 25
 		y = 0
-		relative_position_id = GEK_GER_government
+		offset = {
+			x = -25
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = GEK_gottland_government_establishment
+			}
+		}
+		relative_position_id = GEK_RM_focus_0
 		cost = 5
 		ai_will_do = {
 			factor = 400
@@ -1195,13 +1271,33 @@ focus_tree = {
 			focus = GEK_RM_focus_0
 		}
 		allow_branch = {
-			NOT = {
-				has_completed_focus = GEK_RM_focus_0
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = GEK_RM_focus_0
+					has_completed_focus = GEK_GER_government
+					has_completed_focus = GEK_gottland_government_establishment
+				}
 			}
 		}
-		x = 20
+		x = 35
 		y = 0
-		relative_position_id = GEK_GER_government
+		offset = {
+			x = -35
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = GEK_raise_the_red_flag
+			}
+		}
+		relative_position_id = GEK_RM_focus_0
 		cost = 5
 		ai_will_do = {
 			factor = 400
