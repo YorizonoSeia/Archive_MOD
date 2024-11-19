@@ -2628,6 +2628,33 @@
 	}
 
 	focus = {
+		id = TRM_reorganize_secret_services
+		icon = GFX_focus_generic_secret_service_agency
+		
+		prerequisite = { focus = TRM_war_preparations }
+		x = -1
+		y = 1
+		relative_position_id = TRM_war_preparations
+		cost = 5
+		available = {
+			has_war = no
+		}
+
+		search_filters = {}
+
+		completion_reward = {
+			if = {
+				limit = { has_intelligence_agency = no }
+				create_intelligence_agency = yes
+			}
+			else = {
+				gain_random_agency_upgrade = yes
+			}
+			add_ideas = TRM_reorganize_secret_services
+		}
+	}
+
+	focus = {
 		id = TRM_southern_offensive
 		icon = GFX_goal_TRM_southern_offensive
 		
@@ -3121,7 +3148,7 @@
 		id = TRM_redwinter_war_goal
 		icon = GFX_goal_redwinter_kill
 		cost = 5.00
-		prerequisite = { focus = TRM_We_need_Denmark_milk }
+		prerequisite = { focus = TRM_anti_comintern_pact }
 		mutually_exclusive = {
 			focus = TRM_alliance_with_the_redwinter
 		}
@@ -3162,9 +3189,9 @@
 				has_war = no
 			}
 		}
-		relative_position_id = TRM_We_need_Denmark_milk
+		relative_position_id = TRM_anti_comintern_pact
 		x = 0
-		y = 1
+		y = 2
 		completion_reward = {
 				TRM = {
 					create_wargoal = {
@@ -3813,9 +3840,7 @@
 		text = GER_operation_isabella
 		icon = GFX_focus_generic_attack_portugal
 
-		prerequisite = { focus = TRM_operation_felix focus = TRM_alliance_with_spain }
-
-		mutually_exclusive = { focus = TRM_alliance_with_portugal }
+		prerequisite = { focus = TRM_operation_felix }
 
 		x = 0
 		y = 1

@@ -516,6 +516,8 @@
  TRM_Trinity_Supremacy_desc: "타협 체제의 불확실성은 외교 정책에 대한 의문을 증폭시켰고, 결국 대전이 사태를 기점으로 폭탄처럼 터지고 말았습니다. 이제 우리는 이 낡고 이상주의적이기만 한 타협 체제의 실패를 인정하고, 다시 한 번 트리니티의 패권주의를 재건해야 할 시점에 도달했습니다."
  TRM_war_preparations: "전쟁 준비"
  TRM_war_preparations_desc: "패권을 선언한 것은 주변 국가들의 긴장도를 크게 높히는 짓입니다. 그렇기에 우리는 우리의 군대를 다시 한 번 점검하고 보급 비축량을 증대하는 등 여러가지 노력을 통하여 전쟁을 준비해야합니다. 만약 전쟁의 총소리가 울려 퍼진다면 이러한 노력들은 크게 도움이 될 겁니다."
+ TRM_reorganize_secret_services: "보안부 재편"
+ TRM_reorganize_secret_services_desc: ""
  TRM_southern_offensive: "남부 공세"
  TRM_southern_offensive_desc: "트리니티의 아래에는 [ABY.GetAdjective], [HYA.GetAdjective] 등 여러 약소 학원이 존재합니다. 그러나 이들은 언제든 트리니티의 취약점을 공격할 가능성이 있는 시한폭탄과도 같은 존재입니다. 우리는 이를 방치할 수도, 이 지역에 평화로운 변화를 마냥 기다릴 수도 없습니다."
  TRM_SANHAIJING_offensive: "[SHA.GetAdjective] 측과 전쟁"
