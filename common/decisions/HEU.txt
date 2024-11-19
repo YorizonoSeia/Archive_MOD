@@ -1689,6 +1689,14 @@ HEU_aru_GSC_defiance_decision_category = {
 
 		ai_will_do = {
 			factor = 10
+			modifier = {
+				factor = 0.5
+				NOT = { 
+					989 = {
+						is_owned_by = ROOT #989가 본인 땅이 아니면 판도상 이쪽 먼저 공격 안 함
+					}
+				}
+			}
 		}
 
 		custom_cost_trigger = {
@@ -2760,7 +2768,7 @@ HEU_aru_GSC_annex_decision_category = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = HEU_aru_persona_wisdom_need_95_tt
-				check_variable = { Global.aru_stat_point_array^0 > 95 } #지혜 94 초과
+				check_variable = { Global.aru_stat_point_array^0 > 94 } #지혜 94 초과
 			}
 		}
 
