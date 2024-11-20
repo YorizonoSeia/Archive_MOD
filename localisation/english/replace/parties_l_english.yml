@@ -89,3 +89,10 @@
  EGY_democratic_long:0 "와프드당"
  EGY_democratic_party:0 "와프드당"
  SYR_communism_party:0 "시리아 - 레바논 공산당"
+
+ KPD_party_long: "독일공산당"
+ KPD_party: "공산당"
+ SPD_party_long: "독일사회민주당"
+ SPD_party: "사회민주당"
+ SPD-DZP_party_long: "독일사회민주당 / 독일중앙당-"
+ SPD-DZP_party: "사회민주당 / 중앙당"

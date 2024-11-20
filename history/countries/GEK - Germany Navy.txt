@@ -72,9 +72,9 @@ add_to_array = {
 
 
 add_ideas = {
-	GEK_run_sungman
 	GEK_didntknew_without_navy
 	GEK_swedish_hyupryuk
+	GEK_legitimacy
 	limited_exports
 	limited_conscription
 	partial_economic_mobilisation

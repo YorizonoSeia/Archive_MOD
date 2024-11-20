@@ -3691,7 +3691,7 @@ country_event = { 	#헝가리 수락 or 거절
 		TRM = {
 			set_autonomy = {
 				target = SLO
-				autonomy_state = autonomy_reichsprotectorate
+				autonomy_state = autonomy_holy_dminion
 			}
 		}
 	}
@@ -3709,7 +3709,7 @@ country_event = { 	#슬로바키아의 운명
 		TRM = {
 			set_autonomy = {
 				target = SLO
-				autonomy_state = autonomy_reichsprotectorate
+				autonomy_state = autonomy_holy_dminion
 			}
 		}
 	}
