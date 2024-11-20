@@ -61,9 +61,6 @@ division_template = {
 		militia = { x = 0 y = 0 }
 		militia = { x = 0 y = 1 }
 		militia = { x = 0 y = 2 }
-		militia = { x = 1 y = 0 }
-		militia = { x = 1 y = 1 }
-		militia = { x = 1 y = 2 }
 	}
 	support = {
 	}
@@ -109,17 +106,6 @@ units = {
 				is_name_ordered = yes
 				name_order = 1
 		}
-		location = 3585
-		division_template = "ABYDOS National Brigade"
-		start_experience_factor = 0
-		start_equipment_factor = 0.5
-		start_manpower_factor = 1
-	}
-	division= {	
-		division_name = {
-				is_name_ordered = yes
-				name_order = 2
-		}
 		location = 11401
 		division_template = "ABYDOS National Brigade"
 		start_experience_factor = 0
@@ -129,20 +115,9 @@ units = {
 	division= {	
 		division_name = {
 				is_name_ordered = yes
-				name_order = 3
+				name_order = 1
 		}
 		location = 3418
-		division_template = "Czechoslovakia Border Guards"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.70
-		start_manpower_factor = 0.5
-	}
-	division= {	
-		division_name = {
-				is_name_ordered = yes
-				name_order = 4
-		}
-		location = 9555
 		division_template = "Czechoslovakia Border Guards"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.70
@@ -154,61 +129,6 @@ units = {
 				name_order = 5
 		}
 		location = 6470
-		division_template = "German milita"
-		start_experience_factor = 0
-		start_equipment_factor = 1
-		start_manpower_factor = 1
-	}
-	division= {	
-		division_name = {
-				is_name_ordered = yes
-				name_order = 1
-		}
-		location = 3585
-		division_template = "ABYDOS National Brigade"
-		start_experience_factor = 0
-		start_equipment_factor = 0.5
-		start_manpower_factor = 1
-	}
-	division= {	
-		division_name = {
-				is_name_ordered = yes
-				name_order = 2
-		}
-		location = 11414
-		division_template = "German milita"
-		start_experience_factor = 0
-		start_equipment_factor = 1
-		start_manpower_factor = 1
-	}
-	division= {	
-		division_name = {
-				is_name_ordered = yes
-				name_order = 3
-		}
-		location = 11432
-		division_template = "German milita"
-		start_experience_factor = 0
-		start_equipment_factor = 1
-		start_manpower_factor = 1
-	}
-	division= {	
-		division_name = {
-				is_name_ordered = yes
-				name_order = 4
-		}
-		location = 424
-		division_template = "German milita"
-		start_experience_factor = 0
-		start_equipment_factor = 1
-		start_manpower_factor = 1
-	}
-	division= {	
-		division_name = {
-				is_name_ordered = yes
-				name_order = 5
-		}
-		location = 469
 		division_template = "German milita"
 		start_experience_factor = 0
 		start_equipment_factor = 1

@@ -16616,8 +16616,8 @@ ABY_descision_category_provisional_government = {
 
 		available = {
 			OR = {
-				has_completed_focus = ABY_focus_believe
-				has_completed_focus = ABY_focus_annex_slovakia
+				has_country_flag = ABY_flag_believe
+				has_country_flag = ABY_flag_annex_slovakia
 			}
 		}    
 
@@ -16796,6 +16796,172 @@ ABY_descision_category_provisional_government = {
 		}     
 
 		remove_effect = {
+		}
+	}
+	
+	ABY_descision_slovakia_problem = {
+		priority = 1
+		days_remove = 0
+
+		cost = 100
+		fire_only_once = yes
+		
+		visible = {
+			OR = {
+				has_completed_focus = ABY_focus_with_czech
+				has_completed_focus = ABY_focus_abydos_schoolcountry
+				has_completed_focus = ABY_focus_civil_war
+			}  
+		}
+		                 
+        allowed = {
+            tag = ABY
+        }     
+
+		ai_will_do = { factor = 1000 }
+
+		available = {
+			SLO = {
+				exists = yes
+				any_controlled_state = {
+					any_neighbor_state = {
+						is_controlled_by = ABY
+					}
+				}
+			}
+		}    
+
+		modifier = {
+		}      
+
+		complete_effect = {
+			SLO = {
+				country_event = {
+					id = ABY_new_event.65
+				}
+			}
+		}     
+
+		remove_effect = {
+		}
+	}
+	
+	ABY_descision_believe = {
+		priority = 1
+		days_remove = 50
+
+		cost = 50
+		fire_only_once = yes
+		
+		visible = {
+			OR = {
+				has_completed_focus = ABY_focus_with_czech
+				has_completed_focus = ABY_focus_abydos_schoolcountry
+				has_completed_focus = ABY_focus_civil_war
+			}  
+			NOT = {has_country_flag = ABY_flag_annex_slovakia}
+		}
+		                 
+        allowed = {
+            tag = ABY
+        }     
+
+		ai_will_do = { factor = 1000 }
+
+		available = {
+			SLO = {
+				is_puppet_of = ABY
+			}
+			has_country_flag = ABY_flag_accept_slovakia
+		}    
+
+		modifier = {
+		}      
+
+		complete_effect = {
+		}     
+
+		remove_effect = {
+			annex_country = {
+				target = SLO
+				transfer_troops = yes
+			}
+			70 = {add_core_of = ABY}
+			71 = {add_core_of = ABY}
+			73 = {add_core_of = ABY}
+			664 = {add_core_of = ABY}
+			if = {
+				limit = {
+					ABY = {
+						has_completed_focus = ABY_focus_rebuild_czech
+					}
+
+				}
+				ABY = {
+					set_cosmetic_tag = ABY_czechoslovakia_republic
+				}
+			}
+			SLO = {
+				every_unit_leader = {
+					set_nationality = ABY
+				}
+			}
+			set_country_flag = ABY_flag_believe
+		}
+	}
+	
+	ABY_descision_annex_slovakia = {
+		priority = 1
+		days_remove = 50
+
+		cost = 50
+		fire_only_once = yes
+		
+		visible = {
+			OR = {
+				has_completed_focus = ABY_focus_with_czech
+				has_completed_focus = ABY_focus_abydos_schoolcountry
+				has_completed_focus = ABY_focus_civil_war
+			}  
+			NOT = {has_country_flag = ABY_flag_believe}
+		}
+		                 
+        allowed = {
+            tag = ABY
+        }     
+
+		ai_will_do = { factor = 1000 }
+
+		available = {
+			has_full_control_of_state = 70
+			has_full_control_of_state = 71
+			70 = { compliance > 35 }
+			71 = { compliance > 35 }
+		}    
+
+		modifier = {
+		}      
+
+		complete_effect = {
+		}     
+
+		remove_effect = {
+			70 = { add_core_of = ABY }
+			71 = { add_core_of = ABY }
+			73 = {add_core_of = ABY}
+			664 = {add_core_of = ABY}
+			if = {
+				limit = {
+					ABY = {
+						has_completed_focus = ABY_focus_rebuild_czech
+					}
+
+				}
+				ABY = {
+					set_cosmetic_tag = ABY_czechoslovakia_republic
+				}
+			}
+			set_country_flag = ABY_flag_annex_slovakia
 		}
 	}
 }

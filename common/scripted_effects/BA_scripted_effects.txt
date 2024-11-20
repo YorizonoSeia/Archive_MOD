@@ -333,6 +333,57 @@ BA_halo_tech_tool_effect = { # 이것은 범위에 기술 연구가 허가되지
 			}
 		}
 	}
+ 	# 이것은 헤일로 민병 전용 설계가 의도하지 않은 국가에 존재할 시 제거하는 공용 템플릿 입니다.
+	if = {
+		limit = {
+			has_template = "ABYDOS National Brigade"
+			NOT = { original_tag = ABY }
+		}
+		delete_unit_template_and_units = {
+			division_template = "ABYDOS National Brigade"
+			disband = yes
+		}
+	}
+	if = {
+		limit = {
+			has_template = "Helmet gang"
+			NOT = { original_tag = BLM }
+		}
+		delete_unit_template_and_units = {
+			division_template = "Helmet gang"
+			disband = yes
+		}
+	}
+	if = {
+		limit = {
+			has_template = "Skevan"
+			NOT = { original_tag = BLM }
+		}
+		delete_unit_template_and_units = {
+			division_template = "Skevan"
+			disband = yes
+		}
+	}
+	if = {
+		limit = {
+			has_template = "Pandemonium Legion"
+			NOT = { original_tag = GEM }
+		}
+		delete_unit_template_and_units = {
+			division_template = "Pandemonium Legion"
+			disband = yes
+		}
+	}
+	if = {
+		limit = {
+			has_template = "Redwinter Garde populaire"
+			NOT = { original_tag = RED }
+		}
+		delete_unit_template_and_units = {
+			division_template = "Redwinter Garde populaire"
+			disband = yes
+		}
+	}
 }
 
 BA_ban_democratic_effect = {

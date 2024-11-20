@@ -17,6 +17,11 @@ focus_tree = {
 	shared_focus = GEAF_develop_modern_maneuver_warfare
 	shared_focus = GEAF_expanding_the_luftwaffe
 	shared_focus = GEAF_strengthen_the_kriegsmarine
+	inlay_window = {
+		id = gek_inner_circle_inlay_window
+		position = { x = 5800 y = 750 }
+	}
+
 	default = no
 	focus = {
 		id = GEK_government
@@ -141,930 +146,241 @@ focus_tree = {
 			}
 		}
 	}
-	focus = {
+	focus = { #작전명 : 라인란트 재무장
 		id = GEK_get_in_touch
 		icon = GFX_goal_generic_demand_territory
 		prerequisite = {
 			focus = GEK_communication_with_the_mainland
 		}
+		ai_will_do = {
+			base = 0
+		}
 		x = 0
 		y = 2
 		relative_position_id = GEK_communication_with_the_mainland
 		available = {
-			has_completed_focus = GEK_GER_government
+			date < 1936.6.1
+			NOT = { has_government = communism }
 		}
-		cost = 0
+		cost = 2
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward = {
 			remove_ideas = GEK_didntknew_without_navy
+			country_event = GEK_event.18
+			every_state = {
+				limit = { has_dynamic_modifier = { modifier = GEH_ucantusefactory } }
+				transfer_state_to = ROOT
+				remove_dynamic_modifier = { modifier = GEH_ucantusefactory }
+			}
+			custom_effect_tooltip = GEK_get_in_touch_tt
 		}
 	}
-	focus = { #발트해 패권
-		id = GEK_pirate_focus_0
-		icon = GFX_focus_SOV_reinforce_western_naval_bases
-		prerequisite = {
-			focus = GEK_government
+	focus = { #상륙!
+		id = GEK_RM_focus_0 #RM은 랩몬스터가 아니라 Rhineland Militarization
+		icon = GFX_goal_generic_demand_territory
+		ai_will_do = {
+			base = 0
 		}
-		x = 5
-		y = 1
-		relative_position_id = GEK_government
-		cost = 5
+		mutually_exclusive = {
+			focus = GEK_gottland_government_establishment
+			focus = GEK_raise_the_red_flag
+			focus = GEK_GER_government
+		}
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = GEK_raise_the_red_flag
+					has_completed_focus = GEK_GER_government
+					has_completed_focus = GEK_gottland_government_establishment
+				}
+			}
+		}
+		x = 50
+		y = 0
+		available = {
+			has_completed_focus = GEK_get_in_touch
+			any_controlled_state = {
+				BA_is_GER_core = yes
+			}
+			NOT = { has_government = communism }
+		}
+		cost = 2
 		completion_reward = {
-			add_political_power = 30
-			add_war_support = 0.05
+			set_cosmetic_tag = GEK_RM
+			random_owned_controlled_state = {
+				limit = {
+					BA_is_GER_core = yes
+				}
+				prioritize = { 58 }
+				ROOT = {
+					set_capital = {
+						state = PREV
+						remember_old_capital = no
+					}
+				}
+			}
+			hidden_effect = {
+                load_focus_tree = {
+                    tree = GEK_focus
+                    keep_completed = yes
+                }
+                mark_focus_tree_layout_dirty = yes
+			}
 		}
 	}
-	focus = { #올란드 거점
-		id = GEK_pirate_focus_1
-		icon = GFX_focus_generic_develop_finland_silhouette
-		prerequisite = {
-			focus = GEK_pirate_focus_0
+	focus = { #주정부 충성 재확인
+		id = GEK_RM_focus_1 
+		icon = GFX_goal_generic_demand_territory
+		ai_will_do = {
+			base = 0
 		}
+		prerequisite = {
+			focus = GEK_RM_focus_0
+		}
+		relative_position_id = GEK_RM_focus_0
 		x = -1
 		y = 1
-		relative_position_id = GEK_pirate_focus_0
-		cost = 5
+		cost = 4
 		completion_reward = {
-			country_event = {
-				id = GEK_event.12
-				days = 3
-			}
+			set_cosmetic_tag = GEK_RM
 		}
 	}
-	focus = { #사레마 점령
-		id = GEK_pirate_focus_2
-		icon = GFX_goal_generic_navy_anti_submarine
-		prerequisite = {
-			focus = GEK_pirate_focus_0
+	focus = { #이념을 초월한 연대
+		id = GEK_RM_focus_2
+		icon = GFX_goal_generic_demand_territory
+		ai_will_do = {
+			base = 0
 		}
+		prerequisite = {
+			focus = GEK_RM_focus_0
+		}
+		relative_position_id = GEK_RM_focus_0
 		x = 1
 		y = 1
-		relative_position_id = GEK_pirate_focus_0
-		cost = 5
+		cost = 4
 		completion_reward = {
-			country_event = {
-				id = GEK_event.13
-				days = 3
-			}
+			set_cosmetic_tag = GEK_RM
 		}
 	}
-
-	focus = { #섬 개발 계획
-		id = GEK_island_development_plan
-		icon = GFX_goal_generic_construction2
-		prerequisite = {
-			focus = GEK_pirate_focus_1
+	focus = { #대규모 선전
+		id = GEK_RM_focus_3
+		icon = GFX_goal_generic_demand_territory
+		ai_will_do = {
+			base = 0
 		}
 		prerequisite = {
-			focus = GEK_pirate_focus_2
+			focus = GEK_RM_focus_1
 		}
-		x = 1
+		prerequisite = {
+			focus = GEK_RM_focus_2
+		}
+		relative_position_id = GEK_RM_focus_0
+		x = 0
+		y = 2
+		cost = 4
+		completion_reward = {
+			set_cosmetic_tag = GEK_RM
+		}
+	}
+	focus = { #독일공산당과의 협력
+		id = GEK_RM_com_focus_0
+		icon = GFX_goal_generic_demand_territory
+		ai_will_do = {
+			base = 0
+		}
+		prerequisite = {
+			focus = GEK_RM_focus_3
+		}
+		relative_position_id = GEK_RM_focus_3
+		x = -6
 		y = 1
-		relative_position_id = GEK_pirate_focus_1
-		cost = 5
+		cost = 4
 		completion_reward = {
-			add_ideas = GEK_island_development_modifier
+			set_cosmetic_tag = GEK_RM
 		}
 	}
-
-	focus = {
-		id = GEK_enhanced_naval_construction
-		icon = GFX_goal_generic_construct_naval_dockyard
-		prerequisite = {
-			focus = GEK_island_development_plan
+	focus = { #독일사회민주당과의 협력
+		id = GEK_RM_spd_focus_0
+		icon = GFX_goal_generic_demand_territory
+		ai_will_do = {
+			base = 0
 		}
+		prerequisite = {
+			focus = GEK_RM_focus_3
+		}
+		relative_position_id = GEK_RM_focus_3
 		x = -3
 		y = 1
-		relative_position_id = GEK_island_development_plan
-		cost = 10
-		ai_will_do = {
-			factor = 400
-		}
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
+		cost = 4
 		completion_reward = {
-			random_owned_state = {
-				limit = {
-					free_building_slots = {
-						building = dockyard
-						size > 2
-						include_locked = yes
-					}
-					is_coastal = yes
-				}
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = dockyard
-					level = 3
-					instant_build = yes
-				}
-			}
-			add_tech_bonus = {
-				name = naval_construction_bonus
-				bonus = 0.5
-				uses = 2
-				category = naval_equipment
-			}
+			set_cosmetic_tag = GEK_RM
 		}
 	}
-	
-	# focus = {
-	# 	id = GEK_improve_naval_technology
-	# 	icon = GFX_goal_generic_navy_build_capital
-	# 	prerequisite = {
-	# 		focus = GEK_enhanced_naval_construction
-	# 	}
-	# 	x = -1
-	# 	y = 1
-	# 	relative_position_id = GEK_enhanced_naval_construction
-	# 	cost = 5
-	# 	ai_will_do = {
-	# 		factor = 400
-	# 	}
-	# 	search_filters = {
-	# 		FOCUS_FILTER_RESEARCH
-	# 		FOCUS_FILTER_INDUSTRY
-	# 	}
-	# 	completion_reward = {
-	# 		add_tech_bonus = {
-	# 			name = naval_tech_bonus
-	# 			bonus = 1
-	# 			uses = 3
-	# 			category = naval
-	# 		}
-	# 	}
-	# }
-	
-	focus = {
-		id = GEK_construct_naval_bases
-		icon = GFX_goal_generic_navy_battleship
-		prerequisite = {
-			focus = GEK_enhanced_naval_construction
+	focus = { #독일중앙당과의 협력
+		id = GEK_RM_dzp_focus_0
+		icon = GFX_goal_generic_demand_territory
+		ai_will_do = {
+			base = 0
 		}
+		prerequisite = {
+			focus = GEK_RM_focus_3
+		}
+		relative_position_id = GEK_RM_focus_3
 		x = 0
-		y = 2
-		relative_position_id = GEK_enhanced_naval_construction
-		cost = 10
-		ai_will_do = {
-			factor = 400
-		}
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-			FOCUS_FILTER_WAR_SUPPORT
-		}
-		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = dockyard
-						size > 2
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = dockyard
-					level = 3
-					instant_build = yes
-				}
-			}
-		}
-	}
-	
-	focus = {
-		id = GEK_submarine_initiative
-		icon = GFX_goal_generic_navy_submarine
-		prerequisite = {
-			focus = GEK_construct_naval_bases
-		}
-		x = 1
 		y = 1
-		relative_position_id = GEK_construct_naval_bases
-		cost = 5
-		available = {
-			dockyard > 14
-		}
-		ai_will_do = {
-			factor = 400
-		}
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-			FOCUS_FILTER_INDUSTRY
-		}
+		cost = 4
 		completion_reward = {
-			add_tech_bonus = {
-				name = submarine_tech_bonus
-				bonus = 1
-				uses = 2
-				category = mio_cat_tech_all_submarine_and_modules
-			}
+			set_cosmetic_tag = GEK_RM
 		}
 	}
-	
-	focus = {
-		id = GEK_air_superiority
-		icon = GFX_goal_generic_air_fighter2
-		prerequisite = {
-			focus = GEK_island_development_plan
+	focus = { #군부와의 협력
+		id = GEK_RM_army_focus_0
+		icon = GFX_goal_generic_demand_territory
+		ai_will_do = {
+			base = 0
 		}
+		prerequisite = {
+			focus = GEK_RM_focus_3
+		}
+		relative_position_id = GEK_RM_focus_3
 		x = 3
 		y = 1
-		relative_position_id = GEK_island_development_plan
-		cost = 5
-		ai_will_do = {
-			factor = 400
-		}
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
+		cost = 4
 		completion_reward = {
-			add_tech_bonus = {
-				name = air_superiority_bonus
-				bonus = 0.50
-				uses = 1
-				category = air_equipment
-			}
-			air_experience = 20
+			set_cosmetic_tag = GEK_RM
 		}
 	}
-	
-	focus = {
-		id = GEK_bomber_command
-		icon = GFX_goal_generic_air_bomber
-		prerequisite = {
-			focus = GEK_air_superiority
+	focus = { #나치당과의 협력
+		id = GEK_RM_nazi_focus_0
+		icon = GFX_goal_generic_demand_territory
+		ai_will_do = {
+			base = 0
 		}
-		x = -1
+		text_icon = GER_inner_circle_focus_style
+		prerequisite = {
+			focus = GEK_RM_focus_3
+		}
+		relative_position_id = GEK_RM_focus_3
+		x = 6
 		y = 1
-		relative_position_id = GEK_air_superiority
-		cost = 5
-		ai_will_do = {
-			factor = 400
-		}
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
+		cost = 4
 		completion_reward = {
-			add_tech_bonus = {
-				name = bomber_bonus
-				bonus = 1.0
-				uses = 2
-				category = cat_strategic_bomber
-				category = tactical_bomber
-			}
+			set_cosmetic_tag = GEK_RM
 		}
 	}
-	
-	focus = {
-		id = GEK_fighter_initiative
-		icon = GFX_goal_generic_air_fighter
-		prerequisite = {
-			focus = GEK_air_superiority
-		}
-		x = 1
-		y = 1
-		relative_position_id = GEK_air_superiority
-		cost = 5
-		ai_will_do = {
-			factor = 400
-		}
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				name = fighter_bonus
-				bonus = 1.0
-				uses = 2
-				category = light_fighter
-				category = cat_heavy_fighter
-			}
-		}
-	}
-	
-	focus = {
-		id = GEK_aircraft_production
-		icon = GFX_goal_generic_air_production
-		prerequisite = {
-			focus = GEK_fighter_initiative
-		}
-		prerequisite = {
-			focus = GEK_bomber_command
-		}
-		x = -1
-		y = 1
-		relative_position_id = GEK_fighter_initiative
-		cost = 5
-		ai_will_do = {
-			factor = 400
-		}
-		available = {
-			controls_state = 124
-			controls_state = 910
-		}
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		completion_reward = {
-			124 = {
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = air_base
-					level = 3
-					instant_build = yes
-				}
-			}
-			910 = {
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = arms_factory
-					level = 3
-					instant_build = yes
-				}				
-			}
-		}
-	}
-	
-	focus = {
-		id = GEK_strategic_bombing
-		icon = GFX_focus_generic_air_bases
-		prerequisite = {
-			focus = GEK_aircraft_production
-		}
-		x = 1
-		y = 1
-		relative_position_id = GEK_aircraft_production
-		cost = 5
-		available = {
-			arms_factory > 19
-		}
-		ai_will_do = {
-			factor = 400
-		}
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				name = strategic_bombing_bonus
-				bonus = 1
-				uses = 2
-				category = mio_cat_all_heavy_aircraft_and_modules
-			}
-			air_experience = 25
-		}
-	}
-	
-	focus = {
-		id = GEK_naval_bomber_focus
-		icon = GFX_goal_generic_air_naval_bomber
-		prerequisite = {
-			focus = GEK_aircraft_production
-		}
-		available = {
-			arms_factory > 19
-		}
-		x = -1
-		y = 1
-		relative_position_id = GEK_aircraft_production
-		cost = 5
-		ai_will_do = {
-			factor = 400
-		}
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				name = naval_bomber_bonus
-				bonus = 1
-				uses = 2
-				category = mio_cat_all_naval_bomber_and_modules
-			}
-			air_experience = 25
-		}
-	}
-	
-	focus = {
-		id = GEK_expand_air_bases
-		icon = GFX_goal_generic_build_airforce
-		prerequisite = {
-			focus = GEK_naval_bomber_focus
-		}
-		prerequisite = {
-			focus = GEK_strategic_bombing
-		}
-		x = -1
-		y = 1
-		relative_position_id = GEK_strategic_bombing
-		cost = 5
-		ai_will_do = {
-			factor = 400
-		}
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = air_base
-						size > 2
-						#include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = air_base
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-	}
-	
-	
-	focus = {
-		id = GEK_fortify_islands
-		icon = GFX_goal_generic_construct_military
-		prerequisite = {
-			focus = GEK_island_development_plan
-		}
-		x = 0
-		y = 1
-		relative_position_id = GEK_island_development_plan
-		cost = 10
-		ai_will_do = {
-			factor = 400
-		}
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		completion_reward = {
-			if = {
-				limit = {
-					any_owned_state = {
-						is_coastal = yes
-					}	
-				}
-				124 = {
-					# add_building_construction = {
-					# 	type = coastal_bunker
-					# 	level = 4
-					# 	instant_build = yes
-					# 	province = 408
-					# }
-					add_victory_points = {
-						province = 408
-						value = 19
-					}
-				}
-				145 = {
-					# add_building_construction = {
-					# 	type = coastal_bunker
-					# 	level = 4
-					# 	instant_build = yes
-					# 	province = 9228
-					# }
-					add_victory_points = {
-						province = 9228
-						value = 9
-					}
-				}
-			}
-		}
-	}
-	
-	focus = {
-		id = GEK_garrison_expansion
-		icon = GFX_focus_generic_little_entente
-		prerequisite = {
-			focus = GEK_fortify_islands
-		}
-		x = 0
-		y = 2
-		relative_position_id = GEK_fortify_islands
-		cost = 10
-		ai_will_do = {
-			factor = 400
-		}
-		search_filters = {
-			FOCUS_FILTER_MANPOWER
-			FOCUS_FILTER_WAR_SUPPORT
-		}
-		completion_reward = {
-			add_manpower = 50000
-			division_template = {
-				name = "Garrison Division"
-				regiments = {
-					infantry = { x = 0 y = 0 }
-					infantry = { x = 0 y = 1 }
-					infantry = { x = 1 y = 0 }
-					infantry = { x = 1 y = 1 }
-					infantry = { x = 2 y = 0 }
-				}
-			}
-		}
-	}
-	
-	focus = {
-		id = GEK_light_cruiser_initiative
-		icon = GFX_goal_generic_navy_cruiser
-		prerequisite = {
-			focus = GEK_construct_naval_bases
-		}
-		x = -1
-		y = 1
-		relative_position_id = GEK_construct_naval_bases
-		cost = 5
-		available = {
-			dockyard > 14
-		}
-		ai_will_do = {
-			factor = 400
-		}
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				name = heavy_cruiser_bonus
-				bonus = 1
-				uses = 2
-				category = mio_cat_tech_all_cruiser_and_modules
-			}
-			navy_experience = 20
-		}
-	}
-	
-	focus = {
-		id = GEK_heavy_cruiser_initiative
-		icon = GFX_focus_generic_navy_battleship2
-		prerequisite = {
-			focus = GEK_light_cruiser_initiative
-		}
-		x = -1
-		y = 1
-		relative_position_id = GEK_light_cruiser_initiative
-		cost = 5
-		ai_will_do = {
-			factor = 400
-		}
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				name = light_cruiser_bonus
-				bonus = 1
-				uses = 2
-				category = mio_cat_tech_all_cruiser_and_modules
-			}
-			navy_experience = 20
-		}
-	}
-	
-	focus = {
-		id = GEK_destroyer_initiative
-		icon = GFX_focus_generic_destroyer
-		prerequisite = {
-			focus = GEK_submarine_initiative
-		}
-		x = 1
-		y = 1
-		relative_position_id = GEK_submarine_initiative
-		cost = 5
-		ai_will_do = {
-			factor = 400
-		}
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				name = destroyer_bonus
-				bonus = 1
-				uses = 2
-				category = mio_cat_tech_all_destroyer_and_modules
-			}
-			navy_experience = 20
-		}
-	}
-
-	focus = {
-		id = GEK_naval_experience_training
-		icon = GFX_focus_generic_naval_discipline
-		prerequisite = {
-			focus = GEK_construct_naval_bases
-		}
-		x = 0
-		y = 2
-		relative_position_id = GEK_construct_naval_bases
-		cost = 5
-		ai_will_do = {
-			factor = 400
-		}
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-			FOCUS_FILTER_INDUSTRY
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				name = modern_navy_bonus
-				bonus = 1
-				uses = 2
-				category = naval_equipment
-			}
-			navy_experience = 50
-		}
-	}	
-	
-	focus = {
-		id = GEK_modern_navy
-		icon = GFX_focus_generic_Pacific
-		prerequisite = {
-			focus = GEK_destroyer_initiative
-		}
-		prerequisite = {
-			focus = GEK_heavy_cruiser_initiative
-		}
-		prerequisite = {
-			focus = GEK_naval_experience_training
-		}
-		x = -2
-		y = 1
-		relative_position_id = GEK_destroyer_initiative
-		cost = 5
-		ai_will_do = {
-			factor = 400
-		}
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-			FOCUS_FILTER_INDUSTRY
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				name = modern_navy_bonus
-				bonus = 1
-				uses = 2
-				category = mio_cat_tech_all_carrier_and_modules
-			}
-			navy_experience = 50
-		}
-	}
-
-	focus = { 
-		id = GEK_naval_dominance
-		icon = GFX_goal_generic_navy_doctrines_tactics
-		prerequisite = {
-			focus = GEK_aircraft_production
-			focus = GEK_construct_naval_bases
-			focus = GEK_garrison_expansion
-		}
-
-		x = 0
-		y = 3
-		relative_position_id = GEK_garrison_expansion
-		cost = 5
-		ai_will_do = {
-			factor = 400
-		}
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-			FOCUS_FILTER_WAR_SUPPORT
-		}
-		completion_reward = {
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 3				
-				add_building_construction = {
-					type = dockyard
-					level = 3
-					instant_build = yes
-				}
-			}
-			add_political_power = 50
-		}
-	}
-
-	focus = {
-		id = GEK_massive_correct_plan		# 대규모 교정 계획
-		icon = GFX_goal_generic_military_sphere
-		cost = 5
-
-		available = {
-
-		}
-
-		relative_position_id = GEK_naval_dominance
-
-		prerequisite = {
-			focus = GEK_naval_dominance
-		}
-
-		ai_will_do = {
-			base = 10
-		}
-
-		x = 0
-		y = 1
-
-		completion_reward = {
-			add_ideas = GEK_invasion_preparation_modifier
-		}
-	}
-
-	focus = {
-		id = GEK_mil_correct_plan		# 밀레니엄 교정 계획
-		icon = GFX_focus_attack_MIL
-		cost = 5
-
-		available = {
-			has_army_manpower = { size > 449999 }
-			custom_trigger_tooltip = {
-				tooltip = GEK_mil_correct_plan_tt
-				check_variable = { num_equipment_in_armies_k@infantry_equipment > 18 }
-			}
-		}
-
-		relative_position_id = GEK_massive_correct_plan
-
-		prerequisite = {
-			focus = GEK_massive_correct_plan
-		}
-
-
-		ai_will_do = {
-			base = 10
-		}
-
-		x = -3
-		y = 1
-
-		completion_reward = {
-			create_wargoal = {
-				target = MIL
-				type = annex_everything
-			}
-		}
-
-		bypass = {
-			NOT = { country_exists = MIL }
-		}
-	}
-
-	focus = {
-		id = GEK_geh_correct_plan		# 게헨나 교정 계획
-		icon = GFX_focus_attack_GEH
-		cost = 5
-
-		available = {
-			has_army_manpower = { size > 199999 }
-			custom_trigger_tooltip = {
-				tooltip = GEK_geh_correct_plan_tt
-				check_variable = { num_equipment_in_armies_k@infantry_equipment > 9 }
-			}
-		}
-
-		relative_position_id = GEK_massive_correct_plan
-
-		prerequisite = {
-			focus = GEK_massive_correct_plan
-		}
-
-		ai_will_do = {
-			base = 10
-		}
-
-		x = -1
-		y = 1
-
-		completion_reward = {
-			if = {
-				limit = {		
-					country_exists = GEH
-				}
-				create_wargoal = {
-					target = GEH
-					type = annex_everything
-				}
-			}
-			if = {
-				limit = {
-					country_exists = GEM
-				}
-				create_wargoal = {
-					target = GEM
-					type = annex_everything
-				}
-			}
-		}
-		bypass = {
-			NOT = { country_exists = GEH }
-			NOT = { country_exists = GEM }
-		}
-	}
-
-	focus = {
-		id = GEK_trm_correct_plan		# TRM 교정 계획
-		icon = GFX_focus_attack_TRN
-		cost = 5
-
-		available = {
-			has_army_manpower = { size > 349999 }
-			custom_trigger_tooltip = {
-				tooltip = TRN_gehenna_eq_trigger_tt
-				check_variable = { num_equipment_in_armies_k@infantry_equipment > 16 }
-			}
-		}
-
-		relative_position_id = GEK_massive_correct_plan
-
-		prerequisite = {
-			focus = GEK_massive_correct_plan
-		}
-
-		ai_will_do = {
-			base = 10
-		}
-
-		x = 1
-		y = 1
-
-		completion_reward = {
-			if = {
-				limit = {		
-					country_exists = TRM
-				}
-				create_wargoal = {
-					target = TRM
-					type = annex_everything
-				}
-			}
-		}
-		bypass = {
-			NOT = { country_exists = TRM }
-		}
-	}
-
-	focus = {
-		id = GEK_cou_correct_plan		# COU 교정 계획
-		icon = GFX_focus_attack_SHE
-		cost = 5
-
-		available = {
-			has_army_manpower = { size > 249999 }
-			custom_trigger_tooltip = {
-				tooltip = GEK_cou_correct_plan_tt
-				check_variable = { num_equipment_in_armies_k@infantry_equipment > 12 }
-			}
-		}
-
-		relative_position_id = GEK_massive_correct_plan
-
-		prerequisite = {
-			focus = GEK_massive_correct_plan
-		}
-
-		ai_will_do = {
-			base = 10
-		}
-
-		x = 3
-		y = 1
-
-		completion_reward = {
-			if = {
-				limit = {		
-					country_exists = KVT
-				}
-				create_wargoal = {
-					target = KVT
-					type = annex_everything
-				}
-			}
-			else_if = {
-				limit = {		
-					country_exists = SHE
-				}
-				create_wargoal = {
-					target = SHE
-					type = annex_everything
-				}
-			}
-		}
-		bypass = {
-			NOT = { country_exists = KVT }
-			NOT = { country_exists = SHE }
-		}
-	}
-
 	focus = {
 		id = GEK_GER_government
 		icon = GFX_focus_ger_oppose_hitler
 		available = {
+			NOT = { has_completed_focus = GEK_get_in_touch }
 			any_controlled_state = {
 				BA_is_GER_core = yes
 			}
@@ -1073,9 +389,36 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = GEK_gottland_government_establishment
 			focus = GEK_raise_the_red_flag
+			focus = GEK_RM_focus_0
 		}
-		x = 55
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = GEK_RM_focus_0
+					has_completed_focus = GEK_gottland_government_establishment
+					has_completed_focus = GEK_raise_the_red_flag
+				}
+			}
+		}
+		x = 15
 		y = 0
+		offset = {
+			x = -15
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = GEK_GER_government
+			}
+		}
+		relative_position_id = GEK_RM_focus_0
 		cost = 2
 		ai_will_do = {
 			factor = 400
@@ -1084,6 +427,7 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward = {
+			remove_ideas = GEK_didntknew_without_navy
 			set_cosmetic_tag = GEK_BAY
 			set_country_flag = GEK_win_the_war_GEH_flag
 			set_country_flag = BA_german_claimant_2 #독일 정통성 중간
@@ -1521,13 +865,39 @@ focus_tree = {
 			}
 			NOT = { has_government = communism }
 		}
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = GEK_RM_focus_0
+					has_completed_focus = GEK_GER_government
+					has_completed_focus = GEK_raise_the_red_flag
+				}
+			}
+		}
 		mutually_exclusive = {
 			focus = GEK_GER_government
 			focus = GEK_raise_the_red_flag
+			focus = GEK_RM_focus_0
 		}
-		x = 10
+		x = 25
 		y = 0
-		relative_position_id = GEK_GER_government
+		offset = {
+			x = -25
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = GEK_gottland_government_establishment
+			}
+		}
+		relative_position_id = GEK_RM_focus_0
 		cost = 5
 		ai_will_do = {
 			factor = 400
@@ -1899,10 +1269,36 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = GEK_GER_government
 			focus = GEK_gottland_government_establishment
+			focus = GEK_RM_focus_0
 		}
-		x = 20
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = GEK_RM_focus_0
+					has_completed_focus = GEK_GER_government
+					has_completed_focus = GEK_gottland_government_establishment
+				}
+			}
+		}
+		x = 35
 		y = 0
-		relative_position_id = GEK_GER_government
+		offset = {
+			x = -35
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = GEK_raise_the_red_flag
+			}
+		}
+		relative_position_id = GEK_RM_focus_0
 		cost = 5
 		ai_will_do = {
 			factor = 400

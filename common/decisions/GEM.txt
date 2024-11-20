@@ -928,6 +928,7 @@ GEH_nego_wehrmacht_decisions = {
 			GEM = {
 				clr_country_flag = GEH_start_nego
 				country_event = GEH_event.44
+				country_event = { id = GEH_event.14 days = 1 }
 			}
 		}
 	}

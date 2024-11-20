@@ -840,8 +840,7 @@ leader_traits = {
 	ABY_trait_czech_father = { #"체코의 아버지"
 		random = no
 		democratic_drift = 0.1
-		stability_factor = 0.20
-		political_power_factor = 0.20
+		stability_factor = 0.2
 	}
 	ABY_trait_sudety_council = { #"민간 위원회"
 		random = no
@@ -853,7 +852,7 @@ leader_traits = {
 		random = no
 		neutrality_drift = 0.1
 		mobilization_laws_cost_factor = -0.25
-		political_power_factor = 0.1
+		political_power_factor = 0.05
 	}
  	ABY_trait_president = { #"대통령"
 		random = no
@@ -1051,6 +1050,9 @@ leader_traits = {
 		communism_acceptance = -20
 		fascism_acceptance = -20
 		neutrality_acceptance = -20
+		hidden_modifier = {
+			ai_desired_divisions_factor = -1
+		}
 	}
  	ABY_trait_NKVD = { #"보안부장"
 		random = no

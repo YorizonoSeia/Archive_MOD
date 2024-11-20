@@ -656,7 +656,7 @@ ideas = {
 			}
 
 			modifier = {
-				political_power_gain = 0.5
+				political_power_gain = 0.3
 			}
 		}
 		ABY_idea_eocordnldnjsghl_first = {
@@ -755,7 +755,7 @@ ideas = {
 			}
 
 			modifier = {
-				political_power_gain = 0.5
+				political_power_gain = 0.3
 				stability_factor = 0.1
 			}
 			traits = {
@@ -770,7 +770,7 @@ ideas = {
 			}
 
 			modifier = {
-				political_power_gain = 0.5
+				political_power_gain = 0.3
 				stability_factor = 0.1
 			}
 			traits = {
@@ -786,7 +786,7 @@ ideas = {
 			}
 
 			modifier = {
-				political_power_gain = 0.5
+				political_power_gain = 0.3
 				stability_factor = 0.1
 			}
 			traits = {
@@ -802,7 +802,7 @@ ideas = {
 			}
 
 			modifier = {
-				political_power_gain = 0.5
+				political_power_gain = 0.3
 				stability_factor = 0.1
 			}
 			traits = {
@@ -819,7 +819,7 @@ ideas = {
 			}
 
 			modifier = {
-				political_power_gain = 0.5
+				political_power_gain = 0.3
 				political_power_factor = 0.1
 			}
 			traits = {
@@ -834,7 +834,7 @@ ideas = {
 			}
 
 			modifier = {
-				political_power_gain = 0.5
+				political_power_gain = 0.3
 				political_power_factor = 0.1
 			}
 			traits = {
@@ -850,7 +850,7 @@ ideas = {
 			}
 
 			modifier = {
-				political_power_gain = 0.5
+				political_power_gain = 0.3
 				political_power_factor = 0.1
 			}
 			traits = {
@@ -866,7 +866,7 @@ ideas = {
 			}
 
 			modifier = {
-				political_power_gain = 0.5
+				political_power_gain = 0.3
 				political_power_factor = 0.1
 			}
 			traits = {
@@ -4963,7 +4963,7 @@ ideas = {
 				conscription = 0.03
 				stability_weekly = -0.001
 				war_support_factor = 0.1
-				surrender_limit = 0.5
+				surrender_limit = 0.25
 				custom_modifier_tooltip = ABY_have_cze_aus_tt
 			}
 		}

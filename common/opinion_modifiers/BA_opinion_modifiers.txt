@@ -230,4 +230,11 @@ opinion_modifiers = {
 		value = 50
 		trade = yes
 	}
+	TRM_RED_pact = {
+		value = 20
+	}
+	refused_TRM_RED_pact = {
+		value = -50
+		months = 36
+	}
 }

@@ -2,7 +2,7 @@ add_namespace = TRM_event
 add_namespace = TRN_after_war_event
 add_namespace = TRN_faction_event
 add_namespace = TRN_collapse_event
-add_namespace = TRM_diplomacy_event
+add_namespace = TRMDIP
 add_namespace = TRM_ironsword_event
 add_namespace = trnstory
 country_event = {
@@ -297,12 +297,12 @@ country_event = { # 문제아 해결 (보충 수업부)
 			remove_ideas = TRM_work_clup
 		}
 	}
-	}
+}
 country_event = { #게헨나 항복 이벤트
 	id = TRM_event.15
 	title = TRM_event.15.t
 	desc = TRM_event.15.desc
-	picture = GFX_report_event_lithuanian_ultimatum
+	picture = GFX_event_TRM_event_15
 
 	is_triggered_only = no
 	fire_only_once = yes
@@ -348,9 +348,18 @@ country_event = { #게헨나 항복 이벤트
 	}
 	option = {
 		name = TRM_event.15.a
-        hidden_effect = {
-            news_event = { id = BA_news.5 }
-        }
+		complete_national_focus = TRM_after_war
+		swap_ideas = {
+			remove_idea = TRM_mika_trinity
+			add_idea = TRM_mika_trinity_2
+		}
+		swap_ruler_traits = {
+			remove = TRN_mika_trait_1
+			add = TRN_mika_trait_3
+		}
+        hidden_effect = { 
+			news_event = { id = BA_news.5 } 
+		}
 	}
 }
 country_event = { #미카 집권 이벤트 (진짜 중요!!)
@@ -745,7 +754,7 @@ country_event = {  # 트리니티 - 게헨나 전쟁 (에덴 결전)
 	}
 }
 
-country_event = { 
+country_event = {  # 안씀 
 	id = TRM_event.35
 	title = TRM_event.35.t
 	desc = TRM_event.35.desc
@@ -756,22 +765,12 @@ country_event = {
 	
 	option = { #
 		name = TRM_event.35.a
-		unlock_decision_category_tooltip = TRN_after_war_decisions
 		TRM = {
-			set_global_flag = TRINITY_WON_THE_GEHENNA
-			swap_ideas = {
-				remove_idea = TRM_mika_trinity
-				add_idea = TRM_mika_trinity_2
-			}
-			swap_ruler_traits = {
-				remove = TRN_mika_trait_1
-				add = TRN_mika_trait_3
-			}
 		}
 		#country_event = { id = TRM_event.36 hours = 1 }
 	}
 }
-country_event = { 
+country_event = { # 안씀
 	id = TRM_event.36
 	title = TRM_event.36.t
 	desc = TRM_event.36.desc
@@ -789,7 +788,7 @@ country_event = {
 		}	
 	}
 }
-country_event = { 
+country_event = { # 안씀
 	id = TRM_event.37
 	title = TRM_event.37.t
 	desc = TRM_event.37.desc
@@ -806,7 +805,7 @@ country_event = {
 		set_cosmetic_tag = TRM_germany
 	}
 }
-country_event = { 
+country_event = {  # 안씀
 	id = TRM_event.38
 	title = TRM_event.38.t
 	desc = TRM_event.38.desc
@@ -843,63 +842,6 @@ country_event = {  # 독일 국방군 재입대
 	
 	option = { #
 		name = TRM_event.40.a
-		division_template = {
-			name = "Infanterie-Division"
-			division_names_group = GER_Inf_01
-			regiments = {
-				infantry = { x = 0 y = 0 }
-				infantry = { x = 0 y = 1 }
-				infantry = { x = 0 y = 2 }
-  				infantry = { x = 1 y = 0 }
-				infantry = { x = 1 y = 1 }
-				infantry = { x = 1 y = 2 }
-  				infantry = { x = 2 y = 0 }
-				infantry = { x = 2 y = 1 }
-				infantry = { x = 2 y = 2 }
-			}
-			support = {
-				engineer = { x = 0 y = 0 }
-				artillery = { x = 0 y = 1 }
-			}
-		}
-		random_owned_controlled_state = {
-			limit = { ROOT = { has_full_control_of_state = PREV } }
-			create_unit = {
-				division = "name = \"I. Germany Heer\" division_template = \"Infanterie-Division\" start_experience_factor = 0.10 start_equipment_factor = 0.8" 
-				owner = ROOT
-			}
-			create_unit = {
-				division = "name = \"II. Germany Heer\" division_template = \"Infanterie-Division\" start_experience_factor = 0.10 start_equipment_factor = 0.8" 
-				owner = ROOT
-			}
-			create_unit = {
-				division = "name = \"III. Germany Heer\" division_template = \"Infanterie-Division\" start_experience_factor = 0.10 start_equipment_factor = 0.8" 
-				owner = ROOT
-			}
-			create_unit = {
-				division = "name = \"VI. Germany Heer\" division_template = \"Infanterie-Division\" start_experience_factor = 0.10 start_equipment_factor = 0.8" 
-				owner = ROOT
-			}
-		}
-		random_owned_controlled_state = {
-			limit = { ROOT = { has_full_control_of_state = PREV } }
-			create_unit = {
-				division = "name = \"V. Germany Heer\" division_template = \"Infanterie-Division\" start_experience_factor = 0.10 start_equipment_factor = 0.8" 
-				owner = ROOT
-			}
-			create_unit = {
-				division = "name = \"VI. Germany Heer\" division_template = \"Infanterie-Division\" start_experience_factor = 0.10 start_equipment_factor = 0.8" 
-				owner = ROOT
-			}
-			create_unit = {
-				division = "name = \"VII. Germany Heer\" division_template = \"Infanterie-Division\" start_experience_factor = 0.10 start_equipment_factor = 0.8" 
-				owner = ROOT
-			}
-			create_unit = {
-				division = "name = \"VIII. Germany Heer\" division_template = \"Infanterie-Division\" start_experience_factor = 0.10 start_equipment_factor = 0.8" 
-				owner = ROOT
-			}
-		}
 	}
 }
 country_event = { 
@@ -2825,9 +2767,9 @@ country_event = { # 모스크바 총독부는 누굴로?
     }
 }
 country_event = { # Give me State 102
-	id = TRM_diplomacy_event.1
-	title = TRM_diplomacy_event.1.t
-	desc = TRM_diplomacy_event.1.d
+	id = TRMDIP.1
+	title = TRMDIP.1.t
+	desc = TRMDIP.1.d
 	picture = GFX_report_event_german_troops
 
 	is_triggered_only = yes
@@ -2858,7 +2800,7 @@ country_event = { # Give me State 102
         hidden_effect = {
             FROM = { 
                 country_event = {
-                    id = TRM_diplomacy_event.2 
+                    id = TRMDIP.2 
                     days = 1
                     random_days = 2
                 }
@@ -2881,15 +2823,15 @@ country_event = { # Give me State 102
         }
         hidden_effect = {
             FROM = {
-                country_event = TRM_diplomacy_event.3
+                country_event = TRMDIP.3
             }
         }
 	}
 }
 country_event = { # Give me State 102 - 찬성
-	id = TRM_diplomacy_event.2
-	title = TRM_diplomacy_event.2.t
-	desc = TRM_diplomacy_event.2.d
+	id = TRMDIP.2
+	title = TRMDIP.2.t
+	desc = TRMDIP.2.d
 	picture = GFX_report_event_german_troops
 
 	is_triggered_only = yes
@@ -2918,9 +2860,9 @@ country_event = { # Give me State 102 - 찬성
 	}
 }
 country_event = { # Give me State 102 - 반대
-	id = TRM_diplomacy_event.3
-	title = TRM_diplomacy_event.3.t
-	desc = TRM_diplomacy_event.3.d
+	id = TRMDIP.3
+	title = TRMDIP.3.t
+	desc = TRMDIP.3.d
 	picture = GFX_report_event_generic_read_write
 
 	is_triggered_only = yes
@@ -2943,9 +2885,9 @@ country_event = { # Give me State 102 - 반대
 	}
 }
 country_event = { # 헝가리 지지 선언
-	id = TRM_diplomacy_event.4
-	title = TRM_diplomacy_event.4.t
-	desc = TRM_diplomacy_event.4.d
+	id = TRMDIP.4
+	title = TRMDIP.4.t
+	desc = TRMDIP.4.d
 	picture = GFX_report_event_generic_read_write
 
 	is_triggered_only = yes
@@ -3027,16 +2969,16 @@ country_event = { # 헝가리 지지 선언
 
 	# blasphemy that is
 	option = { 
-		name = TRM_diplomacy_event.4.b
+		name = TRMDIP.4.b
 		ai_chance = { 
 			base = 0
 		}
 	}
 }
 country_event = { # 헝가리 - 루마니아 국경 재조정
-	id = TRM_diplomacy_event.5
-	title = TRM_diplomacy_event.5.t
-	desc = TRM_diplomacy_event.5.desc
+	id = TRMDIP.5
+	title = TRMDIP.5.t
+	desc = TRMDIP.5.desc
 	picture = GFX_report_event_vienna_award_hungary
 
 	is_triggered_only = yes
@@ -3056,7 +2998,7 @@ country_event = { # 헝가리 - 루마니아 국경 재조정
         }
         ROM = {
             country_event = { 
-                id = TRM_diplomacy_event.6 
+                id = TRMDIP.6 
                 hours = 2
                 random_hours = 6 
             }
@@ -3077,7 +3019,7 @@ country_event = { # 헝가리 - 루마니아 국경 재조정
         }
         ROM = {
             country_event = { 
-                id = TRM_diplomacy_event.7 
+                id = TRMDIP.7 
                 hours = 2
                 random_hours =6 
             }
@@ -3094,7 +3036,7 @@ country_event = { # 헝가리 - 루마니아 국경 재조정
 		}
         HUN = {
             country_event = {
-                id = TRM_diplomacy_event.10
+                id = TRMDIP.10
                 hours = 2
                 random_hours =6 
             }
@@ -3102,9 +3044,9 @@ country_event = { # 헝가리 - 루마니아 국경 재조정
 	}
 }
 country_event = { # 북트란실바니아 만 주기 - 루마니아 반응
-	id = TRM_diplomacy_event.6
-	title = TRM_diplomacy_event.6.t
-	desc = TRM_diplomacy_event.6.d
+	id = TRMDIP.6
+	title = TRMDIP.6.t
+	desc = TRMDIP.6.d
 	picture = GFX_report_event_vienna_award_hungary
 
 	is_triggered_only = yes
@@ -3121,7 +3063,7 @@ country_event = { # 북트란실바니아 만 주기 - 루마니아 반응
         set_global_flag = ROM_select_only_north
         HUN = {
             country_event = { 
-                id = TRM_diplomacy_event.9
+                id = TRMDIP.9
                 hours = 2
                 random_hours =6 
             }
@@ -3138,7 +3080,7 @@ country_event = { # 북트란실바니아 만 주기 - 루마니아 반응
         }
         FROM = {
             country_event = {
-                id =TRM_diplomacy_event.8 
+                id =TRMDIP.8 
                 hours = 2
                 random_hours =6 
             }
@@ -3146,9 +3088,9 @@ country_event = { # 북트란실바니아 만 주기 - 루마니아 반응
 	}
 }
 country_event = { # 트란실바니아 전체 주기 - 루마니아 반응
-	id = TRM_diplomacy_event.7
-	title = TRM_diplomacy_event.6.t
-	desc = TRM_diplomacy_event.7.d
+	id = TRMDIP.7
+	title = TRMDIP.6.t
+	desc = TRMDIP.7.d
 	picture = GFX_report_event_vienna_award_hungary
 
 	is_triggered_only = yes
@@ -3165,7 +3107,7 @@ country_event = { # 트란실바니아 전체 주기 - 루마니아 반응
         set_global_flag = ROM_select_all
         HUN = {
             country_event = { 
-                id = TRM_diplomacy_event.9
+                id = TRMDIP.9
                 hours = 2
                 random_hours =6 
             }
@@ -3182,7 +3124,7 @@ country_event = { # 트란실바니아 전체 주기 - 루마니아 반응
         }
         FROM = {
             country_event = { 
-                id =TRM_diplomacy_event.8 
+                id =TRMDIP.8 
                 hours = 2
                 random_hours =6 
             }
@@ -3190,9 +3132,9 @@ country_event = { # 트란실바니아 전체 주기 - 루마니아 반응
 	}
 }
 country_event = { # 트란실바니아 거부하면 이 이벤트로 전쟁 걸림
-	id = TRM_diplomacy_event.8
-	title = TRM_diplomacy_event.8.t
-	desc = TRM_diplomacy_event.8.d
+	id = TRMDIP.8
+	title = TRMDIP.8.t
+	desc = TRMDIP.8.d
 	picture = GFX_report_event_vienna_award_hungary
 
 	is_triggered_only = yes
@@ -3207,9 +3149,9 @@ country_event = { # 트란실바니아 거부하면 이 이벤트로 전쟁 걸�
 	}
 }
 country_event = { # 트란실바니아 양도하면 이 이벤트가 보여야 함
-	id = TRM_diplomacy_event.9
-	title = TRM_diplomacy_event.9.t
-	desc = TRM_diplomacy_event.9.d
+	id = TRMDIP.9
+	title = TRMDIP.9.t
+	desc = TRMDIP.9.d
 	picture = GFX_report_event_vienna_award_hungary
 
 	is_triggered_only = yes
@@ -3245,9 +3187,9 @@ country_event = { # 트란실바니아 양도하면 이 이벤트가 보여야 �
 	}
 }
 country_event = { # 헝가리와 사이 나빠진 TRM
-	id = TRM_diplomacy_event.10
-	title = TRM_diplomacy_event.10.t
-	desc = TRM_diplomacy_event.10.d
+	id = TRMDIP.10
+	title = TRMDIP.10.t
+	desc = TRMDIP.10.d
 	picture = GFX_report_event_vienna_award_hungary
 
 	is_triggered_only = yes
@@ -3263,25 +3205,25 @@ country_event = { # 헝가리와 사이 나빠진 TRM
 	}
 }
 country_event = { # 달마티아 영유권 주장
-	id = TRM_diplomacy_event.11
-	title = TRM_diplomacy_event.11.t
-	desc = TRM_diplomacy_event.11.d
+	id = TRMDIP.11
+	title = TRMDIP.11.t
+	desc = TRMDIP.11.d
 	picture = GFX_report_event_vienna_award_hungary
 
 	is_triggered_only = yes
 
 	option = { # 전쟁 목표 걸리기
-		name = TRM_diplomacy_event.11.a 
+		name = TRMDIP.11.a 
 	}
 
 	option = { # 전쟁 목표 걸리기
-		name = TRM_diplomacy_event.11.b
+		name = TRMDIP.11.b
 	}
 }
 country_event = { # 덴마크 내놔 RED
-	id = TRM_diplomacy_event.12
-	title = TRM_diplomacy_event.12.t
-	desc = TRM_diplomacy_event.12.d
+	id = TRMDIP.12
+	title = TRMDIP.12.t
+	desc = TRMDIP.12.d
 	picture = GFX_report_event_DEN_celebration
 
 	is_triggered_only = yes
@@ -3292,7 +3234,7 @@ country_event = { # 덴마크 내놔 RED
         hidden_effect = {
             FROM ={
                 set_country_flag = TRM_We_need_Denmark_milk_flag
-                country_event = { id = TRM_diplomacy_event.13 hours = 07 }
+                country_event = { id = TRMDIP.13 hours = 07 }
             }
         }
         effect_tooltip = {
@@ -3318,14 +3260,14 @@ country_event = { # 덴마크 내놔 RED
 		name = JUNO_brazil_events.140.b
         ai_chance = { base = 99 }
 		FROM = {
-        	country_event = { id = TRM_diplomacy_event.14 hours = 07 }
+        	country_event = { id = TRMDIP.14 hours = 07 }
 		}
 	}
 }
 country_event = { # 덴마크를 양도한 RED
-	id = TRM_diplomacy_event.13
-	title = TRM_diplomacy_event.13.t
-	desc = TRM_diplomacy_event.13.d
+	id = TRMDIP.13
+	title = TRMDIP.13.t
+	desc = TRMDIP.13.d
 	picture = GFX_report_event_DEN_celebration
 
 	is_triggered_only = yes
@@ -3353,9 +3295,9 @@ country_event = { # 덴마크를 양도한 RED
 	}
 }
 country_event = { # 덴마크를 양도하기 거부한 RED
-	id = TRM_diplomacy_event.14
-	title = TRM_diplomacy_event.14.t
-	desc = TRM_diplomacy_event.14.d
+	id = TRMDIP.14
+	title = TRMDIP.14.t
+	desc = TRMDIP.14.d
 	picture = GFX_report_event_DEN_celebration
 
 	is_triggered_only = yes
@@ -3368,9 +3310,9 @@ country_event = { # 덴마크를 양도하기 거부한 RED
 	}
 }
 country_event = { # 트리니티와 동맹을 맺은 독일계 국가는 이 이벤트가 발생합니다.
-	id = TRM_diplomacy_event.15
-	title = TRM_diplomacy_event.15.t
-	desc = TRM_diplomacy_event.15.d
+	id = TRMDIP.15
+	title = TRMDIP.15.t
+	desc = TRMDIP.15.d
 	picture = GFX_report_event_vienna_award_hungary
 
 	is_triggered_only = yes
@@ -3396,93 +3338,437 @@ country_event = { # 트리니티와 동맹을 맺은 독일계 국가는 이 이
     }
 
 	option = { # 전쟁 목표 걸리기
-		name = TRM_diplomacy_event.15.a
+		name = TRMDIP.15.a
         
 	}
 	option = { # 전쟁 목표 걸리기
-		name = TRM_diplomacy_event.15.b
+		name = TRMDIP.15.b
         
 	}
 }
 country_event = { # 미카의 트리니티가 전쟁 하면 이 이벤트가 보임
-	id = TRM_diplomacy_event.16
-	title = TRM_diplomacy_event.16.t
-	desc = TRM_diplomacy_event.16.d
+	id = TRMDIP.16
+	title = TRMDIP.16.t
+	desc = TRMDIP.16.d
 	picture = GFX_report_event_chamberlain
 
 	is_triggered_only = yes
     fire_only_once = yes
 
 	option = { # 중점 잠구기
-		name = TRM_diplomacy_event.16.a
+		name = TRMDIP.16.a
 		custom_effect_tooltip = TRM_focus_locked_flag_tt
 	}
 }
 country_event = { # 게헨나가 트리니티 침공하면 이 이벤트가 보임
-	id = TRM_diplomacy_event.17
-	title = TRM_diplomacy_event.17.t
-	desc = TRM_diplomacy_event.17.d
+	id = TRMDIP.17
+	title = TRMDIP.17.t
+	desc = TRMDIP.17.d
 	picture = GFX_report_event_chinese_soldiers_running
 
 	is_triggered_only = yes
     fire_only_once = yes
 
 	option = { # 트리니티여, 승리하라!
-		name = TRM_diplomacy_event.16.a
+		name = TRMDIP.16.a
 		complete_national_focus = TRM_invasion_of_devils
 	}
 }
 country_event = { # 트리니티 - 붉은겨울 조약
-	id = TRM_diplomacy_event.18
-	title = TRM_diplomacy_event.18.t
-	desc = TRM_diplomacy_event.18.d
+	id = TRMDIP.18
+	title = TRMDIP.18.t
+	desc = TRMDIP.18.d
 	picture = GFX_report_event_germany_politician_handshake
 
 	is_triggered_only = yes
     fire_only_once = yes
 
 	option = { # 불가침 조약 맺자 -> 이벤트 체인 시작
-		name = TRM_diplomacy_event.18.a
+		name = TRMDIP.18.a
 	}
 
 	option = { # 불가침 조약 알빠노 -> 이벤트 체인 끝
-		name = TRM_diplomacy_event.18.b
+		name = TRMDIP.18.b
 	}
 }
 country_event = { # 트-붉 조약 -> 붉겨 반응
-	id = TRM_diplomacy_event.19
-	title = TRM_diplomacy_event.19.t
-	desc = TRM_diplomacy_event.19.d
+	id = TRMDIP.19
+	title = TRMDIP.19.t
+	desc = TRMDIP.19.d
 	picture = GFX_report_event_germany_politician_handshake
 
 	is_triggered_only = yes
     fire_only_once = yes
 
 	option = { # 맺죠 뭐..
-		name = TRM_diplomacy_event.19.a
+		name = TRMDIP.19.a
 		set_country_flag = Trinity_Redwinter_non_aggression
 	}
 
 	option = { # 꺼져
-		name = TRM_diplomacy_event.19.b
+		name = TRMDIP.19.b
 	}
 }
 country_event = { # 갸아악 폭동이다!!
-	id = TRM_diplomacy_event.20
-	title = TRM_diplomacy_event.20.t
-	desc = TRM_diplomacy_event.20.d
+	id = TRMDIP.20
+	title = TRMDIP.20.t
+	desc = TRMDIP.20.d
 	picture = GFX_report_event_generic_riot
 
 	is_triggered_only = yes
     fire_only_once = yes
 
 	option = { # 아이고
-		name = TRM_diplomacy_event.20.a
+		name = TRMDIP.20.a
 		effect_tooltip = {
 			add_dynamic_modifier = {
 				modifier = TRM_anti_geh_emotion
 			}
 		}
+	}
+}
+country_event = { # 트리니티 - 붉겨 조약
+	id = TRMDIP.21
+	title = TRMDIP.21.t
+	desc = TRMDIP.21.d
+	picture = GFX_report_event_molotov_ribentrop_handshake
+
+	is_triggered_only = yes
+
+	option = { # 수락한다
+		name = TRMDIP.21.a
+		ai_chance = {
+			base = 90
+			modifier = {
+				factor = 0
+				TRM = {
+					OR = {
+						has_wargoal_against = RED
+						is_justifying_wargoal_against = RED
+					}
+					NOT = {
+						is_in_faction_with = RED
+					}
+				}
+			}
+		}
+		set_global_flag = RED_yes_pact
+		every_state = {
+			limit = {
+				is_owned_by = FIN
+				NOT = { 
+					is_owned_by = RED
+					is_owned_by = RE1
+					is_owned_by = RE2
+					is_owned_by = RE3
+				}
+			}
+			add_claim_by = RED
+		}
+		country_event = { id = TRMDIP.22 days = 1 }
+	}
+	option = { # 거부한다
+		name = TRMDIP.21.b
+	}
+}
+country_event = { # 조약 수락
+	id = TRMDIP.22
+	title = TRMDIP.22.t
+	desc = TRMDIP.22.d
+	picture = GFX_report_event_molotov_signing_pact
+
+	is_triggered_only = yes
+
+	option = { # ㄳ
+		name = TRMDIP.22.a
+		diplomatic_relation = { country = RED relation = non_aggression_pact 
+		}
+		add_opinion_modifier = { target = RED modifier = TRM_RED_pact }# pact
+	}
+}
+country_event = { # 조약 거부
+	id = TRMDIP.23
+	title = TRMDIP.23.t
+	desc = TRMDIP.23.d
+	picture = GFX_report_event_stalin_01
+
+	is_triggered_only = yes
+
+	option = {
+		name = TRMDIP.23.a	#bah
+		add_opinion_modifier = { target = RED modifier = refused_TRM_RED_pact }# no pact
+	}
+}
+country_event = { # 게헨나내 독일인 소요
+	id = TRMDIP.24
+	title = TRMDIP.24.t
+	desc = TRMDIP.24.d
+	picture = GFX_report_event_ger_civil_war
+
+	is_triggered_only = yes
+
+	option = {
+		name = TRMDIP.24.a
+		add_political_power = -30
+		add_stability = -0.025
+		add_popularity = {
+			ideology = ROOT
+			popularity = -0.03
+		}
+	}
+}
+country_event = { 	#글라이비츠 중재 - 주데텐 실레시아 요구
+	id = TRMDIP.25
+	title = TRMDIP.25.t
+	desc = TRMDIP.25.desc
+	picture = GFX_report_event_generic_sign_treaty2
+	fire_only_once = yes 
+	is_triggered_only = yes
+	
+	option = {
+		name = TRMDIP.25.a
+		74 = {
+			set_demilitarized_zone = yes
+		}
+		every_country = {
+			limit = {
+				owns_state = 74
+			}
+			country_event = {
+				id = TRMDIP.26
+				days = 2
+			}
+		}
+	}
+}
+country_event = { 	#글라이비츠 중재 - 백귀야행
+	id = TRMDIP.26
+	title = TRMDIP.26.t
+	desc = TRMDIP.26.desc
+	picture = GFX_report_event_generic_sign_treaty2
+	fire_only_once = yes 
+	is_triggered_only = yes
+	
+	option = { #ㅅㅂ ㅇㅋ
+		name = TRMDIP.26.a
+		ai_chance = {
+			base = 10
+		}
+		TRM = {
+			transfer_state = 74
+			add_state_core = 74
+		}
+		POL = {
+			transfer_state = 72
+			add_state_core = 72
+		}
+		74 = {
+			set_demilitarized_zone = no
+		}
+	}
+	option = { #ㅗ
+		name = TRMDIP.26.b
+		74 = {
+			set_demilitarized_zone = no
+		}
+		TRM = {
+			country_event = {
+				id = TRMDIP.27
+				days = 2
+			}
+		}
+	}
+}
+country_event = { 	#글라이비츠 중재 - 거절
+	id = TRMDIP.27
+	title = TRMDIP.27.t
+	desc = TRMDIP.27.desc
+	picture = GFX_report_event_generic_sign_treaty2
+	fire_only_once = yes 
+	is_triggered_only = yes
+	
+	option = { #레츠고 디디씨
+		name = TRMDIP.27.a
+			TRM = {
+				declare_war_on = {
+					target = 74.owner
+					type = annex_everything
+				}
+			}
+		custom_effect_tooltip = TRMDIP.27_tt
+		TRM = {
+			division_template = {
+				name = "Resistance"
+				regiments = {
+					irregular_infantry = {
+						x = 0
+						y = 0
+					}
+					irregular_infantry = {
+						x = 0
+						y = 1
+					}
+					irregular_infantry = {
+						x = 0
+						y = 2
+					}
+				}
+			}
+		}
+		74 = {
+			add_core_of = TRM
+			create_unit = {
+				division = "name = \"Resistance\" division_template = \"Resistance\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+				owner = TRM
+			}
+			create_unit = {
+				division = "name = \"Resistance\" division_template = \"Resistance\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+				owner = TRM
+			}
+			create_unit = {
+				division = "name = \"Resistance\" division_template = \"Resistance\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+				owner = TRM
+			}
+		}
+	}
+	option = { #좀있다
+		name = TRMDIP.27.b
+		add_state_claim = 74
+	}
+}
+country_event = { 	#슬로카비아야 말 잘들어라~
+	id = TRMDIP.28
+	title = TRMDIP.28.t
+	desc = TRMDIP.28.desc
+	picture = GFX_report_event_generic_sign_treaty2
+	fire_only_once = yes 
+	is_triggered_only = yes
+	
+	option = { #네
+		name = TRMDIP.28.a
+		ai_chance = {
+			base = 100
+		}
+		TRM = {
+			country_event = {
+				id = TRMDIP.30
+				days = 1
+			}
+		}
+	}
+	option = { #ㅗ
+		name = TRMDIP.28.b
+		TRM = {
+			create_wargoal = {
+				target = SLO
+				type = annex_everything
+			}
+		}
+	}
+}
+country_event = { 	#헝가리 수락 or 거절
+	id = TRMDIP.29
+	title = TRMDIP.29.t
+	desc = TRMDIP.29.desc
+	picture = GFX_report_event_generic_sign_treaty2
+	fire_only_once = yes 
+	is_triggered_only = yes
+	
+	option = { #ㄱㄱ
+		name = TRMDIP.29.a
+		TRM = {
+			add_to_faction = HUN
+		}
+		annex_country = {
+			target = SLO
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+	option = { #ㄴㄴ
+		name = TRMDIP.29.b
+		TRM = {
+			set_autonomy = {
+				target = SLO
+				autonomy_state = autonomy_reichsprotectorate
+			}
+		}
+	}
+}
+country_event = { 	#슬로바키아의 운명
+	id = TRMDIP.30
+	title = TRMDIP.30.t
+	desc = TRMDIP.30.desc
+	picture = GFX_report_event_generic_sign_treaty2
+	fire_only_once = yes 
+	is_triggered_only = yes
+	
+	option = { #괴뢰화를 요구하자.
+		name = TRMDIP.30.a
+		TRM = {
+			set_autonomy = {
+				target = SLO
+				autonomy_state = autonomy_reichsprotectorate
+			}
+		}
+	}
+	option = { #헝가리를 우리와 결속시키자.
+		name = TRMDIP.30.b
+		HUN = {
+			country_event = {
+				id = TRMDIP.29
+				days = 3
+			}
+		}
+	}
+}
+country_event = { 	# 이탈리아 전용 세력 초대
+	id = TRMDIP.31
+	title = generic.5.t
+	desc = TRMDIP.31.d
+	picture = GFX_report_event_generic_read_write
+	fire_only_once = yes 
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			save_event_target_as = alliance_applicant
+			FROM = {
+				save_event_target_as = alliance_inviter
+			}
+		}
+	}
+	
+	option = { # 수락한다
+		name = generic.5.a
+		ai_chance = {
+			base = 1
+		}
+		FROM = { 
+			add_to_faction = ROOT
+			country_event = { id = generic.6 hours = 6 } 
+		}
+		add_ai_strategy = {
+			type = alliance
+			id = FROM
+			value = 200
+		}
+		hidden_effect = {
+			set_country_flag = alliance_applicant@ROOT
+			FROM = { set_country_flag = alliance_inviter@ROOT }
+			news_event = { id = news.289 hours = 12 }
+		}
+	}
+	option = { # 거부한다.
+		name = generic.2.f
+		ai_chance = {
+			base = 99
+		}
+		FROM = { 
+			country_event = { id = generic.7 hours = 6 }
+		}
+		
 	}
 }
 ##############################
@@ -4363,28 +4649,8 @@ country_event = { # 디버그 이벤트
 	desc = TRM_event.3000.d
 	picture = GFX_event_none_picture
 	
-	is_triggered_only = no
+	is_triggered_only = yes
     fire_only_once = yes
-    trigger = {
-        tag = TRM
-        has_completed_focus = TRM_newfocus_27
-        has_completed_focus = TRM_Arona_focus
-        has_completed_focus = TRM_heu_focus
-        has_war = no
-        has_government = fascism
-        controls_state = 36
-        controls_state = 7
-        controls_state = 35
-        controls_state = 6
-        controls_state = 29
-        controls_state = 983
-        controls_state = 34
-        controls_state = 974
-        controls_state = 989
-    }
-    mean_time_to_happen = {
-        days = 2
-    }
 	
 	option = { #
 		name = TRM_event.3000.a
@@ -4399,11 +4665,12 @@ country_event = { # 디버그 이벤트
 			transfer_state = 34
 			transfer_state = 36
 			transfer_state = 983
-			transfer_state = 974
+			transfer_state = 977
 			transfer_state = 35
 			transfer_state = 6
 			transfer_state = 29
 			transfer_state = 7
+			transfer_state = 980
 			create_country_leader = {
 				name = "TRN_Hifumi"
 				desc = ""
@@ -4434,11 +4701,12 @@ country_event = { # 디버그 이벤트
 			transfer_state = 34
 			transfer_state = 36
 			transfer_state = 983
-			transfer_state = 974
+			transfer_state = 977
 			transfer_state = 35
 			transfer_state = 6
 			transfer_state = 29
 			transfer_state = 7
+			transfer_state = 980
 			create_country_leader = {
 				name = "TRN_gkskzh"
 				desc = ""

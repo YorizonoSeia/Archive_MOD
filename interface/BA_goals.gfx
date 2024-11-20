@@ -967,6 +967,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/TRN/TRM_southern_offensive.tga"  
 	}
 	SpriteType = {
+		name = "GFX_goal_TRM_invade_benelux"
+		texturefile = "gfx/interface/goals/TRN/TRM_invade_benelux.tga"  
+	}
+	SpriteType = {
+		name = "GFX_goal_TRM_New_fascism_friend"
+		texturefile = "gfx/interface/goals/TRN/TRM_New_fascism_friend.tga"  
+	}
+	SpriteType = {
 		name = "GFX_goal_TRM_Operation_Description"
 		texturefile = "gfx/interface/goals/TRN/TRM_Operation_Description.tga"  
 	}
@@ -2183,5 +2191,20 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_goal_GEI_purple_light"
 		textureFile = "gfx/interface/goals/GEI/GEI_purple_light.tga"
+	}
+
+	### 일본 2D 아트팩 ㄷㄷㄷㄷㄷㄷㄷㄷㄷㄷㄷㄷㄷㄷㄷㄷㄷㄷㄷ 
+
+	spriteType = {
+		name = "GFX_goal_JAP_strengthening_democracy"
+		textureFile = "gfx/interface/goals/JAP/JAP_strengthening_democracy.tga"
+	}
+	spriteType = {
+		name = "GFX_goal_JAP_Kodoha"
+		textureFile = "gfx/interface/goals/JAP/JAP_Kodoha.tga"
+	}
+	spriteType = {
+		name = "GFX_goal_JAP_National_Mobilization_Law"
+		textureFile = "gfx/interface/goals/JAP/JAP_National_Mobilization_Law.tga"
 	}
 }

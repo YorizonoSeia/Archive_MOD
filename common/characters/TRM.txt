@@ -1222,7 +1222,7 @@ characters={
 		name = TRM_Fritz_Todt
 		portraits = {
 			army = {
-				small = GFX_Z_TRM_Fritz_Todt_idea
+				small = GFX_portrait_GER_fritz_todt_small
 			}
 		}
 		advisor = {

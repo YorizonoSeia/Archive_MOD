@@ -1124,12 +1124,7 @@ country_event = { # 게헨나-국방군 협상 파기
 	option = { 
 		name = GEH_event.44.a
 		add_stability = -0.05
-		if = {
-			limit = {
-				tag = GEM
-			}
-			country_event = GEH_event.14
-		}
+		custom_effect_tooltip = GEH_event_8_tt
 	}
 }
 country_event = { # 국방군 독립

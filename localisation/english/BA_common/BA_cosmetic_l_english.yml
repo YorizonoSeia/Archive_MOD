@@ -433,6 +433,10 @@
  GEK_gottland_DEF:0 "고틀란드"
  GEK_gottland_ADJ:0 "고틀란드"
 
+ GEK_RM: "전독일해방연합전선"
+ GEK_RM_DEF: "전독일해방연합전선"
+ GEK_RM_ADJ: "독일"
+
  JAP_TORESEN:0 "트레센 학원"
  KOR_UMA:0 "한국마사회" #이름 알아서 바꾸십쇼
  MAN_UMA:0 "트레센 학원 만주지부" #이름 알아서 바꾸십쇼

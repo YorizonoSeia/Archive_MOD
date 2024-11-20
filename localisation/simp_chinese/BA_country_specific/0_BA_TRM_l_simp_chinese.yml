@@ -146,8 +146,8 @@ TRN_guardian_of_the_academy_focus_desc:0 "雾里藤凪咲需要为三一学院�
  TRM_the_southern_thrust_desc: "南部攻势"
  TRM_preemptive_invasion_of_HYA: "征服百鬼夜行"
  TRM_preemptive_invasion_of_HYA_desc: ""
- TRM_war_with_Millennium: "征服千年"
- TRM_war_with_Millennium_desc: ""
+ TRM_Invasion_of_Millennium: "征服千年"
+ TRM_Invasion_of_Millennium_desc: ""
  TRM_Arona_focus: "摧毁阿罗娜"
  TRM_Arona_focus_desc: ""
  TRM_heu_focus: "服从兴信所"
@@ -1247,36 +1247,36 @@ TRN_opposition.24.d: "伴随着响彻街道的巨响,飞射的子弹击中了一
  TRM_alliance_with_bulgaria_flag: "$TRM_alliance_with_bulgaria$"
  TRM_alliance_with_Romania_flag: "$TRM_alliance_with_Romania$"
 
- TRM_diplomacy_event.1.t: "[FROM.GetAdjective]外交部要求割让南斯拉夫领土"
- TRM_diplomacy_event.1.d: "刚刚通过外交部正式向[ROOT.GetAdjective]大使递交了一份要求割让领土的文件。外交部发言人表示,‘北斯洛文尼亚在历史和文化上属于日耳曼民族的生活圈,[FROM.GetAdjective]继承了德国,有义务保护日耳曼民族及其领土。’据政府消息人士透露,[FROM.GetAdjective]驻南斯拉夫大使表示将把这一内容传达给本国。外交部声明后,[FROM.GetAdjective]国防部在新闻发布会上表示将加强南部边境地区的警戒,以应对可能的突发情况。"
+ TRMDIP.1.t: "[FROM.GetAdjective]外交部要求割让南斯拉夫领土"
+ TRMDIP.1.d: "刚刚通过外交部正式向[ROOT.GetAdjective]大使递交了一份要求割让领土的文件。外交部发言人表示,‘北斯洛文尼亚在历史和文化上属于日耳曼民族的生活圈,[FROM.GetAdjective]继承了德国,有义务保护日耳曼民族及其领土。’据政府消息人士透露,[FROM.GetAdjective]驻南斯拉夫大使表示将把这一内容传达给本国。外交部声明后,[FROM.GetAdjective]国防部在新闻发布会上表示将加强南部边境地区的警戒,以应对可能的突发情况。"
 
- TRM_diplomacy_event.2.t: "接受[FROM.GetAdjective]政府的要求"
- TRM_diplomacy_event.2.d: "[FROM.GetAdjective]政府接受了[ROOT.GetAdjective]外交部的领土割让要求。[FROM.GetAdjective]政府宣布将在两周内完成从[ROOT.GetAdjective]声称拥有主权的地区撤军,并表示尊重[ROOT.GetAdjective]的领土主权。对此声明,政府发言人表示,‘这是[ROOT.GetAdjective]外交部和[ROOT.GetLeader]的伟大胜利,政府将继续全力维护[ROOT.GetAdjective]的权利。’专家警告称,[FROM.GetAdjective]政府的领土割让决定可能会在巴尔干半岛内引发类似事件。"
+ TRMDIP.2.t: "接受[FROM.GetAdjective]政府的要求"
+ TRMDIP.2.d: "[FROM.GetAdjective]政府接受了[ROOT.GetAdjective]外交部的领土割让要求。[FROM.GetAdjective]政府宣布将在两周内完成从[ROOT.GetAdjective]声称拥有主权的地区撤军,并表示尊重[ROOT.GetAdjective]的领土主权。对此声明,政府发言人表示,‘这是[ROOT.GetAdjective]外交部和[ROOT.GetLeader]的伟大胜利,政府将继续全力维护[ROOT.GetAdjective]的权利。’专家警告称,[FROM.GetAdjective]政府的领土割让决定可能会在巴尔干半岛内引发类似事件。"
 
- TRM_diplomacy_event.3.t: "拒绝[FROM.GetAdjective]政府的要求"
- TRM_diplomacy_event.3.d: "[FROM.GetAdjective]政府拒绝了[ROOT.GetAdjective]对北斯洛文尼亚主权的要求。[FROM.GetLeader]表示,‘[FROM.GetAdjective]是巴尔干民族的家园,绝不可分割。’并宣称不会屈服于他国的不合理威胁。对此,政府表示,‘不能忽视[FROM.GetName]无视[ROOT.GetAdjective]正当要求并施行暴政的行为。’并暗示将采取强硬应对措施。国防部发言人表示,向[FROM.GetAdjective]边境重新部署军队是考虑到最近紧张局势的正常措施。"
+ TRMDIP.3.t: "拒绝[FROM.GetAdjective]政府的要求"
+ TRMDIP.3.d: "[FROM.GetAdjective]政府拒绝了[ROOT.GetAdjective]对北斯洛文尼亚主权的要求。[FROM.GetLeader]表示,‘[FROM.GetAdjective]是巴尔干民族的家园,绝不可分割。’并宣称不会屈服于他国的不合理威胁。对此,政府表示,‘不能忽视[FROM.GetName]无视[ROOT.GetAdjective]正当要求并施行暴政的行为。’并暗示将采取强硬应对措施。国防部发言人表示,向[FROM.GetAdjective]边境重新部署军队是考虑到最近紧张局势的正常措施。"
 
- TRM_diplomacy_event.4.t: "[FROM.GetAdjective]支持我们对[45.GetName]的主权提议"
- TRM_diplomacy_event.4.d: "[FROM.GetAdjective]方面提出,以签订互相独立保障和合作条约为代价,支持我们对[45.GetName]的主权主张。这对我们来说似乎是个不错的交易,但我们应该接受吗?"
- TRM_diplomacy_event.4.b: "我们为什么要相信这些外人?"
+ TRMDIP.4.t: "[FROM.GetAdjective]支持我们对[45.GetName]的主权提议"
+ TRMDIP.4.d: "[FROM.GetAdjective]方面提出,以签订互相独立保障和合作条约为代价,支持我们对[45.GetName]的主权主张。这对我们来说似乎是个不错的交易,但我们应该接受吗?"
+ TRMDIP.4.b: "我们为什么要相信这些外人?"
 
- TRM_diplomacy_event.5.t: "$TRM_Schidsspruch$"
- TRM_diplomacy_event.5.desc: "应我们的盟友匈牙利的要求,今天在伊甸园召开了重新划定罗马尼亚边界的会议。经过多次讨论,达成了三项结论。\n\n第一,将整个特兰西瓦尼亚交给匈牙利。这将彻底否定特里亚农条约,并将其交给合法的统治者米扎尔人。实际上,特兰西瓦尼亚的一些地区确实是米扎尔人占多数,因此这并非不可能。\n\n第二,将特兰西瓦尼亚的一部分交给匈牙利。尽管米扎尔人在特兰西瓦尼亚占多数,但他们并未均匀分布在整个地区,而是集中在一些山区,特别是北特兰西瓦尼亚地区。因此,仅将北特兰西瓦尼亚交给匈牙利可能会解决两国之间的问题。\n\n第三,我们不干涉特兰西瓦尼亚问题。特里亚农条约是在我们经历大战之前签订的,我们尚未完全理解两国之间的情感,也不知道未来这一选择会给我们带来什么不利。两国之间的问题应由两国自行解决。\n\n这三项提案今天通过办公室传达给了[TRM.GetLeader]。现在必须做出选择。"
+ TRMDIP.5.t: "$TRM_Schidsspruch$"
+ TRMDIP.5.desc: "应我们的盟友匈牙利的要求,今天在伊甸园召开了重新划定罗马尼亚边界的会议。经过多次讨论,达成了三项结论。\n\n第一,将整个特兰西瓦尼亚交给匈牙利。这将彻底否定特里亚农条约,并将其交给合法的统治者米扎尔人。实际上,特兰西瓦尼亚的一些地区确实是米扎尔人占多数,因此这并非不可能。\n\n第二,将特兰西瓦尼亚的一部分交给匈牙利。尽管米扎尔人在特兰西瓦尼亚占多数,但他们并未均匀分布在整个地区,而是集中在一些山区,特别是北特兰西瓦尼亚地区。因此,仅将北特兰西瓦尼亚交给匈牙利可能会解决两国之间的问题。\n\n第三,我们不干涉特兰西瓦尼亚问题。特里亚农条约是在我们经历大战之前签订的,我们尚未完全理解两国之间的情感,也不知道未来这一选择会给我们带来什么不利。两国之间的问题应由两国自行解决。\n\n这三项提案今天通过办公室传达给了[TRM.GetLeader]。现在必须做出选择。"
 
  TRM_second_vienna_award: "$TRM_Schidsspruch$"
 
- TRM_diplomacy_event.6.t: "向我们发出最后通牒的[FROM.GetAdjective]"
- TRM_diplomacy_event.6.d: "最近与匈牙利结盟的[FROM.GetAdjective]宣布废除特里亚农条约,并决定将北特兰西瓦尼亚归还给匈牙利。我们应该接受这个决定吗?"
- TRM_diplomacy_event.7.d: "最近与匈牙利结盟的[FROM.GetAdjective]宣布废除特里亚农条约,并荒谬地决定将整个特兰西瓦尼亚归还给匈牙利。我们应该接受这个决定吗?"
+ TRMDIP.6.t: "向我们发出最后通牒的[FROM.GetAdjective]"
+ TRMDIP.6.d: "最近与匈牙利结盟的[FROM.GetAdjective]宣布废除特里亚农条约,并决定将北特兰西瓦尼亚归还给匈牙利。我们应该接受这个决定吗?"
+ TRMDIP.7.d: "最近与匈牙利结盟的[FROM.GetAdjective]宣布废除特里亚农条约,并荒谬地决定将整个特兰西瓦尼亚归还给匈牙利。我们应该接受这个决定吗?"
 
- TRM_diplomacy_event.8.t: "拒绝我们要求的[FROM.GetAdjective]"
- TRM_diplomacy_event.8.d: "[FROM.GetName]政府拒绝了我们的要求,并未签署割让特兰西瓦尼亚的条约。我们将与[HUN.GetAdjective]一起摧毁[FROM.GetName]。"
+ TRMDIP.8.t: "拒绝我们要求的[FROM.GetAdjective]"
+ TRMDIP.8.d: "[FROM.GetName]政府拒绝了我们的要求,并未签署割让特兰西瓦尼亚的条约。我们将与[HUN.GetAdjective]一起摧毁[FROM.GetName]。"
 
- TRM_diplomacy_event.9.t: "$TRM_Schidsspruch$"
- TRM_diplomacy_event.9.d: "接受了[TRM.GetAdjective]最后通牒的[ROM.GetName]今天向我们政府发来了割让特兰西瓦尼亚的通知。这是一个历史性的时刻。"
+ TRMDIP.9.t: "$TRM_Schidsspruch$"
+ TRMDIP.9.d: "接受了[TRM.GetAdjective]最后通牒的[ROM.GetName]今天向我们政府发来了割让特兰西瓦尼亚的通知。这是一个历史性的时刻。"
 
- TRM_diplomacy_event.10.t: "[TRM.GetAdjective]的调解方案"
- TRM_diplomacy_event.10.d: "尽管拥有正当的主权,[TRM.GetAdjective]决定特兰西瓦尼亚应继续由罗马尼亚统治。他们表示希望解决巴尔干问题,但这似乎只在涉及自身利益时才适用。"
+ TRMDIP.10.t: "[TRM.GetAdjective]的调解方案"
+ TRMDIP.10.d: "尽管拥有正当的主权,[TRM.GetAdjective]决定特兰西瓦尼亚应继续由罗马尼亚统治。他们表示希望解决巴尔干问题,但这似乎只在涉及自身利益时才适用。"
 
  TRM_kivotos_core_states_categories: "占领地管理"
  TRM_kivotos_core_states_categories_desc: "\n\n£GFX_TRN_decisions_peace\n\n\n\n\n与苏联的战争结束后,我们统治了广阔的领土。虽然在占领地建立了名为‘神圣统治领’的傀儡国家,但由于仓促建立,他们的行政能力极其薄弱。"

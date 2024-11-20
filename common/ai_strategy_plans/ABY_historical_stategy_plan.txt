@@ -33,9 +33,6 @@ ABY_historical = {
 		ABY_focus_finish_tjswjs
 		ABY_focus_strong_resistance
 		ABY_focus_gather_around
-		ABY_focus_slovakia_problem
-		ABY_focus_believe
-		ABY_focus_annex_slovakia
 		ABY_focus_sha_war
 		ABY_focus_wjsekswl
 		ABY_focus_welcome_school
