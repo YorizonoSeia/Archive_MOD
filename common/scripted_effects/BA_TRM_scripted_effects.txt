@@ -1793,6 +1793,7 @@ TRM_Balkan_puppet = {
 			OR = {
 				is_core_of = ALB
 				state = 802
+				state = 970
 			}
 		}
 		transfer_state_to = ALB
@@ -1874,6 +1875,7 @@ TRM_Balkan_puppet = {
 		transfer_state = 803
 		transfer_state = 731
 		transfer_state = 184
+		transfer_state = 971
 		hidden_effect = { country_event = { id = TRN_after_war_event.16 days = 02 }  }
 		TRM = {
 			set_autonomy = {

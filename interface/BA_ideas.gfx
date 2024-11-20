@@ -816,4 +816,9 @@ spriteTypes = {
 		name = "GFX_idea_CAN_national_employmen_commission"
 		textureFile = "gfx/interface/ideas/CAN_national_employmen_commission.tga"
 	}
+
+	spriteType = {
+		name = "GFX_idea_KAP_zotdam"
+		textureFile = "gfx/interface/ideas/KAP/KAP_zotdam.tga"
+	}
 }

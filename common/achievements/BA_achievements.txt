@@ -2009,27 +2009,6 @@ Winter_We_are_the_Red_Winter = { # 겨울... 우리가 붉은겨울이다...
     }
 }
 
-I_just_wanted_to_protect_you = { # 그저 너희들을 지키려 했던거야 (TODO)
-    possible = {
-        has_any_custom_difficulty_setting = no
-        game_rules_allow_achievements = yes
-        difficulty > 1
-        custom_trigger_tooltip = {
-            tooltip = TRIGGER_IS_IRONMAN
-            is_ironman = yes
-        }
-        original_tag = TRM
-    }
-    happened = {
-        has_completed_focus = TRM_germany_union
-        any_country = {
-            NOT = { original_tag = TRM }
-            Kivotos_school_tag = yes            
-            has_opinion_modifier = our_liberators
-        }
-    }
-}
-
 How_dare_you_with_that_little_power = { # 겨우 그까짓 힘으로 감히
     possible = {
         has_any_custom_difficulty_setting = no

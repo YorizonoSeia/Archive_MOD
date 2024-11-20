@@ -665,7 +665,7 @@ on_actions = {
 					ROOT = {
 						set_variable = { TRM_anti_geh_emotion_var = FROM.FROM }
 						country_event = {
-							id = TRM_diplomacy_event.20
+							id = TRMDIP.20
 							hours = 0
 						}
 					}
@@ -961,7 +961,7 @@ on_actions = {
 						original_tag = GEM
 					}
 				}
-				TRM = {  country_event = TRM_diplomacy_event.17 }
+				TRM = {  country_event = TRMDIP.17 }
 			}
 		}
 	}
@@ -1034,7 +1034,7 @@ on_actions = {
 							}
 							log = "The disruptor is [THIS.GetName]"
 						}
-						country_event = TRM_diplomacy_event.16
+						country_event = TRMDIP.16
 					}
 				}
 			}
@@ -1106,6 +1106,25 @@ on_actions = {
 						}
 						country_event = usa_chroma_event.2
 					}
+				}
+			}
+		}
+	}
+	on_war = {
+		effect = {
+			if = { # 트리니티가 "TRM_war_preparations" 중점을 완료 했고 전쟁을 선포했을때
+				limit = {
+					TRM = { 
+						has_completed_focus = TRM_war_preparations 
+						NOT = { has_country_flag = TRM_had_strengthened_supply_lines_ns }
+					}
+				}
+				TRM = {
+					add_timed_idea = {
+						idea = GER_strengthened_supply_lines_ns
+						days = 730
+					}
+					set_country_flag = TRM_had_strengthened_supply_lines_ns
 				}
 			}
 		}

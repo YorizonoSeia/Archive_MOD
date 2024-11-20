@@ -53,6 +53,7 @@ set_popularities = {
 
 add_ideas = {
 	closed_economy
+	KAP_gongsadamang
 }
 
 add_opinion_modifier = { target = CHI modifier = hostile_status }

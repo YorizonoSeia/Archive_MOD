@@ -896,6 +896,15 @@ ideas = {
 				drift_defence_factor = 0.2
 			}
 		}
+		TRM_reorganize_secret_services = { 
+			picture = generic_spy_political
+			allowed = { always = no }
+			modifier = {
+				operative_slot = 1
+				agency_upgrade_time = -0.2
+				intel_network_gain = 0.20
+			}
+		}
 		TRM_Towards_National_Revolution = {
 			allowed = {
 				always = no
