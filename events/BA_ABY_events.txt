@@ -1376,8 +1376,58 @@ country_event = {
 	option = {
 		name = ABY_new_event.8.a
 		ai_chance = { factor = 100 }
-		country_event = {
-			id = ABY_new_event.9
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.15
+		}
+		add_political_power = 75
+		add_timed_idea = {
+			idea = ABY_idea_government_make
+			days = 250
+		}
+	}
+	option = {
+		name = ABY_new_event.8.b
+		ai_chance = { factor = 100 }
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.1
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
+		add_political_power = 75
+		add_stability = 0.05
+		add_timed_idea = {
+			idea = ABY_idea_government_make
+			days = 250
+		}
+	}
+	option = {
+		name = ABY_new_event.8.c
+		ai_chance = { factor = 100 }
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.15
+		}
+		add_political_power = 75
+		add_timed_idea = {
+			idea = ABY_idea_government_make
+			days = 250
+		}
+	}
+	option = {
+		name = ABY_new_event.8.e
+		ai_chance = { factor = 100 }
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.15
+		}
+		add_political_power = 75
+		add_timed_idea = {
+			idea = ABY_idea_government_make
+			days = 250
 		}
 	}
 }
@@ -1393,13 +1443,57 @@ country_event = {
 	option = {
 		name = ABY_new_event.9.a
 		ai_chance = { factor = 50 }
-		set_country_flag = ABY_flag_stalinism
+		custom_effect_tooltip = ABY_have_idea_tt
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = ABY_idea_army_1
+				add_idea = ABY_idea_army_1_2
+			}
+		}
+		add_to_variable = {
+            var = ABY_var_modifier_army_sub_unit_category_halo_attack_factor
+            value = 0.15
+        }
+		add_to_variable = {
+            var = ABY_var_modifier_army_sub_unit_category_halo_defense_factor
+            value = 0.15
+        }
+		add_to_variable = {
+            var = ABY_var_army_attack_factor
+            value = -0.05
+        }
+		add_to_variable = {
+            var = ABY_var_army_defense_factor
+            value = -0.05
+        }
+		add_power_balance_value = {
+			id = ABY_power_balance_3
+			value = 0.15
+		}
 	}
 
 	option = {
 		name = ABY_new_event.9.b
 		ai_chance = { factor = 50 }
-		set_country_flag = ABY_flag_new_communism
+		custom_effect_tooltip = ABY_have_idea_tt
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = ABY_idea_army_1
+				add_idea = ABY_idea_army_1_1
+			}
+		}
+		add_to_variable = {
+            var = ABY_var_army_attack_factor
+            value = 0.05
+        }
+		add_to_variable = {
+            var = ABY_var_army_defense_factor
+            value = 0.05
+        }
+		add_power_balance_value = {
+			id = ABY_power_balance_3
+			value = -0.05
+		}
 	}
 }
 
@@ -1414,7 +1508,23 @@ country_event = {
 	option = {
 		name = ABY_new_event.10.a
 		ai_chance = { factor = 100 }
-		add_stability = -0.05
+		add_political_power = 75
+		add_stability = 0.05
+		add_power_balance_value = {
+			id = ABY_power_balance_3
+			value = -0.1
+		}
+	}
+
+	option = {
+		name = ABY_new_event.10.b
+		ai_chance = { factor = 100 }
+		add_political_power = 75
+		add_war_support = 0.05
+		add_power_balance_value = {
+			id = ABY_power_balance_3
+			value = 0.1
+		}
 	}
 }
 
@@ -1429,43 +1539,42 @@ country_event = {
 	option = {
 		name = ABY_new_event.11.a
 		ai_chance = { factor = 100 }
-		152 = { transfer_state_to = AUS }
-		153 = { transfer_state_to = AUS }
-		848 = { transfer_state_to = AUS }
-		986 = { transfer_state_to = AUS }
-		972 = { transfer_state_to = AUS }
-		69 = { transfer_state_to = AUS }
-		4 = { transfer_state_to = AUS }
-		AUS = {
-			declare_war_on = {
-				target = ABY
-				type = annex_everything
-			}
-			set_politics = { ruling_party = fascism elections_allowed = no }
+		add_timed_idea = {
+			idea = ABY_idea_money_make
+			days = 600
 		}
-		complete_national_focus = ABY_focus_call_emergency
+		add_political_power = -50
+		add_stability = -0.05
+		add_power_balance_value = {
+			id = ABY_power_balance_3
+			value = 0.1
+		}
 	}
 
 	option = {
 		name = ABY_new_event.11.b
-		ai_chance = { factor = 0 }
-		152 = { transfer_state_to = AUS }
-		153 = { transfer_state_to = AUS }
-		848 = { transfer_state_to = AUS }
-		986 = { transfer_state_to = AUS }
-		972 = { transfer_state_to = AUS }
-		69 = { transfer_state_to = AUS }
-		4 = { transfer_state_to = AUS }
-		AUS = {
-			declare_war_on = {
-				target = ABY
-				type = annex_everything
-			}
-			set_politics = { ruling_party = fascism elections_allowed = no }
+		ai_chance = { factor = 100 }
+		add_timed_idea = {
+			idea = ABY_idea_money_make
+			days = 600
 		}
-		AUS = {
-			change_tag_from = ROOT
+		add_political_power = -50
+		add_stability = -0.05
+		add_power_balance_value = {
+			id = ABY_power_balance_3
+			value = -0.1
 		}
+	}
+
+	option = {
+		name = ABY_new_event.11.c
+		ai_chance = { factor = 100 }
+		add_timed_idea = {
+			idea = ABY_idea_money_make
+			days = 600
+		}
+		add_political_power = -100
+		add_stability = 0.1
 	}
 }
 
@@ -1480,6 +1589,22 @@ country_event = {
 	option = {
 		name = ABY_new_event.12.a
 		ai_chance = { factor = 100 }
+		add_political_power = 100
+		add_stability = -0.1
+		add_power_balance_value = {
+			id = ABY_power_balance_3
+			value = 0.1
+		}
+	}
+	option = {
+		name = ABY_new_event.12.b
+		ai_chance = { factor = 100 }
+		add_political_power = -100
+		add_stability = 0.1
+		add_power_balance_value = {
+			id = ABY_power_balance_3
+			value = -0.1
+		}
 	}
 }
 
@@ -1494,6 +1619,11 @@ country_event = {
 	option = {
 		name = ABY_new_event.13.a
 		ai_chance = { factor = 100 }
+		add_popularity = {
+			ideology = fascism
+			popularity = -1
+		}
+		add_stability = 0.15
 	}
 }
 
@@ -3703,12 +3833,10 @@ country_event = {
 	option = {
 		name = ABY_new_event.112.a
 		ai_chance = { factor = 100 }
-		complete_national_focus = ABY_focus_rhdghkwjstjs
 	}
 	option = {
 		name = ABY_new_event.112.b
 		ai_chance = { factor = 100 }
-		complete_national_focus = ABY_focus_rnrrkdusaod
 	}
 }
 
@@ -5132,7 +5260,6 @@ country_event = {
 		trigger = {
 			has_country_flag = ABY_flag_duswjd_victory
 		}
-		complete_national_focus = ABY_focus_rhdghkwjstjs
 	}
 	option = {
 		name = ABY_new_event.155.b
@@ -5140,7 +5267,6 @@ country_event = {
 		trigger = {
 			NOT = {has_country_flag = ABY_flag_duswjd_victory}
 		}
-		complete_national_focus = ABY_focus_rnrrkdusaod
 		set_country_flag = ABY_flag_duswjd_victory_2
 	}
 }

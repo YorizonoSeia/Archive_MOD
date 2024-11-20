@@ -1749,6 +1749,8 @@ ABY_army_dynamic_modifier = {
 	army_armor_speed_factor = ABY_var_army_armor_speed_factor
 	ARMY_ARMOR_ATTACK_FACTOR = ABY_var_ARMY_ARMOR_ATTACK_FACTOR
 	ARMY_ARMOR_DEFENCE_FACTOR = ABY_var_ARMY_ARMOR_DEFENCE_FACTOR
+	modifier_army_sub_unit_category_halo_attack_factor = ABY_var_modifier_army_sub_unit_category_halo_attack_factor
+	modifier_army_sub_unit_category_halo_defence_factor = ABY_var_modifier_army_sub_unit_category_halo_defence_factor
 
 	#navy
 	navy_org_factor = ABY_var_NAVY_ORG_FACTOR
@@ -1800,6 +1802,8 @@ ABY_army_dynamic_modifier_manual = {
 	army_armor_speed_factor = ABY_var_army_armor_speed_factor
 	ARMY_ARMOR_ATTACK_FACTOR = ABY_var_ARMY_ARMOR_ATTACK_FACTOR
 	ARMY_ARMOR_DEFENCE_FACTOR = ABY_var_ARMY_ARMOR_DEFENCE_FACTOR
+	modifier_army_sub_unit_category_halo_attack_factor = ABY_var_modifier_army_sub_unit_category_halo_attack_factor
+	modifier_army_sub_unit_category_halo_defence_factor = ABY_var_modifier_army_sub_unit_category_halo_defence_factor
 
 	#navy
 	navy_org_factor = ABY_var_NAVY_ORG_FACTOR

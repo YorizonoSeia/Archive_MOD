@@ -1359,36 +1359,6 @@ ABY_high_school_rebuild = {
         }
     }
 
-    ABY_descision_promote_shiroko = { # ID = 3
-        priority = 1
-
-		cost = 50
-
-        allowed = {
-            tag = ABY
-        }
-
-        visible = {
-			has_country_flag = ABY_flag_abydos_highschool
-            tag = ABY
-			has_completed_focus = ABY_focus_abydos_schoolcountry
-        }
-
-        available = {
-            always = yes
-			NOT = {
-				has_idea = ABY_idea_no_army
-			}
-        }
-
-        remove_effect = {
-			ABYDO_Shiroko = {
-				promote_leader = yes
-			}
-			set_country_flag = ABY_flag_shiroko_marshal
-        }
-    }
-
 	ABY_state_recruit_students = {
 		icon = GFX_decision_eng_trade_unions_support
 
@@ -12848,8 +12818,6 @@ ABY_descision_ennead = {
             }
 			
 			hidden_trigger = {
-				NOT = {has_completed_focus = ABY_focus_rhdghkwjstjs}
-				NOT = {has_completed_focus = ABY_focus_rnrrkdusaod}
 			}
 
 		}      
@@ -12895,8 +12863,6 @@ ABY_descision_ennead = {
 			
 		
 			hidden_trigger = {
-				NOT = {has_completed_focus = ABY_focus_rhdghkwjstjs}
-				NOT = {has_completed_focus = ABY_focus_rnrrkdusaod}
 			}
 
 		}     
@@ -12942,8 +12908,6 @@ ABY_descision_ennead = {
 			
 		
 			hidden_trigger = {
-				NOT = {has_completed_focus = ABY_focus_rhdghkwjstjs}
-				NOT = {has_completed_focus = ABY_focus_rnrrkdusaod}
 			}
 
 		}    
@@ -12989,8 +12953,6 @@ ABY_descision_ennead = {
 			
 		
 			hidden_trigger = {
-				NOT = {has_completed_focus = ABY_focus_rhdghkwjstjs}
-				NOT = {has_completed_focus = ABY_focus_rnrrkdusaod}
 			}
 
 		}               
@@ -13032,8 +12994,6 @@ ABY_descision_ennead = {
 			
 		
 			hidden_trigger = {
-				NOT = {has_completed_focus = ABY_focus_rhdghkwjstjs}
-				NOT = {has_completed_focus = ABY_focus_rnrrkdusaod}
 			}
 
 		}    
@@ -13076,8 +13036,6 @@ ABY_descision_ennead = {
 			
 		
 			hidden_trigger = {
-				NOT = {has_completed_focus = ABY_focus_rhdghkwjstjs}
-				NOT = {has_completed_focus = ABY_focus_rnrrkdusaod}
 			}
 
 		}     
@@ -13124,8 +13082,6 @@ ABY_descision_ennead = {
 			
 		
 			hidden_trigger = {
-				NOT = {has_completed_focus = ABY_focus_rhdghkwjstjs}
-				NOT = {has_completed_focus = ABY_focus_rnrrkdusaod}
 			}
 			
 			check_variable = {
@@ -13160,8 +13116,6 @@ ABY_descision_ennead = {
 			
 		
 			hidden_trigger = {
-				NOT = {has_completed_focus = ABY_focus_rhdghkwjstjs}
-				NOT = {has_completed_focus = ABY_focus_rnrrkdusaod}
 			}
 			
 			check_variable = {
@@ -13205,8 +13159,6 @@ ABY_descision_ennead = {
 			
 		
 			hidden_trigger = {
-				NOT = {has_completed_focus = ABY_focus_rhdghkwjstjs}
-				NOT = {has_completed_focus = ABY_focus_rnrrkdusaod}
 			}
 
 		}                
@@ -13243,8 +13195,6 @@ ABY_descision_ennead = {
 			
 		
 			hidden_trigger = {
-				NOT = {has_completed_focus = ABY_focus_rhdghkwjstjs}
-				NOT = {has_completed_focus = ABY_focus_rnrrkdusaod}
 			}
 
 		}                
@@ -13292,8 +13242,6 @@ ABY_descision_ennead = {
 			
 		
 			hidden_trigger = {
-				NOT = {has_completed_focus = ABY_focus_rhdghkwjstjs}
-				NOT = {has_completed_focus = ABY_focus_rnrrkdusaod}
 			}
 
 		}                
@@ -13341,8 +13289,6 @@ ABY_descision_ennead = {
 			
 		
 			hidden_trigger = {
-				NOT = {has_completed_focus = ABY_focus_rhdghkwjstjs}
-				NOT = {has_completed_focus = ABY_focus_rnrrkdusaod}
 			}
 
 		}                
@@ -13391,8 +13337,6 @@ ABY_descision_ennead = {
 			
 		
 			hidden_trigger = {
-				NOT = {has_completed_focus = ABY_focus_rhdghkwjstjs}
-				NOT = {has_completed_focus = ABY_focus_rnrrkdusaod}
 			}
 			
 		}                
@@ -13440,8 +13384,6 @@ ABY_descision_ennead = {
 			
 		
 			hidden_trigger = {
-				NOT = {has_completed_focus = ABY_focus_rhdghkwjstjs}
-				NOT = {has_completed_focus = ABY_focus_rnrrkdusaod}
 			}
 
 		}    
@@ -13483,8 +13425,6 @@ ABY_descision_ennead = {
 			
 		
 			hidden_trigger = {
-				NOT = {has_completed_focus = ABY_focus_rhdghkwjstjs}
-				NOT = {has_completed_focus = ABY_focus_rnrrkdusaod}
 			}
 
 		}    
@@ -13533,8 +13473,6 @@ ABY_descision_ennead = {
 			
 		
 			hidden_trigger = {
-				NOT = {has_completed_focus = ABY_focus_rhdghkwjstjs}
-				NOT = {has_completed_focus = ABY_focus_rnrrkdusaod}
 			}
 
 
@@ -16962,6 +16900,428 @@ ABY_descision_category_provisional_government = {
 				}
 			}
 			set_country_flag = ABY_flag_annex_slovakia
+		}
+	}
+}
+ABY_descision_category_new_country = {
+
+    ABY_debug_descision_complete = { # ID = 3
+        priority = 1
+
+        allowed = {
+            tag = ABY
+        }
+
+        visible = {
+			has_country_flag = ABY_flag_new_country
+			is_debug = yes
+        }
+
+        available = {
+			is_debug = yes
+        }
+
+        remove_effect = {
+			add_days_mission_timeout = {
+				mission = ABY_descision_suspecious_move
+				days = -358
+			}
+        } 
+    }
+
+	ABY_descision_suspecious_move = {
+        priority = 0   
+
+        allowed = {
+            tag = ABY
+        }
+
+		activation = {
+			has_country_flag = ABY_flag_new_country
+		}
+
+		available = {
+			always = no
+    	}
+
+		fire_only_once = yes
+ 
+		days_mission_timeout = 360
+
+		timeout_effect = {	
+			clr_country_flag = ABY_flag_new_country
+			if = {
+				limit = {
+					democratic < 0.35
+					fascism < 0.35
+					neutrality < 0.35
+				}#아비도스 입헌공화국(파시내전) 
+				add_stability = -0.25
+				set_popularities = {
+					democratic = 50
+					neutrality = 50
+					fascism = 0
+					communism = 0
+				}
+				complete_national_focus = ABY_focus_abydos_federal_republic
+				hidden_effect = {
+    		        load_focus_tree = {
+    		            tree = ABY_focus_tree
+    		            keep_completed = yes
+    		        }
+    		        mark_focus_tree_layout_dirty = yes
+    		    }
+				start_civil_war = {
+					ideology = fascism 
+					size = 0.5
+					army_ratio = 0.25
+					keep_all_characters = yes
+					set_cosmetic_tag = ABY_revolution
+				}
+			}	
+			if = {
+				limit = {
+					democratic > 0.35
+					fascism < 0.35
+					neutrality < 0.35
+				}#아비도스 연방공화국
+				complete_national_focus = ABY_focus_abydos_federal_republic
+				hidden_effect = {
+    		        load_focus_tree = {
+    		            tree = ABY_focus_tree
+    		            keep_completed = yes
+    		        }
+    		        mark_focus_tree_layout_dirty = yes
+    		    }
+				country_event = {
+					id = ABY_new_event.13
+				}
+			}	
+			if = {
+				limit = {
+					democratic < 0.35
+					fascism > 0.35
+					neutrality < 0.35
+				}#색채의 군단
+				complete_national_focus = ABY_focus_12_12
+				hidden_effect = {
+    		        load_focus_tree = {
+    		            tree = ABY_focus_tree
+    		            keep_completed = yes
+    		        }
+    		        mark_focus_tree_layout_dirty = yes
+    		    }
+			}	
+			if = {
+				limit = {
+					democratic < 0.35
+					fascism < 0.35
+					neutrality > 0.35
+				}#신성 아비도스 제국
+				complete_national_focus = ABY_focus_holy_empire
+				hidden_effect = {
+    		        load_focus_tree = {
+    		            tree = ABY_focus_tree
+    		            keep_completed = yes
+    		        }
+    		        mark_focus_tree_layout_dirty = yes
+    		    }
+				country_event = {
+					id = ABY_new_event.13
+				}
+			}	
+			if = {
+				limit = {
+					democratic > 0.35
+					fascism > 0.35
+					neutrality < 0.35
+				}#아비도스 고등학교(군사정부)
+				#complete_national_focus = 
+				hidden_effect = {
+    		        load_focus_tree = {
+    		            tree = ABY_focus_tree
+    		            keep_completed = yes
+    		        }
+    		        mark_focus_tree_layout_dirty = yes
+    		    }
+			}	
+			if = { 
+				limit = {
+					democratic > 0.35
+					fascism < 0.35
+					neutrality > 0.35
+				}#아비도스 입헌공화국(연방공화국과 거의 동일)
+				complete_national_focus = ABY_focus_abydos_federal_republic
+				hidden_effect = {
+    		        load_focus_tree = {
+    		            tree = ABY_focus_tree
+    		            keep_completed = yes
+    		        }
+    		        mark_focus_tree_layout_dirty = yes
+    		    }
+				country_event = {
+					id = ABY_new_event.13
+				}
+			}	
+			if = {
+				limit = {
+					democratic < 0.35
+					fascism > 0.35
+					neutrality > 0.35
+				}#아비도스 엔네아드, 아비도스 고등학교
+				country_event = {
+					id = ABY_new_event.136
+					hours = 8
+				}
+			}			
+		}
+    }
+
+	ABY_descision_inner_circle = {
+        priority = 0   
+
+        allowed = {
+            tag = ABY
+        }
+
+		activation = {
+			has_country_flag = ABY_flag_new_country
+		}
+
+		available = {
+			always = no
+    	}
+
+		fire_only_once = yes
+ 
+		days_mission_timeout = 50
+
+		complete_effect = {	
+			set_country_flag = ABY_flag_country_1	
+			country_event = {
+				id = ABY_new_event.8
+			}		
+		}
+    }
+
+	ABY_descision_army_way = {
+        priority = 0   
+
+        allowed = {
+            tag = ABY
+        }
+
+		activation = {
+			has_country_flag = ABY_flag_new_country
+			has_country_flag = ABY_flag_country_1
+		}
+
+		available = {
+			always = no
+    	}
+
+		fire_only_once = yes
+ 
+		days_mission_timeout = 50
+
+		complete_effect = {	
+			set_country_flag = ABY_flag_country_2	
+			country_event = {
+				id = ABY_new_event.9
+			}		
+		}
+    }
+
+	ABY_descision_wlqkdwkcl = {
+        priority = 0   
+
+        allowed = {
+            tag = ABY
+        }
+
+		activation = {
+			has_country_flag = ABY_flag_new_country
+			has_country_flag = ABY_flag_country_2
+		}
+
+		available = {
+			always = no
+    	}
+
+		fire_only_once = yes
+ 
+		days_mission_timeout = 50
+
+		complete_effect = {	
+			set_country_flag = ABY_flag_country_3	
+			country_event = {
+				id = ABY_new_event.10
+			}		
+		}
+    }
+
+	ABY_descision_united_money = {
+        priority = 0   
+
+        allowed = {
+            tag = ABY
+        }
+
+		activation = {
+			has_country_flag = ABY_flag_new_country
+			has_country_flag = ABY_flag_country_3
+		}
+
+		available = {
+			always = no
+    	}
+
+		fire_only_once = yes
+ 
+		days_mission_timeout = 50
+
+		complete_effect = {	
+			set_country_flag = ABY_flag_country_4	
+			country_event = {
+				id = ABY_new_event.11
+			}		
+		}
+    }
+
+	ABY_descision_low_job = {
+        priority = 0   
+
+        allowed = {
+            tag = ABY
+        }
+
+		activation = {
+			has_country_flag = ABY_flag_new_country
+			has_country_flag = ABY_flag_country_4
+		}
+
+		available = {
+			always = no
+    	}
+
+		fire_only_once = yes
+ 
+		days_mission_timeout = 50
+
+		complete_effect = {	
+			set_country_flag = ABY_flag_country_5	
+			country_event = {
+				id = ABY_new_event.12
+			}		
+		}
+    }
+
+    ABY_descision_promote_shiroko = { # ID = 3
+        priority = 1
+
+		cost = 50
+
+		fire_only_once = yes
+
+        allowed = {
+            tag = ABY
+        }
+
+        visible = {
+			has_country_flag = ABY_flag_new_country
+        }
+
+        available = {
+        }
+
+        remove_effect = {
+			ABYDO_Shiroko = {
+				promote_leader = yes
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.25
+			}
+			add_power_balance_value = {
+				id = ABY_power_balance_3
+				value = -0.25
+			}
+			custom_effect_tooltip = ABY_suspecious_tt
+			add_days_mission_timeout = {
+				mission = ABY_descision_suspecious_move
+				days = -60
+			}
+        }
+    }
+}
+ABY_descision_category_debug = {
+	ABY_descision_debug_ennead = {
+		priority = 1
+		
+		visible = {       
+			tag = ABY
+			is_debug = yes
+		}
+		                 
+        allowed = {
+            tag = ABY
+        }                     
+
+		complete_effect = {
+			complete_national_focus = ABY_focus_get_power_of_student_council
+			hidden_effect = {
+                load_focus_tree = {
+                    tree = ABY_focus_tree
+                    keep_completed = yes
+                }
+                mark_focus_tree_layout_dirty = yes
+            } 
+		}
+	}
+	ABY_descision_debug_republic = {
+		priority = 1
+		
+		visible = {       
+			tag = ABY
+			is_debug = yes
+		}
+		                 
+        allowed = {
+            tag = ABY
+        }                     
+
+		complete_effect = {
+			complete_national_focus = ABY_focus_abydos_federal_republic
+			hidden_effect = {
+                load_focus_tree = {
+                    tree = ABY_focus_tree
+                    keep_completed = yes
+                }
+                mark_focus_tree_layout_dirty = yes
+            } 
+		}
+	}
+	ABY_descision_debug_kingdom = {  
+		priority = 1
+		
+		visible = {       
+			tag = ABY
+			is_debug = yes
+		}
+		                 
+        allowed = {
+            tag = ABY
+        }                     
+
+		complete_effect = {
+			complete_national_focus = ABY_focus_holy_empire
+			hidden_effect = {
+                load_focus_tree = {
+                    tree = ABY_focus_tree
+                    keep_completed = yes
+                }
+                mark_focus_tree_layout_dirty = yes
+            } 
 		}
 	}
 }

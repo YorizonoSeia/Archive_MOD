@@ -42,7 +42,6 @@ ABY_historical = {
 		ABY_focus_make_civil_army
 		ABY_focus_prepare_war
 		ABY_focus_operation_falling_flower
-		ABY_focus_rhdghkwjstjs
 		ABY_focus_abydos_federal_republic
 		ABY_focus_rebuild_army
 		ABY_focus_doctrine_research

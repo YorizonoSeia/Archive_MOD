@@ -2241,7 +2241,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = ABY_focus_descision    #중점명
+		id = ABY_focus_descision    #중점명  
 		icon = GFX_goal_generic_more_territorial_claims
  		cost = 0.00          #중점 일수(주)
 		search_filters = {
@@ -5502,12 +5502,12 @@ focus_tree = {
 			#중점 선행조건
 		}
 
-		#allow_branch = {
-		#	OR = {
-		#		has_completed_focus = ABY_focus_abydos_debug
-		#		has_completed_focus = ABY_focus_abydos_schoolcountry
-		#	}
-		#}
+		allow_branch = {
+			OR = {
+				has_completed_focus = ABY_focus_abydos_debug
+				has_completed_focus = ABY_focus_abydos_schoolcountry
+			}
+		}
 
 		completion_reward = {
 			retire_character = ABY_german
@@ -5611,6 +5611,7 @@ focus_tree = {
     	        right_side = ABY_rmsdhkdrns_side
 				set_default = yes # whether or not to reset the power balance to the initial value, default = no
 			}
+			set_country_flag = ABY_flag_new_country
 		}
 	}
 	focus = {
@@ -5912,128 +5913,6 @@ focus_tree = {
 				add_compliance = 15
 			}
 			add_political_power = 75
-			#중점 완료시 얻는 보상
-		}
-	}
-	focus = {
-		id = ABY_focus_rhdghkwjstjs    #중점명
-		icon = GFX_focus_generic_the_giant_wakes
- 		cost = 5.00          #중점 일수(주)
-		search_filters = {
-			#중점의 타입
-		}
-		prerequisite = {
-			focus = ABY_focus_abydos_schoolcountry   #이전 중점
-		}
-		mutually_exclusive = {
-			focus = ABY_focus_rnrrkdusaod    #반대되는 중점
-		}
-		x = -10      #좌표
-		y = 1
-		relative_position_id = ABY_focus_abydos_schoolcountry
-		bypass = {
-			#중점 통과 조건
-		}
-		available = {
-			democratic > 0.35
-			NOT = {
-				has_completed_focus = ABY_focus_12_12
-			}
-			ABY = {
-				is_puppet = no
-			}
-			#중점 선행조건
-		}
-
-		completion_reward = {
-			add_popularity = {
-				ideology = democratic
-				popularity = 0.25
-			}
-			if = {
-				limit = {
-					power_balance_value = {
-						id = ABY_power_balance_3
-						value < -0.6
-					}
-					GEI = {
-						has_cosmetic_tag = GEI_The_Colour
-					}
-				}
-				country_event = {
-					id = ABY_new_event.190
-					days = 1
-				}
-			}
-			remove_power_balance = {
-				id = ABY_power_balance_3
-			}
-			remove_ideas = {
-				ABY_idea_army_inside
-				ABY_idea_politic_inside
-			}
-			#중점 완료시 얻는 보상
-		}
-	}
-	focus = {
-		id = ABY_focus_rnrrkdusaod    #중점명
-		icon = GFX_focus_generic_home_defense
- 		cost = 5.00          #중점 일수(주)
-		search_filters = {
-			#중점의 타입
-		}
-		prerequisite = {
-			focus = ABY_focus_abydos_schoolcountry   #이전 중점
-		}
-		mutually_exclusive = {
-			focus = ABY_focus_rhdghkwjstjs   #반대되는 중점
-		}
-		x = 10      #좌표
-		y = 1
-		relative_position_id = ABY_focus_abydos_schoolcountry
-		bypass = {
-			#중점 통과 조건
-		}
-		available = {
-			NOT = {has_country_flag = ABY_flag_wpehvk_tkrjs}
-			OR = {
-				neutrality > 0.35
-				fascism > 0.35
-			}
-			ABY = {
-				is_puppet = no
-			}
-			#중점 선행조건
-		}
-
-		completion_reward = {
-			add_popularity = {
-				ideology = neutrality
-				popularity = 0.25
-			}
-			set_politics = {
-				ruling_party = neutrality
-			}
-			if = {
-				limit = {
-					power_balance_value = {
-						id = ABY_power_balance_3
-						value < -0.6
-					}
-				}
-				country_event = {
-					id = ABY_new_event.117
-					days = 1
-				}
-			}
-			custom_effect_tooltip = ABY_wpehvk_tt
-			remove_power_balance = {
-				id = ABY_power_balance_3 
-			}
-			remove_ideas = {
-				ABY_idea_army_inside
-				ABY_idea_politic_inside
-			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -7474,15 +7353,15 @@ focus_tree = {
 			has_war = no
 			custom_trigger_tooltip = {
 				tooltip = ABY_control_tt
-				55 = {is_controlled_by_ROOT_or_ally = yes}
-				7 = {is_controlled_by_ROOT_or_ally = yes}
-				36 = {is_controlled_by_ROOT_or_ally = yes}
-				141= {is_controlled_by_ROOT_or_ally = yes}
-				16 = {is_controlled_by_ROOT_or_ally = yes}
-				14 = {is_controlled_by_ROOT_or_ally = yes}
-				4 = {is_controlled_by_ROOT_or_ally = yes}
-				69= {is_controlled_by_ROOT_or_ally = yes}
-				9 = {is_controlled_by_ROOT_or_ally = yes}
+				55 = {is_controlled_by_ROOT_or_subject = yes}
+				7 = {is_controlled_by_ROOT_or_subject = yes}
+				36 = {is_controlled_by_ROOT_or_subject = yes}
+				141= {is_controlled_by_ROOT_or_subject = yes}
+				16 = {is_controlled_by_ROOT_or_subject = yes}
+				14 = {is_controlled_by_ROOT_or_subject = yes}
+				4 = {is_controlled_by_ROOT_or_subject = yes}
+				69= {is_controlled_by_ROOT_or_subject = yes}
+				9 = {is_controlled_by_ROOT_or_subject = yes}
 			}
 			#중점 선행조건
 		}
@@ -7572,14 +7451,13 @@ focus_tree = {
 			#중점의 타입
 		}
 		prerequisite = {
-			focus = ABY_focus_rnrrkdusaod  #이전 중점
+			focus = ABY_focus_abydos_schoolcountry  #이전 중점
 		}
 		mutually_exclusive = {
-			focus = ABY_focus_elect_king
 		}
-		x = -9      #좌표
+		x = 0      #좌표
 		y = 1
-		relative_position_id = ABY_focus_rnrrkdusaod
+		relative_position_id = ABY_focus_abydos_schoolcountry
 		bypass = {
 			#중점 통과 조건
 		}
@@ -7587,6 +7465,12 @@ focus_tree = {
 			has_country_flag = ABY_flag_wpehvk_tkrjs
 			has_war = no
 			#중점 선행조건
+		}
+
+		allow_branch = {
+			OR = {
+				has_completed_focus = ABY_focus_get_power_of_student_council
+			}
 		}
 
 		select_effect = {
@@ -8811,15 +8695,15 @@ focus_tree = {
 			has_war = no
 			custom_trigger_tooltip = {
 				tooltip = ABY_control_tt
-				55 = {is_controlled_by_ROOT_or_ally = yes}
-				7 = {is_controlled_by_ROOT_or_ally = yes}
-				36 = {is_controlled_by_ROOT_or_ally = yes}
-				141= {is_controlled_by_ROOT_or_ally = yes}
-				16 = {is_controlled_by_ROOT_or_ally = yes}
-				14 = {is_controlled_by_ROOT_or_ally = yes}
-				4 = {is_controlled_by_ROOT_or_ally = yes}
-				69= {is_controlled_by_ROOT_or_ally = yes}
-				9 = {is_controlled_by_ROOT_or_ally = yes}
+				55 = {is_controlled_by_ROOT_or_subject = yes}
+				7 = {is_controlled_by_ROOT_or_subject = yes}
+				36 = {is_controlled_by_ROOT_or_subject = yes}
+				141= {is_controlled_by_ROOT_or_subject = yes}
+				16 = {is_controlled_by_ROOT_or_subject = yes}
+				14 = {is_controlled_by_ROOT_or_subject = yes}
+				4 = {is_controlled_by_ROOT_or_subject = yes}
+				69= {is_controlled_by_ROOT_or_subject = yes}
+				9 = {is_controlled_by_ROOT_or_subject = yes}
 			}
 			#중점 선행조건
 		}
@@ -8905,19 +8789,25 @@ focus_tree = {
 			#중점의 타입 
 		}
 		prerequisite = {
-			focus = ABY_focus_rhdghkwjstjs   #이전 중점
+			focus = ABY_focus_abydos_schoolcountry   #이전 중점
 		}
 		mutually_exclusive = {
 			    #반대되는 중점
 		}
 		x = 0      #좌표
 		y = 1
-		relative_position_id = ABY_focus_rhdghkwjstjs
+		relative_position_id = ABY_focus_abydos_schoolcountry
 		bypass = {
 			#중점 통과 조건
 		}
 		available = {
 			#중점 선행조건
+		}
+
+		allow_branch = {
+			OR = {
+				has_completed_focus = ABY_focus_abydos_federal_republic
+			}
 		}
 
 		completion_reward = {
@@ -8933,6 +8823,14 @@ focus_tree = {
 					ideology = Cohabitism
 					expire = "1965.1.1.1"
 					traits = { ABY_trait_school_leader }
+				}
+			}
+			if = {
+				limit = {
+					neutrality > 0.35
+				}
+				country_event = {
+					id = ABY_new_event.122
 				}
 			}
 			#중점 완료시 얻는 보상
@@ -9349,7 +9247,7 @@ focus_tree = {
 			NOT = {
 				any_state = {
 					BA_is_GER_core = yes
-					NOT = { is_controlled_by_ROOT_or_ally = yes }
+					NOT = { is_controlled_by_ROOT_or_subject = yes }
 				}
 			}
 			ABY = {
@@ -9955,7 +9853,7 @@ focus_tree = {
 		available = {
 			SOV = {
 				all_core_state = {
-					is_controlled_by_ROOT_or_ally = yes
+					is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 			ABY = {
@@ -10045,45 +9943,6 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = ABY_focus_elect_king    #중점명
-		icon = GFX_ABY_focus_2
- 		cost = 5.00          #중점 일수(주)
-		search_filters = {
-			#중점의 타입
-		}
-		prerequisite = {
-			focus = ABY_focus_rhdghkwjstjs   #이전 중점
-		}
-		mutually_exclusive = {
-			focus = ABY_focus_get_power_of_student_council
-		}
-		x = 9      #좌표
-		y = 1
-		relative_position_id = ABY_focus_rhdghkwjstjs
-		bypass = {
-			#중점 통과 조건
-		}
-		available = {
-			has_government = democratic
-			#중점 선행조건
-		}
-
-		completion_reward = {
-			country_event = {
-				id = ABY_new_event.122
-			}
-			add_popularity = {
-				ideology = fascism
-				popularity = -0.25
-			}
-			add_popularity = {
-				ideology = neutrality
-				popularity = -0.25
-			}
-			#중점 완료시 얻는 보상
-		}
-	}
-	focus = {
 		id = ABY_focus_holy_empire    #중점명
 		icon = GFX_ABY_focus_2
  		cost = 5.00          #중점 일수(주)
@@ -10091,17 +9950,22 @@ focus_tree = {
 			#중점의 타입
 		}
 		prerequisite = {
-			focus = ABY_focus_rnrrkdusaod   #이전 중점
+			focus = ABY_focus_abydos_schoolcountry   #이전 중점
 		}
 		x = 0      #좌표
 		y = 1
-		relative_position_id = ABY_focus_rnrrkdusaod
+		relative_position_id = ABY_focus_abydos_schoolcountry
 		bypass = {
 			#중점 통과 조건
 		}
 		available = {
-			NOT = {has_country_flag = ABY_flag_wpehvk_tkrjs}
 			#중점 선행조건
+		}
+
+		allow_branch = {
+			OR = {
+				has_completed_focus = ABY_focus_holy_empire
+			}
 		}
 
 		completion_reward = {
@@ -10364,27 +10228,27 @@ focus_tree = {
 		available = {
 			HUN = {
 				all_core_state = {
-					is_controlled_by_ROOT_or_ally = yes
+					is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 			SLO = {
 				all_core_state = {
-					is_controlled_by_ROOT_or_ally = yes
+					is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 			YUG = {
 				all_core_state = {
-					is_controlled_by_ROOT_or_ally = yes
+					is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 			ITA = {
 				all_core_state = {
-					is_controlled_by_ROOT_or_ally = yes
+					is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 			SWI = {
 				all_core_state = {
-					is_controlled_by_ROOT_or_ally = yes
+					is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 			#중점 선행조건
@@ -11153,53 +11017,6 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = {
 				ABY_idea_liberation_war
-			}
-			#중점 완료시 얻는 보상
-		}
-	}
-	focus = {
-		id = ABY_focus_history_education   #중점명
-		icon = GFX_focus_generic_military_academy
- 		cost = 5.00          #중점 일수(주)
-		search_filters = {
-			#중점의 타입
-		}
-		prerequisite = {
-			focus = ABY_focus_holy_empire
-			focus = ABY_focus_get_power_of_student_council   #이전 중점
-		}
-		mutually_exclusive = {
-			   #반대되는 중점
-		}
-		x = -3      #좌표
-		y = 1
-		relative_position_id = ABY_focus_holy_empire
-		bypass = {
-			#중점 통과 조건
-		}
-		available = {
-			#중점 선행조건
-		}
-
-		completion_reward = {
-			add_war_support = 0.15
-			if = {
-				limit = {
-					has_government = fascism
-				}
-				add_popularity = {
-					ideology = fascism
-					popularity = 0.25
-				}
-			}
-			if = {
-				limit = {
-					has_government = neutrality
-				}
-				add_popularity = {
-					ideology = neutrality
-					popularity = 0.25
-				}
 			}
 			#중점 완료시 얻는 보상
 		}
@@ -13644,11 +13461,11 @@ focus_tree = {
 			#중점의 타입
 		}
 		prerequisite = {
-			focus = ABY_focus_rhdghkwjstjs  #이전 중점
+			focus = ABY_focus_abydos_schoolcountry  #이전 중점
 		}
-		x = 6      #좌표
-		y = 8
-		relative_position_id = ABY_focus_rhdghkwjstjs
+		x = 0      #좌표
+		y = 1
+		relative_position_id = ABY_focus_abydos_schoolcountry
 		bypass = {
 			#중점 통과 조건
 		}

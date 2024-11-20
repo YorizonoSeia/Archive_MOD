@@ -3904,6 +3904,32 @@ ideas = {
 				war_support_factor = 0.05
 			}
 		}
+		ABY_idea_army_1_1 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				war_support_factor = 0.05
+				army_defence_factor = 0.05
+				army_attack_factor = 0.05
+			}
+		}
+		ABY_idea_army_1_2 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				war_support_factor = 0.05
+				army_defence_factor = -0.05
+				army_attack_factor = -0.05
+				modifier_army_sub_unit_category_halo_attack_factor = 0.15
+				modifier_army_sub_unit_category_halo_defence_factor = 0.15
+			}
+		}
 		ABY_idea_army_2_2 = {
 			allowed_civil_war = {
                 always = yes
@@ -4949,12 +4975,12 @@ ideas = {
 			cancel = {
 				SHA = {
 					all_core_state = {
-						is_controlled_by_ROOT_or_ally = yes
+						is_controlled_by_ROOT_or_subject = yes
 					}
 				}
 				HYA = {
 					all_core_state = {
-						is_controlled_by_ROOT_or_ally = yes
+						is_controlled_by_ROOT_or_subject = yes
 					}
 				}
 			}
@@ -4974,39 +5000,39 @@ ideas = {
 			cancel = {
 				SHA = {
 					all_core_state = {
-						is_controlled_by_ROOT_or_ally = yes
+						is_controlled_by_ROOT_or_subject = yes
 					}
 				}
 				HYA = {
 					all_core_state = {
-						is_controlled_by_ROOT_or_ally = yes
+						is_controlled_by_ROOT_or_subject = yes
 					}
 				}
 				SLO = {
 					all_core_state = {
-						is_controlled_by_ROOT_or_ally = yes
+						is_controlled_by_ROOT_or_subject = yes
 					}
 				}
 				39 = {
-					is_controlled_by_ROOT_or_ally = yes
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				850 = {
-					is_controlled_by_ROOT_or_ally = yes
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				102 = {
-					is_controlled_by_ROOT_or_ally = yes
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				736 = {
-					is_controlled_by_ROOT_or_ally = yes
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				852 = {
-					is_controlled_by_ROOT_or_ally = yes
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				982 = {
-					is_controlled_by_ROOT_or_ally = yes
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				853 = {
-					is_controlled_by_ROOT_or_ally = yes
+					is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 			removal_cost = -1 
@@ -5046,6 +5072,32 @@ ideas = {
 					soft_attack = 1
 					hard_attack = 5
 				}
+			}
+		}
+		ABY_idea_government_make = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				political_power_gain = -0.1
+				political_power_factor = -0.25
+			}
+		}
+		ABY_idea_money_make = {
+			allowed_civil_war = {
+                always = yes
+            }
+			remove_effect = {
+				
+			}
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				consumer_goods_expected_value = -0.05
+				production_speed_buildings_factor = 0.1
+				political_power_gain = -0.25
 			}
 		}
 	}

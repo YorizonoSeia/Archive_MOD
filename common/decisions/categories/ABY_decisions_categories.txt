@@ -511,8 +511,6 @@ ABY_descision_ennead = {
 	visible = {
 		has_country_flag = ABY_flag_ennead_council
 		NOT = {has_completed_focus = ABY_focus_rebuild_czech}
-		NOT = {has_completed_focus = ABY_focus_rhdghkwjstjs}
-		NOT = {has_completed_focus = ABY_focus_rnrrkdusaod}
 		NOT = {has_completed_focus = ABY_focus_get_power_of_student_council}
 		NOT = {has_completed_focus = ABY_focus_color_light}
 	}
@@ -576,5 +574,23 @@ ABY_descision_category_provisional_government = {
 	}
 	visible = {
 		has_country_flag = ABY_flag_provisional_government
+	}
+}
+ABY_descision_category_new_country = {
+	priority = 100
+	allowed = {
+		original_tag = ABY
+	}
+	visible = {
+		has_country_flag = ABY_flag_new_country
+	}
+}
+ABY_descision_category_debug = {
+	priority = 10000
+	allowed = {
+		original_tag = ABY
+	}
+	visible = {
+		is_debug = yes
 	}
 }
