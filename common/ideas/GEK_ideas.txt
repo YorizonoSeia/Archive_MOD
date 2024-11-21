@@ -41,6 +41,16 @@ ideas = {
 				war_support_factor = -0.3
 			}
 		}
+		GEK_solidarity_across_ideology_1 = { #아슬한 정치연합
+			name = GEK_solidarity_across_ideology
+			picture = generic_disjointed_gov
+			modifier = {
+				political_power_cost = 0.35
+				max_command_power = -30
+				stability_factor = -0.2
+				war_support_factor = -0.2
+			}
+		}
 		GEK_partisan = { #파르티잔 전술
 			name = GEK_partisan
 			picture = citizen_militia_1
@@ -89,8 +99,8 @@ ideas = {
 				trade_laws_cost_factor = 0.3
 			}
 		}
-		GEK_legitimacy_weimar = { #독일 정통성 : 공화국의 유산
-			picture = chi_incompetent_officers
+		GEK_legitimacy_weimar = { #독일 정통성 : 공화국의 잔광
+			picture = triumphant_will
 			modifier = {
 				war_support_factor = -0.12
 				stability_factor = -0.12
@@ -101,7 +111,123 @@ ideas = {
 				mobilization_laws_cost_factor = 0.1
 				economy_cost_factor = 0.1
 				trade_laws_cost_factor = 0.1
-				democratic_drift = 0.02
+				democratic_drift = 0.01
+			}
+		}
+		GEK_legitimacy_weimar_1 = { #독일 정통성 : 공화국의 유산
+			picture = triumphant_will
+			modifier = {
+				war_support_factor = -0.075
+				stability_factor = -0.075
+				drift_defence_factor = -0.15
+				party_popularity_stability_factor = -0.1
+				political_advisor_cost_factor = 0.05
+				army_advisor_cost_factor = 0.05
+				mobilization_laws_cost_factor = 0.05
+				economy_cost_factor = 0.05
+				trade_laws_cost_factor = 0.05
+				democratic_drift = 0.03
+				political_power_factor = 0.05
+			}
+		}
+		GEK_legitimacy_weimar_2 = { #독일 정통성 : 바이마르 공화국
+			picture = triumphant_will
+			modifier = {
+				war_support_factor = -0.05
+				stability_factor = -0.05
+				drift_defence_factor = -0.15
+				party_popularity_stability_factor = -0.1
+				political_power_factor = 0.1
+				democratic_drift = 0.05
+			}
+		}
+		GEK_legitimacy_empire = { #독일 정통성 : 군주정의 잔광
+			picture = ger_revive_the_kaiserreich
+			modifier = {
+				war_support_factor = -0.05
+				stability_factor = -0.05
+				drift_defence_factor = -0.05
+				party_popularity_stability_factor = -0.05
+				political_advisor_cost_factor = 0.3
+				army_advisor_cost_factor = 0.3
+				mobilization_laws_cost_factor = 0.3
+				economy_cost_factor = 0.3
+				trade_laws_cost_factor = 0.3
+			}
+		}
+		GEK_legitimacy_empire_1 = { #독일 정통성 : 프로이센의 유산
+			picture = ger_revive_the_kaiserreich
+			modifier = {
+				war_support_factor = -0.05
+				stability_factor = -0.05
+				drift_defence_factor = -0.05
+				party_popularity_stability_factor = -0.05
+				political_advisor_cost_factor = 0.3
+				army_advisor_cost_factor = 0.3
+				mobilization_laws_cost_factor = 0.3
+				economy_cost_factor = 0.3
+				trade_laws_cost_factor = 0.3
+				army_attack_factor = 0.05
+				army_org_factor = 0.05
+				neutrality_drift = 0.01
+			}
+		}
+		GEK_legitimacy_empire_2 = { #독일 정통성 : 독일 제국
+			picture = ger_revive_the_kaiserreich
+			modifier = {
+				political_advisor_cost_factor = 0.1
+				army_advisor_cost_factor = 0.1
+				mobilization_laws_cost_factor = 0.3
+				economy_cost_factor = 0.3
+				trade_laws_cost_factor = 0.3
+				army_attack_factor = 0.05
+				army_org_factor = 0.05
+				neutrality_drift = 0.01
+			}
+		}
+		GEK_legitimacy_nazi = { #독일 정통성 : 총통의 잔광
+			picture = vittoria_mutilata
+			modifier = {
+				war_support_factor = -0.08
+				stability_factor = -0.08
+				party_popularity_stability_factor = -0.5
+				political_advisor_cost_factor = 0.3
+				army_advisor_cost_factor = 0.3
+				mobilization_laws_cost_factor = 0.3
+				economy_cost_factor = 0.3
+				trade_laws_cost_factor = 0.3
+				fascism_drift = 0.02
+			}
+		}
+		GEK_legitimacy_nazi_1 = { #독일 정통성 : 제3제국의 유산
+			picture = vittoria_mutilata
+			modifier = {
+				war_support_factor = -0.03
+				stability_factor = -0.03
+				political_advisor_cost_factor = 0.15
+				army_advisor_cost_factor = 0.15
+				mobilization_laws_cost_factor = 0.15
+				economy_cost_factor = 0.15
+				trade_laws_cost_factor = 0.15
+				fascism_drift = 0.03
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		GEK_legitimacy_nazi_2 = { #독일 정통성 : 제3제국
+			picture = vittoria_mutilata
+			modifier = {
+				political_advisor_cost_factor = 0.15
+				army_advisor_cost_factor = 0.15
+				fascism_drift = 0.03
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		GEK_general_staff = {
+			name = general_staff
+			picture = general_staff
+			modifier = {
+				army_org_factor = 0.075
+				planning_speed = 0.3
 			}
 		}
 	}

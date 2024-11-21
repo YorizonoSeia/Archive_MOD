@@ -1,3 +1,210 @@
+GEK_enhance_spd = {
+	if = {
+		limit = { 
+			has_idea = GEK_legitimacy_1
+		}
+		swap_ideas = {
+			remove_idea = GEK_legitimacy_1
+			add_idea = GEK_legitimacy_weimar
+		}
+	}
+	else_if = {
+		limit = { 
+			has_idea = GEK_legitimacy_weimar
+		}
+		swap_ideas = {
+			remove_idea = GEK_legitimacy_weimar
+			add_idea = GEK_legitimacy_weimar_1
+		}
+	}
+	else_if = {
+		limit = { 
+			has_idea = GEK_legitimacy_weimar_1
+		}
+		swap_ideas = {
+			remove_idea = GEK_legitimacy_weimar_1
+			add_idea = GEK_legitimacy_weimar_2
+		}
+		custom_effect_tooltip = GEK_enhance_spd_tt
+	}
+	else_if = {
+		limit = { 
+			has_idea = GEK_legitimacy_nazi_1
+		}
+		swap_ideas = {
+			remove_idea = GEK_legitimacy_nazi_1
+			add_idea = GEK_legitimacy_nazi
+		}
+	}
+	else_if = {
+		limit = { 
+			has_idea = GEK_legitimacy_nazi
+		}
+		swap_ideas = {
+			remove_idea = GEK_legitimacy_nazi
+			add_idea = GEK_legitimacy_weimar
+		}
+	}
+	else_if = {
+		limit = { 
+			has_idea = GEK_legitimacy_empire_1
+		}
+		swap_ideas = {
+			remove_idea = GEK_legitimacy_empire_1
+			add_idea = GEK_legitimacy_empire
+		}
+	}
+	else_if = {
+		limit = { 
+			has_idea = GEK_legitimacy_empire
+		}
+		swap_ideas = {
+			remove_idea = GEK_legitimacy_empire
+			add_idea = GEK_legitimacy_weimar
+		}
+	}
+	else = {
+		add_political_power = -5
+	}
+}
+GEK_enhance_nazi = {
+	if = {
+		limit = { 
+			has_idea = GEK_legitimacy_1
+		}
+		swap_ideas = {
+			remove_idea = GEK_legitimacy_1
+			add_idea = GEK_legitimacy_nazi
+		}
+	}
+	else_if = {
+		limit = { 
+			has_idea = GEK_legitimacy_nazi
+		}
+		swap_ideas = {
+			remove_idea = GEK_legitimacy_nazi
+			add_idea = GEK_legitimacy_nazi_1
+		}
+	}
+	else_if = {
+		limit = { 
+			has_idea = GEK_legitimacy_nazi_1
+		}
+		swap_ideas = {
+			remove_idea = GEK_legitimacy_nazi_1
+			add_idea = GEK_legitimacy_nazi_2
+		}
+		custom_effect_tooltip = GEK_enhance_spd_tt
+	}
+	else_if = {
+		limit = { 
+			has_idea = GEK_legitimacy_weimar_1
+		}
+		swap_ideas = {
+			remove_idea = GEK_legitimacy_weimar_1
+			add_idea = GEK_legitimacy_weimar
+		}
+	}
+	else_if = {
+		limit = { 
+			has_idea = GEK_legitimacy_weimar
+		}
+		swap_ideas = {
+			remove_idea = GEK_legitimacy_weimar
+			add_idea = GEK_legitimacy_nazi
+		}
+	}
+	else_if = {
+		limit = { 
+			has_idea = GEK_legitimacy_empire_1
+		}
+		swap_ideas = {
+			remove_idea = GEK_legitimacy_empire_1
+			add_idea = GEK_legitimacy_empire
+		}
+	}
+	else_if = {
+		limit = { 
+			has_idea = GEK_legitimacy_empire
+		}
+		swap_ideas = {
+			remove_idea = GEK_legitimacy_empire
+			add_idea = GEK_legitimacy_nazi
+		}
+	}
+	else = {
+		add_political_power = -5
+	}
+}
+GEK_enhance_army = {
+	if = {
+		limit = { 
+			has_idea = GEK_legitimacy_1
+		}
+		swap_ideas = {
+			remove_idea = GEK_legitimacy_1
+			add_idea = GEK_legitimacy_empire
+		}
+	}
+	else_if = {
+		limit = { 
+			has_idea = GEK_legitimacy_empire
+		}
+		swap_ideas = {
+			remove_idea = GEK_legitimacy_empire
+			add_idea = GEK_legitimacy_empire_1
+		}
+	}
+	else_if = {
+		limit = { 
+			has_idea = GEK_legitimacy_empire_1
+		}
+		swap_ideas = {
+			remove_idea = GEK_legitimacy_empire_1
+			add_idea = GEK_legitimacy_empire_2
+		}
+		custom_effect_tooltip = GEK_enhance_spd_tt
+	}
+	else_if = {
+		limit = { 
+			has_idea = GEK_legitimacy_weimar_1
+		}
+		swap_ideas = {
+			remove_idea = GEK_legitimacy_weimar_1
+			add_idea = GEK_legitimacy_weimar
+		}
+	}
+	else_if = {
+		limit = { 
+			has_idea = GEK_legitimacy_weimar
+		}
+		swap_ideas = {
+			remove_idea = GEK_legitimacy_weimar
+			add_idea = GEK_legitimacy_empire
+		}
+	}
+	else_if = {
+		limit = { 
+			has_idea = GEK_legitimacy_nazi_1
+		}
+		swap_ideas = {
+			remove_idea = GEK_legitimacy_nazi_1
+			add_idea = GEK_legitimacy_nazi
+		}
+	}
+	else_if = {
+		limit = { 
+			has_idea = GEK_legitimacy_nazi
+		}
+		swap_ideas = {
+			remove_idea = GEK_legitimacy_nazi
+			add_idea = GEK_legitimacy_empire
+		}
+	}
+	else = {
+		add_political_power = -5
+	}
+}
 GEF_give_airplane = {
 	custom_effect_tooltip = GEK_air_innovation_tt
 	GEF = {
