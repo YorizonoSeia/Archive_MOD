@@ -310,7 +310,7 @@ characters={
 		name=MIL_akzl
 		portraits={
 			army={
-				large="gfx/leaders/MIL/MIL_akzl.dds"
+				large= "GFX_Maki_portrait"
 				small= "GFX_Maki"
 			}
 		}
