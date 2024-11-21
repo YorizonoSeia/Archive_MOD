@@ -52,6 +52,25 @@ country_event = {
 				civilian = { large = GFX_TRN_Yurizono_Seia_Portrait_Kon_ka }
 			}
 		}
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = Trinity_Misono_Mika_Portrait_Rule
+					option = Trinity_Mika_Portrait_Maki
+				}
+			}
+			set_portraits = {
+				character = TRN_alzk
+				civilian={
+					large="gfx/leaders/MIL/MIL_akzl.dds"
+					small= GFX_Maki
+				}
+				army={
+					large="gfx/leaders/MIL/MIL_akzl.dds"
+					small= GFX_Maki
+				}
+			}
+		}
 	}
 }
 country_event = {
@@ -3682,12 +3701,11 @@ country_event = { 	#헝가리 수락 or 거절
 		annex_country = {
 			target = SLO
 		}
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 75 }
 	}
 	option = { #ㄴㄴ
 		name = TRMDIP.29.b
+		ai_chance = { base = 25 }
 		TRM = {
 			set_autonomy = {
 				target = SLO

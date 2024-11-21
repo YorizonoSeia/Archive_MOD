@@ -450,6 +450,11 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	spriteType = {
+		name = "GFX_TRM_Balkan_map"
+		texturefile = "gfx/interface/decisions/Balkan_map.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
 		name = "GFX_ARI_trm_add_core"
 		texturefile = "gfx/interface/decisions/ARI_trm_add_core.tga"
 		legacy_lazy_load = no

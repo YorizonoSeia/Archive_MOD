@@ -2788,10 +2788,6 @@
 				division = "name = \"III. Germany Heer\" division_template = \"Infanterie-Division\" start_experience_factor = 0.10 start_equipment_factor = 0.8" 
 				owner = ROOT
 			}
-			create_unit = {
-				division = "name = \"VI. Germany Heer\" division_template = \"Infanterie-Division\" start_experience_factor = 0.10 start_equipment_factor = 0.8" 
-				owner = ROOT
-			}
 		}
 		random_owned_controlled_state = {
 			limit = { ROOT = { has_full_control_of_state = PREV } }
@@ -2805,10 +2801,6 @@
 			}
 			create_unit = {
 				division = "name = \"VII. Germany Heer\" division_template = \"Infanterie-Division\" start_experience_factor = 0.10 start_equipment_factor = 0.8" 
-				owner = ROOT
-			}
-			create_unit = {
-				division = "name = \"VIII. Germany Heer\" division_template = \"Infanterie-Division\" start_experience_factor = 0.10 start_equipment_factor = 0.8" 
 				owner = ROOT
 			}
 		}
@@ -2971,7 +2963,7 @@
 			ITA = {
 				custom_effect_tooltip = generic_invite_to_faction_tt
 				hidden_effect = {
-					country_event = { id = TRMDIP.31 days = 04 }
+					country_event = { id = TRMDIP.31 days = 01 }
 				}
 			}
 		}
@@ -3202,66 +3194,7 @@
 				}
 		}
 	}
-    
-	focus = {
-		id = TRM_war_with_the_ussr
-		icon = GFX_focus_attack_soviet
-		cost = 20
-		prerequisite = { focus = TRM_redwinter_war_goal }
-		available = {
-			is_subject = no
-		}
-		bypass = {
-			OR = {
-				has_war_with = SOV
-				SOV = {
-					exists = no
-				}
-			}
-		}
-		cancel = {
-			is_subject = yes
-			NOT = { country_exists = SOV }
-		}
-		will_lead_to_war_with = SOV
-		ai_will_do = {
-			base = 500
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-			modifier = {
-				factor = 0.5
-				has_war = no
-			}
-		}
-		relative_position_id = TRM_redwinter_war_goal
-		x = 0
-		y = 2
-		completion_reward = {
-			IF = {
-				limit = { SOV = { has_civil_war = no } }
-				create_wargoal = {
-					type = annex_everything
-					target = SOV
-					expire = 0
-				}
-			}
-			ELSE = {
-				every_country = {
-					limit = { original_tag = SOV }
-					TRM = {
-						create_wargoal = {
-							type = annex_everything
-							target = PREV
-							expire = 0
-						}
-					}
-				}
-			}
-		}
-	}
-    
+
     focus = {
 		id = TRM_We_need_Denmark_milk
 		icon = GFX_goal_TRM_We_Need_Denmark_Milk
@@ -3285,6 +3218,7 @@
 					}
             NOT = { has_government = communism }
             NOT = { is_in_faction_with = RED }
+			NOT = { has_completed_focus = TRM_redwinter_war_goal }
 		}
 		will_lead_to_war_with = RED
 		ai_will_do = {
@@ -3541,6 +3475,36 @@
 		cost = 5
 		available = {
 			is_subject = no
+			OR = {
+				COU = { 
+					has_government = fascism 
+					exists = yes
+				}
+				SHE = { 
+					has_government = fascism 
+					exists = yes
+				}
+				KSP = { 
+					has_government = fascism 
+					exists = yes
+				}
+			}
+		}
+		bypass = {
+			NOT = {
+				COU = { 
+					has_government = fascism 
+					exists = yes
+				}
+				SHE = { 
+					has_government = fascism 
+					exists = yes
+				}
+				KSP = { 
+					has_government = fascism 
+					exists = yes
+				}
+			}
 		}
 		prerequisite = {
 			focus = TRM_war_with_gehenna
@@ -3556,6 +3520,31 @@
 		y = 0
 		relative_position_id = TRM_invade_benelux
 		completion_reward ={ 
+			every_country = {
+				limit = {
+					OR = {
+						AND = {
+							tag = COU
+							country_exists = COU
+							has_government = fascism
+						}
+						AND = {
+							tag = SHE
+							country_exists = SHE
+							has_government = fascism
+						}
+						AND = {
+							tag = KSP
+							country_exists = KSP
+							has_government = fascism
+						}
+					}
+				}
+				custom_effect_tooltip = generic_invite_to_faction_tt
+				hidden_effect = {
+					country_event = { id = generic.5 hours = 04 }
+				}
+			}
         }
 	}
 
@@ -3656,10 +3645,74 @@
             }
 		}
 	}
+    
+	focus = {
+		id = TRM_war_with_the_ussr
+		icon = GFX_focus_attack_soviet
+		cost = 20
+		prerequisite = { 
+			#focus = TRM_Invasion_of_Poland 
+		}
+		available = {
+			is_subject = no
+		}
+		allow_branch = {
+			is_debug = yes
+		}
+		bypass = {
+			OR = {
+				has_war_with = SOV
+				SOV = {
+					exists = no
+				}
+			}
+		}
+		cancel = {
+			is_subject = yes
+			NOT = { country_exists = SOV }
+		}
+		will_lead_to_war_with = SOV
+		ai_will_do = {
+			base = 500
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+			}
+		}
+		relative_position_id = TRM_Invasion_of_Poland
+		x = 99
+		y = 1
+		completion_reward = {
+			IF = {
+				limit = { SOV = { has_civil_war = no } }
+				create_wargoal = {
+					type = annex_everything
+					target = SOV
+					expire = 0
+				}
+			}
+			ELSE = {
+				every_country = {
+					limit = { original_tag = SOV }
+					TRM = {
+						create_wargoal = {
+							type = annex_everything
+							target = PREV
+							expire = 0
+						}
+					}
+				}
+			}
+		}
+	}
 
 	focus = {
 		id = TRM_invade_balkan
-		icon = GFX_focus_generic_balkans_focus
+		icon = GFX_SOV_demand_balkan_submission_ccp_2d_sov_compatibility
 		cost = 5
 		available = {
 			is_subject = no
@@ -3678,6 +3731,30 @@
 		y = 2
 		relative_position_id = TRM_war_with_gehenna
 		completion_reward ={
+			every_other_country = {
+				limit = { 
+					OR = {
+						BUL_is_balkan_nation = yes 
+						tag = HUN
+					}
+					NOT = { tag = TUR }
+				}
+				add_timed_idea = {
+					idea = fascist_influence_weak
+					days = 365
+				}
+				hidden_effect = { country_event = { id = generic.1 } }
+			}
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = SOV_demand_balkan_submission_decisions_tt
+			hidden_effect = {
+				activate_targeted_decision = { target = ROM decision = TRM_send_ultimatum_to_country_balkan }
+				activate_targeted_decision = { target = BUL decision = TRM_send_ultimatum_to_country_balkan }
+				activate_targeted_decision = { target = GRE decision = TRM_send_ultimatum_to_country_balkan }
+				activate_targeted_decision = { target = YUG decision = TRM_send_ultimatum_to_country_balkan }
+				activate_targeted_decision = { target = HUN decision = TRM_send_ultimatum_to_country_balkan }
+				activate_targeted_decision = { target = HUN decision = TRM_send_ultimatum_to_country_balkan }
+			}
         }
 	}
 
@@ -3702,6 +3779,34 @@
 		y = 0
 		relative_position_id = TRM_invade_balkan
 		completion_reward ={
+			every_other_country = {
+				limit = { 
+					OR = {
+						BUL_is_balkan_nation = yes 
+						tag = HUN
+					}
+					NOT = { tag = TUR }
+				}
+				add_timed_idea = {
+					idea = fascist_influence_weak
+					days = 365
+				}
+				hidden_effect = { country_event = { id = generic.1 } }
+			}
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = SOV_seek_balkan_cooperation_decisions_tt
+			hidden_effect = {
+				activate_targeted_decision = { target = ROM decision = TRM_pressure_country_government_balkan }
+				activate_targeted_decision = { target = BUL decision = TRM_pressure_country_government_balkan }
+				activate_targeted_decision = { target = GRE decision = TRM_pressure_country_government_balkan }
+				activate_targeted_decision = { target = YUG decision = TRM_pressure_country_government_balkan }
+				activate_targeted_decision = { target = HUN decision = TRM_pressure_country_government_balkan }
+				activate_targeted_decision = { target = ROM decision = TRM_promote_ideology_rallies_balkan }
+				activate_targeted_decision = { target = BUL decision = TRM_promote_ideology_rallies_balkan }
+				activate_targeted_decision = { target = GRE decision = TRM_promote_ideology_rallies_balkan }
+				activate_targeted_decision = { target = YUG decision = TRM_promote_ideology_rallies_balkan }
+				activate_targeted_decision = { target = HUN decision = TRM_promote_ideology_rallies_balkan }
+			}
         }
 	}
 
@@ -3725,9 +3830,8 @@
 		y = 1
 		relative_position_id = TRM_war_with_gehenna
 		completion_reward ={
-			country_event = {
-				id = TRMDIP.28
-				days = 3
+			SLO = {
+				country_event = { id = TRMDIP.28 days = 3 }
 			}
         }
 	}
@@ -3778,7 +3882,7 @@
 		text = GER_operation_felix
 		icon = GFX_focus_generic_attack_nationalist_spain_focus
 		prerequisite = { focus = TRM_form_Rome_Eden_axis focus = TRM_operation_of_Terra_Recta }
-		x = -1
+		x = -3
 		y = 1
 		relative_position_id = TRM_operation_of_Terra_Recta
 		cost = 10
@@ -3840,11 +3944,11 @@
 		text = GER_operation_isabella
 		icon = GFX_focus_generic_attack_portugal
 
-		prerequisite = { focus = TRM_operation_felix }
+		prerequisite = { focus = TRM_operation_of_Terra_Recta }
 
-		x = 0
+		x = -0
 		y = 1
-		relative_position_id = TRM_operation_felix
+		relative_position_id = TRM_operation_of_Terra_Recta
 
 		cost = 10
 

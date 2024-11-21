@@ -1600,7 +1600,7 @@ TRM_POL_RK = {
     				        expire = "1965.1.1"
                             ideology = pater_nazism
                             traits = {
-                                TRM_histroy_loser
+								GER_governor_general_trait
                             }
                         }
                     promote_leader = yes

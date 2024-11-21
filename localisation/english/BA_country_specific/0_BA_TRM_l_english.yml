@@ -1617,23 +1617,14 @@
  TRM_ironsword_event.11.d: "[FROM.GetName]은 여러가지 근거를 제시하며 우리의 요구를 거부하였습니다. 수사에 차질이 생기거나 하진 않겠지만, 범인을 체포하는데 좀 더 걸릴 것입니다."
  TRM_ironsword_event.12.d: "[FROM.GetName]이 우리와 협력하겠다는 의사를 밝혔습니다! 그들의 도움은 범인을 체포하는데 큰 도움이 될 것입니다."
 
-#발칸 외교
- TRM_balkan_diplomacy_categories: "발칸 외교"
- TRM_balkan_diplomacy_categories_desc: ""
- TRM_Give_me_state_102: "[102.GetName] 요구"
- TRM_alliance_with_Romania: "[ROM.GetAdjective]와 동맹"
- TRM_alliance_with_bulgaria: "[BUL.GetAdjective]와 동맹"
- TRM_alliance_with_Hungary: "[HUN.GetAdjective]와 동맹"
- TRM_alliance_with_italian: "[ITA.GetAdjective]와 동맹" # NOT USE
- TRM_Schidsspruch: "[ROM.GetAdjective] 국경 재조정"
- TRM_support_the_hungarians: "헝가리의 [45.GetName] 영유권 지지"
- TRM_support_the_croatia_militia: "[CRO.GetAdjective] 문제"
-
- TRM_alliance_with_Hungary_flag: "$TRM_alliance_with_Hungary$"
- TRM_alliance_with_bulgaria_flag: "$TRM_alliance_with_bulgaria$"
- TRM_alliance_with_Romania_flag: "$TRM_alliance_with_Romania$"
- TRM_pressure_country_government_balkan: "$SOV_pressure_country_government_baltic$"
-
+ #발칸 외교
+ TRM_diplomacy_balkan_decision_category: "$ITA_diplomacy_balkan_decision_category$"
+ TRM_diplomacy_balkan_decision_category_desc: "발칸은 \"유럽의 화약고\"로 불릴 만큼 충돌이 잦은 지역입니다. 이는 국가 간 갈등을 조장하고 이간질하기에 적합한 환경임을 의미합니다. 따라서 우리는 신중하고 전략적으로 접근해야 합니다. \n\n발칸 국가들 간의 관계를 적절히 조율해 우리의 이익에 부합하는 방향으로 그들의 정책을 유도해야 합니다. 궁극적으로, 모든 발칸 국가를 우리에게 종속시키거나 동맹국으로 만들 수 있도록 장기적인 계획을 수립해야 할 것입니다."
+ TRM_send_ultimatum_to_country_balkan: "$SOV_send_ultimatum_to_country_balkan$"
+ TRM_pressure_country_government_balkan: "$SOV_pressure_country_government_balkan$"
+ TRM_promote_ideology_rallies_balkan: "$SOV_promote_ideology_rallies_balkan$"
+ TRM_pressure_government_cd_tt: "\n우리는 §Y[?TRM_pressure_government_cd]§!일에 한 번만 압박할 수 있습니다."
+ TRM_pressure_government_active_flag: "$SOV_pressure_government_active_flag$"
 
  TRMDIP.1.t: "[FROM.GetAdjective] 외무부의 유고슬라비아 영토 할양 요구"
  TRMDIP.1.d: "방금 전 영토 할양을 요구하는 문서가 외무부를 통해 [ROOT.GetAdjective] 대사에게 정식으로 전달되었습니다. 외무부 대변인은 '북슬로베니아는 역사적, 문화적으로 게르만 민족의 생활권에 속하며, 독일을 승계한 [FROM.GetAdjective]는 게르만 민족과 그 영토를 보호할 의무를 가진다.'라고 말했습니다. 정부 소식통에 의하면 주 [FROM.GetAdjective] 유고슬라비아 대사는 이와 같은 내용을 본국에 전달하겠다고 알렸습니다. 외무부 발표 이후 [FROM.GetAdjective] 국방부는 회견을 통해 남부 국경지대의 경비를 강화해 만약에 사태에 대비하겠다고 밝혔습니다."
@@ -1761,7 +1752,7 @@
  TRM_kivotos_core_states_categories: "신성통치령 설립"
  TRM_kivotos_core_states_categories_desc: "\n\n£GFX_TRN_decisions_peace\n\n\n\n\n우리 제국은 광대한 영토를 정복하는 데 성공하였으나, 이를 효율적으로 통치할 행정 역량이 부족하였습니다. 이에 대한 해결책으로 점령지에 \"신성통치령\"을 수립하기로 결정하였습니다. 신성통치령은 중앙 정부의 직접적인 통제 없이 반자치적 형태로 운영되며, 제국에서 선출한 관료와 현지 관료들에게 상당한 권한을 부여하였습니다. 이를 통해 제국의 행정 부담을 줄이면서도 효과적인 통치 체제를 구축할 수 있었습니다."
  TRN_MOSCOW_HOLY_MANDATE: "모스크바 신성통치령 통합"
- TRN_Holy_Mandate_Trigger_tt: "§Y하이라이트§!로 강조된 모든 주를 점령중"
+ TRN_Holy_Mandate_Trigger_tt: "§Y하이라이트§!로 강조된 모든 주를 [ROOT.GetAdjective], 혹은 [ROOT.GetAdjective]의 괴뢰국이 지배중"
  TRN_KAPKAS_HOLY_MANDATE: "캅카스 신성통치령 수립"
  TRN_POLAND_HOLY_MANDATE: "폴란드 신성통치령 수립"
  TRN_Ukraine_Holy_Mandate: "우크라이나 신성통치령 수립"
