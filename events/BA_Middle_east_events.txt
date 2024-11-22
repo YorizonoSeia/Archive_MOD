@@ -14,17 +14,32 @@ country_event ={ #프랑스로부터의 승리
 		add_war_support = 0.1
 		add_stability = 0.1
 		every_owned_state = {
-			damage_building = {
-				type = arms_factory
-				damage = 0.5
+			if = {
+				limit = {
+					arms_factory > 0
+				}
+				damage_building = {
+					type = arms_factory
+					damage = 0.5
+				}
 			}
-			damage_building = {
-				type = industrial_complex
-				damage = 0.5
+			if = {
+				limit = {
+					industrial_complex > 0
+				}
+				damage_building = {
+					type = industrial_complex
+					damage = 0.5
+				}
 			}
-			damage_building = {
-				type = infrastructure
-				damage = 0.5
+			if = {
+				limit = {
+					infrastructure > 0
+				}
+				damage_building = {
+					type = infrastructure
+					damage = 0.5
+				}
 			}
 		}
 		hidden_effect = {
