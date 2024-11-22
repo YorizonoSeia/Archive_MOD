@@ -999,12 +999,11 @@ ABY_political = {
 		available = {
 		}
 		days_remove = 10
-		remove_effect = {
-			add_popularity = {
-				ideology = democratic
-				popularity = 0.025
-			}
+
+		modifier = {
+			democratic_drift = 0.1
 		}
+
 	}
 	
 	ABY_political_1 = {
@@ -1056,13 +1055,13 @@ ABY_political = {
 		}
 		available = {
 		}
-		days_remove = 20
+		days_remove = 30
 		remove_effect = {
 			add_war_support = -0.025
-			add_popularity = {
-				ideology = democratic
-				popularity = 0.05
-			}
+		}
+
+		modifier = {
+			democratic_drift = 0.2
 		}
 	}
 	ABY_political_3 = {
@@ -1076,13 +1075,13 @@ ABY_political = {
 		}
 		available = {
 		}
-		days_remove = 20
+		days_remove = 30
 		remove_effect = {
 			add_war_support = -0.025
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.05
-			}
+		}
+
+		modifier = {
+			fascism_drift = 0.2
 		}
 	}
 	ABY_political_4 = {
@@ -1096,13 +1095,13 @@ ABY_political = {
 		}
 		available = {
 		}
-		days_remove = 20
+		days_remove = 30
 		remove_effect = {
 			add_war_support = -0.025
-			add_popularity = {
-				ideology = communism
-				popularity = 0.05
-			}
+		}
+
+		modifier = {
+			communism_drift = 0.2
 		}
 	}
 	ABY_political_0_2 = {
@@ -17216,10 +17215,38 @@ ABY_descision_category_new_country = {
 		}
     }
 
+	ABY_descision_high_control = {
+        priority = 0   
+
+        allowed = {
+            tag = ABY
+        }
+
+		activation = {
+			has_country_flag = ABY_flag_new_country
+		}
+
+		available = {
+			always = no
+    	}
+
+		fire_only_once = yes
+ 
+		days_mission_timeout = 75
+
+		complete_effect = {		
+			country_event = {
+				id = ABY_new_event.25
+			}		
+		}
+    }
+
     ABY_descision_promote_shiroko = { # ID = 3
         priority = 1
 
 		cost = 50
+
+		days_remove = 100
 
 		fire_only_once = yes
 
@@ -17232,6 +17259,7 @@ ABY_descision_category_new_country = {
         }
 
         available = {
+			has_country_flag = ABY_flag_suspecious_control
         }
 
         remove_effect = {
@@ -17250,6 +17278,252 @@ ABY_descision_category_new_country = {
 			add_days_mission_timeout = {
 				mission = ABY_descision_suspecious_move
 				days = -60
+			}
+        }
+    }
+
+    ABY_descision_good_democratic = { # ID = 3
+        priority = 1
+
+		cost = 25
+
+		days_remove = 30
+
+        allowed = {
+            tag = ABY
+        }
+
+        visible = {
+			has_country_flag = ABY_flag_new_country
+        }
+
+        available = {
+        }
+
+		modifier = {
+			democratic_drift = 0.25
+		}
+
+        remove_effect = {
+			add_stability = -0.025
+        }
+    }
+
+    ABY_descision_no_democratic = { # ID = 3
+        priority = 1
+
+		cost = 50
+
+		days_remove = 30
+
+        allowed = {
+            tag = ABY
+        }
+
+        visible = {
+			has_country_flag = ABY_flag_new_country
+        }
+
+        available = {
+        }
+
+		modifier = {
+			democratic_drift = -0.5
+		}
+
+        remove_effect = {
+			add_stability = -0.05
+        }
+    }
+
+    ABY_descision_good_socialism = { # ID = 3
+        priority = 1
+
+		cost = 50
+
+		days_remove = 30
+
+        allowed = {
+            tag = ABY
+        }
+
+        visible = {
+			has_country_flag = ABY_flag_new_country
+        }
+
+        available = {
+        }
+
+		modifier = {
+			democratic_drift = 0.1
+		}
+
+        remove_effect = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+			add_power_balance_value = {
+				id = ABY_power_balance_3
+				value = -0.05
+			}
+        }
+    }
+
+    ABY_descision_no_socialism = { # ID = 3
+        priority = 1
+
+		cost = 100
+
+		days_remove = 0
+
+		fire_only_once = yes
+
+        allowed = {
+            tag = ABY
+        }
+
+        visible = {
+			has_country_flag = ABY_flag_new_country
+        }
+
+        available = {
+        }
+
+        remove_effect = {
+			add_stability = -0.1
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.15
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = -1
+			}
+			add_power_balance_value = {
+				id = ABY_power_balance_3
+				value = 0.1
+			}
+        }
+    }
+
+    ABY_descision_good_neutrality = { # ID = 3
+        priority = 1
+
+		cost = 25
+
+		days_remove = 30
+
+        allowed = {
+            tag = ABY
+        }
+
+        visible = {
+			has_country_flag = ABY_flag_new_country
+        }
+
+        available = {
+        }
+
+		modifier = {
+			neutrality_drift = 0.25
+		}
+
+        remove_effect = {
+			add_stability = -0.025
+        }
+    }
+
+    ABY_descision_no_neutrality = { # ID = 3
+        priority = 1
+
+		cost = 50
+
+		days_remove = 30
+
+        allowed = {
+            tag = ABY
+        }
+
+        visible = {
+			has_country_flag = ABY_flag_new_country
+        }
+
+        available = {
+        }
+
+		modifier = {
+			neutrality_drift = -0.5
+		}
+
+        remove_effect = {
+			add_stability = -0.05
+        }
+    }
+
+    ABY_descision_good_fascism = { # ID = 3
+        priority = 1
+
+		cost = 25
+
+		days_remove = 30
+
+        allowed = {
+            tag = ABY
+        }
+
+        visible = {
+			has_country_flag = ABY_flag_new_country
+        }
+
+        available = {
+        }
+
+		modifier = {
+			fascism_drift = 0.25
+		}
+
+        remove_effect = {
+			add_stability = -0.05
+			add_power_balance_value = {
+				id = ABY_power_balance_3
+				value = 0.05
+			}
+        }
+    }
+
+    ABY_descision_no_fascism = { # ID = 3
+        priority = 1
+
+		cost = 50
+
+		days_remove = 30
+
+        allowed = {
+            tag = ABY
+        }
+
+        visible = {
+			has_country_flag = ABY_flag_new_country
+        }
+
+        available = {
+        }
+
+		modifier = {
+			fascism_drift = -0.5
+		}
+
+        remove_effect = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+			add_power_balance_value = {
+				id = ABY_power_balance_3
+				value = -0.05
 			}
         }
     }

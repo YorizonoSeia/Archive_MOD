@@ -1322,14 +1322,15 @@ country_event = {
 	option = {
 		name = ABY_new_event.25.a
 		ai_chance = { factor = 100 }
-		activate_advisor = Venes
-		set_country_flag = ABY_election
-	}
-	option = {
-		name = ABY_new_event.25.c
-		ai_chance = { factor = 0 }
-		activate_advisor = Gottwald
-		set_country_flag = ABY_election
+		set_country_flag = ABY_flag_suspecious_control
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.15
+		}
+		add_power_balance_value = {
+			id = ABY_power_balance_3
+			value = 0.1
+		}
 	}
 }
 

@@ -3282,6 +3282,13 @@ leader_traits = {
 			factor = 2
 		}
 	}
+	rothschild = {
+		random = no
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
 	train_school = {
 		random = no
 

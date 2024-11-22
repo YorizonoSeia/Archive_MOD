@@ -2412,10 +2412,9 @@ ideas = {
 			removal_cost = -1 
 			#picture =
 			modifier = {
-				industrial_capacity_factory = 0.05
-				line_change_production_efficiency_factor = 0.05
-				production_factory_max_efficiency_factor = 0.05
-				production_factory_start_efficiency_factor = 0.05
+				production_speed_rail_way_factor = 0.15
+				production_speed_supply_node_factor = 0.15
+				supply_node_range = 0.1
 			}
 		}
  		ABY_idea_neptis_group2 = {   # "네프티스 그룹" 
@@ -2425,10 +2424,9 @@ ideas = {
 			removal_cost = -1 
 			#picture =
 			modifier = {
-				industrial_capacity_factory = 0.1
-				line_change_production_efficiency_factor = 0.05
-				production_factory_max_efficiency_factor = 0.05
-				production_factory_start_efficiency_factor = 0.05
+				production_speed_rail_way_factor = 0.25
+				production_speed_supply_node_factor = 0.25
+				supply_node_range = 0.1
 			}
 		}
  		ABY_idea_neptis_group3 = {   # "네프티스 그룹" 
@@ -2438,10 +2436,9 @@ ideas = {
 			removal_cost = -1 
 			#picture =
 			modifier = {
-				industrial_capacity_factory = 0.1
-				line_change_production_efficiency_factor = 0.1
-				production_factory_max_efficiency_factor = 0.1
-				production_factory_start_efficiency_factor = 0.1
+				production_speed_rail_way_factor = 0.25
+				production_speed_supply_node_factor = 0.25
+				supply_node_range = 0.15
 			}
 		}
  		ABY_idea_kaiser_mine = {   # "카이저 시설 몰수" 
@@ -5089,9 +5086,6 @@ ideas = {
 			allowed_civil_war = {
                 always = yes
             }
-			remove_effect = {
-				
-			}
 			removal_cost = -1 
 			# picture = 
 			modifier = {
@@ -5100,22 +5094,55 @@ ideas = {
 				political_power_gain = -0.25
 			}
 		}
+		ABY_idea_rothschild = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				production_speed_infrastructure_factor = 0.05
+				local_resources_factor = 0.1
+			}
+		}
+		ABY_idea_rothschild_2 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				production_speed_infrastructure_factor = 0.1
+				local_resources_factor = 0.1
+			}
+		}
+		ABY_idea_rothschild_3 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				production_speed_infrastructure_factor = 0.05
+				local_resources_factor = 0.15
+			}
+		}
 	}
 	industrial_concern = {
 		ABY_industrial_concern_neptis_group = {
 
-			picture = GFX_focus_saint_nephtys
+			picture = generic_industrial_concern_2
 			
 			allowed = {
 				tag = ABY
 			}
 
 			available = {
-				has_completed_focus = ABY_focus_with_neptis
+				has_completed_focus = ABY_focus_new_geeup
 			}
 
 			visible = {
-				NOT = {has_completed_focus = ABY_focus_neptis_rebuild_council}
+				NOT = {has_completed_focus = ABY_focus_neptis_collaborate}
 			}
 			
 			research_bonus = {
@@ -5123,10 +5150,9 @@ ideas = {
 			}
 
 			modifier = {	
-				industrial_capacity_factory = 0.05
-				line_change_production_efficiency_factor = 0.05
-				production_factory_max_efficiency_factor = 0.05
-				production_factory_start_efficiency_factor = 0.05
+				production_speed_rail_way_factor = 0.15
+				production_speed_supply_node_factor = 0.15
+				supply_node_range = 0.1
 			}
 			
 			traits = { saint_nephtys }
@@ -5139,19 +5165,19 @@ ideas = {
 		}
 		ABY_industrial_concern_neptis_group_2 = {
 
-			picture = GFX_focus_saint_nephtys
+			picture = generic_industrial_concern_2
 			
 			allowed = {
 				tag = ABY
 			}
 
 			available = {
-				has_completed_focus = ABY_focus_with_neptis
+				has_completed_focus = ABY_focus_new_geeup
 			}
 
 			visible = {
-				has_completed_focus = ABY_focus_neptis_rebuild_council
-				NOT = {has_completed_focus = ABY_focus_national_economy_help}
+				has_completed_focus = ABY_focus_neptis_collaborate
+				NOT = {has_completed_focus = ABY_focus_more_nation_invest}
 			}
 			
 			research_bonus = {
@@ -5159,10 +5185,9 @@ ideas = {
 			}
 
 			modifier = {	
-				industrial_capacity_factory = 0.1
-				line_change_production_efficiency_factor = 0.05
-				production_factory_max_efficiency_factor = 0.05
-				production_factory_start_efficiency_factor = 0.05
+				production_speed_rail_way_factor = 0.25
+				production_speed_supply_node_factor = 0.25
+				supply_node_range = 0.1
 			}
 			
 			traits = { saint_nephtys }
@@ -5175,18 +5200,18 @@ ideas = {
 		}
 		ABY_industrial_concern_neptis_group_3 = {
 
-			picture = GFX_focus_saint_nephtys
+			picture = generic_industrial_concern_2
 			
 			allowed = {
 				tag = ABY
 			}
 
 			available = {
-				has_completed_focus = ABY_focus_with_neptis
+				has_completed_focus = ABY_focus_new_geeup
 			}
 
 			visible = {
-				has_completed_focus = ABY_focus_national_economy_help
+				has_completed_focus = ABY_focus_more_nation_invest
 			}
 			
 			research_bonus = {
@@ -5194,13 +5219,112 @@ ideas = {
 			}
 
 			modifier = {	
-				industrial_capacity_factory = 0.1
-				line_change_production_efficiency_factor = 0.1
-				production_factory_max_efficiency_factor = 0.1
-				production_factory_start_efficiency_factor = 0.1
+				production_speed_rail_way_factor = 0.25
+				production_speed_supply_node_factor = 0.25
+				supply_node_range = 0.15
 			}
 			
 			traits = { saint_nephtys }
+			
+			# assembled hawk II and hawk III fighter bombers as well as the Vultee V-11 ground attackers
+						
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		ABY_industrial_concern_rothschild = {
+
+			picture = generic_industrial_concern_3
+			
+			allowed = {
+				tag = ABY
+			}
+
+			available = {
+				has_completed_focus = ABY_focus_support_native_geeup
+			}
+
+			visible = {
+				NOT = {has_completed_focus = ABY_focus_more_war_industry}
+			}
+			
+			research_bonus = {
+				industry = 0.15
+			}
+
+			modifier = {	
+				production_speed_infrastructure_factor = 0.05
+				local_resources_factor = 0.1
+			}
+			
+			traits = { rothschild }
+			
+			# assembled hawk II and hawk III fighter bombers as well as the Vultee V-11 ground attackers
+						
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		ABY_industrial_concern_rothschild_2 = {
+
+			picture = generic_industrial_concern_3
+			
+			allowed = {
+				tag = ABY
+			}
+
+			available = {
+				has_completed_focus = ABY_focus_support_native_geeup
+			}
+
+			visible = {
+				has_completed_focus = ABY_focus_more_war_industry
+				NOT = {has_completed_focus = ABY_focus_war_industry}
+			}
+			
+			research_bonus = {
+				industry = 0.15
+			}
+
+			modifier = {	
+				production_speed_infrastructure_factor = 0.1
+				local_resources_factor = 0.1
+			}
+			
+			traits = { rothschild }
+			
+			# assembled hawk II and hawk III fighter bombers as well as the Vultee V-11 ground attackers
+						
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		ABY_industrial_concern_rothschild_3 = {
+
+			picture = generic_industrial_concern_3
+			
+			allowed = {
+				tag = ABY
+			}
+
+			available = {
+				has_completed_focus = ABY_focus_support_native_geeup
+			}
+
+			visible = {
+				has_completed_focus = ABY_focus_war_industry
+			}
+			
+			research_bonus = {
+				industry = 0.15
+			}
+
+			modifier = {	
+				production_speed_infrastructure_factor = 0.1
+				local_resources_factor = 0.15
+			}
+			
+			traits = { rothschild }
 			
 			# assembled hawk II and hawk III fighter bombers as well as the Vultee V-11 ground attackers
 						
