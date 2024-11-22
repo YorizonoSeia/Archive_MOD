@@ -289,5 +289,6 @@ ideas = {
                 generate_wargoal_tension = 1
 			}
         }
+		
 	}
 }
