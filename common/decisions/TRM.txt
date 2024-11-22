@@ -2634,15 +2634,15 @@ TRM_kivotos_core_states_categories = {
 		available = { 
             custom_trigger_tooltip = {
                 tooltip = TRN_Holy_Mandate_Trigger_tt
-			    controls_state = 10
-			    controls_state = 92
-			    controls_state = 90
-			    controls_state = 88
-			    controls_state = 91
-			    controls_state = 89
-			    controls_state = 991
-			    controls_state = 87
-			    controls_state = 98
+                10 = { is_owned_or_subject_trigger = yes }
+                92 = { is_owned_or_subject_trigger = yes }
+                90 = { is_owned_or_subject_trigger = yes }
+                88 = { is_owned_or_subject_trigger = yes }
+                91 = { is_owned_or_subject_trigger = yes }
+                89 = { is_owned_or_subject_trigger = yes }
+                991 = { is_owned_or_subject_trigger = yes }
+                87 = { is_owned_or_subject_trigger = yes }
+                98 = { is_owned_or_subject_trigger = yes }
             }
 		}
         highlight_states = {
@@ -2678,40 +2678,40 @@ TRM_kivotos_core_states_categories = {
 			has_war = no
             custom_trigger_tooltip = {
                 tooltip = TRN_Holy_Mandate_Trigger_tt
-                controls_state = 93
-                controls_state = 201
-                controls_state = 198
-                controls_state = 202
-                controls_state = 193
-                controls_state = 225
-                controls_state = 221
-                controls_state = 228
-                controls_state = 227
-                controls_state = 200
-                controls_state = 226
-                controls_state = 203
-                controls_state = 834
-                controls_state = 192
-                controls_state = 197
-                controls_state = 196
-                controls_state = 137
-                controls_state = 199
-                controls_state = 259
-                controls_state = 241
-                controls_state = 194
-                controls_state = 94
-		        controls_state = 224
-        		controls_state = 222
-        		controls_state = 258
-		        controls_state = 218
-		        controls_state = 245
-		        controls_state = 265
-		        controls_state = 257
-        		controls_state = 220
-        		controls_state = 240
-        		controls_state = 260
-        		controls_state = 245
-        		controls_state = 218
+                93 = { is_owned_or_subject_trigger = yes }
+                201 = { is_owned_or_subject_trigger = yes }
+                198 = { is_owned_or_subject_trigger = yes }
+                202 = { is_owned_or_subject_trigger = yes }
+                193 = { is_owned_or_subject_trigger = yes }
+                225 = { is_owned_or_subject_trigger = yes }
+                221 = { is_owned_or_subject_trigger = yes }
+                228 = { is_owned_or_subject_trigger = yes }
+                227 = { is_owned_or_subject_trigger = yes }
+                200 = { is_owned_or_subject_trigger = yes }
+                226 = { is_owned_or_subject_trigger = yes }
+                203 = { is_owned_or_subject_trigger = yes }
+                834 = { is_owned_or_subject_trigger = yes }
+                192 = { is_owned_or_subject_trigger = yes }
+                197 = { is_owned_or_subject_trigger = yes }
+                196 = { is_owned_or_subject_trigger = yes }
+                137 = { is_owned_or_subject_trigger = yes }
+                199 = { is_owned_or_subject_trigger = yes }
+                259 = { is_owned_or_subject_trigger = yes }
+                241 = { is_owned_or_subject_trigger = yes }
+                194 = { is_owned_or_subject_trigger = yes }
+                94 = { is_owned_or_subject_trigger = yes }
+                224 = { is_owned_or_subject_trigger = yes }
+                222 = { is_owned_or_subject_trigger = yes }
+                258 = { is_owned_or_subject_trigger = yes }
+                218 = { is_owned_or_subject_trigger = yes }
+                245 = { is_owned_or_subject_trigger = yes }
+                265 = { is_owned_or_subject_trigger = yes }
+                257 = { is_owned_or_subject_trigger = yes }
+                220 = { is_owned_or_subject_trigger = yes }
+                240 = { is_owned_or_subject_trigger = yes }
+                260 = { is_owned_or_subject_trigger = yes }
+                245 = { is_owned_or_subject_trigger = yes }
+                218 = { is_owned_or_subject_trigger = yes }
             }
 		}
         highlight_states = {
@@ -2738,18 +2738,18 @@ TRM_kivotos_core_states_categories = {
                 state = 241
                 state = 194
                 state = 94
-		        state = 224
-        		state = 222
-        		state = 258
-		        state = 218
-		        state = 245
-		        state = 265
-		        state = 257
-        		state = 220
-        		state = 240
-        		state = 260
-        		state = 245
-        		state = 218
+                state = 224
+                state = 222
+                state = 258
+                state = 218
+                state = 245
+                state = 265
+                state = 257
+                state = 220
+                state = 240
+                state = 260
+                state = 245
+                state = 218
             }
         }
 		visible = { }
@@ -2772,30 +2772,30 @@ TRM_kivotos_core_states_categories = {
 			has_war = no
             custom_trigger_tooltip = {
                 tooltip = TRN_Holy_Mandate_Trigger_tt
-                controls_state = 206
-                controls_state = 204
-                controls_state = 207
-                controls_state = 241
-                controls_state = 96
-                controls_state = 95
-                controls_state = 94
-                controls_state = 97
-                controls_state = 814
-                controls_state = 784
-                controls_state = 11
-                controls_state = 815
-                controls_state = 189
-                controls_state = 190
-                controls_state = 809
-                controls_state = 808
-                controls_state = 12
-                controls_state = 810
-                controls_state = 191
-                controls_state = 13
-                controls_state = 813
-                controls_state = 812
-                controls_state = 811
-                controls_state = 194
+                206 = { is_owned_or_subject_trigger = yes }
+                204 = { is_owned_or_subject_trigger = yes }
+                207 = { is_owned_or_subject_trigger = yes }
+                241 = { is_owned_or_subject_trigger = yes }
+                96 = { is_owned_or_subject_trigger = yes }
+                95 = { is_owned_or_subject_trigger = yes }
+                94 = { is_owned_or_subject_trigger = yes }
+                97 = { is_owned_or_subject_trigger = yes }
+                814 = { is_owned_or_subject_trigger = yes }
+                784 = { is_owned_or_subject_trigger = yes }
+                11 = { is_owned_or_subject_trigger = yes }
+                815 = { is_owned_or_subject_trigger = yes }
+                189 = { is_owned_or_subject_trigger = yes }
+                190 = { is_owned_or_subject_trigger = yes }
+                809 = { is_owned_or_subject_trigger = yes }
+                808 = { is_owned_or_subject_trigger = yes }
+                12 = { is_owned_or_subject_trigger = yes }
+                810 = { is_owned_or_subject_trigger = yes }
+                191 = { is_owned_or_subject_trigger = yes }
+                13 = { is_owned_or_subject_trigger = yes }
+                813 = { is_owned_or_subject_trigger = yes }
+                812 = { is_owned_or_subject_trigger = yes }
+                811 = { is_owned_or_subject_trigger = yes }
+                194 = { is_owned_or_subject_trigger = yes }
             }
 		}
         highlight_states = {
@@ -2851,21 +2851,21 @@ TRM_kivotos_core_states_categories = {
 			has_war = no
             custom_trigger_tooltip = {
                 tooltip = TRN_Holy_Mandate_Trigger_tt
-				controls_state = 219
-		        controls_state = 242
-		        controls_state = 205
-		        controls_state = 243
-		        controls_state = 254
-		        controls_state = 223
-		        controls_state = 247
-		        controls_state = 248
-		        controls_state = 253
-		        controls_state = 246
-		        controls_state = 264
-		        controls_state = 351
-		        controls_state = 880
-		        controls_state = 879
-		        controls_state = 214
+                219 = { is_owned_or_subject_trigger = yes }
+                242 = { is_owned_or_subject_trigger = yes }
+                205 = { is_owned_or_subject_trigger = yes }
+                243 = { is_owned_or_subject_trigger = yes }
+                254 = { is_owned_or_subject_trigger = yes }
+                223 = { is_owned_or_subject_trigger = yes }
+                247 = { is_owned_or_subject_trigger = yes }
+                248 = { is_owned_or_subject_trigger = yes }
+                253 = { is_owned_or_subject_trigger = yes }
+                246 = { is_owned_or_subject_trigger = yes }
+                264 = { is_owned_or_subject_trigger = yes }
+                351 = { is_owned_or_subject_trigger = yes }
+                880 = { is_owned_or_subject_trigger = yes }
+                879 = { is_owned_or_subject_trigger = yes }
+                214 = { is_owned_or_subject_trigger = yes }
             }
         } 
         highlight_states = {
@@ -2907,21 +2907,22 @@ TRM_kivotos_core_states_categories = {
 			has_war = no
             custom_trigger_tooltip = {
                 tooltip = TRN_Holy_Mandate_Trigger_tt
-				controls_state = 234
-		        controls_state = 235
-		        controls_state = 232
-		        controls_state = 233
-		        controls_state = 827
-		        controls_state = 828
-		        controls_state = 821
-		        controls_state = 826
-		        controls_state = 231
-		        controls_state = 230
-		        controls_state = 229
-		        controls_state = 217
-		        controls_state = 236
-		        controls_state = 237
-		        controls_state = 238
+				234 = { is_owned_or_subject_trigger = yes }
+                235 = { is_owned_or_subject_trigger = yes }
+                232 = { is_owned_or_subject_trigger = yes }
+                233 = { is_owned_or_subject_trigger = yes }
+                827 = { is_owned_or_subject_trigger = yes }
+                828 = { is_owned_or_subject_trigger = yes }
+                821 = { is_owned_or_subject_trigger = yes }
+                826 = { is_owned_or_subject_trigger = yes }
+                231 = { is_owned_or_subject_trigger = yes }
+                230 = { is_owned_or_subject_trigger = yes }
+                229 = { is_owned_or_subject_trigger = yes }
+                217 = { is_owned_or_subject_trigger = yes }
+                236 = { is_owned_or_subject_trigger = yes }
+                237 = { is_owned_or_subject_trigger = yes }
+                238 = { is_owned_or_subject_trigger = yes }
+
             }
         }
         highlight_states = {
@@ -2962,30 +2963,31 @@ TRM_kivotos_core_states_categories = {
 			has_war = no
             custom_trigger_tooltip = {
                 tooltip = TRN_Holy_Mandate_Trigger_tt
-			controls_state = 16
-			controls_state = 17
-			controls_state = 15
-			controls_state = 785
-			controls_state = 30
-			controls_state = 23
-			controls_state = 25
-			controls_state = 33
-			controls_state = 26
-			controls_state = 20
-			controls_state = 32
-			controls_state = 21
-			controls_state = 992
-			controls_state = 851
-			controls_state = 31
-			controls_state = 806
-			controls_state = 19
-			controls_state = 985
-			controls_state = 984
-			controls_state = 14
-			controls_state = 22
-			controls_state = 18
-			controls_state = 27
-			controls_state = 24
+			    16 = { is_owned_or_subject_trigger = yes }
+                17 = { is_owned_or_subject_trigger = yes }
+                15 = { is_owned_or_subject_trigger = yes }
+                785 = { is_owned_or_subject_trigger = yes }
+                30 = { is_owned_or_subject_trigger = yes }
+                23 = { is_owned_or_subject_trigger = yes }
+                25 = { is_owned_or_subject_trigger = yes }
+                33 = { is_owned_or_subject_trigger = yes }
+                26 = { is_owned_or_subject_trigger = yes }
+                20 = { is_owned_or_subject_trigger = yes }
+                32 = { is_owned_or_subject_trigger = yes }
+                21 = { is_owned_or_subject_trigger = yes }
+                992 = { is_owned_or_subject_trigger = yes }
+                851 = { is_owned_or_subject_trigger = yes }
+                31 = { is_owned_or_subject_trigger = yes }
+                806 = { is_owned_or_subject_trigger = yes }
+                19 = { is_owned_or_subject_trigger = yes }
+                985 = { is_owned_or_subject_trigger = yes }
+                984 = { is_owned_or_subject_trigger = yes }
+                14 = { is_owned_or_subject_trigger = yes }
+                22 = { is_owned_or_subject_trigger = yes }
+                18 = { is_owned_or_subject_trigger = yes }
+                27 = { is_owned_or_subject_trigger = yes }
+                24 = { is_owned_or_subject_trigger = yes }
+
             }
 		}
 		visible = { }
@@ -3033,29 +3035,30 @@ TRM_kivotos_core_states_categories = {
 			has_war = no
             custom_trigger_tooltip = {
                 tooltip = TRN_Holy_Mandate_Trigger_tt
-                controls_state = 912
-                controls_state = 99
-                controls_state = 37
-                controls_state = 911
-                controls_state = 138
-                controls_state = 139
-                controls_state = 915
-                controls_state = 140
-                controls_state = 913
-                controls_state = 919
-                controls_state = 141
-                controls_state = 916
-                controls_state = 38
-                controls_state = 110
-                controls_state = 921
-                controls_state = 922
-                controls_state = 142
-                controls_state = 143
-                controls_state = 923
-                controls_state = 924
-                controls_state = 144
-                controls_state = 918
-                controls_state = 666
+				912 = { is_owned_or_subject_trigger = yes }
+                99 = { is_owned_or_subject_trigger = yes }
+                37 = { is_owned_or_subject_trigger = yes }
+                911 = { is_owned_or_subject_trigger = yes }
+                138 = { is_owned_or_subject_trigger = yes }
+                139 = { is_owned_or_subject_trigger = yes }
+                915 = { is_owned_or_subject_trigger = yes }
+                140 = { is_owned_or_subject_trigger = yes }
+                913 = { is_owned_or_subject_trigger = yes }
+                919 = { is_owned_or_subject_trigger = yes }
+                141 = { is_owned_or_subject_trigger = yes }
+                916 = { is_owned_or_subject_trigger = yes }
+                38 = { is_owned_or_subject_trigger = yes }
+                110 = { is_owned_or_subject_trigger = yes }
+                921 = { is_owned_or_subject_trigger = yes }
+                922 = { is_owned_or_subject_trigger = yes }
+                142 = { is_owned_or_subject_trigger = yes }
+                143 = { is_owned_or_subject_trigger = yes }
+                923 = { is_owned_or_subject_trigger = yes }
+                924 = { is_owned_or_subject_trigger = yes }
+                144 = { is_owned_or_subject_trigger = yes }
+                918 = { is_owned_or_subject_trigger = yes }
+                666 = { is_owned_or_subject_trigger = yes }
+
             }
 		}
         highlight_states = {
@@ -3106,33 +3109,33 @@ TRM_kivotos_core_states_categories = {
 			}
             custom_trigger_tooltip = {
                 tooltip = TRN_Holy_Mandate_Trigger_tt
-                controls_state = 176
-                controls_state = 172
-                controls_state = 166
-                controls_state = 165
-                controls_state = 793
-                controls_state = 167
-                controls_state = 791
-                controls_state = 174
-                controls_state = 790
-                controls_state = 171
-                controls_state = 788
-                controls_state = 41
-                controls_state = 168
-                controls_state = 789
-                controls_state = 169
-                controls_state = 173
-                controls_state = 177
-                controls_state = 180
-                controls_state = 181
-                controls_state = 112
-                controls_state = 795
-                controls_state = 179
-                controls_state = 170
-                controls_state = 175
-                controls_state = 794
-                controls_state = 792
-                controls_state = 118
+				176 = { is_owned_or_subject_trigger = yes }
+                172 = { is_owned_or_subject_trigger = yes }
+                166 = { is_owned_or_subject_trigger = yes }
+                165 = { is_owned_or_subject_trigger = yes }
+                793 = { is_owned_or_subject_trigger = yes }
+                167 = { is_owned_or_subject_trigger = yes }
+                791 = { is_owned_or_subject_trigger = yes }
+                174 = { is_owned_or_subject_trigger = yes }
+                790 = { is_owned_or_subject_trigger = yes }
+                171 = { is_owned_or_subject_trigger = yes }
+                788 = { is_owned_or_subject_trigger = yes }
+                41 = { is_owned_or_subject_trigger = yes }
+                168 = { is_owned_or_subject_trigger = yes }
+                789 = { is_owned_or_subject_trigger = yes }
+                169 = { is_owned_or_subject_trigger = yes }
+                173 = { is_owned_or_subject_trigger = yes }
+                177 = { is_owned_or_subject_trigger = yes }
+                180 = { is_owned_or_subject_trigger = yes }
+                181 = { is_owned_or_subject_trigger = yes }
+                112 = { is_owned_or_subject_trigger = yes }
+                795 = { is_owned_or_subject_trigger = yes }
+                179 = { is_owned_or_subject_trigger = yes }
+                170 = { is_owned_or_subject_trigger = yes }
+                175 = { is_owned_or_subject_trigger = yes }
+                794 = { is_owned_or_subject_trigger = yes }
+                792 = { is_owned_or_subject_trigger = yes }
+                118 = { is_owned_or_subject_trigger = yes }
             }
 		}
         highlight_states = {
@@ -3189,26 +3192,26 @@ TRM_kivotos_core_states_categories = {
 			}
             custom_trigger_tooltip = {
                 tooltip = TRN_Holy_Mandate_Trigger_tt
-                controls_state = 735
-                controls_state = 158
-                controls_state = 993
-                controls_state = 159
-                controls_state = 160
-                controls_state = 161
-                controls_state = 162
-                controls_state = 1
-                controls_state = 2
-                controls_state = 157
-                controls_state = 117
-                controls_state = 849
-                controls_state = 156
-                controls_state = 115
-                controls_state = 114
-                controls_state = 850
-                controls_state = 39
-                controls_state = 736
-                controls_state = 852
-                controls_state = 116
+                735 = { is_owned_or_subject_trigger = yes }
+                158 = { is_owned_or_subject_trigger = yes }
+                993 = { is_owned_or_subject_trigger = yes }
+                159 = { is_owned_or_subject_trigger = yes }
+                160 = { is_owned_or_subject_trigger = yes }
+                161 = { is_owned_or_subject_trigger = yes }
+                162 = { is_owned_or_subject_trigger = yes }
+                1 = { is_owned_or_subject_trigger = yes }
+                2 = { is_owned_or_subject_trigger = yes }
+                157 = { is_owned_or_subject_trigger = yes }
+                117 = { is_owned_or_subject_trigger = yes }
+                849 = { is_owned_or_subject_trigger = yes }
+                156 = { is_owned_or_subject_trigger = yes }
+                115 = { is_owned_or_subject_trigger = yes }
+                114 = { is_owned_or_subject_trigger = yes }
+                850 = { is_owned_or_subject_trigger = yes }
+                39 = { is_owned_or_subject_trigger = yes }
+                736 = { is_owned_or_subject_trigger = yes }
+                852 = { is_owned_or_subject_trigger = yes }
+                116 = { is_owned_or_subject_trigger = yes }
             }
 		}
         highlight_states = {
@@ -3306,56 +3309,56 @@ TRM_kivotos_core_states_categories = {
 			}
             custom_trigger_tooltip = {
                 tooltip = TRN_Holy_Mandate_Trigger_tt
-                controls_state = 102
-                controls_state = 853
-                controls_state = 982
-                controls_state = 103
-                controls_state = 163
-                controls_state = 109
-                controls_state = 155
-                controls_state = 70
-                controls_state = 71
-                controls_state = 664
-                controls_state = 43
-                controls_state = 154
-                controls_state = 45
-                controls_state = 76
-                controls_state = 73
-                controls_state = 83
-                controls_state = 84
-                controls_state = 82
-                controls_state = 764
-                controls_state = 81
-                controls_state = 46
-                controls_state = 79
-                controls_state = 80
-                controls_state = 78
-                controls_state = 766
-                controls_state = 764
-                controls_state = 107
-                controls_state = 108
-                controls_state = 104
-                controls_state = 804
-                controls_state = 105
-                controls_state = 802
-                controls_state = 934
-                controls_state = 44
-                controls_state = 805
-                controls_state = 803
-                controls_state = 106
-                controls_state = 48
-                controls_state = 212
-                controls_state = 801
-                controls_state = 77
-                controls_state = 211
-                controls_state = 731
-                controls_state = 184
-                controls_state = 185
-                controls_state = 47
-                controls_state = 186
-                controls_state = 187
-                controls_state = 164
-                controls_state = 182
+				102 = { is_owned_or_subject_trigger = yes }
+                853 = { is_owned_or_subject_trigger = yes }
+                982 = { is_owned_or_subject_trigger = yes }
+                103 = { is_owned_or_subject_trigger = yes }
+                163 = { is_owned_or_subject_trigger = yes }
+                109 = { is_owned_or_subject_trigger = yes }
+                155 = { is_owned_or_subject_trigger = yes }
+                70 = { is_owned_or_subject_trigger = yes }
+                71 = { is_owned_or_subject_trigger = yes }
+                664 = { is_owned_or_subject_trigger = yes }
+                43 = { is_owned_or_subject_trigger = yes }
+                154 = { is_owned_or_subject_trigger = yes }
+                45 = { is_owned_or_subject_trigger = yes }
+                76 = { is_owned_or_subject_trigger = yes }
+                73 = { is_owned_or_subject_trigger = yes }
+                83 = { is_owned_or_subject_trigger = yes }
+                84 = { is_owned_or_subject_trigger = yes }
+                82 = { is_owned_or_subject_trigger = yes }
+                764 = { is_owned_or_subject_trigger = yes }
+                81 = { is_owned_or_subject_trigger = yes }
+                46 = { is_owned_or_subject_trigger = yes }
+                79 = { is_owned_or_subject_trigger = yes }
+                80 = { is_owned_or_subject_trigger = yes }
+                78 = { is_owned_or_subject_trigger = yes }
+                766 = { is_owned_or_subject_trigger = yes }
+                764 = { is_owned_or_subject_trigger = yes }
+                107 = { is_owned_or_subject_trigger = yes }
+                108 = { is_owned_or_subject_trigger = yes }
+                104 = { is_owned_or_subject_trigger = yes }
+                804 = { is_owned_or_subject_trigger = yes }
+                105 = { is_owned_or_subject_trigger = yes }
+                802 = { is_owned_or_subject_trigger = yes }
+                934 = { is_owned_or_subject_trigger = yes }
+                44 = { is_owned_or_subject_trigger = yes }
+                805 = { is_owned_or_subject_trigger = yes }
+                803 = { is_owned_or_subject_trigger = yes }
+                106 = { is_owned_or_subject_trigger = yes }
+                48 = { is_owned_or_subject_trigger = yes }
+                212 = { is_owned_or_subject_trigger = yes }
+                801 = { is_owned_or_subject_trigger = yes }
+                77 = { is_owned_or_subject_trigger = yes }
+                211 = { is_owned_or_subject_trigger = yes }
+                731 = { is_owned_or_subject_trigger = yes }
+                184 = { is_owned_or_subject_trigger = yes }
+                185 = { is_owned_or_subject_trigger = yes }
+                47 = { is_owned_or_subject_trigger = yes }
+                186 = { is_owned_or_subject_trigger = yes }
+                187 = { is_owned_or_subject_trigger = yes }
+                164 = { is_owned_or_subject_trigger = yes }
+                182 = { is_owned_or_subject_trigger = yes }
             }
 		}
         highlight_states = {
@@ -3410,6 +3413,10 @@ TRM_kivotos_core_states_categories = {
                 state = 187
                 state = 164
                 state = 182
+                state = 970
+                state = 974
+                state = 973
+                state = 971
             }
         }
 		visible = {
@@ -3751,6 +3758,222 @@ TRM_Iron_Sword_Operations_Categorie = {
 			country_event = { id = TRM_ironsword_event.4 }
 		}
     }
+}
+TRM_diplomacy_balkan_decision_category = {
+
+	TRM_send_ultimatum_to_country_balkan = {
+		priority = 50
+
+		icon = eng_trade_unions_demand
+
+		ai_will_do = {
+			base = 20
+			modifier = {
+				factor = 10
+				has_political_power > 160
+			}
+			modifier = {
+				factor = 10
+				date > 1940.6.1
+			}
+			modifier = {
+				factor = 0
+				is_in_faction_with = FROM
+			}
+		}
+
+		targets = { YUG CRO MNT SLV BOS HRZ MAC SER KOS TRA } #These are all tags included in scripted trigger "BUL_is_balkan_nation = yes"
+
+		target_trigger = {
+			country_exists = FROM
+			FROM = {
+				NOT = { has_war_with = ROOT }
+				NOT = { is_in_faction_with = ROOT } #CAN'T SEND ULTIMATUMS TO ALLIES OR SUBJECTS
+				NOT = { is_subject_of = FROM }
+				NOT = { has_country_flag = TRM_ultimatum_sent_flag }
+			}
+			FROM = {
+				is_subject = no #Subjects get dragged along in what their overlord says
+				NOT = {
+					is_subject_of = TRM
+				}
+			}
+		}
+
+		target_root_trigger = {
+			has_completed_focus = TRM_invade_balkan
+			is_subject = no
+		}
+
+		allowed = {
+			original_tag = TRM
+		}
+
+		available = {
+			FROM = {
+				NOT = { 
+					has_war_with = ROOT 
+				}
+				is_subject = no
+			}
+			is_subject = no
+		}
+
+		visible = {
+
+		}
+
+		cost = TRM_send_ultimatum_to_country_cost
+
+		days_remove = TRM_ultimatum_days
+
+		remove_effect = {
+			FROM = {
+				set_country_flag = TRM_ultimatum_sent_flag
+				country_event = { id = NSB_soviet_foreign_politics_events.200 hours = 16 random_hours = 8 }
+			}
+			custom_effect_tooltip = SOV_ultimatum_generic_effects_tt
+			custom_effect_tooltip = SOV_decision_will_be_locked_tt
+		}
+	}
+
+	TRM_pressure_country_government_balkan = {
+		priority = 50
+
+		icon = generic_political_discourse
+
+		ai_will_do = {
+			base = 0.8
+			modifier = {
+				factor = 2
+				has_political_power > 160
+			}
+			modifier = { #If ideological rallies happened, then it's better
+				factor = 4
+				FROM = { has_country_flag = TRM_ideological_rallies_promoted_flag }
+			}
+			modifier = { #Do it only once, don't spam
+				factor = 0
+				FROM = { has_country_flag = TRM_government_pressured_flag }
+			}
+		}
+
+		#targets = { YUG BUL ROM }
+		targets = { HUN BUL GRE YUG ALB ROM TUR SLV BOS HRZ MAC SER CRO KOS MNT TRA } #These are all tags included in scripted trigger "BUL_is_balkan_nation = yes"
+
+		target_trigger = {
+			SOV_basic_pressure_government_triggers = yes
+		}
+
+		target_root_trigger = {
+			has_completed_focus = TRM_balkan_seeking_collaborators
+			is_subject = no
+		}
+
+		allowed = {
+			original_tag = TRM
+		}
+
+		available = {
+			is_faction_leader = yes
+			FROM = {
+				has_opinion = {
+					target = ROOT
+					value > 49
+				}
+				SOV_is_valid_subject = yes # Italy might not give a sh*t about their petty overlord ;)
+				NOT = { has_war_with = ROOT }
+			}
+			NOT = { has_country_flag = TRM_pressure_government_active_flag }
+		}
+
+		visible = {
+		}
+
+		days_remove = TRM_pressure_government_days
+
+		days_re_enable = TRM_pressure_government_cd
+
+		cost = TRM_pressure_country_government_cost
+
+		modifier = {
+			political_power_gain = -0.25
+		}
+
+		complete_effect = {
+			set_country_flag = TRM_pressure_government_active_flag
+		}
+
+		remove_effect = {
+			FROM = {
+				country_event = { id = NSB_soviet_foreign_politics_events.1 hours = 4 random_hours = 2 }
+				set_country_flag = TRM_government_pressured_flag #For AI weights - don't spam
+			}
+			clr_country_flag = TRM_pressure_government_active_flag
+			custom_effect_tooltip = SOV_pressure_government_effects_tt
+			custom_effect_tooltip = TRM_pressure_government_cd_tt
+		}
+	}
+
+	TRM_promote_ideology_rallies_balkan = {
+		priority = 50
+
+		icon = generic_political_rally
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 2
+				has_political_power > 160
+			}
+		}
+
+		#targets = { YUG BUL ROM }
+		targets = { HUN BUL GRE YUG ALB ROM TUR SLV BOS HRZ MAC SER CRO KOS MNT TRA } #These are all tags included in scripted trigger "BUL_is_balkan_nation = yes"
+
+		target_trigger = {
+			SOV_basic_promote_rallies_triggers = yes
+		}
+
+		target_root_trigger = {
+			has_completed_focus = TRM_balkan_seeking_collaborators
+		}
+
+		allowed = {
+			original_tag = TRM
+		}
+
+		available = {
+			FROM = {
+				SOV_is_valid_subject = yes # Italy might not give a sh*t about their petty overlord ;)
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		visible = {
+		}
+
+		days_remove = TRM_ideological_rallies_days
+
+		fire_only_once = yes
+
+		cost = TRM_promote_ideology_rallies_cost
+
+		modifier = {
+			political_power_gain = -0.25
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			FROM = {
+				country_event = { id = NSB_soviet_foreign_politics_events.2 hours = 4 random_hours = 2 }
+			}
+			custom_effect_tooltip = SOV_promote_rallies_effects_tt
+			custom_effect_tooltip = SOV_promote_ideological_rallies_cd_tt
+		}
+	}
 }
 TRM_story_archive = {
 	TRM_show_story_archive_gui = {

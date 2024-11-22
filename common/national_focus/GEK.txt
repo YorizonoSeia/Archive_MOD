@@ -179,7 +179,7 @@ focus_tree = {
 	}
 	focus = { #상륙!
 		id = GEK_RM_focus_0 #RM은 랩몬스터가 아니라 Rhineland Militarization
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_focus_attack_GEH
 		ai_will_do = {
 			base = 0
 		}
@@ -212,14 +212,14 @@ focus_tree = {
 			}
 			NOT = { has_government = communism }
 		}
-		cost = 2
+		cost = 7
 		completion_reward = {
 			set_cosmetic_tag = GEK_RM
 			random_owned_controlled_state = {
 				limit = {
 					BA_is_GER_core = yes
 				}
-				prioritize = { 58 }
+				prioritize = { 909 }
 				ROOT = {
 					set_capital = {
 						state = PREV
@@ -238,7 +238,7 @@ focus_tree = {
 	}
 	focus = { #주정부 충성 재확인
 		id = GEK_RM_focus_1 
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_goal_tripartite_pact
 		ai_will_do = {
 			base = 0
 		}
@@ -248,14 +248,23 @@ focus_tree = {
 		relative_position_id = GEK_RM_focus_0
 		x = -1
 		y = 1
-		cost = 4
+		cost = 1
 		completion_reward = {
-			set_cosmetic_tag = GEK_RM
+			country_event = {
+				id = GEK_rm_event.1
+				days = 3
+			}
+			hidden_effect = {
+				country_event = {
+					id = wuw_GER_civil_war.1
+					days = 29
+				}
+			}
 		}
 	}
 	focus = { #이념을 초월한 연대
 		id = GEK_RM_focus_2
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_goal_generic_improve_relations
 		ai_will_do = {
 			base = 0
 		}
@@ -265,14 +274,17 @@ focus_tree = {
 		relative_position_id = GEK_RM_focus_0
 		x = 1
 		y = 1
-		cost = 4
+		cost = 1
 		completion_reward = {
-			set_cosmetic_tag = GEK_RM
+			country_event = {
+				id = GEK_rm_event.2
+				days = 3
+			}
 		}
 	}
 	focus = { #대규모 선전
 		id = GEK_RM_focus_3
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_focus_generic_fascist_propaganda
 		ai_will_do = {
 			base = 0
 		}
@@ -285,14 +297,21 @@ focus_tree = {
 		relative_position_id = GEK_RM_focus_0
 		x = 0
 		y = 2
-		cost = 4
+		cost = 1
 		completion_reward = {
-			set_cosmetic_tag = GEK_RM
+			swap_ideas = {
+				remove_idea = GEK_legitimacy
+				add_idea = GEK_legitimacy_1
+			}
+
+			add_political_power = 30
+			add_stability = 0.15
+			add_war_support = 0.15
 		}
 	}
 	focus = { #독일공산당과의 협력
 		id = GEK_RM_com_focus_0
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_focus_chi_cooperation_with_the_communists
 		ai_will_do = {
 			base = 0
 		}
@@ -302,14 +321,252 @@ focus_tree = {
 		relative_position_id = GEK_RM_focus_3
 		x = -6
 		y = 1
-		cost = 4
+		cost = 1
 		completion_reward = {
-			set_cosmetic_tag = GEK_RM
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+			country_event = {
+				id = GEK_rm_event.3
+				days = 3
+			}
+		}
+	}
+	focus = { #대도시 파업 지휘
+		id = GEK_RM_com_focus_1
+		icon = GFX_focus_generic_workers
+		ai_will_do = {
+			base = 0
+		}
+		prerequisite = {
+			focus = GEK_RM_com_focus_0
+		}
+		available = {
+			has_war = yes
+		}
+		relative_position_id = GEK_RM_com_focus_0
+		x = -1
+		y = 1
+		cost = 2
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+			42 = {
+				if = {
+					limit = {
+						NOT = {
+							is_controlled_by = GEK
+						}
+					}
+					create_unit = {
+						division = "name = \"Neuer Roter Frontkämpferbund\" division_template = \"Neuer Roter Frontkämpferbund\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+						owner = GEK
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+			}
+			56 = {
+				if = {
+					limit = {
+						NOT = {
+							is_controlled_by = GEK
+						}
+					}
+					create_unit = {
+						division = "name = \"Neuer Roter Frontkämpferbund\" division_template = \"Neuer Roter Frontkämpferbund\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+						owner = GEK
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+			}
+			50 = {
+				if = {
+					limit = {
+						NOT = {
+							is_controlled_by = GEK
+						}
+					}
+					create_unit = {
+						division = "name = \"Neuer Roter Frontkämpferbund\" division_template = \"Neuer Roter Frontkämpferbund\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+						owner = GEK
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+			}
+			59 = {
+				if = {
+					limit = {
+						NOT = {
+							is_controlled_by = GEK
+						}
+					}
+					create_unit = {
+						division = "name = \"Neuer Roter Frontkämpferbund\" division_template = \"Neuer Roter Frontkämpferbund\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+						owner = GEK
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+			}
+		}
+	}
+	focus = { #유격대 강화
+		id = GEK_RM_com_focus_2
+		icon = GFX_focus_generic_workers_and_farmers_rise
+		ai_will_do = {
+			base = 0
+		}
+		prerequisite = {
+			focus = GEK_RM_com_focus_0
+			focus = GEK_RM_spd_focus_0
+		}
+		available = {
+			has_war = yes
+		}
+		relative_position_id = GEK_RM_com_focus_0
+		x = 1
+		y = 1
+		cost = 2
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						has_template = "Neuer Roter Frontkämpferbund"
+					}
+				}
+				division_template = {
+					name = "Neuer Roter Frontkämpferbund"
+					regiments = {
+						militia = {
+							x = 0
+							y = 0
+						}
+						militia = {
+							x = 0
+							y = 1
+						}
+						militia = {
+							x = 0
+							y = 2
+						}
+						militia = {
+							x = 1
+							y = 0
+						}
+						militia = {
+							x = 1
+							y = 1
+						}
+						militia = {
+							x = 1
+							y = 2
+						}
+					}
+					is_locked = yes
+				}
+			}
+			capital_scope = {
+				create_unit = {
+					division = "name = \"Neuer Roter Frontkämpferbund\" division_template = \"Neuer Roter Frontkämpferbund\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+					owner = GEK
+				}
+				create_unit = {
+					division = "name = \"Neuer Roter Frontkämpferbund\" division_template = \"Neuer Roter Frontkämpferbund\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+					owner = GEK
+				}
+				create_unit = {
+					division = "name = \"Neuer Roter Frontkämpferbund\" division_template = \"Neuer Roter Frontkämpferbund\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+					owner = GEK
+				}
+				create_unit = {
+					division = "name = \"Neuer Roter Frontkämpferbund\" division_template = \"Neuer Roter Frontkämpferbund\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+					owner = GEK
+				}
+			}
+			add_timed_idea = {
+				idea = GEK_partisan
+				days = 150
+			}
+		}
+	}
+	focus = { #반소탕전
+		id = GEK_RM_com_focus_3
+		icon = GFX_focus_prc_infiltration
+		ai_will_do = {
+			base = 0
+		}
+		prerequisite = {
+			focus = GEK_RM_com_focus_1
+		}
+		prerequisite = {
+			focus = GEK_RM_com_focus_2
+		}
+		relative_position_id = GEK_RM_com_focus_0
+		x = 0
+		y = 2
+		cost = 2
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+			every_controlled_state = {
+				create_unit = {
+					division = "name = \"Neuer Roter Frontkämpferbund\" division_template = \"Neuer Roter Frontkämpferbund\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+					owner = GEK
+				}
+			}
+			custom_effect_tooltip = GEK_RM_com_focus_3_tt
+			if = {
+				limit = {
+					has_idea = GEK_partisan
+				}
+				swap_ideas = {
+					remove_idea = GEK_partisan
+					add_idea = GEK_partisan_1
+				}
+				modify_timed_idea = {
+					idea = GEK_partisan_1
+					days = 150
+				}
+			}
+			else = {
+				add_timed_idea = {
+					idea = GEK_partisan
+					days = 150
+				}
+			}
+		}
+	}
+	focus = { #반독재 집중 투쟁
+		id = GEK_RM_com_focus_4
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		ai_will_do = {
+			base = 0
+		}
+		prerequisite = {
+			focus = GEK_RM_com_focus_3
+		}
+		mutually_exclusive = {
+			focus = GEK_RM_spd_focus_4
+			focus = GEK_RM_spd_focus_3
+			focus = GEK_RM_army_focus_4
+			focus = GEK_RM_army_focus_5
+			focus = GEK_RM_nazi_focus_3
+		}
+		text_icon = GER_inner_circle_focus_style
+		relative_position_id = GEK_RM_com_focus_0
+		x = 1
+		y = 3
+		cost = 2
+		completion_reward = {
 		}
 	}
 	focus = { #독일사회민주당과의 협력
 		id = GEK_RM_spd_focus_0
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_goal_support_democracy
 		ai_will_do = {
 			base = 0
 		}
@@ -319,14 +576,126 @@ focus_tree = {
 		relative_position_id = GEK_RM_focus_3
 		x = -3
 		y = 1
-		cost = 4
+		cost = 1
 		completion_reward = {
-			set_cosmetic_tag = GEK_RM
+			country_event = {
+				id = GEK_rm_event.4
+				days = 3
+			}
+		}
+	}
+	focus = { #민중 결집
+		id = GEK_RM_spd_focus_1
+		icon = GFX_focus_por_workers_of_iberia
+		ai_will_do = {
+			base = 0
+		}
+		prerequisite = {
+			focus = GEK_RM_spd_focus_0
+		}
+		relative_position_id = GEK_RM_spd_focus_0
+		x = 0
+		y = 1
+		cost = 2
+		completion_reward = {
+			country_event = {
+				id = GEK_rm_event.5
+				days = 3
+			}
+		}
+	}
+	focus = { #대연정 지도
+		id = GEK_RM_spd_focus_2
+		icon = GFX_goal_generic_national_unity
+		ai_will_do = {
+			base = 0
+		}
+		prerequisite = {
+			focus = GEK_RM_spd_focus_1
+		}
+		prerequisite = {
+			focus = GEK_RM_com_focus_2
+		}
+		prerequisite = {
+			focus = GEK_RM_dzp_focus_1
+		}
+		relative_position_id = GEK_RM_spd_focus_0
+		x = 0
+		y = 2
+		cost = 2
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = GEK_solidarity_across_ideology
+				add_idea = GEK_solidarity_across_ideology_1
+			}
+		}
+	}
+	focus = { #공화주의 정서
+		id = GEK_RM_spd_focus_3
+		icon = GFX_focus_BRA_reach_out_to_military_dem
+		ai_will_do = {
+			base = 0
+		}
+		prerequisite = {
+			focus = GEK_RM_spd_focus_2
+		}
+		prerequisite = {
+			focus = GEK_RM_com_focus_3
+		}
+		mutually_exclusive = {
+			focus = GEK_RM_spd_focus_4
+			focus = GEK_RM_com_focus_4
+			focus = GEK_RM_army_focus_4
+			focus = GEK_RM_army_focus_5
+			focus = GEK_RM_nazi_focus_3
+		}
+		text_icon = GER_inner_circle_focus_style
+		relative_position_id = GEK_RM_spd_focus_0
+		x = 2
+		y = 3
+		cost = 2
+		completion_reward = {
+		}
+	}
+	focus = { #전독일 최대연정 유지
+		id = GEK_RM_spd_focus_4
+		icon = GFX_focus_POL_complete_april_constitution
+		ai_will_do = {
+			base = 0
+		}
+		mutually_exclusive = {
+			focus = GEK_RM_spd_focus_3
+			focus = GEK_RM_com_focus_4
+			focus = GEK_RM_army_focus_4
+			focus = GEK_RM_army_focus_5
+			focus = GEK_RM_nazi_focus_3
+		}
+		prerequisite = {
+			focus = GEK_RM_spd_focus_2
+		}
+		prerequisite = {
+			focus = GEK_RM_com_focus_3
+		}
+		prerequisite = {
+			focus = GEK_RM_dzp_focus_3
+		}
+		prerequisite = {
+			focus = GEK_RM_army_focus_3
+		}
+		prerequisite = {
+			focus = GEK_RM_nazi_focus_2
+		}
+		text_icon = GER_inner_circle_focus_style
+		relative_position_id = GEK_RM_spd_focus_0
+		x = 0
+		y = 3
+		cost = 2
+		completion_reward = {
 		}
 	}
 	focus = { #독일중앙당과의 협력
 		id = GEK_RM_dzp_focus_0
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_focus_generic_pope
 		ai_will_do = {
 			base = 0
 		}
@@ -336,14 +705,203 @@ focus_tree = {
 		relative_position_id = GEK_RM_focus_3
 		x = 0
 		y = 1
-		cost = 4
+		cost = 1
 		completion_reward = {
-			set_cosmetic_tag = GEK_RM
+			country_event = {
+				id = GEK_rm_event.6
+				days = 3
+			}
+		}
+	}
+	focus = { #애국 여단
+		id = GEK_RM_dzp_focus_1
+		icon = GFX_goal_rhineland
+		ai_will_do = {
+			base = 0
+		}
+		prerequisite = {
+			focus = GEK_RM_dzp_focus_0
+		}
+		relative_position_id = GEK_RM_dzp_focus_0
+		x = -1
+		y = 1
+		cost = 2
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_template = "Patriotische Brigade"
+					}
+				}
+				division_template = {
+					name = "Patriotische Brigade"
+					regiments = {
+						militia = {
+							x = 0
+							y = 0
+						}
+						militia = {
+							x = 0
+							y = 1
+						}
+						militia = {
+							x = 0
+							y = 2
+						}
+						militia = {
+							x = 1
+							y = 0
+						}
+						militia = {
+							x = 1
+							y = 1
+						}
+						militia = {
+							x = 1
+							y = 2
+						}
+					}
+					is_locked = yes
+				}
+			}
+			capital_scope = {
+				create_unit = {
+					division = "name = \"Patriotische Brigade\" division_template = \"Patriotische Brigade\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+					owner = GEK
+				}
+				create_unit = {
+					division = "name = \"Patriotische Brigade\" division_template = \"Patriotische Brigade\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+					owner = GEK
+				}
+				create_unit = {
+					division = "name = \"Patriotische Brigade\" division_template = \"Patriotische Brigade\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+					owner = GEK
+				}
+				create_unit = {
+					division = "name = \"Patriotische Brigade\" division_template = \"Patriotische Brigade\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+					owner = GEK
+				}
+				create_unit = {
+					division = "name = \"Patriotische Brigade\" division_template = \"Patriotische Brigade\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+					owner = GEK
+				}
+			}
+		}
+	}
+	focus = { #라인란트 봉기
+		id = GEK_RM_dzp_focus_2
+		icon = GFX_focus_generic_support_the_left_right
+		ai_will_do = {
+			base = 0
+		}
+		prerequisite = {
+			focus = GEK_RM_dzp_focus_0
+		}
+		prerequisite = {
+			focus = GEK_RM_army_focus_0
+		}
+		relative_position_id = GEK_RM_dzp_focus_0
+		x = 1
+		y = 1
+		cost = 2
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_template = "Patriotische Brigade"
+					}
+				}
+				division_template = {
+					name = "Patriotische Brigade"
+					regiments = {
+						militia = {
+							x = 0
+							y = 0
+						}
+						militia = {
+							x = 0
+							y = 1
+						}
+						militia = {
+							x = 0
+							y = 2
+						}
+						militia = {
+							x = 1
+							y = 0
+						}
+						militia = {
+							x = 1
+							y = 1
+						}
+						militia = {
+							x = 1
+							y = 2
+						}
+					}
+					is_locked = yes
+				}
+			}
+			51 = {
+				create_unit = {
+					division = "name = \"Patriotische Brigade\" division_template = \"Patriotische Brigade\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+					owner = GEK
+                    allow_spawning_on_enemy_provs = yes
+				}
+			}
+			987 = {
+				create_unit = {
+					division = "name = \"Patriotische Brigade\" division_template = \"Patriotische Brigade\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+					owner = GEK
+                    allow_spawning_on_enemy_provs = yes
+				}
+			}
+		}
+	}
+	focus = { #산업가 규합
+		id = GEK_RM_dzp_focus_3
+		icon = GFX_focus_generic_industrialists
+		ai_will_do = {
+			base = 0
+		}
+		prerequisite = {
+			focus = GEK_RM_dzp_focus_0
+		}
+		available = {
+			controls_state = 51
+		}
+		relative_position_id = GEK_RM_dzp_focus_0
+		x = 0
+		y = 2
+		cost = 2
+		completion_reward = {
+			random_controlled_state = {
+				limit = {
+					is_core_of = GEK
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+			} 
 		}
 	}
 	focus = { #군부와의 협력
 		id = GEK_RM_army_focus_0
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_focus_POL_beck_ribbentrop
 		ai_will_do = {
 			base = 0
 		}
@@ -353,27 +911,278 @@ focus_tree = {
 		relative_position_id = GEK_RM_focus_3
 		x = 3
 		y = 1
-		cost = 4
+		cost = 1
 		completion_reward = {
-			set_cosmetic_tag = GEK_RM
+			country_event = {
+				id = GEK_rm_event.7
+				days = 3
+			}
+		}
+	}
+	focus = { #루프트바페의 귀환
+		id = GEK_RM_army_focus_1
+		icon = GFX_goal_generic_build_airforce
+		ai_will_do = {
+			base = 0
+		}
+		prerequisite = {
+			focus = GEK_RM_army_focus_0
+		}
+		relative_position_id = GEK_RM_army_focus_0
+		x = 2
+		y = 1
+		cost = 2
+		completion_reward = {
+			effect_tooltip = {
+				unlock_national_focus = GEAF_expanding_the_luftwaffe
+			}
+			set_country_flag =GEAF_expanding_the_luftwaffe_flag
+			GEF_give_airplane = yes
+			air_experience = 25
+			add_doctrine_cost_reduction = {
+				name = air_sup_bonus
+				cost_reduction = 0.25
+				uses = 2
+				category = battlefield_support_tree
+			}
+		}
+	}
+	focus = { #지휘체계 정상화
+		id = GEK_RM_army_focus_2
+		icon = GFX_focus_generic_military_mission
+		ai_will_do = {
+			base = 0
+		}
+		prerequisite = {
+			focus = GEK_RM_army_focus_0
+		}
+		relative_position_id = GEK_RM_army_focus_0
+		x = 0
+		y = 1
+		cost = 2
+		completion_reward = {
+			add_ideas = general_staff
+		}
+	}
+	focus = { #국방군 권한 확대
+		id = GEK_RM_army_focus_3
+		icon = GFX_focus_ger_oppose_hitler
+		ai_will_do = {
+			base = 0
+		}
+		prerequisite = {
+			focus = GEK_RM_army_focus_2
+		}
+		relative_position_id = GEK_RM_army_focus_0
+		x = 0
+		y = 2
+		cost = 2
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = general_staff
+				add_idea = GEK_general_staff
+			}
+			GEK_enhance_army = yes
+		}
+	}
+	focus = { #군주주의 정서
+		id = GEK_RM_army_focus_4
+		icon = GFX_focus_ger_return_of_the_kaiser
+		ai_will_do = {
+			base = 0
+		}
+		prerequisite = {
+			focus = GEK_RM_army_focus_3
+		}
+		mutually_exclusive = {
+			focus = GEK_RM_spd_focus_4
+			focus = GEK_RM_spd_focus_3
+			focus = GEK_RM_com_focus_4
+			focus = GEK_RM_army_focus_5
+			focus = GEK_RM_nazi_focus_3
+		}
+		text_icon = GER_inner_circle_focus_style
+		relative_position_id = GEK_RM_army_focus_0
+		x = -2
+		y = 3
+		cost = 2
+		completion_reward = {
+		}
+	}
+	focus = { #'전시상황'
+		id = GEK_RM_army_focus_5
+		icon = GFX_focus_generic_military_dictatorship
+		ai_will_do = {
+			base = 0
+		}
+		mutually_exclusive = {
+			focus = GEK_RM_spd_focus_4
+			focus = GEK_RM_spd_focus_3
+			focus = GEK_RM_com_focus_4
+			focus = GEK_RM_army_focus_4
+			focus = GEK_RM_nazi_focus_3
+		}
+		prerequisite = {
+			focus = GEK_RM_army_focus_3
+		}
+		text_icon = GER_inner_circle_focus_style
+		relative_position_id = GEK_RM_army_focus_0
+		x = 0
+		y = 3
+		cost = 2
+		completion_reward = {
 		}
 	}
 	focus = { #나치당과의 협력
 		id = GEK_RM_nazi_focus_0
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_focus_chi_mission_to_germany
 		ai_will_do = {
 			base = 0
 		}
-		text_icon = GER_inner_circle_focus_style
 		prerequisite = {
 			focus = GEK_RM_focus_3
 		}
 		relative_position_id = GEK_RM_focus_3
 		x = 6
 		y = 1
-		cost = 4
+		cost = 1
 		completion_reward = {
-			set_cosmetic_tag = GEK_RM
+			country_event = {
+				id = GEK_rm_event.8
+				days = 3
+			}
+		}
+	}
+	focus = { #당조직 재정비
+		id = GEK_RM_nazi_focus_1
+		icon = GFX_focus_generic_self_management
+		ai_will_do = {
+			base = 0
+		}
+		prerequisite = {
+			focus = GEK_RM_nazi_focus_0
+		}
+		relative_position_id = GEK_RM_nazi_focus_0
+		x = 1
+		y = 1
+		cost = 2
+		completion_reward = {
+			add_political_power = 20
+			GEK_enhance_nazi = yes
+			54 = {
+				add_dynamic_modifier = {
+					modifier = GER_bewegungskrieg_modifier
+					days = 120
+				}
+			}
+			53 = {
+				add_dynamic_modifier = {
+					modifier = GER_bewegungskrieg_modifier
+					days = 120
+				}
+			}
+			52 = {
+				add_dynamic_modifier = {
+					modifier = GER_bewegungskrieg_modifier
+					days = 120
+				}
+			}
+		}
+	}
+	focus = { #친위대 활용
+		id = GEK_RM_nazi_focus_2
+		icon = GFX_focus_generic_full_social_mobilization
+		ai_will_do = {
+			base = 0
+		}
+		prerequisite = {
+			focus = GEK_RM_nazi_focus_1
+		}
+		relative_position_id = GEK_RM_nazi_focus_0
+		x = 0
+		y = 2
+		cost = 2
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						has_template = "Patriotische Brigade"
+					}
+				}
+				division_template = {
+					name = "Überreste der Schutzstaffel"
+					regiments = {
+						infantry = {
+							x = 0
+							y = 0
+						}
+						infantry = {
+							x = 0
+							y = 1
+						}
+						infantry = {
+							x = 0
+							y = 2
+						}
+						infantry = {
+							x = 1
+							y = 0
+						}
+						infantry = {
+							x = 1
+							y = 1
+						}
+						infantry = {
+							x = 1
+							y = 2
+						}
+					}
+					is_locked = yes
+				}
+			}
+			capital_scope = {
+				create_unit = {
+					division = "name = \"Überreste der Schutzstaffel\" division_template = \"Überreste der Schutzstaffel\" start_experience_factor = 0.2 start_equipment_factor = 1"
+					owner = GEK
+				}
+				create_unit = {
+					division = "name = \"Überreste der Schutzstaffel\" division_template = \"Überreste der Schutzstaffel\" start_experience_factor = 0.2 start_equipment_factor = 1"
+					owner = GEK
+				}
+				create_unit = {
+					division = "name = \"Überreste der Schutzstaffel\" division_template = \"Überreste der Schutzstaffel\" start_experience_factor = 0.2 start_equipment_factor = 1"
+					owner = GEK
+				}
+				create_unit = {
+					division = "name = \"Überreste der Schutzstaffel\" division_template = \"Überreste der Schutzstaffel\" start_experience_factor = 0.2 start_equipment_factor = 1"
+					owner = GEK
+				}
+			}
+			GEK_enhance_nazi = yes
+		}
+	}
+	focus = { #전당대회
+		id = GEK_RM_nazi_focus_3
+		icon = GFX_focus_ITA_generic_fascist_workers
+		ai_will_do = {
+			base = 0
+		}
+		prerequisite = {
+			focus = GEK_RM_nazi_focus_2
+		}
+		mutually_exclusive = {
+			focus = GEK_RM_spd_focus_4
+			focus = GEK_RM_spd_focus_3
+			focus = GEK_RM_com_focus_4
+			focus = GEK_RM_army_focus_5
+			focus = GEK_RM_army_focus_4
+		}
+		text_icon = GER_inner_circle_focus_style
+		relative_position_id = GEK_RM_nazi_focus_0
+		x = -1
+		y = 3
+		cost = 2
+		completion_reward = {
 		}
 	}
 	focus = {

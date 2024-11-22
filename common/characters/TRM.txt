@@ -1295,7 +1295,8 @@ characters={
         name = TRM_Hans_Frank_name
         portraits={
 			army={
-				large= GFX_Z_TRM_Hans_Frank_Portrait
+				large = GFX_portrait_GER_hans_frank
+				small = GFX_portrait_GER_hans_frank_small
 			}
 		}
     }

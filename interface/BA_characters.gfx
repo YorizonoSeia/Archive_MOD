@@ -175,6 +175,11 @@ spriteTypes = {
 		textureFile = "gfx/interface/advisors/MIL/마키.tga"
 	}
 	spriteType = {
+		name = "GFX_Maki_portrait"
+		textureFile = "gfx/leaders/MIL/MIL_akzl.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
 		name = "GFX_Momoi"
 		textureFile = "gfx/interface/advisors/MIL/모모이.tga"
 	}

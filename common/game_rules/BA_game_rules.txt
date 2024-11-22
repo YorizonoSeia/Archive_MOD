@@ -98,6 +98,11 @@ Trinity_Misono_Mika_Portrait_Rule = {
 		text = "Trinity_Mika_Portrait_ON_NAME"
 		desc = "Trinity_Mika_Portrait_ON_3_DESC"
 	}
+	option = {
+		name =Trinity_Mika_Portrait_Maki
+		text = "Trinity_Mika_Portrait_Maki_NAME"
+		desc = "Trinity_Mika_Portrait_Maki_DESC"
+	}
 }
 Trinity_Nagisa_Portrait_Rule = {
 	name = "Trinity_Nagisa_Portrait_rule_name"

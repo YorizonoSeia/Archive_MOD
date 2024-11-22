@@ -1186,7 +1186,7 @@ country_event = { #난민 문제
 		hidden_effect = {
 			add_ai_strategy = {
 				type = send_volunteers_desire
-				id = SPA
+				id = SPD
 				value = 999
 			}
 			news_event = {
