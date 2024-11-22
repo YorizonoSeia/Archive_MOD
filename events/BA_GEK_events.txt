@@ -937,37 +937,6 @@ country_event = { #사민당과의 연계
 		GEK_enhance_spd = yes
 	}
 }
-country_event = { #사민당과의 연계
-	id = GEK_rm_event.4
-	title = GEK_rm_event.4.t
-	desc = GEK_rm_event.4.d
-	picture = GFX_report_event_communists_in_riga
-	
-	fire_only_once = yes
-	is_triggered_only = yes
-	
-	option = {
-		name = GEK_rm_event.4.a
-		if = {
-			limit = {
-				has_completed_focus = GEK_RM_dzp_focus_0
-			}
-			set_party_name = {
-				ideology = democratic
-				long_name = SPD-DZP_party_long
-				name = SPD-DZP_party
-			}
-		}
-		else = {
-			set_party_name = {
-				ideology = democratic
-				long_name = SPD_party_long
-				name = SPD_party
-			}
-		}
-		GEK_enhance_spd = yes
-	}
-}
 country_event = { #민중 결집
 	id = GEK_rm_event.5
 	title = GEK_rm_event.5.t
