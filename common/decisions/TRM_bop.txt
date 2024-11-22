@@ -4,9 +4,18 @@ TRM_balance_of_power_category = {
 		icon = GFX_decision_eng_blackshirt_speech
 		allowed = { original_tag = TRM }
 		visible = { }
-        ai_will_do = { 
-            factor = 0    
-        }
+
+		ai_will_do = {
+			base = 0.1
+			modifier = {
+				factor = 20
+				power_balance_value = {
+					id = TRM_power_balance
+					value < 0
+				}
+			}
+		}
+
 	    available = {
             NOT = {  has_country_flag = TRM_bop_flag  }
 		}
@@ -31,7 +40,18 @@ TRM_balance_of_power_category = {
 		icon = GFX_decision_generic_form_nation
 		allowed = { original_tag = TRM }
 		visible = { }
-        ai_will_do = { base = 20 }
+
+		ai_will_do = {
+			base = 0.1
+			modifier = {
+				factor = 20
+				power_balance_value = {
+					id = TRM_power_balance
+					value < 0
+				}
+			}
+		}
+
 	    available = {
             NOT = {  has_country_flag = TRM_bop_flag  }
 		}
@@ -69,7 +89,19 @@ TRM_balance_of_power_category = {
 		icon = GFX_decision_eng_propaganda_campaigns
 		allowed = { original_tag = TRM }
 		visible = { }
-        ai_will_do = { base = 0 }
+
+		ai_will_do = {
+			base = 0.1
+			modifier = {
+				factor = 20
+				power_balance_value = {
+					id = TRM_power_balance
+					value < 0
+				}
+			}
+		}
+		
+	    
 	    available = {
             NOT = {  has_country_flag = TRM_bop_flag  }
 		}

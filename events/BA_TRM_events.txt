@@ -332,7 +332,7 @@ country_event = { #게헨나 항복 이벤트
         has_completed_focus = TRM_war_with_gehenna
         TRM = {
             count_triggers = {
-                amount = 2
+                amount = 3
                 controls_state = 59
                 controls_state = 56
                 controls_state = 57
@@ -345,6 +345,7 @@ country_event = { #게헨나 항복 이벤트
                 controls_state = 54
                 controls_state = 53
                 controls_state = 52
+                controls_state = 8
             }
         }
 		GEM = {
@@ -355,6 +356,13 @@ country_event = { #게헨나 항복 이벤트
 			}
 		}
 		GEH = {
+			OR = {
+				exists = no
+				has_capitulated = yes
+				is_subject = yes
+			}
+		}
+		HEU = {
 			OR = {
 				exists = no
 				has_capitulated = yes
