@@ -1260,6 +1260,20 @@ country_event = { #룩셈부르크 시민결합
 	}
 }
 
+country_event = { #사장님의 고민
+	id = HEU_event.132
+	title = HEU_event.132.t
+	desc = HEU_event.132.desc
+	picture = GFX_event_mega_cities_HEU
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.132.a 
+	}
+	
+}
+
 country_event = { #반지
 	id = HEU_event.133
 	title = HEU_event.133.t
@@ -1325,6 +1339,158 @@ country_event = { #반지
 			news_event = { id = HEU_news.13 hours = 3 }
 		}
 	}
+}
+
+country_event = { #보고서 - 작전 계획 '퇴마'
+	id = HEU_event.134
+	title = HEU_event.134.t
+	desc = HEU_event.134.desc
+	picture = GFX_report_event_military_planning 
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.134.a 
+	}
+	
+}
+
+country_event = { #가장 긴 밤
+	id = HEU_event.135
+	title = HEU_event.135.t
+	desc = HEU_event.135.desc
+	picture = GFX_report_event_fascist_militia
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.135.a 
+	}
+	
+}
+
+country_event = { #경찰
+	id = HEU_event.136
+	title = HEU_event.136.t
+	desc = HEU_event.136.desc
+	picture = GFX_report_event_polish_army
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.136.a 
+	}
+	
+}
+
+country_event = { #담당의사 소견서
+	id = HEU_event.137
+	title = HEU_event.137.t
+	desc = HEU_event.137.desc
+	picture = GFX_report_event_she_all_integration
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.137.a 
+	}
+	
+}
+
+country_event = { #군의관 면담
+	id = HEU_event.138
+	title = HEU_event.138.t
+	desc = HEU_event.138.desc
+	picture = GFX_report_event_she_all_integration
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.138.a 
+	}
+	
+}
+
+country_event = { #룩셈부르크 대공국의 협진 요청
+	id = HEU_event.139
+	title = HEU_event.139.t
+	desc = HEU_event.139.desc
+	picture = GFX_report_event_she_all_integration
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.139.a 
+	}
+
+	option = { 
+		name = HEU_event.139.b
+	}
+	
+}
+
+country_event = { #밀레니엄제 의안
+	id = HEU_event.140
+	title = HEU_event.140.t
+	desc = HEU_event.140.desc
+	picture = GFX_report_event_Problem_Solver_68
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.140.a 
+	}
+	
+}
+
+country_event = { #평범한 의안
+	id = HEU_event.141
+	title = HEU_event.141.t
+	desc = HEU_event.141.desc
+	picture = GFX_report_event_Problem_Solver_68
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.141.a 
+	}
+	
+}
+
+country_event = { #룩셈부르크 내전 위기
+	id = HEU_event.142
+	title = HEU_event.142.t
+	desc = HEU_event.142.desc
+	picture = GFX_report_event_fascist_gathering
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.142.a 
+	}
+
+	option = { 
+		name = HEU_event.142.b
+	}
+	
+}
+
+country_event = { #관용차 예산 지원
+	id = HEU_event.143
+	title = HEU_event.143.t
+	desc = HEU_event.143.desc
+	picture = GFX_report_event_military_planning
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.143.a 
+	}
+
+	option = { 
+		name = HEU_event.143.b
+	}
+	
 }
 
 country_event = { #우파당 지지자들의 행진
@@ -1875,19 +2041,19 @@ news_event = {
 		trigger = {
 			tag = HEU
 		}
-		hidden_effect = {
-			if = {
-				limit = {
-						is_ai = no
-				}
-				scoped_play_song = "BA_protests_of_1968"
-				set_global_flag = {
-					flag = BA_Super_Event_Visible
-					value = 25
-					days = 15
-				}
-			}
-		}
+		#hidden_effect = {
+		#	if = {
+		#		limit = {
+		#				is_ai = no
+		#		}
+		#		scoped_play_song = "BA_protests_of_1968"
+		#		set_global_flag = {
+		#			flag = BA_Super_Event_Visible
+		#			value = 25
+		#			days = 15
+		#		}
+		#	}
+		#}
 	}
 
 	option = {
@@ -1895,19 +2061,19 @@ news_event = {
 		trigger = {
 			NOT = { tag = HEU }
 		}
-		hidden_effect = {
-			if = {
-				limit = {
-						is_ai = no
-				}
-				scoped_play_song = "BA_protests_of_1968"
-				set_global_flag = {
-					flag = BA_Super_Event_Visible
-					value = 25
-					days = 15
-				}
-			}
-		}
+		#hidden_effect = {
+		#	if = {
+		#		limit = {
+		#				is_ai = no
+		#		}
+		#		scoped_play_song = "BA_protests_of_1968"
+		#		set_global_flag = {
+		#			flag = BA_Super_Event_Visible
+		#			value = 25
+		#			days = 15
+		#		}
+		#	}
+		#}
 	}
 }
 
