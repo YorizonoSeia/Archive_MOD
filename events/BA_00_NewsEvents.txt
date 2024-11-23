@@ -3514,24 +3514,83 @@ news_event = {
 			}
 		}
 	}
+
+    option = { # 키보토스 반응
+	name = BA_news.96.b
+	trigger = {
+		OR = {
+			TAG = GEI
+			TAG = ARI
+			TAG = RED
+			TAG = KAI
+			TAG = MIL
+			TAG = GEH
+			TAG = GEM
+			TAG = SRT
+			TAG = KSP
+			TAG = HEU
+			TAG = ABY
+			TAG = HYA
+			TAG = SHA
+			TAG = BAC
+			TAG = SUH
+			TAG = INK
+		}
+	}
+}
+
+    option = {  # 지구 국가 반응
+	name = BA_news.96.c
+	trigger = {
+		NOT = {
+			OR = {
+				TAG = SHE
+				TAG = GEI
+				TAG = ARI
+				TAG = RED
+				TAG = KAI
+				TAG = MIL
+				TAG = GEH
+				TAG = GEM
+				TAG = TRM
+				TAG = SRT
+				TAG = KSP
+				TAG = HEU
+				TAG = ABY
+				TAG = HYA
+				TAG = SHA
+				TAG = BAC
+				TAG = SUH
+				TAG = INK
+				TAG = USA
+			}
+		}
+ 	}
+ }
 }
 # 미국 신질서 편입 선언
 news_event = { 
-	id = BA_news.97
+    id = BA_news.97
 	title = BA_news.97.t
 	desc = BA_news.97.desc
 	picture = GFX_event_Kivotos_Union
 	
 	major = yes
-	
 	is_triggered_only = yes
+
+	#hidden_effect = {
+	#	scoped_play_song = "USA_The_New_Order"
+	#}
 	
 	option = {  # 미국 반응
 		name = BA_news.97.a
 		trigger = {
-			TAG = USA
+			OR = {
+		        TAG = USA
 		}
 	}
+
+}
 	option = { # 키보토스 반응
 		name = BA_news.97.b
 		trigger = {
@@ -4023,6 +4082,40 @@ news_event = { #밀레니엄의 총체적 개입
         name = BA_news.110.b
         trigger = {
             NOT = { tag = MIL }
+        }
+    }
+}
+
+news_event = { # 미국 애니메이션 상영
+    id = BA_news.111
+    title = BA_news.111.t
+    desc = BA_news.111.d
+    picture = GFX_news_event_destroyers
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        name = BA_news.111.a
+        trigger = {
+            tag = USA
+        }
+    }
+
+	option = {
+        name = BA_news.111.b
+        trigger = {
+            tag = SHA
+        }
+    }
+
+    option = {
+        name = BA_news.111.c
+        trigger = {
+            NOT = {
+				tag = USA
+			    tag = SHA
+		    }
         }
     }
 }

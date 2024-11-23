@@ -206,7 +206,7 @@ is_triggered_only = yes
  }
 }
 
-#신질서 편입
+#신질서 편입 # 관계 개선 모디파이어 줄 것 
 
 country_event = {
 
@@ -222,11 +222,30 @@ country_event = {
 	 option = {
 		name = usa_new_event.1
 		
+
+	 }
+}
+
+country_event = {
+
+	id = usa_new_event.2
+	title = usa_new_event.2.t
+	desc = usa_new_event.2.d
+	
+	picture = GFX_report_event_generic_read_write
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	 option = {
+		name = usa_new_event.2
+		
 		hidden_effect = {
-				play_song = "claustrophobic_march"
+				play_song = "USA_The_New_Order"
 			}
 	 }
 }
+
 
 #추가적인 경제 위기의 조짐
 

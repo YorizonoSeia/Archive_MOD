@@ -297,3 +297,10 @@ music = {
     }
 }
 
+music = {
+    song = "USA_The_New_Order"
+    chance = {
+        factor = 0
+    }
+}
+

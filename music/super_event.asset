@@ -158,3 +158,9 @@ music = {
 	file = "super_event/protests_of_1968.ogg"
 	volume =  0.90
 }
+
+music = { # First Strike(독일 DLC 트레일러 브금)
+	name = "USA_The_New_Order"
+	file = "USA_The_New_Order.ogg"
+	volume =  0.90
+}
