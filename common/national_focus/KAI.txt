@@ -424,7 +424,7 @@ focus_tree = {
 	focus = { #모병1
 		id = KAI_recruitment
 		icon = GFX_focus_generic_manpower
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = KAI_kaiser_PMC
 		}
@@ -447,7 +447,7 @@ focus_tree = {
 	focus = { #모병2
 		id = KAI_recruitment_2
 		icon = GFX_focus_generic_manpower
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = KAI_recruitment
 		}
@@ -470,7 +470,7 @@ focus_tree = {
 	focus = { #모병3
 		id = KAI_recruitment_3
 		icon = GFX_focus_generic_manpower
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = KAI_recruitment_2
 		}
@@ -494,7 +494,7 @@ focus_tree = {
 	focus = { #카이저 용병대
 		id = KAI_PMC_mercenaries
 		icon = GFX_focus_generic_little_entente
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = KAI_kaiser_PMC
 		}
@@ -514,7 +514,7 @@ focus_tree = {
 	focus = { #카이저 군사 고문
 		id = KAI_PMC_military_adviser
 		icon = GFX_focus_SOV_penal_battalions
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = KAI_PMC_mercenaries
 		}
@@ -532,7 +532,7 @@ focus_tree = {
 	focus = { #교리 연구 중점
 		id = KAI_PMC_war_of_future
 		icon = GFX_goal_generic_air_doctrine
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = KAI_PMC_military_adviser
 		}
@@ -591,7 +591,7 @@ focus_tree = {
 	
 	focus = { #민공 1
 		id = KAI_construction_effort
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_focus_DEN_heavy_regulations
 		prerequisite = { focus = KAI_kaiser_construction }
 		available = {
 			neutrality > 0.50
@@ -599,7 +599,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = KAI_kaiser_construction
-		cost = 10
+		cost = 5
 
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -614,7 +614,7 @@ focus_tree = {
 	}
 	focus = { #민공 2
 		id = KAI_construction_effort_2
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_focus_generic_industry_2
 		prerequisite = { focus = KAI_construction_effort }
 		x = 0
 		y = 2
@@ -622,7 +622,7 @@ focus_tree = {
 		available = {
 			neutrality > 0.60
 		}
-		cost = 10
+		cost = 5
 
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -645,7 +645,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = KAI_construction_effort_2
-		cost = 10
+		cost = 5
 
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -677,7 +677,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = KAI_kaiser_construction
-		cost = 10
+		cost = 5
 
 		completion_reward = {
 			modify_building_resources = {
@@ -705,7 +705,7 @@ focus_tree = {
 		available = {
 			neutrality > 0.60
 		}
-		cost = 10
+		cost = 5
 
 		completion_reward = {
 			modify_building_resources = {
@@ -733,7 +733,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = KAI_future_rubber_synthesis
-		cost = 10	
+		cost = 5	
 
 		completion_reward = {
 			add_ideas = KAI_resource_dev_singularity_idea
@@ -755,7 +755,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = KAI_construction_effort
-		cost = 10
+		cost = 5
 		
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -791,7 +791,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = KAI_future_refining_tech
-		cost = 10
+		cost = 5
 		
 		completion_reward = {
 			add_resource = {
@@ -817,7 +817,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = KAI_construction_effort_2
-		cost = 10
+		cost = 5
 
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -853,7 +853,7 @@ focus_tree = {
 			#has_tech = decimetric_radar
 		}
 		
-		cost = 10
+		cost = 5
 
 		completion_reward = {
 			126 = {
@@ -931,7 +931,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = KAI_construction_effort_3
-		cost = 10
+		cost = 5
 
 		completion_reward = {
 			add_ideas = KAI_industry_dev_singularity_idea
@@ -971,7 +971,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = KAI_kaiser_industry
 
-		cost = 10
+		cost = 5
 
 		completion_reward = {
 			custom_effect_tooltip = KAI_supremacy_of_technology_tt
@@ -991,7 +991,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = KAI_supremacy_of_technology
-		cost = 10
+		cost = 5
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -1013,7 +1013,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = KAI_equipment_effort
-		cost = 10
+		cost = 5
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -1035,7 +1035,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = KAI_equipment_effort_2
-		cost = 10
+		cost = 5
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 		
@@ -1063,7 +1063,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = KAI_supremacy_of_technology
-		cost = 10
+		cost = 5
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -1083,7 +1083,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = KAI_motorization_effort
-		cost = 10
+		cost = 5
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -1104,7 +1104,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = KAI_mechanization_effort
-		cost = 10
+		cost = 5
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -1126,7 +1126,7 @@ focus_tree = {
 		x = 1
 		y = 2
 		relative_position_id = KAI_equipment_effort_3
-		cost = 10
+		cost = 5
 
 		completion_reward = {
 			add_research_slot = 1
@@ -1144,7 +1144,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = KAI_kaiser_industry
 
-		cost = 10
+		cost = 5
 
 		completion_reward = {
 			custom_effect_tooltip = KAI_focus_production_tt
@@ -1167,7 +1167,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = KAI_focus_production
-		cost = 10
+		cost = 5
 
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -1182,7 +1182,7 @@ focus_tree = {
 	}
 	focus = { #군공 2
 		id = KAI_production_effort_2
-		icon = GFX_goal_generic_construct_mil_factory
+		icon = GFX_focus_generic_military_industry
 		prerequisite = { focus = KAI_production_effort }
 		available = {
 			neutrality > 0.60
@@ -1190,7 +1190,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = KAI_production_effort
-		cost = 10
+		cost = 5
 
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -1205,7 +1205,7 @@ focus_tree = {
 	}
 	focus = { #군공 3
 		id = KAI_production_effort_3
-		icon = GFX_goal_generic_construct_mil_factory
+		icon = GFX_focus_generic_combined_arms
 		prerequisite = { focus = KAI_production_effort_2 }
 		available = {
 			neutrality > 0.70
@@ -1213,7 +1213,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = KAI_production_effort_2
-		cost = 10	
+		cost = 105
 
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -1237,7 +1237,7 @@ focus_tree = {
 	
 	focus = { #대량생산
 		id = KAI_mess_production
-		icon = GFX_focus_SOV_merge_plants
+		icon = GFX_focus_generic_mass_production
 		prerequisite = {
 			focus = KAI_production_effort_3
 		}
@@ -1247,7 +1247,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = KAI_production_effort_3
-		cost = 10
+		cost = 5
 
 		completion_reward = {
 			custom_effect_tooltip = KAI_mess_production_tt
@@ -1272,7 +1272,7 @@ focus_tree = {
 	#민공 뜯기
 	focus = { #카이저 론
 		id = KAI_kaiser_loan
-		icon = GFX_focus_mex_privatisation
+		icon = GFX_focus_ger_reichskommisariats
 		cost = 5
 		prerequisite = {
 			focus = KAI_kaiser_industry
@@ -1300,7 +1300,7 @@ focus_tree = {
 
 	focus = { #유럽 지부
 		id = KAI_loan_europe
-		icon = GFX_focus_mex_privatisation
+		icon = GFX_focus_ger_reichskommisariats
 		cost = 5
 		prerequisite = {
 			focus = KAI_kaiser_loan
@@ -1319,7 +1319,7 @@ focus_tree = {
 	}
 	focus = { #아시아 지부
 		id = KAI_loan_asia
-		icon = GFX_focus_mex_privatisation
+		icon = GFX_focus_GER_create_asian_reichskommissariat
 		cost = 5
 		prerequisite = {
 			focus = KAI_kaiser_loan
@@ -1338,7 +1338,7 @@ focus_tree = {
 	}
 	focus = { #아프리카 지부
 		id = KAI_loan_africa
-		icon = GFX_focus_mex_privatisation
+		icon = GFX_focus_GER_mittelafrika
 		cost = 5
 		prerequisite = {
 			focus = KAI_loan_europe
@@ -1358,7 +1358,7 @@ focus_tree = {
 	}
 	focus = { #오세아니아 지부
 		id = KAI_loan_oceania
-		icon = GFX_focus_mex_privatisation
+		icon = GFX_focus_ger_reichskommisariats
 		cost = 5
 		prerequisite = {
 			focus = KAI_loan_europe
@@ -1378,7 +1378,7 @@ focus_tree = {
 	}
 	focus = { #북미 지부
 		id = KAI_loan_na
-		icon = GFX_focus_mex_privatisation
+		icon = GFX_focus_GER_establish_protectorates_in_america
 		cost = 5
 		prerequisite = {
 			focus = KAI_loan_oceania
@@ -1398,7 +1398,7 @@ focus_tree = {
 	}
 	focus = { #남미 지부
 		id = KAI_loan_sa
-		icon = GFX_focus_mex_privatisation
+		icon = GFX_focus_ger_reichskommisariats
 		cost = 5
 		prerequisite = {
 			focus = KAI_loan_oceania
@@ -1418,7 +1418,7 @@ focus_tree = {
 	}
 	focus = { #중동 지부
 		id = KAI_loan_me
-		icon = GFX_focus_mex_privatisation
+		icon = GFX_focus_ger_reichskommisariats
 		cost = 5
 		prerequisite = {
 			focus = KAI_loan_sa

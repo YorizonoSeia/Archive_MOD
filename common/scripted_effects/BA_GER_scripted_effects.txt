@@ -820,7 +820,7 @@ TRM_collapse_event_appearance_effect = {
 		}
 		if = { limit = { has_country_flag = TRN_collapse_event_fascism_party NOT = { has_global_flag = TRN_collapse_fascism_party_global } }
 			set_global_flag = TRN_collapse_fascism_party_global
-			set_variable = { global.TRM_country_creation_var = 64 }
+			set_variable = { global.TRM_country_creation_var = 66 }
 			NSD_country_creation_effect = yes
 			NSD = {
 				add_ideas = KPD_TRM_collapse
