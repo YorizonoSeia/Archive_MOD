@@ -1144,11 +1144,11 @@ BA_kivotos_school_country_category = {
 			ROOT = {
 				tag = global.kivotos_alliance_leader
 			}
+			is_in_array = {
+				array = global.kivotos_alliance
+				value = FROM
+			}
 			FROM = {
-				is_in_array = {
-					array = global.kivotos_alliance
-					value = PREV
-				}
 				has_rule = can_join_factions
 				is_puppet = no
 				exists = yes
