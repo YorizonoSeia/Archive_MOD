@@ -178,6 +178,32 @@ KAI_power_of_the_corporate_state = {
 			KAI_remove_all_political_democracy_idea = yes
 		}
 	}
+	KAI_support_neutrality = {
+		icon = GFX_decision_eng_propaganda_campaigns
+		allowed = {
+			original_tag = KAI
+		}
+
+		available = {
+
+		}
+
+		visible = {
+			has_government = neutrality
+		}
+
+		cost = 50
+
+		days_remove = 70
+
+		modifier = {
+			political_power_cost = 0.10
+			neutrality_drift = 0.05
+			fascism_drift = -0.02
+			communism_drift = -0.02
+			democratic_drift = -0.02
+		}
+	}
 	KAI_support_fascism = {
 		icon = GFX_decision_eng_propaganda_campaigns
 		allowed = {
