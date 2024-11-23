@@ -36,6 +36,11 @@ country_event = {
 	desc = BLM_event.1.d
 
 	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_global_flag = BLM_event_1_flag }
+	}
+
 	immediate = {
 		set_global_flag = BLM_event_1_flag
 	}
@@ -59,6 +64,15 @@ country_event = {
 		complete_national_focus = BLM_gang_thugs_war_focus
 		add_stability = -0.10
 		add_ideas = BLM_gang_thugs_war_idea
+
+		if = {
+			limit = { check_variable = { BLM_thugs_point > BLM_gang_point } }
+			custom_effect_tooltip = BLM_event_2_BLM_thugs_point_tt
+		}
+		if = {
+			limit = { check_variable = { BLM_thugs_point < BLM_gang_point } }
+			custom_effect_tooltip = BLM_event_2_BLM_gang_point_tt
+		}
 	}
 }
 
@@ -87,6 +101,8 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
+		clr_global_flag = BLM_skeban_victory_flag
+		clr_global_flag = BLM_gang_victory_flag
 		if = {
 			limit = { #2점차
 				set_temp_variable = { BLM_point_temp = BLM_gang_point }

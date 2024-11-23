@@ -671,7 +671,7 @@ focus_tree = {
             custom_effect_tooltip = BLM_skevan_div_cap_4_tt
             hidden_effect = {
                 add_to_variable = { ROOT.halo_militia_cap_skevan = 4 }
-                set_division_template_cap = {  division_template = "Skevan" division_cap = ROOT.halo_militia_cap }
+                set_division_template_cap = {  division_template = "Skevan" division_cap = ROOT.halo_militia_cap_skevan }
             }
             add_to_variable = { BLM_thugs_point = 1 }
         }
@@ -696,26 +696,35 @@ focus_tree = {
         }
 
         completion_reward = {
-            custom_effect_tooltip = BLM_organized_armament_strengthening_tt
-            hidden_effect = {
-                add_units_to_division_template = {
-                    template_name = "Helmet gang"
-                    support = { 
-                        artillery = 0
+            if = {
+                limit = { NOT = { has_completed_focus = BLM_eradication_of_helmet_group } }
+                custom_effect_tooltip = BLM_organized_armament_strengthening_tt
+                hidden_effect = {
+                    add_units_to_division_template = {
+                        template_name = "Helmet gang"
+                        support = { 
+                            artillery = 0
+                        }
                     }
                 }
             }
 
-            custom_effect_tooltip = BLM_militia_div_cap_2_tt
-            hidden_effect = {
-                add_to_variable = { ROOT.halo_militia_cap = 2 }
-                set_division_template_cap = {  division_template = "Helmet gang" division_cap = ROOT.halo_militia_cap }
+            if = {
+                limit = { NOT = { has_completed_focus = BLM_eradication_of_helmet_group } }
+                custom_effect_tooltip = BLM_militia_div_cap_2_tt
+                hidden_effect = {
+                    add_to_variable = { ROOT.halo_militia_cap = 2 }
+                    set_division_template_cap = {  division_template = "Helmet gang" division_cap = ROOT.halo_militia_cap }
+                }
             }
-            
-            custom_effect_tooltip = BLM_skevan_div_cap_4_tt
-            hidden_effect = {
-                add_to_variable = { ROOT.halo_militia_cap_skevan = 4 }
-                set_division_template_cap = {  division_template = "Skevan" division_cap = ROOT.halo_militia_cap }
+
+            if = {
+                limit = { NOT = { has_completed_focus = BLM_imprisonment_of_skeban } }
+                custom_effect_tooltip = BLM_skevan_div_cap_4_tt
+                hidden_effect = {
+                    add_to_variable = { ROOT.halo_militia_cap_skevan = 4 }
+                    set_division_template_cap = {  division_template = "Skevan" division_cap = ROOT.halo_militia_cap_skevan }
+                }
             }
         }
     }
@@ -755,6 +764,10 @@ focus_tree = {
         available = {
             NOT = { 
                 has_completed_focus = BLM_bretagne_revolution
+            }
+            custom_trigger_tooltip = {
+                tooltip = has_BLM_gang_thugs_war_idea
+                NOT = { has_idea = BLM_gang_thugs_war_idea }
             }
         }
 
@@ -827,13 +840,6 @@ focus_tree = {
 				uses = 1
 				category = infantry_weapons
 			}
-            if = {
-                limit = { has_active_mission = BLM_gang_thugs_war_1 }
-                add_days_mission_timeout = {
-                    mission = BLM_gang_thugs_war_1
-                    days = 75
-                }
-            }
             add_to_variable = { BLM_gang_point = 1 }
         }
     }
@@ -941,13 +947,6 @@ focus_tree = {
 				uses = 1
 				category = infantry_weapons
 			}
-            if = {
-                limit = { has_active_mission = BLM_gang_thugs_war_1 }
-                add_days_mission_timeout = {
-                    mission = BLM_gang_thugs_war_1
-                    days = 75
-                }
-            }
             add_to_variable = { BLM_thugs_point = 1 }
         }
     }
@@ -976,7 +975,7 @@ focus_tree = {
             custom_effect_tooltip = BLM_skevan_div_cap_3_tt
             hidden_effect = {
                 add_to_variable = { ROOT.halo_militia_cap_skevan = 3 }
-                set_division_template_cap = {  division_template = "Skevan" division_cap = ROOT.halo_militia_cap }
+                set_division_template_cap = {  division_template = "Skevan" division_cap = ROOT.halo_militia_cap_skevan }
             }
 			random_controlled_state = { #Create a few more Blackshirt Divs
 				limit = {
@@ -1048,6 +1047,146 @@ focus_tree = {
     }
 
     focus = { #
+        id = BLM_increasing_numbers
+        icon = GFX_focus_BLM_thugs_priority
+        prerequisite = {
+            focus = BLM_skeban_victory
+        }
+        x = -1
+        y = 1
+        relative_position_id = BLM_skeban_victory
+        cost = 5
+        available = {
+        }
+
+        completion_reward = {
+            custom_effect_tooltip = BLM_skevan_div_cap_3_tt
+            hidden_effect = {
+                add_to_variable = { ROOT.halo_militia_cap_skevan = 3 }
+                set_division_template_cap = {  division_template = "Skevan" division_cap = ROOT.halo_militia_cap_skevan }
+            }
+        }
+    }
+
+    focus = { #
+        id = BLM_where_all_problems_begin
+        icon = GFX_focus_BLM_thugs_priority
+        prerequisite = {
+            focus = BLM_increasing_numbers
+        }
+        x = 0
+        y = 1
+        relative_position_id = BLM_increasing_numbers
+        cost = 5
+        available = {
+        }
+
+        completion_reward = {
+        }
+    }
+
+    focus = { #
+        id = BLM_complete_crush_of_bretagne_independence
+        icon = GFX_focus_BLM_thugs_priority
+        prerequisite = {
+            focus = BLM_where_all_problems_begin
+        }
+        x = 0
+        y = 1
+        relative_position_id = BLM_where_all_problems_begin
+        cost = 5
+        available = {
+        }
+
+        completion_reward = {
+        }
+    }
+
+    focus = { #
+        id = BLM_eradication_of_helmet_group
+        icon = GFX_focus_BLM_thugs_priority
+        prerequisite = {
+            focus = BLM_skeban_victory
+        }
+        mutually_exclusive = {
+            focus = BLM_assimilation_policy
+        }
+        x = 1
+        y = 1
+        relative_position_id = BLM_skeban_victory
+        cost = 5
+        available = {
+        }
+
+        completion_reward = {
+            custom_effect_tooltip = BLM_CS_tt_2IC
+            add_to_variable = { BLM_CS_industrial_factory_donations = 2 }
+            hidden_effect = {
+            	country_event = { id = BLM_hidden_event.1 days = 3 }
+            }
+			delete_unit_template_and_units = {
+				division_template = "Helmet gang"
+				disband = yes
+			}
+        }
+    }
+
+    focus = { #
+        id = BLM_assimilation_policy
+        icon = GFX_focus_BLM_thugs_priority
+        prerequisite = {
+            focus = BLM_skeban_victory
+        }
+        mutually_exclusive = {
+            focus = BLM_eradication_of_helmet_group
+        }
+        x = 3
+        y = 1
+        relative_position_id = BLM_skeban_victory
+        cost = 5
+        available = {
+        }
+
+        completion_reward = {
+        }
+    }
+
+    focus = { #
+        id = BLM_leadership_of_kurihama_akemi
+        icon = GFX_focus_BLM_thugs_priority
+        prerequisite = {
+            focus = BLM_eradication_of_helmet_group
+            focus = BLM_assimilation_policy
+        }
+        x = 1
+        y = 1
+        relative_position_id = BLM_eradication_of_helmet_group
+        cost = 5
+        available = {
+        }
+
+        completion_reward = {
+        }
+    }
+
+    focus = { #
+        id = BLM_tough_ruler
+        icon = GFX_focus_BLM_thugs_priority
+        prerequisite = {
+            focus = BLM_leadership_of_kurihama_akemi
+        }
+        x = 0
+        y = 1
+        relative_position_id = BLM_leadership_of_kurihama_akemi
+        cost = 5
+        available = {
+        }
+
+        completion_reward = {
+        }
+    }
+
+    focus = { #
         id = BLM_gang_victory
         icon = GFX_focus_BLM_gang_priority
         prerequisite = {
@@ -1070,8 +1209,168 @@ focus_tree = {
             custom_effect_tooltip = BLM_skevan_div_cap__4_tt
             hidden_effect = {
                 add_to_variable = { ROOT.halo_militia_cap_skevan = -4 }
-                set_division_template_cap = {  division_template = "Skevan" division_cap = ROOT.halo_militia_cap }
+                set_division_template_cap = {  division_template = "Skevan" division_cap = ROOT.halo_militia_cap_skevan }
             }
+        }
+    }
+
+    focus = { #
+        id = BLM_rebuilding_collapsed_organization
+        icon = GFX_focus_BLM_thugs_priority
+        prerequisite = {
+            focus = BLM_gang_victory
+        }
+        x = -3
+        y = 1
+        relative_position_id = BLM_gang_victory
+        cost = 5
+        available = {
+        }
+
+        completion_reward = {
+        }
+    }
+
+    focus = { #
+        id = BLM_bretagne_loyalist_organization
+        icon = GFX_focus_BLM_thugs_priority
+        prerequisite = {
+            focus = BLM_rebuilding_collapsed_organization
+        }
+        x = 0
+        y = 1
+        relative_position_id = BLM_rebuilding_collapsed_organization
+        cost = 5
+        available = {
+        }
+
+        completion_reward = {
+        }
+    }
+
+    focus = { #
+        id = BLM_new_bretagne_declaration
+        icon = GFX_focus_BLM_thugs_priority
+        prerequisite = {
+            focus = BLM_bretagne_loyalist_organization
+        }
+        x = 0
+        y = 1
+        relative_position_id = BLM_bretagne_loyalist_organization
+        cost = 5
+        available = {
+        }
+
+        completion_reward = {
+        }
+    }
+
+    focus = { #
+        id = BLM_imprisonment_of_skeban
+        icon = GFX_focus_BLM_thugs_priority
+        prerequisite = {
+            focus = BLM_gang_victory
+        }
+        mutually_exclusive = {
+            focus = BLM_forcing_loyalty
+        }
+        x = -1
+        y = 1
+        relative_position_id = BLM_gang_victory
+        cost = 5
+        available = {
+        }
+
+        completion_reward = {
+            custom_effect_tooltip = BLM_CS_tt_2IC
+            add_to_variable = { BLM_CS_industrial_factory_donations = 2 }
+            hidden_effect = {
+            	country_event = { id = BLM_hidden_event.1 days = 3 }
+            }
+			delete_unit_template_and_units = {
+				division_template = "Skevan"
+				disband = yes
+			}
+        }
+    }
+
+    focus = { #
+        id = BLM_forcing_loyalty
+        icon = GFX_focus_BLM_thugs_priority
+        prerequisite = {
+            focus = BLM_gang_victory
+        }
+        mutually_exclusive = {
+            focus = BLM_imprisonment_of_skeban
+        }
+        x = 1
+        y = 1
+        relative_position_id = BLM_gang_victory
+        cost = 5
+        available = {
+        }
+
+        completion_reward = {
+        }
+    }
+
+    focus = { #
+        id = BLM_election_of_leader
+        icon = GFX_focus_BLM_thugs_priority
+        prerequisite = {
+            focus = BLM_imprisonment_of_skeban
+            focus = BLM_forcing_loyalty
+        }
+        mutually_exclusive = {
+            focus = BLM_helmet_group_committee
+        }
+        x = 0
+        y = 1
+        relative_position_id = BLM_imprisonment_of_skeban
+        cost = 5
+        available = {
+        }
+
+        completion_reward = {
+        }
+    }
+
+    focus = { #
+        id = BLM_helmet_group_committee
+        icon = GFX_focus_BLM_thugs_priority
+        prerequisite = {
+            focus = BLM_imprisonment_of_skeban
+            focus = BLM_forcing_loyalty
+        }
+        mutually_exclusive = {
+            focus = BLM_election_of_leader
+        }
+        x = 2
+        y = 1
+        relative_position_id = BLM_imprisonment_of_skeban
+        cost = 5
+        available = {
+        }
+
+        completion_reward = {
+        }
+    }
+
+    focus = { #
+        id = BLM_centralized_criminal_organization
+        icon = GFX_focus_BLM_thugs_priority
+        prerequisite = {
+            focus = BLM_election_of_leader
+            focus = BLM_helmet_group_committee
+        }
+        x = 1
+        y = 1
+        relative_position_id = BLM_election_of_leader
+        cost = 5
+        available = {
+        }
+
+        completion_reward = {
         }
     }
 

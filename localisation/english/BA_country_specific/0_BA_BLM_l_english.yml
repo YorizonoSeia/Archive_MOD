@@ -18,6 +18,9 @@
 
  BLM_criminal_state: "블랙 마켓"
  BLM_criminal_state_tt: "§Y$BLM_criminal_state$§! 변동치:"
+ BLM_CS_tt__2IC: "$BLM_criminal_state_tt$\n$MODIFIER_INDUSTRIAL_FACTORY_DONATIONS$: §R-2§!\n\n"
+ BLM_CS_tt__1IC: "$BLM_criminal_state_tt$\n$MODIFIER_INDUSTRIAL_FACTORY_DONATIONS$: §R-1§!\n\n"
+ BLM_CS_tt_1IC: "$BLM_criminal_state_tt$\n$MODIFIER_INDUSTRIAL_FACTORY_DONATIONS$: §G+1§!\n\n"
  BLM_CS_tt_2IC: "$BLM_criminal_state_tt$\n$MODIFIER_INDUSTRIAL_FACTORY_DONATIONS$: §G+2§!\n\n"
  BLM_CS_tt_3IC: "$BLM_criminal_state_tt$\n$MODIFIER_INDUSTRIAL_FACTORY_DONATIONS$: §G+3§!\n\n"
  BLM_CS_tt_2IC2AF: "$BLM_criminal_state_tt$\n$MODIFIER_INDUSTRIAL_FACTORY_DONATIONS$: §G+2§!\n$MODIFIER_MILITARY_FACTORY_DONATIONS$: §G+2§!\n\n"
@@ -36,6 +39,20 @@
  BLM_trade_laws_2: "밀수입 중점"
 
  BLM_gang_thugs_war_idea: "갱단 전쟁"
+
+ has_BLM_gang_thugs_war_idea: "갱단 전쟁이 진행중이지 않음"
+
+ BLM_event_2_BLM_thugs_point_tt: "§Y이전 중점의 완료에 따라 스케반이 우위를 가지고 시작합니다.§!"
+ BLM_event_2_BLM_gang_point_tt: "§Y이전 중점의 완료에 따라 헬멧단이 우위를 가지고 시작합니다.§!"
+
+ BLM_event_3_BLM_thugs_point_tt: "§Y현재 스케반이 우위를 지니고 있습니다.§!"
+ BLM_event_3_BLM_gang_point_tt: "§Y현재 헬멧단이 우위를 지니고 있습니다.§!"
+ BLM_event_3_n_tt: "§Y그 누구도 우위를 점하고 있지 않습니다.§!"
+
+ BLM_black_market_expansioned_NOT: "블랙 마켓이 철거됨."
+ BLM_black_market_expansion_tt: "[FROM.GetNameWithFlag] 측 행동력 0 보다 많음"
+ BLM_black_market_expansion_tt3: "[FROM.GetNameWithFlag] 국가에 아무 행동도 취하지 않음"
+ BLM_market_expansion_available_tt: "이 국가와 §Y인접한 국가§!에 §Y블랙 마켓§!을 수립하는 결정이 해금됩니다."
 
 
 #중점
@@ -106,7 +123,25 @@
  BLM_gang_thugs_war_focus: "갱단 전쟁"
  BLM_gang_thugs_war_focus_desc: "지난 밤 사이, 좋지 못한 사건이 발생했습니다. 스케반과 헬멧단의 충돌은 기정사실이 되었으며, 두 세력의 충돌은 블랙 마켓의 위협으로 다가오고 말 것입니다. 어서, 방향을 결정해야만 합니다."
  BLM_skeban_victory: "스케반의 승리"
+ BLM_increasing_numbers: "쪽수 불리기"
+ BLM_where_all_problems_begin: "모든 문제가 시작되는 곳"
+ BLM_complete_crush_of_bretagne_independence: "브르타뉴 독립 완전 분쇄"
+ BLM_eradication_of_helmet_group: "헬멧단 소거"
+ BLM_assimilation_policy: "회유책"
+ BLM_leadership_of_kurihama_akemi: "쿠리하마 아케미의 지도"
+ BLM_tough_ruler: "우리의 강인한 지도자"
+
  BLM_gang_victory: "헬멧단의 승리"
+ BLM_rebuilding_collapsed_organization: "무너진 조직 재건"
+ BLM_bretagne_loyalist_organization: "브르타뉴 충성파 조직"
+ BLM_new_bretagne_declaration: "신 브르타뉴 선언"
+ BLM_imprisonment_of_skeban: "스케반 투옥"
+ BLM_forcing_loyalty: "충성 강요"
+ BLM_election_of_leader: "지도자 선출"
+ BLM_helmet_group_committee: "헬멧단 위원회"
+ BLM_centralized_criminal_organization: "중앙화된 범죄조직"
+
+
  BLM_bretagne_revolution: "브르타뉴 혁명"
 
  BLM_return_of_seven_prisoners_tt: "§Y$BLM_Kiyosumi_Akira$§!, §Y$BLM_Kurihama_Akemi$§!가 장군이 됩니다.\n"
@@ -116,8 +151,8 @@
  BLM_militia_div_cap__4_tt: "§YHelmet gang§! 편제 한도가 §R-4§!만큼 변동."
  BLM_militia_div_cap_2_tt: "§YHelmet gang§! 편제 한도가 §G+2§!만큼 변동."
  BLM_militia_div_cap_3_tt: "§YHelmet gang§! 편제 한도가 §G+3§!만큼 변동."
- BLM_organized_armament_strengthening_tt: "헬멧단 사단 구성에 §Y1개 $artillery$대대§! 추가."
- BLM_organized_public_security_management_tt: "헬멧단 사단 구성에 §Y2개 $artillery_brigade$대대§! 추가."
+ BLM_organized_armament_strengthening_tt: "헬멧단 사단 구성에 §Y1개 $artillery$ 중대§! 추가."
+ BLM_organized_public_security_management_tt: "헬멧단 사단 구성에 §Y2개 $artillery_brigade$ 대대§! 추가."
  BLM_mimicking_of_bills_tt: "§Y[THIS.GetName]§!에서 훈련된 §Y1개 헬멧단§! 사단 창설."
 
  BLM_skevan_div_cap__4_tt: "§YSkevan§! 편제 한도가 §R-4§!만큼 변동."
@@ -153,6 +188,10 @@
  BLM_expansion_of_the_black_market_office: "[FROM.GetName]에서 관료 매수"
  BLM_expansion_of_the_black_market_tt_office: "- §Y관료§!를 매수하고 있습니다.\n"
 
+ BLM_expansion_of_the_black_market_contact_marketization: "[FROM.GetName]에서의 블랙 마켓 철수"
+ BLM_expansion_of_the_black_market_contact_marketization_tt: "[FROM.GetName] 측의 블랙 마켓 지부를 철수하고 안전한 유통로를 개발합니다. 정치력 비용이 할인됩니다."
+ BLM_expansion_of_the_black_market_contact_marketization_trigger: "[FROM.GetName]의 관료를 매수했습니다"
+ BLM_black_market_expansioned_contact_marketization_remove_tt: "[FROM.GetName] 측의 개발된 유통로를 철거하고 블랙 마켓 지부를 재설립합니다."
  
  BLM_gang_thugs_war: "갱단 전쟁"
  BLM_gang_thugs_war_1: "심화되는 긴장감"
