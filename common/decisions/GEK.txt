@@ -42,7 +42,22 @@ GEK_attack_gehenna = {
 		}
 
 		cancel_trigger = {
-			has_country_flag = GEK_win_the_war_GEH_flag
+			custom_trigger_tooltip = {
+				tooltip = GEK_win_the_war_GEH_tt
+				controls_state = 42
+				controls_state = 50
+				controls_state = 51
+				controls_state = 52
+				controls_state = 53
+				controls_state = 54
+				controls_state = 55
+				controls_state = 56
+				controls_state = 57
+				controls_state = 59
+				controls_state = 978
+				controls_state = 987
+				controls_state = 990
+			}
 		}
 		
 		cost = 50
@@ -86,7 +101,22 @@ GEK_attack_gehenna = {
 		}
 
 		cancel_trigger = {
-			has_country_flag = GEK_win_the_war_GEH_flag
+			custom_trigger_tooltip = {
+				tooltip = GEK_win_the_war_GEH_tt
+				controls_state = 42
+				controls_state = 50
+				controls_state = 51
+				controls_state = 52
+				controls_state = 53
+				controls_state = 54
+				controls_state = 55
+				controls_state = 56
+				controls_state = 57
+				controls_state = 59
+				controls_state = 978
+				controls_state = 987
+				controls_state = 990
+			}
 		}
 		
 		cost = 50
@@ -134,7 +164,22 @@ GEK_attack_gehenna = {
 		}
 
 		cancel_trigger = {
-			has_country_flag = GEK_win_the_war_GEH_flag
+			custom_trigger_tooltip = {
+				tooltip = GEK_win_the_war_GEH_tt
+				controls_state = 42
+				controls_state = 50
+				controls_state = 51
+				controls_state = 52
+				controls_state = 53
+				controls_state = 54
+				controls_state = 55
+				controls_state = 56
+				controls_state = 57
+				controls_state = 59
+				controls_state = 978
+				controls_state = 987
+				controls_state = 990
+			}
 		}
 		
 		cost = 50
@@ -184,7 +229,22 @@ GEK_attack_gehenna = {
 		}
 
 		cancel_trigger = {
-			has_country_flag = GEK_win_the_war_GEH_flag
+			custom_trigger_tooltip = {
+				tooltip = GEK_win_the_war_GEH_tt
+				controls_state = 42
+				controls_state = 50
+				controls_state = 51
+				controls_state = 52
+				controls_state = 53
+				controls_state = 54
+				controls_state = 55
+				controls_state = 56
+				controls_state = 57
+				controls_state = 59
+				controls_state = 978
+				controls_state = 987
+				controls_state = 990
+			}
 		}
 		
 		cost = 50
@@ -231,7 +291,22 @@ GEK_attack_gehenna = {
 		}
 
 		cancel_trigger = {
-			has_country_flag = GEK_win_the_war_GEH_flag
+			custom_trigger_tooltip = {
+				tooltip = GEK_win_the_war_GEH_tt
+				controls_state = 42
+				controls_state = 50
+				controls_state = 51
+				controls_state = 52
+				controls_state = 53
+				controls_state = 54
+				controls_state = 55
+				controls_state = 56
+				controls_state = 57
+				controls_state = 59
+				controls_state = 978
+				controls_state = 987
+				controls_state = 990
+			}
 		}
 		
 		cost = 50
@@ -282,7 +357,22 @@ GEK_attack_gehenna = {
 		}
 
 		cancel_trigger = {
-			has_country_flag = GEK_win_the_war_GEH_flag
+			custom_trigger_tooltip = {
+				tooltip = GEK_win_the_war_GEH_tt
+				controls_state = 42
+				controls_state = 50
+				controls_state = 51
+				controls_state = 52
+				controls_state = 53
+				controls_state = 54
+				controls_state = 55
+				controls_state = 56
+				controls_state = 57
+				controls_state = 59
+				controls_state = 978
+				controls_state = 987
+				controls_state = 990
+			}
 		}
 		
 		cost = 50

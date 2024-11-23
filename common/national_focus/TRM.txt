@@ -2815,7 +2815,7 @@
 		x = 2
 		y = 1
 		relative_position_id = TRM_Wehrmacht_absorption
-		cost = 5
+		cost = 2
 		available = {
 			is_subject = no
 
