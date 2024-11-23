@@ -72,9 +72,9 @@ difficulty_settings = {
 		multiplier = 2.0
 	}
 	difficulty_setting = {
-		key = "custom_diff_strong_SRT"
+		key = "custom_diff_strong_BLM"
 		modifier = diff_strong_ai_generic
-		countries = { SRT }
+		countries = { BLM }
 		multiplier = 2.0
 	}
 	difficulty_setting = {

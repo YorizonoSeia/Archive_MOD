@@ -73,7 +73,6 @@ BLM_black_market = {
 		allowed = {
 			original_tag = BLM
 		}
-		days_remove = -1
 		target_trigger = {
 			FROM = {
 				exists = yes
@@ -104,23 +103,26 @@ BLM_black_market = {
 						}
 					}
 				}
-				#AND = {
-				#	any_country = {
-				#		has_country_flag = BLM_market_expansion_available
-				#		FROM = {
-				#			any_owned_state = {
-				#				any_neighbor_state = {
-				#					is_owned_by = PREV.PREV.PREV
-				#				}
-				#			}
-				#		}
-				#	}
-				#}
+				AND = {
+					any_country = {
+						has_country_flag = BLM_market_expansion_available
+						FROM = {
+							any_owned_state = {
+								any_neighbor_state = {
+									is_owned_by = PREV.PREV.PREV
+								}
+							}
+						}
+					}
+				}
 				AND = {
 					is_in_array = {
 						array = BLM_expansion_of_the_black_market_arr
 						value = FROM
 					}
+				}
+				AND = {
+					has_country_flag = BLM_black_market_expansioned_contact_marketization
 				}
 			}
 		}
@@ -134,7 +136,30 @@ BLM_black_market = {
 				modifier = BLM_criminal_state
 			}
 		}
-		fire_only_once = yes
+		modifier = {
+			political_power_cost = 0.25
+		}
+		cancel_trigger = {
+			FROM = {
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = BLM_black_market_expansioned_NOT
+						NOT = { has_country_flag = BLM_black_market_expansioned }
+					}
+					has_stability > 0.50
+					hidden_trigger = {
+						has_country_flag = BLM_black_market_expansioned_contact_marketization
+					}
+				}
+			}
+		}
+		days_remove = -1
+		cancel_effect = {
+			if = {
+				limit = { has_country_flag = BLM_black_market_expansioned }
+				clr_country_flag = BLM_black_market_expansioned
+			}
+		}
 		complete_effect = {
 			custom_effect_tooltip = BLM_expansion_of_the_black_market_tt
 		#	hidden_effect = {
@@ -146,46 +171,10 @@ BLM_black_market = {
 					BLM_black_market_expansion = 3
 				}
 			}
-		}
-		cost = 10
-		ai_will_do = {
-			factor = 10
-		}
-	}
-	BLM_expansion_of_the_black_market_casino = { #카지노 운영
-		icon = GFX_decision_generic_fundraising
-		allowed = {
-			original_tag = BLM
-		}
-		target_trigger = {
-			FROM = {
-				exists = yes
-				NOT = {
-					is_in_faction_with = ROOT
-				}
-				NOT = {
-					tag = ROOT
-				}
-				NOT = {
-					has_country_flag = BLM_expansion_of_the_black_market_stop_flag
-				}
-				check_variable = {
-					var = BLM_black_market_expansion
-					value = 0
-					compare = greater_than
-				}
-				has_country_flag = BLM_black_market_expansioned
-			}
-		}
-		visible = {
-			has_dynamic_modifier = {
-				modifier = BLM_criminal_state
-			}
-		}
-		fire_only_once = yes
-		complete_effect = {
-			FROM = {
-				set_country_flag = BLM_black_market_expansioned_casino
+			if = {
+				limit = { has_country_flag = BLM_black_market_expansioned_contact_marketization }
+				clr_country_flag = BLM_black_market_expansioned_contact_marketization
+				custom_effect_tooltip = BLM_black_market_expansioned_contact_marketization_remove_tt
 			}
 		}
 		cost = 10
@@ -210,12 +199,12 @@ BLM_black_market = {
 				NOT = {
 					has_country_flag = BLM_expansion_of_the_black_market_stop_flag
 				}
+				has_country_flag = BLM_black_market_expansioned
 				check_variable = {
 					var = BLM_black_market_expansion
 					value = 0
 					compare = greater_than
 				}
-				has_country_flag = BLM_black_market_expansioned
 			}
 		}
 		visible = {
@@ -223,13 +212,149 @@ BLM_black_market = {
 				modifier = BLM_criminal_state
 			}
 		}
-		fire_only_once = yes
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = BLM_black_market_expansion_tt
+				FROM = {
+					check_variable = {
+						var = BLM_black_market_expansion
+						value = 0
+						compare = greater_than
+					}
+				}
+			}
+			FROM = {
+				has_stability > 0.25
+			}
+		}
+		days_remove = 120
+		cancel_trigger = {
+			FROM = {
+				custom_trigger_tooltip = {
+					tooltip = BLM_black_market_expansioned_NOT
+					NOT = { has_country_flag = BLM_black_market_expansioned }
+				}
+			}
+		}
 		complete_effect = {
 			FROM = {
 				set_country_flag = BLM_black_market_expansioned_guns
+				add_to_variable = { BLM_black_market_expansion = -1 }
+				add_stability = -0.05
 			}
 		}
-		cost = 10
+		remove_effect = {
+			FROM = {
+				clr_country_flag = BLM_black_market_expansioned_guns
+				add_to_variable = { BLM_black_market_expansion = 1 }
+			}
+		}
+		cancel_effect = {
+			FROM = {
+				clr_country_flag = BLM_black_market_expansioned_guns
+				add_to_variable = { BLM_black_market_expansion = 1 }
+			}
+		}
+		cost = 30
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	BLM_expansion_of_the_black_market_casino = { #카지노 운영
+		icon = GFX_decision_generic_fundraising
+		allowed = {
+			original_tag = BLM
+		}
+		target_trigger = {
+			FROM = {
+				exists = yes
+				NOT = {
+					is_in_faction_with = ROOT
+				}
+				NOT = {
+					tag = ROOT
+				}
+				NOT = {
+					has_country_flag = BLM_expansion_of_the_black_market_stop_flag
+				}
+				has_country_flag = BLM_black_market_expansioned
+				check_variable = {
+					var = BLM_black_market_expansion
+					value = 0
+					compare = greater_than
+				}
+			}
+		}
+		visible = {
+			has_dynamic_modifier = {
+				modifier = BLM_criminal_state
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = BLM_black_market_expansion_tt
+				FROM = {
+					check_variable = {
+						var = BLM_black_market_expansion
+						value = 0
+						compare = greater_than
+					}
+				}
+			}
+			FROM = {
+				num_of_available_civilian_factories > 2
+				has_stability < 0.25
+			}
+		}
+		days_remove = 120
+		cancel_trigger = {
+			FROM = {
+				custom_trigger_tooltip = {
+					tooltip = BLM_black_market_expansioned_NOT
+					NOT = { has_country_flag = BLM_black_market_expansioned }
+				}
+			}
+		}
+		complete_effect = {
+			FROM = {
+				set_country_flag = BLM_black_market_expansioned_casino
+				add_to_variable = { BLM_black_market_expansion = -1 }
+			}
+			ROOT = {
+				custom_effect_tooltip = BLM_CS_tt_1IC
+				add_to_variable = { BLM_CS_industrial_factory_donations = 1 }
+				hidden_effect = {
+					country_event = { id = BLM_hidden_event.1 days = 3 }
+				}
+			}
+		}
+		remove_effect = {
+			FROM = {
+				clr_country_flag = BLM_black_market_expansioned_casino
+				add_to_variable = { BLM_black_market_expansion = 1 }
+			}
+			ROOT = {
+				custom_effect_tooltip = BLM_CS_tt__1IC
+				add_to_variable = { BLM_CS_industrial_factory_donations = -1 }
+				hidden_effect = {
+					country_event = { id = BLM_hidden_event.1 days = 3 }
+				}
+			}
+		}
+		cancel_effect = {
+			FROM = {
+				clr_country_flag = BLM_black_market_expansioned_casino
+				add_to_variable = { BLM_black_market_expansion = 1 }
+			}
+			ROOT = {
+				custom_effect_tooltip = BLM_CS_tt__1IC
+				add_to_variable = { BLM_CS_industrial_factory_donations = -1 }
+				hidden_effect = {
+					country_event = { id = BLM_hidden_event.1 days = 3 }
+				}
+			}
+		}
+		cost = 30
 		ai_will_do = {
 			factor = 10
 		}
@@ -251,12 +376,12 @@ BLM_black_market = {
 				NOT = {
 					has_country_flag = BLM_expansion_of_the_black_market_stop_flag
 				}
+				has_country_flag = BLM_black_market_expansioned
 				check_variable = {
 					var = BLM_black_market_expansion
 					value = 0
 					compare = greater_than
 				}
-				has_country_flag = BLM_black_market_expansioned
 			}
 		}
 		visible = {
@@ -264,10 +389,68 @@ BLM_black_market = {
 				modifier = BLM_criminal_state
 			}
 		}
-		fire_only_once = yes
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = BLM_black_market_expansion_tt
+				FROM = {
+					check_variable = {
+						var = BLM_black_market_expansion
+						value = 0
+						compare = greater_than
+					}
+				}
+			}
+			FROM = {
+				has_stability < 0.25
+				has_stability > 0
+			}
+		}
+		days_remove = 70
+		cancel_trigger = {
+			FROM = {
+				custom_trigger_tooltip = {
+					tooltip = BLM_black_market_expansioned_NOT
+					NOT = { has_country_flag = BLM_black_market_expansioned }
+				}
+			}
+		}
 		complete_effect = {
 			FROM = {
 				set_country_flag = BLM_black_market_expansioned_drugs
+				add_to_variable = { BLM_black_market_expansion = -1 }
+			}
+			ROOT = {
+				custom_effect_tooltip = BLM_CS_tt_2IC
+				add_to_variable = { BLM_CS_industrial_factory_donations = 2 }
+				hidden_effect = {
+					country_event = { id = BLM_hidden_event.1 days = 3 }
+				}
+			}
+		}
+		remove_effect = {
+			FROM = {
+				clr_country_flag = BLM_black_market_expansioned_drugs
+				add_to_variable = { BLM_black_market_expansion = 1 }
+			}
+			ROOT = {
+				custom_effect_tooltip = BLM_CS_tt__2IC
+				add_to_variable = { BLM_CS_industrial_factory_donations = -2 }
+				hidden_effect = {
+					country_event = { id = BLM_hidden_event.1 days = 3 }
+				}
+			}
+		}
+		cancel_effect = {
+			FROM = {
+				clr_country_flag = BLM_black_market_expansioned_drugs
+				add_to_variable = { BLM_black_market_expansion = 1 }
+			}
+			ROOT = {
+				custom_effect_tooltip = BLM_CS_tt__2IC
+				add_to_variable = { BLM_CS_industrial_factory_donations = -2 }
+				hidden_effect = {
+					country_event = { id = BLM_hidden_event.1 days = 3 }
+				}
 			}
 		}
 		cost = 10
@@ -292,12 +475,12 @@ BLM_black_market = {
 				NOT = {
 					has_country_flag = BLM_expansion_of_the_black_market_stop_flag
 				}
+				has_country_flag = BLM_black_market_expansioned
 				check_variable = {
 					var = BLM_black_market_expansion
 					value = 0
 					compare = greater_than
 				}
-				has_country_flag = BLM_black_market_expansioned
 			}
 		}
 		visible = {
@@ -305,10 +488,50 @@ BLM_black_market = {
 				modifier = BLM_criminal_state
 			}
 		}
-		fire_only_once = yes
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = BLM_black_market_expansion_tt
+				FROM = {
+					check_variable = {
+						var = BLM_black_market_expansion
+						value = 0
+						compare = greater_than
+					}
+				}
+			}
+			FROM = {
+				has_stability < 0.25
+			}
+		}
+		days_remove = 25
+		cancel_trigger = {
+			FROM = {
+				custom_trigger_tooltip = {
+					tooltip = BLM_black_market_expansioned_NOT
+					NOT = { has_country_flag = BLM_black_market_expansioned }
+				}
+			}
+		}
 		complete_effect = {
 			FROM = {
 				set_country_flag = BLM_black_market_expansioned_bodys
+				add_to_variable = { BLM_black_market_expansion = -1 }
+				add_manpower = -1000
+			}
+			ROOT = {
+				add_manpower = 1000
+			}
+		}
+		remove_effect = {
+			FROM = {
+				clr_country_flag = BLM_black_market_expansioned_bodys
+				add_to_variable = { BLM_black_market_expansion = 1 }
+			}
+		}
+		cancel_effect = {
+			FROM = {
+				clr_country_flag = BLM_black_market_expansioned_bodys
+				add_to_variable = { BLM_black_market_expansion = 1 }
 			}
 		}
 		cost = 10
@@ -333,12 +556,12 @@ BLM_black_market = {
 				NOT = {
 					has_country_flag = BLM_expansion_of_the_black_market_stop_flag
 				}
+				has_country_flag = BLM_black_market_expansioned
 				check_variable = {
 					var = BLM_black_market_expansion
-					value = 0
+					value = 2
 					compare = greater_than
 				}
-				has_country_flag = BLM_black_market_expansioned
 			}
 		}
 		visible = {
@@ -346,13 +569,150 @@ BLM_black_market = {
 				modifier = BLM_criminal_state
 			}
 		}
-		fire_only_once = yes
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = BLM_black_market_expansion_tt
+				FROM = {
+					check_variable = {
+						var = BLM_black_market_expansion
+						value = 2
+						compare = greater_than
+					}
+				}
+			}
+			FROM = {
+				has_stability < 0.25
+			}
+		}
+		days_remove = 280
+		cancel_trigger = {
+			FROM = {
+				custom_trigger_tooltip = {
+					tooltip = BLM_black_market_expansioned_NOT
+					NOT = { has_country_flag = BLM_black_market_expansioned }
+				}
+			}
+		}
+		targeted_modifier = {
+			tag = FROM
+			civilian_factory_use = 1
+		}
 		complete_effect = {
 			FROM = {
 				set_country_flag = BLM_black_market_expansioned_office
+				add_to_variable = { BLM_black_market_expansion = -3 }
+				set_country_flag = {
+					flag = BLM_market_expansion_available
+					value = 1
+					days = 280
+				}
+				custom_effect_tooltip = BLM_market_expansion_available_tt
 			}
 		}
-		cost = 10
+		remove_effect = {
+			FROM = {
+				clr_country_flag = BLM_black_market_expansioned_office
+				add_to_variable = { BLM_black_market_expansion = 3 }
+			}
+		}
+		cancel_effect = {
+			FROM = {
+				clr_country_flag = BLM_black_market_expansioned_office
+				add_to_variable = { BLM_black_market_expansion = 3 }
+				clr_country_flag = BLM_market_expansion_available
+			}
+		}
+		cost = 150
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	BLM_expansion_of_the_black_market_contact_marketization = { #중계 시장화
+		icon = GFX_decision_hol_attract_foreign_investors
+		allowed = {
+			original_tag = BLM
+		}
+		target_trigger = {
+			FROM = {
+				exists = yes
+				NOT = {
+					is_in_faction_with = ROOT
+				}
+				NOT = {
+					tag = ROOT
+				}
+				NOT = {
+					has_country_flag = BLM_expansion_of_the_black_market_stop_flag
+				}
+				has_country_flag = BLM_black_market_expansioned
+				has_country_flag = BLM_black_market_expansioned_office
+				has_country_flag = BLM_market_expansion_available
+			}
+		}
+		visible = {
+			has_dynamic_modifier = {
+				modifier = BLM_criminal_state
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = BLM_expansion_of_the_black_market_contact_marketization_trigger
+				FROM = {
+					has_country_flag = BLM_black_market_expansioned
+					has_country_flag = BLM_black_market_expansioned_office
+					has_country_flag = BLM_market_expansion_available
+				}
+			}
+			FROM = {
+				has_stability < 0.25
+			}
+		}
+		days_remove = -1
+		cancel_trigger = {
+			FROM = {
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = BLM_black_market_expansioned_NOT
+						NOT = { has_country_flag = BLM_black_market_expansioned }
+					}
+					hidden_trigger = {
+						NOT = { has_country_flag = BLM_black_market_expansioned_contact_marketization }
+					}
+				}
+			}
+		}
+		targeted_modifier = {
+			tag = FROM
+			civilian_factory_use = 1
+		}
+		complete_effect = {
+			FROM = {
+				set_country_flag = BLM_black_market_expansioned_contact_marketization
+				set_country_flag = BLM_market_expansion_available
+				custom_effect_tooltip = BLM_market_expansion_available_tt
+			}
+			ROOT = {
+				custom_effect_tooltip = BLM_CS_tt_1IC
+				add_to_variable = { BLM_CS_industrial_factory_donations = 1 }
+				hidden_effect = {
+					country_event = { id = BLM_hidden_event.1 days = 3 }
+				}
+			}
+		}
+		cancel_effect = {
+			FROM = {
+				clr_country_flag = BLM_black_market_expansioned_contact_marketization
+				clr_country_flag = BLM_market_expansion_available
+			}
+			ROOT = {
+				custom_effect_tooltip = BLM_CS_tt__1IC
+				add_to_variable = { BLM_CS_industrial_factory_donations = -1 }
+				hidden_effect = {
+					country_event = { id = BLM_hidden_event.1 days = 3 }
+				}
+			}
+		}
+		cost = 150
 		ai_will_do = {
 			factor = 10
 		}
@@ -403,6 +763,25 @@ BLM_gang_thugs_war = {
 
 		timeout_effect = {
 			country_event = BLM_event.3
+			if = {
+				limit = { #2점차
+					set_temp_variable = { BLM_point_temp = BLM_gang_point }
+					add_to_temp_variable = { BLM_point_temp = 1 }
+					check_variable = { BLM_thugs_point > BLM_point_temp }
+				}
+				custom_effect_tooltip = BLM_event_3_BLM_thugs_point_tt
+			}
+			else_if = {
+				limit = { #2점차
+					set_temp_variable = { BLM_point_temp = BLM_thugs_point }
+					add_to_temp_variable = { BLM_point_temp = 1 }
+					check_variable = { BLM_gang_point > BLM_point_temp }
+				}
+				custom_effect_tooltip = BLM_event_3_BLM_gang_point_tt
+			}
+			else = {
+				custom_effect_tooltip = BLM_event_3_n_tt
+			}
 		}
 	}
 	BLM_gang_thugs_war_thugs_side_1 = {
@@ -428,7 +807,7 @@ BLM_gang_thugs_war = {
 
 		is_good = no
 
-		days_mission_timeout = 180
+		days_mission_timeout = 20
 
 		timeout_effect = {
 			if = {
@@ -564,8 +943,8 @@ BLM_gang_thugs_war = {
 			}
 		}
 		remove_effect = {
-			custom_effect_tooltip = BLM_gang_thugs_war_gang_side_up_tt
-            add_to_variable = { BLM_gang_point = 1 }
+			custom_effect_tooltip = BLM_gang_thugs_war_thugs_side_up_tt
+            add_to_variable = { BLM_thugs_point = 1 }
 		}
 	}
 }

@@ -30,11 +30,6 @@ add_dynamic_modifier = {
 set_variable = { BLM_CS_industrial_factory_donations = 3 }
 set_variable = { BLM_CS_military_factory_donations = 3 }
 
-add_timed_idea = {
-    idea = BA_exiles_of_the_future
-    days = 210
-}
-
 set_technology = {
 	kivotos_infantry_weapons = 1 #키보토스 아티팩트
 	infantry_weapons = 1 #전간기 보병장비

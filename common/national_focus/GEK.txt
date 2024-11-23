@@ -17,10 +17,6 @@ focus_tree = {
 	shared_focus = GEAF_develop_modern_maneuver_warfare
 	shared_focus = GEAF_expanding_the_luftwaffe
 	shared_focus = GEAF_strengthen_the_kriegsmarine
-	inlay_window = {
-		id = gek_inner_circle_inlay_window
-		position = { x = 5800 y = 750 }
-	}
 
 	default = no
 	focus = {

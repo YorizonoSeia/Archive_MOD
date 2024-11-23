@@ -1,0 +1,5 @@
+BLM_debug_effect = {
+	activate_mission = BLM_gang_thugs_war_2
+	complete_national_focus = BLM_gang_thugs_war_focus
+	add_ideas = BLM_gang_thugs_war_idea
+}
