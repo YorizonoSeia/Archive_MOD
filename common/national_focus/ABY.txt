@@ -7220,7 +7220,14 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
-			add_ruling_to_fas = yes
+			add_popularity = {
+				ideology = democratic
+				popularity = -1
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.35
+			}
 			set_politics = {
 				ruling_party = fascism
 				elections_allowed = no
@@ -9712,6 +9719,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			set_politics = {
+				ruling_party = neutrality
+			}
 			promote_character = ABYDOS_tjqwjddmlghl
 			add_stability = -0.1
 			custom_effect_tooltip = ABY_70_days_tt
