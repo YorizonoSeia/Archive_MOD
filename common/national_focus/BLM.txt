@@ -1049,7 +1049,7 @@ focus_tree = {
 
     focus = { #
         id = BLM_increasing_numbers
-        icon = GFX_focus_BLM_thugs_priority
+        icon = GFX_goal_rhineland
         prerequisite = {
             focus = BLM_skeban_victory
         }
@@ -1177,7 +1177,7 @@ focus_tree = {
 
     focus = { #
         id = BLM_tough_ruler
-        icon = GFX_focus_BLM_thugs_priority
+        icon = GFX_focus_ARG_develop_the_electricity_sector
         prerequisite = {
             focus = BLM_leadership_of_kurihama_akemi
         }
@@ -1223,7 +1223,7 @@ focus_tree = {
 
     focus = { #
         id = BLM_rebuilding_collapsed_organization
-        icon = GFX_focus_BLM_thugs_priority
+        icon = GFX_goal_tfv_saf_anti_colonialist_crusade
         prerequisite = {
             focus = BLM_gang_victory
         }
@@ -1354,7 +1354,7 @@ focus_tree = {
 
     focus = { #
         id = BLM_helmet_group_committee
-        icon = GFX_focus_BLM_thugs_priority
+        icon = GFX_goal_tripartite_pact
         prerequisite = {
             focus = BLM_imprisonment_of_skeban
             focus = BLM_forcing_loyalty
@@ -1375,7 +1375,7 @@ focus_tree = {
 
     focus = { #
         id = BLM_centralized_criminal_organization
-        icon = GFX_focus_BLM_thugs_priority
+        icon = GFX_focus_generic_national_security
         prerequisite = {
             focus = BLM_election_of_leader
             focus = BLM_helmet_group_committee
