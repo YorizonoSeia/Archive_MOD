@@ -4,8 +4,7 @@ HYA_war_with_sha_aby = {
 		original_tag = HYA
 	}
 	enable = {
-		NOT = { has_war_with = TRM }
-		has_civil_war = no
+		has_war = no
 	}
 	abort = { always = no }
 	ai_strategy = {
