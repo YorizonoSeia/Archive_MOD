@@ -1043,6 +1043,7 @@ focus_tree = {
                 add_to_variable = { ROOT.halo_militia_cap = -4 }
                 set_division_template_cap = {  division_template = "Helmet gang" division_cap = ROOT.halo_militia_cap }
             }
+            add_ideas = BLM_resistance_of_helmet_gang
         }
     }
 
@@ -1128,6 +1129,7 @@ focus_tree = {
 				division_template = "Helmet gang"
 				disband = yes
 			}
+            remove_ideas = BLM_resistance_of_helmet_gang
         }
     }
 
@@ -1148,6 +1150,10 @@ focus_tree = {
         }
 
         completion_reward = {
+            swap_ideas = {
+                remove_idea = BLM_resistance_of_helmet_gang
+                add_idea = BLM_resistance_of_helmet_gang_2
+            }
         }
     }
 
@@ -1211,6 +1217,7 @@ focus_tree = {
                 add_to_variable = { ROOT.halo_militia_cap_skevan = -4 }
                 set_division_template_cap = {  division_template = "Skevan" division_cap = ROOT.halo_militia_cap_skevan }
             }
+            add_ideas = BLM_resistance_of_skeban
         }
     }
 
@@ -1228,6 +1235,11 @@ focus_tree = {
         }
 
         completion_reward = {
+            add_political_power = 120
+            add_popularity = {
+                ideology = neutrality
+                popularity = 0.10
+            }
         }
     }
 
@@ -1291,6 +1303,7 @@ focus_tree = {
 				division_template = "Skevan"
 				disband = yes
 			}
+            remove_ideas = BLM_resistance_of_skeban
         }
     }
 
@@ -1311,6 +1324,10 @@ focus_tree = {
         }
 
         completion_reward = {
+            swap_ideas = {
+                remove_idea = BLM_resistance_of_skeban
+                add_idea = BLM_resistance_of_skeban_2
+            }
         }
     }
 

@@ -1449,9 +1449,17 @@ country_event = {
 					add_ai_strategy = {
 						type = alliance 
 						id = CSB
-						value =-500
+						value = -500
 					}
 					if = {
+						limit = {
+							OR = {
+								has_government = neutrality
+								has_government = communism
+								has_government = democratic
+							}
+							NOT = { has_war_with = USA }
+						}
 						add_ai_strategy = {
 							type = support
 							id = USA

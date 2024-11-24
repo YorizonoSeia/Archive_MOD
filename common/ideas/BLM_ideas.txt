@@ -153,5 +153,63 @@ ideas = {
                 war_support_factor = -0.05
             }
         }
+        BLM_resistance_of_skeban = { #
+            picture = BLM_resistance_of_skeban
+            allowed = {
+                tag = BLM
+                always = no
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+                stability_factor = -0.10
+                industrial_capacity_factory = -0.05
+                industrial_capacity_dockyard = -0.05
+            }
+        }
+        BLM_resistance_of_helmet_gang = { #
+            picture = BLM_resistance_of_helmet_gang
+            allowed = {
+                tag = BLM
+                always = no
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+                stability_factor = -0.10
+                industrial_capacity_factory = -0.05
+                industrial_capacity_dockyard = -0.05
+            }
+        }
+        BLM_resistance_of_skeban_2 = { #
+            picture = GFX_idea_BLM_resistance_of_skeban_2
+            allowed = {
+                tag = BLM
+                always = no
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+                stability_factor = -0.05
+                political_power_cost = 0.01
+            }
+        }
+        BLM_resistance_of_helmet_gang_2 = { #
+            picture = GFX_idea_BLM_resistance_of_helmet_gang_2
+            allowed = {
+                tag = BLM
+                always = no
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+                stability_factor = -0.05
+                political_power_cost = 0.01
+            }
+        }
     }
 }
