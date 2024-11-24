@@ -1,5 +1,21 @@
 spriteTypes = {
 	spriteType = {
+		name = "GFX_idea_BLM_resistance_of_helmet_gang"
+		texturefile = "gfx/interface/ideas/BLM/idea_BLM_resistance_of_helmet_gang.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BLM_resistance_of_skeban"
+		texturefile = "gfx/interface/ideas/BLM/idea_BLM_resistance_of_skeban.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BLM_resistance_of_helmet_gang_2"
+		texturefile = "gfx/interface/ideas/BLM/idea_BLM_resistance_of_helmet_gang_2.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BLM_resistance_of_skeban_2"
+		texturefile = "gfx/interface/ideas/BLM/idea_BLM_resistance_of_skeban_2.tga"
+	}
+	spriteType = {
 		name = "GFX_idea_BLM_criminal_state"
 		texturefile = "gfx/interface/ideas/BLM/BLM_criminal_state.tga"
 	}
