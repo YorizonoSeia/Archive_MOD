@@ -47,7 +47,7 @@ focus_tree = {
 	focus = {
 		id = ABY_focus_with_neptis    #중점명
 		icon = GFX_focus_nephtys
- 		cost = 3.00          #중점 일수(주)
+ 		cost = 5.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
 		}
@@ -136,7 +136,7 @@ focus_tree = {
 	focus = {
 		id = ABY_focus_intact_czech_governmant    #중점명
 		icon = GFX_goal_molotov_ribbentrop_pact
- 		cost = 3.00          #중점 일수(주)
+ 		cost = 5.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
 		}
@@ -319,7 +319,7 @@ focus_tree = {
 	focus = {
 		id = ABY_focus_eoalstjswjs    #중점명
 		icon = GFX_focus_NOR_lurk_in_the_shadows
- 		cost = 3.00          #중점 일수(주)
+ 		cost = 5.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
 		}
@@ -351,9 +351,12 @@ focus_tree = {
 			72 = { add_core_of = ABY }
 			74 = { add_core_of = ABY } 
 			972 = { add_core_of = ABY }
-			HYA = {
-				country_event = {
-					id = ABY_new_event.101
+			if = {
+				limit = { NOT = { has_global_flag = ABY_focus_operation_falling_flower_flag } }
+				HYA = {
+					country_event = {
+						id = ABY_new_event.101
+					}
 				}
 			}
 			#중점 완료시 얻는 보상
@@ -421,9 +424,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ABY_focus_eoalstjswjs
 		bypass = {
-			HYA = {
-				exists = no
-			}
+			has_global_flag = ABY_focus_operation_falling_flower_flag
 			#중점 통과 조건
 		}
 		available = {
@@ -451,7 +452,7 @@ focus_tree = {
 	focus = {
 		id = ABY_focus_german_resistance_make    #중점명
 		icon = GFX_focus_generic_military_mission
- 		cost = 3.00          #중점 일수(주)
+ 		cost = 5.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
 		}
@@ -465,9 +466,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ABY_focus_call_eocordnldnjsghl
 		bypass = {
-			HYA = {
-				exists = no
-			}
+			has_global_flag = ABY_focus_operation_falling_flower_flag
 			#중점 통과 조건
 		}
 		available = {
@@ -494,7 +493,7 @@ focus_tree = {
 	focus = {
 		id = ABY_focus_strong_resistance    #중점명
 		icon = GFX_focus_generic_little_entente
- 		cost = 3.00          #중점 일수(주)
+ 		cost = 5.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
 		}
@@ -505,12 +504,10 @@ focus_tree = {
 			    #반대되는 중점
 		}
 		x = -1     #좌표
-		y = 2
+		y = 1
 		relative_position_id = ABY_focus_german_resistance_make
 		bypass = {
-			HYA = {
-				exists = no
-			}
+			has_global_flag = ABY_focus_operation_falling_flower_flag
 			#중점 통과 조건
 		}
 		available = {
@@ -533,9 +530,48 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = ABY_focus_strong_resistance_2    #중점명
+		icon = GFX_focus_ETH_peacekeeping_forces
+ 		cost = 10.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			focus = ABY_focus_strong_resistance    #이전 중점
+		}
+		mutually_exclusive = {
+			    #반대되는 중점
+		}
+		x = 0     #좌표
+		y = 1
+		relative_position_id = ABY_focus_strong_resistance
+		bypass = {
+			has_global_flag = ABY_focus_operation_falling_flower_flag
+			#중점 통과 조건
+		}
+		available = {
+
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			custom_effect_tooltip = ABY_new_tt_25
+			clr_country_flag = ABY_flag_german_resistance_2
+			set_country_flag = ABY_flag_german_resistance_3
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
 		id = ABY_focus_prepare_war    #중점명
 		icon = GFX_focus_ETH_freedom_at_gunpoint
- 		cost = 3.00          #중점 일수(주)
+ 		cost = 5.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
 		}
@@ -549,16 +585,11 @@ focus_tree = {
 		y = 4
 		relative_position_id = ABY_focus_german_resistance_make
 		bypass = {
-			HYA = {
-				exists = no
-			}
+			has_global_flag = ABY_focus_operation_falling_flower_flag
 			#중점 통과 조건
 		}
 		available = {
 
-			has_equipment = {
-				infantry_equipment > 1000
-			}
 			#중점 선행조건
 		}
 
@@ -568,7 +599,7 @@ focus_tree = {
 		completion_reward = {
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
-				amount = -1000
+				amount = 1000
 			}
 			HYA = {
 				add_timed_idea = {
@@ -576,6 +607,7 @@ focus_tree = {
 					days = 200
 				}
 			}
+			set_global_flag = ABY_idea_HYA_suspecious_flag
 			custom_effect_tooltip = ABY_suspecious_tt
 			#중점 완료시 얻는 보상
 		}
@@ -583,7 +615,7 @@ focus_tree = {
 	focus = {
 		id = ABY_focus_finish_tjswjs    #중점명
 		icon = GFX_goal_radio_silence
- 		cost = 3.00          #중점 일수(주)
+ 		cost = 5.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
 		}
@@ -597,9 +629,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = ABY_focus_eoalstjswjs
 		bypass = {
-			HYA = {
-				exists = no
-			}
+			has_global_flag = ABY_focus_operation_falling_flower_flag
 			#중점 통과 조건
 		}
 		available = {
@@ -623,6 +653,13 @@ focus_tree = {
 				}
 			}
 			set_country_flag = ABY_flag_czech_resistance
+			HYA = {
+				add_timed_idea = {
+					idea = ABY_idea_HYA_suspecious
+					days = 200
+				}
+			}
+			custom_effect_tooltip = ABY_suspecious_tt
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -635,8 +672,6 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = ABY_focus_finish_tjswjs    #이전 중점
-		}
-		prerequisite = {
 			focus = ABY_focus_prepare_war    #이전 중점
 		}
 		mutually_exclusive = {
@@ -646,9 +681,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ABY_focus_prepare_war
 		bypass = {
-			HYA = {
-				exists = no
-			}
+			has_global_flag = ABY_focus_operation_falling_flower_flag
 			
 			#중점 통과 조건
 		}
@@ -662,10 +695,7 @@ focus_tree = {
 		completion_reward = {
             every_country = {
                 limit = {
-                    OR = {
-                  		controls_state = 9
-                        original_tag = HYA
-                    }
+					original_tag = HYA
                 }
                 ABY = {
                     declare_war_on = {
@@ -674,123 +704,13 @@ focus_tree = {
                     }
                 }
             }
-			add_ideas = {
-				ABY_idea_sword_to_bohemia
-			}
-			division_template = {
-				name = "German resistances"
-				priority = 1
-				division_names_group = ABY_INF_04
-				is_locked = no
-				regiments = {
-					militia = { x = 0 y = 0 }
-					militia = { x = 0 y = 1 }
-					militia = { x = 0 y = 2 }
-				}
-			}
-			hidden_effect = {
-				74 = { transfer_state_to = ABY }
-				if = {
-					limit = {
-						has_country_flag = ABY_flag_czech_resistance
-					}
-					9 = {
-						add_dynamic_modifier = {
-							modifier = ABY_modifier_czech_resistance
-							days = 30
-							scope = HYA
-						}
-					}
-				}
-				if = {
-					limit = {
-						has_country_flag = ABY_flag_german_resistance_1
-						HYA = {
-							has_idea = ABY_idea_HYA_suspecious
-						}
-					}
-					74 = {
-						create_unit = {
-							division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0 start_equipment_factor = 0.8"
-							owner = ABY
-						}
-						create_unit = {
-							division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0 start_equipment_factor = 0.8"
-							owner = ABY
-						}
-						create_unit = {
-							division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0 start_equipment_factor = 0.8"
-							owner = ABY
-						}
-						create_unit = {
-							division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0 start_equipment_factor = 0.8"
-							owner = ABY
-						}
-						create_unit = {
-							division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0 start_equipment_factor = 0.8"
-							owner = ABY
-						}
-						create_unit = {
-							division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0 start_equipment_factor = 0.8"
-							owner = ABY
-						}
-					}
-				}
-				if = {
-					limit = {
-						has_country_flag = ABY_flag_german_resistance_2
-						HYA = {
-							has_idea = ABY_idea_HYA_suspecious
-						}
-					}
-					74 = {
-						create_unit = {
-							division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
-							owner = ABY
-						}
-						create_unit = {
-							division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
-							owner = ABY
-						}
-						create_unit = {
-							division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
-							owner = ABY
-						}
-						create_unit = {
-							division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
-							owner = ABY
-						}
-						create_unit = {
-							division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
-							owner = ABY
-						}
-						create_unit = {
-							division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
-							owner = ABY
-						}
-						create_unit = {
-							division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
-							owner = ABY
-						}
-						create_unit = {
-							division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
-							owner = ABY
-						}
-						create_unit = {
-							division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
-							owner = ABY
-						}
-					}
-				}
-				74 = { transfer_state_to = HYA }
-			}
 			#중점 완료시 얻는 보상
 		}
 	}
 	focus = {
 		id = ABY_focus_cldks_propblem_improve    #중점명
 		icon = GFX_goal_demand_sudetenland
- 		cost = 3.00          #중점 일수(주)
+ 		cost = 5.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
 		}
@@ -838,7 +758,7 @@ focus_tree = {
 	focus = {
 		id = ABY_focus_no_helmet    #중점명
 		icon = GFX_focus_helmet      #아이콘
- 		cost = 3.00          #중점 일수(주)
+ 		cost = 5.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
 		}
@@ -2255,8 +2175,9 @@ focus_tree = {
 			remove_power_balance = {
 				id = ABY_power_balance
 			}
-			remove_ideas = {
-				ABY_idea_economy_recuit
+			if = {
+				limit = { has_idea = ABY_idea_economy_recuit }
+				remove_ideas = ABY_idea_economy_recuit
 			}
 			retire_character = ABY_HYA
 			if = {

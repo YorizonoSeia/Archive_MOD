@@ -1,0 +1,368 @@
+on_actions = {
+	on_declare_war = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = { 
+						tag = ABY
+					}
+					FROM = { 
+						original_tag = HYA
+					}
+				}
+				set_global_flag = ABY_focus_operation_falling_flower_flag
+				ROOT = {
+					hidden_effect = {
+						add_ideas = {
+							ABY_idea_sword_to_bohemia
+						}
+						if = {
+							limit = {
+								has_country_flag = ABY_flag_czech_resistance
+							}
+							9 = {
+								add_dynamic_modifier = {
+									modifier = ABY_modifier_czech_resistance
+									days = 30
+									scope = HYA
+								}
+							}
+						}
+						if = {
+							limit = {
+								has_country_flag = ABY_flag_german_resistance_1
+								if = {
+									limit = { has_global_flag = ABY_idea_HYA_suspecious_flag }
+									FROM = { has_idea = ABY_idea_HYA_suspecious }
+								}
+							}
+							division_template = {
+								name = "German resistances"
+								priority = 1
+								division_names_group = ABY_INF_04
+								is_locked = no
+								regiments = {
+									militia = { x = 0 y = 0 }
+									militia = { x = 0 y = 1 }
+									militia = { x = 0 y = 2 }
+								}
+							}
+							74 = {
+								create_unit = {
+									division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0 start_equipment_factor = 0.8"
+									owner = ABY
+									allow_spawning_on_enemy_provs = yes
+								}
+								create_unit = {
+									division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0 start_equipment_factor = 0.8"
+									owner = ABY
+									allow_spawning_on_enemy_provs = yes
+								}
+								create_unit = {
+									division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0 start_equipment_factor = 0.8"
+									owner = ABY
+									allow_spawning_on_enemy_provs = yes
+								}
+							}
+						}
+						else_if = {
+							limit = {
+								has_country_flag = ABY_flag_german_resistance_2
+								if = {
+									limit = { has_global_flag = ABY_idea_HYA_suspecious_flag }
+									FROM = { has_idea = ABY_idea_HYA_suspecious }
+								}
+							}
+							division_template = {
+								name = "German resistances"
+								priority = 1
+								division_names_group = ABY_INF_04
+								is_locked = no
+								regiments = {
+									militia = { x = 0 y = 0 }
+									militia = { x = 0 y = 1 }
+									militia = { x = 0 y = 2 }
+								}
+							}
+							74 = {
+								create_unit = {
+									division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+									owner = ABY
+									allow_spawning_on_enemy_provs = yes
+								}
+								create_unit = {
+									division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+									owner = ABY
+									allow_spawning_on_enemy_provs = yes
+								}
+								create_unit = {
+									division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+									owner = ABY
+									allow_spawning_on_enemy_provs = yes
+								}
+								create_unit = {
+									division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+									owner = ABY
+									allow_spawning_on_enemy_provs = yes
+								}
+								create_unit = {
+									division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+									owner = ABY
+									allow_spawning_on_enemy_provs = yes
+								}
+							}
+						}
+						else_if = {
+							limit = {
+								has_country_flag = ABY_flag_german_resistance_3
+								if = {
+									limit = { has_global_flag = ABY_idea_HYA_suspecious_flag }
+									FROM = { has_idea = ABY_idea_HYA_suspecious }
+								}
+							}
+							division_template = {
+								name = "German resistances"
+								priority = 1
+								division_names_group = ABY_INF_04
+								is_locked = no
+								regiments = {
+									militia = { x = 0 y = 0 }
+									militia = { x = 0 y = 1 }
+									militia = { x = 0 y = 2 }
+								}
+							}
+							74 = {
+								create_unit = {
+									division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+									owner = ABY
+									allow_spawning_on_enemy_provs = yes
+								}
+								create_unit = {
+									division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+									owner = ABY
+									allow_spawning_on_enemy_provs = yes
+								}
+								create_unit = {
+									division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+									owner = ABY
+									allow_spawning_on_enemy_provs = yes
+								}
+								create_unit = {
+									division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+									owner = ABY
+									allow_spawning_on_enemy_provs = yes
+								}
+								create_unit = {
+									division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+									owner = ABY
+									allow_spawning_on_enemy_provs = yes
+								}
+								create_unit = {
+									division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+									owner = ABY
+									allow_spawning_on_enemy_provs = yes
+								}
+								create_unit = {
+									division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+									owner = ABY
+									allow_spawning_on_enemy_provs = yes
+								}
+								create_unit = {
+									division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+									owner = ABY
+									allow_spawning_on_enemy_provs = yes
+								}
+								create_unit = {
+									division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+									owner = ABY
+									allow_spawning_on_enemy_provs = yes
+								}
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { 
+						original_tag = HYA
+					}
+					FROM = { 
+						tag = ABY
+					}
+				}
+				set_global_flag = ABY_focus_operation_falling_flower_flag
+				FROM = {
+					hidden_effect = {
+						add_ideas = {
+							ABY_idea_sword_to_bohemia
+						}
+						if = {
+							limit = {
+								has_country_flag = ABY_flag_czech_resistance
+							}
+							9 = {
+								add_dynamic_modifier = {
+									modifier = ABY_modifier_czech_resistance
+									days = 30
+									scope = HYA
+								}
+							}
+						}
+						if = {
+							limit = {
+								has_country_flag = ABY_flag_german_resistance_1
+								if = {
+									limit = { has_global_flag = ABY_idea_HYA_suspecious_flag }
+									ROOT = { has_idea = ABY_idea_HYA_suspecious }
+								}
+							}
+							division_template = {
+								name = "German resistances"
+								priority = 1
+								division_names_group = ABY_INF_04
+								is_locked = no
+								regiments = {
+									militia = { x = 0 y = 0 }
+									militia = { x = 0 y = 1 }
+									militia = { x = 0 y = 2 }
+								}
+							}
+							74 = {
+								create_unit = {
+									division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0 start_equipment_factor = 0.8"
+									owner = ABY
+									allow_spawning_on_enemy_provs = yes
+								}
+								create_unit = {
+									division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0 start_equipment_factor = 0.8"
+									owner = ABY
+									allow_spawning_on_enemy_provs = yes
+								}
+								create_unit = {
+									division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0 start_equipment_factor = 0.8"
+									owner = ABY
+									allow_spawning_on_enemy_provs = yes
+								}
+							}
+						}
+						else_if = {
+							limit = {
+								has_country_flag = ABY_flag_german_resistance_2
+								if = {
+									limit = { has_global_flag = ABY_idea_HYA_suspecious_flag }
+									ROOT = { has_idea = ABY_idea_HYA_suspecious }
+								}
+							}
+							division_template = {
+								name = "German resistances"
+								priority = 1
+								division_names_group = ABY_INF_04
+								is_locked = no
+								regiments = {
+									militia = { x = 0 y = 0 }
+									militia = { x = 0 y = 1 }
+									militia = { x = 0 y = 2 }
+								}
+							}
+							74 = {
+								create_unit = {
+									division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+									owner = ABY
+									allow_spawning_on_enemy_provs = yes
+								}
+								create_unit = {
+									division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+									owner = ABY
+									allow_spawning_on_enemy_provs = yes
+								}
+								create_unit = {
+									division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+									owner = ABY
+									allow_spawning_on_enemy_provs = yes
+								}
+								create_unit = {
+									division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+									owner = ABY
+									allow_spawning_on_enemy_provs = yes
+								}
+								create_unit = {
+									division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+									owner = ABY
+									allow_spawning_on_enemy_provs = yes
+								}
+							}
+						}
+						else_if = {
+							limit = {
+								has_country_flag = ABY_flag_german_resistance_3
+								if = {
+									limit = { has_global_flag = ABY_idea_HYA_suspecious_flag }
+									ROOT = { has_idea = ABY_idea_HYA_suspecious }
+								}
+							}
+							division_template = {
+								name = "German resistances"
+								priority = 1
+								division_names_group = ABY_INF_04
+								is_locked = no
+								regiments = {
+									militia = { x = 0 y = 0 }
+									militia = { x = 0 y = 1 }
+									militia = { x = 0 y = 2 }
+								}
+							}
+							74 = {
+								create_unit = {
+									division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+									owner = ABY
+									allow_spawning_on_enemy_provs = yes
+								}
+								create_unit = {
+									division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+									owner = ABY
+									allow_spawning_on_enemy_provs = yes
+								}
+								create_unit = {
+									division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+									owner = ABY
+									allow_spawning_on_enemy_provs = yes
+								}
+								create_unit = {
+									division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+									owner = ABY
+									allow_spawning_on_enemy_provs = yes
+								}
+								create_unit = {
+									division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+									owner = ABY
+									allow_spawning_on_enemy_provs = yes
+								}
+								create_unit = {
+									division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+									owner = ABY
+									allow_spawning_on_enemy_provs = yes
+								}
+								create_unit = {
+									division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+									owner = ABY
+									allow_spawning_on_enemy_provs = yes
+								}
+								create_unit = {
+									division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+									owner = ABY
+									allow_spawning_on_enemy_provs = yes
+								}
+								create_unit = {
+									division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+									owner = ABY
+									allow_spawning_on_enemy_provs = yes
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
