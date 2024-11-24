@@ -26,7 +26,7 @@ peace_ai_desires = {
 					NOT = { has_war_with = HYA }
 					AND = {
 						has_war_with = HYA
-						any_war_score < 40
+						any_war_score < 20
 					}
 				}
 			}
@@ -51,7 +51,7 @@ peace_ai_desires = {
 		enable = {
 			SHA = {
 				has_war_with = HYA
-				any_war_score > 39
+				any_war_score > 19
 			}
 			ROOT = {
 				original_tag = ABY
@@ -64,7 +64,7 @@ peace_ai_desires = {
 				state = 986
 			}
 		}
-		ai_desire = -400
+		ai_desire = -2000
 	}
 	SHA_peace_annex_HYA = {
 		peace_action_type = take_states 
@@ -80,7 +80,7 @@ peace_ai_desires = {
 				state = 986
 			}
 		}
-		ai_desire = 1000
+		ai_desire = 2000
 	}
 	ABY_peace_annex_SHA = {
 		peace_action_type = take_states 
