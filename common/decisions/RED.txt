@@ -1356,6 +1356,12 @@ RED_minori_revolution_decision = {
 				id = RED_minori_event.3
 				random_days = 3
 			}
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				add_command_power = 200
+			}
 		}
 	}
 	RED_aproaching_anti_revolution = {
@@ -1391,7 +1397,7 @@ RED_minori_revolution_decision = {
 				}
 				declare_war_on = {
 					target = RED
-					type = annex_everything
+					type = civil_war
 				}
 			}
 			news_event = BA_news.79

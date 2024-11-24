@@ -1057,3 +1057,22 @@ country_event = { #국가사회주의 독일 노동자당
 		}
 	}
 }
+country_event = { #금이 가는 연정
+	id = GEK_rm_event.9
+	title = GEK_rm_event.9.t
+	desc = GEK_rm_event.9.d
+	picture = GFX_report_event_communists_in_riga
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = GEK_rm_event.9.a
+		GEK_enhance_nazi = yes
+		set_party_name = {
+			ideology = neutrality
+			long_name = GER_fascism_party_long
+			name = GER_fascism_party
+		}
+	}
+}
