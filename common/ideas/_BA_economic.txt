@@ -17,7 +17,7 @@ ideas = {
 			}
 
 			modifier = {
-				military_factory_donations = 30
+				military_factory_donations = 80
 				surrender_limit = 2.00
 				production_speed_buildings_factor = -0.5
 				production_speed_industrial_complex_factor = -0.20
