@@ -78,7 +78,7 @@
 		}
 		ai_will_do = { base = 40 }
 		icon = GFX_focus_generic_military_industry
-		x = -4
+		x = -6
 		y = 1
 		relative_position_id = TRM_localization
 		cost = 10.00
@@ -99,7 +99,7 @@
 		mutually_exclusive = { focus = TRN_german_company_acceptance }
 		available = {  }
 		ai_will_do = { base = 40 }
-		x = -1
+		x = -3
 		y = 1
 		relative_position_id = TRN_kickstart_the_civilian_industry
 		cost = 5.00
@@ -131,7 +131,7 @@
 		mutually_exclusive = { focus = TRN_self_reliance }
 		available = {  }
 		ai_will_do = { base = 40 }
-		x = 1
+		x = 3
 		y = 1
 		relative_position_id = TRN_kickstart_the_civilian_industry
 		cost = 5.00
@@ -209,7 +209,7 @@
 		}
 		available = {
 		}
-		x = -1
+		x = 1
 		y = 1
 		relative_position_id = TRN_self_reliance
 		completion_reward = {
@@ -245,7 +245,7 @@
 		ai_will_do = { base = 40 }
 		available = {
 		}
-		x = -3
+		x = -1
 		y = 1
 		relative_position_id = TRN_self_reliance
 		completion_reward = {
@@ -528,7 +528,14 @@
 			focus = TRN_Contract_with_Mauser
 		}
 		completion_reward = {
-			add_ideas = TRN_invest_arms_industry
+            if = {
+                limit = { has_idea = TRN_invest_arms_industry }
+			    swap_ideas = {
+    				remove_idea = TRN_invest_arms_industry
+				    add_idea = TRN_deutchland_industry_power_amry
+			    }
+                else = { add_ideas = TRN_invest_arms_industry }
+            }
 		}
 
 	}
@@ -580,7 +587,7 @@
 			focus = TRN_self_reliance
 		}
 		ai_will_do = { base = 40 }
-		x = -1
+		x = -0
 		y = 3
 		relative_position_id = TRN_kickstart_the_civilian_industry
 		completion_reward = {
@@ -742,9 +749,7 @@
     				remove_idea = TRN_invest_arms_industry
 				    add_idea = TRN_deutchland_industry_power_amry
 			    }
-                else = {
-                    add_ideas = TRN_invest_arms_industry
-                }
+                else = { add_ideas = TRN_invest_arms_industry }
             }
 		}
 

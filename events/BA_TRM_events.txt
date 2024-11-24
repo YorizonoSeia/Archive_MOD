@@ -355,18 +355,20 @@ country_event = { #게헨나 항복 이벤트
 				is_subject = yes
 			}
 		}
-		GEH = {
-			OR = {
-				exists = no
-				has_capitulated = yes
-				is_subject = yes
+		OR = {
+			GEH = {
+				OR = {
+					exists = no
+					has_capitulated = yes
+					is_subject = yes
+				}
 			}
-		}
-		HEU = {
-			OR = {
-				exists = no
-				has_capitulated = yes
-				is_subject = yes
+			HEU = {
+				OR = {
+					exists = no
+					has_capitulated = yes
+					is_subject = yes
+				}
 			}
 		}
 	}
