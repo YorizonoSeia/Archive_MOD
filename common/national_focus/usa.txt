@@ -167,6 +167,54 @@ focus_tree = {
 			}
 		}
 	}
+    
+    # 강제 기상
+	focus = {
+		id = USABA_forced_wake_up
+		icon = GFX_focus_CHL_silverworking
+		prerequisite = { focus = USA_continue_the_new_deal }
+		x = -13
+		y = 1
+		relative_position_id = USA_continue_the_new_deal
+
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = no
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+		available = {
+			if = { limit = { has_country_flag = USABA_government_official_exile }
+				NOT = { has_country_flag = USABA_government_official_exile }
+			}
+			has_country_flag = USA_2nd_great_depression_4th_flag
+		}
+		bypass = {
+			
+		}
+		search_filters = {FOCUS_FILTER_USA_CONGRESS}
+		completion_reward = {
+			add_ideas = USABA_forced_wake_up
+			add_war_support = -0.2
+			add_stability = -0.2
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.15
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
+		}
+	}
+
 
 
     # 정치 고문 중점
@@ -234,7 +282,7 @@ focus_tree = {
 		}
 		search_filters = {FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 50
 			add_stability = 0.10
 			add_popularity = {
 				ideology = democratic
@@ -1455,6 +1503,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
+			add_stability = 0.1
 			add_political_power = 150
 		}
 	}
@@ -3275,7 +3324,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		bypass = {
-			has_idea = BA_USA_homeland_defense
+			#has_idea = BA_USA_homeland_defense
 		}
 
 		completion_reward = {
@@ -3514,7 +3563,9 @@ focus_tree = {
 
 		}
 		completion_reward = {
-
+            # give_guarantee = ITA
+			# give_guarantee = ENG
+			# give_guarantee = FRA
 		}
 	}
     
@@ -3684,6 +3735,9 @@ focus_tree = {
                }
 		}
 	}
+
+
+
 
 		# 샬레 공격
 		focus = {
@@ -3911,7 +3965,7 @@ focus_tree = {
 
 		}
 		completion_reward = {
-
+              add_ideas = Pax_Americana
 		}
 	}
 
@@ -3963,15 +4017,15 @@ focus_tree = {
 		y = 1
 		relative_position_id = USABA_american_reindustrialization
 		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
+		#ai_will_do = {
+		#	factor = 1
+		#}
 		available_if_capitulated = yes
 		available = {
 			if = { limit = { has_country_flag = USABA_government_official_exile }
 				NOT = { has_country_flag = USABA_government_official_exile }
 			}
-			threat > 0.8
+			threat > 1
 			congress_high_support_trigger = yes
 		}
 		completion_reward = {
@@ -3999,7 +4053,13 @@ focus_tree = {
 
 		}
 		completion_reward = {
-			
+			add_manpower = 1000
+			add_war_support = 0.1
+			add_stability = -0.1
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.05
+			}
 		}
 	}
 
@@ -4022,6 +4082,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			news_event = { id = BA_news.111 }
+			add_ideas = USA_anime
 		}
 	}
 
@@ -4045,7 +4106,7 @@ focus_tree = {
 
 		}
 		completion_reward = {
-			
+
 		}
 	}
 
@@ -4128,6 +4189,7 @@ focus_tree = {
 
 		}
 		completion_reward = {
+			add_stability = 0.1
 			add_popularity = {
 				ideology = democratic
 				popularity = 0.3
@@ -4157,8 +4219,7 @@ focus_tree = {
 
 		}
 		completion_reward = {
-
-
+            give_guarantee = MIL
 		}
 	}
 
@@ -4184,7 +4245,6 @@ focus_tree = {
 
 		}
 		completion_reward = {
-
 
 		}
 	}
@@ -4278,32 +4338,6 @@ focus_tree = {
 		icon = GFX_goal_TRM_New_fascism_friend
 		prerequisite = { focus = USA_blue_kivotos focus = USA_bad_kivotos}
 
-		x = -2
-		y = 4
-		relative_position_id = USA_new_team
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = yes
-		available = {
-			if = { limit = { has_country_flag = USABA_government_official_exile }
-				NOT = { has_country_flag = USABA_government_official_exile }
-			}
-
-		}
-		completion_reward = {
-
-		}
-	}
-
-	
-	# 에덴
-	focus = {
-		id = USA_bad_kivotos_Eden
-		icon = GFX_goal_TRN_eden_pacts_letsgo
-		prerequisite = { focus = USA_blue_kivotos focus = USA_bad_kivotos}
-
 		x = 0
 		y = 4
 		relative_position_id = USA_new_team
@@ -4319,16 +4353,51 @@ focus_tree = {
 
 		}
 		completion_reward = {
+              give_guarantee = COU
+		}
+	}
 
+	
+	# 에덴
+	focus = {
+		id = USA_bad_kivotos_Eden
+		icon = GFX_goal_TRN_eden_pacts_letsgo
+		prerequisite = { focus = USA_blue_kivotos}
+
+		x = -2
+		y = 4
+		relative_position_id = USA_new_team
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = yes
+		available = {
+			if = { limit = { has_country_flag = USABA_government_official_exile }
+				NOT = { has_country_flag = USABA_government_official_exile }
+			}
+			if = {
+				NOT = {
+					TRM = {
+						has_war_with = GEH
+						has_war_with = GEM
+					}
+				}
+				TRM = {
+					NOT = {
+					   has_government = fascism
+					}
+					is_in_faction_with = GEM
+				}
+			}
+		}
+		completion_reward = {
+            give_guarantee = TRM
+			give_guarantee = GEH
+			give_guarantee = GEM
 		}
 	}
 	
-
-
-
-
-
-
 
      #공산 파시
 	focus = {
@@ -4347,21 +4416,17 @@ focus_tree = {
 		available_if_capitulated = yes
 		available = {
 			if = { limit = { has_country_flag = USABA_government_official_exile }
-				NOT = { has_country_flag = USABA_government_official_exile }
+				NOT = { has_country_flag = USABA_government_official_exile}
 			}
 
 		}
 		completion_reward = {
+			add_war_support = 0.2
+			add_stability = -0.1
 			add_popularity = {
-				ideology = communism
-				popularity = 0.15
+				ideology = democratic
+				popularity = -1
 			}
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.15
-			}
-
-
 		}
 	}
 
@@ -4386,8 +4451,11 @@ focus_tree = {
 	
 			}
 			completion_reward = {
-	
-	
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.2
+			}
+
 			}
 		}
     
@@ -4400,7 +4468,7 @@ focus_tree = {
 	# 트리니티 친선
 	focus = {
 		id = USA_bad_kivotos_TRM
-		icon = GFX_goal_TRN_TRM_newfocus_7
+		icon = GFX_goal_TRN_Hegemony
 		prerequisite = { focus = USA_bad_kivotos }
 		mutually_exclusive = { focus = USA_bad_kivotos_GEM }
 		x = 1
@@ -4418,13 +4486,16 @@ focus_tree = {
 
 		}
 		completion_reward = {
-
-
+            add_popularity = {
+				ideology = fascism
+				popularity = 0.2
+			}
+            
 		}
 	}
 
 
-	# 신비 육성
+	# 신비 헤일로 보병 육성
 	focus = {
 		id = USA_bad_kivotos_halo_infantry_division
 		icon = GFX_goal_TRM_mika_Idolization
@@ -4449,10 +4520,67 @@ focus_tree = {
 		}
 	}
 
+
+	# 게헨나 헤일로
+
+		focus = {
+		id = USA_bad_kivotos_GEM_halo_infantry
+		icon = GFX_goal_GEH_sundoboo
+		prerequisite = { focus = USA_bad_kivotos_halo_infantry_division}
+		prerequisite = { focus = USA_bad_kivotos_GEM} 
+		x = -1
+		y = 4
+		relative_position_id = USA_bad_kivotos
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available_if_capitulated = yes
+		available = {
+			if = { limit = { has_country_flag = USABA_government_official_exile }
+				NOT = { has_country_flag = USABA_government_official_exile }
+			}
+
+		}
+		completion_reward = {
+
+
+		}
+	}
+
+	# 트리니티 헤일로
+
+	   focus = {
+		id = USA_bad_kivotos_TRM_halo_infantry
+		icon = GFX_goal_TRN_serve_to_trinity
+		prerequisite = { focus = USA_bad_kivotos_halo_infantry_division}
+		prerequisite = { focus = USA_bad_kivotos_TRM} 
+		x = 1
+		y = 4
+		relative_position_id = USA_bad_kivotos
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available_if_capitulated = yes
+		available = {
+			if = { limit = { has_country_flag = USABA_government_official_exile }
+				NOT = { has_country_flag = USABA_government_official_exile }
+			}
+
+		}
+		completion_reward = {
+
+
+		}
+	}
+
+
+
 		# 미카 지원
 		focus = {
 			id = USA_bad_kivotos_support_Mika
-			icon = GFX_goal_TRM_mika_Idolization
+			icon = GFX_focus_deal_with_mika
 			prerequisite = { focus = USA_bad_kivotos_TRM focus = USA_bad_kivotos_GEM}
 			x = 2
 			y = 2
@@ -4477,7 +4605,7 @@ focus_tree = {
 			# 미카 따까리
 	focus = {
 		id = USA_bad_kivotos_Mika_fanclub
-		icon = GFX_focus_CZE_german_puppet
+		icon = GFX_goal_TRN_TRM_newfocus_7
 		prerequisite = { focus = USA_bad_kivotos_support_Mika }
 		x = 2
 		y = 3
@@ -4507,7 +4635,7 @@ focus_tree = {
 		id = USA_bad_kivotos_RED
 		icon = GFX_focus_chi_mission_to_the_RED
 		prerequisite = { focus = USA_bad_kivotos }
-		x = 5
+		x = 7
 		y = 1
 		relative_position_id = USA_bad_kivotos
 		cost = 5
@@ -4522,7 +4650,10 @@ focus_tree = {
 
 		}
 		completion_reward = {
-            
+            add_popularity = {
+				ideology = communism
+				popularity = 0.2
+			}
 
 		}
 	}
