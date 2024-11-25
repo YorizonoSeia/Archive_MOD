@@ -1,0 +1,14 @@
+KAI_none_aliy_trm = {
+	allowed = {
+		original_tag = KAI
+	}
+	enable = {
+		NOT = { has_completed_focus = KAI_treaty_with_trinity }
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = alliance
+		id = "TRM"
+		value = -200
+	}
+}
