@@ -1311,12 +1311,6 @@ focus_tree = {
 					count = 3
 				}
 			}
-			
-			# 침공 준비 이벤트 발생
-			country_event = { 
-				id = GEI_event.20 
-				days = 1
-			}
 		}
 	}
 	#브리튼 제도 청소
