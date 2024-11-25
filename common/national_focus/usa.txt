@@ -644,7 +644,6 @@ focus_tree = {
 			}
 			not = { has_completed_focus = USA_limited_intervention }
 			not = { has_completed_focus = USA_neutrality_act }
-			OR = { has_war_with = TAN}
 		}
 		
 		bypass = {
