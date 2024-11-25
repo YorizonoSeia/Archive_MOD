@@ -340,11 +340,11 @@ ideas = {
 			picture = man_low_legitimacy5
 			
 			allowed = {
-				always = no
+				always = yes
 			}
 
 			allowed_civil_war = {
-				always = yes
+				always = no
 			}
 
 			removal_cost = -1
@@ -354,5 +354,55 @@ ideas = {
 			  stability_factor = 0.05
  	        }
        }
+
+
+	   # 우유부단한 신념
+	   week_faith_for_new_team = {
+            picture = generic_disjointed_gov
+            
+			allowed = {
+                tag = USA
+            }
+
+            allowed_civil_war = {
+				always = no
+			}
+
+			modifier = {
+			    #add_political_power = -0.1
+				#democracy_factor = -0.2
+				stability_factor = -0.2
+				war_support_factor = -0.5
+				stability_weekly = -0.005
+				war_support_weekly = -0.005
+				war_stability_factor = -0.6
+
+			}
+	   }
+
+    # 구질서 수호 반란 미국 국민정신 
+
+	 strong_faith_for_old_team = {
+            picture = generic_disjointed_gov
+            
+			allowed = {
+                tag = USA
+            }
+
+            allowed_civil_war = {
+				always = no
+			}
+
+			modifier = {
+                #add_political_power = 100
+				war_support_factor = 0.4
+				war_stability_factor = 0.2
+				war_support_weekly = 0.01
+			}
+	   }
+
+    
+	
+
   }
 }
