@@ -4068,7 +4068,6 @@ focus_tree = {
 			if = { limit = { has_country_flag = USABA_government_official_exile }
 				NOT = { has_country_flag = USABA_government_official_exile }
 			}
-
 		}
 		completion_reward = {
 			add_threat = -80
@@ -4114,7 +4113,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = USA_old_team_guardian
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 10
 		}
@@ -4448,7 +4447,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = USA_blue_kivotos_MIL
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 10
 		}
@@ -4462,7 +4461,9 @@ focus_tree = {
 		completion_reward = {
 			# MIL = { add_to_tech_sharing_group = USA_MIL_tech_group }
 			# add_to_tech_sharing_group = USA_MIL_tech_group
+			add_stability = 0.05
 			add_research_slot = 1
+			add_ideas = MIL_internet_2
 		}
 	}
     
@@ -4488,7 +4489,6 @@ focus_tree = {
 
 		}
 		completion_reward = {
-
 
 		}
 	}
