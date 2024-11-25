@@ -1091,7 +1091,6 @@ focus_tree = {
 					idea = GEI_signal_interference
 					days = 180
 				}
-				country_event = { id = GEI_event.20 }
 			}
 		}
 	}
