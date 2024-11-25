@@ -4041,12 +4041,6 @@ focus_tree = {
 			}
 		}
 
-
-
-	
-
-
-
 	
 	# 민주주의의 수호자
 	
@@ -9855,7 +9849,7 @@ focus_tree = {
 	# 전쟁부 새로 만든 중점
     focus = {
 	 	id = USA_wake_giant
-		icon = GFX_goal_generic_special_forces
+		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = USA_war_department }
 		x = 17
 		y = 1
@@ -9981,6 +9975,37 @@ focus_tree = {
 		}
 
 	}
+
+
+	 # 민간 -> 군수 (재무장)
+		focus = {
+			id = USA_change_weapon_industry
+            icon = GFX_focus_SOV_merge_plants
+			prerequisite = { focus = USA_wake_giant2 }
+			x = 0
+			y = 1
+            relative_position_id = USA_wake_giant2
+			cost = 10
+			completion_reward = {
+			  add_ideas = wartime_industry_focus
+			}
+		}
+
+
+		focus = {
+			id = USA_change_weapon_industry2
+            icon = GFX_focus_generic_support_the_left_right
+			prerequisite = { focus = USA_change_weapon_industry }
+			x = 0
+			y = 2
+            relative_position_id = USA_wake_giant2
+			cost = 10
+			completion_reward = {
+			  custom_effect_tooltip = available_designer
+			  show_ideas_tooltip = USA_general_motors
+			}
+		}
+
 }
 
 
