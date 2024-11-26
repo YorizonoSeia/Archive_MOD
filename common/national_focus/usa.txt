@@ -23,7 +23,7 @@ focus_tree = {
 			original_tag = USA
 		}
 	}
-	continuous_focus_position = { x = 50 y = 1600 }
+	continuous_focus_position = { x = 50 y = 2300 }
 	default = no
 #	focus = {
 #		id = USA_
@@ -1187,7 +1187,7 @@ focus_tree = {
 			if = { limit = { has_country_flag = USABA_government_official_exile }
 				NOT = { has_country_flag = USABA_government_official_exile }
 			}
-			communism > 0.3
+			has_government = communism
 		}
 		
 		bypass = {
@@ -2383,9 +2383,12 @@ focus_tree = {
 	focus = {
 		id = USABA_SOV_enter_american_civilwar
 		icon = GFX_focus_SOV_the_glory_of_the_red_army_communism
-		x = 23
+		x = 22
 		y = 0
 		relative_position_id = USABA_regression_strategy
+		mutually_exclusive = {
+			focus = USABA_a_strong_alliance
+		}
 
 		cost = 2
 		#ai_will_do = {
@@ -2412,11 +2415,55 @@ focus_tree = {
 			    ideology = communism
 			    popularity = 0.05
 			}
+			add_ideas = USABA_LEFT_civil_war_idea
 			SOV = { #USA_civil_war_commitments
 				add_timed_idea = { idea = USABA_civil_war_commitments days = 730 }
 				add_opinion_modifier = { target = ROOT modifier = USA_civil_war_commitments }
 			}
 			custom_effect_tooltip = SPR_expand_soviet_aid_tt
+		}
+	}
+
+	focus = {
+		id = USABA_a_strong_alliance
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		x = 3
+		y = 0
+		relative_position_id = USABA_SOV_enter_american_civilwar
+		mutually_exclusive = {
+			focus = USABA_SOV_enter_american_civilwar
+		}
+
+		cost = 2
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = no
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = unlock_focuses
+				always = no
+			}
+		}
+		bypass = {
+			is_in_faction_with = SOU
+			hidden_trigger = {
+				NOT = { has_completed_focus = USA_reestablish_the_gold_standard }
+			}
+		}
+		bypass = {
+			
+		}
+
+		completion_reward = {
+			add_popularity = {
+			    ideology = communism
+			    popularity = 0.05
+			}
 		}
 	}
 
@@ -2566,6 +2613,10 @@ focus_tree = {
 
 		completion_reward = {
 			SOV = { add_opinion_modifier = { target = ROOT modifier = SPR_subvert_soviet_control } }
+			if = {
+				limit = { is_subject = yes }
+				OVERLORD = { end_puppet = ROOT }
+			}
 			custom_effect_tooltip = SPR_subvert_soviet_control_tt
 		}
 	}
@@ -2655,6 +2706,196 @@ focus_tree = {
 					level = 1
 					instant_build = yes
 				}
+			}
+		}
+	}
+	
+	# 우익 내전
+	focus = {
+		id = USABA_so_the_jews_are_the_problem
+		icon = GFX_goal_generic_military_deal
+		x = 30
+		y = 0
+		relative_position_id = USABA_regression_strategy
+
+		cost = 2
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = no
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+		available = {
+			has_completed_focus = USA_reestablish_the_gold_standard
+			has_civil_war = yes
+			NOT = { has_government = communism }
+		}
+		bypass = {
+		}
+		bypass = {
+			
+		}
+
+		completion_reward = {
+			add_popularity = {
+			    ideology = fascism
+			    popularity = 0.05
+			}
+			add_ideas = USABA_RIGHT_civil_war_idea
+			custom_effect_tooltip = USABA_so_the_jews_are_the_problem_tt
+			if = {
+				limit = {
+					has_template = "German National Army"
+				}
+				delete_unit_template_and_units = {
+					division_template = "German National Army"
+					disband = yes
+				}
+			}
+			hidden_effect = {
+				division_template = {
+					name = "German National Army"
+					priority = 0
+					division_names_group = USA_ARM_01
+					is_locked = yes
+					regiments = {
+						militia = { x = 0 y = 0 }
+						militia = { x = 0 y = 1 }
+						militia = { x = 0 y = 2 }
+						militia = { x = 1 y = 0 }
+						militia = { x = 1 y = 1 }
+						militia = { x = 1 y = 2 }
+					}
+				}
+				capital_scope = {
+					create_unit = {
+						division = "name = \"German National Army\" division_template = \"German National Army\" start_experience_factor = 0 start_equipment_factor = 0.9"
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German National Army\" division_template = \"German National Army\" start_experience_factor = 0 start_equipment_factor = 0.9"
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German National Army\" division_template = \"German National Army\" start_experience_factor = 0 start_equipment_factor = 0.9"
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German National Army\" division_template = \"German National Army\" start_experience_factor = 0 start_equipment_factor = 0.9"
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German National Army\" division_template = \"German National Army\" start_experience_factor = 0 start_equipment_factor = 0.9"
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+			}
+			custom_effect_tooltip = USABA_so_the_jews_are_the_problem_red_tt
+		}
+	}
+
+	focus = {
+		id = USABA_german_ethnic_union_in_america
+		icon = GFX_focus_ger_oppose_hitler
+		prerequisite = { focus = USABA_so_the_jews_are_the_problem }
+		x = 0
+		y = 1
+		relative_position_id = USABA_so_the_jews_are_the_problem
+
+		cost = 5
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = no
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+		available = {
+		}
+		bypass = {
+			has_civil_war = no
+		}
+		bypass = {
+			
+		}
+
+		completion_reward = {
+			add_popularity = {
+			    ideology = fascism
+			    popularity = 0.05
+			}
+			custom_effect_tooltip = USABA_german_ethnic_union_in_america_tt
+			hidden_effect = {
+				capital_scope = {
+					create_unit = {
+						division = "name = \"German National Army\" division_template = \"German National Army\" start_experience_factor = 0 start_equipment_factor = 0.9"
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German National Army\" division_template = \"German National Army\" start_experience_factor = 0 start_equipment_factor = 0.9"
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German National Army\" division_template = \"German National Army\" start_experience_factor = 0 start_equipment_factor = 0.9"
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German National Army\" division_template = \"German National Army\" start_experience_factor = 0 start_equipment_factor = 0.9"
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German National Army\" division_template = \"German National Army\" start_experience_factor = 0 start_equipment_factor = 0.9"
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = USABA_german_national_protection_law
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = USABA_german_ethnic_union_in_america }
+		mutually_exclusive = { focus = USA_new_team focus = USA_soviet_team focus = USA_old_team }
+		x = 0
+		y = 2
+		relative_position_id = USABA_german_ethnic_union_in_america
+
+		cost = 5
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = no
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+		available = {
+			has_civil_war = no
+		}
+		bypass = {
+		}
+		bypass = {
+			
+		}
+
+		completion_reward = {
+			add_popularity = {
+			    ideology = fascism
+			    popularity = 0.05
 			}
 		}
 	}
@@ -3687,7 +3928,7 @@ focus_tree = {
 		id = USA_old_team
 		icon = GFX_focus_generic_league_of_nations
 		prerequisite = { focus = USABA_american_reindustrialization }
-		mutually_exclusive = { focus = USA_new_team focus = USA_soviet_team }
+		mutually_exclusive = { focus = USA_new_team focus = USA_soviet_team focus = USABA_german_national_protection_law }
 		x = 0
 		y = 1
 		relative_position_id = USABA_american_reindustrialization
@@ -4364,7 +4605,7 @@ focus_tree = {
 		id = USA_new_team
 		icon = GFX_focus_generic_little_entente
 		prerequisite = { focus = USABA_american_reindustrialization }
-		mutually_exclusive = { focus = USA_old_team focus = USA_soviet_team }
+		mutually_exclusive = { focus = USA_old_team focus = USA_soviet_team focus = USABA_german_national_protection_law }
 
 		x = 12
 		y = 1
@@ -5999,11 +6240,6 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
-			add_political_power = -200
-			add_popularity = {
-                ideology = democratic
-	            popularity = -0.1
-            }
 			USA_congress_large_support = yes
 			event_target:WTT_current_china_leader = {
 				add_opinion_modifier = { modifier = USA_extend_the_chinese_exclusion_acts target = ROOT }
@@ -10637,27 +10873,26 @@ focus_tree = {
 	focus = {
 		id = USA_soviet_team
 		icon = GFX_focus_generic_join_comintern
-		prerequisite = { focus = USABA_soviet_recovery_aid }
-		mutually_exclusive = { focus = USA_old_team focus = USA_new_team }
+		prerequisite = { focus = USABA_soviet_recovery_aid focus = USABA_a_strong_alliance }
+		mutually_exclusive = { focus = USA_old_team focus = USA_new_team focus = USABA_german_national_protection_law }
 
-		x = 0
+		x = 2
 		y = 3
 		relative_position_id = USABA_SOV_enter_american_civilwar
-		cost = 10
-		#ai_will_do = {
-		#	factor = 1
-		#}
-		available_if_capitulated = yes
+		cost = 5
 		available = {
 			if = { limit = { has_country_flag = USABA_government_official_exile }
 				NOT = { has_country_flag = USABA_government_official_exile }
 			}
 			has_government = communism
 		}
+		bypass = {
+		}
+		#ai_will_do = {
+		#	factor = 1
+		#}
+		available_if_capitulated = yes
 		completion_reward = {
-			SOU = {
-				country_event = generic.2
-			}
 		}
 	}
 }
