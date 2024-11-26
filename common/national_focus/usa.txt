@@ -1825,6 +1825,8 @@ focus_tree = {
 		}
 		search_filters = {FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = USA_charles_lindbergh_political_advisor
 			custom_effect_tooltip = USABA_maintenance_of_isolation_policy_desc_cst
 			hidden_effect = {
 				random_owned_state = {
@@ -2005,6 +2007,7 @@ focus_tree = {
 					clr_state_flag = USABA_regression_strategy__1IC
 				}
 			}
+			USA_congress_medium_opposition = yes
 		}
 	}
 	#주 권한의 확대
@@ -2040,6 +2043,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 200
 			add_ideas = USABA_strengthening_state_authority
+			USA_congress_small_support = yes
 		}
 	}
 	#야당과 접촉
@@ -2087,7 +2091,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = USABA_contact_with_opposition
 
-		cost = 10
+		cost = 5
 		#ai_will_do = {
 		#	factor = 1
 		#}

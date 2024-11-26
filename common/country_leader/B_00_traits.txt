@@ -59,6 +59,15 @@ leader_traits = {
 			factor = 1
 		}
 	}
+	USABA_charles_lindbergh_trait = {
+		random = no
+		sprite = 13
+		stability_factor = 0.05
+		consumer_goods_factor = -0.03
+		min_export = -0.10
+		democratic_drift = 0.01
+		fascism_drift = 0.01
+	}
 	USABA_commander_in_chief = {
 		random = no
 		army_core_attack_factor = 0.10

@@ -129,9 +129,6 @@ ideas = {
 			cancel = {
 				NOT = {
 					has_idea = second_great_depression
-					has_idea = great_depression
-					has_idea = great_depression_2
-					has_idea = great_depression_3
 				}
 			}
 
