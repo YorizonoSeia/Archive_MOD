@@ -283,7 +283,7 @@ IRE_celt = {
 		}
 	}
 }
-_unification = {
+gehenna_unification = {
 	gehenna_unification_decision = {
 		icon = GFX_decision_Gehenna_Emblem
 
