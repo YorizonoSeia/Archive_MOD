@@ -1,3 +1,22 @@
+AI_USA_civil_war_commitments = {
+	allowed = {
+		original_tag = SOV
+	}
+	enable = {
+		has_idea = USA_civil_war_commitments
+	}
+	abort = { NOT = { has_idea = USA_civil_war_commitments } }
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "USA"
+		value = 1000
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "USP"
+		value = 1000
+	}
+}
 BA_sov_vol = {
 	allowed = {
 		original_tag = SOV

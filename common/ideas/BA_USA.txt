@@ -1,5 +1,120 @@
 ideas = {
     country = {
+
+		USABA_soviet_recovery_aid = {
+
+			picture = generic_production_bonus
+
+			allowed = {
+				original_tag = USA
+				NOT = { has_government = fascism }
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			modifier = {
+				stability_weekly = 0.002
+				communism_drift = 0.05
+				industry_repair_factor = 0.1
+			}
+		}
+
+		USABA_soviet_military_advisors = {
+
+			picture = saf_soviet_advisers
+
+			allowed = {
+				original_tag = USA
+				NOT = { has_government = fascism }
+			}
+
+			cancel = {
+				has_civil_war = no
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			modifier = {
+				communism_drift = 0.05
+				planning_speed = 0.1
+				max_planning = 0.1
+			}
+		}
+		
+
+		USABA_equipment_shipments = {
+
+			picture = generic_artillery_regiments
+
+			allowed = {
+				OR = {
+					original_tag = USA
+					original_tag = ITA
+					original_tag = ENG
+					original_tag = CAN
+					original_tag = ITA
+				}
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			modifier = {
+				lend_lease_tension = -0.5
+				request_lease_tension = -0.5
+			}
+		}
+
+		USABA_equipment_shipments_usa = {
+
+			name = USABA_equipment_shipments
+
+			picture = generic_artillery_regiments
+
+			allowed = {
+				original_tag = USA
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			modifier = {
+				lend_lease_tension = -0.5
+			}
+		}
+
+		USABA_civil_war_commitments = {
+
+			name = USA_civil_war_commitments
+
+			picture = generic_manpower_bonus
+
+			allowed = {
+				OR = {
+					original_tag = USA
+					original_tag = ITA
+					original_tag = ENG
+					original_tag = CAN
+					original_tag = ITA
+				}
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			modifier = {
+				send_volunteer_size = 3
+				send_volunteer_divisions_required = -1
+				lend_lease_tension = -0.30
+			}
+		}
         USABA_secret_currency_issuance = {
 			picture = generic_disjointed_gov
 			
@@ -8,7 +123,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = no
+				has_government = communism
 			}
 
 			cancel = {
