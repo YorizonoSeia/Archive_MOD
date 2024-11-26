@@ -96,7 +96,6 @@ USA_historical_plan = {
 		USA_attack_COU
 		USA_old_team_guardian
 		USA_marshall_plan
-		USA_attack_abyss
 		USA_Pax_Americana
 	}
 
