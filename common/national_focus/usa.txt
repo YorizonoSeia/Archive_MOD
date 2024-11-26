@@ -23,7 +23,7 @@ focus_tree = {
 			original_tag = USA
 		}
 	}
-	continuous_focus_position = { x = 50 y = 1600 }
+	continuous_focus_position = { x = 50 y = 2300 }
 	default = no
 #	focus = {
 #		id = USA_
@@ -2383,7 +2383,7 @@ focus_tree = {
 	focus = {
 		id = USABA_SOV_enter_american_civilwar
 		icon = GFX_focus_SOV_the_glory_of_the_red_army_communism
-		x = 23
+		x = 22
 		y = 0
 		relative_position_id = USABA_regression_strategy
 		mutually_exclusive = {
@@ -6047,11 +6047,6 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
-			add_political_power = -200
-			add_popularity = {
-                ideology = democratic
-	            popularity = -0.1
-            }
 			USA_congress_large_support = yes
 			event_target:WTT_current_china_leader = {
 				add_opinion_modifier = { modifier = USA_extend_the_chinese_exclusion_acts target = ROOT }
