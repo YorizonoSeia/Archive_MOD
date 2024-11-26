@@ -2756,13 +2756,9 @@ focus_tree = {
 		continue_if_invalid = yes
 
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = unlock_focuses
-				always = no
-			}
 		}
 		bypass = {
-			is_in_faction_with = SOU
+			has_civil_war = no
 		}
 		bypass = {
 			
@@ -2795,13 +2791,9 @@ focus_tree = {
 		continue_if_invalid = yes
 
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = unlock_focuses
-				always = no
-			}
+			has_civil_war = no
 		}
 		bypass = {
-			is_in_faction_with = SOU
 		}
 		bypass = {
 			
