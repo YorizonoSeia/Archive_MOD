@@ -141,3 +141,17 @@ technology_sharing_group = {
 		is_in_faction_with = HUN
     }
 }
+
+#technology_sharing_group = {
+#	id = USA_MIL_tech_group
+#	name = USA_MIL_tech_group_name
+#	desc = USA_MIL_tech_group_desc
+#	picture = GFX_idea_generic_research_bonus
+#   
+#	research_sharing_per_country_bonus = 0.10
+#
+#    available = {
+#		is_in_faction_with = MIL
+#		is_in_faction_with = USA
+#    }
+#}

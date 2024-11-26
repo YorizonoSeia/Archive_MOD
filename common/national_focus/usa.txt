@@ -3672,6 +3672,7 @@ focus_tree = {
 
 
 
+
 	# 구질서 수호
 
 	focus = {
@@ -3750,6 +3751,48 @@ focus_tree = {
 			add_to_tech_sharing_group = USA_SOV_tech_group
 		}	
 	}
+
+		focus = {
+		id = USA_support_SOV
+		icon = GFX_goal_generic_soviet_construction
+		x = 7
+		y = 2
+		prerequisite = { focus = USA_devil_economy }
+		relative_position_id = USA_old_team
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			if = { limit = { has_country_flag = USABA_government_official_exile }
+				NOT = { has_country_flag = USABA_government_official_exile }
+			}
+			not = {
+				has_war_with = SOU
+			}
+		}
+		
+		bypass = {
+			SOU = {
+				OR = {
+					exists = no
+					has_war_with = USA
+					is_subject = yes
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+
+		}	
+	}
+
 
 	# 연합국 지원
 	focus = {
@@ -3977,7 +4020,7 @@ focus_tree = {
 			id = USA_support_north_europe
 			icon = GFX_focus_generic_scandinavia_flags
 			prerequisite = { focus = USA_old_team }
-			x = 3
+			x = 5
 			y = 0
 			relative_position_id = USA_support_GEK
 			cost = 5
@@ -4000,7 +4043,7 @@ focus_tree = {
 			id = USA_support_FIN
 			icon = GFX_focus_invite_finland
 			prerequisite = { focus = USA_support_north_europe }
-			x = 1
+			x = -1
 			y = 1
 			relative_position_id = USA_support_north_europe
 			cost = 5
@@ -4090,7 +4133,7 @@ focus_tree = {
 			id = USA_support_ITA
 			icon = GFX_focus_befriend_italy
 			prerequisite = { focus = USA_old_team }
-			x = 5
+			x = 3
 			y = 1
 			relative_position_id = USA_old_team
 			cost = 5
@@ -4156,7 +4199,6 @@ focus_tree = {
 		prerequisite = { focus = USA_attack_TRM}
 		prerequisite = { focus = USA_attack_GEH}
 		prerequisite = { focus = USA_attack_RED}
-		prerequisite = { focus = USA_attack_RED}
         prerequisite = { focus = USA_attack_SHA}
 
 		x = 0
@@ -4178,44 +4220,18 @@ focus_tree = {
 		}
 	}
 
-	# 팍스 아메리카
-	focus = {
-		id = USA_Pax_Americana
-		icon = GFX_focus_ARG_the_american_push
-		prerequisite = { focus = USA_old_team_guardian }
-
-
-		x = 0
-		y = 1
-		relative_position_id = USA_old_team_guardian
-		cost = 5
-		ai_will_do = {
-			factor = 10
-		}
-		available_if_capitulated = yes
-		available = {
-			if = { limit = { has_country_flag = USABA_government_official_exile }
-				NOT = { has_country_flag = USABA_government_official_exile }
-			}
-
-		}
-		completion_reward = {
-              add_ideas = Pax_Americana
-		}
-	}
-
 
 	#마셜 플랜
 
 	focus = {
 		id = USA_marshall_plan
 		icon = GFX_goal_generic_construct_civ_factory
-		prerequisite = { focus = USA_Pax_Americana }
+		prerequisite = { focus = USA_old_team_guardian }
 
 
 		x = -1
 		y = 1
-		relative_position_id = USA_Pax_Americana
+		relative_position_id = USA_old_team_guardian
 		cost = 10
 		ai_will_do = {
 			factor = 10
@@ -4229,6 +4245,32 @@ focus_tree = {
 		}
 		completion_reward = {
 
+		}
+	}
+
+		# 팍스 아메리카
+	focus = {
+		id = USA_Pax_Americana
+		icon = GFX_focus_ARG_the_american_push
+		prerequisite = { focus = USA_old_team_guardian }
+
+
+		x = 0
+		y = 3
+		relative_position_id = USA_old_team_guardian
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = yes
+		available = {
+			if = { limit = { has_country_flag = USABA_government_official_exile }
+				NOT = { has_country_flag = USABA_government_official_exile }
+			}
+
+		}
+		completion_reward = {
+              add_ideas = Pax_Americana
 		}
 	}
 
@@ -4259,6 +4301,18 @@ focus_tree = {
 
 		}
 		completion_reward = {
+			add_tech_bonus = {
+				name = USA_manhattan_project
+				bonus = 1.0
+				uses = 1
+				category = nuclear
+			}
+			add_tech_bonus = {
+				name = USA_manhattan_project
+				bonus = 1.0
+				uses = 1
+				category = nuclear
+			}
 
 
 		}
@@ -4292,6 +4346,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			country_event = { id = usa_new_event.1 days = 3 }
+			USA_congress_large_opposition = yes
 		}
 	}
 	
@@ -4385,7 +4440,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = USA_new_team
-		cost = 0.5
+		cost = 1
 		ai_will_do = {
 			factor = 1
 		}
@@ -4532,8 +4587,8 @@ focus_tree = {
 
 		}
 		completion_reward = {
-			# MIL = { add_to_tech_sharing_group = USA_MIL_tech_group }
-			# add_to_tech_sharing_group = USA_MIL_tech_group
+			 #MIL = { add_to_tech_sharing_group = USA_MIL_tech_group }
+			 #add_to_tech_sharing_group = USA_MIL_tech_group
 			add_stability = 0.05
 			add_research_slot = 1
 			add_ideas = MIL_internet_2
@@ -10103,6 +10158,9 @@ focus_tree = {
 			has_government = communism
 		}
 		completion_reward = {
+			SOU = {
+				country_event = generic.2
+			}
 		}
 	}
 }
