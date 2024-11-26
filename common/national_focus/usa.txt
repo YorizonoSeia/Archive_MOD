@@ -3701,6 +3701,7 @@ focus_tree = {
 				NOT = { has_country_flag = USABA_government_official_exile }
 			}
 			threat > 0.8
+			has_war_support > 0.55
 			has_government = democratic
 		}
 		completion_reward = {
@@ -4407,6 +4408,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_war_support = 0.1
+			USA_congress_small_support = yes
 			add_stability = -0.1
 			add_popularity = {
 				ideology = democratic
@@ -4573,6 +4575,7 @@ focus_tree = {
 		}
 		completion_reward = {
             give_guarantee = MIL
+			news_event = {id = BA_news.112 days = 2}
 		}
 	}
 
@@ -4708,6 +4711,7 @@ focus_tree = {
 		}
 		completion_reward = {
               give_guarantee = COU
+			  news_event = {id = BA_news.114 days = 2} 
 		}
 	}
 
@@ -4730,7 +4734,24 @@ focus_tree = {
 
 	}
 	completion_reward = {
-		add_ideas = USA_Buntang
+		#add_ideas = USA_Buntang
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "La Resistance"
+					}
+				}
+				add_tech_bonus = {
+					name = USA_black_chamber
+					bonus = 1.0
+					uses = 2
+					category = encryption_tech
+					category = decryption_tech
+				}
+			}
+			else = {
+				add_ideas = USA_black_chamber
+			}
 	}
 }
 
@@ -4771,6 +4792,7 @@ focus_tree = {
 		completion_reward = {
             give_guarantee = TRM
 			give_guarantee = GEM
+			news_event = {id = BA_news.112 days = 2}
 		}
 	}
 
@@ -4782,7 +4804,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = USA_bad_kivotos_Eden
-		cost = 5
+		cost = 8
 		ai_will_do = {
 			factor = 1
 		}
@@ -4873,10 +4895,10 @@ focus_tree = {
 			completion_reward = {
 			add_popularity = {
 				ideology = fascism
-				popularity = 0.1
+				popularity = 0.25
 			}
 			set_politics = { ruling_party = fascism}
-			
+			news_event = {id = BA_news.115 days = 2}
 
 			}
 		}
@@ -4913,9 +4935,10 @@ focus_tree = {
 		completion_reward = {
             add_popularity = {
 				ideology = fascism
-				popularity = 0.1
+				popularity = 0.25
 			}
             set_politics = { ruling_party = fascism}
+			news_event = {id = BA_news.116 days = 2}
 		}
 	}
 
@@ -5060,7 +5083,7 @@ focus_tree = {
 		id = USA_bad_kivotos_RED
 		icon = GFX_focus_chi_mission_to_the_RED
 		prerequisite = { focus = USA_bad_kivotos }
-		x = 7
+		x = 4
 		y = 1
 		relative_position_id = USA_bad_kivotos
 		cost = 5
@@ -5077,12 +5100,89 @@ focus_tree = {
 		completion_reward = {
             add_popularity = {
 				ideology = communism
-				popularity = 0.2
+				popularity = 0.15
 			}
+			set_politics = { ruling_party = communism elections_allowed = yes }
+			USA_congress_large_opposition = yes
+			news_event = {id = BA_news.117 days = 2}
 
 		}
 	}
 
+		focus = {
+		id = USA_bad_kivotos_RED_pudding
+		icon = GFX_focus_generic_truck
+		prerequisite = { focus = USA_bad_kivotos_RED }
+		x = 0
+		y = 1
+		relative_position_id = USA_bad_kivotos_RED
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available_if_capitulated = yes
+		available = {
+			if = { limit = { has_country_flag = USABA_government_official_exile }
+				NOT = { has_country_flag = USABA_government_official_exile }
+			}
+
+		}
+		completion_reward = {
+            add_ideas = USA_pudding
+			add_war_support = -0.1
+			USA_congress_small_opposition = yes
+
+		}
+	}
+
+	focus = {
+		id = USA_bad_kivotos_RED_more_pudding
+		icon = GFX_focus_SOV_the_road_of_life
+		prerequisite = { focus = USA_bad_kivotos_RED_pudding }
+		x = 1
+		y = 2
+		relative_position_id = USA_bad_kivotos_RED
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available_if_capitulated = yes
+		available = {
+			if = { limit = { has_country_flag = USABA_government_official_exile }
+				NOT = { has_country_flag = USABA_government_official_exile }
+			}
+
+		}
+		completion_reward = {
+            add_stability = 0.05
+			USA_congress_small_support = yes
+
+		}
+	}
+
+
+		focus = {
+		id = USA_bad_kivotos_RED_see_myself
+		icon = GFX_focus_prc_infiltration
+		prerequisite = { focus = USA_bad_kivotos_RED_pudding }
+		x = 0
+		y = 3
+		relative_position_id = USA_bad_kivotos_RED
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available_if_capitulated = yes
+		available = {
+			if = { limit = { has_country_flag = USABA_government_official_exile }
+				NOT = { has_country_flag = USABA_government_official_exile }
+			}
+
+		}
+		completion_reward = {
+              
+		}
+	}
 
     
 
@@ -8978,6 +9078,48 @@ focus_tree = {
 			add_ideas = USA_army_of_the_united_states
 		}
 	}
+        # 열병식
+		focus = {
+		id = USA_army_of_the_united_states_propaganda
+		icon = GFX_focus_generic_fascist_propaganda
+		x = -2
+		y = 1
+		prerequisite = { focus = USA_army_of_the_united_states }
+		relative_position_id = USA_army_of_the_united_states
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = { 
+				has_idea = second_great_depression
+				has_idea = great_depression
+				has_idea = great_depression_2
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_war_support = 0.1
+			add_popularity = {
+	          ideology = fascism
+	          popularity = 0.05
+           }
+		   USA_congress_yes_support = yes
+		}
+	}
+
+
+
 	focus = {
 		id = USA_womens_armed_service_integration_act
 		icon = GFX_focus_generic_treaty
@@ -10109,6 +10251,7 @@ focus_tree = {
 		available_if_capitulated = no
         available = { has_completed_focus = USABA_american_reindustrialization}
         completion_reward = {
+			add_war_support = 0.2
 			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT

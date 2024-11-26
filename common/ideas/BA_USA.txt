@@ -526,7 +526,7 @@ ideas = {
 
 	   # 분탕 미국
 
-	   	 USA_Buntang = {
+	   	 USA_pudding = {
             picture = generic_disjointed_gov
             
 			allowed = {
@@ -538,9 +538,8 @@ ideas = {
 			}
 
 			modifier = {
-	   			send_volunteer_size = 10
-				send_volunteer_divisions_required = -0.2
-				lend_lease_tension = -1
+				stability_factor = -0.1
+	   			stability_weekly = 0.01
 			}
 	   }	
 
