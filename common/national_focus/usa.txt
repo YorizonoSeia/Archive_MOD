@@ -2415,6 +2415,7 @@ focus_tree = {
 			    ideology = communism
 			    popularity = 0.05
 			}
+			add_ideas = USABA_LEFT_civil_war_idea
 			SOV = { #USA_civil_war_commitments
 				add_timed_idea = { idea = USABA_civil_war_commitments days = 730 }
 				add_opinion_modifier = { target = ROOT modifier = USA_civil_war_commitments }
@@ -2450,6 +2451,9 @@ focus_tree = {
 		}
 		bypass = {
 			is_in_faction_with = SOU
+			hidden_trigger = {
+				NOT = { has_completed_focus = USA_reestablish_the_gold_standard }
+			}
 		}
 		bypass = {
 			
@@ -2609,6 +2613,10 @@ focus_tree = {
 
 		completion_reward = {
 			SOV = { add_opinion_modifier = { target = ROOT modifier = SPR_subvert_soviet_control } }
+			if = {
+				limit = { is_subject = yes }
+				OVERLORD = { end_puppet = ROOT }
+			}
 			custom_effect_tooltip = SPR_subvert_soviet_control_tt
 		}
 	}
@@ -2735,6 +2743,61 @@ focus_tree = {
 			    ideology = fascism
 			    popularity = 0.05
 			}
+			add_ideas = USABA_RIGHT_civil_war_idea
+			custom_effect_tooltip = USABA_so_the_jews_are_the_problem_tt
+			if = {
+				limit = {
+					has_template = "German National Army"
+				}
+				delete_unit_template_and_units = {
+					division_template = "German National Army"
+					disband = yes
+				}
+			}
+			hidden_effect = {
+				division_template = {
+					name = "German National Army"
+					priority = 0
+					division_names_group = USA_ARM_01
+					is_locked = yes
+					regiments = {
+						militia = { x = 0 y = 0 }
+						militia = { x = 0 y = 1 }
+						militia = { x = 0 y = 2 }
+						militia = { x = 1 y = 0 }
+						militia = { x = 1 y = 1 }
+						militia = { x = 1 y = 2 }
+					}
+				}
+				capital_scope = {
+					create_unit = {
+						division = "name = \"German National Army\" division_template = \"German National Army\" start_experience_factor = 0 start_equipment_factor = 0.9"
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German National Army\" division_template = \"German National Army\" start_experience_factor = 0 start_equipment_factor = 0.9"
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German National Army\" division_template = \"German National Army\" start_experience_factor = 0 start_equipment_factor = 0.9"
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German National Army\" division_template = \"German National Army\" start_experience_factor = 0 start_equipment_factor = 0.9"
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German National Army\" division_template = \"German National Army\" start_experience_factor = 0 start_equipment_factor = 0.9"
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+			}
+			custom_effect_tooltip = USABA_so_the_jews_are_the_problem_red_tt
 		}
 	}
 
@@ -2746,7 +2809,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = USABA_so_the_jews_are_the_problem
 
-		cost = 2
+		cost = 5
 		#ai_will_do = {
 		#	factor = 1
 		#}
@@ -2769,6 +2832,36 @@ focus_tree = {
 			    ideology = fascism
 			    popularity = 0.05
 			}
+			custom_effect_tooltip = USABA_german_ethnic_union_in_america_tt
+			hidden_effect = {
+				capital_scope = {
+					create_unit = {
+						division = "name = \"German National Army\" division_template = \"German National Army\" start_experience_factor = 0 start_equipment_factor = 0.9"
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German National Army\" division_template = \"German National Army\" start_experience_factor = 0 start_equipment_factor = 0.9"
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German National Army\" division_template = \"German National Army\" start_experience_factor = 0 start_equipment_factor = 0.9"
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German National Army\" division_template = \"German National Army\" start_experience_factor = 0 start_equipment_factor = 0.9"
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German National Army\" division_template = \"German National Army\" start_experience_factor = 0 start_equipment_factor = 0.9"
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+			}
 		}
 	}
 
@@ -2781,7 +2874,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = USABA_german_ethnic_union_in_america
 
-		cost = 2
+		cost = 5
 		#ai_will_do = {
 		#	factor = 1
 		#}

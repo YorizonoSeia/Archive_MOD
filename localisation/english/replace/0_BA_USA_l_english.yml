@@ -13,6 +13,10 @@
  USA_civil_war_commitments: "미국 내전 전념"
  USABA_equipment_shipments: "미국 내전에 무기 수송"
 
+ USABA_RIGHT_civil_war_idea: "미국 내전에 우익 민병대 동원"
+ USABA_LEFT_civil_war_idea: "미국 내전에 소련 의용군 지원"
+
+ USABA_civil_war_idea_tt: "미국 내전 종료시 제거:\n내전 중이 아님"
 
  USABA_SOV_enter_american_civilwar: "[SOV.GetFactionName]에 지원 요청"
  USABA_a_strong_alliance: "강력한 인류 동맹 국가"
@@ -23,7 +27,10 @@
  USA_soviet_team: "아메리카 소비에트 사회주의 공화국 연방"
 
  USABA_so_the_jews_are_the_problem: "그러니까 유대인이 문제야!"
+ USABA_so_the_jews_are_the_problem_tt: "우리를 돕기 위한 §Y독일 민족주의 민병대§!가 수도에서 조직됩니다."
+ USABA_so_the_jews_are_the_problem_red_tt: "\n§R내전이 끝난 후 독일인 이민자와 미국 극우들이 뿌린 선전은 미국에 깊게 남을 것입니다.§!"
  USABA_german_ethnic_union_in_america: "재미독일민족연맹"
+ USABA_german_ethnic_union_in_america_tt: "§Y독일 민족주의 민병대§! §G6§! 사단이 수도에서 새로 창설됩니다"
  USABA_german_national_protection_law: "독일 민족 보호법"
 
 ######################################################

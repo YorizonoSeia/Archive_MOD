@@ -1,6 +1,66 @@
 ideas = {
     country = {
 
+		USABA_LEFT_civil_war_idea = {
+
+			picture = generic_production_bonus
+
+			allowed = {
+				original_tag = USA
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			cancel = {
+				has_civil_war = no
+			}
+
+			on_remove = {
+				#이곳에 좌파 내전 끝날 시 효과 입력
+				SOU = { puppet = USA }
+			}
+
+			modifier = {
+				custom_modifier_tooltip = USABA_civil_war_idea_tt
+			}
+		}
+
+		USABA_RIGHT_civil_war_idea = {
+
+			picture = generic_production_bonus
+
+			allowed = {
+				original_tag = USA
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			cancel = {
+				has_civil_war = no
+			}
+
+			on_remove = {
+				#이곳에 우파 내전 끝날 시 효과 입력
+				if = {
+					limit = {
+						has_template = "German National Army"
+					}
+					delete_unit_template_and_units = {
+						division_template = "German National Army"
+						disband = yes
+					}
+				}
+			}
+
+			modifier = {
+				custom_modifier_tooltip = USABA_civil_war_idea_tt
+			}
+		}
+
 		USABA_soviet_recovery_aid = {
 
 			picture = generic_production_bonus
