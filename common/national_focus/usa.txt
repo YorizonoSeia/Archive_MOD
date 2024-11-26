@@ -1187,7 +1187,7 @@ focus_tree = {
 			if = { limit = { has_country_flag = USABA_government_official_exile }
 				NOT = { has_country_flag = USABA_government_official_exile }
 			}
-			communism > 0.3
+			has_government = communism
 		}
 		
 		bypass = {
