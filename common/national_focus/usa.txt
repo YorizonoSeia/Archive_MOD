@@ -10670,9 +10670,6 @@ focus_tree = {
 		#}
 		available_if_capitulated = yes
 		completion_reward = {
-			SOU = {
-				country_event = generic.2
-			}
 		}
 	}
 }
