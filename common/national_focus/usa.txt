@@ -2386,6 +2386,9 @@ focus_tree = {
 		x = 23
 		y = 0
 		relative_position_id = USABA_regression_strategy
+		mutually_exclusive = {
+			focus = USABA_a_strong_alliance
+		}
 
 		cost = 2
 		#ai_will_do = {
@@ -2417,6 +2420,46 @@ focus_tree = {
 				add_opinion_modifier = { target = ROOT modifier = USA_civil_war_commitments }
 			}
 			custom_effect_tooltip = SPR_expand_soviet_aid_tt
+		}
+	}
+
+	focus = {
+		id = USABA_a_strong_alliance
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		x = 3
+		y = 0
+		relative_position_id = USABA_SOV_enter_american_civilwar
+		mutually_exclusive = {
+			focus = USABA_SOV_enter_american_civilwar
+		}
+
+		cost = 2
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = no
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = unlock_focuses
+				always = no
+			}
+		}
+		bypass = {
+			is_in_faction_with = SOU
+		}
+		bypass = {
+			
+		}
+
+		completion_reward = {
+			add_popularity = {
+			    ideology = communism
+			    popularity = 0.05
+			}
 		}
 	}
 
@@ -2655,6 +2698,119 @@ focus_tree = {
 					level = 1
 					instant_build = yes
 				}
+			}
+		}
+	}
+	
+	# 우익 내전
+	focus = {
+		id = USABA_so_the_jews_are_the_problem
+		icon = GFX_goal_generic_military_deal
+		x = 30
+		y = 0
+		relative_position_id = USABA_regression_strategy
+
+		cost = 2
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = no
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+		available = {
+			has_completed_focus = USA_reestablish_the_gold_standard
+			has_civil_war = yes
+			NOT = { has_government = communism }
+		}
+		bypass = {
+		}
+		bypass = {
+			
+		}
+
+		completion_reward = {
+			add_popularity = {
+			    ideology = fascism
+			    popularity = 0.05
+			}
+		}
+	}
+
+	focus = {
+		id = USABA_german_ethnic_union_in_america
+		icon = GFX_focus_ger_oppose_hitler
+		prerequisite = { focus = USABA_so_the_jews_are_the_problem }
+		x = 0
+		y = 1
+		relative_position_id = USABA_so_the_jews_are_the_problem
+
+		cost = 2
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = no
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = unlock_focuses
+				always = no
+			}
+		}
+		bypass = {
+			is_in_faction_with = SOU
+		}
+		bypass = {
+			
+		}
+
+		completion_reward = {
+			add_popularity = {
+			    ideology = fascism
+			    popularity = 0.05
+			}
+		}
+	}
+
+	focus = {
+		id = USABA_german_national_protection_law
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = USABA_german_ethnic_union_in_america }
+		mutually_exclusive = { focus = USA_new_team focus = USA_soviet_team focus = USA_old_team }
+		x = 0
+		y = 2
+		relative_position_id = USABA_german_ethnic_union_in_america
+
+		cost = 2
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = no
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = unlock_focuses
+				always = no
+			}
+		}
+		bypass = {
+			is_in_faction_with = SOU
+		}
+		bypass = {
+			
+		}
+
+		completion_reward = {
+			add_popularity = {
+			    ideology = fascism
+			    popularity = 0.05
 			}
 		}
 	}
@@ -3687,7 +3843,7 @@ focus_tree = {
 		id = USA_old_team
 		icon = GFX_focus_generic_league_of_nations
 		prerequisite = { focus = USABA_american_reindustrialization }
-		mutually_exclusive = { focus = USA_new_team focus = USA_soviet_team }
+		mutually_exclusive = { focus = USA_new_team focus = USA_soviet_team focus = USABA_german_national_protection_law }
 		x = 0
 		y = 1
 		relative_position_id = USABA_american_reindustrialization
@@ -4363,7 +4519,7 @@ focus_tree = {
 		id = USA_new_team
 		icon = GFX_focus_generic_little_entente
 		prerequisite = { focus = USABA_american_reindustrialization }
-		mutually_exclusive = { focus = USA_old_team focus = USA_soviet_team }
+		mutually_exclusive = { focus = USA_old_team focus = USA_soviet_team focus = USABA_german_national_protection_law }
 
 		x = 12
 		y = 1
@@ -10494,23 +10650,25 @@ focus_tree = {
 	focus = {
 		id = USA_soviet_team
 		icon = GFX_focus_generic_join_comintern
-		prerequisite = { focus = USABA_soviet_recovery_aid }
-		mutually_exclusive = { focus = USA_old_team focus = USA_new_team }
+		prerequisite = { focus = USABA_soviet_recovery_aid focus = USABA_a_strong_alliance }
+		mutually_exclusive = { focus = USA_old_team focus = USA_new_team focus = USABA_german_national_protection_law }
 
-		x = 0
+		x = 2
 		y = 3
 		relative_position_id = USABA_SOV_enter_american_civilwar
-		cost = 10
-		#ai_will_do = {
-		#	factor = 1
-		#}
-		available_if_capitulated = yes
+		cost = 5
 		available = {
 			if = { limit = { has_country_flag = USABA_government_official_exile }
 				NOT = { has_country_flag = USABA_government_official_exile }
 			}
 			has_government = communism
 		}
+		bypass = {
+		}
+		#ai_will_do = {
+		#	factor = 1
+		#}
+		available_if_capitulated = yes
 		completion_reward = {
 			SOU = {
 				country_event = generic.2

@@ -169,7 +169,7 @@ ideas = {
 				political_power_gain = -0.2
 				consumer_goods_factor = -0.25
 				production_speed_buildings_factor = 0.3
-			    custom_modifier_tooltip = USABA_second_great_depression_idea_tt
+			    custom_modifier_tooltip = USABA_forced_wake_up_tt
 			}
         }
 
