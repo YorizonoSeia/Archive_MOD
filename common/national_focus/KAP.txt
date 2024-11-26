@@ -328,6 +328,13 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
+			add_popularity = {
+                ideology = communism
+                popularity = 1.00
+
+				
+            }
+
 			
 		}
 	}
@@ -359,7 +366,75 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			if = {
+				limit = {
+					SHX = { can_ROOT_get_wargoal_on_THIS = yes }
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = SHX
+				}
+			}
 
+			if = {
+				limit = {
+					XSM = { can_ROOT_get_wargoal_on_THIS = yes }
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = XSM
+				}
+			}
+
+			if = {
+				limit = {
+					SIK = { can_ROOT_get_wargoal_on_THIS = yes }
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = SIK
+				}
+			}
+
+			if = {
+				limit = {
+					YUN = { can_ROOT_get_wargoal_on_THIS = yes }
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = YUN
+				}
+			}
+
+			if = {
+				limit = {
+					GXC = { can_ROOT_get_wargoal_on_THIS = yes }
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = GXC
+				}
+			}
+
+			if = {
+				limit = {
+					CHI = { can_ROOT_get_wargoal_on_THIS = yes }
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = CHI
+				}
+			}
+
+			if = {
+				limit = {
+					JAP = { can_ROOT_get_wargoal_on_THIS = yes }
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = JAP
+				}
+			}
 		}
 	}
 
@@ -392,7 +467,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 		completion_reward = {
 			add_stability = 0.1
-
+			add_country_leader_trait = KAP_kohane_vanjyai
 		}
 	}
 
@@ -433,7 +508,7 @@ focus_tree = {
 				limit = {
 					is_in_faction = no
 				}
-				create_faction = KAP_mao_faction
+				create_faction = KAP_kapila_federation
 			}
 		}
 	}
@@ -468,6 +543,25 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			set_cosmetic_tag = KAP_proclaimed
+
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = CHI
+						is_core_of = SHX
+						is_core_of = XSM
+						is_core_of = SIK
+						is_core_of = YUN
+						is_core_of = GXC
+						is_core_of = TIB
+						is_core_of = MEN
+						is_core_of = MAN
+						is_core_of = JAP
+					}
+				}
+				add_core_of = ROOT
+			}
+
 			hidden_effect = {
 				news_event = { id = wtt_news.37 days = 3 random_days = 3 }
 			}
