@@ -551,6 +551,84 @@ focus_tree = {
 			}
 		}
 	}
+
+	focus = {
+		id = HEU_forgiving_them
+		
+		relative_position_id = HEU_neutralization_rietspartei
+
+		icon = GFX_focus_generic_full_social_mobilization
+
+		prerequisite = { 
+			focus = HEU_neutralization_rietspartei
+		}
+
+		mutually_exclusive = {
+			focus = HEU_go_to_the_bottom_of_gehenna
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {  }
+
+		cost = 5.00
+
+		x = -1
+		y = 1
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = HEU_go_to_the_bottom_of_gehenna
+		
+		relative_position_id = HEU_neutralization_rietspartei
+
+		icon = GFX_focus_GER_strafbataillon
+
+		prerequisite = { 
+			focus = HEU_neutralization_rietspartei
+		}
+
+		mutually_exclusive = {
+			focus = HEU_forgiving_them
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {  }
+
+		cost = 5.00
+
+		x = 1
+		y = 1
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			
+		}
+	}
 	
 	focus = {
 		id = HEU_separation_of_education
@@ -651,7 +729,7 @@ focus_tree = {
 		
 		relative_position_id = HEU_doubt_pandemonium_society
 
-		icon = GFX_focus_ger_reichskommisariats
+		icon = GFX_focus_GER_brothers_in_arms
 
 		prerequisite = { 
 			focus = HEU_doubt_pandemonium_society
@@ -1466,10 +1544,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			974 = { add_claim_by = ROOT }
+			34 = { add_claim_by = ROOT }
+			980 = { add_claim_by = ROOT }
 			983 = { add_claim_by = ROOT }
 			989 = { add_claim_by = ROOT }
-			34 = { add_claim_by = ROOT }
 		}
 	}
 
@@ -1724,6 +1802,7 @@ focus_tree = {
 			GEI = {
 				has_country_leader_with_trait = GEI_notion_of_incomprehensibility
 			}
+			is_puppet = no
 		}
 
 		bypass = {
