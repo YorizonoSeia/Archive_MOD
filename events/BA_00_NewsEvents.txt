@@ -4119,3 +4119,66 @@ news_event = { # 미국 애니메이션 상영
         }
     }
 }
+
+
+
+
+
+
+
+
+#news_event = { # 미국 트리니티 에덴 점령
+#    id = BA_news.112
+#    title = BA_news.112.t
+#    desc = BA_news.112.d
+#    picture = GFX_news_event_destroyers
+#
+#    major = yes
+#    is_triggered_only = yes
+#
+#	trigger = {
+#		USA = has_control_of_state = 64
+#	}
+#
+#   option = {
+#		scoped_play_song = "order_of_the_day"
+#        name = BA_news.112.a
+#        trigger = {
+#            tag = USA
+#        }
+#    }
+#
+#	option = {
+#		scoped_play_song = "order_of_the_day"
+#        name = BA_news.112.b
+#       trigger = {
+#			    AND = {
+#				   is_allied_with = TRM
+#                  has_war = yes
+#				}
+#        }
+#    }
+#
+#	option = {
+#		scoped_play_song = "order_of_the_day"
+#        name = BA_news.112.c
+#        trigger = {
+#			AND = {
+#			    NOT = { Kivotos_tag = yes }
+#			    has_war_with = TRM
+#				NOT = { tag = USA}
+#			}
+#        }
+#    }
+#		option = {
+#		scoped_play_song = "order_of_the_day"
+#      name = BA_news.112.d
+#       trigger = {
+#			AND = {
+#			  Kivotos_tag = yes 
+#			  NOT = { has_war_with = TRM } 
+#			}
+#        }
+#    }
+#		 
+#}

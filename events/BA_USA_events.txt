@@ -200,10 +200,6 @@ is_triggered_only = yes
 
  option = {
     name = usa_old_event.1
-    
-    hidden_effect = {
-			play_song = "order_of_the_day"
-		}
  }
 }
 
