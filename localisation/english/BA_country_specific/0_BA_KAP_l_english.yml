@@ -87,3 +87,13 @@
  KAP_KAPna_medical_university_desc:0 "위생과 의료는 우리 군대를 야전에서 유지하고 시민들의 삶을 개선할 수 있게 해줄 것입니다. 우리는 이러한 분야에서 새로운 방법을 개발하고 이를 사람들에게 가르칠 것입니다."
  KAP_form_the_academy_of_sciences:0 "과학학술원 설립"
  KAP_form_the_academy_of_sciences_desc:0 "우리의 여러 연구 시설과 대학을 규합해서 더욱 효율적인 관리가 가능한 새로운 조직을 만들 것입니다." 
+
+ #캐릭터 이름
+ KAP_Kohane: "오히토메 코하네"
+ KAP_Kaoru: "이토코노우에 카오루"
+ KAP_koito: "아시하라츠모리 코이토"
+ KAP_rei: "쿠즈노하 레이"
+ KAP_Ju_at_su: "쥬았쓰!"
+ KAP_reconnaissance_Kaoru: "감시한다"
+ KAP_in_jang_jujack_Kaoru: "인장주작은 뭐야"
+ KAP_Zotdam_Kaoru: "좆됐네"
