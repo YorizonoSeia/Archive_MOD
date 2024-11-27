@@ -258,6 +258,113 @@ EGY_sphinx_guardians_desc:0 "고대의 신비와 이세계의 기술이 결합�
 EGY_pharaohs_vengeance:0 "파라오의 복수"
 EGY_pharaohs_vengeance_desc:0 "오랜 세월 외세의 지배 아래 있었던 우리 이집트가 마침내 독립을 쟁취했습니다. 이제 파라오의 이름으로, 우리를 억압했던 자들에게 복수의 칼날을 겨눌 때입니다!"
 
+# 정치 중점
+ EGY_1935_revolution:0 "1935년 혁명"
+ EGY_1935_revolution_desc:0 "영국의 지배에서 벗어나기 위한 이집트의 투쟁은 계속되고 있습니다. 키보토스의 각 학원들이 유럽의 영토를 점령한 이 시기야말로 우리가 독립을 쟁취할 절호의 기회입니다."
+
+ EGY_wafd_unification:0 "와프드당 규합"
+ EGY_wafd_unification_desc:0 "이집트의 대표적인 민족주의 정당인 와프드당을 중심으로 독립운동 세력을 결집시켜야 합니다. 분열된 목소리로는 영국의 지배에서 벗어날 수 없습니다."
+
+ EGY_blue_shirts:0 "푸른 셔츠단 결성"
+ EGY_blue_shirts_desc:0 "와프드당의 준군사조직인 푸른 셔츠단을 조직하여 영국의 압제에 대항할 무력을 갖추어야 합니다."
+
+ EGY_sudan_suffrage:0 "수단 투표권 인정"
+ EGY_sudan_suffrage_desc:0 "수단인들에게도 동등한 투표권을 부여함으로써, 우리는 영국의 분할통치 전략에 맞서 나일강 유역의 단결을 이룩할 수 있습니다."
+
+ EGY_local_elections:0 "지방선거 허용"
+ EGY_local_elections_desc:0 "지방자치의 확대를 통해 민주주의의 기틀을 다지고, 동시에 국민들의 지지를 얻어내야 합니다."
+
+ EGY_parliament_suspended:0 "의회 정지"
+ EGY_parliament_suspended_desc:0 "혼란스러운 정국을 수습하기 위해 일시적으로 의회를 정지시키고 비상조치를 시행해야 합니다."
+
+ EGY_palace_seizure:0 "왕궁 장악"
+ EGY_palace_seizure_desc:0 "파루크 국왕의 궁전을 장악하여 왕실의 저항을 무력화해야 합니다."
+
+ EGY_cairo_martial_law:0 "카이로 계엄령 선포"
+ EGY_cairo_martial_law_desc:0 "수도 카이로에 계엄령을 선포하여 혼란을 진압하고 질서를 회복해야 합니다."
+
+ EGY_sudanese_army:0 "수단군 회유"
+ EGY_sudanese_army_desc:0 "수단 주둔군을 우리 편으로 만들어 군사력을 강화해야 합니다."
+
+ EGY_king_exiled:0 "국왕 추방"
+ EGY_king_exiled_desc:0 "파루크 국왕을 추방하고 새로운 시대의 문을 열어야 합니다."
+
+ EGY_new_king:0 "새 왕좌의 주인"
+ EGY_new_king_desc:0 "아비도스 학원의 지원을 받아 새로운 파라오를 옹립하여 이집트의 영광을 되찾을 때입니다."
+
+ EGY_accept_kibotos:0 "키보토스인 이민 수용"
+ EGY_accept_kibotos_desc:0 "키보토스의 학생들을 이집트로 받아들여 우리의 힘을 강화하고 새로운 문명의 융합을 이룩해야 합니다."
+
+ EGY_kibotos_conscription:0 "키보토스인 동원"
+ EGY_kibotos_conscription_desc:0 "키보토스 출신 이민자들을 군대에 편입시켜 우리의 군사력을 증강해야 합니다."
+
+ EGY_mystical_research_boost:0 "신비 연구 가속화"
+ EGY_mystical_research_boost_desc:0 "키보토스의 신비한 기술과 고대 이집트의 비술을 결합한 연구를 진행해야 합니다."
+
+ EGY_rebellion_encouraged:0 "봉기 종용"
+ EGY_rebellion_encouraged_desc:0 "영국의 지배하에 있는 다른 지역들의 반란을 부추겨 영국의 통치력을 약화시켜야 합니다."
+
+ EGY_imperial_claims:0 "충성파 부대 소집"
+ EGY_imperial_claims_desc:0 "새로운 파라오에게 충성을 맹세한 군대를 조직하여 우리의 권위를 강화해야 합니다."
+
+ EGY_civilian_support:0 "민심 휘어잡기"
+ EGY_civilian_support_desc:0 "대중의 지지를 얻어내어 새로운 파라오의 통치를 정당화해야 합니다."
+
+ EGY_emperor_crowned:0 "황제 즉위"
+ EGY_emperor_crowned_desc:0 "새로운 파라오를 황제로 추대하여 이집트 제국의 부활을 선포합니다."
+
+ EGY_imperial_authenticity:0 "왕조 정통성 주장"
+ EGY_imperial_authenticity_desc:0 "고대 이집트 왕조의 정통성을 계승했음을 선포하여 우리의 통치를 공고히 해야 합니다."
+
+ EGY_abidos_kemet_empire:0 "아비도스 케메트 제국"
+ EGY_abidos_kemet_empire_desc:0 "아비도스의 지원으로 부활한 새로운 이집트 제국, 케메트 제국의 시대가 도래했습니다."
+
+ EGY_vassal_kingdoms:0 "부왕국 설치"
+ EGY_vassal_kingdoms_desc:0 "정복지에 부왕국을 설치하여 효율적인 통치체제를 구축해야 합니다."
+
+ EGY_imperial_land_claims:0 "제국 영유권 주장"
+ EGY_imperial_land_claims_desc:0 "고대 이집트 제국의 영토에 대한 우리의 정당한 권리를 주장해야 합니다."
+
+ EGY_imperial_unification:0 "제국 통합"
+ EGY_imperial_unification_desc:0 "제국의 각 지역을 하나로 통합하여 강력한 중앙집권체제를 확립해야 합니다."
+
+ EGY_second_dynasty_glory:0 "제 2왕조의 영광"
+ EGY_second_dynasty_glory_desc:0 "새로운 왕조의 영광스러운 시대가 시작되었습니다."
+
+ EGY_african_domination:0 "아프리카 지배"
+ EGY_african_domination_desc:0 "아프리카 전역을 우리의 통치 아래 두어야 합니다."
+
+ EGY_middle_east_domination:0 "중동 지배"
+ EGY_middle_east_domination_desc:0 "중동 지역을 장악하여 우리의 제국을 확장해야 합니다."
+
+ EGY_kivotos_domination:0 "키보토스"
+ EGY_kivotos_domination_desc:0 "이제 키보토스마저 우리의 통치 아래 들어올 때입니다."
+
+ EGY_national_state:0 "이집트 국민국가"
+ EGY_national_state_desc:0 "왕정을 폐지하고 근대적인 국민국가를 수립해야 합니다."
+
+ EGY_political_parties:0 "정당정치 활성화"
+ EGY_political_parties_desc:0 "다양한 정당의 활동을 보장하여 민주주의의 발전을 도모해야 합니다."
+
+ EGY_green_shirts_crush:0 "녹색 셔츠단 분쇄"
+ EGY_green_shirts_crush_desc:0 "이슬람 원리주의 세력인 녹색 셔츠단을 진압하여 세속 국가의 기반을 다져야 합니다."
+
+ EGY_blue_shirts_strengthen:0 "푸른 셔츠단 강화"
+ EGY_blue_shirts_strengthen_desc:0 "푸른 셔츠단의 역량을 강화하여 국가의 안정을 유지해야 합니다."
+
+ EGY_montreux_convention:0 "만수라 협정"
+ EGY_montreux_convention_desc:0 "만수라에서 열린 국제회의를 통해 이집트의 주권을 국제적으로 인정받아야 합니다."
+
+ EGY_egyptian_nationalism:0 "이집트 제일주의"
+ EGY_egyptian_nationalism_desc:0 "이집트의 독자적인 발전과 번영을 최우선으로 하는 정책을 추진해야 합니다."
+
+ EGY_1930_constitution:0 "1930년 헌법 복원"
+ EGY_1930_constitution_desc:0 "1930년 헌법을 복원하여 입헌군주제의 틀 안에서 안정적인 발전을 도모해야 합니다."
+
+ EGY_union_jack:0 "유니온 잭에 충성"
+ EGY_union_jack_desc:0 "영국과의 협력 관계를 유지하는 것이 이집트의 번영을 위한 최선의 길입니다."
+
+
 # 아이디어
 
 EGY_industrial_modernization_idea:0 "산업 현대화 계획"
