@@ -375,10 +375,11 @@ focus_tree = {
 				add_manpower = 30000
 			}
 			add_equipment_bonus = {
+				name = EGY_sudanese_army
 				bonus = { 
 					infantry_equipment = {
 						acclimatization_hot_climate_gain_factor = 0.1
-						defence = 0.1
+						defense = 0.1
 					}
 				}
 			}
@@ -467,161 +468,6 @@ focus_tree = {
 			add_popularity = {
 				ideology = neutrality
 				popularity = 0.3
-			}
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		# 미국과의 협력
-		id = EGY_american_cooperation
-		icon = GFX_focus_generic_treaty
-		cost = 5
-
-		x = -2
-		y = 1
-
-		prerequisite = {
-			focus = EGY_national_state
-		}
-		
-		relative_position_id = EGY_national_state
-
-		mutually_exclusive = {
-			focus = EGY_italy_cooperation
-			focus = EGY_soviet_cooperation
-		}
-
-		available = {
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus EGY_american_cooperation_complete"
-			add_political_power = 10
-			#add_opinion_modifier = { target = USA modifier = EGY_american_cooperation }
-			if = {
-				limit = {
-					has_dlc = "No Step Back"
-				}
-				add_tech_bonus = {
-					name = EGY_american_military_doctrine
-					bonus = 0.5
-					uses = 2
-					category = air_doctrine
-				}
-			}
-			else = {
-				add_tech_bonus = {
-					name = EGY_american_military_equipment
-					bonus = 0.5
-					uses = 2
-					category = infantry_weapons
-				}
-			}
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		# 이탈리아와 함께
-		id = EGY_italy_cooperation
-		icon = GFX_focus_generic_treaty
-		cost = 5
-
-		x = 0
-		y = 1
-
-		prerequisite = {
-			focus = EGY_national_state
-		}
-		
-		relative_position_id = EGY_national_state
-
-		mutually_exclusive = {
-			focus = EGY_american_cooperation
-			focus = EGY_soviet_cooperation
-		}
-
-		available = {
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus EGY_italy_cooperation_complete"
-			add_political_power = 10
-			#add_opinion_modifier = { target = ITA modifier = EGY_italy_cooperation }
-			if = {
-				limit = {
-					has_dlc = "No Step Back"
-				}
-				add_tech_bonus = {
-					name = EGY_italian_military_doctrine
-					bonus = 0.5
-					uses = 2
-					category = naval_doctrine
-				}
-				
-			}
-			else = {
-				add_tech_bonus = {
-					name = EGY_italian_military_equipment
-					bonus = 0.5
-					uses = 2
-					category = infantry_weapons
-				}
-				
-			}
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		# 코민테른과 동맹
-		id = EGY_soviet_cooperation
-		icon = GFX_focus_generic_treaty
-		cost = 5
-
-		x = 2
-		y = 1
-
-		prerequisite = {
-			focus = EGY_national_state
-		}
-		
-		relative_position_id = EGY_national_state
-
-		mutually_exclusive = {
-			focus = EGY_american_cooperation
-			focus = EGY_italy_cooperation
-		}
-
-		available = {
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus EGY_american_cooperation_complete"
-			add_political_power = 10
-			#add_opinion_modifier = { target = USA modifier = EGY_american_cooperation }
-			if = {
-				limit = {
-					has_dlc = "No Step Back"
-				}
-				add_tech_bonus = {
-					name = EGY_american_military_doctrine
-					bonus = 0.5
-					uses = 2
-					category = land_doctrine
-				}
-			}
-			else = {
-				add_tech_bonus = {
-					name = EGY_american_military_equipment
-					bonus = 0.5
-					uses = 2
-					category = infantry_weapons
-				}
 			}
 		}
 
@@ -1116,6 +962,161 @@ focus_tree = {
 	}
 
 	focus = {
+		# 미국과의 협력
+		id = EGY_american_cooperation
+		icon = GFX_focus_generic_treaty
+		cost = 5
+
+		x = -2
+		y = 1
+
+		prerequisite = {
+			focus = EGY_national_state
+		}
+		
+		relative_position_id = EGY_national_state
+
+		mutually_exclusive = {
+			focus = EGY_italy_cooperation
+			focus = EGY_soviet_cooperation
+		}
+
+		available = {
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus EGY_american_cooperation_complete"
+			add_political_power = 10
+			#add_opinion_modifier = { target = USA modifier = EGY_american_cooperation }
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
+				}
+				add_tech_bonus = {
+					name = EGY_american_military_doctrine
+					bonus = 0.5
+					uses = 2
+					category = air_doctrine
+				}
+			}
+			else = {
+				add_tech_bonus = {
+					name = EGY_american_military_equipment
+					bonus = 0.5
+					uses = 2
+					category = infantry_weapons
+				}
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		# 이탈리아와 함께
+		id = EGY_italy_cooperation
+		icon = GFX_focus_generic_treaty
+		cost = 5
+
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = EGY_national_state
+		}
+		
+		relative_position_id = EGY_national_state
+
+		mutually_exclusive = {
+			focus = EGY_american_cooperation
+			focus = EGY_soviet_cooperation
+		}
+
+		available = {
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus EGY_italy_cooperation_complete"
+			add_political_power = 10
+			#add_opinion_modifier = { target = ITA modifier = EGY_italy_cooperation }
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
+				}
+				add_tech_bonus = {
+					name = EGY_italian_military_doctrine
+					bonus = 0.5
+					uses = 2
+					category = naval_doctrine
+				}
+				
+			}
+			else = {
+				add_tech_bonus = {
+					name = EGY_italian_military_equipment
+					bonus = 0.5
+					uses = 2
+					category = infantry_weapons
+				}
+				
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		# 코민테른과 동맹
+		id = EGY_soviet_cooperation
+		icon = GFX_focus_generic_treaty
+		cost = 5
+
+		x = 2
+		y = 1
+
+		prerequisite = {
+			focus = EGY_national_state
+		}
+		
+		relative_position_id = EGY_national_state
+
+		mutually_exclusive = {
+			focus = EGY_american_cooperation
+			focus = EGY_italy_cooperation
+		}
+
+		available = {
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus EGY_american_cooperation_complete"
+			add_political_power = 10
+			#add_opinion_modifier = { target = USA modifier = EGY_american_cooperation }
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
+				}
+				add_tech_bonus = {
+					name = EGY_american_military_doctrine
+					bonus = 0.5
+					uses = 2
+					category = land_doctrine
+				}
+			}
+			else = {
+				add_tech_bonus = {
+					name = EGY_american_military_equipment
+					bonus = 0.5
+					uses = 2
+					category = infantry_weapons
+				}
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
 		# 정당정치 활성화
 		id = EGY_political_parties
 		icon = GFX_focus_generic_treaty
@@ -1247,7 +1248,7 @@ focus_tree = {
 
 		mutually_exclusive = {
 			focus = EGY_1930_constitution
-			focus = GFX_focus_generic_treaty
+			focus = EGY_wafd_unification
 		}
 
 		relative_position_id = EGY_1935_revolution
