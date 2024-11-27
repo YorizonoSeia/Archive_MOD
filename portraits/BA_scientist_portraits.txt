@@ -18,6 +18,9 @@ TRM = {
 			"GFX_portrait_generic_europe_female_15"
 			"GFX_portrait_generic_europe_female_16"
 		}
+		male = {
+			"GFX_portrait_generic_europe_male_01"
+		}
 	}
 }
 COU = {
@@ -39,6 +42,9 @@ COU = {
 			"GFX_portrait_generic_europe_female_14"
 			"GFX_portrait_generic_europe_female_15"
 			"GFX_portrait_generic_europe_female_16"
+		}
+		male = {
+			"GFX_portrait_generic_europe_male_01"
 		}
 	}
 
@@ -63,6 +69,9 @@ ARI = {
 			"GFX_portrait_generic_europe_female_15"
 			"GFX_portrait_generic_europe_female_16"
 		}
+		male = {
+			"GFX_portrait_generic_europe_male_01"
+		}
 	}
 
 }
@@ -85,6 +94,9 @@ KSP = {
 			"GFX_portrait_generic_europe_female_14"
 			"GFX_portrait_generic_europe_female_15"
 			"GFX_portrait_generic_europe_female_16"
+		}
+		male = {
+			"GFX_portrait_generic_europe_male_01"
 		}
 	}
 
@@ -109,6 +121,9 @@ SRT = {
 			"GFX_portrait_generic_europe_female_15"
 			"GFX_portrait_generic_europe_female_16"
 		}
+		male = {
+			"GFX_portrait_generic_europe_male_01"
+		}
 	}
 
 }
@@ -132,6 +147,9 @@ GEH = { #게헨나 선도부
 			"GFX_portrait_generic_europe_female_15"
 			"GFX_portrait_generic_europe_female_16"
 		}
+		male = {
+			"GFX_portrait_generic_europe_male_01"
+		}
 	}
 
 }
@@ -154,6 +172,9 @@ GEM = { #게헨나 만마전
 			"GFX_portrait_generic_europe_female_14"
 			"GFX_portrait_generic_europe_female_15"
 			"GFX_portrait_generic_europe_female_16"
+		}
+		male = {
+			"GFX_portrait_generic_europe_male_01"
 		}
 	}
 	
@@ -179,6 +200,9 @@ HEU = { #게헨나 공용
 			"GFX_portrait_generic_europe_female_15"
 			"GFX_portrait_generic_europe_female_16"
 		}
+		male = {
+			"GFX_portrait_generic_europe_male_01"
+		}
 	}
 	
 }
@@ -202,6 +226,9 @@ SHA = {
 			"GFX_portrait_generic_europe_female_14"
 			"GFX_portrait_generic_europe_female_15"
 			"GFX_portrait_generic_europe_female_16"
+		}
+		male = {
+			"GFX_portrait_generic_europe_male_01"
 		}
 	}
 	
@@ -227,6 +254,9 @@ HYA = {
 			"GFX_portrait_generic_europe_female_15"
 			"GFX_portrait_generic_europe_female_16"
 		}
+		male = {
+			"GFX_portrait_generic_europe_male_01"
+		}
 	}
 	
 }
@@ -250,6 +280,9 @@ MIL = {
 			"GFX_portrait_generic_europe_female_14"
 			"GFX_portrait_generic_europe_female_15"
 			"GFX_portrait_generic_europe_female_16"
+		}
+		male = {
+			"GFX_portrait_generic_europe_male_01"
 		}
 	}
 	
@@ -275,6 +308,9 @@ SHE = {
 			"GFX_portrait_generic_europe_female_15"
 			"GFX_portrait_generic_europe_female_16"
 		}
+		male = {
+			"GFX_portrait_generic_europe_male_01"
+		}
 	}
 	
 }
@@ -297,6 +333,9 @@ ABY = {
 			"GFX_portrait_generic_europe_female_14"
 			"GFX_portrait_generic_europe_female_15"
 			"GFX_portrait_generic_europe_female_16"
+		}
+		male = {
+			"GFX_portrait_generic_europe_male_01"
 		}
 	}
 	
