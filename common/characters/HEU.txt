@@ -583,6 +583,9 @@ characters={
 
 	HEU_guillaume_kroll={
 		portraits={
+			civilian={
+				large="gfx/leaders/HEU/HEU_guillaume_kroll.dds"
+			}
 			army={
 				small= "GFX_idea_generic_political_advisor_europe_6"
 			}
@@ -601,6 +604,13 @@ characters={
 			}
 			ai_will_do = {
 				factor = 24.000
+			}
+		}
+		
+		scientist = {
+			traits = { scientist_trait_armored_specialist }
+			skills = {
+				specialization_land = 2
 			}
 		}
 	}

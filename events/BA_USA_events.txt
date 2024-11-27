@@ -1,7 +1,7 @@
 add_namespace = usa_event
 add_namespace = usa_chroma_event
-add_namespace = usa_new_event # 신질서 전쟁
-add_namespace = usa_old_event # 구질서 전쟁
+add_namespace = usa_new_event # 신질서
+add_namespace = usa_old_event # 구질서
 add_namespace = usa_new_civil_event # 내전
 
 country_event = {
@@ -200,10 +200,6 @@ is_triggered_only = yes
 
  option = {
     name = usa_old_event.1
-    
-    hidden_effect = {
-			play_song = "order_of_the_day"
-		}
  }
 }
 
@@ -246,6 +242,8 @@ country_event = {
 			}
 	 }
 }
+
+
 
 
 #추가적인 경제 위기의 조짐
@@ -893,6 +891,11 @@ country_event = {
 		# country_event = { id = usa_new_civil_event.2 days = 90  }
 	}
 }
+
+
+
+
+
 
 
 

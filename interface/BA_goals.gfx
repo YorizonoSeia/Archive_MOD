@@ -1,6 +1,11 @@
 spriteTypes = {
 	
 	SpriteType = {
+		name = "GFX_focus_TRM_united_law"
+		texturefile = "gfx/interface/goals/TRN/TRM_united_law.tga"			
+	}
+
+	SpriteType = {
 		name = "GFX_focus_BLM_gang_thugs_war_focus"
 		texturefile = "gfx/interface/goals/BLM/focus_BLM_gang_thugs_war_focus.tga"			
 	}
@@ -2206,5 +2211,21 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_goal_JAP_National_Mobilization_Law"
 		textureFile = "gfx/interface/goals/JAP/JAP_National_Mobilization_Law.tga"
+	}
+	spriteType = {
+		name = "GFX_goal_JAP_South_attack"
+		textureFile = "gfx/interface/goals/JAP/JAP_South_attack.tga"
+	}
+	spriteType = {
+		name = "GFX_goal_JAP_alliance_with_Thailand"
+		textureFile = "gfx/interface/goals/JAP/JAP_alliance_with_Thailand.tga"
+	}
+	spriteType = {
+		name = "GFX_goal_JAP_alliance_with_Thailand"
+		textureFile = "gfx/interface/goals/JAP/JAP_alliance_with_Thailand.tga"
+	}
+	spriteType = {
+		name = "GFX_goal_JAP_MarcoPolo_incident"
+		textureFile = "gfx/interface/goals/JAP/JAP_MarcoPolo_incident.tga"
 	}
 }

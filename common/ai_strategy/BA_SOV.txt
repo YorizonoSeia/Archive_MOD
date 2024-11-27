@@ -3,9 +3,9 @@ AI_USA_civil_war_commitments = {
 		original_tag = SOV
 	}
 	enable = {
-		has_idea = USA_civil_war_commitments
+		has_idea = USABA_civil_war_commitments
 	}
-	abort = { NOT = { has_idea = USA_civil_war_commitments } }
+	abort = { NOT = { has_idea = USABA_civil_war_commitments } }
 	ai_strategy = {
 		type = send_volunteers_desire
 		id = "USA"
