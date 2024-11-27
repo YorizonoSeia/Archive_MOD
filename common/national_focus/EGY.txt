@@ -82,6 +82,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus EGY_wafd_unification_complete"
+			add_political_power = 10
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.2
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -107,6 +113,13 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus EGY_blue_shirts_complete"
+			add_political_power = 10
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.2
+			}
+			add_manpower = 30000
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -132,6 +145,27 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus EGY_sudan_suffrage_complete"
+			add_political_power = 5
+			add_stability = 0.05
+			if = {
+				limit = {
+					is_puppet = no
+				}
+				add_manpower = 30000
+			}
+			if = {
+				limit = {
+					controls_state = 631
+				}
+
+				631 = {
+					add_resource = {
+						type = chromium
+						amount = 3
+					}
+				}
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -160,6 +194,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus EGY_local_elections_complete"
+			add_political_power = 5
+			add_stability = 0.05
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -194,6 +231,19 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus EGY_parliament_suspended_complete"
+			add_political_power = 15
+			add_stability = -0.1
+			set_country_flag = parliament_suspended
+			if = {
+				limit = {					
+					has_government = fascism
+				}
+				add_war_support = 0.2
+			}
+			else = {
+				add_war_support = 0.1
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -218,6 +268,17 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus EGY_palace_seizure_complete"
+			add_political_power = 10
+			add_stability = -0.05
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -242,6 +303,35 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus EGY_cairo_martial_law_complete"
+			add_political_power = 10
+			add_stability = 0.05
+			add_war_support = 0.05
+			if = {
+				limit = {
+					has_government = fascism
+				}
+				add_manpower = 30000				
+				
+
+				capital_scope = {					
+					create_unit = {						
+						division = "division_template = \"Al-Mushati Infantry\" start_experience_factor = 0.3"
+						owner = EGY
+						count = 3
+					}
+				}
+			}
+			else = {
+				add_manpower = 30000
+				capital_scope = {					
+					create_unit = {						
+						division = "division_template = \"Al-Mushati Infantry\" start_experience_factor = 0.3"
+						owner = EGY
+						count = 2
+					}
+				}
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -266,6 +356,32 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus EGY_sudanese_army_complete"
+			add_political_power = 10
+			if = {
+				limit = {
+					controls_state = 631 # 수단 주 ID (임시)
+				}
+				add_manpower = 30000
+				capital_scope = {					
+					create_unit = {						
+						division = "division_template = \"Al-Mushati Infantry\" start_experience_factor = 0.3"
+						owner = EGY
+						count = 4
+					}
+				}
+			}
+			else = {
+				add_manpower = 30000
+			}
+			add_equipment_bonus = {
+				bonus = { 
+					infantry_equipment = {
+						acclimatization_hot_climate_gain_factor = 0.1
+						defence = 0.1
+					}
+				}
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -299,6 +415,16 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus EGY_king_exiled_complete"
+			add_political_power = 20
+			add_stability = 0.1
+			set_country_flag = king_exiled
+			if = {
+				limit = {
+					has_government = fascism
+				}
+				add_war_support = 0.1
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -328,6 +454,20 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus EGY_new_king_complete"
+			add_political_power = 15
+			add_stability = 0.1
+			# create_country_leader = {
+			# 	name = "Placeholder Royalist Leader" # 왕정복고 지도자 이름 (임시)
+			# 	desc = "Placeholder Royalist Leader Desc" # 왕정복고 지도자 설명 (임시)
+			# 	picture = GFX_leader_egypt_placeholder_royalist # 왕정복고 지도자 이미지 (임시)
+			# 	ideology = paternal_autocrat
+			# 	traits = { charismatic_leader military_theorist }
+			# }
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.3
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -357,6 +497,28 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus EGY_american_cooperation_complete"
+			add_political_power = 10
+			#add_opinion_modifier = { target = USA modifier = EGY_american_cooperation }
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
+				}
+				add_tech_bonus = {
+					name = EGY_american_military_doctrine
+					bonus = 0.5
+					uses = 2
+					category = air_doctrine
+				}
+			}
+			else = {
+				add_tech_bonus = {
+					name = EGY_american_military_equipment
+					bonus = 0.5
+					uses = 2
+					category = infantry_weapons
+				}
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -386,6 +548,30 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus EGY_italy_cooperation_complete"
+			add_political_power = 10
+			#add_opinion_modifier = { target = ITA modifier = EGY_italy_cooperation }
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
+				}
+				add_tech_bonus = {
+					name = EGY_italian_military_doctrine
+					bonus = 0.5
+					uses = 2
+					category = naval_doctrine
+				}
+				
+			}
+			else = {
+				add_tech_bonus = {
+					name = EGY_italian_military_equipment
+					bonus = 0.5
+					uses = 2
+					category = infantry_weapons
+				}
+				
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -415,6 +601,28 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus EGY_american_cooperation_complete"
+			add_political_power = 10
+			#add_opinion_modifier = { target = USA modifier = EGY_american_cooperation }
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
+				}
+				add_tech_bonus = {
+					name = EGY_american_military_doctrine
+					bonus = 0.5
+					uses = 2
+					category = land_doctrine
+				}
+			}
+			else = {
+				add_tech_bonus = {
+					name = EGY_american_military_equipment
+					bonus = 0.5
+					uses = 2
+					category = infantry_weapons
+				}
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -440,6 +648,17 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus EGY_accept_kibotos_complete"
+			add_political_power = 10
+			add_stability = 0.05
+			set_country_flag = kibotos_refugees_accepted
+			#add_ideas = EGY_kibotos_immigration
+			set_technology = {
+				kivotos_infantry_weapons = 1
+			}
+			set_country_flag = kivotos_research_on
+
+
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -464,6 +683,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus EGY_kibotos_conscription_complete"
+			add_political_power = 10
+			add_manpower = 20000 #동원 가능 인력 추가 (수치 조정 가능)
+			army_experience = 10 # 육군 경험치 추가 (수치 조정 가능)			
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -488,6 +711,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_tech_bonus = {
+				name = EGY_mystic_engineering_boost
+				category = mystic_engineering
+				bonus = 1.0
+				uses = 2
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -513,6 +742,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus EGY_rebellion_encouraged_complete"
+			add_political_power = 10
+			# 국가에 대한 첩보 활동 강화, 특정 국가와의 관계 악화 등
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -538,6 +770,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus EGY_imperial_claims_complete"
+			add_political_power = 10
+			add_ideas = service_by_requirement
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -563,6 +798,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus EGY_civilian_support_complete"
+			add_political_power = 10
+			add_stability = 0.1 # 안정도 증가
+			add_war_support = 0.1 # 전쟁 지지도 증가
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -588,6 +827,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus EGY_emperor_crowned_complete"
+			add_political_power = 15
+			# 요건 누군가 하고픈 사람이 하라지 ~_~
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -613,6 +855,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus EGY_imperial_authenticity_complete"
+			add_political_power = 10
+			add_stability = 0.1 # 안정도 증가
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -641,6 +886,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus EGY_abidos_kemet_empire_complete"
+			add_political_power = 15
+			# 대충 호시노가 여왕된다는 내용
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -666,6 +914,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus EGY_vassal_kingdoms_complete"
+			add_political_power = 10
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
