@@ -13819,5 +13819,34 @@ focus_tree = {
             } 
 		}
 	}
+	focus = {
+		id = ABY_focus_way_of_empire    #중점명
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
+ 		cost = 2.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			    #반대되는 중점
+		}
+		x = 75     #좌표
+		y = 15
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			always = no
+			#중점 선행조건
+		}
+		allow_branch = {
+			is_debug = yes
+		}
+
+		completion_reward = {
+		}
+	}
 }
 

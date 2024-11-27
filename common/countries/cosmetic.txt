@@ -2442,6 +2442,26 @@ ABY_ohung = {
 	color = rgb { 194 198 215 }
 	color_ui = rgb { 255 255 255 }
 }
+ABY_laita_ABY = {
+	color = rgb { 194 198 215 }
+	color_ui = rgb { 255 255 255 }
+}
+ABY_german_empire = {
+	color = rgb { 100 100 50 }
+	color_ui = rgb { 100 100 50 }
+}
+ABY_duchy_of_austria = {
+	color = rgb { 150 150 75 }
+	color_ui = rgb { 150 150 75 }
+}
+ABY_holy_roman_empire = {
+	color = rgb { 150 150 75 }
+	color_ui = rgb { 150 150 75 }
+}
+ABY_frank_kingdom = {
+	color = rgb { 50 50 100 }
+	color_ui = rgb { 50 50 100 }
+}
 ABY_abydos_union = {
 	color = rgb { 153 0 25 }
 	color_ui = rgb { 153 0 25 }
