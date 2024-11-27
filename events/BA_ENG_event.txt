@@ -202,6 +202,7 @@ country_event = {
 				transfer_state = 903
 				transfer_state = 905
 				transfer_state = 542
+				transfer_state = 981
 				create_country_leader = {
 					name = "No Leader"
 					desc = ""

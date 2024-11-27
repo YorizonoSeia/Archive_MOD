@@ -4119,3 +4119,275 @@ news_event = { # 미국 애니메이션 상영
         }
     }
 }
+
+
+news_event = { # 미국의 밀레니엄 독보
+    id = BA_news.112
+    title = BA_news.112.t
+    desc = BA_news.112.d
+    picture = GFX_news_event_greek_civil_war
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        name = BA_news.112.a
+        trigger = {
+            OR = {
+				tag = MIL
+			    tag = USA    
+			}
+        }
+    }
+
+    option = {
+        name = BA_news.112.b
+        trigger = {
+            NOT = {
+				OR = {
+				  tag = MIL
+				  tag= USA
+				  }	  
+			 }
+        }
+    }
+}
+
+news_event = { # 미국의 에덴 독보
+    id = BA_news.113
+    title = BA_news.113.t
+    desc = BA_news.113.d
+    picture = GFX_news_event_greek_civil_war
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        name = BA_news.113.a
+        trigger = {
+            OR = {
+				tag = GEM
+				tag = TRM
+			    tag = USA    
+			}
+        }
+    }
+
+    option = {
+        name = BA_news.113.b
+        trigger = {
+            NOT = {
+				OR = {
+				  tag = GEM
+				  tag = TRM
+				  tag= USA
+				  }	  
+			 }
+        }
+    }
+}
+
+news_event = { # 미국의 총학생회 독보
+    id = BA_news.114
+    title = BA_news.114.t
+    desc = BA_news.114.d
+    picture = GFX_news_event_greek_civil_war
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        name = BA_news.114.a
+        trigger = {
+            OR = {
+				tag = COU
+			    tag = USA    
+			}
+        }
+    }
+
+    option = {
+        name = BA_news.114.b
+        trigger = {
+            NOT = {
+				OR = {
+				  tag = COU
+				  tag= USA
+				  }	  
+			 }
+        }
+    }
+}
+
+news_event = { # 미국의 게헨나 따르기
+    id = BA_news.115
+    title = BA_news.115.t
+    desc = BA_news.115.d
+    picture = GFX_news_event_greek_civil_war
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        name = BA_news.115.a
+        trigger = {
+				tag = USA
+        }
+    }
+    option = {
+        name = BA_news.115.b
+        trigger = {
+				tag = GEM
+        }
+    }
+
+
+    option = {
+        name = BA_news.115.c
+        trigger = {
+            NOT = {
+				OR = {
+				  tag = GEM
+				  tag= USA
+				  }	  
+			 }
+        }
+    }
+}
+
+
+news_event = { # 미국의 트리니티 따르기
+    id = BA_news.116
+    title = BA_news.116.t
+    desc = BA_news.116.d
+    picture = GFX_news_event_greek_civil_war
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        name = BA_news.116.a
+        trigger = {
+				tag = USA
+        }
+    }
+    option = {
+        name = BA_news.116.b
+        trigger = {
+				tag = TRM
+        }
+    }
+
+
+    option = {
+        name = BA_news.116.c
+        trigger = {
+            NOT = {
+				OR = {
+				  tag = TRM
+				  tag= USA
+				  }	  
+			 }
+        }
+    }
+}
+
+news_event = { # 미국의 붉은겨울 따르기
+    id = BA_news.117
+    title = BA_news.117.t
+    desc = BA_news.117.d
+    picture = GFX_news_event_greek_civil_war
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        name = BA_news.117.a
+        trigger = {
+				tag = USA
+        }
+    }
+    option = {
+        name = BA_news.117.b
+        trigger = {
+				tag = RED
+        }
+    }
+
+
+    option = {
+        name = BA_news.117.c
+        trigger = {
+            NOT = {
+				OR = {
+				  tag = USA
+				  tag = RED
+				  }	  
+			 }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+#news_event = { # 미국 트리니티 에덴 점령
+#    id = BA_news.112
+#    title = BA_news.112.t
+#    desc = BA_news.112.d
+#    picture = GFX_news_event_destroyers
+#
+#    major = yes
+#    is_triggered_only = yes
+#
+#	trigger = {
+#		USA = has_control_of_state = 64
+#	}
+#
+#   option = {
+#		scoped_play_song = "order_of_the_day"
+#        name = BA_news.112.a
+#        trigger = {
+#            tag = USA
+#        }
+#    }
+#
+#	option = {
+#		scoped_play_song = "order_of_the_day"
+#        name = BA_news.112.b
+#       trigger = {
+#			    AND = {
+#				   is_allied_with = TRM
+#                  has_war = yes
+#				}
+#        }
+#    }
+#
+#	option = {
+#		scoped_play_song = "order_of_the_day"
+#        name = BA_news.112.c
+#        trigger = {
+#			AND = {
+#			    NOT = { Kivotos_tag = yes }
+#			    has_war_with = TRM
+#				NOT = { tag = USA}
+#			}
+#        }
+#    }
+#		option = {
+#		scoped_play_song = "order_of_the_day"
+#      name = BA_news.112.d
+#       trigger = {
+#			AND = {
+#			  Kivotos_tag = yes 
+#			  NOT = { has_war_with = TRM } 
+#			}
+#        }
+#    }
+#		 
+#}

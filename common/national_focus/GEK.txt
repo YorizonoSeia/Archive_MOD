@@ -199,7 +199,7 @@ focus_tree = {
 				}
 			}
 		}
-		x = 50
+		x = 53
 		y = 0
 		available = {
 			has_completed_focus = GEK_get_in_touch
@@ -542,6 +542,14 @@ focus_tree = {
 		ai_will_do = {
 			base = 0
 		}
+		available = {
+			NOT = {
+				has_idea = GEK_legitimacy_weimar_2
+				has_idea = GEK_legitimacy_empire_2
+				has_idea = GEK_legitimacy_nazi_2
+			}
+			has_war = no
+		}
 		prerequisite = {
 			focus = GEK_RM_com_focus_3
 		}
@@ -638,6 +646,10 @@ focus_tree = {
 		prerequisite = {
 			focus = GEK_RM_com_focus_3
 		}
+		available = {
+			has_idea = GEK_legitimacy_weimar_2
+			has_war = no
+		}
 		mutually_exclusive = {
 			focus = GEK_RM_spd_focus_4
 			focus = GEK_RM_com_focus_4
@@ -658,6 +670,14 @@ focus_tree = {
 		icon = GFX_focus_POL_complete_april_constitution
 		ai_will_do = {
 			base = 0
+		}
+		available = {
+			NOT = {
+				has_idea = GEK_legitimacy_weimar_2
+				has_idea = GEK_legitimacy_empire_2
+				has_idea = GEK_legitimacy_nazi_2
+			}
+			has_war = no
 		}
 		mutually_exclusive = {
 			focus = GEK_RM_spd_focus_3
@@ -990,6 +1010,10 @@ focus_tree = {
 		prerequisite = {
 			focus = GEK_RM_army_focus_3
 		}
+		available = {
+			has_idea = GEK_legitimacy_empire_2
+			has_war = no
+		}
 		mutually_exclusive = {
 			focus = GEK_RM_spd_focus_4
 			focus = GEK_RM_spd_focus_3
@@ -1010,6 +1034,14 @@ focus_tree = {
 		icon = GFX_focus_generic_military_dictatorship
 		ai_will_do = {
 			base = 0
+		}
+		available = {
+			NOT = {
+				has_idea = GEK_legitimacy_weimar_2
+				has_idea = GEK_legitimacy_empire_2
+				has_idea = GEK_legitimacy_nazi_2
+			}
+			has_war = no
 		}
 		mutually_exclusive = {
 			focus = GEK_RM_spd_focus_4
@@ -1162,6 +1194,10 @@ focus_tree = {
 		icon = GFX_focus_ITA_generic_fascist_workers
 		ai_will_do = {
 			base = 0
+		}
+		available = {
+			has_idea = GEK_legitimacy_nazi_2
+			has_war = no
 		}
 		prerequisite = {
 			focus = GEK_RM_nazi_focus_2

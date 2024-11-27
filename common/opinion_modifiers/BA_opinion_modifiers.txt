@@ -237,4 +237,8 @@ opinion_modifiers = {
 		value = -50
 		months = 36
 	}
+	
+	USA_civil_war_commitments = {
+		value = 25
+	}
 }

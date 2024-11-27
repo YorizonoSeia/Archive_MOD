@@ -23,7 +23,7 @@ focus_tree = {
 			original_tag = USA
 		}
 	}
-	continuous_focus_position = { x = 50 y = 1600 }
+	continuous_focus_position = { x = 50 y = 2300 }
 	default = no
 #	focus = {
 #		id = USA_
@@ -167,6 +167,50 @@ focus_tree = {
 			}
 		}
 	}
+    
+    # 강제 기상
+	focus = {
+		id = USABA_forced_wake_up
+		icon = GFX_focus_CHL_silverworking
+		prerequisite = { focus = USA_continue_the_new_deal }
+		x = 0
+		y = 1
+		relative_position_id = USA_continue_the_new_deal
+
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = no
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+		available = {
+			if = { limit = { has_country_flag = USABA_government_official_exile }
+				NOT = { has_country_flag = USABA_government_official_exile }
+			}
+			if = { limit = { has_country_flag = USABA_government_official_exile }
+				NOT = { has_country_flag = USABA_government_official_exile }
+			}
+			not = { has_completed_focus = USABA_regression_strategy}
+			has_country_flag = USA_2nd_great_depression_4th_flag
+		}
+		bypass = {
+			
+		}
+		search_filters = {FOCUS_FILTER_USA_CONGRESS}
+		completion_reward = {
+			add_ideas = USABA_forced_wake_up
+			add_war_support = -0.1
+			add_stability = -0.15
+			add_popularity = {
+				ideology = ROOT
+				popularity = -0.15
+			}
+		}
+	}
+
 
 
     # 정치 고문 중점
@@ -174,7 +218,7 @@ focus_tree = {
 		id = USA_add_dog
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = USA_continue_the_new_deal }
-		x = -10
+		x = 4
 		y = 1
 		relative_position_id = USA_continue_the_new_deal
 
@@ -234,7 +278,7 @@ focus_tree = {
 		}
 		search_filters = {FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 50
 			add_stability = 0.10
 			add_popularity = {
 				ideology = democratic
@@ -286,7 +330,16 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
-			add_stability = -0.05
+			add_political_power = 100
+			add_stability = 0.05
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.1
+			}
 			custom_effect_tooltip = available_political_advisor
 		    show_ideas_tooltip = earl_browder
 		    if = {
@@ -969,6 +1022,13 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			add_popularity = {
+	           ideology = communism
+	           popularity = 0.1
+            }
+			add_political_power = -100
+			add_stability = -0.2
+			USA_congress_medium_opposition
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = harry_white
 			custom_effect_tooltip = available_political_advisor
@@ -1127,7 +1187,7 @@ focus_tree = {
 			if = { limit = { has_country_flag = USABA_government_official_exile }
 				NOT = { has_country_flag = USABA_government_official_exile }
 			}
-			communism > 0.3
+			has_government = communism
 		}
 		
 		bypass = {
@@ -1441,7 +1501,7 @@ focus_tree = {
 			}
 		}
 
-		cost = 5
+		cost = 10
 		#ai_will_do = {
 		#	factor = 1
 		#}
@@ -1456,6 +1516,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			add_political_power = 150
+			add_stability = 0.1
 		}
 	}
 	focus = {
@@ -1495,6 +1556,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
+			add_stability = 0.15
 			if = {
 				limit = { has_idea = USABA_collapsed_government_authority }
 				remove_ideas = USABA_collapsed_government_authority
@@ -1544,6 +1606,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
+			add_stability = 0.2
 			USA_great_depression_level_down = yes
 			set_country_flag = { flag = USA_great_depression_cooldown value = 1 days = 230 }
 			custom_effect_tooltip = USA_great_depression_cooldown_tt
@@ -1590,6 +1653,7 @@ focus_tree = {
 		}
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
+			add_stability = 0.15
 			USA_great_depression_level_down = yes
 			USA_congress_medium_opposition = yes
 			custom_effect_tooltip = federal_housing_tt
@@ -1763,6 +1827,8 @@ focus_tree = {
 		}
 		search_filters = {FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = USA_charles_lindbergh_political_advisor
 			custom_effect_tooltip = USABA_maintenance_of_isolation_policy_desc_cst
 			hidden_effect = {
 				random_owned_state = {
@@ -1912,11 +1978,13 @@ focus_tree = {
 		}
 		search_filters = {FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
-			custom_effect_tooltip = USABA_regression_strategy_loweffect_tt
+			USA_congress_large_opposition = yes
+			add_stability = -0.1
 			add_popularity = {
 				ideology = ROOT
 				popularity = -0.10
 			}
+			custom_effect_tooltip = USABA_regression_strategy_loweffect_tt
 			hidden_effect = {
 				random_owned_state = {
 					limit = { has_state_flag = USABA_regression_strategy__1IC }
@@ -1943,6 +2011,7 @@ focus_tree = {
 					clr_state_flag = USABA_regression_strategy__1IC
 				}
 			}
+			USA_congress_medium_opposition = yes
 		}
 	}
 	#주 권한의 확대
@@ -1978,6 +2047,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 200
 			add_ideas = USABA_strengthening_state_authority
+			USA_congress_small_support = yes
 		}
 	}
 	#야당과 접촉
@@ -2025,7 +2095,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = USABA_contact_with_opposition
 
-		cost = 10
+		cost = 5
 		#ai_will_do = {
 		#	factor = 1
 		#}
@@ -2307,6 +2377,529 @@ focus_tree = {
 			}
 		}
 	}
+
+
+	# 소련 내전 참가
+	focus = {
+		id = USABA_SOV_enter_american_civilwar
+		icon = GFX_focus_SOV_the_glory_of_the_red_army_communism
+		x = 22
+		y = 0
+		relative_position_id = USABA_regression_strategy
+		mutually_exclusive = {
+			focus = USABA_a_strong_alliance
+		}
+
+		cost = 2
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = no
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+		available = {
+			has_civil_war = yes
+			NOT = { has_war_with = SOV }
+			SOV = { has_government = communism }
+		}
+		bypass = {
+		}
+		bypass = {
+			
+		}
+
+		completion_reward = {
+			add_popularity = {
+			    ideology = communism
+			    popularity = 0.05
+			}
+			add_ideas = USABA_LEFT_civil_war_idea
+			SOV = { #USA_civil_war_commitments
+				add_timed_idea = { idea = USABA_civil_war_commitments days = 730 }
+				add_opinion_modifier = { target = ROOT modifier = USA_civil_war_commitments }
+			}
+			custom_effect_tooltip = SPR_expand_soviet_aid_tt
+		}
+	}
+
+	focus = {
+		id = USABA_a_strong_alliance
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		x = 3
+		y = 0
+		relative_position_id = USABA_SOV_enter_american_civilwar
+		mutually_exclusive = {
+			focus = USABA_SOV_enter_american_civilwar
+		}
+
+		cost = 2
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = no
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = unlock_focuses
+				always = no
+			}
+		}
+		bypass = {
+			is_in_faction_with = SOU
+			hidden_trigger = {
+				NOT = { has_completed_focus = USA_reestablish_the_gold_standard }
+			}
+		}
+		bypass = {
+			
+		}
+
+		completion_reward = {
+			add_popularity = {
+			    ideology = communism
+			    popularity = 0.05
+			}
+		}
+	}
+
+	focus = {
+		id = USABA_soviet_equipment_shipments
+		available = {
+			NOT = { has_war_with = SOV }
+			SOV = { has_government = communism }
+		}
+		bypass = {
+			has_civil_war = no
+		}
+		prerequisite = { focus = USABA_SOV_enter_american_civilwar }
+
+		icon = GFX_goal_generic_build_tank
+		x = -1
+		y = 1
+		relative_position_id = USABA_SOV_enter_american_civilwar
+		cost = 5
+
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = SPR_soviet_equipment_shipments_1mil }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			add_popularity = {
+			    ideology = communism
+			    popularity = 0.05
+			}
+			SOV = {
+				add_timed_idea = { idea = USABA_equipment_shipments days = 730 }
+				add_ai_strategy = { type = send_lend_lease_desire id = ROOT value = 200 }
+			}
+			add_timed_idea = { idea = USABA_equipment_shipments_usa days = 730 }
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+					}
+					is_core_of = ROOT
+				}
+				set_state_flag = SPR_soviet_equipment_shipments_2mil
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+					}
+					is_core_of = ROOT
+					NOT = { has_state_flag = SPR_soviet_equipment_shipments_1mil }
+				}
+				set_state_flag = SPR_soviet_equipment_shipments_2mil
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+					}
+					is_core_of = ROOT
+					NOT = { has_state_flag = SPR_soviet_equipment_shipments_1mil }
+				}
+				set_state_flag = SPR_soviet_equipment_shipments_2mil
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = USABA_soviet_military_advisors
+		available = {
+			NOT = { has_war_with = SOV }
+			SOV = { has_government = communism }
+		}
+		bypass = {
+			has_civil_war = no
+		}
+		prerequisite = { focus = USABA_SOV_enter_american_civilwar }
+
+		icon = GFX_focus_generic_military_mission
+		x = 1
+		y = 1
+		relative_position_id = USABA_SOV_enter_american_civilwar
+		cost = 5
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			army_experience = 25
+			add_war_support = 0.1
+			add_ideas = USABA_soviet_military_advisors
+			custom_effect_tooltip = SPR_seize_public_transport_tt
+		}
+	}
+
+	focus = {
+		id = USABA_subvert_soviet_control
+		available = {
+			has_civil_war = no
+		}
+		bypass = {
+		}
+		prerequisite = { focus = USABA_soviet_equipment_shipments }
+		prerequisite = { focus = USABA_soviet_military_advisors }
+		mutually_exclusive = {
+			focus = USABA_soviet_recovery_aid
+		}
+
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		relative_position_id = USABA_soviet_equipment_shipments
+		cost = 5
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICAL}
+
+		completion_reward = {
+			SOV = { add_opinion_modifier = { target = ROOT modifier = SPR_subvert_soviet_control } }
+			if = {
+				limit = { is_subject = yes }
+				OVERLORD = { end_puppet = ROOT }
+			}
+			custom_effect_tooltip = SPR_subvert_soviet_control_tt
+		}
+	}
+
+	focus = {
+		id = USABA_soviet_recovery_aid
+		available = {
+			NOT = { has_war_with = SOV }
+			SOV = { has_government = communism }
+			has_civil_war = no
+		}
+		bypass = {
+		}
+		prerequisite = { focus = USABA_soviet_equipment_shipments }
+		prerequisite = { focus = USABA_soviet_military_advisors }
+		mutually_exclusive = {
+			focus = USABA_subvert_soviet_control
+		}
+
+		icon = GFX_goal_generic_soviet_construction
+		x = 2
+		y = 1
+		relative_position_id = USABA_soviet_equipment_shipments
+		cost = 10
+
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+			every_state = {
+				limit	= {	has_state_flag = USABA_soviet_recovery_aid_1civ }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			add_timed_idea = { idea = SPR_soviet_recovery_aid days = 1095 }
+
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+					}
+					is_core_of = ROOT
+				}
+				set_state_flag = USABA_soviet_recovery_aid_1civ
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+					}
+					is_core_of = ROOT
+				}
+				set_state_flag = USABA_soviet_recovery_aid_1civ
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+					}
+					is_core_of = ROOT
+				}
+				set_state_flag = USABA_soviet_recovery_aid_1civ
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	# 우익 내전
+	focus = {
+		id = USABA_so_the_jews_are_the_problem
+		icon = GFX_goal_generic_military_deal
+		x = 30
+		y = 0
+		relative_position_id = USABA_regression_strategy
+
+		cost = 2
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = no
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+		available = {
+			has_completed_focus = USA_reestablish_the_gold_standard
+			has_civil_war = yes
+			NOT = { has_government = communism }
+		}
+		bypass = {
+		}
+		bypass = {
+			
+		}
+
+		completion_reward = {
+			add_popularity = {
+			    ideology = fascism
+			    popularity = 0.05
+			}
+			add_ideas = USABA_RIGHT_civil_war_idea
+			custom_effect_tooltip = USABA_so_the_jews_are_the_problem_tt
+			if = {
+				limit = {
+					has_template = "German National Army"
+				}
+				delete_unit_template_and_units = {
+					division_template = "German National Army"
+					disband = yes
+				}
+			}
+			hidden_effect = {
+				division_template = {
+					name = "German National Army"
+					priority = 0
+					division_names_group = USA_ARM_01
+					is_locked = yes
+					regiments = {
+						militia = { x = 0 y = 0 }
+						militia = { x = 0 y = 1 }
+						militia = { x = 0 y = 2 }
+						militia = { x = 1 y = 0 }
+						militia = { x = 1 y = 1 }
+						militia = { x = 1 y = 2 }
+					}
+				}
+				capital_scope = {
+					create_unit = {
+						division = "name = \"German National Army\" division_template = \"German National Army\" start_experience_factor = 0 start_equipment_factor = 0.9"
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German National Army\" division_template = \"German National Army\" start_experience_factor = 0 start_equipment_factor = 0.9"
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German National Army\" division_template = \"German National Army\" start_experience_factor = 0 start_equipment_factor = 0.9"
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German National Army\" division_template = \"German National Army\" start_experience_factor = 0 start_equipment_factor = 0.9"
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German National Army\" division_template = \"German National Army\" start_experience_factor = 0 start_equipment_factor = 0.9"
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+			}
+			custom_effect_tooltip = USABA_so_the_jews_are_the_problem_red_tt
+		}
+	}
+
+	focus = {
+		id = USABA_german_ethnic_union_in_america
+		icon = GFX_focus_ger_oppose_hitler
+		prerequisite = { focus = USABA_so_the_jews_are_the_problem }
+		x = 0
+		y = 1
+		relative_position_id = USABA_so_the_jews_are_the_problem
+
+		cost = 5
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = no
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+		available = {
+		}
+		bypass = {
+			has_civil_war = no
+		}
+		bypass = {
+			
+		}
+
+		completion_reward = {
+			add_popularity = {
+			    ideology = fascism
+			    popularity = 0.05
+			}
+			custom_effect_tooltip = USABA_german_ethnic_union_in_america_tt
+			hidden_effect = {
+				capital_scope = {
+					create_unit = {
+						division = "name = \"German National Army\" division_template = \"German National Army\" start_experience_factor = 0 start_equipment_factor = 0.9"
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German National Army\" division_template = \"German National Army\" start_experience_factor = 0 start_equipment_factor = 0.9"
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German National Army\" division_template = \"German National Army\" start_experience_factor = 0 start_equipment_factor = 0.9"
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German National Army\" division_template = \"German National Army\" start_experience_factor = 0 start_equipment_factor = 0.9"
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German National Army\" division_template = \"German National Army\" start_experience_factor = 0 start_equipment_factor = 0.9"
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = USABA_german_national_protection_law
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = USABA_german_ethnic_union_in_america }
+		mutually_exclusive = { focus = USA_new_team focus = USA_soviet_team focus = USA_old_team }
+		x = 0
+		y = 2
+		relative_position_id = USABA_german_ethnic_union_in_america
+
+		cost = 5
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = no
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+		available = {
+			has_civil_war = no
+		}
+		bypass = {
+		}
+		bypass = {
+			
+		}
+
+		completion_reward = {
+			add_popularity = {
+			    ideology = fascism
+			    popularity = 0.05
+			}
+		}
+	}
+
 
 	focus = {
 		id = USA_limited_intervention
@@ -3275,7 +3868,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		bypass = {
-			has_idea = BA_USA_homeland_defense
+			#has_idea = BA_USA_homeland_defense
 		}
 
 		completion_reward = {
@@ -3327,15 +3920,16 @@ focus_tree = {
 
 
 
-	# 코민테른
+
+
+	# 구질서 수호
 
 	focus = {
-		id = USA_devil_team
-		icon = GFX_focus_generic_join_comintern
+		id = USA_old_team
+		icon = GFX_focus_generic_league_of_nations
 		prerequisite = { focus = USABA_american_reindustrialization }
-		mutually_exclusive = { focus = USA_new_team }
-		mutually_exclusive = { focus = USA_old_team }
-		x = -15
+		mutually_exclusive = { focus = USA_new_team focus = USA_soviet_team focus = USABA_german_national_protection_law }
+		x = 0
 		y = 1
 		relative_position_id = USABA_american_reindustrialization
 		cost = 10
@@ -3347,26 +3941,38 @@ focus_tree = {
 			if = { limit = { has_country_flag = USABA_government_official_exile }
 				NOT = { has_country_flag = USABA_government_official_exile }
 			}
-			threat > 1
-			communism > 0.55
+			threat > 0.8
+			has_war_support > 0.55
+			has_government = democratic
 		}
 		completion_reward = {
-			SOU = {
-				country_event = generic.2
+			create_faction = USA_NATO_FACTION
+			set_rule = {
+				can_create_factions = yes
 			}
+			news_event = { id = BA_news.96 }
+			add_popularity = {
+              ideology = democratic
+	          popularity = 0.2
+            } 
+			add_stability = 0.2
+			hidden_effect = {
+			  country_event = { id = usa_event.1 days = 1 }
+			}
+			USA_congress_large_support = yes
 		}
 	}
-    
+	
 
 	# 소련 협력
 
 	focus = {
 		id = USA_devil_economy
 		icon = GFX_goal_generic_soviet_construction
-		x = 2
+		x = 7
 		y = 1
-		prerequisite = { focus = USA_devil_team }
-		relative_position_id = USA_devil_team
+		prerequisite = { focus = USA_old_team }
+		relative_position_id = USA_old_team
 		cost = 5
 
 		ai_will_do = {
@@ -3402,104 +4008,54 @@ focus_tree = {
 		}	
 	}
 
-	# 붉겨 지원
-    focus = {
-		id = USA_support_RED
-		icon = GFX_focus_chi_mission_to_the_RED
-		prerequisite = {focus = USA_devil_team}
-		
-		x = 4
-		y = 1
-		relative_position_id = USA_devil_team
-		cost = 3
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = yes
-		available = {
-			if = { limit = { has_country_flag = USABA_government_official_exile }
-				NOT = { has_country_flag = USABA_government_official_exile }
-			}
-
-		}
-		completion_reward = {
-
-		}
-	}
-
-
-
-
-	# 구질서 수호
-
-	focus = {
-		id = USA_old_team
-		icon = GFX_focus_generic_league_of_nations
-		prerequisite = { focus = USABA_american_reindustrialization }
-		mutually_exclusive = { focus = USA_new_team }
-		mutually_exclusive = { focus = USA_devil_team }
-		x = 0
-		y = 1
-		relative_position_id = USABA_american_reindustrialization
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = yes
-		available = {
-			if = { limit = { has_country_flag = USABA_government_official_exile }
-				NOT = { has_country_flag = USABA_government_official_exile }
-			}
-			threat > 0.8
-			has_government = democratic
-		}
-		completion_reward = {
-			create_faction = USA_NATO_FACTION
-			set_rule = {
-				can_create_factions = yes
-			}
-			news_event = { id = BA_news.96 }
-			hidden_effect = {
-			  country_event = { id = usa_event.1 days = 1 }
-			}
-		}
-	}
-	
-
-	#소련 지원
-    focus = {
+		focus = {
 		id = USA_support_SOV
 		icon = GFX_focus_chi_mission_to_the_soviet_union
-		prerequisite = { focus = USA_old_team focus = USA_devil_team}
-		
-		x = 6
-		y = 1
-		relative_position_id = USA_devil_team
+		x = 7
+		y = 2
+		prerequisite = { focus = USA_devil_economy }
+		relative_position_id = USA_old_team
 		cost = 5
+
 		ai_will_do = {
 			factor = 1
 		}
-		available_if_capitulated = yes
+
 		available = {
 			if = { limit = { has_country_flag = USABA_government_official_exile }
 				NOT = { has_country_flag = USABA_government_official_exile }
 			}
-
+			not = {
+				has_war_with = SOU
+			}
 		}
+		
+		bypass = {
+			SOU = {
+				OR = {
+					exists = no
+					has_war_with = USA
+					is_subject = yes
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
 		completion_reward = {
 
-		}
+		}	
 	}
-
-
 
 
 	# 연합국 지원
 	focus = {
 		id = USA_support_alies
-		icon = GFX_focus_focus_fra_ratify_stresa
+		icon = GFX_focus_ARG_join_the_allies
 		prerequisite = { focus = USA_old_team }
-		x = -5
+		x = -3
 		y = 1
 		relative_position_id = USA_old_team
 		cost = 5
@@ -3514,7 +4070,9 @@ focus_tree = {
 
 		}
 		completion_reward = {
-
+            # give_guarantee = ITA
+			# give_guarantee = ENG
+			# give_guarantee = FRA
 		}
 	}
     
@@ -3524,8 +4082,8 @@ focus_tree = {
 		icon = GFX_goal_generic_major_war
 		prerequisite = { focus = USA_support_alies }
 
-		x = -2
-		y = 1
+		x = -3
+		y = 2
 		relative_position_id = USA_support_alies
 		cost = 5
 		ai_will_do = {
@@ -3540,7 +4098,7 @@ focus_tree = {
 		}
 		completion_reward = {
             	create_wargoal = {
-	             type = puppet_wargoal_focus
+	             type = topple_government
 	             target = KAI
                }
 		}
@@ -3551,8 +4109,8 @@ focus_tree = {
 		id = USA_attack_MIL
 		icon = GFX_focus_attack_MIL
 		prerequisite = { focus = USA_support_alies }
-		x = 0
-		y = 1
+		x = 1
+		y = 2
 		relative_position_id = USA_support_alies
 		cost = 10
 		ai_will_do = {
@@ -3567,39 +4125,17 @@ focus_tree = {
 		}
 		completion_reward = {
 		  create_wargoal = {
-	             type = puppet_wargoal_focus
+	             type = topple_government
 	             target = MIL
                }
-		}
-	}
-    
-	# SRT 공격
-	focus = {
-		id = USA_attack_BLM
-		icon = GFX_focus_attack_MIL
-		prerequisite = { focus = USA_support_alies }
-		x = 2
-		y = 1
-		relative_position_id = USA_support_alies
-		cost = 4
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = yes
-		available = {
-			if = { limit = { has_country_flag = USABA_government_official_exile }
-				NOT = { has_country_flag = USABA_government_official_exile }
-			}
-
-		}
-		completion_reward = {
-            create_wargoal = {
-	             type = puppet_wargoal_focus
+		 create_wargoal = {
+	             type = topple_government
 	             target = BLM
                }
 		}
 	}
     
+
 
 
 	# 독일 지원
@@ -3646,11 +4182,19 @@ focus_tree = {
 
 		}
 		completion_reward = {
-			declare_war_on = {
-				target = TRM
-				type = puppet_wargoal_focus
-			}
-		  country_event = { id = usa_old_event.1 }
+		  	create_wargoal = {
+					 type = topple_government
+					 target = TRM
+				   }
+            
+              
+		  	create_wargoal = {
+					 type = topple_government
+					 target = ARI
+				   }
+			 hidden_effect = {
+					country_event = { id = usa_old_event.1 }
+			 }
 		}
 	}
 
@@ -3675,23 +4219,26 @@ focus_tree = {
 		}
 		completion_reward = {
           create_wargoal = {
-	             type = puppet_wargoal_focus
+	             type = topple_government
 	             target = GEM
                }
 		  create_wargoal = {
-	             type = puppet_wargoal_focus
+	             type = topple_government
 	             target = GEH
                }
 		}
 	}
 
+
+
+
 		# 샬레 공격
 		focus = {
 			id = USA_attack_COU
 			icon = GFX_goal_TRM_invade_benelux
-			prerequisite = { focus = USA_old_team }
-			x = -2
-			y = 1
+			prerequisite = { focus = USA_support_alies }
+			x = -4
+			y = 3
 			relative_position_id = USA_old_team
 			cost = 5
 			ai_will_do = {
@@ -3706,16 +4253,20 @@ focus_tree = {
 			}
 			completion_reward = {
 				create_wargoal = {
-					 type = puppet_wargoal_focus
+					 type = topple_government
 					 target = COU
 				   }
 				   create_wargoal = {
-					type = puppet_wargoal_focus
+					type = topple_government
 					target = SHE
 				  }
 				  create_wargoal = {
-					type = puppet_wargoal_focus
+					type = topple_government
 					target = KSP
+				  }
+				  create_wargoal = {
+					type = topple_government
+					target = HEU
 				  }
 			}
 		}
@@ -3724,9 +4275,9 @@ focus_tree = {
 
 		focus = {
 			id = USA_support_north_europe
-			icon = GFX_focus_generic_pan_scandinavism
+			icon = GFX_focus_generic_scandinavia_flags
 			prerequisite = { focus = USA_old_team }
-			x = 4
+			x = 5
 			y = 0
 			relative_position_id = USA_support_GEK
 			cost = 5
@@ -3745,16 +4296,14 @@ focus_tree = {
 			}
 		}
 
-		# 핀란드 지원
-
 		focus = {
 			id = USA_support_FIN
-			icon = GFX_focus_EST_national_pride_in_finland
+			icon = GFX_focus_invite_finland
 			prerequisite = { focus = USA_support_north_europe }
 			x = -1
 			y = 1
 			relative_position_id = USA_support_north_europe
-			cost = 3
+			cost = 5
 			ai_will_do = {
 				factor = 1
 			}
@@ -3778,8 +4327,8 @@ focus_tree = {
 			id = USA_attack_RED
 			icon = GFX_focus_attack_RED
 			prerequisite = { focus = USA_support_north_europe }
-			x = 1
-			y = 1
+			x = 0
+			y = 2
 			relative_position_id = USA_support_north_europe
 			cost = 5
 			ai_will_do = {
@@ -3794,19 +4343,80 @@ focus_tree = {
 			}
 			completion_reward = {
 				create_wargoal = {
-					type = puppet_wargoal_focus
+					type = topple_government
 					target = RED
+				  }
+				create_wargoal = {
+					type = topple_government
+					target = RE1
+				  }
+				create_wargoal = {
+					type = topple_government
+					target = RE2
+				  }
+				create_wargoal = {
+					type = topple_government
+					target = RE3
 				  }
 			}
 		}
+
 		focus = {
-			id = USA_attack_abyss
-			icon = GFX_focus_GEI_beyond_consciousness
-			prerequisite = { focus = USA_old_team_guardian }
-			x = 0
-			y = 6
+			id = USA_support_spain
+			icon = GFX_focus_por_iberian_summit
+			prerequisite = { focus = USA_old_team }
+			x = -5
+			y = 1
 			relative_position_id = USA_old_team
-			cost = 10
+			cost = 5
+			ai_will_do = {
+				factor = 1
+			}
+			available_if_capitulated = yes
+			available = {
+				if = { limit = { has_country_flag = USABA_government_official_exile }
+					NOT = { has_country_flag = USABA_government_official_exile }
+				}
+	
+			}
+			completion_reward = {
+
+			}
+		}
+
+
+
+		focus = {
+			id = USA_support_ITA
+			icon = GFX_focus_befriend_italy
+			prerequisite = { focus = USA_old_team }
+			x = 3
+			y = 1
+			relative_position_id = USA_old_team
+			cost = 5
+			ai_will_do = {
+				factor = 1
+			}
+			available_if_capitulated = yes
+			available = {
+				if = { limit = { has_country_flag = USABA_government_official_exile }
+					NOT = { has_country_flag = USABA_government_official_exile }
+				}
+	
+			}
+			completion_reward = {
+
+			}
+		}
+
+		focus = {
+			id = USA_attack_SHA
+			icon = GFX_focus_attack_SHA
+			prerequisite = { focus = USA_support_ITA }
+			x = 0
+			y = 2
+			relative_position_id = USA_support_ITA
+			cost = 5
 			ai_will_do = {
 				factor = 1
 			}
@@ -3819,12 +4429,20 @@ focus_tree = {
 			}
 			completion_reward = {
 				create_wargoal = {
-					type = puppet_wargoal_focus
-					target = GEI
+					type = topple_government
+					target = ABY
 				  }
+ 				create_wargoal = {
+					type = topple_government
+					target = HYA
+				  }
+				create_wargoal = {
+					type = topple_government
+					target = SHA
+				  }
+
 			}
 		}
-
 
 	
 	# 민주주의의 수호자
@@ -3834,9 +4452,11 @@ focus_tree = {
 		icon = GFX_focus_SWE_refuge_from_war
 		prerequisite = { focus = USA_attack_KAI}
 		prerequisite = { focus = USA_attack_MIL}
+		prerequisite = { focus = USA_attack_COU}
 		prerequisite = { focus = USA_attack_TRM}
 		prerequisite = { focus = USA_attack_GEH}
 		prerequisite = { focus = USA_attack_RED}
+        prerequisite = { focus = USA_attack_SHA}
 
 		x = 0
 		y = 4
@@ -3850,7 +4470,6 @@ focus_tree = {
 			if = { limit = { has_country_flag = USABA_government_official_exile }
 				NOT = { has_country_flag = USABA_government_official_exile }
 			}
-
 		}
 		completion_reward = {
 			add_threat = -80
@@ -3864,13 +4483,13 @@ focus_tree = {
 	focus = {
 		id = USA_marshall_plan
 		icon = GFX_goal_generic_construct_civ_factory
-		prerequisite = { focus = USA_old_team_guardian}
+		prerequisite = { focus = USA_old_team_guardian }
 
 
-		x = -2
+		x = -1
 		y = 1
 		relative_position_id = USA_old_team_guardian
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 10
 		}
@@ -3886,22 +4505,19 @@ focus_tree = {
 		}
 	}
 
-
-
-
-	# 팍스 아메리카
+		# 팍스 아메리카
 	focus = {
 		id = USA_Pax_Americana
 		icon = GFX_focus_ARG_the_american_push
-		prerequisite = { focus = USA_attack_abyss}
+		prerequisite = { focus = USA_old_team_guardian }
 
 
 		x = 0
-		y = 5
+		y = 3
 		relative_position_id = USA_old_team_guardian
-		cost = 5
+		cost = 10
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 		available_if_capitulated = yes
 		available = {
@@ -3911,7 +4527,7 @@ focus_tree = {
 
 		}
 		completion_reward = {
-
+              add_ideas = Pax_Americana
 		}
 	}
 
@@ -3919,14 +4535,10 @@ focus_tree = {
 
 
 
-
-
-
-	# 핵폭탄
 	focus = {
-		id = USA_old_team_nuclear
-		icon = GFX_focus_wonderweapons
-		prerequisite = { focus = USA_old_team focus = USA_devil_team}
+		id = USA_old_team_research
+		icon = GFX_focus_research
+		prerequisite = { focus = USA_old_team }
 		x = -7
 		y = 1
 		relative_position_id = USA_old_team
@@ -3942,6 +4554,43 @@ focus_tree = {
 
 		}
 		completion_reward = {
+            add_research_slot =1
+		}
+	}
+
+
+	# 핵폭탄
+	focus = {
+		id = USA_old_team_nuclear
+		icon = GFX_focus_wonderweapons
+		prerequisite = { focus = USA_old_team_research }
+		x = -7
+		y = 2
+		relative_position_id = USA_old_team
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = yes
+		available = {
+			if = { limit = { has_country_flag = USABA_government_official_exile }
+				NOT = { has_country_flag = USABA_government_official_exile }
+			}
+
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = USA_manhattan_project
+				bonus = 1.0
+				uses = 1
+				category = nuclear
+			}
+			add_tech_bonus = {
+				name = USA_manhattan_project
+				bonus = 1.0
+				uses = 1
+				category = nuclear
+			}
 
 
 		}
@@ -3956,26 +4605,26 @@ focus_tree = {
 		id = USA_new_team
 		icon = GFX_focus_generic_little_entente
 		prerequisite = { focus = USABA_american_reindustrialization }
-		mutually_exclusive = { focus = USA_old_team }
-		mutually_exclusive = { focus = USA_devil_team }
+		mutually_exclusive = { focus = USA_old_team focus = USA_soviet_team focus = USABA_german_national_protection_law }
 
 		x = 12
 		y = 1
 		relative_position_id = USABA_american_reindustrialization
 		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
+		#ai_will_do = {
+		#	factor = 1
+		#}
 		available_if_capitulated = yes
 		available = {
 			if = { limit = { has_country_flag = USABA_government_official_exile }
 				NOT = { has_country_flag = USABA_government_official_exile }
 			}
-			threat > 0.8
+			threat > 0.99
 			congress_high_support_trigger = yes
 		}
 		completion_reward = {
 			country_event = { id = usa_new_event.1 days = 3 }
+			USA_congress_large_opposition = yes
 		}
 	}
 	
@@ -3999,7 +4648,14 @@ focus_tree = {
 
 		}
 		completion_reward = {
-			
+			add_war_support = 0.1
+			USA_congress_small_support = yes
+			add_stability = -0.1
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.05
+			}
+			#add_manpower = -20000 #20k
 		}
 	}
 
@@ -4022,6 +4678,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			news_event = { id = BA_news.111 }
+			add_ideas = USA_anime
 		}
 	}
 
@@ -4045,7 +4702,7 @@ focus_tree = {
 
 		}
 		completion_reward = {
-			
+
 		}
 	}
 
@@ -4062,7 +4719,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = USA_new_team
-		cost = 0.5
+		cost = 1
 		ai_will_do = {
 			factor = 1
 		}
@@ -4074,9 +4731,9 @@ focus_tree = {
 			add_threat = 15
 			news_event = { id = BA_news.97 }
 			country_event = { id = usa_new_event.2 days = 3 }
-			hidden_effect = {
-
-			}
+			#hidden_effect = {
+            #
+			#}
 		}
 	}
 
@@ -4128,6 +4785,7 @@ focus_tree = {
 
 		}
 		completion_reward = {
+			add_stability = 0.1
 			add_popularity = {
 				ideology = democratic
 				popularity = 0.3
@@ -4157,8 +4815,8 @@ focus_tree = {
 
 		}
 		completion_reward = {
-
-
+            give_guarantee = MIL
+			news_event = {id = BA_news.112 days = 2}
 		}
 	}
 
@@ -4185,7 +4843,6 @@ focus_tree = {
 		}
 		completion_reward = {
 
-
 		}
 	}
 
@@ -4198,7 +4855,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = USA_blue_kivotos_MIL
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 10
 		}
@@ -4210,9 +4867,11 @@ focus_tree = {
 
 		}
 		completion_reward = {
-			# MIL = { add_to_tech_sharing_group = USA_MIL_tech_group }
-			# add_to_tech_sharing_group = USA_MIL_tech_group
+			 #MIL = { add_to_tech_sharing_group = USA_MIL_tech_group }
+			 #add_to_tech_sharing_group = USA_MIL_tech_group
+			add_stability = 0.05
 			add_research_slot = 1
+			add_ideas = MIL_internet_2
 		}
 	}
     
@@ -4238,7 +4897,6 @@ focus_tree = {
 
 		}
 		completion_reward = {
-
 
 		}
 	}
@@ -4278,32 +4936,6 @@ focus_tree = {
 		icon = GFX_goal_TRM_New_fascism_friend
 		prerequisite = { focus = USA_blue_kivotos focus = USA_bad_kivotos}
 
-		x = -2
-		y = 4
-		relative_position_id = USA_new_team
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = yes
-		available = {
-			if = { limit = { has_country_flag = USABA_government_official_exile }
-				NOT = { has_country_flag = USABA_government_official_exile }
-			}
-
-		}
-		completion_reward = {
-
-		}
-	}
-
-	
-	# 에덴
-	focus = {
-		id = USA_bad_kivotos_Eden
-		icon = GFX_goal_TRN_eden_pacts_letsgo
-		prerequisite = { focus = USA_blue_kivotos focus = USA_bad_kivotos}
-
 		x = 0
 		y = 4
 		relative_position_id = USA_new_team
@@ -4319,16 +4951,136 @@ focus_tree = {
 
 		}
 		completion_reward = {
-
+              give_guarantee = COU
+			  news_event = {id = BA_news.114 days = 2} 
 		}
 	}
+
+    focus = {
+		id = USA_buntang
+		icon = GFX_focus_ARG_defense_and_democracy
+		prerequisite = { focus = USA_blue_kivotos_MIL focus = USA_bad_kivotos_Eden focus= USA_bad_kivotos_COU}
+		x = -1
+		y = 5
+		relative_position_id = USA_new_team
+        cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = yes
+        
+
+		available = {
+			
+
+	}
+	completion_reward = {
+		#add_ideas = USA_Buntang
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "La Resistance"
+					}
+				}
+				add_tech_bonus = {
+					name = USA_black_chamber
+					bonus = 1.0
+					uses = 2
+					category = encryption_tech
+					category = decryption_tech
+				}
+			}
+			else = {
+				add_ideas = USA_black_chamber
+			}
+	}
+}
+
 	
+	# 에덴
+	focus = {
+		id = USA_bad_kivotos_Eden
+		icon = GFX_goal_TRN_eden_pacts_letsgo
+		prerequisite = { focus = USA_blue_kivotos}
+
+		x = -2
+		y = 4
+		relative_position_id = USA_new_team
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = yes
+		available = {
+			if = { limit = { has_country_flag = USABA_government_official_exile }
+				NOT = { has_country_flag = USABA_government_official_exile }
+			}
+			if = {
+				NOT = {
+					TRM = {
+						has_war_with = GEH
+						has_war_with = GEM
+					}
+				}
+				TRM = {
+					NOT = {
+					   has_government = fascism
+					}
+					is_in_faction_with = GEM
+				}
+			}
+		}
+		completion_reward = {
+            give_guarantee = TRM
+			give_guarantee = GEM
+			news_event = {id = BA_news.112 days = 2}
+		}
+	}
+
+		focus = {
+		id = USA_bad_kivotos_Eden2
+		icon = GFX_focus_SWE_form_rfsu
+		prerequisite = { focus = USA_blue_kivotos}
+
+		x = 0
+		y = 2
+		relative_position_id = USA_bad_kivotos_Eden
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = yes
+		available = {
+			if = { limit = { has_country_flag = USABA_government_official_exile }
+				NOT = { has_country_flag = USABA_government_official_exile }
+			}
+			if = {
+				NOT = {
+					TRM = {
+						has_war_with = GEH
+						has_war_with = GEM
+					}
+				}
+				TRM = {
+					NOT = {
+					   has_government = fascism
+					}
+					is_in_faction_with = GEM
+				}
+			}
+		}
+		completion_reward = {
+			  add_political_power = 50
+              add_stability = 0.15
+			  add_popularity = {
+				 ideology = democratic
+				 popularity = 0.1
+			  }
+		}
+	}
 
 
-
-
-
-
+	
 
      #공산 파시
 	focus = {
@@ -4347,21 +5099,17 @@ focus_tree = {
 		available_if_capitulated = yes
 		available = {
 			if = { limit = { has_country_flag = USABA_government_official_exile }
-				NOT = { has_country_flag = USABA_government_official_exile }
+				NOT = { has_country_flag = USABA_government_official_exile}
 			}
 
 		}
 		completion_reward = {
+			add_war_support = 0.2
+			add_stability = -0.1
 			add_popularity = {
-				ideology = communism
-				popularity = 0.15
+				ideology = democratic
+				popularity = -1
 			}
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.15
-			}
-
-
 		}
 	}
 
@@ -4386,8 +5134,13 @@ focus_tree = {
 	
 			}
 			completion_reward = {
-	
-	
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.25
+			}
+			set_politics = { ruling_party = fascism}
+			news_event = {id = BA_news.115 days = 2}
+
 			}
 		}
     
@@ -4400,7 +5153,7 @@ focus_tree = {
 	# 트리니티 친선
 	focus = {
 		id = USA_bad_kivotos_TRM
-		icon = GFX_goal_TRN_TRM_newfocus_7
+		icon = GFX_goal_TRN_Hegemony
 		prerequisite = { focus = USA_bad_kivotos }
 		mutually_exclusive = { focus = USA_bad_kivotos_GEM }
 		x = 1
@@ -4414,17 +5167,24 @@ focus_tree = {
 		available = {
 			if = { limit = { has_country_flag = USABA_government_official_exile }
 				NOT = { has_country_flag = USABA_government_official_exile }
+				TRM = {
+					ideology = fascism
+				}
 			}
 
 		}
 		completion_reward = {
-
-
+            add_popularity = {
+				ideology = fascism
+				popularity = 0.25
+			}
+            set_politics = { ruling_party = fascism}
+			news_event = {id = BA_news.116 days = 2}
 		}
 	}
 
 
-	# 신비 육성
+	# 신비 헤일로 보병 육성
 	focus = {
 		id = USA_bad_kivotos_halo_infantry_division
 		icon = GFX_goal_TRM_mika_Idolization
@@ -4449,10 +5209,67 @@ focus_tree = {
 		}
 	}
 
+
+	# 게헨나 헤일로
+
+		focus = {
+		id = USA_bad_kivotos_GEM_halo_infantry
+		icon = GFX_goal_GEH_sundoboo
+		prerequisite = { focus = USA_bad_kivotos_halo_infantry_division}
+		prerequisite = { focus = USA_bad_kivotos_GEM} 
+		x = -1
+		y = 4
+		relative_position_id = USA_bad_kivotos
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available_if_capitulated = yes
+		available = {
+			if = { limit = { has_country_flag = USABA_government_official_exile }
+				NOT = { has_country_flag = USABA_government_official_exile }
+			}
+
+		}
+		completion_reward = {
+
+
+		}
+	}
+
+	# 트리니티 헤일로
+
+	   focus = {
+		id = USA_bad_kivotos_TRM_halo_infantry
+		icon = GFX_goal_TRN_serve_to_trinity
+		prerequisite = { focus = USA_bad_kivotos_halo_infantry_division}
+		prerequisite = { focus = USA_bad_kivotos_TRM} 
+		x = 1
+		y = 4
+		relative_position_id = USA_bad_kivotos
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available_if_capitulated = yes
+		available = {
+			if = { limit = { has_country_flag = USABA_government_official_exile }
+				NOT = { has_country_flag = USABA_government_official_exile }
+			}
+
+		}
+		completion_reward = {
+
+
+		}
+	}
+
+
+
 		# 미카 지원
 		focus = {
 			id = USA_bad_kivotos_support_Mika
-			icon = GFX_goal_TRM_mika_Idolization
+			icon = GFX_focus_deal_with_mika
 			prerequisite = { focus = USA_bad_kivotos_TRM focus = USA_bad_kivotos_GEM}
 			x = 2
 			y = 2
@@ -4477,7 +5294,7 @@ focus_tree = {
 			# 미카 따까리
 	focus = {
 		id = USA_bad_kivotos_Mika_fanclub
-		icon = GFX_focus_CZE_german_puppet
+		icon = GFX_goal_TRN_TRM_newfocus_7
 		prerequisite = { focus = USA_bad_kivotos_support_Mika }
 		x = 2
 		y = 3
@@ -4507,7 +5324,7 @@ focus_tree = {
 		id = USA_bad_kivotos_RED
 		icon = GFX_focus_chi_mission_to_the_RED
 		prerequisite = { focus = USA_bad_kivotos }
-		x = 5
+		x = 4
 		y = 1
 		relative_position_id = USA_bad_kivotos
 		cost = 5
@@ -4522,11 +5339,91 @@ focus_tree = {
 
 		}
 		completion_reward = {
-            
+            add_popularity = {
+				ideology = communism
+				popularity = 0.15
+			}
+			set_politics = { ruling_party = communism elections_allowed = yes }
+			USA_congress_large_opposition = yes
+			news_event = {id = BA_news.117 days = 2}
 
 		}
 	}
 
+		focus = {
+		id = USA_bad_kivotos_RED_pudding
+		icon = GFX_focus_generic_truck
+		prerequisite = { focus = USA_bad_kivotos_RED }
+		x = 0
+		y = 1
+		relative_position_id = USA_bad_kivotos_RED
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available_if_capitulated = yes
+		available = {
+			if = { limit = { has_country_flag = USABA_government_official_exile }
+				NOT = { has_country_flag = USABA_government_official_exile }
+			}
+
+		}
+		completion_reward = {
+            add_ideas = USA_pudding
+			add_war_support = -0.1
+			USA_congress_small_opposition = yes
+
+		}
+	}
+
+	focus = {
+		id = USA_bad_kivotos_RED_more_pudding
+		icon = GFX_focus_SOV_the_road_of_life
+		prerequisite = { focus = USA_bad_kivotos_RED_pudding }
+		x = 1
+		y = 2
+		relative_position_id = USA_bad_kivotos_RED
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available_if_capitulated = yes
+		available = {
+			if = { limit = { has_country_flag = USABA_government_official_exile }
+				NOT = { has_country_flag = USABA_government_official_exile }
+			}
+
+		}
+		completion_reward = {
+            add_stability = 0.05
+			USA_congress_small_support = yes
+
+		}
+	}
+
+
+		focus = {
+		id = USA_bad_kivotos_RED_see_myself
+		icon = GFX_focus_prc_infiltration
+		prerequisite = { focus = USA_bad_kivotos_RED_pudding }
+		x = 0
+		y = 3
+		relative_position_id = USA_bad_kivotos_RED
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available_if_capitulated = yes
+		available = {
+			if = { limit = { has_country_flag = USABA_government_official_exile }
+				NOT = { has_country_flag = USABA_government_official_exile }
+			}
+
+		}
+		completion_reward = {
+              
+		}
+	}
 
     
 
@@ -5087,6 +5984,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
+			add_political_power = -200
 			add_timed_idea = { idea = USA_adjusted_compensation_payment days = 180 }
 			USA_great_depression_level_down = yes
 			if = {
@@ -7907,6 +8805,17 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "La Resistance"
+					}
+				}
+				add_ideas = office_of_strategic_services
+			}
+			else = {
+				add_ideas = office_of_strategic_services_lar
+			}
              
 		}
 	}
@@ -8405,6 +9314,48 @@ focus_tree = {
 			add_ideas = USA_army_of_the_united_states
 		}
 	}
+        # 열병식
+		focus = {
+		id = USA_army_of_the_united_states_propaganda
+		icon = GFX_focus_generic_fascist_propaganda
+		x = -2
+		y = 1
+		prerequisite = { focus = USA_army_of_the_united_states }
+		relative_position_id = USA_army_of_the_united_states
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = { 
+				has_idea = second_great_depression
+				has_idea = great_depression
+				has_idea = great_depression_2
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_war_support = 0.1
+			add_popularity = {
+	          ideology = fascism
+	          popularity = 0.05
+           }
+		   USA_congress_yes_support = yes
+		}
+	}
+
+
+
 	focus = {
 		id = USA_womens_armed_service_integration_act
 		icon = GFX_focus_generic_treaty
@@ -8529,12 +9480,12 @@ focus_tree = {
 				mio:USA_tank_destroyer_board_organization = {
 					add_mio_size = 2
 				}
+				
 			}
 			ELSE = {
 				custom_effect_tooltip = available_designer
 				show_ideas_tooltip = tank_destroyer_board
 			}
-			
 		}
 	}
 	focus = {
@@ -9519,4 +10470,432 @@ focus_tree = {
 			}
 		}
 	} 
+
+	# 전쟁부 새로 만든 중점
+    focus = {
+	 	id = USA_wake_giant
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = USA_war_department }
+		x = 17
+		y = 1
+		relative_position_id = USA_war_department
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = no
+        available = { has_completed_focus = USABA_american_reindustrialization}
+        completion_reward = {
+			add_war_support = 0.2
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = USA_arsenal_of_democracy_3AF
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = USA_arsenal_of_democracy_3AF
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = USA_arsenal_of_democracy_3AF
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = USA_arsenal_of_democracy_3AF
+			}
+		}
+	}
+
+
+	focus = {
+		id = USA_wake_giant2
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = USA_wake_giant }
+		x = 0
+		y = 1
+		relative_position_id = USA_wake_giant
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+		
+
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_idea = undisturbed_isolation }
+					NOT = { has_idea = isolation }
+					NOT = { has_country_flag = USA_the_giant_wakes_added_civ_eco }
+				}
+				add_political_power = 100
+			}
+			if = {
+				limit = {
+					OR = {
+						has_idea = isolation 
+						has_idea = undisturbed_isolation 
+						has_country_flag = USA_the_giant_wakes_added_civ_eco
+					}
+				}
+				add_ideas = civilian_economy
+				set_country_flag = USA_the_giant_wakes_added_civ_eco
+			}
+                
+		}
+
+	}
+
+
+	 # 민간 -> 군수 (재무장)
+		focus = {
+			id = USA_change_weapon_industry
+            icon = GFX_focus_SOV_merge_plants
+			prerequisite = { focus = USA_wake_giant2 }
+			x = 0
+			y = 1
+            relative_position_id = USA_wake_giant2
+			cost = 10
+			completion_reward = {
+			  add_ideas = wartime_industry_focus
+			}
+		}
+
+
+		focus = {
+			id = USA_change_weapon_industry2
+            icon = GFX_focus_generic_support_the_left_right
+			prerequisite = { focus = USA_change_weapon_industry }
+			x = 0
+			y = 2
+            relative_position_id = USA_wake_giant2
+			cost = 10
+			completion_reward = {
+			  custom_effect_tooltip = available_designer
+			  show_ideas_tooltip = USA_general_motors
+			random_owned_controlled_state = {
+				limit = {
+					arms_factory > 0
+					free_building_slots = {
+						building = arms_factory
+						size > 4
+						include_locked = yes
+					}
+					OR = {
+						region = 117
+						region = 118
+						region = 119
+						region = 120
+						region = 199
+						region = 219
+						region = 218
+						region = 211
+						region = 214
+						region = 198
+						region = 197
+					}
+				}
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = arms_factory
+					level = 5
+					instant_build = yes
+				}
+				set_state_flag = USA_military_construction_5MF
+			}
+			if = {
+				limit = {
+					any_owned_state = {
+						AND = {
+							is_controlled_by = USA
+							is_core_of = USA
+							free_building_slots = {
+								building = infrastructure
+								size > 1
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { 
+						is_core_of = USA
+						free_building_slots = {
+							building = infrastructure
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+					set_state_flag = USA_military_construction_2Inf
+				}
+			}
+			if = {
+				limit = {
+			 		any_owned_state = { 
+						is_controlled_by = USA
+						is_core_of = USA
+						NOT = {
+							has_state_flag = USA_military_construction_2Inf
+						}
+						free_building_slots = {
+							building = infrastructure
+							size > 1
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					prioritize = { 371 }
+					limit = { 
+						is_core_of = USA
+						NOT = {
+							has_state_flag = USA_military_construction_2Inf
+						}
+						free_building_slots = {
+							building = infrastructure
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+					set_state_flag = USA_military_construction_2Inf
+				}
+			}
+			
+			if = {
+				limit = {
+					any_owned_state = { #doing this in sequence so that one single state having open infra slots doesn't cascade through everything. There is probably a smarter way of doing this but it is late and my brain no worky
+						AND = {
+							is_controlled_by = USA
+							is_core_of = USA
+							NOT = {
+								has_state_flag = USA_military_construction_2Inf
+							}
+							free_building_slots = {
+								building = infrastructure
+								size > 1
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { 
+						is_core_of = USA
+						NOT = {
+							has_state_flag = USA_military_construction_2Inf
+						}
+						free_building_slots = {
+							building = infrastructure
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+					set_state_flag = USA_military_construction_2Inf
+				}
+			}
+			if = {
+				limit = { 
+					any_owned_state = {
+						is_controlled_by = USA
+						is_core_of = USA
+						NOT = {
+							has_state_flag = USA_military_construction_2Inf
+						}
+						free_building_slots = {
+							building = infrastructure
+							size > 1
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					prioritize = { 375 }
+					limit = { 
+						is_core_of = USA
+						NOT = {
+							has_state_flag = USA_military_construction_2Inf
+						}
+						free_building_slots = {
+							building = infrastructure
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+					set_state_flag = USA_military_construction_2Inf
+				}
+			}
+						
+			if = {
+				limit = {
+					any_owned_state = {
+						AND = {
+							is_controlled_by = USA
+							is_core_of = USA
+							NOT = {
+								has_state_flag = USA_military_construction_2Inf
+							}
+							free_building_slots = {
+								building = infrastructure
+								size > 1
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { 
+						is_core_of = USA
+						NOT = {
+							has_state_flag = USA_military_construction_2Inf
+						}
+						free_building_slots = {
+							building = infrastructure
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+					set_state_flag = USA_military_construction_2Inf
+				}
+			}
+			
+			if = {
+				limit = { 
+					any_owned_state = {
+						is_controlled_by = USA
+						is_core_of = USA
+						NOT = {
+							has_state_flag = USA_military_construction_2Inf
+						}
+						free_building_slots = {
+							building = infrastructure
+							size > 1
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					prioritize = { 378 }
+					limit = { 
+						is_core_of = USA
+						NOT = {
+							has_state_flag = USA_military_construction_2Inf
+						}
+						free_building_slots = {
+							building = infrastructure
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+					set_state_flag = USA_military_construction_2Inf
+				}
+			}
+						
+		}
+			}
+		
+  
+	# 아메리카 소비에트 사회주의 공화국
+
+	focus = {
+		id = USA_soviet_team
+		icon = GFX_focus_generic_join_comintern
+		prerequisite = { focus = USABA_soviet_recovery_aid focus = USABA_a_strong_alliance }
+		mutually_exclusive = { focus = USA_old_team focus = USA_new_team focus = USABA_german_national_protection_law }
+
+		x = 2
+		y = 3
+		relative_position_id = USABA_SOV_enter_american_civilwar
+		cost = 5
+		available = {
+			if = { limit = { has_country_flag = USABA_government_official_exile }
+				NOT = { has_country_flag = USABA_government_official_exile }
+			}
+			has_government = communism
+		}
+		bypass = {
+		}
+		#ai_will_do = {
+		#	factor = 1
+		#}
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
 }
+
+
+

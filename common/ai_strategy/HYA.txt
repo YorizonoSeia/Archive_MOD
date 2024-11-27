@@ -9,12 +9,41 @@ HYA_war_with_sha_aby = {
 	abort_when_not_enabled = yes
 	ai_strategy = {
 		type = prepare_for_war
-		id = "ABY"
-		value = 100
+		id = "SHA"
+		value = 200
 	}
 	ai_strategy = {
 		type = prepare_for_war
-		id = "SHA"
+		id = "ABY"
+		value = 200
+	}
+}
+HYA_war_with_sha_aby_any = {
+	allowed = {
+		original_tag = HYA
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		has_war_with = ABY
+	}
+	ai_strategy = {
+		type = front_unit_request
+
+		country_trigger = {
+			original_tag = SHA
+		}
+		
+		value = 200
+	}
+	ai_strategy = {
+		type = front_unit_request
+
+		country_trigger = {
+			original_tag = ABY
+		}
+		
 		value = 100
 	}
 }

@@ -168,7 +168,7 @@ characters={
 		name=KAP_rei
 		portraits={
 			civilian={
-				large=GFX_Portrait_KAP_rei
+				large=GFX_portrait_KAP_rei
 			}
 		}
 		country_leader={

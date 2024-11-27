@@ -1,5 +1,180 @@
 ideas = {
     country = {
+
+		USABA_LEFT_civil_war_idea = {
+
+			picture = generic_production_bonus
+
+			allowed = {
+				original_tag = USA
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			cancel = {
+				has_civil_war = no
+			}
+
+			on_remove = {
+				#이곳에 좌파 내전 끝날 시 효과 입력
+				SOU = { puppet = USA }
+			}
+
+			modifier = {
+				custom_modifier_tooltip = USABA_civil_war_idea_tt
+			}
+		}
+
+		USABA_RIGHT_civil_war_idea = {
+
+			picture = generic_production_bonus
+
+			allowed = {
+				original_tag = USA
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			cancel = {
+				has_civil_war = no
+			}
+
+			on_remove = {
+				#이곳에 우파 내전 끝날 시 효과 입력
+				if = {
+					limit = {
+						has_template = "German National Army"
+					}
+					delete_unit_template_and_units = {
+						division_template = "German National Army"
+						disband = yes
+					}
+				}
+			}
+
+			modifier = {
+				custom_modifier_tooltip = USABA_civil_war_idea_tt
+			}
+		}
+
+		USABA_soviet_recovery_aid = {
+
+			picture = generic_production_bonus
+
+			allowed = {
+				original_tag = USA
+				NOT = { has_government = fascism }
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			modifier = {
+				stability_weekly = 0.002
+				communism_drift = 0.05
+				industry_repair_factor = 0.1
+			}
+		}
+
+		USABA_soviet_military_advisors = {
+
+			picture = saf_soviet_advisers
+
+			allowed = {
+				original_tag = USA
+				NOT = { has_government = fascism }
+			}
+
+			cancel = {
+				has_civil_war = no
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			modifier = {
+				communism_drift = 0.05
+				planning_speed = 0.1
+				max_planning = 0.1
+			}
+		}
+		
+
+		USABA_equipment_shipments = {
+
+			picture = generic_artillery_regiments
+
+			allowed = {
+				OR = {
+					original_tag = USA
+					original_tag = ITA
+					original_tag = ENG
+					original_tag = CAN
+					original_tag = ITA
+				}
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			modifier = {
+				lend_lease_tension = -0.5
+				request_lease_tension = -0.5
+			}
+		}
+
+		USABA_equipment_shipments_usa = {
+
+			name = USABA_equipment_shipments
+
+			picture = generic_artillery_regiments
+
+			allowed = {
+				original_tag = USA
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			modifier = {
+				lend_lease_tension = -0.5
+			}
+		}
+
+		USABA_civil_war_commitments = {
+
+			name = USA_civil_war_commitments
+
+			picture = generic_manpower_bonus
+
+			allowed = {
+				OR = {
+					original_tag = USA
+					original_tag = ITA
+					original_tag = ENG
+					original_tag = CAN
+					original_tag = ITA
+				}
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			modifier = {
+				send_volunteer_size = 12
+				send_volunteer_divisions_required = -1
+				lend_lease_tension = -0.30
+			}
+		}
         USABA_secret_currency_issuance = {
 			picture = generic_disjointed_gov
 			
@@ -8,6 +183,29 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				has_government = communism
+			}
+
+			cancel = {
+				NOT = {
+					has_idea = second_great_depression
+				}
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.05
+				consumer_goods_factor = -0.15
+				custom_modifier_tooltip = USABA_second_great_depression_idea_tt
+			}
+        }
+        
+		# 강제 기상
+		USABA_forced_wake_up = {
+			picture = generic_disjointed_gov
+			
+			allowed = {
 				always = no
 			}
 
@@ -20,14 +218,24 @@ ideas = {
 				}
 			}
 
+
+			allowed_civil_war = {
+				always = no
+			}
+
 			removal_cost = -1
 			
 			modifier = {
-				political_power_gain = 0.05
-				consumer_goods_factor = -0.15
-				custom_modifier_tooltip = USABA_second_great_depression_idea_tt
+				political_power_gain = -0.2
+				consumer_goods_factor = -0.25
+				production_speed_buildings_factor = 0.3
+			    custom_modifier_tooltip = USABA_forced_wake_up_tt
 			}
         }
+
+
+
+
         USABA_collapsed_government_authority = {
 			picture = generic_disjointed_gov
 			
@@ -215,7 +423,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				political_power_gain = 0.10
+				political_power_gain = 0.50
 				stability_weekly = 0.0030
 				consumer_goods_factor = -0.25
 				production_speed_buildings_factor = 0.25
@@ -289,6 +497,111 @@ ideas = {
                 generate_wargoal_tension = 1
 			}
         }
-		
-	}
+
+		Pax_Americana = {
+			picture = generic_victors_of_ww1
+
+            allowed = {
+                tag = USA
+            }
+
+            allowed_civil_war = {
+				always = no
+			}
+
+			modifier = {
+                join_faction_tension = -1
+                generate_wargoal_tension = -0.7
+				democratic_drift = 1
+				add_stability_daily = 0.1
+			}
+
+		}
+
+		USA_anime = {
+			picture = man_low_legitimacy5
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+              stability_weekly = 0.001
+			  stability_factor = 0.05
+ 	        }
+       }
+
+
+	   # 우유부단한 신념
+	   week_faith_for_new_team = {
+            picture = generic_disjointed_gov
+            
+			allowed = {
+                tag = USA
+            }
+
+            allowed_civil_war = {
+				always = no
+			}
+
+			modifier = {
+			    #add_political_power = -0.1
+				#democracy_factor = -0.2
+				stability_factor = -0.2
+				war_support_factor = -0.5
+				stability_weekly = -0.005
+				war_support_weekly = -0.005
+				war_stability_factor = -0.6
+
+			}
+	   }
+
+    # 구질서 수호 반란 미국 국민정신 
+
+	 strong_faith_for_old_team = {
+            picture = generic_disjointed_gov
+            
+			allowed = {
+                tag = USA
+            }
+
+            allowed_civil_war = {
+				always = no
+			}
+
+			modifier = {
+                #add_political_power = 100
+				war_support_factor = 0.4
+				war_stability_factor = 0.2
+				war_support_weekly = 0.01
+			}
+	   }
+
+
+	   # 분탕 미국
+
+	   	 USA_pudding = {
+            picture = generic_disjointed_gov
+            
+			allowed = {
+                tag = USA
+            }
+
+            allowed_civil_war = {
+				always = no
+			}
+
+			modifier = {
+				stability_factor = -0.1
+	   			stability_weekly = 0.01
+			}
+	   }	
+
+  }
 }

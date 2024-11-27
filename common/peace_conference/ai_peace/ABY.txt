@@ -10,15 +10,19 @@ peace_ai_desires = {
 			}
 			FROM.FROM.FROM = {
 				is_core_of = HYA
+				NOT = {
+					state = 972
+					state = 986
+				}
 			}
 		}
-		ai_desire = 1000
+		ai_desire = 500
 	}
-	ABY_peace_annex_HYA_for_SHA = {
+	ABY_peace_annex_HYASHA = {
 		peace_action_type = take_states 
 		enable = {
 			SHA = {
-				has_war_with = HYA
+				NOT = { has_war_with = HYA }
 			}
 			ROOT = {
 				original_tag = ABY
@@ -27,11 +31,34 @@ peace_ai_desires = {
 				tag = ROOT
 			}
 			FROM.FROM.FROM = {
-				state = 972
-				state = 986
+				is_core_of = HYA
+				OR = {
+					state = 972
+					state = 986
+				}
 			}
 		}
-		ai_desire = -1200
+		ai_desire = 500
+	}
+	ABY_peace_none_annex_HYA_for_SHA = {
+		peace_action_type = take_states 
+		enable = {
+			SHA = { has_war_with = HYA }
+			ROOT = {
+				original_tag = ABY
+				has_war_with = HYA
+			}
+			ROOT.FROM = {
+				tag = ROOT
+			}
+			FROM.FROM.FROM = {
+				OR = {
+					state = 972
+					state = 986
+				}
+			}
+		}
+		ai_desire = -1000
 	}
 	SHA_peace_annex_HYA = {
 		peace_action_type = take_states 
@@ -43,17 +70,20 @@ peace_ai_desires = {
 				tag = ROOT
 			}
 			FROM.FROM.FROM = {
-				state = 972
-				state = 986
+				OR = {
+					state = 972
+					state = 986
+				}
 			}
 		}
-		ai_desire = 400
+		ai_desire = 500
 	}
 	ABY_peace_annex_SHA = {
 		peace_action_type = take_states 
 		enable = {
 			ROOT = {
 				original_tag = ABY
+				has_war_with = SHA
 			}
 			ROOT.FROM = {
 				tag = ROOT
@@ -62,6 +92,6 @@ peace_ai_desires = {
 				is_core_of = SHA
 			}
 		}
-		ai_desire = 1000
+		ai_desire = 500
 	}
 }

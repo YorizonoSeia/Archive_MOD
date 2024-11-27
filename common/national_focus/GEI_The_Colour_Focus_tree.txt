@@ -1091,7 +1091,6 @@ focus_tree = {
 					idea = GEI_signal_interference
 					days = 180
 				}
-				country_event = { id = GEI_event.20 }
 			}
 		}
 	}
@@ -1299,22 +1298,6 @@ focus_tree = {
 		completion_reward = {
 			add_command_power = 50
 			add_war_support = 0.1
-			
-			# 각 주변국에 대한 전쟁 목표 생성
-			every_neighbor_country = {
-				limit = {
-					NOT = { 
-						tag = GEI 
-						is_ally_with = GEI
-					}
-				}
-				ROOT = {
-					create_wargoal = {
-						target = PREV
-						type = annex_everything
-					}
-				}
-			}
 						
 			# 전역에 특수부대 배치
 			random_owned_controlled_state = {
@@ -1326,12 +1309,6 @@ focus_tree = {
 					owner = GEI
 					count = 3
 				}
-			}
-			
-			# 침공 준비 이벤트 발생
-			country_event = { 
-				id = GEI_event.20 
-				days = 1
 			}
 		}
 	}

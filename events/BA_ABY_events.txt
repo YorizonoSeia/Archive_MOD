@@ -9505,6 +9505,188 @@ country_event = {
 		ai_chance = { factor = 100 }
 	}
 }
+
+country_event = {
+	id = ABY_new_event.201
+	title = ABY_new_event.201.t
+	desc = ABY_new_event.201.d
+
+	immediate = {
+		hidden_effect = {
+			FROM = {
+				country_event = ABY_new_event.202
+				if = {
+					limit = {
+						NOT = { has_template = "German resistances" }
+					}
+					division_template = {
+						name = "German resistances"
+						priority = 0
+						division_names_group = ABY_INF_04
+						is_locked = no
+						regiments = {
+							militia = { x = 0 y = 0 }
+							militia = { x = 0 y = 1 }
+							militia = { x = 0 y = 2 }
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					FROM = { has_country_flag = ABY_flag_german_resistance_1 }
+				}
+				74 = {
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+				74 = {
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+				74 = {
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					FROM = { has_country_flag = ABY_flag_german_resistance_2 }
+				}
+				74 = {
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+				74 = {
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+				74 = {
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+				74 = {
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+				74 = {
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					FROM = { has_country_flag = ABY_flag_german_resistance_3 }
+				}
+				74 = {
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+				74 = {
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+				74 = {
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+				74 = {
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+				74 = {
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+				74 = {
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+				74 = {
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+				74 = {
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+				74 = {
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+			}
+		}
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = ABY_new_event.201.a
+	}
+}
+
+country_event = {
+	id = ABY_new_event.202
+	title = ABY_new_event.202.t
+	desc = ABY_new_event.202.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = ABY_new_event.202.a
+	}
+}
 ####################################################################################################
 ############################################################
 #####학생 영입 이벤트#########################

@@ -4579,6 +4579,7 @@ focus_tree = {
 			is_subject = no 
 		}
 		allow_branch = {
+			has_global_flag = ENG_lose_global_flag 
 			NOT = { has_country_flag = winston_churchill_is_leader_flag }
 		}
 		mutually_exclusive = {
