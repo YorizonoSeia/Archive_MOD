@@ -97,12 +97,11 @@ ideas = {
 		}
 	}
 	country = {
-        BA_interference_committee_1 = {
+        BA_interference_committee_1 = { #간섭위원회
 			name = BA_interference_committee
             picture = generic_secret_police
             modifier = {
                 send_volunteer_divisions_required = -0.5
-                send_volunteer_size = 1
                 send_volunteers_tension = -0.5
             }
             available = {
@@ -120,7 +119,7 @@ ideas = {
             picture = generic_secret_police
             modifier = {
                 send_volunteer_divisions_required = -1
-                send_volunteer_size = 2
+                send_volunteer_size = 1
                 send_volunteers_tension = -1
                 consumer_goods_factor = 0.03
             }

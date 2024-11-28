@@ -177,7 +177,10 @@
 	cost = 5
 
 	ai_will_do = {
-		
+		modifier = {
+			tag = RED
+			add = -100
+		}
 	}
 
 	available = {

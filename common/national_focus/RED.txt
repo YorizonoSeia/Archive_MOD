@@ -116,7 +116,7 @@ focus_tree = {
 		x = -6
 		y = 1
 		relative_position_id = RED_land_research
-		cost = 5
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -160,7 +160,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = RED_economy_dev_plan
-		cost = 5
+		cost = 4
 
 		ai_will_do = {
 			factor = 100
@@ -215,7 +215,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = RED_economy_dev_plan
-		cost = 5
+		cost = 4
 		available = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
@@ -246,7 +246,7 @@ focus_tree = {
 		x = -3
 		y = 1
 		relative_position_id = RED_entice_publicworks
-		cost = 5
+		cost = 4
 		available = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
@@ -308,7 +308,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = RED_entice_publicworks
-		cost = 5
+		cost = 4
 
 		completion_reward = {
 			916 = {
@@ -346,7 +346,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = RED_entice_publicworks
-		cost = 5
+		cost = 4
 		available = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
@@ -403,7 +403,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = RED_upgrade_heavy_industry
-		cost = 5
+		cost = 4
 
 		available = {
    
@@ -458,7 +458,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = RED_steel_casting_industry
-		cost = 5
+		cost = 4
 
 		available = {
    
@@ -505,7 +505,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = RED_steel_casting_industry
-		cost = 5
+		cost = 4
 
 		available = {
    
@@ -558,7 +558,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = RED_steel_casting_industry
-		cost = 5
+		cost = 4
 
 		available = {
    
@@ -584,7 +584,7 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = RED_upgrade_heavy_industry
-		cost = 5
+		cost = 4
 
 		available = {
    
@@ -615,7 +615,7 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = RED_upgrade_army_industry
-		cost = 5
+		cost = 4
 
 		available = {
    
@@ -667,7 +667,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = RED_industrial_futurization
-		cost = 5
+		cost = 4
 
 		cancel_if_invalid = yes
 
@@ -676,7 +676,7 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-			num_of_civilian_factories > 100
+			num_of_civilian_factories > 80
 		}
 
 		completion_reward = {
@@ -1663,7 +1663,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = RED_knowledge_liberation
-		cost = 5
+		cost = 2
 
 		available = {
    
@@ -5479,6 +5479,12 @@ focus_tree = {
 					level = 2
 				}
 			}
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				add_command_power = 200
+			}
 		}
 	}
 	focus = { #혁명을 수호하라!
@@ -5505,6 +5511,12 @@ focus_tree = {
 					id = RED_minori_event.7
 					days = 3
 				}
+			}
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				add_command_power = 200
 			}
 		}
 	}
@@ -5568,6 +5580,21 @@ focus_tree = {
 				create_unit = {
 					division = "name = \"Armed Workers\" division_template = \"militia\" start_experience_factor = 0.05 start_equipment_factor = 0.5"
 					owner = RED
+				}
+			}
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				add_command_power = 200
+				every_owned_state = {
+					limit = {
+						is_demilitarized_zone = no
+					}
+					create_unit = {
+						division = "name = \"Student Militia\" division_template = \"Redwinter Garde populaire\" start_experience_factor = 0.05 start_equipment_factor = 0.5"
+						owner = RED
+					}
 				}
 			}
 			custom_effect_tooltip = RED_communist_diplo_tt
@@ -5684,6 +5711,12 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
 		completion_reward = {
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				add_command_power = 200
+			}
 			swap_ideas = {
 				remove_idea = RED_redwinter_idea
 				add_idea = RED_fire_of_revolution
@@ -5723,6 +5756,12 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				add_command_power = 200
+			}
 			add_command_power = 10
 			swap_ideas = {
 				remove_idea = RED_fire_of_revolution
@@ -6495,7 +6534,7 @@ focus_tree = {
 			focus = RED_new_council
 		}
 		relative_position_id = RED_council_for_worker
-		cost = 5
+		cost = 4
 		x = -8
 		y = 1
 		completion_reward = {
@@ -6509,7 +6548,7 @@ focus_tree = {
 			focus = RED_industrial_union
 		}
 		relative_position_id = RED_industrial_union
-		cost = 5
+		cost = 2
 		x = -1
 		y = 1
 		completion_reward = {
@@ -6530,7 +6569,7 @@ focus_tree = {
 			focus = RED_industrial_union
 		}
 		relative_position_id = RED_industrial_union
-		cost = 5
+		cost = 2
 		x = 0
 		y = 2
 		completion_reward = {
@@ -6551,7 +6590,7 @@ focus_tree = {
 			focus = RED_industrial_union
 		}
 		relative_position_id = RED_industrial_union
-		cost = 5
+		cost = 2
 		x = 1
 		y = 1
 		completion_reward = {
@@ -6571,7 +6610,7 @@ focus_tree = {
 			focus = RED_industrial_union
 		}
 		relative_position_id = RED_industrial_union
-		cost = 5
+		cost = 2
 		x = 2
 		y = 2
 		completion_reward = {
@@ -6585,7 +6624,7 @@ focus_tree = {
 			focus = RED_military_union
 		}
 		relative_position_id = RED_industrial_union
-		cost = 5
+		cost = 2
 		x = -1
 		y = 3
 		completion_reward = {
@@ -6613,7 +6652,7 @@ focus_tree = {
 			focus = RED_industrial_union
 		}
 		relative_position_id = RED_industrial_union
-		cost = 5
+		cost = 2
 		x = -2
 		y = 2
 		completion_reward = {
@@ -6717,7 +6756,7 @@ focus_tree = {
 			focus = RED_mil-ind_complex
 		}
 		relative_position_id = RED_infrastructure_union
-		cost = 5
+		cost = 2
 		x = -3
 		y = 3
 		completion_reward = {
@@ -6987,7 +7026,7 @@ focus_tree = {
 		icon = GFX_focus_generic_modernize_industry
 		x = -13
 		y = 1
-		cost = 5
+		cost = 4
 		relative_position_id = RED_rearming_focus_0
 		ai_will_do = {
 			factor = 1
@@ -7032,7 +7071,7 @@ focus_tree = {
 		icon = GFX_focus_generic_industry_1
 		x = -3
 		y = 1
-		cost = 5
+		cost = 4
 		relative_position_id = RED_rearming_focus_1
 		ai_will_do = {
 			factor = 1
@@ -7073,7 +7112,7 @@ focus_tree = {
 		icon = GFX_goal_generic_production
 		x = -1
 		y = 1
-		cost = 5
+		cost = 4
 		relative_position_id = RED_rearming_focus_1
 		ai_will_do = {
 			factor = 1
@@ -7106,7 +7145,7 @@ focus_tree = {
 		icon = GFX_focus_generic_reorient_production
 		x = 1
 		y = 1
-		cost = 5
+		cost = 4
 		relative_position_id = RED_rearming_focus_1
 		ai_will_do = {
 			factor = 1
@@ -7150,7 +7189,7 @@ focus_tree = {
 		icon = GFX_focus_CHL_domestic_production_of_the_willys_mb
 		x = -2
 		y = 2
-		cost = 5
+		cost = 4
 		relative_position_id = RED_rearming_focus_1
 		ai_will_do = {
 			factor = 1
@@ -7200,7 +7239,7 @@ focus_tree = {
 		icon = GFX_goal_Military_Mobilisation
 		x = 2
 		y = 2
-		cost = 5
+		cost = 4
 		relative_position_id = RED_rearming_focus_1
 		ai_will_do = {
 			factor = 1
@@ -7230,7 +7269,7 @@ focus_tree = {
 		icon = GFX_focus_generic_full_employment
 		x = -1
 		y = 3
-		cost = 5
+		cost = 4
 		relative_position_id = RED_rearming_focus_1
 		ai_will_do = {
 			factor = 1
@@ -7269,7 +7308,7 @@ focus_tree = {
 		icon = GFX_focus_generic_support_the_left_right
 		x = 1
 		y = 3
-		cost = 5
+		cost = 4
 		relative_position_id = RED_rearming_focus_1
 		ai_will_do = {
 			factor = 1
@@ -7305,7 +7344,7 @@ focus_tree = {
 		icon = GFX_focus_ITA_devaluate_the_lire
 		x = -2
 		y = 4
-		cost = 5
+		cost = 4
 		relative_position_id = RED_rearming_focus_1
 		ai_will_do = {
 			factor = 1
@@ -7384,7 +7423,7 @@ focus_tree = {
 		icon = GFX_goal_generic_union_agreement
 		x = 2
 		y = 4
-		cost = 5
+		cost = 4
 		relative_position_id = RED_rearming_focus_1
 		ai_will_do = {
 			factor = 1
@@ -7453,7 +7492,7 @@ focus_tree = {
 		icon = GFX_goal_generic_soviet_construction
 		x = 0
 		y = 5
-		cost = 5
+		cost = 4
 		relative_position_id = RED_rearming_focus_1
 		ai_will_do = {
 			factor = 1
@@ -7531,7 +7570,7 @@ focus_tree = {
 		icon = GFX_goal_generic_army_artillery2
 		x = 3
 		y = 3
-		cost = 5
+		cost = 4
 		relative_position_id = RED_rearming_focus_1
 		ai_will_do = {
 			factor = 1
@@ -7565,7 +7604,7 @@ focus_tree = {
 		icon = GFX_focus_generic_energy
 		x = -3
 		y = 3
-		cost = 5
+		cost = 4
 		relative_position_id = RED_rearming_focus_1
 		ai_will_do = {
 			factor = 1
@@ -7607,7 +7646,7 @@ focus_tree = {
 		relative_position_id = RED_rearming_focus_1
 		x = 0
 		y = 2
-		cost = 5
+		cost = 4
 
 		available = {
 			NOT = {
@@ -7644,7 +7683,7 @@ focus_tree = {
 		icon = GFX_goal_munitions_factories
 		x = -7
 		y = 1
-		cost = 5
+		cost = 4
 		relative_position_id = RED_rearming_focus_0
 		ai_will_do = {
 			factor = 1
@@ -8203,7 +8242,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = RED_strengthen_the_mobilization_plan
-		cost = 5
+		cost = 4
 
 		available = {
 			NOT = {
@@ -8228,7 +8267,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = RED_strengthen_the_mobilization_plan
-		cost = 5
+		cost = 4
 
 		available = {
 			NOT = {
@@ -8253,7 +8292,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = RED_strengthen_the_mobilization_plan
-		cost = 5
+		cost = 4
 
 		available = {
 			NOT = {
@@ -8279,7 +8318,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = RED_rehabilitated_military
-		cost = 5
+		cost = 4
 
 		available = {
 			NOT = {
@@ -8305,7 +8344,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = RED_rehabilitated_military
-		cost = 5
+		cost = 4
 
 		available = {
 			NOT = {
@@ -8331,7 +8370,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = RED_rehabilitated_military
-		cost = 5
+		cost = 4
 
 		available = {
 			NOT = {
@@ -8369,7 +8408,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = RED_an_adaptable_army
-		cost = 5
+		cost = 4
 
 		available = {
 			NOT = {
@@ -8396,7 +8435,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = RED_military_reorganization
-		cost = 5
+		cost = 4
 
 		available = {
 			NOT = {
@@ -8423,7 +8462,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = RED_trench_exp
-		cost = 5
+		cost = 4
 
 		available = {
 			NOT = {

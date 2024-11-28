@@ -1437,7 +1437,13 @@ RED_minori_revolution_decision = {
 			command_power > 9
 		}
 		visible = {
-			has_completed_focus = RED_deal_with_ger
+			OR = {
+				has_completed_focus = RED_deal_with_ger
+				AND = {
+					is_ai = yes
+					has_completed_focus = RED_the_threats_abound
+				}
+			}
 		}
 		days_remove = 5
 		custom_cost_text = RED_ousting_office_tt

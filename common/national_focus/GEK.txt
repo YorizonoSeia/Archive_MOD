@@ -315,7 +315,7 @@ focus_tree = {
 			focus = GEK_RM_focus_3
 		}
 		relative_position_id = GEK_RM_focus_3
-		x = -6
+		x = -8
 		y = 1
 		cost = 1
 		completion_reward = {
@@ -332,18 +332,19 @@ focus_tree = {
 	focus = { #대도시 파업 지휘
 		id = GEK_RM_com_focus_1
 		icon = GFX_focus_generic_workers
+		text_icon = GER_inner_circle_focus_style
 		ai_will_do = {
 			base = 0
 		}
 		prerequisite = {
-			focus = GEK_RM_com_focus_0
+			focus = GEK_RM_spd_focus_2.5
 		}
 		available = {
 			has_war = yes
 		}
 		relative_position_id = GEK_RM_com_focus_0
-		x = -1
-		y = 1
+		x = 1
+		y = 2
 		cost = 2
 		completion_reward = {
 			add_popularity = {
@@ -411,18 +412,18 @@ focus_tree = {
 	focus = { #유격대 강화
 		id = GEK_RM_com_focus_2
 		icon = GFX_focus_generic_workers_and_farmers_rise
+		text_icon = GER_inner_circle_focus_style
 		ai_will_do = {
 			base = 0
 		}
 		prerequisite = {
 			focus = GEK_RM_com_focus_0
-			focus = GEK_RM_spd_focus_0
 		}
 		available = {
 			has_war = yes
 		}
 		relative_position_id = GEK_RM_com_focus_0
-		x = 1
+		x = -1
 		y = 1
 		cost = 2
 		completion_reward = {
@@ -490,17 +491,15 @@ focus_tree = {
 	focus = { #반소탕전
 		id = GEK_RM_com_focus_3
 		icon = GFX_focus_prc_infiltration
+		text_icon = GER_inner_circle_focus_style
 		ai_will_do = {
 			base = 0
-		}
-		prerequisite = {
-			focus = GEK_RM_com_focus_1
 		}
 		prerequisite = {
 			focus = GEK_RM_com_focus_2
 		}
 		relative_position_id = GEK_RM_com_focus_0
-		x = 0
+		x = -1
 		y = 2
 		cost = 2
 		completion_reward = {
@@ -553,6 +552,9 @@ focus_tree = {
 		prerequisite = {
 			focus = GEK_RM_com_focus_3
 		}
+		prerequisite = {
+			focus = GEK_RM_com_focus_1
+		}
 		mutually_exclusive = {
 			focus = GEK_RM_spd_focus_4
 			focus = GEK_RM_spd_focus_3
@@ -562,7 +564,7 @@ focus_tree = {
 		}
 		text_icon = GER_inner_circle_focus_style
 		relative_position_id = GEK_RM_com_focus_0
-		x = 1
+		x = 0
 		y = 3
 		cost = 2
 		completion_reward = {
@@ -578,7 +580,7 @@ focus_tree = {
 			focus = GEK_RM_focus_3
 		}
 		relative_position_id = GEK_RM_focus_3
-		x = -3
+		x = -4
 		y = 1
 		cost = 1
 		completion_reward = {
@@ -588,18 +590,40 @@ focus_tree = {
 			}
 		}
 	}
-	focus = { #민중 결집
+	focus = { #주정부 제휴
 		id = GEK_RM_spd_focus_1
-		icon = GFX_focus_por_workers_of_iberia
+		icon = GFX_focus_generic_improve_the_administration
+		text_icon = GER_inner_circle_focus_style
 		ai_will_do = {
 			base = 0
 		}
 		prerequisite = {
-			focus = GEK_RM_spd_focus_0
+			focus = GEK_RM_spd_focus_2
 		}
 		relative_position_id = GEK_RM_spd_focus_0
-		x = 0
-		y = 1
+		x = -1
+		y = 2
+		cost = 2
+		completion_reward = {
+			country_event = {
+				id = GEK_rm_event.5
+				days = 3
+			}
+		}
+	}
+	focus = { #언론 활용
+		id = GEK_RM_spd_focus_1.5
+		icon = GFX_focus_generic_treaty
+		text_icon = GER_inner_circle_focus_style
+		ai_will_do = {
+			base = 0
+		}
+		prerequisite = {
+			focus = GEK_RM_spd_focus_2
+		}
+		relative_position_id = GEK_RM_spd_focus_0
+		x = 1
+		y = 2
 		cost = 2
 		completion_reward = {
 			country_event = {
@@ -611,27 +635,48 @@ focus_tree = {
 	focus = { #대연정 지도
 		id = GEK_RM_spd_focus_2
 		icon = GFX_goal_generic_national_unity
+		text_icon = GER_inner_circle_focus_style
 		ai_will_do = {
 			base = 0
 		}
 		prerequisite = {
-			focus = GEK_RM_spd_focus_1
+			focus = GEK_RM_spd_focus_0
 		}
 		prerequisite = {
-			focus = GEK_RM_com_focus_2
+			focus = GEK_RM_com_focus_0
 		}
 		prerequisite = {
-			focus = GEK_RM_dzp_focus_1
+			focus = GEK_RM_dzp_focus_0
 		}
 		relative_position_id = GEK_RM_spd_focus_0
 		x = 0
-		y = 2
+		y = 1
 		cost = 2
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = GEK_solidarity_across_ideology
 				add_idea = GEK_solidarity_across_ideology_1
 			}
+		}
+	}
+	focus = { #노동조합 무장
+		id = GEK_RM_spd_focus_2.5
+		icon = GFX_focus_ITA_peasants_rise
+		text_icon = GER_inner_circle_focus_style
+		ai_will_do = {
+			base = 0
+		}
+		prerequisite = {
+			focus = GEK_RM_spd_focus_0
+		}
+		prerequisite = {
+			focus = GEK_RM_com_focus_0
+		}
+		relative_position_id = GEK_RM_spd_focus_0
+		x = -3
+		y = 1
+		cost = 2
+		completion_reward = {
 		}
 	}
 	focus = { #공화주의 정서
@@ -641,10 +686,7 @@ focus_tree = {
 			base = 0
 		}
 		prerequisite = {
-			focus = GEK_RM_spd_focus_2
-		}
-		prerequisite = {
-			focus = GEK_RM_com_focus_3
+			focus = GEK_RM_dzp_focus_1
 		}
 		available = {
 			has_idea = GEK_legitimacy_weimar_2
@@ -689,18 +731,6 @@ focus_tree = {
 		prerequisite = {
 			focus = GEK_RM_spd_focus_2
 		}
-		prerequisite = {
-			focus = GEK_RM_com_focus_3
-		}
-		prerequisite = {
-			focus = GEK_RM_dzp_focus_3
-		}
-		prerequisite = {
-			focus = GEK_RM_army_focus_3
-		}
-		prerequisite = {
-			focus = GEK_RM_nazi_focus_2
-		}
 		text_icon = GER_inner_circle_focus_style
 		relative_position_id = GEK_RM_spd_focus_0
 		x = 0
@@ -729,17 +759,21 @@ focus_tree = {
 			}
 		}
 	}
-	focus = { #애국 여단
+	focus = { #흑적금 국기단
 		id = GEK_RM_dzp_focus_1
 		icon = GFX_goal_rhineland
+		text_icon = GER_inner_circle_focus_style
 		ai_will_do = {
 			base = 0
 		}
 		prerequisite = {
 			focus = GEK_RM_dzp_focus_0
 		}
+		prerequisite = {
+			focus = GEK_RM_spd_focus_0
+		}
 		relative_position_id = GEK_RM_dzp_focus_0
-		x = -1
+		x = -2
 		y = 1
 		cost = 2
 		completion_reward = {
@@ -811,18 +845,16 @@ focus_tree = {
 	focus = { #라인란트 봉기
 		id = GEK_RM_dzp_focus_2
 		icon = GFX_focus_generic_support_the_left_right
+		text_icon = GER_inner_circle_focus_style
 		ai_will_do = {
 			base = 0
 		}
 		prerequisite = {
-			focus = GEK_RM_dzp_focus_0
-		}
-		prerequisite = {
-			focus = GEK_RM_army_focus_0
+			focus = GEK_RM_dzp_focus_1
 		}
 		relative_position_id = GEK_RM_dzp_focus_0
-		x = 1
-		y = 1
+		x = -1
+		y = 2
 		cost = 2
 		completion_reward = {
 			add_popularity = {
@@ -885,6 +917,7 @@ focus_tree = {
 	focus = { #산업가 규합
 		id = GEK_RM_dzp_focus_3
 		icon = GFX_focus_generic_industrialists
+		text_icon = GER_inner_circle_focus_style
 		ai_will_do = {
 			base = 0
 		}
@@ -896,7 +929,7 @@ focus_tree = {
 		}
 		relative_position_id = GEK_RM_dzp_focus_0
 		x = 0
-		y = 2
+		y = 1
 		cost = 2
 		completion_reward = {
 			random_controlled_state = {
@@ -915,6 +948,79 @@ focus_tree = {
 			} 
 		}
 	}
+	focus = { #가톨릭 교회와의 제휴
+		id = GEK_RM_dzp_focus_4
+		icon = GFX_focus_generic_catholic_dominion
+		text_icon = GER_inner_circle_focus_style
+		ai_will_do = {
+			base = 0
+		}
+		prerequisite = {
+			focus = GEK_RM_dzp_focus_0
+		}
+		mutually_exclusive = {
+			focus = GEK_RM_DNVP_focus_2
+		}
+		relative_position_id = GEK_RM_dzp_focus_0
+		x = 1
+		y = 2
+		cost = 2
+		completion_reward = {
+		}
+	}
+	focus = { #국가인민당과의 협력
+		id = GEK_RM_DNVP_focus_0
+		icon = GFX_focus_ger_return_of_the_kaiser
+		ai_will_do = {
+			base = 0
+		}
+		prerequisite = {
+			focus = GEK_RM_focus_3
+		}
+		relative_position_id = GEK_RM_focus_3
+		x = 3
+		y = 1
+		cost = 1
+		completion_reward = {
+		}
+	}
+	focus = { #자유군단 모집
+		id = GEK_RM_DNVP_focus_1
+		icon = GFX_focus_FIN_strengthen_military_administration
+		text_icon = GER_inner_circle_focus_style
+		ai_will_do = {
+			base = 0
+		}
+		prerequisite = {
+			focus = GEK_RM_DNVP_focus_0
+		}
+		relative_position_id = GEK_RM_DNVP_focus_0
+		x = -1
+		y = 1
+		cost = 2
+		completion_reward = {
+		}
+	}
+	focus = { #개신교 교회와의 제휴
+		id = GEK_RM_DNVP_focus_2
+		icon = GFX_focus_mex_triumph_over_the_cristeros
+		text_icon = GER_inner_circle_focus_style
+		ai_will_do = {
+			base = 0
+		}
+		prerequisite = {
+			focus = GEK_RM_DNVP_focus_1
+		}
+		mutually_exclusive = {
+			focus = GEK_RM_dzp_focus_4
+		}
+		relative_position_id = GEK_RM_DNVP_focus_0
+		x = 0
+		y = 2
+		cost = 2
+		completion_reward = {
+		}
+	}
 	focus = { #군부와의 협력
 		id = GEK_RM_army_focus_0
 		icon = GFX_focus_POL_beck_ribbentrop
@@ -925,7 +1031,7 @@ focus_tree = {
 			focus = GEK_RM_focus_3
 		}
 		relative_position_id = GEK_RM_focus_3
-		x = 3
+		x = 5
 		y = 1
 		cost = 1
 		completion_reward = {
@@ -938,6 +1044,7 @@ focus_tree = {
 	focus = { #루프트바페의 귀환
 		id = GEK_RM_army_focus_1
 		icon = GFX_goal_generic_build_airforce
+		text_icon = GER_inner_circle_focus_style
 		ai_will_do = {
 			base = 0
 		}
@@ -945,7 +1052,7 @@ focus_tree = {
 			focus = GEK_RM_army_focus_0
 		}
 		relative_position_id = GEK_RM_army_focus_0
-		x = 2
+		x = 1
 		y = 1
 		cost = 2
 		completion_reward = {
@@ -966,6 +1073,7 @@ focus_tree = {
 	focus = { #지휘체계 정상화
 		id = GEK_RM_army_focus_2
 		icon = GFX_focus_generic_military_mission
+		text_icon = GER_inner_circle_focus_style
 		ai_will_do = {
 			base = 0
 		}
@@ -973,7 +1081,7 @@ focus_tree = {
 			focus = GEK_RM_army_focus_0
 		}
 		relative_position_id = GEK_RM_army_focus_0
-		x = 0
+		x = -1
 		y = 1
 		cost = 2
 		completion_reward = {
@@ -981,6 +1089,7 @@ focus_tree = {
 		}
 	}
 	focus = { #국방군 권한 확대
+		text_icon = GER_inner_circle_focus_style
 		id = GEK_RM_army_focus_3
 		icon = GFX_focus_ger_oppose_hitler
 		ai_will_do = {
@@ -1003,12 +1112,13 @@ focus_tree = {
 	}
 	focus = { #군주주의 정서
 		id = GEK_RM_army_focus_4
-		icon = GFX_focus_ger_return_of_the_kaiser
+		icon = GFX_focus_rom_royal_dictatorship
 		ai_will_do = {
 			base = 0
 		}
 		prerequisite = {
-			focus = GEK_RM_army_focus_3
+			focus = GEK_RM_dzp_focus_4
+			focus = GEK_RM_DNVP_focus_2
 		}
 		available = {
 			has_idea = GEK_legitimacy_empire_2
@@ -1023,7 +1133,7 @@ focus_tree = {
 		}
 		text_icon = GER_inner_circle_focus_style
 		relative_position_id = GEK_RM_army_focus_0
-		x = -2
+		x = -3
 		y = 3
 		cost = 2
 		completion_reward = {
@@ -1071,7 +1181,7 @@ focus_tree = {
 			focus = GEK_RM_focus_3
 		}
 		relative_position_id = GEK_RM_focus_3
-		x = 6
+		x = 7
 		y = 1
 		cost = 1
 		completion_reward = {
@@ -1082,6 +1192,7 @@ focus_tree = {
 		}
 	}
 	focus = { #당조직 재정비
+		text_icon = GER_inner_circle_focus_style
 		id = GEK_RM_nazi_focus_1
 		icon = GFX_focus_generic_self_management
 		ai_will_do = {
@@ -1118,6 +1229,7 @@ focus_tree = {
 		}
 	}
 	focus = { #친위대 활용
+		text_icon = GER_inner_circle_focus_style
 		id = GEK_RM_nazi_focus_2
 		icon = GFX_focus_generic_full_social_mobilization
 		ai_will_do = {
@@ -1211,7 +1323,7 @@ focus_tree = {
 		}
 		text_icon = GER_inner_circle_focus_style
 		relative_position_id = GEK_RM_nazi_focus_0
-		x = -1
+		x = 0
 		y = 3
 		cost = 2
 		completion_reward = {

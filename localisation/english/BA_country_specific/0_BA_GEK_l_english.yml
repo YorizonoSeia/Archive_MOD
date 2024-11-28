@@ -57,6 +57,9 @@
  GEK_rm_event.8.t: "국가사회주의 독일 노동자당"
  GEK_rm_event.8.d: "비단 몇 달 전까지 조국을 통치하고 있던 정당인 나치당은 말할 필요도 없이 전국적으로 강한 행정력을 행사할 수 있는 잠재력을 지닌 조직입니다. 이들이 비록 이계의 침공으로 치명타를 입었지만, 그들의 근거지인 뉘른베르크와 남독일 일대에서의 활동에서, 그들은 우리에게 충분한 지원을 줄 수 있을 것입니다."
  GEK_rm_event.8.a: "히틀러 없는 나치라."
+ GEK_rm_event.9.t: "금이 가는 연정"
+ GEK_rm_event.9.d: "'전독일 최대연정'이라는 환상은 오래 가지 못할 것임을 구성원 모두가 어렴풋이 알고는 있었습니다."
+ GEK_rm_event.9.a: "젠장."
 
  #아이디어
  GEK_solidarity_across_ideology: "아슬한 정치연합"
@@ -142,15 +145,22 @@
  GEK_RM_com_focus_4: "반독재 집중 투쟁"
 
  GEK_RM_spd_focus_0: "독일 사회민주당과의 협력"
- GEK_RM_spd_focus_1: "민중 결집"
+ GEK_RM_spd_focus_1: "주정부 제휴"
+ GEK_RM_spd_focus_1.5: "언론 활용"
  GEK_RM_spd_focus_2: "대연정 지도"
+ GEK_RM_spd_focus_2.5: "노동조합 무장"
  GEK_RM_spd_focus_3: "공화주의 정서"
  GEK_RM_spd_focus_4: "전독일 최대연정 유지"
 
  GEK_RM_dzp_focus_0: "독일 중앙당과의 협력"
- GEK_RM_dzp_focus_1: "애국 여단"
+ GEK_RM_dzp_focus_1: "흑적금 국기단"
  GEK_RM_dzp_focus_2: "라인란트 봉기"
  GEK_RM_dzp_focus_3: "산업가 규합"
+ GEK_RM_dzp_focus_4: "가톨릭 교회와의 제휴"
+
+ GEK_RM_DNVP_focus_0: "독일 국가인민당과의 협력"
+ GEK_RM_DNVP_focus_1: "자유군단 모집"
+ GEK_RM_DNVP_focus_2: "개신교 교회와의 제휴"
 
  GEK_RM_army_focus_0: "군부와의 협력"
  GEK_RM_army_focus_1: "루프트바페의 귀환"
@@ -280,9 +290,12 @@
  GEK_restoration_decision_POL:0 "단치히 통합"
  GEK_restoration_decision_LIT:0 "메멜 통합"
 
+ GEK_max_coalition: "전독일 최대연정"
+ GEK_flatering_coalition: "붕괴하는 대연정"
+
  GEK_attack_gehenna:0 "조국해방전쟁"
  GEK_imminent_war:0 "임박한 공세"
- GEK_strengthening_the_free_corps:0 "독일 자유 군단"
+ GEK_strengthening_the_free_corps:0 "민병대 조직 촉구"
  GEK_anti_gehenna_tactics:0 "헤일로 대응 전술"
  GEK_amphibious_assault:0 "사단 기동성"
  GEK_weapons_production_plan:0 "무기 생산"

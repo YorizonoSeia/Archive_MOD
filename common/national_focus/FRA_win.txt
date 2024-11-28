@@ -48,7 +48,7 @@ focus_tree = {
 	focus = {
 		#행정 복원
 		id = FRA_focus_win_2.1
-		cost = 4
+		cost = 2
 		icon = GFX_focus_generic_improve_the_administration
 		x = 10
 		y = 2
@@ -71,7 +71,7 @@ focus_tree = {
 	focus = {
 		#동원 해제
 		id = FRA_focus_win_2
-		cost = 4
+		cost = 2
 		icon = GFX_goal_generic_improve_relations
 		x = 8
 		y = 3
@@ -86,7 +86,7 @@ focus_tree = {
 	focus = {
 		#피난민 구제
 		id = FRA_focus_win_5
-		cost = 4
+		cost = 2
 		x = 12
 		y = 3
 		available = {
@@ -106,7 +106,7 @@ focus_tree = {
 	focus = {
 		#학생 체포
 		id = FRA_focus_win_3
-		cost = 4
+		cost = 2
 		x = 8
 		icon = GFX_focus_SOV_penal_battalions
 		y = 5
@@ -142,7 +142,7 @@ focus_tree = {
 	focus = {
 		#도시 재건
 		id = FRA_focus_win_4
-		cost = 4
+		cost = 2
 		icon = GFX_focus_generic_modernize_industry
 		x = 7
 		y = 4
@@ -183,7 +183,7 @@ focus_tree = {
 	focus = {
 		#농촌 질서 복구
 		id = FRA_focus_win_2.2
-		cost = 4
+		cost = 2
 		icon = GFX_focus_generic_farmland
 		x = 13
 		y = 4
@@ -226,7 +226,7 @@ focus_tree = {
 		#망명자 복귀
 		icon = GFX_goal_generic_navy_battleship
 		id = FRA_focus_win_6
-		cost = 4
+		cost = 2
 		x = 10
 		y = 3
 		available = {
@@ -292,7 +292,7 @@ focus_tree = {
 		#자원 산업 재건
 		icon = GFX_focus_generic_mining_industry
 		id = FRA_focus_win_7
-		cost = 4
+		cost = 2
 		x = 9
 		y = 4
 		prerequisite = {
@@ -363,7 +363,7 @@ focus_tree = {
 		#아프리카 산업 이전
 		icon = GFX_focus_generic_africa_factory
 		id = FRA_focus_win_8
-		cost = 4
+		cost = 2
 		x = 11
 		y = 4
 		prerequisite = {
@@ -455,7 +455,7 @@ focus_tree = {
 		#결정
 		id = FRA_focus_win_10
 		icon = GFX_goal_generic_dangerous_deal
-		cost = 4
+		cost = 2
 		x = 10
 		y = 6
 		prerequisite = {

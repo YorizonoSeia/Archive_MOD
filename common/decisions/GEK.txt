@@ -1,3 +1,33 @@
+GEK_max_coalition = { #대연정
+	GEK_flatering_coalition = { #붕괴하는 대연정
+		icon = GFX_decision_generic_civil_support
+		allowed = {
+			original_tag = GEK
+		}
+		activation = {
+			always = yes
+		}
+		available = {
+			always = no
+		}
+		days_mission_timeout = 90
+		timeout_effect = {
+			if = {
+				limit = {
+					has_idea = GEK_solidarity_across_ideology_1
+				}
+				swap_ideas = {
+					remove_idea = GEK_solidarity_across_ideology_1
+					add_idea = GEK_solidarity_across_ideology
+				}
+				activate_mission = GEK_flatering_coalition
+			}
+			else = {
+
+			}
+		}
+	}
+}
 GEK_attack_gehenna = {
 	GEK_imminent_war = { #임박한 공세
 		icon = GFX_decision_generic_civil_support
