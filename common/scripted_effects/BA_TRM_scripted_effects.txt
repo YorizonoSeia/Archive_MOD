@@ -2017,3 +2017,44 @@ TRM_SPR_RK = {
 				}
 			}
 }
+TRM_anti_geh_emotion_effect = {
+	if = {
+		limit = {
+			has_dynamic_modifier = { modifier = TRM_anti_geh_emotion }
+		}
+		remove_dynamic_modifier = {
+			modifier = TRM_anti_geh_emotion
+		}
+		add_dynamic_modifier = {
+			modifier = TRM_anti_geh_emotion_2
+		}
+	}
+	else_if = {
+		limit = {
+			has_dynamic_modifier = { modifier = TRM_anti_geh_emotion_2 }
+		}
+		remove_dynamic_modifier = {
+			modifier = TRM_anti_geh_emotion_2
+		}
+		add_dynamic_modifier = {
+			modifier = TRM_anti_geh_emotion_3
+		}
+	}
+	else_if = {
+		limit = {
+			has_dynamic_modifier = { modifier = TRM_anti_geh_emotion_3 }
+		}
+		remove_dynamic_modifier = {
+			modifier = TRM_anti_geh_emotion_3
+		}
+		add_dynamic_modifier = {
+			modifier = international_city_4
+		}
+	}
+	else_if = {
+		limit = {
+			has_dynamic_modifier = { modifier = international_city_4 }
+		}
+		add_compliance = 5
+	}
+}

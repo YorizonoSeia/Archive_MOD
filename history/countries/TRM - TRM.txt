@@ -128,6 +128,7 @@ set_variable = { TRM_pressure_government_cd = 365 }
 set_variable = { TRM_pressure_country_government_cost = 50 }
 set_variable = { TRM_ideological_rallies_days = 90 }
 set_variable = { TRM_promote_ideology_rallies_cost = 50 }
+set_variable = { TRM_unification_propaganda_re_enable = 90 }
 
 # DIPLOMACY
 recruit_character = TRN_tea_party # 티파티

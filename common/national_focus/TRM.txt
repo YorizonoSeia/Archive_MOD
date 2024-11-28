@@ -2013,7 +2013,7 @@
 		x = -1
 		y = 1
 		completion_reward = {
-			country_event = { id = TRM_event.35 }
+			#country_event = { id = TRM_event.35 }
 			unlock_decision_category_tooltip = TRN_after_war_decisions
 			mark_focus_tree_layout_dirty = yes
 			hidden_effect = {
@@ -2027,7 +2027,40 @@
 			}
 		}
 	}
-	focus = {#게헨나 격하운동
+
+	focus = { # 연합법
+		id = TRM_germany_union
+		icon = GFX_focus_TRM_united_law
+		cost = 8.00
+
+		prerequisite = { focus = TRM_after_war }
+		relative_position_id = TRM_after_war
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = GAEBALJUNG
+				has_completed_focus = TRM_anti_gehenna_focus_2
+				has_completed_focus = TRM_anti_gehenna_focus_3
+				always = no
+			}
+		}
+		ai_will_do = {
+			base = 4000
+		}
+		x = -0
+		y = 1
+		completion_reward = {
+			country_event = { id = TRM_event.5 hours = 02 }
+			hidden_effect = { 
+				news_event = { id = BA_news.7 hours = 04 } 
+			}
+			add_political_power = 50
+			add_command_power = 75
+			#custom_effect_tooltip = TRM_germany_union_tt
+		}
+	}
+	
+	#게헨나 저항군 소탕
+	focus = {
 		id = TRM_anti_gehenna_focus_2 
 		icon = GFX_goal_hmmngshinso_broken
 		cost = 2.00
@@ -2039,73 +2072,11 @@
 		}
         available = { }
 		relative_position_id = TRM_after_war
-		x = 1
+		x = 2
 		y = 1
 		completion_reward = {
-			#country_event = { id = TRM_event.27 }
-            custom_effect_tooltip = TRINITY_after_war_tt
-            effect_tooltip = {
-                custom_effect_tooltip = Change_MegacityName
-                55 = {
-                    clr_state_flag = Megacity_GEH_Senter
-                    set_state_flag = Megacity_GEH_trinity_Senter
-                }
-            custom_effect_tooltip = tooltip_white_line
-			    set_province_name = {
-                    id = 6488
-                    name = "BA_Frankfurt"
-                }
-			    set_province_name = {
-                    id = 6469
-                    name = "BA_Essen"
-                }
-			    set_province_name = {
-                    id = 692
-                    name = "BA_Munich"
-                }
-				set_province_name = {
-					id = 6377
-					name = ABY_hanover
-				}
-            }
-            hidden_effect = {
-            if = { 
-                limit = {
-                    controls_state = 55
-                }
-                custom_effect_tooltip = Change_MegacityName
-			    set_province_name = {
-                    id = 6488
-                    name = "BA_Frankfurt"
-                }
-                55 = {
-                    clr_state_flag = Megacity_GEH_Senter
-                    set_state_flag = Megacity_GEH_trinity_Senter
-                }
-            }
-            custom_effect_tooltip = tooltip_white_line
-            if = {
-                limit = { controls_state = 51 }
-			    set_province_name = {
-                    id = 6469
-                    name = "BA_Essen"
-                }
-            }
-            if = {
-                limit = { controls_state = 52 }
-			    set_province_name = {
-                    id = 692
-                    name = "BA_Munich"
-                }
-            }
-            if = {
-                limit = { controls_state = 59 }
-				set_province_name = {
-					id = 6377
-					name = ABY_hanover
-				}
-            }
-            }
+			unlock_decision_tooltip = TRM_raid_gehenna_resistance
+			unlock_decision_tooltip = TRM_tighten_control
 		}
 	}
 
@@ -2120,36 +2091,10 @@
 			base = 4000
 		}
 		relative_position_id = TRM_after_war
-		x = -1
+		x = -2
 		y = 1
 		completion_reward = {
-            unlock_decision_tooltip = TRN_after_war_decision_fake
-		}
-	}
-
-	focus = { # 연합법
-		id = TRM_germany_union
-		icon = GFX_goal_TRN_eden_pacts_letsgo
-		cost = 5.00
-
-		prerequisite = { focus = TRM_anti_gehenna_focus_3 }
-		prerequisite = { focus = TRM_anti_gehenna_focus_2 }
-		relative_position_id = TRM_after_war
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = GAEBALJUNG
-				always = no 
-			}
-		}
-		ai_will_do = {
-			base = 4000
-		}
-		x = -0
-		y = 3
-		completion_reward = {
-			news_event = { id = BA_news.7 hours = 04 }
-			add_political_power = 50
-			add_command_power = 75
+            unlock_decision_tooltip = TRM_Gehenna_Military_Civil_Administration
 		}
 	}
 	focus = {
@@ -4123,7 +4068,7 @@
 		x = -1
 		y = 1
 		relative_position_id = TRM_Reorganise_Armament_Production
-	    cost = 8
+	    cost = 5
 		completion_reward = {
             custom_effect_tooltip = TRM_Expand_the_Logistics_Corps_tt
             set_variable = { TRM_army_out_of_supply_factor = -0.1 }
@@ -4151,7 +4096,7 @@
 		x = 1
 		y = 1
 		relative_position_id = TRM_Reorganise_Armament_Production
-	    cost = 8
+	    cost = 5
 		completion_reward = {
             custom_effect_tooltip = TRM_Local_Workshops_tt
             add_to_variable = { TRM_industries_dynamic_production_factory_max_efficiency_factor = 0.05 }
@@ -4181,7 +4126,7 @@
 		x = -1
 		y = 1
 		relative_position_id = TRM_Local_Workshops
-	    cost = 8
+	    cost = 10
 		completion_reward = {
 		    add_tech_bonus = {
     			name = TRM_Terrestrial_Dreadnoughts
@@ -4205,7 +4150,7 @@
 		x = 2
 		y = 1
 		relative_position_id = TRN_research_rifle
-	    cost = 8
+	    cost = 5
 		completion_reward = {
             custom_effect_tooltip = TRM_Asymmetric_Tactics_tt
             add_to_variable = { TRM_army_army_morale_factor = 0.10 }
@@ -4260,7 +4205,7 @@
 		x = 1
 		y = 1
 		relative_position_id = TRM_Decentralised_Structure
-		cost = 8
+		cost = 5
 		completion_reward = {
             add_ideas = TRM_defense_industry_artillery_bonus
             custom_effect_tooltip = tooltip_white_line
@@ -4293,7 +4238,7 @@
 		x = 3
 		y = 1
 		relative_position_id = TRM_Decentralised_Structure
-		cost = 8
+		cost = 10
 		completion_reward = {
             custom_effect_tooltip = TRM_Officer_Initiative_tt
             add_to_variable = { TRM_army_max_dig_in = 5 }
@@ -4332,7 +4277,7 @@
 		x = 0
 		y = 1
 		relative_position_id = TRM_Trinity_Field_Artillery
-		cost = 10
+		cost = 5
 		completion_reward = {
 	    	every_army_leader = {
 			    limit = {
@@ -4374,7 +4319,7 @@
 		x = -2
 		y = 1
 		relative_position_id = TRN_research_rifle
-		cost = 8
+		cost = 5
 		completion_reward = {
             custom_effect_tooltip = TRM_Centralised_Command_tt
             add_to_variable = { TRM_army_army_org_factor = 0.05 }
@@ -4389,7 +4334,7 @@
 		relative_position_id = TRM_Centralised_Command
 		x = 1
 		y = 1
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			base = 300
 			modifier = {
@@ -4414,7 +4359,7 @@
 		relative_position_id = TRM_Centralised_Command
 		x = -1
 		y = 1
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			base = 300
 			modifier = {
@@ -4515,7 +4460,7 @@
 		relative_position_id = TRM_Protectors_of_the_Motherland
 		x = 1
 		y = 1
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			base = 300
 			modifier = {
@@ -4548,7 +4493,7 @@
 		relative_position_id = TRM_superb_training
 		x = -2
 		y = 1
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			base = 300
 			modifier = {
@@ -4591,7 +4536,7 @@
 		relative_position_id = TRM_superb_training
 		x = 0
 		y = 1
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			base = 300
 			modifier = {
@@ -4638,7 +4583,7 @@
 		relative_position_id = TRM_Small_Unit_Tactics
 		x = -1
 		y = 1
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			base = 300
 			modifier = {
@@ -4663,7 +4608,7 @@
 		relative_position_id = TRM_Combined_Arms
 		x = 0
 		y = 1
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			base = 300
 			modifier = {
@@ -4706,7 +4651,7 @@
 		relative_position_id = TRM_Combined_Arms
 		x = 2
 		y = 1
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			base = 300
 			modifier = {

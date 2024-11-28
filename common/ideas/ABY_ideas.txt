@@ -4965,6 +4965,7 @@ ideas = {
 			}
 		}
 		ABY_idea_bohemia_and_austria = {
+			picture = hol_the_foundations_of_defense
 			allowed_civil_war = {
                 always = yes
             }

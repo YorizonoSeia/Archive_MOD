@@ -150,12 +150,6 @@ TRM_Reichsland_2 = {
     local_building_slots_factor = 0.1
     compliance_growth = 0.05
 }
-TRM_Military_occupation = {
-	icon = "GFX_decision_SWE_set_army_budget"
-
-	compliance_growth = 0.03
-	resistance_growth = -0.03
-}
 GEH_Senter_aggressive = { # 중앙구 공세
 	enable = { always = yes }
 
@@ -211,6 +205,14 @@ RED_bunker_modifier = {
 	ground_attack_factor = -0.1
 	local_org_regain = -0.1
 }
+ENG_we_will_win = {
+	icon = GFX_idea_CZE_planning_bonus
+	remove_trigger = {
+		NOT = { is_owned_by = ENG }
+	}
+	
+	army_speed_factor = 0.75
+}
 TRM_unplanned_offensive = {
 	icon = GFX_unplanned_offensive
 	attacker_modifier = yes
@@ -238,19 +240,66 @@ TRM_occupied_state_government = {
 	state_resources_factor = -0.50
 	state_production_speed_buildings_factor = -0.25
 }
+
 TRM_anti_geh_emotion = {
 	icon = GFX_decision_generic_ignite_civil_war
 	
 	remove_trigger = { NOT = { is_controlled_by = TRM } }
-	local_manpower = -0.5
-	state_production_speed_buildings_factor = -0.5
-	local_factories = -0.5
-}
-ENG_we_will_win = {
-	icon = GFX_idea_CZE_planning_bonus
-	remove_trigger = {
-		NOT = { is_owned_by = ENG }
-	}
 	
-	army_speed_factor = 0.75
+	state_resources_factor = -0.75
+	recruitable_population_factor = -0.75
+	local_factories = -0.75
+	resistance_growth = 0.50
+	disable_strategic_redeployment = yes
+}
+
+TRM_anti_geh_emotion_2 = {
+	enable = { always = yes }
+
+	icon = GFX_decision_generic_ignite_civil_war
+	
+	remove_trigger = { NOT = { is_controlled_by = TRM } }
+	
+	state_resources_factor = -0.5
+	recruitable_population_factor = -0.5
+	local_factories = -0.5
+	resistance_growth = 0.5
+	disable_strategic_redeployment = yes
+}
+
+TRM_anti_geh_emotion_3 = {
+	enable = { always = yes }
+
+	icon = GFX_decision_generic_ignite_civil_war
+	
+	remove_trigger = { NOT = { is_controlled_by = TRM } }
+	
+	state_resources_factor = -0.25
+	recruitable_population_factor = -0.25
+	local_factories = -0.25
+	resistance_growth = 0.2
+	disable_strategic_redeployment = yes
+}
+
+TRM_anti_geh_emotion_4 = {
+	enable = { always = yes }
+
+	icon = GFX_decision_generic_ignite_civil_war
+	
+	remove_trigger = { NOT = { is_controlled_by = TRM } }
+	
+	state_resources_factor = -0.15
+	recruitable_population_factor = -0.15
+	local_factories = -0.15
+	resistance_growth = 0.1
+	disable_strategic_redeployment = yes
+}
+
+TRM_Military_occupation = {
+	icon = "GFX_decision_SWE_set_army_budget"
+
+	remove_trigger = { NOT = { is_controlled_by = TRM } }
+
+	#compliance_growth = 0.03
+	resistance_growth = -0.15
 }

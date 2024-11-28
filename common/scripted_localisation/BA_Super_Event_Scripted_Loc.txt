@@ -1823,27 +1823,6 @@ defined_text = {
 	}
 }
 defined_text = {
-    name = KAI_United_State_threat_text
-    text = {
-        trigger = {
-            check_variable = { KAI_usa_threat < 70 }
-        }
-        localization_key = KAI_United_State_threat_text_R
-    }
-    text = {
-        trigger = {
-            check_variable = { KAI_usa_threat > 69 }
-        }
-        localization_key = KAI_United_State_threat_text_G
-    }
-    text = {
-        trigger = {
-            check_variable = { KAI_usa_threat > 101 }
-        }
-        localization_key = KAI_United_State_threat_text_100_R
-    }
-}
-defined_text = {
     name = aby_rebuild_high_school_current_num_of_students_text
     text = {
         localization_key = ABY_rebuild_high_school_current_num_of_students_text

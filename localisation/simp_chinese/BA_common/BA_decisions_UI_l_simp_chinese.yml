@@ -226,9 +226,3 @@ GEI_Secure_Royal_Blood_decision_search_run_desc_tt:0 "§9皇家血统§!的§Y�
  TRN_nagisa_imprisoned:0 "长门被监禁"
  TRN_parter_coupdetat:0 "帕特尔派系的抵抗"
 
- ########
- #基马特里亚#
- ########
-
- KAI_United_State_threat_text_R:0 "@USA美利坚合众国紧张度: §G[?KAI_usa_threat]%§!"
- KAI_United_State_threat_text_G:0 "@USA美利坚合众国紧张度: §R[?KAI_usa_threat]%§!"
