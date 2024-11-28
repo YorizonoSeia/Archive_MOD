@@ -44,6 +44,7 @@ USA_congress = {
 	visible = {
 		#/BA_MOD_FIX
 			NOT = { has_global_flag = BA_shotdown_USA_congress }
+			NOT = { has_country_flag = BA_end_USA_congress }
 		#BA_MOD_FIX/
 	}
 

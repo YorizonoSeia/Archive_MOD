@@ -1026,9 +1026,8 @@ focus_tree = {
 	           ideology = communism
 	           popularity = 0.1
             }
-			add_political_power = -100
-			add_stability = -0.2
-			USA_congress_medium_opposition
+			add_stability = -0.05
+			USA_congress_medium_opposition = yes
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = harry_white
 			custom_effect_tooltip = available_political_advisor
@@ -2386,9 +2385,6 @@ focus_tree = {
 		x = 22
 		y = 0
 		relative_position_id = USABA_regression_strategy
-		mutually_exclusive = {
-			focus = USABA_a_strong_alliance
-		}
 
 		cost = 2
 		#ai_will_do = {
@@ -2400,9 +2396,9 @@ focus_tree = {
 		continue_if_invalid = yes
 
 		available = {
-			has_civil_war = yes
-			NOT = { has_war_with = SOV }
-			SOV = { has_government = communism }
+			has_war_with = CSA
+			NOT = { has_war_with = SOU }
+			SOU = { has_government = communism }
 		}
 		bypass = {
 		}
@@ -2425,56 +2421,13 @@ focus_tree = {
 	}
 
 	focus = {
-		id = USABA_a_strong_alliance
-		icon = GFX_focus_chi_mission_to_the_soviet_union
-		x = 3
-		y = 0
-		relative_position_id = USABA_SOV_enter_american_civilwar
-		mutually_exclusive = {
-			focus = USABA_SOV_enter_american_civilwar
-		}
-
-		cost = 2
-		#ai_will_do = {
-		#	factor = 1
-		#}
-
-		available_if_capitulated = no
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = unlock_focuses
-				always = no
-			}
-		}
-		bypass = {
-			is_in_faction_with = SOU
-			hidden_trigger = {
-				NOT = { has_completed_focus = USA_reestablish_the_gold_standard }
-			}
-		}
-		bypass = {
-			
-		}
-
-		completion_reward = {
-			add_popularity = {
-			    ideology = communism
-			    popularity = 0.05
-			}
-		}
-	}
-
-	focus = {
 		id = USABA_soviet_equipment_shipments
 		available = {
-			NOT = { has_war_with = SOV }
-			SOV = { has_government = communism }
+			NOT = { has_war_with = SOU }
+			SOU = { has_government = communism }
 		}
 		bypass = {
-			has_civil_war = no
+			NOT = { has_war_with = CSA }
 		}
 		prerequisite = { focus = USABA_SOV_enter_american_civilwar }
 
@@ -2565,11 +2518,11 @@ focus_tree = {
 	focus = {
 		id = USABA_soviet_military_advisors
 		available = {
-			NOT = { has_war_with = SOV }
-			SOV = { has_government = communism }
+			NOT = { has_war_with = SOU }
+			SOU = { has_government = communism }
 		}
 		bypass = {
-			has_civil_war = no
+			NOT = { has_war_with = CSA }
 		}
 		prerequisite = { focus = USABA_SOV_enter_american_civilwar }
 
@@ -2592,9 +2545,11 @@ focus_tree = {
 	focus = {
 		id = USABA_subvert_soviet_control
 		available = {
-			has_civil_war = no
+			NOT = { has_war_with = CSA }
+			democratic > 0.30
 		}
 		bypass = {
+			is_subject = no
 		}
 		prerequisite = { focus = USABA_soviet_equipment_shipments }
 		prerequisite = { focus = USABA_soviet_military_advisors }
@@ -2613,6 +2568,13 @@ focus_tree = {
 
 		completion_reward = {
 			SOV = { add_opinion_modifier = { target = ROOT modifier = SPR_subvert_soviet_control } }
+			set_politics = {
+				ruling_party = democratic
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.20
+			}
 			if = {
 				limit = { is_subject = yes }
 				OVERLORD = { end_puppet = ROOT }
@@ -2624,9 +2586,9 @@ focus_tree = {
 	focus = {
 		id = USABA_soviet_recovery_aid
 		available = {
-			NOT = { has_war_with = SOV }
-			SOV = { has_government = communism }
-			has_civil_war = no
+			NOT = { has_war_with = SOU }
+			SOU = { has_government = communism }
+			NOT = { has_war_with = CSA }
 		}
 		bypass = {
 		}
@@ -5168,7 +5130,7 @@ focus_tree = {
 			if = { limit = { has_country_flag = USABA_government_official_exile }
 				NOT = { has_country_flag = USABA_government_official_exile }
 				TRM = {
-					ideology = fascism
+					has_government = fascism
 				}
 			}
 
@@ -9350,7 +9312,7 @@ focus_tree = {
 	          ideology = fascism
 	          popularity = 0.05
            }
-		   USA_congress_yes_support = yes
+		   USA_congress_small_support = yes
 		}
 	}
 
@@ -10873,10 +10835,10 @@ focus_tree = {
 	focus = {
 		id = USA_soviet_team
 		icon = GFX_focus_generic_join_comintern
-		prerequisite = { focus = USABA_soviet_recovery_aid focus = USABA_a_strong_alliance }
+		prerequisite = { focus = USABA_soviet_recovery_aid }
 		mutually_exclusive = { focus = USA_old_team focus = USA_new_team focus = USABA_german_national_protection_law }
 
-		x = 2
+		x = 0
 		y = 3
 		relative_position_id = USABA_SOV_enter_american_civilwar
 		cost = 5
@@ -10885,6 +10847,7 @@ focus_tree = {
 				NOT = { has_country_flag = USABA_government_official_exile }
 			}
 			has_government = communism
+			is_subject_of = SOU
 		}
 		bypass = {
 		}
@@ -10893,6 +10856,36 @@ focus_tree = {
 		#}
 		available_if_capitulated = yes
 		completion_reward = {
+			custom_effect_tooltip = BA_end_USA_congress_tt
+			set_country_flag = BA_end_USA_congress
+			set_temp_variable = { temp_democratic = party_popularity@democratic }
+			multiply_temp_variable = { temp_democratic = -1 }
+			add_stability = var:temp_democratic
+			if = {
+				limit = {
+					has_country_flag = mtg_usa_civil_war_fascists_1
+					not = {
+						has_country_flag = mtg_usa_civil_war_fascists_2
+					}
+				}
+				country_event = mtg_usa_civil_war_fascists.2
+				custom_effect_tooltip = mtg_usa_civil_war_warning_tt
+			}
+			else_if = {
+				limit = { not = { has_country_flag = mtg_usa_civil_war_fascists_1 } }
+				country_event = mtg_usa_civil_war_fascists.1
+				custom_effect_tooltip = mtg_usa_civil_war_warning_tt
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = mtg_usa_civil_war_fascists_2
+						has_war = no
+						not = { has_country_flag = mucwf4 }
+					}
+					country_event = mtg_usa_civil_war_fascists.4
+				}
+			}
 		}
 	}
 }

@@ -14,7 +14,7 @@ ideas = {
 			}
 
 			cancel = {
-				has_civil_war = no
+				NOT = { has_war_with = CSA }
 			}
 
 			on_remove = {
@@ -40,7 +40,7 @@ ideas = {
 			}
 
 			cancel = {
-				has_civil_war = no
+				has_civil_war = no #놀랍게도 우파 미국 내전은 진짜 내전이 맞군!
 			}
 
 			on_remove = {
@@ -510,10 +510,10 @@ ideas = {
 			}
 
 			modifier = {
-                join_faction_tension = -1
+                join_faction_tension = -0.7
                 generate_wargoal_tension = -0.7
-				democratic_drift = 1
-				add_stability_daily = 0.1
+				democratic_drift = 0.05
+				stability_factor = 0.10
 			}
 
 		}
