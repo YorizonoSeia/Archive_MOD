@@ -242,7 +242,7 @@ TRM_occupied_state_government = {
 }
 
 TRM_anti_geh_emotion = {
-	icon = GFX_decision_generic_ignite_civil_war
+	icon = GFX_modifiers_TRM_Gehenna_resistant
 	
 	remove_trigger = { NOT = { is_controlled_by = TRM } }
 	
@@ -256,7 +256,7 @@ TRM_anti_geh_emotion = {
 TRM_anti_geh_emotion_2 = {
 	enable = { always = yes }
 
-	icon = GFX_decision_generic_ignite_civil_war
+	icon = GFX_modifiers_TRM_Gehenna_resistant
 	
 	remove_trigger = { NOT = { is_controlled_by = TRM } }
 	
@@ -270,7 +270,7 @@ TRM_anti_geh_emotion_2 = {
 TRM_anti_geh_emotion_3 = {
 	enable = { always = yes }
 
-	icon = GFX_decision_generic_ignite_civil_war
+	icon = GFX_modifiers_TRM_Gehenna_resistant
 	
 	remove_trigger = { NOT = { is_controlled_by = TRM } }
 	
@@ -284,7 +284,7 @@ TRM_anti_geh_emotion_3 = {
 TRM_anti_geh_emotion_4 = {
 	enable = { always = yes }
 
-	icon = GFX_decision_generic_ignite_civil_war
+	icon = GFX_modifiers_TRM_Gehenna_resistant
 	
 	remove_trigger = { NOT = { is_controlled_by = TRM } }
 	
@@ -306,30 +306,30 @@ TRM_Military_occupation = {
 GEK_protestant_state = { # 주 모디파이어
 	enable = { always = yes }
 
-	icon = GFX_idea_MEX_church_power_5
+	icon = GFX_modifiers_GEK_protestant_state
 	
 }
 GEK_catholic_state = { # 주 모디파이어
 	enable = { always = yes }
 
-	icon = GFX_idea_MEX_church_power_5
+	icon = GFX_modifiers_GEK_catholic_state
 	
 }
 GEK_trm_christianity_state = { # 주 모디파이어
 	enable = { always = yes }
 
-	icon = GFX_idea_TRM_icon
+	icon = GFX_modifiers_GEK_trm_christianity_state
 	
 }
 GEK_no_religion = { # 주 모디파이어
 	enable = { always = yes }
 
-	icon = GFX_idea_SPR_anarchist_society
+	icon = GFX_modifiers_GEK_no_religion
 	
 }
 GEK_ari_religion = { # 주 모디파이어
 	enable = { always = yes }
 
-	icon = GFX_idea_ARI_arian_faith
+	icon = GFX_modifiers_GEK_ari_religion
 	
 }

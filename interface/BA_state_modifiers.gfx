@@ -7,4 +7,28 @@ spriteTypes = {
     	name = "GFX_modifiers_GEH_state_government"				
     	textureFile = "gfx/interface/state_modifiers/modifiers_GEH_state_government.dds"
    	}
+	spriteType = { 
+    	name = "GFX_modifiers_TRM_Gehenna_resistant"
+    	textureFile = "gfx/interface/state_modifiers/modifiers_TRM_Gehenna_resistant.dds"
+   	}
+	spriteType = { 
+    	name = "GFX_modifiers_GEK_ari_religion"
+    	textureFile = "gfx/interface/state_modifiers/modifiers_GEK_ari_religion.dds"
+   	}
+	spriteType = { 
+    	name = "GFX_modifiers_GEK_catholic_state"
+    	textureFile = "gfx/interface/state_modifiers/modifiers_GEK_catholic_state.dds"
+   	}
+	spriteType = { 
+    	name = "GFX_modifiers_GEK_no_religion"
+    	textureFile = "gfx/interface/state_modifiers/modifiers_GEK_no_religion.dds"
+   	}
+	spriteType = { 
+    	name = "GFX_modifiers_GEK_protestant_state"
+    	textureFile = "gfx/interface/state_modifiers/modifiers_GEK_protestant_state.dds"
+   	}
+	spriteType = { 
+    	name = "GFX_modifiers_GEK_trm_christianity_state"
+    	textureFile = "gfx/interface/state_modifiers/modifiers_GEK_trm_christianity_state.dds"
+   	}
 }

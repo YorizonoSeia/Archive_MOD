@@ -360,8 +360,20 @@ ideas = {
 				allowed = { always = no }
 				allowed_civil_war = { always = yes }
 				modifier = {
-					war_support_factor = 0.05
+					war_support_factor = 0.1
 					custom_modifier_tooltip = TRM_anti_gehenna_idea_tt
+				}
+				targeted_modifier = {
+					tag = GEH
+					attack_bonus_against = 0.1
+				}
+				targeted_modifier = {
+					tag = GEM
+					attack_bonus_against = 0.1
+				}
+				targeted_modifier = {
+					tag = HEU
+					attack_bonus_against = 0.1
 				}
 			}
 			TRM_Endsige2 = { # 영도자 미소노 미카의 지도 아래서!
