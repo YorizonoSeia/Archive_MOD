@@ -38,6 +38,7 @@ state = {
 		victory_points = {
 			11560 2 # Mainz
 		}
+		add_dynamic_modifier = { modifier = GEK_no_religion }
 	}
 
 	provinces = {

@@ -44,6 +44,7 @@ state = {
 			}
 		}
 
+		add_dynamic_modifier = { modifier = GEK_protestant_state }
 		add_dynamic_modifier = { modifier = GEH_ucantusefactory_2 }
 	}
 

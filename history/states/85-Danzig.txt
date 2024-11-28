@@ -24,6 +24,8 @@ state={
 		add_core_of = KSH
 		
 		add_core_of = PRE
+		
+		add_dynamic_modifier = { modifier = GEK_ari_religion }
 	}
 
 	provinces={

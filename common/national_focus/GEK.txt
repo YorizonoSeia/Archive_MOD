@@ -208,7 +208,7 @@ focus_tree = {
 			}
 			NOT = { has_government = communism }
 		}
-		cost = 7
+		cost = 1
 		completion_reward = {
 			set_cosmetic_tag = GEK_RM
 			random_owned_controlled_state = {
@@ -327,6 +327,13 @@ focus_tree = {
 				id = GEK_rm_event.3
 				days = 3
 			}
+			hidden_effect = {
+				country_event = {
+					id = GEK_event_for_auto.1
+					random_days = 15
+					days = 5
+				}
+			}
 		}
 	}
 	focus = { #대도시 파업 지휘
@@ -420,7 +427,7 @@ focus_tree = {
 			focus = GEK_RM_com_focus_0
 		}
 		available = {
-			has_war = yes
+			always = no
 		}
 		relative_position_id = GEK_RM_com_focus_0
 		x = -1
@@ -436,27 +443,27 @@ focus_tree = {
 				division_template = {
 					name = "Neuer Roter Frontkämpferbund"
 					regiments = {
-						militia = {
+						irregular_infantry = {
 							x = 0
 							y = 0
 						}
-						militia = {
+						irregular_infantry = {
 							x = 0
 							y = 1
 						}
-						militia = {
+						irregular_infantry = {
 							x = 0
 							y = 2
 						}
-						militia = {
+						irregular_infantry = {
 							x = 1
 							y = 0
 						}
-						militia = {
+						irregular_infantry = {
 							x = 1
 							y = 1
 						}
-						militia = {
+						irregular_infantry = {
 							x = 1
 							y = 2
 						}
@@ -497,6 +504,9 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = GEK_RM_com_focus_2
+		}
+		available = {
+			always = no
 		}
 		relative_position_id = GEK_RM_com_focus_0
 		x = -1
@@ -588,6 +598,13 @@ focus_tree = {
 				id = GEK_rm_event.4
 				days = 3
 			}
+			hidden_effect = {
+				country_event = {
+					id = GEK_event_for_auto.9
+					random_days = 15
+					days = 5
+				}
+			}
 		}
 	}
 	focus = { #주정부 제휴
@@ -600,14 +617,24 @@ focus_tree = {
 		prerequisite = {
 			focus = GEK_RM_spd_focus_2
 		}
+		available = {
+			always = no
+		}
 		relative_position_id = GEK_RM_spd_focus_0
 		x = -1
 		y = 2
 		cost = 2
 		completion_reward = {
-			country_event = {
-				id = GEK_rm_event.5
-				days = 3
+			custom_effect_tooltip = GEK_RM_spd_focus_1_tt
+			every_controlled_state = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GEH_state_government
+					}
+				}
+				GEK = {
+					add_stability = 0.03
+				}
 			}
 		}
 	}
@@ -620,6 +647,9 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = GEK_RM_spd_focus_2
+		}
+		available = {
+			always = no
 		}
 		relative_position_id = GEK_RM_spd_focus_0
 		x = 1
@@ -648,6 +678,9 @@ focus_tree = {
 		prerequisite = {
 			focus = GEK_RM_dzp_focus_0
 		}
+		available = {
+			always = no
+		}
 		relative_position_id = GEK_RM_spd_focus_0
 		x = 0
 		y = 1
@@ -672,11 +705,18 @@ focus_tree = {
 		prerequisite = {
 			focus = GEK_RM_com_focus_0
 		}
+		available = {
+			always = no
+		}
 		relative_position_id = GEK_RM_spd_focus_0
 		x = -3
 		y = 1
 		cost = 2
 		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 3000
+			}
 		}
 	}
 	focus = { #공화주의 정서
@@ -691,6 +731,9 @@ focus_tree = {
 		available = {
 			has_idea = GEK_legitimacy_weimar_2
 			has_war = no
+		}
+		available = {
+			always = no
 		}
 		mutually_exclusive = {
 			focus = GEK_RM_spd_focus_4
@@ -757,6 +800,13 @@ focus_tree = {
 				id = GEK_rm_event.6
 				days = 3
 			}
+			hidden_effect = {
+				country_event = {
+					id = GEK_event_for_auto.19
+					random_days = 15
+					days = 5
+				}
+			}
 		}
 	}
 	focus = { #흑적금 국기단
@@ -772,6 +822,9 @@ focus_tree = {
 		prerequisite = {
 			focus = GEK_RM_spd_focus_0
 		}
+		available = {
+			always = no
+		}
 		relative_position_id = GEK_RM_dzp_focus_0
 		x = -2
 		y = 1
@@ -784,11 +837,11 @@ focus_tree = {
 			if = {
 				limit = {
 					NOT = {
-						has_template = "Patriotische Brigade"
+						has_template = "Reichsbanner Schwarz-Rot-Gold"
 					}
 				}
 				division_template = {
-					name = "Patriotische Brigade"
+					name = "Reichsbanner Schwarz-Rot-Gold"
 					regiments = {
 						militia = {
 							x = 0
@@ -820,23 +873,23 @@ focus_tree = {
 			}
 			capital_scope = {
 				create_unit = {
-					division = "name = \"Patriotische Brigade\" division_template = \"Patriotische Brigade\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+					division = "name = \"Reichsbanner Schwarz-Rot-Gold\" division_template = \"Reichsbanner Schwarz-Rot-Gold\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
 					owner = GEK
 				}
 				create_unit = {
-					division = "name = \"Patriotische Brigade\" division_template = \"Patriotische Brigade\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+					division = "name = \"Reichsbanner Schwarz-Rot-Gold\" division_template = \"Reichsbanner Schwarz-Rot-Gold\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
 					owner = GEK
 				}
 				create_unit = {
-					division = "name = \"Patriotische Brigade\" division_template = \"Patriotische Brigade\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+					division = "name = \"Reichsbanner Schwarz-Rot-Gold\" division_template = \"Reichsbanner Schwarz-Rot-Gold\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
 					owner = GEK
 				}
 				create_unit = {
-					division = "name = \"Patriotische Brigade\" division_template = \"Patriotische Brigade\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+					division = "name = \"Reichsbanner Schwarz-Rot-Gold\" division_template = \"Reichsbanner Schwarz-Rot-Gold\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
 					owner = GEK
 				}
 				create_unit = {
-					division = "name = \"Patriotische Brigade\" division_template = \"Patriotische Brigade\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+					division = "name = \"Reichsbanner Schwarz-Rot-Gold\" division_template = \"Reichsbanner Schwarz-Rot-Gold\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
 					owner = GEK
 				}
 			}
@@ -852,6 +905,9 @@ focus_tree = {
 		prerequisite = {
 			focus = GEK_RM_dzp_focus_1
 		}
+		available = {
+			always = no
+		}
 		relative_position_id = GEK_RM_dzp_focus_0
 		x = -1
 		y = 2
@@ -864,11 +920,11 @@ focus_tree = {
 			if = {
 				limit = {
 					NOT = {
-						has_template = "Patriotische Brigade"
+						has_template = "Reichsbanner Schwarz-Rot-Gold"
 					}
 				}
 				division_template = {
-					name = "Patriotische Brigade"
+					name = "Reichsbanner Schwarz-Rot-Gold"
 					regiments = {
 						militia = {
 							x = 0
@@ -900,14 +956,14 @@ focus_tree = {
 			}
 			51 = {
 				create_unit = {
-					division = "name = \"Patriotische Brigade\" division_template = \"Patriotische Brigade\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+					division = "name = \"Reichsbanner Schwarz-Rot-Gold\" division_template = \"Reichsbanner Schwarz-Rot-Gold\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
 					owner = GEK
                     allow_spawning_on_enemy_provs = yes
 				}
 			}
 			987 = {
 				create_unit = {
-					division = "name = \"Patriotische Brigade\" division_template = \"Patriotische Brigade\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+					division = "name = \"Reichsbanner Schwarz-Rot-Gold\" division_template = \"Reichsbanner Schwarz-Rot-Gold\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
 					owner = GEK
                     allow_spawning_on_enemy_provs = yes
 				}
@@ -925,7 +981,7 @@ focus_tree = {
 			focus = GEK_RM_dzp_focus_0
 		}
 		available = {
-			controls_state = 51
+			always = no
 		}
 		relative_position_id = GEK_RM_dzp_focus_0
 		x = 0
@@ -961,11 +1017,63 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = GEK_RM_DNVP_focus_2
 		}
+		available = {
+			always = no
+		}
 		relative_position_id = GEK_RM_dzp_focus_0
 		x = 1
 		y = 2
 		cost = 2
 		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						has_template = "Reichsbanner Schwarz-Rot-Gold"
+					}
+				}
+				division_template = {
+					name = "Reichsbanner Schwarz-Rot-Gold"
+					regiments = {
+						militia = {
+							x = 0
+							y = 0
+						}
+						militia = {
+							x = 0
+							y = 1
+						}
+						militia = {
+							x = 0
+							y = 2
+						}
+						militia = {
+							x = 1
+							y = 0
+						}
+						militia = {
+							x = 1
+							y = 1
+						}
+						militia = {
+							x = 1
+							y = 2
+						}
+					}
+					is_locked = yes
+				}
+			}
+			custom_effect_tooltip = GEK_RM_dzp_focus_4_tt
+			every_controlled_state = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GEK_catholic_state
+					}
+				}
+				create_unit = {
+					division = "name = \"Reichsbanner Schwarz-Rot-Gold\" division_template = \"Reichsbanner Schwarz-Rot-Gold\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+					owner = GEK
+				}
+			}
 		}
 	}
 	focus = { #국가인민당과의 협력
@@ -982,6 +1090,18 @@ focus_tree = {
 		y = 1
 		cost = 1
 		completion_reward = {
+			country_event = {
+				id = GEK_rm_event.10
+				days = 3
+			}
+			hidden_effect = {
+				country_event = {
+					id = GEK_event_for_auto.24
+					days = 5
+					random_days = 15
+					days = 5
+				}
+			}
 		}
 	}
 	focus = { #자유군단 모집
@@ -994,11 +1114,67 @@ focus_tree = {
 		prerequisite = {
 			focus = GEK_RM_DNVP_focus_0
 		}
+		available = {
+			always = no
+		}
 		relative_position_id = GEK_RM_DNVP_focus_0
 		x = -1
 		y = 1
 		cost = 2
 		completion_reward = {
+			division_template = {
+				name = "Freikorps"
+				regiments = {
+						militia = {
+							x = 0
+							y = 0
+						}
+						militia = {
+							x = 0
+							y = 1
+						}
+						militia = {
+							x = 0
+							y = 2
+						}
+						militia = {
+							x = 1
+							y = 0
+						}
+						militia = {
+							x = 1
+							y = 1
+						}
+						militia = {
+							x = 1
+							y = 2
+						}
+					}
+					is_locked = yes
+				
+			}
+			capital_scope = {
+				create_unit = {
+					division = "name = \"Freikorps\" division_template = \"Freikorps\" start_experience_factor = 0.2 start_equipment_factor = 1"
+					owner = GEK
+				}
+				create_unit = {
+					division = "name = \"Freikorps\" division_template = \"Freikorps\" start_experience_factor = 0.2 start_equipment_factor = 1"
+					owner = GEK
+				}
+				create_unit = {
+					division = "name = \"Freikorps\" division_template = \"Freikorps\" start_experience_factor = 0.2 start_equipment_factor = 1"
+					owner = GEK
+				}
+				create_unit = {
+					division = "name = \"Freikorps\" division_template = \"Freikorps\" start_experience_factor = 0.2 start_equipment_factor = 1"
+					owner = GEK
+				}
+				create_unit = {
+					division = "name = \"Freikorps\" division_template = \"Freikorps\" start_experience_factor = 0.2 start_equipment_factor = 1"
+					owner = GEK
+				}
+			}
 		}
 	}
 	focus = { #개신교 교회와의 제휴
@@ -1014,11 +1190,27 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = GEK_RM_dzp_focus_4
 		}
+		available = {
+			always = no
+		}
 		relative_position_id = GEK_RM_DNVP_focus_0
 		x = 0
 		y = 2
 		cost = 2
 		completion_reward = {
+			custom_effect_tooltip = GEK_RM_DNVP_focus_2_tt
+			every_controlled_state = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GEK_protestant_state
+					}
+				}
+				create_unit = {
+					division = "name = \"Freikorps\" division_template = \"Freikorps\" start_experience_factor = 0.2 start_equipment_factor = 1"
+					owner = GEK
+				}
+			}
+			GEK_enhance_army = yes
 		}
 	}
 	focus = { #군부와의 협력
@@ -1039,6 +1231,13 @@ focus_tree = {
 				id = GEK_rm_event.7
 				days = 3
 			}
+			hidden_effect = {
+				country_event = {
+					id = GEK_event_for_auto.29
+					random_days = 15
+					days = 5
+				}
+			}
 		}
 	}
 	focus = { #루프트바페의 귀환
@@ -1050,6 +1249,9 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = GEK_RM_army_focus_0
+		}
+		available = {
+			always = no
 		}
 		relative_position_id = GEK_RM_army_focus_0
 		x = 1
@@ -1080,6 +1282,9 @@ focus_tree = {
 		prerequisite = {
 			focus = GEK_RM_army_focus_0
 		}
+		available = {
+			always = no
+		}
 		relative_position_id = GEK_RM_army_focus_0
 		x = -1
 		y = 1
@@ -1097,6 +1302,9 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = GEK_RM_army_focus_2
+		}
+		available = {
+			always = no
 		}
 		relative_position_id = GEK_RM_army_focus_0
 		x = 0
@@ -1189,6 +1397,13 @@ focus_tree = {
 				id = GEK_rm_event.8
 				days = 3
 			}
+			hidden_effect = {
+				country_event = {
+					id = GEK_event_for_auto.35
+					random_days = 15
+					days = 5
+				}
+			}
 		}
 	}
 	focus = { #당조직 재정비
@@ -1197,6 +1412,9 @@ focus_tree = {
 		icon = GFX_focus_generic_self_management
 		ai_will_do = {
 			base = 0
+		}
+		available = {
+			always = no
 		}
 		prerequisite = {
 			focus = GEK_RM_nazi_focus_0
@@ -1238,6 +1456,9 @@ focus_tree = {
 		prerequisite = {
 			focus = GEK_RM_nazi_focus_1
 		}
+		available = {
+			always = no
+		}
 		relative_position_id = GEK_RM_nazi_focus_0
 		x = 0
 		y = 2
@@ -1246,7 +1467,7 @@ focus_tree = {
 			if = {
 				limit = {
 					NOT = {
-						has_template = "Patriotische Brigade"
+						has_template = "Reichsbanner Schwarz-Rot-Gold"
 					}
 				}
 				division_template = {

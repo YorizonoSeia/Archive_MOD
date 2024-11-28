@@ -1071,18 +1071,725 @@ country_event = { #금이 가는 연정
 		activate_mission = GEK_flatering_coalition
 	}
 }
-country_event = { #금이 가는 연정
+country_event = { #독일국가인민당과의 연합
 	id = GEK_rm_event.10
-	title = GEK_rm_event.9.t
-	desc = GEK_rm_event.9.d
+	title = GEK_rm_event.10.t
+	desc = GEK_rm_event.10.d
 	picture = GFX_report_event_communists_in_riga
 	
 	fire_only_once = yes
 	is_triggered_only = yes
 	
 	option = {
-		name = GEK_rm_event.9.a 
+		name = GEK_rm_event.10.a
+		GEK_enhance_army = yes
+	}
+}
+add_namespace = GEK_event_for_auto
+country_event = { #유격대 강화 자동 찍기
+	id = GEK_event_for_auto.1
+	title = GEK_rm_event.1.t
+	desc = GEK_rm_event.1.d
+	hidden = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
 		activate_shine_on_focus = GEK_RM_com_focus_2
-
+		country_event = {
+			id = GEK_event_for_auto.2
+			days = 14
+		}
+	}
+}
+country_event = { #유격대 강화 자동 완료
+	id = GEK_event_for_auto.2
+	title = GEK_rm_event.1.t
+	desc = GEK_rm_event.1.d
+	hidden = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		deactivate_shine_on_focus = GEK_RM_com_focus_2
+		complete_national_focus = {
+            focus = GEK_RM_com_focus_2
+            use_side_message = yes
+            originator_name = KPD_party_long
+        }
+		country_event = {
+			id = GEK_event_for_auto.3
+			days = 3
+			random_days = 10
+		}
+	}
+}
+country_event = { #반소탕전 자동 찍기
+	id = GEK_event_for_auto.3
+	title = GEK_rm_event.3.t
+	desc = GEK_rm_event.3.d
+	hidden = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		activate_shine_on_focus = GEK_RM_com_focus_3
+		country_event = {
+			id = GEK_event_for_auto.4
+			days = 14
+		}
+	}
+}
+country_event = { #반소탕전 자동 완료
+	id = GEK_event_for_auto.4
+	title = GEK_rm_event.3.t
+	desc = GEK_rm_event.3.d
+	hidden = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		deactivate_shine_on_focus = GEK_RM_com_focus_3
+		complete_national_focus = {
+            focus = GEK_RM_com_focus_3
+            use_side_message = yes
+            originator_name = KPD_party_long
+        }
+	}
+}
+country_event = { #노동조합무장 자동 찍기
+	id = GEK_event_for_auto.5
+	title = GEK_rm_event.3.t
+	desc = GEK_rm_event.3.d
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		has_completed_focus = GEK_RM_spd_focus_2
+		has_completed_focus = GEK_RM_com_focus_2
+	}
+	
+	option = {
+		activate_shine_on_focus = GEK_RM_spd_focus_2.5
+		country_event = {
+			id = GEK_event_for_auto.6
+			days = 14
+		}
+	}
+}
+country_event = { #노조무 자동 완료
+	id = GEK_event_for_auto.6
+	title = GEK_rm_event.3.t
+	desc = GEK_rm_event.3.d
+	hidden = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		deactivate_shine_on_focus = GEK_RM_spd_focus_2.5
+		complete_national_focus = {
+            focus = GEK_RM_spd_focus_2.5
+            use_side_message = yes
+            originator_name = KPD_party_long
+        }
+		country_event = {
+			id = GEK_event_for_auto.7
+			days = 3
+			random_days = 10
+		}
+	}
+}
+country_event = { #대도시파업지휘 자동 찍기
+	id = GEK_event_for_auto.7
+	title = GEK_rm_event.3.t
+	desc = GEK_rm_event.3.d
+	hidden = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		activate_shine_on_focus = GEK_RM_com_focus_1
+		country_event = {
+			id = GEK_event_for_auto.8
+			days = 14
+		}
+	}
+}
+country_event = { # 자동 완료
+	id = GEK_event_for_auto.8
+	title = GEK_rm_event.3.t
+	desc = GEK_rm_event.3.d
+	hidden = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		deactivate_shine_on_focus = GEK_RM_com_focus_1
+		complete_national_focus = {
+            focus = GEK_RM_com_focus_1
+            use_side_message = yes
+            originator_name = KPD_party_long
+        }
+	}
+}
+country_event = { #대연정지도 자동 찍기
+	id = GEK_event_for_auto.9
+	title = GEK_rm_event.3.t
+	desc = GEK_rm_event.3.d
+	hidden = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		activate_shine_on_focus = GEK_RM_spd_focus_2
+		country_event = {
+			id = GEK_event_for_auto.10
+			days = 14
+		}
+	}
+}
+country_event = { # 자동 완료
+	id = GEK_event_for_auto.10
+	title = GEK_rm_event.3.t
+	desc = GEK_rm_event.3.d
+	hidden = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		deactivate_shine_on_focus = GEK_RM_spd_focus_2
+		complete_national_focus = {
+            focus = GEK_RM_spd_focus_2
+            use_side_message = yes
+            originator_name = SPD_party_long
+        }
+		country_event = {
+			id = GEK_event_for_auto.11
+			days = 3
+			random_days = 10
+		}
+	}
+}
+country_event = { #주정부제휴 자동 찍기
+	id = GEK_event_for_auto.11
+	title = GEK_rm_event.3.t
+	desc = GEK_rm_event.3.d
+	hidden = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		activate_shine_on_focus = GEK_RM_spd_focus_1
+		country_event = {
+			id = GEK_event_for_auto.12
+			days = 14
+		}
+	}
+}
+country_event = { # 자동 완료
+	id = GEK_event_for_auto.12
+	title = GEK_rm_event.3.t
+	desc = GEK_rm_event.3.d
+	hidden = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		deactivate_shine_on_focus = GEK_RM_spd_focus_1
+		complete_national_focus = {
+            focus = GEK_RM_spd_focus_1
+            use_side_message = yes
+            originator_name = SPD_party_long
+        }
+		country_event = {
+			id = GEK_event_for_auto.13
+			days = 3
+			random_days = 10
+		}
+	}
+}
+country_event = { #언론활용 자동 찍기
+	id = GEK_event_for_auto.13
+	title = GEK_rm_event.3.t
+	desc = GEK_rm_event.3.d
+	hidden = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		activate_shine_on_focus = GEK_RM_spd_focus_1.5
+		country_event = {
+			id = GEK_event_for_auto.14
+			days = 14
+		}
+	}
+}
+country_event = { # 자동 완료
+	id = GEK_event_for_auto.14
+	title = GEK_rm_event.3.t
+	desc = GEK_rm_event.3.d
+	hidden = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		deactivate_shine_on_focus = GEK_RM_spd_focus_1.5
+		complete_national_focus = {
+            focus = GEK_RM_spd_focus_1.5
+            use_side_message = yes
+            originator_name = SPD_party_long
+        }
+	}
+}
+country_event = { #흑적금 자동 찍기
+	id = GEK_event_for_auto.15 
+	title = GEK_rm_event.3.t
+	desc = GEK_rm_event.3.d
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		has_completed_focus = GEK_RM_dzp_focus_3
+		OR = {
+			has_completed_focus = GEK_RM_dzp_focus_4
+			has_completed_focus = GEK_RM_DNVP_focus_2
+		}
+	}
+	
+	option = {
+		activate_shine_on_focus = GEK_RM_dzp_focus_1
+		country_event = {
+			id = GEK_event_for_auto.16
+			days = 14
+		}
+	}
+}
+country_event = { # 자동 완료
+	id = GEK_event_for_auto.16
+	title = GEK_rm_event.3.t
+	desc = GEK_rm_event.3.d
+	hidden = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		deactivate_shine_on_focus = GEK_RM_dzp_focus_1
+		complete_national_focus = {
+            focus = GEK_RM_dzp_focus_1
+            use_side_message = yes
+            originator_name = DZP_party_long
+        }
+		country_event = {
+			id = GEK_event_for_auto.17
+			days = 3
+			random_days = 10
+		}
+	}
+}
+country_event = { #라인란트 자동 찍기
+	id = GEK_event_for_auto.17
+	title = GEK_rm_event.3.t
+	desc = GEK_rm_event.3.d
+	hidden = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		activate_shine_on_focus = GEK_RM_dzp_focus_2
+		country_event = {
+			id = GEK_event_for_auto.18
+			days = 14
+		}
+	}
+}
+country_event = { # 자동 완료
+	id = GEK_event_for_auto.18
+	title = GEK_rm_event.3.t
+	desc = GEK_rm_event.3.d
+	hidden = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		deactivate_shine_on_focus = GEK_RM_dzp_focus_2
+		complete_national_focus = {
+            focus = GEK_RM_dzp_focus_2
+            use_side_message = yes
+            originator_name = DZP_party_long
+        }
+	}
+}
+country_event = { #산업가 자동 찍기
+	id = GEK_event_for_auto.19
+	title = GEK_rm_event.3.t
+	desc = GEK_rm_event.3.d
+	hidden = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		activate_shine_on_focus = GEK_RM_dzp_focus_3
+		country_event = {
+			id = GEK_event_for_auto.20
+			days = 14
+		}
+	}
+}
+country_event = { # 자동 완료
+	id = GEK_event_for_auto.20
+	title = GEK_rm_event.3.t
+	desc = GEK_rm_event.3.d
+	hidden = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		deactivate_shine_on_focus = GEK_RM_dzp_focus_3
+		complete_national_focus = {
+            focus = GEK_RM_dzp_focus_3
+            use_side_message = yes
+            originator_name = DZP_party_long
+        }
+		country_event = {
+			id = GEK_event_for_auto.21
+			days = 3
+			random_days = 10
+		}
+	}
+}
+country_event = { #가톨릭 자동 찍기
+	id = GEK_event_for_auto.21
+	title = GEK_rm_event.3.t
+	desc = GEK_rm_event.3.d
+	hidden = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			has_completed_focus = GEK_RM_DNVP_focus_2
+		}
+	}
+	option = {
+		activate_shine_on_focus = GEK_RM_dzp_focus_4
+		country_event = {
+			id = GEK_event_for_auto.22
+			days = 7
+		}
+	}
+}
+country_event = { # 가톨릭 할 거임?
+	id = GEK_event_for_auto.22
+	title = GEK_event_for_auto.22.t
+	desc = GEK_event_for_auto.22.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { #ㅇㅇ
+		name = GEK_event_for_auto.22.a
+		hidden_effect = {
+			country_event = {
+				id = GEK_event_for_auto.23
+				days = 7
+			}
+		}
+	}
+	option = { #ㄴㄴ
+		name = GEK_event_for_auto.22.b
+		hidden_effect = {
+			deactivate_shine_on_focus = GEK_RM_dzp_focus_4
+		}
+	}
+}
+country_event = { # 가톨릭 자동 완료
+	id = GEK_event_for_auto.23
+	title = GEK_rm_event.3.t
+	desc = GEK_rm_event.3.d
+	hidden = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		deactivate_shine_on_focus = GEK_RM_dzp_focus_4
+		complete_national_focus = {
+            focus = GEK_RM_dzp_focus_4
+            use_side_message = yes
+            originator_name = DZP_party_long
+        }
+	}
+}
+country_event = { # 자유군단 자동 찍기
+	id = GEK_event_for_auto.24
+	title = GEK_rm_event.22.t
+	desc = GEK_rm_event.22.d
+	hidden = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		activate_shine_on_focus = GEK_RM_DNVP_focus_1
+		country_event = {
+			id = GEK_event_for_auto.22
+			days = 14
+		}
+	}
+}
+country_event = { # 자동 완료
+	id = GEK_event_for_auto.25
+	title = GEK_rm_event.3.t
+	desc = GEK_rm_event.3.d
+	hidden = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		deactivate_shine_on_focus = GEK_RM_DNVP_focus_1
+		complete_national_focus = {
+            focus = GEK_RM_DNVP_focus_1
+            use_side_message = yes
+            originator_name = DNVP_party_long
+        }
+		country_event = {
+			id = GEK_event_for_auto.26
+			days = 3
+			random_days = 10
+		}
+	}
+}
+country_event = { # 개신교회 자동 찍기
+	id = GEK_event_for_auto.26
+	title = GEK_rm_event.26.t
+	desc = GEK_rm_event.26.d
+	hidden = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			has_completed_focus = GEK_RM_dzp_focus_4
+		}
+	}
+	option = {
+		activate_shine_on_focus = GEK_RM_DNVP_focus_2
+		country_event = {
+			id = GEK_event_for_auto.27
+			days = 7
+		}
+	}
+}
+country_event = { # 개신교 할 거임?
+	id = GEK_event_for_auto.27
+	title = GEK_event_for_auto.27.t
+	desc = GEK_event_for_auto.27.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { #ㅇㅇ
+		name = GEK_event_for_auto.22.a
+		hidden_effect = {
+			country_event = {
+				id = GEK_event_for_auto.28
+				days = 7
+			}
+		}
+	}
+	option = { #ㄴㄴ
+		name = GEK_event_for_auto.22.b
+		hidden_effect = {
+			deactivate_shine_on_focus = GEK_RM_DNVP_focus_2
+		}
+	}
+}
+country_event = { # 개신교회 자동 완료
+	id = GEK_event_for_auto.28
+	title = GEK_rm_event.3.t
+	desc = GEK_rm_event.3.d
+	hidden = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		deactivate_shine_on_focus = GEK_RM_DNVP_focus_2
+		complete_national_focus = {
+            focus = GEK_RM_DNVP_focus_2
+            use_side_message = yes
+            originator_name = DNVP_party_long
+        }
+	}
+}
+country_event = { # 루프트바페 자동 찍기
+	id = GEK_event_for_auto.29
+	title = GEK_rm_event.22.t
+	desc = GEK_rm_event.22.d
+	hidden = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		activate_shine_on_focus = GEK_RM_army_focus_1
+		country_event = {
+			id = GEK_event_for_auto.30
+			days = 14
+		}
+	}
+}
+country_event = { # 자동 완료
+	id = GEK_event_for_auto.30
+	title = GEK_rm_event.3.t
+	desc = GEK_rm_event.3.d
+	hidden = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		deactivate_shine_on_focus = GEK_RM_army_focus_1
+		complete_national_focus = {
+            focus = GEK_RM_army_focus_1
+            use_side_message = yes
+            originator_name = GEK_army_party_long
+        }
+		country_event = {
+			id = GEK_event_for_auto.31
+			days = 3
+			random_days = 10
+		}
+	}
+}
+country_event = { # 지휘체계 자동 찍기
+	id = GEK_event_for_auto.31
+	title = GEK_rm_event.22.t
+	desc = GEK_rm_event.22.d
+	hidden = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		activate_shine_on_focus = GEK_RM_army_focus_2
+		country_event = {
+			id = GEK_event_for_auto.32
+			days = 14
+		}
+	}
+}
+country_event = { # 자동 완료
+	id = GEK_event_for_auto.32
+	title = GEK_rm_event.3.t
+	desc = GEK_rm_event.3.d
+	hidden = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		deactivate_shine_on_focus = GEK_RM_army_focus_2
+		complete_national_focus = {
+            focus = GEK_RM_army_focus_2
+            use_side_message = yes
+            originator_name = GEK_army_party_long
+        }
+		country_event = {
+			id = GEK_event_for_auto.33
+			days = 3
+			random_days = 10
+		}
+	}
+}
+country_event = { # 국방군 권한 확대
+	id = GEK_event_for_auto.33
+	title = GEK_rm_event.22.t
+	desc = GEK_rm_event.22.d
+	hidden = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		activate_shine_on_focus = GEK_RM_army_focus_3
+		country_event = {
+			id = GEK_event_for_auto.34
+			days = 14
+		}
+	}
+}
+country_event = { # 자동 완료
+	id = GEK_event_for_auto.34
+	title = GEK_rm_event.3.t
+	desc = GEK_rm_event.3.d
+	hidden = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		deactivate_shine_on_focus = GEK_RM_army_focus_3
+		complete_national_focus = {
+            focus = GEK_RM_army_focus_3
+            use_side_message = yes
+            originator_name = GEK_army_party_long
+        }
+	}
+}
+country_event = { # 당조직 자동 찍기
+	id = GEK_event_for_auto.35
+	title = GEK_rm_event.22.t
+	desc = GEK_rm_event.22.d
+	hidden = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		activate_shine_on_focus = GEK_RM_nazi_focus_1
+		country_event = {
+			id = GEK_event_for_auto.36
+			days = 14
+		}
+	}
+}
+country_event = { # 자동 완료
+	id = GEK_event_for_auto.36
+	title = GEK_rm_event.3.t
+	desc = GEK_rm_event.3.d
+	hidden = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		deactivate_shine_on_focus = GEK_RM_nazi_focus_1
+		complete_national_focus = {
+            focus = GEK_RM_nazi_focus_1
+            use_side_message = yes
+            originator_name = GER_fascism_party
+        }
+		country_event = {
+			id = GEK_event_for_auto.37
+			days = 3
+			random_days = 10
+		}
+	}
+}
+country_event = { # 친위대 자동 찍기
+	id = GEK_event_for_auto.37
+	title = GEK_rm_event.22.t
+	desc = GEK_rm_event.22.d
+	hidden = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		activate_shine_on_focus = GEK_RM_nazi_focus_2
+		country_event = {
+			id = GEK_event_for_auto.38
+			days = 14
+		}
+	}
+}
+country_event = { # 자동 완료
+	id = GEK_event_for_auto.36
+	title = GEK_rm_event.3.t
+	desc = GEK_rm_event.3.d
+	hidden = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		deactivate_shine_on_focus = GEK_RM_nazi_focus_2
+		complete_national_focus = {
+            focus = GEK_RM_nazi_focus_2
+            use_side_message = yes
+            originator_name = GER_fascism_party
+        }
 	}
 }

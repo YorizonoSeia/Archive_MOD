@@ -23,6 +23,8 @@ state=
 		add_core_of = LIT
 		add_core_of = PRE
 		add_claim_by = ARI
+		
+		add_dynamic_modifier = { modifier = GEK_protestant_state }
 	}
 	provinces={
 		3288 	

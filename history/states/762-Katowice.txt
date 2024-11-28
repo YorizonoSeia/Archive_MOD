@@ -23,6 +23,7 @@ state={
 		add_core_of = POL
 		add_core_of = SIL
 		add_core_of = PRE
+		add_dynamic_modifier = { modifier = GEK_catholic_state }
 	}
 
 	local_supplies=0.0 

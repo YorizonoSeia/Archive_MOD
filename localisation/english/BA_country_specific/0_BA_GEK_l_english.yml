@@ -3,6 +3,12 @@
  ###########################################################
  ###########################################################
 
+ GEK_protestant_state: "독일계 개신교 주"
+ GEK_catholic_state: "독일계 가톨릭 주"
+ GEK_trm_christianity_state: "독일계 트리니티 기독교 주"
+ GEK_no_religion: "독일계 무신론/자유종교 주"
+ GEK_ari_religion: "독일계 아리우스 기독교 주"
+
  NSD_the_SS_went_to_america: "§Y$reinhard_heydrich$§!가 §Y[USA.GetNameWithFlag]§!에 있음"
  NSD_the_SS_went_to_arius: "§Y$reinhard_heydrich$§!가 §Y[ARI.GetNameWithFlag]§!에 있음"
  NSD_the_SS_went_to_gottland: "§Y$reinhard_heydrich$§!가 §Y[GEK.GetNameWithFlag]§!에 있음"
@@ -60,6 +66,16 @@
  GEK_rm_event.9.t: "금이 가는 연정"
  GEK_rm_event.9.d: "'전독일 최대연정'이라는 환상은 오래 가지 못할 것임을 구성원 모두가 어렴풋이 알고는 있었습니다."
  GEK_rm_event.9.a: "젠장."
+ GEK_rm_event.10.t: "국가인민당과의 연합"
+ GEK_rm_event.10.d: "국가인민당은 대전쟁 이후 보수주의 최대 정당으로서, 계급적으로는 융커들을 대변하고 있습니다. 이들의 숙고된 정치적 판단과 빛나는 옛 영광을 향한 충의는 우리에게 큰 도움이 될 것입니다."
+ GEK_rm_event.10.a: "제국을 향해!"
+
+ GEK_event_for_auto.22.t: "가톨릭 교회와의 제휴"
+ GEK_event_for_auto.22.d: "가톨릭 교회와의 제휴를 반대하는 개신교 계열 조직들의 반대가 있습니다."
+ GEK_event_for_auto.22.a: "그들이 무슨 상관이지?"
+ GEK_event_for_auto.22.b: "그들이 그렇다면야."
+ GEK_event_for_auto.27.t: "개신교 교회와의 제휴"
+ GEK_event_for_auto.27.d: "개신교 교회와의 제휴를 반대하는 개신교 계열 조직들의 반대가 있습니다."
 
  #아이디어
  GEK_solidarity_across_ideology: "아슬한 정치연합"
@@ -146,6 +162,7 @@
 
  GEK_RM_spd_focus_0: "독일 사회민주당과의 협력"
  GEK_RM_spd_focus_1: "주정부 제휴"
+ GEK_RM_spd_focus_1_tt: "§Y독일 주 정부§! 변동치를 소유한 모든 점령 중인 주마다 §Y안정도§! §G+3.00%§!\n\n"
  GEK_RM_spd_focus_1.5: "언론 활용"
  GEK_RM_spd_focus_2: "대연정 지도"
  GEK_RM_spd_focus_2.5: "노동조합 무장"
@@ -157,10 +174,12 @@
  GEK_RM_dzp_focus_2: "라인란트 봉기"
  GEK_RM_dzp_focus_3: "산업가 규합"
  GEK_RM_dzp_focus_4: "가톨릭 교회와의 제휴"
+ GEK_RM_dzp_focus_4_tt: "통제하는 모든 §Y독일계 가톨릭 주§!:\n\n"
 
  GEK_RM_DNVP_focus_0: "독일 국가인민당과의 협력"
  GEK_RM_DNVP_focus_1: "자유군단 모집"
  GEK_RM_DNVP_focus_2: "개신교 교회와의 제휴"
+ GEK_RM_DNVP_focus_2_tt: "통제하는 모든 §Y독일계 개신교 주§!:\n\n"
 
  GEK_RM_army_focus_0: "군부와의 협력"
  GEK_RM_army_focus_1: "루프트바페의 귀환"

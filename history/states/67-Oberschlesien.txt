@@ -23,6 +23,7 @@ state = {
 			9511 3 # Oppeln
 		}
 		
+		add_dynamic_modifier = { modifier = GEK_catholic_state }
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 2
