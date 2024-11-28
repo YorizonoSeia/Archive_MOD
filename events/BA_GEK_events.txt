@@ -1526,7 +1526,7 @@ country_event = { # 자유군단 자동 찍기
 	option = {
 		activate_shine_on_focus = GEK_RM_DNVP_focus_1
 		country_event = {
-			id = GEK_event_for_auto.22
+			id = GEK_event_for_auto.25
 			days = 14
 		}
 	}
@@ -1777,7 +1777,7 @@ country_event = { # 친위대 자동 찍기
 	}
 }
 country_event = { # 자동 완료
-	id = GEK_event_for_auto.36
+	id = GEK_event_for_auto.38
 	title = GEK_rm_event.3.t
 	desc = GEK_rm_event.3.d
 	hidden = yes
