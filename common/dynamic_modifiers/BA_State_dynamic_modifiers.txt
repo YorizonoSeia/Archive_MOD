@@ -331,5 +331,11 @@ GEK_ari_religion = { # 주 모디파이어
 	enable = { always = yes }
 
 	icon = GFX_modifiers_GEK_ari_religion
-	
+
+}
+ARI_Gottglaubig_religion = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_ARI_gottglaubig
+
 }

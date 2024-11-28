@@ -1940,9 +1940,10 @@ TRN_after_war_decisions = {
 	
 	TRM_unification_propaganda = {
 
-		icon = infiltrate_state
+		icon = GFX_decision_eng_propaganda_campaigns
 
 		available = {
+			has_completed_focus = TRM_germany_union
 			any_owned_state = {
 				OR = {
 					has_dynamic_modifier = { modifier = TRM_anti_geh_emotion }
@@ -1952,7 +1953,9 @@ TRN_after_war_decisions = {
 				}
 				NOT = { has_dynamic_modifier = { modifier = unity_propaganda } }
 			}
+			NOT = { has_idea = TRM_anti_gehenna_idea }
 		}
+		visible = { has_completed_focus = TRM_germany_union }
 
 		cost = 75
 		fire_only_once = no
@@ -1965,25 +1968,50 @@ TRN_after_war_decisions = {
 			political_power_gain = -0.1
 		}
 		complete_effect = {
-			if  = {
-				limit = { }
-				every_owned_state = {
-					limit = {
-						OR = {
-							has_dynamic_modifier = { modifier = TRM_anti_geh_emotion }
-							has_dynamic_modifier = { modifier = TRM_anti_geh_emotion_2 }
-							has_dynamic_modifier = { modifier = TRM_anti_geh_emotion_3 }
-							has_dynamic_modifier = { modifier = TRM_anti_geh_emotion_4 }
-						}
+			every_owned_state = {
+				limit = {
+					OR = {
+						has_dynamic_modifier = { modifier = TRM_anti_geh_emotion }
+						has_dynamic_modifier = { modifier = TRM_anti_geh_emotion_2 }
+						has_dynamic_modifier = { modifier = TRM_anti_geh_emotion_3 }
+						has_dynamic_modifier = { modifier = TRM_anti_geh_emotion_4 }
 					}
-					add_dynamic_modifier = {
-						modifier = unity_propaganda
-						days = TRM_unification_propaganda_remove
-					}
+				}
+				add_dynamic_modifier = {
+					modifier = unity_propaganda
+					days = 90
 				}
 			}
 			custom_effect_tooltip = TRM_unification_propaganda_tt 
 			#:0 "\n이 결정은 §Y[?ITA_colonial_management_cd]일§! 후에 다시 사용할 수 있습니다.\n"
+		}
+	}
+	
+	TRM_Decline_of_the_anti_gehenna_sentiment = {
+
+		icon = GFX_decision_oppression
+
+		available = {
+			#has_completed_focus = TRM_germany_union
+			has_idea = TRM_anti_gehenna_idea
+		}
+		#visible = { has_completed_focus = TRM_germany_union }
+
+		cost = 150
+		fire_only_once = yes
+		days_remove = 180
+		ai_will_do = {
+			factor = 2
+		}
+		modifier = {
+			political_power_gain = -0.1
+			
+		}
+		complete_effect = {
+			add_stability = -0.1
+		}
+		remove_effect = {
+			remove_ideas = TRM_anti_gehenna_idea
 		}
 	}
 

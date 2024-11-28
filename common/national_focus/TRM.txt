@@ -1605,7 +1605,7 @@
 			}
 			}
             hidden_effect = {
-			    country_event = { id = TRM_event.99 days = 10 }
+			    #country_event = { id = TRM_event.99 days = 10 }
 			    country_event = { id = TRN_after_war_event.1 days = 20 }
             }
 		}
@@ -2051,10 +2051,12 @@
 		completion_reward = {
 			country_event = { id = TRM_event.5 hours = 02 }
 			hidden_effect = { 
-				news_event = { id = BA_news.7 hours = 04 } 
+				news_event = { id = BA_news.7 days = 04 } 
 			}
 			add_political_power = 50
 			add_command_power = 75
+			unlock_decision_tooltip = TRM_unification_propaganda
+			unlock_decision_tooltip = TRM_unification_propaganda
 			#custom_effect_tooltip = TRM_germany_union_tt
 		}
 	}
@@ -4688,7 +4690,7 @@
 	focus = {
 		id = TRN_Luftwaffe
 		icon = GFX_focus_GER_airforce
-		cost = 8
+		cost = 10
 		available = {
 		}
 		prerequisite = {
@@ -5026,7 +5028,7 @@
 	focus = {
 		id = TRN_Standardise_Pilot_Training
 		icon = GFX_focus_FIN_expand_air_force_academy
-		cost = 8
+		cost = 5
 		available = {
 		}
 		prerequisite = {
@@ -5075,7 +5077,7 @@
 	focus = {
 		id = TRN_Promote_Amateur_Flying
 		icon = GFX_focus_SOV_flying_clubs
-		cost = 8
+		cost = 5
 		available = {
 		}
 		prerequisite = {
@@ -5124,7 +5126,7 @@
 	focus = {
 		id = TRN_Night_Witches
 		icon = GFX_focus_SOV_women_in_aviation
-		cost = 8
+		cost = 5
 		available = {
 		}
 		prerequisite = {
@@ -5362,7 +5364,7 @@
 	focus = {
 		id = TRN_Death_From_Above
 		icon = GFX_goal_generic_air_fighter2
-		cost = 8
+		cost = 5
 		available = {
 		}
 		prerequisite = {
@@ -7256,6 +7258,26 @@
 		completion_reward = {
 			add_state_core = 85
 			85 = {
+				remove_dynamic_modifier = {
+					modifier = GEK_ari_religion
+				}
+				if = {
+					limit = { 
+      					has_country_leader = {
+				            character = TRN_alzk
+            				ruling_only = yes
+        				}
+						has_completed_focus = TRM_naechi
+					}
+					add_dynamic_modifier = {
+						modifier = ARI_Gottglaubig_religion
+					}
+				}
+				else = {
+					add_dynamic_modifier = {
+						modifier = GEK_trm_christianity_state
+					}
+				}
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
