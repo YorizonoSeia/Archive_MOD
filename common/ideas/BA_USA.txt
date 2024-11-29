@@ -1,6 +1,65 @@
 ideas = {
     country = {
 
+		USABA_usa_nkvd_idea = {
+
+			picture = nkvd_2
+
+			allowed = {
+				original_tag = USA
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			modifier = {
+				political_power_gain = 0.05
+				war_support_factor = 0.10
+				communism_drift = 0.05
+			}
+		}
+
+		USABA_soviet_citi_give_worker_idea = {
+
+			picture = por_iberian_workers_united
+
+			allowed = {
+				original_tag = USA
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			modifier = {
+				production_speed_infrastructure_factor = 0.10
+				production_factory_efficiency_gain_factor = -0.03
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+
+		USABA_soviet_stalin_valley_idea = {
+
+			picture = por_iberian_workers_united
+
+			allowed = {
+				original_tag = USA
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			modifier = {
+				research_speed_factor = 0.05
+				production_speed_infrastructure_factor = 0.10
+				production_factory_efficiency_gain_factor = -0.05
+				production_factory_max_efficiency_factor = 0.10
+				communism_drift = 0.02
+			}
+		}
+
 		USABA_LEFT_civil_war_idea = {
 
 			picture = generic_production_bonus

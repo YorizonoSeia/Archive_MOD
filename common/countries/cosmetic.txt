@@ -2618,3 +2618,7 @@ PAN_EUROPEA_STATE = {
 	color = rgb { 0 0 70 }
 	color_ui = rgb { 0 0 70 }
 }
+USABA_soviet = {
+	color = rgb { 145 23 44 }
+	color_ui = rgb { 183 37 51 }
+}

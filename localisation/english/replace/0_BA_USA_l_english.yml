@@ -16,10 +16,13 @@
  USABA_RIGHT_civil_war_idea: "미국 내전에 우익 민병대 동원"
  USABA_LEFT_civil_war_idea: "미국 내전에 소련 의용군 지원"
 
+ USABA_usa_nkvd_idea: "내무인민위원부 활동 보장"
+ USABA_soviet_citi_give_worker_idea: "노동자 주 감독위원회"
+ USABA_soviet_stalin_valley_idea: "스탈린밸리"
+
  USABA_civil_war_idea_tt: "미국 내전 종료시 제거:\n내전 중이 아님"
 
  USABA_SOV_enter_american_civilwar: "[SOV.GetFactionName]에 지원 요청"
- USABA_a_strong_alliance: "강력한 인류 동맹 국가"
  USABA_soviet_equipment_shipments: "소련 장비 수송"
  USABA_soviet_military_advisors: "소련 군사고문단"
  USABA_soviet_recovery_aid: "소련 경제회복 원조"
@@ -34,6 +37,13 @@
  USABA_german_national_protection_law: "독일 민족 보호법"
 
  BA_end_USA_congress_tt: "§R미합중국의 의회가 정지됩니다.§!\n§R민주주의 정당 지지율에 의해 안정도가 감소합니다.§!"
+
+######미국 내전 이후
+ USA_soviet_nkvd_in_usa: "NKVD의 미국 활동 보장"
+ USA_soviet_citi_give_worker: "노동자 위원회의 주 감독"
+ USA_soviet_future_soviet_academia: "미래의 스탈린주의 교육"
+ USA_soviet_stalin_valley: "스탈린밸리"
+
 ######################################################
 ######################신규 중점들######################
 ######################################################
