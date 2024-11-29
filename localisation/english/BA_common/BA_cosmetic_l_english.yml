@@ -627,6 +627,9 @@
  ABY_roman_PAP:0 "교황령"
  ABY_roman_TTS:0 "나폴리 왕국"
 
+ ABY_german_HOL:0 "네덜란드 연합왕국"
+ ABY_german_BEL:0 "왈로니국"
+
  ABY_holy_roman_empire:0 "신성 로마 제국"
  ABY_holy_roman_empire_DEF:0 "독일 민족의 신성 로마 제국"
  ABY_holy_roman_empire_ADJ:0 "로마"

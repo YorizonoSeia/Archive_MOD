@@ -10101,7 +10101,6 @@ focus_tree = {
 
 		allow_branch = {
 			OR = {
-				has_completed_focus = ABY_focus_with_german_debug
 				has_completed_focus = ABY_focus_with_german
 			}
 		}
@@ -11459,106 +11458,6 @@ focus_tree = {
 				popularity = 0.15
 			}
 			set_cosmetic_tag = ABY_neptis_nation_1
-			#중점 완료시 얻는 보상
-		}
-	}
-	focus = {
-		id = ABY_focus_czech_problem    #중점명
-		#icon = GFX_ABY_focus_2      #아이콘
- 		cost = 10.00          #중점 일수(주)
-		search_filters = {
-			#중점의 타입
-		}
-		prerequisite = {
-			focus = ABY_focus_german_recover  #이전 중점
-		}
-		mutually_exclusive = {    #반대되는 중점
-		}
-		x = 0      #좌표
-		y = 1
-		relative_position_id = ABY_focus_german_recover
-		bypass = {
-			#중점 통과 조건
-		}
-		available = {
-			has_full_control_of_state = 64
-			has_war = no
-			#중점 선행조건
-		}
-
-		select_effect = {
-			#중점 시작시 얻는 보상
-		}
-		completion_reward = {
-			country_event = {
-				id = ABY_new_event.158
-			}
-			#중점 완료시 얻는 보상
-		}
-	}
-	focus = {
-		id = ABY_focus_attack_soviet    #중점명
-		#icon = GFX_ABY_focus_2      #아이콘
- 		cost = 10.00          #중점 일수(주)
-		search_filters = {
-			#중점의 타입
-		}
-		prerequisite = {
-			focus = ABY_focus_german_recover  #이전 중점
-		}
-		mutually_exclusive = {    #반대되는 중점
-		}
-		x = 2      #좌표
-		y = 1
-		relative_position_id = ABY_focus_german_recover
-		bypass = {
-			#중점 통과 조건
-		}
-		available = {
-			has_full_control_of_state = 64
-			#중점 선행조건
-		}
-
-		select_effect = {
-			#중점 시작시 얻는 보상
-		}
-		completion_reward = {
-			declare_war_on = {
-				target = SOV
-				type = annex_everything
-			}
-			#중점 완료시 얻는 보상
-		}
-	}
-	focus = {
-		id = ABY_focus_reichskomindante    #중점명
-		#icon = GFX_ABY_focus_2      #아이콘
- 		cost = 10.00          #중점 일수(주)
-		search_filters = {
-			#중점의 타입
-		}
-		prerequisite = {
-			focus = ABY_focus_german_recover  #이전 중점
-		}
-		mutually_exclusive = {    #반대되는 중점
-		}
-		x = -2      #좌표
-		y = 1
-		relative_position_id = ABY_focus_german_recover
-		bypass = {
-			#중점 통과 조건
-		}
-		available = {
-			has_full_control_of_state = 64
-			#중점 선행조건
-		}
-
-		select_effect = {
-			#중점 시작시 얻는 보상
-		}
-		completion_reward = {
-			set_country_flag = ABY_flag_reichskommindante
-			custom_effect_tooltip = ABY_reichskommindante_tt
 			#중점 완료시 얻는 보상
 		}
 	}

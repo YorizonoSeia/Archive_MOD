@@ -99,7 +99,7 @@ ABY_high_school_rebuild = {
     }
     visible = {
         original_tag = ABY
-		NOT = {has_completed_focus = ABY_focus_civil_war}
+		NOT = {has_completed_focus = ABY_focus_absorb_front}
     }
     priority = 120
 }

@@ -72,6 +72,7 @@ autonomy_state = {
 			original_tag = HAN
 			original_tag = RHI
 			original_tag = HOL
+			original_tag = BEL
 			original_tag = LUX
 			original_tag = OCC
 			original_tag = SPM

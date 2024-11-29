@@ -5279,14 +5279,7 @@ country_event = {
 	title = ABY_new_event.157.t
 	desc = ABY_new_event.157.d
 
-	trigger = {
-		tag = ABY
-		ABY = {
-			has_completed_focus = ABY_focus_german_recover
-			has_war = no
-			has_full_control_of_state = 64
-		}
-	}
+	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
@@ -11497,14 +11490,7 @@ country_event = {
 	title = ABY_new_event.257.t
 	desc = ABY_new_event.257.d
 
-	trigger = {
-		tag = ABY
-		ABY = {
-			has_completed_focus = ABY_focus_german_recover
-			has_war = no
-			has_full_control_of_state = 64
-		}
-	}
+	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
