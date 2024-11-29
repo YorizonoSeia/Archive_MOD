@@ -2185,7 +2185,6 @@ focus_tree = {
 					OR = {
 						AND = {
 							has_government = communism
-							fascism < 0.3
 						}
 						AND = {
 							has_government = democratic
@@ -2193,26 +2192,13 @@ focus_tree = {
 						AND = {
 							has_government = neutrality
 						}
-					}
-				}
-				country_event = {
-					id = ABY_new_event.109
-				}
-			}
-			if = {
-				limit = {
-					OR = {
-						AND = {
-							has_government = communism
-							fascism > 0.3
-						}
 						AND = {
 							has_government = fascism
 						}
 					}
 				}
 				country_event = {
-					id = ABY_new_event.108
+					id = ABY_new_event.109
 				}
 			}
 			#중점 완료시 얻는 보상
@@ -5720,8 +5706,8 @@ focus_tree = {
 		prerequisite = {
 			focus = ABY_focus_descision    #이전 중점
 		}
-		x = 11      #좌표
-		y = 1
+		x = 0      #좌표
+		y = 2
 		relative_position_id = ABY_focus_descision
 		bypass = {
 			#중점 통과 조건
@@ -5736,8 +5722,8 @@ focus_tree = {
 
 		allow_branch = {
 			OR = {
-				has_completed_focus = ABY_focus_civil_war_debug
-				has_completed_focus = ABY_focus_civil_war
+				has_completed_focus = ABY_focus_absorb_front_debug
+				has_completed_focus = ABY_focus_absorb_front
 			}
 		}
 
@@ -5778,107 +5764,6 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = ABY_focus_civil_war    #중점명
-		#icon = GFX_focus_SWE_socialist_reforms
- 		cost = 0.00          #중점 일수(주)
-		search_filters = {
-			#중점의 타입
-		}
-		prerequisite = {
-			focus = ABY_focus_descision    #이전 중점
-		}
-		x = 0      #좌표
-		y = 2
-		relative_position_id = ABY_focus_descision
-		bypass = {
-			#중점 통과 조건
-		}
-		available = {
-			#중점 선행조건
-		}
-
-		allow_branch = {
-			OR = {
-				has_completed_focus = ABY_focus_civil_war_debug
-				has_completed_focus = ABY_focus_civil_war
-			}
-		}
-
-		completion_reward = {
-			if = {
-				limit = {
-					AND = {
-						has_government = communism
-						fascism > 0.3
-					}
-				}
-				SOV = {
-					puppet = { target = ABY end_wars = no end_civil_wars = no }
-					set_autonomy = {
-						target = ABY
-						autonomy_state = autonomy_puppet
-					}
-					add_ai_strategy = {
-						type = support
-						id = ABY
-						value = 1000
-					}
-				}
-				ABY = {
-					set_cosmetic_tag = ABY_soviet_socialism_republic
-				}
-				start_civil_war = {
-					ideology = fascism 
-					size = 0.3
-					states = {
-						972 69 74
-					}
-					keep_all_characters = yes
-				}
-			}
-			if = {
-				limit = {
-					AND = {
-						has_government = fascism
-						TRM = {
-							has_government = fascism
-						}
-					}
-				}
-				set_politics = {
-					ruling_party = fascism
-				}
-				add_stability = -0.1
-				TRM = {
-					country_event = {
-						id = ABY_new_event.133
-					}
-				}
-				9 = { remove_core_of = ABY }
-				72 = { remove_core_of = ABY }
-				75 = { remove_core_of = ABY }
-				add_country_leader_role = {
-					character = ABYDO_Hoshino
-					promote_leader = yes
-					country_leader = {
-						ideology = pater_nazism
-						expire = "1965.1.1.1"
-						traits = { ABY_trait_black_sun }
-					}
-				}
-				start_civil_war = {
-					ideology = democratic
-					size = 0.5
-					states = {
-						9 75 72
-					}
-					keep_all_characters = yes
-				}
-			}
-			#중점 완료시 얻는 보상
-		}
-	}
-	focus = {
 		id = ABY_focus_new_way   #중점명
 		icon = GFX_focus_ITA_the_italian_republic
  		cost = 10.00          #중점 일수(주)
@@ -5893,19 +5778,12 @@ focus_tree = {
 		}
 		x = 14      #좌표
 		y = 1
-		relative_position_id = ABY_focus_civil_war
+		relative_position_id = ABY_focus_absorb_front
 		bypass = {
 			#중점 통과 조건
 		}
 		available = {
 			#중점 선행조건
-		}
-
-		allow_branch = {
-			OR = {
-				has_completed_focus = ABY_focus_civil_war_debug
-				has_completed_focus = ABY_focus_civil_war
-			}
 		}
 
 		select_effect = {
@@ -6110,7 +5988,7 @@ focus_tree = {
 			#중점의 타입
 		}
 		prerequisite = {
-			focus = ABY_focus_civil_war#이전 중점
+			focus = ABY_focus_absorb_front#이전 중점
 		}
 		prerequisite = {
 			focus = ABY_focus_absorb_front#이전 중점
@@ -6118,9 +5996,9 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = ABY_focus_new_way    #반대되는 중점
 		}
-		x = 8      #좌표
+		x = 7      #좌표
 		y = 1
-		relative_position_id = ABY_focus_civil_war
+		relative_position_id = ABY_focus_absorb_front
 		bypass = {
 			#중점 통과 조건
 		}
@@ -6130,13 +6008,6 @@ focus_tree = {
 
 		select_effect = {
 			#중점 시작시 얻는 보상
-		}
-
-		allow_branch = {
-			OR = {
-				has_completed_focus = ABY_focus_civil_war_debug
-				has_completed_focus = ABY_focus_civil_war
-			}
 		}
 		completion_reward = {
 			add_stability = 0.05
@@ -6151,8 +6022,8 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = ABY_focus_accept_czech_communism_party    #중점명
-		icon = GFX_focus_gottwald_gyeyak      #아이콘
+		id = ABY_focus_good_partner    #중점명
+		icon = GFX_focus_ITA_peasants_rise      #아이콘
  		cost = 10.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -6166,85 +6037,6 @@ focus_tree = {
 		x = 0      #좌표
 		y = 1
 		relative_position_id = ABY_focus_soviet_revolution
-		bypass = {
-			#중점 통과 조건
-		}
-		available = {
-			#중점 선행조건
-		}
-
-		select_effect = {
-			#중점 시작시 얻는 보상
-		}
-		completion_reward = {
-			set_country_flag = ABY_flag_accept_communism
-			custom_effect_tooltip = ABY_new_tt_5
-			add_popularity = {
-				ideology = communism
-				popularity = 0.10
-			}
-			add_stability = -0.1
-			#중점 완료시 얻는 보상
-		}
-	}
-	focus = {
-		id = ABY_focus_moscowien_think    #중점명
-		icon = GFX_focus_SOV_organization_centralization_discipline      #아이콘
- 		cost = 10.00          #중점 일수(주)
-		search_filters = {
-			#중점의 타입
-		}
-		prerequisite = {
-			focus = ABY_focus_accept_czech_communism_party  #이전 중점
-		}
-		prerequisite = {
-			focus = ABY_focus_civil_war  #이전 중점
-		}
-		mutually_exclusive = {
-			focus = ABY_focus_good_partner    #반대되는 중점
-		}
-		x = -1      #좌표
-		y = 1
-		relative_position_id = ABY_focus_accept_czech_communism_party
-		bypass = {
-			#중점 통과 조건
-		}
-		available = {
-			ABY = {
-				is_puppet_of = SOV
-			}
-			#중점 선행조건
-		}
-
-		select_effect = {
-			#중점 시작시 얻는 보상
-		}
-		completion_reward = {
-			add_popularity = {
-				ideology = communism
-				popularity = 0.15
-			}
-			add_stability = -0.1
-			add_war_support = 0.2
-			#중점 완료시 얻는 보상
-		}
-	}
-	focus = {
-		id = ABY_focus_good_partner    #중점명
-		icon = GFX_focus_ITA_peasants_rise      #아이콘
- 		cost = 10.00          #중점 일수(주)
-		search_filters = {
-			#중점의 타입
-		}
-		prerequisite = {
-			focus = ABY_focus_accept_czech_communism_party  #이전 중점
-		}
-		mutually_exclusive = {
-			focus = ABY_focus_moscowien_think    #반대되는 중점
-		}
-		x = 1      #좌표
-		y = 1
-		relative_position_id = ABY_focus_accept_czech_communism_party
 		bypass = {
 			#중점 통과 조건
 		}
@@ -6275,22 +6067,21 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = ABY_focus_kivotos_SSR    #중점명
-		icon = GFX_ABY_focus_2      #아이콘
+		id = ABY_focus_accept_czech_communism_party    #중점명
+		icon = GFX_focus_gottwald_gyeyak      #아이콘
  		cost = 10.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
 		}
 		prerequisite = {
-			focus = ABY_focus_good_partner
-			focus = ABY_focus_moscowien_think  #이전 중점
+			focus = ABY_focus_good_partner  #이전 중점
 		}
 		mutually_exclusive = {
 			    #반대되는 중점
 		}
-		x = -1      #좌표
+		x = 0      #좌표
 		y = 1
-		relative_position_id = ABY_focus_moscowien_think
+		relative_position_id = ABY_focus_good_partner
 		bypass = {
 			#중점 통과 조건
 		}
@@ -6302,479 +6093,13 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
-			add_ideas = {
-				ABY_idea_kivotos_SSR
+			set_country_flag = ABY_flag_accept_communism
+			custom_effect_tooltip = ABY_new_tt_5
+			add_popularity = {
+				ideology = communism
+				popularity = 0.10
 			}
-			#중점 완료시 얻는 보상
-		}
-	}
-	focus = {
-		id = ABY_focus_see_reality    #중점명
-		icon = GFX_ABY_focus_2      #아이콘
- 		cost = 10.00          #중점 일수(주)
-		search_filters = {
-			#중점의 타입
-		}
-		prerequisite = {
-			focus = ABY_focus_good_partner
-			focus = ABY_focus_moscowien_think
-			focus = ABY_focus_heil_to_night_queen  #이전 중점
-		}
-		mutually_exclusive = {
-			focus = ABY_focus_accept_reality    #반대되는 중점
-		}
-		x = -5      #좌표
-		y = 1
-		relative_position_id = ABY_focus_moscowien_think
-		bypass = {
-			#중점 통과 조건
-		}
-		available = {
-			ABY = {
-				is_puppet = yes
-			}
-			#중점 선행조건
-		}
-
-		select_effect = {
-			#중점 시작시 얻는 보상
-		}
-		completion_reward = {
-			add_manpower = -100000
-			custom_effect_tooltip = ABY_new_tt_23
-			add_war_support = 0.05
-			add_autonomy_score = {
-				value = 500
-			}
-			#중점 완료시 얻는 보상
-		}
-	}
-	focus = {
-		id = ABY_focus_accept_reality    #중점명
-		icon = GFX_ABY_focus_2      #아이콘
- 		cost = 10.00          #중점 일수(주)
-		search_filters = {
-			#중점의 타입
-		}
-		prerequisite = {
-			focus = ABY_focus_good_partner
-			focus = ABY_focus_moscowien_think
-			focus = ABY_focus_heil_to_night_queen  #이전 중점
-		}
-		mutually_exclusive = {
-			focus = ABY_focus_see_reality    #반대되는 중점
-		}
-		x = -3      #좌표
-		y = 1
-		relative_position_id = ABY_focus_moscowien_think
-		bypass = {
-			#중점 통과 조건
-		}
-		available = {
-			ABY = {
-				is_puppet = yes
-			}
-			#중점 선행조건
-		}
-
-		select_effect = {
-			#중점 시작시 얻는 보상
-		}
-		completion_reward = {
-			add_manpower = 100000
-			add_war_support = -0.05
-			add_autonomy_score = {
-				value = -500
-			}
-			#중점 완료시 얻는 보상
-		}
-	}
-	focus = {
-		id = ABY_focus_see_reality_2    #중점명
-		icon = GFX_ABY_focus_2      #아이콘
- 		cost = 10.00          #중점 일수(주)
-		search_filters = {
-			#중점의 타입
-		}
-		prerequisite = {
-			focus = ABY_focus_see_reality
-			focus = ABY_focus_accept_reality  #이전 중점
-		}
-		mutually_exclusive = {
-			focus = ABY_focus_accept_reality_2    #반대되는 중점
-		}
-		x = -5      #좌표
-		y = 2
-		relative_position_id = ABY_focus_moscowien_think
-		bypass = {
-			#중점 통과 조건
-		}
-		available = {
-			ABY = {
-				is_puppet = yes
-			}
-			#중점 선행조건
-		}
-
-		select_effect = {
-			#중점 시작시 얻는 보상
-		}
-		completion_reward = {
-			add_timed_idea = {
-				idea = ABY_idea_industry_accident
-				days = 365
-			}
-			add_stability = 0.1
-			add_autonomy_score = {
-				value = 500
-			}
-			#중점 완료시 얻는 보상
-		}
-	}
-	focus = {
-		id = ABY_focus_accept_reality_2    #중점명
-		icon = GFX_ABY_focus_2      #아이콘
- 		cost = 10.00          #중점 일수(주)
-		search_filters = {
-			#중점의 타입
-		}
-		prerequisite = {
-			focus = ABY_focus_see_reality
-			focus = ABY_focus_accept_reality  #이전 중점
-		}
-		mutually_exclusive = {
-			focus = ABY_focus_see_reality_2    #반대되는 중점
-		}
-		x = -3      #좌표
-		y = 2
-		relative_position_id = ABY_focus_moscowien_think
-		bypass = {
-			#중점 통과 조건
-		}
-		available = {
-			ABY = {
-				is_puppet = yes
-			}
-			#중점 선행조건
-		}
-
-		select_effect = {
-			#중점 시작시 얻는 보상
-		}
-		completion_reward = {
 			add_stability = -0.1
-			add_autonomy_score = {
-				value = -500
-			}
-			random_owned_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			#중점 완료시 얻는 보상
-		}
-	}
-	focus = {
-		id = ABY_focus_see_reality_3    #중점명
-		icon = GFX_ABY_focus_2      #아이콘
- 		cost = 10.00          #중점 일수(주)
-		search_filters = {
-			#중점의 타입
-		}
-		prerequisite = {
-			focus = ABY_focus_see_reality_2
-			focus = ABY_focus_accept_reality_2  #이전 중점
-		}
-		mutually_exclusive = {
-			focus = ABY_focus_accept_reality_3    #반대되는 중점
-		}
-		mutually_exclusive = {
-			focus = ABY_focus_zavaziya    #반대되는 중점
-		}
-		x = -5      #좌표
-		y = 3
-		relative_position_id = ABY_focus_moscowien_think
-		bypass = {
-			#중점 통과 조건
-		}
-		available = {
-			ABY = {
-				is_puppet = yes
-			}
-			#중점 선행조건
-		}
-
-		select_effect = {
-			#중점 시작시 얻는 보상
-		}
-		completion_reward = {
-			if = {
-				limit = {
-					ABY = {
-						is_puppet_of = TRM
-					}
-				}
-				TRM = {
-					set_autonomy = {
-						target = ABY
-						autonomy_state = autonomy_satellite
-					}
-				}
-			}
-			if = {
-				limit = {
-					ABY = {
-						is_puppet_of = SOV
-					}
-				}
-				SOV = {
-					set_autonomy = {
-						target = ABY
-						autonomy_state = autonomy_dominion
-					}
-				}
-			}
-			if = {
-				limit = {
-					ABY = {
-						has_completed_focus = ABY_focus_see_reality
-					}
-				}
-				add_manpower = 125000
-			}
-			#중점 완료시 얻는 보상
-		}
-	}
-	focus = {
-		id = ABY_focus_accept_reality_3    #중점명
-		icon = GFX_focus_CZE_german_puppet      #아이콘
- 		cost = 10.00          #중점 일수(주)
-		search_filters = {
-			#중점의 타입
-		}
-		prerequisite = {
-			focus = ABY_focus_see_reality_2
-			focus = ABY_focus_accept_reality_2  #이전 중점
-		}
-		mutually_exclusive = {
-			focus = ABY_focus_see_reality_3    #반대되는 중점
-		}
-		mutually_exclusive = {
-			focus = ABY_focus_zavaziya    #반대되는 중점
-		}
-		x = -3      #좌표
-		y = 3
-		relative_position_id = ABY_focus_moscowien_think
-		bypass = {
-			#중점 통과 조건
-		}
-		available = {
-			ABY = {
-				is_puppet = yes
-			}
-			#중점 선행조건
-		}
-
-		select_effect = {
-			#중점 시작시 얻는 보상
-		}
-		completion_reward = {
-			if = {
-				limit = {
-					ABY = {
-						is_puppet_of = TRM
-					}
-				}
-				TRM = {
-					annex_country = {
-						target = ABY
-						transfer_troops = yes
-					}
-				}
-			}
-			if = {
-				limit = {
-					ABY = {
-						is_puppet_of = SOV
-					}
-				}
-				SOV = {
-					annex_country = {
-						target = ABY
-						transfer_troops = yes
-					}
-				}
-			}
-			custom_effect_tooltip = ABY_final_tt
-			#중점 완료시 얻는 보상
-		}
-	}
-	focus = {
-		id = ABY_focus_dntkdghk    #중점명
-		icon = GFX_ABY_focus_2
- 		cost = 10.00          #중점 일수(주)
-		search_filters = {
-			#중점의 타입
-		}
-		prerequisite = {
-			focus = ABY_focus_good_partner
-			focus = ABY_focus_moscowien_think  #이전 중점
-		}
-		mutually_exclusive = {
-			    #반대되는 중점
-		}
-		x = 3      #좌표
-		y = 1
-		relative_position_id = ABY_focus_moscowien_think
-		bypass = {
-			#중점 통과 조건
-		}
-		available = {
-			ABY = {
-				is_puppet_of = SOV
-			}
-			#중점 선행조건
-		}
-
-		select_effect = {
-			#중점 시작시 얻는 보상
-		}
-		completion_reward = {
-			add_country_leader_trait = stalin_heart_of_steel
-			#중점 완료시 얻는 보상
-		}
-	}
-	focus = {
-		id = ABY_focus_soviet_economy    #중점명
-		icon = GFX_goal_construction_engineering
- 		cost = 10.00          #중점 일수(주)
-		search_filters = {
-			#중점의 타입
-		}
-		prerequisite = {
-			focus = ABY_focus_good_partner
-			focus = ABY_focus_moscowien_think  #이전 중점
-		}
-		mutually_exclusive = {
-			    #반대되는 중점
-		}
-		x = 1      #좌표
-		y = 1
-		relative_position_id = ABY_focus_moscowien_think
-		bypass = {
-			#중점 통과 조건
-		}
-		available = {
-			#중점 선행조건
-		}
-
-		select_effect = {
-			#중점 시작시 얻는 보상
-		}
-		completion_reward = {
-			add_ideas = {
-				ABY_idea_soviet_economy
-			}
-			#중점 완료시 얻는 보상
-		}
-	}
-	focus = {
-		id = ABY_focus_expend_duddbrnjs    #중점명
-		icon = GFX_ABY_focus_2
- 		cost = 10.00          #중점 일수(주)
-		search_filters = {
-			#중점의 타입
-		}
-		prerequisite = {
-
-			focus = ABY_focus_soviet_economy  #이전 중점
-		}
-		prerequisite = {
-			focus = ABY_focus_dntkdghk
-			  #이전 중점
-		}
-		mutually_exclusive = {
-			    #반대되는 중점
-		}
-		x = 1      #좌표
-		y = 1
-		relative_position_id = ABY_focus_soviet_economy
-		bypass = {
-			#중점 통과 조건
-		}
-		available = {
-			ABY = {
-				is_puppet_of = SOV
-			}
-			#중점 선행조건
-		}
-
-		select_effect = {
-			#중점 시작시 얻는 보상
-		}
-		completion_reward = {
-			every_state = {
-				limit = {
-					OR = {
-						is_core_of = SPA
-						is_core_of = SPR
-						is_core_of = POR
-					}
-				}
-				add_claim_by = ABY
-			}
-			#중점 완료시 얻는 보상
-		}
-	}
-	focus = {
-		id = ABY_focus_zavaziya    #중점명
-		icon = GFX_ABY_focus_2
- 		cost = 10.00          #중점 일수(주)
-		search_filters = {
-			#중점의 타입
-		}
-		prerequisite = {
-			focus = ABY_focus_expend_duddbrnjs  #이전 중점
-		}
-		prerequisite = {
-			focus = ABY_focus_kivotos_SSR  #이전 중점
-		}
-		mutually_exclusive = {
-			focus = ABY_focus_see_reality_3    #반대되는 중점
-		}
-		mutually_exclusive = {
-			focus = ABY_focus_accept_reality_3    #반대되는 중점
-		}
-		x = -3      #좌표
-		y = 1
-		relative_position_id = ABY_focus_expend_duddbrnjs
-		bypass = {
-			#중점 통과 조건
-		}
-		available = {
-			ABY = {
-				is_puppet_of = SOV
-			}
-			#중점 선행조건
-		}
-
-		select_effect = {
-			#중점 시작시 얻는 보상
-		}
-		completion_reward = {
-			add_stability = 0.25
-			set_cosmetic_tag = ABY_zavaziya_socialism_republic
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -10762,24 +10087,23 @@ focus_tree = {
 			#중점의 타입
 		}
 		prerequisite = {
-			focus = ABY_focus_civil_war#이전 중점
+			focus = ABY_focus_descision    #이전 중점
 		}
-		
-		x = -7      #좌표
-		y = 1
-		relative_position_id = ABY_focus_civil_war
+		x = 0      #좌표
+		y = 2
+		relative_position_id = ABY_focus_descision
 		bypass = {
 			#중점 통과 조건
 		}
 		available = {
-			TRM = {
-				has_government = fascism
-			}
-			has_government = fascism
-			ABY = {
-				is_puppet = no
-			}
 			#중점 선행조건
+		}
+
+		allow_branch = {
+			OR = {
+				has_completed_focus = ABY_focus_with_german_debug
+				has_completed_focus = ABY_focus_with_german
+			}
 		}
 
 		select_effect = {
@@ -10795,668 +10119,6 @@ focus_tree = {
 				ideology = fascism
 				name = ABY_fascism_party_3
 				long_name = ABY_fascism_party_3
-			}
-			#중점 완료시 얻는 보상
-		}
-	}
-	focus = {
-		id = ABY_focus_with_trinity    #중점명
-		icon = GFX_goal_TRN_Hegemony
- 		cost = 5.00          #중점 일수(주)
-		search_filters = {
-			#중점의 타입
-		}
-		prerequisite = {
-			focus = ABY_focus_with_german   #이전 중점
-		}
-		x = 0      #좌표
-		y = 1
-		relative_position_id = ABY_focus_with_german
-		bypass = {
-			#중점 통과 조건
-		}
-		available = {
-			#중점 선행조건
-		}
-
-		completion_reward = {
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.15
-			}
-			#중점 완료시 얻는 보상
-		}
-	}
-	focus = {
-		id = ABY_focus_heil_to_night_queen    #중점명
-		icon = GFX_goal_TRN_TRM_newfocus_7
- 		cost = 5.00          #중점 일수(주)
-		search_filters = {
-			#중점의 타입
-		}
-		prerequisite = {
-			focus = ABY_focus_with_trinity   #이전 중점
-		}
-		x = 2      #좌표
-		y = 1
-		relative_position_id = ABY_focus_with_trinity
-		bypass = {
-			#중점 통과 조건
-		}
-		available = {
-			9 = { is_controlled_by = ABY }
-			72 = { is_controlled_by = ABY }
-			75 = { is_controlled_by = ABY }
-			has_war = no
-			fascism > 0.5
-			#중점 선행조건
-		}
-
-		completion_reward = {
-			set_power_balance = {
-				id = ABY_power_balance_4
-    	        left_side = ABY_hoshino_side
-    	        right_side = ABY_frank_side
-				set_default = yes # whether or not to reset the power balance to the initial value, default = no
-			}
-			#중점 완료시 얻는 보상
-		}
-	}
-	focus = {
-		id = ABY_focus_visit_trinity    #중점명
-		icon = GFX_ABY_focus_2
- 		cost = 5.00          #중점 일수(주)
-		search_filters = {
-			#중점의 타입
-		}
-		prerequisite = {
-			focus = ABY_focus_with_trinity   #이전 중점
-		}
-		x = -2      #좌표
-		y = 1
-		relative_position_id = ABY_focus_with_trinity
-		bypass = {
-			#중점 통과 조건
-		}
-		available = {
-			9 = { is_controlled_by = ABY }
-			72 = { is_controlled_by = ABY }
-			74 = { is_controlled_by = ABY }
-			75 = { is_controlled_by = ABY }
-			972 = { is_controlled_by = ABY }
-			has_war = no
-			#중점 선행조건
-		}
-
-		completion_reward = {
-			TRM = {
-				country_event = {
-					id = ABY_new_event.132
-				}
-			}
-			#중점 완료시 얻는 보상
-		}
-	}
-	focus = {
-		id = ABY_focus_accept_czech    #중점명
-		icon = GFX_ABY_focus_2
- 		cost = 5.00          #중점 일수(주)
-		search_filters = {
-			#중점의 타입
-		}
-		prerequisite = {
-			focus = ABY_focus_visit_trinity   #이전 중점
-		}
-		prerequisite = {
-			focus = ABY_focus_heil_to_night_queen   #이전 중점
-		}
-		x = 2      #좌표
-		y = 1
-		relative_position_id = ABY_focus_visit_trinity
-		bypass = {
-			#중점 통과 조건
-		}
-		available = {
-			ABY = {
-				is_puppet_of = TRM
-			}
-			#중점 선행조건
-		}
-
-		completion_reward = {
-			9 = { add_core_of = ABY }
-			72 = { add_core_of = ABY }
-			74 = { add_core_of = ABY }
-			75 = { add_core_of = ABY }
-			972 = { add_core_of = ABY }
-			add_ideas = {
-				ABY_idea_bohemian_problem
-			}
-			#중점 완료시 얻는 보상
-		}
-	}
-	focus = {
-		id = ABY_focus_come_mika    #중점명
-		icon = GFX_ABY_focus_2
- 		cost = 5.00          #중점 일수(주)
-		search_filters = {
-			#중점의 타입
-		}
-		prerequisite = {
-			focus = ABY_focus_visit_trinity   #이전 중점
-		}
-		prerequisite = {
-			focus = ABY_focus_heil_to_night_queen   #이전 중점
-		}
-		x = 0      #좌표
-		y = 1
-		relative_position_id = ABY_focus_visit_trinity
-		bypass = {
-			#중점 통과 조건
-		}
-		available = {
-			ABY = {
-				is_puppet_of = TRM
-			}
-			#중점 선행조건
-		}
-
-		completion_reward = {
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.5
-			}
-			country_event = {
-				id = ABY_new_event.134
-			}
-			#중점 완료시 얻는 보상
-		}
-	}
-	focus = {
-		id = ABY_focus_small_germania    #중점명
-		icon = GFX_ABY_focus_2
- 		cost = 5.00          #중점 일수(주)
-		search_filters = {
-			#중점의 타입
-		}
-		prerequisite = {
-			focus = ABY_focus_come_mika   #이전 중점
-		}
-		prerequisite = {
-			focus = ABY_focus_accept_czech  #이전 중점
-		}
-		x = 1      #좌표
-		y = 1
-		relative_position_id = ABY_focus_come_mika
-		bypass = {
-			#중점 통과 조건
-		}
-		available = {
-			ABY = {
-				is_puppet_of = TRM
-			}
-			4 = { is_controlled_by = ABY }
-			986 = { is_controlled_by = ABY }
-			153 = { is_controlled_by = ABY }
-			152 = { is_controlled_by = ABY }
-			848 = { is_controlled_by = ABY }
-			#중점 선행조건
-		}
-
-		completion_reward = {
-			4 = { add_core_of = ABY }
-			986 = { add_core_of = ABY }
-			153 = { add_core_of = ABY }
-			152 = { add_core_of = ABY }
-			848 = { add_core_of = ABY }
-			39 = { add_core_of = ABY }
-			850 = { add_core_of = ABY }
-			102 = { add_core_of = ABY }
-			736 = { add_core_of = ABY }
-			852 = { add_core_of = ABY }
-			982 = { add_core_of = ABY }
-			853 = { add_core_of = ABY }
-			
-			#중점 완료시 얻는 보상
-		}
-	}
-	focus = {
-		id = ABY_focus_sword_of_trinity    #중점명
-		icon = GFX_goal_TRN_domination
- 		cost = 5.00          #중점 일수(주)
-		search_filters = {
-			#중점의 타입
-		}
-		prerequisite = {
-			focus = ABY_focus_small_germania  #이전 중점
-		}
-		x = 0      #좌표
-		y = 1
-		relative_position_id = ABY_focus_small_germania
-		bypass = {
-			#중점 통과 조건
-		}
-		available = {
-			ABY = {
-				is_puppet_of = TRM
-			}
-			#중점 선행조건
-		}
-
-		completion_reward = {
-			add_ideas = {
-				ABY_idea_trinity_sword
-			}
-			#중점 완료시 얻는 보상
-		}
-	}
-	focus = {
-		id = ABY_focus_armored_support   #중점명
-		icon = GFX_goal_generic_army_tanks
- 		cost = 5.00          #중점 일수(주)
-		search_filters = {
-			#중점의 타입
-		}
-		prerequisite = {
-			focus = ABY_focus_heil_to_night_queen
-			focus = ABY_focus_moscowien_think#이전 중점
-		}
-		mutually_exclusive = {
-			focus = ABY_focus_special_support#반대되는 중점
-		}
-		mutually_exclusive = {
-			focus = ABY_focus_air_support#반대되는 중점
-		}
-		x = 4      #좌표
-		y = 1
-		relative_position_id = ABY_focus_heil_to_night_queen
-		bypass = {
-			#중점 통과 조건
-		}
-		available = {
-			ABY = {
-				is_puppet = yes
-			}
-			#중점 선행조건
-		}
-
-		select_effect = {
-			#중점 시작시 얻는 보상
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 1
-				uses = 1
-				category = cat_heavy_armor
-			}
-			add_tech_bonus = {
-				bonus = 1
-				uses = 1
-				category = cat_medium_armor
-			}
-			add_tech_bonus = {
-				bonus = 1
-				uses = 1
-				category = cat_light_armor
-			}
-			#중점 완료시 얻는 보상
-		}
-	}
-	focus = {
-		id = ABY_focus_air_support   #중점명
-		icon = GFX_goal_generic_air_fighter
- 		cost = 5.00          #중점 일수(주)
-		search_filters = {
-			#중점의 타입
-		}
-		prerequisite = {
-			focus = ABY_focus_heil_to_night_queen#이전 중점
-			focus = ABY_focus_moscowien_think
-		}
-		mutually_exclusive = {
-			focus = ABY_focus_special_support#반대되는 중점
-		}
-		mutually_exclusive = {
-			focus = ABY_focus_armored_support#반대되는 중점
-		}
-		x = 2      #좌표
-		y = 1
-		relative_position_id = ABY_focus_heil_to_night_queen
-		bypass = {
-			#중점 통과 조건
-		}
-		available = {
-			ABY = {
-				is_puppet = yes
-			}
-			#중점 선행조건
-		}
-
-		select_effect = {
-			#중점 시작시 얻는 보상
-		}
-		completion_reward = {
-			add_ideas = {
-				ABY_idea_more_airforce
-			}
-			#중점 완료시 얻는 보상
-		}
-	}
-	focus = {
-		id = ABY_focus_special_support   #중점명
-		icon = GFX_goal_generic_special_forces
- 		cost = 5.00          #중점 일수(주)
-		search_filters = {
-			#중점의 타입
-		}
-		prerequisite = {
-			focus = ABY_focus_heil_to_night_queen#이전 중점
-			focus = ABY_focus_moscowien_think
-		}
-		mutually_exclusive = {
-			focus = ABY_focus_air_support#반대되는 중점
-		}
-		mutually_exclusive = {
-			focus = ABY_focus_armored_support#반대되는 중점
-		}
-		x =0      #좌표
-		y = 1
-		relative_position_id = ABY_focus_heil_to_night_queen
-		bypass = {
-			#중점 통과 조건
-		}
-		available = {
-			ABY = {
-				is_puppet = yes
-			}
-			#중점 선행조건
-		}
-
-		select_effect = {
-			#중점 시작시 얻는 보상
-		}
-		completion_reward = {
-			add_ideas = {
-				ABY_idea_more_special_forces
-			}
-			add_tech_bonus = {
-				bonus = 1
-				uses = 2
-				category = cat_special_forces_generic
-			}
-			#중점 완료시 얻는 보상
-		}
-	}
-	focus = {
-		id = ABY_focus_armored_army   #중점명
-		icon = GFX_focus_generic_army_tanks2
- 		cost = 5.00          #중점 일수(주)
-		search_filters = {
-			#중점의 타입
-		}
-		prerequisite = {
-			focus = ABY_focus_armored_support#이전 중점
-		}
-		mutually_exclusive = {
-			#반대되는 중점
-		}
-		x = 1      #좌표
-		y = 1
-		relative_position_id = ABY_focus_armored_support
-		bypass = {
-			#중점 통과 조건
-		}
-		available = {
-			ABY = {
-				is_puppet = yes
-			}
-			#중점 선행조건
-		}
-
-		select_effect = {
-			#중점 시작시 얻는 보상
-		}
-		completion_reward = {
-			add_ideas = {
-				ABY_idea_more_armored
-			}
-			#중점 완료시 얻는 보상
-		}
-	}
-	focus = {
-		id = ABY_focus_armored_infantry   #중점명
-		icon = GFX_goal_generic_army_motorized
- 		cost = 5.00          #중점 일수(주)
-		search_filters = {
-			#중점의 타입
-		}
-		prerequisite = {
-			focus = ABY_focus_armored_support#이전 중점
-		}
-		mutually_exclusive = {
-			#반대되는 중점
-		}
-		x = -1      #좌표
-		y = 1
-		relative_position_id = ABY_focus_armored_support
-		bypass = {
-			#중점 통과 조건
-		}
-		available = {
-			ABY = {
-				is_puppet = yes
-			}
-			#중점 선행조건
-		}
-
-		select_effect = {
-			#중점 시작시 얻는 보상
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 1
-				uses = 2
-				category = cat_mechanized_equipment
-			}
-			#중점 완료시 얻는 보상
-		}
-	}
-	focus = {
-		id = ABY_focus_more_marine   #중점명
-		icon = GFX_goal_generic_amphibious_assault
- 		cost = 5.00          #중점 일수(주)
-		search_filters = {
-			#중점의 타입
-		}
-		prerequisite = {
-			focus = ABY_focus_special_support#이전 중점
-		}
-		mutually_exclusive = {
-			focus = ABY_focus_more_air_infantry#반대되는 중점
-		}
-		x = 1      #좌표
-		y = 1
-		relative_position_id = ABY_focus_special_support
-		bypass = {
-			#중점 통과 조건
-		}
-		available = {
-			ABY = {
-				is_puppet = yes
-			}
-			#중점 선행조건
-		}
-
-		select_effect = {
-			#중점 시작시 얻는 보상
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 1
-				uses = 2
-				category = marine_tech
-			}
-			#중점 완료시 얻는 보상
-		}
-	}
-	focus = {
-		id = ABY_focus_more_air_infantry   #중점명
-		icon = GFX_focus_generic_paratrooper
- 		cost = 5.00          #중점 일수(주)
-		search_filters = {
-			#중점의 타입
-		}
-		prerequisite = {
-			focus = ABY_focus_special_support#이전 중점
-		}
-		mutually_exclusive = {
-			focus = ABY_focus_more_marine#반대되는 중점
-		}
-		x = -1      #좌표
-		y = 1
-		relative_position_id = ABY_focus_special_support
-		bypass = {
-			#중점 통과 조건
-		}
-		available = {
-			ABY = {
-				is_puppet = yes
-			}
-			#중점 선행조건
-		}
-
-		select_effect = {
-			#중점 시작시 얻는 보상
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 1
-				uses = 2
-				category = para_tech
-			}
-			#중점 완료시 얻는 보상
-		}
-	}
-	focus = {
-		id = ABY_focus_fighter_support   #중점명
-		icon = GFX_goal_generic_air_fighter
- 		cost = 5.00          #중점 일수(주)
-		search_filters = {
-			#중점의 타입
-		}
-		prerequisite = {
-			focus = ABY_focus_air_support#이전 중점
-		}
-		mutually_exclusive = {
-			focus = ABY_focus_bomber_support#반대되는 중점
-		}
-		x = 0      #좌표
-		y = 2
-		relative_position_id = ABY_focus_air_support
-		bypass = {
-			#중점 통과 조건
-		}
-		available = {
-			ABY = {
-				is_puppet = yes
-			}
-			#중점 선행조건
-		}
-
-		select_effect = {
-			#중점 시작시 얻는 보상
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 1
-				uses = 2
-				category = heavy_air
-			}
-			add_tech_bonus = {
-				bonus = 1
-				uses = 1
-				category = light_air
-			}
-			#중점 완료시 얻는 보상
-		}
-	}
-	focus = {
-		id = ABY_focus_bomber_support   #중점명
-		icon = GFX_goal_generic_air_bomber
- 		cost = 5.00          #중점 일수(주)
-		search_filters = {
-			#중점의 타입
-		}
-		prerequisite = {
-			focus = ABY_focus_air_support#이전 중점
-		}
-		mutually_exclusive = {
-			focus = ABY_focus_fighter_support#반대되는 중점
-		}
-		x = -2      #좌표
-		y = 2
-		relative_position_id = ABY_focus_air_support
-		bypass = {
-			#중점 통과 조건
-		}
-		available = {
-			ABY = {
-				is_puppet = yes
-			}
-			#중점 선행조건
-		}
-
-		select_effect = {
-			#중점 시작시 얻는 보상
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 1
-				uses = 2
-				category = heavy_air
-			}
-			add_tech_bonus = {
-				bonus = 1
-				uses = 1
-				category = medium_air
-			}
-			#중점 완료시 얻는 보상
-		}
-	}
-	focus = {
-		id = ABY_focus_air_equipment   #중점명
-		icon = GFX_goal_generic_air_production
- 		cost = 5.00          #중점 일수(주)
-		search_filters = {
-			#중점의 타입
-		}
-		prerequisite = {
-			focus = ABY_focus_air_support#이전 중점
-		}
-		mutually_exclusive = {
-			#반대되는 중점
-		}
-		x = 2      #좌표
-		y = 2
-		relative_position_id = ABY_focus_air_support
-		bypass = {
-			#중점 통과 조건
-		}
-		available = {
-			ABY = {
-				is_puppet = yes
-			}
-			#중점 선행조건
-		}
-
-		select_effect = {
-			#중점 시작시 얻는 보상
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 0.5
-				uses = 4
-				category = air_equipment
 			}
 			#중점 완료시 얻는 보상
 		}
@@ -12801,80 +11463,6 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = ABY_focus_czech_osterreich    #중점명
-		#icon = GFX_ABY_focus_2      #아이콘
- 		cost = 0.00          #중점 일수(주)
-		search_filters = {
-			#중점의 타입
-		}
-		prerequisite = {
-			focus = ABY_focus_see_reality_3  #이전 중점
-		}
-		mutually_exclusive = {    #반대되는 중점
-		}
-		x = 0      #좌표
-		y = 1
-		relative_position_id = ABY_focus_see_reality_3
-		bypass = {
-			#중점 통과 조건
-		}
-		available = {
-			#중점 선행조건
-		}
-		allow_branch = {
-			OR = {
-				has_country_flag = ABY_flag_czech_osterreich
-				has_completed_focus = ABY_focus_czech_osterreich_debug
-			}
-		}
-
-		select_effect = {
-			#중점 시작시 얻는 보상
-		}
-		completion_reward = {
-			set_cosmetic_tag = ABY_czech_osterreich
-			add_stability = 0.1
-			remove_power_balance = {
-				id = ABY_power_balance_4
-			}
-			#중점 완료시 얻는 보상
-		}
-	}
-	focus = {
-		id = ABY_focus_german_recover    #중점명
-		#icon = GFX_ABY_focus_2      #아이콘
- 		cost = 10.00          #중점 일수(주)
-		search_filters = {
-			#중점의 타입
-		}
-		prerequisite = {
-			focus = ABY_focus_czech_osterreich  #이전 중점
-		}
-		mutually_exclusive = {    #반대되는 중점
-		}
-		x = 0      #좌표
-		y = 1
-		relative_position_id = ABY_focus_czech_osterreich
-		bypass = {
-			#중점 통과 조건
-		}
-		available = {
-			#중점 선행조건
-		}
-
-		select_effect = {
-			#중점 시작시 얻는 보상
-		}
-		completion_reward = {
-			declare_war_on = {
-				target = TRM
-				type = annex_everything
-			}
-			add_war_support = 0.25
-			#중점 완료시 얻는 보상
-		}
-	}
-	focus = {
 		id = ABY_focus_czech_problem    #중점명
 		#icon = GFX_ABY_focus_2      #아이콘
  		cost = 10.00          #중점 일수(주)
@@ -13471,7 +12059,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = ABY_focus_civil_war_debug    #중점명
+		id = ABY_focus_absorb_front_debug    #중점명
 		icon = GFX_focus_spr_torchbearers_of_tomorrow
  		cost = 2.00          #중점 일수(주)
 		search_filters = {
@@ -13497,7 +12085,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			complete_national_focus = ABY_focus_civil_war
+			complete_national_focus = ABY_focus_absorb_front
 			hidden_effect = {
                 load_focus_tree = {
                     tree = ABY_focus_tree

@@ -5,3 +5,5 @@
  antonomous_government:0 "현지 자치 정부"
  antonomous_government_improved:0 "$antonomous_government$"
  antonomous_government_final:0 "$antonomous_government$"
+ territorial_state:0 "제국영방"
+ territorial_state_improved:0 "$territorial_state$"

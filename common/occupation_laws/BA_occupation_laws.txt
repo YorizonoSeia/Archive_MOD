@@ -37,8 +37,10 @@ antonomous_government = {
 		has_completed_focus = ABY_focus_ocuupied_lands
         NOT = { has_completed_focus= ABY_focus_ocuupied_lands_army }
         NOT = { has_completed_focus= ABY_focus_ocuupied_lands_industry }
-		capital_scope = {
-			is_on_continent = europe
+		FROM = {
+			capital_scope = {
+				is_on_continent = europe
+			}
 		}
 	}
 
@@ -69,8 +71,10 @@ antonomous_government_improved = {
 		has_completed_focus = ABY_focus_ocuupied_lands
         has_completed_focus = ABY_focus_ocuupied_lands_army
         NOT = { has_completed_focus= ABY_focus_ocuupied_lands_industry }
-		capital_scope = {
-			is_on_continent = europe
+		FROM = {
+			capital_scope = {
+				is_on_continent = europe
+			}
 		}
 	}
 
@@ -99,8 +103,10 @@ antonomous_government_final = {
 		has_completed_focus = ABY_focus_ocuupied_lands
         has_completed_focus = ABY_focus_ocuupied_lands_army
         has_completed_focus = ABY_focus_ocuupied_lands_industry
-		capital_scope = {
-			is_on_continent = europe
+		FROM = {
+			capital_scope = {
+				is_on_continent = europe
+			}
 		}
 	}
 
@@ -112,6 +118,73 @@ antonomous_government_final = {
 		local_factories 				= -0.25
 		local_resources 				= -0.25
 		local_manpower 					= 0.13
+	}
+
+
+	ai_will_do = {
+		base = 50000
+	}
+}
+
+territorial_state = {
+	icon = GFX_autonomy_austro_hungarian_subject_icon
+	sound_effect = "Martial_Law_Interface_Autonomous_Occupation_Unique_DEM"
+
+	fallback_law = territorial_state_improved
+
+	visible = {
+		original_tag = ABY
+		has_completed_focus = ABY_focus_with_german
+		FROM = {
+			OR = {
+				original_tag = PRE
+				original_tag = HUN
+				original_tag = SPA
+				original_tag = SPR
+			}
+		}
+	}
+
+	state_modifier = { #CHANGES HERE NEED TO BE APPLIED ALSO IN ITA_fake_colonial_police_law idea
+		resistance_target 				= -0.25
+		compliance_gain 				= 0.1
+		required_garrison_factor 		= -0.2
+		resistance_damage_to_garrison	= -0.5
+		local_manpower 					= 0.2
+	}
+
+
+	ai_will_do = {
+		base = 50000
+	}
+}
+
+territorial_state_improved = {
+	icon = GFX_autonomy_austro_hungarian_subject_icon
+	sound_effect = "Martial_Law_Interface_Autonomous_Occupation_Unique_DEM"
+
+	visible = {
+		original_tag = ABY
+		has_completed_focus = ABY_focus_with_german
+		FROM = {
+			OR = {
+				original_tag = PRE
+				original_tag = HUN
+				original_tag = SPA
+				original_tag = SPR
+				original_tag = ALB
+				original_tag = UKR
+				original_tag = POL
+			}
+		}
+	}
+
+	state_modifier = { #CHANGES HERE NEED TO BE APPLIED ALSO IN ITA_fake_colonial_police_law idea
+		resistance_target 				= -0.25
+		compliance_gain 				= 0.1
+		required_garrison_factor 		= -0.2
+		resistance_damage_to_garrison	= -0.5
+		local_manpower 					= 0.2
 	}
 
 
