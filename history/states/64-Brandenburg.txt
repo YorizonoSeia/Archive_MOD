@@ -38,6 +38,14 @@ state = {
                     }
                 }
             }
+			11505 = {
+				landmark_TRM_trinity_chruch = {
+                    level = 1
+                    allowed = {
+                        has_dlc = "Gotterdammerung"
+                    }
+                }
+			}
             3499 = {
                 land_facility = 1 #Representing Kommersdorf's Research Facilities
             }

@@ -1,0 +1,20 @@
+objectTypes = {
+
+##########################################
+######	    TRM Trinity Chruch      ######
+##########################################
+
+	pdxmesh = {
+		name = "landmark_TRM_trinity_chruch_mesh"
+		file = "gfx/models/buildings/landmarks/landmark_TRM_trinity_chruch.mesh"
+
+		meshsettings = {
+			name = "landmark_TRM_trinity_chruchShape"
+			index = 0
+			texture_diffuse = "TRM_texture.dds"
+			texture_normal = "basic_specular.dds"
+			texture_specular = "TRM_normal.dds"
+			shader = "PdxMeshStandard"
+		}
+	}
+}
