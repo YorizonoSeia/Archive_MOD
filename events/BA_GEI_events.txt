@@ -1072,7 +1072,14 @@ country_event = {
 		}
 		hidden_effect = {
 			if = {
-				limit = { country_exists = USA }
+				limit = {
+					USA = {
+						exists = yes
+						has_capitulated = no
+						is_subject = no
+						NOT = { has_country_flag = BA_end_USA_congress }
+					}
+				}
 				USA = { country_event = { id = usa_chroma_event.1 days = 15 } }
 			}
 		}
