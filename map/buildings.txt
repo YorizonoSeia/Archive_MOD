@@ -46864,7 +46864,7 @@
 771;special_project_facility_spawn;3301.00;13.73;477.00;2.25;0
 771;special_project_facility_spawn;3250.00;13.30;435.00;4.91;0
 771;special_project_facility_spawn;3294.00;11.82;429.00;1.29;0
-64;landmark_spawn;3014.50;9.70;1572.29;-0.23;0
+64;landmark_spawn;3012.11;9.70;1572.35;0.07;0
 58;locks_spawn;2959.71;9.70;1609.81;2.28;0
 1;special_project_facility_spawn;2950.00;12.40;1364.00;5.72;0
 1;special_project_facility_spawn;2952.00;10.65;1363.00;0.65;0
@@ -59726,3 +59726,4 @@
 890;special_project_facility_spawn;3228.00;11.65;572.00;2.53;0
 890;special_project_facility_spawn;3256.00;11.85;560.00;5.20;0
 890;rocket_site_spawn;3267.00;12.28;665.00;1.58;0
+64;landmark_spawn;3016.02;9.70;1569.31;1.57;0
