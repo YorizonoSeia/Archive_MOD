@@ -463,6 +463,12 @@ ideas = {
 
 			modifier = {
 				min_export = 0
+				country_resource_oil = 80
+				country_resource_aluminium = 100
+				country_resource_rubber = 50
+				country_resource_tungsten = 100
+				country_resource_steel = 200
+				country_resource_chromium = 60
 				weekly_manpower = 500
 				production_lack_of_resource_penalty_factor = -0.6
 				supply_factor = 0.5
