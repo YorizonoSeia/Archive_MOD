@@ -38,13 +38,13 @@ defined_text = { # Country
 		}
 		localization_key = ABY_army_dynamic_modifier_communism
 	}
-	text = {
-		trigger = {	
-			has_completed_focus = ABY_focus_descision	
-			has_completed_focus = ABY_focus_heil_to_night_queen
-		}
-		localization_key = ABY_army_dynamic_modifier_trinity
-	}
+	#text = {
+	#	trigger = {	
+	#		has_completed_focus = ABY_focus_descision	
+	#		has_completed_focus = ABY_focus_heil_to_night_queen
+	#	}
+	#	localization_key = ABY_army_dynamic_modifier_trinity
+	#}
 	text = {
 		trigger = {	
 			has_completed_focus = ABY_focus_descision	

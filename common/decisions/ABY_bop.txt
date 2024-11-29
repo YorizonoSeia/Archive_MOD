@@ -8,7 +8,7 @@ ABY_balance_of_power_category = {
 		}
 
 		visible = {
-			NOT = {has_completed_focus = ABY_focus_heil_to_night_queen}
+			
 		}
 
 		cost = 25
@@ -34,7 +34,7 @@ ABY_balance_of_power_category = {
 		}
 
 		visible = {
-			NOT = {has_completed_focus = ABY_focus_heil_to_night_queen}
+			
 		}
 
 		cost = 200
@@ -61,7 +61,7 @@ ABY_balance_of_power_category = {
 		}
 
 		visible = {
-			NOT = {has_completed_focus = ABY_focus_heil_to_night_queen}
+			
 		}
 
 		cost = 200
@@ -93,7 +93,7 @@ ABY_balance_of_power_category = {
 		}
 
 		visible = {
-			NOT = {has_completed_focus = ABY_focus_heil_to_night_queen}
+			
 		}
 
 		cost = 25
@@ -214,7 +214,7 @@ ABY_balance_of_power_category_4 = {
 		}
 
 		visible = {
-			has_completed_focus = ABY_focus_heil_to_night_queen
+			always = no
 		}
 
 		cost = 50
@@ -242,7 +242,7 @@ ABY_balance_of_power_category_4 = {
 		}
 
 		visible = {
-			has_completed_focus = ABY_focus_heil_to_night_queen
+			always = no
 		}
 
 		cost = 100
@@ -269,7 +269,7 @@ ABY_balance_of_power_category_4 = {
 		}
 
 		visible = {
-			has_completed_focus = ABY_focus_heil_to_night_queen
+			always = no
 		}
 
 		cost = 150
@@ -296,7 +296,7 @@ ABY_balance_of_power_category_4 = {
 		}
 
 		visible = {
-			has_completed_focus = ABY_focus_heil_to_night_queen
+			always = no
 		}
 
 		cost = 50
@@ -324,7 +324,7 @@ ABY_balance_of_power_category_4 = {
 		}
 
 		visible = {
-			has_completed_focus = ABY_focus_heil_to_night_queen
+			always = no
 		}
 
 		cost = 200
@@ -351,7 +351,7 @@ ABY_balance_of_power_category_4 = {
 		}
 
 		visible = {
-			has_completed_focus = ABY_focus_heil_to_night_queen
+			always = no
 		}
 
 		cost = 150

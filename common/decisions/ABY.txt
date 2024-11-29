@@ -17598,6 +17598,29 @@ ABY_descision_category_debug = {
             } 
 		}
 	}
+	ABY_descision_debug_kgerman = {  
+		priority = 1
+		
+		visible = {       
+			tag = ABY
+			is_debug = yes
+		}
+		                 
+        allowed = {
+            tag = ABY
+        }                     
+
+		complete_effect = {
+			complete_national_focus = ABY_focus_with_german
+			hidden_effect = {
+                load_focus_tree = {
+                    tree = ABY_focus_tree
+                    keep_completed = yes
+                }
+                mark_focus_tree_layout_dirty = yes
+            } 
+		}
+	}
 	ABY_descision_debug_ohung_laita = {  
 		priority = 1
 		

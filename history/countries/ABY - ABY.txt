@@ -60,6 +60,22 @@ set_variable = {ABY_var_air_accidents_factor = 0 }
 set_variable = {ABY_var_air_mission_xp_gain_factor = 0 }
 set_variable = {ABY_var_air_night_penalty = 0 }
 
+set_variable = {ABY_var_political_power_factor = -0.15}
+set_variable = {ABY_var_stability_factor = -0.1}
+set_variable = {ABY_var_war_support_factor = -0.1}
+set_variable = {ABY_var_surrender_limit = -0.3}
+set_variable = {ABY_var_drift_defence_factor = -0.75}
+set_variable = {ABY_var_conscription_factor = -0.05}
+set_variable = {ABY_var_consumer_goods_expected_value = 0.05}
+set_variable = {ABY_var_power_balance_daily = 0}
+set_variable = {ABY_var_army_core_attack_factor = 0}
+set_variable = {ABY_var_army_core_defence_factor = 0}
+set_variable = {ABY_var_monthly_population = 0}
+set_variable = {ABY_var_command_power_gain_mult = 0}
+set_variable = {ABY_var_experience_gain_army_factor = 0}
+set_variable = {ABY_var_political_power_cost = 0}
+set_variable = {ABY_var_compliance_gain = 0}
+
 every_state = {
     limit = {
         OR = {
@@ -100,6 +116,8 @@ add_ideas = {
 	limited_conscription
 	ABY_idea_bohemia_and_austria
 }
+
+add_dynamic_modifier = { modifier = ABY_two_dynamic_modifier }
 
 set_research_slots = 3
 set_stability = 0
