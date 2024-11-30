@@ -1992,10 +1992,10 @@ TRN_after_war_decisions = {
 		icon = GFX_decision_oppression
 
 		available = {
-			#has_completed_focus = TRM_germany_union
+			has_completed_focus = TRM_germany_union
 			has_idea = TRM_anti_gehenna_idea
 		}
-		#visible = { has_completed_focus = TRM_germany_union }
+		visible = { has_completed_focus = TRM_germany_union }
 
 		cost = 150
 		fire_only_once = yes
