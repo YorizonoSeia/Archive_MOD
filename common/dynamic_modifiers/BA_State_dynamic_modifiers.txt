@@ -1,3 +1,14 @@
+USA_rising_exiled_germans_state = {
+
+	enable = { always = yes }
+
+	icon = GFX_modifiers_sabotaged_resource
+	
+	recruitable_population_factor = -0.8
+	state_resources_factor = -0.8
+	state_production_speed_buildings_factor = -0.8
+	local_factories = -0.50
+}
 killing_field_state = {
 
 	enable = { always = yes }

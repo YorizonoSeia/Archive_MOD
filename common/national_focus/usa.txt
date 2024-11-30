@@ -2847,6 +2847,7 @@ focus_tree = {
 
 		available = {
 			has_civil_war = no
+			NOT = { has_global_flag = USA_rising_exiled_germans_3st_flag }
 		}
 		bypass = {
 		}
