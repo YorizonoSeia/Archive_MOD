@@ -2005,6 +2005,70 @@ country_event = { #총학생회장 리쿠하치마 아루?
 	}
 }
 
+country_event = { #혁명은 어디까지 혁명이어야 하는가
+	id = HEU.flavor_event.30
+	title = HEU.flavor_event.30.t
+	desc = HEU.flavor_event.30.desc
+	picture = GFX_report_event_generic_ruins
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 100
+	}
+
+	trigger = {
+		original_tag = HEU
+		date > 1939.6.1
+		
+		has_dynamic_modifier = {
+			modifier = HEU_rikuhachimaism_idea
+		}
+	}
+
+	option = { 
+		name = HEU.flavor_event.30.a 
+		ai_chance = {
+			base = 10
+		}
+
+		add_political_power = -25
+	}
+}
+
+country_event = { #에반에마엘 요새의 해방
+	id = HEU.flavor_event.31
+	title = HEU.flavor_event.31.t
+	desc = HEU.flavor_event.31.desc
+	picture = GFX_report_event_bunker_01
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 32
+	}
+
+	trigger = {
+		original_tag = HEU
+		controls_state = 989
+	}
+
+	option = { 
+		name = HEU.flavor_event.31.a 
+		ai_chance = {
+			base = 10
+		}
+
+		add_manpower = 60
+		
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 200
+			producer = BEL
+		}
+	}
+}
+
 country_event = { #만마전, 이부키, 그리고 이부키
 	id = HEU.flavor_event.32
 	title = HEU.flavor_event.32.t
@@ -2030,6 +2094,62 @@ country_event = { #만마전, 이부키, 그리고 이부키
 
 		add_war_support = 0.01
 		add_political_power = -50
+	}
+}
+
+country_event = { #블루 아카이브: 흥신소 68 업무일지
+	id = HEU.flavor_event.33
+	title = HEU.flavor_event.33.t
+
+	desc = {
+		text = HEU.flavor_event.33.desc.a
+		trigger = { 
+			has_dynamic_modifier = {
+				modifier = HEU_rikuhachimaism_idea
+			} 
+		}
+
+	}
+
+	desc = {
+		text = HEU.flavor_event.33.desc.b
+		trigger = { 
+			has_dynamic_modifier = {
+				modifier = HEU_luxembourgism_idea
+			} 
+		}
+	}
+
+	picture = GFX_report_event_Problem_Solver_68
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 100
+	}
+
+	trigger = {
+		original_tag = HEU
+		date > 1939.1.1
+		
+		OR = {
+			has_dynamic_modifier = {
+				modifier = HEU_rikuhachimaism_idea
+			}
+
+			has_dynamic_modifier = {
+				modifier = HEU_luxembourgism_idea
+			}
+		}
+	}
+
+	option = { 
+		name = HEU.flavor_event.33.a 
+		ai_chance = {
+			base = 10
+		}
+
+		add_political_power = 25
 	}
 }
 
