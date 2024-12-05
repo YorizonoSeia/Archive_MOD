@@ -6,15 +6,24 @@ ideas = {
 				max_planning_factor = 0.2
 				military_factory_donations = 3
 			}
-			available = {
-				OR = {
-					GEH = {
-						exists = yes
-					}
-					GEM = {
-						exists = yes
-					}
-				}
+		}
+		GEK_well_planned_1 = { #수복 계획
+			name = GEK_well_planned
+			picture = CZE_planning_bonus
+			modifier = {
+				max_planning_factor = 0.2
+				military_factory_donations = 3
+				breakthrough_factor = 0.05
+			}
+		}
+		GEK_well_planned_2 = { #수복 계획
+			name = GEK_well_planned
+			picture = CZE_planning_bonus
+			modifier = {
+				max_planning_factor = 0.2
+				military_factory_donations = 3
+				supply_node_range = 0.05
+				breakthrough_factor = 0.05
 			}
 		}
 		GEK_send_volunteers_idea = { #독일 지원

@@ -69,6 +69,12 @@
  GEK_rm_event.10.t: "국가인민당과의 연합"
  GEK_rm_event.10.d: "국가인민당은 대전쟁 이후 보수주의 최대 정당으로서, 계급적으로는 융커들을 대변하고 있습니다. 이들의 숙고된 정치적 판단과 빛나는 옛 영광을 향한 충의는 우리에게 큰 도움이 될 것입니다."
  GEK_rm_event.10.a: "제국을 향해!"
+ GEK_rm_event.11.t: "내전!"
+ GEK_rm_event.11.d: "군부 통치에 반대하는 정당 세력들이 봉기하였습니다!"
+ GEK_rm_event.11.a: "젠장!"
+ GEK_rm_event.12.t: "만선합작"
+ GEK_rm_event.12.d: "현지인 군대가 대규모로 침공할 조짐이 보입니다!"
+ GEK_rm_event.12.a: "도와줘, 선도부!"
 
  GEK_event_for_auto.22.t: "가톨릭 교회와의 제휴"
  GEK_event_for_auto.22.d: "가톨릭 교회와의 제휴를 반대하는 개신교 계열 조직들의 반대가 있습니다."
@@ -153,7 +159,7 @@
  GEK_RM_focus_2: "이념을 초월한 연대"
  GEK_RM_focus_3: "대규모 선전"
  GEK_RM_focus_4: "전투계획"
- GEK_RM_focus_5: "서부 해안 상륙"
+ GEK_RM_focus_5: "해안의 국방군"
  GEK_RM_focus_6: "배신자 포섭"
  GEK_RM_focus_7: "국가 소생"
  GEK_RM_focus_8: "강을 이용한 보급"
@@ -315,6 +321,9 @@
  GEK_restoration_decision_TRM:0 "동부 독일 영토 통합"
  GEK_restoration_decision_POL:0 "단치히 통합"
  GEK_restoration_decision_LIT:0 "메멜 통합"
+
+ GEK_state_government_takeover_category: "주정부 인수"
+
 
  GEK_max_coalition: "전독일 최대연정"
  GEK_flatering_coalition: "붕괴하는 대연정"
