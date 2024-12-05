@@ -964,6 +964,29 @@ on_actions = {
 				TRM = {  country_event = TRMDIP.17 }
 			}
 		}
+		effect = {
+			if = { # 트리니티가 미카 경로를 들어서고 특별군사작전 중점을 완료하지 않은채 게헨나에 선전포고 한다면
+				limit = {
+					ROOT = {
+						original_tag = TRM
+						TRM = { 
+							has_completed_focus = TRM_newfocus_27
+							NOT = { has_completed_focus = TRM_war_with_gehenna }
+						}
+					}
+					FROM = {
+						original_tag = GEM
+					}
+				}
+				TRM = { 
+					complete_national_focus = TRM_war_with_gehenna
+					add_timed_idea = {
+						idea = TRN_NOT_READY_WAR
+						days = 180
+					}
+				}
+			}
+		}
 	}
 	on_war_relation_added = {
 		effect = {

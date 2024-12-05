@@ -122,4 +122,10 @@ USA_decolonisation = {
 		}
 		priority = 75
 	}
+	USA_rising_exiled_germans = {
+		allowed = {
+			original_tag = USA
+		}
+		priority = 95
+	}
 #BA_MOD_FIX/

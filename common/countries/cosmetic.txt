@@ -2622,3 +2622,7 @@ USABA_soviet = {
 	color = rgb { 145 23 44 }
 	color_ui = rgb { 183 37 51 }
 }
+USABA_germany = {
+	color = rgb { 61 114 161 }
+	color_ui = rgb { 61 114 161 }
+}

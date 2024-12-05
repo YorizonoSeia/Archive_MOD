@@ -64,7 +64,6 @@ GEK_enhance_spd = {
 		}
 	}
 	else = {
-		add_political_power = -5
 	}
 }
 GEK_enhance_nazi = {

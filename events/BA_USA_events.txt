@@ -844,6 +844,132 @@ country_event = {
 	}
 }
 
+#디트로이트 독일인 폭동
+
+country_event = {
+	
+	id = usa_event.12
+	title = usa_event.12.t
+	desc = usa_event.12.d
+	
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = usa_event.12.a
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 393
+					state = 395
+				}
+			}
+			add_dynamic_modifier = {
+				modifier = USA_rising_exiled_germans_state
+			}
+		}
+	}
+}
+country_event = {
+	
+	id = usa_event.13
+	title = usa_event.13.t
+	desc = usa_event.13.d
+	
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = usa_event.13.a
+		effect_tooltip = {
+			event_target:USA_rising_exiled_germans_2st = {
+				add_dynamic_modifier = {
+					modifier = USA_rising_exiled_germans_state
+				}
+			}
+		}
+	}
+}
+country_event = {
+	
+	id = usa_event.14
+	title = usa_event.14.t
+	desc = usa_event.14.d
+	
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = USA_rising_exiled_germans_3st
+	}
+	
+	option = {
+		name = usa_event.14.a
+		create_dynamic_country = {
+			original_tag = USA
+			set_cosmetic_tag = USABA_germany
+			hidden_effect = {
+				set_politics = {
+					ruling_party = fascism
+				}
+				add_popularity = {
+					ideology = fascism
+					popularity = 1.00
+				}
+			}
+			every_state = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = USA_rising_exiled_germans_state
+					}
+				}
+				transfer_state_to = PREV
+				remove_dynamic_modifier = {
+					modifier = USA_rising_exiled_germans_state
+				}
+				add_core_of = PREV
+			}
+			division_template = {
+				name = "German National Army"
+				priority = 0
+				division_names_group = GER_ARM_01
+				regiments = {
+					militia = { x = 0 y = 0 }
+					militia = { x = 0 y = 1 }
+					militia = { x = 0 y = 2 }
+					militia = { x = 1 y = 0 }
+					militia = { x = 1 y = 1 }
+					militia = { x = 1 y = 2 }
+				}
+			}
+			every_controlled_state = {
+				create_unit = {
+					division = "name = \"German National Army\" division_template = \"German National Army\" start_experience_factor = 0 start_equipment_factor = 0.9"
+					owner = PREV
+					allow_spawning_on_enemy_provs = yes
+				}
+				create_unit = {
+					division = "name = \"German National Army\" division_template = \"German National Army\" start_experience_factor = 0 start_equipment_factor = 0.9"
+					owner = PREV
+					allow_spawning_on_enemy_provs = yes
+				}
+				create_unit = {
+					division = "name = \"German National Army\" division_template = \"German National Army\" start_experience_factor = 0 start_equipment_factor = 0.9"
+					owner = PREV
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+			declare_war_on = {
+				target = ROOT
+				type = annex_everything
+			}
+		}
+	}
+}
+
 
 
  # 신질서 내전

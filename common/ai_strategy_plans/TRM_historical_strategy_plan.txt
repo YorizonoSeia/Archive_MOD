@@ -87,6 +87,13 @@ TRM_historical = {
         
         # 마지막 내정 중점
         TRN_gyungje_hyu_ul_bub
+        
+        # 공군 중점
+        TRN_Luftwaffe
+        TRN_Standardise_Pilot_Training
+        TRN_Transpolar_Flights
+        TRN_Expand_The_Aircraft_Industry
+        
 	}
 	research = {
 		infantry_weapons = 50.0

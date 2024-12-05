@@ -222,13 +222,5 @@ ideas = {
 				production_speed_buildings_factor = 0.05
 			}
 		}
-		GEK_general_staff = {
-			name = general_staff
-			picture = general_staff
-			modifier = {
-				army_org_factor = 0.075
-				planning_speed = 0.3
-			}
-		}
 	}
 }

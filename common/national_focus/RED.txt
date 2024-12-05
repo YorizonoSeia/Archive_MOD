@@ -5576,10 +5576,7 @@ focus_tree = {
 				create_unit = {
 					division = "name = \"Public Works Department\" division_template = \"militia\" start_experience_factor = 0.05 start_equipment_factor = 0.5"
 					owner = RED
-				}
-				create_unit = {
-					division = "name = \"Armed Workers\" division_template = \"militia\" start_experience_factor = 0.05 start_equipment_factor = 0.5"
-					owner = RED
+					count = 2
 				}
 			}
 			if = {
@@ -5721,13 +5718,12 @@ focus_tree = {
 				remove_idea = RED_redwinter_idea
 				add_idea = RED_fire_of_revolution
 			}
-			add_equipment_to_stockpile = {
-				type = infantry_equipment
-				amount = 1000
-			}
-			add_equipment_to_stockpile = {
-				type = kivotos_infantry_equipment
-				amount = 100
+			capital_scope = {
+				create_unit = {
+					division = "division_template = \Redwinter Garde populaire\" start_experience_factor = 1 start_equipment_factor = 1.0"
+					owner = ROOT
+					count = 3
+				}
 			}
 			add_war_support = 0.10
 			if = {
@@ -9892,14 +9888,7 @@ focus_tree = {
 				create_unit = {
 					division = "name = \"Regional Defense Division\" division_template = \"Regional Defense Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
 					owner = RED
-				}
-				create_unit = {
-					division = "name = \"Regional Defense Division\" division_template = \"Regional Defense Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
-					owner = RED
-				}
-				create_unit = {
-					division = "name = \"Regional Defense Division\" division_template = \"Regional Defense Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
-					owner = RED
+					count = 3
 				}
 			}
 
@@ -9965,22 +9954,7 @@ focus_tree = {
 				create_unit = {
 					division = "name = \"Regional Defense Division\" division_template = \"Regional Defense Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
 					owner = RED
-				}
-				create_unit = {
-					division = "name = \"Regional Defense Division\" division_template = \"Regional Defense Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
-					owner = RED
-				}
-				create_unit = {
-					division = "name = \"Regional Defense Division\" division_template = \"Regional Defense Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
-					owner = RED
-				}
-				create_unit = {
-					division = "name = \"Regional Defense Division\" division_template = \"Regional Defense Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
-					owner = RED
-				}
-				create_unit = {
-					division = "name = \"Regional Defense Division\" division_template = \"Regional Defense Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
-					owner = RED
+					count = 5
 				}
 			}
 			uncomplete_national_focus = {
@@ -10085,26 +10059,7 @@ focus_tree = {
 					create_unit = {
 						division = "name = \"Regional Defense Anti Tank Division\" division_template = \"Anti Tank Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
 						owner = RED
-					}
-					create_unit = {
-						division = "name = \"Regional Defense Anti Tank Division\" division_template = \"Anti Tank Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
-						owner = RED
-					}
-					create_unit = {
-						division = "name = \"Regional Defense Anti Tank Division\" division_template = \"Anti Tank Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
-						owner = RED
-					}
-					create_unit = {
-						division = "name = \"Regional Defense Anti Tank Division\" division_template = \"Anti Tank Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
-						owner = RED
-					}
-					create_unit = {
-						division = "name = \"Regional Defense Anti Tank Division\" division_template = \"Anti Tank Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
-						owner = RED
-					}
-					create_unit = {
-						division = "name = \"Regional Defense Anti Tank Division\" division_template = \"Anti Tank Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
-						owner = RED
+						count = 6
 					}
 				}
 			}
@@ -10252,26 +10207,7 @@ focus_tree = {
 				create_unit = {
 					division = "name = \"Mountain Ranger\" division_template = \"Mountain Ranger\" start_experience_factor = 1 start_equipment_factor = 1"
 					owner = RED
-				}
-				create_unit = {
-					division = "name = \"Mountain Ranger\" division_template = \"Mountain Ranger\" start_experience_factor = 1 start_equipment_factor = 1"
-					owner = RED
-				}
-				create_unit = {
-					division = "name = \"Mountain Ranger\" division_template = \"Mountain Ranger\" start_experience_factor = 1 start_equipment_factor = 1"
-					owner = RED
-				}
-				create_unit = {
-					division = "name = \"Mountain Ranger\" division_template = \"Mountain Ranger\" start_experience_factor = 1 start_equipment_factor = 1"
-					owner = RED
-				}
-				create_unit = {
-					division = "name = \"Mountain Ranger\" division_template = \"Mountain Ranger\" start_experience_factor = 1 start_equipment_factor = 1"
-					owner = RED
-				}
-				create_unit = {
-					division = "name = \"Mountain Ranger\" division_template = \"Mountain Ranger\" start_experience_factor = 1 start_equipment_factor = 1"
-					owner = RED
+					count = 6
 				}
 			}
 		}
@@ -10368,26 +10304,7 @@ focus_tree = {
 					create_unit = {
 						division = "name = \"Rocket Artillery Division\" division_template = \"Rocket Artillery Division\" start_experience_factor = 1 start_equipment_factor = 1"
 						owner = RED
-					}
-					create_unit = {
-						division = "name = \"Rocket Artillery Division\" division_template = \"Rocket Artillery Division\" start_experience_factor = 1 start_equipment_factor = 1"
-						owner = RED
-					}
-					create_unit = {
-						division = "name = \"Rocket Artillery Division\" division_template = \"Rocket Artillery Division\" start_experience_factor = 1 start_equipment_factor = 1"
-						owner = RED
-					}
-					create_unit = {
-						division = "name = \"Rocket Artillery Division\" division_template = \"Rocket Artillery Division\" start_experience_factor = 1 start_equipment_factor = 1"
-						owner = RED
-					}
-					create_unit = {
-						division = "name = \"Rocket Artillery Division\" division_template = \"Rocket Artillery Division\" start_experience_factor = 1 start_equipment_factor = 1"
-						owner = RED
-					}
-					create_unit = {
-						division = "name = \"Rocket Artillery Division\" division_template = \"Rocket Artillery Division\" start_experience_factor = 1 start_equipment_factor = 1"
-						owner = RED
+						count = 6
 					}
 				}
 			}
@@ -10490,26 +10407,7 @@ focus_tree = {
 					create_unit = {
 						division = "name = \"Anti Air Division\" division_template = \"Anti Air Division\" start_experience_factor = 1 start_equipment_factor = 1"
 						owner = RED
-					}
-					create_unit = {
-						division = "name = \"Anti Air Division\" division_template = \"Anti Air Division\" start_experience_factor = 1 start_equipment_factor = 1"
-						owner = RED
-					}
-					create_unit = {
-						division = "name = \"Anti Air Division\" division_template = \"Anti Air Division\" start_experience_factor = 1 start_equipment_factor = 1"
-						owner = RED
-					}
-					create_unit = {
-						division = "name = \"Anti Air Division\" division_template = \"Anti Air Division\" start_experience_factor = 1 start_equipment_factor = 1"
-						owner = RED
-					}
-					create_unit = {
-						division = "name = \"Anti Air Division\" division_template = \"Anti Air Division\" start_experience_factor = 1 start_equipment_factor = 1"
-						owner = RED
-					}
-					create_unit = {
-						division = "name = \"Anti Air Division\" division_template = \"Anti Air Division\" start_experience_factor = 1 start_equipment_factor = 1"
-						owner = RED
+						count = 6
 					}
 				}
 			}

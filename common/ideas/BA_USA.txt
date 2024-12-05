@@ -113,6 +113,7 @@ ideas = {
 						disband = yes
 					}
 				}
+				activate_mission = USA_rising_exiled_germans_1st
 			}
 
 			modifier = {

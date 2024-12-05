@@ -199,7 +199,7 @@ focus_tree = {
 				}
 			}
 		}
-		x = 53
+		x = 62
 		y = 0
 		available = {
 			has_completed_focus = GEK_get_in_touch
@@ -303,6 +303,145 @@ focus_tree = {
 			add_political_power = 30
 			add_stability = 0.15
 			add_war_support = 0.15
+		}
+	}
+	focus = { #전투계획
+		id = GEK_RM_focus_4
+		icon = GFX_goal_generic_position_armies
+		ai_will_do = {
+			base = 0
+		}
+		prerequisite = {
+			focus = GEK_RM_focus_3
+		}
+		relative_position_id = GEK_RM_focus_3
+		x = -14
+		y = 1
+		cost = 1
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+			country_event = {
+				id = GEK_rm_event.3
+				days = 3
+			}
+			hidden_effect = {
+				country_event = {
+					id = GEK_event_for_auto.1
+					random_days = 15
+					days = 5
+				}
+			}
+		}
+	}
+	focus = { #강물을 이용한 보급
+		id = GEK_RM_focus_8
+		icon = GFX_focus_ARG_study_the_battle_of_the_river_plate
+		ai_will_do = {
+			base = 0
+		}
+		prerequisite = {
+			focus = GEK_RM_focus_4
+		}
+		relative_position_id = GEK_RM_focus_4
+		x = -1
+		y = 1
+		cost = 1
+		completion_reward = {
+		}
+	}
+	focus = { #서부해안 상륙
+		id = GEK_RM_focus_5
+		icon = GFX_focus_generic_cruiser2
+		ai_will_do = {
+			base = 0
+		}
+		prerequisite = {
+			focus = GEK_RM_focus_4
+		}
+		relative_position_id = GEK_RM_focus_4
+		x = 1
+		y = 1
+		cost = 1
+		completion_reward = {
+		}
+	}
+	focus = { #배신자 포섭
+		id = GEK_RM_focus_6
+		icon = GFX_goal_generic_dangerous_deal
+		ai_will_do = {
+			base = 0
+		}
+		prerequisite = {
+			focus = GEK_RM_focus_4
+		}
+		relative_position_id = GEK_RM_focus_4
+		x = 2
+		y = 2
+		cost = 1
+		completion_reward = {
+		}
+	}
+	focus = { #국가 소생
+		id = GEK_RM_focus_7
+		icon = GFX_focus_generic_public_works
+		prerequisite = { focus = GEK_RM_focus_8 focus = GEK_RM_focus_5}
+
+		x = 0
+		y = 2
+		relative_position_id = GEK_RM_focus_4
+		
+		cost = 5
+
+		available = {
+			has_war = no
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			add_timed_idea = {
+				idea = GER_national_revitalization_ns
+				days = 545
+			}
+		}
+	}
+	focus = { #소련에 지원 요청
+		id = GEK_RM_focus_9
+		icon = GFX_goal_molotov_ribbentrop_pact
+		ai_will_do = {
+			base = 0
+		}
+		prerequisite = {
+			focus = GEK_RM_focus_4
+			focus = GEK_RM_com_focus_0
+		}
+		relative_position_id = GEK_RM_focus_4
+		x = 3
+		y = 1
+		cost = 1
+		completion_reward = {
+		}
+	}
+	focus = { #주정부 인수
+		id = GEK_RM_focus_10
+		icon = GFX_focus_generic_self_management
+		ai_will_do = {
+			base = 0
+		}
+		prerequisite = {
+			focus = GEK_RM_focus_4
+		}
+		relative_position_id = GEK_RM_focus_4
+		x = -2
+		y = 2
+		cost = 1
+		completion_reward = {
 		}
 	}
 	focus = { #독일공산당과의 협력
@@ -475,18 +614,7 @@ focus_tree = {
 				create_unit = {
 					division = "name = \"Neuer Roter Frontkämpferbund\" division_template = \"Neuer Roter Frontkämpferbund\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
 					owner = GEK
-				}
-				create_unit = {
-					division = "name = \"Neuer Roter Frontkämpferbund\" division_template = \"Neuer Roter Frontkämpferbund\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
-					owner = GEK
-				}
-				create_unit = {
-					division = "name = \"Neuer Roter Frontkämpferbund\" division_template = \"Neuer Roter Frontkämpferbund\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
-					owner = GEK
-				}
-				create_unit = {
-					division = "name = \"Neuer Roter Frontkämpferbund\" division_template = \"Neuer Roter Frontkämpferbund\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
-					owner = GEK
+					count = 2
 				}
 			}
 			add_timed_idea = {
@@ -875,22 +1003,7 @@ focus_tree = {
 				create_unit = {
 					division = "name = \"Reichsbanner Schwarz-Rot-Gold\" division_template = \"Reichsbanner Schwarz-Rot-Gold\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
 					owner = GEK
-				}
-				create_unit = {
-					division = "name = \"Reichsbanner Schwarz-Rot-Gold\" division_template = \"Reichsbanner Schwarz-Rot-Gold\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
-					owner = GEK
-				}
-				create_unit = {
-					division = "name = \"Reichsbanner Schwarz-Rot-Gold\" division_template = \"Reichsbanner Schwarz-Rot-Gold\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
-					owner = GEK
-				}
-				create_unit = {
-					division = "name = \"Reichsbanner Schwarz-Rot-Gold\" division_template = \"Reichsbanner Schwarz-Rot-Gold\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
-					owner = GEK
-				}
-				create_unit = {
-					division = "name = \"Reichsbanner Schwarz-Rot-Gold\" division_template = \"Reichsbanner Schwarz-Rot-Gold\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
-					owner = GEK
+					count = 3
 				}
 			}
 		}
@@ -1157,22 +1270,7 @@ focus_tree = {
 				create_unit = {
 					division = "name = \"Freikorps\" division_template = \"Freikorps\" start_experience_factor = 0.2 start_equipment_factor = 1"
 					owner = GEK
-				}
-				create_unit = {
-					division = "name = \"Freikorps\" division_template = \"Freikorps\" start_experience_factor = 0.2 start_equipment_factor = 1"
-					owner = GEK
-				}
-				create_unit = {
-					division = "name = \"Freikorps\" division_template = \"Freikorps\" start_experience_factor = 0.2 start_equipment_factor = 1"
-					owner = GEK
-				}
-				create_unit = {
-					division = "name = \"Freikorps\" division_template = \"Freikorps\" start_experience_factor = 0.2 start_equipment_factor = 1"
-					owner = GEK
-				}
-				create_unit = {
-					division = "name = \"Freikorps\" division_template = \"Freikorps\" start_experience_factor = 0.2 start_equipment_factor = 1"
-					owner = GEK
+					count = 3
 				}
 			}
 		}
@@ -1290,7 +1388,13 @@ focus_tree = {
 		y = 1
 		cost = 2
 		completion_reward = {
-			add_ideas = general_staff
+			capital_scope = {
+				create_unit = {
+					division = "name = \"Infanterie-Division\" division_template = \"Infanterie-Division\" start_experience_factor = 0.3 start_equipment_factor = 1"
+					owner = GEK
+					count = 3
+				}
+			}
 		}
 	}
 	focus = { #국방군 권한 확대
@@ -1311,10 +1415,7 @@ focus_tree = {
 		y = 2
 		cost = 2
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = general_staff
-				add_idea = GEK_general_staff
-			}
+			upgrade_economy_law = yes
 			GEK_enhance_army = yes
 		}
 	}
@@ -1409,7 +1510,7 @@ focus_tree = {
 	focus = { #당조직 재정비
 		text_icon = GER_inner_circle_focus_style
 		id = GEK_RM_nazi_focus_1
-		icon = GFX_focus_generic_self_management
+		icon = GFX_focus_generic_diplomatic_treaty
 		ai_will_do = {
 			base = 0
 		}
@@ -1505,18 +1606,7 @@ focus_tree = {
 				create_unit = {
 					division = "name = \"Überreste der Schutzstaffel\" division_template = \"Überreste der Schutzstaffel\" start_experience_factor = 0.2 start_equipment_factor = 1"
 					owner = GEK
-				}
-				create_unit = {
-					division = "name = \"Überreste der Schutzstaffel\" division_template = \"Überreste der Schutzstaffel\" start_experience_factor = 0.2 start_equipment_factor = 1"
-					owner = GEK
-				}
-				create_unit = {
-					division = "name = \"Überreste der Schutzstaffel\" division_template = \"Überreste der Schutzstaffel\" start_experience_factor = 0.2 start_equipment_factor = 1"
-					owner = GEK
-				}
-				create_unit = {
-					division = "name = \"Überreste der Schutzstaffel\" division_template = \"Überreste der Schutzstaffel\" start_experience_factor = 0.2 start_equipment_factor = 1"
-					owner = GEK
+					count = 4
 				}
 			}
 			GEK_enhance_nazi = yes
