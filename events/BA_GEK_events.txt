@@ -560,6 +560,9 @@ country_event = { #수병들의 처우 개선 요구
 	trigger = {
 		tag = GEK
 		date > 1936.4.1
+		NOT = {
+			has_completed_focus = GEK_RM_focus_0
+		}
 	}
 	
 	option = { #그들의 요구를 들어주자
@@ -796,7 +799,7 @@ country_event = { #주정부의 충성
 			}
 			add_dynamic_modifier = {
 				modifier = GER_bewegungskrieg_modifier
-				days = 360
+				days = 120
 			}
 		}
 	}
@@ -877,26 +880,7 @@ country_event = { #공산당과의 연계
 			create_unit = {
 				division = "name = \"Neuer Roter Frontkämpferbund\" division_template = \"Neuer Roter Frontkämpferbund\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
 				owner = GEK
-			}
-			create_unit = {
-				division = "name = \"Neuer Roter Frontkämpferbund\" division_template = \"Neuer Roter Frontkämpferbund\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
-				owner = GEK
-			}
-			create_unit = {
-				division = "name = \"Neuer Roter Frontkämpferbund\" division_template = \"Neuer Roter Frontkämpferbund\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
-				owner = GEK
-			}
-			create_unit = {
-				division = "name = \"Neuer Roter Frontkämpferbund\" division_template = \"Neuer Roter Frontkämpferbund\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
-				owner = GEK
-			}
-			create_unit = {
-				division = "name = \"Neuer Roter Frontkämpferbund\" division_template = \"Neuer Roter Frontkämpferbund\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
-				owner = GEK
-			}
-			create_unit = {
-				division = "name = \"Neuer Roter Frontkämpferbund\" division_template = \"Neuer Roter Frontkämpferbund\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
-				owner = GEK
+				count = 2
 			}
 		}
 		set_party_name = {
@@ -1052,7 +1036,7 @@ country_event = { #국가사회주의 독일 노동자당
 		GEK_enhance_nazi = yes
 		set_party_name = {
 			ideology = fascism
-			long_name = GER_fascism_party_long
+			long_name = GER_fascism_party_long 
 			name = GER_fascism_party
 		}
 	}
@@ -1064,7 +1048,16 @@ country_event = { #금이 가는 연정
 	picture = GFX_report_event_communists_in_riga
 	
 	fire_only_once = yes
-	is_triggered_only = yes
+	trigger = {
+		tag = GEK
+		GEH = {
+			exists = no
+		}
+		GEM = {
+			exists = no
+		}
+		has_completed_focus = GEK_RM_focus_3
+	}
 	
 	option = {
 		name = GEK_rm_event.9.a
@@ -1085,6 +1078,268 @@ country_event = { #독일국가인민당과의 연합
 		GEK_enhance_army = yes
 	}
 }
+country_event = { #내전!
+	id = GEK_rm_event.11
+	title = GEK_rm_event.11.t
+	desc = GEK_rm_event.11.d
+	picture = GFX_report_event_communists_in_riga
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = GEK_rm_event.11.a
+		delete_unit_template_and_units = {
+			division_template = "Neuer Roter Frontkämpferbund"
+		}
+		delete_unit_template_and_units = {
+			division_template = "Reichsbanner Schwarz-Rot-Gold"
+		}
+		delete_unit_template_and_units = {
+			division_template = "Überreste der Schutzstaffel"
+		}
+		hidden_effect = {
+			every_owned_state = {
+				limit = {
+					is_core_of = SHL
+				}
+				transfer_state_to = SHL
+			}
+			every_owned_state = {
+				limit = {
+					is_core_of = RHI
+				}
+				transfer_state_to = RHI
+			}
+			every_owned_state = {
+				limit = {
+					is_core_of = BAY
+				}
+				transfer_state_to = NSD
+			}
+			SOV = {
+				add_ai_strategy = {
+					type = send_volunteers_desire
+					id = GEK
+					value = -50
+				}
+			}
+			SHL = {
+				declare_war_on = {
+					target = GEK
+					type = annex_everything
+				}
+				give_military_access = RHI
+				set_politics = {
+					ruling_party = communism
+				}
+				set_popularities = {
+					communism = 100
+				}
+				set_party_name = {
+					ideology = communism
+					long_name = GER_communism_party
+					name = GER_communism_party
+				}
+				create_country_leader = {
+					name = GER_ernst_thalmann
+					picture = GFX_portrait_GER_ernst_thalmann
+					ideology = leninism
+				}
+				set_cosmetic_tag = SHL_com
+				if = {
+					limit = {
+						NOT = {
+							has_template = "Neuer Roter Frontkämpferbund"
+						}
+					}
+					division_template = {
+						name = "Neuer Roter Frontkämpferbund"
+						regiments = {
+							irregular_infantry = {
+								x = 0
+								y = 0
+							}
+							irregular_infantry = {
+								x = 0
+								y = 1
+							}
+							irregular_infantry = {
+								x = 0
+								y = 2
+							}
+							irregular_infantry = {
+								x = 1
+								y = 0
+							}
+							irregular_infantry = {
+								x = 1
+								y = 1
+							}
+							irregular_infantry = {
+								x = 1
+								y = 2
+							}
+						}
+						is_locked = yes
+					}
+				}
+				capital_scope = {
+					create_unit = {
+						division = "name = \"Neuer Roter Frontkämpferbund\" division_template = \"Neuer Roter Frontkämpferbund\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+						owner = SHL
+						count = 10
+					}
+				}
+			}
+			RHI = {
+				declare_war_on = {
+					target = GEK
+					type = annex_everything
+				}
+				give_military_access = SHL
+				set_politics = {
+					ruling_party = democratic
+				}
+				set_popularities = {
+					democratic = 100
+				}
+				set_party_name = {
+					ideology = democratic
+					long_name = GER_democratic_party
+					name = GER_democratic_party
+				}
+				create_country_leader = {
+					name = GER_konrad_adenauer
+					picture = GFX_portrait_GER_konrad_adenauer
+					ideology = conservatism
+				}
+				set_cosmetic_tag = RHI_dem
+				if = {
+					limit = {
+						NOT = {
+							has_template = "Reichsbanner Schwarz-Rot-Gold"
+						}
+					}
+					division_template = {
+						name = "Reichsbanner Schwarz-Rot-Gold"
+						regiments = {
+							militia = {
+								x = 0
+								y = 0
+							}
+							militia = {
+								x = 0
+								y = 1
+							}
+							militia = {
+								x = 0
+								y = 2
+							}
+							militia = {
+								x = 1
+								y = 0
+							}
+							militia = {
+								x = 1
+								y = 1
+							}
+							militia = {
+								x = 1
+								y = 2
+							}
+						}
+						is_locked = yes
+					}
+				}
+				capital_scope = {
+					create_unit = {
+						division = "name = \"Reichsbanner Schwarz-Rot-Gold\" division_template = \"Reichsbanner Schwarz-Rot-Gold\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+						owner = RHI
+						count = 10
+					}
+				}
+			}
+			NSD = {
+				declare_war_on = {
+					target = GEK
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = RHI
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = SHL
+					type = annex_everything
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_template = "Überreste der Schutzstaffel"
+						}
+					}
+					division_template = {
+						name = "Überreste der Schutzstaffel"
+						regiments = {
+							infantry = {
+								x = 0
+								y = 0
+							}
+							infantry = {
+								x = 0
+								y = 1
+							}
+							infantry = {
+								x = 0
+								y = 2
+							}
+							infantry = {
+								x = 1
+								y = 0
+							}
+							infantry = {
+								x = 1
+								y = 1
+							}
+							infantry = {
+								x = 1
+								y = 2
+							}
+						}
+						is_locked = yes
+					}
+				}
+				capital_scope = {
+					create_unit = {
+						division = "name = \"Überreste der Schutzstaffel\" division_template = \"Überreste der Schutzstaffel\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = NSD
+						count = 16
+					}
+				}
+			}
+		}
+	}
+}
+country_event = { #만선합작
+	id = GEK_rm_event.12
+	title = GEK_rm_event.12.t
+	desc = GEK_rm_event.12.d
+	picture = GFX_report_event_communists_in_riga
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = GEK_rm_event.12.a
+		give_military_access = GEH
+	}
+}
+
+#
+# 중점 자동 진행
+#
+
 add_namespace = GEK_event_for_auto
 country_event = { #유격대 강화 자동 찍기
 	id = GEK_event_for_auto.1

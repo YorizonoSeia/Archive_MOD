@@ -854,34 +854,22 @@ ideas = {
 				attack_bonus_against = 0.25
 			}
 		}
-		ishowspeed = {
-			allowed = { always = no }
-			removal_cost = -1
-			modifier = {
-				army_speed_factor = 100
-				army_attack_factor = 100
-			}
-		}
 		TRN_NOT_READY_WAR = { # 전쟁 좀 일찍 하지 마!!
 			picture = ger_mefo_bills_payment
 			allowed = { always = no }
 			modifier = {
-				industrial_capacity_factory = -0.15
-				consumer_goods_factor = 0.15
-				stability_factor = -0.15
-				war_support_factor = -0.05
-				supply_consumption_factor = 0.05
+				supply_factor = -0.15
+			}
+			targeted_modifier = {
+				tag = GEM
+				attack_bonus_against = -0.1
 			}
 			targeted_modifier = {
 				tag = GEH
 				attack_bonus_against = -0.1
 			}
-			targeted_modifier = {
-				tag = TRM
-				attack_bonus_against = -0.1
-			}
 		}
-		TRN_new_administration = { # 에이아이는 게헨나를 더 싫어함
+		TRN_new_administration = { #
 			allowed = { always = no }
 			modifier = {
 				consumer_goods_factor = 0.2

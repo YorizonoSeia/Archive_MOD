@@ -1212,6 +1212,9 @@ TRM_industries_dynamic = {
 TRM_develop_the_heer_modifier = { # 트리니티 육군
 	
 	icon = GFX_idea_TRM_Trinity_Grande_Armee
+	
+	# 정치 중점
+	unit_leader_as_advisor_cp_cost_factor = TRM_army_unit_leader_as_advisor_cp_cost_factor
 
     # 중앙 지휘 체계
     planning_speed = TRM_army_planning_speed
