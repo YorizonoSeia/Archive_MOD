@@ -5128,6 +5128,387 @@ ideas = {
 				local_resources_factor = 0.15
 			}
 		}
+		ABY_idea_two_0 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+			}
+		}
+		ABY_idea_two_1 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				command_power_gain_mult = -0.25
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				consumer_goods_expected_value =
+			}
+		}
+		ABY_idea_two_2 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				command_power_gain_mult = 0.25
+				army_core_attack_factor = -0.1
+				army_core_defence_factor = -0.1
+			}
+		}
+		ABY_idea_two_3 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				command_power_gain_mult = -0.15
+				experience_gain_army_factor = 0.1
+				power_balance_daily = 0.001
+			}
+		}
+		ABY_idea_two_4 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				command_power_gain_mult = 0.15
+				experience_gain_army_factor = -0.1
+				power_balance_daily = -0.001
+			}
+		}
+		ABY_idea_two_5 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				compliance_gain = 0.1
+				political_power_cost = 0.25
+				power_balance_daily = -0.001
+			}
+		}
+		ABY_idea_two_6 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				compliance_gain = -0.1
+				political_power_cost = -0.25
+				power_balance_daily = 0.001
+			}
+		}
+		ABY_idea_two_7 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				stability_factor = 0.025
+				consumer_goods_expected_value = -0.005
+			}
+		}
+		ABY_idea_two_8 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				surrender_limit = 0.1
+				political_power_factor = -0.05
+				stability_factor = 0.025
+				drift_defence_factor = -0.05
+				power_balance_daily = -0.001
+				consumer_goods_expected_value = -0.005
+			}
+		}
+		ABY_idea_two_9 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				power_balance_daily = -0.001
+				political_power_factor = 0.025
+				drift_defence_factor = 0.025
+				war_support_factor = 0.025
+				consumer_goods_expected_value = -0.005
+			}
+		}
+		ABY_idea_two_10 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				power_balance_daily = 0.001
+				political_power_factor = 0.025
+				drift_defence_factor = 0.025
+				war_support_factor = 0.025
+				consumer_goods_expected_value = -0.005
+			}
+		}
+		ABY_idea_two_11 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				surrender_limit = 0.05
+				power_balance_daily = -0.001
+				drift_defence_factor = 0.1
+				conscription_factor = -0.025
+				political_power_factor = 0.05
+				consumer_goods_expected_value = -0.005
+			}
+		}
+		ABY_idea_two_12 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				power_balance_daily = -0.001
+				drift_defence_factor = 0.2
+				conscription_factor = -0.05
+				political_power_factor = 0.1
+				consumer_goods_expected_value = -0.005
+			}
+		}
+		ABY_idea_two_13 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				power_balance_daily = 0.001
+				drift_defence_factor = 0.15
+				conscription_factor = -0.05
+				political_power_factor = 0.05
+				consumer_goods_expected_value = -0.005
+			}
+		}
+		ABY_idea_two_14 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				drift_defence_factor = 0.15
+				surrender_limit = 0.075
+				conscription_factor = 0.025
+				consumer_goods_expected_value = -0.005
+			}
+		}
+		ABY_idea_two_15 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				drift_defence_factor = 0.15
+				surrender_limit = 0.075
+				conscription_factor = 0.025
+				power_balance_daily = -0.001
+				consumer_goods_expected_value = -0.005
+			}
+		}
+		ABY_idea_two_16 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				drift_defence_factor = 0.15
+				surrender_limit = 0.075
+				conscription_factor = 0.025
+				power_balance_daily = 0.001
+				consumer_goods_expected_value = -0.005
+			}
+		}
+		ABY_idea_two_17 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				drift_defence_factor = 0.05
+				political_power_factor = 0.05
+				consumer_goods_expected_value = -0.005
+			}
+		}
+		ABY_idea_two_18 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				drift_defence_factor = 0.05
+				conscription_factor = 0.025
+				stability_factor = 0.025
+				consumer_goods_expected_value = -0.005
+			}
+		}
+		ABY_idea_two_19 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = 0.1
+				consumer_goods_expected_value = -0.005
+			}
+		}
+		ABY_idea_two_20 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				stability_factor = 0.025
+				army_core_attack_factor = 0.025
+				army_core_defence_factor = 0.025
+				surrender_limit = 0.025
+				consumer_goods_expected_value = -0.005
+			}
+		}
+		ABY_idea_two_21 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				stability_factor = -0.05
+				political_power_factor = -0.1
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				surrender_limit = 0.05
+				consumer_goods_expected_value = -0.005
+			}
+		}
+		ABY_idea_two_22 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				conscription_factor = 0.05
+				surrender_limit = 0.025
+				consumer_goods_expected_value = -0.005
+			}
+		}
+		ABY_idea_two_23 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				drift_defence_factor = 0.05
+				surrender_limit = 0.05
+				consumer_goods_expected_value = -0.005
+			}
+		}
+		ABY_idea_two_24 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				conscription_factor = 0.075
+				consumer_goods_expected_value = -0.005
+			}
+		}
+		ABY_idea_two_25 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				drift_defence_factor = 0.05
+				political_power_factor = 0.1
+				power_balance_daily = -0.001
+				consumer_goods_expected_value = -0.005
+			}
+		}
+		ABY_idea_two_26 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				drift_defence_factor = 0.05
+				political_power_factor = 0.05
+				stability_factor = 0.05
+				power_balance_daily = -0.001
+				consumer_goods_expected_value = -0.005
+			}
+		}
+		ABY_idea_two_27 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				monthly_population = 0.5
+				political_power_factor = -0.1
+				stability_factor = 0.05
+				surrender_limit = 0.05
+				drift_defence_factor = 0.05
+				consumer_goods_expected_value = -0.005
+			}
+		}
+		ABY_idea_two_28 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				political_power_factor = 0.1
+				stability_factor = -0.05
+				surrender_limit = 0.15
+				drift_defence_factor = 0.125
+				consumer_goods_expected_value = -0.005
+			}
+		}
 	}
 	industrial_concern = {
 		ABY_industrial_concern_neptis_group = {

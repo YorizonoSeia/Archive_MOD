@@ -608,9 +608,9 @@
  ABY_laita_AUS_DEF:0 "제국의회에 대표되는 왕국들과 영토들"
  ABY_laita_AUS_ADJ:0 "시스라이타니아"
 
- ABY_german_empire:0 "독일 제국"
- ABY_german_empire_DEF:0 "독일 민족의 제국"
- ABY_german_empire_ADJ:0 "독일"
+ ABY_german_empire:0 "독일 연방"
+ ABY_german_empire_DEF:0 "독일 연방 제국"
+ ABY_german_empire_ADJ:0 "독일 연방"
 
  ABY_duchy_of_austria:0 "오스트리아 대공국"
  ABY_duchy_of_austria_DEF:0 "오스트리아 대공국"
@@ -645,6 +645,22 @@
 
  ABY_german_HOL:0 "네덜란드 연합왕국"
  ABY_german_BEL:0 "왈로니국"
+ ABY_german_HUN:0 "헝가리 연방"
+ ABY_german_CRO:0 "크로아티아-슬라보니아 연방"
+ ABY_german_PRE:0 "프로이센 왕국"
+
+ ABY_puppet_GAL:0 "갈리치아-로도메리아 왕국"
+ ABY_puppet_POL:0 "폴란드 왕국"
+ ABY_puppet_POL_PRE:0 "폴란드-프로이센 연방"
+ ABY_puppet_UKR:0 "우크라이나 왕국"
+ ABY_puppet_BLR:0 "백루테니아 왕국"
+ ABY_puppet_LAT:0 "발트 연합공국"
+ ABY_puppet_LIT:0 "리투아니아 왕국"
+ ABY_puppet_GEO:0 "자캅카스 신성왕국"
+ ABY_puppet_SER:0 "세르비아 총독부"
+ ABY_puppet_MOL:0 "몰다비아 공국"
+ ABY_puppet_ROM:0 "왈라키아 공국"
+ ABY_puppet_ALB:0 "알바니아 공국"
 
  ABY_holy_roman_empire:0 "신성 로마 제국"
  ABY_holy_roman_empire_DEF:0 "독일 민족의 신성 로마 제국"

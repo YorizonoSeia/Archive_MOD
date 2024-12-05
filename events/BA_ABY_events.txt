@@ -8719,6 +8719,100 @@ country_event = {
 	option = {
 		name = ABY_new_event.176.a
 		ai_chance = { factor = 100 }
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = ABY_idea_two_0
+				add_idea = ABY_idea_two_14
+			}
+		}
+		add_stability = -0.05
+		add_power_balance_value = {
+			id = ABY_power_balance_3
+			value = -0.025
+		}
+		hidden_effect = {
+			add_to_variable = {
+				ABY_var_surrender_limit = 0.075
+			}
+			add_to_variable = {
+				ABY_var_conscription_factor = 0.025
+			}
+			add_to_variable = {
+				ABY_var_drift_defence_factor = 0.15
+			}
+			#add_to_variable = {
+			#	ABY_var_power_balance_daily = 0.001
+			#}
+			add_to_variable = {
+				ABY_var_consumer_goods_expected_value = -0.005
+			}
+		}
+	}
+
+	option = {
+		name = ABY_new_event.176.b
+		ai_chance = { factor = 100 }
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = ABY_idea_two_0
+				add_idea = ABY_idea_two_15
+			}
+		}
+		add_stability = -0.025
+		add_power_balance_value = {
+			id = ABY_power_balance_3
+			value = -0.05
+		}
+		hidden_effect = {
+			add_to_variable = {
+				ABY_var_surrender_limit = 0.075
+			}
+			add_to_variable = {
+				ABY_var_conscription_factor = 0.025
+			}
+			add_to_variable = {
+				ABY_var_drift_defence_factor = 0.15
+			}
+			add_to_variable = {
+				ABY_var_power_balance_daily = -0.001
+			}
+			add_to_variable = {
+				ABY_var_consumer_goods_expected_value = -0.005
+			}
+		}
+	}
+
+	option = {
+		name = ABY_new_event.176.c
+		ai_chance = { factor = 100 }
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = ABY_idea_two_0
+				add_idea = ABY_idea_two_16
+			}
+		}
+		add_stability = -0.05
+		add_power_balance_value = {
+			id = ABY_power_balance_3
+			value = 0.05
+		}
+		hidden_effect = {
+			add_to_variable = {
+				ABY_var_surrender_limit = 0.075
+			}
+			add_to_variable = {
+				ABY_var_conscription_factor = 0.025
+			}
+			add_to_variable = {
+				ABY_var_drift_defence_factor = 0.15
+			}
+			add_to_variable = {
+				ABY_var_power_balance_daily = 0.001
+			}
+			add_to_variable = {
+				ABY_var_consumer_goods_expected_value = -0.005
+			}
+		}
 	}
 }
 
@@ -8733,6 +8827,100 @@ country_event = {
 	option = {
 		name = ABY_new_event.177.a
 		ai_chance = { factor = 100 }
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = ABY_idea_two_0
+				add_idea = ABY_idea_two_19
+			}
+		}
+		add_political_power = -150
+		add_stability = -0.1
+		add_power_balance_value = {
+			id = ABY_power_balance_3
+			value = -0.05
+		}
+		hidden_effect = {
+			add_to_variable = {
+				ABY_var_stability_factor = 0.1
+			}
+			add_to_variable = {
+				ABY_var_political_power_factor = 0.1
+			}
+			add_to_variable = {
+				ABY_var_consumer_goods_expected_value = -0.005
+			}
+		}
+	}
+
+	option = {
+		name = ABY_new_event.177.b
+		ai_chance = { factor = 100 }
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = ABY_idea_two_0
+				add_idea = ABY_idea_two_20
+			}
+		}
+		add_political_power = -100
+		add_stability = -0.075
+		add_power_balance_value = {
+			id = ABY_power_balance_3
+			value = 0.025
+		}
+		hidden_effect = {
+			add_to_variable = {
+				ABY_var_stability_factor = 0.025
+			}
+			add_to_variable = {
+				ABY_var_surrender_limit = 0.025
+			}
+			add_to_variable = {
+				ABY_var_army_core_attack_factor = 0.025
+			}
+			add_to_variable = {
+				ABY_var_army_core_defence_factor = 0.025
+			}
+			add_to_variable = {
+				ABY_var_consumer_goods_expected_value = -0.005
+			}
+		}
+	}
+
+	option = {
+		name = ABY_new_event.177.c
+		ai_chance = { factor = 100 }
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = ABY_idea_two_0
+				add_idea = ABY_idea_two_21
+			}
+		}
+		add_political_power = -50
+		add_stability = -0.05
+		add_power_balance_value = {
+			id = ABY_power_balance_3
+			value = 0.1
+		}
+		hidden_effect = {
+			add_to_variable = {
+				ABY_var_stability_factor = -0.05
+			}
+			add_to_variable = {
+				ABY_var_political_power_factor = -0.1
+			}
+			add_to_variable = {
+				ABY_var_surrender_limit = 0.05
+			}
+			add_to_variable = {
+				ABY_var_army_core_attack_factor = 0.05
+			}
+			add_to_variable = {
+				ABY_var_army_core_defence_factor = 0.05
+			}
+			add_to_variable = {
+				ABY_var_consumer_goods_expected_value = -0.005
+			}
+		}
 	}
 }
 
@@ -8747,6 +8935,68 @@ country_event = {
 	option = {
 		name = ABY_new_event.178.a
 		ai_chance = { factor = 100 }
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = ABY_idea_two_0
+				add_idea = ABY_idea_two_25
+			}
+		}
+		add_war_support = 0.025
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.1
+		}
+		hidden_effect = {
+			add_to_variable = {
+				ABY_var_political_power_factor = 0.1
+			}
+			add_to_variable = {
+				ABY_var_drift_defence_factor = 0.05
+			}
+			add_to_variable = {
+				ABY_var_power_balance_daily = -0.001
+			}
+			add_to_variable = {
+				ABY_var_consumer_goods_expected_value = -0.005
+			}
+		}
+	}
+
+	option = {
+		name = ABY_new_event.178.b
+		ai_chance = { factor = 100 }
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = ABY_idea_two_0
+				add_idea = ABY_idea_two_26
+			}
+		}
+		add_stability = 0.025
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
+		hidden_effect = {
+			add_to_variable = {
+				ABY_var_political_power_factor = 0.05
+			}
+			add_to_variable = {
+				ABY_var_stability_factor = 0.05
+			}
+			add_to_variable = {
+				ABY_var_drift_defence_factor = 0.05
+			}
+			add_to_variable = {
+				ABY_var_power_balance_daily = -0.001
+			}
+			add_to_variable = {
+				ABY_var_consumer_goods_expected_value = -0.005
+			}
+		}
 	}
 }
 
