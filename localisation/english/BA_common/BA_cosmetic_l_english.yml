@@ -1,4 +1,12 @@
 ﻿ l_english: 
+#전쟁해군
+SHL_com: "독일 적색 유격대"
+SHL_com_ADJ: "적색 유격대"
+SHL_com_DEF: "독일 적색 유격대"
+
+RHI_dem: "공화파 독일"
+RHI_dem_ADJ: "공화파 독일"
+RHI_dem_DEF: "공화파 독일"
 #트리니티
  TRM_collapse_win_fascism:0 "독일국"
  TRM_collapse_win_fascism_DEF:0 "독일국"

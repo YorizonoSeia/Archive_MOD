@@ -229,6 +229,9 @@ focus_tree = {
                     keep_completed = yes
                 }
                 mark_focus_tree_layout_dirty = yes
+				GEM = {
+					country_event =  GEK_rm_event.12
+				}
 			}
 		}
 	}
@@ -311,6 +314,9 @@ focus_tree = {
 		ai_will_do = {
 			base = 0
 		}
+		available = {
+			has_completed_focus = GEK_first_mainland_plan
+		}
 		prerequisite = {
 			focus = GEK_RM_focus_3
 		}
@@ -319,24 +325,13 @@ focus_tree = {
 		y = 1
 		cost = 1
 		completion_reward = {
-			add_popularity = {
-				ideology = communism
-				popularity = 0.05
-			}
-			country_event = {
-				id = GEK_rm_event.3
-				days = 3
-			}
-			hidden_effect = {
-				country_event = {
-					id = GEK_event_for_auto.1
-					random_days = 15
-					days = 5
-				}
+			swap_ideas = {
+				remove_idea = GEK_well_planned
+				add_idea = GEK_well_planned_1
 			}
 		}
 	}
-	focus = { #강물을 이용한 보급
+	focus = { #강을 이용한 보급
 		id = GEK_RM_focus_8
 		icon = GFX_focus_ARG_study_the_battle_of_the_river_plate
 		ai_will_do = {
@@ -350,9 +345,13 @@ focus_tree = {
 		y = 1
 		cost = 1
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = GEK_well_planned_1
+				add_idea = GEK_well_planned_2
+			}
 		}
 	}
-	focus = { #서부해안 상륙
+	focus = { #해안의 국방군
 		id = GEK_RM_focus_5
 		icon = GFX_focus_generic_cruiser2
 		ai_will_do = {
@@ -366,6 +365,31 @@ focus_tree = {
 		y = 1
 		cost = 1
 		completion_reward = {
+			59 = {
+				create_unit = {
+					division = "name = \"Infanterie-Division\" division_template = \"Infanterie-Division\" start_experience_factor = 0.3 start_equipment_factor = 1"
+					owner = GEK
+					count = 1
+					prioritize_location = 374
+					allow_spawning_on_enemy_provs = yes
+				}
+				create_unit = {
+					division = "name = \"Infanterie-Division\" division_template = \"Infanterie-Division\" start_experience_factor = 0.3 start_equipment_factor = 1"
+					owner = GEK
+					count = 1
+					prioritize_location = 3326
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+			56 = {
+				create_unit = {
+					division = "name = \"Infanterie-Division\" division_template = \"Infanterie-Division\" start_experience_factor = 0.3 start_equipment_factor = 1"
+					owner = GEK
+					count = 1
+					prioritize_location = 241
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
 		}
 	}
 	focus = { #배신자 포섭
@@ -377,11 +401,43 @@ focus_tree = {
 		prerequisite = {
 			focus = GEK_RM_focus_4
 		}
+		available = {
+			has_full_control_of_state = 59
+		}
 		relative_position_id = GEK_RM_focus_4
 		x = 2
 		y = 2
 		cost = 1
 		completion_reward = {
+			division_template = {
+				name = "Abteilung für Studenten"
+				division_names_group = GEM_INF_02
+				is_locked = yes
+				force_allow_recruiting = yes
+				division_cap = 2
+				regiments = {
+					halo_militia = { x = 0 y = 0 }
+					halo_militia = { x = 0 y = 1 }
+					halo_militia = { x = 0 y = 2 }
+					halo_militia = { x = 1 y = 0 }
+					halo_militia = { x = 1 y = 1 }
+					halo_militia = { x = 1 y = 2 }
+				}
+				support = {
+					halo_recon = { x = 0 y = 0 }
+				}
+			}
+			set_variable = { ROOT.halo_militia_cap = 2 } 
+			59 = {
+				create_unit = {
+					division = "division_template = \"Abteilung für Studenten\" start_experience_factor = 0.1" 
+					owner = ROOT
+					count = 2
+				}
+			}
+			set_technology = {
+				kivotos_infantry_weapons = 1
+			}
 		}
 	}
 	focus = { #국가 소생
@@ -426,6 +482,17 @@ focus_tree = {
 		y = 1
 		cost = 1
 		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+			SOV = {
+				add_ai_strategy = {
+					type = send_volunteers_desire
+					id = GEK
+					value = 50
+				}
+			}
 		}
 	}
 	focus = { #주정부 인수
@@ -442,6 +509,7 @@ focus_tree = {
 		y = 2
 		cost = 1
 		completion_reward = {
+			unlock_decision_category_tooltip = GEK_state_government_takeover_category
 		}
 	}
 	focus = { #독일공산당과의 협력
@@ -646,6 +714,12 @@ focus_tree = {
 				popularity = 0.05
 			}
 			every_controlled_state = {
+				limit = {
+					NOT = {
+						is_core_of = SWE
+						is_core_of = DEN
+					}
+				}
 				create_unit = {
 					division = "name = \"Neuer Roter Frontkämpferbund\" division_template = \"Neuer Roter Frontkämpferbund\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
 					owner = GEK
@@ -700,12 +774,13 @@ focus_tree = {
 			focus = GEK_RM_army_focus_5
 			focus = GEK_RM_nazi_focus_3
 		}
-		text_icon = GER_inner_circle_focus_style
 		relative_position_id = GEK_RM_com_focus_0
 		x = 0
 		y = 3
 		cost = 2
 		completion_reward = {
+			remove_ideas = GEK_solidarity_across_ideology
+			remove_ideas = GEK_solidarity_across_ideology_1
 		}
 	}
 	focus = { #독일사회민주당과의 협력
@@ -1568,7 +1643,7 @@ focus_tree = {
 			if = {
 				limit = {
 					NOT = {
-						has_template = "Reichsbanner Schwarz-Rot-Gold"
+						has_template = "Überreste der Schutzstaffel"
 					}
 				}
 				division_template = {
