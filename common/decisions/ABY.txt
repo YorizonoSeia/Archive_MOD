@@ -947,6 +947,9 @@ ABY_political = {
 		}
 		available = {
 			democratic > 0.5
+			NOT = {
+				ruling_party = democratic
+			}
 		}
 		complete_effect = {
 			set_politics = {
@@ -963,6 +966,9 @@ ABY_political = {
 		}
 		available = {
 			fascism > 0.5
+			NOT = {
+				ruling_party = fascism
+			}
 		}
 		complete_effect = {
 			set_politics = {
@@ -978,11 +984,14 @@ ABY_political = {
 			
 		}
 		available = {
-			communism > 0.5
+			neutrality > 0.5
+			NOT = {
+				ruling_party = neutrality
+			}
 		}
 		complete_effect = {
 			set_politics = {
-				ruling_party = communism
+				ruling_party = neutrality
 			}
 		}
 	}
@@ -1039,7 +1048,7 @@ ABY_political = {
 		days_remove = 10
 		remove_effect = {
 			add_popularity = {
-				ideology = communism
+				ideology = neutrality
 				popularity = 0.025
 			}
 		}
@@ -1101,7 +1110,7 @@ ABY_political = {
 		}
 
 		modifier = {
-			communism_drift = 0.2
+			neutrality_drift = 0.2
 		}
 	}
 	ABY_political_0_2 = {
@@ -16428,7 +16437,6 @@ ABY_descision_category_provisional_government = {
 			}  
 			OR = {
 				has_completed_focus = ABY_focus_abydos_schoolcountry
-				has_completed_focus = ABY_focus_absorb_front
 			}
 			tag = ABY
 			ABY = {
@@ -16747,7 +16755,6 @@ ABY_descision_category_provisional_government = {
 			OR = {
 				has_completed_focus = ABY_focus_with_czech
 				has_completed_focus = ABY_focus_abydos_schoolcountry
-				has_completed_focus = ABY_focus_absorb_front
 			}  
 		}
 		                 
@@ -16794,7 +16801,6 @@ ABY_descision_category_provisional_government = {
 			OR = {
 				has_completed_focus = ABY_focus_with_czech
 				has_completed_focus = ABY_focus_abydos_schoolcountry
-				has_completed_focus = ABY_focus_absorb_front
 			}  
 			NOT = {has_country_flag = ABY_flag_annex_slovakia}
 		}
@@ -16858,7 +16864,6 @@ ABY_descision_category_provisional_government = {
 			OR = {
 				has_completed_focus = ABY_focus_with_czech
 				has_completed_focus = ABY_focus_abydos_schoolcountry
-				has_completed_focus = ABY_focus_absorb_front
 			}  
 			NOT = {has_country_flag = ABY_flag_believe}
 		}

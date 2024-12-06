@@ -668,7 +668,7 @@ country_event = {
 		name = ABY_event.40.a
 		add_war_support = -0.025
 		add_popularity = {
-			ideology = communism
+			ideology = neutrality
 			popularity = 0.15
 		}
 	}
@@ -685,7 +685,7 @@ country_event = {
 		name = ABY_event.41.a
 		add_war_support = -0.025
 		add_popularity = {
-			ideology = communism
+			ideology = neutrality
 			popularity = 0.05
 		}
 	}
@@ -3720,7 +3720,6 @@ country_event = {
 					has_government = communism
 				}
 			}
-			complete_national_focus = ABY_focus_absorb_front
 		}
 		if = {
 			limit = {
@@ -10181,7 +10180,6 @@ country_event = {
 					has_government = communism
 				}
 			}
-			complete_national_focus = ABY_focus_absorb_front
 		}
 		if = {
 			limit = {
