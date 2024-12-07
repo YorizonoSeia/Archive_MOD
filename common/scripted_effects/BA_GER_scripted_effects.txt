@@ -132,7 +132,6 @@ GEK_enhance_nazi = {
 		}
 	}
 	else = {
-		add_political_power = -5
 	}
 }
 GEK_enhance_army = {
@@ -201,7 +200,6 @@ GEK_enhance_army = {
 		}
 	}
 	else = {
-		add_political_power = -5
 	}
 }
 GEF_give_airplane = {

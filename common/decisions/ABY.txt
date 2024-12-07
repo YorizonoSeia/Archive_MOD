@@ -947,6 +947,9 @@ ABY_political = {
 		}
 		available = {
 			democratic > 0.5
+			NOT = {
+				ruling_party = democratic
+			}
 		}
 		complete_effect = {
 			set_politics = {
@@ -963,6 +966,9 @@ ABY_political = {
 		}
 		available = {
 			fascism > 0.5
+			NOT = {
+				ruling_party = fascism
+			}
 		}
 		complete_effect = {
 			set_politics = {
@@ -978,11 +984,14 @@ ABY_political = {
 			
 		}
 		available = {
-			communism > 0.5
+			neutrality > 0.5
+			NOT = {
+				ruling_party = neutrality
+			}
 		}
 		complete_effect = {
 			set_politics = {
-				ruling_party = communism
+				ruling_party = neutrality
 			}
 		}
 	}
@@ -1039,7 +1048,7 @@ ABY_political = {
 		days_remove = 10
 		remove_effect = {
 			add_popularity = {
-				ideology = communism
+				ideology = neutrality
 				popularity = 0.025
 			}
 		}
@@ -1101,7 +1110,7 @@ ABY_political = {
 		}
 
 		modifier = {
-			communism_drift = 0.2
+			neutrality_drift = 0.2
 		}
 	}
 	ABY_political_0_2 = {
@@ -16428,7 +16437,6 @@ ABY_descision_category_provisional_government = {
 			}  
 			OR = {
 				has_completed_focus = ABY_focus_abydos_schoolcountry
-				has_completed_focus = ABY_focus_absorb_front
 			}
 			tag = ABY
 			ABY = {
@@ -16747,7 +16755,6 @@ ABY_descision_category_provisional_government = {
 			OR = {
 				has_completed_focus = ABY_focus_with_czech
 				has_completed_focus = ABY_focus_abydos_schoolcountry
-				has_completed_focus = ABY_focus_absorb_front
 			}  
 		}
 		                 
@@ -16794,7 +16801,6 @@ ABY_descision_category_provisional_government = {
 			OR = {
 				has_completed_focus = ABY_focus_with_czech
 				has_completed_focus = ABY_focus_abydos_schoolcountry
-				has_completed_focus = ABY_focus_absorb_front
 			}  
 			NOT = {has_country_flag = ABY_flag_annex_slovakia}
 		}
@@ -16858,7 +16864,6 @@ ABY_descision_category_provisional_government = {
 			OR = {
 				has_completed_focus = ABY_focus_with_czech
 				has_completed_focus = ABY_focus_abydos_schoolcountry
-				has_completed_focus = ABY_focus_absorb_front
 			}  
 			NOT = {has_country_flag = ABY_flag_believe}
 		}
@@ -17266,6 +17271,7 @@ ABY_descision_category_new_country = {
 			ABYDO_Shiroko = {
 				promote_leader = yes
 			}
+			set_country_flag = ABY_shiroko_flag
 			add_popularity = {
 				ideology = fascism
 				popularity = -0.25
@@ -17776,31 +17782,6 @@ ABY_descision_category_debug = {
         }                     
 
 		complete_effect = {
-			CZE = {
-				every_state = {
-					limit = {
-						OR = {
-							state = 9
-							state = 75
-							state = 74
-							state = 72
-							state = 69
-							state = 972
-						}
-					}
-					transfer_state_to = CZE
-					add_core_of = CZE
-				}
-				create_country_leader = {
-					name = CZE_albrecht_franz
-					desc = "" 
-					picture = "gfx/leaders/HUN/portrait_CZE_albrecht_franz_von_habsburg.dds"
-					expire = "1965.1.1"
-					ideology = despotism
-					traits = { duke_of_teschen_king_of_bohemia }
-				}
-				set_cosmetic_tag = ABY_roman_CZE
-			}
 			create_dynamic_country = {
 				original_tag = HOL
 				copy_tag = HOL
@@ -17837,89 +17818,59 @@ ABY_descision_category_debug = {
 				set_cosmetic_tag = ABY_german_BEL
 				set_country_flag = ABY_flag_holy_roman_nation
 			}
-			SPM = {
+			create_dynamic_country = {
+				original_tag = PRE
+				copy_tag = PRE
 				every_state = {
 					limit = {
 						OR = {
-							state = 158
-							state = 114
+							state = 86
+							state = 807
+							state = 85
+							state = 5
+							state = 763
+							state = 188
 						}
 					}
-					transfer_state_to = SPM
-					add_core_of = SPM
+					add_core_of = PREV
+					transfer_state_to = PREV
 				}
-				set_cosmetic_tag = ABY_roman_SPM
+				create_country_leader = {
+					name = GER_wilhelm_ii
+					desc = "" 
+					picture = "gfx/leaders/GER/portrait_ger_wilhelm_ii.dds"
+					expire = "1965.1.1"
+					ideology = despotism
+					traits = {
+						anti_democrat				
+					}
+				}
+				set_cosmetic_tag = ABY_german_PRE
 				set_country_flag = ABY_flag_holy_roman_nation
 			}
-			SWI = {
+			CRO = {
 				every_state = {
 					limit = {
 						OR = {
-							state = 847
+							state = 109
+							state = 104
+							state = 804
+							state = 163
+							state = 103
 						}
 					}
-					transfer_state_to = SWI
-					add_core_of = SWI
+					transfer_state_to = CRO
+					add_core_of = CRO
 				}
-				set_cosmetic_tag = ABY_roman_SWI1
-				set_country_flag = ABY_flag_holy_roman_nation
-			}
-			LBV = {
-				every_state = {
-					limit = {
-						OR = {
-							state = 159
-							state = 160
-						}
-					}
-					transfer_state_to = LBV
-					add_core_of = LBV
+				create_country_leader = {
+					name = CRO_joseph_francis
+					desc = "" 
+					picture = "gfx/leaders/HUN/portrait_CRO_joseph_francis.dds"
+					expire = "1965.1.1"
+					ideology = despotism
+					traits = { ban_of_croatia_slavonia }
 				}
-				set_cosmetic_tag = ABY_roman_LBV
-				set_country_flag = ABY_flag_holy_roman_nation
-			}
-			TOS = {
-				every_state = {
-					limit = {
-						OR = {
-							state = 162
-						}
-					}
-					transfer_state_to = TOS
-					add_core_of = TOS
-				}
-				set_cosmetic_tag = ABY_roman_TOS 
-				set_country_flag = ABY_flag_holy_roman_nation
-			}
-			PAP = {
-				every_state = {
-					limit = {
-						OR = {
-							state = 161
-							state = 157
-							state = 2
-						}
-					}
-					transfer_state_to =PAP 
-					add_core_of = PAP
-				}
-				set_cosmetic_tag = ABY_roman_PAP
-				set_country_flag = ABY_flag_holy_roman_nation
-			}
-			TTS = {
-				every_state = {
-					limit = {
-						OR = {
-							state = 849
-							state = 117
-							state = 156
-							state = 115
-						}
-					}
-					transfer_state_to = TTS
-					add_core_of = TTS
-				}
-				set_cosmetic_tag = ABY_roman_TTS
+				set_cosmetic_tag = ABY_german_CRO
 				set_country_flag = ABY_flag_holy_roman_nation
 			}
 			HUN = {
@@ -17937,11 +17888,6 @@ ABY_descision_category_debug = {
 							state = 83
 							state = 84
 							state = 76
-							state = 109
-							state = 104
-							state = 804
-							state = 163
-							state = 103
 							state = 70
 							state = 71
 							state = 73
@@ -17951,7 +17897,15 @@ ABY_descision_category_debug = {
 					transfer_state_to = HUN
 					add_core_of = HUN
 				}
-				set_cosmetic_tag = ABY_roman_HUN
+				create_country_leader = {
+					name = HUN_joseph_august_von_habsburg
+					desc = "" 
+					picture = "gfx/leaders/HUN/portrait_HUN_joseph_august_von_habsburg.dds"
+					expire = "1965.1.1"
+					ideology = despotism
+					traits = { HUN_the_old_warden }
+				}
+				set_cosmetic_tag = ABY_german_HUN
 				set_country_flag = ABY_flag_holy_roman_nation
 			}
 			ABY = {
@@ -17995,12 +17949,6 @@ ABY_descision_category_debug = {
 							state = 62
 							state = 63
 							state = 68
-							state = 86
-							state = 807
-							state = 85
-							state = 5
-							state = 763
-							state = 188
 							state = 102
 							state = 736
 							state = 853
@@ -18009,6 +17957,12 @@ ABY_descision_category_debug = {
 							state = 39
 							state = 850
 							state = 912
+							state = 9
+							state = 75
+							state = 74
+							state = 72
+							state = 69
+							state = 972
 						}
 					}
 					transfer_state_to = ABY
@@ -18023,11 +17977,6 @@ ABY_descision_category_debug = {
 					traits = { archduke_of_austria_este }
 				}
 				set_cosmetic_tag = ABY_german_empire
-				puppet = CZE
-				set_autonomy = {
-					target = CZE
-					autonomy_state = autonomy_austro_hungarian_subject
-				}
 				every_country = {
 					limit = {
 						has_country_flag = ABY_flag_holy_roman_nation
@@ -18043,7 +17992,7 @@ ABY_descision_category_debug = {
 			}
 		}
 	}
-	ABY_descision_debug_holy_roman_empire = {  
+	ABY_descision_debug_holy_roman_empire = {   
 		priority = 1
 		
 		visible = {       
@@ -18518,6 +18467,299 @@ ABY_descision_category_debug = {
 							target = PREV
 							autonomy_state = autonomy_austro_hungarian_subject
 						}
+					}
+				}
+			}
+		}
+	}
+	
+	ABY_descision_debug_east_puppet = {  
+		priority = 1
+		
+		visible = {       
+			tag = ABY
+			is_debug = yes
+		}
+		                 
+        allowed = {
+            tag = ABY
+        }  
+		
+		complete_effect = {
+			GAL = {
+				every_state = {
+					limit = {
+						OR = {
+							state = 88
+							state = 91
+							state = 89
+							state = 991
+						}
+					}
+					transfer_state_to = GAL
+					add_core_of = GAL
+				}
+				set_cosmetic_tag = ABY_puppet_GAL
+				set_country_flag = ABY_flag_holy_roman_nation
+			}
+			POL = {
+				every_state = {
+					limit = {
+						OR = {
+							state = 98
+							state = 87
+							state = 90
+							state = 92
+							state = 10
+						}
+					}
+					transfer_state_to = POL
+					add_core_of = POL
+				}
+				create_country_leader = {
+					name = POL_karl_albrecht
+					desc = "" 
+					picture = "gfx/leaders/POL/portrait_POL_karl_albrecht.dds"
+					expire = "1965.1.1"
+					ideology = despotism
+					traits = { patriot_king }
+				}
+				set_cosmetic_tag = ABY_puppet_POL
+				set_country_flag = ABY_flag_holy_roman_nation
+			}
+			LIT = {
+				every_state = {
+					limit = {
+						OR = {
+							state = 784
+							state = 11
+							state = 814
+							state = 815
+							state = 189
+						}
+					}
+					transfer_state_to = LIT
+					add_core_of = LIT
+				}
+				set_cosmetic_tag = ABY_puppet_LIT
+				set_country_flag = ABY_flag_holy_roman_nation
+			}
+			LAT = {
+				every_state = {
+					limit = {
+						OR = {
+							state = 809
+							state = 190
+							state = 808
+							state = 12
+							state = 810
+							state = 191
+							state = 813
+							state = 13
+							state = 811
+							state = 812
+						}
+					}
+					transfer_state_to = LAT
+					add_core_of = LAT
+				}
+				set_cosmetic_tag = ABY_puppet_LAT
+				set_country_flag = ABY_flag_holy_roman_nation
+			}
+			BLR = {
+				every_state = {
+					limit = {
+						OR = {
+							state = 97
+							state = 94
+							state = 95
+							state = 96
+							state = 207
+							state = 206
+							state = 204
+							state = 194
+							state = 241
+						}
+					}
+					transfer_state_to = BLR
+					add_core_of = BLR
+				}
+				set_cosmetic_tag = ABY_puppet_BLR
+				set_country_flag = ABY_flag_holy_roman_nation
+			}
+			UKR = {
+				every_state = {
+					limit = {
+						OR = {
+							state = 93
+							state = 201
+							state = 198
+							state = 202
+							state = 193
+							state = 225
+							state = 221
+							state = 228
+							state = 227
+							state = 200
+							state = 226
+							state = 203
+							state = 834
+							state = 192
+							state = 197
+							state = 196
+							state = 137
+							state = 199
+							state = 259
+							state = 234
+							state = 218
+							state = 245
+							state = 240
+							state = 220
+						}
+					}
+					transfer_state_to = UKR
+					add_core_of = UKR
+				}
+				create_country_leader = {
+					name = HUN_vasyl_vyshyvanyi
+					desc = "" 
+					picture = "gfx/leaders/HUN/portrait_UKR_vasyl_vyshyvany.dds"
+					expire = "1965.1.1"
+					ideology = despotism
+					traits = { HUN_the_habsburg_hetman }
+				}
+				set_cosmetic_tag = ABY_puppet_UKR
+				set_country_flag = ABY_flag_holy_roman_nation
+			}
+			GEO = {
+				every_state = {
+					limit = {
+						OR = {
+							state = 232
+							state = 233
+							state = 827
+							state = 828
+							state = 821
+							state = 826
+							state = 231
+							state = 230
+							state = 229
+						}
+					}
+					transfer_state_to = GEO
+					add_core_of = GEO
+				}
+				set_cosmetic_tag = ABY_puppet_GEO
+				set_country_flag = ABY_flag_holy_roman_nation
+			}
+			every_country = {
+				limit = {
+					has_country_flag = ABY_flag_holy_roman_nation
+				}
+				ABY = {
+					puppet = PREV
+					set_autonomy = {
+						target = PREV
+						autonomy_state = autonomy_austro_hungarian_subject
+					}
+				}
+			}
+		}
+	}
+	
+	ABY_descision_debug_balkan_puppet = {  
+		priority = 1
+		
+		visible = {       
+			tag = ABY
+			is_debug = yes
+		}
+		                 
+        allowed = {
+            tag = ABY
+        }  
+		
+		complete_effect = {
+			SER = {
+				every_state = {
+					limit = {
+						OR = {
+							state = 108
+							state = 107
+						}
+					}
+					transfer_state_to = SER
+					add_core_of = SER
+				}
+				set_cosmetic_tag = ABY_puppet_SER
+				set_country_flag = ABY_flag_holy_roman_nation
+			}
+			MOL = {
+				every_state = {
+					limit = {
+						OR = {
+							state = 79
+							state = 80
+							state = 78
+							state = 766
+						}
+					}
+					transfer_state_to = MOL
+					add_core_of = MOL
+				}
+				set_cosmetic_tag = ABY_puppet_MOL
+				set_country_flag = ABY_flag_holy_roman_nation
+			}
+			ROM = {
+				every_state = {
+					limit = {
+						OR = {
+							state = 46
+							state = 81
+						}
+					}
+					transfer_state_to = ROM
+					add_core_of = ROM
+				}
+				set_cosmetic_tag = ABY_puppet_ROM
+				set_country_flag = ABY_flag_holy_roman_nation
+			}
+			ALB = {
+				every_state = {
+					limit = {
+						OR = {
+							state = 105
+							state = 802
+							state = 934
+							state = 970
+							state = 44
+							state = 805
+							state = 185
+						}
+					}
+					transfer_state_to = ALB
+					add_core_of = ALB
+				}
+				create_country_leader = {
+					name = ALB_wilhelm_of_wied
+					desc = "" 
+					picture = "gfx/leaders/HUN/portrait_ALB_wilhelm_of_wied.dds"
+					expire = "1965.1.1"
+					ideology = despotism
+					traits = { skanderbeg_ii }
+				}
+				set_cosmetic_tag = ABY_puppet_ALB
+				set_country_flag = ABY_flag_holy_roman_nation
+			}
+			every_country = {
+				limit = {
+					has_country_flag = ABY_flag_holy_roman_nation
+				}
+				ABY = {
+					puppet = PREV
+					set_autonomy = {
+						target = PREV
+						autonomy_state = autonomy_austro_hungarian_subject
 					}
 				}
 			}

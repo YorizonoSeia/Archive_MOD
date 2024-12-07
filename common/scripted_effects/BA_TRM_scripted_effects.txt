@@ -1974,7 +1974,7 @@ TRM_SPR_RK = {
 				original_tag = SPR
 				copy_tag = SPR
 				add_political_power = 100
-				set_cosmetic_tag = TRN_SPR
+				set_cosmetic_tag = TRM_colony_color
 				every_state = {
 					limit = { 
 						OR = {
@@ -2013,6 +2013,10 @@ TRM_SPR_RK = {
 				}
 				TRM = { 
 					puppet = PREV 
+					set_autonomy = {
+						target = PREV
+						autonomy_state = autonomy_holy_dminion
+					}
 					transfer_state = 118
 				}
 			}
