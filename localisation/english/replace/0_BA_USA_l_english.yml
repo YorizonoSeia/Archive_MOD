@@ -51,8 +51,16 @@
  USA_rising_exiled_germans_2st: "폭동 확대"
  USA_rising_exiled_germans_3st: "마지막 결단"
 
+ USABA_revolutionaries_of_the_nation: "민족의 혁명가들"
+ USABA_strong_propaganda: "강력한 선전"
+ USABA_expansion_of_influence_in_america: "미국 내 영향력 확대"
+ USABA_destruction_of_jewish_groups: "유대인 로비 그룹 파괴"
+ USABA_rise_to_power: "집권"
+
  USA_rising_exiled_germans_3st_flag: "3차 미국 내전이 발생함"
  USA_rising_exiled_germans_3st_flag_NOT: "3차 미국 내전이 발생하지 않음"
+ USABA_german_national_protection_law_tt: "시간이 지남에 따라 §Y독일인 대표 위원회§!(은)는 자신의 갈래에 있는 중점을 개시할 것입니다."
+ USABA_german_ch: "독일인 대표 위원회"
 
 ######################################################
 ######################신규 중점들######################
@@ -234,7 +242,7 @@
 
 #국민정신
  second_great_depression: "2차 대공황"
- USABA_famine: "대기근"
+ USABA_famine: "식량 부족 사태"
  USABA_famine_1: "기근으로부터의 회복"
  USABA_famine_2: "부활한 콘벨트"
  USABA_famine_3: "전시 배급제"

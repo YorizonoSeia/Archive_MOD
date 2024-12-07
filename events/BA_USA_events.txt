@@ -3,6 +3,7 @@ add_namespace = usa_chroma_event
 add_namespace = usa_new_event # 신질서
 add_namespace = usa_old_event # 구질서
 add_namespace = usa_new_civil_event # 내전
+add_namespace = usa_hidden_right_event # 히든 우파 미국 중점 자동완료
 
 country_event = {
 
@@ -1100,3 +1101,117 @@ country_event = {
 
 
 
+country_event = { #미국 중점 자동시작
+	id = usa_hidden_right_event.1
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_completed_focus = USABA_german_national_protection_law
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_completed_focus = USABA_revolutionaries_of_the_nation }
+			}
+			activate_shine_on_focus = USABA_revolutionaries_of_the_nation
+			set_country_flag = { flag = USABA_revolutionaries_of_the_nation_in_progress_flag days = 70 value = 1 }
+			country_event = { id = usa_hidden_right_event.2 days = 70 }
+		}
+		else_if = {
+			limit = {
+				NOT = { has_completed_focus = USABA_strong_propaganda }
+			}
+			activate_shine_on_focus = USABA_strong_propaganda
+			set_country_flag = { flag = USABA_strong_propaganda_in_progress_flag days = 140 value = 1 }
+			country_event = { id = usa_hidden_right_event.2 days = 140 }
+		}
+		else_if = {
+			limit = {
+				NOT = { has_completed_focus = USABA_expansion_of_influence_in_america }
+			}
+			activate_shine_on_focus = USABA_expansion_of_influence_in_america
+			set_country_flag = { flag = USABA_expansion_of_influence_in_america_in_progress_flag days = 140 value = 1 }
+			country_event = { id = usa_hidden_right_event.2 days = 140 }
+		}
+		else_if = {
+			limit = {
+				NOT = { has_completed_focus = USABA_destruction_of_jewish_groups }
+			}
+			activate_shine_on_focus = USABA_destruction_of_jewish_groups
+			set_country_flag = { flag = USABA_destruction_of_jewish_groups_in_progress_flag days = 70 value = 1 }
+			country_event = { id = usa_hidden_right_event.2 days = 70 }
+		}
+		else = { #Debug logs
+			#log = "SOMETHING WENT WRONG WITH GOEBBELS's FOCUS BRANCH - Cannot start new focus"
+		}
+	}
+}
+# GOEBBELS - Complete Focus
+country_event = {
+	id = usa_hidden_right_event.2
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_completed_focus = USABA_german_national_protection_law
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_shine_effect_on_focus = USABA_revolutionaries_of_the_nation
+			}
+			complete_national_focus = {
+				focus = USABA_revolutionaries_of_the_nation
+				use_side_message = yes
+				originator_name = USABA_german_ch
+			}
+			clr_country_flag = USABA_revolutionaries_of_the_nation_in_progress_flag
+			country_event = { id = usa_hidden_right_event.1 days = 55 random_days = 30 }
+		}
+		else_if = {
+			limit = {
+				has_shine_effect_on_focus = USABA_strong_propaganda
+			}
+			complete_national_focus = {
+				focus = USABA_strong_propaganda
+				use_side_message = yes
+				originator_name = USABA_german_ch
+			}
+			clr_country_flag = USABA_strong_propaganda_in_progress_flag
+			country_event = { id = usa_hidden_right_event.1 days = 55 random_days = 30 }
+		}
+		else_if = {
+			limit = {
+				has_shine_effect_on_focus = USABA_expansion_of_influence_in_america
+			}
+			complete_national_focus = {
+				focus = USABA_expansion_of_influence_in_america
+				use_side_message = yes
+				originator_name = USABA_german_ch
+			}
+			clr_country_flag = USABA_expansion_of_influence_in_america_in_progress_flag
+			country_event = { id = usa_hidden_right_event.1 days = 55 random_days = 30 }
+		}
+		else_if = {
+			limit = {
+				has_shine_effect_on_focus = USABA_destruction_of_jewish_groups
+			}
+			complete_national_focus = {
+				focus = USABA_destruction_of_jewish_groups
+				use_side_message = yes
+				originator_name = USABA_german_ch
+			}
+			clr_country_flag = USABA_destruction_of_jewish_groups_in_progress_flag
+		}
+		else = { #Debug logs
+			#log = "SOMETHING WENT WRONG WITH GOEBBELS's FOCUS BRANCH - Cannot complete focus"
+		}
+	}
+}

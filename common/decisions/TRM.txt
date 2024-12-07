@@ -1896,11 +1896,11 @@ TRN_after_war_decisions = {
 		icon = infiltrate_state
 
 		available = {
-			has_completed_focus = TRM_anti_gehenna_focus_2
+			has_completed_focus = TRM_germany_union
 			NOT = { has_idea = TRM_anti_gehenna_idea }
 		}
 		visible = {
-			has_completed_focus = TRM_anti_gehenna_focus_2
+			has_completed_focus = TRM_germany_union
 		}
 
 		custom_cost_trigger = {

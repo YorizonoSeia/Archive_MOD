@@ -4147,9 +4147,10 @@ USA_recover_from_2nd_great_depression_categorie = {
 					instant_build = yes
 				}
 			}
-			swap_ideas = {
-				remove_idea = USABA_famine_1
-				add_idea = USABA_famine_2
+			remove_ideas = USABA_famine_1
+			add_timed_idea = {
+				idea = USABA_famine_2
+				days = 480
 			}
 		}
 	}
