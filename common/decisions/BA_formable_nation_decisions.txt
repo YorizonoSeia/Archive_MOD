@@ -835,7 +835,7 @@ BA_greater_ABY_category = {
 
 		available = {
 			is_subject = no
-			has_completed_focus = ABY_focus_united_nations
+			always = no
 		}
 
 		complete_effect = {

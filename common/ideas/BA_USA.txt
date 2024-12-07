@@ -370,11 +370,11 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				monthly_population = -0.50
+				monthly_population = -0.95
                 political_power_cost = 0.25
-                consumer_goods_factor = 0.40
-                global_building_slots_factor = -0.25
-                production_speed_buildings_factor = -0.25
+                consumer_goods_factor = 0.20
+                global_building_slots_factor = -0.20
+                production_speed_buildings_factor = -0.20
 			}
         }
 		USABA_famine_1 = {
@@ -395,9 +395,9 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				monthly_population = -0.25
+				monthly_population = -0.50
                 political_power_cost = 0.10
-                consumer_goods_factor = 0.15
+                consumer_goods_factor = 0.10
                 global_building_slots_factor = -0.10
                 production_speed_buildings_factor = -0.10
 			}
@@ -420,9 +420,9 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-                consumer_goods_factor = -0.10
-                global_building_slots_factor = 0.05
-                production_speed_infrastructure_factor = 0.05
+				stability_weekly = 0.0005
+                consumer_goods_factor = -0.15
+                production_speed_infrastructure_factor = 0.10
 			}
         }
 		USABA_famine_3 = {
