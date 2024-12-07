@@ -2827,42 +2827,6 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = USABA_german_national_protection_law
-		icon = GFX_goal_generic_political_pressure
-		prerequisite = { focus = USABA_german_ethnic_union_in_america }
-		mutually_exclusive = { focus = USA_new_team focus = USA_soviet_team focus = USA_old_team }
-		x = 0
-		y = 2
-		relative_position_id = USABA_german_ethnic_union_in_america
-
-		cost = 5
-		#ai_will_do = {
-		#	factor = 1
-		#}
-
-		available_if_capitulated = no
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-
-		available = {
-			has_civil_war = no
-			NOT = { has_global_flag = USA_rising_exiled_germans_3st_flag }
-		}
-		bypass = {
-		}
-		bypass = {
-			
-		}
-
-		completion_reward = {
-			add_popularity = {
-			    ideology = fascism
-			    popularity = 0.05
-			}
-		}
-	}
-
 
 	focus = {
 		id = USA_limited_intervention
@@ -11058,6 +11022,322 @@ focus_tree = {
 					level = 1
 					instant_build = yes
 				}
+			}
+		}
+	}
+
+	focus = {
+		id = USABA_german_national_protection_law
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = USABA_german_ethnic_union_in_america }
+		mutually_exclusive = { focus = USA_new_team focus = USA_soviet_team focus = USA_old_team }
+		x = 0
+		y = 2
+		relative_position_id = USABA_german_ethnic_union_in_america
+
+		cost = 5
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = no
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+		available = {
+			has_civil_war = no
+			NOT = { has_global_flag = USA_rising_exiled_germans_3st_flag }
+		}
+		bypass = {
+		}
+		bypass = {
+			
+		}
+
+		completion_reward = {
+			add_popularity = {
+			    ideology = fascism
+			    popularity = 0.05
+			}
+			custom_effect_tooltip = USABA_german_national_protection_law_tt
+			hidden_effect = {
+				country_event = usa_hidden_right_event.1
+			}
+		}
+	}
+
+	focus = {
+		id = USABA_revolutionaries_of_the_nation
+		icon = GFX_focus_GER_optimize_reich_labour_service
+		prerequisite = { focus = USABA_german_national_protection_law }
+		x = 2
+		y = 1
+		relative_position_id = USABA_german_national_protection_law
+		text_icon = GER_inner_circle_focus_style
+
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = no
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+		available = {
+			if = { #ADVISOR WORKING ON THE FOCUS (Show progress)
+				limit = {
+					has_country_flag = USABA_revolutionaries_of_the_nation_in_progress_flag
+				}
+				set_temp_variable = { temp_focus_days = 1 } #For tooltip purposes
+				multiply_temp_variable = { temp_focus_days = 1 } #The constant uses focus cost which is in weeks, so convert to days
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_inner_circle_focus_in_progress_tt
+						CHARACTER = USABA_german_ch
+						FLAG_DAYS = [?USABA_revolutionaries_of_the_nation_in_progress_flag:days]
+					}
+					always = no 
+				}
+			}
+			else = { #NOT BEEN WORKED ON (Just Explain)
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_focus_can_only_be_completed_by_advisor_tt
+						CHARACTER = USABA_german_ch
+						FOCUS = USABA_german_national_protection_law
+					}
+					always = no
+				}
+			}
+		}
+		bypass = {
+		}
+		bypass = {
+			
+		}
+
+		completion_reward = {
+			add_popularity = {
+			    ideology = fascism
+			    popularity = 0.05
+			}
+		}
+	}
+
+	focus = {
+		id = USABA_strong_propaganda
+		icon = GFX_focus_GER_expand_ss_security_duties
+		prerequisite = { focus = USABA_revolutionaries_of_the_nation }
+		x = 0
+		y = 1
+		relative_position_id = USABA_revolutionaries_of_the_nation
+		text_icon = GER_inner_circle_focus_style
+
+		cost = 20
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = no
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+		available = {
+			if = { #ADVISOR WORKING ON THE FOCUS (Show progress)
+				limit = {
+					has_country_flag = USABA_strong_propaganda_in_progress_flag
+				}
+				set_temp_variable = { temp_focus_days = 20 } #For tooltip purposes
+				multiply_temp_variable = { temp_focus_days = 7 } #The constant uses focus cost which is in weeks, so convert to days
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_inner_circle_focus_in_progress_tt
+						CHARACTER = USABA_german_ch
+						FLAG_DAYS = [?USABA_strong_propaganda_in_progress_flag:days]
+					}
+					always = no 
+				}
+			}
+			else = { #NOT BEEN WORKED ON (Just Explain)
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_focus_can_only_be_completed_by_advisor_tt
+						CHARACTER = USABA_german_ch
+						FOCUS = USABA_german_national_protection_law
+					}
+					always = no
+				}
+			}
+		}
+		bypass = {
+		}
+		bypass = {
+			
+		}
+
+		completion_reward = {
+			add_popularity = {
+			    ideology = fascism
+			    popularity = 0.05
+			}
+		}
+	}
+
+	focus = {
+		id = USABA_expansion_of_influence_in_america
+		icon = GFX_focus_GER_expand_gestapo
+		prerequisite = { focus = USABA_strong_propaganda }
+		x = 0
+		y = 1
+		relative_position_id = USABA_strong_propaganda
+		text_icon = GER_inner_circle_focus_style
+
+		cost = 20
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = no
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+		available = {
+			if = { #ADVISOR WORKING ON THE FOCUS (Show progress)
+				limit = {
+					has_country_flag = USABA_expansion_of_influence_in_america_in_progress_flag
+				}
+				set_temp_variable = { temp_focus_days = 20 } #For tooltip purposes
+				multiply_temp_variable = { temp_focus_days = 7 } #The constant uses focus cost which is in weeks, so convert to days
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_inner_circle_focus_in_progress_tt
+						CHARACTER = USABA_german_ch
+						FLAG_DAYS = [?USABA_expansion_of_influence_in_america_in_progress_flag:days]
+					}
+					always = no 
+				}
+			}
+			else = { #NOT BEEN WORKED ON (Just Explain)
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_focus_can_only_be_completed_by_advisor_tt
+						CHARACTER = USABA_german_ch
+						FOCUS = USABA_german_national_protection_law
+					}
+					always = no
+				}
+			}
+		}
+		bypass = {
+		}
+		bypass = {
+			
+		}
+
+		completion_reward = {
+			add_popularity = {
+			    ideology = fascism
+			    popularity = 0.05
+			}
+		}
+	}
+
+	focus = {
+		id = USABA_destruction_of_jewish_groups
+		icon = GFX_focus_GER_hegemony_of_the_ss
+		prerequisite = { focus = USABA_expansion_of_influence_in_america }
+		x = 0
+		y = 1
+		relative_position_id = USABA_expansion_of_influence_in_america
+		text_icon = GER_inner_circle_focus_style
+
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = no
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+		available = {
+			if = { #ADVISOR WORKING ON THE FOCUS (Show progress)
+				limit = {
+					has_country_flag = USABA_destruction_of_jewish_groups_in_progress_flag
+				}
+				set_temp_variable = { temp_focus_days = 10 } #For tooltip purposes
+				multiply_temp_variable = { temp_focus_days = 7 } #The constant uses focus cost which is in weeks, so convert to days
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_inner_circle_focus_in_progress_tt
+						CHARACTER = USABA_german_ch
+						FLAG_DAYS = [?USABA_destruction_of_jewish_groups_in_progress_flag:days]
+					}
+					always = no 
+				}
+			}
+			else = { #NOT BEEN WORKED ON (Just Explain)
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_focus_can_only_be_completed_by_advisor_tt
+						CHARACTER = USABA_german_ch
+						FOCUS = USABA_german_national_protection_law
+					}
+					always = no
+				}
+			}
+		}
+		bypass = {
+		}
+		bypass = {
+			
+		}
+
+		completion_reward = {
+			add_popularity = {
+			    ideology = fascism
+			    popularity = 0.05
+			}
+			add_popularity = {
+			    ideology = democratic
+			    popularity = -0.10
+			}
+		}
+	}
+
+	focus = {
+		id = USABA_rise_to_power
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = USABA_destruction_of_jewish_groups }
+		x = 0
+		y = 1
+		relative_position_id = USABA_destruction_of_jewish_groups
+
+		cost = 5
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = no
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+		available = {
+			is_subject = no
+			has_civil_war = no
+			has_government = fascism
+		}
+		bypass = {
+		}
+		bypass = {
+			
+		}
+
+		completion_reward = {
+			add_popularity = {
+			    ideology = fascism
+			    popularity = 0.05
 			}
 		}
 	}
