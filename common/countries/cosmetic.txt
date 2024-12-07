@@ -2447,16 +2447,16 @@ ABY_laita_ABY = {
 	color_ui = rgb { 255 255 255 }
 }
 ABY_german_empire = {
-	color = rgb { 100 100 50 }
-	color_ui = rgb { 100 100 50 }
+	color = rgb { 116 100 59 }
+	color_ui = rgb { 116 100 59 }
 }
 ABY_duchy_of_austria = {
-	color = rgb { 150 150 75 }
-	color_ui = rgb { 150 150 75 }
+	color = rgb { 116 100 59 }
+	color_ui = rgb { 116 100 59 }
 }
 ABY_holy_roman_empire = {
-	color = rgb { 150 150 75 }
-	color_ui = rgb { 150 150 75 }
+	color = rgb { 116 100 59 }
+	color_ui = rgb { 116 100 59 }
 }
 ABY_frank_kingdom = {
 	color = rgb { 50 50 100 }

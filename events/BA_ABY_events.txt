@@ -668,7 +668,7 @@ country_event = {
 		name = ABY_event.40.a
 		add_war_support = -0.025
 		add_popularity = {
-			ideology = neutrality
+			ideology = communism
 			popularity = 0.15
 		}
 	}
@@ -685,7 +685,7 @@ country_event = {
 		name = ABY_event.41.a
 		add_war_support = -0.025
 		add_popularity = {
-			ideology = neutrality
+			ideology = communism
 			popularity = 0.05
 		}
 	}
