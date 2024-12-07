@@ -136,6 +136,9 @@ characters={
 				if = { limit = { has_character_flag = TRM_forced_dismissal_flag }
 					NOT = { has_character_flag = TRM_forced_dismissal_flag }
 				}
+				NOT = {
+					has_government = fascism
+				}
 			
 			}
     		traits = { b_dPdjsdmleocjstk }

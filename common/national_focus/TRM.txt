@@ -2056,7 +2056,8 @@
 			add_political_power = 50
 			add_command_power = 75
 			unlock_decision_tooltip = TRM_unification_propaganda
-			unlock_decision_tooltip = TRM_unification_propaganda
+			unlock_decision_tooltip = TRM_Decline_of_the_anti_gehenna_sentiment
+			unlock_decision_tooltip = TRM_tighten_control
 			#custom_effect_tooltip = TRM_germany_union_tt
 		}
 	}
@@ -2078,7 +2079,6 @@
 		y = 1
 		completion_reward = {
 			unlock_decision_tooltip = TRM_raid_gehenna_resistance
-			unlock_decision_tooltip = TRM_tighten_control
 		}
 	}
 
@@ -3339,8 +3339,11 @@
 
 			TRN_country_collapse_down = yes
 			custom_effect_tooltip = TRM_tooltip_attack_gehenna
-			hidden_effect = {
-				country_event = { id = TRM_event.34 days = 10 }
+			if = { 
+				limit = { 
+					NOT = { has_war_with = GEM }
+				}
+				hidden_effect = { country_event = { id = TRM_event.34 days = 10 } }
 			}
 			add_ai_strategy = {
 				type = conquer
