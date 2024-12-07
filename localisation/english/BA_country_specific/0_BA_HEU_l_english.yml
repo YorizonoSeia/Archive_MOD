@@ -1,4 +1,7 @@
 ﻿l_english:
+ landmark_HEU_luxemburg_palace:0 "룩셈부르크 대공궁"
+ landmark_HEU_luxemburg_palace_desc:0 "룩셈부르크 대공궁입니다."
+
  # #### #### 흥신소68 이벤트 #### #### #
  # #### #### 흥신소68 이벤트 #### #### #
  # #### #### 흥신소68 이벤트 #### #### #
@@ -2222,3 +2225,4 @@
 
  ### 군수기업 ###
  HEU_grand_ducal_gendarmerie_organization:0 "룩셈부르크 헌병대"
+ 
