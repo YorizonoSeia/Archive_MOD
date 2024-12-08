@@ -365,11 +365,11 @@ ideas = {
 				}
 				targeted_modifier = {
 					tag = GEH
-					attack_bonus_against = 0.1
+					attack_bonus_against = 0.05
 				}
 				targeted_modifier = {
 					tag = GEM
-					attack_bonus_against = 0.1
+					attack_bonus_against = 0.05
 				}
 				targeted_modifier = {
 					tag = HEU
