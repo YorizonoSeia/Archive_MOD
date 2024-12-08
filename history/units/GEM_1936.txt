@@ -171,6 +171,24 @@ units = {
 				is_name_ordered = yes
 				name_order = 4
 		}
+		location = 587
+		division_template = "Halo Infantry Division"
+		start_experience_factor = 0.75
+	}
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 4
+		}
+		location = 495
+		division_template = "Halo Infantry Division"
+		start_experience_factor = 0.75
+	}
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 4
+		}
 		location = 11435
 		division_template = "Halo Infantry Division"
 		start_experience_factor = 0.75

@@ -1,34 +1,34 @@
 add_namespace = GEK_event
 
 
-country_event = { #수상한 함선 나포
-	id = GEK_event.1
-	title = GEK_event.1.t
-	desc = GEK_event.1.desc
-	picture = GFX_event_none_picture
-	
-	fire_only_once = yes
-	
-	trigger = {
-		original_tag = GEK
-	}
-	mean_time_to_happen = {
-		days = 20
-	}
-	
-	option = { 
-		name = GEK_event.1.a
-		add_stability = -0.05
-		add_equipment_to_stockpile = {
-			type = infantry_equipment
-			amount = 500
-			producer = GER
-		}
-		country_event = { id = GEK_event.2 hours = 12 }
-		custom_effect_tooltip = GEK_get_halo_infantry_tt
-		set_country_flag = kivotos_research_on
-	}
-}
+#country_event = { #수상한 함선 나포
+#	id = GEK_event.1
+#	title = GEK_event.1.t
+#	desc = GEK_event.1.desc
+#	picture = GFX_event_none_picture
+#
+#	fire_only_once = yes
+#	
+#	trigger = {
+#		original_tag = GEK
+#	}
+#	mean_time_to_happen = {
+#		days = 20
+#	}
+#	
+#	option = { 
+#		name = GEK_event.1.a
+#		add_stability = -0.05
+#		add_equipment_to_stockpile = {
+#			type = infantry_equipment
+#			amount = 500
+#			producer = GER
+#		}
+#		country_event = { id = GEK_event.2 hours = 12 }
+#		custom_effect_tooltip = GEK_get_halo_infantry_tt
+#		set_country_flag = kivotos_research_on
+#	}
+#}
 country_event = { #재활용
 	id = GEK_event.2
 	title = GEK_event.2.t
@@ -1125,9 +1125,13 @@ country_event = { #내전!
 				}
 			}
 			SHL = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 4000
+				}
 				declare_war_on = {
 					target = GEK
-					type = annex_everything
+					type = civil_war
 				}
 				give_military_access = RHI
 				set_politics = {
@@ -1193,9 +1197,13 @@ country_event = { #내전!
 				}
 			}
 			RHI = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 4000
+				}
 				declare_war_on = {
 					target = GEK
-					type = annex_everything
+					type = civil_war
 				}
 				give_military_access = SHL
 				set_politics = {
@@ -1261,54 +1269,51 @@ country_event = { #내전!
 				}
 			}
 			NSD = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 4000
+				}
 				declare_war_on = {
 					target = GEK
-					type = annex_everything
+					type = civil_war
 				}
 				declare_war_on = {
 					target = RHI
-					type = annex_everything
+					type = civil_war
 				}
 				declare_war_on = {
 					target = SHL
-					type = annex_everything
+					type = civil_war
 				}
-				if = {
-					limit = {
-						NOT = {
-							has_template = "Schutzstaffel"
+				division_template = {
+					name = "Schutzstaffel"
+					regiments = {
+						infantry = {
+							x = 0
+							y = 0
+						}
+						infantry = {
+							x = 0
+							y = 1
+						}
+						infantry = {
+							x = 0
+							y = 2
+						}
+						infantry = {
+							x = 1
+							y = 0
+						}
+						infantry = {
+							x = 1
+							y = 1
+						}
+						infantry = {
+							x = 1
+							y = 2
 						}
 					}
-					division_template = {
-						name = "Schutzstaffel"
-						regiments = {
-							infantry = {
-								x = 0
-								y = 0
-							}
-							infantry = {
-								x = 0
-								y = 1
-							}
-							infantry = {
-								x = 0
-								y = 2
-							}
-							infantry = {
-								x = 1
-								y = 0
-							}
-							infantry = {
-								x = 1
-								y = 1
-							}
-							infantry = {
-								x = 1
-								y = 2
-							}
-						}
-						is_locked = yes
-					}
+					is_locked = yes
 				}
 				capital_scope = {
 					create_unit = {
@@ -1333,6 +1338,33 @@ country_event = { #만선합작
 	option = {
 		name = GEK_rm_event.12.a
 		give_military_access = GEH
+	}
+}
+country_event = { #만마전 유저에게 기회 주기
+	id = GEK_rm_event.13
+	title = GEK_rm_event.13.t
+	desc = GEK_rm_event.13.d
+	trigger = {
+		tag = GEM
+		GEM = {
+			is_ai = no
+		}
+		GEK = {
+			is_ai = yes
+		}
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = GEK_rm_event.13.a
+	}
+	option = {
+		name = GEK_rm_event.13.b
+		GEK = {
+			set_country_flag = GEK_i_want_war_by_GEM
+		}
+		custom_effect_tooltip = GEK_rm_event.13_tt
 	}
 }
 
@@ -1751,6 +1783,12 @@ country_event = { # 가톨릭 할 거임?
 		hidden_effect = {
 			deactivate_shine_on_focus = GEK_RM_dzp_focus_4
 		}
+		trigger = {
+			NOT = {
+				has_country_flag = GEK_not_protest_flag
+			}
+		}
+		set_country_flag = GEK_not_catholic_flag
 	}
 }
 country_event = { # 가톨릭 자동 완료
@@ -1846,9 +1884,15 @@ country_event = { # 개신교 할 거임?
 	}
 	option = { #ㄴㄴ
 		name = GEK_event_for_auto.22.b
+		trigger = {
+			NOT = {
+				has_country_flag = GEK_not_catholic_flag
+			}
+		}
 		hidden_effect = {
 			deactivate_shine_on_focus = GEK_RM_DNVP_focus_2
 		}
+		set_country_flag = GEK_not_protest_flag
 	}
 }
 country_event = { # 개신교회 자동 완료
