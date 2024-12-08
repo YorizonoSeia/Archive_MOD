@@ -1,5 +1,5 @@
 GEK_state_government_takeover_category = { #주정부 인수
-	GEM_state_government_takeover = {
+	GEK_state_government_takeover = {
 		icon = GFX_decision_eng_trade_unions_support
 		highlight_states = {
 			highlight_state_targets = {
