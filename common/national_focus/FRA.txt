@@ -4677,12 +4677,10 @@ focus_tree = {
 		y = 5
 		prerequisite = {
 			focus = FRA_focus_resistance_7
+			focus = FRA_focus_resistance_6
 		}
 		mutually_exclusive = {
 			focus = FRA_focus_resistance_10
-		}
-		prerequisite = {
-			focus = FRA_focus_resistance_6
 		}
 		completion_reward = {
 			MIL = {
@@ -4702,8 +4700,6 @@ focus_tree = {
 		y = 5
 		prerequisite = {
 			focus = FRA_focus_resistance_6
-		}
-		prerequisite = {
 			focus = FRA_focus_resistance_4
 		}
 		mutually_exclusive = {
@@ -5552,6 +5548,14 @@ focus_tree = {
 		completion_reward = {
 			add_war_support = -0.1
 			add_stability = -0.1
+			hidden_effect = {
+				set_country_flag =  FRA_exile_is_over
+				mark_focus_tree_layout_dirty = yes
+				load_focus_tree = {
+					tree = FRA_focus
+					
+				}
+			}
 		}
 	}
 	focus = {

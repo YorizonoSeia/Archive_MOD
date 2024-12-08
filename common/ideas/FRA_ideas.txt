@@ -2181,8 +2181,6 @@ ideas = {
 				}
 			}
 		}
-	}
-	industrial_concern = {
 		FRA_agricultural_corporation = {
 			picture = generic_agrarian_reform
 			allowed_civil_war = {
@@ -2190,9 +2188,6 @@ ideas = {
 			}
 			allowed = {
 				original_tag = FRA
-			}
-			allowed_to_remove = {
-				always = no
 			}
 			available = {
 				has_completed_focus = FRA_focus_6
@@ -2213,9 +2208,6 @@ ideas = {
 				original_tag = FRA
 			}
 			allowed_civil_war = {
-				always = no
-			}
-			allowed_to_remove = {
 				always = no
 			}
 			available = {

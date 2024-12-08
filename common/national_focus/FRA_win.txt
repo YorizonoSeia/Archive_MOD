@@ -462,7 +462,7 @@ focus_tree = {
 			focus = FRA_focus_win_3
 		}
 		prerequisite = {
-			focus = FRA_focus_win_7
+			focus = FRA_focus_win_9
 		}
 		prerequisite = {
 			focus = FRA_focus_win_2.3
@@ -1143,6 +1143,15 @@ focus_tree = {
 		x = 2
 		y = 4
 		available = {
+
+		}
+		bypass = {
+			OR = {
+				HND = {
+					exists = no
+				}
+				is_ally_with = HND
+			}
 		}
 		prerequisite = {
 			focus = FRA_focus_old_6
@@ -1301,6 +1310,14 @@ focus_tree = {
 		y = 1
 		available = {
 		}
+		bypass = {
+			OR = {
+				is_ally_with = ITA
+				ITA = {
+					exists = no
+				}
+			}
+		}
 		prerequisite = {
 			focus = FRA_focus_win_14
 		}
@@ -1323,6 +1340,14 @@ focus_tree = {
 		x = 5
 		y = 1
 		available = {
+		}
+		bypass = {
+			OR = {
+				is_ally_with = ITA
+				ITA = {
+					exists = no
+				}
+			}
 		}
 		prerequisite = {
 			focus = FRA_focus_win_14
@@ -1357,7 +1382,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		#중유럽 공세
+		#브르타뉴 소탕
 		id = FRA_focus_old_12
 		icon = GFX_goal_generic_more_territorial_claims
 		cost = 5
@@ -1368,40 +1393,16 @@ focus_tree = {
 		prerequisite = {
 			focus = FRA_focus_old_9
 		}
+		bypass = {
+			BLM = {
+				exists = no
+			}
+		}
 		relative_position_id = FRA_focus_win_14
 		completion_reward = {
-			if = {
-				limit = {
-					SHA = {
-						exists = yes
-					}
-				}
-				create_wargoal = {
-					target = SHA
-					type = liberate_wargoal
-				}
-			}
-			if = {
-				limit = {
-					ABY = {
-						exists = yes
-					}
-				}
-				create_wargoal = {
-					target = ABY
-					type = liberate_wargoal
-				}
-			}
-			if = {
-				limit = {
-					HYA = {
-						exists = yes
-					}
-				}
-				create_wargoal = {
-					target = HYA
-					type = liberate_wargoal
-				}
+			declare_war_on = {
+				target = BLM
+				type = annex_everything
 			}
 		}
 	}
@@ -2159,7 +2160,7 @@ focus_tree = {
 		#밀레니엄 타워 점거
 		icon = GFX_focus_ITA_modernize_ansaldo_facilities
 		id = FRA_focus_tech_9
-		cost = 2.8
+		cost = 2.9
 		x = -3
 		y = 2
 		prerequisite = {
@@ -2177,7 +2178,7 @@ focus_tree = {
 		#통신선 장악
 		icon = GFX_focus_SWE_radiotjanst
 		id = FRA_focus_tech_2
-		cost = 2.8
+		cost = 2.9
 		x = 0
 		y = 1
 		prerequisite = {
@@ -2206,7 +2207,7 @@ focus_tree = {
 		#기계장치 분석
 		icon = GFX_focus_NORDIC_dem_capstone_navy
 		id = FRA_focus_tech_3
-		cost = 2.8
+		cost = 2.9
 		x = 2
 		y = 1
 		prerequisite = {
@@ -2235,7 +2236,7 @@ focus_tree = {
 		#헤일로 보병 훈련
 		icon = GFX_focus_NORDIC_dem_army
 		id = FRA_focus_tech_4
-		cost = 2.8
+		cost = 2.9
 		x = -1
 		prerequisite = {
 			focus = FRA_focus_tech_0
@@ -2258,7 +2259,7 @@ focus_tree = {
 		#전력기술확보
 		icon = GFX_focus_NORDIC_dem_selector_civilian
 		id = FRA_focus_tech_5
-		cost = 2.8
+		cost = 2.9
 		x = 1
 		y = 2
 		prerequisite = {
@@ -2287,7 +2288,7 @@ focus_tree = {
 		#자동화 공정 연구
 		icon = GFX_focus_NORDIC_dem_capstone_civilian
 		id = FRA_focus_tech_6
-		cost = 2.8
+		cost = 2.9
 		x = -2
 		y = 3
 		prerequisite = {
@@ -2316,7 +2317,7 @@ focus_tree = {
 		#미래 과학 탐구
 		icon = GFX_focus_NORDIC_dem_capstone_research
 		id = FRA_focus_tech_7
-		cost = 2.8
+		cost = 2.9
 		x = 2
 		y = 3
 		prerequisite = {
@@ -2345,7 +2346,7 @@ focus_tree = {
 		#교통시설
 		icon = GFX_focus_NORDIC_dem_capstone_airforce
 		id = FRA_focus_tech_8
-		cost = 2.8
+		cost = 2.9
 		x = 0
 		y = 3
 		prerequisite = {
@@ -2373,7 +2374,7 @@ focus_tree = {
 	focus = {
 		icon = GFX_focus_NORDIC_dem_institution_1
 		id = FRA_focus_tech_1
-		cost = 2.8
+		cost = 2.9
 		x = 3
 		y = 2
 		available = {
@@ -2396,7 +2397,7 @@ focus_tree = {
 	focus = {
 		icon = GFX_focus_NORDIC_dem_materiel
 		id = FRA_focus_tech_10
-		cost = 2.8
+		cost = 2.9
 		x = -2
 		y = 1
 		prerequisite = {
