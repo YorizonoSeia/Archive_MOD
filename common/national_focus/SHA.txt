@@ -7644,7 +7644,7 @@ focus_tree = {
 
 
 		completion_reward = {
-
+			remove_ideas = SHA_Austrian_fascist_militia
 		}
 	}
 
@@ -7709,7 +7709,8 @@ focus_tree = {
 		relative_position_id = SHA_gathering_of_radicals
 
 		completion_reward = {
-
+			# 무슨 효과를 넣어야 할지는 모르겠는데
+			# 보수혁명 경로를 진행하고 싶을때는 이 중점이 필요 없도록 느껴지는 효과를 넣어주세요.. 하투 하투~
 		}
 	}
 
@@ -8013,6 +8014,32 @@ focus_tree = {
 		relative_position_id = SHA_Expansion_of_cooperation_with_other_clubs
 
 		completion_reward = {
+		}
+	}
+
+	# 질서 회복
+	focus = {
+		id = SHA_Solving_the_Militia_Problem
+		icon = GFX_focus_AUS_legitimistische_jugend
+		x = -1
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = SHA_Shintani_Kai_Follow 
+			focus = SHA_conservative_revolution
+		}
+		mutually_exclusive = {  }
+
+		available = {
+			NOT = { has_completed_focus = SHA_Contact_with_Austrian_militia }
+		}
+		bypass = { }
+
+		relative_position_id = SHA_conservative_revolution
+
+		completion_reward = {
+			remove_ideas = SHA_Austrian_fascist_militia
 		}
 	}
 
