@@ -609,4 +609,58 @@ spriteTypes = {
 		name = "GFX_event_CAN_bank_of_canada"
 		texturefile = "gfx/event_pictures/CAN_bank_of_canada.tga"
 	}
+	## 흥신소 ##
+	
+    spriteType = {
+		name = "GFX_report_event_aru_rikuhachima"
+		texturefile = "gfx/event_pictures/HEU/aru_rikuhachima.dds"
+	}
+    spriteType = {
+		name = "GFX_report_event_aru_rikuhachima_dress"
+		texturefile = "gfx/event_pictures/HEU/aru_rikuhachima_dress.dds"
+	}
+    spriteType = {
+		name = "GFX_report_event_aru_rikuhachima_senaka"
+		texturefile = "gfx/event_pictures/HEU/aru_rikuhachima_senaka.dds"
+	}
+    spriteType = {
+		name = "GFX_report_event_aru_rikuhachima_smile"
+		texturefile = "gfx/event_pictures/HEU/aru_rikuhachima_smile.dds"
+	}
+    spriteType = {
+		name = "GFX_report_event_grand_ducal_palace_luxembourg"
+		texturefile = "gfx/event_pictures/HEU/grand_ducal_palace_luxembourg.dds"
+	}
+    spriteType = {
+		name = "GFX_report_event_haruka_igusa"
+		texturefile = "gfx/event_pictures/HEU/haruka_igusa.dds"
+	}
+    spriteType = {
+		name = "GFX_report_event_haruka_shock"
+		texturefile = "gfx/event_pictures/HEU/haruka_shock.dds"
+	}
+    spriteType = {
+		name = "GFX_report_event_kayoko_onikata"
+		texturefile = "gfx/event_pictures/HEU/kayoko_onikata.dds"
+	}
+    spriteType = {
+		name = "GFX_report_event_luxembourg_army_1"
+		texturefile = "gfx/event_pictures/HEU/luxembourg_army_1.dds"
+	}
+    spriteType = {
+		name = "GFX_report_event_luxembourg_army_2"
+		texturefile = "gfx/event_pictures/HEU/luxembourg_army_2.dds"
+	}
+    spriteType = {
+		name = "GFX_report_event_luxembourg_army_3"
+		texturefile = "gfx/event_pictures/HEU/luxembourg_army_3.dds"
+	}
+    spriteType = {
+		name = "GFX_report_event_luxembourg_city"
+		texturefile = "gfx/event_pictures/HEU/luxembourg_city.dds"
+	}
+    spriteType = {
+		name = "GFX_report_event_mutsuki_asagi_dress"
+		texturefile = "gfx/event_pictures/HEU/mutsuki_asagi_dress.dds"
+	}
 }
