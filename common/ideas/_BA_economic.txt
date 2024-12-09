@@ -310,7 +310,7 @@ ideas = {
 			}
 		}
 		SHA_isolation_economic = {
-			picture = closed_economy
+			picture = undisturbed_isolation
 			allowed = {
 				always = no
 			}

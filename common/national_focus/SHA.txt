@@ -330,8 +330,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			swap_ideas = {
-				remove_idea = SHA_duseksqkd_idea
-				add_idea = SHA_duseksqkd_idea3
+				remove_idea = SHA_Eastern_alchemy_society
+				add_idea = SHA_Eastern_alchemy_society3
 			}
 			add_research_slot = 1
 		}
@@ -2171,8 +2171,8 @@ focus_tree = {
 		completion_reward = {
 			add_research_slot = 1
 			swap_ideas = {
-				remove_idea = SHA_duseksqkd_idea
-				add_idea = SHA_duseksqkd_idea2
+				remove_idea = SHA_Eastern_alchemy_society
+				add_idea = SHA_Eastern_alchemy_society2
 			}
 		}
 	}
@@ -2192,7 +2192,7 @@ focus_tree = {
 		completion_reward = {
 			add_research_slot = 1
 			add_stability = 0.05
-			remove_ideas = SHA_duseksqkd_idea
+			remove_ideas = SHA_Eastern_alchemy_society
 		}
 	}
 	focus = { #
@@ -3215,8 +3215,8 @@ focus_tree = {
 			}
 			remove_ideas = SHA_Black_Tortoise_Promenade
 			swap_ideas = {
-				remove_idea = SHA_duseksqkd_idea
-				add_idea = SHA_duseksqkd_idea2
+				remove_idea = SHA_Eastern_alchemy_society
+				add_idea = SHA_Eastern_alchemy_society2
 			}
 			hidden_effect = {
 				set_party_name = {
@@ -4985,7 +4985,7 @@ focus_tree = {
 		x = 12
 		y = 2
 		available = {
-			has_country_flag = GAEBALJUNG
+			#has_country_flag = GAEBALJUNG
 		}
 		bypass = {
 		}
@@ -5120,7 +5120,7 @@ focus_tree = {
 			custom_effect_tooltip = SHA_tt_20
 			custom_effect_tooltip = SHA_tt_21
 			hidden_effect = {
-				remove_ideas = SHA_duseksqkd_idea
+				remove_ideas = SHA_Eastern_alchemy_society
 				swap_ideas = {
 					remove_idea = SHA_opera_idea2
 					add_idea = SHA_opera_idea3
@@ -7596,5 +7596,511 @@ focus_tree = {
 				BA_halo_infantry_cap_edit_effect = yes
 			}
 		}
-	} 
+	}
+
+###################
+###################
+###################
+###################
+	
+	# 나중에 삭제 좀 해다오.
+	focus = {
+		id = SHA_debug_focus_tree_hellyeah
+		icon = GFX_focus_GER_anschluss
+		x = 29
+		y = 21
+		cost = 1
+
+		ai_will_do = {
+			factor = -3
+		}
+
+		allow_branch = { }
+		prerequisite = {}
+		mutually_exclusive = { }
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+
+		}
+	}
+
+	# 오스트리아인 탄압 지속
+	focus = {
+		id = SHA_Austrian_oppression_continues
+		icon = GFX_focus_GER_anschluss
+		x = 37
+		y = 22
+		cost = 5
+
+		prerequisite = { focus = SHA_debug_focus_tree_hellyeah }
+		mutually_exclusive = { focus = SHA_Austrian_appeasement_policy }
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+
+		}
+	}
+
+	# 오스트리아 유화 정책
+	focus = {
+		id = SHA_Austrian_appeasement_policy
+		icon = GFX_focus_generic_befriend_austria
+		x = 20
+		y = 22
+		cost = 5
+
+		prerequisite = { focus = SHA_debug_focus_tree_hellyeah }
+		mutually_exclusive = { focus = SHA_Austrian_oppression_continues }
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+
+		}
+	}
+
+	# 급진파 결집
+	focus = {
+		id = SHA_gathering_of_radicals
+		icon = GFX_focus_generic_advanced_military_studies
+		x = 5
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_Austrian_appeasement_policy }
+		mutually_exclusive = { focus = SHA_local_harmony }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_Austrian_appeasement_policy
+
+		completion_reward = {
+			add_timed_idea = {
+				days = 180
+				idea = SHA_gathering_of_radicals_idea
+			}
+		}
+	}
+
+	# 오스트리아 민병대와 접촉
+	focus = {
+		id = SHA_Contact_with_Austrian_militia
+		icon = GFX_focus_AUS_osterreichische_bundesheer
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_gathering_of_radicals }
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_gathering_of_radicals
+
+		completion_reward = {
+
+		}
+	}
+
+	# 경극부 협력
+	focus = {
+		id = SHA_Cooperation_with_Kaguya
+		icon = GFX_goal_SHA_kaguya_focus
+		x = -2
+		y = 2
+		cost = 5
+
+		prerequisite = { focus = SHA_gathering_of_radicals }
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_gathering_of_radicals
+
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
+			custom_effect_tooltip = tooltip_white_line
+			if = { 
+				limit = {
+					has_character = SHA_KAGUYA
+				}
+				SHA_KAGUYA = { add_country_leader_trait = SWE_ardent_conservative }
+			}
+			add_field_marshal_role = {
+				character = SHA_KAGUYA
+				traits = {
+					old_guard
+					politically_connected
+					media_personality
+				}
+				skill=3
+				attack_skill=2
+				defense_skill=3
+				planning_skill=4
+				logistics_skill=3
+			}
+		}
+	}
+
+	# 연단방 협력
+	focus = {
+		id = SHA_podium_room_cooperation
+		icon = GFX_goal_SHA_podium_room_cooperation
+		x = 2
+		y = 2
+		cost = 5
+
+		prerequisite = { focus = SHA_gathering_of_radicals }
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_gathering_of_radicals
+
+		completion_reward = {
+			SHA_Eastern_Alchemy_Society_idea_up = yes
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
+		}
+	}
+
+	# 키사키 억제
+	focus = {
+		id = SHA_Kisaki_Suppression
+		icon = GFX_goal_SHA_Kisaki_locked
+		x = 2
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_Cooperation_with_Kaguya }
+		prerequisite = { focus = SHA_podium_room_cooperation }
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_Cooperation_with_Kaguya
+
+		completion_reward = {
+			country_event = { id = shafas.1 }
+		}
+	}
+
+	# 카이 추종
+	focus = {
+		id = SHA_Shintani_Kai_Follow
+		icon = GFX_goal_Shintani_Kai_Follow
+		x = -3
+		y = 1
+		cost = 10
+
+		prerequisite = { focus = SHA_Kisaki_Suppression }
+		mutually_exclusive = { focus = SHA_conservative_revolution }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_Kisaki_Suppression
+
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = SHA_KAI_1
+			add_corps_commander_role = {
+				Character = SHA_KAI
+				traits = {
+					harsh_leader
+					politically_connected
+					media_personality
+					inspirational_leader
+				}
+				skill=5
+				attack_skill=5 #+1
+				defense_skill=4
+				planning_skill=6
+				logistics_skill=3
+			}
+		}
+	}
+
+	# 보수 혁명
+	focus = {
+		id = SHA_conservative_revolution
+		icon = GFX_goal_SHA_Shanhaijing_conservative_revolution
+		x = 3
+		y = 1
+		cost = 10
+
+		prerequisite = { focus = SHA_Kisaki_Suppression }
+		mutually_exclusive = { focus = SHA_Shintani_Kai_Follow }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_Kisaki_Suppression
+
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.1
+			custom_effect_tooltip = SHA_conservative_revolution_tt
+			set_temp_variable = {
+				var = conservative_revolution_var
+				value = party_popularity@fascism
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = conservative_revolution_var
+			}
+			multiply_temp_variable = {
+				var = conservative_revolution_var
+				value = -1
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = conservative_revolution_var
+			}
+			if = { 
+				limit = { 
+					NOT = { has_government = neutrality }
+				}
+				set_politics = {
+					ruling_party = neutrality
+					elections_allowed = no
+				}
+			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = SHA_KAGUYA_political_advisor
+		}
+	}
+
+	# 새로운 산해경 보수주의
+	focus = {
+		id = SHA_new_shanhaijing_conservatism
+		icon = GFX_goal_SHA_new_shanhaijing_conservatism
+		x = 2
+		y = 1
+		cost = 6
+
+		prerequisite = { focus = SHA_conservative_revolution }
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_conservative_revolution
+
+		completion_reward = {
+			add_ideas = SHA_walking_the_dragon_1
+		}
+	}
+
+	# 타 동아리 협력 확장
+	focus = {
+		id = SHA_Expansion_of_cooperation_with_other_clubs
+		icon = GFX_goal_SHA_Shanhaijing_conservative_revolution
+		x = -1
+		y = 1
+		cost = 6
+
+		prerequisite = { focus = SHA_new_shanhaijing_conservatism }
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_new_shanhaijing_conservatism
+
+		completion_reward = {
+			if = { 
+				limit = { has_idea = SHA_walking_the_dragon_1 }
+				swap_ideas = {
+					add_idea = SHA_walking_the_dragon_3
+					remove_idea = SHA_walking_the_dragon_1
+				}
+				else_if = {
+					limit = { has_idea = SHA_walking_the_dragon_2 }
+					swap_ideas = {
+						add_idea = SHA_walking_the_dragon_4
+						remove_idea = SHA_walking_the_dragon_2
+					}
+				}
+				else = { 
+					effect_tooltip = {
+						swap_ideas = {
+							add_idea = SHA_walking_the_dragon_3
+							remove_idea = SHA_walking_the_dragon_1
+						}
+					}
+				}
+			}
+		}
+	}
+
+	# 새로운 헌룡문 - 경극부 관계
+	focus = {
+		id = SHA_New_Genryumon_Peking_Opera_Department_Relations
+		icon = GFX_goal_SHA_Shanhaijing_conservative_revolution
+		x = 1
+		y = 1
+		cost = 6
+
+		prerequisite = { focus = SHA_new_shanhaijing_conservatism }
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_new_shanhaijing_conservatism
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = SHA_walking_the_dragon_1 }
+				swap_ideas = {
+					add_idea = SHA_walking_the_dragon_2
+					remove_idea = SHA_walking_the_dragon_1
+				}
+				else_if = {
+					limit = { has_idea = SHA_walking_the_dragon_3 }
+					swap_ideas = {
+						add_idea = SHA_walking_the_dragon_4
+						remove_idea = SHA_walking_the_dragon_3
+					}
+				}
+				else = { 
+					effect_tooltip = {
+						swap_ideas = {
+							add_idea = SHA_walking_the_dragon_2
+							remove_idea = SHA_walking_the_dragon_1
+						}
+					}	
+				}
+			}
+		}
+	}
+
+	# 산해경 보수주의 육성
+	focus = {
+		id = SHA_Cultivating_Shanhaijing_conservatism
+		icon = GFX_goal_SHA_Shanhaijing_conservative_revolution
+		x = 1
+		y = 1
+		cost = 6
+
+		prerequisite = { focus = SHA_Expansion_of_cooperation_with_other_clubs }
+		prerequisite = { focus = SHA_New_Genryumon_Peking_Opera_Department_Relations }
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_Expansion_of_cooperation_with_other_clubs
+
+		completion_reward = {
+		}
+	}
+
+	# 비상 조치
+	focus = {
+		id = SHA_emergency_measures
+		icon = GFX_focus_generic_mass_production
+		x = 0
+		y = 2
+		cost = 5
+
+		prerequisite = {
+			focus = SHA_Shintani_Kai_Follow 
+			focus = SHA_conservative_revolution
+		}
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_Kisaki_Suppression
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = SHA_emergency_measures_idea
+				days = 720
+			}
+		}
+	}
+
+	# 학원 영토 수복
+	focus = {
+		id = SHA_invade_of_Hyakkiyako
+		icon = GFX_focus_attack_HYA
+		x = 0
+		y = 3
+		cost = 10
+
+		prerequisite = { focus = SHA_emergency_measures }
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = {
+			OR = {
+				has_global_flag = GFLAG_BAKSANWAR
+				has_war_with = HYA
+				HYA = {
+					exists = no
+				}
+				HYA = {
+					is_in_faction_with = SHA
+				}
+			}
+		}
+
+		relative_position_id = SHA_emergency_measures
+		
+		will_lead_to_war_with = HYA
+		
+		completion_reward = {
+			remove_ideas = SHA_shanhaijing_isolation
+			HYA = {
+				country_event = {
+					id = SHA_event.2
+				}
+			}
+			set_global_flag = GFLAG_FASI_BAKSANWAR
+		}
+	}
+
+	# 현지 화합?
+	focus = {
+		id = SHA_local_harmony
+		icon = GFX_focus_AUS_diplomatic_effort
+		x = -7
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_Austrian_appeasement_policy }
+		mutually_exclusive = { focus = SHA_gathering_of_radicals }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_Austrian_appeasement_policy
+
+		completion_reward = {
+
+		}
+	}
 }

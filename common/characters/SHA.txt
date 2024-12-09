@@ -501,9 +501,28 @@ characters={
 		}
 		country_leader={
 			ideology=fascism_ideology
-			traits={ 
-			}
+			traits={ }
 			expire="1965.1.1.1"
+		}
+		advisor = {
+    		slot = political_advisor
+    		idea_token = SHA_KAGUYA_political_advisor
+			allowed = {
+				original_tag = SHA
+			}
+			available = { 
+				has_completed_focus = SHA_conservative_revolution 
+				NOT = {
+					has_country_leader = {
+						ruling_only = yes
+						character = SHA_KAGUYA
+					}
+				}
+			}
+			visible = { has_completed_focus = SHA_conservative_revolution }
+    		traits = { SWE_ardent_conservative }
+			cost = 75
+			ai_will_do = { base = 4000 }
 		}
 	}
 	SHA_kurt_schuschnigg={

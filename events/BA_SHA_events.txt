@@ -1144,3 +1144,29 @@ country_event = {
 		}
 	}
 }
+
+
+add_namespace = shafas
+country_event = {
+	id = shafas.1
+	title = shafas.1.t
+	desc = shafas.1.d
+	picture = GFX_report_event_ARG_coup_detat
+    is_triggered_only = yes
+
+	option = {
+		name = shafas.1.a
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+		}
+		if = { 
+			limit = {
+				has_character = SHA_KAGUYA
+			}
+			SHA_KAGUYA = { 
+				add_country_leader_trait = SHA_T2a 
+			}
+		}
+	}
+}

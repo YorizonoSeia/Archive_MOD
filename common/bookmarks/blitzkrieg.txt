@@ -85,8 +85,8 @@ bookmarks = {
 			ideology = neutrality
 			ideas = {
 				SHA_Black_Tortoise_Promenade
-				SHA_altlrgkrdnjs_idea
-				SHA_duseksqkd_idea
+				SHA_shanhaijing_isolation
+				SHA_Eastern_alchemy_society
 			}	
 			focuses = {
 				SHA_foc_1-1-4

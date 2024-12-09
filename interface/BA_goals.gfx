@@ -1589,6 +1589,30 @@ spriteTypes = {
 		name = "GFX_goal_SHA_ROUMI_focus"
 		texturefile = "gfx/interface/goals/SHA/SHA_ROUMI_focus.tga"  
 	}
+	SpriteType = {	
+		name = "GFX_goal_SHA_kaguya_focus"
+		texturefile = "gfx/interface/goals/SHA/SHA_kaguya_focus.tga"  
+	}
+	SpriteType = {
+		name = "GFX_goal_SHA_Kisaki_locked"
+		texturefile = "gfx/interface/goals/SHA/SHA_Kisaki_locked.tga"  
+	}
+	SpriteType = {
+		name = "GFX_goal_SHA_podium_room_cooperation"
+		texturefile = "gfx/interface/goals/SHA/SHA_podium_room_cooperation.tga"  
+	}
+	SpriteType = {
+		name = "GFX_goal_SHA_Shanhaijing_conservative_revolution"
+		texturefile = "gfx/interface/goals/SHA/SHA_Shanhaijing_conservative_revolution.tga"  
+	}
+	SpriteType = {
+		name = "GFX_goal_Shintani_Kai_Follow"
+		texturefile = "gfx/interface/goals/SHA/Shintani_Kai_Follow.tga"  
+	}
+	SpriteType = {
+		name = "GFX_goal_SHA_new_shanhaijing_conservatism"
+		texturefile = "gfx/interface/goals/SHA/SHA_new_shanhaijing_conservatism.tga"  
+	}
 	SpriteType = { 	
 		name = "GFX_goal_ROM_invite_german_advisorsr"
 		texturefile = "gfx/interface/goals/ROM/ROM_invite_german_advisors.tga"  

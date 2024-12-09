@@ -22,13 +22,16 @@ add_timed_idea = {
 add_ideas = {
 	disarmed_nation
 	BA_isolation
+
+	SHA_shanhaijing_isolation
 	SHA_isolation_economic
-	SHA_faup_idea
-	SHA_opera_idea
+
+	SHA_Peking_Opera
 	SHA_Black_Tortoise_Promenade
-	SHA_altlrgkrdnjs_idea
-	SHA_duseksqkd_idea
+	SHA_Eastern_Alchemy_Society_low
 	SHA_aoghkdnjs_idea
+	SHA_faup_idea
+	SHA_Austrian_fascist_militia
 }
 add_ideas = BA_student_conscription_idea
 set_technology = {

@@ -1,5 +1,17 @@
 spriteTypes = {
 	spriteType = {
+		name = "GFX_idea_SHA_walking_the_dragon"
+		texturefile = "gfx/interface/ideas/SHA/walking_the_black_dragon.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SHA_Peking_Opera"
+		texturefile = "gfx/interface/ideas/SHA/SHA_Peking_Opera.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SHA_shanhaijing_isolation"
+		texturefile = "gfx/interface/ideas/SHA/idea_Shanhaijing_isolation.tga"
+	}
+	spriteType = {
 		name = "GFX_idea_BLM_resistance_of_helmet_gang"
 		texturefile = "gfx/interface/ideas/BLM/idea_BLM_resistance_of_helmet_gang.tga"
 	}

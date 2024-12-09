@@ -2604,8 +2604,10 @@ leader_traits = {
 	}
 	SHA_T1a = { #암흑의 군주
 		random = no
-		stability_factor = -0.20
+		stability_factor = 0.05
 		neutrality_drift = 0.02
+		ai_call_ally_desire_factor = -70
+		ai_join_ally_desire_factor = -70
 	}
 	SHA_T2a = { #현룡문의 문주
 		random = no

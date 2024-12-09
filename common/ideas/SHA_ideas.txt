@@ -276,17 +276,6 @@ ideas = {
 				compliance_growth = 0.30
 			}
 		}
-		SHA_duseksqkd_idea = { #연단방
-			picture = SHA_IdeaG_11
-			allowed = {	always = no	}
-			allowed_civil_war = { always = yes }
-			modifier = {
-				experience_gain_army_factor = -0.40
-				political_power_cost = 0.30
-				stability_weekly = -0.002
-				research_speed_factor = 0.15
-			}
-		}
 		SHA_aoghkdnjs_idea = { #매화원
 			picture = SHA_IdeaG_4
 			allowed = {	always = no	}
@@ -324,7 +313,18 @@ ideas = {
 				army_morale_factor = 0.10
 			}
 		}
-		SHA_duseksqkd_idea2 = { #연단방
+		SHA_Eastern_alchemy_society = { #연단방
+			picture = SHA_IdeaG_11
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			modifier = {
+				experience_gain_army_factor = -0.40
+				political_power_cost = 0.30
+				stability_weekly = -0.002
+				research_speed_factor = 0.15
+			}
+		}
+		SHA_Eastern_alchemy_society2 = { #연단방
 			picture = SHA_IdeaG_11
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
@@ -333,7 +333,7 @@ ideas = {
 				research_speed_factor = 0.15
 			}
 		}
-		SHA_duseksqkd_idea3 = { #혁명 연단방
+		SHA_Eastern_alchemy_society3 = { #혁명 연단방
 			picture = SHA_IdeaG_12
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
@@ -789,6 +789,165 @@ ideas = {
 			}
 			cancel = {
 				has_war = yes
+			}
+		}
+
+
+	}
+	country = {
+		# 산해경 고립
+		SHA_shanhaijing_isolation = {
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+
+			modifier = {
+				stability_factor = 0.15
+				drift_defence_factor = 0.30
+				join_faction_tension = 1.00
+				guarantee_tension = 1.0
+				embargo_threshold_factor = 2.5
+				consumer_goods_factor = 0.15
+				generate_wargoal_tension = 0.75
+				justify_war_goal_time = 0.50
+				custom_modifier_tooltip = AUS_treaty_of_saint_germain_en_laye_tt
+			}
+			rule = { can_send_volunteers = no }
+			on_remove = {
+				set_rule = { can_send_volunteers = yes }
+			}
+		}
+		# 오스트리아 파시스트 민병대
+		SHA_Austrian_fascist_militia = {
+			picture = AUS_austrofascissm
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+
+			modifier = {
+				stability_weekly = -0.001
+				weekly_manpower = -35
+				war_support_factor = -0.15
+				fascism_drift = 0.02
+				neutrality_drift = -0.02
+			}
+		}
+		# 경극부
+		SHA_Peking_Opera = {
+			name = SHA_opera_idea
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+
+			modifier = {
+				political_power_factor = -0.05
+				stability_factor = 0.05
+				fascism_drift = 0.01
+			}
+		}
+		# 연단방
+		SHA_Eastern_Alchemy_Society_low = {
+			picture = SHA_IdeaG_11
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			
+			modifier = {
+				political_power_cost = 0.1
+				research_speed_factor = 0.05
+			}
+		}
+		# 연단방 - 높은 예산
+		SHA_Eastern_Alchemy_Society_medium = {
+			picture = SHA_IdeaG_11
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			
+			modifier = {
+				political_power_cost = 0.5
+				research_speed_factor = 0.10
+			}
+		}
+		# 연단방 - 매우 높은 예산
+		SHA_Eastern_Alchemy_Society_high = {
+			picture = SHA_IdeaG_11
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			
+			modifier = {
+				political_power_factor = -0.15
+				political_power_cost = 1
+				stability_factor = -0.1
+				research_speed_factor = 0.3
+			}
+		}
+		# 급진파 결집
+		SHA_gathering_of_radicals_idea = {
+			picture = generic_fascist_workers
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			
+			modifier = {
+				fascism_drift = 0.02
+			}
+		}
+		# 비상 조치
+		SHA_emergency_measures_idea = { 
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			picture = SOV_third_five_year_plan_military
+			modifier = {
+				production_speed_industrial_complex_factor = 0.2
+				production_speed_arms_factory_factor = 0.2
+				production_speed_rail_way_factor = 0.1
+				production_speed_bunker_factor = 0.1
+			}
+		}
+		# 산해경 고립 - 보수 혁명
+		SHA_walking_the_dragon_1 = {
+			name = SHA_walking_the_dragon
+			picture = SHA_walking_the_dragon
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+
+			modifier = {
+				army_core_defence_factor = 0.1
+			}
+		}
+		# 산해경 고립 - 보수 혁명
+		SHA_walking_the_dragon_2 = {
+			name = SHA_walking_the_dragon
+			picture = SHA_walking_the_dragon
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+
+			modifier = {
+				army_core_defence_factor = 0.1
+				consumer_goods_factor = -0.03
+
+			}
+		}
+		# 산해경 고립 - 보수 혁명
+		SHA_walking_the_dragon_3 = {
+			name = SHA_walking_the_dragon
+			picture = SHA_walking_the_dragon
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+
+			modifier = {
+				army_core_defence_factor = 0.1
+				political_advisor_cost_factor = -0.33
+			}
+		}
+		# 산해경 고립 - 보수 혁명
+		SHA_walking_the_dragon_4 = {
+			name = SHA_walking_the_dragon
+			picture = SHA_walking_the_dragon
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+
+			modifier = {
+				army_core_defence_factor = 0.1
+				consumer_goods_factor = -0.03
+				political_advisor_cost_factor = -0.33
 			}
 		}
 	}
