@@ -827,7 +827,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			GEK_modify_industrial_modifier = yes
+			GER_modify_industrial_modifier = yes
 			add_to_variable = { 
 				GER_industrial_consumer_goods_factor = -0.15
 				tooltip = consumer_goods_factor_tt
@@ -2180,24 +2180,24 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			custom_effect_tooltip = GEK_gain_autarkic_economy_lock_free_trade_tt
+			custom_effect_tooltip = GER_gain_autarkic_economy_lock_free_trade_tt
 			add_ideas = autarkic_economy
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			custom_effect_tooltip = GEK_improve_trade_relations_tt
+			custom_effect_tooltip = GER_improve_trade_relations_tt
 			every_other_country = {
 				limit = {
 					is_in_faction_with = PREV
 				}	
 				add_opinion_modifier = {
 					target = GER
-					modifier = GEK_autarky_trade_opinion
+					modifier = GER_autarky_trade_opinion
 				}
 				GER = {
 					add_opinion_modifier = {
 						target = PREV
-						modifier = GEK_german_trade_opinion
+						modifier = GER_german_trade_opinion
 					}
 				}
 			}
@@ -2230,25 +2230,25 @@ focus_tree = {
 			if = {
 				limit = {
 					OR = {
-						has_dynamic_modifier = { modifier = GEK_mefo_bills_modifier }
-						has_dynamic_modifier = { modifier = GEK_economy_of_conquest_modifier }
+						has_dynamic_modifier = { modifier = GER_mefo_bills_modifier }
+						has_dynamic_modifier = { modifier = GER_economy_of_conquest_modifier }
 					}
 				}
-				GEK_modify_industrial_modifier = yes
-				custom_effect_tooltip = GEK_reduce_increasing_consumer_goods_tt
-				subtract_from_variable = { GEK_monthly_consumer_goods_increase = GEK_change_monthly_CG_price_controls }
+				GER_modify_industrial_modifier = yes
+				custom_effect_tooltip = GER_reduce_increasing_consumer_goods_tt
+				subtract_from_variable = { GER_monthly_consumer_goods_increase = GER_change_monthly_CG_price_controls }
 			}
 			else = {
-				GEK_modify_industrial_modifier = yes
+				GER_modify_industrial_modifier = yes
 				add_to_variable = { 
-					GEK_industrial_consumer_goods_factor = -0.1
+					GER_industrial_consumer_goods_factor = -0.1
 					tooltip = consumer_goods_factor_tt
 				}
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			custom_effect_tooltip = GEK_unlock_price_controls_decision_tt
+			custom_effect_tooltip = GER_unlock_price_controls_decision_tt
 		}
 	}
 	
@@ -2262,9 +2262,9 @@ focus_tree = {
 		relative_position_id = GEK_autarky_efforts
 		cost = 5
 		available = {
-			custom_trigGEK_tooltip = {
-				tooltip = GEK_industrial_consumer_goods_factor_limit_tt
-				check_variable = { GEK_industrial_consumer_goods_factor < 0.9 }
+			custom_trigger_tooltip = {
+				tooltip = GER_industrial_consumer_goods_factor_limit_tt
+				check_variable = { GER_industrial_consumer_goods_factor < 0.9 }
 			}
 		}
 
@@ -2306,30 +2306,30 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			custom_effect_tooltip = GEK_unlock_reichswerke_tt
+			custom_effect_tooltip = GER_unlock_reichswerke_tt
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			GEK_modify_industrial_modifier = yes
+			GER_modify_industrial_modifier = yes
 			add_to_variable = { 
-				GEK_industrial_consumer_goods_factor = 0.1
+				GER_industrial_consumer_goods_factor = 0.1
 				tooltip = consumer_goods_factor_tt
 			}
 			if = {
 				limit = {
 					OR = {
-						has_dynamic_modifier = { modifier = GEK_mefo_bills_modifier }
-						has_dynamic_modifier = { modifier = GEK_economy_of_conquest_modifier }
+						has_dynamic_modifier = { modifier = GER_mefo_bills_modifier }
+						has_dynamic_modifier = { modifier = GER_economy_of_conquest_modifier }
 					}
 				}
-				GEK_add_mefo_bills_penalty = yes
+				GER_add_mefo_bills_penalty = yes
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			GEK_add_or_modify_wehrwirtschaft = yes
+			GER_add_or_modify_wehrwirtschaft = yes
 			add_to_variable = { 
-				GEK_wehrwirtschaft_local_resources_factor = 0.05
+				GER_wehrwirtschaft_local_resources_factor = 0.05
 				tooltip = local_resources_factor_tt
 			}
 
@@ -2346,9 +2346,9 @@ focus_tree = {
 		relative_position_id = GEK_establish_the_reichswerke
 		cost = 5
 		available = {
-			custom_trigGEK_tooltip = {
-				tooltip = GEK_industrial_consumer_goods_factor_limit_tt
-				check_variable = { GEK_industrial_consumer_goods_factor < 0.9 }
+			custom_trigger_tooltip = {
+				tooltip = GER_industrial_consumer_goods_factor_limit_tt
+				check_variable = { GER_industrial_consumer_goods_factor < 0.9 }
 			}
 			any_controlled_state = {
 				NOT = { is_core_of = ROOT }
@@ -2496,7 +2496,7 @@ focus_tree = {
 				}
 				random_select_amount = 5
 				add_dynamic_modifier = { 
-					modifier = GEK_nationalized_industries_modifier
+					modifier = GER_nationalized_industries_modifier
 					scope = GER
 				}
 			}
@@ -2516,24 +2516,24 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			GEK_modify_industrial_modifier = yes
+			GER_modify_industrial_modifier = yes
 			add_to_variable = { 
-				GEK_industrial_consumer_goods_factor = 0.1
+				GER_industrial_consumer_goods_factor = 0.1
 				tooltip = consumer_goods_factor_tt
 			}
 			if = {
 				limit = {
 					OR = {
-						has_dynamic_modifier = { modifier = GEK_mefo_bills_modifier }
-						has_dynamic_modifier = { modifier = GEK_economy_of_conquest_modifier }
+						has_dynamic_modifier = { modifier = GER_mefo_bills_modifier }
+						has_dynamic_modifier = { modifier = GER_economy_of_conquest_modifier }
 					}
 				}
-				GEK_add_mefo_bills_penalty = yes
+				GER_add_mefo_bills_penalty = yes
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			custom_effect_tooltip = GEK_modify_wehrwirtschaft_modifier_tt
+			custom_effect_tooltip = GER_modify_wehrwirtschaft_modifier_tt
 			add_to_variable = { 
 				GEK_wehrwirtschaft_local_resources_factor = 0.05
 				tooltip = local_resources_factor_tt
@@ -2553,9 +2553,9 @@ focus_tree = {
 		relative_position_id = GEK_autarky_efforts
 		cost = 5
 		available = {
-			custom_trigGEK_tooltip = {
-				tooltip = GEK_industrial_consumer_goods_factor_limit_tt
-				check_variable = { GEK_industrial_consumer_goods_factor < 0.9 }
+			custom_trigger_tooltip = {
+				tooltip = GER_industrial_consumer_goods_factor_limit_tt
+				check_variable = { GER_industrial_consumer_goods_factor < 0.9 }
 			}
 		}
 
@@ -2593,24 +2593,24 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			GEK_modify_industrial_modifier = yes
+			GER_modify_industrial_modifier = yes
 			add_to_variable = { 
-				GEK_industrial_consumer_goods_factor = 0.1
+				GER_industrial_consumer_goods_factor = 0.1
 				tooltip = consumer_goods_factor_tt
 			}
 			if = {
 				limit = {
 					OR = {
-						has_dynamic_modifier = { modifier = GEK_mefo_bills_modifier }
-						has_dynamic_modifier = { modifier = GEK_economy_of_conquest_modifier }
+						has_dynamic_modifier = { modifier = GER_mefo_bills_modifier }
+						has_dynamic_modifier = { modifier = GER_economy_of_conquest_modifier }
 					}
 				}
-				GEK_add_mefo_bills_penalty = yes
+				GER_add_mefo_bills_penalty = yes
 			}
 
-			GEK_add_or_modify_wehrwirtschaft = yes
+			GER_add_or_modify_wehrwirtschaft = yes
 			add_to_variable = { 
-				GEK_wehrwirtschaft_production_speed_synthetic_refinery_factor = 0.1
+				GER_wehrwirtschaft_production_speed_synthetic_refinery_factor = 0.1
 				tooltip = production_speed_synthetic_refinery_factor_tt
 			}
 			add_to_variable = { 
@@ -2626,14 +2626,14 @@ focus_tree = {
 				}
 				swap_ideas = {
 					remove_idea = ig_faben
-					add_idea = GEK_ig_faben_improved
+					add_idea = GER_ig_faben_improved
 				}
 			}
 			else = {
 				effect_tooltip = {
 					swap_ideas = {
 						remove_idea = ig_faben
-						add_idea = GEK_ig_faben_improved
+						add_idea = GER_ig_faben_improved
 					}
 				}
 			}
@@ -2642,7 +2642,7 @@ focus_tree = {
 	
 	focus = {
 		id = GEK_subsidize_hoesch_benzin
-		icon = GFX_focus_GEK_subsidize_hoesch_benzin
+		icon = GFX_focus_GER_subsidize_hoesch_benzin
 		prerequisite = { focus = GEK_coal_liquefaction }
 
 		x = -1
@@ -2650,9 +2650,9 @@ focus_tree = {
 		relative_position_id = GEK_coal_liquefaction
 		cost = 5
 		available = {
-			custom_trigGEK_tooltip = {
-				tooltip = GEK_industrial_consumer_goods_factor_limit_tt
-				check_variable = { GEK_industrial_consumer_goods_factor < 0.9 }
+			custom_trigger_tooltip = {
+				tooltip = GER_industrial_consumer_goods_factor_limit_tt
+				check_variable = { GER_industrial_consumer_goods_factor < 0.9 }
 			}
 			has_tech = oil_processing
 		}
@@ -2700,26 +2700,26 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			GEK_modify_industrial_modifier = yes
+			GER_modify_industrial_modifier = yes
 			add_to_variable = { 
-				GEK_industrial_consumer_goods_factor = 0.1
+				GER_industrial_consumer_goods_factor = 0.1
 				tooltip = consumer_goods_factor_tt
 			}
 			if = {
 				limit = {
 					OR = {
-						has_dynamic_modifier = { modifier = GEK_mefo_bills_modifier }
-						has_dynamic_modifier = { modifier = GEK_economy_of_conquest_modifier }
+						has_dynamic_modifier = { modifier = GER_mefo_bills_modifier }
+						has_dynamic_modifier = { modifier = GER_economy_of_conquest_modifier }
 					}
 				}
-				GEK_add_mefo_bills_penalty = yes
+				GER_add_mefo_bills_penalty = yes
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			custom_effect_tooltip = GEK_modify_wehrwirtschaft_modifier_tt
+			custom_effect_tooltip = GER_modify_wehrwirtschaft_modifier_tt
 			add_to_variable = { 
-				GEK_wehrwirtschaft_production_oil_factor = 0.1
+				GER_wehrwirtschaft_production_oil_factor = 0.1
 				tooltip = production_oil_factor_tt
 			}
 
@@ -2745,9 +2745,9 @@ focus_tree = {
 		relative_position_id = GEK_coal_liquefaction
 		cost = 5
 		available = {
-			custom_trigGEK_tooltip = {
-				tooltip = GEK_industrial_consumer_goods_factor_limit_tt
-				check_variable = { GEK_industrial_consumer_goods_factor < 0.9 }
+			custom_trigger_tooltip = {
+				tooltip = GER_industrial_consumer_goods_factor_limit_tt
+				check_variable = { GER_industrial_consumer_goods_factor < 0.9 }
 			}
 			has_tech = rubber_processing
 		}
@@ -2811,26 +2811,26 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			GEK_modify_industrial_modifier = yes
+			GER_modify_industrial_modifier = yes
 			add_to_variable = { 
-				GEK_industrial_consumer_goods_factor = 0.1
+				GER_industrial_consumer_goods_factor = 0.1
 				tooltip = consumer_goods_factor_tt
 			}
 			if = {
 				limit = {
 					OR = {
-						has_dynamic_modifier = { modifier = GEK_mefo_bills_modifier }
-						has_dynamic_modifier = { modifier = GEK_economy_of_conquest_modifier }
+						has_dynamic_modifier = { modifier = GER_mefo_bills_modifier }
+						has_dynamic_modifier = { modifier = GER_economy_of_conquest_modifier }
 					}
 				}
-				GEK_add_mefo_bills_penalty = yes
+				GER_add_mefo_bills_penalty = yes
 			}
 		}
 	}
 	
-	focus = {
+	focus = { #경제 자립 달성
 		id = GEK_autarky_achieved
-		icon = GFX_focus_GEK_autarky_achieved
+		icon = GFX_focus_GER_autarky_achieved
 		prerequisite = { focus = GEK_seize_foreign_industries }
 		prerequisite = { focus = GEK_subsidize_hoesch_benzin }
 		prerequisite = { focus = GEK_establish_buna_werke }
@@ -2932,14 +2932,14 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			GEK_autarky_achieved_effects = yes
+			GER_autarky_achieved_effects = yes
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			if = {
 				limit = { #Notify that you will get an improved version of the Trade Law
 					NOT = { has_idea = autarkic_economy }
 				}
-				custom_effect_tooltip = GEK_improve_autarkic_economy_tt
+				custom_effect_tooltip = GER_improve_autarkic_economy_tt
 			}
 			else = { #Get the improved version of the Trade Law
 				swap_ideas = {
@@ -2950,7 +2950,7 @@ focus_tree = {
 
 			#custom_effect_tooltip = generic_skip_one_line_tt
 
-			#custom_effect_tooltip = GEK_modify_wehrwirtschaft_modifier_tt
+			#custom_effect_tooltip = GER_modify_wehrwirtschaft_modifier_tt
 			#add_to_variable = { 
 			#	GEK_wehrwirtschaft_production_speed_buildings_factor = 0.05
 			#	tooltip = production_speed_buildings_factor_tt
@@ -2994,13 +2994,13 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
-			GEK_modify_industrial_modifier = yes
+			GER_modify_industrial_modifier = yes
 			add_to_variable = { 
-				GEK_industrial_production_speed_arms_factory_factor = 0.05
+				GER_industrial_production_speed_arms_factory_factor = 0.05
 				tooltip = production_speed_arms_factory_factor_tt
 			}
 			add_to_variable = { 
-				GEK_industrial_production_speed_dockyard_factor = 0.05
+				GER_industrial_production_speed_dockyard_factor = 0.05
 				tooltip = production_speed_dockyard_factor_tt
 			}
 		}
@@ -3075,21 +3075,21 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			GEK_modify_industrial_modifier = yes
+			GER_modify_industrial_modifier = yes
 			add_to_variable = { 
-				GEK_industrial_production_factory_max_efficiency_factor = 0.05
+				GER_industrial_production_factory_max_efficiency_factor = 0.05
 				tooltip = production_factory_max_efficiency_factor_tt
 			}
 			add_to_variable = { 
-				GEK_industrial_production_factory_efficiency_gain_factor = 0.05
+				GER_industrial_production_factory_efficiency_gain_factor = 0.05
 				tooltip = production_factory_efficiency_gain_factor_tt
 			}
 			add_to_variable = { 
-				GEK_industrial_production_factory_start_efficiency_factor = 0.05
+				GER_industrial_production_factory_start_efficiency_factor = 0.05
 				tooltip = production_factory_start_efficiency_factor_tt
 			}
 			add_to_variable = { 
-				GEK_industrial_line_change_production_efficiency_factor = 0.05
+				GER_industrial_line_change_production_efficiency_factor = 0.05
 				tooltip = line_change_production_efficiency_factor_tt
 			}
 		}
@@ -3124,9 +3124,9 @@ focus_tree = {
 	#		
 	#		custom_effect_tooltip = generic_skip_one_line_tt
 #
-	#		GEK_modify_industrial_modifier = yes
+	#		GER_modify_industrial_modifier = yes
 	#		add_to_variable = { 
-	#			GEK_industrial_industrial_capacity_factory = 0.05
+	#			GER_industrial_industrial_capacity_factory = 0.05
 	#			tooltip = industrial_capacity_factory_tt
 	#		}
 	#	}
@@ -3162,9 +3162,9 @@ focus_tree = {
 #
 	#		custom_effect_tooltip = generic_skip_one_line_tt
 #
-	#		GEK_modify_industrial_modifier = yes
+	#		GER_modify_industrial_modifier = yes
 	#		add_to_variable = { 
-	#			GEK_industrial_industrial_capacity_dockyard = 0.05
+	#			GER_industrial_industrial_capacity_dockyard = 0.05
 	#			tooltip = industrial_capacity_dockyard_tt
 	#		}
 	#	}
@@ -3196,7 +3196,7 @@ focus_tree = {
 					OR = {
 						has_government = fascism
 						has_government = communism
-						custom_trigGEK_tooltip = { tooltip = or_clarification_tooltip always = no }
+						custom_trigger_tooltip = { tooltip = or_clarification_tooltip always = no }
 						AND = {
 							has_war = yes
 							any_enemy_country = {
@@ -3216,21 +3216,21 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
-			GEK_modify_industrial_modifier = yes
+			GER_modify_industrial_modifier = yes
 			add_to_variable = { 
-				GEK_industrial_production_lack_of_resource_penalty_factor = -0.1
+				GER_industrial_production_lack_of_resource_penalty_factor = -0.1
 				tooltip = production_lack_of_resource_penalty_factor_tt
 			}
 			add_to_variable = { 
-				GEK_industrial_industrial_capacity_factory = 0.05
+				GER_industrial_industrial_capacity_factory = 0.05
 				tooltip = industrial_capacity_factory_tt
 			}
 			add_to_variable = { 
-				GEK_industrial_industrial_capacity_dockyard = 0.05
+				GER_industrial_industrial_capacity_dockyard = 0.05
 				tooltip = industrial_capacity_dockyard_tt
 			}
 			add_to_variable = { 
-				GEK_industrial_conversion_cost_civ_to_mil_factor = -0.2
+				GER_industrial_conversion_cost_civ_to_mil_factor = -0.2
 				tooltip = conversion_cost_civ_to_mil_factor_tt
 			}
 		}
@@ -3271,17 +3271,17 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			GEK_modify_industrial_modifier = yes
+			GER_modify_industrial_modifier = yes
 			add_to_variable = { 
-				GEK_industrial_production_speed_arms_factory_factor = 0.05
+				GER_industrial_production_speed_arms_factory_factor = 0.05
 				tooltip = production_speed_arms_factory_factor_tt
 			}
 			add_to_variable = { 
-				GEK_industrial_production_speed_dockyard_factor = 0.05
+				GER_industrial_production_speed_dockyard_factor = 0.05
 				tooltip = production_speed_dockyard_factor_tt
 			}
 			add_to_variable = { 
-				GEK_industrial_industry_air_damage_factor = -0.1
+				GER_industrial_industry_air_damage_factor = -0.1
 				tooltip = industry_air_damage_factor_tt
 			}
 
@@ -3303,29 +3303,29 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
-			GEK_modify_industrial_modifier = yes
+			GER_modify_industrial_modifier = yes
 			add_to_variable = { 
-				GEK_industrial_industrial_capacity_factory = 0.05
+				GER_industrial_industrial_capacity_factory = 0.05
 				tooltip = industrial_capacity_factory_tt
 			}
 			add_to_variable = { 
-				GEK_industrial_industrial_capacity_dockyard = 0.05
+				GER_industrial_industrial_capacity_dockyard = 0.05
 				tooltip = industrial_capacity_dockyard_tt
 			}
 			add_to_variable = { 
-				GEK_industrial_production_factory_max_efficiency_factor = 0.05
+				GER_industrial_production_factory_max_efficiency_factor = 0.05
 				tooltip = production_factory_max_efficiency_factor_tt
 			}
 			add_to_variable = { 
-				GEK_industrial_production_factory_efficiency_gain_factor = 0.05
+				GER_industrial_production_factory_efficiency_gain_factor = 0.05
 				tooltip = production_factory_efficiency_gain_factor_tt
 			}
 			add_to_variable = { 
-				GEK_industrial_production_factory_start_efficiency_factor = 0.05
+				GER_industrial_production_factory_start_efficiency_factor = 0.05
 				tooltip = production_factory_start_efficiency_factor_tt
 			}
 			add_to_variable = { 
-				GEK_industrial_line_change_production_efficiency_factor = 0.05
+				GER_industrial_line_change_production_efficiency_factor = 0.05
 				tooltip = line_change_production_efficiency_factor_tt
 			}
 		}
