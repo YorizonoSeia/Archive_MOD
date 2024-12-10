@@ -3085,12 +3085,14 @@ HEU_aru_GSC_annex_decision_category = {
 			highlight_state_targets = { 
 				state = 983
 				state = 34
+				state = 977
 			} 
 		}
 
 		visible = {
 			owns_state = 983
 			owns_state = 34
+			owns_state = 977
 		}
 
 		available = {
@@ -3117,6 +3119,9 @@ HEU_aru_GSC_annex_decision_category = {
 				add_core_of = ROOT
 			}
 			34 = {
+				add_core_of = ROOT
+			}
+			977 = {
 				add_core_of = ROOT
 			}
 			add_to_variable = {
