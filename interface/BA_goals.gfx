@@ -1613,6 +1613,22 @@ spriteTypes = {
 		name = "GFX_goal_SHA_new_shanhaijing_conservatism"
 		texturefile = "gfx/interface/goals/SHA/SHA_new_shanhaijing_conservatism.tga"  
 	}
+	SpriteType = {
+		name = "GFX_goal_SHA_Expansion_of_cooperation_with_other_clubs"
+		texturefile = "gfx/interface/goals/SHA/SHA_Expansion_of_cooperation_with_other_clubs.tga"  
+	}
+	SpriteType = {
+		name = "GFX_goal_SHA_Cabinet_Secretariat"
+		texturefile = "gfx/interface/goals/SHA/SHA_Cabinet_Secretariat.tga"  
+	}
+	SpriteType = {
+		name = "GFX_goal_SHA_New_Genryumon_Peking_Opera_Department_Relations"
+		texturefile = "gfx/interface/goals/SHA/SHA_New_Genryumon_Peking_Opera_Department_Relations.tga"  
+	}
+	SpriteType = {
+		name = "GFX_goal_SHA_Engine_of_conservative_revolution"
+		texturefile = "gfx/interface/goals/SHA/SHA_Engine_of_conservative_revolution.tga"  
+	}
 	SpriteType = { 	
 		name = "GFX_goal_ROM_invite_german_advisorsr"
 		texturefile = "gfx/interface/goals/ROM/ROM_invite_german_advisors.tga"  

@@ -7740,7 +7740,7 @@ focus_tree = {
 				limit = {
 					has_character = SHA_KAGUYA
 				}
-				SHA_KAGUYA = { add_country_leader_trait = SWE_ardent_conservative }
+				SHA_KAGUYA = { add_country_leader_trait = SHA_ardent_conservative }
 			}
 			add_field_marshal_role = {
 				character = SHA_KAGUYA
@@ -7888,6 +7888,25 @@ focus_tree = {
 			}
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = SHA_KAGUYA_political_advisor
+			custom_effect_tooltip = tooltip_white_line
+			effect_tooltip = {
+				swap_ideas = {
+					add_idea = SHA_kaguya_idea_tooltip_2
+					remove_idea = SHA_kaguya_idea_tooltip
+				}
+			}
+			hidden_effect = {
+				remove_trait = {
+					character = SHA_KAGUYA
+					slot = political_advisor
+					trait = SHA_ardent_conservative
+				}
+				add_trait = {
+					character = SHA_KAGUYA
+					slot = political_advisor
+					trait = SHA_ardent_conservative_2
+				}
+			}
 		}
 	}
 
@@ -7895,7 +7914,7 @@ focus_tree = {
 	focus = {
 		id = SHA_new_shanhaijing_conservatism
 		icon = GFX_goal_SHA_new_shanhaijing_conservatism
-		x = 2
+		x = 1
 		y = 1
 		cost = 6
 
@@ -7915,10 +7934,10 @@ focus_tree = {
 	# 타 동아리 협력 확장
 	focus = {
 		id = SHA_Expansion_of_cooperation_with_other_clubs
-		icon = GFX_goal_SHA_Shanhaijing_conservative_revolution
-		x = -1
+		icon = GFX_goal_SHA_Expansion_of_cooperation_with_other_clubs
+		x = -2
 		y = 1
-		cost = 6
+		cost = 5
 
 		prerequisite = { focus = SHA_new_shanhaijing_conservatism }
 		mutually_exclusive = {  }
@@ -7957,10 +7976,10 @@ focus_tree = {
 	# 새로운 헌룡문 - 경극부 관계
 	focus = {
 		id = SHA_New_Genryumon_Peking_Opera_Department_Relations
-		icon = GFX_goal_SHA_Shanhaijing_conservative_revolution
-		x = 1
+		icon = GFX_goal_SHA_New_Genryumon_Peking_Opera_Department_Relations
+		x = 2
 		y = 1
-		cost = 6
+		cost = 5
 
 		prerequisite = { focus = SHA_new_shanhaijing_conservatism }
 		mutually_exclusive = {  }
@@ -7996,24 +8015,87 @@ focus_tree = {
 		}
 	}
 
-	# 산해경 보수주의 육성
+	# 산해경 추밀원
 	focus = {
-		id = SHA_Cultivating_Shanhaijing_conservatism
-		icon = GFX_goal_SHA_Shanhaijing_conservative_revolution
-		x = 1
+		id = SHA_Cabinet_Secretariat
+		icon = GFX_goal_SHA_Cabinet_Secretariat
+		x = 0
 		y = 1
-		cost = 6
+		cost = 10
 
-		prerequisite = { focus = SHA_Expansion_of_cooperation_with_other_clubs }
-		prerequisite = { focus = SHA_New_Genryumon_Peking_Opera_Department_Relations }
+		prerequisite = { focus = SHA_new_shanhaijing_conservatism }
 		mutually_exclusive = {  }
 
 		available = { }
 		bypass = { }
 
-		relative_position_id = SHA_Expansion_of_cooperation_with_other_clubs
+		relative_position_id = SHA_new_shanhaijing_conservatism
 
 		completion_reward = {
+			effect_tooltip = {
+				swap_ideas = {
+					add_idea = SHA_kaguya_idea_tooltip_3
+					remove_idea = SHA_kaguya_idea_tooltip_2
+				}
+			}
+			hidden_effect = {
+				remove_trait = {
+					character = SHA_KAGUYA
+					slot = political_advisor
+					trait = SHA_ardent_conservative_2
+				}
+				add_trait = {
+					character = SHA_KAGUYA
+					slot = political_advisor
+					trait = SHA_ardent_conservative_3
+				}
+			}
+		}
+	}
+
+	# 보수혁명의 원동기
+	focus = {
+		id = SHA_Engine_of_conservative_revolution
+		icon = GFX_goal_SHA_Engine_of_conservative_revolution
+		x = 0
+		y = 1
+		cost = 10
+
+		prerequisite = { focus = SHA_Expansion_of_cooperation_with_other_clubs }
+		prerequisite = { focus = SHA_New_Genryumon_Peking_Opera_Department_Relations }
+		prerequisite = { focus = SHA_Cabinet_Secretariat }
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_Cabinet_Secretariat
+
+		completion_reward = {
+			add_stability = 0.1
+			add_war_support = 0.05
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					add_idea = SHA_kaguya_idea_tooltip_4
+					remove_idea = SHA_kaguya_idea_tooltip_3
+				}
+			}
+			hidden_effect = {
+				remove_trait = {
+					character = SHA_KAGUYA
+					slot = political_advisor
+					trait = SHA_ardent_conservative_3
+				}
+				add_trait = {
+					character = SHA_KAGUYA
+					slot = political_advisor
+					trait = SHA_ardent_conservative_4
+				}
+			}
 		}
 	}
 
@@ -8034,12 +8116,40 @@ focus_tree = {
 		available = {
 			NOT = { has_completed_focus = SHA_Contact_with_Austrian_militia }
 		}
-		bypass = { }
+		bypass = { 
+			NOT = { has_idea = SHA_Austrian_fascist_militia }
+		}
 
 		relative_position_id = SHA_conservative_revolution
 
 		completion_reward = {
 			remove_ideas = SHA_Austrian_fascist_militia
+		}
+	}
+
+	# 파업 진압
+	focus = {
+		id = SHA_strike_suppression
+		icon = GFX_focus_SWE_attack_landsorganisationen
+		x = 1
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = SHA_Shintani_Kai_Follow 
+			focus = SHA_conservative_revolution
+		}
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = {
+			NOT = { has_idea = SHA_faup_idea }
+		}
+
+		relative_position_id = SHA_Shintani_Kai_Follow
+
+		completion_reward = {
+			remove_ideas = SHA_faup_idea
 		}
 	}
 

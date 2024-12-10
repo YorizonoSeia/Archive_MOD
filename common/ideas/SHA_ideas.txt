@@ -950,5 +950,78 @@ ideas = {
 				political_advisor_cost_factor = -0.33
 			}
 		}
+
+
+
+
+
+
+		# 툴팁용
+		SHA_kaguya_idea_tooltip = {
+			name = SHA_KAGUYA
+			picture = SHA_KAGUYA
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+
+			modifier = {
+				conscription_factor = 0.06
+				war_support_factor = 0.05
+				consumer_goods_factor = 0.06
+			}
+		}
+		SHA_kaguya_idea_tooltip_2 = {
+			name = SHA_KAGUYA
+			picture = SHA_KAGUYA
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+
+			modifier = {
+				conscription_factor = 0.1
+				war_support_factor = 0.05
+				consumer_goods_factor = 0.02
+				army_morale_factor = 0.05
+			}
+		}
+		SHA_kaguya_idea_tooltip_3 = {
+			name = SHA_KAGUYA
+			picture = SHA_KAGUYA
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+
+			modifier = {
+				conscription_factor = 0.1
+				war_support_factor = 0.05
+				army_morale_factor = 0.05
+				neutrality_drift = 0.02
+				custom_modifier_tooltip = DEN_military_advisors_cost_big_tt
+				hidden_modifier = {
+					air_advisor_cost_factor = -0.15
+					army_advisor_cost_factor = -0.15
+					navy_advisor_cost_factor = -0.15
+				}
+			}
+		}
+		SHA_kaguya_idea_tooltip_4 = {
+			name = SHA_KAGUYA
+			picture = SHA_KAGUYA
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+
+			modifier = {
+				conscription_factor = 0.1
+				war_support_factor = 0.05
+				army_morale_factor = 0.05
+				neutrality_drift = 0.04
+				custom_modifier_tooltip = DEN_military_advisors_cost_big_tt
+				hidden_modifier = {
+					air_advisor_cost_factor = -0.15
+					army_advisor_cost_factor = -0.15
+					navy_advisor_cost_factor = -0.15
+				}
+				offensive_war_stability_factor = 0.05
+				defensive_war_stability_factor = 0.05
+			}
+		}
+
 	}
 }

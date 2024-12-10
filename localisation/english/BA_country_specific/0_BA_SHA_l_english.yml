@@ -669,12 +669,14 @@
  SHA_Kisaki_Suppression_desc: "때가 되었습니다! 현 문주의 우둔함을 폭로하기 위한 경극이 준비되었습니다. 경극부와 현룡문 내 일부 급진파와 협력하여, 경극 상연의 순간을 기회로 삼아 현 문주를 퇴진시키고 $SHA_KAGUYA$를 새로운 문주로 추대할 것입니다."
  SHA_Shintani_Kai_Follow: "신타니 카이 추종"
  SHA_conservative_revolution: "보수혁명"
- SHA_conservative_revolution_tt: "현재 §Y파시즘 지지율§!을 §Y비동맹주의 지지율§!로 변한합니다."
+ SHA_conservative_revolution_tt: "현재 §Y파시즘 지지율§!을 §Y비동맹주의 지지율§!로 변환합니다."
  SHA_new_shanhaijing_conservatism: "새로운 산해경 보수주의"
- SHA_Expansion_of_cooperation_with_other_clubs: "타 동아리 협력 확장"
+ SHA_Expansion_of_cooperation_with_other_clubs: "타 동아리 협력 확대"
  SHA_New_Genryumon_Peking_Opera_Department_Relations: "새로운 현룡문 - 경극부 관계"
- SHA_Cultivating_Shanhaijing_conservatism: "산해경 보수주의 육성"
+ SHA_Cabinet_Secretariat: "산해경 추밀원"
+ SHA_Engine_of_conservative_revolution: "보수혁명의 원동기"
  SHA_Solving_the_Militia_Problem: "질서 회복"
+ SHA_strike_suppression: "파업 진압"
  SHA_emergency_measures: "급속 재무장"
  SHA_invade_of_Hyakkiyako: "학원 영토 수복"
 
@@ -700,3 +702,9 @@
  shafas.1.t: "경극부의 쿠데타!"
  shafas.1.d: "\"산해경의 전통의 이름 아래, 현룡문의 문주 $SHA_KISAKI$, 규탄한다!\"\n\n경극이 예정되었던 운명의 날, 백호 광장에는 수백의 관중과 경극부가 운집했습니다. 그러나 이날 선보인 경극은 단순한 예술적 공연이 아니었습니다. 이는 현 산해경 현룡문의 문주인 $SHA_KISAKI$를 \"검은 군주\"에 비유하며 직접적으로 겨냥한 날카로운 풍자극이었습니다.\n\n경극의 줄거리는 어리석은 검은 군주가 변혁의 바람을 맞이하겠다며 성문을 함부로 열어 난세를 초래하고 백성을 혼란에 빠뜨린다는 내용이었습니다. 공연은 무대 위에서 펼쳐지는 환상적인 장면들과 함께 문주를 향한 강렬한 비판의 메시지를 담아냈습니다. 경극이 끝나자마자 광장은 함성으로 들끓었고, 이는 현룡문 내부 급진파들의 마음에 불씨를 지폈습니다.\n\n결국 이 날의 공연은 단순한 연극이 아닌 혁명의 신호탄이었습니다. 급진파들은 경극부와 합세하여 백호 광장에서 문주 $SHA_KISAKI$의 축출을 선언했고, 현장은 혼란과 분노로 뒤덮였습니다. 전통을 내세운 이들의 외침은 단순한 구호가 아닌, 문주의 권위를 무너뜨리는 날카로운 칼날이 되었던 것입니다.\n\n현재 $SHA_KISAKI$는 감옥에 투옥되어 있지만, 전 문주라는 지위 덕분에 일정한 예우를 받고 있는 상황입니다. 그러나 그의 몰락 이후 산해경의 미래는 여전히 안갯속에 가려져 있습니다. 새롭게 문주의 자리에 오른 $SHA_KAGUYA$의 정책 방향이 무엇일지, 사람들 사이에서는 설왕설래가 이어지고 있습니다.\n\n그러나 내부적으로 우려의 목소리가 나오고 있습니다. 몇 년전 산해경의 치안을 어지럽힌 $SHA_KAI$의 처분을 취소시키고 다시 복학 시킨다는 위험한 소문이 돌고 있습니다..."
  shafas.1.a: "우리의 전통을 수호하자!"
+
+ # 특성
+ SHA_ardent_conservative: "열렬한 보수주의자"
+ SHA_ardent_conservative_2: "$SHA_ardent_conservative$"
+ SHA_ardent_conservative_3: "$SHA_ardent_conservative$"
+ SHA_ardent_conservative_4: "보수주의의 선구자"

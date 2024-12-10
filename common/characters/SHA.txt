@@ -520,7 +520,7 @@ characters={
 				}
 			}
 			visible = { has_completed_focus = SHA_conservative_revolution }
-    		traits = { SWE_ardent_conservative }
+    		traits = { SHA_ardent_conservative }
 			cost = 75
 			ai_will_do = { base = 4000 }
 		}
