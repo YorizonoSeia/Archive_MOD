@@ -933,14 +933,52 @@ country_event = { #민중 결집
 	option = {
 		name = GEK_rm_event.5.a
 		GEK_enhance_spd = yes
+		trigger = {
+			NOT = {
+				OR = {
+					has_idea = GEK_legitimacy_nazi_2
+					has_idea = GEK_legitimacy_empire_2
+					has_idea = GEK_legitimacy_weimar_2
+				}
+			}
+		}
 	}
 	option = {
 		name = GEK_rm_event.5.b
 		GEK_enhance_army = yes
+		trigger = {
+			NOT = {
+				OR = {
+					has_idea = GEK_legitimacy_nazi_2
+					has_idea = GEK_legitimacy_empire_2
+					has_idea = GEK_legitimacy_weimar_2
+				}
+			}
+		}
 	}
 	option = {
 		name = GEK_rm_event.5.c
 		GEK_enhance_nazi = yes
+		trigger = {
+			NOT = {
+				OR = {
+					has_idea = GEK_legitimacy_nazi_2
+					has_idea = GEK_legitimacy_empire_2
+					has_idea = GEK_legitimacy_weimar_2
+				}
+			}
+		}
+	}
+	option = { #정통성 논쟁 끝났을 때
+		name = GEK_rm_event.5.e
+		trigger = {
+			OR = {
+				has_idea = GEK_legitimacy_nazi_2
+				has_idea = GEK_legitimacy_empire_2
+				has_idea = GEK_legitimacy_weimar_2
+			}
+		}
+		add_war_support = 0.1
 	}
 }
 country_event = { #중앙당과의 제휴

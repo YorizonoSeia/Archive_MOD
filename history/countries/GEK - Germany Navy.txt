@@ -289,8 +289,8 @@ set_fuel_ratio = 0.8
 #/고유 정치
 	set_research_slots = 2
 	set_convoys = 150
-	set_stability = 0.15
-	set_war_support = 0.3
+	set_stability = 0.05
+	set_war_support = 0.15
 
 	set_politics = {
 		ruling_party = neutrality

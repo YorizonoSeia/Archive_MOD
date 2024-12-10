@@ -3380,7 +3380,7 @@ focus_tree = {
 			focus = GEK_RM_spd_focus_2.5
 		}
 		available = {
-			has_war = yes
+			always = no
 		}
 		relative_position_id = GEK_RM_com_focus_0
 		x = 1

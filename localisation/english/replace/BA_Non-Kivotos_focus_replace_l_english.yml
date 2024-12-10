@@ -29,3 +29,8 @@
  USA_war_plan_black:0 "전쟁 계획 남색" 
  USA_war_plan_black_desc:0 "그들은 조용히 있는 것처럼 보이지만, 사실은 무엇보다 가장 위험한 세계의 적입니다. 대응이 불가능하기 전에 반드시 격퇴해야 합니다."
 
+
+#독일(전쟁해군)
+
+
+ GER_increasing_cg_tt: "§Y$MODIFIER_CONSUMER_GOODS_FACTOR$§!가 매달 §Y[?ROOT.GER_monthly_consumer_goods_increase|%1]§!씩 §Y100%§!까지 §R증가할 것입니다§!. 매달 증가량은 §Y[ROOT.GetName]§!(이)가 통제하는 §Y비핵심주§!의 수에 따라 §R높아집니다§!." #메포어음 tt
