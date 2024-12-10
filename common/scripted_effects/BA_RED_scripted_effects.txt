@@ -4,9 +4,107 @@
 @snakebox_black = 4
 
 RED_debug_eff = {
-	RED_snake_game_setup = yes
-	RED_snake_tailupeffect = yes
-	activate_mission = snake_turn
+	add_dynamic_modifier = { modifier = RED_zenkyoutou_cat_dynamic_modifier }
+	clr_country_flag = RED_zenkyoutou_LEFT_lock_flag
+	clr_country_flag = RED_zenkyoutou_RIGHT_lock_flag
+	clr_country_flag = RED_zenkyoutou_CENTER_lock_flag
+}
+RED_zenkyoutou_LEFT_button_click_effect = {
+	if = {
+		limit = {
+			check_variable = { RED_redwinter_rightwing_var = 2 }
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { RED_redwinter_rightwing_var = 3 }
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { RED_redwinter_rightwing_var = 4 }
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { RED_redwinter_rightwing_var = 5 }
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { RED_redwinter_rightwing_var = 6 }
+		}
+	}
+}
+RED_zenkyoutou_RIGHT_button_click_effect = {
+	if = {
+		limit = {
+			check_variable = { RED_redwinter_rightwing_var = 2 }
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { RED_redwinter_rightwing_var = 3 }
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { RED_redwinter_rightwing_var = 4 }
+		}
+	}
+}
+RED_zenkyoutou_CENTER_button_click_effect = {
+	if = {
+		limit = {
+			check_variable = { RED_redwinter_center_var = 2 }
+		}
+		set_temp_variable = { RED_redwinter_organizational_recovery_max_temp = RED_redwinter_organizational_max_value }
+		subtract_from_temp_variable = { RED_redwinter_organizational_recovery_max_temp = 50 }
+		set_variable = { RED_redwinter_organizational_recovery_max_value = RED_redwinter_organizational_recovery_max_temp }
+		clamp_variable = {
+			var = RED_redwinter_organizational_value
+			min = 0
+			max = RED_redwinter_organizational_recovery_max_value
+		}
+		set_variable = { RED_zenkyoutou_cat_political_power_factor = 0.10 }
+		set_variable = { RED_zenkyoutou_cat_production_speed_buildings_factor = 0.10 }
+		set_variable = { RED_zenkyoutou_cat_intel_network_gain_factor = 0.10 }
+		set_variable = { RED_zenkyoutou_cat_compliance_gain = 0.03 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { RED_redwinter_center_var = 3 }
+		}
+		set_temp_variable = { RED_redwinter_organizational_recovery_max_temp = RED_redwinter_organizational_max_value }
+		subtract_from_temp_variable = { RED_redwinter_organizational_recovery_max_temp = 30 }
+		set_variable = { RED_redwinter_organizational_recovery_max_value = RED_redwinter_organizational_recovery_max_temp }
+		clamp_variable = {
+			var = RED_redwinter_organizational_value
+			min = 0
+			max = RED_redwinter_organizational_recovery_max_value
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { RED_redwinter_center_var = 4 }
+		}
+		set_temp_variable = { RED_redwinter_organizational_recovery_max_temp = RED_redwinter_organizational_max_value }
+		subtract_from_temp_variable = { RED_redwinter_organizational_recovery_max_temp = 10 }
+		set_variable = { RED_redwinter_organizational_recovery_max_value = RED_redwinter_organizational_recovery_max_temp }
+		clamp_variable = {
+			var = RED_redwinter_organizational_value
+			min = 0
+			max = RED_redwinter_organizational_recovery_max_value
+		}
+	}
+	RED_zenkyoutou_CENTER_GFXUI_reload = yes
+}
+RED_zenkyoutou_CENTER_GFXUI_reload = {
+	set_temp_variable = { RED_redwinter_organizational_var_temp = RED_redwinter_organizational_value }
+	divide_temp_variable = { RED_redwinter_organizational_var_temp = RED_redwinter_organizational_recovery_max_value }
+	multiply_temp_variable = { RED_redwinter_organizational_var_temp = 24 }
+	round_temp_variable  = RED_redwinter_organizational_var_temp
+	set_variable = { RED_redwinter_organizational_var = RED_redwinter_organizational_var_temp }
 }
 RED_population_solve = {
 	if = {

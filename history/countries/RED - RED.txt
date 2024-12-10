@@ -235,6 +235,14 @@ add_to_array = { #키보토스 국가
 set_variable = { RED_prepare_of_arms = 0 } #군수중점 찍은 수
 
 #전공투
+set_variable = { RED_zenkyoutou_cat_political_power_factor = 0.02 }
+set_variable = { RED_zenkyoutou_cat_consumer_goods_factor = 0.15 }
+set_variable = { RED_zenkyoutou_cat_production_speed_buildings_factor = 0 }
+set_variable = { RED_zenkyoutou_cat_local_intel_to_enemies = 0 }
+set_variable = { RED_zenkyoutou_cat_operative_slot = 0 }
+set_variable = { RED_zenkyoutou_cat_intel_network_gain_factor = 0 }
+set_variable = { RED_zenkyoutou_cat_compliance_gain = 0 }
+
 set_variable = { RED_redwinter_leftwing_var = 0 }
 set_variable = { RED_redwinter_rightwing_var = 0 }
 set_variable = { RED_redwinter_center_var = 0 }
@@ -246,7 +254,11 @@ set_variable = { RED_redwinter_organizational_var = 22 }
 set_variable = { RED_redwinter_progress_LEFT_value = 16 }
 set_variable = { RED_redwinter_progress_CENTER_value = 56 }
 set_variable = { RED_redwinter_progress_RIGHT_value = 28 }
-set_variable = { RED_redwinter_organizational_value = 90 }
+
+set_variable = { RED_redwinter_organizational_value = 80 }
+set_variable = { RED_redwinter_organizational_recovery_value = 5 }
+set_variable = { RED_redwinter_organizational_recovery_max_value = 80 }
+set_variable = { RED_redwinter_organizational_max_value = 100 }
 
 #겨울군대
 set_variable = { RED_winter_army_army_infantry_attack_factor = 0 }

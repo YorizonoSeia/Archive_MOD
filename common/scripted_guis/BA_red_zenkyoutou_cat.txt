@@ -167,6 +167,7 @@ scripted_gui = {
 						value = 1
 						days = 30
 					}
+					RED_zenkyoutou_LEFT_button_click_effect = yes
 				}
 			}
 			RED_zenkyoutou_LEFT_2_click = {
@@ -185,6 +186,7 @@ scripted_gui = {
 						value = 1
 						days = 30
 					}
+					RED_zenkyoutou_LEFT_button_click_effect = yes
 				}
 			}
 			RED_zenkyoutou_LEFT_3_click = {
@@ -203,6 +205,7 @@ scripted_gui = {
 						value = 1
 						days = 30
 					}
+					RED_zenkyoutou_LEFT_button_click_effect = yes
 				}
 			}
 			RED_zenkyoutou_LEFT_4_click = {
@@ -221,6 +224,7 @@ scripted_gui = {
 						value = 1
 						days = 30
 					}
+					RED_zenkyoutou_LEFT_button_click_effect = yes
 				}
 			}
 			RED_zenkyoutou_LEFT_5_click = {
@@ -239,6 +243,7 @@ scripted_gui = {
 						value = 1
 						days = 30
 					}
+					RED_zenkyoutou_LEFT_button_click_effect = yes
 				}
 			}
 		}
@@ -294,6 +299,7 @@ scripted_gui = {
 						value = 1
 						days = 30
 					}
+					RED_zenkyoutou_RIGHT_button_click_effect = yes
 				}
 			}
 			RED_zenkyoutou_RIGHT_2_button_click = {
@@ -312,6 +318,7 @@ scripted_gui = {
 						value = 1
 						days = 30
 					}
+					RED_zenkyoutou_RIGHT_button_click_effect = yes
 				}
 			}
 			RED_zenkyoutou_RIGHT_3_button_click = {
@@ -330,6 +337,7 @@ scripted_gui = {
 						value = 1
 						days = 30
 					}
+					RED_zenkyoutou_RIGHT_button_click_effect = yes
 				}
 			}
 		}
@@ -385,6 +393,7 @@ scripted_gui = {
 						value = 1
 						days = 30
 					}
+					RED_zenkyoutou_CENTER_button_click_effect = yes
 				}
 			}
 			RED_zenkyoutou_CENTER_2_button_click = {
@@ -403,6 +412,7 @@ scripted_gui = {
 						value = 1
 						days = 30
 					}
+					RED_zenkyoutou_CENTER_button_click_effect = yes
 				}
 			}
 			RED_zenkyoutou_CENTER_3_button_click = {
@@ -421,6 +431,7 @@ scripted_gui = {
 						value = 1
 						days = 30
 					}
+					RED_zenkyoutou_CENTER_button_click_effect = yes
 				}
 			}
 		}

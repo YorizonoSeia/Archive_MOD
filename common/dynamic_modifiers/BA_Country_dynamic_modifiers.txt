@@ -917,11 +917,25 @@ RED_labor_party_dynamic_modifier = { #용역부
 	political_power_factor = RED_labor_party_dynamic_modifier_political_power_factor
 	research_speed_factor = RED_labor_party_dynamic_modifier_iresearch_speed_factor
 }
+RED_zenkyoutou_cat_dynamic_modifier = { #전공투
+	enable = {
+		always = yes
+	}
+	icon = GFX_idea_SOV_organize_wreckers
+
+	political_power_factor = RED_zenkyoutou_cat_political_power_factor
+	consumer_goods_factor = RED_zenkyoutou_cat_consumer_goods_factor
+	production_speed_buildings_factor = RED_zenkyoutou_cat_production_speed_buildings_factor
+	local_intel_to_enemies = RED_zenkyoutou_cat_local_intel_to_enemies
+	operative_slot = RED_zenkyoutou_cat_operative_slot
+	intel_network_gain_factor = RED_zenkyoutou_cat_intel_network_gain_factor
+	compliance_gain = RED_zenkyoutou_cat_compliance_gain
+}
 RED_RedWinterIntelligenceService_dynamic_modifier = { #정보국
 	enable = {
 		always = yes
 	}
-	icon = nkvd_2
+	icon = GFX_idea_nkvd_2
 
 	local_intel_to_enemies = -0.05
 	

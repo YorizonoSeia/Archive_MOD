@@ -1,0 +1,19 @@
+on_actions = {
+	on_monthly_RED = {
+		effect = {
+			#MEFO BILLS and ECONOMY OF CONQUEST increasing CG
+			if = {
+				limit = {
+					has_dynamic_modifier = { modifier = RED_zenkyoutou_cat_dynamic_modifier }
+				}
+				add_to_variable = { RED_redwinter_organizational_value = RED_redwinter_organizational_recovery_value }
+				clamp_variable = {
+					var = RED_redwinter_organizational_value
+					min = 0
+					max = RED_redwinter_organizational_recovery_max_value
+				}
+				RED_zenkyoutou_CENTER_GFXUI_reload = yes
+			}
+		}
+	}
+}

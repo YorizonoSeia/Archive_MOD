@@ -450,8 +450,8 @@ KSP_annex_cou_decesion_desc: "발키리에 총학생회를 편입시킵니다. �
 #####
 #####
 #####
- RED_redwinter_progress_tt: "§t전학공투회의§!\n\n§R현장파§! ([?RED_redwinter_progress_LEFT_value]%)\n- §R현장파§!는 §Y비타협적인 노동자§! 파벌로, 주로 §Y투쟁§!과 §Y파업§!을 통해 자신들의 목표를 추진합니다.\n\n§S중앙파§! ([?RED_redwinter_progress_CENTER_value]%)\n- §S중앙파§!는 §Y광범위한 협동§!을 중시하는 파벌로, §Y온건노선§!과 §Y투쟁노선§!을 병행합니다.\n\n§p민중파§! ([?RED_redwinter_progress_RIGHT_value]%)\n- §p민중파§!는 §Y대중운동에 합류하여§! 활동하는 파벌로, §Y온건한 선전§!과 §Y개혁§!을 주된 행동 방침으로 삼습니다.\n\n이들은 미노리의 §R혁명적 행동주의§!와 아나코-생디칼리슴의 §t비타협적 혁명론§!을 융합하여 탄생한 혁명적 학생 단체로서, 기존 용역부가 가졌던 §Y행동주의적 혁명론§!을 그대로 계승하여, 전 세계 국가들을 대상으로 사회주의자들이 일으킨 전 세계 각국의 반정부 시위를 주도하고 있습니다."
- RED_redwinter_organizational_tt: "§t전학공투회의 조직력§! ([?RED_redwinter_organizational_value]%)\n\n§Y조직력§!은 §t전학공투회의§!의 조직이 얼마나 많은 행동을 할 수 있는지를 결정합니다. §Y조직력§!을 이용해 더 많은 §C조직 개편§!을 하거나, 더 많은 양의 §C투쟁§!을 조직할 수 있습니다.\n\n현재 키보토스는 대전이를 겪으며 기존의 §Y사회 모순§!이 극한으로 떠오르고 있습니다. §t전공투§!는 각 키보토스 학원 현지의 혁명적인 학생들이 모여서 구성되어 §Y붉은겨울 중앙위원회§!에 의해 지원받으며 활동하고 있는 반자치적인 조직입니다.\n\n이들은 학원 내에서의 §Y사상 학습 투쟁§!뿐만 아니라, §Y이념 강연 세미나§!, §t노동자-농민 집회§!에의 참여, §t동맹 휴학§!과 §R적색 테러§! 및 §R지하조직 확장§! 등 전국 단위 §Y혁명적 사회주의 운동§!을 지원하며 모든 키보토스 학원을 대상으로 그들 지배계급의 추악한 행태와 그로 인해 비롯된 사회 모순들을 대중들에게 적나라하게 폭로하고 있습니다."
+ RED_redwinter_progress_tt: "§t전학공투회의§!\n\n§R현장파§! ([?RED_redwinter_progress_LEFT_value]%)\n- §R현장파§!는 §Y비타협적인 노동자§! 파벌로, 주로 §Y투쟁§!과 §Y파업§!을 통해 자신들의 목표를 추진합니다.\n\n§S중앙파§! ([?RED_redwinter_progress_CENTER_value]%)\n- §S중앙파§!는 §Y광범위한 협동§!을 중시하는 파벌로, §Y온건노선§!과 §Y투쟁노선§!을 병행합니다.\n\n§p민중파§! ([?RED_redwinter_progress_RIGHT_value]%)\n- §p민중파§!는 §Y대중운동에 합류하여§! 활동하는 파벌로, §Y온건한 선전§!과 §Y개혁§!을 주된 행동 방침으로 삼습니다.\n\n이들은 미노리의 §R혁명적 행동주의§!와 아나코-생디칼리슴의 §t비타협적 혁명론§!을 융합하여 탄생한 혁명적 학생 단체로서, 기존 용역부가 가졌던 §Y행동주의적 혁명론§!을 그대로 계승하여, 전 세계 국가들을 대상으로 사회주의자들이 일으킨 전 세계 각국의 반정부 시위를 주도하고 있습니다.\n\n현재 키보토스는 대전이를 겪으며 기존의 §Y사회 모순§!이 극한으로 떠오르고 있습니다. §t전공투§!는 각 키보토스 학원 현지의 혁명적인 학생들이 모여서 구성되어 §Y붉은겨울 중앙위원회§!에 의해 지원받으며 활동하고 있는 반자치적인 조직입니다.\n\n이들은 학원 내에서의 §Y사상 학습 투쟁§!뿐만 아니라, §Y이념 강연 세미나§!, §t노동자-농민 집회§!에의 참여, §t동맹 휴학§!과 §R적색 테러§! 및 §R지하조직 확장§! 등 전국 단위 §Y혁명적 사회주의 운동§!을 지원하며 모든 키보토스 학원을 대상으로 그들 지배계급의 추악한 행태와 그로 인해 비롯된 사회 모순들을 대중들에게 적나라하게 폭로하고 있습니다."
+ RED_redwinter_organizational_tt: "§t전학공투회의 조직력§! (현재 §Y[?RED_redwinter_organizational_value]§!)\n\n§Y조직력§!은 §t전학공투회의§!의 조직이 얼마나 많은 행동을 할 수 있는지를 결정합니다. §Y조직력§!을 이용해 더 많은 §C조직 개편§!을 하거나, 더 많은 양의 §C투쟁§!을 조직할 수 있습니다.\n\n§t전학공투회의 조직력§!이 매달 §Y[?RED_redwinter_organizational_recovery_value]§!씩 최대 §Y[?RED_redwinter_organizational_recovery_max_value]§!까지 §C회복될 것입니다§!. 매달 증가량은 §Y조직 방침§!에 의해 결정되며, 최대 회복량은 §Y전학공투회의의 충성§!과 여러 결정에 의해 변화할 것입니다.\n\n§t전학공투회의 조직력§!의 §Y최대 회복량§!은 현재 §Y전학공투회의의 충성§!에 의해 최대 §Y[?RED_redwinter_organizational_recovery_max_value]§!까지 §R제한될 것입니다§!. §Y기본 최대 회복량§!은 §Y[?RED_redwinter_organizational_max_value]§! 입니다."
  RED_redwinter_left_wing_tt: "§Y투쟁 방식§!\n\n§Y투쟁 방식§!은 §t전학공투회의§! 조직의 주된 투쟁 방침을 지휘합니다. §Y투쟁 방침§!에 따라 §Y우리§!의 지휘 아래에 모든 §t전학공투회의§!가 활동하게 될 것입니다.[RED_redwinter_leftwing_tooltip]"
  RED_redwinter_right_wing_tt: "§Y조직 방침§!\n\n§Y조직 방침§!은 §t전학공투회의§! 조직이 구성되는 방침을 지정합니다. §Y조직 방침§!에 따라 §Y우리§!의 영향력이 닿는 §t전학공투회의§! 조직이 해당 형태로 구성될 것입니다.[RED_redwinter_rightwing_tooltip]"
 
@@ -509,10 +509,17 @@ KSP_annex_cou_decesion_desc: "발키리에 총학생회를 편입시킵니다. �
  RED_zenkyoutou_CENTER_2_title: "공산주의적 대의"
  RED_zenkyoutou_CENTER_3_title: "자발적 조직화"
 
- RED_zenkyoutou_CENTER_1_tt: "조직력: §R-50%§!"
- RED_zenkyoutou_CENTER_2_tt: "조직력: §R-30%§!"
- RED_zenkyoutou_CENTER_3_tt: "조직력: §R-10%§!"
+ RED_zenkyoutou_CENTER_1_tt: "조직력: §R-50§!"
+ RED_zenkyoutou_CENTER_2_tt: "조직력: §R-30§!"
+ RED_zenkyoutou_CENTER_3_tt: "조직력: §R-10§!"
 
+ RED_zenkyoutou_RIGHT_1_effect_tooltip: "현재 조직 방침을 §Y지하 비밀 결사§!(으)로 교체 시 효과:"
+ RED_zenkyoutou_RIGHT_2_effect_tooltip: "현재 조직 방침을 §Y전위대§!(으)로 교체 시 효과:"
+ RED_zenkyoutou_RIGHT_3_effect_tooltip: "현재 조직 방침을 §Y대중 단체§!(으)로 교체 시 효과:"
+
+ RED_zenkyoutou_CENTER_1_effect_tooltip: "현재 조직의 충성을 §Y붉은겨울에 대한 충성§!(으)로 교체 시 효과:\n전학공투회의 조직력 최대 회복량: §R-50§!\n\n정치력 획득: §G+10%§!\n건설 속도: §G+10%§!\n매일 순응도 획득: §G+0.030%§!\n첩보망 강도 증가율: §G+10.00%§!"
+ RED_zenkyoutou_CENTER_2_effect_tooltip: "현재 조직의 충성을 §Y공산주의적 대의§!(으)로 교체 시 효과:\n전학공투회의 조직력 최대 회복량: §R-30§!\n\n건설 속도: §G+5%§!\n매일 순응도 획득: §G+0.010%§!\n첩보망 강도 증가율: §G+5.00%§!"
+ RED_zenkyoutou_CENTER_3_effect_tooltip: "현재 조직의 충성을 §Y자발적 조직화§!(으)로 교체 시 효과:\n전학공투회의 조직력 최대 회복량: §R-10§!"
  
  RED_redwinter_leftwing_1_tooltip: ""
  RED_redwinter_leftwing_2_tooltip: "\n\n현재 투쟁 방식: §R적색 테러§!\n§R적색 테러§!는 §t전학공투회의§!의 조직 그 자체를 소모하여 §Y목표 국가§!에 약간의 §Y산업 손상§!과 막대한 §Y안정도§!와 §Y전쟁 지지도§! 피해를 입힙니다. 테러가 성공할 때마다 §R현장파§!의 §Y영향력§!이 상승합니다.\n\n"

@@ -510,6 +510,7 @@ guiTypes = {
 					name = "RED_zenkyoutou_RIGHT_1_button"
 					position = { x = 0 y = 0 }
 					quadTextureSprite = "GFX_RED_zenkyoutou_RIGHT_button"
+					pdx_tooltip = RED_zenkyoutou_RIGHT_1_effect_tooltip
 				}
 				
 				instantTextBoxType = {
@@ -523,6 +524,7 @@ guiTypes = {
 					maxHeight = 20
 					fixedsize = yes
 					format = center
+					alwaystransparent = yes
 				}
 				
 				instantTextBoxType = {
@@ -536,6 +538,7 @@ guiTypes = {
 					maxHeight = 160
 					fixedsize = yes
 					format = center
+					alwaystransparent = yes
 				}
 				
 				instantTextBoxType = {
@@ -549,6 +552,7 @@ guiTypes = {
 					maxHeight = 20
 					fixedsize = yes
 					format = center
+					alwaystransparent = yes
 				}
 				
 				iconType = {
@@ -576,6 +580,7 @@ guiTypes = {
 					name = "RED_zenkyoutou_RIGHT_2_button"
 					position = { x = 0 y = 0 }
 					quadTextureSprite = "GFX_RED_zenkyoutou_RIGHT_button"
+					pdx_tooltip = RED_zenkyoutou_RIGHT_2_effect_tooltip
 				}
 				
 				instantTextBoxType = {
@@ -589,6 +594,7 @@ guiTypes = {
 					maxHeight = 20
 					fixedsize = yes
 					format = center
+					alwaystransparent = yes
 				}
 				
 				instantTextBoxType = {
@@ -602,6 +608,7 @@ guiTypes = {
 					maxHeight = 160
 					fixedsize = yes
 					format = center
+					alwaystransparent = yes
 				}
 				
 				instantTextBoxType = {
@@ -615,6 +622,7 @@ guiTypes = {
 					maxHeight = 20
 					fixedsize = yes
 					format = center
+					alwaystransparent = yes
 				}
 				
 				iconType = {
@@ -642,6 +650,7 @@ guiTypes = {
 					name = "RED_zenkyoutou_RIGHT_3_button"
 					position = { x = 0 y = 0 }
 					quadTextureSprite = "GFX_RED_zenkyoutou_RIGHT_button"
+					pdx_tooltip = RED_zenkyoutou_RIGHT_3_effect_tooltip
 				}
 				
 				instantTextBoxType = {
@@ -655,6 +664,7 @@ guiTypes = {
 					maxHeight = 20
 					fixedsize = yes
 					format = center
+					alwaystransparent = yes
 				}
 				
 				instantTextBoxType = {
@@ -668,6 +678,7 @@ guiTypes = {
 					maxHeight = 160
 					fixedsize = yes
 					format = center
+					alwaystransparent = yes
 				}
 				
 				instantTextBoxType = {
@@ -681,6 +692,7 @@ guiTypes = {
 					maxHeight = 20
 					fixedsize = yes
 					format = center
+					alwaystransparent = yes
 				}
 				
 				iconType = {
@@ -763,6 +775,7 @@ guiTypes = {
 					name = "RED_zenkyoutou_CENTER_1_button"
 					position = { x = 0 y = 0 }
 					quadTextureSprite = "GFX_RED_zenkyoutou_RIGHT_button"
+					pdx_tooltip = RED_zenkyoutou_CENTER_1_effect_tooltip
 				}
 				
 				instantTextBoxType = {
@@ -776,6 +789,7 @@ guiTypes = {
 					maxHeight = 20
 					fixedsize = yes
 					format = center
+					alwaystransparent = yes
 				}
 				
 				instantTextBoxType = {
@@ -789,6 +803,7 @@ guiTypes = {
 					maxHeight = 20
 					fixedsize = yes
 					format = center
+					alwaystransparent = yes
 				}
 				
 				iconType = {
@@ -824,6 +839,7 @@ guiTypes = {
 					name = "RED_zenkyoutou_CENTER_2_button"
 					position = { x = 0 y = 0 }
 					quadTextureSprite = "GFX_RED_zenkyoutou_RIGHT_button"
+					pdx_tooltip = RED_zenkyoutou_CENTER_2_effect_tooltip
 				}
 				
 				instantTextBoxType = {
@@ -837,6 +853,7 @@ guiTypes = {
 					maxHeight = 20
 					fixedsize = yes
 					format = center
+					alwaystransparent = yes
 				}
 				
 				instantTextBoxType = {
@@ -850,6 +867,7 @@ guiTypes = {
 					maxHeight = 20
 					fixedsize = yes
 					format = center
+					alwaystransparent = yes
 				}
 				
 				iconType = {
@@ -885,6 +903,7 @@ guiTypes = {
 					name = "RED_zenkyoutou_CENTER_3_button"
 					position = { x = 0 y = 0 }
 					quadTextureSprite = "GFX_RED_zenkyoutou_RIGHT_button"
+					pdx_tooltip = RED_zenkyoutou_CENTER_3_effect_tooltip
 				}
 				
 				instantTextBoxType = {
@@ -898,6 +917,7 @@ guiTypes = {
 					maxHeight = 20
 					fixedsize = yes
 					format = center
+					alwaystransparent = yes
 				}
 				
 				instantTextBoxType = {
@@ -911,6 +931,7 @@ guiTypes = {
 					maxHeight = 20
 					fixedsize = yes
 					format = center
+					alwaystransparent = yes
 				}
 				
 				iconType = {

@@ -135,6 +135,7 @@ RED_zenkyoutou_cat = { #전공투
 		original_tag = RED
 	}
 	visible = {
+		has_dynamic_modifier = { modifier = RED_zenkyoutou_cat_dynamic_modifier }
 	}
 	priority = 500
 
