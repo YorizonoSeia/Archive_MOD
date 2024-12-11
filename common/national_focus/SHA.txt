@@ -7797,7 +7797,9 @@ focus_tree = {
 		prerequisite = { focus = SHA_podium_room_cooperation }
 		mutually_exclusive = {  }
 
-		available = { }
+		available = {
+			fascism > 0.35
+		}
 		bypass = { }
 
 		relative_position_id = SHA_Cooperation_with_Kaguya
@@ -7916,6 +7918,7 @@ focus_tree = {
 					slot = political_advisor
 					trait = SHA_ardent_conservative_2
 				}
+				news_event = { id = shanews.02 days = 04 }
 			}
 		}
 	}
@@ -8134,6 +8137,10 @@ focus_tree = {
 
 		completion_reward = {
 			remove_ideas = SHA_Austrian_fascist_militia
+			if = {
+				limit = { has_character = SHA_arthur_seyss_inquart }
+				SHA_arthur_seyss_inquart = { retire = yes }
+			}
 		}
 	}
 
@@ -8169,7 +8176,7 @@ focus_tree = {
 		icon = GFX_focus_generic_mass_production
 		x = 0
 		y = 2
-		cost = 5
+		cost = 10
 
 		prerequisite = {
 			focus = SHA_Shintani_Kai_Follow 
@@ -8186,6 +8193,13 @@ focus_tree = {
 			add_timed_idea = {
 				idea = SHA_emergency_measures_idea
 				days = 720
+			}
+			if = {
+				limit = { has_idea = SHA_isolation_economic }
+				swap_ideas = {
+					remove_idea = SHA_isolation_economic
+					add_idea = low_economic_mobilisation
+				}
 			}
 		}
 	}

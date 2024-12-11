@@ -1148,6 +1148,8 @@ country_event = {
 
 add_namespace = shafas
 add_namespace = shanews
+
+# 경극부 쿠데타
 country_event = {
 	id = shafas.1
 	title = shafas.1.t
@@ -1171,6 +1173,23 @@ country_event = {
 		}
 	}
 }
+
+# 현무상회의 반대
+country_event = {
+	id = shafas.2
+	title = shafas.2.t
+	desc = shafas.2.d
+	picture = GFX_report_event_ARG_coup_detat
+    is_triggered_only = yes
+
+	option = {
+		name = shafas.2.a
+		
+	}
+}
+
+
+# 뉴스
 news_event = {
 	id = shanews.01
 	title = shanews.01.t
@@ -1234,6 +1253,76 @@ news_event = {
 				tag = RE2
 				tag = RE3
 			}
+		}
+	}
+}
+
+news_event = {
+	id = shanews.02
+	title = shanews.02.t
+	desc = shanews.02.desc
+	picture = GFX_event_Shanhaijing_Kaguya
+	
+	major = yes	
+	is_triggered_only = yes
+		
+	option = {
+		name = shanews.02.a
+		trigger = {
+			tag = SHA
+		}
+	}
+		
+	option = {
+		name = shanews.02.b
+		trigger = {
+			OR = {
+				tag = TRM
+				tag = ABY
+				tag = HYA
+				tag = GEH
+				tag = GEM
+				tag = COU
+				tag = SHE
+				tag = KSP
+				tag = HEU
+				tag = MIL
+				tag = BLM
+				tag = KAI
+			}
+			NOT = { tag = SHA }
+		}
+	}
+		
+	option = {
+		name = BA_news.1.d
+		trigger = {
+			NOT = {
+				tag = SHA
+				tag = TRM
+				tag = ABY
+				tag = HYA
+				tag = GEH
+				tag = GEM
+				tag = COU
+				tag = SHE
+				tag = KSP
+				tag = HEU
+				tag = MIL
+				tag = BLM
+				tag = KAI
+				tag = RE1
+				tag = RED
+				tag = RE2
+				tag = RE3
+				has_government = communism
+			}
+		}
+	}
+	option = {
+		name = shanews.02.c
+		trigger = {
+			has_government = communism
 		}
 	}
 }
