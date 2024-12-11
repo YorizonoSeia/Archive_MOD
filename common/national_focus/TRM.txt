@@ -822,7 +822,9 @@
 		x = 0
 		y = 1
 		relative_position_id = TRN_Fission
-		completion_reward = {  custom_effect_tooltip = TRN_Otto_han_tt }
+		completion_reward = {  
+			custom_effect_tooltip = TRN_Otto_han_tt 
+		}
 	}
 	focus = {
 		id = TRN_Uranprojekt_2
@@ -844,7 +846,7 @@
 	focus = {
 		id = TRN_Uranprojekt_3
 		icon = GFX_goal_TRN_my_eyes
-		cost = 10
+		cost = 5
 		prerequisite = { focus = TRN_Uranprojekt }
 		ai_will_do = {
 			base = 1
@@ -858,9 +860,9 @@
 		relative_position_id = TRN_Uranprojekt
 		completion_reward = {
 			add_tech_bonus = {
-				name = TRN_Uranprojekt_name
+				name = TRN_Uranprojekt_3
 				bonus = 0.5
-				uses = 1
+				uses = 2
 				category = nuclear
 			}
 		}
@@ -868,7 +870,7 @@
 	focus = {
 		id = TRN_Uranprojekt_4
 		icon = GFX_goal_generic_army_artillery
-		cost = 10
+		cost = 5
 		prerequisite = { focus = TRN_Uranprojekt }
 		ai_will_do = {
 			base = 1
@@ -882,9 +884,9 @@
 		relative_position_id = TRN_Uranprojekt
 		completion_reward = {
 			add_tech_bonus = {
-				name = TRN_Uranprojekt_name
-				bonus = 1.5
-				uses = 1
+				name = TRN_Uranprojekt_4
+				bonus = 0.5
+				uses = 2
 				category = rocketry
 			}
 		}
@@ -913,16 +915,25 @@
 			}
 			if = {
 				limit = {
-					has_tech = nukes
+					NOT = {
+						has_tech = atomic_research
+					}
 				}
-				add_nuclear_bombs = 1
-			}
-			else = {
 				add_tech_bonus = {
-					name = TRN_Uranprojekt_name
-					bonus = 2
+					name = TRN_Uranprojekt_5
+					bonus = 1.0
 					uses = 1
 					category = nuclear
+				}
+				add_breakthrough_progress = {
+					specialization = specialization_nuclear
+					value = 0.5
+				}
+			}
+			else = {
+				add_breakthrough_progress = {
+					specialization = specialization_nuclear
+					value = 1
 				}
 			}
 		}

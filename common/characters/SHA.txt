@@ -557,27 +557,24 @@ characters={
 			}
 		}
 	}
-	SHA_arthur_seyss-inquart={
+	SHA_arthur_seyss_inquart={
 		name=AUS_arthur_seyss-inquart
 		portraits={
 			civilian={
-				large=GFX_portrait_AUS_arthur_seyss-inquart
-				small=GFX_portrait_AUS_arthur_seyss-inquart_small
+				large = "GFX_portrait_AUS_arthur_seyss_inquart"
+				small = "GFX_portrait_AUS_arthur_seyss_inquart_small"
 			}
 		}
 		advisor={
 			slot = political_advisor
-			idea_token = SHA_arthur_seyss-inquart_1
+			idea_token = SHA_arthur_seyss_inquart_political_advisor
 			allowed = {
 				original_tag = SHA
 			}
 			available = {
-				AUS = {
-					exists = no
-				}
+				NOT = { country_exists = AUS }
 				OR = {
-					has_government = fascism
-					has_completed_focus = SHA_foc_1-2-8
+					has_completed_focus = SHA_Contact_with_Austrian_militia
 				}
 			}
 			traits  = {

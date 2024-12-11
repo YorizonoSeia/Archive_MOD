@@ -1478,14 +1478,14 @@ news_event = { # 핵 분 열
 	option = {
 		name = BA_news.34.a
 		trigger = {
-			tag = USA
+			tag = TRM
 		}
 	}
 	option = {
 		name = BA_news.34.b
 		trigger = { 
 			NOT = {
-				tag = USA 
+				tag = TRM 
 			}
 		}
 	}

@@ -7886,6 +7886,13 @@ focus_tree = {
 					elections_allowed = no
 				}
 			}
+			if = {
+				limit = { has_idea = SHA_Peking_Opera }
+				swap_ideas = {
+					add_idea = SHA_Peking_Opera_conservative
+					remove_idea = SHA_Peking_Opera
+				}
+			}
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = SHA_KAGUYA_political_advisor
 			custom_effect_tooltip = tooltip_white_line

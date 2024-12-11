@@ -1254,20 +1254,12 @@ characters={
 				small= GFX_TRN_Otto_han_idea
 			}
 		}
-		advisor={
-			cost = 100
-			slot = theorist
-			idea_token = TRN_Otto_han
-			ledger = army 
-			allowed = { TAG = TRM }
-			available = {
-				if = { limit = { has_character_flag = TRM_forced_dismissal_flag }
-					NOT = { has_character_flag = TRM_forced_dismissal_flag }
-				}
+
+		scientist = {
+			traits = { scientist_trait_nuclear_specialist scientist_trait_brilliant_theorist }
+			skills = {
+				specialization_nuclear = 2
 			}
-			visible = { has_completed_focus = TRN_Uranprojekt }
-			research_bonus = { nuclear = 0.150 }
-			traits = { nuclear_scientist }
 		}
 	}
     TRM_Moscow_governor_general = {
