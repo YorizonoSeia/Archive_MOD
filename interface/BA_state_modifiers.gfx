@@ -35,4 +35,8 @@ spriteTypes = {
     	name = "GFX_modifiers_ARI_gottglaubig"
     	textureFile = "gfx/interface/state_modifiers/modifiers_ARI_gottglaubig.dds"
    	}
+	spriteType = { 
+	   name = "GFX_modifiers_GEK_spirit_of_capitalism"
+	   textureFile = "gfx/interface/state_modifiers/modifiers_GEK_spirit_of_capitalism.tga"
+	}
 }

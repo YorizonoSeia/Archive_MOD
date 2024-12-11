@@ -1,5 +1,9 @@
 spriteTypes = {
-	
+	SpriteType = {
+		name = "GFX_focus_work_with_kpd"
+		texturefile = "gfx/interface/goals/GER/work_with_kpd.tga"			
+	}
+
 	SpriteType = {
 		name = "GFX_focus_TRM_united_law"
 		texturefile = "gfx/interface/goals/TRN/TRM_united_law.tga"			

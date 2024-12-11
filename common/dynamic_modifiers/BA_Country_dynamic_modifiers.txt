@@ -996,6 +996,16 @@ GEK_german_nationalism = {
 
 }
 
+GEK_gottglaubig_modifier = {
+	enable = {always = yes}
+	icon = GFX_idea_generic_fascism_drift_bonus
+
+	custom_modifier_tooltip = GEK_gottglaubig_modifier_tt
+	political_power_factor = GEK_gottglaubig_modifier_political_power_facter
+	fascism_drift = 0.05
+	war_support_factor = GEK_gottglaubig_modifier_war_support_factor
+	army_org_factor = GEK_gottglaubig_modifier_army_org_factor
+}
 KPD_army_dynamic_modifier = { #독일군
 	enable = { always = yes }
 

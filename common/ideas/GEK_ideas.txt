@@ -222,5 +222,65 @@ ideas = {
 				production_speed_buildings_factor = 0.05
 			}
 		}
+		GEK_buying_meal = { #농산물 수입
+			picture = generic_goods_red_bonus
+			modifier = {
+				consumer_goods_factor = 0.2
+			}
+		}
+		GEK_buying_meal_from_usa = { #농산물 수입
+			picture = generic_goods_red_bonus
+			modifier = {
+				consumer_goods_factor = 0.35
+			}
+		}
+		GEK_religious_conflict = { #종교 갈등
+			picture = SOV_a_church_of_the_catacombs
+			modifier = {
+				political_power_factor = -0.05
+				stability_factor = -0.05
+				war_support_factor = -0.05
+				production_speed_buildings_factor = -0.05
+				consumer_goods_factor = 0.05
+			}
+		}
+		GEK_religious_conflict_by_protestant = { #개신교 반발
+			picture = SOV_a_church_of_the_catacombs
+			modifier = {
+				political_power_factor = -0.1
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				production_speed_buildings_factor = -0.05
+				consumer_goods_factor = 0.05
+			}
+		}
+		GEK_religious_conflict_by_catholic = { #가톨릭 반발
+			picture = SOV_a_church_of_the_catacombs
+			modifier = {
+				political_power_factor = -0.05
+				stability_factor = -0.05
+				war_support_factor = -0.05
+				production_speed_buildings_factor = -0.1
+				consumer_goods_factor = 0.1
+			}
+		}
+		GEK_gottglaubig = { #고트글로이비히
+			name = GEK_gottglaubig
+			picture = generic_fascism_drift_bonus
+			modifier = {
+				political_power_factor = 0.1
+				fascism_drift = 0.05
+			}
+		}
+		GEK_gottglaubig_1 = { #고트글로이비히
+			name = GEK_gottglaubig
+			picture = generic_fascism_drift_bonus
+			modifier = {
+				war_support_factor = 0.1
+				army_org_factor = 0.05
+				political_power_factor = 0.1
+				fascism_drift = 0.05
+			}
+		}
 	}
 }

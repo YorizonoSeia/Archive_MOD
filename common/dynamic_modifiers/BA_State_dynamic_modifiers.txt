@@ -320,6 +320,39 @@ GEK_protestant_state = { # 주 모디파이어
 	icon = GFX_modifiers_GEK_protestant_state
 	
 }
+GEK_spirit_of_capitalism_state = { # 주 모디파이어
+	enable = { always = yes }
+	icon = GFX_modifiers_GEK_spirit_of_capitalism
+
+	state_production_speed_buildings_factor = 0.05
+	local_resources_factor = 0.05
+}
+GEK_protestant_patriotism = { #애국주의적 개신교
+	enable = { 
+		TRM = {
+			exists = yes
+		}
+		GEK = {
+			exists = yes
+		}
+	}
+	icon = GFX_modifiers_GEK_spirit_of_capitalism
+
+	recruitable_population_factor = 0.15
+}
+GEK_protestant_patriotism_for_TRM = { #애국주의적 개신교
+	enable = {
+		TRM = {
+			exists = yes
+		}
+		GEK = {
+			exists = yes
+		}
+	}
+	icon = GFX_modifiers_GEK_spirit_of_capitalism
+
+	recruitable_population_factor = -0.15
+}
 GEK_catholic_state = { # 주 모디파이어
 	enable = { always = yes }
 
@@ -337,6 +370,15 @@ GEK_no_religion = { # 주 모디파이어
 
 	icon = GFX_modifiers_GEK_no_religion
 	
+}
+GEK_materialism = { # 유물론과 생산성
+	enable = { always = yes }
+
+	icon = GFX_modifiers_GEK_no_religion
+	
+	state_production_speed_buildings_factor = 0.075
+	local_resources_factor = 0.075
+	local_building_slots = 1
 }
 GEK_ari_religion = { # 주 모디파이어
 	enable = { always = yes }

@@ -59,6 +59,15 @@ set_variable = { GEK_german_nationalism_army_defence_factor = -0.10 }
 set_variable = { GEK_german_nationalism_army_attack_factor = -0.10 }
 set_variable = { GEK_german_nationalism_army_org_regain = 0.00 }
 
+set_variable = {
+	GEK_gottglaubig_modifier_political_power_facter = 0
+}
+set_variable = {
+	GEK_gottglaubig_modifier_war_support_factor = 0
+}
+set_variable = {
+	GEK_gottglaubig_modifier_army_org_factor = 0
+}
 add_dynamic_modifier = {
 	modifier = GEK_german_nationalism
 }
@@ -100,6 +109,33 @@ recruit_character = GEK_kurt_schumacher #쿠르트 슈마허, 민주주의 고�
 recruit_character = GEK_carl_friedrich_goerdeler #카를 프리드리히 괴르델러, 정치고문
 recruit_character = GEK_alfred_hugenberg #알프레트 후겐베르크, 군주주의 언론 거물
 recruit_character = GEK_theodor_heuss #테오도어 호이스,경제고문
+
+
+#조언가
+recruit_character = GEK_joachim_von_ribbentrop
+recruit_character = GEK_konstantin_von_neurath
+recruit_character = GEK_alexander_von_falkenhausen
+recruit_character = GEK_werner_von_blomberg
+recruit_character = GEK_oswald_lutz
+recruit_character = GEK_walther_nehring
+recruit_character = GEK_hans_krebs
+recruit_character = GEK_rolf_carls
+recruit_character = GEK_helmuth_wilberg
+recruit_character = GEK_josef_kammhuber
+recruit_character = GEK_robert_knauss
+recruit_character = GEK_alfred_becker
+recruit_character = GEK_walter_dornberger
+recruit_character = GEK_alfred_rosenberg
+recruit_character = GEK_reinhard_heydrich
+recruit_character = GEK_leni_riefenstahl
+recruit_character = GEK_franz_seldte
+recruit_character = GEK_hanns_kerrl
+recruit_character = GEK_ludwig_erhard
+recruit_character = GEK_paul_von_lettow_vorbeck # He is "new"
+recruit_character = GEK_carl_friedrich_goerdeler
+recruit_character = GEK_wilhelm_iv
+
+
 #과학자
 recruit_character = GEK_von_braun
 recruit_character = GEK_heisenberg

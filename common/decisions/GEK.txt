@@ -1131,3 +1131,608 @@ GER_price_controls_cat = {
 		}
 	}
 }
+
+GEK_religion_issue_cat = { #종교 정책
+	GEK_conversion_to_protestant = { #개신교 개종
+		icon = GFX_decision_eng_trade_unions_support
+		highlight_states = {
+			highlight_state_targets = {
+				state = FROM
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+		target_array = GEK.controlled_states
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				OR = {
+					has_dynamic_modifier = {
+						modifier = GEK_ari_religion
+					}
+					has_dynamic_modifier = {
+						modifier = GEK_trm_christianity_state
+					}
+					has_dynamic_modifier = {
+						modifier = GEK_no_religion
+					}
+					has_dynamic_modifier = {
+						modifier = ARI_Gottglaubig_religion
+					}
+				}
+			}
+		}
+		on_map_mode = map_and_decisions_view
+		ai_will_do = {
+			factor = 200
+		}
+		visible = {
+			tag = GEK
+			has_completed_focus = GEK_RM_rel_focus_1
+			NOT = {
+				has_completed_focus = GEK_RM_rel_focus_6
+			}
+		}
+		available = {
+			political_power_daily > 0
+		}
+		
+		cost = 10
+		
+		days_remove = 240
+
+		modifier = {
+			political_power_cost = 0.15
+			consumer_goods_factor = 0.05
+		}
+		complete_effect = {
+			FROM = {
+				add_manpower = 3000
+			}
+		}
+		remove_effect = {
+			FROM = {
+				if = {
+					limit = {
+						FROM = {
+							has_dynamic_modifier = {
+								modifier = GEK_ari_religion
+							}
+						}
+					}
+					remove_dynamic_modifier = {
+						modifier = GEK_ari_religion
+					}
+					add_dynamic_modifier = {
+						modifier = GEK_protestant_state
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_dynamic_modifier = {
+								modifier = GEK_no_religion
+							}
+						}
+					}
+					remove_dynamic_modifier = {
+						modifier = GEK_no_religion
+					}
+					add_dynamic_modifier = {
+						modifier = GEK_protestant_state
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_dynamic_modifier = {
+								modifier = GEK_trm_christianity_state
+							}
+						}
+					}
+					remove_dynamic_modifier = {
+						modifier = GEK_trm_christianity_state
+					}
+					add_dynamic_modifier = {
+						modifier = GEK_protestant_state
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_dynamic_modifier = {
+								modifier = ARI_Gottglaubig_religion
+							}
+						}
+					}
+					remove_dynamic_modifier = {
+						modifier = ARI_Gottglaubig_religion
+					}
+					add_dynamic_modifier = {
+						modifier = GEK_protestant_state
+					}
+				}
+			}
+		}
+	}
+	GEK_insist_spirit_of_capitalism = { #'자본주의 정신' 강조
+		icon = GFX_decision_gre_paying_ifc_debt
+		highlight_states = {
+			highlight_state_targets = {
+				state = FROM
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+		target_array = GEK.controlled_states
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				AND = {
+					has_dynamic_modifier = {
+						modifier = GEK_protestant_state
+					}
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = GEK_spirit_of_capitalism_state
+						}
+					}
+				}
+			}
+		}
+		on_map_mode = map_and_decisions_view
+		ai_will_do = {
+			factor = 200
+		}
+		visible = {
+			tag = GEK
+			has_completed_focus = GEK_RM_rel_focus_4
+		}
+		
+		cost = 10
+		
+		complete_effect = {
+			FROM = {
+				add_dynamic_modifier = {
+					modifier = GEK_spirit_of_capitalism_state
+				}
+			}
+		}
+	}
+	GEK_conversion_to_catholic = { #가톨릭 개종
+		icon = GFX_decision_eng_trade_unions_support
+		highlight_states = {
+			highlight_state_targets = {
+				state = FROM
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+		target_array = GEK.controlled_states
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				OR = {
+					has_dynamic_modifier = {
+						modifier = GEK_ari_religion
+					}
+					has_dynamic_modifier = {
+						modifier = GEK_trm_christianity_state
+					}
+					has_dynamic_modifier = {
+						modifier = GEK_no_religion
+					}
+					has_dynamic_modifier = {
+						modifier = ARI_Gottglaubig_religion
+					}
+				}
+			}
+		}
+		on_map_mode = map_and_decisions_view
+		ai_will_do = {
+			factor = 200
+		}
+		visible = {
+			tag = GEK
+			has_completed_focus = GEK_RM_rel_focus_3
+			NOT = {
+				has_completed_focus = GEK_RM_rel_focus_6
+			}
+		}
+		available = {
+			political_power_daily > 0
+		}
+		
+		cost = 10
+		
+		days_remove = 240
+
+		modifier = {
+			political_power_cost = 0.15
+			consumer_goods_factor = 0.05
+		}
+		complete_effect = {
+			FROM = {
+				add_manpower = 3000
+			}
+		}
+		remove_effect = {
+			FROM = {
+				if = {
+					limit = {
+						FROM = {
+							has_dynamic_modifier = {
+								modifier = GEK_ari_religion
+							}
+						}
+					}
+					remove_dynamic_modifier = {
+						modifier = GEK_ari_religion
+					}
+					add_dynamic_modifier = {
+						modifier = GEK_catholic_state
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_dynamic_modifier = {
+								modifier = GEK_no_religion
+							}
+						}
+					}
+					remove_dynamic_modifier = {
+						modifier = GEK_no_religion
+					}
+					add_dynamic_modifier = {
+						modifier = GEK_catholic_state
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_dynamic_modifier = {
+								modifier = GEK_trm_christianity_state
+							}
+						}
+					}
+					remove_dynamic_modifier = {
+						modifier = GEK_trm_christianity_state
+					}
+					add_dynamic_modifier = {
+						modifier = GEK_catholic_state
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_dynamic_modifier = {
+								modifier = ARI_Gottglaubig_religion
+							}
+						}
+					}
+					remove_dynamic_modifier = {
+						modifier = ARI_Gottglaubig_religion
+					}
+					add_dynamic_modifier = {
+						modifier = GEK_catholic_state
+					}
+				}
+			}
+		}
+	}
+	GEK_conversion_to_gottglaubig = { #고.글.비 개종
+		icon = GFX_decision_eng_trade_unions_support
+		highlight_states = {
+			highlight_state_targets = {
+				state = FROM
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+		target_array = GEK.controlled_states
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				OR = {
+					has_dynamic_modifier = {
+						modifier = GEK_ari_religion
+					}
+					has_dynamic_modifier = {
+						modifier = GEK_trm_christianity_state
+					}
+					has_dynamic_modifier = {
+						modifier = GEK_no_religion
+					}
+					has_dynamic_modifier = {
+						modifier = GEK_protestant_state
+					}
+					has_dynamic_modifier = {
+						modifier = GEK_catholic_state
+					}
+				}
+			}
+		}
+		on_map_mode = map_and_decisions_view
+		ai_will_do = {
+			factor = 200
+		}
+		visible = {
+			tag = GEK
+			has_completed_focus = GEK_RM_rel_focus_9
+			NOT = {
+				has_completed_focus = GEK_RM_rel_focus_6
+			}
+		}
+		available = {
+			political_power_daily > 0
+		}
+		
+		cost = 10
+		
+		days_remove = 240
+
+		modifier = {
+			political_power_cost = 0.15
+			consumer_goods_factor = 0.05
+		}
+		remove_effect = {
+			add_to_variable = {
+				GEK_gottglaubig_modifier_political_power_facter = 0.005
+			}
+			FROM = {
+				if = {
+					limit = {
+						FROM = {
+							has_dynamic_modifier = {
+								modifier = GEK_catholic_state
+							}
+						}
+					}
+					remove_dynamic_modifier = {
+						modifier = GEK_catholic_state
+					}
+					add_dynamic_modifier = {
+						modifier = ARI_Gottglaubig_religion
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_dynamic_modifier = {
+								modifier = GEK_protestant_state
+							}
+						}
+					}
+					remove_dynamic_modifier = {
+						modifier = GEK_protestant_state
+					}
+					add_dynamic_modifier = {
+						modifier = ARI_Gottglaubig_religion
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_dynamic_modifier = {
+								modifier = GEK_ari_religion
+							}
+						}
+					}
+					remove_dynamic_modifier = {
+						modifier = GEK_ari_religion
+					}
+					add_dynamic_modifier = {
+						modifier = ARI_Gottglaubig_religion
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_dynamic_modifier = {
+								modifier = GEK_no_religion
+							}
+						}
+					}
+					remove_dynamic_modifier = {
+						modifier = GEK_no_religion
+					}
+					add_dynamic_modifier = {
+						modifier = ARI_Gottglaubig_religion
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_dynamic_modifier = {
+								modifier = GEK_trm_christianity_state
+							}
+						}
+					}
+					remove_dynamic_modifier = {
+						modifier = GEK_trm_christianity_state
+					}
+					add_dynamic_modifier = {
+						modifier = GEK_catholic_state
+					}
+				}
+			}
+		}
+	}
+	GEK_conversion_to_no_religion = { #무신론
+		icon = GFX_decision_eng_trade_unions_support
+		highlight_states = {
+			highlight_state_targets = {
+				state = FROM
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+		target_array = GEK.controlled_states
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				OR = {
+					has_dynamic_modifier = {
+						modifier = GEK_ari_religion
+					}
+					has_dynamic_modifier = {
+						modifier = GEK_trm_christianity_state
+					}
+					has_dynamic_modifier = {
+						modifier = GEK_protestant_state
+					}
+					has_dynamic_modifier = {
+						modifier = GEK_catholic_state
+					}
+				}
+			}
+		}
+		on_map_mode = map_and_decisions_view
+		ai_will_do = {
+			factor = 200
+		}
+		visible = {
+			tag = GEK
+			has_completed_focus = GEK_RM_rel_focus_11
+			NOT = {
+				has_completed_focus = GEK_RM_rel_focus_6
+			}
+		}
+		available = {
+			political_power_daily > 0
+		}
+		
+		cost = 10
+		
+		days_remove = 240
+
+		modifier = {
+			political_power_cost = 0.15
+			consumer_goods_factor = 0.05
+		}
+		remove_effect = {
+			FROM = {
+				if = {
+					limit = {
+						FROM = {
+							has_dynamic_modifier = {
+								modifier = GEK_catholic_state
+							}
+						}
+					}
+					remove_dynamic_modifier = {
+						modifier = GEK_catholic_state
+					}
+					add_dynamic_modifier = {
+						modifier = GEK_no_religion
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_dynamic_modifier = {
+								modifier = GEK_protestant_state
+							}
+						}
+					}
+					remove_dynamic_modifier = {
+						modifier = GEK_protestant_state
+					}
+					add_dynamic_modifier = {
+						modifier = GEK_no_religion
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_dynamic_modifier = {
+								modifier = ARI_Gottglaubig_religion
+							}
+						}
+					}
+					remove_dynamic_modifier = {
+						modifier = ARI_Gottglaubig_religion
+					}
+					add_dynamic_modifier = {
+						modifier = GEK_no_religion
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_dynamic_modifier = {
+								modifier = GEK_ari_religion
+							}
+						}
+					}
+					remove_dynamic_modifier = {
+						modifier = GEK_ari_religion
+					}
+					add_dynamic_modifier = {
+						modifier = GEK_no_religion
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_dynamic_modifier = {
+								modifier = GEK_trm_christianity_state
+							}
+						}
+					}
+					remove_dynamic_modifier = {
+						modifier = GEK_trm_christianity_state
+					}
+					add_dynamic_modifier = {
+						modifier = GEK_no_religion
+					}
+				}
+			}
+		}
+	}
+	GEK_insist_materialism = { #유물론적 사고관 고취
+		icon = GFX_decision_gre_paying_ifc_debt
+		highlight_states = {
+			highlight_state_targets = {
+				state = FROM
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+		target_array = GEK.controlled_states
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				AND = {
+					has_dynamic_modifier = {
+						modifier = GEK_no_religion
+					}
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = GEK_materialism
+						}
+					}
+				}
+			}
+		}
+		on_map_mode = map_and_decisions_view
+		ai_will_do = {
+			factor = 200
+		}
+		visible = {
+			tag = GEK
+			has_completed_focus = GEK_RM_rel_focus_12
+		}
+		
+		cost = 10
+		
+		complete_effect = {
+			FROM = {
+				add_dynamic_modifier = {
+					modifier = GEK_materialism
+				}
+			}
+		}
+	}
+}

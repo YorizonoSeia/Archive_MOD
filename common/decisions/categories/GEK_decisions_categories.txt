@@ -86,3 +86,14 @@ GER_price_controls_cat = { #가격통제
 		}
 	}
 }
+
+GEK_religion_issue_cat = { #종교 정책
+	icon = GFX_decision_category_power_struggle
+	allowed = {
+		original_tag = GEK
+	}
+	priority = 100
+	visible = {
+		has_completed_focus = GEK_RM_rel_focus_0
+	}
+}
