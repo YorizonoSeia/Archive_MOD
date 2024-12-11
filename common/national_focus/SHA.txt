@@ -7711,6 +7711,8 @@ focus_tree = {
 		completion_reward = {
 			# 무슨 효과를 넣어야 할지는 모르겠는데
 			# 보수혁명 경로를 진행하고 싶을때는 이 중점이 필요 없도록 느껴지는 효과를 넣어주세요.. 하투 하투~
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = SHA_arthur_seyss_inquart_political_advisor
 		}
 	}
 
@@ -7802,6 +7804,7 @@ focus_tree = {
 
 		completion_reward = {
 			country_event = { id = shafas.1 }
+			hidden_effect = { news_event = { id = shanews.01 days = 04 } }
 		}
 	}
 

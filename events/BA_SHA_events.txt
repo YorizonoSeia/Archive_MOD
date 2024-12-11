@@ -1147,6 +1147,7 @@ country_event = {
 
 
 add_namespace = shafas
+add_namespace = shanews
 country_event = {
 	id = shafas.1
 	title = shafas.1.t
@@ -1166,6 +1167,72 @@ country_event = {
 			}
 			SHA_KAGUYA = { 
 				add_country_leader_trait = SHA_T2a 
+			}
+		}
+	}
+}
+news_event = {
+	id = shanews.01
+	title = shanews.01.t
+	desc = shanews.01.desc
+	picture = GFX_event_Shanhaijing_Kaguya
+	
+	major = yes	
+	is_triggered_only = yes
+		
+	option = {
+		name = shanews.01.a
+		trigger = {
+			tag = SHA
+		}
+	}
+		
+	option = {
+		name = shanews.01.b
+		trigger = {
+			OR = {
+				tag = TRM
+				tag = ABY
+				tag = HYA
+				tag = GEH
+				tag = GEM
+				tag = COU
+				tag = SHE
+				tag = KSP
+				tag = HEU
+				tag = MIL
+				tag = BLM
+				tag = KAI
+				tag = RE1
+				tag = RED
+				tag = RE2
+				tag = RE3
+			}
+			NOT = { tag = SHA }
+		}
+	}
+		
+	option = {
+		name = NSB_soviet_paranoia_system_events.49.b
+		trigger = {
+			NOT = {
+				tag = SHA
+				tag = TRM
+				tag = ABY
+				tag = HYA
+				tag = GEH
+				tag = GEM
+				tag = COU
+				tag = SHE
+				tag = KSP
+				tag = HEU
+				tag = MIL
+				tag = BLM
+				tag = KAI
+				tag = RE1
+				tag = RED
+				tag = RE2
+				tag = RE3
 			}
 		}
 	}
