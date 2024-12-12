@@ -11055,9 +11055,17 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_dynamic_modifier = {
+				modifier = USABA_german_ch_idea
+			}
+			custom_effect_tooltip = enter_tt
 			add_popularity = {
 			    ideology = fascism
 			    popularity = 0.05
+			}
+			every_state = {
+				limit = { has_dynamic_modifier = { modifier = USA_rising_exiled_germans_state } }
+				remove_dynamic_modifier = { modifier = USA_rising_exiled_germans_state }
 			}
 			custom_effect_tooltip = USABA_german_national_protection_law_tt
 			hidden_effect = {
@@ -11118,6 +11126,16 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = USABA_german_ch_idea_modifier_tt
+			add_to_variable = {
+				USABA_GER_modfiy_war_support_factor = 0.05
+				tooltip = war_support_factor_tt
+			}
+			add_to_variable = {
+				USABA_GER_modfiy_conscription = 0.01
+				tooltip = conscription_tt
+			}
+			custom_effect_tooltip = enter_tt
 			add_popularity = {
 			    ideology = fascism
 			    popularity = 0.05
@@ -11177,10 +11195,23 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = USABA_german_ch_idea_modifier_tt
+			add_to_variable = {
+				USABA_GER_modfiy_political_power_factor = 0.05
+				tooltip = political_power_factor_tt
+			}
+			add_to_variable = {
+				stability_factor = -0.05
+				tooltip = stability_factor_tt
+			}
+			custom_effect_tooltip = enter_tt
 			add_popularity = {
 			    ideology = fascism
 			    popularity = 0.05
 			}
+			custom_effect_tooltip = USABA_revolutionaries_of_the_nation_tt
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = GER_leni_riefenstahl
 		}
 	}
 
@@ -11236,10 +11267,29 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = USABA_german_ch_idea_modifier_tt
+			add_to_variable = {
+				USABA_GER_modfiy_political_power_factor = 0.05
+				tooltip = political_power_factor_tt
+			}
+			add_to_variable = {
+				stability_factor = -0.05
+				tooltip = stability_factor_tt
+			}
+			add_to_variable = {
+				USABA_GER_modfiy_production_speed_arms_factory_factor = 0.05
+				tooltip = production_speed_arms_factory_factor_tt
+			}
+			add_to_variable = {
+				USABA_GER_modfiy_production_factory_efficiency_gain_factor = 0.05
+				tooltip = production_factory_efficiency_gain_factor_tt
+			}
+			custom_effect_tooltip = enter_tt
 			add_popularity = {
 			    ideology = fascism
 			    popularity = 0.05
 			}
+			
 		}
 	}
 
@@ -11295,6 +11345,24 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = USABA_german_ch_idea_modifier_tt
+			add_to_variable = {
+				USABA_GER_modfiy_political_power_factor = 0.05
+				tooltip = political_power_factor_tt
+			}
+			add_to_variable = {
+				USABA_GER_modfiy_production_speed_industrial_complex_factor = -0.05
+				tooltip = production_speed_arms_factory_factor_tt
+			}
+			add_to_variable = {
+				USABA_GER_modfiy_production_speed_arms_factory_factor = 0.05
+				tooltip = production_speed_arms_factory_factor_tt
+			}
+			add_to_variable = {
+				USABA_GER_modfiy_production_factory_max_efficiency_factor = 0.05
+				tooltip = production_factory_max_efficiency_factor_tt
+			}
+			custom_effect_tooltip = enter_tt
 			add_popularity = {
 			    ideology = fascism
 			    popularity = 0.05
@@ -11308,7 +11376,7 @@ focus_tree = {
 
 	focus = {
 		id = USABA_joining_hands
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_generic_german_trade
 		prerequisite = { focus = USABA_german_national_protection_law }
 		x = -1
 		y = 1
@@ -11332,12 +11400,17 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_political_power = 80
+			add_popularity = {
+				ideology = ROOT
+				popularity = 0.10
+			}
 		}
 	}
 
 	focus = {
 		id = USABA_compromise_plan
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_goal_generic_forceful_treaty
 		prerequisite = { focus = USABA_joining_hands }
 		mutually_exclusive = {
 			focus = USABA_towards_a_new_era_in_america
@@ -11365,12 +11438,13 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			unlock_decision_tooltip = USABA_german_government_restored
 		}
 	}
 
 	focus = {
 		id = USABA_controlling_the_far_right
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_generic_anti_fascist_diplomacy
 		prerequisite = { focus = USABA_german_national_protection_law }
 		x = -3
 		y = 1
@@ -11386,6 +11460,7 @@ focus_tree = {
 		continue_if_invalid = yes
 
 		available = {
+			NOT = { has_completed_focus = USABA_rise_to_power }
 		}
 		bypass = {
 		}
@@ -11394,12 +11469,17 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = USABA_german_ch_idea_modifier_tt
+			add_to_variable = {
+				USABA_GER_modfiy_political_power_factor = -0.10
+				tooltip = political_power_factor_tt
+			}
 		}
 	}
 
 	focus = {
 		id = USABA_attacks_on_conspiracy_theories
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = USABA_controlling_the_far_right }
 		x = 0
 		y = 1
@@ -11415,6 +11495,7 @@ focus_tree = {
 		continue_if_invalid = yes
 
 		available = {
+			NOT = { has_completed_focus = USABA_rise_to_power }
 		}
 		bypass = {
 		}
@@ -11423,12 +11504,17 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = USABA_german_ch_idea_modifier_tt
+			add_to_variable = {
+				USABA_GER_modfiy_political_power_factor = -0.05
+				tooltip = political_power_factor_tt
+			}
 		}
 	}
 
 	focus = {
 		id = USABA_limiting_german_militia
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_goal_generic_neutrality_focus
 		prerequisite = { focus = USABA_attacks_on_conspiracy_theories }
 		x = 0
 		y = 1
@@ -11444,6 +11530,7 @@ focus_tree = {
 		continue_if_invalid = yes
 
 		available = {
+			NOT = { has_completed_focus = USABA_rise_to_power }
 		}
 		bypass = {
 		}
@@ -11452,12 +11539,17 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = USABA_german_ch_idea_modifier_tt
+			add_to_variable = {
+				USABA_GER_modfiy_political_power_factor = -0.05
+				tooltip = political_power_factor_tt
+			}
 		}
 	}
 
 	focus = {
 		id = USABA_towards_a_new_era_in_america
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_goal_generic_alliance
 		prerequisite = { focus = USABA_limiting_german_militia }
 		mutually_exclusive = {
 			focus = USABA_compromise_plan
@@ -11485,6 +11577,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			remove_dynamic_modifier = { modifier = USABA_german_ch_idea }
 		}
 	}
 
@@ -11521,6 +11614,20 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = USABA_german_ch_idea_modifier_tt
+			add_to_variable = {
+				USABA_GER_modfiy_political_power_factor = 0.05
+				tooltip = political_power_factor_tt
+			}
+			add_to_variable = {
+				USABA_GER_modfiy_war_support_factor = 0.10
+				tooltip = war_support_factor_tt
+			}
+			add_to_variable = {
+				USABA_GER_modfiy_consumer_goods_factor = -0.05
+				tooltip = consumer_goods_factor_tt
+			}
+			custom_effect_tooltip = enter_tt
 			add_popularity = {
 			    ideology = fascism
 			    popularity = 0.05

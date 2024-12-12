@@ -732,4 +732,47 @@ characters = {
 			}
 		}
 	}
+
+	#미국 인물 추가
+
+	USABA_german_ch = {
+		name=USABA_german_ch
+		portraits={
+			army={ #!! 포트레잇 없음!
+				large=GFX_portrait_USA_william_halsey_jr
+				small=GFX_portrait_USA_william_halsey_jr_small
+			}
+		}
+	}
+
+	USABA_leni_riefenstahl = {	
+
+		name = GER_leni_riefenstahl
+
+		gender = female 
+
+		portraits = {
+			army = {
+				small = GFX_portrait_GER_leni_riefenstahl_small
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = GER_leni_riefenstahl
+			allowed = {
+				original_tag = USA
+			}
+			visible = {
+				has_completed_focus = USABA_strong_propaganda
+				has_government = fascism
+			}
+			available = {
+			}
+			traits = {
+				GER_film_director
+			}
+		}
+			
+	}
 }

@@ -48,6 +48,19 @@ set_war_support = 0
 add_command_power = 20
 
 activate_mission = USA_2nd_great_depression_1st
+	
+set_variable = { USABA_GER_modfiy_political_power_factor = -0.05 }
+set_variable = { USABA_GER_modfiy_consumer_goods_factor = 0.05 }
+set_variable = { USABA_GER_modfiy_production_speed_buildings_factor = 0 }
+set_variable = { USABA_GER_modfiy_stability_factor = 0 }
+set_variable = { USABA_GER_modfiy_war_support_factor = 0 }
+set_variable = { USABA_GER_modfiy_conscription = 0 }
+set_variable = { USABA_GER_modfiy_industrial_capacity_factory = 0 }
+set_variable = { USABA_GER_modfiy_production_speed_arms_factory_factor = 0 }
+set_variable = { USABA_GER_modfiy_production_speed_industrial_complex_factor = 0 }
+set_variable = { USABA_GER_modfiy_production_factory_start_efficiency_factor = 0 }
+set_variable = { USABA_GER_modfiy_production_factory_max_efficiency_factor = 0 }
+set_variable = { USABA_GER_modfiy_production_factory_efficiency_gain_factor = 0 }
 
 set_variable = { var = senators_support value = 48 }
 set_variable = { var = senators_total value = 96 }
@@ -473,6 +486,9 @@ recruit_character = USA_william_francis_gibbs
 recruit_character = USA_andrew_mckee
 recruit_character = USA_john_walter_christie
 recruit_character = USA_vannevar_bush
+#/BA_MOD_FIX
+recruit_character = USABA_leni_riefenstahl
+recruit_character = USABA_german_ch
 
 
 

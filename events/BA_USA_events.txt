@@ -926,12 +926,14 @@ country_event = {
 					has_dynamic_modifier = {
 						modifier = USA_rising_exiled_germans_state
 					}
+					is_owned_by = ROOT
 				}
 				transfer_state_to = PREV
-				remove_dynamic_modifier = {
-					modifier = USA_rising_exiled_germans_state
-				}
 				add_core_of = PREV
+			}
+			every_state = {
+				limit = { has_dynamic_modifier = { modifier = USA_rising_exiled_germans_state } }
+				remove_dynamic_modifier = { modifier = USA_rising_exiled_germans_state }
 			}
 			division_template = {
 				name = "German National Army"

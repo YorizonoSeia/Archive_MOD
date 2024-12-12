@@ -4370,3 +4370,144 @@ USA_rising_exiled_germans = {
 		}
 	}
 }
+
+USA_congress = {
+	
+	USABA_german_government_restored = {
+		icon = GFX_decision_ger_reichskommissariats
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 5
+				state = 42
+				state = 50
+				state = 51
+				state = 52
+				state = 53
+				state = 54
+				state = 55
+				state = 56
+				state = 57
+				state = 58
+				state = 59
+				state = 60
+				state = 61
+				state = 62
+				state = 63
+				state = 64
+				state = 65
+				state = 66
+				state = 67
+				state = 68
+				state = 188
+				state = 763
+				state = 909
+				state = 987
+				state = 978
+				state = 990
+			}
+		}
+
+		visible = {
+			has_completed_focus = USABA_compromise_plan
+		}
+
+		available = {
+			controls_state = 5
+			controls_state = 42
+			controls_state = 50
+			controls_state = 51
+			controls_state = 52
+			controls_state = 53
+			controls_state = 54
+			controls_state = 55
+			controls_state = 56
+			controls_state = 57
+			controls_state = 58
+			controls_state = 59
+			controls_state = 60
+			controls_state = 61
+			controls_state = 62
+			controls_state = 63
+			controls_state = 64
+			controls_state = 65
+			controls_state = 66
+			controls_state = 67
+			controls_state = 68
+			controls_state = 188
+			controls_state = 763
+			controls_state = 909
+			controls_state = 987
+			controls_state = 978
+			controls_state = 990
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		fire_only_once = yes
+
+		cost = 100
+		
+		days_remove = 28
+
+		modifier = {
+			political_power_factor = -0.2
+		}
+		
+		remove_effect = {
+			create_dynamic_country = {
+				original_tag = GER
+				copy_tag = GER
+				add_political_power = 100
+				transfer_state = 5
+				transfer_state = 42
+				transfer_state = 50
+				transfer_state = 51
+				transfer_state = 52
+				transfer_state = 53
+				transfer_state = 54
+				transfer_state = 55
+				transfer_state = 56
+				transfer_state = 57
+				transfer_state = 58
+				transfer_state = 59
+				transfer_state = 60
+				transfer_state = 61
+				transfer_state = 62
+				transfer_state = 63
+				transfer_state = 64
+				transfer_state = 65
+				transfer_state = 66
+				transfer_state = 67
+				transfer_state = 68
+				transfer_state = 188
+				transfer_state = 763
+				transfer_state = 909
+				transfer_state = 987
+				transfer_state = 978
+				transfer_state = 990
+				
+				ROOT = {
+					set_autonomy = {
+						target = PREV
+						autonomous_state = autonomy_personal_union
+						end_wars = no
+						end_civil_wars = no
+					}
+				}
+				create_country_leader = {
+					name = ARI_german_country_leader
+					picture = "gfx/leaders/ARI/ARI_german_reconstruction_government.tga"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+					}
+				}
+				
+				BA_halo_tech_tool_effect = yes #헤일로 연구 바로잡기
+			}
+		}
+	}
+}

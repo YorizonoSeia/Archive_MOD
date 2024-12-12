@@ -30,11 +30,14 @@
  USA_soviet_team: "아메리카 소비에트 사회주의 공화국 연방"
 
  USABA_so_the_jews_are_the_problem: "그러니까 유대인이 문제야!"
+ USABA_so_the_jews_are_the_problem_desc: "세계 대전에서의 독일의 패배, 그리고 현재 미합중국의 퇴폐마저, 모든 음모의 끝에는 유대인이 존재했습니다! 우리는 이들을 미국의 적으로 선언해야만 합니다!"
  USABA_so_the_jews_are_the_problem_tt: "우리를 돕기 위한 §Y독일 민족주의 민병대§!가 수도에서 조직됩니다."
  USABA_so_the_jews_are_the_problem_red_tt: "\n§R내전이 끝난 후 독일 민족 보호법을 빠르게 완료하지 않는다면 우익 민병대와 재미독일인들은 폭도로 변하고 말 것입니다.§!"
  USABA_german_ethnic_union_in_america: "재미독일민족연맹"
+ USABA_german_ethnic_union_in_america_desc: "1935년 12월, 독일의 여러 군과 살아남은 잔존 행정조직이 독일의 소멸을 선언한 이후, 수 많은 독일인들은 유럽의 참사를 피해 우리 미합중국으로 피난했습니다. 우리는 이들을 포용하고 보스턴 반란을 진압하는 민병대를 확대해야 합니다."
  USABA_german_ethnic_union_in_america_tt: "§Y독일 민족주의 민병대§! §G6§! 사단이 수도에서 새로 창설됩니다"
  USABA_german_national_protection_law: "독일 민족 보호법"
+ USABA_german_national_protection_law_desc: "망명한 독일인들이 그들의 영토로 돌아가기 전 까지 미합중국 내에서 '특별한' 지위를 유지할 보호 법안을 작성해야 합니다."
 
  BA_end_USA_congress_tt: "§R미합중국의 의회가 정지됩니다.§!\n§R민주주의 정당 지지율에 의해 안정도가 감소합니다.§!"
 
@@ -68,6 +71,12 @@
  USA_rising_exiled_germans_3st_flag_NOT: "3차 미국 내전이 발생하지 않음"
  USABA_german_national_protection_law_tt: "시간이 지남에 따라 §Y독일인 대표 위원회§!(은)는 자신의 갈래에 있는 중점을 개시할 것입니다."
  USABA_german_ch: "독일인 대표 위원회"
+ USABA_revolutionaries_of_the_nation_tt: "§g과거 독일의 저명한 영화감독이자, 현재 독일 망명자들의 구심점으로 부상하는 $GER_leni_riefenstahl$은 정부에 초대될 것입니다.§!"
+
+ USABA_german_ch_idea: "독일인 대표 위원회"
+ USABA_german_ch_idea_modifier_tt: "§Y$USABA_german_ch_idea$§! 변동치:"
+
+ USABA_german_government_restored: "독일 정부 수복"
 
 ######################################################
 ######################신규 중점들######################

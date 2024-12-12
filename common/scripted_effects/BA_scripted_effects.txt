@@ -2688,3 +2688,50 @@ USABA_debug_effect2 = {
 	add_ideas = USABA_famine
 	add_ideas = USABA_collapsed_government_authority
 }
+USABA_debug_effect3 = {
+	if = {
+		limit = {
+			NOT = { has_completed_focus = USABA_revolutionaries_of_the_nation }
+		}
+		activate_shine_on_focus = USABA_revolutionaries_of_the_nation
+		set_country_flag = { flag = USABA_revolutionaries_of_the_nation_in_progress_flag days = 3 value = 1 }
+		country_event = { id = usa_hidden_right_event.2 days = 3 }
+	}
+	else_if = {
+		limit = {
+			NOT = { has_completed_focus = USABA_strong_propaganda }
+		}
+		activate_shine_on_focus = USABA_strong_propaganda
+		set_country_flag = { flag = USABA_strong_propaganda_in_progress_flag days = 3 value = 1 }
+		country_event = { id = usa_hidden_right_event.2 days = 3 }
+	}
+	else_if = {
+		limit = {
+			NOT = { has_completed_focus = USABA_expansion_of_influence_in_america }
+		}
+		activate_shine_on_focus = USABA_expansion_of_influence_in_america
+		set_country_flag = { flag = USABA_expansion_of_influence_in_america_in_progress_flag days = 3 value = 1 }
+		country_event = { id = usa_hidden_right_event.2 days = 3 }
+	}
+	else_if = {
+		limit = {
+			NOT = { has_completed_focus = USABA_destruction_of_jewish_groups }
+		}
+		activate_shine_on_focus = USABA_destruction_of_jewish_groups
+		set_country_flag = { flag = USABA_destruction_of_jewish_groups_in_progress_flag days = 3 value = 1 }
+		country_event = { id = usa_hidden_right_event.2 days = 3 }
+	}
+}
+USABA_debug_effect4 = {
+	every_owned_state = {
+		limit = {
+			OR = {
+				state = 393
+				state = 395
+			}
+		}
+		add_dynamic_modifier = {
+			modifier = USA_rising_exiled_germans_state
+		}
+	}
+}
