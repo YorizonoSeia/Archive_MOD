@@ -1,11 +1,9 @@
 ﻿l_simp_chinese:
-		 
-antonomous_government:0 "现地自治政府"
-antonomous_government_accept:0 "$antonomous_government$"
-antonomous_government_army:0 "$antonomous_government$"
-antonomous_government_accept_people:0 "$antonomous_government$"
-antonomous_government_accept_army:0 "$antonomous_government$"
-antonomous_government_army_industry:0 "$antonomous_government$"
-antonomous_government_accept_army_people:0 "$antonomous_government$"
-antonomous_government_accept_army_industry:0 "$antonomous_government$"
-antonomous_government_final:0 "$antonomous_government$"
+ #占领法
+ 
+ unity_of_gehenna:0 "格黑娜统一统治"
+ antonomous_government:0 "当地自治政府"
+ antonomous_government_improved:0 "$antonomous_government$"
+ antonomous_government_final:0 "$antonomous_government$"
+ territorial_state:0 "帝国领地"
+ territorial_state_improved:0 "$territorial_state$"

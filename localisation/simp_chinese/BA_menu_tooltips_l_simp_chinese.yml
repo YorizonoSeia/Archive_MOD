@@ -1,4 +1,4 @@
 ﻿l_simp_chinese:
- BA_CAREER_PROFILE_TOOLTIP:0 "个人资料"
- BA_SETTINGS_TOOLTIP:0 "设置"
- BA_NUDGE_TOOLTIP:0 "§4提示:这是一个提醒。§!"
+  BA_CAREER_PROFILE_TOOLTIP: "个人资料"
+  BA_SETTINGS_TOOLTIP: "设置"
+  BA_NUDGE_TOOLTIP: "§4提示：这是一个提示。§!"
