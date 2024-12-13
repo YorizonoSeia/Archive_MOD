@@ -153,6 +153,13 @@ BA_from_southern_kivotos = {
 			has_completed_focus = HYA_focus_70
 		}
 	}
+	on_map_area = {
+        targets = {
+			4 986 152 153 848 69 74 75 72 9 69 53 52 54 976 975 972
+		}
+        name = southern_kivoto_decision
+        zoom = 200
+    }
 
 	highlight_states = {
 		highlight_state_targets = {
@@ -170,6 +177,9 @@ BA_from_southern_kivotos = {
 			state = 53
 			state = 52
 			state = 54
+			state = 976
+			state = 975
+			state = 972
 		}
 	}
 }

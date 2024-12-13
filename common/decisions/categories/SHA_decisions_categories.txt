@@ -16,6 +16,14 @@ SHA_congress = {
 		has_country_flag = SHA_congress_ok
 	}
 }
+SHA_coup_of_Black_Tortoise_Promenade = {
+	priority = 10
+	allowed = { original_tag = SHA }
+
+	visible = {
+		has_completed_focus = SHA_Kisaki_Suppression
+	}
+}
 SHA_balance_of_power_category = {
 	priority = 0
 	icon = GFX_decision_category_power_struggle

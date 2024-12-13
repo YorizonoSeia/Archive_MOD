@@ -197,18 +197,6 @@ ideas = {
 				surrender_limit = 1
 			}
 		}
-		SHA_Black_Tortoise_Promenade = {
-			picture = SHA_IdeaG_5
-			allowed = {	always = no	}
-			allowed_civil_war = { always = yes }
-			modifier = {
-				political_power_cost = 0.25
-				industrial_factory_donations = 5
-				consumer_goods_factor = 0.1
-				trade_laws_cost_factor = 0.25
-				economy_cost_factor = 0.25
-			}
-		}
 		SHA_Power_Black_Tortoise_Promenade = {
 			picture = SHA_IdeaG_8
 			allowed = {	always = no	}
@@ -961,6 +949,27 @@ ideas = {
 				army_core_defence_factor = 0.1
 				consumer_goods_factor = -0.03
 				political_advisor_cost_factor = -0.33
+			}
+		}
+		# 현무상회
+		SHA_Black_Tortoise_Promenade = {
+			picture = SHA_IdeaG_5
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			modifier = {
+				industrial_factory_donations = 5
+				political_power_factor = -0.05
+				communism_drift = 0.01
+				democratic_drift = 0.01
+			}
+		}
+		# 현무상회 - 억제 됨
+		SHA_suppressed_Black_Tortoise_Promenade = {
+			picture = SHA_IdeaG_5
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			modifier = {
+				industrial_factory_donations = 2
 			}
 		}
 

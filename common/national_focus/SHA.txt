@@ -7642,6 +7642,12 @@ focus_tree = {
 		available = { }
 		bypass = { }
 
+		allow_branch = {
+			NOT = {
+				has_completed_focus = SHA_Austrian_appeasement_policy
+			}
+		}
+
 
 		completion_reward = {
 			remove_ideas = SHA_Austrian_fascist_militia
@@ -7661,6 +7667,12 @@ focus_tree = {
 
 		available = { }
 		bypass = { }
+
+		allow_branch = {
+			NOT = {
+				has_completed_focus = SHA_Austrian_oppression_continues
+			}
+		}
 
 
 		completion_reward = {
@@ -7837,12 +7849,83 @@ focus_tree = {
 					media_personality
 					inspirational_leader
 				}
-				skill=5
-				attack_skill=5 #+1
-				defense_skill=4
-				planning_skill=6
+				skill=2
+				attack_skill=3 #+1
+				defense_skill=2
+				planning_skill=3
 				logistics_skill=3
 			}
+		}
+	}
+
+	# 카구야 축출
+	focus = {
+		id = SHA_Kaguya_ousted
+		icon = GFX_goal_Shintani_Kai_Follow
+		x = -3
+		y = 1
+		cost = 10
+
+		prerequisite = { focus = SHA_Shintani_Kai_Follow }
+		mutually_exclusive = { }
+
+		available = {
+			fascism > 0.35
+		}
+		bypass = { }
+
+		relative_position_id = SHA_Shintani_Kai_Follow
+
+		completion_reward = {
+		}
+	}
+
+	# 산해경 파시즘
+	focus = {
+		id = SHA_Shanhaijing_fascism
+		icon = GFX_goal_Shintani_Kai_Follow
+		x = 2
+		y = 1
+		cost = 10
+
+		prerequisite = { focus = SHA_Kaguya_ousted }
+		mutually_exclusive = { focus = SHA_fascism_friend }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_Kaguya_ousted
+
+		completion_reward = {
+		}
+	}
+
+	# 새로운 파시즘 친구
+	focus = {
+		id = SHA_fascism_friend
+		icon = GFX_goal_Shintani_Kai_Follow
+		x = -2
+		y = 1
+		cost = 10
+
+		prerequisite = { focus = SHA_Kaguya_ousted }
+		mutually_exclusive = { focus = SHA_Shanhaijing_fascism }
+
+		available = {
+			NOT = { has_war_with = TRM }
+			TRM = {
+				#exist = yes
+				has_government = fascism
+				is_faction_leader = yes
+				is_puppet = no
+				has_civil_war = no
+			}
+		}
+		bypass = { }
+
+		relative_position_id = SHA_Kaguya_ousted
+
+		completion_reward = {
 		}
 	}
 
@@ -7906,6 +7989,23 @@ focus_tree = {
 					add_idea = SHA_kaguya_idea_tooltip_2
 					remove_idea = SHA_kaguya_idea_tooltip
 				}
+			}
+			custom_effect_tooltip = SHA_Kisaki_is_Doorkeeper_tt
+			hidden_effect = {
+				SHA_KISAKI = { 
+					add_country_leader_role = {
+						country_leader = {
+							ideology = despotism
+							expire = "1965.1.1.1"
+							id = -1
+							traits = { 
+								SHA_T1a
+								SHA_T2a 
+							}
+						}
+					}
+				}
+				SHA_KAGUYA = { remove_country_leader_role = { ideology = despotism } }
 			}
 			hidden_effect = {
 				remove_trait = {
@@ -8167,6 +8267,32 @@ focus_tree = {
 
 		completion_reward = {
 			remove_ideas = SHA_faup_idea
+		}
+	}
+
+	# 루미 경질
+	focus = {
+		id = SHA_Sack_of_Rumi
+		icon = GFX_goal_SHA_Sack_of_Rumi
+		x = 1
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = SHA_strike_suppression
+		}
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_strike_suppression
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SHA_Black_Tortoise_Promenade
+				add_idea =SHA_suppressed_Black_Tortoise_Promenade
+			}
 		}
 	}
 
