@@ -7869,7 +7869,9 @@ focus_tree = {
 		prerequisite = { focus = SHA_Shintani_Kai_Follow }
 		mutually_exclusive = { }
 
-		available = { }
+		available = {
+			fascism > 0.35
+		}
 		bypass = { }
 
 		relative_position_id = SHA_Shintani_Kai_Follow
@@ -7912,7 +7914,7 @@ focus_tree = {
 		available = {
 			NOT = { has_war_with = TRM }
 			TRM = {
-				exist = yes
+				#exist = yes
 				has_government = fascism
 				is_faction_leader = yes
 				is_puppet = no
@@ -7987,6 +7989,23 @@ focus_tree = {
 					add_idea = SHA_kaguya_idea_tooltip_2
 					remove_idea = SHA_kaguya_idea_tooltip
 				}
+			}
+			custom_effect_tooltip = SHA_Kisaki_is_Doorkeeper_tt
+			hidden_effect = {
+				SHA_KISAKI = { 
+					add_country_leader_role = {
+						country_leader = {
+							ideology = despotism
+							expire = "1965.1.1.1"
+							id = -1
+							traits = { 
+								SHA_T1a
+								SHA_T2a 
+							}
+						}
+					}
+				}
+				SHA_KAGUYA = { remove_country_leader_role = { ideology = despotism } }
 			}
 			hidden_effect = {
 				remove_trait = {
