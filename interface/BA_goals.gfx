@@ -1641,6 +1641,14 @@ spriteTypes = {
 		name = "GFX_goal_SHA_Sack_of_Rumi"
 		texturefile = "gfx/interface/goals/SHA/SHA_Sack_of_Rumi.tga"  
 	}
+	SpriteType = {
+		name = "GFX_goal_SHA_Kaguya_ousted"
+		texturefile = "gfx/interface/goals/SHA/SHA_Kaguya_ousted.tga"  
+	}
+	SpriteType = {
+		name = "GFX_goal_SHA_Eastern_Alchemy_Society_solidarity"
+		texturefile = "gfx/interface/goals/SHA/SHA_Eastern_Alchemy_Society_solidarity.tga"  
+	}
 	SpriteType = { 	
 		name = "GFX_goal_ROM_invite_german_advisorsr"
 		texturefile = "gfx/interface/goals/ROM/ROM_invite_german_advisors.tga"  

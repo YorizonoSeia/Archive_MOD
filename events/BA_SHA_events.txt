@@ -1188,8 +1188,8 @@ country_event = {
 		}
 		set_party_name = {
 			ideology = fascism
-			long_name = SHA_Radical_party_long
-			name = SHA_Radical_party
+			long_name = SHA_party_name4
+			name = SHA_party_name4
 		}
 	}
 }
@@ -1199,11 +1199,12 @@ country_event = {
 	id = shafas.2
 	title = shafas.2.t
 	desc = shafas.2.d
-	picture = GFX_report_event_ARG_coup_detat
+	picture = GFX_report_event_communists_in_riga
     is_triggered_only = yes
 
 	option = {
 		name = shafas.2.a
+		activate_mission = SHA_BTP_revolt_mission
 		hidden_effect = {
 			country_event = { id = shafas.3 days = 03 }
 		}
@@ -1215,12 +1216,56 @@ country_event = {
 	id = shafas.3
 	title = shafas.3.t
 	desc = shafas.3.d
-	picture = GFX_report_event_ARG_coup_detat
+	picture = GFX_report_event_generic_italian_fascists
 
     is_triggered_only = yes
 
 	option = {
 		name = shafas.3.a
+		set_party_name = {
+			ideology = fascism
+			long_name = SHA_Radical_party_long
+			name = SHA_Radical_party
+		}
+		SHA_secret_agent ={
+			add_country_leader_role = {
+				country_leader = {
+					ideology = fascism_ideology
+					expire = "1965.1.1.1"
+					id = -1
+					traits = {  }
+				}
+				promote_leader = yes
+			}
+		}
+	}
+}
+
+# 현무상회의 쿠데타!
+country_event = {
+	id = shafas.4
+	title = shafas.4.t
+	desc = shafas.4.d
+	picture = GFX_report_event_ARG_coup_detat
+
+    is_triggered_only = yes
+
+	option = {
+		name = shafas.4.a
+        army_experience = 5
+		set_politics = { ruling_party = democratic }
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.5
+		}
+	}
+
+	option = {
+		name = shafas.4.b
+        army_experience = 5
+		add_stability = -0.1
+		add_war_support = -0.05
+		add_political_power = -75
 	}
 }
 

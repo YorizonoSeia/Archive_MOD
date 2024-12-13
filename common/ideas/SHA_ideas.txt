@@ -818,6 +818,19 @@ ideas = {
 				neutrality_drift = -0.02
 			}
 		}
+		# 오스트리아 파시스트 민병대 - 약해짐
+		SHA_Austrian_fascist_militia_weak = {
+			name = SHA_Austrian_fascist_militia
+			picture = AUS_austrofascissm
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+
+			modifier = {
+				war_support_factor = -0.05
+				fascism_drift = 0.02
+				neutrality_drift = -0.02
+			}
+		}
 		# 경극부
 		SHA_Peking_Opera = {
 			name = SHA_opera_idea

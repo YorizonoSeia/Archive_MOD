@@ -452,6 +452,55 @@ SHA_congress = {
 }
 
 SHA_coup_of_Black_Tortoise_Promenade = {
+
+	SHA_BTP_revolt_mission = {
+
+		priority = 100
+
+		allowed = { always = no }
+
+		icon = GFX_decision_generic_political_discourse
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		days_mission_timeout = 365
+		is_good = no
+		fire_only_once = yes
+
+		cancel_trigger = {
+			has_completed_focus = SHA_Sack_of_Rumi
+		}
+
+		remove_effect = {
+		}
+
+		complete_effect = {
+		}
+
+		timeout_effect = {
+
+			country_event = { 
+				id = shafas.4 
+			}
+			custom_effect_tooltip = this_will_happen_tt
+			effect_tooltip = {
+        		army_experience = 5
+				set_politics = { ruling_party = democratic }
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.5
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+			}
+
+		}
+
+		ai_will_do = {
+			base = 250
+		}
+	}
 	
 }
 

@@ -7725,6 +7725,11 @@ focus_tree = {
 			# 보수혁명 경로를 진행하고 싶을때는 이 중점이 필요 없도록 느껴지는 효과를 넣어주세요.. 하투 하투~
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = SHA_arthur_seyss_inquart_political_advisor
+			custom_effect_tooltip = tooltip_white_line 
+			swap_ideas = {
+				add_idea = SHA_Austrian_fascist_militia_weak
+				remove_idea = SHA_Austrian_fascist_militia
+			}
 		}
 	}
 
@@ -7810,7 +7815,7 @@ focus_tree = {
 		mutually_exclusive = {  }
 
 		available = {
-			fascism > 0.35
+			fascism > 0.34
 		}
 		bypass = { }
 
@@ -7828,7 +7833,7 @@ focus_tree = {
 		icon = GFX_goal_Shintani_Kai_Follow
 		x = -3
 		y = 1
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = SHA_Kisaki_Suppression }
 		mutually_exclusive = { focus = SHA_conservative_revolution }
@@ -7861,7 +7866,7 @@ focus_tree = {
 	# 카구야 축출
 	focus = {
 		id = SHA_Kaguya_ousted
-		icon = GFX_goal_Shintani_Kai_Follow
+		icon = GFX_goal_SHA_Kaguya_ousted
 		x = -3
 		y = 1
 		cost = 10
@@ -7870,7 +7875,7 @@ focus_tree = {
 		mutually_exclusive = { }
 
 		available = {
-			fascism > 0.35
+			fascism > 0.45
 		}
 		bypass = { }
 
@@ -7883,10 +7888,10 @@ focus_tree = {
 	# 산해경 파시즘
 	focus = {
 		id = SHA_Shanhaijing_fascism
-		icon = GFX_goal_Shintani_Kai_Follow
+		icon = GFX_focus_generic_fascist_troops
 		x = 2
 		y = 1
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = SHA_Kaguya_ousted }
 		mutually_exclusive = { focus = SHA_fascism_friend }
@@ -7900,13 +7905,92 @@ focus_tree = {
 		}
 	}
 
+	# 선단 투여
+	focus = {
+		id = SHA_Sundan_dosage
+		icon = GFX_goal_Shintani_Kai_Follow
+		x = 2
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_Shanhaijing_fascism }
+		mutually_exclusive = { }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_Shanhaijing_fascism
+
+		completion_reward = {
+		}
+	}
+
+	# 연단방 결속
+	focus = {
+		id = SHA_Eastern_Alchemy_Society_solidarity
+		icon = GFX_goal_SHA_Eastern_Alchemy_Society_solidarity
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_Shanhaijing_fascism }
+		mutually_exclusive = { }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_Shanhaijing_fascism
+
+		completion_reward = {
+		}
+	}
+
+	# 연단방 결속
+	focus = {
+		id = SHA_Proclamation_of_mobilization_order
+		icon = GFX_goal_Shintani_Kai_Follow
+		x = 1
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_Eastern_Alchemy_Society_solidarity }
+		prerequisite = { focus = SHA_Sundan_dosage }
+		mutually_exclusive = { }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_Eastern_Alchemy_Society_solidarity
+
+		completion_reward = {
+			add_stability = -0.05
+			add_war_support = 0.10
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
 	# 새로운 파시즘 친구
 	focus = {
 		id = SHA_fascism_friend
 		icon = GFX_goal_Shintani_Kai_Follow
 		x = -2
 		y = 1
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = SHA_Kaguya_ousted }
 		mutually_exclusive = { focus = SHA_Shanhaijing_fascism }
@@ -7926,6 +8010,7 @@ focus_tree = {
 		relative_position_id = SHA_Kaguya_ousted
 
 		completion_reward = {
+		
 		}
 	}
 
@@ -7935,7 +8020,7 @@ focus_tree = {
 		icon = GFX_goal_SHA_Shanhaijing_conservative_revolution
 		x = 3
 		y = 1
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = SHA_Kisaki_Suppression }
 		mutually_exclusive = { focus = SHA_Shintani_Kai_Follow }
@@ -8274,7 +8359,7 @@ focus_tree = {
 	focus = {
 		id = SHA_Sack_of_Rumi
 		icon = GFX_goal_SHA_Sack_of_Rumi
-		x = 1
+		x = 0
 		y = 1
 		cost = 5
 
@@ -8301,7 +8386,7 @@ focus_tree = {
 		id = SHA_emergency_measures
 		icon = GFX_focus_generic_mass_production
 		x = 0
-		y = 2
+		y = 3
 		cost = 10
 
 		prerequisite = {

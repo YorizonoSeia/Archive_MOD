@@ -407,19 +407,6 @@
  SHA_news.10.t:0 "산해경-일본 수교"
  SHA_news.10.desc:0 "오늘, 국제 사회에 충격적인 소식이 전해졌습니다. 지금까지 존재 자체가 미스터리였던 산해경 고급중학교가 대일본제국과 공식적으로 수교를 맺었다고 합니다. 이는 현대 국제 정치의 판도를 뒤흔들 만한 사건으로 평가되고 있습니다. 한 국제 정치 전문가는 "이는 단순한 외교 관계 수립 이상의 의미를 갖습니다. 산해경 고급중학교라는 미지의 세력과 대일본제국의 결합은 세계 질서에 큰 변화를 가져올 수 있습니다"라고 평가했습니다.\n\n이번 사건의 여파로 주변국들의 외교적, 군사적 대응이 예상되며, 국제 사회는 이 새로운 동맹의 향후 행보를 예의주시하고 있습니다."
  SHA_news.10.a:0 "오."
-
- #캐릭터
- SHA_KISAKI:0 "류우게 키사키"
- SHA_MINA:0 "코노에 미나"
- SHA_KAI:0 "신타니 카이"
- SHA_SAYA:0 "이쿠시 사야"
- SHA_SHUN:0 "스노하라 슌"
- SHA_RORISHUN:0 "슈에링"
- SHA_KOKONA:0 "스노하라 코코나"
- SHA_ROUMI:0 "아케시로 루미"
- SHA_REIJO:0 "카야마 레이죠"
- SHA_PAY:0 "페이"
- SHA_KAGUYA:0 "우루시바라 카구야"
  #트레잇
  SHA_T1a:0 "검은 군주"
  SHA_T2a:0 "현룡문의 문주"
@@ -673,7 +660,12 @@
  SHA_Kaguya_ousted: "$SHA_KAGUYA$ 축출"
  SHA_Kaguya_ousted_desc: "경극부의 힘에 입어 $SHA_KISAKI$를 몰아내는데에 성공하였습니다. 그러나 이제 경극부는 쓸모없는 짐 덩어리에 불과합니다. 연단방과 협력해 경극부를 습격하여 $SHA_KAGUYA$를 문주의 자리에서 끌어내리고 현룡문의 문주 자리를 차지할 것입니다."
  SHA_Shanhaijing_fascism: "산해경 파시즘"
+ SHA_Sundan_dosage: "선단 투여"
+ SHA_Sundan_dosage_desc: "우리의 군사적 목적 달성을 위해 \"선단\" 이라는 약품을 군인들에게 투여할 것입니다. 비록 약품이 완성되지 않았지만 산해경의 영광을 위해서라면 우리의 군인들은 감내할 것입니다.."
+ SHA_Eastern_Alchemy_Society_solidarity: "연단방 결속"
+ SHA_Proclamation_of_mobilization_order: "동원령 선포"
  SHA_fascism_friend: "[TRM.GetAdjective]의 지원 모색"
+
 
  # 보수 혁명 루트
  SHA_conservative_revolution: "보수혁명"
@@ -727,7 +719,12 @@
 
  shafas.3.t: "내부에 암약한 급진파"
  shafas.3.d: "현재 산해경은 혼란스럽습니다. 경극부의 쿠데타가 혁명으로 번지고 현룡문의 문주 였던 키사키는 이제 문주의 자리를 우루시바라 카구야에게 이양 되었고 현재 VIP 자택에 감금 되었습니다. 혁명은 어느정도 성공으로 끝났으나 아직 처리해야할 문제가 산더미입니다.\n\n그러나 내부로부터 수상한 움직임들이 포착 됩니다. 연단방의 급진파들이 신타니 카이의 복권을 위해 정치력을 발휘하고 있고 경극부의 일부 부원들 또한 이러한 행동도 결국 변화이며 산해경의 전통에 맞지 않는다고 주장합니다. 이러한 둘의 관계를 잘 조절해야할 것입니다."
- shafas.3.a: "우리는 두 발짝 앞서야 한다."
+ shafas.3.a: "우리는 두 걸음 앞서야 한다."
+
+ shafas.4.t: "현무상회의 쿠데타!"
+ shafas.4.d: "경극부의 쿠데타 이후, 산해경에서는 또 한 번의 쿠데타가 발생했습니다. 이번에는 현무상회가 남아 있던 현룡문의 온건파를 결집시켜 우리 세력에 대항하기 시작 하였습니다.\n\n그들은 경극부의 혁명이 산해경의 전통을 완전히 거스르는 행위이며, 신타니 카이의 복권을 목적으로 벌어진 것이라고 주장했습니다. 또한 자신들이야말로 산해경의 안정을 되찾을 세력이라며 혁명을 외치고, 학생들을 선동하기 시작했습니다."
+ shafas.4.a: "현무상회가 쿠데타를 성공시켰다!"
+ shafas.4.b: "그들은 배반의 대가를 치룰 것이다!"
 
  # 툴팁
  SHA_Kaguya_is_Doorkeeper_tt: "§Y$SHA_KAGUYA$§!는 §Y현룡문의 문주§!가 될 것입니다."
@@ -738,3 +735,23 @@
  SHA_ardent_conservative_2: "$SHA_ardent_conservative$"
  SHA_ardent_conservative_3: "$SHA_ardent_conservative$"
  SHA_ardent_conservative_4: "보수주의의 선구자"
+
+ # 결정
+ SHA_coup_of_Black_Tortoise_Promenade: "현무상회의 인내심 악화"
+ SHA_coup_of_Black_Tortoise_Promenade_desc: "\n\n£GFX_SHA_Rumi_cat\n\n\n\n\n현무상회는 개방적인 성향을 지닌 조직으로, 현룡문의 개혁파들과 정치적으로 긴밀한 연관성을 갖고 있습니다. 그들의 이러한 개방성은 산해경의 전통을 중시하는 보수파들 사이에서 끊임없는 갈등을 야기해 왔습니다. 그러나 경극부가 산해경의 전통 유지를 명분으로 혁명을 일으킨 이상, 현무상회와의 충돌은 더 이상 피할 수 없는 상황이 되었습니다."
+ SHA_BTP_revolt_mission: "현무상회 반란"
+
+ 
+
+ # 인물
+ SHA_KISAKI: "류우게 키사키"
+ SHA_MINA: "코노에 미나"
+ SHA_KAI: "신타니 카이"
+ SHA_SAYA: "이쿠시 사야"
+ SHA_SHUN: "스노하라 슌"
+ SHA_RORISHUN: "슈에링"
+ SHA_KOKONA: "스노하라 코코나"
+ SHA_ROUMI: "아케시로 루미"
+ SHA_REIJO: "카야마 레이죠"
+ SHA_KAGUYA: "우루시바라 카구야"
+ SHA_secret_agent: "비밀 요원 A"

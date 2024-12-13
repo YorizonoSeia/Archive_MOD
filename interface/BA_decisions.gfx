@@ -113,6 +113,12 @@ spriteTypes = {
 		legacy_lazy_load = no
 		noOfFrames = 25
 	}
+
+	spriteType = {
+		name = "GFX_SHA_Rumi_cat"
+		texturefile = "gfx/interface/decisions/SHA_Rumi_cat.tga"
+		legacy_lazy_load = no
+	}
 	spriteType = {
 		name = "GFX_ENG_india_problem"
 		texturefile = "gfx/interface/decisions/ENG_india_problem.tga"

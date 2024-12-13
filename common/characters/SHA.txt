@@ -525,6 +525,18 @@ characters={
 			ai_will_do = { base = 4000 }
 		}
 	}
+	SHA_secret_agent ={
+		name = SHA_secret_agent
+		gender = female
+		portraits={
+			civilian={
+				large= GFX_Portrait_BlueArchive_SHA_Generic_1
+			}
+			army={
+				large= GFX_Portrait_BlueArchive_SHA_Generic_1
+			}
+		}
+	}
 	SHA_arthur_seyss_inquart={
 		name=AUS_arthur_seyss-inquart
 		portraits={
