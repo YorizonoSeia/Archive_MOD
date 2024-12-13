@@ -451,6 +451,10 @@ SHA_congress = {
 	}
 }
 
+SHA_coup_of_Black_Tortoise_Promenade = {
+	
+}
+
 political_actions = {
 	SHA_revolutionGOGO = {
 		icon = GFX_decision_generic_tank

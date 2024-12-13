@@ -265,7 +265,6 @@
  SHA_opera_idea2:0 "힘을 얻은 경극부"
  SHA_opera_idea3:0 "경극연구부"
  SHA_civilwar:0 "산해경 내전"
- SHA_Black_Tortoise_Promenade:0 "현무상회"
  SHA_Power_Black_Tortoise_Promenade:0 "힘을 얻은 현무상회"
  SHA_Weak_Black_Tortoise_Promenade:0 "억제된 현무상회"
  SHA_altlrgkrdnjs_idea:0 "미식과 전통의 학원"
@@ -667,8 +666,16 @@
  SHA_local_harmony: "현지 화합"
  SHA_Kisaki_Suppression: "키사키 억제"
  SHA_Kisaki_Suppression_desc: "때가 되었습니다! 현 문주의 우둔함을 폭로하기 위한 경극이 준비되었습니다. 경극부와 현룡문 내 일부 급진파와 협력하여, 경극 상연의 순간을 기회로 삼아 현 문주를 퇴진시키고 $SHA_KAGUYA$를 새로운 문주로 추대할 것입니다."
+
+ # 신타니 카이 루트
  SHA_Shintani_Kai_Follow: "신타니 카이 복귀"
  SHA_Shintani_Kai_Follow_desc: "신타니 카이는 과거 산해경에서 여러 소동과 문제를 일으킨 문제아였지만, $SHA_KISAKI$의 폭거로 인해 정당한 절차조차 없이 퇴학당했습니다. 이제 그녀를 다시 불러들일 것입니다."
+ SHA_Kaguya_ousted: "$SHA_KAGUYA$ 축출"
+ SHA_Kaguya_ousted_desc: "경극부의 힘에 입어 $SHA_KISAKI$를 몰아내는데에 성공하였습니다. 그러나 이제 경극부는 쓸모없는 짐 덩어리에 불과합니다. 연단방과 협력해 경극부를 습격하여 $SHA_KAGUYA$를 문주의 자리에서 끌어내리고 현룡문의 문주 자리를 차지할 것입니다."
+ SHA_Shanhaijing_fascism: "산해경 파시즘"
+ SHA_fascism_friend: "[TRM.GetAdjective]의 지원 모색"
+
+ # 보수 혁명 루트
  SHA_conservative_revolution: "보수혁명"
  SHA_conservative_revolution_tt: "현재 §Y파시즘 지지율§!을 §Y비동맹주의 지지율§!로 변환합니다."
  SHA_conservative_revolution_desc: "수 년 넘게 산해경엔 제대로 된 보수파 문주가 없었으며, 전 문주의 짧았던 임기를 감안해봤을 때 이 퇴폐의 공백은 수십 년 이상으로 늘어납니다. 이러한 가식은 끝나야 합니다. 우리는 웅대한 보수혁명 속에서 올바른 산해경 애국자들의 이상에 따라 산해경을 재편해야 합니다."
@@ -677,8 +684,13 @@
  SHA_New_Genryumon_Peking_Opera_Department_Relations: "새로운 현룡문 - 경극부 관계"
  SHA_Cabinet_Secretariat: "산해경 추밀원"
  SHA_Engine_of_conservative_revolution: "보수혁명의 원동기"
+
+ # 공용
  SHA_Solving_the_Militia_Problem: "질서 회복"
  SHA_strike_suppression: "파업 진압"
+ SHA_strike_suppression_desc: "대전이 직후 산해경은 더욱 강력한 고립주의 정책을 채택했으며, 이는 상인연합회의 불만을 불러일으키기에 충분했습니다. 결국 그들은 12월에 현룡문의 정책에 반대하며 개혁과 개방을 요구하는 총파업에 돌입했습니다. 그러나 이러한 행동이 오히려 산해경의 상황을 더 악화시킬 뿐이라는 사실을 이들에게 명확히 깨닫게 하고, 필요하다면 무력으로 이를 진압해야 할 것입니다."
+ SHA_Sack_of_Rumi: "루미 경질"
+ SHA_Sack_of_Rumi_desc: "아케시로 루미는 12월 총파업의 주동자 중 한 명으로 지목됩니다. 루미를 경질함과 동시에 현무상회에 강력한 제재를 가함으로써 산해경의 전통을 수호하고, 나아가 보수적인 가치를 더욱 공고히 할 것입니다."
  SHA_emergency_measures: "급속 재무장"
  SHA_invade_of_Hyakkiyako: "학원 영토 수복"
 
@@ -699,6 +711,10 @@
  SHA_emergency_measures_idea: "비상조치"
  SHA_emergency_measures_idea_desc: "점점 변해가는 세상에서 [ROOT.GetName](이)가 뒤떨어지지 않게 하려면 공격적인 조치를 취하여 산업적 역량을 끌어올려야 합니다."
  SHA_walking_the_dragon: "산해경 보수혁명"
+ SHA_Black_Tortoise_Promenade: "현무상회"
+ SHA_Black_Tortoise_Promenade_desc: "키보토스 전역의 식자재가 모이는 상인연합회로, 산해경에서도 으뜸가는 미식의 명소로 꼽힙니다. 이런 특징 덕분에 산해경 전통 요리뿐만 아니라 키보토스의 다양한 식문화를 섭렵하고 있습니다.\n\n그러나 이러한 과정에서 자연스럽게 개방적인 성향을 드러내기 때문에, 현룡문을 비롯한 보수파들에게 배척받고 있습니다."
+ SHA_suppressed_Black_Tortoise_Promenade: "억제된 현무상회"
+ SHA_suppressed_Black_Tortoise_Promenade_desc: "키보토스 전역의 식자재가 모이는 상인연합회로 명성을 떨치던 동아리이었습니다만, 현재는 산해경의 현룡문 통제를 받고 있습니다. 조금이라도 현룡문의 전통에서 벗어나는 행위는 철저한 규제의 대상이 되며, 이로 인해 정치적 기반을 사실상 완전히 상실했습니다.\n\n한때 키보토스의 다양한 식문화를 선도하던 상인연합회는 이제 과거의 영광을 그리워하며, 보수적인 제약 속에서 겨우 명맥을 이어가고 있습니다."
 
  # 이벤트
  shafas.1.t: "경극부의 쿠데타!"
