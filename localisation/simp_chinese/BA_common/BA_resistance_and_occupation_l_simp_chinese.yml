@@ -1,9 +1,9 @@
 ﻿l_simp_chinese:
  #占领法
- 
- unity_of_gehenna:0 "格黑娜统一统治"
+
+ unity_of_gehenna:0 "盖赫纳统一统治"
  antonomous_government:0 "当地自治政府"
  antonomous_government_improved:0 "$antonomous_government$"
  antonomous_government_final:0 "$antonomous_government$"
- territorial_state:0 "帝国领地"
+ territorial_state:0 "帝国属邦"
  territorial_state_improved:0 "$territorial_state$"
