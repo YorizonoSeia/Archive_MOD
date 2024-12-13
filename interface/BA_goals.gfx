@@ -1,5 +1,9 @@
 spriteTypes = {
 	SpriteType = {
+		name = "GFX_focus_attack_SHA_HYA_ABY"
+		texturefile = "gfx/interface/goals/GER/attack_SHA_HYA_ABY.tga"			
+	}
+	SpriteType = {
 		name = "GFX_focus_work_with_kpd"
 		texturefile = "gfx/interface/goals/GER/work_with_kpd.tga"			
 	}
