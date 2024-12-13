@@ -1,4 +1,4 @@
-﻿l_english:
+﻿l_simp_chinese:
  #ABY_num_of_students_tt:0 "可招募更多学生以重建学院。\n当前学生人数：§G[?var:ABY_num_of_students]§!"
  #ABY_exiles_var_tt:0 "转学生人数：§G150§!"
  #aby_rebuild_high_school_text_desc:0 "民用工厂使用率：§g$ABY_num_of_students$§!\n\n每周劳动力：§g50§!\n\n可征兵人口：§g-10%§!"
