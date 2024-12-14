@@ -59,6 +59,15 @@ leader_traits = {
 			factor = 1
 		}
 	}
+	USABA_charles_lindbergh_trait = {
+		random = no
+		sprite = 13
+		stability_factor = 0.05
+		consumer_goods_factor = -0.03
+		min_export = -0.10
+		democratic_drift = 0.01
+		fascism_drift = 0.01
+	}
 	USABA_commander_in_chief = {
 		random = no
 		army_core_attack_factor = 0.10
@@ -2595,8 +2604,10 @@ leader_traits = {
 	}
 	SHA_T1a = { #암흑의 군주
 		random = no
-		stability_factor = -0.20
+		stability_factor = 0.05
 		neutrality_drift = 0.02
+		ai_call_ally_desire_factor = -70
+		ai_join_ally_desire_factor = -70
 	}
 	SHA_T2a = { #현룡문의 문주
 		random = no
@@ -2700,6 +2711,59 @@ leader_traits = {
 	SHA_T17a = { #
 		random = no
 		fascism_drift = 0.05
+	}
+	# 열렬한 보수주의자
+	SHA_ardent_conservative = {
+		random = no
+		sprite = 13
+
+		conscription_factor = 0.06
+		war_support_factor = 0.05
+		consumer_goods_factor = 0.06
+	}
+	# 열렬한 보수주의자
+	SHA_ardent_conservative_2 = {
+		random = no
+		sprite = 13
+
+		conscription_factor = 0.1
+		war_support_factor = 0.05
+		consumer_goods_factor = 0.02
+		army_morale_factor = 0.05
+	}
+	# 열렬한 보수주의자
+	SHA_ardent_conservative_3 = {
+		random = no
+		sprite = 13
+
+		conscription_factor = 0.1
+		war_support_factor = 0.05
+		army_morale_factor = 0.05
+		neutrality_drift = 0.02
+		custom_modifier_tooltip = DEN_military_advisors_cost_big_tt
+		hidden_modifier = {
+			air_advisor_cost_factor = -0.15
+			army_advisor_cost_factor = -0.15
+			navy_advisor_cost_factor = -0.15
+		}
+	}
+	# 열렬한 보수주의자
+	SHA_ardent_conservative_4 = {
+		random = no
+		sprite = 13
+
+		conscription_factor = 0.1
+		war_support_factor = 0.05
+		army_morale_factor = 0.05
+		neutrality_drift = 0.04
+		offensive_war_stability_factor = 0.05
+		defensive_war_stability_factor = 0.05
+		custom_modifier_tooltip = DEN_military_advisors_cost_big_tt
+		hidden_modifier = {
+			air_advisor_cost_factor = -0.15
+			army_advisor_cost_factor = -0.15
+			navy_advisor_cost_factor = -0.15
+		}
 	}
 	HYA_T1a = { #낙천적인 음양부장
 		random = no
@@ -3521,5 +3585,13 @@ leader_traits = {
 			experience_gain_air_factor = 0.1
             command_power_gain_mult = 0.5
             military_leader_cost_factor = -0.75
+	}
+
+	KAP_kohane_vanjyai = { # KV 리더 트레잇
+		random = no
+		stability_factor = 0.1
+		political_power_factor = 0.1
+		army_attack_factor = 0.1
+		army_defence_factor = 0.1
 	}
 }
