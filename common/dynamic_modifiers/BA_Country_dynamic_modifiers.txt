@@ -1995,3 +1995,32 @@ USABA_german_ch_idea = { #독일인 대표 위원회
 	production_factory_max_efficiency_factor = USABA_GER_modfiy_production_factory_max_efficiency_factor
 	production_factory_efficiency_gain_factor = USABA_GER_modfiy_production_factory_efficiency_gain_factor
 }
+
+SHA_Shanhaijinfascism = {
+	enable = { always = yes }
+	icon = GFX_idea_AUS_austrofascissm
+
+	fascism_drift = SHA_Shanhaijinfascism_fascism_drift
+	fascism_acceptance = SHA_Shanhaijinfascism_fascism_acceptance
+	
+	stability_factor = SHA_Shanhaijinfascism_stability_factor
+	drift_defence_factor = SHA_Shanhaijinfascism_drift_defence_factor
+	political_power_factor = SHA_Shanhaijinfascism_political_power_factor
+	war_support_factor = SHA_Shanhaijinfascism_war_support_factor
+	party_popularity_stability_factor = SHA_Shanhaijinfascism_party_popularity_stability_factor
+	
+	industrial_capacity_factory = SHA_Shanhaijinfascism_industrial_capacity_factor
+	production_speed_industrial_complex_factor = SHA_Shanhaijinfascism_production_speed_industrial_complex_factor 
+	production_speed_arms_factory_factor = SHA_Shanhaijinfascism_production_speed_arms_factory_factor
+	production_speed_infrastructure_factor = SHA_Shanhaijinfascism_production_speed_infrastructure_factor
+	
+	conscription_factor = SHA_Shanhaijinfascism_conscription_factor
+	army_org_factor = SHA_Shanhaijinfascism_army_org_factor
+	research_speed_factor = SHA_Shanhaijinfascism_research_speed_factor
+	
+	economy_cost_factor = SHA_Shanhaijinfascism_economy_cost_factor
+	mobilization_laws_cost_factor = SHA_Shanhaijinfascism_mobilization_laws_cost_factor
+	trade_laws_cost_factor = SHA_Shanhaijinfascism_trade_laws_cost_factor
+	justify_war_goal_time = SHA_Shanhaijinfascism_justify_war_goal_time
+
+}

@@ -2880,6 +2880,12 @@
 			has_army_manpower = { size > 149999 }
 			country_exists = ABY
 		}
+		bypass = {
+			OR = {
+				NOT = { country_exists = ABY }
+				owns_state = 69
+			}
+		}
 
 		completion_reward = {
 			create_wargoal = {
@@ -2907,6 +2913,12 @@
 			is_subject = no
 			has_army_manpower = { size > 199999 }
 			NOT = { owns_state = 74 }
+		}
+		bypass = {
+			OR = {
+				owns_state = 74
+				controls_state = 74
+			}
 		}
 
 		completion_reward = {
@@ -2937,6 +2949,9 @@
 				has_government = fascism
 				is_subject = no
 			}
+		}
+		bypass = {
+			SHA = { is_in_faction_with = TRM }
 		}
 
 		completion_reward = {

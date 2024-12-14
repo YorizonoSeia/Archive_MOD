@@ -840,7 +840,7 @@ ideas = {
 			modifier = {
 				political_power_factor = -0.05
 				stability_factor = 0.05
-				fascism_drift = 0.01
+				fascism_drift = 0.1
 			}
 		}
 		# 경극부 - 보수 혁명
@@ -853,7 +853,7 @@ ideas = {
 			modifier = {
 				political_power_factor = -0.05
 				stability_factor = 0.05
-				neutrality_drift = 0.01
+				neutrality_drift = 0.1
 			}
 		}
 		# 연단방
@@ -898,7 +898,7 @@ ideas = {
 			allowed_civil_war = { always = yes }
 			
 			modifier = {
-				fascism_drift = 0.02
+				fascism_drift = 0.1
 			}
 		}
 		# 비상 조치

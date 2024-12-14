@@ -101,7 +101,7 @@
 	}
 	offset = {
 		x = 21
-		y = 0
+		y = 10
 		trigger = {
 			OR = {
 				original_tag = SHA
