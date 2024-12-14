@@ -6001,6 +6001,13 @@ country_event = {
 		ai_chance = {
 			factor = 5
 			modifier = {
+				NOT = {
+					controls_state = 56
+					controls_state = 59
+				}
+				factor = 0
+			}
+			modifier = {
 				controls_state = 56
 				factor = 2
 			}
