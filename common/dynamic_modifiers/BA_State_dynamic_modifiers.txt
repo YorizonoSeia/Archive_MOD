@@ -359,6 +359,13 @@ GEK_catholic_state = { # 주 모디파이어
 	icon = GFX_modifiers_GEK_catholic_state
 	
 }
+GEK_catholic_trade_union = { # 가톨릭 노동조합
+	enable = { always = yes }
+
+	icon = GFX_modifiers_GEK_catholic_state
+	local_factories = 0.1
+	state_production_speed_buildings_factor = 0.05
+}
 GEK_trm_christianity_state = { # 주 모디파이어
 	enable = { always = yes }
 
@@ -374,7 +381,7 @@ GEK_no_religion = { # 주 모디파이어
 GEK_materialism = { # 유물론과 생산성
 	enable = { always = yes }
 
-	icon = GFX_modifiers_GEK_no_religion
+	icon = GFX_modifiers_GEK_materialism
 	
 	state_production_speed_buildings_factor = 0.075
 	local_resources_factor = 0.075

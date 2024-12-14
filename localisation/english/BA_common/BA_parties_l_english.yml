@@ -217,7 +217,9 @@
  SHA_Peking_Opera_Club_long:0 "경극부-현룡문\n§g현재 경극부는 혁명을 통하여 류우게 키사키의 권력을 전부 이양받았습니다. 또한 행정 공백이 생기는 것을 막기 위하여 현룡문의 부원들을 전부 흡수한 결과 경극부와 현룡문의 기이한 협력 체제가 탄생 하였습니다.§!"
  SHA_Radical_party:0 "산해경 급진파"
  SHA_Radical_party_long:0 "연단방-산해경 급진파\n§g연단방의 숨어있는 신타니 카이의 추종자들이 일부 현룡문의 급진파들과 손을 잡았다는 소문이 퍼지고 있었고 지난 경극부의 혁명으로 이는 사실로 들어났습니다. 이들은 주로 신타니 카이의 복권을 위하여 정치력을 활용하며 산해경에 새로운 사상을 주입하기 위해 노력하고 있습니다.§!"
-
+ SHA_Shintani_KAI_party:0 "신 연단방"
+ SHA_Shintani_KAI_party_long:0 "신 연단방 - 신타니카이주의"
+ 
  GEM_communism_party:0 "미식연구회"
  GEM_communism_party_long:0 "미식연구회"
  GEM_democratic_party:0 "온천개발부"

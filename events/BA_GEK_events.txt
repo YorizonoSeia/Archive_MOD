@@ -1828,12 +1828,12 @@ country_event = { #흑적금 자동 찍기
 	desc = GEK_rm_event.3.d
 	hidden = yes
 	fire_only_once = yes
+	mean_time_to_happen = {
+		days = 5
+	}
 	trigger = {
 		has_completed_focus = GEK_RM_dzp_focus_3
-		OR = {
-			has_completed_focus = GEK_RM_dzp_focus_4
-			has_completed_focus = GEK_RM_DNVP_focus_2
-		}
+		has_completed_focus = GEK_RM_spd_focus_0
 	}
 	
 	option = {
@@ -1930,11 +1930,6 @@ country_event = { # 자동 완료
             use_side_message = yes
             originator_name = DZP_party_long
         }
-		country_event = {
-			id = GEK_event_for_auto.21
-			days = 3
-			random_days = 10
-		}
 	}
 }
 country_event = { #가톨릭 자동 찍기
@@ -1943,8 +1938,17 @@ country_event = { #가톨릭 자동 찍기
 	desc = GEK_rm_event.3.d
 	hidden = yes
 	fire_only_once = yes
-	is_triggered_only = yes
+	immediate = {
+		set_country_flag = GEK_doing_catholic_flag
+	}
+	mean_time_to_happen = {
+		days = 20
+	}
 	trigger = {
+		NOT = {
+			has_country_flag = GEK_doing_protestant_flag
+		}
+		has_completed_focus = GEK_RM_dzp_focus_1
 		NOT = {
 			has_completed_focus = GEK_RM_DNVP_focus_2
 		}
@@ -1963,7 +1967,6 @@ country_event = { # 가톨릭 할 거임?
 	desc = GEK_event_for_auto.22.d
 	fire_only_once = yes
 	is_triggered_only = yes
-	
 	option = { #ㅇㅇ
 		name = GEK_event_for_auto.22.a
 		hidden_effect = {
@@ -1984,6 +1987,7 @@ country_event = { # 가톨릭 할 거임?
 			}
 		}
 		set_country_flag = GEK_not_catholic_flag
+		clr_country_flag = GEK_doing_catholic_flag
 	}
 }
 country_event = { # 가톨릭 자동 완료
@@ -2034,11 +2038,6 @@ country_event = { # 자동 완료
             use_side_message = yes
             originator_name = DNVP_party_long
         }
-		country_event = {
-			id = GEK_event_for_auto.26
-			days = 3
-			random_days = 10
-		}
 	}
 }
 country_event = { # 개신교회 자동 찍기
@@ -2047,10 +2046,17 @@ country_event = { # 개신교회 자동 찍기
 	desc = GEK_rm_event.26.d
 	hidden = yes
 	fire_only_once = yes
-	is_triggered_only = yes
+	mean_time_to_happen = {
+		days = 20
+	}
+	immediate = {
+		set_country_flag = GEK_doing_protestant_flag
+	}
 	trigger = {
+		has_completed_focus = GEK_RM_DNVP_focus_1
 		NOT = {
 			has_completed_focus = GEK_RM_dzp_focus_4
+			has_country_flag = GEK_doing_catholic_flag
 		}
 	}
 	option = {
@@ -2088,6 +2094,7 @@ country_event = { # 개신교 할 거임?
 			deactivate_shine_on_focus = GEK_RM_DNVP_focus_2
 		}
 		set_country_flag = GEK_not_protest_flag
+		clr_country_flag = GEK_doing_protestant_flag
 	}
 }
 country_event = { # 개신교회 자동 완료

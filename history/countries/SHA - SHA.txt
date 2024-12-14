@@ -148,3 +148,27 @@ set_variable = { SHA_government_jiji = 50 }
 set_variable = { SHA_total_seats = 300 }
 set_variable = { SHA_INPARTY = 155 }
 set_variable = { SHA_OUTPARTY = 145 }
+
+set_variable = { SHA_Shanhaijinfascism_fascism_drift = 0.1 }
+set_variable = { SHA_Shanhaijinfascism_fascism_acceptance = 0 } 
+
+set_variable = { SHA_Shanhaijinfascism_war_support_factor = 0 } 
+set_variable = { SHA_Shanhaijinfascism_political_power_factor = 0 } 
+set_variable = { SHA_Shanhaijinfascism_drift_defence_factor = 0 } 
+set_variable = { SHA_Shanhaijinfascism_stability_factor = 0 } 
+set_variable = { SHA_Shanhaijinfascism_party_popularity_stability_factor = 0 }
+
+set_variable = { SHA_Shanhaijinfascism_production_speed_infrastructure_factor = 0 } 
+set_variable = { SHA_Shanhaijinfascism_production_speed_industrial_complex_factor = 0 } 
+set_variable = { SHA_Shanhaijinfascism_production_speed_arms_factory_factor = 0 } 
+
+set_variable = { SHA_Shanhaijinfascism_conscription_factor = 0 } 
+set_variable = { SHA_Shanhaijinfascism_army_org_factor = 0 }
+set_variable = { SHA_Shanhaijinfascism_research_speed_factor = 0 }
+
+set_variable = { SHA_Shanhaijinfascism_industrial_capacity_factor = 0 }
+
+set_variable = { SHA_Shanhaijinfascism_economy_cost_factor = 0 } 
+set_variable = { SHA_Shanhaijinfascism_mobilization_laws_cost_factor = 0 } 
+set_variable = { SHA_Shanhaijinfascism_trade_laws_cost_factor = 0 } 
+set_variable = { SHA_Shanhaijinfascism_justify_war_goal_time = 0 } 

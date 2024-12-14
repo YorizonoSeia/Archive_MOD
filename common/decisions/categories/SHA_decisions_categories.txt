@@ -24,6 +24,18 @@ SHA_coup_of_Black_Tortoise_Promenade = {
 		has_completed_focus = SHA_Kisaki_Suppression
 	}
 }
+SHA_Eastern_Alchemy_Society_cat = {
+	priority = 10
+	allowed = { original_tag = SHA }
+
+	visible = {
+		OR = {
+			has_idea = SHA_Eastern_Alchemy_Society_medium
+			has_idea = SHA_Eastern_Alchemy_Society_low
+			has_idea =SHA_Eastern_Alchemy_Society_high
+		}
+	}
+}
 SHA_balance_of_power_category = {
 	priority = 0
 	icon = GFX_decision_category_power_struggle

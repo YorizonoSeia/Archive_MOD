@@ -504,6 +504,36 @@ SHA_coup_of_Black_Tortoise_Promenade = {
 	
 }
 
+SHA_Eastern_Alchemy_Society_cat = {
+	SHA_EAS_Budget_passed = {
+		icon = GFX_decision_hol_attract_foreign_investors
+		available = {
+			NOT = { has_idea = SHA_Eastern_Alchemy_Society_high }
+		}
+		days_re_enable = 180
+		fire_only_once = no 
+		cost = 35
+
+		complete_effect = {
+			SHA_Eastern_Alchemy_Society_idea_up = yes
+		}
+	}
+	SHA_EAS_Budget_cuts = {
+		icon = GFX_decision_eng_trade_unions_support
+		available = {
+			NOT = { has_idea = SHA_Eastern_Alchemy_Society_low }
+		}
+		days_re_enable = 180
+		fire_only_once = no 
+		cost = 35
+
+		complete_effect = {
+			SHA_Eastern_Alchemy_Society_idea_down = yes
+			custom_effect_tooltip = SHA_days_re_enable_is_180
+		}
+	}
+}
+
 political_actions = {
 	SHA_revolutionGOGO = {
 		icon = GFX_decision_generic_tank

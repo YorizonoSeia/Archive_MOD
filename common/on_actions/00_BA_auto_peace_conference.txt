@@ -1,6 +1,46 @@
 on_actions = {
 	on_capitulation = {
 		effect = {
+			if = {
+				limit = {
+					tag = RE4
+					has_war_with = FIN
+					date < 1940.1.1
+				}
+				RE4 = {
+					white_peace = FIN
+					every_owned_state = {
+						limit = { is_core_of = FIN }
+						transfer_state_to = FIN
+					}
+					if = { 
+						limit = {
+							is_subject = yes
+						}
+						OVERLORD = {
+							if = {
+								limit = {
+									RE3 = {
+										is_subject_of = PREV
+									}
+								}
+								RE3 = {
+									annex_country = {
+										target = RE4
+										transfer_troops = yes
+									}
+								}
+							}
+							else = {
+								annex_country = {
+									target = RE4
+									transfer_troops = yes
+								}
+							}
+						}
+					}
+				}
+			}
 			if = { #바라트 혁명 승전
 				limit = {
 					tag = RAJ

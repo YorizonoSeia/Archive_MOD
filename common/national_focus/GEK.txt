@@ -584,7 +584,7 @@ focus_tree = {
 			focus = GEK_RM_focus_11
 		}
 		relative_position_id = GEK_RM_focus_4
-		x = -5
+		x = -4
 		y = 4
 		cost = 2
 		completion_reward = {
@@ -626,7 +626,7 @@ focus_tree = {
 	}
 	focus = { #세속주의 유지
 		id = GEK_RM_rel_focus_2
-		icon = GFX_focus_SOV_rebuild_the_savior_cathedral
+		icon = GFX_focus_secularism
 		prerequisite = {
 			focus = GEK_RM_rel_focus_0
 		}
@@ -649,7 +649,7 @@ focus_tree = {
 	}
 	focus = { #가톨릭 지원
 		id = GEK_RM_rel_focus_3
-		icon = GFX_focus_mex_restore_the_army_of_christ
+		icon = GFX_focus_assist_catholic
 		prerequisite = {
 			focus = GEK_RM_rel_focus_0
 		}
@@ -806,6 +806,124 @@ focus_tree = {
 		y = 4
 		cost = 2
 		completion_reward = {
+			add_stability = -0.05
+			add_political_power = -30
+		}
+	}
+	focus = { #트리니티 기독교 포용
+		id = GEK_RM_rel_focus_16
+		icon = GFX_goal_focus_TRM_cooperation
+		prerequisite = {
+			focus = GEK_RM_rel_focus_8
+		}
+		available = {
+			TRM = {
+				exists = no
+			}
+			any_controlled_state = {
+				has_dynamic_modifier = {
+					modifier = GEK_trm_christianity_state
+				}
+			}
+		}
+		relative_position_id = GEK_RM_rel_focus_0
+		x = -4
+		y = 5
+		cost = 2
+		completion_reward = {
+			custom_effect_tooltip = GEK_RM_rel_focus_16_tt
+			every_controlled_state = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GEK_trm_christianity_state
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+		}
+	}
+	focus = { #게헨나 토속신앙
+		id = GEK_RM_rel_focus_17
+		icon = GFX_goal_HEU_geh_c
+		prerequisite = {
+			focus = GEK_RM_rel_focus_8
+		}
+		available = {
+			any_controlled_state = {
+				has_dynamic_modifier = {
+					modifier = GEK_no_religion
+				}
+			}
+		}
+		relative_position_id = GEK_RM_rel_focus_0
+		x = -2
+		y = 5
+		cost = 2
+		completion_reward = {
+			custom_effect_tooltip = GEK_RM_rel_focus_12_tt
+
+			every_controlled_state = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GEK_no_religion
+					}
+				}
+				add_to_variable = { ROOT.halo_militia_cap = 2 } 
+				create_unit = {
+					division = "division_template = \"Abteilung für Studenten\" start_experience_factor = 0.1" 
+					owner = ROOT
+					count = 2
+				}
+			}
+		}
+	}
+	focus = { #아리우스 기독교 포용
+		id = GEK_RM_rel_focus_18
+		icon = GFX_ARI_arius_prussian_federation
+		prerequisite = {
+			focus = GEK_RM_rel_focus_8
+			focus = GEK_RM_rel_focus_9
+		}
+		available = {
+			any_controlled_state = {
+				has_dynamic_modifier = {
+					modifier = GEK_ari_religion
+				}
+			}
+		}
+		relative_position_id = GEK_RM_rel_focus_0
+		x = 0
+		y = 5
+		cost = 2
+		completion_reward = {
+			85 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+				}
+				if = {
+					limit = {
+						GEK = {
+							has_completed_focus = GEK_RM_rel_focus_9
+						}
+					}
+					remove_dynamic_modifier = {
+						modifier = GEK_ari_religion
+					}
+					add_dynamic_modifier = {
+						modifier = ARI_Gottglaubig_religion
+					}
+				}
+			}
 		}
 	}
 	focus = { #'고트글로이비히'
@@ -849,7 +967,7 @@ focus_tree = {
 				}
 			}
 			add_to_variable = {
-				GEK_gottglaubig_modifier_war_support_factor = 0.1
+				GEK_gottglaubig_modifier_army_morale_factor = 0.05
 			}
 			add_to_variable = {
 				GEK_gottglaubig_modifier_army_org_factor = 0.05
@@ -889,7 +1007,7 @@ focus_tree = {
 		relative_position_id = GEK_RM_rel_focus_0
 		x = 3
 		y = 4
-		cost = 2
+		cost = 5
 		completion_reward = {
 			custom_effect_tooltip = GEK_RM_rel_focus_12_tt
 			every_controlled_state = {
@@ -914,8 +1032,12 @@ focus_tree = {
 		relative_position_id = GEK_RM_rel_focus_0
 		x = 4
 		y = 3
-		cost = 2
+		cost = 4
 		completion_reward = {
+			add_timed_idea = {
+				idea = GEK_tax_christian
+				years = 1
+			}
 		}
 	}
 	focus = { #가톨릭 노동조합
@@ -927,8 +1049,20 @@ focus_tree = {
 		relative_position_id = GEK_RM_rel_focus_0
 		x = 3
 		y = 2
-		cost = 2
+		cost = 5
 		completion_reward = {
+			custom_effect_tooltip = GEK_RM_dzp_focus_4_tt
+			every_controlled_state = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GEK_catholic_state
+					}
+				}
+				add_dynamic_modifier = {
+					modifier = GEK_catholic_trade_union
+				}
+			}
+			unlock_decision_tooltip = GEK_insist_catholic_union
 		}
 	}
 	focus = { #교황청과의 제휴
@@ -942,6 +1076,9 @@ focus_tree = {
 		y = 2
 		cost = 2
 		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+			add_war_support = 0.05
 		}
 	}
 	focus = { #경제 정책

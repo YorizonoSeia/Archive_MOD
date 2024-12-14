@@ -1,5 +1,13 @@
 spriteTypes = {
 	SpriteType = {
+		name = "GFX_focus_secularism"
+		texturefile = "gfx/interface/goals/GER/secularism.tga"			
+	}
+	SpriteType = {
+		name = "GFX_focus_assist_catholic"
+		texturefile = "gfx/interface/goals/GER/assist_catholic.tga"			
+	}
+	SpriteType = {
 		name = "GFX_focus_attack_SHA_HYA_ABY"
 		texturefile = "gfx/interface/goals/GER/attack_SHA_HYA_ABY.tga"			
 	}
@@ -1648,6 +1656,10 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_goal_SHA_Eastern_Alchemy_Society_solidarity"
 		texturefile = "gfx/interface/goals/SHA/SHA_Eastern_Alchemy_Society_solidarity.tga"  
+	}
+	SpriteType = {
+		name = "GFX_goal_SHA_joint_military_training"
+		texturefile = "gfx/interface/goals/SHA/SHA_joint_military_training.tga"  
 	}
 	SpriteType = { 	
 		name = "GFX_goal_ROM_invite_german_advisorsr"

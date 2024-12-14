@@ -43,3 +43,19 @@ SHA_Eastern_Alchemy_Society_idea_up = {
 		}
 	}
 }
+SHA_Eastern_Alchemy_Society_idea_down = {
+	if = { 
+		limit = { has_idea = SHA_Eastern_Alchemy_Society_high }
+		swap_ideas = {
+			add_idea = SHA_Eastern_Alchemy_Society_medium
+			remove_idea = SHA_Eastern_Alchemy_Society_high
+		}
+		else_if = {
+			limit = { has_idea = SHA_Eastern_Alchemy_Society_medium }
+			swap_ideas = {
+				add_idea = SHA_Eastern_Alchemy_Society_low
+				remove_idea = SHA_Eastern_Alchemy_Society_medium
+			}
+		}
+	}
+}

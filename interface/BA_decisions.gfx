@@ -119,6 +119,13 @@ spriteTypes = {
 		texturefile = "gfx/interface/decisions/SHA_Rumi_cat.tga"
 		legacy_lazy_load = no
 	}
+
+	spriteType = {
+		name = "GFX_SHA_Saya_cat"
+		texturefile = "gfx/interface/decisions/SHA_Saya_cat.tga"
+		legacy_lazy_load = no
+	}
+
 	spriteType = {
 		name = "GFX_ENG_india_problem"
 		texturefile = "gfx/interface/decisions/ENG_india_problem.tga"
