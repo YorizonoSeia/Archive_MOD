@@ -880,7 +880,7 @@ ideas = {
 			
 			targeted_modifier = {
 				tag = TRM
-				attack_bonus_against = 0.2
+				attack_bonus_against = 0.1
 				defense_bonus_against = 0.1
 			}
 		}
@@ -902,7 +902,7 @@ ideas = {
 			
 			targeted_modifier = {
 				tag = GEH
-				attack_bonus_against = 0.2
+				attack_bonus_against = 0.1
 				defense_bonus_against = 0.1
 			}
 		}
