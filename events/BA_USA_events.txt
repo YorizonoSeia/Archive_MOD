@@ -972,6 +972,78 @@ country_event = {
 		}
 	}
 }
+country_event = {
+	
+	id = usa_event.15
+	title = usa_event.15.t
+	desc = usa_event.15.d
+	
+	picture = GFX_report_event_japanese_transport_soldiers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = usa_event.15.a
+		end_puppet = PHI
+		FROM = { country_event = { id = usa_event.16 hours = 6 } }
+	}
+	
+	option = {
+		name = usa_event.15.b
+		FROM = { country_event = { id = usa_event.17 hours = 6 } }
+	}
+}
+country_event = {
+	
+	id = usa_event.16
+	title = usa_event.16.t
+	desc = usa_event.16.d
+	
+	picture = GFX_report_event_japanese_chinese_surrender
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = usa_event.16.a
+		create_wargoal = {
+			target = "PHI"
+			type = puppet_wargoal_focus
+			expire = 0
+			expire = 0
+		}
+		add_ai_strategy = {
+			type = conquer
+			id = "PHI"
+			value = 200
+		}
+	}
+}
+country_event = {
+	
+	id = usa_event.17
+	title = usa_event.17.t
+	desc = usa_event.17.d
+	
+	picture = GFX_report_event_japanese_soldiers_03
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = usa_event.17.a
+		create_wargoal = {
+			target = "PHI"
+			type = puppet_wargoal_focus
+			expire = 0
+			expire = 0
+		}
+		add_ai_strategy = {
+			type = conquer
+			id = "PHI"
+			value = 200
+		}
+	}
+}
+
 
 
 

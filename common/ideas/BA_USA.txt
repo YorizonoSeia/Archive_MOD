@@ -117,6 +117,7 @@ ideas = {
 			}
 
 			modifier = {
+				army_core_attack_factor = 0.10
 				custom_modifier_tooltip = USABA_civil_war_idea_tt
 			}
 		}

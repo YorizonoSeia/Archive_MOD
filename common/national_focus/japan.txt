@@ -2274,16 +2274,34 @@
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
-			create_wargoal = {
-				target = "PHI"
-				type = puppet_wargoal_focus
-				expire = 0
-				expire = 0
+			if = {
+				limit = {
+					PHI = {
+						OR = {
+							is_subject_of = USA
+							is_subject_of = USB
+							is_subject_of = CSA
+						}
+					}
+				}
+				PHI = {
+					OVERLORD = {
+						country_event = { id = usa_event.15 hours = 8 }
+					}
+				}
 			}
-			add_ai_strategy = {
-				type = conquer
-				id = "PHI"
-				value = 200
+			else = {
+				create_wargoal = {
+					target = "PHI"
+					type = puppet_wargoal_focus
+					expire = 0
+					expire = 0
+				}
+				add_ai_strategy = {
+					type = conquer
+					id = "PHI"
+					value = 200
+				}
 			}
 		}
 	}
