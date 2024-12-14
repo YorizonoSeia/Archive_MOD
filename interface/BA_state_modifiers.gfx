@@ -12,6 +12,10 @@ spriteTypes = {
     	textureFile = "gfx/interface/state_modifiers/modifiers_TRM_Gehenna_resistant.dds"
    	}
 	spriteType = { 
+    	name = "GFX_modifiers_GEK_materialism"
+    	textureFile = "gfx/interface/state_modifiers/modifiers_GEK_materialism.dds"
+   	}
+	spriteType = { 
     	name = "GFX_modifiers_GEK_ari_religion"
     	textureFile = "gfx/interface/state_modifiers/modifiers_GEK_ari_religion.dds"
    	}

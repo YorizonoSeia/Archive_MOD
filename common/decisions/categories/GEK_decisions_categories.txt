@@ -66,7 +66,7 @@ GEK_story_archive = {
 }
 
 
-GEK_price_controls_cat = { #가격통제
+GER_price_controls_cat = { #가격통제
 	icon = GFX_decision_category_generic_economy
 	#picture = GFX_decision_cat_picture_PLACEHOLDER
 
@@ -92,8 +92,81 @@ GEK_religion_issue_cat = { #종교 정책
 	allowed = {
 		original_tag = GEK
 	}
+	visible_when_empty = yes
 	priority = 100
 	visible = {
 		has_completed_focus = GEK_RM_rel_focus_0
+	}
+	on_map_area = { #개신교 주
+		target_array = controlled_states
+		name = GEK_protestant_state
+		zoom = 150
+		target_trigger = {
+			FROM = {
+				has_dynamic_modifier = {
+					modifier = GEK_protestant_state
+				}
+			}
+		}
+	}
+	on_map_area = { #가톨릭 주
+		target_array = controlled_states
+		name = GEK_catholic_state
+		zoom = 150
+		target_trigger = {
+			FROM = {
+				has_dynamic_modifier = {
+					modifier = GEK_catholic_state
+				}
+			}
+		}
+	}
+	on_map_area = { #무신론/자유종교
+		target_array = controlled_states
+		name = GEK_no_religion
+		zoom = 150
+		target_trigger = {
+			FROM = {
+				has_dynamic_modifier = {
+					modifier = GEK_no_religion
+				}
+			}
+		}
+	}
+	on_map_area = { #트리니티 기독교
+		target_array = controlled_states
+		name = GEK_trm_christianity_state
+		zoom = 150
+		target_trigger = {
+			FROM = {
+				has_dynamic_modifier = {
+					modifier = GEK_trm_christianity_state
+				}
+			}
+		}
+	}
+	on_map_area = { #아리우스 기독교교
+		target_array = controlled_states
+		name = GEK_ari_religion
+		zoom = 150
+		target_trigger = {
+			FROM = {
+				has_dynamic_modifier = {
+					modifier = GEK_ari_religion
+				}
+			}
+		}
+	}
+	on_map_area = { #고트글로이비히
+		target_array = controlled_states
+		name = ARI_Gottglaubig_religion
+		zoom = 150
+		target_trigger = {
+			FROM = {
+				has_dynamic_modifier = {
+					modifier = ARI_Gottglaubig_religion
+				}
+			}
+		}
 	}
 }

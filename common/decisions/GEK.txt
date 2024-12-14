@@ -1097,7 +1097,7 @@ GEK_religion_issue_cat = { #종교 정책
 		
 		cost = 10
 		
-		days_remove = 240
+		days_remove = 180
 
 		modifier = {
 			political_power_cost = 0.15
@@ -1263,7 +1263,7 @@ GEK_religion_issue_cat = { #종교 정책
 		
 		cost = 10
 		
-		days_remove = 240
+		days_remove = 180
 
 		modifier = {
 			political_power_cost = 0.15
@@ -1339,6 +1339,50 @@ GEK_religion_issue_cat = { #종교 정책
 			}
 		}
 	}
+	GEK_insist_catholic_union = { #가톨릭 노동조합 설립
+		icon = GFX_decision_POL_organize_strike_two
+		highlight_states = {
+			highlight_state_targets = {
+				state = FROM
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+		target_array = GEK.controlled_states
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				AND = {
+					has_dynamic_modifier = {
+						modifier = GEK_catholic_state
+					}
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = GEK_catholic_trade_union
+						}
+					}
+				}
+			}
+		}
+		on_map_mode = map_and_decisions_view
+		ai_will_do = {
+			factor = 200
+		}
+		visible = {
+			tag = GEK
+			has_completed_focus = GEK_RM_rel_focus_14
+		}
+		
+		cost = 10
+		
+		complete_effect = {
+			FROM = {
+				add_dynamic_modifier = {
+					modifier = GEK_catholic_trade_union
+				}
+			}
+		}
+	}
 	GEK_conversion_to_gottglaubig = { #고.글.비 개종
 		icon = GFX_decision_eng_trade_unions_support
 		highlight_states = {
@@ -1388,7 +1432,7 @@ GEK_religion_issue_cat = { #종교 정책
 		
 		cost = 10
 		
-		days_remove = 240
+		days_remove = 180
 
 		modifier = {
 			political_power_cost = 0.15
@@ -1397,6 +1441,9 @@ GEK_religion_issue_cat = { #종교 정책
 		remove_effect = {
 			add_to_variable = {
 				GEK_gottglaubig_modifier_political_power_facter = 0.005
+			}
+			add_to_variable = {
+				GEK_gottglaubig_modifier_war_support_factor = 0.005
 			}
 			FROM = {
 				if = {
@@ -1523,7 +1570,7 @@ GEK_religion_issue_cat = { #종교 정책
 		
 		cost = 10
 		
-		days_remove = 240
+		days_remove = 180
 
 		modifier = {
 			political_power_cost = 0.15
@@ -1610,7 +1657,7 @@ GEK_religion_issue_cat = { #종교 정책
 		}
 	}
 	GEK_insist_materialism = { #유물론적 사고관 고취
-		icon = GFX_decision_gre_paying_ifc_debt
+		icon = GFX_decision_SOV_the_workers_dictatorship
 		highlight_states = {
 			highlight_state_targets = {
 				state = FROM

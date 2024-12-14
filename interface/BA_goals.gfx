@@ -1,5 +1,13 @@
 spriteTypes = {
 	SpriteType = {
+		name = "GFX_focus_secularism"
+		texturefile = "gfx/interface/goals/GER/secularism.tga"			
+	}
+	SpriteType = {
+		name = "GFX_focus_assist_catholic"
+		texturefile = "gfx/interface/goals/GER/assist_catholic.tga"			
+	}
+	SpriteType = {
 		name = "GFX_focus_attack_SHA_HYA_ABY"
 		texturefile = "gfx/interface/goals/GER/attack_SHA_HYA_ABY.tga"			
 	}

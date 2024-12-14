@@ -975,6 +975,7 @@ GEK_gottglaubig_modifier = {
 	fascism_drift = 0.05
 	war_support_factor = GEK_gottglaubig_modifier_war_support_factor
 	army_org_factor = GEK_gottglaubig_modifier_army_org_factor
+	army_morale_factor = GEK_gottglaubig_modifier_army_morale_factor
 }
 KPD_army_dynamic_modifier = { #독일군
 	enable = { always = yes }
