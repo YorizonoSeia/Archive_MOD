@@ -161,7 +161,7 @@ ideas = {
         }
 
         GEI_production_penalty = {
-            picture = GFX_idea_production_penalty
+            picture = The_Colour_idea
 
             allowed = {
 				always = no
@@ -199,7 +199,7 @@ ideas = {
         }
 
         GEI_reduced_resistance = {
-            picture = GFX_idea_resistance
+            picture = The_Colour_idea
 
             allowed = {
 				always = no
@@ -218,7 +218,7 @@ ideas = {
         }
 
         GEI_increased_compliance = {
-            picture = GFX_idea_compliance
+            picture = The_Colour_idea
 
 			allowed = {
 				always = no
@@ -297,7 +297,7 @@ ideas = {
         }
 
 		GEI_enhanced_intel_network = {
-            picture = GFX_idea_intel_network
+            picture = The_Colour_idea
 
 			allowed = {
 				always = no
@@ -319,7 +319,7 @@ ideas = {
         }
 
         GEI_improved_decryption = {
-            picture = GFX_idea_decryption
+            picture = The_Colour_idea
 
 			allowed = {
 				always = no
@@ -360,7 +360,7 @@ ideas = {
         }
 
 		GEI_enhanced_conscription = {
-            picture = GFX_idea_conscription
+            picture = The_Colour_idea
 
 			allowed = {
 				always = no

@@ -39,6 +39,106 @@ ideas = {
 			}
 		}
 
+		GEI_invaders_from_another_dimension_2 = { # 강화된 차원문
+			allowed = {
+				always = no
+			}
+
+			cost = 150
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			modifier = {
+				military_factory_donations = 120
+				surrender_limit = 2.00
+				production_speed_buildings_factor = -0.25
+				production_speed_industrial_complex_factor = -0.20
+				production_speed_arms_factory_factor = 0.3
+				conversion_cost_civ_to_mil_factor= -0.2
+				conversion_cost_mil_to_civ_factor = -0.2
+				global_building_slots_factor = 0.25
+				industrial_capacity_factory = 1.5
+				industrial_capacity_dockyard = 1
+				production_factory_efficiency_gain_factor = -1.5
+				line_change_production_efficiency_factor = 0.1
+				production_factory_start_efficiency_factor = 0.25
+				cannot_call_allies_or_join_wars = 1
+			}
+			cancel_if_invalid = no
+			
+			ai_will_do = {
+				factor = 1000
+			}
+		}
+
+		GEI_invaders_from_another_dimension_3 = { # 흔들리는 의식
+			allowed = {
+				always = no
+			}
+
+			cost = 150
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			modifier = {
+				military_factory_donations = 140
+				surrender_limit = 2.00
+				production_speed_industrial_complex_factor = -0.20
+				production_speed_arms_factory_factor = 0.3
+				conversion_cost_civ_to_mil_factor= -0.2
+				conversion_cost_mil_to_civ_factor = -0.2
+				global_building_slots_factor = 0.25
+				industrial_capacity_factory = 1.5
+				industrial_capacity_dockyard = 1
+				production_factory_efficiency_gain_factor = -1
+				line_change_production_efficiency_factor = 0.1
+				production_factory_start_efficiency_factor = 0.25
+				cannot_call_allies_or_join_wars = 1
+			}
+			cancel_if_invalid = no
+			
+			ai_will_do = {
+				factor = 1000
+			}
+		}
+
+		GEI_invaders_from_another_dimension_4 = { # 무너져버린 경계
+			allowed = {
+				always = no
+			}
+
+			cost = 150
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			modifier = {
+				military_factory_donations = 160
+				surrender_limit = 2.00
+				production_speed_buildings_factor = 0.5
+				production_speed_industrial_complex_factor = -0.20
+				production_speed_arms_factory_factor = 0.3
+				conversion_cost_civ_to_mil_factor= -0.2
+				conversion_cost_mil_to_civ_factor = -0.2
+				global_building_slots_factor = 0.25
+				industrial_capacity_factory = 1.5
+				industrial_capacity_dockyard = 1
+				line_change_production_efficiency_factor = 0.1
+				production_factory_start_efficiency_factor = 0.25
+				cannot_call_allies_or_join_wars = 1
+			}
+			cancel_if_invalid = no
+			
+			ai_will_do = {
+				factor = 1000
+			}
+		}
+
 		SHE_wareconomy = { #샬레 전시 경제
 
 			allowed = {
