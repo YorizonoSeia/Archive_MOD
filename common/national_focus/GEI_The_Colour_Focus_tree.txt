@@ -6,7 +6,7 @@ focus_tree = {
 		factor = 0
 		
 		modifier = {
-			add = 0
+			add = 10000
 			tag = GEI
 		}
 	}
@@ -205,21 +205,27 @@ focus_tree = {
 					
 		}
 		completion_reward = {
+			set_technology = {
+				decagrammaton_weapons_2 = 1
+			}
 			add_to_variable = {
 				var = BA_decagrammaton_division_cap
 				value = 2
 			}
-
 			# 대충 데카그라마톤을 생성하는 디시전 추가
 			set_division_template_cap = {
 				division_template = "Decagrammaton Division"	
 				division_cap = BA_decagrammaton_division_cap
 			}
 			create_equipment_variant = {
-				name = GEI_colorized_decagrammaton_part
-				type = decagrammaton_equipment_0
-				parent_version = 1
-				design_team = mio:COLOUR_mystic_orgianzation
+				name = "Colorized Decagrammaton Part"
+				type = decagrammaton_equipment_1
+				upgrades = {
+					tank_reliability_upgrade = 5
+					tank_engine_upgrade = 5
+					tank_armor_upgrade = 5
+					mech_cost_upgrade = 5
+				}
 			}
 		
 		}
@@ -259,7 +265,6 @@ focus_tree = {
 			base = 1
 		}
 		available = {
-			has_country_flag = GAEBALJUNG
 		}
 		prerequisite = { focus = COLOUR_watch_earth }
 		relative_position_id = COLOUR_watch_earth
@@ -353,7 +358,7 @@ focus_tree = {
 		icon = GFX_unknown
 		x = 3
 		y = 1
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			base = 1
 		}
@@ -366,6 +371,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_ideas = GEI_increased_capture_chance
+			hidden_effect = {
+				GEI_swap_invaders_idea_effect = yes				
+			}
+			custom_effect_tooltip = GEI_color_awakening
 		}
 	}
 	#인격 말살
@@ -374,7 +383,7 @@ focus_tree = {
 		icon = GFX_unknown
 		x = 1
 		y = 1
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			base = 1
 		}
@@ -399,6 +408,10 @@ focus_tree = {
 					days = 270
 				}
 			}
+			hidden_effect = {
+				GEI_swap_invaders_idea_effect = yes				
+			}
+			custom_effect_tooltip = GEI_color_awakening
 		}
 	}
 	#의식의 연결
@@ -407,7 +420,7 @@ focus_tree = {
 		icon = GFX_unknown
 		x = -1
 		y = 1
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			base = 1
 		}
@@ -423,6 +436,10 @@ focus_tree = {
 				GEI_enhanced_intel_network
 				GEI_improved_decryption
 			}
+			hidden_effect = {
+				GEI_swap_invaders_idea_effect = yes				
+			}
+			custom_effect_tooltip = GEI_color_awakening
 		}
 	}
 	#'공포' 확산
@@ -431,7 +448,7 @@ focus_tree = {
 		icon = GFX_unknown
 		x = -3
 		y = 1
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			base = 1
 		}
@@ -453,6 +470,10 @@ focus_tree = {
 					days = 270
 				}
 			}
+			hidden_effect = {
+				GEI_swap_invaders_idea_effect = yes				
+			}
+			custom_effect_tooltip = GEI_color_awakening
 		}
 	}
 	#초월적 하나의 부품
@@ -461,7 +482,7 @@ focus_tree = {
 		icon = GFX_unknown
 		x = 0
 		y = 2
-		cost = 5
+		cost = 20
 		ai_will_do = {
 			base = 1
 		}
@@ -477,17 +498,21 @@ focus_tree = {
 		}
 		# COLOUR_the_ones_piece
 		completion_reward = {
+			set_technology = {
+				decagrammaton_weapons_3 = 1
+			}
 			set_division_template_cap = {			
 				division_template = "Decagrammaton Division"
 				division_cap = 6
 			}
 			create_equipment_variant = {
-				name = GEI_totaly_colorized_decagrammaton
-				type = decagrammaton_equipment_0
-				parent_version = 0
+				name = "Totaly Colorized Decagrammaton Part"
+				type = decagrammaton_equipment_2
 				upgrades = {
-					tank_nsb_engine_upgrade = 2
-					tank_nsb_armor_upgrade = 2
+					tank_reliability_upgrade = 5
+					tank_engine_upgrade = 5
+					tank_armor_upgrade = 5
+					mech_cost_upgrade = 5
 				}
 			}
 			add_ideas = GEI_enhanced_conscription

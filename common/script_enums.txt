@@ -162,6 +162,8 @@ script_enum_equipment_bonus_type = {
 	#/BA_MOD_FIX
 		decagrammaton_equipment
 		decagrammaton_equipment_0
+		decagrammaton_equipment_1
+		decagrammaton_equipment_2
 		kivotos_infantry_equipment
 		kivotos_infantry_equipment_0
 		kivotos_infantry_equipment_1

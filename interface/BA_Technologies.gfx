@@ -21,6 +21,22 @@ spriteTypes = {
    	}
 
 	spriteType = {
+    	name = "GFX_decagrammaton_weapons_medium"
+	    texturefile = "gfx/interface/technologies/decagrammaton_equipment.dds"
+   	}
+
+	spriteType = {
+    	name = "GFX_decagrammaton_weapons_2_medium"
+	    texturefile = "gfx/interface/technologies/decagrammaton_equipment.dds"
+   	}
+
+	spriteType = {
+    	name = "GFX_decagrammaton_weapons_3_medium"
+	    texturefile = "gfx/interface/technologies/decagrammaton_equipment.dds"
+   	}
+
+
+	spriteType = {
     	name = "GFX_mystic_engineering_tab"
 	    texturefile = "gfx/interface/techtree/mystic_engineering_tab.dds"
 		noOfFrames = 2

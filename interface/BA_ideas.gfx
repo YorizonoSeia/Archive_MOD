@@ -264,6 +264,18 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/gei/GEI_invaders_from_another_dimension.tga"
 	}
 	spriteType = {
+		name = "GFX_idea_GEI_invaders_from_another_dimension_2"
+		texturefile = "gfx/interface/ideas/gei/GEI_invaders_from_another_dimension.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_GEI_invaders_from_another_dimension_3"
+		texturefile = "gfx/interface/ideas/gei/GEI_invaders_from_another_dimension.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_GEI_invaders_from_another_dimension_4"
+		texturefile = "gfx/interface/ideas/gei/GEI_invaders_from_another_dimension.tga"
+	}
+	spriteType = {
 		name = "GFX_idea_GEI_erosion_army"
 		texturefile = "gfx/interface/ideas/gei/GEI_erosion_army.tga"
 	}

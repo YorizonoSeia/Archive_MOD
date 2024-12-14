@@ -7,4 +7,22 @@ technologies = {
 			decagrammaton_equipment_0
 		}
 	}
+
+	decagrammaton_weapons_2 = {
+		allow = {
+            always = no
+        }
+		enable_equipments = {
+			decagrammaton_equipment_1
+		}
+	}
+
+	decagrammaton_weapons_3 = {
+		allow = {
+            always = no
+        }
+		enable_equipments = {
+			decagrammaton_equipment_2
+		}
+	}
 }

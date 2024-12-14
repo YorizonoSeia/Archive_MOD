@@ -27,6 +27,8 @@
  kivotos_halo_upgrade_1_desc:0 "자신의 방어력을 더욱 잘 활용하도록 전투 훈련 프로그램을 개량합니다. 헤일로 보병의 전투력이 더욱 향상되었습니다."
  kivotos_artificial_halo:0 "인공 헤일로 제작"
  decagrammaton_weapons:0 "데카그라마톤의 예언자"
+ decagrammaton_weapons_2:0 "색채화된 데카그라마톤의 예언자"
+ decagrammaton_weapons_3:0 "완전히 색채화된 데카그라마톤의 예언자"
 
  kivotos_helicopter_tech: "키보토스 헬리콥터"
  attack_heli:0 "기동헬기부대"
