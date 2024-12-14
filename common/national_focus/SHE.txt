@@ -2564,6 +2564,12 @@ focus_tree = {
 						FOCUS_FILTER_ANNEXATION
 					
 		}
+		ai_will_do = {
+			modifier = {
+				date < 1942.1.1
+				factor = 0
+			}
+		}
 		prerequisite = { focus = SHE_jeogseongseryeogjusi  }
 		prerequisite = { focus = SHE_jeonjaenggyehoeg  }
 		completion_reward = {
