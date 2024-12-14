@@ -66,7 +66,7 @@ GEK_story_archive = {
 }
 
 
-GER_price_controls_cat = { #가격통제
+GEK_price_controls_cat = { #가격통제
 	icon = GFX_decision_category_generic_economy
 	#picture = GFX_decision_cat_picture_PLACEHOLDER
 
