@@ -984,12 +984,22 @@ country_event = {
 	
 	option = {
 		name = usa_event.15.a
+		ai_chance = {
+			base = 1
+		}
 		end_puppet = PHI
 		FROM = { country_event = { id = usa_event.16 hours = 6 } }
 	}
 	
 	option = {
 		name = usa_event.15.b
+		ai_chance = {
+			base = 1
+			modifier = {
+				num_of_factories > 150
+				factor = 0
+			}
+		}
 		FROM = { country_event = { id = usa_event.17 hours = 6 } }
 	}
 }
