@@ -3762,4 +3762,36 @@ focus_tree = {
 			}
 		}
 	}
+
+	focus = {
+		id = HYA_focus_108
+		icon = GFX_goal_generic_military_deal
+		prerequisite = { focus = HYA_focus_100 focus = HYA_focus_101 }
+		x = 8
+		y = 9
+		cost = 5
+		available = {
+			is_subject = no
+		}
+		relative_position_id = HYA_focus_1
+		completion_reward = {
+			every_other_country = {
+				limit = {
+					OR = {
+						original_tag = ITA
+						original_tag = HUN
+						original_tag = YUG
+						original_tag = SLO
+						original_tag = ROM
+						original_tag = BUL
+					}
+					is_neighbor_of = ROOT
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = large_decrease
+				}
+			}
+		}
+	}
 }
