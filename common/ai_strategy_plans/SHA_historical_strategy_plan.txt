@@ -31,4 +31,11 @@ SHA_historical = {
 		SHA_foc_3-5
 		SHA_foc_3-2
 	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
 }
