@@ -412,6 +412,7 @@
  SHA_T2a:0 "현룡문의 문주"
  SHA_T3a:0 "오욕의 미후" # 일섭에서는 오진의 미후
  SHA_T4a:0 "천재 과학자"
+ SHA_T4a_2:0 "$SHA_T4a$"
  SHA_T5a:0 "어린이"
  SHA_T6a:0 "현무상회의 회장"
  SHA_T7a:0 "현무상회의 경호원"
@@ -666,10 +667,14 @@
  SHA_Sundan_dosage_desc: "우리의 군사적 목적 달성을 위해 \"선단\" 이라는 약품을 군인들에게 투여할 것입니다. 비록 약품이 완성되지 않았지만 산해경의 영광을 위해서라면 우리의 군인들은 감내할 것입니다.."
 
  SHA_Expansion_of_military_factories: "군수공장 확충"
+ SHA_Abolition_of_national_isolation_policy: "쇄국정책 폐지"
+ SHA_Abolition_of_national_isolation_policy_desc: "산해경의 쇄국정책은 국가 발전을 저해하는 주요 요인으로, 이제는 폐지해야 할 때입니다. 특히 연단방이 연구에 필요한 재료를 제대로 공급받지 못하고 있는 현실은 쇄국정책의 한계를 여실히 보여줍니다. 쇄국으로 인해 얻은 이익은 사실상 존재하지 않았으며, 오히려 외부와의 교류 단절로 인해 학문적, 기술적 발전이 정체되고 있습니다. 쇄국정책을 유지할 명분은 더 이상 설득력을 가지지 못하고 있습니다."
  
  SHA_fascism_friend: "[TRM.GetAdjective]의 지원 모색"
  SHA_joint_military_training: "합동 군사 훈련"
  SHA_Austrian_industrial_centralization: "오스트리아 산업 중앙 집권화"
+ SHA_black_sun_and_black_dragon: "검은 태양, 검은 용"
+ SHA_black_sun_and_black_dragon_desc: "[TRM.GetAdjective] 와의 비공식적인 접촉은 있었지만, 구체적이고 법적인 구속력을 가진 것은 거의 합의 되지 않았습니다. [TRM.GetAdjective](이)가 퇴폐적인 문화에 맞선 투쟁을 지속할때 우리는 그들과 함께 연합전선을 결성해야합니다."
 
 
  # 보수 혁명 루트
@@ -686,8 +691,8 @@
  SHA_Solving_the_Militia_Problem: "질서 회복"
  SHA_strike_suppression: "파업 진압"
  SHA_strike_suppression_desc: "대전이 직후 산해경은 더욱 강력한 고립주의 정책을 채택했으며, 이는 상인연합회의 불만을 불러일으키기에 충분했습니다. 결국 그들은 12월에 현룡문의 정책에 반대하며 개혁과 개방을 요구하는 총파업에 돌입했습니다. 그러나 이러한 행동이 오히려 산해경의 상황을 더 악화시킬 뿐이라는 사실을 이들에게 명확히 깨닫게 하고, 필요하다면 무력으로 이를 진압해야 할 것입니다."
- SHA_Sack_of_Rumi: "루미 경질"
- SHA_Sack_of_Rumi_desc: "아케시로 루미는 12월 총파업의 주동자 중 한 명으로 지목됩니다. 루미를 경질함과 동시에 현무상회에 강력한 제재를 가함으로써 산해경의 전통을 수호하고, 나아가 보수적인 가치를 더욱 공고히 할 것입니다."
+ SHA_Sack_of_Rumi: "루미 억제제"
+ SHA_Sack_of_Rumi_desc: "아케시로 루미는 12월 총파업의 주동자 중 한 명으로 지목됩니다. 루미를 억제함과 동시에 현무상회에 강력한 제재를 가함으로써 산해경의 전통을 수호하고, 나아가 보수적인 가치를 더욱 공고히 할 것입니다."
  SHA_emergency_measures: "급속 재무장"
  SHA_invade_of_Hyakkiyako: "학원 영토 수복"
 
@@ -703,6 +708,7 @@
  SHA_Eastern_Alchemy_Society_medium_desc: "$SHA_Eastern_Alchemy_Society_idea_desc$"
  SHA_Eastern_Alchemy_Society_high: "매우 높은 연단방 예산"
  SHA_Eastern_Alchemy_Society_high_desc: "$SHA_Eastern_Alchemy_Society_idea_desc$\n\n최근 학생들 사이에서 우려의 목소리가 커지고 있습니다. 현 정부가 연단방에만 의도적으로 예산을 집중 지원하면서, 다른 동아리들이 제 역할을 하지 못하고 있다는 소문이 퍼지고 있기 때문입니다. 물론 연단방에 충분한 예산을 지원하면 국가 발전에 기여할 가능성이 크지만, 시민들의 불만과 사회적 혼란을 피하기는 어려울 것입니다."
+ SHA_Eastern_Alchemy_Society_super_low: "연단방 예산 삭감"
  SHA_gathering_of_radicals_idea: "급진파 결집"
  SHA_gathering_of_radicals_idea_desc: "급진파가 하나의 정치적 구색을 가지고 결집하고 있습니다. 이들이 무슨 꿍꿍이인지는 모르겠지만 현 키사키 문주에게는 별로 좋은 소식은 아닌거 같습니다."
  SHA_emergency_measures_idea: "비상조치"
@@ -744,7 +750,7 @@
  SHA_ardent_conservative: "열렬한 보수주의자"
  SHA_ardent_conservative_2: "$SHA_ardent_conservative$"
  SHA_ardent_conservative_3: "$SHA_ardent_conservative$"
- SHA_ardent_conservative_4: "보수주의의 선구자"
+ SHA_ardent_conservative_4: "보수의 선구자"
 
  # 결정
  SHA_coup_of_Black_Tortoise_Promenade: "현무상회의 인내심 악화"

@@ -1998,7 +1998,7 @@ USABA_german_ch_idea = { #독일인 대표 위원회
 
 SHA_Shanhaijinfascism = {
 	enable = { always = yes }
-	icon = GFX_idea_AUS_austrofascissm
+	icon = GFX_idea_SHA_Shanhaijinfascism
 
 	fascism_drift = SHA_Shanhaijinfascism_fascism_drift
 	fascism_acceptance = SHA_Shanhaijinfascism_fascism_acceptance

@@ -508,7 +508,6 @@ SHA_Eastern_Alchemy_Society_cat = {
 	SHA_EAS_Budget_passed = {
 		icon = GFX_decision_hol_attract_foreign_investors
 		available = {
-			NOT = { has_idea = SHA_Eastern_Alchemy_Society_high }
 		}
 		days_re_enable = 180
 		fire_only_once = no 
@@ -516,12 +515,12 @@ SHA_Eastern_Alchemy_Society_cat = {
 
 		complete_effect = {
 			SHA_Eastern_Alchemy_Society_idea_up = yes
+			custom_effect_tooltip = SHA_days_re_enable_is_180
 		}
 	}
 	SHA_EAS_Budget_cuts = {
 		icon = GFX_decision_eng_trade_unions_support
 		available = {
-			NOT = { has_idea = SHA_Eastern_Alchemy_Society_low }
 		}
 		days_re_enable = 180
 		fire_only_once = no 

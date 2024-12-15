@@ -57,5 +57,12 @@ SHA_Eastern_Alchemy_Society_idea_down = {
 				remove_idea = SHA_Eastern_Alchemy_Society_medium
 			}
 		}
+		else_if = {
+			limit = { has_idea = SHA_Eastern_Alchemy_Society_low }
+			add_timed_idea = {
+				idea = SHA_Eastern_Alchemy_Society_super_low
+				days = 180
+			}
+		}
 	}
 }

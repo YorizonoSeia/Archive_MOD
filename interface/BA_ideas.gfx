@@ -8,6 +8,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/SHA/walking_the_black_dragon.tga"
 	}
 	spriteType = {
+		name = "GFX_idea_SHA_Shanhaijinfascism"
+		texturefile = "gfx/interface/ideas/SHA/idea_SHA_Shanhaijinfascism.tga"
+	}
+	spriteType = {
 		name = "GFX_idea_SHA_walking_the_dragon"
 		texturefile = "gfx/interface/ideas/SHA/new_shanhaijing_conservatism.tga"
 	}

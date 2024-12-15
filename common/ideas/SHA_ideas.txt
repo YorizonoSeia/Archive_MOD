@@ -857,6 +857,17 @@ ideas = {
 			}
 		}
 		# 연단방
+		SHA_Eastern_Alchemy_Society_super_low = {
+			picture = SHA_IdeaG_11
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			
+			modifier = {
+				political_power_cost = -0.1
+				research_speed_factor = -0.05
+			}
+		}
+		# 연단방
 		SHA_Eastern_Alchemy_Society_low = {
 			picture = SHA_IdeaG_11
 			allowed = { always = no }
@@ -972,8 +983,9 @@ ideas = {
 			modifier = {
 				industrial_factory_donations = 5
 				political_power_factor = -0.05
-				communism_drift = 0.01
-				democratic_drift = 0.01
+				stability_factor = -0.05
+				communism_drift = 0.1
+				democratic_drift = 0.1
 			}
 		}
 		# 현무상회 - 억제 됨

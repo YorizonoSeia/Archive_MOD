@@ -1,5 +1,9 @@
 spriteTypes = {
 	SpriteType = {
+		name = "GFX_focus_HYA_focus_110"
+		texturefile = "gfx/interface/goals/HYA/focus_HYA_focus_110.tga"			
+	}
+	SpriteType = {
 		name = "GFX_focus_secularism"
 		texturefile = "gfx/interface/goals/GER/secularism.tga"			
 	}
@@ -1660,6 +1664,10 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_goal_SHA_joint_military_training"
 		texturefile = "gfx/interface/goals/SHA/SHA_joint_military_training.tga"  
+	}
+	SpriteType = {
+		name = "GFX_goal_SHA_black_sun_and_black_dragon"
+		texturefile = "gfx/interface/goals/SHA/SHA_black_sun_and_black_dragon.tga"  
 	}
 	SpriteType = { 	
 		name = "GFX_goal_ROM_invite_german_advisorsr"
