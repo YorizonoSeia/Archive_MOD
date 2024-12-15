@@ -10,23 +10,25 @@ SHA_historical = {
 	abort = {
 	}
 	ai_national_focuses = {
-		SHA_foc_2 #10
-		SHA_foc_2-1 #20
-		SHA_foc_2-3 #30
-		SHA_foc_2-3-2 #65
-		SHA_foc_2-3-3 #100
-		SHA_foc_2-3-4 #135 
-		SHA_foc_2-3-1 #170
-		SHA_foc_2-3-5 #205
-		SHA_foc_2-3-6 #240
-		SHA_foc_2-3-7 #310, 산하이징 진군
-		SHA_foc_2-3-8 #380
-		SHA_foc_2-3-12 #450
-		SHA_foc_2-3-14 #520
-		SHA_foc_2-3-13 #590
-		SHA_foc_2-3-9 #660
-		SHA_foc_2-3-10 #730, 백산전쟁
-		SHA_foc_2-3-15 #800
-		SHA_foc_2-3-11
+		SHA_Austrian_appeasement_policy
+		SHA_gathering_of_radicals
+		SHA_Cooperation_with_Kaguya
+		SHA_podium_room_cooperation
+		SHA_Kisaki_Suppression
+
+		SHA_Shintani_Kai_Follow
+		SHA_strike_suppression
+		SHA_Kaguya_ousted
+		SHA_Shanhaijing_fascism
+		SHA_Sack_of_Rumi
+		SHA_consolidate_industries
+		SHA_Abolition_of_national_isolation_policy
+		
+		SHA_emergency_measures
+		SHA_invade_of_Hyakkiyako
+
+		SHA_foc_3
+		SHA_foc_3-5
+		SHA_foc_3-2
 	}
 }

@@ -132,6 +132,7 @@ characters={
 			}
 			available = {
 				has_completed_focus = SHA_Shintani_Kai_Follow
+				SHA_KAI = { is_country_leader = no }
 			}
 			traits = {
 				SHA_T3a
@@ -192,6 +193,9 @@ characters={
 			traits = {
 				SHA_T4a
 			}
+			available = {
+				SHA_KAI = { is_country_leader = no }
+			}
 			cost = 150
 			ai_will_do = {
 				factor = 1.000
@@ -245,7 +249,7 @@ characters={
 				original_tag = SHA
 			}
 			traits = {
-				BA_category_halo_3
+				BA_category_halo_2
 			}
 			cost = 200
 			ai_will_do = {
@@ -338,7 +342,7 @@ characters={
 				original_tag = SHA
 			}
 			traits = {
-				army_regrouping_2
+				army_regrouping_1
 			}
 			cost = 100
 			ai_will_do = {

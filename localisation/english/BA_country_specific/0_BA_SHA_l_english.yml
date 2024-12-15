@@ -667,6 +667,8 @@
  SHA_Sundan_dosage_desc: "우리의 군사적 목적 달성을 위해 \"선단\" 이라는 약품을 군인들에게 투여할 것입니다. 비록 약품이 완성되지 않았지만 산해경의 영광을 위해서라면 우리의 군인들은 감내할 것입니다.."
 
  SHA_Expansion_of_military_factories: "군수공장 확충"
+ SHA_Abolition_of_national_isolation_policy: "쇄국정책 폐지"
+ SHA_Abolition_of_national_isolation_policy_desc: "산해경의 쇄국정책은 국가 발전을 저해하는 주요 요인으로, 이제는 폐지해야 할 때입니다. 특히 연단방이 연구에 필요한 재료를 제대로 공급받지 못하고 있는 현실은 쇄국정책의 한계를 여실히 보여줍니다. 쇄국으로 인해 얻은 이익은 사실상 존재하지 않았으며, 오히려 외부와의 교류 단절로 인해 학문적, 기술적 발전이 정체되고 있습니다. 쇄국정책을 유지할 명분은 더 이상 설득력을 가지지 못하고 있습니다."
  
  SHA_fascism_friend: "[TRM.GetAdjective]의 지원 모색"
  SHA_joint_military_training: "합동 군사 훈련"

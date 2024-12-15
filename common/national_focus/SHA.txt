@@ -26,7 +26,7 @@ focus_tree = {
 		bypass = { }
 
 		allow_branch = {
-			is_debug = yes
+			always = no
 		}
 		completion_reward = {
 
@@ -36,7 +36,7 @@ focus_tree = {
 		#relative_position_id = 
 		id = SHA_foc_1
 		icon = GFX_goal_support_communism
-		#prerequisite = { focus = SHA_debug_hellyeah }
+		prerequisite = { focus = SHA_debug_hellyeah }
 		mutually_exclusive = { focus = SHA_foc_2 }
 		cost = 1.43
 		x = -5
@@ -3112,7 +3112,7 @@ focus_tree = {
 		#relative_position_id = 
 		id = SHA_foc_2
 		icon = GFX_focus_rom_royal_dictatorship
-		#prerequisite = { focus = SHA_debug_hellyeah }
+		prerequisite = { focus = SHA_debug_hellyeah }
 		mutually_exclusive = { focus = SHA_foc_1 }
 		cost = 1.43
 		x = 13
@@ -6694,12 +6694,25 @@ focus_tree = {
 		cost = 1.43
 		x = 40
 		y = 1
+		offset = {
+			x = -15
+			y = -1
+			trigger = {
+				has_completed_focus = SHA_Austrian_appeasement_policy
+			}
+		}
+		offset = {
+			x = -5
+			y = -0
+			trigger = {
+				has_completed_focus = SHA_Austrian_appeasement_policy
+				has_completed_focus = SHA_gathering_of_radicals
+			}
+		}
 		available = {
 			OR = {
-				has_completed_focus = SHA_foc_1-1
-				has_completed_focus = SHA_foc_1-2
-				has_completed_focus = SHA_foc_2-2
-				has_completed_focus = SHA_foc_2-3
+				has_completed_focus = SHA_Austrian_appeasement_policy
+				has_completed_focus = SHA_Austrian_oppression_continues
 			}
 		}
 		bypass = {
@@ -7633,7 +7646,7 @@ focus_tree = {
 		id = SHA_Austrian_oppression_continues
 		icon = GFX_focus_GER_anschluss
 		x = 37
-		y = 22
+		y = 0
 		cost = 5
 
 		prerequisite = { }
@@ -7677,7 +7690,7 @@ focus_tree = {
 		icon = GFX_focus_generic_befriend_austria
 		x = -20
 		y = 0
-		cost = 5
+		cost = 2
 
 		prerequisite = { }
 		mutually_exclusive = { focus = SHA_Austrian_oppression_continues }
@@ -8017,7 +8030,7 @@ focus_tree = {
 	focus = {
 		id = SHA_Eastern_Alchemy_Society_solidarity
 		icon = GFX_goal_SHA_Eastern_Alchemy_Society_solidarity
-		x = 0
+		x = 2
 		y = 1
 		cost = 10
 
@@ -8046,7 +8059,7 @@ focus_tree = {
 	focus = {
 		id = SHA_consolidate_industries
 		icon = GFX_focus_generic_modernize_industry
-		x = 2
+		x = 0
 		y = 1
 		cost = 10
 
@@ -8084,7 +8097,7 @@ focus_tree = {
 	focus = {
 		id = SHA_Sundan_dosage
 		icon = GFX_focus_generic_coffee
-		x = 1
+		x = -1
 		y = 1
 		cost = 5
 
@@ -8215,13 +8228,13 @@ focus_tree = {
 		}
 	}
 
-	# 동원령
+	# 쇄국정책 폐지
 	focus = {
-		id = SHA_Expansion_of_military_factories
-		icon = GFX_focus_generic_reorient_production
+		id = SHA_Abolition_of_national_isolation_policy
+		icon = GFX_goal_generic_demand_territory
 		x = 0
-		y = 3
-		cost = 8
+		y = 2
+		cost = 10
 
 		prerequisite = { 
 			focus = SHA_Shanhaijing_fascism 
@@ -8233,6 +8246,39 @@ focus_tree = {
 		bypass = { }
 
 		relative_position_id = SHA_Kaguya_ousted
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = SHA_isolation_economic }
+				swap_ideas = {
+					remove_idea = SHA_isolation_economic
+					add_idea = civilian_economy
+				}
+				else = {
+					add_political_power = 150
+				}
+			}
+		}
+	}
+
+	# 동원령
+	focus = {
+		id = SHA_Expansion_of_military_factories
+		icon = GFX_focus_generic_reorient_production
+		x = 0
+		y = 2
+		cost = 8
+
+		prerequisite = {
+			focus = SHA_consolidate_industries
+			focus = SHA_Austrian_industrial_centralization
+		}
+		mutually_exclusive = { }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_Abolition_of_national_isolation_policy
 
 		completion_reward = {
 			add_war_support = 0.05
