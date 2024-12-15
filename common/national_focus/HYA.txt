@@ -1366,7 +1366,7 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = HYA_focus_61 focus = HYA_focus_65 }
 		mutually_exclusive = { focus = HYA_focus_97 }
-		x = -4
+		x = -3
 		y = 5
 		cost = 5
 		available = {
@@ -1390,7 +1390,7 @@ focus_tree = {
 		prerequisite = { focus = HYA_focus_65 }
 		prerequisite = { focus = HYA_focus_95 }
 		mutually_exclusive = { focus = HYA_focus_96 }
-		x = 0
+		x = -1
 		y = 5
 		cost = 5
 		available = {
@@ -1614,7 +1614,7 @@ focus_tree = {
 		available = {
 			has_civil_war = no
 		}   
-		x = 0
+		x = 1
 		y = 1
 		cost = 5
 		search_filters = {FOCUS_FILTER_STABILITY}
@@ -1720,7 +1720,7 @@ focus_tree = {
 		prerequisite = { focus = HYA_focus_46 }
 		prerequisite = { focus = HYA_focus_62 focus = HYA_focus_63 }
 		#mutually_exclusive = { focus = HYA_focus_ }
-		x = -3
+		x = -1
 		y = 1
 		cost = 10
 		search_filters = {FOCUS_FILTER_POLITICAL}
@@ -3555,11 +3555,16 @@ focus_tree = {
 		id = HYA_focus_102
 		icon = GFX_goal_generic_neutrality_focus
 		prerequisite = { focus = HYA_focus_100 focus = HYA_focus_101 }
-		x = -2
+		x = 0
 		y = 9
 		cost = 5
+		available = {
+			is_subject = no
+			is_in_faction = no
+		}
 		relative_position_id = HYA_focus_1
 		completion_reward = {
+			add_ideas = neutrality_idea
 			every_other_country = {
 				limit = {
 					OR = {
@@ -3627,6 +3632,20 @@ focus_tree = {
 		cost = 5
 		relative_position_id = HYA_focus_102
 		completion_reward = {
+			every_other_country = {
+				limit = {
+					OR = {
+						original_tag = ITA
+						original_tag = HUN
+						original_tag = YUG
+						original_tag = SLO
+						original_tag = ROM
+						original_tag = BUL
+					}
+					NOT = { has_war_with = ROOT }
+				}
+				country_event = { id = HYA_event.11 hours = 8 }
+			}
 		}
 	}
 
@@ -3687,6 +3706,28 @@ focus_tree = {
 		cost = 5
 		relative_position_id = HYA_focus_102
 		completion_reward = {
+			set_temp_variable = { HYA_temp = HYA_event_11_var }
+			divide_temp_variable = { HYA_temp = 5 }
+			add_stability = var:HYA_temp
+			add_war_support = var:HYA_event_11_var
+			set_temp_variable = { HYA_temp2 = HYA_event_11_var }
+			multiply_temp_variable = { HYA_temp2 = 200 }
+			army_experience = var:HYA_temp2
+			multiply_temp_variable = { HYA_temp = 100 }
+			custom_effect_tooltip = HYA_focus_106_tt2
+			hidden_effect = {
+				every_country = {
+					limit = { has_country_flag = HYA_event_11_flag }
+					ROOT = {
+						add_doctrine_cost_reduction = {
+							cost_reduction = 0.75
+							name = HYA_focus_106
+							uses = 1
+							category = land_doctrine
+						}
+					}
+				}
+			}
 		}
 	}
 
@@ -3701,7 +3742,7 @@ focus_tree = {
 		relative_position_id = HYA_focus_102
 		completion_reward = {
 			add_ideas = HYA_fort_idea
-			custom_effect_tooltip = HYA_focus_106_tt
+			custom_effect_tooltip = HYA_focus_107_tt
 			every_owned_state = {
 				limit = {
 					has_state_flag = HYA_focus_fort
@@ -3709,7 +3750,7 @@ focus_tree = {
 				hidden_effect = {
 					add_building_construction = {
 						type = bunker
-						level = 4
+						level = 2
 						instant_build = yes
 						province = {
 							all_provinces = yes

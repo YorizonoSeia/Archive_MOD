@@ -364,3 +364,65 @@ country_event = {
 		name = HYA_event.9.a
 	}
 }
+country_event = {
+	id = HYA_event.11
+	title = HYA_event.11.t
+	desc = HYA_event.11.desc
+	picture = GFX_event_HYA_flower_bird_wind_moon_club_event	
+	
+	is_triggered_only = yes
+
+	option = {
+		name = HYA_event.11.a
+		ai_chance = {
+			modifier = {
+				has_government = fascism
+				factor = 0.5
+			}
+		}
+		diplomatic_relation = {
+			country = FROM
+			relation = non_aggression_pact
+			active = yes
+		}
+		FROM = { country_event = { id = HYA_event.12 hours = 3 } }
+	}
+	option = {
+		name = HYA_event.11.a
+		ai_chance = {
+			modifier = {
+				has_government = democratic
+				factor = 0.5
+			}
+		}
+		set_country_flag = HYA_event_11_flag
+		FROM = { country_event = { id = HYA_event.13 hours = 3 } }
+	}
+}
+country_event = {
+	id = HYA_event.12
+	title = HYA_event.12.t
+	desc = HYA_event.12.desc
+	picture = GFX_event_HYA_flower_bird_wind_moon_club_event	
+	
+	is_triggered_only = yes
+
+	option = {
+		name = HYA_event.12.a
+		add_stability = 0.05
+	}
+}
+country_event = {
+	id = HYA_event.13
+	title = HYA_event.13.t
+	desc = HYA_event.13.desc
+	picture = GFX_event_HYA_flower_bird_wind_moon_club_event	
+	
+	is_triggered_only = yes
+
+	option = {
+		name = HYA_event.13.a
+		add_war_support = 0.05
+		add_to_variable = { HYA_event_11_var = 0.05 }
+	}
+}
