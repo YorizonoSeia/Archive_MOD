@@ -1665,6 +1665,10 @@ spriteTypes = {
 		name = "GFX_goal_SHA_joint_military_training"
 		texturefile = "gfx/interface/goals/SHA/SHA_joint_military_training.tga"  
 	}
+	SpriteType = {
+		name = "GFX_goal_SHA_black_sun_and_black_dragon"
+		texturefile = "gfx/interface/goals/SHA/SHA_black_sun_and_black_dragon.tga"  
+	}
 	SpriteType = { 	
 		name = "GFX_goal_ROM_invite_german_advisorsr"
 		texturefile = "gfx/interface/goals/ROM/ROM_invite_german_advisors.tga"  

@@ -2627,6 +2627,11 @@ leader_traits = {
 		consumer_goods_factor = -0.05
 		research_speed_factor = 0.05
 	}
+	SHA_T4a_2 = { #천재 과학자
+		random = no
+		sprite = 10
+		research_speed_factor = 0.1
+	}
 	SHA_T5a = { #어린이
 		random = no	
 		sprite = 12

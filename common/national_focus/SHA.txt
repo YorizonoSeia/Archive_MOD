@@ -8037,6 +8037,8 @@ focus_tree = {
 			}
 			custom_effect_tooltip = tooltip_white_line
 			add_research_slot = 1
+			custom_effect_tooltip = tooltip_white_line
+			swap_ruler_traits = { remove = SHA_T4a add = SHA_T4a_2 }
 		}
 	}
 
@@ -8184,6 +8186,30 @@ focus_tree = {
 			add_to_variable = { SHA_Shanhaijinfascism_production_speed_industrial_complex_factor = 0.1 tooltip = production_speed_industrial_complex_factor_tt }
 			add_to_variable = { SHA_Shanhaijinfascism_production_speed_arms_factory_factor = 0.1 tooltip = production_speed_arms_factory_factor_tt }
 		
+		}
+	}
+
+	# 검은 태양, 검은 용
+	focus = {
+		id = SHA_black_sun_and_black_dragon
+		icon = GFX_goal_SHA_black_sun_and_black_dragon
+		x = 1
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_joint_military_training }
+		prerequisite = { focus = SHA_Austrian_industrial_centralization }
+		mutually_exclusive = { }
+
+		available = {
+
+		}
+		bypass = { }
+
+		relative_position_id = SHA_joint_military_training
+
+		completion_reward = {
+
 		}
 	}
 
