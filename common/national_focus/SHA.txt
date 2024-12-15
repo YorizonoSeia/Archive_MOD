@@ -8209,7 +8209,9 @@ focus_tree = {
 		relative_position_id = SHA_joint_military_training
 
 		completion_reward = {
-
+			TRM = {
+				country_event = { id = AAT_Sweden.23 }
+			}
 		}
 	}
 
