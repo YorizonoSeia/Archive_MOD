@@ -1407,3 +1407,83 @@ news_event = {
 		}
 	}
 }
+
+news_event = {
+	id = shanews.03
+	title = shanews.03.t
+	desc = shanews.03.desc
+	picture = GFX_event_Shanhaijing_Kai
+	
+	major = yes	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = { add_threat = 5 }
+	}
+		
+	option = {
+		name = shanews.03.a
+		trigger = {
+			tag = SHA
+		}
+		effect_tooltip = { add_threat = 5 }
+	}
+		
+	option = {
+		name = shanews.03.b
+		trigger = {
+			tag = HYA
+		}
+		effect_tooltip = { add_threat = 5 }
+	}
+		
+	option = {
+		name = shanews.03.c
+		trigger = {
+			OR = {
+				tag = TRM
+				tag = ABY
+				tag = GEH
+				tag = GEM
+				tag = COU
+				tag = SHE
+				tag = KSP
+				tag = HEU
+				tag = MIL
+				tag = BLM
+				tag = KAI
+			}
+			NOT = { 
+				tag = SHA 
+				tag = HYA
+			}
+		}
+		effect_tooltip = { add_threat = 5 }
+	}
+		
+	option = {
+		name = BA_news.1.d
+		trigger = {
+			NOT = {
+				tag = SHA
+				tag = TRM
+				tag = ABY
+				tag = HYA
+				tag = GEH
+				tag = GEM
+				tag = COU
+				tag = SHE
+				tag = KSP
+				tag = HEU
+				tag = MIL
+				tag = BLM
+				tag = KAI
+				tag = RE1
+				tag = RED
+				tag = RE2
+				tag = RE3
+			}
+		}
+		effect_tooltip = { add_threat = 5 }
+	}
+}

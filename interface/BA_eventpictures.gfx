@@ -220,6 +220,10 @@ spriteTypes = {
 		name = "GFX_event_Shanhaijing_Kaguya"
 		texturefile = "gfx/event_pictures/Shanhaijing_Kaguya.tga"
 	}
+	spriteType = {
+		name = "GFX_event_Shanhaijing_Kai"
+		texturefile = "gfx/event_pictures/Shanhaijing_Kai.tga"
+	}
 #
 
 

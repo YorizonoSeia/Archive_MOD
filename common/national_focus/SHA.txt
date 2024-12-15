@@ -8675,6 +8675,7 @@ focus_tree = {
 				remove_idea = SHA_Black_Tortoise_Promenade
 				add_idea =SHA_suppressed_Black_Tortoise_Promenade
 			}
+			remove_mission = SHA_BTP_revolt_mission
 		}
 	}
 
