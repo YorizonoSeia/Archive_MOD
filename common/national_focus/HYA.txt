@@ -2732,6 +2732,76 @@ focus_tree = {
 			}
 		}
 	}
+	focus = { # 요괴들의 학원
+		relative_position_id = HYA_focus_77
+		id = HYA_focus_109
+		icon = GFX_goal_generic_attack_allies
+		prerequisite = { focus = HYA_focus_77 }
+		x = 0
+		y = 2
+		cost = 10
+		available = {
+		}   
+		bypass = {
+		}
+		completion_reward = {
+			custom_effect_tooltip = HYA_flower_bird_wind_moon_club_dynamic_modifiers_tt
+			add_to_variable = {
+				HYA_flower_bird_wind_moon_club_dynamic_modifiers_army_core_attack_factor = 0.05
+				tooltip = army_core_attack_factor_tt
+			}
+			add_to_variable = {
+				HYA_flower_bird_wind_moon_club_dynamic_modifiers_conscription_factor = 0.05
+				tooltip = conscription_factor_tt
+			}
+			custom_effect_tooltip = enter_tt
+			army_experience = 25
+		}
+	}
+	focus = { # 백귀야행
+		relative_position_id = HYA_focus_109
+		id = HYA_focus_110
+		icon = GFX_focus_HYA_focus_110
+		prerequisite = { focus = HYA_focus_109 }
+		x = 0
+		y = 2
+		cost = 10
+		available = {
+		}   
+		bypass = {
+		}
+		completion_reward = {
+			custom_effect_tooltip = HYA_flower_bird_wind_moon_club_dynamic_modifiers_tt
+			add_to_variable = {
+				HYA_flower_bird_wind_moon_club_dynamic_modifiers_army_attack_factor = 0.05
+				tooltip = army_attack_factor_tt
+			}
+			custom_effect_tooltip = enter_tt
+			every_other_country = {
+				limit = {
+					OR = {
+						original_tag = INK
+						original_tag = BAC
+						original_tag = SUH
+						original_tag = ABY
+						original_tag = SLO
+						original_tag = SHA
+						original_tag = HUN
+					}
+					is_neighbor_of = ROOT
+				}
+				custom_effect_tooltip = war_aim_against_the_country_puppetization_tt
+				hidden_effect = {
+					ROOT = {
+						create_wargoal = {
+							type = puppet_wargoal_focus
+							target = PREV
+						}
+					}
+				}
+			}
+		}
+	}
 	focus = { # 통제 원칙 수립
 		relative_position_id = HYA_focus_80
 		id = HYA_focus_86
@@ -3555,6 +3625,7 @@ focus_tree = {
 		id = HYA_focus_102
 		icon = GFX_goal_generic_neutrality_focus
 		prerequisite = { focus = HYA_focus_100 focus = HYA_focus_101 }
+		mutually_exclusive = { focus = HYA_focus_108 }
 		x = 0
 		y = 9
 		cost = 5
@@ -3766,7 +3837,8 @@ focus_tree = {
 	focus = {
 		id = HYA_focus_108
 		icon = GFX_goal_generic_military_deal
-		prerequisite = { focus = HYA_focus_100 focus = HYA_focus_101 }
+		prerequisite = { focus = HYA_focus_110 focus = HYA_focus_101 }
+		mutually_exclusive = { focus = HYA_focus_102 }
 		x = 8
 		y = 9
 		cost = 5
@@ -3775,6 +3847,7 @@ focus_tree = {
 		}
 		relative_position_id = HYA_focus_1
 		completion_reward = {
+			add_ideas = HYA_securing_balkan_hegemony
 			every_other_country = {
 				limit = {
 					OR = {
@@ -3791,6 +3864,167 @@ focus_tree = {
 					target = ROOT
 					modifier = large_decrease
 				}
+			}
+		}
+	}
+
+	focus = {
+		id = HYA_focus_111
+		icon = GFX_focus_generic_attack_hungary
+		prerequisite = { focus = HYA_focus_108 }
+		x = -1
+		y = 1
+		cost = 5
+		available = {
+			is_subject = no
+			HUN = {
+				exists = yes
+				NOT = { is_subject_of = ROOT }
+			}
+			strength_ratio = {
+				tag = HUN
+				ratio > 0.50
+			}
+		}
+		bypass = {
+			HUN = {
+				OR = {
+					exists = no
+					is_subject_of = ROOT
+				}
+			}
+		}
+		relative_position_id = HYA_focus_108
+		completion_reward = {
+			create_wargoal = {
+				target = HUN
+				type = annex_everything
+			}
+		}
+	}
+
+	focus = {
+		id = HYA_focus_112
+		icon = GFX_focus_generic_attack_slovakia
+		prerequisite = { focus = HYA_focus_108 }
+		x = 1
+		y = 1
+		cost = 5
+		available = {
+			is_subject = no
+			SLO = {
+				exists = yes
+				NOT = { is_subject_of = ROOT }
+			}
+			strength_ratio = {
+				tag = SLO
+				ratio > 0.50
+			}
+		}
+		bypass = {
+			SLO = {
+				OR = {
+					exists = no
+					is_subject_of = ROOT
+				}
+			}
+		}
+		relative_position_id = HYA_focus_108
+		completion_reward = {
+			create_wargoal = {
+				target = SLO
+				type = annex_everything
+			}
+		}
+	}
+
+	focus = {
+		id = HYA_focus_113
+		icon = GFX_focus_generic_attack_romania
+		prerequisite = { focus = HYA_focus_111 }
+		x = -1
+		y = 2
+		cost = 5
+		available = {
+			is_subject = no
+			ROM = {
+				exists = yes
+				NOT = { is_subject_of = ROOT }
+			}
+			strength_ratio = {
+				tag = ROM
+				ratio > 0.50
+			}
+		}
+		bypass = {
+			ROM = {
+				OR = {
+					exists = no
+					is_subject_of = ROOT
+				}
+			}
+		}
+		relative_position_id = HYA_focus_108
+		completion_reward = {
+			create_wargoal = {
+				target = ROM
+				type = annex_everything
+			}
+		}
+	}
+
+	focus = {
+		id = HYA_focus_114
+		icon = GFX_focus_generic_attack_yugoslavia
+		prerequisite = { focus = HYA_focus_112 }
+		x = 1
+		y = 2
+		cost = 5
+		available = {
+			is_subject = no
+			YUG = {
+				exists = yes
+				NOT = { is_subject_of = ROOT }
+			}
+			strength_ratio = {
+				tag = YUG
+				ratio > 0.50
+			}
+		}
+		bypass = {
+			YUG = {
+				OR = {
+					exists = no
+					is_subject_of = ROOT
+				}
+			}
+		}
+		relative_position_id = HYA_focus_108
+		completion_reward = {
+			create_wargoal = {
+				target = YUG
+				type = annex_everything
+			}
+		}
+	}
+
+	focus = {
+		id = HYA_focus_115
+		icon = GFX_focus_SMB_mountain_guns
+		prerequisite = { focus = HYA_focus_113 }
+		prerequisite = { focus = HYA_focus_114 }
+		x = 0
+		y = 3
+		cost = 5
+		available = {
+			is_subject = no
+
+		}
+		relative_position_id = HYA_focus_108
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = HYA_securing_balkan_hegemony
+				add_idea = HYA_securing_balkan_hegemony_2
 			}
 		}
 	}

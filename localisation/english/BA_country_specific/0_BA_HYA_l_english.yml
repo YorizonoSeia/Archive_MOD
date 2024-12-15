@@ -152,6 +152,14 @@
  HYA_focus_105:0 "발칸 장벽"
  HYA_focus_106:0 "적성 국가 판별"
  HYA_focus_107:0 "백귀야행 요새 위원회"
+ HYA_focus_108:0 "발칸 패권 확보"
+ HYA_focus_109:0 "요괴들의 학원"
+ HYA_focus_110:0 "'백귀야행'"
+ HYA_focus_111:0 "헝가리의 야망 제압"
+ HYA_focus_112:0 "슬로바키아 수탈"
+ HYA_focus_113:0 "대루마니아 좌절"
+ HYA_focus_114:0 "유고슬라비아 해체"
+ HYA_focus_115:0 "발칸의 패권국"
  
  HYA_focus_103_tt: "모든 §Y키보토스 국가§!와 인접한 주의 국경에 §G4§!개의 §Y요새§! 추가:"
  HYA_focus_105_tt: "모든 §Y남부 유럽 또는 발칸 국가§!와 인접한 주의 국경에 §G4§!개의 §Y요새§! 추가:"
@@ -159,6 +167,8 @@
  HYA_focus_106_tt2: "불개입 조약에 반대한 국가: §Y[?HYA_temp]x§!가지 비용 §G75%§! 감소: §Y육군 교리§!"
 
  #아이디어
+ HYA_securing_balkan_hegemony: "백귀야행 패권주의"
+ HYA_securing_balkan_hegemony_2: "패권국"
  HYA_merchant_association:0 "상인조합"
  HYA_merchant_association_desc:0 "상인조합의 회장인 냥테 마사무네는 백야행제로 벌어들이는 수익의 대부분을 미츠리부가 독점하는 것에 불만을 품고 있습니다."
  HYA_qortkswjswod:0 "백귀야행-산해경 전쟁"
@@ -283,6 +293,8 @@
 #다이나믹 모디파이어
  HYA_hyakkayouran_conflict_resolution_council:0 "백화요란 분쟁조정위원회"
  HYA_flower_bird_wind_moon_club_dynamic_modifiers:0 "화조풍월부"
+
+ HYA_flower_bird_wind_moon_club_dynamic_modifiers_tt:0 "§Y$HYA_flower_bird_wind_moon_club_dynamic_modifiers$§! 변동치:"
 
  HYA_focus_65_tt3:0 "\n§Y$HYA_hyakkayouran_conflict_resolution_council$§! 변동치\n매일 비동맹주의 인기도: §R-0.02§!"
  HYA_focus_66_tt:0 "\n§Y$HYA_hyakkayouran_conflict_resolution_council$§! 변동치\n정치력 획득: §G+5%§!\n이념 변화 방어: §G+5.0%§!"
