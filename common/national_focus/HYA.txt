@@ -2705,6 +2705,9 @@ focus_tree = {
 		}   
 		bypass = {
 		}
+		ai_will_do = {
+			factor = 0
+		}
 		completion_reward = {
 			capital_scope = {
 				add_extra_state_shared_building_slots = 3
@@ -2739,7 +2742,7 @@ focus_tree = {
 		prerequisite = { focus = HYA_focus_77 }
 		x = 0
 		y = 2
-		cost = 10
+		cost = 5
 		available = {
 		}   
 		bypass = {
@@ -3625,7 +3628,7 @@ focus_tree = {
 		id = HYA_focus_102
 		icon = GFX_goal_generic_neutrality_focus
 		prerequisite = { focus = HYA_focus_100 focus = HYA_focus_101 }
-		mutually_exclusive = { focus = HYA_focus_108 }
+		mutually_exclusive = { focus = HYA_focus_108 focus = HYA_focus_116 }
 		x = 0
 		y = 9
 		cost = 5
@@ -3838,7 +3841,7 @@ focus_tree = {
 		id = HYA_focus_108
 		icon = GFX_goal_generic_military_deal
 		prerequisite = { focus = HYA_focus_110 focus = HYA_focus_101 }
-		mutually_exclusive = { focus = HYA_focus_102 }
+		mutually_exclusive = { focus = HYA_focus_102 focus = HYA_focus_116 }
 		x = 8
 		y = 9
 		cost = 5
@@ -4025,6 +4028,164 @@ focus_tree = {
 			swap_ideas = {
 				remove_idea = HYA_securing_balkan_hegemony
 				add_idea = HYA_securing_balkan_hegemony_2
+			}
+		}
+	}
+
+	focus = {
+		id = HYA_focus_116
+		icon = GFX_focus_generic_red_flags
+		prerequisite = { focus = HYA_focus_94 focus = HYA_focus_93 }
+		mutually_exclusive = { focus = HYA_focus_108 focus = HYA_focus_102 }
+		x = 15
+		y = 9
+		cost = 5
+		available = {
+			is_subject = no
+		}
+		relative_position_id = HYA_focus_1
+		completion_reward = {
+			add_war_support = 0.10
+			add_state_claim = 4
+			add_state_claim = 986
+			add_state_claim = 152
+			add_state_claim = 153
+			add_state_claim = 848
+			add_state_claim = 976
+			add_state_claim = 975
+			add_state_claim = 972
+			add_state_claim = 75
+			add_state_claim = 74
+			add_state_claim = 72
+			add_state_claim = 9
+			add_state_claim = 69
+			add_state_claim = 53
+			add_state_claim = 52
+			add_state_claim = 54
+			add_threat = 1
+		}
+	}
+
+	focus = {
+		id = HYA_focus_117
+		icon = GFX_focus_generic_advanced_military_studies
+		prerequisite = { focus = HYA_focus_116 }
+		x = 0
+		y = 1
+		cost = 5
+		available = {
+			is_subject = no
+			any_country = {
+				NOT = { tag = ROOT }
+				OR = {
+					owns_state = 4
+					owns_state = 986
+					owns_state = 152
+					owns_state = 153
+					owns_state = 848
+					owns_state = 976
+					owns_state = 975
+					owns_state = 972
+					owns_state = 75
+					owns_state = 74
+					owns_state = 72
+					owns_state = 9
+					owns_state = 69
+				}
+			}
+		}
+		bypass = {
+			controls_state = 4
+			controls_state = 986
+			controls_state = 152
+			controls_state = 153
+			controls_state = 848
+			controls_state = 976
+			controls_state = 975
+			controls_state = 972
+			controls_state = 75
+			controls_state = 74
+			controls_state = 72
+			controls_state = 9
+			controls_state = 69
+		}
+		relative_position_id = HYA_focus_116
+		completion_reward = {
+			every_other_country = {
+				limit = {
+					NOT = { tag = ROOT }
+					OR = {
+						owns_state = 4
+						owns_state = 986
+						owns_state = 152
+						owns_state = 153
+						owns_state = 848
+						owns_state = 976
+						owns_state = 975
+						owns_state = 972
+						owns_state = 75
+						owns_state = 74
+						owns_state = 72
+						owns_state = 9
+						owns_state = 69
+					}
+				}
+				custom_effect_tooltip = war_aim_against_the_country_puppetization_tt
+				hidden_effect = {
+					ROOT = {
+						create_wargoal = {
+							type = puppet_wargoal_focus
+							target = PREV
+						}
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = HYA_focus_118
+		icon = GFX_focus_attack_GEH
+		prerequisite = { focus = HYA_focus_117 }
+		x = 0
+		y = 3
+		cost = 5
+		available = {
+			is_subject = no
+			any_country = {
+				NOT = { tag = ROOT }
+				OR = {
+					owns_state = 53
+					owns_state = 52
+					owns_state = 54
+				}
+			}
+		}
+		bypass = {
+			controls_state = 53
+			controls_state = 52
+			controls_state = 54
+		}
+		relative_position_id = HYA_focus_116
+		completion_reward = {
+			every_other_country = {
+				limit = {
+					NOT = { tag = ROOT }
+					OR = {
+						owns_state = 53
+						owns_state = 52
+						owns_state = 54
+					}
+				}
+				custom_effect_tooltip = war_aim_against_the_country_puppetization_tt
+				hidden_effect = {
+					ROOT = {
+						create_wargoal = {
+							type = puppet_wargoal_focus
+							target = PREV
+						}
+					}
+				}
 			}
 		}
 	}
