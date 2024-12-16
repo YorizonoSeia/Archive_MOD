@@ -531,6 +531,10 @@ SHA_Eastern_Alchemy_Society_cat = {
 			custom_effect_tooltip = SHA_days_re_enable_is_180
 		}
 	}
+	SHA_remove_EAS_tooltip = {
+		allowed = { tag = SHA}
+		visible = { always = no }
+	}
 }
 
 political_actions = {

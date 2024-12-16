@@ -689,12 +689,15 @@
 
  # 공용
  SHA_Solving_the_Militia_Problem: "질서 회복"
+ SHA_Solving_the_Militia_Problem_desc: ""
  SHA_strike_suppression: "파업 진압"
  SHA_strike_suppression_desc: "대전이 직후 산해경은 더욱 강력한 고립주의 정책을 채택했으며, 이는 상인연합회의 불만을 불러일으키기에 충분했습니다. 결국 그들은 12월에 현룡문의 정책에 반대하며 개혁과 개방을 요구하는 총파업에 돌입했습니다. 그러나 이러한 행동이 오히려 산해경의 상황을 더 악화시킬 뿐이라는 사실을 이들에게 명확히 깨닫게 하고, 필요하다면 무력으로 이를 진압해야 할 것입니다."
- SHA_Sack_of_Rumi: "루미 억제제"
+ SHA_Sack_of_Rumi: "루미 억제"
  SHA_Sack_of_Rumi_desc: "아케시로 루미는 12월 총파업의 주동자 중 한 명으로 지목됩니다. 루미를 억제함과 동시에 현무상회에 강력한 제재를 가함으로써 산해경의 전통을 수호하고, 나아가 보수적인 가치를 더욱 공고히 할 것입니다."
  SHA_emergency_measures: "급속 재무장"
+ SHA_emergency_measures_desc: ""
  SHA_invade_of_Hyakkiyako: "학원 영토 수복"
+ SHA_invade_of_Hyakkiyako_desc: ""
 
  # 국민정신
  SHA_Austrian_fascist_militia: "오스트리아인 민병대"
@@ -761,6 +764,7 @@
  SHA_Eastern_Alchemy_Society_cat_desc: "\n\n£GFX_SHA_Saya_cat\n\n\n\n\n현재 야쿠시 사야가 부장으로 있는 연단방은 이름 그대로 연금술을 연구하는 동아리입니다. 이름만 보면 유사과학을 탐구하는 모임으로 오해받기 쉽지만, 실상은 다릅니다. 연단방은 키보토스에서도 손꼽히는 첨단 기기들로 가득 찬 연구소를 보유하고 있으며, 이를 활용해 활발한 연구 활동을 이어가고 있습니다.\n\n연단방의 궁극적인 목표는 불로불사의 영약을 만드는 것입니다. 물론, 구성원들 모두 불로불사의 영약이 현실적으로 불가능하다는 사실을 잘 알고 있습니다. 그러나 이는 의도적으로 설정한 높은 목표입니다. 도달하기 어려운 목표를 향해 나아가는 과정에서, 다양한 새로운 발견과 혁신적인 결과를 얻기 위해서입니다."
  SHA_EAS_Budget_passed: "예산안 통과"
  SHA_EAS_Budget_cuts: "예산안 삭감"
+ SHA_remove_EAS_tooltip: "$SHA_Eastern_Alchemy_Society_cat$"
 
  
 

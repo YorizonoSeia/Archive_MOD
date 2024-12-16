@@ -32,7 +32,7 @@ SHA_Eastern_Alchemy_Society_cat = {
 		OR = {
 			has_idea = SHA_Eastern_Alchemy_Society_medium
 			has_idea = SHA_Eastern_Alchemy_Society_low
-			has_idea =SHA_Eastern_Alchemy_Society_high
+			has_idea = SHA_Eastern_Alchemy_Society_high
 		}
 	}
 }
