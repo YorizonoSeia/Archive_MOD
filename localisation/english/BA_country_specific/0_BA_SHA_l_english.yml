@@ -647,11 +647,13 @@
  SHA_gathering_of_radicals: "급진파 결집"
  SHA_gathering_of_radicals_desc: "현룡문의 문주는 오스트리아 유화 정책을 펼치며 산해경의 전통을 무시하는 행동을 보였습니다. 이는 명백히 산해경의 전통을 깨부수고 새로운 위협에 산해경을 노출 시키는 행위일 것입니다. 사랑하는 학원을 지킬려면 $SHA_KISAKI$(을)를 권좌에서 몰아내야합니다!"
  SHA_Contact_with_Austrian_militia: "오스트리아 민병대와 접촉"
+ SHA_Contact_with_Austrian_militia_desc: ""
  SHA_Cooperation_with_Kaguya: "경극부에 접근"
  SHA_Cooperation_with_Kaguya_desc: "경극부는 현재 산해경에서 가장 충성스러운 집단으로 평가받아도 손색이 없을 것입니다. 하지만 이들의 충언을 무시하며 독단적인 행보를 이어가는 현 문주를 끌어내리기 위해서는 경극부와의 협력이 필수적일 것입니다."
  SHA_podium_room_cooperation: "연단방에 접근"
  SHA_podium_room_cooperation_desc: "연단방에는 신타니 카이를 추종하는 일부 급진파들이 모여있다는 소문이 돌고 있습니다. 만약 이들과 접촉하는데 성공한다면 추후의 현 문주를 권좌에서 끌어내릴때 크나큰 도움이 될 것입니다."
  SHA_local_harmony: "현지 화합"
+ SHA_local_harmony_desc: ""
  SHA_Kisaki_Suppression: "키사키 억제"
  SHA_Kisaki_Suppression_desc: "때가 되었습니다! 현 문주의 우둔함을 폭로하기 위한 경극이 준비되었습니다. 경극부와 현룡문 내 일부 급진파와 협력하여, 경극 상연의 순간을 기회로 삼아 현 문주를 퇴진시키고 $SHA_KAGUYA$를 새로운 문주로 추대할 것입니다."
 
@@ -661,18 +663,25 @@
  SHA_Kaguya_ousted: "$SHA_KAGUYA$ 축출"
  SHA_Kaguya_ousted_desc: "경극부의 힘에 입어 $SHA_KISAKI$를 몰아내는데에 성공하였습니다. 그러나 이제 경극부는 쓸모없는 짐 덩어리에 불과합니다. 연단방과 협력해 경극부를 습격하여 $SHA_KAGUYA$를 문주의 자리에서 끌어내리고 현룡문의 문주 자리를 차지할 것입니다."
  SHA_Shanhaijing_fascism: "산해경 파시즘"
+ SHA_Shanhaijing_fascism_desc: ""
  SHA_Eastern_Alchemy_Society_solidarity: "연단방 결속"
+ SHA_Eastern_Alchemy_Society_solidarity_desc: ""
  SHA_consolidate_industries: "오스트리아 산업 통합"
+ SHA_consolidate_industries_desc: ""
  SHA_Sundan_dosage: "선단 투여"
  SHA_Sundan_dosage_desc: "우리의 군사적 목적 달성을 위해 \"선단\" 이라는 약품을 군인들에게 투여할 것입니다. 비록 약품이 완성되지 않았지만 산해경의 영광을 위해서라면 우리의 군인들은 감내할 것입니다.."
 
  SHA_Expansion_of_military_factories: "군수공장 확충"
+ SHA_Expansion_of_military_factories_desc: ""
  SHA_Abolition_of_national_isolation_policy: "쇄국정책 폐지"
  SHA_Abolition_of_national_isolation_policy_desc: "산해경의 쇄국정책은 국가 발전을 저해하는 주요 요인으로, 이제는 폐지해야 할 때입니다. 특히 연단방이 연구에 필요한 재료를 제대로 공급받지 못하고 있는 현실은 쇄국정책의 한계를 여실히 보여줍니다. 쇄국으로 인해 얻은 이익은 사실상 존재하지 않았으며, 오히려 외부와의 교류 단절로 인해 학문적, 기술적 발전이 정체되고 있습니다. 쇄국정책을 유지할 명분은 더 이상 설득력을 가지지 못하고 있습니다."
  
  SHA_fascism_friend: "[TRM.GetAdjective]의 지원 모색"
+ SHA_fascism_friend_desc: ""
  SHA_joint_military_training: "합동 군사 훈련"
+ SHA_joint_military_training_desc: ""
  SHA_Austrian_industrial_centralization: "오스트리아 산업 중앙 집권화"
+ SHA_Austrian_industrial_centralization_desc: ""
  SHA_black_sun_and_black_dragon: "검은 태양, 검은 용"
  SHA_black_sun_and_black_dragon_desc: "[TRM.GetAdjective] 와의 비공식적인 접촉은 있었지만, 구체적이고 법적인 구속력을 가진 것은 거의 합의 되지 않았습니다. [TRM.GetAdjective](이)가 퇴폐적인 문화에 맞선 투쟁을 지속할때 우리는 그들과 함께 연합전선을 결성해야합니다."
 
@@ -682,19 +691,27 @@
  SHA_conservative_revolution_tt: "현재 §Y파시즘 지지율§!을 §Y비동맹주의 지지율§!로 변환합니다."
  SHA_conservative_revolution_desc: "수 년 넘게 산해경엔 제대로 된 보수파 문주가 없었으며, 전 문주의 짧았던 임기를 감안해봤을 때 이 퇴폐의 공백은 수십 년 이상으로 늘어납니다. 이러한 가식은 끝나야 합니다. 우리는 웅대한 보수혁명 속에서 올바른 산해경 애국자들의 이상에 따라 산해경을 재편해야 합니다."
  SHA_new_shanhaijing_conservatism: "새로운 산해경 보수주의"
+ SHA_new_shanhaijing_conservatism_desc: ""
  SHA_Expansion_of_cooperation_with_other_clubs: "타 동아리 협력 확대"
+ SHA_Expansion_of_cooperation_with_other_clubs_desc: ""
  SHA_New_Genryumon_Peking_Opera_Department_Relations: "새로운 현룡문 - 경극부 관계"
+ SHA_New_Genryumon_Peking_Opera_Department_Relations_desc: ""
  SHA_Cabinet_Secretariat: "산해경 추밀원"
+ SHA_Cabinet_Secretariat_desc: ""
  SHA_Engine_of_conservative_revolution: "보수혁명의 원동기"
+ SHA_Engine_of_conservative_revolution_desc: ""
 
  # 공용
  SHA_Solving_the_Militia_Problem: "질서 회복"
+ SHA_Solving_the_Militia_Problem_desc: ""
  SHA_strike_suppression: "파업 진압"
  SHA_strike_suppression_desc: "대전이 직후 산해경은 더욱 강력한 고립주의 정책을 채택했으며, 이는 상인연합회의 불만을 불러일으키기에 충분했습니다. 결국 그들은 12월에 현룡문의 정책에 반대하며 개혁과 개방을 요구하는 총파업에 돌입했습니다. 그러나 이러한 행동이 오히려 산해경의 상황을 더 악화시킬 뿐이라는 사실을 이들에게 명확히 깨닫게 하고, 필요하다면 무력으로 이를 진압해야 할 것입니다."
- SHA_Sack_of_Rumi: "루미 억제제"
+ SHA_Sack_of_Rumi: "루미 억제"
  SHA_Sack_of_Rumi_desc: "아케시로 루미는 12월 총파업의 주동자 중 한 명으로 지목됩니다. 루미를 억제함과 동시에 현무상회에 강력한 제재를 가함으로써 산해경의 전통을 수호하고, 나아가 보수적인 가치를 더욱 공고히 할 것입니다."
  SHA_emergency_measures: "급속 재무장"
+ SHA_emergency_measures_desc: ""
  SHA_invade_of_Hyakkiyako: "학원 영토 수복"
+ SHA_invade_of_Hyakkiyako_desc: ""
 
  # 국민정신
  SHA_Austrian_fascist_militia: "오스트리아인 민병대"
@@ -761,6 +778,7 @@
  SHA_Eastern_Alchemy_Society_cat_desc: "\n\n£GFX_SHA_Saya_cat\n\n\n\n\n현재 야쿠시 사야가 부장으로 있는 연단방은 이름 그대로 연금술을 연구하는 동아리입니다. 이름만 보면 유사과학을 탐구하는 모임으로 오해받기 쉽지만, 실상은 다릅니다. 연단방은 키보토스에서도 손꼽히는 첨단 기기들로 가득 찬 연구소를 보유하고 있으며, 이를 활용해 활발한 연구 활동을 이어가고 있습니다.\n\n연단방의 궁극적인 목표는 불로불사의 영약을 만드는 것입니다. 물론, 구성원들 모두 불로불사의 영약이 현실적으로 불가능하다는 사실을 잘 알고 있습니다. 그러나 이는 의도적으로 설정한 높은 목표입니다. 도달하기 어려운 목표를 향해 나아가는 과정에서, 다양한 새로운 발견과 혁신적인 결과를 얻기 위해서입니다."
  SHA_EAS_Budget_passed: "예산안 통과"
  SHA_EAS_Budget_cuts: "예산안 삭감"
+ SHA_remove_EAS_tooltip: "$SHA_Eastern_Alchemy_Society_cat$"
 
  
 

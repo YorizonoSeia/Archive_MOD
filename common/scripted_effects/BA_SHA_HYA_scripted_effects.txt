@@ -34,12 +34,12 @@ SHA_Eastern_Alchemy_Society_idea_up = {
 			add_idea = SHA_Eastern_Alchemy_Society_medium
 			remove_idea = SHA_Eastern_Alchemy_Society_low
 		}
-		else_if = {
-			limit = { has_idea = SHA_Eastern_Alchemy_Society_medium }
-			swap_ideas = {
-				add_idea = SHA_Eastern_Alchemy_Society_high
-				remove_idea = SHA_Eastern_Alchemy_Society_medium
-			}
+	}
+	else_if = {
+		limit = { has_idea = SHA_Eastern_Alchemy_Society_medium }
+		swap_ideas = {
+			add_idea = SHA_Eastern_Alchemy_Society_high
+			remove_idea = SHA_Eastern_Alchemy_Society_medium
 		}
 	}
 }
@@ -64,5 +64,21 @@ SHA_Eastern_Alchemy_Society_idea_down = {
 				days = 180
 			}
 		}
+	}
+}
+SHA_EAS_idea_remove = {
+	custom_effect_tooltip = tooltip_white_line
+	effect_tooltip = { remove_decision = SHA_remove_EAS_tooltip }
+	if = {
+		limit = { has_idea = SHA_Eastern_Alchemy_Society_high }
+		remove_ideas = SHA_Eastern_Alchemy_Society_high
+	}
+	else_if = {
+		limit = { has_idea = SHA_Eastern_Alchemy_Society_low }
+		remove_ideas = SHA_Eastern_Alchemy_Society_low
+	}
+	else_if = {
+		limit = { has_idea = SHA_Eastern_Alchemy_Society_medium }
+		remove_ideas = SHA_Eastern_Alchemy_Society_medium
 	}
 }

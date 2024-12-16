@@ -1026,7 +1026,7 @@ focus_tree = {
 	}
 	focus = {
 		#야포 투자
-		id = HND_army_focus_4
+		id = HND_DNVP_focus_3
 		icon = GFX_goal_generic_army_artillery2
 		cost = 5
 		x = -2
@@ -1056,7 +1056,7 @@ focus_tree = {
 			focus = HND_army_focus_3
 		}
 		prerequisite = {
-			focus = HND_army_focus_4
+			focus = HND_DNVP_focus_3
 		}
 		completion_reward = {
 			add_doctrine_cost_reduction = {
