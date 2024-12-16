@@ -7957,6 +7957,9 @@ focus_tree = {
 					promote_leader = yes
 				}
 			}
+			hidden_effect = {
+				news_event = { id = shanews.03 days = 04 }
+			}
 		}
 	}
 
