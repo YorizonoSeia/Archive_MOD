@@ -7652,7 +7652,9 @@ focus_tree = {
 		prerequisite = { }
 		mutually_exclusive = { focus = SHA_Austrian_appeasement_policy }
 
-		available = { }
+		available = {
+			has_country_flag = GAEBALJUNG
+		}
 		bypass = { }
 
 		allow_branch = {
@@ -8782,7 +8784,9 @@ focus_tree = {
 		prerequisite = { focus = SHA_Austrian_appeasement_policy }
 		mutually_exclusive = { focus = SHA_gathering_of_radicals }
 
-		available = { }
+		available = {
+			has_country_flag = GAEBALJUNG
+		}
 		bypass = { }
 		allow_branch = {
 			IF = {
