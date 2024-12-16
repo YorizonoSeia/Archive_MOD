@@ -4511,3 +4511,40 @@ USA_congress = {
 		}
 	}
 }
+
+USA_war_plans = {
+	
+	USABA_usa_government_restored = {
+		icon = GFX_decision_generic_civil_support
+
+		visible = {
+			has_global_flag = BA_shotdown_USA_congress
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USABA_usa_government_restored_tt
+				NOT = {
+					any_core_state = {
+						is_owned_by = ROOT
+						NOT = { is_controlled_by = ROOT }
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 4000
+		}
+
+		modifier = {
+			stability_weekly = 0.01
+		}
+
+		days_remove = 35
+		
+		remove_effect = {
+			country_event = usa_chroma_event.4
+		}
+	}
+}

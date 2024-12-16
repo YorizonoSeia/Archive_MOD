@@ -1,6 +1,29 @@
 ideas = {
     country = {
 
+		USABA_usa_event_5_idea = {
+
+			picture = air_war_plans_division_focus
+
+			allowed = {
+				original_tag = USA
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			modifier = {
+				stability_weekly = -0.01
+				army_core_attack_factor = 0.10
+				army_core_defence_factor = 0.15
+				conscription = 0.05
+				dig_in_speed_factor = 0.25
+				mobilization_speed = 0.50
+				industrial_capacity_factory = 0.15
+			}
+		}
+
 		USABA_usa_nkvd_idea = {
 
 			picture = nkvd_2

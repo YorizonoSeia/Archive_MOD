@@ -1080,7 +1080,7 @@ country_event = {
 						NOT = { has_country_flag = BA_end_USA_congress }
 					}
 				}
-				USA = { country_event = { id = usa_chroma_event.1 days = 15 } }
+				USA = { country_event = { id = usa_chroma_event.5 days = 15 } }
 			}
 		}
 	}

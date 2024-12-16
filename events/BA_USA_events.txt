@@ -137,7 +137,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = usa_chroma_event.2
+		name = usa_chroma_event.2.a
 		
 		custom_effect_tooltip = USA_recover_from_2nd_great_depression_tt
 		unlock_decision_tooltip = USA_recover_from_2nd_great_depression_rebuild_war_flan
@@ -157,9 +157,59 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = usa_chroma_event.3
+		name = usa_chroma_event.3.a
 	}
 }
+
+country_event = {
+
+	id = usa_chroma_event.4
+	title = usa_chroma_event.4.t
+	desc = usa_chroma_event.4.d
+	
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+
+	immediate = {
+		clr_global_flag = BA_shotdown_USA_congress
+	}
+	
+	option = {
+		name = usa_chroma_event.4.a
+		if = { limit = { country_exists = USP } annex_country = { target = USP } }
+	}
+}
+
+country_event = {
+
+	id = usa_chroma_event.5
+	title = usa_chroma_event.5.t
+	desc = usa_chroma_event.5.d
+	
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = usa_chroma_event.5.a
+		add_stability = 0.10
+		add_war_support = -0.05
+		add_timed_idea = {
+			idea = USABA_usa_event_5_idea
+			days = 100
+		}
+		USA = { country_event = { id = usa_chroma_event.1 days = 15 } }
+	}
+	
+	option = {
+		name = usa_chroma_event.5.b
+		add_political_power = -100
+		add_war_support = 0.10
+		add_stability = -0.05
+	}
+}
+
 
 
 # 구질서 수호
