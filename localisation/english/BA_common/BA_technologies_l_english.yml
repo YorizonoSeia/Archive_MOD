@@ -49,3 +49,14 @@
  kivotos_infantry_weapons_tt:0 "§Y편제 제한§! §G6§!의 §C헤일로 보병§!을 생산할 수 있습니다."
  kivotos_halo_max_upgrade_tt:0 "£GFX_unit_halo_infantry_icon_small §C헤일로 보병§!의 §Y편제 제한§!: §G+6§!"
  kivotos_halo_light_upgrade_tt:0 "£GFX_unit_halo_infantry_icon_small §C헤일로 보병§!의 §Y편제 제한§!: §G+12§!"
+
+ # 로컬 비적용 대응 (차후 한패팀에서 대응 시 삭제)
+ early_ship_hull_light: "초기형 구축함 함체"
+ basic_ship_hull_light: "1936형 구축함 함체"
+ improved_ship_hull_light: "1940형 구축함 함체"
+ advanced_ship_hull_light: "1944형 구축함 함체"
+
+ early_destroyer: "초기형 구축함"
+ basic_destroyer: "1936형 구축함"
+ improved_destroyer: "1940형 구축함"
+ advanced_destroyer: "1944형 구축함"
