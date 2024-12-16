@@ -359,7 +359,7 @@
  GEK_RM_spd_focus_1.5: "언론 활용"
  GEK_RM_spd_focus_2: "대연정 지도"
  GEK_RM_spd_focus_2.5: "노동조합 무장"
- GEK_RM_spd_focus_3: "공화주의 정서"
+ GEK_RM_dzp_focus_5: "공화주의 정서"
  GEK_RM_spd_focus_4: "전독일 최대연정 유지"
 
  GEK_RM_dzp_focus_0: "독일 중앙당과의 협력"
@@ -379,13 +379,29 @@
  GEK_RM_army_focus_2: "지휘체계 정상화"
  GEK_RM_army_focus_2.5: "독일 국가인민당"
  GEK_RM_army_focus_3: "국방군 권한 확대"
- GEK_RM_army_focus_4: "군주주의 정서"
+ GEK_RM_DNVP_focus_3: "군주주의 정서"
  GEK_RM_army_focus_5: "'전시상황'"
 
  GEK_RM_nazi_focus_0: "NSDAP와의 협력"
  GEK_RM_nazi_focus_1: "당조직 재정비"
  GEK_RM_nazi_focus_2: "친위대 활용"
  GEK_RM_nazi_focus_3: "전당대회"
+
+ GEK_weimar_focus_0: "대연정 내 급진파 억제"
+ GEK_weimar_focus_1: "1919년의 유산"
+ GEK_weimar_focus_2: "대중 집회"
+ GEK_weimar_focus_3: "자유선거"
+ GEK_popular_front_focus_0: "재건된 인민전선"
+ GEK_popular_front_focus_1: "통일전선 결속"
+ GEK_popular_front_focus_2: "공산당: 12월 테제"
+ GEK_popular_front_focus_3: "공산당: 노동조합 대표자"
+ GEK_popular_front_focus_4: "사민당: 군부와의 타협"
+ GEK_popular_front_focus_5: "사민당: 재분배 정책"
+ GEK_popular_front_focus_6: "전계급에의 단결 호소"
+ GEK_reaction_focus_0: "흑백적 연정"
+ 
+
+
 
  GEK_naval_dominance: "해군 우세"
  GEK_naval_dominance_desc: "우리의 해군을 강화하여 해양에서 우세를 점합니다."
@@ -493,6 +509,10 @@
  GEK_geh_correct_plan_tt: "육군 내 보병 장비 §Y9000§!개 이상"
 
  #독일 군사정부 - 디시전
+
+ GEK_seize_gold_reserves_cat: "$GER_seize_gold_reserves_cat$"
+ GEK_seize_gold_reserves: "$GER_seize_gold_reserves$"
+ GEK_seize_russian_citites_gold_reserves: "$GER_seize_russian_citites_gold_reserves$"
  GEA_contact_the_war_navy:0 "전쟁해군에 연락"
 
  GEK_restoration_decision:0 "독일 영토 수복"

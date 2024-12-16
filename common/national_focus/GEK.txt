@@ -4114,8 +4114,8 @@ focus_tree = {
 		}
 		mutually_exclusive = {
 			focus = GEK_RM_spd_focus_4
-			focus = GEK_RM_spd_focus_3
-			focus = GEK_RM_army_focus_4
+			focus = GEK_RM_dzp_focus_5
+			focus = GEK_RM_DNVP_focus_3
 			focus = GEK_RM_army_focus_5
 			focus = GEK_RM_nazi_focus_3
 		}
@@ -4260,7 +4260,7 @@ focus_tree = {
 		}
 	}
 	focus = { #공화주의 정서
-		id = GEK_RM_spd_focus_3
+		id = GEK_RM_dzp_focus_5
 		icon = GFX_focus_BRA_reach_out_to_military_dem
 		prerequisite = {
 			focus = GEK_RM_dzp_focus_1
@@ -4275,7 +4275,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = GEK_RM_spd_focus_4
 			focus = GEK_RM_com_focus_4
-			focus = GEK_RM_army_focus_4
+			focus = GEK_RM_DNVP_focus_3
 			focus = GEK_RM_army_focus_5
 			focus = GEK_RM_nazi_focus_3
 		}
@@ -4307,9 +4307,9 @@ focus_tree = {
 			has_war = no
 		}
 		mutually_exclusive = {
-			focus = GEK_RM_spd_focus_3
+			focus = GEK_RM_dzp_focus_5
 			focus = GEK_RM_com_focus_4
-			focus = GEK_RM_army_focus_4
+			focus = GEK_RM_DNVP_focus_3
 			focus = GEK_RM_army_focus_5
 			focus = GEK_RM_nazi_focus_3
 		}
@@ -4797,7 +4797,7 @@ focus_tree = {
 		}
 	}
 	focus = { #군주주의 정서
-		id = GEK_RM_army_focus_4
+		id = GEK_RM_DNVP_focus_3
 		icon = GFX_focus_rom_royal_dictatorship
 		prerequisite = {
 			focus = GEK_RM_dzp_focus_4
@@ -4809,7 +4809,7 @@ focus_tree = {
 		}
 		mutually_exclusive = {
 			focus = GEK_RM_spd_focus_4
-			focus = GEK_RM_spd_focus_3
+			focus = GEK_RM_dzp_focus_5
 			focus = GEK_RM_com_focus_4
 			focus = GEK_RM_army_focus_5
 			focus = GEK_RM_nazi_focus_3
@@ -4843,9 +4843,9 @@ focus_tree = {
 		}
 		mutually_exclusive = {
 			focus = GEK_RM_spd_focus_4
-			focus = GEK_RM_spd_focus_3
+			focus = GEK_RM_dzp_focus_5
 			focus = GEK_RM_com_focus_4
-			focus = GEK_RM_army_focus_4
+			focus = GEK_RM_DNVP_focus_3
 			focus = GEK_RM_nazi_focus_3
 		}
 		prerequisite = {
@@ -4993,10 +4993,10 @@ focus_tree = {
 		}
 		mutually_exclusive = {
 			focus = GEK_RM_spd_focus_4
-			focus = GEK_RM_spd_focus_3
+			focus = GEK_RM_dzp_focus_5
 			focus = GEK_RM_com_focus_4
 			focus = GEK_RM_army_focus_5
-			focus = GEK_RM_army_focus_4
+			focus = GEK_RM_DNVP_focus_3
 		}
 		relative_position_id = GEK_RM_nazi_focus_0
 		x = 0
@@ -5014,6 +5014,192 @@ focus_tree = {
 			}
 		}
 	}
+
+	
+	focus = { #대연정 내 급진파 억제
+		id = GEK_weimar_focus_0
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		prerequisite = {
+			focus = GEK_RM_spd_focus_4
+		}
+		relative_position_id = GEK_RM_spd_focus_4
+		x = -1
+		y = 1
+		cost = 2
+		completion_reward = {
+			GEK_enhance_spd = yes
+			GEK_enhance_spd = yes
+			GEK_enhance_spd = yes
+		}
+	}
+	focus = { #1919년의 유산
+		id = GEK_weimar_focus_1
+		icon = GFX_focus_AUS_lawmaking_leniency
+		prerequisite = {
+			focus = GEK_RM_spd_focus_4
+			focus = GEK_RM_dzp_focus_5
+		}
+		relative_position_id = GEK_RM_spd_focus_4
+		x = 1
+		y = 1
+		cost = 2
+		completion_reward = {
+			GEK_enhance_spd = yes
+			GEK_enhance_spd = yes
+			GEK_enhance_spd = yes
+		}
+	}
+	focus = { #대중 집회
+		id = GEK_weimar_focus_2
+		icon = GFX_focus_ITA_corpo_volontari_della_liberta
+		prerequisite = {
+			focus = GEK_RM_spd_focus_4
+			focus = GEK_RM_dzp_focus_5
+		}
+		relative_position_id = GEK_RM_spd_focus_4
+		x = 3
+		y = 1
+		cost = 2
+		completion_reward = {
+			GEK_enhance_spd = yes
+			GEK_enhance_spd = yes
+			GEK_enhance_spd = yes
+		}
+	}
+	focus = { #자유 선거
+		id = GEK_weimar_focus_3
+		icon = GFX_focus_ARG_defense_and_democracy
+		prerequisite = {
+			focus = GEK_weimar_focus_2
+		}
+		prerequisite = {
+			focus = GEK_weimar_focus_1
+		}
+		relative_position_id = GEK_RM_spd_focus_4
+		x = 2
+		y = 2
+		cost = 2
+		completion_reward = {
+			GEK_enhance_spd = yes
+			GEK_enhance_spd = yes
+			GEK_enhance_spd = yes
+		}
+	}
+	focus = { #재건된 인민전선
+		id = GEK_popular_front_focus_0
+		icon = GFX_focus_ARG_defense_and_democracy
+		prerequisite = {
+			focus = GEK_weimar_focus_3
+		}
+		mutually_exclusive = {
+			focus = GEK_reaction_focus_0
+		}
+		relative_position_id = GEK_weimar_focus_3
+		x = -3
+		y = 1
+		cost = 2
+		completion_reward = {
+		}
+	}
+	focus = { #통일전선 결속
+		id = GEK_popular_front_focus_1
+		icon = GFX_focus_ARG_defense_and_democracy
+		prerequisite = {
+			focus = GEK_popular_front_focus_0
+		}
+		relative_position_id = GEK_popular_front_focus_0
+		x = -3
+		y = 1
+		cost = 2
+		completion_reward = {
+		}
+	}
+	focus = { #12월 테제
+		id = GEK_popular_front_focus_2
+		icon = GFX_focus_ARG_defense_and_democracy
+		prerequisite = {
+			focus = GEK_popular_front_focus_1
+		}
+		relative_position_id = GEK_popular_front_focus_1
+		x = -1
+		y = 1
+		cost = 2
+		completion_reward = {
+		}
+	}
+	focus = { #노동조합 대표자
+		id = GEK_popular_front_focus_3
+		icon = GFX_focus_ARG_defense_and_democracy
+		prerequisite = {
+			focus = GEK_popular_front_focus_2
+		}
+		relative_position_id = GEK_popular_front_focus_1
+		x = -1
+		y = 2
+		cost = 2
+		completion_reward = {
+		}
+	}
+	focus = { #군부와의 타협
+		id = GEK_popular_front_focus_4
+		icon = GFX_focus_ARG_defense_and_democracy
+		prerequisite = {
+			focus = GEK_popular_front_focus_1
+		}
+		relative_position_id = GEK_popular_front_focus_1
+		x = 1
+		y = 1
+		cost = 2
+		completion_reward = {
+		}
+	}
+	focus = { #제한적인 부의 재분배
+		id = GEK_popular_front_focus_5
+		icon = GFX_focus_ARG_defense_and_democracy
+		prerequisite = {
+			focus = GEK_popular_front_focus_4
+		}
+		relative_position_id = GEK_popular_front_focus_1
+		x = 1
+		y = 2
+		cost = 2
+		completion_reward = {
+		}
+	}
+	focus = { #전계급에의 단결 호소
+		id = GEK_popular_front_focus_6
+		icon = GFX_focus_ARG_defense_and_democracy
+		prerequisite = {
+			focus = GEK_popular_front_focus_5
+		}
+		prerequisite = {
+			focus = GEK_popular_front_focus_3
+		}
+		relative_position_id = GEK_popular_front_focus_1
+		x = 0
+		y = 3
+		cost = 2
+		completion_reward = {
+		}
+	}
+	focus = { #흑백적 연정
+		id = GEK_reaction_focus_0
+		icon = GFX_focus_ARG_defense_and_democracy
+		prerequisite = {
+			focus = GEK_weimar_focus_3
+		}
+		mutually_exclusive = {
+			focus = GEK_popular_front_focus_0
+		}
+		relative_position_id = GEK_weimar_focus_3
+		x = 3
+		y = 1
+		cost = 2
+		completion_reward = {
+		}
+	}
+
+
 	focus = {
 		id = GEK_GER_government
 		icon = GFX_focus_ger_oppose_hitler
