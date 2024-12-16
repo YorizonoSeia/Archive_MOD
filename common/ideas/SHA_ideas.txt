@@ -1040,12 +1040,9 @@ ideas = {
 				war_support_factor = 0.05
 				army_morale_factor = 0.05
 				neutrality_drift = 0.02
-				custom_modifier_tooltip = DEN_military_advisors_cost_big_tt
-				hidden_modifier = {
-					air_advisor_cost_factor = -0.15
-					army_advisor_cost_factor = -0.15
-					navy_advisor_cost_factor = -0.15
-				}
+				air_advisor_cost_factor = -0.15
+				army_advisor_cost_factor = -0.15
+				navy_advisor_cost_factor = -0.15
 			}
 		}
 		SHA_kaguya_idea_tooltip_4 = {
@@ -1059,12 +1056,9 @@ ideas = {
 				war_support_factor = 0.05
 				army_morale_factor = 0.05
 				neutrality_drift = 0.04
-				custom_modifier_tooltip = DEN_military_advisors_cost_big_tt
-				hidden_modifier = {
-					air_advisor_cost_factor = -0.15
-					army_advisor_cost_factor = -0.15
-					navy_advisor_cost_factor = -0.15
-				}
+				air_advisor_cost_factor = -0.15
+				army_advisor_cost_factor = -0.15
+				navy_advisor_cost_factor = -0.15
 				offensive_war_stability_factor = 0.05
 				defensive_war_stability_factor = 0.05
 			}
