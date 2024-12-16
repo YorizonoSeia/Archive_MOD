@@ -1047,7 +1047,7 @@ news_event = { #헝가리의 발칸 통일
 						is_ai = no
 				}
 				scoped_play_song = "BA_Internationale"
-				set_global_flag = {
+				set_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 11
 					days = 15

@@ -189,7 +189,7 @@ news_event = { #미카의 집권
 						is_ai = no
 				}
 				scoped_play_song = "BA_night_on_bald_mountain"
-				set_global_flag = {
+				set_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 1
 					days = 15
@@ -208,7 +208,7 @@ news_event = { #미카의 집권
 						is_ai = no
 				}
 				scoped_play_song = "BA_night_on_bald_mountain"
-				set_global_flag = {
+				set_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 1
 					days = 15
@@ -232,7 +232,7 @@ news_event = { #미카의 집권
 						is_ai = no
 				}
 				scoped_play_song = "BA_night_on_bald_mountain"
-				set_global_flag = {
+				set_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 1
 					days = 15
@@ -261,7 +261,7 @@ news_event = { #미카의 집권
 						is_ai = no
 				}
 				scoped_play_song = "BA_night_on_bald_mountain"
-				set_global_flag = {
+				set_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 1
 					days = 15
@@ -315,7 +315,7 @@ news_event = { #트리니티 게헨나 전쟁
 			if = {
 				limit = { is_ai = no }
 				scoped_play_song = "BA_fall_schwarz"
-				set_global_flag = {
+				set_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 5
 					days = 15
@@ -333,7 +333,7 @@ news_event = { #트리니티 게헨나 전쟁
 			if = {
 				limit = { is_ai = no }
 				scoped_play_song = "BA_fall_schwarz"
-				set_global_flag = {
+				set_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 5
 					days = 15
@@ -354,7 +354,7 @@ news_event = { #트리니티 게헨나 전쟁
 			if = {
 				limit = { is_ai = no }
 				scoped_play_song = "BA_fall_schwarz"
-				set_global_flag = {
+				set_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 5
 					days = 15
@@ -491,7 +491,7 @@ news_event = { # 트리니티 - 소련 전쟁
 						is_ai = no
 				}
 				scoped_play_song = "BA_Russia_Trinity_war"
-				set_global_flag = {
+				set_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 2
 					days = 15
@@ -510,7 +510,7 @@ news_event = { # 트리니티 - 소련 전쟁
 						is_ai = no
 				}
 				scoped_play_song = "BA_Russia_Trinity_war"
-				set_global_flag = {
+				set_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 2
 					days = 15
@@ -529,7 +529,7 @@ news_event = { # 트리니티 - 소련 전쟁
 						is_ai = no
 				}
 				scoped_play_song = "BA_Russia_Trinity_war"
-				set_global_flag = {
+				set_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 2
 					days = 15
@@ -564,7 +564,7 @@ news_event = { # 트리니티의 키보토스(으악 너무 강력해~)
 						is_ai = no
 				}
 				scoped_play_song = "BA_piano_concerto_no2_in_c_minor_op18"
-				set_global_flag = {
+				set_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 6
 					days = 15
@@ -583,7 +583,7 @@ news_event = { # 트리니티의 키보토스(으악 너무 강력해~)
 						is_ai = no
 				}
 				scoped_play_song = "BA_piano_concerto_no2_in_c_minor_op18"
-				set_global_flag = {
+				set_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 6
 					days = 15
@@ -802,7 +802,7 @@ news_event = { #색채의 침입
 						is_ai = no
 				}
 				scoped_play_song = "BA_the_planets_mars"
-				set_global_flag = {
+				set_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 4
 					days = 15
@@ -1087,7 +1087,7 @@ news_event = { #아트라하시스의 방주
 			if = {
 				limit = { is_ai = no }
 				scoped_play_song = "BA_Codex_of_Omen"
-				set_global_flag = {
+				set_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 13
 					days = 15
@@ -1114,7 +1114,7 @@ news_event = { #밀레니엄의 붕괴
 			if = {
 				limit = { is_ai = no }
 				scoped_play_song = "BA_final_destination_of_ark"
-				set_global_flag = {
+				set_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 12
 					days = 15
@@ -1133,7 +1133,7 @@ news_event = { #밀레니엄의 붕괴
 			if = {
 				limit = { is_ai = no }
 				scoped_play_song = "BA_final_destination_of_ark"
-				set_global_flag = {
+				set_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 12
 					days = 15
@@ -1195,7 +1195,7 @@ news_event = { #밀레니엄 인공위성
 					is_ai = no
 				}
 				scoped_play_song = "BA_Sputnik_Beeping"
-				set_global_flag = {
+				set_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 15
 					days = 15
@@ -1216,7 +1216,7 @@ news_event = { #밀레니엄 인공위성
 					is_ai = no
 				}
 				scoped_play_song = "BA_Sputnik_Beeping"
-				set_global_flag = {
+				set_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 15
 					days = 15
@@ -1541,7 +1541,7 @@ news_event = { #에덴 핵폭발
 			if = {
 				limit = { is_ai = no }
 				scoped_play_song = "BA_Megalith_Agnus_Dei"
-				set_global_flag = {
+				set_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 16
 					days = 15
@@ -1577,7 +1577,7 @@ news_event = { #소폴전쟁
 			if = {
 				limit = { is_ai = no }
 				scoped_play_song = "BA_red_cavarly"
-				set_global_flag = {
+				set_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 17
 					days = 15
@@ -1597,7 +1597,7 @@ news_event = { #소폴전쟁
 			if = {
 				limit = { is_ai = no }
 				scoped_play_song = "BA_red_cavarly"
-				set_global_flag = {
+				set_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 17
 					days = 15
@@ -1614,7 +1614,7 @@ news_event = { #소폴전쟁
 			if = {
 				limit = { is_ai = no }
 				scoped_play_song = "BA_red_cavarly"
-				set_global_flag = {
+				set_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 17
 					days = 15
@@ -1778,7 +1778,7 @@ news_event = { # 소련의 승전
 			if = {
 				limit = { is_ai = no }
 				scoped_play_song = "BA_soviet_win"
-				set_global_flag = {
+				set_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 18
 					days = 15
@@ -1798,7 +1798,7 @@ news_event = { # 소련의 승전
 			if = {
 				limit = { is_ai = no }
 				scoped_play_song = "BA_soviet_win"
-				set_global_flag = {
+				set_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 18
 					days = 15
@@ -1813,7 +1813,7 @@ news_event = { # 소련의 승전
 			if = {
 				limit = { is_ai = no }
 				scoped_play_song = "BA_soviet_win"
-				set_global_flag = {
+				set_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 1
 					days = 15
@@ -2676,7 +2676,7 @@ news_event = { #영국 승전
 			if = {
 				limit = { is_ai = no }
 				scoped_play_song = "BA_britain_win"
-				set_global_flag = {
+				set_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 8
 					days = 15
@@ -2834,7 +2834,7 @@ news_event = { #백귀야행 산해경 전쟁
 			}
 			hidden_effect = {
 				scoped_play_song = "BA_Hohei_no_Honryo"
-				set_global_flag = {
+				set_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 20
 					days = 15
@@ -2853,7 +2853,7 @@ news_event = { #백귀야행 산해경 전쟁
 			}
 			hidden_effect = {
 				scoped_play_song = "BA_Hohei_no_Honryo"
-				set_global_flag = {
+				set_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 20
 					days = 15
@@ -2877,7 +2877,7 @@ news_event = { #백귀야행 산해경 전쟁
 			}
 			hidden_effect = {
 				scoped_play_song = "BA_Hohei_no_Honryo"
-				set_global_flag = {
+				set_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 20
 					days = 15
@@ -2907,7 +2907,7 @@ news_event = { #붉은겨울 내전
 			}
 			hidden_effect = {
 				scoped_play_song = "BA_jap_warsow"
-				set_global_flag = {
+				set_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 19
 					days = 15
@@ -2929,7 +2929,7 @@ news_event = { #붉은겨울 내전
 			}
 			hidden_effect = {
 				scoped_play_song = "BA_jap_warsow"
-				set_global_flag = {
+				set_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 19
 					days = 15
@@ -2954,7 +2954,7 @@ news_event = { #붉은겨울 내전
 			}
 			hidden_effect = {
 				scoped_play_song = "BA_jap_warsow"
-				set_global_flag = {
+				set_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 19
 					days = 15
@@ -3506,7 +3506,7 @@ news_event = {
 			}
 			hidden_effect = {
 				scoped_play_song = "imperterrita" #BA_united_nations_music
-				set_global_flag = {
+				set_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 21
 					days = 15

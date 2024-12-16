@@ -5,12 +5,12 @@ scripted_gui = {
 		context_type = player_context
 
 		visible = {
-			has_global_flag = BA_Super_Event_Visible
+			has_country_flag = BA_Super_Event_Visible
 		}
 		
 		triggers = {
 			BA_Super_Event_Image_asd_visible = {
-				has_global_flag = {
+				has_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 1
 				}
@@ -18,7 +18,7 @@ scripted_gui = {
 		}
 		triggers = {
 			BA_Super_Event_Image_aby_cze_union_visible = {
-				has_global_flag = {
+				has_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 2
 				}
@@ -26,7 +26,7 @@ scripted_gui = {
 		}
 		triggers = {
 			BA_Super_Event_Image_unity_germany_visible = {
-				has_global_flag = {
+				has_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 3
 				}
@@ -34,7 +34,7 @@ scripted_gui = {
 		}
 		triggers = {
 			BA_Super_Event_Image_invasion_another_dimension_visible = {
-				has_global_flag = {
+				has_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 4
 				}
@@ -42,7 +42,7 @@ scripted_gui = {
 		}
 		triggers = {
 			BA_Super_Event_Image_trinity_gehenna_war_visible = {
-				has_global_flag = {
+				has_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 5
 				}
@@ -50,7 +50,7 @@ scripted_gui = {
 		}
 		triggers = {
 			BA_Super_Event_Image_Kivotos_visible = {
-				has_global_flag = {
+				has_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 6
 				}
@@ -58,7 +58,7 @@ scripted_gui = {
 		}
 		triggers = {
 			BA_Super_Event_Image_france_visible = {
-				has_global_flag = {
+				has_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 7
 				}
@@ -66,7 +66,7 @@ scripted_gui = {
 		}
 		triggers = {
 			BA_Super_Event_Image_britain_visible = {
-				has_global_flag = {
+				has_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 8
 				}
@@ -74,7 +74,7 @@ scripted_gui = {
 		}
 		triggers = {
 			BA_Super_Event_Image_GER_mil_visible = {
-				has_global_flag = {
+				has_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 9
 				}
@@ -82,7 +82,7 @@ scripted_gui = {
 		}
 		triggers = {
 			BA_Super_Event_Image_BA_superevent_Middle_Asia_war_visible = {
-				has_global_flag = {
+				has_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 10
 				}
@@ -90,7 +90,7 @@ scripted_gui = {
 		}
 		triggers = {
 			BA_Super_Event_Image_HUN_BALKAN_visible = {
-				has_global_flag = {
+				has_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 11
 				}
@@ -98,7 +98,7 @@ scripted_gui = {
 		}
 		triggers = {
 			BA_Super_Event_Image_BA_superevent_Key_visible = {
-				has_global_flag = {
+				has_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 12
 				}
@@ -106,7 +106,7 @@ scripted_gui = {
 		}
 		triggers = {
 			BA_Super_Event_Image_Atrahasis_visible = {
-				has_global_flag = {
+				has_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 13
 				}
@@ -114,7 +114,7 @@ scripted_gui = {
 		}
 		triggers = {
 			BA_Super_Event_Image_china_japan_war_visible = {
-				has_global_flag = {
+				has_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 14
 				}
@@ -122,7 +122,7 @@ scripted_gui = {
 		}
 		triggers = {
 			BA_Super_Event_Image_launch_vehicle_visible = {
-				has_global_flag = {
+				has_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 15
 				}
@@ -130,7 +130,7 @@ scripted_gui = {
 		}
 		triggers = {
 			BA_Super_Event_Image_BA_airship_crash_visible = {
-				has_global_flag = {
+				has_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 16
 				}
@@ -138,7 +138,7 @@ scripted_gui = {
 		}
 		triggers = {
 			BA_Super_Event_Image_sov_pol_war_visible = {
-				has_global_flag = {
+				has_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 17
 				}
@@ -146,7 +146,7 @@ scripted_gui = {
 		}
 		triggers = {
 			BA_Super_Event_Image_BA_Soviet_Win_visible = {
-				has_global_flag = {
+				has_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 18
 				}
@@ -154,7 +154,7 @@ scripted_gui = {
 		}
 		triggers = {
 			BA_Super_Event_Image_BA_redwinter_civilwar_visible = {
-				has_global_flag = {
+				has_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 19
 				}
@@ -162,7 +162,7 @@ scripted_gui = {
 		}
 		triggers = {
 			BA_Super_Event_Image_BA_HYA_SHA_war_visible = {
-				has_global_flag = {
+				has_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 20
 				}
@@ -170,7 +170,7 @@ scripted_gui = {
 		}
 		triggers = {
 			BA_Super_Event_Image_united_nations_visible = {
-				has_global_flag = {
+				has_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 21
 				}
@@ -178,7 +178,7 @@ scripted_gui = {
 		}
 		triggers = {
 			BA_Super_Event_Image_france_com_visible = {
-				has_global_flag = {
+				has_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 22
 				}
@@ -186,7 +186,7 @@ scripted_gui = {
 		}
 		triggers = {
 			BA_Super_Event_Image_france_dem_visible = {
-				has_global_flag = {
+				has_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 23
 				}
@@ -194,7 +194,7 @@ scripted_gui = {
 		}
 		triggers = {
 			BA_Super_Event_Image_france_fas_visible = {
-				has_global_flag = {
+				has_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 24
 				}
@@ -202,21 +202,12 @@ scripted_gui = {
 		}
 		triggers = {
 			BA_Super_Event_Image_68_revolutions_visible = {
-				has_global_flag = {
+				has_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 25
 				}
 			}
 		}
-		
-		#triggers = {
-		#	BA_Super_Event_Image_68_revolutions_visible = {
-		#		has_global_flag = {
-		#			flag = BA_Super_Event_Visible
-		#			value = 26
-		#		}
-		#	}
-		#}
 
 		#내전 슈퍼 이벤트
 
@@ -226,7 +217,7 @@ scripted_gui = {
 		
 		effects = {
 			blue_sp_event_close_button_click = {
-				clr_global_flag = BA_Super_Event_Visible
+				clr_country_flag = BA_Super_Event_Visible
 			}
 		}
 	}

@@ -20,22 +20,6 @@ country_event = {
 			set_global_flag = BA_shotdown_USA_congress
 			set_global_flag = USABA_resistance_to_mainland_invasion_flag
 
-			remove_country_leader_role = {
-				character = USA_franklin_delano_roosevelt
-				ideology = liberalism
-			}
-			remove_country_leader_role = {
-				character = USA_william_dudley_pelley
-				ideology = fascism_ideology
-			}
-			remove_country_leader_role = {
-				character = USA_carnot_wheeler
-				ideology = oligarchism
-			}
-			remove_country_leader_role = {
-				character = USA_earl_browder
-				ideology = marxism
-			}
 			set_country_flag = USABA_government_official_exile
 			set_country_flag = USABA_relocation_of_naval_headquarters
 
@@ -86,6 +70,39 @@ country_event = {
 				character = USA_douglas_macarthur
 				country_leader = {
 					ideology = emergency_military_government
+					
+					traits = {
+						USABA_commander_in_chief
+					}
+				}
+				promote_leader = yes
+			}
+			add_country_leader_role = {
+				character = USA_douglas_macarthur
+				country_leader = {
+					ideology = conservatism
+					
+					traits = {
+						USABA_commander_in_chief
+					}
+				}
+				promote_leader = yes
+			}
+			add_country_leader_role = {
+				character = USA_douglas_macarthur
+				country_leader = {
+					ideology = stalinism
+					
+					traits = {
+						USABA_commander_in_chief
+					}
+				}
+				promote_leader = yes
+			}
+			add_country_leader_role = {
+				character = USA_douglas_macarthur
+				country_leader = {
+					ideology = falangism
 					
 					traits = {
 						USABA_commander_in_chief
@@ -173,11 +190,35 @@ country_event = {
 
 	immediate = {
 		clr_global_flag = BA_shotdown_USA_congress
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.30
+		}
 	}
 	
 	option = {
 		name = usa_chroma_event.4.a
 		if = { limit = { country_exists = USP } annex_country = { target = USP } }
+		drop_cosmetic_tag = yes
+		remove_country_leader_role = {
+			character = USA_douglas_macarthur
+			ideology = emergency_military_government
+		}
+		remove_country_leader_role = {
+			character = USA_douglas_macarthur
+			ideology = conservatism
+		}
+		remove_country_leader_role = {
+			character = USA_douglas_macarthur
+			ideology = stalinism
+		}
+		remove_country_leader_role = {
+			character = USA_douglas_macarthur
+			ideology = falangism
+		}
+		set_politics = {
+			ruling_party = democratic
+		}
 	}
 }
 
@@ -193,6 +234,13 @@ country_event = {
 	
 	option = {
 		name = usa_chroma_event.5.a
+		trigger = {
+			NOT = {
+				has_government = fascism
+				has_government = neutrality
+				has_government = communism
+			}
+		}
 		add_stability = 0.10
 		add_war_support = -0.05
 		add_timed_idea = {
@@ -204,9 +252,34 @@ country_event = {
 	
 	option = {
 		name = usa_chroma_event.5.b
+		trigger = {
+			NOT = {
+				has_government = fascism
+				has_government = neutrality
+				has_government = communism
+			}
+		}
 		add_political_power = -100
 		add_war_support = 0.10
 		add_stability = -0.05
+	}
+	
+	option = {
+		name = usa_chroma_event.5.c
+		trigger = {
+			OR = {
+				has_government = fascism
+				has_government = neutrality
+				has_government = communism
+			}
+		}
+		add_political_power = -35
+		add_war_support = 0.05
+		add_stability = -0.05
+		add_timed_idea = {
+			idea = USABA_usa_event_5_idea
+			days = 55
+		}
 	}
 }
 

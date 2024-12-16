@@ -4512,7 +4512,7 @@ USA_congress = {
 	}
 }
 
-USA_war_plans = {
+political_actions = {
 	
 	USABA_usa_government_restored = {
 		icon = GFX_decision_generic_civil_support

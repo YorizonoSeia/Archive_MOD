@@ -7601,6 +7601,13 @@ focus_tree = {
 			has_global_flag = USABA_resistance_to_mainland_invasion_flag
 		}
 		offset = {
+			x = -26
+			y = 0
+			trigger = {
+				NOT = { has_dlc = "Man the Guns" }
+			}
+		}
+		offset = {
 			x = -17
 			y = 0
 			trigger = {
@@ -7686,7 +7693,20 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			add_political_power = 120
 			add_war_support = 0.10
+			if = {
+				limit = { has_idea = second_great_depression }
+				remove_ideas = second_great_depression
+			}
+			if = {
+				limit = { has_idea = USABA_famine }
+				remove_ideas = USABA_famine
+			}
+			if = {
+				limit = { has_idea = USABA_famine_1 }
+				remove_ideas = USABA_famine_1
+			}
 			if = {
 				limit = {
 					has_idea = disarmed_nation
