@@ -49,4 +49,39 @@ equipments = {
 			steel = 4
 		}
 	}
+
+	# 발키리 대응
+	helicopter_equipment_2 = {
+		year = 1944
+
+		archetype = helicopter_equipment
+		priority = 15	
+
+		visual_level = 1
+
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.7
+
+		#Defensive Abilities
+		defense 		= 9
+		breakthrough 	= 12
+		hardness 		= 0.80
+		armor_value 	= 6
+
+		#Offensive Abilities
+		ap_attack = 13
+		air_attack = 0
+
+		#Space taken in convoy
+		lend_lease_cost = 3
+
+		build_cost_ic = 10
+		resources = {
+			aluminium = 3
+			steel = 1
+		}
+
+		fuel_consumption = 1.85
+	}
 }

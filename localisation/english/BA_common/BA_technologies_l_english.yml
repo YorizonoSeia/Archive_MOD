@@ -50,6 +50,10 @@
  kivotos_halo_max_upgrade_tt:0 "£GFX_unit_halo_infantry_icon_small §C헤일로 보병§!의 §Y편제 제한§!: §G+6§!"
  kivotos_halo_light_upgrade_tt:0 "£GFX_unit_halo_infantry_icon_small §C헤일로 보병§!의 §Y편제 제한§!: §G+12§!"
 
+ # 스프(대충 스페셜 프로젝트라는 말)
+ BA_sp_air_helicopter: "키보토스 헬리콥터"
+ helicopter_equipment_2: "키보토스 헬리콥터"
+
  # 로컬 비적용 대응 (차후 한패팀에서 대응 시 삭제)
  early_ship_hull_light: "초기형 구축함 함체"
  basic_ship_hull_light: "1936형 구축함 함체"

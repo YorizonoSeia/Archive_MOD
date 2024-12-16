@@ -2051,7 +2051,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KSP_mwez_river_junggongup_danji
-		icon = generic_industry_idea
+		icon = GFX_focus_generic_hydroelectric_energy
 		cost = 5
 
 		available = {
@@ -3110,6 +3110,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			complete_special_project = {
+				project = sp:sp_air_helicopter
+			}
+			complete_special_project = {
+				project = sp:BA_sp_air_helicopter
+			}
 			division_template = {
 				name = "Valkyrie of Sky"
 				priority = 1
@@ -3128,6 +3134,17 @@ focus_tree = {
 					engineer = { x = 0 y = 0 }
 				}
 			}
+			random_owned_controlled_state = {
+				prioritize = { 34  }
+				create_unit = {
+					division = "name = \"Valkyrie of Sky\" division_template = \"Valkyrie of Sky\" start_experience_factor = 5 start_equipment_factor = 1.0"
+					owner = KSP
+				}
+				create_unit = {
+					division = "name = \"Valkyrie of Sky\" division_template = \"Valkyrie of Sky\" start_experience_factor = 5 start_equipment_factor = 1.0"
+					owner = KSP
+				}
+			}			
 		}
 	}
 
@@ -4457,13 +4474,13 @@ focus_tree = {
 
 		completion_reward = {
 			create_wargoal = {
-				target = SRT
+				target = BLM
 				type = annex_everything
 			}
 		}
 
 		bypass = {
-			NOT = { country_exists = SRT }
+			NOT = { country_exists = BLM }
 		}
 	}
 
