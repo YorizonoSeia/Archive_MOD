@@ -128,3 +128,8 @@ entity = {
 		texture_anim_speed = 0.5
 	}
 }
+
+entity = {
+	clone = "KSP_helicopter_entity"
+	name = "KSP_helicopter_brigade_entity"
+}

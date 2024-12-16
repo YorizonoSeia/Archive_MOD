@@ -776,6 +776,11 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/KSP_ah_64d.dds"
 	}
 
+	spriteType = {
+		name = "GFX_KSP_helicopter_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/KSP_ah_64d.dds"
+	}
+
 	#
 	#	Infantry equipments by Kivotos Nation
 	#
