@@ -3,30 +3,32 @@ on_actions = {
 		effect = {
 			if = {
 				limit = {
+					original_tag = ITA
 					OR = {
-						AND = {
-							tag = ITA
-							OR = {
-								has_idea = PASTA_shock_to_daejeon
-								has_idea = PASTA_shock_to_daejeon
-								has_idea = PASTA_shock_to_daejeon
-							}
-							FROM = { Kivotos_tag = yes }
-						}
-						AND = {
-							Kivotos_tag = yes
-							FROM = {
-								tag = ITA
-								OR = {
-									has_idea = PASTA_shock_to_daejeon
-									has_idea = PASTA_shock_to_daejeon
-									has_idea = PASTA_shock_to_daejeon
-								}
-							}
+						has_idea = PASTA_shock_to_daejeon
+						has_idea = PASTA_shock_to_daejeon
+						has_idea = PASTA_shock_to_daejeon
+					}
+					FROM = { Kivotos_tag = yes }
+				}
+				ROOT = {
+					set_country_flag = ITA_human_fascism_lock_trigger_flag
+					country_event = PASTA_event.8
+				}
+			}
+			else_if = {
+				limit = {
+					Kivotos_tag = yes
+					FROM = {
+						original_tag = ITA
+						OR = {
+							has_idea = PASTA_shock_to_daejeon
+							has_idea = PASTA_shock_to_daejeon
+							has_idea = PASTA_shock_to_daejeon
 						}
 					}
 				}
-				ITA = {
+				FROM = {
 					set_country_flag = ITA_human_fascism_lock_trigger_flag
 					country_event = PASTA_event.8
 				}
@@ -37,32 +39,124 @@ on_actions = {
 		effect = {
 			if = {
 				limit = {
+					original_tag = ITA
 					OR = {
-						AND = {
-							tag = ITA
-							OR = {
-								has_idea = PASTA_shock_to_daejeon
-								has_idea = PASTA_shock_to_daejeon
-								has_idea = PASTA_shock_to_daejeon
-							}
-							FROM = { Kivotos_tag = yes }
-						}
-						AND = {
-							Kivotos_tag = yes
-							FROM = {
-								tag = ITA
-								OR = {
-									has_idea = PASTA_shock_to_daejeon
-									has_idea = PASTA_shock_to_daejeon
-									has_idea = PASTA_shock_to_daejeon
-								}
-							}
+						has_idea = PASTA_shock_to_daejeon
+						has_idea = PASTA_shock_to_daejeon
+						has_idea = PASTA_shock_to_daejeon
+					}
+					FROM = { Kivotos_tag = yes }
+				}
+				ROOT = {
+					set_country_flag = ITA_human_fascism_lock_trigger_flag
+					country_event = PASTA_event.8
+				}
+			}
+			else_if = {
+				limit = {
+					Kivotos_tag = yes
+					FROM = {
+						original_tag = ITA
+						OR = {
+							has_idea = PASTA_shock_to_daejeon
+							has_idea = PASTA_shock_to_daejeon
+							has_idea = PASTA_shock_to_daejeon
 						}
 					}
 				}
-				ITA = {
+				FROM = {
 					set_country_flag = ITA_human_fascism_lock_trigger_flag
 					country_event = PASTA_event.8
+				}
+			}
+		}
+	}
+	on_join_faction = {
+		effect = {
+			if = {
+				limit = {
+					original_tag = ITA
+					OR = {
+						has_idea = PASTA_shock_to_daejeon
+						has_idea = PASTA_shock_to_daejeon
+						has_idea = PASTA_shock_to_daejeon
+					}
+					FROM = { Kivotos_tag = yes }
+				}
+				ROOT = {
+					set_country_flag = ITA_human_fascism_lock_trigger_flag
+					country_event = PASTA_event.8
+				}
+			}
+			else_if = {
+				limit = {
+					Kivotos_tag = yes
+					FROM = {
+						original_tag = ITA
+						OR = {
+							has_idea = PASTA_shock_to_daejeon
+							has_idea = PASTA_shock_to_daejeon
+							has_idea = PASTA_shock_to_daejeon
+						}
+					}
+				}
+				FROM = {
+					set_country_flag = ITA_human_fascism_lock_trigger_flag
+					country_event = PASTA_event.8
+				}
+			}
+		}
+	}
+	on_leave_faction = {
+		effect = {
+			if = {
+				limit = {
+					original_tag = ITA
+					has_power_balance_modifier = {
+						id = ITA_power_balance
+						modifier = ITA_power_balance_aliy_in_kvt_country
+					}
+					FROM = { Kivotos_tag = yes }
+				}
+				ROOT = {
+					if = {
+						limit = {
+							has_power_balance_modifier = {
+								id = ITA_power_balance
+								modifier = ITA_power_balance_aliy_in_kvt_country
+							}
+						}
+						remove_power_balance_modifier = {
+							id = ITA_power_balance
+							modifier = ITA_power_balance_aliy_in_kvt_country
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					Kivotos_tag = yes
+					FROM = {
+						original_tag = ITA
+						has_power_balance_modifier = {
+							id = ITA_power_balance
+							modifier = ITA_power_balance_aliy_in_kvt_country
+						}
+					}
+				}
+				FROM = {
+					if = {
+						limit = {
+							has_power_balance_modifier = {
+								id = ITA_power_balance
+								modifier = ITA_power_balance_aliy_in_kvt_country
+							}
+						}
+						remove_power_balance_modifier = {
+							id = ITA_power_balance
+							modifier = ITA_power_balance_aliy_in_kvt_country
+						}
+					}
 				}
 			}
 		}

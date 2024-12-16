@@ -193,14 +193,15 @@ country_event = {
 		if = {
 			limit = {
 				has_power_balance = { id = ITA_power_balance }
-				OR = { 
-					has_completed_focus = ITA_culto_del_duce
-					has_completed_focus = ITA_convene_the_grand_council
-				}
+				has_government = fascism
 			}
 			add_power_balance_value = {
 				id = ITA_power_balance
 				value = -0.25
+			}
+			add_power_balance_modifier = {
+				id = ITA_power_balance
+				modifier = ITA_power_balance_aliy_in_kvt_country
 			}
 		}
 		add_political_power = -200

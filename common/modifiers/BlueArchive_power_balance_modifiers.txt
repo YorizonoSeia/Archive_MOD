@@ -17,3 +17,9 @@ HEU_sympathy_for_the_locals = {
 HEU_sympathy_for_the_kivotos = {
 	power_balance_daily = -0.001
 }
+
+#########################################
+
+ITA_power_balance_aliy_in_kvt_country = {
+	power_balance_weekly = -0.002
+}
