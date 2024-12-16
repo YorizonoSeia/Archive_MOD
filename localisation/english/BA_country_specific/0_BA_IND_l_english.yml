@@ -190,7 +190,7 @@
  HND_army_focus_2:0 "대중주의적 군사기관"
  HND_army_focus_tt:0 "§Y군사 개혁§!을 완료했습니다."
  HND_army_focus_3:0 "소화기 개발"
- HND_army_focus_4:0 "야포 투자"
+ HND_DNVP_focus_3:0 "야포 투자"
  HND_army_focus_5:0 "육군 현대화"
  HND_naval_focus_0:0 "인도양으로!"
  HND_naval_focus_1:0 "동해안 조선소"

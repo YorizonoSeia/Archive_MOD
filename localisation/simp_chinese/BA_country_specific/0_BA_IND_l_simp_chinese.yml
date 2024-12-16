@@ -186,7 +186,7 @@
  HND_army_focus_2:0 "大众主义军事机构"
  HND_army_focus_tt:0 "完成了§Y军事改革§!。"
  HND_army_focus_3:0 "轻武器研发"
- HND_army_focus_4:0 "投资野战炮"
+ HND_DNVP_focus_3:0 "投资野战炮"
  HND_army_focus_5:0 "陆军现代化"
  HND_naval_focus_0:0 "驶向印度洋！"
  HND_naval_focus_1:0 "东海岸造船厂"

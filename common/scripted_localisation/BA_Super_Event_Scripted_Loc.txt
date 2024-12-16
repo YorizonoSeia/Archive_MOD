@@ -1841,14 +1841,14 @@ defined_text = {
     }
 }
 defined_text = {
-    name = GEH_Army_focus_4_text
+    name = GEH_DNVP_focus_3_text
     text = {
         trigger = {
             GEH = {
                 has_completed_focus = GEH_Leverage_Perfect_team_strengths
             }
         }
-        localization_key = GEH_Army_focus_4_2
+        localization_key = GEH_DNVP_focus_3_2
     }
     text = {
         trigger = {
@@ -1856,7 +1856,7 @@ defined_text = {
                 has_completed_focus = GEH_look_to_the_west
             }
         }
-        localization_key = GEH_Army_focus_4_1
+        localization_key = GEH_DNVP_focus_3_1
     }
     text = {
         trigger = {
@@ -1867,6 +1867,6 @@ defined_text = {
                 }
             }
         }
-        localization_key = GEH_Army_focus_4_1
+        localization_key = GEH_DNVP_focus_3_1
     }
 }

@@ -2735,7 +2735,7 @@ focus_tree = {
         }
 	}
     focus = {
-		id = GEH_Army_focus_4
+		id = GEH_DNVP_focus_3
 		icon = GFX_goal_GEH_flag
 		cost = 5
 		x = -3
@@ -2785,12 +2785,12 @@ focus_tree = {
             if = {
                 limit = {
                     NOT = {
-                        has_completed_focus = GEH_Army_focus_4
+                        has_completed_focus = GEH_DNVP_focus_3
                     }
                 }
-            custom_effect_tooltip = GEH_Army_focus_4_tt
+            custom_effect_tooltip = GEH_DNVP_focus_3_tt
             custom_effect_tooltip = GEH_look_to_the_west_ttt
-            custom_effect_tooltip = GEH_Army_focus_4_2_tt
+            custom_effect_tooltip = GEH_DNVP_focus_3_2_tt
             custom_effect_tooltip = GEH_Leverage_Perfect_team_strengths_ttt
             }
             hidden_effect = {
@@ -2818,13 +2818,13 @@ focus_tree = {
 		x = 0
 		y = 1
         prerequisite = {
-            focus = GEH_prefect_army_focus_4
-            focus = GEH_west_army_focus_4
+            focus = GEH_prefect_DNVP_focus_3
+            focus = GEH_west_DNVP_focus_3
         }
         prerequisite = {
-            focus = GEH_Army_focus_4
+            focus = GEH_DNVP_focus_3
         }
-        relative_position_id = GEH_Army_focus_4
+        relative_position_id = GEH_DNVP_focus_3
 		ai_will_do = {
 			base = 500
 			modifier = {
@@ -2968,7 +2968,7 @@ focus_tree = {
         }
 	}
     focus = {
-		id = GEH_west_army_focus_4
+		id = GEH_west_DNVP_focus_3
 		icon = GFX_focus_SOV_restore_cossack_units
 		cost = 5
 		x = -0
@@ -2993,7 +2993,7 @@ focus_tree = {
 		}
 		available = { }
 		completion_reward = { 
-            custom_effect_tooltip = GEH_west_army_focus_4_tt
+            custom_effect_tooltip = GEH_west_DNVP_focus_3_tt
             #add_to_variable = { GEH_RU_army_sub_unit_halo_infantry_attack_factor = 0.05 }
             #add_to_variable = { GEH_RU_army_sub_unit_halo_infantry_defence_factor = 0.05 }
             add_to_variable = { GEH_RU_army_org_factor = 0.05 }
@@ -3100,7 +3100,7 @@ focus_tree = {
         }
 	}
     focus = {
-		id = GEH_prefect_army_focus_4
+		id = GEH_prefect_DNVP_focus_3
 		icon = GFX_goal_GEH_gloy_of_gehenna
 		cost = 10
 		x = 1
@@ -3125,7 +3125,7 @@ focus_tree = {
 		}
 		available = { }
 		completion_reward = { 
-            custom_effect_tooltip = GEH_prefect_army_focus_4_tt
+            custom_effect_tooltip = GEH_prefect_DNVP_focus_3_tt
             add_to_variable = { GEH_RU_breakthrough_factor = 0.05 }
         }
 	}
