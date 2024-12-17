@@ -1776,6 +1776,8 @@ TRN_after_war_decisions = {
 				}
 			}
 		}
+		
+		on_map_mode = decision_view_only
 
 		days_remove = 30
 		
@@ -1835,7 +1837,7 @@ TRN_after_war_decisions = {
 	
 	TRM_raid_gehenna_resistance = {
 
-		icon = infiltrate_state
+		icon = GFX_decision_generic_arrest
 
 		available = {
 			has_completed_focus = TRM_anti_gehenna_focus_2
@@ -1843,52 +1845,44 @@ TRN_after_war_decisions = {
 		visible = {
 			has_completed_focus = TRM_anti_gehenna_focus_2
 		}
-
-		custom_cost_trigger = {
-			command_power > 49
-			has_political_power > 49
+		on_map_mode = map_only
+		target_array = TRM.controlled_states
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				has_resistance = yes
+				OR = {
+					is_core_of = GEM
+					is_core_of = GEH
+					state = 58
+					state = 909
+				}
+			}
 		}
-		custom_cost_text = decision_cost_CP_50_pp_50
+
 		fire_only_once = no
-		days_remove = 60
+		days_remove = 30
+		cost = 25
 		ai_will_do = {
 			base = 20
 			modifier = {
+				has_political_power > 74
 				factor = 3
-				command_power > 49
 			}
 		}
 		modifier = {
-			command_power_gain = -0.05
-			political_power_gain = -0.05
 		}
 		complete_effect = {
-			hidden_effect = {
-				add_command_power = -50
-				add_political_power = -50
-			}
 		}
 		remove_effect = {
-			random_owned_state = {
-				limit = {
-					BA_is_GER_core = yes
-					OR = {
-						has_dynamic_modifier = { modifier = TRM_anti_geh_emotion }
-						has_dynamic_modifier = { modifier = TRM_anti_geh_emotion_2 }
-						has_dynamic_modifier = { modifier = TRM_anti_geh_emotion_3 }
-						has_dynamic_modifier = { modifier = TRM_anti_geh_emotion_4 }
-					}
-					NOT = { is_core_of = TRM }
-					NOT = { has_state_flag = TRM_raid_gehenna_resistance_flag }
-				}
-				add_resistance = -3
-				set_state_flag = {
-					flag = TRM_raid_gehenna_resistance_flag
-					value = 1
-					days = 300
-				}
+			FROM = {
+				add_resistance = -5
 			}
 		}
+	}
+	TRM_raid_gehenna_resistance_tooltip = {
+		visible = { always = no }
+		available = { always = no }
 	}
 	
 	TRM_tighten_control = {
@@ -1924,6 +1918,34 @@ TRN_after_war_decisions = {
 			}
 		}
 		remove_effect = {
+			random_owned_state = {
+				limit = {
+					OR = {
+						has_dynamic_modifier = { modifier = TRM_anti_geh_emotion }
+						has_dynamic_modifier = { modifier = TRM_anti_geh_emotion_2 }
+						has_dynamic_modifier = { modifier = TRM_anti_geh_emotion_3 }
+						has_dynamic_modifier = { modifier = TRM_anti_geh_emotion_4 }
+					}
+				}
+				remove_building = {
+					type = arms_factory
+					level = 1
+				}
+			}
+			random_owned_state = {
+				limit = {
+					OR = {
+						has_dynamic_modifier = { modifier = TRM_anti_geh_emotion }
+						has_dynamic_modifier = { modifier = TRM_anti_geh_emotion_2 }
+						has_dynamic_modifier = { modifier = TRM_anti_geh_emotion_3 }
+						has_dynamic_modifier = { modifier = TRM_anti_geh_emotion_4 }
+					}
+				}
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
 			every_owned_state = { 
 				limit = { 
 					OR = {
@@ -2004,11 +2026,11 @@ TRN_after_war_decisions = {
 			factor = 2
 		}
 		modifier = {
-			political_power_gain = -0.1
-			
+			political_power_gain = -1
+			stability_weekly = -0.012
 		}
 		complete_effect = {
-			add_stability = -0.1
+			add_stability = -0.07
 		}
 		remove_effect = {
 			remove_ideas = TRM_anti_gehenna_idea
@@ -2130,7 +2152,7 @@ TRN_after_war_decisions = {
 				}
 			}
 		}
-		on_map_mode = map_and_decisions_view
+		on_map_mode = decision_view_only
 		ai_will_do = {
 			factor = 200
 		}

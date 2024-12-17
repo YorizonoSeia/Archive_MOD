@@ -1547,11 +1547,12 @@
 ###트리니티 디시전###
 
  TRN_after_war_decisions: "게헨나 영토 처리 문제"
- TRN_after_war_decisions_desc: "\n\n£GFX_TRN_decisions_peace\n\n\n\n\n전쟁의 폭풍이 휩쓸고 간 자리, 우리는 승리의 깃발을 높이 들었습니다. 게헨나의 영토가 이제 우리의 손아귀에 들어왔습니다. 이는 단순한 정복이 아닌, 우리 조국의 번영을 위한 새로운 기회입니다.\n\n황폐해진 게헨나의 땅은 이제 우리의 의지대로 변모할 것입니다. 파괴된 도시들은 우리의 산업을 위한 거대한 공장으로 탈바꿈할 것이며, 황폐한 들판은 우리의 필요를 충족시킬 자원의 보고가 될 것입니다. 게헨나의 재건은 오직 우리의 이익을 위해 이루어질 것입니다.\n\n하지만 우리는 경계를 늦추지 말아야 합니다. 국제 사회의 탐욕스러운 눈길이 언제든 이 땅을 노릴 수 있습니다. 만약 그들이 이 영토를 빼앗았다면, 우리는 주저 없이 다시 전쟁의 불길을 피울 것입니다. 역사는 우리에게 영토를 지키는 유일한 방법이 무력임을 가르쳐 주었습니다."
+ TRN_after_war_decisions_desc: "\n\n£GFX_TRN_decisions_peace\n\n\n\n\n전쟁의 폭풍이 휩쓸고 간 자리, 우리는 승리의 깃발을 높이 들었습니다. 게헨나의 영토가 이제 우리의 손아귀에 들어왔습니다. 이는 단순한 정복이 아닌, 모국의 번영을 위한 새로운 기회입니다.\n\n황폐해진 게헨나의 땅은 이제 우리의 의지대로 변모할 것입니다. 파괴된 도시들은 우리의 산업을 위한 거대한 공장으로 탈바꿈할 것이며, 황폐한 들판은 우리의 필요를 충족시킬 자원의 보고가 될 것입니다. 게헨나의 재건은 오직 우리의 이익을 위해 이루어질 것입니다.\n\n하지만 우리는 경계를 늦추지 말아야 합니다. 국제 사회의 탐욕스러운 눈길이 언제든 이 땅을 노릴 수 있습니다. 만약 그들이 이 영토를 빼앗았다면, 우리는 주저 없이 다시 전쟁의 불길을 피울 것입니다. 역사는 우리에게 영토를 지키는 유일한 방법이 무력임을 가르쳐 주었습니다."
  TRM_Gehenna_Military_Civil_Administration: "게헨나 군민정청 수립"
  TRM_complete_GMCA: "§Y게헨나 군민정청§!을 수립함."
  TRM_GMCA_transfer: "[FROM.GetName]주 군민정청 편입"
- TRM_raid_gehenna_resistance: "게헨나 저항군 습격"
+ TRM_raid_gehenna_resistance: "[FROM.GetName]주 저항군 체포"
+ TRM_raid_gehenna_resistance_tooltip: "게헨나 저항군 체포"
  TRM_germany_union_tt: "@GEM§Y게헨나 학원§!에 §Y핵심주를 획득§!하는 £decision_icon_small §Y결정 해금§!"
  TRM_tighten_control: "통제 강화"
  TRM_unification_propaganda: "통합 선전"

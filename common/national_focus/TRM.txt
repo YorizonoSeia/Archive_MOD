@@ -2051,7 +2051,6 @@
 				tooltip = GAEBALJUNG
 				has_completed_focus = TRM_anti_gehenna_focus_2
 				has_completed_focus = TRM_anti_gehenna_focus_3
-				always = no
 			}
 		}
 		ai_will_do = {
@@ -2089,7 +2088,7 @@
 		x = 2
 		y = 1
 		completion_reward = {
-			unlock_decision_tooltip = TRM_raid_gehenna_resistance
+			unlock_decision_tooltip = TRM_raid_gehenna_resistance_tooltip
 		}
 	}
 
@@ -2466,7 +2465,7 @@
 			base = 100
 		}
 		relative_position_id = TRM_oetzi
-		x = 6
+		x = 5
 		y = 1
 		completion_reward = {
 			create_faction = TRINITY_ECO
@@ -3026,7 +3025,7 @@
 			base = 100
 		}
 		relative_position_id = TRM_maintain_a_compromise_system
-		x = -1
+		x = 0
 		y = 1
 		completion_reward = {
 			RED = {
@@ -3097,7 +3096,7 @@
 
 		prerequisite = { focus = TRM_oetzi }
 
-		x = 8
+		x = 7
 		y = 1
 		relative_position_id = TRM_oetzi
 		cost = 5
@@ -3166,12 +3165,71 @@
 			}
 		}
 	}
+
+    focus = {
+		id = TRM_We_need_Denmark_milk
+		icon = GFX_goal_TRM_We_Need_Denmark_Milk
+		cost = 5.00
+		prerequisite = {
+			focus = TRM_anti_comintern_pact
+		}
+		mutually_exclusive = {
+			focus = TRM_Trinity_Redwinter_Pact
+		}
+		available = {
+			is_subject = no
+					TRM = {
+						any_neighbor_country = {
+							OR = {
+                                tag = DEN
+                                tag = RE1
+                                tag = RED
+                            }
+						}
+					}
+            NOT = { has_government = communism }
+            NOT = { is_in_faction_with = RED }
+			NOT = { has_completed_focus = TRM_redwinter_war_goal }
+		}
+		will_lead_to_war_with = RED
+		ai_will_do = {
+			base = 500
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+			}
+		}
+		relative_position_id = TRM_anti_comintern_pact
+		x = 0
+		y = 1
+		completion_reward = {
+			if = {
+				limit = {
+					OR = {
+						RED = { controls_state = 37 }
+						RE1 = { controls_state = 37 }
+					}
+				}
+				RED = { country_event = TRMDIP.12 }
+			}
+			if = {
+				limit = {
+					DEN = { controls_state = 37 }
+				}
+				DEN = { country_event = TRMDIP.12 }
+			}
+		}
+	}
 	
 	focus = {
 		id = TRM_redwinter_war_goal
 		icon = GFX_goal_redwinter_kill
 		cost = 5.00
-		prerequisite = { focus = TRM_anti_comintern_pact }
+		prerequisite = { focus = TRM_We_need_Denmark_milk }
 		mutually_exclusive = {
 			focus = TRM_alliance_with_the_redwinter
 		}
@@ -3212,9 +3270,9 @@
 				has_war = no
 			}
 		}
-		relative_position_id = TRM_anti_comintern_pact
+		relative_position_id = TRM_We_need_Denmark_milk
 		x = 0
-		y = 2
+		y = 1
 		completion_reward = {
 				TRM = {
 					create_wargoal = {
@@ -3223,65 +3281,6 @@
 						expire = 0
 					}
 				}
-		}
-	}
-
-    focus = {
-		id = TRM_We_need_Denmark_milk
-		icon = GFX_goal_TRM_We_Need_Denmark_Milk
-		cost = 5.00
-		prerequisite = {
-			focus = TRM_anti_comintern_pact
-		}
-		mutually_exclusive = {
-			focus = TRM_Trinity_Redwinter_Pact
-		}
-		available = {
-			is_subject = no
-					TRM = {
-						any_neighbor_country = {
-							OR = {
-                                tag = DEN
-                                tag = RE1
-                                tag = RED
-                            }
-						}
-					}
-            NOT = { has_government = communism }
-            NOT = { is_in_faction_with = RED }
-			NOT = { has_completed_focus = TRM_redwinter_war_goal }
-		}
-		will_lead_to_war_with = RED
-		ai_will_do = {
-			base = 500
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-			modifier = {
-				factor = 0.5
-				has_war = no
-			}
-		}
-		relative_position_id = TRM_anti_comintern_pact
-		x = -1
-		y = 1
-		completion_reward = {
-			if = {
-				limit = {
-					OR = {
-						RED = { controls_state = 37 }
-						RE1 = { controls_state = 37 }
-					}
-				}
-				RED = { country_event = TRMDIP.12 }
-			}
-			if = {
-				limit = {
-					DEN = { controls_state = 37 }
-				}
-				DEN = { country_event = TRMDIP.12 }
-			}
 		}
 	}
 	focus = {
@@ -4046,7 +4045,7 @@
 			}
 		}
 		relative_position_id = TRM_maintain_a_compromise_system
-		x = -3
+		x = -2
 		y = 1
 		completion_reward = {
 		    unlock_decision_category_tooltip = TRM_kivotos_core_states_categories
