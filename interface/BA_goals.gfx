@@ -19,6 +19,18 @@ spriteTypes = {
 		name = "GFX_focus_work_with_kpd"
 		texturefile = "gfx/interface/goals/GER/work_with_kpd.tga"			
 	}
+	SpriteType = {
+		name = "GFX_focus_deal_with_spd"
+		texturefile = "gfx/interface/goals/GER/deal_with_spd.tga"			
+	}
+	SpriteType = {
+		name = "GFX_focus_deal_with_dzp"
+		texturefile = "gfx/interface/goals/GER/deal_with_dzp.tga"			
+	}
+	SpriteType = {
+		name = "GFX_focus_deal_with_DStP"
+		texturefile = "gfx/interface/goals/GER/deal_with_DStP.tga"			
+	}
 
 	SpriteType = {
 		name = "GFX_focus_TRM_united_law"

@@ -1101,6 +1101,12 @@ country_event = { #금이 가는 연정
 	option = {
 		name = GEK_rm_event.9.a
 		activate_mission = GEK_flatering_coalition
+		hidden_effect = {
+			country_event = {
+				id = GEK_rm_event.19
+				days = 5
+			}
+		}
 	}
 }
 country_event = { #독일국가인민당과의 연합
@@ -1559,6 +1565,171 @@ country_event = { #개신교 반발
 		swap_ideas = {
 			remove_idea = GEK_religious_conflict
 			add_idea = GEK_religious_conflict_by_protestant
+		}
+	}
+}
+country_event = { #손상된 산업
+	id = GEK_rm_event.19
+	title = GEK_rm_event.19.t
+	desc = GEK_rm_event.19.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { #
+		name = GEK_rm_event.19.a
+		add_ideas = GEK_attacked_industry
+		hidden_effect = {
+			id = GEK_rm_event.21
+			days = 5
+		}
+	}
+}
+country_event = { #학생 정책
+	id = GEK_rm_event.20
+	title = GEK_rm_event.20.t
+	desc = GEK_rm_event.20.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { #
+		name = GEK_rm_event.20.a
+		add_political_power = -10
+	}
+}
+country_event = { #학생 문제
+	id = GEK_rm_event.21
+	title = GEK_rm_event.21.t
+	desc = GEK_rm_event.21.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { #
+		name = GEK_rm_event.21.a
+		add_ideas = GEK_student_resistance
+	}
+}
+country_event = { #협력자 선정
+	id = GEK_rm_event.22
+	title = GEK_rm_event.22.t
+	desc = GEK_rm_event.22.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { #만마전과 협력하자
+		name = GEK_rm_event.22.a
+		country_event = {
+			id = GEK_rm_event.23
+			days = 1
+		}
+	}
+	option = { #선도부와 협력하자
+		name = GEK_rm_event.22.b
+		country_event = {
+			id = GEK_rm_event.24
+			days = 1
+		}
+	}
+	option = { #동아리와 협력하자
+		name = GEK_rm_event.22.c
+		country_event = {
+			id = GEK_rm_event.25
+			days = 1
+		}
+	}
+}
+country_event = { #만마전과의 협력
+	id = GEK_rm_event.23
+	title = GEK_rm_event.23.t
+	desc = GEK_rm_event.23.d
+	is_triggered_only = yes
+	option = { #이로하 등용
+		name = GEK_rm_event.23.a
+		add_timed_idea = {
+			idea = GEK_iroha
+			days = 240
+		}
+	}
+	option = { #이부키 등용
+		name = GEK_rm_event.23.b
+		add_timed_idea = {
+			idea = GEK_ibuki
+			days = 240
+		}
+	}
+}
+country_event = { #선도부와의 협력
+	id = GEK_rm_event.24
+	title = GEK_rm_event.24.t
+	desc = GEK_rm_event.24.d
+	is_triggered_only = yes
+	option = { #이오리 등용
+		name = GEK_rm_event.24.a
+		add_timed_idea = {
+			idea = GEK_iori
+			days = 240
+		}
+	}
+	option = { #치나츠 등용
+		name = GEK_rm_event.24.b
+		add_timed_idea = {
+			idea = GEK_chinatsu
+			days = 240
+		}
+	}
+	option = { #아마우 아코
+		name = GEK_rm_event.24.c
+		add_timed_idea = {
+			idea = GEK_ako
+			days = 240
+		}
+	}
+}
+country_event = { #동아리와의 협력
+	id = GEK_rm_event.25
+	title = GEK_rm_event.25.t
+	desc = GEK_rm_event.25.d
+	is_triggered_only = yes
+	option = { #미식연구회와의 제휴
+		name = GEK_rm_event.25.a
+		add_timed_idea = {
+			idea = GEK_haruna
+			days = 240
+		}
+		if = {
+			limit = {
+				TRM = {
+					exists = yes
+				}
+			}
+			hidden_effect = {
+				country_event = {
+					id = GEK_rm_event.26
+					days = 3
+				}
+			}
+		}
+	}
+	option = { #온천개발부
+		name = GEK_rm_event.25.b
+		add_timed_idea = {
+			idea = GEK_megu
+			days = 240
+		}
+	}
+	option = { #응급의학부
+		name = GEK_rm_event.25.c
+		add_timed_idea = {
+			idea = GEK_sena
+			days = 240
+		}
+	}
+}
+country_event = { #미식연구회의 행동!
+	id = GEK_rm_event.26
+	title = GEK_rm_event.26.t
+	desc = GEK_rm_event.26.d
+	is_triggered_only = yes
+	option = { #젠장!!
+		name = GEK_rm_event.26.a
+		declare_war_on = {
+			target = TRM
+			type = annex_everything
 		}
 	}
 }

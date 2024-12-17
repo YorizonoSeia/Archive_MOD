@@ -1,4 +1,37 @@
 spriteTypes = {
+	#게헨나
+	spriteType = {
+		name = "GFX_idea_GEH_ibuki"
+		textureFile = "gfx/interface/advisors/GEH/dlqnzl.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GEH_iroha"
+		textureFile = "gfx/interface/advisors/GEH/Natsume_Iroha_idea.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_GEH_iori"
+		textureFile = "gfx/interface/advisors/GEH/dldhfl.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GEH_chinatsu"
+		textureFile = "gfx/interface/advisors/GEH/GEH_Hinomiya_chinatsu_idea.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_GEH_ako"
+		textureFile = "gfx/interface/advisors/GEH/GEH_Amua_Ako_idea.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_GEH_haruna"
+		textureFile = "gfx/interface/advisors/GEH/gkfnsk.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GEH_megu"
+		textureFile = "gfx/interface/advisors/GEH/megu.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GEH_sena"
+		textureFile = "gfx/interface/advisors/GEH/GEH_Himuro_Sena_idea.tga"
+	}
 	#샬레
 	spriteType = {
 		name = "GFX_SHE_central_labor_union"

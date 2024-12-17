@@ -39,6 +39,20 @@
 @air_command_factor_3 = 0.80
 
 leader_traits = {
+	GEK_GEH_megu_trait = {
+		random = no
+		stability_factor = -0.1
+		production_speed_buildings_factor = 0.1
+	}
+	GEK_GEH_ibuki_trait = {
+		random = no
+		stability_factor = 0.05
+	}
+	GEK_GEH_iroha_trait = { #게헨나 최고의 전차장
+		random = no
+		army_armor_speed_factor = 0.03
+		army_armor_attack_factor = 0.03
+	}
 	KAI_british_industrial_benefactor = {
 		random = no
 		sprite = 10

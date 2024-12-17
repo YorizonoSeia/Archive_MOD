@@ -3134,9 +3134,17 @@ GEK_rheinmetall_organization = {
 			controls_province = 6469
 		}
 		OR = {
-			has_global_flag = GEM_corporate_headquarters_destroyed_flag
-			GEM = {
-				has_completed_focus = GEH_llinked_ruhr_industrial
+			has_country_flag = GEM_corporate_headquarters_destroyed_flag
+			if = {
+				limit = {
+					GEM = {
+						exists = yes
+					}
+					GEM = { has_completed_focus = GEH_llinked_ruhr_industrial }
+				}
+			}
+			else = {
+				GEK = { has_completed_focus = GEK_RM_eco_focus_3 }
 			}
 		}
 	}

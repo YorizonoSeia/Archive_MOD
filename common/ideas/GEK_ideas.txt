@@ -287,5 +287,145 @@ ideas = {
 				political_power_cost = 0.15
 			}
 		}
+		GEK_attacked_industry = { #손상된 산업
+			name = GEK_attacked_industry
+			picture = POL_disjointed_industry
+			modifier = {
+				consumer_goods_expected_value = 0.1
+				production_speed_buildings_factor = -0.2
+				economy_cost_factor = 0.25
+				industrial_capacity_factory = -0.2
+			}
+		}
+		GEK_attacked_industry_1 = { #손상된 산업
+			name = GEK_attacked_industry
+			picture = POL_disjointed_industry
+			modifier = {
+				consumer_goods_expected_value = 0.05
+				production_speed_buildings_factor = -0.1
+				economy_cost_factor = 0.125
+				industrial_capacity_factory = -0.1
+			}
+		}
+		GEK_student_resistance = { #사회적인 학생 저항
+			picture = chi_war_of_resistance
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				political_power_cost = 0.1
+			}
+		}
+		GEK_student_citizenship = { #이계인 시민권 지급
+			picture = generic_democratic_drift_bonus
+			modifier = {
+				political_power_cost = 0.1
+			}
+		}
+
+		#게헨나의 협력자들
+		GEK_iroha = {
+			name = GEH_dlfhgk
+			picture = GEH_iroha
+			traits = {
+				GEK_GEH_iroha_trait
+			}
+			on_remove = {
+				country_event = {
+					id = GEK_rm_event.23
+					days = 3
+				}
+			}
+		}
+		GEK_ibuki = {
+			name = GEH_dlqnzl
+			picture = GEH_ibuki
+			traits = {
+				GEK_GEH_ibuki_trait
+			}
+			on_remove = {
+				country_event = {
+					id = GEK_rm_event.23
+					days = 3
+				}
+			}
+		}
+		GEK_iori = {
+			name = GEH_dldhfl
+			picture = GEH_iori
+			traits = {
+				princess_of_terror
+			}
+			on_remove = {
+				country_event = {
+					id = GEK_rm_event.24
+					days = 3
+				}
+			}
+		}
+		GEK_chinatsu = {
+			name = GEH_chinatsu
+			picture = GEH_iori
+			traits = {
+				GEH_Emergency_Medicine_Club
+			}
+			on_remove = {
+				country_event = {
+					id = GEK_rm_event.24
+					days = 3
+				}
+			}
+		}
+		GEK_ako = {
+			name = GEH_dkzh
+			picture = GEH_ako
+			traits = {
+				financial_expert
+			}
+			on_remove = {
+				country_event = {
+					id = GEK_rm_event.24
+					days = 3
+				}
+			}
+		}
+		GEK_haruna = {
+			name = GEH_gkfnsk
+			picture = GEH_haruna
+			traits = {
+				b_dlsrldlTsmsaltlrrk
+			}
+			on_remove = {
+				country_event = {
+					id = GEK_rm_event.25
+					days = 3
+				}
+			}
+		}
+		GEK_megu = {
+			name = GEH_shimokura_megu
+			picture = GEH_megu
+			traits = {
+				GEK_GEH_megu_trait
+			}
+			on_remove = {
+				country_event = {
+					id = GEK_rm_event.25
+					days = 3
+				}
+			}
+		}
+		GEK_sena = {
+			name = GEH_Himuro_Sena_name
+			picture = GEH_sena
+			traits = {
+				GEH_Emergency_Medicine_Sena_Club
+			}
+			on_remove = {
+				country_event = {
+					id = GEK_rm_event.25
+					days = 3
+				}
+			}
+		}
 	}
 }
