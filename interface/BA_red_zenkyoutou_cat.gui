@@ -268,26 +268,31 @@ guiTypes = {
 				name = "RED_zenkyoutou_LEFT_1"
 				position = { x = 60 y = 19 }
 				quadTextureSprite = "GFX_sort_button_428x29_button"
+				pdx_tooltip = RED_zenkyoutou_LEFT_1_effect_tooltip
 			}
 			buttonType = {
 				name = "RED_zenkyoutou_LEFT_2"
 				position = { x = 60 y = 54 }
 				quadTextureSprite = "GFX_sort_button_428x29_button"
+				pdx_tooltip = RED_zenkyoutou_LEFT_2_effect_tooltip
 			}
 			buttonType = {
 				name = "RED_zenkyoutou_LEFT_3"
 				position = { x = 60 y = 89 }
 				quadTextureSprite = "GFX_sort_button_428x29_button"
+				pdx_tooltip = RED_zenkyoutou_LEFT_3_effect_tooltip
 			}
 			buttonType = {
 				name = "RED_zenkyoutou_LEFT_4"
 				position = { x = 60 y = 124 }
 				quadTextureSprite = "GFX_sort_button_428x29_button"
+				pdx_tooltip = RED_zenkyoutou_LEFT_4_effect_tooltip
 			}
 			buttonType = {
 				name = "RED_zenkyoutou_LEFT_5"
 				position = { x = 60 y = 159 }
 				quadTextureSprite = "GFX_sort_button_428x29_button"
+				pdx_tooltip = RED_zenkyoutou_LEFT_5_effect_tooltip
 			}
 		
 			iconType = {
@@ -327,6 +332,7 @@ guiTypes = {
 				maxHeight = 40
 				fixedsize = yes
 				format = left
+				alwaystransparent = yes
 			}
 			instantTextBoxType = {
 				name = "RED_zenkyoutou_LEFT_2_txt"
@@ -339,6 +345,7 @@ guiTypes = {
 				maxHeight = 40
 				fixedsize = yes
 				format = left
+				alwaystransparent = yes
 			}
 			instantTextBoxType = {
 				name = "RED_zenkyoutou_LEFT_3_txt"
@@ -351,6 +358,7 @@ guiTypes = {
 				maxHeight = 40
 				fixedsize = yes
 				format = left
+				alwaystransparent = yes
 			}
 			instantTextBoxType = {
 				name = "RED_zenkyoutou_LEFT_4_txt"
@@ -363,6 +371,7 @@ guiTypes = {
 				maxHeight = 40
 				fixedsize = yes
 				format = left
+				alwaystransparent = yes
 			}
 			instantTextBoxType = {
 				name = "RED_zenkyoutou_LEFT_5_txt"
@@ -375,6 +384,7 @@ guiTypes = {
 				maxHeight = 40
 				fixedsize = yes
 				format = left
+				alwaystransparent = yes
 			}
 			
 			instantTextBoxType = {
@@ -388,6 +398,7 @@ guiTypes = {
 				maxHeight = 40
 				fixedsize = yes
 				format = center
+				alwaystransparent = yes
 			}
 			instantTextBoxType = {
 				name = "RED_zenkyoutou_LEFT_2_title"
@@ -400,6 +411,7 @@ guiTypes = {
 				maxHeight = 40
 				fixedsize = yes
 				format = center
+				alwaystransparent = yes
 			}
 			instantTextBoxType = {
 				name = "RED_zenkyoutou_LEFT_3_title"
@@ -412,6 +424,7 @@ guiTypes = {
 				maxHeight = 40
 				fixedsize = yes
 				format = center
+				alwaystransparent = yes
 			}
 			instantTextBoxType = {
 				name = "RED_zenkyoutou_LEFT_4_title"
@@ -424,6 +437,7 @@ guiTypes = {
 				maxHeight = 40
 				fixedsize = yes
 				format = center
+				alwaystransparent = yes
 			}
 			instantTextBoxType = {
 				name = "RED_zenkyoutou_LEFT_5_title"
@@ -436,6 +450,7 @@ guiTypes = {
 				maxHeight = 40
 				fixedsize = yes
 				format = center
+				alwaystransparent = yes
 			}
 		
 			iconType = {

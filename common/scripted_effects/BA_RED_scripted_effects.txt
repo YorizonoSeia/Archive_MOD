@@ -9,6 +9,27 @@ RED_debug_eff = {
 	clr_country_flag = RED_zenkyoutou_RIGHT_lock_flag
 	clr_country_flag = RED_zenkyoutou_CENTER_lock_flag
 }
+RED_debug_eff1 = {
+	set_temp_variable = {
+		RED_redwinter_TOP_value_temp = 5
+		tooltip = RED_redwinter_LEFT_tt
+	}
+	RED_zenkyoutou_TOP_add_LEFT = yes
+}
+RED_debug_eff2 = {
+	set_temp_variable = {
+		RED_redwinter_TOP_value_temp = 5
+		tooltip = RED_redwinter_CENTER_tt
+	}
+	RED_zenkyoutou_TOP_add_CENTER = yes
+}
+RED_debug_eff3 = {
+	set_temp_variable = {
+		RED_redwinter_TOP_value_temp = 5
+		tooltip = RED_redwinter_RIGHT_tt
+	}
+	RED_zenkyoutou_TOP_add_RIGHT = yes
+}
 RED_zenkyoutou_LEFT_button_click_effect = {
 	if = {
 		limit = {
@@ -105,6 +126,273 @@ RED_zenkyoutou_CENTER_GFXUI_reload = {
 	multiply_temp_variable = { RED_redwinter_organizational_var_temp = 24 }
 	round_temp_variable  = RED_redwinter_organizational_var_temp
 	set_variable = { RED_redwinter_organizational_var = RED_redwinter_organizational_var_temp }
+}
+RED_zenkyoutou_TOP_add_LEFT = { # RED_redwinter_TOP_value_temp
+	hidden_effect = {
+		if = {
+			limit = {
+				check_variable = { RED_redwinter_progress_LEFT_value > 99 }
+			}
+			set_temp_variable = { RED_redwinter_TOP_value_temp = 0 }
+		}
+		set_temp_variable = { RED_redwinter_TOP_test0_temp = RED_redwinter_progress_LEFT_value }
+		add_to_temp_variable = { RED_redwinter_TOP_test0_temp = RED_redwinter_TOP_value_temp }
+		if = {
+			limit = {
+				check_variable = { RED_redwinter_TOP_test0_temp < 0 }
+			}
+			log = "0 이하로 감소 방지"
+			multiply_temp_variable = { RED_redwinter_TOP_test0_temp = -1 }
+			add_to_temp_variable = { RED_redwinter_TOP_value_temp = RED_redwinter_TOP_test0_temp }
+		}
+		add_to_variable = { RED_redwinter_progress_LEFT_value = RED_redwinter_TOP_value_temp }
+		if = {
+			limit = {
+				check_variable = { RED_redwinter_progress_LEFT_value > 99 }
+			}
+			set_variable = { RED_redwinter_progress_LEFT_value = 100 }
+			set_variable = { RED_redwinter_progress_CENTER_value = 0 }
+			set_variable = { RED_redwinter_progress_RIGHT_value = 0 }
+			set_temp_variable = { RED_redwinter_TOP_value_temp = 0 }
+		}
+		set_temp_variable = { RED_redwinter_TOP_div_value_temp = RED_redwinter_TOP_value_temp }
+		divide_temp_variable = { RED_redwinter_TOP_div_value_temp = 2 }
+		round_temp_variable = RED_redwinter_TOP_div_value_temp
+		
+		set_temp_variable = { RED_redwinter_TOP_remove1_temp = RED_redwinter_TOP_div_value_temp }
+		set_temp_variable = { RED_redwinter_TOP_remove2_temp = RED_redwinter_TOP_div_value_temp }
+
+		set_temp_variable = { RED_redwinter_TOP_test_temp = RED_redwinter_TOP_remove2_temp }
+		if = {
+			limit = {
+				add_to_temp_variable = { RED_redwinter_TOP_test_temp = RED_redwinter_TOP_remove1_temp }
+				NOT = { check_variable = { RED_redwinter_TOP_test_temp = RED_redwinter_TOP_value_temp } }
+			}
+			subtract_from_temp_variable = { RED_redwinter_TOP_value_temp = RED_redwinter_TOP_test_temp }
+			random_list = {
+				1 = {
+					add_to_temp_variable = { RED_redwinter_TOP_remove1_temp = RED_redwinter_TOP_value_temp }
+				}
+				1 = {
+					add_to_temp_variable = { RED_redwinter_TOP_remove2_temp = RED_redwinter_TOP_value_temp }
+				}
+			}
+		}
+
+		set_temp_variable = { RED_redwinter_TOP_test2_1_temp = RED_redwinter_progress_CENTER_value }
+		set_temp_variable = { RED_redwinter_TOP_test2_2_temp = RED_redwinter_progress_RIGHT_value }
+		subtract_from_temp_variable = { RED_redwinter_TOP_test2_1_temp = RED_redwinter_TOP_remove1_temp }
+		subtract_from_temp_variable = { RED_redwinter_TOP_test2_2_temp = RED_redwinter_TOP_remove2_temp }
+		if = {
+			limit = { 
+				check_variable = { RED_redwinter_TOP_test2_1_temp < 0 }
+			}
+			log = "중앙파 영향력이 0 미만으로 추락 방지 : 지금 값 : [?RED_redwinter_progress_CENTER_value] 이후 값 : [?RED_redwinter_TOP_test2_1_temp]"
+			add_to_temp_variable = { RED_redwinter_TOP_remove1_temp = RED_redwinter_TOP_test2_1_temp }
+			subtract_from_temp_variable = { RED_redwinter_TOP_remove2_temp = RED_redwinter_TOP_test2_1_temp }
+			log = "1 값 : [?RED_redwinter_TOP_remove1_temp]"
+			log = "2 값 : [?RED_redwinter_TOP_remove2_temp]"
+		}
+		if = {
+			limit = { 
+				check_variable = { RED_redwinter_TOP_test2_2_temp < 0 }
+			}
+			log = "민중파 영향력이 0 미만으로 추락 방지 : 지금 값 : [?RED_redwinter_progress_RIGHT_value] 이후 값 : [?RED_redwinter_TOP_test2_2_temp]"
+			add_to_temp_variable = { RED_redwinter_TOP_remove2_temp = RED_redwinter_TOP_test2_2_temp }
+			subtract_from_temp_variable = { RED_redwinter_TOP_remove1_temp = RED_redwinter_TOP_test2_2_temp }
+			log = "1 값 : [?RED_redwinter_TOP_remove1_temp]"
+			log = "2 값 : [?RED_redwinter_TOP_remove2_temp]"
+		}
+		
+		subtract_from_variable = { RED_redwinter_progress_CENTER_value = RED_redwinter_TOP_remove1_temp }
+		subtract_from_variable = { RED_redwinter_progress_RIGHT_value = RED_redwinter_TOP_remove2_temp }
+
+		set_temp_variable = { RED_redwinter_TOP_value_temp = 0 }
+		RED_zenkyoutou_TOP_GFXUI_reload = yes
+	}
+}
+RED_zenkyoutou_TOP_add_CENTER = { # RED_redwinter_TOP_value_temp
+	hidden_effect = {
+		if = {
+			limit = {
+				check_variable = { RED_redwinter_progress_CENTER_value > 99 }
+			}
+			set_temp_variable = { RED_redwinter_TOP_value_temp = 0 }
+		}
+		set_temp_variable = { RED_redwinter_TOP_test0_temp = RED_redwinter_progress_CENTER_value }
+		add_to_temp_variable = { RED_redwinter_TOP_test0_temp = RED_redwinter_TOP_value_temp }
+		if = {
+			limit = {
+				check_variable = { RED_redwinter_TOP_test0_temp < 0 }
+			}
+			multiply_temp_variable = { RED_redwinter_TOP_test0_temp = -1 }
+			add_to_temp_variable = { RED_redwinter_TOP_value_temp = RED_redwinter_TOP_test0_temp }
+		}
+		add_to_variable = { RED_redwinter_progress_CENTER_value = RED_redwinter_TOP_value_temp }
+		if = {
+			limit = {
+				check_variable = { RED_redwinter_progress_CENTER_value > 99 }
+			}
+			set_variable = { RED_redwinter_progress_LEFT_value = 0 }
+			set_variable = { RED_redwinter_progress_CENTER_value = 100 }
+			set_variable = { RED_redwinter_progress_RIGHT_value = 0 }
+			set_temp_variable = { RED_redwinter_TOP_value_temp = 0 }
+		}
+		set_temp_variable = { RED_redwinter_TOP_div_value_temp = RED_redwinter_TOP_value_temp }
+		divide_temp_variable = { RED_redwinter_TOP_div_value_temp = 2 }
+		round_temp_variable = RED_redwinter_TOP_div_value_temp
+		
+		set_temp_variable = { RED_redwinter_TOP_remove1_temp = RED_redwinter_TOP_div_value_temp }
+		set_temp_variable = { RED_redwinter_TOP_remove2_temp = RED_redwinter_TOP_div_value_temp }
+
+		set_temp_variable = { RED_redwinter_TOP_test_temp = RED_redwinter_TOP_remove2_temp }
+		if = {
+			limit = {
+				add_to_temp_variable = { RED_redwinter_TOP_test_temp = RED_redwinter_TOP_remove1_temp }
+				NOT = { check_variable = { RED_redwinter_TOP_test_temp = RED_redwinter_TOP_value_temp } }
+			}
+			subtract_from_temp_variable = { RED_redwinter_TOP_value_temp = RED_redwinter_TOP_test_temp }
+			random_list = {
+				1 = {
+					add_to_temp_variable = { RED_redwinter_TOP_remove1_temp = RED_redwinter_TOP_value_temp }
+				}
+				1 = {
+					add_to_temp_variable = { RED_redwinter_TOP_remove2_temp = RED_redwinter_TOP_value_temp }
+				}
+			}
+		}
+
+		set_temp_variable = { RED_redwinter_TOP_test2_1_temp = RED_redwinter_progress_LEFT_value }
+		set_temp_variable = { RED_redwinter_TOP_test2_2_temp = RED_redwinter_progress_RIGHT_value }
+		subtract_from_temp_variable = { RED_redwinter_TOP_test2_1_temp = RED_redwinter_TOP_remove1_temp }
+		subtract_from_temp_variable = { RED_redwinter_TOP_test2_2_temp = RED_redwinter_TOP_remove2_temp }
+		if = {
+			limit = { 
+				check_variable = { RED_redwinter_TOP_test2_1_temp < 0 }
+			}
+			log = "현장파 영향력이 0 미만으로 추락 방지 : 지금 값 : [?RED_redwinter_progress_LEFT_value] 이후 값 : [?RED_redwinter_TOP_test2_1_temp]"
+			add_to_temp_variable = { RED_redwinter_TOP_remove1_temp = RED_redwinter_TOP_test2_1_temp }
+			subtract_from_temp_variable = { RED_redwinter_TOP_remove2_temp = RED_redwinter_TOP_test2_1_temp }
+			log = "1 값 : [?RED_redwinter_TOP_remove1_temp]"
+			log = "2 값 : [?RED_redwinter_TOP_remove2_temp]"
+		}
+		if = {
+			limit = { 
+				check_variable = { RED_redwinter_TOP_test2_2_temp < 0 }
+			}
+			log = "민중파 영향력이 0 미만으로 추락 방지 : 지금 값 : [?RED_redwinter_progress_RIGHT_value] 이후 값 : [?RED_redwinter_TOP_test2_2_temp]"
+			add_to_temp_variable = { RED_redwinter_TOP_remove2_temp = RED_redwinter_TOP_test2_2_temp }
+			subtract_from_temp_variable = { RED_redwinter_TOP_remove1_temp = RED_redwinter_TOP_test2_2_temp }
+			log = "1 값 : [?RED_redwinter_TOP_remove1_temp]"
+			log = "2 값 : [?RED_redwinter_TOP_remove2_temp]"
+		}
+		
+		subtract_from_variable = { RED_redwinter_progress_LEFT_value = RED_redwinter_TOP_remove1_temp }
+		subtract_from_variable = { RED_redwinter_progress_RIGHT_value = RED_redwinter_TOP_remove2_temp }
+
+		set_temp_variable = { RED_redwinter_TOP_value_temp = 0 }
+		RED_zenkyoutou_TOP_GFXUI_reload = yes
+	}
+}
+RED_zenkyoutou_TOP_add_RIGHT = { # RED_redwinter_TOP_value_temp
+	hidden_effect = {
+		if = {
+			limit = {
+				check_variable = { RED_redwinter_progress_RIGHT_value > 99 }
+			}
+			set_temp_variable = { RED_redwinter_TOP_value_temp = 0 }
+		}
+		set_temp_variable = { RED_redwinter_TOP_test0_temp = RED_redwinter_progress_RIGHT_value }
+		add_to_temp_variable = { RED_redwinter_TOP_test0_temp = RED_redwinter_TOP_value_temp }
+		if = {
+			limit = {
+				check_variable = { RED_redwinter_TOP_test0_temp < 0 }
+			}
+			multiply_temp_variable = { RED_redwinter_TOP_test0_temp = -1 }
+			add_to_temp_variable = { RED_redwinter_TOP_value_temp = RED_redwinter_TOP_test0_temp }
+		}
+		add_to_variable = { RED_redwinter_progress_RIGHT_value = RED_redwinter_TOP_value_temp }
+		if = {
+			limit = {
+				check_variable = { RED_redwinter_progress_RIGHT_value > 99 }
+			}
+			set_variable = { RED_redwinter_progress_LEFT_value = 0 }
+			set_variable = { RED_redwinter_progress_CENTER_value = 0 }
+			set_variable = { RED_redwinter_progress_RIGHT_value = 100 }
+			set_temp_variable = { RED_redwinter_TOP_value_temp = 0 }
+		}
+		set_temp_variable = { RED_redwinter_TOP_div_value_temp = RED_redwinter_TOP_value_temp }
+		divide_temp_variable = { RED_redwinter_TOP_div_value_temp = 2 }
+		round_temp_variable = RED_redwinter_TOP_div_value_temp
+		
+		set_temp_variable = { RED_redwinter_TOP_remove1_temp = RED_redwinter_TOP_div_value_temp }
+		set_temp_variable = { RED_redwinter_TOP_remove2_temp = RED_redwinter_TOP_div_value_temp }
+	
+		set_temp_variable = { RED_redwinter_TOP_test_temp = RED_redwinter_TOP_remove2_temp }
+		if = {
+			limit = {
+				add_to_temp_variable = { RED_redwinter_TOP_test_temp = RED_redwinter_TOP_remove1_temp }
+				NOT = { check_variable = { RED_redwinter_TOP_test_temp = RED_redwinter_TOP_value_temp } }
+			}
+			subtract_from_temp_variable = { RED_redwinter_TOP_value_temp = RED_redwinter_TOP_test_temp }
+			random_list = {
+				1 = {
+					add_to_temp_variable = { RED_redwinter_TOP_remove1_temp = RED_redwinter_TOP_value_temp }
+				}
+				1 = {
+					add_to_temp_variable = { RED_redwinter_TOP_remove2_temp = RED_redwinter_TOP_value_temp }
+				}
+			}
+		}
+
+		set_temp_variable = { RED_redwinter_TOP_test2_1_temp = RED_redwinter_progress_LEFT_value }
+		set_temp_variable = { RED_redwinter_TOP_test2_2_temp = RED_redwinter_progress_CENTER_value }
+		subtract_from_temp_variable = { RED_redwinter_TOP_test2_1_temp = RED_redwinter_TOP_remove1_temp }
+		subtract_from_temp_variable = { RED_redwinter_TOP_test2_2_temp = RED_redwinter_TOP_remove2_temp }
+		if = {
+			limit = { 
+				check_variable = { RED_redwinter_TOP_test2_1_temp < 0 }
+			}
+			log = "현장파 영향력이 0 미만으로 추락 방지 : 지금 값 : [?RED_redwinter_progress_RIGHT_value] 이후 값 : [?RED_redwinter_TOP_test2_1_temp]"
+			add_to_temp_variable = { RED_redwinter_TOP_remove1_temp = RED_redwinter_TOP_test2_1_temp }
+			subtract_from_temp_variable = { RED_redwinter_TOP_remove2_temp = RED_redwinter_TOP_test2_1_temp }
+			log = "1 값 : [?RED_redwinter_TOP_remove1_temp]"
+			log = "2 값 : [?RED_redwinter_TOP_remove2_temp]"
+		}
+		if = {
+			limit = { 
+				check_variable = { RED_redwinter_TOP_test2_2_temp < 0 }
+			}
+			log = "중앙파 영향력이 0 미만으로 추락 방지 : 지금 값 : [?RED_redwinter_progress_CENTER_value] 이후 값 : [?RED_redwinter_TOP_test2_2_temp]"
+			add_to_temp_variable = { RED_redwinter_TOP_remove2_temp = RED_redwinter_TOP_test2_2_temp }
+			subtract_from_temp_variable = { RED_redwinter_TOP_remove1_temp = RED_redwinter_TOP_test2_2_temp }
+			log = "1 값 : [?RED_redwinter_TOP_remove1_temp]"
+			log = "2 값 : [?RED_redwinter_TOP_remove2_temp]"
+		}
+		
+		subtract_from_variable = { RED_redwinter_progress_LEFT_value = RED_redwinter_TOP_remove1_temp }
+		subtract_from_variable = { RED_redwinter_progress_CENTER_value = RED_redwinter_TOP_remove2_temp }
+	
+		set_temp_variable = { RED_redwinter_TOP_value_temp = 0 }
+		RED_zenkyoutou_TOP_GFXUI_reload = yes
+	}
+}
+RED_zenkyoutou_TOP_GFXUI_reload = {
+	set_temp_variable = { RED_redwinter_TOP1_var_temp = RED_redwinter_progress_LEFT_value }
+	set_temp_variable = { RED_redwinter_TOP2_var_temp = RED_redwinter_progress_CENTER_value }
+	add_to_temp_variable = { RED_redwinter_TOP2_var_temp = RED_redwinter_TOP1_var_temp }
+
+	divide_temp_variable = { RED_redwinter_TOP1_var_temp = 100 }
+	divide_temp_variable = { RED_redwinter_TOP2_var_temp = 100 }
+
+	multiply_temp_variable = { RED_redwinter_TOP1_var_temp = 26 }
+	multiply_temp_variable = { RED_redwinter_TOP2_var_temp = 26 }
+
+	round_temp_variable = RED_redwinter_TOP1_var_temp
+	round_temp_variable = RED_redwinter_TOP2_var_temp
+	
+	set_variable = { RED_redwinter_progress_1_var = RED_redwinter_TOP2_var_temp }
+	set_variable = { RED_redwinter_progress_2_var = RED_redwinter_TOP1_var_temp }
 }
 RED_population_solve = {
 	if = {

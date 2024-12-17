@@ -247,8 +247,8 @@ set_variable = { RED_redwinter_leftwing_var = 0 } # GUI용
 set_variable = { RED_redwinter_rightwing_var = 0 } # GUI용
 set_variable = { RED_redwinter_center_var = 0 } # GUI용
 
-set_variable = { RED_redwinter_progress_1_var = 18 } # GUI용
-set_variable = { RED_redwinter_progress_2_var = 4 } # GUI용
+set_variable = { RED_redwinter_progress_1_var = 0 } # GUI용
+set_variable = { RED_redwinter_progress_2_var = 0 } # GUI용
 set_variable = { RED_redwinter_organizational_var = 22 } # GUI용
 
 set_variable = { RED_redwinter_progress_LEFT_value = 16 } # 현장파
@@ -266,6 +266,7 @@ set_variable = { RED_redwinter_influence_start_value = 0 } #시작시 영향력 
 set_variable = { RED_redwinter_influence_add_value = 1 } #영향력 상승시 상승량에 곱해질 값
 set_variable = { RED_redwinter_influence_use_this_value = 1 } #영향력 사용시 소모량에 곱해질 값
 # RED_redwinter_influence_value : 해당 국가의 전공투 영향력
+RED_zenkyoutou_TOP_GFXUI_reload = yes
 RED_zenkyoutou_CENTER_GFXUI_reload = yes
 #겨울군대
 set_variable = { RED_winter_army_army_infantry_attack_factor = 0 }

@@ -104,14 +104,14 @@ spriteTypes = {
 		name = "GFX_RED_redwinter_progress_1"
 		texturefile = "gfx/interface/decisions/icon/redwinter_progress_1.tga"
 		legacy_lazy_load = no
-		noOfFrames = 25
+		noOfFrames = 26
 	}
 
 	spriteType = {
 		name = "GFX_RED_redwinter_progress_2"
 		texturefile = "gfx/interface/decisions/icon/redwinter_progress_2.tga"
 		legacy_lazy_load = no
-		noOfFrames = 25
+		noOfFrames = 26
 	}
 
 	spriteType = {
