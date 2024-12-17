@@ -13,6 +13,7 @@ set_popularities = {
 recruit_character = NSD_heydrich
 recruit_character = GEK_konstantin_von_neurath #나치외무장관
 #친위대
+recruit_character = GEK_joachim_von_ribbentrop
 recruit_character = GEK_paul_hausser
 recruit_character = GEK_sepp_dietrich
 recruit_character = GEK_felix_steiner

@@ -293,8 +293,14 @@ shared_focus = {
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
-		show_unit_leaders_tooltip = GEK_friedrich_schulz
-		show_unit_leaders_tooltip = GEK_ernsteberhard_hell
+		if = { 
+			limit = { has_character = GEK_friedrich_schulz }
+			show_unit_leaders_tooltip = GEK_friedrich_schulz
+		}
+		if = { 
+			limit = { has_character = GEK_ernsteberhard_hell }
+			show_unit_leaders_tooltip = GEK_ernsteberhard_hell
+		}
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -726,8 +732,11 @@ shared_focus = {
 		}
 
 		custom_effect_tooltip = generic_skip_one_line_tt
-		#custom_effect_tooltip = available_chief_of_army
-		#show_ideas_tooltip = franz_halder
+		if = {
+			limit = { has_character = GEK_franz_halder }
+			custom_effect_tooltip = available_chief_of_army
+			show_ideas_tooltip = franz_halder
+		}
 
 		if = {
 			limit = {
@@ -1514,7 +1523,10 @@ shared_focus = {
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
-		#show_unit_leaders_tooltip = GER_heinz_guderian
+		if = {
+			limit = { has_character = GEK_heinz_guderian }
+			show_unit_leaders_tooltip = GEK_heinz_guderian
+		}
 		#custom_effect_tooltip = available_theorist
 		#show_ideas_tooltip = heinz_guderian
 		#show_unit_leaders_tooltip = GEK_erwin_rommel
@@ -1558,9 +1570,14 @@ shared_focus = {
 		}
 
 		custom_effect_tooltip = generic_skip_one_line_tt
-
-		show_unit_leaders_tooltip = GER_hasso_von_manteuffel
-		show_unit_leaders_tooltip = GEK_walther_nehring
+		if = {
+			limit = { has_character = GEK_hasso_von_manteuffel }
+			show_unit_leaders_tooltip = GEK_hasso_von_manteuffel
+		}
+		if = {
+			limit = { has_character = GEK_walther_nehring }
+			show_unit_leaders_tooltip = GEK_walther_nehring
+		}
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -2030,9 +2047,11 @@ shared_focus = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 		}
-
-		#custom_effect_tooltip = available_chief_of_airforce
-		#show_ideas_tooltip = ritter_von_greim
+		if = {
+			limit = { has_character = GEK_ritter_von_greim }
+			custom_effect_tooltip = available_chief_of_airforce
+			show_ideas_tooltip = ritter_von_greim
+		}
 	}
 }
 
@@ -2257,9 +2276,13 @@ shared_focus = {
 		#custom_effect_tooltip = available_military_high_command
 		#show_ideas_tooltip = hugo_sperrle
 
-		#custom_effect_tooltip = generic_skip_one_line_tt
-		#custom_effect_tooltip = available_theorist
-		#show_ideas_tooltip = ernst_udet
+		if = {
+			limit = { has_character = GEK_ernst_udet }
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = available_theorist
+			show_ideas_tooltip = ernst_udet
+		}
 	}
 }
 
@@ -2625,11 +2648,14 @@ shared_focus = {
 			tooltip = special_forces_cap_tt
 		}
 
-		#custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_skip_one_line_tt
 
-		#show_unit_leaders_tooltip = GER_kurt_student
-		#custom_effect_tooltip = available_military_high_command
-		#show_ideas_tooltip = kurt_student
+		if = {
+			limit = { has_character = GEK_kurt_student }
+			show_unit_leaders_tooltip = GEK_kurt_student
+			custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = kurt_student
+		}
 	}
 }
 
@@ -4980,10 +5006,14 @@ shared_focus = {
 			idea = GER_rudeltaktik_ns
 			days = 365
 		}
-
-		#custom_effect_tooltip = generic_skip_one_line_tt
-		#custom_effect_tooltip = available_theorist
-		#show_ideas_tooltip = alfred_saalwachter
+		if = {
+			limit = {
+				has_character = GEK_alfred_saalwachter
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = available_theorist
+			show_ideas_tooltip = alfred_saalwachter
+		}
 	}
 }
 
@@ -5204,6 +5234,2856 @@ shared_focus = {
 		}
 
 		add_ideas = GER_seeherrschaft_ns
+	}
+}
+
+
+shared_focus = { #경제 정책
+	id = GEAF_Mefo_return
+	icon = GFX_goal_generic_consumer_goods
+	available = {
+		count_triggers = {
+			amount = 10
+			controls_state = 5
+			controls_state = 42
+			controls_state = 50
+			controls_state = 51
+			controls_state = 52
+			controls_state = 53
+			controls_state = 54
+			controls_state = 55
+			controls_state = 56
+			controls_state = 57
+			controls_state = 58
+			controls_state = 59
+			controls_state = 60
+			controls_state = 61
+			controls_state = 62
+			controls_state = 63
+			controls_state = 64
+			controls_state = 65
+			controls_state = 66
+			controls_state = 67
+			controls_state = 68
+			controls_state = 763
+			controls_state = 909
+			controls_state = 987
+			controls_state = 990
+			controls_state = 978
+		}
+	}
+	x = 47
+	y = 0
+	cost = 5
+	completion_reward = {
+		add_popularity = {
+			ideology = ROOT
+			popularity = 0.10
+		}
+		#INDUSTRAY: MEFO Bills/Economy of Conquest/Recovering Economy/Wirtschaftswunder
+		#REMINDER to always update the fake NS if these numbers are altered!
+		set_variable = { GER_monthly_consumer_goods_increase = GER_monthly_consumer_goods_start } #Amount of increasing CG each month
+		set_variable = { GER_industrial_consumer_goods_factor = 0.1 } #Used for MEFO Bills, Economy of Conquest and Recovering Economy and Wirtschaftswunder - must correspond with the Fake MEFO Bills NS for the 1936 Bookmark
+		set_variable = { GER_industrial_civilian_intel_to_others = -25 }
+		set_variable = { GER_industrial_army_intel_to_others = -25 }
+		set_variable = { GER_industrial_navy_intel_to_others = -25 }
+		set_variable = { GER_industrial_airforce_intel_to_others = -25 }
+		set_variable = { GER_industrial_production_speed_arms_factory_factor = 0.1 }
+		set_variable = { GER_industrial_production_speed_dockyard_factor = 0.1 }
+		set_variable = { GER_industrial_industrial_capacity_factory = 0 }
+		set_variable = { GER_industrial_industrial_capacity_dockyard = 0 }
+		set_variable = { GER_industrial_production_lack_of_resource_penalty_factor = 0 }
+		set_variable = { GER_industrial_conversion_cost_civ_to_mil_factor = 0 }
+		set_variable = { GER_industrial_industry_air_damage_factor = 0 }
+		set_variable = { GER_industrial_resource_trade_cost_bonus_per_factory = 0 }
+		set_variable = { GER_industrial_production_speed_buildings_factor = 0 }
+		set_variable = { GER_industrial_research_speed_factor = 0 }
+		set_variable = { GER_industrial_economy_cost_factor = 0 }
+		set_variable = { GER_industrial_trade_laws_cost_factor = 0 }
+		set_variable = { GER_recovering_economy_modifier_local_resources_factor = 0 }
+		set_variable = { GER_industrial_production_factory_max_efficiency_factor = 0 }
+		set_variable = { GER_industrial_production_factory_efficiency_gain_factor = 0 }
+		set_variable = { GER_industrial_production_factory_start_efficiency_factor = 0 }
+		set_variable = { GER_industrial_line_change_production_efficiency_factor = 0 }
+		set_variable = { GER_industrial_equipment_conversion_speed = 0 }
+		set_variable = { GER_industrial_consumer_goods_expected_value = 0 }
+		set_variable = { GER_economic_crash_consumer_goods = 0.75 } #Amount of CGFF if the MEFO Bills gets canceled one way or another
+		#WEHRWIRTSCHAFT
+		#REMINDER to always update the fake NS if these numbers are altered!
+		set_variable = { GER_wehrwirtschaft_local_resources_factor = 0 }
+		set_variable = { GER_wehrwirtschaft_production_speed_buildings_factor = 0 }
+		set_variable = { GER_wehrwirtschaft_production_oil_factor = 0 }
+		set_variable = { GER_wehrwirtschaft_production_speed_synthetic_refinery_factor = 0 }
+		set_variable = { GER_wehrwirtschaft_production_speed_fuel_silo_factor = 0 }
+	}
+}
+
+shared_focus = { #경제 성장 우선
+	id = GEAF_prioritize_economic_growth
+	icon = GFX_focus_usa_reestablish_the_gold_standard
+	
+	relative_position_id = GEAF_Mefo_return
+	x = -3
+	y = 1
+	cost = 5
+	#relative_position_id = GEAF_strengthen_the_kriegsmarine
+
+	mutually_exclusive = { focus = GEAF_the_four_year_plan }
+	available = {
+		NOT = {
+			has_dynamic_modifier = { modifier = GER_economy_of_conquest_modifier }
+		}
+	}
+	prerequisite = {
+		focus = GEAF_Mefo_return
+	}
+	completion_reward = {
+		add_ideas = civilian_economy
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		add_stability = -0.1
+		add_popularity = {
+			ideology = ROOT
+			popularity = -0.1
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		every_core_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+				free_building_slots = {
+					building = industrial_complex
+					size > 0
+					include_locked = yes
+				}
+			}
+			random_select_amount = 2
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		custom_effect_tooltip = available_political_advisor
+		show_ideas_tooltip = GER_ludwig_erhard
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		#custom_effect_tooltip = remove_political_advisor
+		#show_ideas_tooltip = hjalmar_schacht
+		if = { 
+			limit = {
+				has_dynamic_modifier = { modifier = GER_mefo_bills_modifier }
+			}
+			custom_effect_tooltip = {
+				localization_key = remove_political_advisor_no_trait_tt
+				CHARACTER = hjalmar_schacht
+			}
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+		add_dynamic_modifier = {
+			modifier = GER_recovering_economy_modifier
+		}
+
+	}
+}
+
+shared_focus = { #화폐 개혁
+	id = GEAF_currency_reforms
+	icon = GFX_focus_generic_currency_reforms
+	prerequisite = { focus = GEAF_prioritize_economic_growth }
+
+	x = -3
+	y = 1
+	relative_position_id = GEAF_prioritize_economic_growth
+	cost = 5
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		every_core_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+				free_building_slots = {
+					building = industrial_complex
+					size > 0
+					include_locked = yes
+				}
+			}
+			random_select_amount = 2
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		GER_modify_industrial_modifier = yes
+		add_to_variable = { 
+			GER_industrial_consumer_goods_factor = -0.2
+			tooltip = consumer_goods_factor_tt
+		}
+	}
+}
+
+shared_focus = {
+	id = GEAF_lower_taxes
+	icon = GFX_focus_mex_privatisation
+	prerequisite = { focus = GEAF_currency_reforms }
+
+	x = -1
+	y = 1
+	relative_position_id = GEAF_currency_reforms
+	cost = 5
+	available = {
+		NOT = {
+			has_idea = GER_mefo_bills_ended
+		}
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
+
+	completion_reward = {
+		add_stability = 0.05
+		add_popularity = {
+			ideology = ROOT
+			popularity = 0.05
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		random_core_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+				free_building_slots = {
+					building = industrial_complex
+					size > 0
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		GER_modify_industrial_modifier = yes
+		add_to_variable = { 
+			GER_industrial_consumer_goods_factor = -0.15
+			tooltip = consumer_goods_factor_tt
+		}
+	}
+}
+
+shared_focus = {
+	id = GEAF_abolish_price_controls
+	icon = GFX_focus_ARG_anti_corruption_policies
+	prerequisite = { focus = GEAF_lower_taxes }
+
+	x = -1
+	y = 1
+	relative_position_id = GEAF_lower_taxes
+	cost = 5
+	available = {
+	}
+
+	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		add_stability = 0.05
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		random_core_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+				free_building_slots = {
+					building = industrial_complex
+					size > 0
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		GER_modify_industrial_modifier = yes
+		add_to_variable = { 
+			GER_industrial_consumer_goods_factor = -0.15
+			tooltip = consumer_goods_factor_tt
+		}
+	}
+}
+
+shared_focus = {
+	id = GEAF_increased_trade
+	icon = GFX_goal_generic_positive_trade_relations
+	prerequisite = { focus = GEAF_abolish_price_controls }
+
+	x = -1
+	y = 1
+	relative_position_id = GEAF_abolish_price_controls
+	cost = 5
+	available = {
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
+
+	completion_reward = {
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		GER_modify_industrial_modifier = yes
+		add_to_variable = { 
+			GER_industrial_resource_trade_cost_bonus_per_factory = 1
+			tooltip = resource_trade_cost_bonus_per_factory_tt
+		}
+	}
+}
+
+shared_focus = {
+	id = GEAF_housing_developments
+	icon = GFX_focus_generic_low_cost_housing
+	prerequisite = { focus = GEAF_currency_reforms }
+
+	x = 1
+	y = 1
+	relative_position_id = GEAF_currency_reforms
+	cost = 5
+	available = {
+		OR ={
+			763 = { #Köningsberg
+				is_owned_and_controlled_by = ROOT
+			}
+			56 = { #Weser-Ems
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+	}
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		if = {
+			limit = {
+				763 = { #Köningsberg
+					is_owned_and_controlled_by = ROOT
+				}
+			}
+			763 = { set_state_category = large_city }
+		}
+		if = {
+			limit = {
+				56 = { #Weser-Ems
+					is_owned_and_controlled_by = ROOT
+				}
+			}
+			56 = { set_state_category = large_city }
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		every_core_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+			}
+			random_select_amount = 2
+			add_extra_state_shared_building_slots = 1
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		GER_modify_industrial_modifier = yes
+		add_to_variable = { 
+			GER_industrial_production_speed_buildings_factor = 0.05
+			tooltip = production_speed_buildings_factor_tt
+		}
+	}
+}
+
+shared_focus = {
+	id = GEAF_workers_rights
+	icon = GFX_focus_generic_workers
+	prerequisite = { focus = GEAF_housing_developments }
+
+	x = 1
+	y = 1
+	relative_position_id = GEAF_housing_developments
+	cost = 5
+	available = {
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		add_popularity = {
+			ideology = ROOT
+			popularity = 0.05
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		GER_modify_industrial_modifier = yes
+		add_to_variable = { 
+			GER_industrial_production_factory_max_efficiency_factor = 0.05
+			tooltip = production_factory_max_efficiency_factor_tt
+		}
+		add_to_variable = { 
+			GER_industrial_production_factory_efficiency_gain_factor = 0.05
+			tooltip = production_factory_efficiency_gain_factor_tt
+		}
+		add_to_variable = { 
+			GER_industrial_production_factory_start_efficiency_factor = 0.05
+			tooltip = production_factory_start_efficiency_factor_tt
+		}
+		add_to_variable = { 
+			GER_industrial_line_change_production_efficiency_factor = 0.05
+			tooltip = line_change_production_efficiency_factor_tt
+		}
+	}
+}
+
+shared_focus = {
+	id = GEAF_industrial_expansion
+	icon = GFX_focus_generic_modernize_industry
+	prerequisite = { focus = GEAF_housing_developments }
+	prerequisite = { focus = GEAF_lower_taxes }
+
+	x = 1
+	y = 1
+	relative_position_id = GEAF_lower_taxes
+	cost = 10
+	available = {
+	}
+
+	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+
+		random_core_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+				free_building_slots = {
+					building = industrial_complex
+					size > 0
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_core_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+				free_building_slots = {
+					building = arms_factory
+					size > 0
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		add_tech_bonus = {
+			name = GER_industrial_expansion
+			bonus = 1
+			uses = 1
+			category = industry
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		modify_building_resources = {
+		   building = synthetic_refinery
+		   resource = rubber
+		   amount = 1
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		GER_modify_industrial_modifier = yes
+		add_to_variable = { 
+			GER_industrial_industrial_capacity_factory = 0.05
+			tooltip = industrial_capacity_factory_tt
+		}
+		add_to_variable = { 
+			GER_industrial_industrial_capacity_dockyard = 0.05
+			tooltip = industrial_capacity_dockyard_tt
+		}
+		add_to_variable = { 
+			GER_industrial_research_speed_factor = 0.05
+			tooltip = research_speed_factor_tt 
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		if = {
+			limit = {
+				has_idea = ig_faben
+			}
+			swap_ideas = {
+				remove_idea = ig_faben
+				add_idea = GER_ig_faben_improved
+			}
+		}
+		else = {
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ig_faben
+					add_idea = GER_ig_faben_improved
+				}
+			}
+		}
+
+	}
+}
+
+shared_focus = { #연합 체절소 투자
+	id = GEAF_invest_in_vereinigte_stahlwerke
+	icon = GFX_focus_GER_vereinigte_stahlwerke
+	prerequisite = { focus = GEAF_industrial_expansion }
+	prerequisite = { focus = GEAF_abolish_price_controls }
+
+	x = -1
+	y = 1
+	relative_position_id = GEAF_industrial_expansion
+	cost = 10
+	available = {
+		42 = {
+			is_fully_controlled_by = ROOT
+			is_demilitarized_zone = no
+		}
+		has_tech = excavation3
+	}
+
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+
+	completion_reward = {
+		if = {	
+			limit = {
+				42 = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+			}
+			42 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		42 = {
+			add_resource = {
+				type = steel
+				amount = 8
+			}
+			add_resource = {
+				type = tungsten
+				amount = 2
+			}
+			add_resource = {
+				type = chromium
+				amount = 2
+			}
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		add_tech_bonus = {
+			name = GER_invest_in_vereinigte_stahlwerke
+			bonus = 1
+			uses = 1
+			category = excavation_tech
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		GER_modify_industrial_modifier = yes
+		add_to_variable = { 
+			GER_recovering_economy_modifier_local_resources_factor = 0.05
+			tooltip = local_resources_factor_tt
+		}
+
+	}
+}
+
+shared_focus = {
+	id = GEAF_agricultural_reforms
+	icon = GFX_focus_generic_farmland
+	prerequisite = { focus = GEAF_industrial_expansion }
+	prerequisite = { focus = GEAF_workers_rights }
+
+	x = 1
+	y = 1
+	relative_position_id = GEAF_industrial_expansion
+	cost = 10
+	available = {
+		has_tech = advanced_machine_tools
+	}
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+
+		if = {
+			limit = {
+				909 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
+			909 = { add_extra_state_shared_building_slots = 1 }
+		}
+		if = {
+			limit = {
+				61 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
+			61 = { add_extra_state_shared_building_slots = 1 }
+		}
+		if = {
+			limit = {
+				62 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
+			62 = { add_extra_state_shared_building_slots = 1 }
+		}
+		if = {
+			limit = {
+				63 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
+			63 = { add_extra_state_shared_building_slots = 1 }
+		}
+		if = {
+			limit = {
+				5 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
+			5 = { add_extra_state_shared_building_slots = 1 }
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		GER_modify_industrial_modifier = yes
+		add_to_variable = { 
+			GER_industrial_consumer_goods_factor = -0.1
+			tooltip = consumer_goods_factor_tt
+		}
+
+	}
+}
+
+shared_focus = { 
+	id = GEAF_urbanization
+	icon = GFX_focus_generic_full_employment
+	prerequisite = { focus = GEAF_agricultural_reforms }
+
+	x = 1
+	y = 1
+	relative_position_id = GEAF_agricultural_reforms
+	cost = 10
+	available = {
+		OR ={
+			59 = { #Hannover
+				is_owned_and_controlled_by = ROOT
+			}
+			978 = { #Baden
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+	}
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		
+		if = {
+			limit = {
+				59 = { #Hannover
+					is_owned_and_controlled_by = ROOT
+				}
+			}
+			59 = { set_state_category = metropolis }
+		}
+		if = {
+			limit = {
+				978 = { #Baden
+					is_owned_and_controlled_by = ROOT
+				}
+			}
+			978 = { set_state_category = metropolis }
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		GER_modify_industrial_modifier = yes
+		add_to_variable = { 
+			GER_industrial_industrial_capacity_factory = 0.05
+			tooltip = industrial_capacity_factory_tt
+		}
+		add_to_variable = { 
+			GER_industrial_industrial_capacity_dockyard = 0.05
+			tooltip = industrial_capacity_dockyard_tt
+		}
+	}
+}
+
+shared_focus = { #경제 기적
+	id = GEAF_wirtschaftswunder
+	icon = GFX_focus_GER_wirtschaftswunder
+	prerequisite = { focus = GEAF_invest_in_vereinigte_stahlwerke }
+	prerequisite = { focus = GEAF_agricultural_reforms }
+
+	x = 1
+	y = 1
+	relative_position_id = GEAF_invest_in_vereinigte_stahlwerke
+	cost = 10
+	available = {
+	}
+
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+
+	completion_reward = {
+
+		every_core_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+				free_building_slots = {
+					building = industrial_complex
+					size > 0
+					include_locked = yes
+				}
+			}
+			random_select_amount = 2
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		add_tech_bonus = {
+			name = GER_wirtschaftswunder
+			bonus = 1
+			uses = 1
+			category = industry
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		custom_effect_tooltip = GER_replace_recovering_economy_with_wirtschaftswunder_tt
+		add_to_variable = { 
+			GER_industrial_consumer_goods_factor = -0.15
+			tooltip = consumer_goods_factor_tt
+		}
+		add_to_variable = { 
+			GER_industrial_production_speed_buildings_factor = 0.1
+			tooltip = production_speed_buildings_factor_tt
+		}
+		
+		hidden_effect = { 
+			remove_dynamic_modifier = { modifier = GER_recovering_economy_modifier }
+			add_dynamic_modifier = { modifier = GER_wirtschaftswunder_modifier }
+		}
+
+	}
+}
+
+shared_focus = {
+	id = GEAF_mass_production
+	icon = GFX_focus_generic_military_industry
+	prerequisite = { focus = GEAF_wirtschaftswunder }
+
+	x =-1
+	y = 1
+	relative_position_id = GEAF_wirtschaftswunder
+	cost = 10
+	available = {
+		OR = {
+			has_war = yes
+			threat > 0.15
+		}
+	}
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+
+		random_core_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+				free_building_slots = {
+					building = arms_factory
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		GER_modify_industrial_modifier = yes
+		add_to_variable = { 
+			GER_industrial_production_lack_of_resource_penalty_factor = -0.05
+			tooltip = production_lack_of_resource_penalty_factor_tt
+		}
+		add_to_variable = { 
+			GER_industrial_industrial_capacity_factory = 0.05
+			tooltip = industrial_capacity_factory_tt
+		}
+		add_to_variable = { 
+			GER_industrial_industrial_capacity_dockyard = 0.05
+			tooltip = industrial_capacity_dockyard_tt
+		}
+
+	}
+}
+
+shared_focus = {
+	id = GEAF_build_defense_industry
+	icon = GFX_goal_generic_construct_mil_factory
+	prerequisite = { focus = GEAF_wirtschaftswunder }
+
+	x = 1
+	y = 1
+	relative_position_id = GEAF_wirtschaftswunder
+	cost = 10
+	available = {
+		OR = {
+			has_war = yes
+			threat > 0.3
+		}
+	}
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		random_core_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+				free_building_slots = {
+					building = arms_factory
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+
+		GER_modify_industrial_modifier = yes
+		add_to_variable = { 
+			GER_industrial_production_factory_max_efficiency_factor = 0.05
+			tooltip = production_factory_max_efficiency_factor_tt
+		}
+		add_to_variable = { 
+			GER_industrial_production_factory_efficiency_gain_factor = 0.05
+			tooltip = production_factory_efficiency_gain_factor_tt
+		}
+		add_to_variable = { 
+			GER_industrial_production_factory_start_efficiency_factor = 0.05
+			tooltip = production_factory_start_efficiency_factor_tt
+		}
+		add_to_variable = { 
+			GER_industrial_line_change_production_efficiency_factor = 0.05
+			tooltip = line_change_production_efficiency_factor_tt
+		}
+	}
+}
+
+shared_focus = {
+	id = GEAF_war_production
+	icon = GFX_focus_generic_mass_production
+	prerequisite = { focus = GEAF_mass_production }
+	prerequisite = { focus = GEAF_build_defense_industry }
+
+	x = 1
+	y = 1
+	relative_position_id = GEAF_mass_production
+	cost = 10
+	available = {
+		has_war_with_major = yes
+	}
+
+	continue_if_invalid = yes
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+
+		random_core_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+				free_building_slots = {
+					building = arms_factory
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		GER_modify_industrial_modifier = yes
+		add_to_variable = { 
+			GER_industrial_industrial_capacity_factory = 0.05
+			tooltip = industrial_capacity_factory_tt
+		}
+		add_to_variable = { 
+			GER_industrial_industrial_capacity_dockyard = 0.05
+			tooltip = industrial_capacity_dockyard_tt
+		}
+		add_to_variable = { 
+			GER_industrial_conversion_cost_civ_to_mil_factor = -0.2
+			tooltip = conversion_cost_civ_to_mil_factor_tt
+		}
+		add_to_variable = { 
+			GER_industrial_production_factory_max_efficiency_factor = 0.05
+			tooltip = production_factory_max_efficiency_factor_tt
+		}
+		add_to_variable = { 
+			GER_industrial_production_factory_efficiency_gain_factor = 0.05
+			tooltip = production_factory_efficiency_gain_factor_tt
+		}
+		add_to_variable = { 
+			GER_industrial_production_factory_start_efficiency_factor = 0.05
+			tooltip = production_factory_start_efficiency_factor_tt
+		}
+		add_to_variable = { 
+			GER_industrial_line_change_production_efficiency_factor = 0.05
+			tooltip = line_change_production_efficiency_factor_tt
+		}
+
+	}
+}
+
+
+shared_focus = {
+	id = GEAF_construct_the_reichsautobahn
+	icon = GFX_focus_generic_road_investment
+	prerequisite = { focus = GEAF_prioritize_economic_growth focus = GEAF_the_four_year_plan }
+
+	x = 3
+	y = 1
+	relative_position_id = GEAF_prioritize_economic_growth
+	cost = 5
+	available = {
+		OR = {
+			has_full_control_of_state = 64 #Brandenburg
+			has_full_control_of_state = 59 #Hannover
+			has_full_control_of_state = 60 #Thüringen
+			has_full_control_of_state = 54 #Franken
+		}
+	}
+	bypass = {
+		has_civil_war = no
+		NOT = { has_full_control_of_state = 64 }
+		NOT = {	has_full_control_of_state = 59 }
+		NOT = {	has_full_control_of_state = 60 }
+		NOT = {	has_full_control_of_state = 54 }
+	}
+
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+
+	completion_reward = {
+		custom_effect_tooltip = GER_autobahn_tt
+		hidden_effect = {
+			64 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = infrastructure
+						level = 5
+						instant_build = yes
+					}
+				}
+			}
+			59 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+
+					add_building_construction = {
+						type = infrastructure
+						level = 5
+						instant_build = yes
+					}
+				}
+			}
+			60 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = infrastructure
+						level = 5
+						instant_build = yes
+					}
+				}
+			}
+			54 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = infrastructure
+						level = 5
+						instant_build = yes
+					}
+				}
+			}
+		}		
+	}
+}
+
+shared_focus = {
+	id = GEAF_build_the_rur_dam
+	icon = GFX_focus_generic_hydroelectric_energy
+	prerequisite = { focus = GEAF_construct_the_reichsautobahn focus = GEAF_currency_reforms }
+
+	x = -2
+	y = 1
+	relative_position_id = GEAF_construct_the_reichsautobahn
+	cost = 10
+	available = {
+		51 = { 
+			is_fully_controlled_by = ROOT
+			is_demilitarized_zone = no 
+		}
+	}
+
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+
+	completion_reward = {
+		if = {
+			limit = {
+				51 = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+			}
+			51 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		custom_effect_tooltip = generic_skip_one_line_tt
+		51 = {
+			add_building_construction = {
+				type = dam
+				level = 1
+				instant_build = yes
+				province = {
+					id = 3547
+				}
+			}
+		}
+		custom_effect_tooltip = {
+			localization_key = building_state_modifier|dam
+			INDENT = "    "
+		}
+	}
+}
+
+shared_focus = {
+	id = GEAF_trade_deal_with_sweden
+	icon = GFX_focus_generic_befriend_sweden
+	prerequisite = { focus = GEAF_construct_the_reichsautobahn focus = GEAF_autarky_efforts }
+
+	x = 2
+	y = 1
+	relative_position_id = GEAF_construct_the_reichsautobahn
+	cost = 5
+	available = {
+		is_subject = no
+		AND = {
+			country_exists = SWE
+			SWE = { is_subject = no }
+			NOT = { has_war_with = SWE }
+			SWE = {
+				custom_trigger_tooltip = {
+					tooltip = GER_alone_or_peace_faction_tt
+					is_alone_or_in_faction_at_peace_with_GER = yes
+				}
+			}
+		}
+	}
+
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_HISTORICAL}
+
+	completion_reward = {
+		SWE = {
+			country_event = { id = wuw_GER_diplomacy.1 days = 2 }
+		}
+
+		custom_effect_tooltip = if_they_accept_tt
+		effect_tooltip = {
+			SWE = {
+				add_ideas = GER_german_trade_ns
+				add_opinion_modifier = {
+					target = PREV
+					modifier = GER_trading_partners
+				}
+			}
+			custom_effect_tooltip = war_will_cancel_deal_tt
+		}
+	}
+}
+
+shared_focus = { #바겐 공장
+	id = GEAF_kdf_wagen_factories
+	icon = GFX_focus_GER_kdf_wagen
+	prerequisite = { focus = GEAF_construct_the_reichsautobahn }
+
+	x = 0
+	y = 1
+	relative_position_id = GEAF_construct_the_reichsautobahn
+	cost = 5
+	available = {
+	}
+
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+
+	completion_reward = {
+		
+		if = {
+			limit = {
+				has_war = yes
+			}
+			if = {
+				limit = {
+					59 = {
+						is_fully_controlled_by = ROOT
+						free_building_slots = {
+							building = arms_factory
+							size > 2
+							include_locked = yes
+						}
+					}
+				}
+				59 = { #Hannover
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = arms_factory
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+			else = {
+				random_owned_state = {
+					limit = {
+						is_controlled_by = ROOT
+						free_building_slots = {
+							building = arms_factory
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = arms_factory
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+		}
+		else = { #if at peace
+			if = {
+				limit = {
+					59 = {
+						is_fully_controlled_by = ROOT
+						free_building_slots = {
+							building = arms_factory
+							size > 2
+							include_locked = yes
+						}
+					}
+				}
+				59 = { #Hannover
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			else = {
+				random_owned_state = {
+					limit = {
+						is_controlled_by = ROOT
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = GEAF_expand_the_reichsautobahn_south
+	icon = GFX_goal_generic_construct_infrastructure
+	prerequisite = { focus = GEAF_kdf_wagen_factories }
+
+	x = -1
+	y = 1
+	relative_position_id = GEAF_kdf_wagen_factories
+	cost = 5
+	available = {
+		OR = {
+			53 = { #Niederbayern
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+			52 = { #Oberbayern
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+			152 = { #Upper Austria
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+			4 = { #Lower Austria
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+		}
+	}
+	bypass = {
+	}
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		custom_effect_tooltip = GER_expand_the_reichsautobahn_south_tt
+		custom_effect_tooltip = generic_skip_one_line_tt
+		if = {
+			limit = {
+				53 = { #Niederbayern
+					infrastructure < 5
+					state_is_fully_controlled_by_ROOT_or_subject = yes
+				}
+			}
+			53 = { 
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				52 = { #Oberbayern
+					infrastructure < 5
+					state_is_fully_controlled_by_ROOT_or_subject = yes
+				}
+			}
+			52 = { 
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				152 = { #Upper Austria
+					infrastructure < 5
+					state_is_fully_controlled_by_ROOT_or_subject = yes
+				}
+			}
+			152 = { 
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				4 = { #Lower Austria
+					infrastructure < 5
+					state_is_fully_controlled_by_ROOT_or_subject = yes
+				}
+			}
+			4 = { 
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				52 = { #Oberbayern
+					state_is_fully_controlled_by_ROOT_or_subject = yes
+				}
+				152 = { #Upper Austria
+					state_is_fully_controlled_by_ROOT_or_subject = yes
+				}
+				4 = { #Lower Austria
+					state_is_fully_controlled_by_ROOT_or_subject = yes
+				}
+			}
+			#Regensburg - Wien
+			build_railway = {
+				path = { 9515 9681 3703 9665 11651 704 11666 }
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = GEAF_expand_the_reichsautobahn_east
+	icon = GFX_goal_generic_construct_infrastructure
+	prerequisite = { focus = GEAF_kdf_wagen_factories }
+
+	x = 1
+	y = 1
+	relative_position_id = GEAF_kdf_wagen_factories
+	cost = 5
+	available = {
+		OR = {
+			68 = { #Ostmark
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+			63 = { #Hinterpommern
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+			807 = { #Gdynia
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+			85 = { #Danzig
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+		}
+	}
+	bypass = {
+	}
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		custom_effect_tooltip = GER_expand_the_reichsautobahn_east_tt
+		custom_effect_tooltip = generic_skip_one_line_tt
+		if = {
+			limit = {
+				68 = { #Ostmark
+					infrastructure < 5
+					state_is_fully_controlled_by_ROOT_or_subject = yes
+				}
+			}
+			68 = { 
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				63 = { #Hinterpommern
+					infrastructure < 5
+					state_is_fully_controlled_by_ROOT_or_subject = yes
+				}
+			}
+			63 = { 
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				807 = { #Gdynia
+					infrastructure < 5
+					state_is_fully_controlled_by_ROOT_or_subject = yes
+				}
+			}
+			807 = { 
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				85 = { #Danzig
+					infrastructure < 5
+					state_is_fully_controlled_by_ROOT_or_subject = yes
+				}
+			}
+			85 = { 
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				63 = { #Hinterpommern
+					state_is_fully_controlled_by_ROOT_or_subject = yes
+				}
+				807 = { #Gdynia
+					state_is_fully_controlled_by_ROOT_or_subject = yes
+				}
+				85 = { #Danzig
+					state_is_fully_controlled_by_ROOT_or_subject = yes
+				}
+			}
+			#Köslin - Danzig
+			build_railway = {
+				path = { 11372 11343 9263 362 }
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = GEAF_develop_heraeus_facilities
+	icon = GFX_focus_research
+	prerequisite = { focus = GEAF_kdf_wagen_factories }
+
+	x = 0
+	y = 2
+	relative_position_id = GEAF_kdf_wagen_factories
+	cost = 10
+	available = {
+		industrial_complex > 49
+	}
+
+	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+
+	completion_reward = {
+
+		add_research_slot = 1
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		random_core_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+			}
+			prioritize = { 56 }
+			add_resource = {
+				type = tungsten
+				amount = 2
+			}
+			add_resource = {
+				type = chromium
+				amount = 2
+			}
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		add_tech_bonus = {
+			name = GER_develop_heraeus_facilities
+			bonus = 1
+			uses = 1
+			category = electronics
+		}
+
+	}
+}
+
+shared_focus = { #메포어음 재발행
+	id = GEAF_the_four_year_plan
+
+	icon = GFX_focus_GER_the_four_year_plan
+	alternate_icon = GFX_focus_GER_the_four_year_plan_historical
+	prerequisite = {
+		focus = GEAF_Mefo_return
+	}
+	mutually_exclusive = { focus = GEAF_prioritize_economic_growth }
+	x = 6
+	y = 0
+	relative_position_id = GEAF_prioritize_economic_growth
+	cost = 5
+	available = {
+		has_country_flag = GEAF_the_four_year_plan_can_flag
+	}
+	
+	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+
+	completion_reward = {
+		every_core_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+				free_building_slots = {
+					building = industrial_complex
+					size > 0
+					include_locked = yes
+				}
+			}
+			random_select_amount = 2
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+		add_dynamic_modifier = {
+			modifier = GER_mefo_bills_modifier
+		}
+		add_tech_bonus = {
+			name = GEK_the_four_year_plan
+			bonus = 1
+			uses = 1
+			category = industry
+		}
+	}
+}
+
+shared_focus = { #경제 자립 주력
+	id = GEAF_autarky_efforts
+	icon = GFX_focus_GER_autarky_ambitions
+	prerequisite = { focus = GEAF_the_four_year_plan  }
+
+	x = 2
+	y = 1
+	relative_position_id = GEAF_the_four_year_plan
+	cost = 5
+	available = {
+	}
+
+	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+
+	completion_reward = {
+		random_core_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+				free_building_slots = {
+					building = industrial_complex
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		every_core_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+			}
+			random_select_amount = 4
+			add_extra_state_shared_building_slots = 1
+		}
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		add_tech_bonus = {
+			name = GEK_autarky_efforts
+			bonus = 1
+			uses = 1
+			category = industry
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		custom_effect_tooltip = GER_gain_autarkic_economy_lock_free_trade_tt
+		add_ideas = autarkic_economy
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		custom_effect_tooltip = GER_improve_trade_relations_tt
+		every_other_country = {
+			limit = {
+				is_in_faction_with = PREV
+			}	
+			add_opinion_modifier = {
+				target = GER
+				modifier = GER_autarky_trade_opinion
+			}
+			GER = {
+				add_opinion_modifier = {
+					target = PREV
+					modifier = GER_german_trade_opinion
+				}
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = GEAF_institute_price_controls
+	icon = GFX_focus_generic_price_controls
+	prerequisite = { focus = GEAF_autarky_efforts }
+
+	x = 0
+	y = 1
+	relative_position_id = GEAF_autarky_efforts
+	cost = 5
+	available = {
+	}
+
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+
+	completion_reward = {
+		add_stability = -0.05
+		add_popularity = {
+			ideology = ROOT
+			popularity = -0.05
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		if = {
+			limit = {
+				OR = {
+					has_dynamic_modifier = { modifier = GER_mefo_bills_modifier }
+					has_dynamic_modifier = { modifier = GER_economy_of_conquest_modifier }
+				}
+			}
+			GER_modify_industrial_modifier = yes
+			custom_effect_tooltip = GER_reduce_increasing_consumer_goods_tt
+			subtract_from_variable = { GER_monthly_consumer_goods_increase = GER_change_monthly_CG_price_controls }
+		}
+		else = {
+			GER_modify_industrial_modifier = yes
+			add_to_variable = { 
+				GER_industrial_consumer_goods_factor = -0.1
+				tooltip = consumer_goods_factor_tt
+			}
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		custom_effect_tooltip = GER_unlock_price_controls_decision_tt
+	}
+}
+
+shared_focus = {
+	id = GEAF_establish_the_reichswerke
+	icon = GFX_goal_generic_construct_civ_factory
+	prerequisite = { focus = GEAF_autarky_efforts }
+
+	x = -1
+	y = 2
+	relative_position_id = GEAF_autarky_efforts
+	cost = 5
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = GER_industrial_consumer_goods_factor_limit_tt
+			check_variable = { GER_industrial_consumer_goods_factor < 0.9 }
+		}
+	}
+
+	continue_if_invalid = yes
+
+	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+
+	completion_reward = {
+		random_core_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+				free_building_slots = {
+					building = industrial_complex
+					size > 1
+					include_locked = yes
+				}
+			}
+			prioritize = { 59 }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+			add_resource = {
+				type = steel
+				amount = 6
+			}
+		}
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		add_tech_bonus = {
+			name = GEK_establish_the_reichswerke
+			bonus = 1
+			uses = 1
+			category = excavation_tech
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		custom_effect_tooltip = GER_unlock_reichswerke_tt
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		GER_modify_industrial_modifier = yes
+		add_to_variable = { 
+			GER_industrial_consumer_goods_factor = 0.1
+			tooltip = consumer_goods_factor_tt
+		}
+		if = {
+			limit = {
+				OR = {
+					has_dynamic_modifier = { modifier = GER_mefo_bills_modifier }
+					has_dynamic_modifier = { modifier = GER_economy_of_conquest_modifier }
+				}
+			}
+			GER_add_mefo_bills_penalty = yes
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		GER_add_or_modify_wehrwirtschaft = yes
+		add_to_variable = { 
+			GER_wehrwirtschaft_local_resources_factor = 0.05
+			tooltip = local_resources_factor_tt
+		}
+
+	}
+}
+
+shared_focus = {
+	id = GEAF_seize_foreign_industries
+	icon = GFX_focus_DEN_heavy_regulations
+	prerequisite = { focus = GEAF_establish_the_reichswerke }
+
+	x = -1
+	y = 1
+	relative_position_id = GEAF_establish_the_reichswerke
+	cost = 5
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = GER_industrial_consumer_goods_factor_limit_tt
+			check_variable = { GER_industrial_consumer_goods_factor < 0.9 }
+		}
+		any_controlled_state = {
+			NOT = { is_core_of = ROOT }
+			is_fully_controlled_by = ROOT
+			OR = {
+				steel > 24
+				aluminium > 19
+				oil > 14
+				tungsten > 9
+				chromium > 9
+			}
+		}
+	}
+
+	cancel = {
+		NOT = {
+			any_controlled_state = {
+				is_core_of = ROOT
+				OR = {
+					steel > 25
+					aluminium > 20
+					oil > 15
+					tungsten > 10
+					chromium > 10
+				}
+			}
+		}
+	}
+
+	bypass = {
+		OR = {
+			has_resources_in_country = {
+				resource = steel
+				amount > 799
+				extracted = yes
+			}
+			any_subject_country = {
+				has_resources_in_country = {
+					resource = steel
+					amount > 799
+					extracted = yes
+				}
+			}
+		}
+		OR = {
+			has_resources_in_country = {
+				resource = aluminium
+				amount > 499
+				extracted = yes
+			}
+			any_subject_country = {
+				has_resources_in_country = {
+					resource = aluminium
+					amount > 499
+					extracted = yes
+				}
+			}
+		}
+		OR = {
+			has_resources_in_country = {
+				resource = tungsten
+				amount > 99
+				extracted = yes
+			}
+			any_subject_country = {
+				has_resources_in_country = {
+					resource = tungsten
+					amount > 99
+					extracted = yes
+				}
+			}
+		}
+		OR = {
+			has_resources_in_country = {
+				resource = chromium
+				amount > 99
+				extracted = yes
+			}
+			any_subject_country = {
+				has_resources_in_country = {
+					resource = chromium
+					amount > 99
+					extracted = yes
+				}
+			}
+		}
+	}
+
+	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+
+	completion_reward = {
+		random_controlled_state = {
+			limit = {
+				NOT = { is_core_of = ROOT }
+				is_fully_controlled_by = ROOT
+				free_building_slots = {
+					building = industrial_complex
+					size > 0
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_controlled_state = {
+			limit = {
+				NOT = { is_core_of = ROOT }
+				is_fully_controlled_by = ROOT
+				free_building_slots = {
+					building = arms_factory
+					size > 0
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		every_controlled_state = {
+			limit = {
+				NOT = { 
+					is_core_of = ROOT 
+					any_neighbor_state = {
+						controller = {
+							has_war_with = ROOT
+						}
+					}	
+				}
+				is_fully_controlled_by = ROOT
+				is_on_continent = europe
+				OR = {
+					steel > 19
+					aluminium > 10
+					oil > 9
+					tungsten > 9
+					chromium > 9
+				}
+			}
+			random_select_amount = 5
+			add_dynamic_modifier = { 
+				modifier = GER_nationalized_industries_modifier
+				scope = GER
+			}
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		add_tech_bonus = {
+			name = GEK_seize_foreign_industries
+			bonus = 0.5
+			uses = 1
+			category = excavation_tech
+		}
+		add_equipment_to_stockpile = {
+			type = train_equipment
+			amount = 20
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		GER_modify_industrial_modifier = yes
+		add_to_variable = { 
+			GER_industrial_consumer_goods_factor = 0.1
+			tooltip = consumer_goods_factor_tt
+		}
+		if = {
+			limit = {
+				OR = {
+					has_dynamic_modifier = { modifier = GER_mefo_bills_modifier }
+					has_dynamic_modifier = { modifier = GER_economy_of_conquest_modifier }
+				}
+			}
+			GER_add_mefo_bills_penalty = yes
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		custom_effect_tooltip = GER_modify_wehrwirtschaft_modifier_tt
+		add_to_variable = { 
+			GEK_wehrwirtschaft_local_resources_factor = 0.05
+			tooltip = local_resources_factor_tt
+		}
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+	}
+}
+
+shared_focus = {
+	id = GEAF_coal_liquefaction
+	icon = GFX_goal_generic_oil_refinery
+	prerequisite = { focus = GEAF_autarky_efforts }
+
+	x = 1
+	y = 2
+	relative_position_id = GEAF_autarky_efforts
+	cost = 5
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = GER_industrial_consumer_goods_factor_limit_tt
+			check_variable = { GER_industrial_consumer_goods_factor < 0.9 }
+		}
+	}
+
+	continue_if_invalid = yes
+
+	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+
+	completion_reward = {
+		random_core_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+				free_building_slots = {
+					building = synthetic_refinery
+					size > 0
+					include_locked = yes
+				}
+			}
+			prioritize = { 65 }
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = synthetic_refinery
+				level = 1
+				instant_build = yes
+			}
+		}
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		add_tech_bonus = {
+			name = GEK_coal_liquefaction
+			bonus = 1
+			uses = 1
+			category = synth_resources
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		GER_modify_industrial_modifier = yes
+		add_to_variable = { 
+			GER_industrial_consumer_goods_factor = 0.1
+			tooltip = consumer_goods_factor_tt
+		}
+		if = {
+			limit = {
+				OR = {
+					has_dynamic_modifier = { modifier = GER_mefo_bills_modifier }
+					has_dynamic_modifier = { modifier = GER_economy_of_conquest_modifier }
+				}
+			}
+			GER_add_mefo_bills_penalty = yes
+		}
+
+		GER_add_or_modify_wehrwirtschaft = yes
+		add_to_variable = { 
+			GER_wehrwirtschaft_production_speed_synthetic_refinery_factor = 0.1
+			tooltip = production_speed_synthetic_refinery_factor_tt
+		}
+		add_to_variable = { 
+			GEK_wehrwirtschaft_production_speed_fuel_silo_factor = 0.1
+			tooltip = production_speed_fuel_silo_factor_tt
+		}
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		if = {
+			limit = {
+				has_idea = ig_faben
+			}
+			swap_ideas = {
+				remove_idea = ig_faben
+				add_idea = GER_ig_faben_improved
+			}
+		}
+		else = {
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ig_faben
+					add_idea = GER_ig_faben_improved
+				}
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = GEAF_subsidize_hoesch_benzin
+	icon = GFX_focus_GER_subsidize_hoesch_benzin
+	prerequisite = { focus = GEAF_coal_liquefaction }
+
+	x = -1
+	y = 1
+	relative_position_id = GEAF_coal_liquefaction
+	cost = 5
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = GER_industrial_consumer_goods_factor_limit_tt
+			check_variable = { GER_industrial_consumer_goods_factor < 0.9 }
+		}
+		has_tech = oil_processing
+	}
+
+	continue_if_invalid = yes
+
+	bypass = {
+		OR = {
+			has_resources_in_country = {
+				resource = oil
+				amount > 149
+				extracted = yes
+			}
+			any_subject_country = {
+				has_resources_in_country = {
+					resource = oil
+					amount > 149
+					extracted = yes
+				}
+			}
+		}
+	}
+
+	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+
+	completion_reward = {
+
+		random_core_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+				free_building_slots = {
+					building = synthetic_refinery
+					size > 0
+					include_locked = yes
+				}
+			}
+			prioritize = { 57 }
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = synthetic_refinery
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		GER_modify_industrial_modifier = yes
+		add_to_variable = { 
+			GER_industrial_consumer_goods_factor = 0.1
+			tooltip = consumer_goods_factor_tt
+		}
+		if = {
+			limit = {
+				OR = {
+					has_dynamic_modifier = { modifier = GER_mefo_bills_modifier }
+					has_dynamic_modifier = { modifier = GER_economy_of_conquest_modifier }
+				}
+			}
+			GER_add_mefo_bills_penalty = yes
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		custom_effect_tooltip = GER_modify_wehrwirtschaft_modifier_tt
+		add_to_variable = { 
+			GER_wehrwirtschaft_production_oil_factor = 0.1
+			tooltip = production_oil_factor_tt
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		add_tech_bonus = {
+			name = GEK_subsidize_hoesch_benzin
+			bonus = 1
+			uses = 1
+			category = synth_resources
+		}
+
+	}
+}
+
+shared_focus = {
+	id = GEAF_establish_buna_werke
+	icon = GFX_focus_generic_rubber
+	prerequisite = { focus = GEAF_coal_liquefaction }
+
+	x = 1
+	y = 1
+	relative_position_id = GEAF_coal_liquefaction
+	cost = 5
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = GER_industrial_consumer_goods_factor_limit_tt
+			check_variable = { GER_industrial_consumer_goods_factor < 0.9 }
+		}
+		has_tech = rubber_processing
+	}
+
+	continue_if_invalid = yes
+
+	bypass = {
+		OR = {
+			has_resources_in_country = {
+				resource = rubber
+				amount > 99
+				extracted = yes
+			}
+			any_subject_country = {
+				has_resources_in_country = {
+					resource = rubber
+					amount > 99
+					extracted = yes
+				}
+			}
+		}
+	}
+
+	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+
+	completion_reward = {
+		random_core_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+				free_building_slots = {
+					building = synthetic_refinery
+					size > 0
+					include_locked = yes
+				}
+			}
+			prioritize = { 65 }
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = synthetic_refinery
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		modify_building_resources = {
+		   building = synthetic_refinery
+		   resource = rubber
+		   amount = 2
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		add_tech_bonus = {
+			name = GEK_establish_buna_werke
+			bonus = 1
+			uses = 1
+			category = synth_resources
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		GER_modify_industrial_modifier = yes
+		add_to_variable = { 
+			GER_industrial_consumer_goods_factor = 0.1
+			tooltip = consumer_goods_factor_tt
+		}
+		if = {
+			limit = {
+				OR = {
+					has_dynamic_modifier = { modifier = GER_mefo_bills_modifier }
+					has_dynamic_modifier = { modifier = GER_economy_of_conquest_modifier }
+				}
+			}
+			GER_add_mefo_bills_penalty = yes
+		}
+	}
+}
+
+shared_focus = { #경제 자립 달성
+	id = GEAF_autarky_achieved
+	icon = GFX_focus_GER_autarky_achieved
+	prerequisite = { focus = GEAF_seize_foreign_industries }
+	prerequisite = { focus = GEAF_subsidize_hoesch_benzin }
+	prerequisite = { focus = GEAF_establish_buna_werke }
+
+	x = 2
+	y = 1
+	relative_position_id = GEAF_seize_foreign_industries
+	cost = 10
+	available = {
+		all_core_state = {
+			is_fully_controlled_by = ROOT
+		}
+		OR = {
+			has_resources_in_country = {
+				resource = steel
+				amount > 799 #This needs to correspond to the Bypass values in the previous focuses
+				extracted = yes
+			}
+			any_subject_country = {
+				has_resources_in_country = {
+					resource = steel
+					amount > 799 #This needs to correspond to the Bypass values in the previous focuses
+					extracted = yes
+				}
+			}
+		}
+		OR = {
+			has_resources_in_country = {
+				resource = aluminium
+				amount > 199 #This needs to correspond to the Bypass values in the previous focuses
+				extracted = yes
+			}
+			any_subject_country = {
+				has_resources_in_country = {
+					resource = aluminium
+					amount > 199 #This needs to correspond to the Bypass values in the previous focuses
+					extracted = yes
+				}
+			}
+		}
+		OR = {
+			has_resources_in_country = {
+				resource = oil
+				amount > 149 #This needs to correspond to the Bypass values in the previous focuses
+				extracted = yes
+			}
+			any_subject_country = {
+				has_resources_in_country = {
+					resource = oil
+					amount > 149 #This needs to correspond to the Bypass values in the previous focuses
+					extracted = yes
+				}
+			}
+		}
+		OR = {
+			has_resources_in_country = {
+				resource = tungsten
+				amount > 99 #This needs to correspond to the Bypass values in the previous focuses
+				extracted = yes
+			}
+			any_subject_country = {
+				has_resources_in_country = {
+					resource = tungsten
+					amount > 99 #This needs to correspond to the Bypass values in the previous focuses
+					extracted = yes
+				}
+			}
+		}
+		OR = {
+			has_resources_in_country = {
+				resource = chromium
+				amount > 99 #This needs to correspond to the Bypass values in the previous focuses
+				extracted = yes
+			}
+			any_subject_country = {
+				has_resources_in_country = {
+					resource = chromium
+					amount > 99 #This needs to correspond to the Bypass values in the previous focuses
+					extracted = yes
+				}
+			}
+		}
+		OR = {
+			has_resources_in_country = {
+				resource = rubber
+				amount > 49 #This needs to correspond to the Bypass values in the previous focuses
+				extracted = yes
+			}
+			any_subject_country = {
+				has_resources_in_country = {
+					resource = rubber
+					amount > 49 #This needs to correspond to the Bypass values in the previous focuses
+					extracted = yes
+				}
+			}
+		}
+	}
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		GER_autarky_achieved_effects = yes
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		if = {
+			limit = { #Notify that you will get an improved version of the Trade Law
+				NOT = { has_idea = autarkic_economy }
+			}
+			custom_effect_tooltip = GER_improve_autarkic_economy_tt
+		}
+		else = { #Get the improved version of the Trade Law
+			swap_ideas = {
+				remove_idea = autarkic_economy
+				add_idea = autarkic_economy_improved
+			}
+		}			
+
+		#custom_effect_tooltip = generic_skip_one_line_tt
+
+		#custom_effect_tooltip = GER_modify_wehrwirtschaft_modifier_tt
+		#add_to_variable = { 
+		#	GEK_wehrwirtschaft_production_speed_buildings_factor = 0.05
+		#	tooltip = production_speed_buildings_factor_tt
+		#}
+	}
+}
+
+
+shared_focus = {
+	id = GEAF_accelerate_the_rearmament_program
+	icon = GFX_focus_generic_combined_arms
+	prerequisite = { focus = GEAF_the_four_year_plan }
+
+	x = 6
+	y = 1
+	relative_position_id = GEAF_the_four_year_plan
+	cost = 5
+	available = {
+	}
+
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+
+	completion_reward = {
+		every_core_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+				free_building_slots = {
+					building = arms_factory
+					size > 0
+					include_locked = yes
+				}
+			}
+			random_select_amount = 2
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		GER_modify_industrial_modifier = yes
+		add_to_variable = { 
+			GER_industrial_production_speed_arms_factory_factor = 0.05
+			tooltip = production_speed_arms_factory_factor_tt
+		}
+		add_to_variable = { 
+			GER_industrial_production_speed_dockyard_factor = 0.05
+			tooltip = production_speed_dockyard_factor_tt
+		}
+	}
+}
+
+shared_focus = {
+	id = GEAF_concentrated_armament_program
+	icon = GFX_focus_generic_reorient_production
+	prerequisite = { focus = GEAF_accelerate_the_rearmament_program }
+
+	x = -1
+	y = 1
+	relative_position_id = GEAF_accelerate_the_rearmament_program
+	cost = 5
+	available = {
+	}
+
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+
+	completion_reward = {
+		every_core_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+				free_building_slots = {
+					building = arms_factory
+					size > 1
+					include_locked = yes
+				}
+			}
+			random_select_amount = 2
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = GEAF_establish_production_targets
+	icon = GFX_goal_generic_construct_mil_factory
+	prerequisite = { focus = GEAF_accelerate_the_rearmament_program }
+
+	x = 1
+	y = 1
+	relative_position_id = GEAF_accelerate_the_rearmament_program
+	cost = 5
+	available = {
+	}
+
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+
+	completion_reward = {
+		random_core_state = {
+			limit = {
+				is_controlled_by = ROOT
+				free_building_slots = {
+					building = arms_factory
+					size > 0
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		GER_modify_industrial_modifier = yes
+		add_to_variable = { 
+			GER_industrial_production_factory_max_efficiency_factor = 0.05
+			tooltip = production_factory_max_efficiency_factor_tt
+		}
+		add_to_variable = { 
+			GER_industrial_production_factory_efficiency_gain_factor = 0.05
+			tooltip = production_factory_efficiency_gain_factor_tt
+		}
+		add_to_variable = { 
+			GER_industrial_production_factory_start_efficiency_factor = 0.05
+			tooltip = production_factory_start_efficiency_factor_tt
+		}
+		add_to_variable = { 
+			GER_industrial_line_change_production_efficiency_factor = 0.05
+			tooltip = line_change_production_efficiency_factor_tt
+		}
+	}
+}
+
+#shared_focus = {
+#	id = GEAF_prioritize_the_army
+#	icon = GFX_focus_generic_tank_production
+#	prerequisite = { focus = GEAF_concentrated_armament_program }
+#	mutually_exclusive = { focus = GEAF_prioritize_the_navy }
+#	x = -1
+#	y = 1
+#	relative_position_id = GEAF_concentrated_armament_program
+#	cost = 10
+#	available = {
+#	}
+#
+#	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+#
+#	completion_reward = {
+#		random_core_state = {
+#			limit = {
+#				is_controlled_by = ROOT
+#			}
+#			add_extra_state_shared_building_slots = 2
+#			add_building_construction = {
+#				type = arms_factory
+#				level = 2
+#				instant_build = yes
+#			}
+#		}
+#		
+#		custom_effect_tooltip = generic_skip_one_line_tt
+#
+#		GER_modify_industrial_modifier = yes
+#		add_to_variable = { 
+#			GER_industrial_industrial_capacity_factory = 0.05
+#			tooltip = industrial_capacity_factory_tt
+#		}
+#	}
+#}
+#
+#shared_focus = {
+#	id = GEAF_prioritize_the_navy
+#	icon = GFX_goal_generic_navy_battleship
+#	prerequisite = { focus = GEAF_concentrated_armament_program }
+#	mutually_exclusive = { focus = GEAF_prioritize_the_army }
+#	x = 1
+#	y = 1
+#	relative_position_id = GEAF_concentrated_armament_program
+#	cost = 10
+#	available = {
+#	}
+#
+#	search_filters = { FOCUS_FILTER_INDUSTRY }
+#
+#	completion_reward = {
+#		random_core_state = {
+#			limit = {
+#				is_controlled_by = ROOT
+#				is_coastal = yes
+#			}
+#			add_extra_state_shared_building_slots = 2
+#			add_building_construction = {
+#				type = dockyard
+#				level = 2
+#				instant_build = yes
+#			}
+#		}
+#
+#		custom_effect_tooltip = generic_skip_one_line_tt
+#
+#		GER_modify_industrial_modifier = yes
+#		add_to_variable = { 
+#			GER_industrial_industrial_capacity_dockyard = 0.05
+#			tooltip = industrial_capacity_dockyard_tt
+#		}
+#	}
+#}
+
+shared_focus = {
+	id = GEAF_zentrale_planung
+	icon = GFX_focus_generic_central_planning
+	prerequisite = { focus = GEAF_concentrated_armament_program focus = GEAF_establish_production_targets}
+
+	x = 1
+	y = 2
+	relative_position_id = GEAF_concentrated_armament_program
+	cost = 10
+	available = {
+		has_war_with_major = yes
+		has_civil_war = no
+	}
+
+	continue_if_invalid = yes
+
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+
+	completion_reward = {
+		if = {
+			limit = { #Must be one economy law away from the next one and fulfill the next law's criterias
+				has_idea = partial_economic_mobilisation
+				has_war_support > 0.5
+				OR = {
+					has_government = fascism
+					has_government = communism
+					custom_trigger_tooltip = { tooltip = or_clarification_tooltip always = no }
+					AND = {
+						has_war = yes
+						any_enemy_country = {
+							ic_ratio = {
+								tag = ROOT
+								ratio > 0.4
+							}
+						}
+					}
+				}
+			}
+			add_ideas = war_economy
+		}
+		else = {
+			custom_effect_tooltip = GEAF_criteria_for_economy_laws_tt
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		GER_modify_industrial_modifier = yes
+		add_to_variable = { 
+			GER_industrial_production_lack_of_resource_penalty_factor = -0.1
+			tooltip = production_lack_of_resource_penalty_factor_tt
+		}
+		add_to_variable = { 
+			GER_industrial_industrial_capacity_factory = 0.05
+			tooltip = industrial_capacity_factory_tt
+		}
+		add_to_variable = { 
+			GER_industrial_industrial_capacity_dockyard = 0.05
+			tooltip = industrial_capacity_dockyard_tt
+		}
+		add_to_variable = { 
+			GER_industrial_conversion_cost_civ_to_mil_factor = -0.2
+			tooltip = conversion_cost_civ_to_mil_factor_tt
+		}
+	}
+}
+
+shared_focus = {
+	id = GEAF_create_rustungsstab
+	icon = GFX_focus_generic_mass_production
+	prerequisite = { focus = GEAF_zentrale_planung }
+
+	x = 1
+	y = 1
+	relative_position_id = GEAF_zentrale_planung
+	cost = 10
+	available = {
+	}
+
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+
+	completion_reward = {
+		every_core_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+				free_building_slots = {
+					building = arms_factory
+					size > 0
+					include_locked = yes
+				}
+			}
+			random_select_amount = 2
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		GER_modify_industrial_modifier = yes
+		add_to_variable = { 
+			GER_industrial_production_speed_arms_factory_factor = 0.05
+			tooltip = production_speed_arms_factory_factor_tt
+		}
+		add_to_variable = { 
+			GER_industrial_production_speed_dockyard_factor = 0.05
+			tooltip = production_speed_dockyard_factor_tt
+		}
+		add_to_variable = { 
+			GER_industrial_industry_air_damage_factor = -0.1
+			tooltip = industry_air_damage_factor_tt
+		}
+
+	}
+}
+
+shared_focus = {
+	id = GEAF_armament_rationalization
+	icon = GFX_focus_generic_military_industry
+	prerequisite = { focus = GEAF_zentrale_planung }
+
+	x = -1
+	y = 1
+	relative_position_id = GEAF_zentrale_planung
+	cost = 10
+	available = {
+	}
+
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+
+	completion_reward = {
+		GER_modify_industrial_modifier = yes
+		add_to_variable = { 
+			GER_industrial_industrial_capacity_factory = 0.05
+			tooltip = industrial_capacity_factory_tt
+		}
+		add_to_variable = { 
+			GER_industrial_industrial_capacity_dockyard = 0.05
+			tooltip = industrial_capacity_dockyard_tt
+		}
+		add_to_variable = { 
+			GER_industrial_production_factory_max_efficiency_factor = 0.05
+			tooltip = production_factory_max_efficiency_factor_tt
+		}
+		add_to_variable = { 
+			GER_industrial_production_factory_efficiency_gain_factor = 0.05
+			tooltip = production_factory_efficiency_gain_factor_tt
+		}
+		add_to_variable = { 
+			GER_industrial_production_factory_start_efficiency_factor = 0.05
+			tooltip = production_factory_start_efficiency_factor_tt
+		}
+		add_to_variable = { 
+			GER_industrial_line_change_production_efficiency_factor = 0.05
+			tooltip = line_change_production_efficiency_factor_tt
+		}
+	}
+}
+
+shared_focus = {
+	id = GEAF_totaler_krieg
+	icon = GFX_focus_generic_total_war
+	prerequisite = { focus = GEAF_create_rustungsstab }
+	prerequisite = { focus = GEAF_armament_rationalization }
+
+	x = 1
+	y = 1
+	relative_position_id = GEAF_armament_rationalization
+	cost = 5
+	available = {
+		has_war_with_major = yes
+		OR = {
+			has_war_support > 0.89
+			surrender_progress > 0
+		}
+		any_enemy_country = {
+			ic_ratio = {
+				tag = ROOT
+				ratio > 0.5
+			}
+		}
+	}
+
+	continue_if_invalid = yes
+
+	search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER FOCUS_FILTER_HISTORICAL }
+
+	completion_reward = {
+		add_war_support = 0.05
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		custom_effect_tooltip = GER_gain_totaler_krieg_remove_total_mob_tt
+		add_ideas = totaler_krieg_economy
+
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_completed_focus = GER_womens_rights_and_equality 
+						has_decision = women_in_the_workforce 
+					}
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			unlock_decision_tooltip = {
+				decision = women_in_the_workforce
+				show_effect_tooltip = yes # default is no
+				show_modifiers = yes # default is no
+			} 
+			activate_decision = women_in_the_workforce
+		}
 	}
 }
 

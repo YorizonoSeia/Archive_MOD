@@ -34,6 +34,7 @@ add_breakthrough_progress = {
 
 #지도자
 recruit_character = GEK_gerd_von_rundstedt
+recruit_character = GEK_wilhelm_keitel
 
 add_country_leader_role = {
 	character = GEK_gerd_von_rundstedt
@@ -53,8 +54,6 @@ add_country_leader_role = {
 recruit_character = GEK_august_von_mackensen
 recruit_character = GEK_werner_von_blomberg
 recruit_character = GEK_gunther_von_kluge
-recruit_character = GEK_walter_model
-recruit_character = GEK_vincenz_muller
 recruit_character = GEK_werner_von_fritsch
 recruit_character = GEK_wilhelm_ritter_von_leeb
 recruit_character = GEK_ewald_von_kleist
@@ -66,10 +65,15 @@ recruit_character = GEK_georghans_reinhardt
 recruit_character = GEK_hasso_von_manteuffel
 recruit_character = GEK_johannes_blaskowitz
 recruit_character = GEK_hans_oster
-recruit_character = GEK_hans_kahle
-recruit_character = GEK_arno_von_lenski
 recruit_character = GEK_ferdinand_schorner
 recruit_character = GEK_hans_krebs
+recruit_character = GEK_jurgen_von_blumenthal
+recruit_character = GEK_walther_nehring
+
+#recruit_character = GEK_vincenz_muller
+#recruit_character = GEK_hans_kahle
+#recruit_character = GEK_hans_marchwitza
+#recruit_character = GEK_arno_von_lenski
 
 recruit_character = GEK_ernsteberhard_hell
 recruit_character = GEK_alfred_jodl
@@ -85,7 +89,6 @@ recruit_character = GEK_ludwig_beck
 recruit_character = GEK_maximilian_von_weichs
 recruit_character = GEK_walther_von_brauchitsch
 recruit_character = GEK_wilhelm_canaris
-recruit_character = GEK_alexander_von_falkenhausen
 
 add_ideas = {
 	limited_exports

@@ -71,19 +71,13 @@ GEK_price_controls_cat = { #가격통제
 	#picture = GFX_decision_cat_picture_PLACEHOLDER
 
 	allowed = {
-		OR = {
-			original_tag = GER
-			original_tag = GEK
-		}
+		original_tag = GEK
 	}
 
 	priority = 150
 
 	visible = {
-		OR = {
-			has_completed_focus = GER_institute_price_controls
-			has_completed_focus = GEK_institute_price_controls
-		}
+		has_completed_focus = GEAF_institute_price_controls
 	}
 }
 

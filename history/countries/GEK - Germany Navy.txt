@@ -1,5 +1,6 @@
 ﻿capital = 124
 
+set_global_flag = GEAF_the_four_year_plan_can_flag
 #CONSUMER GOODS INCREASE AND PENALTIES VARIABLES
 set_variable = { GER_monthly_consumer_goods_start = 0.03 } #Starting amount of monthly increasing CG for MEFO Bills 
 set_variable = { GER_change_monthly_CG_vichy_france = 0.005 } #Changing monthly CG when capitulating FRance
@@ -106,34 +107,22 @@ recruit_character = GEK_central_navy_committee
 recruit_character = GEK_reinhard_heydrich
 
 #민간인들
-recruit_character = GEK_ludwig_erhard #루트비히 에르하르트, 정치고문
-recruit_character = GEK_konrad_adenauer #콘라트 아데나워, 민주주의 정당 지도자
+recruit_character = GEK_ludwig_erhard #루트비히 에르하르트, 경제 성장 우선 중점
 recruit_character = GEK_kurt_schumacher #쿠르트 슈마허, 민주주의 고문
-recruit_character = GEK_carl_friedrich_goerdeler #카를 프리드리히 괴르델러, 정치고문
-recruit_character = GEK_alfred_hugenberg #알프레트 후겐베르크, 군주주의 언론 거물
-recruit_character = GEK_theodor_heuss #테오도어 호이스,경제고문
+recruit_character = GEK_theodor_heuss #테오도어 호이스, 자유주의 언론인
+recruit_character = GEK_julius_leber #줄리어스 레버
 
 
 #조언가
-recruit_character = GEK_joachim_von_ribbentrop
+recruit_character = GEK_dietrich_bonhoeffer
+recruit_character = GEK_hans_luther
 recruit_character = GEK_oswald_lutz
-recruit_character = GEK_walther_nehring
-recruit_character = GEK_helmuth_wilberg
 recruit_character = GEK_josef_kammhuber
 recruit_character = GEK_robert_knauss
 recruit_character = GEK_alfred_becker
 recruit_character = GEK_walter_dornberger
-recruit_character = GEK_alfred_rosenberg
-recruit_character = GEK_leni_riefenstahl
-recruit_character = GEK_franz_seldte
 recruit_character = GEK_hanns_kerrl
 recruit_character = GEK_paul_von_lettow_vorbeck # He is "new"
-recruit_character = GEK_wilhelm_iv
-
-
-#과학자
-recruit_character = GEK_von_braun
-recruit_character = GEK_heisenberg
 
 # 스토리 아카이브 사용 시 정의
 set_variable = {

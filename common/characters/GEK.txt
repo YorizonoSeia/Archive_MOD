@@ -12,18 +12,6 @@ characters={
 			expire="1965.1.1.1"
 		}
 	}
-	GEK_Walter_von_Reichenau={
-		name=GEK_Walter_von_Reichenau
-		portraits={
-			civilian={
-				large="gfx/leaders/GEH/BAY_Walter_von_Reichenau.tga"
-			}
-			army={
-				large="gfx/leaders/GEH/BAY_Walter_von_Reichenau.tga"
-				small="gfx/interface/ideas/BAY_Walter_von_Reichenau.tga"
-			}
-		}
-	}
 	NSD_heydrich = {
 		name = NSD_heydrich
 		portraits = {
@@ -812,116 +800,7 @@ characters={
 ##    ## ##     ## ##     ## ##   ###    ##    ##    ##     ##       ##       ##       ##     ## ##     ## ##       ##    ##  ##    ## 
  ######   #######   #######  ##    ##    ##    ##     ##    ##       ######## ######## ##     ## ########  ######## ##     ##  ######  
 
-
-
-	### FASCIST ###
-	GEK_adolf_hitler = {
-		name = GER_adolf_hitler
-		portraits = {
-			civilian = {
-				large = GFX_portrait_GER_adolf_hitler
-			}
-		}
-		country_leader = {
-			ideology = nazism
-			traits = { GER_der_fuhrer }
-			expire = "1965.1.1.1"
-			id = -1
-		}
-	}
-
-	GEK_eva_braun = {
-		name = GER_eva_braun
-		portraits = {
-			civilian = {
-				large = GFX_portrait_GER_eva_braun
-				small = GFX_portrait_GER_eva_braun_small
-			}
-		}
-		gender = female
-		#country_leader = {
-		#	ideology = nazism
-		#	traits = { GER_the_iron_maiden }
-		#	expire = "1965.1.1.1"
-		#	id = -1
-		#}
-	}
-
-	GEK_otto_strasser = {
-		name = GER_otto_strasser
-		portraits = {
-			civilian = {
-				large = GFX_portrait_GER_otto_strasser
-				small = GFX_portrait_GER_otto_strasser_small
-			}
-		}
-		#country_leader = {
-		#	ideology = nazism
-		#	traits = { }
-		#	expire = "1954.1.1.1"
-		#	id = -1
-		#}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = GER_otto_strasser
-			allowed = {
-				OR = { original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
-			}
-			# He is meant to be quite hidden since he is an easter-egg for the most part
-			visible = {
-				has_completed_focus = GER_expatriate_the_communists_ww
-				has_country_flag = GER_strasserism_relevant_in_germany_flag
-			}
-			available = {
-			}
-			traits = {
-				GER_revolutionary_nationalist_advisor
-			}
-		}
-	}
-
-	### NON-ALIGNED ###
-
-	GEK_wilhelm_ii = { #Empty Wilhelm II so he doesn't become ruler automatically if the neutrals are in power
-		name = GER_wilhelm_ii
-		portraits = {
-			civilian = {
-				large = GFX_portrait_ger_wilhelm_ii
-			}	
-		}
-	}
-
-	GEK_wilhelm_iii = { #Empty Wilhelm III so he doesn't become ruler automatically if the neutrals are in power
-		name = GER_wilhelm_iii
-		portraits = {
-			civilian = {
-				large = GFX_portrait_ger_wilhelm_iii
-			}	
-		}
-	}
-
-	GEK_wilhelm_iv = { #Empty Wilhelm IV so he doesn't become ruler automatically if the neutrals are in power
-		name = GER_wilhelm_iv
-		portraits = {
-			civilian = {
-				large = GFX_portrait_GER_wilhelm_iv
-				small = GFX_portrait_GER_wilhelm_iv_small
-			}	
-		}
-	}
-
-	GEK_victoria = { #Empty Vicky3 
-		name = GER_victoria
-		gender = female
-		portraits = {
-			civilian = {
-				large = GFX_portrait_ger_victoria_louise
-			}
-		}
-	}
-
-	GEK_august_von_mackensen = {
+	GEK_august_von_mackensen = { # 육군
 		name = GER_august_von_mackensen
 		portraits = {
 			civilian = {
@@ -945,7 +824,7 @@ characters={
 		}
 	}
 
-	GEK_oberste_heeresleitung_character = { #Empty Military Council so they don't become ruler automatically if the neutrals are in power
+	GEK_oberste_heeresleitung_character = { # 미사용 : 군사 위원회
 		name = GER_oberste_heeresleitung_character
 		portraits = {
 			civilian = {
@@ -955,7 +834,7 @@ characters={
 	}
 
 	### DEMOCRATIC ###
-	GEK_konrad_adenauer = {
+	GEK_konrad_adenauer = { # 미사용 : 민주 정당 지도자
 		name = GER_konrad_adenauer
 		portraits = {
 			civilian = {
@@ -970,7 +849,7 @@ characters={
 		}
 	}
 
-	GEK_hans_vogel = {
+	GEK_hans_vogel = { # 미사용 : 민주 정당 지도자
 		name = GER_hans_vogel
 		portraits = {
 			civilian = {
@@ -986,7 +865,7 @@ characters={
 		#}
 	}
 
-	GEK_otto_grotewohl = { 
+	GEK_otto_grotewohl = { # 미사용 : 민주 정당 지도자
 		name = GER_otto_grotewohl
 		portraits = {
 			civilian = {
@@ -1004,7 +883,7 @@ characters={
 
 	### COMMUNIST ###
 
-	GEK_wilhelm_pieck = {
+	GEK_wilhelm_pieck = { # 미사용 : 공산 정당 지도자
 		name = GER_wilhelm_pieck
 		portraits = {
 			civilian = {
@@ -1019,7 +898,7 @@ characters={
 		}
 	}
 
-	GEK_heinrich_brandler = { #shell character activated in Legacy of the Spartacus League
+	GEK_heinrich_brandler = { # 미사용 : 공산 정당 지도자
 		name = GER_heinrich_brandler
 		portraits = {
 			civilian = {
@@ -1040,7 +919,7 @@ characters={
 
 
 
-	GEK_werner_von_blomberg = {
+	GEK_werner_von_blomberg = { # 육군
 		name = GER_werner_von_blomberg
 		portraits = {
 			army = {
@@ -1057,9 +936,9 @@ characters={
 			planning_skill = 3
 			logistics_skill = 2
 			visible = {
-				NOT = {
-					has_completed_focus = GER_reorganize_the_wehrmacht
-				}
+				#NOT = {
+				#	has_completed_focus = GER_reorganize_the_wehrmacht
+				#}
 			}
 		}
 
@@ -1069,17 +948,17 @@ characters={
 			idea_token = GER_werner_von_blomberg
 			ledger = army
 			allowed = {
-				OR = { original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
+				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 			}
 			visible = {
-				NOT = {
-					has_completed_focus = GER_reorganize_the_wehrmacht
-				}
+				#NOT = {
+				#	has_completed_focus = GER_reorganize_the_wehrmacht
+				#}
 			}
 			available = {
-				NOT = {
-					has_completed_focus = GER_reorganize_the_wehrmacht
-				}
+				#NOT = {
+				#	has_completed_focus = GER_reorganize_the_wehrmacht
+				#}
 			}
 			traits = {
 				grand_battle_plan_expert
@@ -1087,7 +966,7 @@ characters={
 		}
 	}
 
-	GEK_gerd_von_rundstedt = {
+	GEK_gerd_von_rundstedt = { # 육군
 		name = GER_gerd_von_rundstedt
 		portraits = {
 			army = {
@@ -1100,7 +979,7 @@ characters={
 			idea_token = gerd_von_rundstedt
 			ledger = army
 			allowed = {
-				OR = { original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
+				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 			}
 			traits = {
 				army_regrouping_2
@@ -1122,7 +1001,7 @@ characters={
 		}
 	}
 
-	GEK_gunther_von_kluge = {
+	GEK_gunther_von_kluge = { # 육군
 		name = GER_gunther_von_kluge
 		portraits = {
 			army = {
@@ -1141,7 +1020,7 @@ characters={
 		}
 	}
 
-	GEK_walter_model = {
+	GEK_walter_model = { # 미사용 : 육군
 		name = GER_walter_model
 		portraits = {
 			army = {
@@ -1166,7 +1045,7 @@ characters={
 		}
 	}
 
-	GEK_vincenz_muller = {
+	GEK_vincenz_muller = { # 미사용 : 육군 : 국가인민군
 		name = GER_vincenz_muller
 		portraits = {
 			army = {
@@ -1198,7 +1077,7 @@ characters={
 
 
 
-	GEK_werner_von_fritsch = {
+	GEK_werner_von_fritsch = { # 육군
 		name = GER_werner_von_fritsch
 		portraits = {
 			army = {
@@ -1212,23 +1091,11 @@ characters={
 			idea_token = werner_von_fritsch_high_command
 			ledger = army
 			allowed = {
-				OR = { original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
+				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 			}
 			visible = {
-				NOT = {
-					has_completed_focus = GER_reorganize_the_wehrmacht
-				}
 			}
 			available = {
-				if = {
-					limit = {
-						has_dlc = "Gotterdammerung"
-					}
-					not_already_hired_except_as = high_command
-					NOT = {
-						has_completed_focus = GER_reorganize_the_wehrmacht
-					}
-				}
 			}
 			traits = {
 				army_logistics_2
@@ -1244,19 +1111,13 @@ characters={
 			idea_token = werner_von_fritsch_army_chief
 			ledger = army
 			allowed = {
-				original_tag = GER
+				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 				has_dlc = "Gotterdammerung"
 			}
 			visible = {
-				NOT = {
-					has_completed_focus = GER_remilitarize_the_rhineland
-					has_completed_focus = GER_the_monarchy_compromise_ww
-					has_completed_focus = GER_start_the_proletarian_revolution
-				}
 			}
 			available = {
 				not_already_hired_except_as = army_chief
-				has_completed_focus = GER_prussian_artillery
 			}
 			traits = {
 				army_chief_army_high_command
@@ -1274,15 +1135,10 @@ characters={
 			defense_skill = 3
 			planning_skill = 2
 			logistics_skill = 3
-			visible = {
-				NOT = {
-					has_completed_focus = GER_reorganize_the_wehrmacht
-				}
-			}
 		}
 	}
 
-	GEK_oswald_lutz = {
+	GEK_oswald_lutz = { # 육군
 		name = GER_oswald_lutz
 		portraits = {
 			army = {
@@ -1298,14 +1154,11 @@ characters={
 			planning_skill = 2
 			logistics_skill = 3
 			visible = {
-				NOT = {
-					has_completed_focus = GER_reorganize_the_wehrmacht
-				}
 			}
 		}
 	}
 
-	GEK_friedrich_paulus = {
+	GEK_friedrich_paulus = { # 육군
 		name = GER_friedrich_paulus
 		portraits = {
 			army = {
@@ -1324,7 +1177,7 @@ characters={
 		}
 	}
 
-	GEK_erwin_rommel = {
+	GEK_erwin_rommel = { # 육군
 		name = GER_erwin_rommel
 		portraits = {
 			army = {
@@ -1337,10 +1190,9 @@ characters={
 			idea_token = erwin_rommel
 			ledger = army
 			allowed = {
-				OR = { original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
+				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 			}
 			available = {
-				has_completed_focus = GER_adopt_new_panzer_doctrine
 			}
 			traits = {
 				army_armored_3
@@ -1350,16 +1202,11 @@ characters={
 				base = 8
 				modifier = {
 					factor = 0
-					has_completed_focus = GER_start_the_proletarian_revolution
-					NOT = {
-						has_completed_focus = GER_the_peoples_victory
-					}
 				}
 			}
 		}
 		
 		corps_commander = {
-			visible = { has_completed_focus = GER_adopt_new_panzer_doctrine }
 			traits = { trait_reckless media_personality armor_officer war_hero trickster }
 			skill = 4
 			attack_skill = 5
@@ -1370,7 +1217,7 @@ characters={
 		}
 	}
 
-	GEK_erich_von_manstein = {
+	GEK_erich_von_manstein = { # 육군
 		name = GER_erich_von_manstein
 		portraits = {
 			army = {
@@ -1384,7 +1231,7 @@ characters={
 			idea_token = manstein
 			ledger = army
 			allowed = {
-				OR = { original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
+				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 			}
 			traits = {
 				mobile_warfare_expert
@@ -1402,7 +1249,7 @@ characters={
 		}
 	}
 
-	GEK_heinz_guderian = {
+	GEK_heinz_guderian = { # 육군
 		name = GER_heinz_guderian
 		portraits = {
 			army = {
@@ -1416,10 +1263,10 @@ characters={
 			idea_token = heinz_guderian
 			ledger = army
 			allowed = {
-				OR = { original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
+				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 			}
 			available = {
-				has_completed_focus = GER_adopt_new_panzer_doctrine
+				has_completed_focus = GEAF_adopt_new_panzer_doctrine
 			}
 			traits = {
 				blitzkrieg_theorist
@@ -1438,7 +1285,7 @@ characters={
 		}
 	}
 
-	GEK_wilhelm_list = {
+	GEK_wilhelm_list = { # 육군
 		name = GER_wilhelm_list
 		portraits = {
 			army = {
@@ -1457,7 +1304,7 @@ characters={
 		}
 	}
 
-	GEK_ewald_von_kleist = {
+	GEK_ewald_von_kleist = { # 육군
 		name = GER_ewald_von_kleist
 		portraits = {
 			army = {
@@ -1476,7 +1323,7 @@ characters={
 		}
 	}
 
-	GEK_fedor_von_bock = {
+	GEK_fedor_von_bock = { # 육군
 		name = GER_fedor_von_bock
 		portraits = {
 			army = {
@@ -1495,7 +1342,7 @@ characters={
 		}
 	}
 
-	GEK_maximilian_von_weichs = {
+	GEK_maximilian_von_weichs = { # 육군
 		name = GER_maximilian_von_weichs
 		portraits = {
 			army = {
@@ -1514,7 +1361,7 @@ characters={
 		}
 	}
 
-	GEK_wilhelm_ritter_von_leeb = {
+	GEK_wilhelm_ritter_von_leeb = { # 육군
 		name = GER_wilhelm_ritter_von_leeb
 		portraits = {
 			army = {
@@ -1533,7 +1380,7 @@ characters={
 		}
 	}
 
-	GEK_georghans_reinhardt = {
+	GEK_georghans_reinhardt = { # 육군
 		name = GER_georghans_reinhardt
 		portraits = {
 			army = {
@@ -1552,7 +1399,7 @@ characters={
 		}
 	}
 
-	GEK_kurt_student = {
+	GEK_kurt_student = { # 공군
 		name = GER_kurt_student
 		portraits = {
 			army = {
@@ -1565,7 +1412,7 @@ characters={
 			idea_token = kurt_student
 			ledger = air
 			allowed = {
-				OR = { original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
+				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 			}
 			traits = {
 				air_airborne_2
@@ -1576,7 +1423,7 @@ characters={
 			}
 
 			available = {
-				has_completed_focus = GER_fallschirmjager
+				has_completed_focus = GEAF_fallschirmjager
 			}
 		}
 		
@@ -1589,12 +1436,12 @@ characters={
 			logistics_skill = 3
 			#legacy_id = 16
 			visible = {
-				has_completed_focus = GER_fallschirmjager
+				has_completed_focus = GEAF_fallschirmjager
 			}
 		}
 	}
 
-	GEK_erwin_von_witzleben = {
+	GEK_erwin_von_witzleben = { # 육군
 		name = GER_erwin_von_witzleben
 		portraits = {
 			army = {
@@ -1613,7 +1460,7 @@ characters={
 		}
 	}
 
-	GEK_hermann_hoth = {
+	GEK_hermann_hoth = { # 육군
 		name = GER_hermann_hoth
 		portraits = {
 			army = {
@@ -1630,15 +1477,12 @@ characters={
 			logistics_skill = 3
 			#legacy_id = 18
 			visible = {
-				OR = {
-					has_global_flag = GER_civil_war_has_started
-					has_completed_focus = GER_bribe_senior_officers
-				}
+				has_completed_focus = GEAF_instill_auftragstaktik
 			}
 		}
 	}
 
-	GEK_georg_von_kuchler = {
+	GEK_georg_von_kuchler = { # 육군
 		name = GER_georg_von_kuchler
 		portraits = {
 			army = {
@@ -1656,7 +1500,7 @@ characters={
 		}
 	}
 
-	GEK_alfred_jodl = {
+	GEK_alfred_jodl = { # 육군
 		name = GER_alfred_jodl
 		portraits = {
 			army = {
@@ -1675,7 +1519,7 @@ characters={
 		}
 	}
 
-	GEK_hasso_von_manteuffel = {
+	GEK_hasso_von_manteuffel = { # 육군
 		name = GER_hasso_von_manteuffel
 		portraits = {
 			army = {
@@ -1693,12 +1537,12 @@ characters={
 			#legacy_id = 25
 
 			visible = {
-				has_completed_focus = GER_panzer_troops_school
+				has_completed_focus = GEAF_panzer_troops_school
 			}
 		}
 	}
 
-	GEK_albert_kesselring = {
+	GEK_albert_kesselring = { # 공군 : 지도자
 		name = GER_albert_kesselring
 		portraits = {
 			army = {
@@ -1712,7 +1556,7 @@ characters={
 			slot = air_chief
 			idea_token = albert_kesselring
 			allowed = {
-				OR = { original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
+				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 			}
 			traits = {
 				air_chief_reform_2
@@ -1734,7 +1578,7 @@ characters={
 		}
 	}
 
-	GEK_gotthard_heinrici = {
+	GEK_gotthard_heinrici = { # 육군
 		name = GER_gotthard_heinrici
 		portraits = {
 			army = {
@@ -1753,7 +1597,7 @@ characters={
 		}
 	}
 
-	GEK_ernsteberhard_hell = {
+	GEK_ernsteberhard_hell = { # 육군
 		name = GER_ernsteberhard_hell
 		portraits = {
 			army = {
@@ -1771,12 +1615,12 @@ characters={
 			#legacy_id = 34
 
 			visible = {
-				has_completed_focus = GER_lessons_of_the_great_war
+				has_completed_focus = GEAF_lessons_of_the_great_war
 			}
 		}
 	}
 
-	GEK_johannes_blaskowitz = {
+	GEK_johannes_blaskowitz = { # 육군
 		name = GER_johannes_blaskowitz
 		portraits = {
 			army = {
@@ -1795,7 +1639,7 @@ characters={
 		}
 	}
 
-	GEK_friedrich_schulz = {
+	GEK_friedrich_schulz = { # 육군
 		name = GER_friedrich_schulz
 		portraits = {
 			army = {
@@ -1813,12 +1657,12 @@ characters={
 			#legacy_id = 21
 
 			visible = {
-				has_completed_focus = GER_lessons_of_the_great_war
+				has_completed_focus = GEAF_lessons_of_the_great_war
 			}
 		}
 	}
 
-	GEK_felix_steiner = {
+	GEK_felix_steiner = { # 육군
 		name = GER_felix_steiner
 		portraits = {
 			army = {
@@ -1844,7 +1688,7 @@ characters={
 		}
 	}
 
-	GEK_hans_krebs = {
+	GEK_hans_krebs = { # 육군
 		name = GER_hans_krebs
 		portraits = {
 			army = {
@@ -1859,15 +1703,12 @@ characters={
 			defense_skill = 2
 			planning_skill = 3
 			logistics_skill = 2
-			visible = {
-				has_country_flag = GER_recalled_hans_krebs_from_russia_flag
-			}
 		}
 	}
 
 	### GER_hermann_erhardt is located by the other alt-hist advisors
 
-	GEK_franz_ritter_von_epp = {
+	GEK_franz_ritter_von_epp = { # 미사용 : 육군 : 독일 제국
 		name = GER_franz_ritter_von_epp
 		portraits = {
 			army = {
@@ -1890,7 +1731,7 @@ characters={
 		}
 	}
 
-	GEK_jurgen_von_blumenthal = {
+	GEK_jurgen_von_blumenthal = { # 육군 : 반히틀러
 		name = GER_jurgen_von_blumenthal
 		portraits = {
 			army = {
@@ -1905,16 +1746,10 @@ characters={
 			defense_skill = 2
 			planning_skill = 2
 			logistics_skill = 3
-			visible = {
-				has_completed_focus = GER_oppose_hitler_ww
-				NOT = {
-					has_government = communism
-				}
-			}
 		}
 	}
 
-	GEK_walter_kruger = {
+	GEK_walter_kruger = { # 친위대
 		name = GER_walter_kruger
 		portraits = {
 			army = {
@@ -1930,17 +1765,10 @@ characters={
 			planning_skill = 1
 			logistics_skill = 3
 			#legacy_id = 15
-
-			visible = {
-				OR = {
-					has_completed_focus = GER_strengthen_the_waffen_ss
-					has_global_flag = GER_civil_war_has_started
-				}
-			}
 		}
 	}
 
-	GEK_sepp_dietrich = {
+	GEK_sepp_dietrich = { # 친위대
 		name = GER_sepp_dietrich
 		portraits = {
 			army = {
@@ -1956,17 +1784,10 @@ characters={
 			planning_skill = 4
 			logistics_skill = 4
 			#legacy_id = 24
-
-			visible = {
-				OR = {
-					has_completed_focus = GER_strengthen_the_waffen_ss
-					has_global_flag = GER_civil_war_has_started
-				}
-			}
 		}
 	}
 
-	GEK_paul_hausser = {
+	GEK_paul_hausser = { # 친위대
 		name = GER_paul_hausser
 		portraits = {
 			army = {
@@ -1982,18 +1803,10 @@ characters={
 			planning_skill = 4
 			logistics_skill = 3
 			#legacy_id = 20
-
-			visible = {
-				OR = {
-					has_completed_focus = GER_strengthen_the_waffen_ss
-					has_global_flag = GER_civil_war_has_started
-				}
-			}
 		}
 	}
 
-	GEK_alexander_von_falkenhausen = { #TODO_Manu: Deal with the von Falkenhausen plague situation, there are 11 more von Falkenhausen impostors
-		name = CHI_alexander_von_falkenhausen
+	GEK_alexander_von_falkenhausen = { # 미사용 : 팔켄하우젠
 		portraits = {
 			army = {
 				large = GFX_portrait_chi_alexander_von_falkenhausen
@@ -2008,13 +1821,10 @@ characters={
 			logistics_skill = 3
 			#legacy_id = 603
 			traits = { infantry_officer }
-			visible = {
-				has_global_flag = falkenhausen_recalled
-			}
 		}
 	}
 
-	GEK_paul_von_lettow_vorbeck = { 
+	GEK_paul_von_lettow_vorbeck = { # 육군 : 독일 제국
 		name = GER_paul_von_lettow_vorbeck
 
 		portraits = {
@@ -2032,20 +1842,15 @@ characters={
 			logistics_skill = 5
 			#legacy_id = -1
 			traits = { trickster war_hero media_personality jungle_rat militias_officer }
-			visible = {
-				has_global_flag = von_lettow_is_in_a_country
-			}
 		}
 
 		advisor = {
 			slot = high_command
 			idea_token = GER_paul_von_lettow_vorbeck
 			allowed = {
-				OR = { original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
+				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 			}
 			visible = {
-				has_government = neutrality
-				has_global_flag = von_lettow_is_in_a_country
 			}
 			available = {
 				has_government = neutrality
@@ -2060,7 +1865,7 @@ characters={
 
 	}
 
-	GEK_walther_nehring = {
+	GEK_walther_nehring = { # 육군
 		name = GER_walther_nehring
 		portraits = {
 			army = {
@@ -2076,12 +1881,12 @@ characters={
 			planning_skill = 2
 			logistics_skill = 2
 			visible = {
-				has_completed_focus = GER_panzer_troops_school
+				has_completed_focus = GEAF_panzer_troops_school
 			}
 		}
 	}
 
-	GEK_hans_kahle = {
+	GEK_hans_kahle = { # 미사용 : 육군 : 국가인민군
 		name = GER_hans_kahle
 		portraits = {
 			army = {
@@ -2096,13 +1901,10 @@ characters={
 			defense_skill = 2
 			planning_skill = 2
 			logistics_skill = 2
-			visible = {
-				has_completed_focus = GER_reorganize_nationale_volksarmee
-			}
 		}
 	}
 
-	GEK_hans_marchwitza = {
+	GEK_hans_marchwitza = { # 미사용 : 육군 : 국가인민군
 		name = GER_hans_marchwitza
 		portraits = {
 			army = {
@@ -2117,13 +1919,10 @@ characters={
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 1
-			visible = {
-				has_completed_focus = GER_reorganize_nationale_volksarmee
-			}
 		}
 	}
 
-	GEK_arno_von_lenski = {
+	GEK_arno_von_lenski = { # 미사용 : 육군 : 국가인민군
 		name = GER_arno_von_lenski
 		portraits = {
 			army = {
@@ -2138,9 +1937,6 @@ characters={
 			defense_skill = 1
 			planning_skill = 3
 			logistics_skill = 2
-			visible = {
-				has_completed_focus = GER_reorganize_nationale_volksarmee
-			}
 		}
 	}
 
@@ -2155,7 +1951,7 @@ characters={
 ##     ## ########  ##     ## #### ##     ## ##     ## ########  ######  
 
 
-	GEK_karl_donitz = {
+	GEK_karl_donitz = { # 해군
 		name = GER_karl_donitz
 		portraits = {
 			army = {
@@ -2170,7 +1966,7 @@ characters={
 			slot = navy_chief
 			idea_token = donitz
 			allowed = {
-				OR = { original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
+				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 			}
 			available = {
 				has_completed_focus = GER_trade_interdiction
@@ -2195,14 +1991,13 @@ characters={
 		}
 		
 		country_leader={
-			desc = GEK_erich_raeder_desc
 			ideology = nazism
 			expire = "1965.1.1.1"
 			traits = { submarine_specialist }
 		}
 	}
 
-	GEK_erich_raeder = {
+	GEK_erich_raeder = { # 해군 : 지도자
 		name = GER_erich_raeder
 		portraits = {
 			army = {
@@ -2217,7 +2012,7 @@ characters={
 			slot = navy_chief
 			idea_token = raeder
 			allowed = {
-				OR = { original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
+				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 			}
 			traits = {
 				navy_chief_decisive_battle_2
@@ -2254,7 +2049,7 @@ characters={
 		}
 	}
 
-	GEK_alfred_saalwachter = {
+	GEK_alfred_saalwachter = { # 해군
 		name = GER_alfred_saalwachter
 		portraits = {
 			army = {
@@ -2271,10 +2066,13 @@ characters={
 			idea_token = alfred_saalwachter
 			ledger = navy
 			allowed = {
-				OR = { original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
+				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 			}
 			available = {
-				has_completed_focus = GER_wolfpack_tactics
+				if = {
+					limit = { tag = GEK }
+					has_completed_focus = GEAF_wolfpack_tactics
+				}
 			}
 			traits = {
 				submarine_specialist
@@ -2292,7 +2090,7 @@ characters={
 		}
 	}
 
-	GEK_hermann_boehm = {
+	GEK_hermann_boehm = { # 해군
 		name = GER_hermann_boehm
 		portraits = {
 			army = {
@@ -2311,7 +2109,7 @@ characters={
 		}
 	}
 
-	GEK_wilhelm_marschall = {
+	GEK_wilhelm_marschall = { # 해군
 		name = GER_wilhelm_marschall
 		portraits = {
 			army = {
@@ -2330,7 +2128,7 @@ characters={
 		}
 	}
 
-	GEK_gunther_lutjens = {
+	GEK_gunther_lutjens = { # 해군
 		name = GER_gunther_lutjens
 		portraits = {
 			army = {
@@ -2346,7 +2144,7 @@ characters={
 			idea_token = gunther_lutjens
 			ledger = navy
 			allowed = {
-				OR = { original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
+				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 			}
 			traits = {
 				navy_fleet_logistics_2
@@ -2384,7 +2182,7 @@ characters={
 
 	# Saalwachter up there
 
-	GEK_wolfram_von_richthofen = {
+	GEK_wolfram_von_richthofen = { # 공군
 		name = GER_wolfram_von_richthofen
 		portraits = {
 			army = {
@@ -2397,7 +2195,7 @@ characters={
 			idea_token = wolfram_von_richthofen
 			ledger = air
 			allowed = {
-				OR = { original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
+				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 			}
 			traits = {
 				close_air_support_proponent
@@ -2405,7 +2203,7 @@ characters={
 		}
 	}
 
-	GEK_walther_wever = { #TODO_Manu: Died in June 1936, probably remove him
+	GEK_walther_wever = { #  미사용 : 공군 : 36년 6월에 사망
 		name = GER_walther_wever
 		portraits = {
 			army = {
@@ -2418,7 +2216,7 @@ characters={
 			idea_token = walther_wever
 			ledger = air
 			allowed = {
-				OR = { original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
+				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 			}
 			traits = { air_warfare_theorist }
 		}
@@ -2437,10 +2235,10 @@ characters={
 			idea_token = ernst_udet
 			ledger = air
 			allowed = {
-				OR = { original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
+				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 			}
 			available = {
-				has_completed_focus = GER_dive_bombers
+				has_completed_focus = GEAF_dive_bombers
 			}
 			traits = {
 				dive_bomber
@@ -2448,7 +2246,7 @@ characters={
 		}
 	}
 
-	GEK_otto_ciliax = {
+	GEK_otto_ciliax = { # 해군
 		name = GER_otto_ciliax
 		portraits = {
 			army = {
@@ -2461,7 +2259,7 @@ characters={
 			idea_token = otto_ciliax
 			ledger = navy
 			allowed = {
-				OR = { original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
+				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 			}
 			traits = { naval_theorist }
 		}
@@ -2478,7 +2276,7 @@ characters={
 ##     ## ##     ## ##     ##    ##        ######  ##     ## #### ######## ##        ######  
 
 
-	GEK_ludwig_beck = {
+	GEK_ludwig_beck = { # 육군
 		name = GER_ludwig_beck
 		portraits = {
 			army = {
@@ -2489,7 +2287,7 @@ characters={
 			slot = army_chief
 			idea_token = ludwig_beck
 			allowed = {
-				OR = { original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
+				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 			}
 			traits = {
 				army_chief_organizational_2
@@ -2501,7 +2299,7 @@ characters={
 		}
 	}
 
-	GEK_wilhelm_keitel = {
+	GEK_wilhelm_keitel = {  # 육군 : 친나치
 		name = GER_wilhelm_keitel
 		portraits = {
 			army = {
@@ -2512,7 +2310,7 @@ characters={
 			slot = army_chief
 			idea_token = wilhelm_keitel
 			allowed = {
-				OR = { original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
+				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 			}
 			visible = {
 				has_government = fascism
@@ -2527,10 +2325,10 @@ characters={
 			ai_will_do = {
 				factor = 1.000
 			}
-		}		
+		}
 	}
 
-	GEK_franz_halder = {
+	GEK_franz_halder = {  # 육군
 		name = GER_franz_halder
 		portraits = {
 			army = {
@@ -2541,10 +2339,10 @@ characters={
 			slot = army_chief
 			idea_token = franz_halder
 			allowed = {
-				OR = { original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
+				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 			}
 			available = {
-				has_completed_focus = GER_instill_auftragstaktik
+				has_completed_focus = GEAF_instill_auftragstaktik
 			}
 			traits = {
 				army_chief_offensive_2
@@ -2556,7 +2354,7 @@ characters={
 		}
 	}
 
-	GEK_walther_von_brauchitsch = {
+	GEK_walther_von_brauchitsch = { # 육군
 		name = GER_walther_von_brauchitsch
 		portraits = {
 			army = {
@@ -2567,10 +2365,10 @@ characters={
 			slot = army_chief
 			idea_token = walther_von_brauchitsch
 			allowed = {
-				OR = { original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
+				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 			}
 			available = {
-				has_completed_focus = GER_develop_modern_maneuver_warfare
+				has_completed_focus = GEAF_develop_modern_maneuver_warfare
 			}
 			traits = {
 				army_chief_maneuver_2
@@ -2598,7 +2396,7 @@ characters={
 	# Raeder up there
 
 
-	GEK_rolf_carls = {
+	GEK_rolf_carls = { # 해군
 		name = GER_rolf_carls
 		portraits = {
 			army = {
@@ -2610,10 +2408,10 @@ characters={
 			slot = navy_chief
 			idea_token = GER_rolf_carls
 			allowed = {
-				OR = { original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
+				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 			}
 			available = {
-				has_completed_focus = GER_re_establish_the_seekriegsleitung
+				has_completed_focus = GEAF_re_establish_the_seekriegsleitung
 			}
 			traits = {
 				navy_chief_maneuver_2
@@ -2646,97 +2444,7 @@ characters={
 
 	# Kesselring up there
 
-	GEK_hermann_goring = {
-		name = GER_hermann_goring
-		portraits = {
-			army = {
-				small = GFX_idea_goering
-			}
-			civilian = {
-				large = GFX_portrait_GER_hermann_goring
-				small = GFX_portrait_GER_hermann_goring_small #GFX_portrait_GER_hermann_goring_civilian_small
-			}
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = GER_hermann_goring
-			allowed = {
-				OR = { original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
-			}
-			available = {
-				has_government = fascism
-				NOT = { has_completed_focus = GER_ascension_of_goring }
-			}
-			visible = {
-				always = no #TODO_Manu: Part of Inner Circle. REMOVE COMPLETELY IF NOT USED BY ALT-HIST
-				has_government = fascism
-				NOT = {
-					has_completed_focus = GER_oppose_hitler_ww
-				}
-			}
-			traits = {
-				GER_overseer_four_year_plan
-			}
-		}
-		
-		advisor = {
-			slot = air_chief
-			idea_token = goering
-			allowed = {
-				OR = {
-					original_tag = GER
-					original_tag = HUN
-				}
-			}
-			available = {
-				or = {
-					has_government = fascism
-					has_country_flag = GER_reinstated_nazi_leadership
-				}
-			}
-			visible = {
-				has_government = fascism
-				NOT = {
-					has_completed_focus = GER_oppose_hitler_ww
-				}
-			}
-			traits = {
-				GER_reich_marshal
-			}
-			cost = 100
-			ai_will_do = {
-				base = 2
-				modifier = {
-					factor = 0
-					OR = {
-						has_country_flag = GER_AI_RANDOM_COMMUNIST_STALINIST
-						has_game_rule = {
-							rule = GER_ai_behavior
-							option = GER_COMMUNIST_STALINIST
-						}
-						has_country_flag = GER_AI_RANDOM_COMMUNIST_SPARTACUS
-						has_game_rule = {
-							rule = GER_ai_behavior
-							option = GER_COMMUNIST_SPARTACUS
-						}
-						has_country_flag = GER_AI_RANDOM_KAISER
-						has_game_rule = {
-							rule = GER_ai_behavior
-							option = KAISER
-						}
-						has_country_flag = GER_AI_RANDOM_DEMOCRATIC
-						has_game_rule = {
-							rule = GER_ai_behavior
-							option = DEMOCRATIC
-						}
-					}
-				}
-			}
-		}
-	}
-
-	GEK_ritter_von_greim = {
+	GEK_ritter_von_greim = { # 공군
 		name = GER_ritter_von_greim
 		portraits = {
 			army = {
@@ -2747,10 +2455,10 @@ characters={
 			slot = air_chief
 			idea_token = ritter_von_greim
 			allowed = {
-				OR = { original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
+				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 			}
 			available = {
-				has_completed_focus = GER_expanding_the_luftwaffe
+				has_completed_focus = GEAF_expanding_the_luftwaffe
 			}
 			traits = {
 				air_chief_all_weather_2
@@ -2762,7 +2470,7 @@ characters={
 		}
 	}
 
-	GEK_helmuth_wilberg = {
+	GEK_helmuth_wilberg = { # 공군 : 유대계
 		name = GER_helmuth_wilberg
 		portraits = {
 			army = {
@@ -2773,11 +2481,10 @@ characters={
 			slot = air_chief
 			idea_token = GER_helmuth_wilberg
 			allowed = {
-				OR = { original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
+				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 			}
 			available = {
 				NOT = { has_government = fascism } #TODO_Manu: Maybe political focuses?
-				has_completed_focus = GER_reorganize_the_luftwaffe
 			}
 			traits = {
 				air_chief_ground_support_3
@@ -2811,7 +2518,7 @@ characters={
 
 	# Von Fritsch up there
 
-	GEK_ferdinand_schorner = {
+	GEK_ferdinand_schorner = { # 육군
 		name = GER_ferdinand_schorner
 		portraits = {
 			army = {
@@ -2823,7 +2530,7 @@ characters={
 			idea_token = ferdinand_schorner
 			ledger = army
 			allowed = {
-				OR = { original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
+				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 			}
 			traits = {
 				army_infantry_2
@@ -2835,7 +2542,7 @@ characters={
 		}
 	}
 
-	GEK_erich_bey = {
+	GEK_erich_bey = { # 해군
 		name = GER_erich_bey
 		portraits = {
 			army = {
@@ -2847,7 +2554,7 @@ characters={
 			idea_token = erich_bey
 			ledger = navy
 			allowed = {
-				OR = { original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
+				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 			}
 			traits = {
 				navy_naval_air_defense_2
@@ -2860,7 +2567,7 @@ characters={
 	}
 
 
-	GEK_viktor_schutze = {
+	GEK_viktor_schutze = { # 해군
 		name = GER_viktor_schutze
 		portraits = {
 			army = {
@@ -2872,7 +2579,7 @@ characters={
 			idea_token = viktor_schutze
 			ledger = navy
 			allowed = {
-				OR = { original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
+				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 			}
 			traits = {
 				navy_anti_submarine_1
@@ -2884,7 +2591,7 @@ characters={
 		}
 	}
 
-	GEK_hugo_sperrle = {
+	GEK_hugo_sperrle = { # 공군
 		name = GER_hugo_sperrle
 		portraits = {
 			army = {
@@ -2896,10 +2603,10 @@ characters={
 			idea_token = hugo_sperrle
 			ledger = air
 			allowed = {
-				OR = { original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
+				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 			}
 			available = {
-				has_completed_focus = GER_dive_bombers
+				has_completed_focus = GEAF_dive_bombers
 			}
 			traits = {
 				air_close_air_support_2
@@ -2911,7 +2618,7 @@ characters={
 		}
 	}
 
-	GEK_erhard_milch = {
+	GEK_erhard_milch = { # 공군
 		name = GER_erhard_milch
 		portraits = {
 			army = {
@@ -2923,10 +2630,10 @@ characters={
 			idea_token = erhard_milch
 			ledger = air
 			allowed = {
-				OR = { original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
+				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 			}
 			available = {
-				has_completed_focus = GER_tactical_bombers
+				has_completed_focus = GEAF_tactical_bombers
 			}
 			traits = {
 				air_tactical_bombing_2
@@ -2938,7 +2645,7 @@ characters={
 		}
 	}
 
-	GEK_robert_knauss = {
+	GEK_robert_knauss = { # 공군
 		name = GER_robert_knauss
 		portraits = {
 			army = {
@@ -2950,10 +2657,10 @@ characters={
 			idea_token = GER_robert_knauss
 			ledger = air
 			allowed = {
-				OR = { original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
+				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 			}
 			available = {
-				has_completed_focus = GER_uralbomber_program
+				has_completed_focus = GEAF_uralbomber_program
 			}
 			traits = {
 				air_strategic_bombing_2
@@ -2965,7 +2672,7 @@ characters={
 		}
 	}
 
-	GEK_josef_kammhuber = {
+	GEK_josef_kammhuber = { # 공군
 		name = GER_josef_kammhuber
 		portraits = {
 			army = {
@@ -2977,7 +2684,7 @@ characters={
 			idea_token = GER_josef_kammhuber
 			ledger = air
 			allowed = {
-				OR = { original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
+				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 			}
 			traits = {
 				air_bomber_interception_2
@@ -2989,7 +2696,7 @@ characters={
 		}
 	}
 
-	GEK_alfred_becker = {
+	GEK_alfred_becker = { # 연구
 		name = GER_alfred_becker
 		portraits = {
 			army = {
@@ -3001,10 +2708,10 @@ characters={
 			idea_token = GER_alfred_becker
 			ledger = army
 			allowed = {
-				OR = { original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
+				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 			}
 			available = {
-				has_completed_focus = GER_salvage_captured_equipment
+				has_completed_focus = GEAF_salvage_captured_equipment
 			}
 			traits = {
 				GER_adaptive_engineer
@@ -3016,7 +2723,7 @@ characters={
 		}
 	}
 
-	GEK_walter_dornberger = {
+	GEK_walter_dornberger = { # 연구
 		name = GER_walter_dornberger
 		portraits = {
 			army = {
@@ -3028,7 +2735,7 @@ characters={
 			idea_token = GER_walter_dornberger
 			ledger = army
 			allowed = {
-				OR = { original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
+				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 			}
 			available = {
 				OR = {
@@ -3046,36 +2753,6 @@ characters={
 			}
 		}
 	}
-
-
-	GEK_nikolaus_von_falkenhorst = { # USED IN FINLAND
-		name = GER_nikolaus_von_falkenhorst
-		portraits = {
-			army = {
-				small = GFX_portrait_GER_nikolaus_von_falkenhorst_small
-			}
-		}
-		advisor = {
-			slot = high_command
-			idea_token = GER_nikolaus_von_falkenhorst
-			ledger = army
-			allowed = {
-				original_tag = FIN
-			}
-			available = {
-				has_completed_focus = FIN_german_military_advisors
-				NOT = { has_war_with = GER }
-				NOT = { has_government = communism }
-			}
-			traits = {
-				army_german_ground_commander
-			}
-			cost = 200
-			ai_will_do = {
-				base = 1.000
-			}
-		}		
-	}
 	
 
 
@@ -3089,7 +2766,7 @@ characters={
 
 
 
-	GEK_joachim_von_ribbentrop = {
+	GEK_joachim_von_ribbentrop = { # 독일 장관
 		name = GER_joachim_von_ribbentrop
 		portraits = {
 			army = {
@@ -3100,27 +2777,11 @@ characters={
 			slot = political_advisor
 			idea_token = joachim_von_ribbentrop
 			allowed = {
-				OR = { original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
+				original_tag = GER
 			}
 			visible = {
-				OR = {
-					has_country_flag = GER_reinstated_nazi_leadership
-					NOT = {
-						OR = {
-							has_completed_focus = GER_heed_von_neuraths_concerns
-							has_completed_focus = GER_oppose_hitler_ww
-						}
-					}
-				}
 			}
 			available = {
-				OR = {
-					AND = {
-						has_completed_focus = GER_reorganize_the_wehrmacht
-						has_government = fascism 
-					}
-					has_country_flag = GER_reinstated_nazi_leadership 
-				}
 			}
 
 			cost = 50
@@ -3146,19 +2807,12 @@ characters={
 			slot = political_advisor
 			idea_token = konstantin_von_neurath
 			allowed = {
-				OR = { original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
+				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 			}
 			visible = {
-				NOT = {
-					OR = {
-						has_completed_focus = GER_reorganize_the_wehrmacht
-						has_completed_focus = GER_oppose_hitler_ww
-					}
-				}
 			}
 			available = {
 				NOT = { has_government = communism }
-				has_completed_focus = GER_heed_von_neuraths_concerns
 			}
 			cost = 50
 			traits = {
@@ -3167,396 +2821,7 @@ characters={
 		}
 	}
 
-	GEK_fritz_todt = {
-		name = GER_fritz_todt
-		portraits = {
-			army = {
-				large = GFX_portrait_GER_fritz_todt
-				small = GFX_portrait_GER_fritz_todt_small
-			}
-			
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = todt
-			allowed = {
-				OR = { original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
-			}
-			available = {
-				has_country_flag = GER_reinstated_nazi_leadership
-			}
-			visible = {
-				has_country_flag = GER_reinstated_nazi_leadership
-			}
-			traits = {
-				GER_reich_engineer
-			}
-			ai_will_do = {
-				factor = 0
-			}
-		}
-	}
-
-	GEK_albert_speer = { 
-		name = GER_albert_speer
-		portraits = {
-			army = {
-				large = GFX_portrait_GER_albert_speer
-				small = GFX_portrait_GER_albert_speer_small
-			}
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = speer
-			allowed = {
-				OR = { original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
-			}
-			available = {
-				has_country_flag = GER_reinstated_nazi_leadership
-			}
-			visible = {
-				has_country_flag = GER_reinstated_nazi_leadership
-			}
-			traits = {
-				GER_reich_architect
-			}
-		}		
-	}
-
-	GEK_hjalmar_schacht = {
-		name = GER_hjalmar_schacht
-		portraits = {
-			army = {
-				small = GFX_idea_hjalmar_schacht
-			}
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = hjalmar_schacht
-			allowed = {
-				OR = { original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
-			}
-			cost = 75 #as soon as the MEFO Bills are gone, so is Schacht
-			available = {
-				has_dynamic_modifier = { modifier = GER_mefo_bills_modifier }
-				NOT = { has_government = communism }
-				GEK_walther_funk = {
-					is_hired_as_advisor  = no 
-				}
-			}
-			visible = {
-				has_dynamic_modifier = { modifier = GER_mefo_bills_modifier }
-				NOT = { has_government = communism }
-			}
-			traits = {
-				GER_mefo_bills_architect 
-			}
-			ai_will_do = {
-				base = 15
-				modifier = {
-					factor = 0
-					OR = {
-						has_country_flag = GER_AI_RANDOM_COMMUNIST_STALINIST
-						has_game_rule = {
-							rule = GER_ai_behavior
-							option = GER_COMMUNIST_STALINIST
-						}
-						has_country_flag = GER_AI_RANDOM_COMMUNIST_SPARTACUS
-						has_game_rule = {
-							rule = GER_ai_behavior
-							option = GER_COMMUNIST_SPARTACUS
-						}
-					}
-				}
-			}
-		}		
-	}
-
-	GEK_walther_funk = {
-		name = GER_walther_funk
-		portraits = {
-			army = {
-				small = GFX_idea_walther_funk
-			}
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = walther_funk
-			allowed = {
-				OR = { original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
-			}
-			available = {
-				has_government = fascism
-				GEK_hjalmar_schacht = {
-					is_hired_as_advisor  = no 
-				}
-				GEK_ludwig_erhard = {
-					is_hired_as_advisor = no
-				}
-			}
-			visible = {
-				has_government = fascism
-				NOT = {
-					OR = {
-						has_completed_focus = GER_oppose_hitler
-						has_completed_focus = GER_oppose_hitler_ww
-					}
-				}
-			}
-			traits = {
-				GER_reich_minister_of_economy 
-			}
-			ai_will_do = {
-				base = 5
-				modifier = {
-					factor = 3
-					has_war = yes
-				}
-			}
-		}		
-	}
-
-	GEK_joseph_goebbels = {
-		name = GER_joseph_goebbels
-		portraits = {
-			civilian = {
-				large = GFX_portrait_GER_joseph_goebbels
-				small = GFX_portrait_GER_joseph_goebbels_small
-			}
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = joseph_goebbels
-			allowed = {
-				OR = { original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
-			}
-			available = {
-				has_country_flag = GER_reinstated_nazi_leadership
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state = autonomy_supervised_state
-						has_completed_focus = GER_ascension_of_goebbels
-					}
-				}
-			}
-			visible = {
-				has_country_flag = GER_reinstated_nazi_leadership
-			}
-			traits = {
-				GER_reich_minister_of_propaganda
-			}
-			do_effect = {
-				NOT = {
-					has_government = fascism 
-				}
-			}
-			ai_will_do = {
-				base = 0
-			}
-		}
-	}
-
-	GEK_rudolf_hess = {
-		name = GER_rudolf_hess
-		portraits = {
-			army = {
-				large = GFX_portrait_GER_rudolf_hess
-				small = GFX_portrait_GER_rudolf_hess_small
-			}
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = rudolf_hess
-			allowed = {
-				OR = { original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
-			}
-			available = {
-				NOT = {
-					has_country_flag = flight_of_hess 
-					GEK_martin_bormann = {
-						is_hired_as_advisor  = yes 
-					}
-					has_completed_focus = GER_party_chancellor_hess
-				}
-				OR = {
-					has_government = fascism 
-					has_country_flag = GER_reinstated_nazi_leadership 
-				}
-			}
-			visible = {
-				always = no #TODO_Manu: Part of Inner Circle. REMOVE COMPLETELY IF NOT USED BY ALT-HIST
-				has_government = fascism
-				NOT = {
-					has_completed_focus = GER_oppose_hitler_ww
-				}
-			}
-			traits = {
-				GER_first_among_equals #TODO_Manu: Maybe change trait
-			}
-		}
-	}
-
-	GEK_heinrich_himmler = {
-		name = GER_heinrich_himmler
-		portraits = {
-			army = {
-				small = GFX_portrait_GER_heinrich_himmler_small
-				large = GFX_portrait_GER_heinrich_himmler
-			}
-			civilian = {
-				large = GFX_portrait_GER_heinrich_himmler
-			}
-		}
-		allowed_civil_war = {
-			has_government = fascism
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = heinrich_himmler
-			allowed = {
-				OR = { original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
-			}
-			available = {
-				OR = {
-					has_government = fascism 
-					has_country_flag = GER_reinstated_nazi_leadership 
-				}
-				NOT = { has_completed_focus = GER_ascension_of_himmler }
-			}
-			visible = {
-				always = no #TODO_Manu: Part of Inner Circle. REMOVE COMPLETELY IF NOT USED BY ALT-HIST
-				has_government = fascism
-				NOT = {
-					has_completed_focus = GER_oppose_hitler_ww
-				}
-			}
-			on_add = {
-				custom_effect_tooltip = GER_SS_himmler_recruit
-			}
-			traits = {
-				prince_of_terror #TODO_Manu: Probably change trait
-			}
-		}
-	}
-
-	GEK_martin_bormann = {
-		name = GER_martin_bormann
-		portraits = {
-			army = {
-				large = GFX_portrait_GER_martin_bormann
-				small = GFX_portrait_GER_martin_bormann_small
-			}
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = martin_bormann
-			allowed = {
-				OR = { original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
-			}
-			available = {
-				NOT = {
-					GEK_rudolf_hess = {
-						is_hired_as_advisor  = yes 
-					}
-					has_completed_focus = GER_party_chancellor_bormann
-				}
-				OR = {
-					has_government = fascism 
-					has_country_flag = GER_reinstated_nazi_leadership 
-				}
-			}
-			visible = {
-				always = no #TODO_Manu: Part of Inner Circle. REMOVE COMPLETELY IF NOT USED BY ALT-HIST
-				has_government = fascism
-				NOT = {
-					has_completed_focus = GER_oppose_hitler_ww
-				}
-			}
-			ai_will_do = {
-				factor = 0
-			}
-			traits = {
-				GER_secretary_to_the_fuhrer
-			}
-		}		
-	}
-
-	GEK_leni_riefenstahl = {	
-
-		name = GER_leni_riefenstahl
-
-		gender = female 
-
-		portraits = {
-			army = {
-				small = GFX_portrait_GER_leni_riefenstahl_small
-			}
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = GER_leni_riefenstahl
-			allowed = {
-				OR = { original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
-			}
-			visible = {
-				OR = {
-					has_government = fascism
-					has_country_flag = GER_reinstated_nazi_leadership
-				}
-			}
-			available = {
-				OR = {
-					has_country_flag = GER_reinstated_nazi_leadership
-					has_completed_focus = GER_fund_the_film_department
-				}
-			}
-			traits = {
-				GER_film_director
-			}
-		}
-			
-	}
-
-	GEK_franz_seldte = {	
-
-		name = GER_franz_seldte
-
-		portraits = {
-			army = {
-				small = GFX_portrait_GER_franz_seldte_small
-			}
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = GER_franz_seldte
-			allowed = {
-				OR = { original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
-			}
-			visible = {
-				OR = {
-					has_government = fascism
-					has_country_flag = GER_reinstated_nazi_leadership
-				}
-			}
-			available = {
-				OR = {
-					has_country_flag = GER_reinstated_nazi_leadership
-					has_government = fascism
-				}
-			}
-			traits = {
-				GER_reich_minister_for_labor
-			}
-		}
-			
-	}
-
-	GEK_hanns_kerrl = {	
+	GEK_hanns_kerrl = {	# 독일 장관
 
 		name = GER_hanns_kerrl
 
@@ -3570,22 +2835,12 @@ characters={
 			slot = political_advisor
 			idea_token = GER_hanns_kerrl
 			allowed = {
-				OR = { original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
+				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 			}
 			visible = {
-				OR = {
-					has_government = fascism
-					has_country_flag = GER_reinstated_nazi_leadership
-				}
 			}
 			available = {
-				OR = {
-					has_country_flag = GER_reinstated_nazi_leadership
-					has_government = fascism
-				}
-				NOT = {
-					has_completed_focus = GER_hegemony_of_the_ss
-				}
+				has_completed_focus = GEK_hanns_kerrl
 			}
 			traits = {
 				GER_reich_minister_of_church_affairs
@@ -3593,7 +2848,7 @@ characters={
 		}	
 	}
 
-	GEK_reinhard_heydrich = {
+	GEK_reinhard_heydrich = { # 친위대 : 하이드리히
 		instance = {
 			allowed = {
 				has_dlc = "La Resistance"
@@ -3609,19 +2864,12 @@ characters={
 				slot = political_advisor
 				idea_token = GER_reinhard_heydrich
 				allowed = {
-					original_tag = GER
+					OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 				}
 				visible = {
-					OR = {
-						has_government = fascism
-						has_country_flag = GER_reinstated_nazi_leadership
-					}
 				}
 				available = {
-					OR = {
-						has_country_flag = GER_reinstated_nazi_leadership
-						has_government = fascism
-					}
+					has_completed_focus = GEK_paramilitary_officials_invitation
 				}
 				traits = {
 					GER_reich_security_main_office_director_lar
@@ -3663,7 +2911,7 @@ characters={
 		}
 	}
 
-	GEK_wilhelm_canaris = {
+	GEK_wilhelm_canaris = { # 국방군
  		name = GER_wilhelm_canaris
 		portraits = {
 			army = {
@@ -3674,18 +2922,12 @@ characters={
 			slot = political_advisor
 			idea_token = GER_wilhelm_canaris
 			allowed = {
-				original_tag = GER
+				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 				has_dlc = "La Resistance"
 			}
 			available = {
-				has_intelligence_agency = yes
-				NOT = { 
-					has_completed_focus = GER_reorganize_secret_services
-					has_completed_focus = GER_start_the_proletarian_revolution
-				}
 			}
 			visible = {
-				NOT = { has_completed_focus = GER_start_the_proletarian_revolution }
 			}
 			traits = {
 				head_of_the_abwehr
@@ -3693,7 +2935,7 @@ characters={
 		}		
 	}
 
-	GEK_hans_oster = {
+	GEK_hans_oster = { # 반나치
 		name = GER_hans_oster
 		portraits = {
 			army = {
@@ -3704,29 +2946,14 @@ characters={
 			slot = political_advisor
 			idea_token = GER_hans_oster
 			allowed = {
-				original_tag = GER
+				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 				has_dlc = "Waking the Tiger"
 			}
 			visible = {
-				NOT = {
-					AND = {
-						has_government = fascism
-						has_completed_focus = GER_remilitarize_the_rhineland
-					}
-				}
+				NOT = { has_government = fascism }
 			}
 			available = {
-				IF = {
-					limit = {
-						NOT = {
-							has_dlc = "Gotterdammerung"
-						}
-					}
-					has_completed_focus = GER_oppose_hitler 
-				}
-				ELSE = {
-					has_completed_focus = GER_oppose_hitler_ww 
-				}
+				NOT = { has_government = fascism }
 			}
 			traits = {
 				anti_fascist_agent 
@@ -3737,7 +2964,7 @@ characters={
 		}
 	}
 
-	GEK_alfred_hugenberg = {
+	GEK_alfred_hugenberg = { # 미사용 : 독일 제국
 		name = GER_alfred_hugenberg
 		portraits = {
 			army = {
@@ -3748,10 +2975,7 @@ characters={
 			slot = political_advisor
 			idea_token = GER_alfred_hugenberg
 			allowed = {
-				OR = {
-					original_tag = GER
-					original_tag = COG
-				}
+				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 				has_dlc = "Waking the Tiger"
 			}
 			visible = {
@@ -3791,7 +3015,7 @@ characters={
 		}
 	}
 	
-	GEK_carl_friedrich_goerdeler = {
+	GEK_carl_friedrich_goerdeler = { # 미사용 : 독일 제국
 		name = GER_carl_friedrich_goerdeler
 		portraits = {
 			civilian = {
@@ -3806,10 +3030,7 @@ characters={
 			slot = political_advisor
 			idea_token = GER_carl_friedrich_goerdeler
 			allowed = {
-				OR = {
-					original_tag = GER
-					original_tag = COG
-				}
+				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 				has_dlc = "Waking the Tiger"
 			}
 			visible = {
@@ -3850,7 +3071,7 @@ characters={
 		}	
 	}
 	
-	GEK_julius_leber = {
+	GEK_julius_leber = { # 민주 독일
 		name = GER_julius_leber
 		portraits = {
 			army = {
@@ -3861,32 +3082,17 @@ characters={
 			slot = political_advisor
 			idea_token = GER_julius_leber
 			allowed = {
-				original_tag = GER
+				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 				has_dlc = "Waking the Tiger"
 			}
 			visible = {
-				NOT = {
-					AND = {
-						has_government = fascism
-						has_completed_focus = GER_remilitarize_the_rhineland
-					}
-					has_completed_focus = GER_revive_the_kaiserreich_ww
-					has_completed_focus = GER_revive_the_kaiserreich
-					has_completed_focus = GER_start_the_proletarian_revolution
+				OR = {
+					has_completed_focus = GEK_government_officials_invitation
+					has_completed_focus = GEK_RM_spd_focus_0
 				}
 			}
 			available = {
-				IF = {
-					limit = {
-						NOT = {
-							has_dlc = "Gotterdammerung"
-						}
-					}
-					has_completed_focus = GER_reestablish_free_elections 
-				}
-				ELSE = {
-					has_completed_focus = GER_re_establish_free_elections_ww
-				}
+				NOT = { has_government = fascism }
 			}
 			traits = {
 				connected_citizen 
@@ -3897,7 +3103,7 @@ characters={
 		}
 	}
 	
-	GEK_kurt_schumacher = {
+	GEK_kurt_schumacher = { # ! 민주주의 정치고문
 		name = GER_kurt_schumacher
 		portraits = {
 			army = {
@@ -3908,30 +3114,20 @@ characters={
 			slot = political_advisor
 			idea_token = kurt_schumacher
 			allowed = {
-				OR = { original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
+				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 			}
 			visible = {
-				NOT = {
-					AND = {
-						has_government = fascism
-						has_completed_focus = GER_remilitarize_the_rhineland
-					}
-					has_completed_focus = GER_revive_the_kaiserreich_ww
-					has_completed_focus = GER_revive_the_kaiserreich
-					has_completed_focus = GER_start_the_proletarian_revolution
-				}
+				has_completed_focus = GEK_government_officials_invitation
 			}
 			available = {
-				IF = {
-					limit = {
-						NOT = {
-							has_dlc = "Gotterdammerung"
-						}
+				NOT = { has_government = fascism }
+				if  = {
+					limit  = {
+						has_dlc = "Man the Guns"
 					}
-					has_completed_focus = GER_reestablish_free_elections 
-				}
-				ELSE = {
-					has_completed_focus = GER_re_establish_free_elections_ww
+					NOT = {
+						has_autonomy_state  = autonomy_supervised_state
+					}
 				}
 			}
 			traits = {
@@ -3948,7 +3144,7 @@ characters={
 		}		
 	}
 
-	GEK_theodor_heuss = {
+	GEK_theodor_heuss = { # 민주 독일
 		name = GER_theodor_heuss
 		portraits = {
 			army = {
@@ -3959,32 +3155,24 @@ characters={
 			slot = political_advisor
 			idea_token = GER_theodor_heuss
 			allowed = {
-				original_tag = GER
-				has_dlc = "Waking the Tiger"
+				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 			}
 			visible = {
-				NOT = {
-					AND = {
-						has_government = fascism
-						has_completed_focus = GER_remilitarize_the_rhineland
-					}
-					has_completed_focus = GER_revive_the_kaiserreich_ww
-					has_completed_focus = GER_revive_the_kaiserreich
-					has_completed_focus = GER_start_the_proletarian_revolution
+				OR = {
+					has_completed_focus = GEK_government_officials_invitation
+					has_completed_focus = GEK_RM_spd_focus_0
 				}
 			}
 			available = {
-				IF = {
-					limit = {
-						NOT = {
-							has_dlc = "Gotterdammerung"
-						}
+				if  = {
+					limit  = {
+						has_dlc = "Man the Guns"
 					}
-					has_completed_focus = GER_reestablish_free_elections 
+					NOT = {
+						has_autonomy_state  = autonomy_supervised_state
+					}
 				}
-				ELSE = {
-					has_completed_focus = GER_re_establish_free_elections_ww
-				}
+				has_government = democratic
 			}
 			traits = {
 				liberal_journalist 
@@ -3995,7 +3183,7 @@ characters={
 		}
 	}
 
-	GEK_alfred_rosenberg = {
+	GEK_alfred_rosenberg = { # 미사용 : 국가판무관부 시스템
 		name = GER_alfred_rosenberg
 		portraits = {
 			civilian = {
@@ -4019,7 +3207,7 @@ characters={
 		#}		
 	}
 
-	GEK_hans_luther = {
+	GEK_hans_luther = { # 미사용 : 민간 은행가
 		name = GER_hans_luther
 		portraits = {
 			army = {
@@ -4030,45 +3218,24 @@ characters={
 			slot = political_advisor
 			idea_token = GER_hans_luther
 			allowed = {
-				OR = { original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
+				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 			}
 			visible = {
-				NOT = {
-					AND = {
-						has_completed_focus = GER_remilitarize_the_rhineland
-						has_government = fascism
-					}
-				}
+				NOT = { has_government = fascism }
 			}
 			available = {
 				NOT = { has_government = fascism }
-				#NOT = { has_government = communism } # TODO_Manu: Also not available to commies?
 			}
 			traits = {
 				the_banker #TODO_Manu: New trait, similar but adjusting ideology acceptances 
 			}
 			ai_will_do = {
 				base = 2
-				modifier = {
-					factor = 0
-					OR = {
-						has_country_flag = GER_AI_RANDOM_COMMUNIST_STALINIST
-						has_game_rule = {
-							rule = GER_ai_behavior
-							option = GER_COMMUNIST_STALINIST
-						}
-						has_country_flag = GER_AI_RANDOM_COMMUNIST_SPARTACUS
-						has_game_rule = {
-							rule = GER_ai_behavior
-							option = GER_COMMUNIST_SPARTACUS
-						}
-					}
-				}
 			}
 		}		
 	}
 
-	GEK_ludwig_erhard = {
+	GEK_ludwig_erhard = { # 민간 경제
 		name = GER_ludwig_erhard
 		portraits = {
 			army = {
@@ -4079,18 +3246,15 @@ characters={
 			slot = political_advisor
 			idea_token = GER_ludwig_erhard
 			allowed = {
-				OR = { original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
+				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 			}
 			visible = {
 				NOT = {
-					has_completed_focus = GER_the_four_year_plan
+					has_completed_focus = GEAF_the_four_year_plan
 				}
 			}
 			available = {
-				has_completed_focus = GER_prioritize_economic_growth
-				GEK_walther_funk = {
-					is_hired_as_advisor = no
-				}
+				has_completed_focus = GEAF_prioritize_economic_growth
 			}
 			traits = {
 				economic_reformer
@@ -4098,7 +3262,7 @@ characters={
 		}		
 	}
 
-	GEK_hermann_erhardt = {
+	GEK_hermann_erhardt = { # 미사용 : 독일 제국
 		name = GER_hermann_erhardt
 		portraits = {
 			army = {
@@ -4146,7 +3310,7 @@ characters={
 		}
 	}
 	
-	GEK_adolf_friedrich_von_mecklenburg = {
+	GEK_adolf_friedrich_von_mecklenburg = { # 미사용 : 독일 제국
 		name = GER_adolf_friedrich_von_mecklenburg
 
 		# He will be able to become country leader for reichskommisariats and grand duchies through decisions
@@ -4189,7 +3353,7 @@ characters={
 		}		
 	}
 
-	GEK_wilhelm_von_gayl = {
+	GEK_wilhelm_von_gayl = { # 미사용 : 독일 제국
 		name = GER_wilhelm_von_gayl
 
 		portraits = {
@@ -4220,7 +3384,7 @@ characters={
 		}		
 	}
 
-	GEK_andreas_hermes = {
+	GEK_andreas_hermes = { # 미사용 : 독일 제국
 		name = GER_andreas_hermes
 
 		portraits = {
@@ -4251,7 +3415,7 @@ characters={
 		}		
 	}
 
-	GEK_dietrich_bonhoeffer = {
+	GEK_dietrich_bonhoeffer = { # 독일 기독교
 		name = GER_dietrich_bonhoeffer
 
 		portraits = {
@@ -4268,15 +3432,10 @@ characters={
 				has_dlc = "Gotterdammerung"
 			}
 			visible = {
-				NOT = {
-					has_completed_focus = GER_remilitarize_the_rhineland
-				}
+				has_completed_focus = GEK_RM_focus_0
 			}
 			available = {
-				OR = {
-					has_government = neutrality
-					has_government = democratic
-				}
+				has_completed_focus = GEK_RM_rel_focus_1
 			}
 			traits = {
 				GER_influential_pastor
@@ -4284,7 +3443,7 @@ characters={
 		}		
 	}
 
-	GEK_ernst_thalmann = {
+	GEK_ernst_thalmann = { # 미사용 : 공산독일
 		instance = {
 			allowed = {
 				NOT = {
@@ -4379,7 +3538,7 @@ characters={
 		}
 	}
 
-	GEK_walter_ulbricht = {
+	GEK_walter_ulbricht = { # 미사용 : 공산독일
 		name = GER_walter_ulbricht
 		portraits = {
 			civilian = {
@@ -4422,7 +3581,7 @@ characters={
 		}		
 	}
 
-	GEK_wilhelm_zaisser = {
+	GEK_wilhelm_zaisser = { # 미사용 : 공산독일
 		name = GER_wilhelm_zaisser
 
 		portraits = {
@@ -4460,7 +3619,7 @@ characters={
 		}
 	}
 
-	GEK_otto_ruhle = {
+	GEK_otto_ruhle = { # 미사용 : 공산독일
 		name = GER_otto_ruhle
 
 		portraits = {
@@ -4498,7 +3657,7 @@ characters={
 		}
 	}
 
-	GEK_hermann_duncker = {
+	GEK_hermann_duncker = { # 미사용 : 공산독일
 		name = GER_hermann_duncker
 
 		portraits = {
@@ -4543,7 +3702,7 @@ characters={
 		}
 	}
 
-	GEK_august_thalheimer = {
+	GEK_august_thalheimer = { # 미사용 : 공산독일
 		name = GER_august_thalheimer
 
 		portraits = {
@@ -4588,7 +3747,7 @@ characters={
 		}
 	}
 
-	GEK_bernhard_bastlein = {
+	GEK_bernhard_bastlein = { # 미사용 : 공산독일
 		name = GER_bernhard_bastlein
 
 		portraits = {

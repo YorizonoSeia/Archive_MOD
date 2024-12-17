@@ -35,13 +35,24 @@ add_breakthrough_progress = {
 #공군
 recruit_character = GEK_albert_kesselring
 
+add_country_leader_role = {
+	character = GEK_albert_kesselring
+	promote_leader = yes
+	country_leader = {
+		ideology = emergency_military_government
+		expire = "1965.1.1.1"
+		traits = {  }
+	}
+}
+
 recruit_character = GEK_wolfram_von_richthofen
 
 recruit_character = GEK_ritter_von_greim
-recruit_character = GEK_walther_wever
 recruit_character = GEK_erhard_milch
 recruit_character = GEK_ernst_udet
 recruit_character = GEK_hugo_sperrle
+recruit_character = GEK_helmuth_wilberg
+recruit_character = GEK_ritter_von_greim
 
 recruit_character = GEK_kurt_student
 
