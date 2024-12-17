@@ -629,21 +629,24 @@ focus_tree = {
 		prerequisite = {
 			focus = GEK_RM_kiv_focus_3
 		}
+		available = {
+			has_tech = kivotos_infantry_weapons
+		}
 		relative_position_id = GEK_RM_kiv_focus_0
 		x = -3
 		y = 3
 		cost = 5
 		completion_reward = {
-			add_to_variable = { ROOT.halo_militia_cap = 4 } 
-			GEK = {
-				set_division_template_cap = {  division_template = "Abteilung für Studenten" division_cap = ROOT.halo_militia_cap }
+			custom_effect_tooltip = kivotos_halo_add3_tt
+			hidden_effect = {
+				set_variable = { BA_halo_infantry_cap_edit_var = 3 }
+				BA_halo_infantry_cap_edit_effect = yes
 			}
-			custom_effect_tooltip = GEK_RM_kiv_focus_4_tt
 			capital_scope = {
 				create_unit = {
-					division = "division_template = \"Abteilung für Studenten\" start_experience_factor = 0.1" 
+					division = "division_template = \"Halo Infantry Division\" start_experience_factor = 1 start_equipment_factor = 1.0"
 					owner = ROOT
-					count = 4
+					count = 3
 				}
 			}
 		}
@@ -709,6 +712,7 @@ focus_tree = {
 		y = 2
 		cost = 2
 		completion_reward = {
+			add_stability = 0.05
 		}
 	}
 	focus = { #기술 확보
@@ -722,6 +726,12 @@ focus_tree = {
 		y = 2
 		cost = 2
 		completion_reward = {
+			add_tech_bonus = {
+				name = GEK_RM_kiv_focus_9
+				bonus = 0.2
+				uses = 2
+				category = mystic_engineering
+			}
 		}
 	}
 	focus = { #학생 동원
@@ -733,11 +743,26 @@ focus_tree = {
 		prerequisite = {
 			focus = GEK_RM_kiv_focus_9
 		}
+		available = {
+			has_tech = kivotos_artificial_halo_low
+		}
 		relative_position_id = GEK_RM_kiv_focus_0
 		x = 3
 		y = 3
-		cost = 2
+		cost = 5
 		completion_reward = {
+			add_to_variable = { ROOT.halo_militia_cap = 3 } 
+			GEK = {
+				set_division_template_cap = {  division_template = "Abteilung für Studenten" division_cap = ROOT.halo_militia_cap }
+			}
+			custom_effect_tooltip = GEK_RM_kiv_focus_4_tt
+			capital_scope = {
+				create_unit = {
+					division = "division_template = \"Abteilung für Studenten\" start_experience_factor = 0.1" 
+					owner = ROOT
+					count = 3
+				}
+			}
 		}
 	}
 	focus = { #종교 정책
