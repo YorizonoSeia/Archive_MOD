@@ -1587,11 +1587,16 @@ ideas = {
                     exists = no
                 }
             }
-            modifier = { custom_modifier_tooltip = GEH_army_discipline_idea_tt }
+            modifier = {
+				political_power_factor = 0.05
+				annex_cost_factor = -0.15
+				offensive_war_stability_factor = 0.10
+				custom_modifier_tooltip = GEH_army_discipline_idea_tt
+			}
 			targeted_modifier = {
 				tag = GEM
-				attack_bonus_against = 0.20
-				defense_bonus_against = 0.20
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
 			}
         }
 		GEH_Greater_War = {

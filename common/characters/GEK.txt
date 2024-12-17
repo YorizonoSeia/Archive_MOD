@@ -2838,9 +2838,12 @@ characters={
 				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 			}
 			visible = {
+				OR = {
+					has_completed_focus = GEK_RM_rel_focus_0
+				}
 			}
 			available = {
-				has_completed_focus = GEK_hanns_kerrl
+				has_completed_focus = GEK_RM_rel_focus_0
 			}
 			traits = {
 				GER_reich_minister_of_church_affairs

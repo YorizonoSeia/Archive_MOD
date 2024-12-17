@@ -460,6 +460,9 @@ focus_tree = {
 			focus = GEH_main_route_focus
 		}
         available = {
+			hidden_trigger = {
+				has_country_flag = hina_assembly_c_flag
+			}
         }
         completion_reward = {
             add_political_power = 20
@@ -697,6 +700,9 @@ focus_tree = {
 			focus = GEH_main_route_focus
 		}
 		available = {
+			hidden_trigger = {
+				has_country_flag = hina_assembly_12_flag
+			}
 		}
 		completion_reward = {
 			add_stability = 0.02
@@ -992,6 +998,9 @@ focus_tree = {
 			focus = GEH_main_route_focus
 		}
 		available = {
+			hidden_trigger = {
+				has_country_flag = hina_assembly_a_flag
+			}
 		}
 		completion_reward = {
 			add_stability = 0.05
@@ -1225,6 +1234,9 @@ focus_tree = {
 			focus = GEH_ako_route_focus
 		}
 		available = {
+			hidden_trigger = {
+				has_country_flag = hina_assembly_normal_flag
+			}
 		}
 		completion_reward = {
 			add_stability = 0.10
