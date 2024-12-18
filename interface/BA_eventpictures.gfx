@@ -224,6 +224,10 @@ spriteTypes = {
 		name = "GFX_event_Shanhaijing_Kai"
 		texturefile = "gfx/event_pictures/Shanhaijing_Kai.tga"
 	}
+	spriteType = {
+		name = "GFX_event_BA_news_78"
+		texturefile = "gfx/event_pictures/BA_news_78.tga"
+	}
 #
 
 

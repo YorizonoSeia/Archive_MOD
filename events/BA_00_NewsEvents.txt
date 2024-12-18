@@ -2806,7 +2806,7 @@ news_event = { #백귀야행 산해경 전쟁
 	id = BA_news.78
 	title = BA_news.78.t
 	desc = BA_news.78.desc
-	picture = GFX_news_event_soldiers_marching	
+	picture = GFX_event_BA_news_78	
 
 	major = yes	
 	
