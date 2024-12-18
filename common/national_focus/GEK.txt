@@ -401,14 +401,7 @@ focus_tree = {
 			focus = GEK_RM_focus_4
 		}
 		available = {
-			has_war_with = GEM
 			controls_state = 59
-		}
-		bypass = {
-			NOT = {
-				has_war_with = GEM
-				has_war_with = GEH
-			}
 		}
 		relative_position_id = GEK_RM_focus_4
 		x = 2
@@ -443,7 +436,7 @@ focus_tree = {
 				}
 			}
 			set_technology = {
-				kivotos_artificial_halo_low   = 1
+				kivotos_artificial_halo_replica_tech   = 1
 			}
 		}
 	}
@@ -744,7 +737,7 @@ focus_tree = {
 			focus = GEK_RM_kiv_focus_9
 		}
 		available = {
-			has_tech = kivotos_artificial_halo_low
+			has_tech = kivotos_artificial_halo_replica_tech
 		}
 		relative_position_id = GEK_RM_kiv_focus_0
 		x = 3
@@ -3031,7 +3024,7 @@ focus_tree = {
 		x = 15
 		y = 0
 		offset = {
-			x = -15
+			x = -35
 			trigger = {
 				has_game_rule = {
 					rule = obsolete_focus_branches_visibility
@@ -3131,9 +3124,9 @@ focus_tree = {
 			focus = GEK_GER_government
 		}
 		x = 3
-		y = 1
+		y = 2
 		relative_position_id = GEK_GER_government
-		cost = 10
+		cost = 2
 		ai_will_do = {
 			factor = 400
 		}
@@ -3167,9 +3160,9 @@ focus_tree = {
 			focus = GEK_GER_government
 		}
 		x = -3
-		y = 1
+		y = 2
 		relative_position_id = GEK_GER_government
-		cost = 5
+		cost = 2
 		ai_will_do = {
 			factor = 400
 		}
@@ -3220,16 +3213,20 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = GEK_GER_government
-		cost = 2
+		cost = 3
 		ai_will_do = {
 			factor = 400
 		}
 		available_if_capitulated = yes
 		completion_reward = {
+			army_experience = 25
 			add_ideas = general_staff
-			add_power_balance_value = {
-				id = BAY_power_balance
-				value = -0.1
+
+			add_doctrine_cost_reduction = {
+				name = GEK_fight_3
+				cost_reduction = 0.25
+				uses = 2
+				category = land_doctrine
 			}
 		}
 	}
@@ -3243,7 +3240,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GEK_GER_government
-		cost = 5
+		cost = 3
 		ai_will_do = {
 			factor = 400
 		}
@@ -3301,10 +3298,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		#친위대 활용
+		# 나치당 복원
 		id = GEK_fight_8
-		icon = GFX_focus_ITA_generic_fascist_workers
+		icon = GFX_goal_generic_forceful_treaty
 		prerequisite = {
+			focus = GEK_fight_3
 			focus = GEK_fight_7
 		}
 		mutually_exclusive = {
@@ -3319,6 +3317,7 @@ focus_tree = {
 		}
 		available_if_capitulated = yes
 		completion_reward = {
+			add_political_power = 25
 			add_power_balance_value = {
 				id = BAY_power_balance
 				value = 0.1
@@ -3326,11 +3325,12 @@ focus_tree = {
 		}
 	}
 	focus = {
-		#친위대 활용
+		# 군정 지속
 		id = GEK_fight_9
-		icon = GFX_focus_ITA_generic_fascist_workers
+		icon = GFX_goal_generic_military_sphere
 		prerequisite = {
 			focus = GEK_fight_3
+			focus = GEK_fight_7
 		}
 		mutually_exclusive = {
 			focus = GEK_fight_8
@@ -3344,9 +3344,131 @@ focus_tree = {
 		}
 		available_if_capitulated = yes
 		completion_reward = {
+			army_experience = 25
 			add_power_balance_value = {
 				id = BAY_power_balance
 				value = -0.1
+			}
+		}
+	}
+
+	focus = {
+		# 독일 군사정부
+		id = GEK_fight_10
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = {
+			focus = GEK_fight_1
+		}
+		prerequisite = {
+			focus = GEK_fight_8
+			focus = GEK_fight_9
+		}
+		prerequisite = {
+			focus = GEK_air_innovation
+		}
+		x = 0
+		y = 3
+		relative_position_id = GEK_GER_government
+		cost = 5
+		ai_will_do = {
+			factor = 400
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = GEK_legitimacy
+				add_idea = GEK_legitimacy_2
+			}
+			custom_effect_tooltip = GEK_fight_10_tt
+			every_state = {
+				limit = {
+					NOT = { is_core_of = ROOT }
+					is_core_of = GEM
+					BA_is_GER_core = yes
+				}
+				add_core_of = ROOT
+			}
+		}
+	}
+
+	focus = {
+		# 서독일 수복 전쟁
+		id = GEK_fight_11
+		icon = GFX_focus_attack_GEH
+		prerequisite = {
+			focus = GEK_fight_10
+		}
+		available = {
+			any_other_country = {
+				OR = {
+					owns_state = 42
+					owns_state = 50
+					owns_state = 51
+					owns_state = 52
+					owns_state = 53
+					owns_state = 54
+					owns_state = 55
+					owns_state = 56
+					owns_state = 57
+					owns_state = 58
+					owns_state = 59
+					owns_state = 909
+					owns_state = 987
+					owns_state = 990
+					owns_state = 978
+				}
+				NOT = {
+					has_war_with = ROOT
+				}
+			}
+			has_army_manpower = { size > 180000 }
+		}
+		x = 0
+		y = 1
+		relative_position_id = GEK_fight_10
+		cost = 5
+		ai_will_do = {
+			factor = 400
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.10
+			every_country = {
+				limit = {
+					AND = {
+						OR = {
+							owns_state = 42
+							owns_state = 50
+							owns_state = 51
+							owns_state = 52
+							owns_state = 53
+							owns_state = 54
+							owns_state = 55
+							owns_state = 56
+							owns_state = 57
+							owns_state = 58
+							owns_state = 59
+							owns_state = 909
+							owns_state = 987
+							owns_state = 990
+							owns_state = 978
+						}
+						NOT = {
+							OR = {
+								has_war_with = ROOT
+								original_tag = ROOT
+								is_subject_of = ROOT
+							}
+						}
+					}
+				}
+				custom_effect_tooltip = war_aim_against_the_country_annex_tt
+				hidden_effect = {
+					create_wargoal = {
+						target = GEM
+						type = independence_wargoal
+					}
+				}
 			}
 		}
 	}

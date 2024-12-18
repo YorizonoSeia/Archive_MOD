@@ -155,6 +155,7 @@
  GEK_partisan_1: "반소탕전"
  GEK_legitimacy: "독일 정통성: §R잔당§!"
  GEK_legitimacy_1: "독일 정통성: §3해방군§!"
+ GEK_legitimacy_2: "독일 정통성: §g군사정부§!"
  GEK_legitimacy_weimar: "독일 정통성 : §t공화국의 잔광§!"
  GEK_legitimacy_weimar_1: "독일 정통성 : §t공화국의 유산§!"
  GEK_legitimacy_weimar_2: "독일 정통성 : §t'바이마르 공화국'§!"
@@ -441,7 +442,7 @@
 
  GEK_fight_1:0 "방어선 구축"
  GEK_fight_2:0 "라인 지방의 군수기업"
- GEK_fight_3:0 "장군 참모"
+ GEK_fight_3:0 "장군 참모제도 복원"
  GEK_fight_4:0 "바이에른의 나치당원"
  GEK_fight_4_tt:0 "§Y7§!개의 §Y파시즘 민병대§! 사단 생성"
  GEK_fight_5:0 "중앙당과의 제휴"
@@ -449,6 +450,11 @@
  GEK_fight_6:0 "현지 물자 동원"
  GEK_fight_7:0 "친위대 활용"
  GEK_fight_7_tt:0 "§8친위대§! 사단이 합류합니다."
+ GEK_fight_8:0 "수권법의 재작성"
+ GEK_fight_9:0 "군정 지속"
+ GEK_fight_10: "독일 군사정부"
+ GEK_fight_10_tt:0 "독일 서부의 모든 §Y독일 주§!에 핵심을 얻습니다."
+ GEK_fight_11: "서독일 수복 전쟁"
 
  GEK_gottland_government_establishment: "고틀란드 정부 수립"
  GEK_government_officials_invitation: "정부 인사 초청"

@@ -99,6 +99,20 @@ ideas = {
 				trade_laws_cost_factor = 0.3
 			}
 		}
+		GEK_legitimacy_2 = { #독일 정통성 : 군벌
+			picture = chi_incompetent_officers
+			modifier = {
+				war_support_factor = -0.05
+				stability_factor = -0.20
+				drift_defence_factor = -0.15
+				party_popularity_stability_factor = -0.2
+				political_advisor_cost_factor = 0.15
+				army_advisor_cost_factor = 0.15
+				mobilization_laws_cost_factor = 0.15
+				economy_cost_factor = 0.15
+				trade_laws_cost_factor = 0.15
+			}
+		}
 		GEK_legitimacy_weimar = { #독일 정통성 : 공화국의 잔광
 			picture = triumphant_will
 			modifier = {

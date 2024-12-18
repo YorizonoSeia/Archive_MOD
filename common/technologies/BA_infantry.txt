@@ -649,5 +649,17 @@ technologies = {
 		}
 	}
 
+	kivotos_artificial_halo_replica_tech  = {
+		enable_equipments = {
+			kivotos_infantry_equipment_0
+		}
+		
+		allow = {
+			always = no
+		}
+
+		research_cost = 1
+		start_year = 1936
+	}
 	
 }

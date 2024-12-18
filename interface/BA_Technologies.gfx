@@ -122,6 +122,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_kivotos_artificial_halo_replica_tech_medium"
+	    texturefile = "gfx/interface/technologies/kivotos_infantry_equipment_0.dds"
+	}
+
+	SpriteType = {
 		name = "GFX_kivotos_halo_special_forces_medium"
 	    texturefile = "gfx/interface/technologies/centralized_fire_control.dds"
 	}
