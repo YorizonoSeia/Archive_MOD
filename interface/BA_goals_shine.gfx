@@ -11773,7 +11773,8 @@ animation = {
 			animationrotationoffset = { x = 0.0 y = 0.0 }
 			animationtexturescale = { x = 1.0 y = 1.0 } 
 		}
-		le
+		legacy_lazy_load = no
+	}
 	SpriteType = {
 		name = "GFX_goal_SHA_Contact_POC_shine"
 		texturefile = "gfx/interface/goals/SHA/SHA_Contact_POC.tga"
