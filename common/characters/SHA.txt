@@ -17,6 +17,7 @@ characters={
 			traits={ 
 				SHA_T2a
 				SHA_T1a
+				SHA_sick_trait
 			}
 			expire="1965.1.1.1"
 		}

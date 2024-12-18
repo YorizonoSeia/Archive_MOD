@@ -768,6 +768,7 @@
  SHA_ardent_conservative_2: "$SHA_ardent_conservative$"
  SHA_ardent_conservative_3: "$SHA_ardent_conservative$"
  SHA_ardent_conservative_4: "보수의 선구자"
+ SHA_sick_trait: "병약"
 
  # 결정
  SHA_coup_of_Black_Tortoise_Promenade: "현무상회의 인내심 악화"
@@ -779,6 +780,12 @@
  SHA_EAS_Budget_passed: "예산안 통과"
  SHA_EAS_Budget_cuts: "예산안 삭감"
  SHA_remove_EAS_tooltip: "$SHA_Eastern_Alchemy_Society_cat$"
+
+ SHA_invade_of_Hyakkiyako_cat: "산해경 - 백귀야행 전쟁"
+ SHA_invade_of_Hyakkiyako_cat_desc: "산해경 군대는 성급한 공격으로 인해 준비가 부족한 상태에서 전쟁에 돌입했습니다. 그러나 기습을 받은 백귀야행 역시 큰 충격을 받아 공세 역량이 약화된 상황입니다. 이 틈을 타 산해경은 전시 체제를 신속히 완비하고 백귀야행을 항복시킬 계획입니다."
+ SHA_operational_planning: "공세 계획 실행"
+ SHA_shock_relief: "충격 완화"
+ SHA_attack_plan: "산해경의 공세"
 
  
 

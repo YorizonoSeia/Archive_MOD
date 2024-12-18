@@ -193,6 +193,8 @@
  GEK_civilian_requisition:0 "민간 동원"
  GEK_paramilitary_organization:0 "준군사조직"
  GEK_send_volunteers_idea:0 "독일 전쟁 지원국"
+ GEK_communist_rav_idea:0 "혁명 후"
+ GEK_communist_good_idea:0 "은닉 자산 확보"
 
  #독일 군사정부 - 툴팁
  GEK_absorbed_into_a_specific_country:0 "§Y특정 국가§!에 소속됨" #해군용
@@ -466,6 +468,10 @@
  GEK_industrialization_3: "도시화"
 
  GEK_raise_the_red_flag: "붉은 기를 들어올려라"
+ GEK_raise_the_red_flag_1: "선상 재판"
+ GEK_raise_the_red_flag_2: "은닉 자산 확보"
+ GEK_raise_the_red_flag_3: "스웨덴 시민의 지지"
+ GEK_raise_the_red_flag_4: "적색 전단의 미래"
 
  GEK_pirate_focus_0:0 "발트해 패권"
  GEK_pirate_focus_1:0 "올란드 거점"

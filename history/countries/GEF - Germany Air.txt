@@ -52,6 +52,8 @@ recruit_character = GEK_erhard_milch
 recruit_character = GEK_ernst_udet
 recruit_character = GEK_hugo_sperrle
 recruit_character = GEK_helmuth_wilberg
+recruit_character = GEK_robert_knauss
+recruit_character = GEK_josef_kammhuber
 
 recruit_character = GEK_kurt_student
 

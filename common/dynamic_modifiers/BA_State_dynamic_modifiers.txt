@@ -306,6 +306,15 @@ TRM_anti_geh_emotion_4 = {
 	disable_strategic_redeployment = yes
 }
 
+SHA_attack_plan = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_SOV_invaders_must_die
+	
+	breakthrough_factor = 0.05
+	army_attack_factor = 0.1
+}
+
 TRM_Military_occupation = {
 	icon = "GFX_decision_SWE_set_army_budget"
 

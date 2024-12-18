@@ -116,13 +116,9 @@ recruit_character = GEK_julius_leber #줄리어스 레버
 #조언가
 recruit_character = GEK_dietrich_bonhoeffer
 recruit_character = GEK_hans_luther
-recruit_character = GEK_oswald_lutz
-recruit_character = GEK_josef_kammhuber
-recruit_character = GEK_robert_knauss
 recruit_character = GEK_alfred_becker
 recruit_character = GEK_walter_dornberger
 recruit_character = GEK_hanns_kerrl
-recruit_character = GEK_paul_von_lettow_vorbeck # He is "new"
 
 # 스토리 아카이브 사용 시 정의
 set_variable = {

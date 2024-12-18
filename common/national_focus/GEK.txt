@@ -3375,6 +3375,7 @@ focus_tree = {
 		}
 		available_if_capitulated = yes
 		completion_reward = {
+			set_cosmetic_tag = GEK_military_government
 			swap_ideas = {
 				remove_idea = GEK_legitimacy
 				add_idea = GEK_legitimacy_2
@@ -3919,7 +3920,7 @@ focus_tree = {
 			}
 		}
 		relative_position_id = GEK_RM_focus_0
-		cost = 5
+		cost = 2
 		ai_will_do = {
 			factor = 400
 		}
@@ -3952,6 +3953,118 @@ focus_tree = {
 				}
 			}
 			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = GEK_raise_the_red_flag_1
+		icon = GFX_focus_GER_the_peoples_victory
+		prerequisite = {
+			focus = GEK_raise_the_red_flag
+		}
+		available = {
+		}
+		x = 0
+		y = 1
+		relative_position_id = GEK_raise_the_red_flag
+		cost = 2
+		ai_will_do = {
+			factor = 400
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_political_power = 40
+			add_popularity = {
+				ideology = communism
+				popularity = 0.10
+			}
+			if = { limit = { has_character = GEK_karl_donitz } GEK_karl_donitz = { retire = yes } }
+			if = { limit = { has_character = GEK_wilhelm_marschall } GEK_wilhelm_marschall = { retire = yes } }
+			if = { limit = { has_character = GEK_rolf_carls } GEK_rolf_carls = { retire = yes } }
+		}
+	}
+
+	focus = {
+		id = GEK_raise_the_red_flag_2
+		icon = GFX_focus_SOV_the_last_purge
+		prerequisite = {
+			focus = GEK_raise_the_red_flag_1
+		}
+		available = {
+		}
+		x = -1
+		y = 2
+		relative_position_id = GEK_raise_the_red_flag
+		cost = 2
+		ai_will_do = {
+			factor = 400
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 2
+			}
+			add_timed_idea = {
+				idea = GEK_communist_good_idea
+				days = 180
+			}
+		}
+	}
+
+	focus = {
+		id = GEK_raise_the_red_flag_3
+		icon = GFX_goal_support_communism
+		prerequisite = {
+			focus = GEK_raise_the_red_flag_1
+		}
+		available = {
+		}
+		x = 1
+		y = 2
+		relative_position_id = GEK_raise_the_red_flag
+		cost = 2
+		ai_will_do = {
+			factor = 400
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = GEK_swedish_hyupryuk
+				add_idea = GEK_swedish_hyupryuk_com
+			}
+		}
+	}
+
+	focus = {
+		id = GEK_raise_the_red_flag_4
+		icon = GFX_focus_generic_red_flags
+		prerequisite = {
+			focus = GEK_raise_the_red_flag_2
+		}
+		prerequisite = {
+			focus = GEK_raise_the_red_flag_3
+		}
+		available = {
+		}
+		x = 0
+		y = 3
+		relative_position_id = GEK_raise_the_red_flag
+		cost = 5
+		ai_will_do = {
+			factor = 400
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			remove_ideas = GEK_communist_rav_idea
 		}
 	}
 }
