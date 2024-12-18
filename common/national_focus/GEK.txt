@@ -973,10 +973,9 @@ focus_tree = {
 		id = GEK_RM_spd_focus_4
 		icon = GFX_focus_POL_complete_april_constitution
 		available = {
-			NOT = {
+			OR = {
 				has_idea = GEK_legitimacy_weimar_2
-				has_idea = GEK_legitimacy_empire_2
-				has_idea = GEK_legitimacy_nazi_2
+				has_idea = GEK_legitimacy_weimar_1
 			}
 			has_war = no
 		}

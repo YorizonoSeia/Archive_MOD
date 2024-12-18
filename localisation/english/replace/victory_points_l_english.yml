@@ -18,12 +18,20 @@
  VICTORY_POINTS_11148:0 "붉은겨울 구교사"
  VICTORY_POINTS_156:0 "체리나"
 #게헨나
- VICTORY_POINTS_692:0 "게헨나 남구"
- VICTORY_POINTS_6469:0 "게헨나 서구"
- VICTORY_POINTS_6377:0 "게헨나 북구"
- VICTORY_POINTS_6488:0 "게헨나 중앙구"
+ GEM_VICTORY_POINTS_692:0 "게헨나 남구"
+ GEM_VICTORY_POINTS_6469:0 "게헨나 서구"
+ GEM_VICTORY_POINTS_6377:0 "게헨나 북구"
+ GEM_VICTORY_POINTS_6488:0 "게헨나 중앙구"
+ GEH_VICTORY_POINTS_692:0 "게헨나 남구"
+ GEH_VICTORY_POINTS_6469:0 "게헨나 서구"
+ GEH_VICTORY_POINTS_6377:0 "게헨나 북구"
+ GEH_VICTORY_POINTS_6488:0 "게헨나 중앙구"
+ HEU_VICTORY_POINTS_692:0 "게헨나 남구"
+ HEU_VICTORY_POINTS_6469:0 "게헨나 서구"
+ HEU_VICTORY_POINTS_6377:0 "게헨나 북구"
+ HEU_VICTORY_POINTS_6488:0 "게헨나 중앙구"
 #아리우스
- VICTORY_POINTS_362:0 "아리우스 바실리카\n단치히"
+ ARI_VICTORY_POINTS_362:0 "아리우스 바실리카\n단치히"
 #기타
  VICTORY_POINTS_6934:0 "프리드리히스하펜"
  VICTORY_POINTS_6364:0 "용역부"
@@ -104,15 +112,6 @@
 
 #커스텀
  COLOUR_home:0 "거짓된 성소"
-
- Berlin:0 "베를린"
- Poznan:0 "포젠"
- Konigsberg:0 "쾨니히스베르크"
- Hamburg:0 "함부르크"
- Hanover:0 "하노버\n게헨나 북구"
- Dusseldorf:0 "뒤셀도르프\n게헨나 서구"
- Frankfurt:0 "프랑크푸르트\n게헨나 중앙구"
- Munich:0 "뮌헨\n게헨나 남구"
 
  Vilnius:0 "빌뉴스"
  Paris_AL:0 "아트라하시스의 방주"
