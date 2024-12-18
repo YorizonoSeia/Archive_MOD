@@ -31,10 +31,10 @@ characters={
 		gender = female
 		portraits={
 			civilian={
-				large="gfx/leaders/HEU/HEU_ARU.tga"
+				large="GFX_HEU_aru_rikuhachima_base_Portrait"
 			}
 			army={
-				large="gfx/leaders/HEU/HEU_ARU.tga"
+				large="GFX_HEU_aru_rikuhachima_base_Portrait"
 				small= "gfx/interface/advisors/HEU/HEU_ARU_S.tga"
 			}
 		}
