@@ -8116,7 +8116,6 @@ shared_focus = { #서독 통일
 
 shared_focus = { #국가인민군
 	id = GE1_reorganize_nationale_volksarmee  
-	text = GER_re_form_the_freikorps
 	icon = GFX_goal_generic_axis_build_infantry
 	prerequisite = {
 		focus = GE1_start_focus
@@ -8301,7 +8300,6 @@ shared_focus = { #동독 통일
 
 shared_focus = { #국가인민군
 	id = GE2_reorganize_nationale_volksarmee  
-	text = GER_re_form_the_freikorps
 	icon = GFX_goal_generic_axis_build_infantry
 	prerequisite = {
 		focus = GE2_start_focus
@@ -8351,7 +8349,6 @@ shared_focus = { #국가인민군
 
 shared_focus = { #공산 정보부
 	id = GE2_formalize_the_intelligence_wing
-	text = GER_re_form_the_freikorps
 	icon = GFX_goal_generic_axis_build_infantry
 	prerequisite = {
 		focus = GE2_reorganize_nationale_volksarmee
@@ -8382,7 +8379,6 @@ shared_focus = { #공산 정보부
 
 shared_focus = { #제국
 	id = GE2_return_of_the_kaiserreich
-	text = GER_re_form_the_freikorps
 	icon = GFX_goal_generic_axis_build_infantry
 	prerequisite = {
 		focus = GE2_start_focus
@@ -8650,8 +8646,11 @@ shared_focus = { #종교 정책
 			days = 2
 		}
 		unlock_decision_category_tooltip = GEK_religion_issue_cat
-		custom_effect_tooltip = available_political_advisor
-		show_ideas_tooltip = GER_hanns_kerrl
+		if = {
+			limit = { has_character = GEK_hanns_kerrl }
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = GER_hanns_kerrl
+		}
 	}
 }
 shared_focus = { #개신교 지원
