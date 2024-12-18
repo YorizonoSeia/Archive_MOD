@@ -179,3 +179,18 @@ GEK_seize_gold_reserves_cat = { #금먹기
 		has_dynamic_modifier = { modifier = GER_economy_of_conquest_modifier }
 	}
 }
+GEK_seize_future_material_reserves_cat = { #미래 소재 먹기
+	icon = GFX_decision_category_GER_seize_gold_reserves
+	picture = GFX_decision_cat_picture_seize_gold_reserves
+
+	allowed = {
+		original_tag = GEK
+	}
+	visible_when_empty = no
+
+	priority = 1200
+
+	visible = {
+		has_completed_focus = GEK_RM_kiv_focus_9
+	}
+}

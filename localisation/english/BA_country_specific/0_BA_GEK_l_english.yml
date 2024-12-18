@@ -482,7 +482,7 @@
  GEK_geh_correct_plan_tt: "육군 내 보병 장비 §Y9000§!개 이상"
 
  #독일 군사정부 - 디시전
-
+ GEK_seize_future_material_reserves_cat: "미래 소재"
  GEK_seize_gold_reserves_cat: "$GER_seize_gold_reserves_cat$"
  GEK_seize_gold_reserves: "$GER_seize_gold_reserves$"
  GEK_seize_russian_citites_gold_reserves: "$GER_seize_russian_citites_gold_reserves$"

@@ -332,7 +332,9 @@ ideas = {
 		GEK_student_citizenship = { #이계인 시민권 지급
 			picture = generic_democratic_drift_bonus
 			modifier = {
-				political_power_cost = 0.1
+				political_power_cost = 0.15
+				consumer_goods_factor = 0.1
+				stability_weekly = -0.002
 			}
 		}
 
