@@ -8770,6 +8770,8 @@ focus_tree = {
 				}
 			}
 			set_global_flag = GFLAG_FASI_BAKSANWAR
+			custom_effect_tooltip = tooltip_white_line 
+			unlock_decision_category_tooltip = SHA_invade_of_Hyakkiyako_cat
 		}
 	}
 

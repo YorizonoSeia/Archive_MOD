@@ -2778,6 +2778,13 @@ leader_traits = {
 		army_advisor_cost_factor = -0.15
 		navy_advisor_cost_factor = -0.15
 	}
+	# 나 아파요..
+	SHA_sick_trait = {
+		random = no
+		sprite = 13
+
+		political_power_factor = -0.05
+	}
 	HYA_T1a = { #낙천적인 음양부장
 		random = no
 		political_power_factor = -0.30

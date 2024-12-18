@@ -82,3 +82,36 @@ SHA_EAS_idea_remove = {
 		remove_ideas = SHA_Eastern_Alchemy_Society_medium
 	}
 }
+SHA_invade_HYA_idea_down = {
+	if = {
+		limit = { has_idea = SHA_HYA_clarhd_idea }
+		swap_ideas = {
+			remove_idea = SHA_HYA_clarhd_idea
+			add_idea = SHA_HYA_clarhd_idea_2
+		}
+	}
+	else_if = {
+		limit = { SHA_HYA_clarhd_idea_2 }
+		swap_ideas = {
+			remove_idea = SHA_HYA_clarhd_idea_2
+			add_idea = SHA_HYA_clarhd_idea_3
+		}
+	}
+	else_if = {
+		limit = { SHA_HYA_clarhd_idea_3 }
+		swap_ideas = {
+			remove_idea = SHA_HYA_clarhd_idea_3
+			add_idea = SHA_HYA_clarhd_idea_4
+		}
+	}
+	else_if = {
+		limit = { SHA_HYA_clarhd_idea_4 }
+		swap_ideas = {
+			remove_idea = SHA_HYA_clarhd_idea_4
+			add_idea = SHA_HYA_clarhd_idea_5
+		}
+	}
+	else = { 
+		army_experience = 25 
+	}
+}
