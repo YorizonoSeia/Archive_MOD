@@ -999,32 +999,6 @@ ideas = {
 			}
 		}
 
-#		BA_train_school = {
-#
-#			picture = generic_build_infrastructure
-#			
-#			allowed = {
-#				Kivotos_tag = yes
-#			}
-#
-#			available = {
-#				controls_state = 29
-#			}
-#
-#			modifier = {	
-#				production_speed_infrastructure_factor = 0.1
-#				production_speed_rail_way_factor = 0.1
-#			}
-#			
-#			traits = { train_school }
-#			
-			# assembled hawk II and hawk III fighter bombers as well as the Vultee V-11 ground attackers
-#						
-#			ai_will_do = {
-#				factor = 1
-#			}
-#		}
-
 		MIL_laboratory = { #NORTH
 			picture = gre_phaliron_aircraft
 			allowed = {

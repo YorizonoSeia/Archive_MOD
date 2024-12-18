@@ -1578,8 +1578,10 @@ country_event = { #손상된 산업
 		name = GEK_rm_event.19.a
 		add_ideas = GEK_attacked_industry
 		hidden_effect = {
-			id = GEK_rm_event.21
-			days = 5
+			country_event = {
+				id = GEK_rm_event.21
+				days = 5
+			}
 		}
 	}
 }
