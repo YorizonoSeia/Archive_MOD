@@ -1,4 +1,11 @@
 on_actions = {
+	on_startup = {
+		effect = {
+			ABY = {
+				setup_central_map = yes
+			}
+		}
+	}
 	on_declare_war = {
 		effect = {
 			if = {

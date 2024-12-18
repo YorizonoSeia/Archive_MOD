@@ -12,6 +12,12 @@
  ABY_STATE_74:0 "체스케 슬레스코"
  ABY_STATE_72:0 "테신스코"
  ABY_STATE_73:0 "포트카르파츠카 루스"
+ ABY_STATE_66: "돌니 슬레스코"
+ ABY_STATE_67: "호르니 슬레스코"
+ ABY_STATE_39: "쥐트티롤"
+ ABY_STATE_160: "베네디히"
+ ABY_STATE_850: "트리엔트"
+ ABY_STATE_853: "라이바흐"
 #밀레니엄
  STATE_16:0 "밀레니엄 캠퍼스 중앙"
  STATE_24:0 "캠퍼스 외곽"

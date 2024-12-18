@@ -1,0 +1,388 @@
+ABY_clear_country_flag_effect = {
+	clr_country_flag = ABY_flag_north_sudetenland
+	clr_country_flag = ABY_flag_moravia
+	clr_country_flag = ABY_flag_bohemia
+	clr_country_flag = ABY_flag_east_sudetenland
+	clr_country_flag = ABY_flag_zaolzie
+	clr_country_flag = ABY_flag_south_sudetenland
+	clr_country_flag = ABY_flag_linz
+	clr_country_flag = ABY_flag_burgenlang
+	clr_country_flag = ABY_flag_overosterreich
+	clr_country_flag = ABY_flag_neitherosterreich
+	clr_country_flag = ABY_flag_stiremark_kernten
+	clr_country_flag = ABY_flag_tirol
+	clr_country_flag = ABY_flag_lichtenstein
+}
+setup_central_map = {
+	hidden_effect = {
+		clear_array = TUR_central_map_array
+		clear_array = TUR_map_x
+		clear_array = TUR_map_y
+
+		add_to_array = { TUR_central_map_array = 797 }
+		add_to_array = { TUR_map_x = 10 }
+		add_to_array = { TUR_map_y = 50 }
+		set_variable = { 797:TUR_central_var = 65 }
+
+		add_to_array = { TUR_central_map_array = 339 }
+		add_to_array = { TUR_map_x = 10 }
+		add_to_array = { TUR_map_y = 50 }
+		set_variable = { 339:TUR_central_var = 47 }
+
+		add_to_array = { TUR_central_map_array = 347 }
+		add_to_array = { TUR_map_x = 10 }
+		add_to_array = { TUR_map_y = 50 }
+		set_variable = { 347:TUR_central_var = 45 }
+
+		add_to_array = { TUR_central_map_array = 49 }
+		add_to_array = { TUR_map_x = 10 }
+		add_to_array = { TUR_map_y = 50 }
+		set_variable = { 49:TUR_central_var = 51 }
+
+		add_to_array = { TUR_central_map_array = 342 }
+		add_to_array = { TUR_map_x = 10 }
+		add_to_array = { TUR_map_y = 50 }
+		set_variable = { 342:TUR_central_var = 38 }
+
+		add_to_array = { TUR_central_map_array = 344 }
+		add_to_array = { TUR_map_x = 10 }
+		add_to_array = { TUR_map_y = 50 }
+		set_variable = { 344:TUR_central_var = 21 }
+
+		add_to_array = { TUR_central_map_array = 353 }
+		add_to_array = { TUR_map_x = 10 }
+		add_to_array = { TUR_map_y = 50 }
+		set_variable = { 353:TUR_central_var = 14 }
+
+		add_to_array = { TUR_central_map_array = 680 }
+		add_to_array = { TUR_map_x = 10 }
+		add_to_array = { TUR_map_y = 50 }
+		set_variable = { 680:TUR_central_var = 12 }
+
+		add_to_array = { TUR_central_map_array = 454 }
+		add_to_array = { TUR_map_x = 10 }
+		add_to_array = { TUR_map_y = 50 }
+		set_variable = { 454:TUR_central_var = 11 }
+
+		add_to_array = { TUR_central_map_array = 291 }
+		add_to_array = { TUR_map_x = 10 }
+		add_to_array = { TUR_map_y = 50 }
+		set_variable = { 291:TUR_central_var = 12 }
+
+		add_to_array = { TUR_central_map_array = 855 }
+		add_to_array = { TUR_map_x = 10 }
+		add_to_array = { TUR_map_y = 50 }
+		set_variable = { 855:TUR_central_var = 6 }
+
+		add_to_array = { TUR_central_map_array = 273 }
+		add_to_array = { TUR_map_x = 10 }
+		add_to_array = { TUR_map_y = 50 }
+		set_variable = { 273:TUR_central_var = 6 }
+
+		add_to_array = { TUR_central_map_array = 936 }
+		add_to_array = { TUR_map_x = 10 }
+		add_to_array = { TUR_map_y = 50 }
+		set_variable = { 936:TUR_central_var = 17 }
+	}
+	central_map_calculate_frame = yes
+}
+central_map_calculate_frame = {
+	for_each_loop = {
+		array = TUR_central_map_array
+		var:v = {
+			if = {
+				limit = {
+					check_variable = { TUR_central_var < 25 }
+				}
+
+				set_variable = { controlling_faction = 1 }
+	
+				set_variable = { gui_display_frame_tur = controlling_faction }
+				multiply_variable = { gui_display_frame_tur = 1000 }
+
+			}
+			else_if = {
+				limit = {
+					AND = {
+						OR = {
+							check_variable = { TUR_central_var > 25 }
+							check_variable = { TUR_central_var = 25 }
+						}
+						check_variable = { TUR_central_var < 50 }
+					}
+				}
+
+				set_variable = { controlling_faction = 2 }
+	
+				set_variable = { gui_display_frame_tur = controlling_faction }
+				multiply_variable = { gui_display_frame_tur = 1000 }
+
+			}
+			else_if = {
+				limit = {
+					AND = {
+						OR = {
+							check_variable = { TUR_central_var > 50 }
+							check_variable = { TUR_central_var = 50 }
+						}
+						check_variable = { TUR_central_var < 75 }
+					}
+				}
+
+				set_variable = { controlling_faction = 3 }
+	
+				set_variable = { gui_display_frame_tur = controlling_faction }
+				multiply_variable = { gui_display_frame_tur = 1000 }
+
+			}
+			else_if = {
+				limit = {
+					AND = {
+						OR = {
+							check_variable = { TUR_central_var > 75 }
+							check_variable = { TUR_central_var = 75 }
+						}
+						check_variable = { TUR_central_var < 100 }
+					}
+				}
+				
+				set_variable = { controlling_faction = 4 }
+	
+				set_variable = { gui_display_frame_tur = controlling_faction }
+				multiply_variable = { gui_display_frame_tur = 1000 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { TUR_central_var = 100 }
+				}
+				
+				set_variable = { controlling_faction = 5 }
+	
+				set_variable = { gui_display_frame_tur = controlling_faction }
+				multiply_variable = { gui_display_frame_tur = 1000 }
+			}
+
+			if = {
+				limit = {
+					TUR = {
+						OR = {
+							AND = {
+								check_variable = { v = 797 }
+								NOT = {
+									341 = {
+										is_controlled_by = TUR
+									}
+									797 = {
+										is_controlled_by = TUR
+									}
+									944 = {
+										is_controlled_by = TUR
+									}
+								}
+							}
+							AND = {
+								check_variable = { v = 339 }
+								NOT = {
+									187 = {
+										is_controlled_by = TUR
+									}
+									339 = {
+										is_controlled_by = TUR
+									}
+									340 = {
+										is_controlled_by = TUR
+									}
+									343 = {
+										is_controlled_by = TUR
+									}
+								}
+							}
+							AND = {
+								check_variable = { v = 347 }
+								NOT = {
+									347 = {
+										is_controlled_by = TUR
+									}
+									354 = {
+										is_controlled_by = TUR
+									}
+									355 = {
+										is_controlled_by = TUR
+									}
+									356 = {
+										is_controlled_by = TUR
+									}
+								}
+							}
+							AND = {
+								check_variable = { v = 49 }
+								NOT = {
+									49 = {
+										is_controlled_by = TUR
+									}
+									346 = {
+										is_controlled_by = TUR
+									}
+									348 = {
+										is_controlled_by = TUR
+									}
+									798 = {
+										is_controlled_by = TUR
+									}
+								}
+							}
+							AND = {
+								check_variable = { v = 342 }
+								NOT = {
+									164 = {
+										is_controlled_by = TUR
+									}
+									342 = {
+										is_controlled_by = TUR
+									}
+									345 = {
+										is_controlled_by = TUR
+									}
+								}
+							}
+							AND = {
+								check_variable = { v = 344 }
+								NOT = {
+									344 = {
+										is_controlled_by = TUR
+									}
+									350 = {
+										is_controlled_by = TUR
+									}
+									799 = {
+										is_controlled_by = TUR
+									}
+								}
+							}
+							AND = {
+								check_variable = { v = 353 }
+								NOT = {
+									352 = {
+										is_controlled_by = TUR
+									}
+									353 = {
+										is_controlled_by = TUR
+									}
+									800 = {
+										is_controlled_by = TUR
+									}
+								}
+							}
+							AND = {
+								check_variable = { v = 680 }
+								NOT = {
+									677 = {
+										is_controlled_by = TUR
+									}
+									680 = {
+										is_controlled_by = TUR
+									}
+								}
+							}
+							AND = {
+								check_variable = { v = 454 }
+								NOT = {
+									454 = {
+										is_controlled_by = TUR
+									}
+									455 = {
+										is_controlled_by = TUR
+									}
+									553 = {
+										is_controlled_by = TUR
+									}
+									554 = {
+										is_controlled_by = TUR
+									}
+								}
+							}
+							AND = {
+								check_variable = { v = 291 }
+								NOT = {
+									291 = {
+										is_controlled_by = TUR
+									}
+									676 = {
+										is_controlled_by = TUR
+									}
+									940 = {
+										is_controlled_by = TUR
+									}
+									941 = {
+										is_controlled_by = TUR
+									}
+								}
+							}
+							AND = {
+								check_variable = { v = 855 }
+								NOT = {
+									679 = {
+										is_controlled_by = TUR
+									}
+									855 = {
+										is_controlled_by = TUR
+									}
+									856 = {
+										is_controlled_by = TUR
+									}
+									927 = {
+										is_controlled_by = TUR
+									}
+								}
+							}
+							AND = {
+								check_variable = { v = 273 }
+								NOT = {
+									273 = {
+										is_controlled_by = TUR
+									}
+									448 = {
+										is_controlled_by = TUR
+									}
+									449 = {
+										is_controlled_by = TUR
+									}
+									450 = {
+										is_controlled_by = TUR
+									}
+									451 = {
+										is_controlled_by = TUR
+									}
+									661 = {
+										is_controlled_by = TUR
+									}
+									662 = {
+										is_controlled_by = TUR
+									}
+									663 = {
+										is_controlled_by = TUR
+									}
+									915 = {
+										is_controlled_by = TUR
+									}
+								}
+							}
+							AND = {
+								check_variable = { v = 936 }
+								NOT = {
+									936 = {
+										is_controlled_by = TUR
+									}
+									918 = {
+										is_controlled_by = TUR
+									}
+								}
+							}
+						}
+					}
+				}
+				set_variable = { gui_display_frame_tur = 6000 }
+			}
+		}
+	}
+}

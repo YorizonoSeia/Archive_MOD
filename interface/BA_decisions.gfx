@@ -686,6 +686,259 @@ spriteTypes = {
         texturefile = "gfx/interface/decisions/aby_descision_gui/ABY_council_2_8.png"
         legacy_lazy_load = no
     }
+	spriteType = {
+		name = "GFX_TUR_central_state_selected_797"
+		textureFile = "gfx/interface/decisions/aby_descision_gui/export202412161405461175_small.tga"
+		transparencecheck = yes
+		noofframes = 2
+	}
+	spriteType = {
+		name = "GFX_TUR_central_state_selected_339"
+		textureFile = "gfx/interface/decisions/aby_descision_gui/export202412161405561924_small.tga"
+		transparencecheck = yes
+		noofframes = 2
+	}
+	spriteType = {
+		name = "GFX_TUR_central_state_selected_347"
+		textureFile = "gfx/interface/decisions/aby_descision_gui/export202412161406238360_small.tga"
+		transparencecheck = yes
+		noofframes = 2
+	}
+	spriteType = {
+		name = "GFX_TUR_central_state_selected_49"
+		textureFile = "gfx/interface/decisions/aby_descision_gui/export202412161406354145_small.tga"
+		transparencecheck = yes
+		noofframes = 2
+	}
+	spriteType = {
+		name = "GFX_TUR_central_state_selected_342"
+		textureFile = "gfx/interface/decisions/aby_descision_gui/export202412161406505499_small.tga"
+		transparencecheck = yes
+		noofframes = 2
+	}
+	spriteType = {
+		name = "GFX_TUR_central_state_selected_344"
+		textureFile = "gfx/interface/decisions/aby_descision_gui/export202412161406599463_small.tga"
+		transparencecheck = yes
+		noofframes = 2
+	}
+	spriteType = {
+		name = "GFX_TUR_central_state_selected_353"
+		textureFile = "gfx/interface/decisions/aby_descision_gui/export202412161407100481_small.tga"
+		transparencecheck = yes
+		noofframes = 2
+	}
+	spriteType = {
+		name = "GFX_TUR_central_state_selected_680"
+		textureFile = "gfx/interface/decisions/aby_descision_gui/export202412161407196344_small.tga"
+		transparencecheck = yes
+		noofframes = 2
+	}
+	spriteType = {
+		name = "GFX_TUR_central_state_selected_454"
+		textureFile = "gfx/interface/decisions/aby_descision_gui/export202412161407292286_small.tga"
+		transparencecheck = yes
+		noofframes = 2
+	}
+	spriteType = {
+		name = "GFX_TUR_central_state_selected_291"
+		textureFile = "gfx/interface/decisions/aby_descision_gui/export202412161407395987_small.tga"
+		transparencecheck = yes
+		noofframes = 2
+	}
+	spriteType = {
+		name = "GFX_TUR_central_state_selected_855"
+		textureFile = "gfx/interface/decisions/aby_descision_gui/export202412161407490287_small.tga"
+		transparencecheck = yes
+		noofframes = 2
+	}
+	spriteType = {
+		name = "GFX_TUR_central_state_selected_273"
+		textureFile = "gfx/interface/decisions/aby_descision_gui/export202412161407587459_small.tga"
+		transparencecheck = yes
+		noofframes = 2
+	}
+	spriteType = {
+		name = "GFX_TUR_central_state_selected_936"
+		textureFile = "gfx/interface/decisions/aby_descision_gui/export202412161408082834_small.tga"
+		transparencecheck = yes
+		noofframes = 2
+	}
+	progressbartype = {
+		name = "GFX_TUR_central_state_797"
+		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161405461175.tga"
+		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_develop.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 480
+			y = 270
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_TUR_central_state_339"
+		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161405561924.tga"
+		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_develop.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 480
+			y = 270
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_TUR_central_state_347"
+		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161406238360.tga"
+		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_develop.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 480
+			y = 270
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_TUR_central_state_49"
+		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161406354145.tga"
+		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_develop.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 480
+			y = 270
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_TUR_central_state_342"
+		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161406505499.tga"
+		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_develop.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 480
+			y = 270
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_TUR_central_state_344"
+		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161406599463.tga"
+		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_develop.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 480
+			y = 270
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_TUR_central_state_353"
+		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161407100481.tga"
+		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_develop.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 480
+			y = 270
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_TUR_central_state_680"
+		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161407196344.tga"
+		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_develop.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 480
+			y = 270
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_TUR_central_state_454"
+		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161407292286.tga"
+		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_develop.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 480
+			y = 270
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_TUR_central_state_291"
+		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161407395987.tga"
+		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_develop.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 480
+			y = 270
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_TUR_central_state_855"
+		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161407490287.tga"
+		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_develop.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 480
+			y = 270
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_TUR_central_state_273"
+		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161407587459.tga"
+		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_develop.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 480
+			y = 270
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_TUR_central_state_936"
+		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161408082834.tga"
+		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_develop.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 480
+			y = 270
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+
+	spriteType = {
+		name = "GFX_TUR_central_state_border"
+		textureFile = "gfx/interface/decisions/aby_descision_gui/export202412181118152962.tga"
+		scale = 0.25
+	}
 
 	
 	spriteType = {

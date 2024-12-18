@@ -593,3 +593,20 @@ ABY_descision_category_debug = {
 		is_debug = yes
 	}
 }
+
+ABY_descision_category_abydos_highschool = { #전공투 
+
+	icon = GFX_decision_category_SOV_civil_puppet_interaction
+	
+	allowed = {
+		original_tag = ABY
+	}
+	visible = { 
+		is_debug = yes
+	}                  
+	priority = 500
+
+	scripted_gui = TUR_centralization_GUI
+
+	visible_when_empty = yes
+}

@@ -702,6 +702,15 @@ defined_text = {
     }
 }
 defined_text = {
+	name = ABY_state_owner_icon
+	text = {
+		trigger = {
+            check_variable = { TRM_internal_factions_slot_two_var = 2 } #필리우스
+		}
+		localization_key = "GFX_TRM_filius_icon"
+	}
+}
+defined_text = {
 	name = ENG_King_text
 	text = { 
 		trigger = {
