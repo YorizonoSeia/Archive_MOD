@@ -147,9 +147,7 @@
  GEK_paramilitary_organization:0 "准军事组织"
  GEK_send_volunteers_idea:0 "德国战争支援国"
  #德国军事政府 - 工具提示
- GEK_absorbed_into_a_specific_country:0 "隶属于§Y特定国家§!" #海军专用
- GEA_absorbed_into_a_specific_country:0 "隶属于§Y特定国家§!" #陆军专用
- GEF_absorbed_into_a_specific_country:0 "隶属于§Y特定国家§!" #空军专用
+ GER_absorbed_into_a_specific_country:0 "隶属于§Y特定国家§!" #海军专用
  GEK_communication_with_the_mainland_flag:0 "与§Y本土国防军§!取得联系"
  GEK_restoration_decision_GEH_tt:0 "@GEH§Y盖伊纳学院§!控制的§Y德国领土§!"
  GEK_restoration_decision_TRM_tt:0 "@TRM§Y三位一体综合学院§!控制的§Y德国领土§!"

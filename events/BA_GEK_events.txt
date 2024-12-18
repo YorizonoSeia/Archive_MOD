@@ -196,7 +196,7 @@ country_event = { #북부 독일 수립
 			add_core_of = GEK
 		}
 		GEA = {
-			set_country_flag = GEA_absorbed_into_a_specific_country
+			set_country_flag = GER_absorbed_into_a_specific_country
 			every_character = {
 				limit = {
 					NOT = {
@@ -760,7 +760,7 @@ country_event = { #북부 독일 수립
 			add_core_of = GEK
 		}
 		GEA = {
-			set_country_flag = GEA_absorbed_into_a_specific_country
+			set_country_flag = GER_absorbed_into_a_specific_country
 			every_character = {
 				limit = {
 					NOT = {

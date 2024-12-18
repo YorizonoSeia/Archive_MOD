@@ -2596,9 +2596,13 @@ shared_focus = {
 			tooltip = sp_tag_rocket_speed_factor_tt
 		}
 
-		#custom_effect_tooltip = generic_skip_one_line_tt
-		#custom_effect_tooltip = available_military_high_command
-		#show_ideas_tooltip = GER_walter_dornberger
+		if = {
+			limit = { has_character = GEK_walter_dornberger }
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = GER_walter_dornberger
+		}
 		
 	}
 }
@@ -8090,968 +8094,1272 @@ shared_focus = {
 	}
 }
 
+shared_focus = { #서독 통일
+	id = GE1_start_focus
+	icon = GFX_focus_SWE_landsverk
+	available = {
+		GE1 = { NOT = { has_country_flag = GER_absorbed_into_a_specific_country }}
+	}
+	x = 30
+	y = 12
+	cost = 2
+	completion_reward = {
+		add_political_power = 100
+		GE1 = {
+			set_country_flag = GER_absorbed_into_a_specific_country
+			every_character = {
+				set_nationality = ROOT
+			}
+		}
+	}
+}
+
+shared_focus = { #국가인민군
+	id = GE1_reorganize_nationale_volksarmee  
+	icon = GFX_goal_generic_axis_build_infantry
+	prerequisite = {
+		focus = GE1_start_focus
+	}
+	relative_position_id = GE1_start_focus
+	available = {
+		has_government = communism
+	}
+	x = -2
+	y = 2
+	cost = 5
+	completion_reward = {
+		add_command_power = 15
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		GER_modify_army_modifier = yes
+		add_to_variable = { GER_military_planning_speed = -0.1 tooltip = planning_speed_factor_tt }
+		add_to_variable = { GER_military_unit_leader_as_advisor_cp_cost_factor = -0.1 tooltip = unit_leader_as_advisor_cp_cost_factor_tt }
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		effect_tooltip = { #GER_vincenz_muller exists in the character file. This is for TT purposes only
+			if = { 
+				limit = { has_character = GEK_vincenz_muller }
+				add_field_marshal_role  = {
+					character = GEK_vincenz_muller
+					traits = { infantry_officer trait_reckless politically_connected offensive_doctrine }
+					skill = 2
+					attack_skill = 2
+					defense_skill = 2
+					planning_skill = 1
+					logistics_skill = 2
+				}
+			}
+		}
+		if = { 
+			limit = { has_character = GEK_hans_kahle }
+			show_unit_leaders_tooltip = GEK_hans_kahle
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+		if = {
+			limit = {
+				has_character = GEK_maximilian_von_weichs
+			}
+			retire_character = GEK_maximilian_von_weichs
+		}
+		if = {
+			limit = {
+				has_character = GEK_ewald_von_kleist
+			}
+			retire_character = GEK_ewald_von_kleist
+		}
+	}
+}
+
+shared_focus = { #군주주의 정서
+	id = GE1_monarchist_sentiment 
+	icon = GFX_focus_SWE_landsverk
+	prerequisite = {
+		focus = GE1_start_focus
+	}
+	relative_position_id = GE1_start_focus
+	available = {
+		has_government = neutrality
+	}
+	x = 4
+	y = 1
+	cost = 5
+	completion_reward = {
+	}
+}
+
+shared_focus = { #자유군단
+	id = GE1_re_form_the_freikorps  
+	text = GER_re_form_the_freikorps
+	icon = GFX_goal_generic_axis_build_infantry
+	prerequisite = {
+		focus = GE1_monarchist_sentiment
+	}
+	relative_position_id = GE1_monarchist_sentiment
+	available = {
+		has_government = neutrality
+	}
+	x = 0
+	y = 2
+	cost = 5
+	completion_reward = {
+
+		custom_effect_tooltip = GER_freikrops_militia_recruitment_tt
+
+		hidden_effect = {
+			delete_unit_template_and_units = {
+				division_template = "Freikorps"
+				disband = yes #if yes, will refund equipment/manpower.
+			}
+
+			division_template = {
+				name = "Freikorps"	
+				division_names_group = GER_MIL_01
+				template_counter = 84 # The pickelhaube 
+				# TODO_Danne: Add a custom 3d model for them
+				is_locked = yes
+				force_allow_recruiting = yes
+				division_cap = 24 
+				regiments = {
+					militia = { x = 0 y = 0 }
+					militia = { x = 0 y = 1 }
+					militia = { x = 0 y = 2 }
+					militia = { x = 1 y = 0 }
+					militia = { x = 1 y = 1 }
+					militia = { x = 1 y = 2 }
+				}
+				support = {
+					artillery = { x = 0 y = 0 }  
+				}
+			}
+
+			random_state = { 
+				limit = {
+					is_fully_controlled_by = ROOT
+					is_owned_by = ROOT
+					is_core_of = ROOT
+				}
+				create_unit = {
+					division = "name = \"Freikorps 'München'\" division_template = \"Freikorps\" start_experience_factor = 0.4 start_equipment_factor = 0.6"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Freikorps 'Nürnberg'\" division_template = \"Freikorps\" start_experience_factor = 0.3 start_equipment_factor = 0.8"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Freikorps 'Berlin'\" division_template = \"Freikorps\" start_experience_factor = 0.2 start_equipment_factor = 0.5"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Freikorps 'Bremerhaven'\" division_template = \"Freikorps\" start_experience_factor = 0.3 start_equipment_factor = 0.8"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Freikorps 'Hamburg'\" division_template = \"Freikorps\" start_experience_factor = 0.2 start_equipment_factor = 0.5"
+					owner = ROOT
+				}
+			}
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		custom_effect_tooltip = GER_re_form_the_freikorps_generals_tt
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+		if = {
+			limit = { has_character = GEK_hermann_erhardt }
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = GER_hermann_erhardt
+		}
+	}
+}
+
+shared_focus = { #동독 통일
+	id = GE2_start_focus
+	icon = GFX_focus_SWE_landsverk
+	relative_position_id = GE1_start_focus
+	available = {
+		GE2 = { NOT = { has_country_flag = GER_absorbed_into_a_specific_country }}
+	}
+	x = 32
+	y = 0
+	cost = 2
+	completion_reward = {
+		add_political_power = 100
+		GE2 = {
+			set_country_flag = GER_absorbed_into_a_specific_country
+			every_character = {
+				set_nationality = ROOT
+			}
+		}
+	}
+}
+
+shared_focus = { #국가인민군
+	id = GE2_reorganize_nationale_volksarmee  
+	icon = GFX_goal_generic_axis_build_infantry
+	prerequisite = {
+		focus = GE2_start_focus
+	}
+	relative_position_id = GE2_start_focus
+	available = {
+		has_government = communism
+	}
+	x = -2
+	y = 2
+	cost = 5
+	completion_reward = {
+		add_command_power = 15
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		GER_modify_army_modifier = yes
+		add_to_variable = { GER_military_planning_speed = -0.1 tooltip = planning_speed_factor_tt }
+		add_to_variable = { GER_military_unit_leader_as_advisor_cp_cost_factor = -0.1 tooltip = unit_leader_as_advisor_cp_cost_factor_tt }
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		if = { 
+			limit = { has_character = GEK_hans_marchwitza }
+			show_unit_leaders_tooltip = GEK_hans_marchwitza
+		}
+		if = { 
+			limit = { has_character = GEK_arno_von_lenski }
+			show_unit_leaders_tooltip = GEK_arno_von_lenski
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+		if = {
+			limit = {
+				has_character = GEK_maximilian_von_weichs
+			}
+			retire_character = GEK_maximilian_von_weichs
+		}
+		if = {
+			limit = {
+				has_character = GEK_ewald_von_kleist
+			}
+			retire_character = GEK_ewald_von_kleist
+		}
+	}
+}
+
+shared_focus = { #공산 정보부
+	id = GE2_formalize_the_intelligence_wing
+	icon = GFX_goal_generic_axis_build_infantry
+	prerequisite = {
+		focus = GE2_reorganize_nationale_volksarmee
+	}
+	relative_position_id = GE2_reorganize_nationale_volksarmee
+	available = {
+		has_government = communism
+	}
+	x = 0
+	y = 1
+	cost = 5
+	completion_reward = {
+		add_dynamic_modifier = {
+			modifier = GER_communist_intel_modifier
+		}
+		if = {
+			limit = {
+				has_dlc = "La Resistance"
+				has_character = GEK_wilhelm_zaisser
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = GEK_wilhelm_zaisser			
+		}
+	}
+}
+
+shared_focus = { #제국
+	id = GE2_return_of_the_kaiserreich
+	icon = GFX_goal_generic_axis_build_infantry
+	prerequisite = {
+		focus = GE2_start_focus
+	}
+	relative_position_id = GE2_start_focus
+	available = {
+		has_government = neutrality
+	}
+	x = 3
+	y = 1
+	cost = 5
+	completion_reward = {
+	}
+}
+
 # 종교 중점들
 
 
-	focus = { #종교 정책
-		id = GEK_RM_rel_focus_0
-		icon = GFX_focus_SOV_rebuild_the_savior_cathedral
-		prerequisite = {
-			focus = GEK_RM_focus_11
-		}
-		relative_position_id = GEK_RM_focus_4
-		x = -9
-		y = 4
-		cost = 2
-		completion_reward = {
-			country_event = {
-				id = GEK_rm_event.16
-				days = 2
-			}
-			unlock_decision_category_tooltip = GEK_religion_issue_cat
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = GER_hanns_kerrl
+shared_focus = { #경제 정책
+	id = GEK_RM_eco_focus_0
+	icon = GFX_focus_SWE_landsverk
+	prerequisite = {
+		focus = GE1_start_focus
+		focus = GE2_start_focus
+	}
+	relative_position_id = GE1_start_focus
+	x = 8
+	y = 1
+	cost = 2
+	completion_reward = {
+		country_event = {
+			id = GEK_rm_event.14
+			days = 2
 		}
 	}
-	focus = { #개신교 지원
-		id = GEK_RM_rel_focus_1
-		icon = GFX_focus_SOV_rebuild_the_savior_cathedral
-		prerequisite = {
-			focus = GEK_RM_rel_focus_0
-		}
-		mutually_exclusive = {
-			focus = GEK_RM_rel_focus_2
-			focus = GEK_RM_rel_focus_3
-		}
-		relative_position_id = GEK_RM_rel_focus_0
-		x = -2
-		y = 1
-		cost = 2
-		completion_reward = {
-			add_war_support = 0.05
-			add_popularity = {
-				ideology = neutrality
-				popularity = 0.05
-			}
-			unlock_decision_tooltip = GEK_conversion_to_protestant
-			hidden_effect = {
-				country_event = {
-					id = GEK_rm_event.17
-					days = 3
-				}
-			}
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = GER_dietrich_bonhoeffer
-		}
+}
+shared_focus = { #산업 애국주의
+	id = GEK_RM_eco_focus_1
+	icon = GFX_focus_BUL_condemn_macedonian_organizations
+	prerequisite = {
+		focus = GEK_RM_eco_focus_0
 	}
-	focus = { #세속주의 유지
-		id = GEK_RM_rel_focus_2
-		icon = GFX_focus_secularism
-		prerequisite = {
-			focus = GEK_RM_rel_focus_0
-		}
-		relative_position_id = GEK_RM_rel_focus_0
-		mutually_exclusive = {
-			focus = GEK_RM_rel_focus_3
-			focus = GEK_RM_rel_focus_1
-		}
-		x = 0
-		y = 1
-		cost = 2
-		completion_reward = {
-			add_war_support = 0.025
-			add_stability = 0.025
-			add_popularity = {
-				ideology = neutrality
-				popularity = -0.05
+	relative_position_id = GEK_RM_eco_focus_0
+	x = -1
+	y = 1
+	cost = 2
+	completion_reward = {
+		if = {
+			limit = {
+				has_idea = GEK_attacked_industry
+			}
+			swap_ideas = {
+				remove_idea = GEK_attacked_industry
+				add_idea = GEK_attacked_industry_1
 			}
 		}
-	}
-	focus = { #가톨릭 지원
-		id = GEK_RM_rel_focus_3
-		icon = GFX_focus_assist_catholic
-		prerequisite = {
-			focus = GEK_RM_rel_focus_0
+		else = {
+			remove_ideas = GEK_attacked_industry_1
 		}
-		mutually_exclusive = {
-			focus = GEK_RM_rel_focus_2
-			focus = GEK_RM_rel_focus_1
-		}
-		relative_position_id = GEK_RM_rel_focus_0
-		x = 2
-		y = 1
-		cost = 2
-		completion_reward = {
-			add_stability = 0.05
-			add_popularity = {
-				ideology = democratic
-				popularity = 0.05
+		if = {
+			limit = {
+				has_idea = GER_national_revitalization
 			}
-			unlock_decision_tooltip = GEK_conversion_to_catholic
-			hidden_effect = {
-				country_event = {
-					id = GEK_rm_event.18
-					days = 3
-				}
-			}
-		}
-	}
-	focus = { #'자본주의 정신'
-		id = GEK_RM_rel_focus_4
-		icon = GFX_focus_BEL_christian_corporatism
-		prerequisite = {
-			focus = GEK_RM_rel_focus_1
-		}
-		relative_position_id = GEK_RM_rel_focus_0
-		x = -3
-		y = 2
-		cost = 5
-		completion_reward = {
-			custom_effect_tooltip = GEK_RM_DNVP_focus_2_tt
-			every_controlled_state = {
-				limit = {
-					has_dynamic_modifier = {
-						modifier = GEK_protestant_state
-					}
-				}
-				add_dynamic_modifier = {
-					modifier = GEK_spirit_of_capitalism_state
-				}
-			}
-			unlock_decision_tooltip = GEK_insist_spirit_of_capitalism
-		}
-	}
-	focus = { #애국주의적 개신교
-		id = GEK_RM_rel_focus_5
-		icon = GFX_focus_FIN_chaplains
-		prerequisite = {
-			focus = GEK_RM_rel_focus_1
-		}
-		relative_position_id = GEK_RM_rel_focus_0
-		x = -2
-		y = 3
-		cost = 5
-		completion_reward = {
-			custom_effect_tooltip = GEK_RM_DNVP_focus_2_tt
-			every_controlled_state = {
-				limit = {
-					has_dynamic_modifier = {
-						modifier = GEK_protestant_state
-					}
-				}
-				add_dynamic_modifier = {
-					modifier = GEK_protestant_patriotism
-				}
-			}
-			TRM = {
-				custom_effect_tooltip = GEK_RM_DNVP_focus_2_tt
-				every_controlled_state = {
-					limit = {
-						has_dynamic_modifier = {
-							modifier = GEK_protestant_state
-						}
-					}
-					add_dynamic_modifier = {
-						modifier = GEK_protestant_patriotism_for_TRM
-					}
-				}
-			}
-		}
-	}
-	focus = { #신앙의 자유
-		id = GEK_RM_rel_focus_6
-		icon = GFX_goal_generic_national_unity
-		prerequisite = {
-			focus = GEK_RM_rel_focus_1
-			focus = GEK_RM_rel_focus_2
-			focus = GEK_RM_rel_focus_3
-		}
-		mutually_exclusive = {
-			focus = GEK_RM_rel_focus_7
-		}
-		relative_position_id = GEK_RM_rel_focus_0
-		x = -1
-		y = 2
-		cost = 4
-		completion_reward = {
-			custom_effect_tooltip = GEK_RM_rel_focus_6_tt
-			if = {
-				limit = {
-					has_idea = GEK_religious_conflict
-				}
-				remove_ideas = GEK_religious_conflict
-			}
-			if = {
-				limit = {
-					has_idea = GEK_religious_conflict_by_catholic
-				}
-				remove_ideas = GEK_religious_conflict_by_catholic
-			}
-			if = {
-				limit = {
-					has_idea = GEK_religious_conflict_by_protestant
-				}
-				remove_ideas = GEK_religious_conflict_by_protestant
-			}
-		}
-	}
-	focus = { #반종교 정책
-		id = GEK_RM_rel_focus_7
-		icon = GFX_focus_ARG_state_atheism
-		prerequisite = {
-			focus = GEK_RM_rel_focus_2
-		}
-		mutually_exclusive = {
-			focus = GEK_RM_rel_focus_6
-		}
-		relative_position_id = GEK_RM_rel_focus_0
-		x = 1
-		y = 2
-		cost = 4
-		completion_reward = {
-			add_political_power = -30
-			add_stability = -0.1
-			add_war_support = -0.1
-			remove_ideas = GEK_religious_conflict
-		}
-	}
-	focus = { #이계 종교 포용
-		id = GEK_RM_rel_focus_8
-		icon = GFX_focus_por_workers_of_iberia
-		prerequisite = {
-			focus = GEK_RM_rel_focus_6
-		}
-		relative_position_id = GEK_RM_rel_focus_0
-		x = -1
-		y = 4
-		cost = 2
-		completion_reward = {
-			add_stability = -0.05
-			add_political_power = -30
-		}
-	}
-	focus = { #트리니티 기독교 포용
-		id = GEK_RM_rel_focus_16
-		icon = GFX_goal_focus_TRM_cooperation
-		prerequisite = {
-			focus = GEK_RM_rel_focus_8
-		}
-		available = {
-			TRM = {
-				exists = no
-			}
-			any_controlled_state = {
-				has_dynamic_modifier = {
-					modifier = GEK_trm_christianity_state
-				}
-			}
-		}
-		relative_position_id = GEK_RM_rel_focus_0
-		x = -4
-		y = 5
-		cost = 2
-		completion_reward = {
-			custom_effect_tooltip = GEK_RM_rel_focus_16_tt
-			every_controlled_state = {
-				limit = {
-					has_dynamic_modifier = {
-						modifier = GEK_trm_christianity_state
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-				}
-			}
-		}
-	}
-	focus = { #게헨나 토속신앙
-		id = GEK_RM_rel_focus_17
-		icon = GFX_goal_HEU_geh_c
-		prerequisite = {
-			focus = GEK_RM_rel_focus_8
-		}
-		available = {
-			any_controlled_state = {
-				has_dynamic_modifier = {
-					modifier = GEK_no_religion
-				}
-			}
-		}
-		relative_position_id = GEK_RM_rel_focus_0
-		x = -2
-		y = 5
-		cost = 2
-		completion_reward = {
-			custom_effect_tooltip = GEK_RM_rel_focus_12_tt
-
-			every_controlled_state = {
-				limit = {
-					has_dynamic_modifier = {
-						modifier = GEK_no_religion
-					}
-				}
-				add_to_variable = { ROOT.halo_militia_cap = 2 } 
-				GEK = {
-					set_division_template_cap = {  division_template = "Abteilung für Studenten" division_cap = ROOT.halo_militia_cap }
-				}
-				
-				create_unit = {
-					division = "division_template = \"Abteilung für Studenten\" start_experience_factor = 0.1" 
-					owner = ROOT
-					count = 2
-				}
-			}
-		}
-	}
-	focus = { #아리우스 기독교 포용
-		id = GEK_RM_rel_focus_18
-		icon = GFX_ARI_arius_prussian_federation
-		prerequisite = {
-			focus = GEK_RM_rel_focus_8
-			focus = GEK_RM_rel_focus_9
-		}
-		available = {
-			any_controlled_state = {
-				has_dynamic_modifier = {
-					modifier = GEK_ari_religion
-				}
-			}
-		}
-		relative_position_id = GEK_RM_rel_focus_0
-		x = 0
-		y = 5
-		cost = 2
-		completion_reward = {
-			85 = {
-				add_extra_state_shared_building_slots = 4
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-				}
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-				}
-				if = {
-					limit = {
-						GEK = {
-							has_completed_focus = GEK_RM_rel_focus_9
-						}
-					}
-					remove_dynamic_modifier = {
-						modifier = GEK_ari_religion
-					}
-					add_dynamic_modifier = {
-						modifier = ARI_Gottglaubig_religion
-					}
-				}
-			}
-		}
-	}
-	focus = { #'고트글로이비히'
-		id = GEK_RM_rel_focus_9
-		icon = GFX_focus_SWE_revoke_militia_law
-		prerequisite = {
-			focus = GEK_RM_rel_focus_7
-		}
-		mutually_exclusive = {
-			focus = GEK_RM_rel_focus_11
-		}
-		available = {
-			has_government = fascism
-		}
-		relative_position_id = GEK_RM_rel_focus_0
-		x = 0
-		y = 3
-		cost = 4
-		completion_reward = {
-			add_dynamic_modifier = {
-				modifier = GEK_gottglaubig_modifier
-			}
-			unlock_decision_tooltip = GEK_conversion_to_gottglaubig
-		}
-	}
-	focus = { #성전 선포
-		id = GEK_RM_rel_focus_10
-		icon = GFX_focus_GRE_reviving_the_spartan_warrior_spirit
-		prerequisite = {
-			focus = GEK_RM_rel_focus_9
-		}
-		available = {
-			has_war_with_major = yes
-		}
-		relative_position_id = GEK_RM_rel_focus_0
-		x = 1
-		y = 4
-		cost = 2
-		completion_reward = {
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = GEK_gottglaubig
-					add_idea = GEK_gottglaubig_1
-				}
-			}
-			add_to_variable = {
-				GEK_gottglaubig_modifier_army_morale_factor = 0.05
-			}
-			add_to_variable = {
-				GEK_gottglaubig_modifier_army_org_factor = 0.05
-			}
-		}
-	}
-	focus = { #국가무신론
-		id = GEK_RM_rel_focus_11
-		icon = GFX_focus_BRA_state_atheism
-		prerequisite = {
-			focus = GEK_RM_rel_focus_7
-		}
-		mutually_exclusive = {
-			focus = GEK_RM_rel_focus_9
-		}
-		available = {
-			has_government = communism
-		}
-		relative_position_id = GEK_RM_rel_focus_0
-		x = 2
-		y = 3
-		cost = 4
-		completion_reward = {
-			add_popularity = {
-				ideology = communism
-				popularity = 0.05
-			}
-			unlock_decision_tooltip = GEK_conversion_to_no_religion
-		}
-	}
-	focus = { #유물론과 생산성
-		id = GEK_RM_rel_focus_12
-		icon = GFX_focus_eng_liberate_the_home_of_marx
-		prerequisite = {
-			focus = GEK_RM_rel_focus_11
-		}
-		relative_position_id = GEK_RM_rel_focus_0
-		x = 3
-		y = 4
-		cost = 5
-		completion_reward = {
-			custom_effect_tooltip = GEK_RM_rel_focus_12_tt
-			every_controlled_state = {
-				limit = {
-					has_dynamic_modifier = {
-						modifier = GEK_no_religion
-					}
-				}
-				add_dynamic_modifier = {
-					modifier = GEK_materialism
-				}
-			}
-			unlock_decision_tooltip = GEK_insist_materialism
-		}
-	}
-	focus = { #교회 억압 정책
-		id = GEK_RM_rel_focus_13
-		icon = GFX_focus_mex_triumph_over_the_cristeros
-		prerequisite = {
-			focus = GEK_RM_rel_focus_7
-		}
-		relative_position_id = GEK_RM_rel_focus_0
-		x = 4
-		y = 3
-		cost = 4
-		completion_reward = {
-			add_timed_idea = {
-				idea = GEK_tax_christian
-				years = 1
-			}
-		}
-	}
-	focus = { #가톨릭 노동조합
-		id = GEK_RM_rel_focus_14
-		icon = GFX_goal_GEH_easy_order
-		prerequisite = {
-			focus = GEK_RM_rel_focus_3
-		}
-		relative_position_id = GEK_RM_rel_focus_0
-		x = 3
-		y = 2
-		cost = 5
-		completion_reward = {
-			custom_effect_tooltip = GEK_RM_dzp_focus_4_tt
-			every_controlled_state = {
-				limit = {
-					has_dynamic_modifier = {
-						modifier = GEK_catholic_state
-					}
-				}
-				add_dynamic_modifier = {
-					modifier = GEK_catholic_trade_union
-				}
-			}
-			unlock_decision_tooltip = GEK_insist_catholic_union
-		}
-	}
-	focus = { #교황청과의 제휴
-		id = GEK_RM_rel_focus_15
-		icon = GFX_focus_generic_catholic_dominion
-		prerequisite = {
-			focus = GEK_RM_rel_focus_3
-		}
-		relative_position_id = GEK_RM_rel_focus_0
-		x = 5
-		y = 2
-		cost = 2
-		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.05
-			add_war_support = 0.05
-		}
-	}
-
-	# 학생 중점
-
-	
-	focus = { #학생 정책
-		id = GEK_RM_kiv_focus_0
-		icon = GFX_focus_generic_university_1
-		prerequisite = {
-			focus = GEK_RM_focus_6
-		}
-		prerequisite = {
-			focus = GEK_RM_focus_11
-		}
-		relative_position_id = GEK_RM_focus_4
-		x = 0
-		y = 4
-		cost = 2
-		completion_reward = {
-			country_event = {
-				id = GEK_rm_event.20
-				days = 2
-			}
-		}
-	}
-	focus = { #이해
-		id = GEK_RM_kiv_focus_1
-		icon = GFX_goal_generic_major_alliance
-		prerequisite = {
-			focus = GEK_RM_kiv_focus_0
-		}
-		mutually_exclusive = {
-			focus = GEK_RM_kiv_focus_2
-		}
-		relative_position_id = GEK_RM_kiv_focus_0
-		x = -1
-		y = 1
-		cost = 2
-		completion_reward = {
-			add_stability = 0.05
-		}
-	}
-	focus = { #경계
-		id = GEK_RM_kiv_focus_2
-		icon = GFX_goal_generic_political_pressure
-		prerequisite = {
-			focus = GEK_RM_kiv_focus_0
-		}
-		mutually_exclusive = {
-			focus = GEK_RM_kiv_focus_1
-		}
-		relative_position_id = GEK_RM_kiv_focus_0
-		x = 1
-		y = 1
-		cost = 2
-		completion_reward = {
-			add_war_support = 0.05
-		}
-	}
-	focus = { #동등한 권리
-		id = GEK_RM_kiv_focus_3
-		icon = GFX_goal_GEH_take_Benriya
-		prerequisite = {
-			focus = GEK_RM_kiv_focus_1
-		}
-		relative_position_id = GEK_RM_kiv_focus_0
-		x = -2
-		y = 2
-		cost = 2
-		completion_reward = {
-			add_timed_idea = {
-				idea = GEK_student_citizenship
-				days = 480
-			}
-		}
-	}
-	focus = { #공동 복무
-		id = GEK_RM_kiv_focus_4
-		icon = GFX_focus_generic_advanced_military_studies
-		prerequisite = {
-			focus = GEK_RM_kiv_focus_3
-		}
-		available = {
-			has_tech = kivotos_infantry_weapons
-		}
-		relative_position_id = GEK_RM_kiv_focus_0
-		x = -3
-		y = 3
-		cost = 5
-		completion_reward = {
-			custom_effect_tooltip = kivotos_halo_add3_tt
-			hidden_effect = {
-				set_variable = { BA_halo_infantry_cap_edit_var = 3 }
-				BA_halo_infantry_cap_edit_effect = yes
-			}
-			capital_scope = {
-				create_unit = {
-					division = "division_template = \"Halo Infantry Division\" start_experience_factor = 1 start_equipment_factor = 1.0"
-					owner = ROOT
-					count = 3
-				}
-			}
-		}
-	}
-	focus = { #이계의 협력자
-		id = GEK_RM_kiv_focus_5
-		icon = GFX_goal_GEH_bureaucracy
-		prerequisite = {
-			focus = GEK_RM_kiv_focus_3
-		}
-		relative_position_id = GEK_RM_kiv_focus_0
-		x = -1
-		y = 3
-		cost = 2
-		completion_reward = {
-			country_event = {
-				id = GEK_rm_event.22
-				days = 2
-			}
-		}
-	}
-	focus = { #재교육 캠프
-		id = GEK_RM_kiv_focus_6
-		icon = GFX_focus_generic_military_academy
-		prerequisite = {
-			focus = GEK_RM_kiv_focus_1
-			focus = GEK_RM_kiv_focus_2
-		}
-		relative_position_id = GEK_RM_kiv_focus_0
-		x = 0
-		y = 2
-		cost = 2
-		completion_reward = {
-			remove_ideas = GEK_student_resistance
-			add_timed_idea = {
-				idea = FRA_student_education
+			modify_timed_idea = {
+				idea = GER_national_revitalization
 				days = 120
 			}
 		}
 	}
-	focus = { #이계관리청
-		id = GEK_RM_kiv_focus_7
-		icon = GFX_focus_generic_self_management
-		prerequisite = {
-			focus = GEK_RM_kiv_focus_6
+}
+shared_focus = { #산업 재건
+	id = GEK_RM_eco_focus_2
+	icon = GFX_SOV_infrastructure_effort_nsb_ccp_2d_sov_compatibility
+	prerequisite = {
+		focus = GEK_RM_eco_focus_0
+	}
+	relative_position_id = GEK_RM_eco_focus_0
+	x = 1
+	y = 1
+	cost = 2
+	completion_reward = {
+		if = {
+			limit = {
+				has_idea = GEK_attacked_industry
+			}
+			swap_ideas = {
+				remove_idea = GEK_attacked_industry
+				add_idea = GEK_attacked_industry_1
+			}
 		}
-		relative_position_id = GEK_RM_kiv_focus_0
-		x = 1
-		y = 3
-		cost = 2
-		completion_reward = {
-			add_research_slot = 1
+		else = {
+			remove_ideas = GEK_attacked_industry_1
+		}
+		add_tech_bonus = {
+			name = GEK_RM_eco_focus_2
+			bonus = 0.1
+			category = industry
 		}
 	}
-	focus = { #특수한 지위
-		id = GEK_RM_kiv_focus_8
-		icon = GFX_focus_usa_voter_registration_act
-		prerequisite = {
-			focus = GEK_RM_kiv_focus_2
-		}
-		relative_position_id = GEK_RM_kiv_focus_0
-		x = 2
-		y = 2
-		cost = 2
-		completion_reward = {
-			add_political_power = 120
-		}
+}
+shared_focus = { #전시 산업 재건
+	id = GEK_RM_eco_focus_6
+	icon = GFX_focus_generic_stockpile_fuel
+	prerequisite = {
+		focus = GEK_RM_eco_focus_2
 	}
-	focus = { #기술 확보
-		id = GEK_RM_kiv_focus_9
-		icon = GFX_focus_generic_university_3
-		prerequisite = {
-			focus = GEK_RM_kiv_focus_2
-		}
-		relative_position_id = GEK_RM_kiv_focus_0
-		x = 4
-		y = 2
-		cost = 2
-		completion_reward = {
-			add_tech_bonus = {
-				name = GEK_RM_kiv_focus_9
-				bonus = 0.2
-				uses = 2
-				category = mystic_engineering
+	relative_position_id = GEK_RM_eco_focus_0
+	x = -2
+	y = 2
+	mutually_exclusive = {
+		focus = GEK_RM_eco_focus_4
+	}
+	cost = 5
+	completion_reward = {
+		random_owned_controlled_state = {
+			limit = {
+				is_core_of = GEK
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
 			}
 		}
 	}
-	focus = { #학생 동원
-		id = GEK_RM_kiv_focus_10
-		icon = GFX_focus_generic_limited_social_mobilization
-		prerequisite = {
-			focus = GEK_RM_kiv_focus_8
+}
+shared_focus = { #루르 산업 연결
+	id = GEK_RM_eco_focus_3
+	icon = GFX_focus_generic_industry_1
+	prerequisite = {
+		focus = GEK_RM_eco_focus_2
+	}
+	relative_position_id = GEK_RM_eco_focus_0
+	x = 1
+	y = 3
+	cost = 5
+	completion_reward = {
+		custom_effect_tooltip = GEH_llinked_ruhr_industrial_tt
+		random_owned_controlled_state = {
+			prioritize = { 57 }
+			limit = {
+				free_building_slots = {
+					building = industrial_complex
+					size > 0
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
 		}
-		prerequisite = {
-			focus = GEK_RM_kiv_focus_9
+		random_owned_controlled_state = {
+			prioritize = { 990 }
+			limit = {
+				free_building_slots = {
+					building = industrial_complex
+					size > 0
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
 		}
-		available = {
-			has_tech = kivotos_artificial_halo_replica_tech
+	}
+}
+shared_focus = { #소비재 생산 단지
+	id = GEK_RM_eco_focus_4
+	icon = GFX_goal_GER_Siemens
+	prerequisite = {
+		focus = GEK_RM_eco_focus_2
+	}
+	relative_position_id = GEK_RM_eco_focus_0
+	x = 0
+	y = 2
+	cost = 5
+	mutually_exclusive = {
+		focus = GEK_RM_eco_focus_6
+	}
+	completion_reward = {
+		custom_effect_tooltip = GEH_consumer_goods_augmentation_tt
+		52 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
 		}
-		relative_position_id = GEK_RM_kiv_focus_0
-		x = 3
-		y = 3
-		cost = 5
-		completion_reward = {
-			add_to_variable = { ROOT.halo_militia_cap = 3 } 
+	}
+}
+shared_focus = { #정유 산업 재건
+	id = GEK_RM_eco_focus_5
+	icon = GFX_goal_munitions_factories
+	prerequisite = {
+		focus = GEK_RM_eco_focus_2
+	}
+	relative_position_id = GEK_RM_eco_focus_0
+	x = 2
+	y = 2
+	cost = 5
+	completion_reward = {
+		custom_effect_tooltip = GEH_IG_farben_tt
+		add_tech_bonus = {
+			name = GEH_IG_farben
+			bonus = 1.0
+			uses = 1
+			category = synth_resources
+		}
+		if = {
+			limit = {
+				has_full_control_of_state = 51
+			}
+			51 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		else = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = synthetic_refinery
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+
+
+
+shared_focus = { #종교 정책
+	id = GEK_RM_rel_focus_0
+	icon = GFX_focus_SOV_rebuild_the_savior_cathedral
+	prerequisite = {
+		focus = GE1_start_focus
+		focus = GE2_start_focus
+	}
+	relative_position_id = GEK_RM_eco_focus_0
+	x = 7
+	y = 0
+	cost = 2
+	completion_reward = {
+		country_event = {
+			id = GEK_rm_event.16
+			days = 2
+		}
+		unlock_decision_category_tooltip = GEK_religion_issue_cat
+		if = {
+			limit = { has_character = GEK_hanns_kerrl }
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = GER_hanns_kerrl
+		}
+	}
+}
+shared_focus = { #개신교 지원
+	id = GEK_RM_rel_focus_1
+	icon = GFX_focus_SOV_rebuild_the_savior_cathedral
+	prerequisite = {
+		focus = GEK_RM_rel_focus_0
+	}
+	mutually_exclusive = {
+		focus = GEK_RM_rel_focus_2
+		focus = GEK_RM_rel_focus_3
+	}
+	relative_position_id = GEK_RM_rel_focus_0
+	x = -2
+	y = 1
+	cost = 2
+	completion_reward = {
+		add_war_support = 0.05
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.05
+		}
+		unlock_decision_tooltip = GEK_conversion_to_protestant
+		hidden_effect = {
+			country_event = {
+				id = GEK_rm_event.17
+				days = 3
+			}
+		}
+		custom_effect_tooltip = available_political_advisor
+		show_ideas_tooltip = GER_dietrich_bonhoeffer
+	}
+}
+shared_focus = { #세속주의 유지
+	id = GEK_RM_rel_focus_2
+	icon = GFX_focus_secularism
+	prerequisite = {
+		focus = GEK_RM_rel_focus_0
+	}
+	relative_position_id = GEK_RM_rel_focus_0
+	mutually_exclusive = {
+		focus = GEK_RM_rel_focus_3
+		focus = GEK_RM_rel_focus_1
+	}
+	x = 0
+	y = 1
+	cost = 2
+	completion_reward = {
+		add_war_support = 0.025
+		add_stability = 0.025
+		add_popularity = {
+			ideology = neutrality
+			popularity = -0.05
+		}
+	}
+}
+shared_focus = { #가톨릭 지원
+	id = GEK_RM_rel_focus_3
+	icon = GFX_focus_assist_catholic
+	prerequisite = {
+		focus = GEK_RM_rel_focus_0
+	}
+	mutually_exclusive = {
+		focus = GEK_RM_rel_focus_2
+		focus = GEK_RM_rel_focus_1
+	}
+	relative_position_id = GEK_RM_rel_focus_0
+	x = 2
+	y = 1
+	cost = 2
+	completion_reward = {
+		add_stability = 0.05
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}
+		unlock_decision_tooltip = GEK_conversion_to_catholic
+		hidden_effect = {
+			country_event = {
+				id = GEK_rm_event.18
+				days = 3
+			}
+		}
+	}
+}
+shared_focus = { #'자본주의 정신'
+	id = GEK_RM_rel_focus_4
+	icon = GFX_focus_BEL_christian_corporatism
+	prerequisite = {
+		focus = GEK_RM_rel_focus_1
+	}
+	relative_position_id = GEK_RM_rel_focus_0
+	x = -3
+	y = 2
+	cost = 5
+	completion_reward = {
+		custom_effect_tooltip = GEK_RM_DNVP_focus_2_tt
+		every_controlled_state = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = GEK_protestant_state
+				}
+			}
+			add_dynamic_modifier = {
+				modifier = GEK_spirit_of_capitalism_state
+			}
+		}
+		unlock_decision_tooltip = GEK_insist_spirit_of_capitalism
+	}
+}
+shared_focus = { #애국주의적 개신교
+	id = GEK_RM_rel_focus_5
+	icon = GFX_focus_FIN_chaplains
+	prerequisite = {
+		focus = GEK_RM_rel_focus_1
+	}
+	relative_position_id = GEK_RM_rel_focus_0
+	x = -2
+	y = 3
+	cost = 5
+	completion_reward = {
+		custom_effect_tooltip = GEK_RM_DNVP_focus_2_tt
+		every_controlled_state = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = GEK_protestant_state
+				}
+			}
+			add_dynamic_modifier = {
+				modifier = GEK_protestant_patriotism
+			}
+		}
+		TRM = {
+			custom_effect_tooltip = GEK_RM_DNVP_focus_2_tt
+			every_controlled_state = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GEK_protestant_state
+					}
+				}
+				add_dynamic_modifier = {
+					modifier = GEK_protestant_patriotism_for_TRM
+				}
+			}
+		}
+	}
+}
+shared_focus = { #신앙의 자유
+	id = GEK_RM_rel_focus_6
+	icon = GFX_goal_generic_national_unity
+	prerequisite = {
+		focus = GEK_RM_rel_focus_1
+		focus = GEK_RM_rel_focus_2
+		focus = GEK_RM_rel_focus_3
+	}
+	mutually_exclusive = {
+		focus = GEK_RM_rel_focus_7
+	}
+	relative_position_id = GEK_RM_rel_focus_0
+	x = -1
+	y = 2
+	cost = 4
+	completion_reward = {
+		custom_effect_tooltip = GEK_RM_rel_focus_6_tt
+		if = {
+			limit = {
+				has_idea = GEK_religious_conflict
+			}
+			remove_ideas = GEK_religious_conflict
+		}
+		if = {
+			limit = {
+				has_idea = GEK_religious_conflict_by_catholic
+			}
+			remove_ideas = GEK_religious_conflict_by_catholic
+		}
+		if = {
+			limit = {
+				has_idea = GEK_religious_conflict_by_protestant
+			}
+			remove_ideas = GEK_religious_conflict_by_protestant
+		}
+	}
+}
+shared_focus = { #반종교 정책
+	id = GEK_RM_rel_focus_7
+	icon = GFX_focus_ARG_state_atheism
+	prerequisite = {
+		focus = GEK_RM_rel_focus_2
+	}
+	mutually_exclusive = {
+		focus = GEK_RM_rel_focus_6
+	}
+	relative_position_id = GEK_RM_rel_focus_0
+	x = 1
+	y = 2
+	cost = 4
+	completion_reward = {
+		add_political_power = -30
+		add_stability = -0.1
+		add_war_support = -0.1
+		remove_ideas = GEK_religious_conflict
+	}
+}
+shared_focus = { #이계 종교 포용
+	id = GEK_RM_rel_focus_8
+	icon = GFX_focus_por_workers_of_iberia
+	prerequisite = {
+		focus = GEK_RM_rel_focus_6
+	}
+	relative_position_id = GEK_RM_rel_focus_0
+	x = -1
+	y = 4
+	cost = 2
+	completion_reward = {
+		add_stability = -0.05
+		add_political_power = -30
+	}
+}
+shared_focus = { #트리니티 기독교 포용
+	id = GEK_RM_rel_focus_16
+	icon = GFX_goal_focus_TRM_cooperation
+	prerequisite = {
+		focus = GEK_RM_rel_focus_8
+	}
+	available = {
+		TRM = {
+			exists = no
+		}
+		any_controlled_state = {
+			has_dynamic_modifier = {
+				modifier = GEK_trm_christianity_state
+			}
+		}
+	}
+	relative_position_id = GEK_RM_rel_focus_0
+	x = -4
+	y = 5
+	cost = 2
+	completion_reward = {
+		custom_effect_tooltip = GEK_RM_rel_focus_16_tt
+		every_controlled_state = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = GEK_trm_christianity_state
+				}
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+			}
+		}
+	}
+}
+shared_focus = { #게헨나 토속신앙
+	id = GEK_RM_rel_focus_17
+	icon = GFX_goal_HEU_geh_c
+	prerequisite = {
+		focus = GEK_RM_rel_focus_8
+	}
+	available = {
+		any_controlled_state = {
+			has_dynamic_modifier = {
+				modifier = GEK_no_religion
+			}
+		}
+	}
+	relative_position_id = GEK_RM_rel_focus_0
+	x = -2
+	y = 5
+	cost = 2
+	completion_reward = {
+		custom_effect_tooltip = GEK_RM_rel_focus_12_tt
+
+		every_controlled_state = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = GEK_no_religion
+				}
+			}
+			add_to_variable = { ROOT.halo_militia_cap = 2 } 
 			GEK = {
 				set_division_template_cap = {  division_template = "Abteilung für Studenten" division_cap = ROOT.halo_militia_cap }
 			}
-			custom_effect_tooltip = GEK_RM_kiv_focus_4_tt
-			capital_scope = {
-				create_unit = {
-					division = "division_template = \"Abteilung für Studenten\" start_experience_factor = 0.1" 
-					owner = ROOT
-					count = 3
-				}
+			
+			create_unit = {
+				division = "division_template = \"Abteilung für Studenten\" start_experience_factor = 0.1" 
+				owner = ROOT
+				count = 2
 			}
 		}
 	}
-	
-	focus = { #경제 정책
-		id = GEK_RM_eco_focus_0
-		icon = GFX_focus_SWE_landsverk
-		prerequisite = {
-			focus = GEK_RM_focus_11
-		}
-		relative_position_id = GEK_RM_focus_4
-		x = -16
-		y = 4
-		cost = 2
-		completion_reward = {
-			country_event = {
-				id = GEK_rm_event.14
-				days = 2
+}
+shared_focus = { #아리우스 기독교 포용
+	id = GEK_RM_rel_focus_18
+	icon = GFX_ARI_arius_prussian_federation
+	prerequisite = {
+		focus = GEK_RM_rel_focus_8
+		focus = GEK_RM_rel_focus_9
+	}
+	available = {
+		any_controlled_state = {
+			has_dynamic_modifier = {
+				modifier = GEK_ari_religion
 			}
 		}
 	}
-	focus = { #산업 애국주의
-		id = GEK_RM_eco_focus_1
-		icon = GFX_focus_BUL_condemn_macedonian_organizations
-		prerequisite = {
-			focus = GEK_RM_eco_focus_0
-		}
-		relative_position_id = GEK_RM_eco_focus_0
-		x = -1
-		y = 1
-		cost = 2
-		completion_reward = {
-			if = {
-				limit = {
-					has_idea = GEK_attacked_industry
-				}
-				swap_ideas = {
-					remove_idea = GEK_attacked_industry
-					add_idea = GEK_attacked_industry_1
-				}
+	relative_position_id = GEK_RM_rel_focus_0
+	x = 0
+	y = 5
+	cost = 2
+	completion_reward = {
+		85 = {
+			add_extra_state_shared_building_slots = 4
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
 			}
-			else = {
-				remove_ideas = GEK_attacked_industry_1
+			add_building_construction = {
+				type = arms_factory
+				level = 2
 			}
 			if = {
 				limit = {
-					has_idea = GER_national_revitalization
-				}
-				modify_timed_idea = {
-					idea = GER_national_revitalization
-					days = 120
-				}
-			}
-		}
-	}
-	focus = { #산업 재건
-		id = GEK_RM_eco_focus_2
-		icon = GFX_SOV_infrastructure_effort_nsb_ccp_2d_sov_compatibility
-		prerequisite = {
-			focus = GEK_RM_eco_focus_0
-		}
-		relative_position_id = GEK_RM_eco_focus_0
-		x = 1
-		y = 1
-		cost = 2
-		completion_reward = {
-			if = {
-				limit = {
-					has_idea = GEK_attacked_industry
-				}
-				swap_ideas = {
-					remove_idea = GEK_attacked_industry
-					add_idea = GEK_attacked_industry_1
-				}
-			}
-			else = {
-				remove_ideas = GEK_attacked_industry_1
-			}
-			add_tech_bonus = {
-				name = GEK_RM_eco_focus_2
-				bonus = 0.1
-				category = industry
-			}
-		}
-	}
-	focus = { #전시 산업 재건
-		id = GEK_RM_eco_focus_6
-		icon = GFX_focus_generic_stockpile_fuel
-		prerequisite = {
-			focus = GEK_RM_eco_focus_2
-		}
-		relative_position_id = GEK_RM_eco_focus_0
-		x = -2
-		y = 2
-		mutually_exclusive = {
-			focus = GEK_RM_eco_focus_4
-		}
-		cost = 5
-		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					is_core_of = GEK
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-				}
-			}
-		}
-	}
-	focus = { #루르 산업 연결
-		id = GEK_RM_eco_focus_3
-		icon = GFX_focus_generic_industry_1
-		prerequisite = {
-			focus = GEK_RM_eco_focus_2
-		}
-		relative_position_id = GEK_RM_eco_focus_0
-		x = 1
-		y = 3
-		cost = 5
-		completion_reward = {
-			custom_effect_tooltip = GEH_llinked_ruhr_industrial_tt
-			random_owned_controlled_state = {
-				prioritize = { 57 }
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
+					GEK = {
+						has_completed_focus = GEK_RM_rel_focus_9
 					}
 				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
+				remove_dynamic_modifier = {
+					modifier = GEK_ari_religion
 				}
-			}
-			random_owned_controlled_state = {
-				prioritize = { 990 }
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
+				add_dynamic_modifier = {
+					modifier = ARI_Gottglaubig_religion
 				}
 			}
 		}
 	}
-	focus = { #소비재 생산 단지
-		id = GEK_RM_eco_focus_4
-		icon = GFX_goal_GER_Siemens
-		prerequisite = {
-			focus = GEK_RM_eco_focus_2
+}
+shared_focus = { #'고트글로이비히'
+	id = GEK_RM_rel_focus_9
+	icon = GFX_focus_SWE_revoke_militia_law
+	prerequisite = {
+		focus = GEK_RM_rel_focus_7
+	}
+	mutually_exclusive = {
+		focus = GEK_RM_rel_focus_11
+	}
+	available = {
+		has_government = fascism
+	}
+	relative_position_id = GEK_RM_rel_focus_0
+	x = 0
+	y = 3
+	cost = 4
+	completion_reward = {
+		add_dynamic_modifier = {
+			modifier = GEK_gottglaubig_modifier
 		}
-		relative_position_id = GEK_RM_eco_focus_0
-		x = 0
-		y = 2
-		cost = 5
-		mutually_exclusive = {
-			focus = GEK_RM_eco_focus_6
+		unlock_decision_tooltip = GEK_conversion_to_gottglaubig
+	}
+}
+shared_focus = { #성전 선포
+	id = GEK_RM_rel_focus_10
+	icon = GFX_focus_GRE_reviving_the_spartan_warrior_spirit
+	prerequisite = {
+		focus = GEK_RM_rel_focus_9
+	}
+	available = {
+		has_war_with_major = yes
+	}
+	relative_position_id = GEK_RM_rel_focus_0
+	x = 1
+	y = 4
+	cost = 2
+	completion_reward = {
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = GEK_gottglaubig
+				add_idea = GEK_gottglaubig_1
+			}
 		}
-		completion_reward = {
-			custom_effect_tooltip = GEH_consumer_goods_augmentation_tt
-			52 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
+		add_to_variable = {
+			GEK_gottglaubig_modifier_army_morale_factor = 0.05
+		}
+		add_to_variable = {
+			GEK_gottglaubig_modifier_army_org_factor = 0.05
+		}
+	}
+}
+shared_focus = { #국가무신론
+	id = GEK_RM_rel_focus_11
+	icon = GFX_focus_BRA_state_atheism
+	prerequisite = {
+		focus = GEK_RM_rel_focus_7
+	}
+	mutually_exclusive = {
+		focus = GEK_RM_rel_focus_9
+	}
+	available = {
+		has_government = communism
+	}
+	relative_position_id = GEK_RM_rel_focus_0
+	x = 2
+	y = 3
+	cost = 4
+	completion_reward = {
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
+		unlock_decision_tooltip = GEK_conversion_to_no_religion
+	}
+}
+shared_focus = { #유물론과 생산성
+	id = GEK_RM_rel_focus_12
+	icon = GFX_focus_eng_liberate_the_home_of_marx
+	prerequisite = {
+		focus = GEK_RM_rel_focus_11
+	}
+	relative_position_id = GEK_RM_rel_focus_0
+	x = 3
+	y = 4
+	cost = 5
+	completion_reward = {
+		custom_effect_tooltip = GEK_RM_rel_focus_12_tt
+		every_controlled_state = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = GEK_no_religion
 				}
+			}
+			add_dynamic_modifier = {
+				modifier = GEK_materialism
+			}
+		}
+		unlock_decision_tooltip = GEK_insist_materialism
+	}
+}
+shared_focus = { #교회 억압 정책
+	id = GEK_RM_rel_focus_13
+	icon = GFX_focus_mex_triumph_over_the_cristeros
+	prerequisite = {
+		focus = GEK_RM_rel_focus_7
+	}
+	relative_position_id = GEK_RM_rel_focus_0
+	x = 4
+	y = 3
+	cost = 4
+	completion_reward = {
+		add_timed_idea = {
+			idea = GEK_tax_christian
+			years = 1
+		}
+	}
+}
+shared_focus = { #가톨릭 노동조합
+	id = GEK_RM_rel_focus_14
+	icon = GFX_goal_GEH_easy_order
+	prerequisite = {
+		focus = GEK_RM_rel_focus_3
+	}
+	relative_position_id = GEK_RM_rel_focus_0
+	x = 3
+	y = 2
+	cost = 5
+	completion_reward = {
+		custom_effect_tooltip = GEK_RM_dzp_focus_4_tt
+		every_controlled_state = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = GEK_catholic_state
+				}
+			}
+			add_dynamic_modifier = {
+				modifier = GEK_catholic_trade_union
+			}
+		}
+		unlock_decision_tooltip = GEK_insist_catholic_union
+	}
+}
+shared_focus = { #교황청과의 제휴
+	id = GEK_RM_rel_focus_15
+	icon = GFX_focus_generic_catholic_dominion
+	prerequisite = {
+		focus = GEK_RM_rel_focus_3
+	}
+	relative_position_id = GEK_RM_rel_focus_0
+	x = 5
+	y = 2
+	cost = 2
+	completion_reward = {
+		add_political_power = 50
+		add_stability = 0.05
+		add_war_support = 0.05
+	}
+}
+
+# 학생 중점
+
+
+shared_focus = { #학생 정책
+	id = GEK_RM_kiv_focus_0
+	icon = GFX_focus_generic_university_1
+	prerequisite = {
+		focus = GE1_start_focus
+		focus = GE2_start_focus
+	}
+	relative_position_id = GE1_start_focus
+	x = 24
+	y = 1
+	cost = 2
+	completion_reward = {
+		country_event = {
+			id = GEK_rm_event.20
+			days = 2
+		}
+	}
+}
+shared_focus = { #이해
+	id = GEK_RM_kiv_focus_1
+	icon = GFX_goal_generic_major_alliance
+	prerequisite = {
+		focus = GEK_RM_kiv_focus_0
+	}
+	mutually_exclusive = {
+		focus = GEK_RM_kiv_focus_2
+	}
+	relative_position_id = GEK_RM_kiv_focus_0
+	x = -1
+	y = 1
+	cost = 2
+	completion_reward = {
+		add_stability = 0.05
+	}
+}
+shared_focus = { #경계
+	id = GEK_RM_kiv_focus_2
+	icon = GFX_goal_generic_political_pressure
+	prerequisite = {
+		focus = GEK_RM_kiv_focus_0
+	}
+	mutually_exclusive = {
+		focus = GEK_RM_kiv_focus_1
+	}
+	relative_position_id = GEK_RM_kiv_focus_0
+	x = 1
+	y = 1
+	cost = 2
+	completion_reward = {
+		add_war_support = 0.05
+	}
+}
+shared_focus = { #동등한 권리
+	id = GEK_RM_kiv_focus_3
+	icon = GFX_goal_GEH_take_Benriya
+	prerequisite = {
+		focus = GEK_RM_kiv_focus_1
+	}
+	relative_position_id = GEK_RM_kiv_focus_0
+	x = -2
+	y = 2
+	cost = 2
+	completion_reward = {
+		add_timed_idea = {
+			idea = GEK_student_citizenship
+			days = 480
+		}
+	}
+}
+shared_focus = { #공동 복무
+	id = GEK_RM_kiv_focus_4
+	icon = GFX_focus_generic_advanced_military_studies
+	prerequisite = {
+		focus = GEK_RM_kiv_focus_3
+	}
+	available = {
+		has_tech = kivotos_infantry_weapons
+	}
+	relative_position_id = GEK_RM_kiv_focus_0
+	x = -3
+	y = 3
+	cost = 5
+	completion_reward = {
+		custom_effect_tooltip = kivotos_halo_add3_tt
+		hidden_effect = {
+			set_variable = { BA_halo_infantry_cap_edit_var = 3 }
+			BA_halo_infantry_cap_edit_effect = yes
+		}
+		capital_scope = {
+			create_unit = {
+				division = "division_template = \"Halo Infantry Division\" start_experience_factor = 1 start_equipment_factor = 1.0"
+				owner = ROOT
+				count = 3
 			}
 		}
 	}
-	focus = { #정유 산업 재건
-		id = GEK_RM_eco_focus_5
-		icon = GFX_goal_munitions_factories
-		prerequisite = {
-			focus = GEK_RM_eco_focus_2
+}
+shared_focus = { #이계의 협력자
+	id = GEK_RM_kiv_focus_5
+	icon = GFX_goal_GEH_bureaucracy
+	prerequisite = {
+		focus = GEK_RM_kiv_focus_3
+	}
+	relative_position_id = GEK_RM_kiv_focus_0
+	x = -1
+	y = 3
+	cost = 2
+	completion_reward = {
+		country_event = {
+			id = GEK_rm_event.22
+			days = 2
 		}
-		relative_position_id = GEK_RM_eco_focus_0
-		x = 2
-		y = 2
-		cost = 5
-		completion_reward = {
-			custom_effect_tooltip = GEH_IG_farben_tt
-			add_tech_bonus = {
-				name = GEH_IG_farben
-				bonus = 1.0
-				uses = 1
-				category = synth_resources
-			}
-			if = {
-				limit = {
-					has_full_control_of_state = 51
-				}
-				51 = {
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = synthetic_refinery
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			else = {
-				random_owned_controlled_state = {
-					limit = {
-						free_building_slots = {
-							building = synthetic_refinery
-							size > 0
-							include_locked = yes
-						}
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = synthetic_refinery
-						level = 1
-						instant_build = yes
-					}
-				}
+	}
+}
+shared_focus = { #재교육 캠프
+	id = GEK_RM_kiv_focus_6
+	icon = GFX_focus_generic_military_academy
+	prerequisite = {
+		focus = GEK_RM_kiv_focus_1
+		focus = GEK_RM_kiv_focus_2
+	}
+	relative_position_id = GEK_RM_kiv_focus_0
+	x = 0
+	y = 2
+	cost = 2
+	completion_reward = {
+		remove_ideas = GEK_student_resistance
+		add_timed_idea = {
+			idea = FRA_student_education
+			days = 120
+		}
+	}
+}
+shared_focus = { #이계관리청
+	id = GEK_RM_kiv_focus_7
+	icon = GFX_focus_generic_self_management
+	prerequisite = {
+		focus = GEK_RM_kiv_focus_6
+	}
+	relative_position_id = GEK_RM_kiv_focus_0
+	x = 1
+	y = 3
+	cost = 2
+	completion_reward = {
+		add_research_slot = 1
+	}
+}
+shared_focus = { #특수한 지위
+	id = GEK_RM_kiv_focus_8
+	icon = GFX_focus_usa_voter_registration_act
+	prerequisite = {
+		focus = GEK_RM_kiv_focus_2
+	}
+	relative_position_id = GEK_RM_kiv_focus_0
+	x = 2
+	y = 2
+	cost = 2
+	completion_reward = {
+		add_political_power = 120
+	}
+}
+shared_focus = { #기술 확보
+	id = GEK_RM_kiv_focus_9
+	icon = GFX_focus_generic_university_3
+	prerequisite = {
+		focus = GEK_RM_kiv_focus_2
+	}
+	relative_position_id = GEK_RM_kiv_focus_0
+	x = 4
+	y = 2
+	cost = 2
+	completion_reward = {
+		add_tech_bonus = {
+			name = GEK_RM_kiv_focus_9
+			bonus = 0.2
+			uses = 2
+			category = mystic_engineering
+		}
+	}
+}
+shared_focus = { #학생 동원
+	id = GEK_RM_kiv_focus_10
+	icon = GFX_focus_generic_limited_social_mobilization
+	prerequisite = {
+		focus = GEK_RM_kiv_focus_8
+	}
+	prerequisite = {
+		focus = GEK_RM_kiv_focus_9
+	}
+	available = {
+		has_tech = kivotos_artificial_halo_replica_tech
+	}
+	relative_position_id = GEK_RM_kiv_focus_0
+	x = 3
+	y = 3
+	cost = 5
+	completion_reward = {
+		add_to_variable = { ROOT.halo_militia_cap = 3 } 
+		GEK = {
+			set_division_template_cap = {  division_template = "Abteilung für Studenten" division_cap = ROOT.halo_militia_cap }
+		}
+		custom_effect_tooltip = GEK_RM_kiv_focus_4_tt
+		capital_scope = {
+			create_unit = {
+				division = "division_template = \"Abteilung für Studenten\" start_experience_factor = 0.1" 
+				owner = ROOT
+				count = 3
 			}
 		}
 	}
-	
+}

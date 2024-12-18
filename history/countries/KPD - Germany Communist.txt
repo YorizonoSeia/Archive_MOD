@@ -1,5 +1,65 @@
 capital = 64
 
+#COMMUNIST INTEL MODIFIER
+set_variable = { GER_communist_intel_drift_defence_factor = 0.2 }
+set_variable = { GER_communist_intel_communism_drift = 0.05 }
+set_variable = { GER_communist_intel_operative_slot = 0 }
+set_variable = { GER_communist_intel_stability_factor = 0 }
+set_variable = { GER_communist_intel_operation_cost = 0 }
+set_variable = { GER_communist_intel_subversive_activities_upkeep = 0 }
+set_variable = { GER_communist_intel_intel_network_gain = 0 }
+set_variable = { GER_communist_intel_decryption_factor = 0 }
+set_variable = { GER_communist_intel_encryption_factor = 0 }
+
+#INDUSTRAY: MEFO Bills/Economy of Conquest/Recovering Economy/Wirtschaftswunder
+#REMINDER to always update the fake NS if these numbers are altered!
+set_variable = { GER_monthly_consumer_goods_increase = GER_monthly_consumer_goods_start } #Amount of increasing CG each month
+set_variable = { GER_industrial_consumer_goods_factor = 0.1 } #Used for MEFO Bills, Economy of Conquest and Recovering Economy and Wirtschaftswunder - must correspond with the Fake MEFO Bills NS for the 1936 Bookmark
+set_variable = { GER_industrial_civilian_intel_to_others = -25 }
+set_variable = { GER_industrial_army_intel_to_others = -25 }
+set_variable = { GER_industrial_navy_intel_to_others = -25 }
+set_variable = { GER_industrial_airforce_intel_to_others = -25 }
+set_variable = { GER_industrial_production_speed_arms_factory_factor = 0.1 }
+set_variable = { GER_industrial_production_speed_dockyard_factor = 0.1 }
+set_variable = { GER_industrial_industrial_capacity_factory = 0 }
+set_variable = { GER_industrial_industrial_capacity_dockyard = 0 }
+set_variable = { GER_industrial_production_lack_of_resource_penalty_factor = 0 }
+set_variable = { GER_industrial_conversion_cost_civ_to_mil_factor = 0 }
+set_variable = { GER_industrial_industry_air_damage_factor = 0 }
+set_variable = { GER_industrial_resource_trade_cost_bonus_per_factory = 0 }
+set_variable = { GER_industrial_production_speed_buildings_factor = 0 }
+set_variable = { GER_industrial_research_speed_factor = 0 }
+set_variable = { GER_industrial_economy_cost_factor = 0 }
+set_variable = { GER_industrial_trade_laws_cost_factor = 0 }
+set_variable = { GER_recovering_economy_modifier_local_resources_factor = 0 }
+set_variable = { GER_industrial_production_factory_max_efficiency_factor = 0 }
+set_variable = { GER_industrial_production_factory_efficiency_gain_factor = 0 }
+set_variable = { GER_industrial_production_factory_start_efficiency_factor = 0 }
+set_variable = { GER_industrial_line_change_production_efficiency_factor = 0 }
+set_variable = { GER_industrial_equipment_conversion_speed = 0 }
+set_variable = { GER_industrial_consumer_goods_expected_value = 0 }
+set_variable = { GER_economic_crash_consumer_goods = 0.75 } #Amount of CGFF if the MEFO Bills gets canceled one way or another
+#WEHRWIRTSCHAFT
+#REMINDER to always update the fake NS if these numbers are altered!
+set_variable = { GER_wehrwirtschaft_local_resources_factor = 0 }
+set_variable = { GER_wehrwirtschaft_production_speed_buildings_factor = 0 }
+set_variable = { GER_wehrwirtschaft_production_oil_factor = 0 }
+set_variable = { GER_wehrwirtschaft_production_speed_synthetic_refinery_factor = 0 }
+set_variable = { GER_wehrwirtschaft_production_speed_fuel_silo_factor = 0 }
+
+# FINNISH ARMY NS
+set_variable = { GEK_german_nationalism_experience_gain_army_factor = 0.05 }
+set_variable = { GEK_german_nationalism_mobilization_speed = 0.05 }
+set_variable = { GEK_german_nationalism_land_reinforce_rate = 0.05 }
+set_variable = { GEK_german_nationalism_army_spirit_category_type_cost_factor = 0.00 }
+set_variable = { GEK_german_nationalism_army_org_factor = 0.00 }
+set_variable = { GEK_german_nationalism_army_attack_speed_factor = 0.00 }
+set_variable = { GEK_german_nationalism_army_core_attack_factor = 0.15 }
+set_variable = { GEK_german_nationalism_army_core_defence_factor = 0.15 }
+set_variable = { GEK_german_nationalism_army_defence_factor = -0.10 }
+set_variable = { GEK_german_nationalism_army_attack_factor = -0.10 }
+set_variable = { GEK_german_nationalism_army_org_regain = 0.00 }
+
 set_popularities = {
 	communism = 60
 	democratic = 25

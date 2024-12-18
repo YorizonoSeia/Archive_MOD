@@ -197,9 +197,8 @@
  GEK_communist_good_idea:0 "은닉 자산 확보"
 
  #독일 군사정부 - 툴팁
- GEK_absorbed_into_a_specific_country:0 "§Y특정 국가§!에 소속됨" #해군용
- GEA_absorbed_into_a_specific_country:0 "§Y특정 국가§!에 소속됨" #육군용
- GEF_absorbed_into_a_specific_country:0 "§Y특정 국가§!에 소속됨" #공군용
+ GER_absorbed_into_a_specific_country:0 "§Y특정 국가§!에 소속됨"
+ GER_absorbed_into_a_specific_country_NOT:0 "§Y특정 국가§!에 소속되지 않음"
  GEK_communication_with_the_mainland_flag:0 "§Y본토의 국방군§!과 접촉함"
  GEK_restoration_decision_GEH_tt:0 "@GEH§Y게헨나 학원§!의 §Y독일 영토§! 지배"
  GEK_restoration_decision_TRM_tt:0 "@TRM§Y트리니티 종합학원§!의 §Y독일 영토§! 지배"

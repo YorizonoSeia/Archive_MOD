@@ -11,6 +11,17 @@ set_variable = { GER_factory_output_penalty = 0.2 } #Factory output penalty when
 set_variable = { GER_dockyard_output_penalty = 0.2 } #Dockyard output penalty when hitting 100% CGFF
 set_variable = { GER_reduce_russian_CG_bonus = 0 } #Used to reduce Soviet Gold Reserves if Germany has taken gold from various Soviet cities before capping them
 
+#COMMUNIST INTEL MODIFIER
+set_variable = { GER_communist_intel_drift_defence_factor = 0.2 }
+set_variable = { GER_communist_intel_communism_drift = 0.05 }
+set_variable = { GER_communist_intel_operative_slot = 0 }
+set_variable = { GER_communist_intel_stability_factor = 0 }
+set_variable = { GER_communist_intel_operation_cost = 0 }
+set_variable = { GER_communist_intel_subversive_activities_upkeep = 0 }
+set_variable = { GER_communist_intel_intel_network_gain = 0 }
+set_variable = { GER_communist_intel_decryption_factor = 0 }
+set_variable = { GER_communist_intel_encryption_factor = 0 }
+
 #INDUSTRAY: MEFO Bills/Economy of Conquest/Recovering Economy/Wirtschaftswunder
 #REMINDER to always update the fake NS if these numbers are altered!
 set_variable = { GER_monthly_consumer_goods_increase = GER_monthly_consumer_goods_start } #Amount of increasing CG each month

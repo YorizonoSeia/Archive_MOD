@@ -27,6 +27,11 @@ every_possible_country = {
 				TAG = SUH
 				TAG = INK
 				TAG = ABC
+				TAG = GEK
+				TAG = GEA
+				TAG = GEF
+				TAG = GE1
+				TAG = GE2
 			}
 		}
 		NOT = { OR = { tag = GER tag = ENG tag = SOV original_tag = FRA tag = ITA tag = JAP tag = USA tag = AST tag = RAJ tag = CAN tag = SAF tag = CZE tag = ROM tag = CHI tag = MAN tag = MEX tag = HOL original_tag = SPR original_tag = POL } }
@@ -97,6 +102,11 @@ every_possible_country = {
 				TAG = SUH
 				TAG = INK
 				TAG = ABC
+				TAG = GEK
+				TAG = GEA
+				TAG = GEF
+				TAG = GE1
+				TAG = GE2
 			}
 		}
 		NOT = { OR = { tag = GER tag = ENG tag = SOV original_tag = FRA tag = ITA tag = JAP tag = USA tag = AST tag = RAJ tag = CAN tag = SAF tag = CZE tag = PRC tag = CHI tag = MAN tag = MEX tag = HOL original_tag = SPR original_tag = POL } }
@@ -169,6 +179,11 @@ every_possible_country = {
 				TAG = SUH
 				TAG = INK
 				TAG = ABC
+				TAG = GEK
+				TAG = GEA
+				TAG = GEF
+				TAG = GE1
+				TAG = GE2
 			}
 		}
 		NOT = { OR = { tag = GER tag = ENG tag = SOV original_tag = FRA tag = ITA tag = JAP tag = USA tag = AST tag = RAJ tag = CAN tag = SAF tag = ROM tag = CZE tag = PRC tag = CHI tag = MAN tag = MEX tag = HOL original_tag = SPR original_tag = POR original_tag = POL original_tag=LAT } }
@@ -238,6 +253,11 @@ every_possible_country = {
 				TAG = SUH
 				TAG = INK
 				TAG = ABC
+				TAG = GEK
+				TAG = GEA
+				TAG = GEF
+				TAG = GE1
+				TAG = GE2
 			}
 		}
 		has_dlc = "La Resistance"
