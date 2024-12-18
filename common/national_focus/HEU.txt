@@ -447,6 +447,12 @@ focus_tree = {
 
 		completion_reward = {
 			HEU_bop_high_decrease_effect = yes
+				
+			set_portraits = {
+				character = HEU_aru
+				army = { large ="GFX_HEU_aru_rikuhachima_fascist_Portrait" }
+			}
+
 			add_popularity = {
 				ideology = fascism
 				popularity = 0.4
@@ -1578,6 +1584,11 @@ focus_tree = {
 					remove = HEU_regent_of_luxembourg
 					add = HEU_regent_of_luxembourg_2
 				}
+
+				set_portraits = {
+					character = HEU_aru
+					army = { large ="GFX_HEU_aru_rikuhachima_fascist_Portrait" }
+				}
 			}
 
 			HEU_bop_high_decrease_effect = yes
@@ -1929,7 +1940,7 @@ focus_tree = {
 		
 		relative_position_id = HEU_general_student_council_aru
 
-		icon = GFX_goal_generic_territory_or_war
+		icon = GFX_goal_HEU_GSC_president_rikuhachima
 
 		prerequisite = { 
 			focus = HEU_general_student_council_aru
@@ -2098,6 +2109,62 @@ focus_tree = {
 
 		completion_reward = {
 			create_wargoal = { type = annex_everything target = GEI }
+		}
+	}
+
+	focus = {
+		id = HEU_pro_gehenna_route_ending
+		
+		relative_position_id = HEU_GSC_president_rikuhachima
+
+		icon = GFX_goal_HEU_pro_gehenna_ending
+
+		prerequisite = { 
+			focus = HEU_GSC_president_rikuhachima
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		search_filters = {  }
+
+		cost = 6.00
+
+		x = 0
+		y = 2
+
+		available = {
+            custom_trigger_tooltip = {
+                tooltip = THIS_IS_WIP_TT
+			    has_country_flag = GAEBALJUNG
+            }
+			#custom_trigger_tooltip = {
+			#	tooltip = HEU_pro_gehenna_route_ending_1_tt
+			#	has_completed_focus = HEU_civil_partnership
+			#}
+			#custom_trigger_tooltip = {
+			#	tooltip = HEU_pro_gehenna_route_ending_2_tt
+			#	NOT = { country_exists = GEI }
+			#}
+			#custom_trigger_tooltip = {
+			#	tooltip = HEU_pro_gehenna_route_ending_3_tt
+			#	check_variable = { global.HEU_core_GSC > 3 }
+			#}
+		}
+
+		bypass = {
+		}
+
+		search_filters = {  }
+
+		completion_reward = {
+			custom_effect_tooltip = HEU_pro_gehenna_route_ending_tt
+
+			add_victory_points = {
+				province = 6583
+				value = 25
+			}
 		}
 	}
 	
@@ -3040,7 +3107,7 @@ focus_tree = {
 		
 		relative_position_id = HEU_rikuhachimaism_focus_1
 
-		icon = GFX_focus_FIN_a_new_course_for_kokoomus
+		icon = GFX_goal_HEU_rikuhachimaism_focus_5_2
 
 		prerequisite = { 
 			focus = HEU_rikuhachimaism_focus_5 

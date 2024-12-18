@@ -1605,6 +1605,18 @@ spriteTypes = {
 		name = "GFX_goal_HEU_saori_jomae"
 		textureFile = "gfx/interface/goals/HEU/HEU_saori_jomae.dds"
 	}
+	spriteType = {
+		name = "GFX_goal_HEU_rikuhachimaism_focus_5_2"
+		textureFile = "gfx/interface/goals/HEU/HEU_rikuhachimaism_focus_5_2.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEU_pro_gehenna_ending"
+		textureFile = "gfx/interface/goals/HEU/HEU_pro_gehenna_ending.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEU_GSC_president_rikuhachima"
+		textureFile = "gfx/interface/goals/HEU/HEU_GSC_president_rikuhachima.dds"
+	}
 	SpriteType = { 	
 		name = "GFX_goal_SHA_KISAKI"
 		texturefile = "gfx/interface/goals/SHA/키사키.tga"  
