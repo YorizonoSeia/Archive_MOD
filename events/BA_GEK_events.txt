@@ -10,7 +10,6 @@ country_event = { #수상한 함선 나포
 	fire_only_once = yes
 	
 	trigger = {
-		always = no
 		original_tag = GEK
 	}
 	mean_time_to_happen = {
@@ -20,14 +19,46 @@ country_event = { #수상한 함선 나포
 	option = { 
 		name = GEK_event.1.a
 		add_stability = -0.05
+		set_technology = {
+			kivotos_artificial_halo_replica_tech   = 1
+		}
 		add_equipment_to_stockpile = {
 			type = infantry_equipment
-			amount = 500
+			amount = 1000
 			producer = GER
 		}
+		add_equipment_to_stockpile = {
+			type = kivotos_infantry_equipment
+			amount = 500
+			producer = KBT
+		}
 		country_event = { id = GEK_event.2 hours = 12 }
-		custom_effect_tooltip = GEK_get_halo_infantry_tt
-		set_country_flag = kivotos_research_on
+		division_template = {
+			name = "Abteilung für Sonderrekruten"
+			division_names_group = GEK_Inf_01
+			is_locked = yes
+			force_allow_recruiting = yes
+			division_cap = 2
+			regiments = {
+				halo_militia = { x = 0 y = 0 }
+				halo_militia = { x = 0 y = 1 }
+				halo_militia = { x = 0 y = 2 }
+				halo_militia = { x = 1 y = 0 }
+				halo_militia = { x = 1 y = 1 }
+				halo_militia = { x = 1 y = 2 }
+			}
+			support = {
+				halo_recon = { x = 0 y = 0 }
+			}
+		}
+		set_variable = { ROOT.halo_militia_cap = 2 } 
+		capital_scope = {
+			create_unit = {
+				division = "division_template = \"Abteilung für Sonderrekruten\" start_experience_factor = 0.1" 
+				owner = ROOT
+				count = 2
+			}
+		}
 	}
 }
 country_event = { #재활용
@@ -604,6 +635,8 @@ country_event = { #수병반란!
 			ruling_party = communism
 		}
 		set_cosmetic_tag = GEK_red
+		if = { limit = { has_character = GEK_erich_raeder } GEK_erich_raeder = { retire = yes } }
+		add_ideas = GEK_communist_rav_idea
 	}
 }
 country_event = { #수상한 인물

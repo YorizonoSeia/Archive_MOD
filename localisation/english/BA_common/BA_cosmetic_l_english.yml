@@ -421,6 +421,10 @@ RHI_dem_DEF: "공화파 독일"
  GEK_BAY_DEF:0 "독일 해방임시위원회"
  GEK_BAY_ADJ:0 "독일"
 
+ GEK_military_government:0 "독일 군사정부"
+ GEK_military_government_DEF:0 "독일 군사정부"
+ GEK_military_government_ADJ:0 "독일"
+
  GEK_gottland:0 "고틀란드"
  GEK_gottland_DEF:0 "고틀란드"
  GEK_gottland_ADJ:0 "고틀란드"

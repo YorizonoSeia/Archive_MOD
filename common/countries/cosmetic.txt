@@ -2630,3 +2630,7 @@ USABA_germany = {
 	color = rgb { 61 114 161 }
 	color_ui = rgb { 61 114 161 }
 }
+GEK_military_government = {
+	color = HSV { 0.1 0.15 0.4 }
+	color_ui = rgb { 138 155 116 }
+}

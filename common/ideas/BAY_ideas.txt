@@ -1,5 +1,32 @@
 ideas = {	
 	country = {
+		GEK_communist_good_idea = { #
+			picture = SPR_relocate_the_gold_reserves
+			allowed = {
+				always = no
+				tag = GEK
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				consumer_goods_factor = -0.30
+				production_speed_buildings_factor = 0.10
+			}
+		}
+		GEK_communist_rav_idea = { #
+			picture = anti_soviet_pact
+			allowed = {
+				always = no
+				tag = GEK
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				political_power_cost = 1.00
+			}
+		}
 		GEK_well_planned = { #수복 계획
 			picture = CZE_planning_bonus
 			modifier = {
@@ -100,6 +127,26 @@ ideas = {
 			modifier = {
 				political_power_factor = 0.10
 				surrender_limit = 0.1
+			}
+		}
+		GEK_swedish_hyupryuk_com = { #스웨덴 협력
+			picture = SWE_with_finland_for_sweden_fin
+			name = GEK_swedish_hyupryuk
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.10
+				surrender_limit = 0.1
+				communism_drift = 0.01
+				production_factory_efficiency_gain_factor = 0.05
 			}
 		}
 		

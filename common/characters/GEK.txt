@@ -2870,6 +2870,7 @@ characters={
 					OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 				}
 				visible = {
+					has_completed_focus = GEK_paramilitary_officials_invitation
 				}
 				available = {
 					has_completed_focus = GEK_paramilitary_officials_invitation
