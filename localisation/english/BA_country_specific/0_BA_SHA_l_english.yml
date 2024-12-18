@@ -642,6 +642,15 @@
 #################################
  SHA_Austrian_oppression_continues: "오스트리아 탄압 지속"
  SHA_Austrian_oppression_continues_desc: "오스트리아인들은 지속적으로 우리 산해경의 지배에 반대하며 훼방을 놓는 데만 열을 올려왔습니다. 이제 그들의 저항을 단호히 뿌리 뽑아야 할 때입니다. 우리는 대대적으로 현룡문의 요원들을 투입해 이들의 반발을 철저히 제압하고, 그들이 산해경 체제 아래에 완전히 복속되도록 만들어야 합니다."
+ SHA_internal_solidarity: "내부 결속"
+ SHA_Strengthening_Genryumon: "현룡문 강화"
+ SHA_Strengthening_Kisaki: "문주 권한 강화"
+ SHA_Genryumon_left_wing: "헌룡문 좌파"
+ SHA_Contact_BTP: "현무상회와 협력"
+ SHA_Genryumon_right_wing: "현룡문 우파"
+ SHA_Contact_POC: "경극부와 협력"
+
+ # 오스트리아 유화 정책
  SHA_Austrian_appeasement_policy: "오스트리아 유화 정책"
  SHA_Austrian_appeasement_policy_desc: "오스트리아인들은 본래 오스트리아 땅의 주인들이었습니다. 그러나 우리가 이들에게 영토를 양보하기에는 현실적으로 불가능한 상황입니다. 따라서 강경책 대신 유화책을 통해 이들을 체제에 복속시키는 것이 가장 현명한 선택일 것입니다."
  SHA_gathering_of_radicals: "급진파 결집"

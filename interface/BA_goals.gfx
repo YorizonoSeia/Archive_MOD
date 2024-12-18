@@ -1693,6 +1693,26 @@ spriteTypes = {
 		name = "GFX_goal_SHA_black_sun_and_black_dragon"
 		texturefile = "gfx/interface/goals/SHA/SHA_black_sun_and_black_dragon.tga"  
 	}
+	SpriteType = {
+		name = "GFX_goal_SHA_Strengthening_Genryumon"
+		texturefile = "gfx/interface/goals/SHA/SHA_Strengthening_Genryumon.tga"  
+	}
+	SpriteType = {
+		name = "GFX_goal_SHA_Genryumon_left_wing"
+		texturefile = "gfx/interface/goals/SHA/SHA_Genryumon_left_wing.tga"  
+	}
+	SpriteType = {
+		name = "GFX_goal_SHA_Genryumon_right_wing"
+		texturefile = "gfx/interface/goals/SHA/SHA_Genryumon_right_wing.tga"  
+	}
+	SpriteType = {
+		name = "GFX_goal_SHA_Contact_BTP"
+		texturefile = "gfx/interface/goals/SHA/SHA_Contact_BTP.tga"  
+	}
+	SpriteType = {
+		name = "GFX_goal_SHA_Contact_POC"
+		texturefile = "gfx/interface/goals/SHA/SHA_Contact_POC.tga"  
+	}
 	SpriteType = { 	
 		name = "GFX_goal_ROM_invite_german_advisorsr"
 		texturefile = "gfx/interface/goals/ROM/ROM_invite_german_advisors.tga"  

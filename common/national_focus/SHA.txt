@@ -1,6 +1,6 @@
 focus_tree = {
 	id = SHA_focus_tree
-	continuous_focus_position = { x = 100 y = 1600 } 
+	continuous_focus_position = { x = -1000 y = 0 } 
 	shared_focus = BA_new_world_technology
 	country = {
 		factor = 0
@@ -7647,7 +7647,7 @@ focus_tree = {
 		icon = GFX_focus_GER_anschluss
 		x = 37
 		y = 0
-		cost = 5
+		cost = 10
 
 		prerequisite = { }
 		mutually_exclusive = { focus = SHA_Austrian_appeasement_policy }
@@ -7683,6 +7683,153 @@ focus_tree = {
 				}
 				mark_focus_tree_layout_dirty = yes
 			}
+		}
+	}
+
+	# 내부 결속
+	focus = {
+		id = SHA_internal_solidarity
+		icon = GFX_focus_AUS_for_a_better_future
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_Austrian_oppression_continues }
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_Austrian_oppression_continues
+
+		completion_reward = {
+			
+		}
+	}
+
+	# 현룡문 강화
+	focus = {
+		id = SHA_Strengthening_Genryumon
+		icon = GFX_goal_SHA_Strengthening_Genryumon
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_internal_solidarity }
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_internal_solidarity
+
+		completion_reward = {
+			
+		}
+	}
+
+	# 키사키 권한 강화
+	focus = {
+		id = SHA_Strengthening_Kisaki
+		icon = GFX_goal_SHA_Cabinet_Secretariat
+		x = 4
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_Strengthening_Genryumon }
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_Strengthening_Genryumon
+
+		completion_reward = {
+			
+		}
+	}
+
+	# 현룡문 좌파
+	focus = {
+		id = SHA_Genryumon_left_wing
+		icon = GFX_goal_SHA_Genryumon_left_wing
+		x = -4
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_Strengthening_Genryumon }
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_Strengthening_Genryumon
+
+		completion_reward = {
+			
+		}
+	}
+
+	# 현무상회와 협력력
+	focus = {
+		id = SHA_Contact_BTP
+		icon = GFX_goal_SHA_Contact_BTP
+		x = 1
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_Genryumon_left_wing }
+		mutually_exclusive = { focus = SHA_Contact_POC }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_Genryumon_left_wing
+
+		completion_reward = {
+			
+		}
+	}
+
+	# 현룡문 우파
+	focus = {
+		id = SHA_Genryumon_right_wing
+		icon = GFX_goal_SHA_Genryumon_right_wing
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_Strengthening_Genryumon }
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_Strengthening_Genryumon
+
+		completion_reward = {
+			
+		}
+	}
+	
+	# 경극부와 협력
+	focus = {
+		id = SHA_Contact_POC
+		icon = GFX_goal_SHA_Contact_POC
+		x = -1
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_Genryumon_right_wing }
+		mutually_exclusive = { focus = SHA_Contact_BTP }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_Genryumon_right_wing
+
+		completion_reward = {
+			
 		}
 	}
 
