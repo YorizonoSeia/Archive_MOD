@@ -91,21 +91,21 @@ SHA_invade_HYA_idea_down = {
 		}
 	}
 	else_if = {
-		limit = { SHA_HYA_clarhd_idea_2 }
+		limit = { has_idea = SHA_HYA_clarhd_idea_2 }
 		swap_ideas = {
 			remove_idea = SHA_HYA_clarhd_idea_2
 			add_idea = SHA_HYA_clarhd_idea_3
 		}
 	}
 	else_if = {
-		limit = { SHA_HYA_clarhd_idea_3 }
+		limit = { has_idea = SHA_HYA_clarhd_idea_3 }
 		swap_ideas = {
 			remove_idea = SHA_HYA_clarhd_idea_3
 			add_idea = SHA_HYA_clarhd_idea_4
 		}
 	}
 	else_if = {
-		limit = { SHA_HYA_clarhd_idea_4 }
+		limit = { has_idea = SHA_HYA_clarhd_idea_4 }
 		swap_ideas = {
 			remove_idea = SHA_HYA_clarhd_idea_4
 			add_idea = SHA_HYA_clarhd_idea_5
