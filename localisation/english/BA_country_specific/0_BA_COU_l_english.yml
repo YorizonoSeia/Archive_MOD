@@ -5,7 +5,7 @@
 
  COU_guide: "목표\n\n총학생회의 혼란을 해결하십시오.\n총학생회장의 명령을 받은 인공지능 아로나를 통제하십시오.\n\n§Y철통같은 제국§! \n£white_dot. 권한 대행직을 장악하고 총학생회를 지배하십시오.\n£white_dot. 키보토스의 모든학원을 장악하십시오.\n£white_dot. 하나의 키보토스를 선포하십시오.\n\n§C정당한 대행의 학생회§!\n£white_dot. 폭풍 속에서 권한 대행의 자리를 지켜내십시오.\n£white_dot. 키보토스의 혼란을 잠재우고 새로운 미래를 밝혀내십시오.\n\n§R원하지 않던 자리§!\n£white_dot. 간단하게 시위 문제를 해결하십시오.\n£white_dot. 운명을 맞이하십시오.\n£white_dot. 그리고 자신이 만들어낸 미래를 지켜보십시오.\n\n§6키보토스의 안정을 복원하십시오.§!"
 
- COU_GATHERING_STORM_DESC: "수천 개의 크고 작은 학교가 모여 연방을 구성하고 있는 거대한 학원도시 키보토스의 중앙구에 위치하고 있는 키보토스 총학생회는 키보토스의 모든 중앙 행정시설을 통제하고 자치구 내에 존재하는 모든 학원 간의 분쟁, 정치 등을 조율하는 기관입니다.\n\n허나 대전이라고 불리는 재앙으로 인해 모든 것은 통제불능의 상태로 빠져들었습니다.\n\n이 전대미문의 사태를 극복하기 위해 총학생회장은 어떤 선택을 할 수 있을까요?"
+ COU_GATHERING_STORM_DESC: "수천 개의 크고 작은 학교가 모여 연방을 구성하고 있는 거대한 학원도시 키보토스의 중앙구에 위치하고 있는 키보토스 총학생회는 키보토스의 모든 중앙 행정시설을 통제하고 자치구 내에 존재하는 모든 학원 간의 분쟁, 정치 등을 조율하는 기관입니다.\n\n허나 대전이라고 불리는 재앙으로 인해 모든 것은 통제 불능의 상태로 빠져들었습니다.\n\n이 전대미문의 사태를 극복하기 위해 총학생회장은 어떤 선택을 하게 될까요?"
 
  COU_cut_tower_down_effect_tt: "§Y$COU_cut_tower$§! 국민정신의 효과가 감소합니다."
  COU_NOT_ARREST: "§Y[COU.ROOT.GetName]§!(은)는 억류되지 않음"
@@ -25,13 +25,13 @@
  COU_opening_of_local_culture: "현지 문화 개방"
  COU_opening_of_local_culture_desc: "일부 학생의 동요가 있을지도 모르지만, 현지인 세력과 조력을 위해 먼저 그들의 문화부터 알아야 한다는 의견이 제시되었습니다. 이는 우리에게 충분히 도움이 될지도 모릅니다."
  COU_expansion_of_autonomy: "자치 보장"
- COU_expansion_of_autonomy_desc: "우리는 아직 남아있는 현지인 세력에게 그들의 자치권 보장을 통해 우리와 공존을 위한 협력을 부탁할 수 있을지도 모릅니다."
+ COU_expansion_of_autonomy_desc: "우리는 환영받지 못하는 외지인이고 현지인들에게는 침략자로 보일 뿐입니다. 우선 그들에게 자치를 보장하여 불만을 낮출 필요성이 있습니다."
  COU_reduction_of_administrative_committee_authority: "행정위원회 권한 축소"
- COU_reduction_of_administrative_committee_authority_desc: "행정위원회의 일부 권한을 축소함에 따라 해당 절차가 간소화되어 인력 재배치를 함에 있어 필요한 곳에 필요한 인력을 보충할 수 있게 될 것입니다."
+ COU_reduction_of_administrative_committee_authority_desc: "우리가 현지인들을 강압적으로 지배할 것이라는 모습으로 비춰 보여서는 안 됩니다. 이를 위해서는 행정위원회의 일부 권한을 축소할 필요성이 있습니다."
  COU_establishment_of_human_rights_committee: "인권보장실 설립"
  COU_establishment_of_human_rights_committee_desc: "현재 게헨나와 트리니티가 있던 지역 \"독일\"이라는 국가는 과거 바이마르 헌법이라는 법률을 통해 각 개인 간의 권리를 명시했다고 합니다. 이를 이용하여 우리도 인권보장실을 설립해 학생이든 현지인이든 개개인이 마땅히 누려야 할 기본적인 권리를 누리게 합시다."
  COU_union_negotiation: "노동위원회 설립"
- COU_union_negotiation_desc: "우리를 위해 도와주는 현지인들을 위해 노동위원회를 설립하여 공장 가동률을 증진시키고 지역 발전에 이바지하도록 합시다."
+ COU_union_negotiation_desc: "우리를 위해 도와주는 현지인들을 위해 노동위원회를 설립하여 그들의 목소리를 들어야 할 필요성이 있습니다."
  COU_infrastructure_restoration: "기반 시설 복구"
  COU_infrastructure_restoration_desc: "현재 우리가 전이한 이세계의 철도망은 우리가 있던 키보토스의 철도망과는 상당히 다른 문제점이 존재합니다. 이를 일부나마 개선할 필요성이 있습니다."
  COU_establishment_of_federal_industrial_committee: "연방산업위원회 설립"
@@ -45,10 +45,10 @@
  COU_restructuring_of_defense_office: "방위실 재편"
  COU_restructuring_of_defense_office_desc: "방위실을 재편하여 우리가 필요로 하는 위치에 학생들을 적재적소로 투입할 수 있게 할 것입니다."
  COU_normalization_of_administration: "행정 정상화"
- COU_normalization_of_administration_desc: "우리의 노력으로 행정 체계가 정상화되고 이윽고 마지막 작업만이 남았습니다. 우리는 여태까지 진행해 왔던 비상대책위원회를 해산할 것이며, 총학생회는 이제 앞으로 나아갈 준비가 되었습니다.\n\n§g서로를 영원히 이해할 수 없을 것이기에 이해하지 못하는 것을 통해 우리들을 이해할 수 있을까?§!"
+ COU_normalization_of_administration_desc: "여러 노력을 통해 행정 체계가 정상화되고 이윽고 마지막 작업만이 남았습니다. 우리는 권력 투쟁에서 주도권을 잡았으며, 총학생회는 이제 앞으로 나아갈 준비가 되었습니다.\n\n§g서로를 영원히 이해할 수 없을 것이기에 이해하지 못하는 것을 통해 우리들을 이해할 수 있을까?§!"
 #우파
  COU_emergency_system: "비상 체제"
- COU_emergency_system_desc: "§R키보토스는 초인에 의해 지휘되어야 합니다.§!\n\n현 총학생회장 권한대행인 나나가미 린은 총학생회장과 같은 능력도 권위도 강단도 의지도 무엇 하나 없으며, 이런 사람에겐 총학생회장의 대행 같은 건 어울리지 않습니다. 이를 통해 현 방위실장인 시라누이 카야는 비상 체제를 선언하였습니다."
+ COU_emergency_system_desc: "§R\"키보토스는 초인에 의해 지휘되어야 합니다.\"§!\n\n현 총학생회장 권한대행인 나나가미 린은 총학생회장과 같은 능력도 권위도 강단도 의지도 무엇 하나 없으며, 이런 사람에겐 총학생회장의 대행 같은 건 어울리지 않습니다. 이를 통해 현 비상대책위원회의 위원장이자 방위실장인 시라누이 카야는 비상 체제를 선언하였습니다."
  COU_council_dkswjd: "비상 체제 안정화"
  COU_godwjddnldnjsghl_wlwlghkrqh: "행정위원회 지지 확보"
  COU_woantlfghkrqh: "체육실 확보"
@@ -123,11 +123,11 @@
 
 #중도
  COU_stabilization_of_the_student_council: "총학생회의 안정"
- COU_stabilization_of_the_student_council_desc: "다행히 일부 잡음이 있었지만, 비상대책위원회 해체 이후 총학생회는 안정을 되찾았습니다. 하지만 재무실장인 오키 아오이가 이전 샬레와의 충돌과 관련한 건으로 회의 소집을 요청하였습니다."
+ COU_stabilization_of_the_student_council_desc: "다행히 일부 잡음이 있었지만, 총학생회는 안정을 되찾았습니다. 하지만 재무실장인 오키 아오이가 이전 샬레와의 충돌과 관련한 건으로 회의 소집을 요청하였습니다."
  COU_impeachment_of_chief_executive: "권한대행 탄핵"
- COU_impeachment_of_chief_executive_desc: "§g당신은 총학생회장이 아니야. 수석행정관. 대행 완장을 찬다고 해서 당신이 그 사람이 되는건 아니니까.§!\n\n나나가미 린 수석행정관은 비록 샬레라는 조직 때문이었다고 하나, 그 과정 중에 총학생회장을 격하함으로써 용납할 수 없는 선을 넘었습니다. 우리는 이번 회의에 불신임 투표를 가결해 수석행정관을 탄핵할 것입니다."
+ COU_impeachment_of_chief_executive_desc: "§g\"당신은 총학생회장이 아니야. 수석행정관. 대행 완장을 찬다고 해서 당신이 그 사람이 되는건 아니니까.\"§!\n\n나나가미 린 수석행정관은 비록 샬레라는 조직 때문이었다고 하나, 그 과정 중에 총학생회장을 격하함으로써 용납할 수 없는 선을 넘었습니다. 우리는 이번 회의에 불신임 투표를 가결해 수석행정관을 탄핵할 것입니다."
  COU_student_council_amendment: "학생회 개정안"
- COU_student_council_amendment_desc: "§2제 의견과 다르다고 해서 권위를 내세워 타인을 억압할 수는 없습니다.§!\n\n이번 회의를 통해 나나가미 린 총학생회장 대행은 학생회 개정안을 발표하면서 반대파들의 불만을 잠재우고 키보토스 총학생회의 총학생회장 권한대행으로써 최선을 다할 것임을 천명하였습니다."
+ COU_student_council_amendment_desc: "§2\"제 의견과 다르다고 해서 권위를 내세워 타인을 억압할 수는 없습니다.\"§!\n\n이번 회의를 통해 나나가미 린 총학생회장 대행은 학생회 개정안을 발표하면서 반대파들의 불만을 잠재우고 키보토스 총학생회의 총학생회장 권한대행으로써 최선을 다할 것임을 천명하였습니다."
  COU_analog_adminstration: "아날로그식 행정체계"
  COU_balkiri_annex: "행정 복구"
  COU_balkiri_annex_tt: "§Y발키리 경찰학원§!이 방위실 예하 치안본부로 재편됩니다."
@@ -213,7 +213,7 @@
 
  COU_logistics_control_of_student_council: "학생회 물류 통제"
 
- COU_resignation_of_acting_authority: "권한대행 사퇴"
+ COU_resignation_of_acting_authority: "대책위원장 사퇴 요구"
 
  COU_federal_integration: "연방제 통합"
 
@@ -233,6 +233,7 @@
  COU_leftward_shift: "좌경화"
 
  COU_honorary_student_council_president: "명예 학생회장"
+ COU_honorary_student_council_president_desc: "§p\"으응? 무슨 일이야?\"§!\n\n우리는 비록 유라기 모모카를 비상대책위원회의 위원장 자리에서 내려오게 했으나 개혁위원회의 생각에 따라 그녀를 명예직으로나마 학생회장에 임명해 두는 것이 총학생회 안정화에 도움이 될 것으로 판단하였습니다."
 
  COU_restoration_of_parliamentary_politics: "의회 정치 복원"
 
