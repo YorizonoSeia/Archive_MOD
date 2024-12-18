@@ -2680,11 +2680,21 @@ focus_tree = {
 		relative_position_id = GEK_RM_spd_focus_4
 		x = 1
 		y = 1
-		cost = 2
+		cost = 4
 		completion_reward = {
-			GEK_enhance_spd = yes
-			GEK_enhance_spd = yes
-			GEK_enhance_spd = yes
+			if = {
+				limit = {
+					has_idea = GEK_solidarity_across_ideology
+				}
+				remove_ideas = GEK_solidarity_across_ideology
+			}
+			else = {
+				remove_ideas = GEK_solidarity_across_ideology_1
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
 		}
 	}
 	focus = { #대중 집회
@@ -2694,14 +2704,15 @@ focus_tree = {
 			focus = GEK_RM_spd_focus_4
 			focus = GEK_RM_dzp_focus_5
 		}
+		available = {
+			has_country_flag = GAEBALJUNG
+		}
 		relative_position_id = GEK_RM_spd_focus_4
 		x = 3
 		y = 1
 		cost = 2
 		completion_reward = {
-			GEK_enhance_spd = yes
-			GEK_enhance_spd = yes
-			GEK_enhance_spd = yes
+
 		}
 	}
 	focus = { #자유 선거
