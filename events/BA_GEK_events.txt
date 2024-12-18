@@ -34,7 +34,7 @@ country_event = { #수상한 함선 나포
 		}
 		country_event = { id = GEK_event.2 hours = 12 }
 		division_template = {
-			name = "Abteilung für Sonderrekruten"
+			name = "Abteilung für Studenten"
 			division_names_group = GEK_Inf_01
 			is_locked = yes
 			force_allow_recruiting = yes
@@ -54,7 +54,7 @@ country_event = { #수상한 함선 나포
 		set_variable = { ROOT.halo_militia_cap = 2 } 
 		capital_scope = {
 			create_unit = {
-				division = "division_template = \"Abteilung für Sonderrekruten\" start_experience_factor = 0.1" 
+				division = "division_template = \"Abteilung für Studenten\" start_experience_factor = 0.1" 
 				owner = ROOT
 				count = 2
 			}

@@ -185,4 +185,44 @@ on_actions = {
 			}
 		}
 	}
+	on_war_relation_added = {
+		effect = { 
+			if = {
+				limit = {
+					ROOT = { 
+						original_tag = GEK
+						has_dynamic_modifier = { modifier = GER_mefo_bills_modifier }
+					}
+					NOT = { 
+						FROM = {
+							OR = {
+								original_tag = GEK
+							}
+						} 
+					} # Don't remove it from Fascist Germany if they start the civil war
+				}
+				ROOT = {
+					country_event = { id = germany_mefo_bills.1 hours = 2 }
+				}
+			}
+			if = {
+				limit = {
+					FROM = { 
+						original_tag = GEK
+						has_dynamic_modifier = { modifier = GER_mefo_bills_modifier }
+					}
+					ROOT = {
+						NOT = {
+							OR = {
+								original_tag = GEK
+							}
+						}
+					}
+				}
+				FROM = {
+					country_event = { id = germany_mefo_bills.1 hours = 2 }
+				}
+			}
+		}
+	}
 }

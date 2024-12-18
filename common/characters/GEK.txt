@@ -3432,7 +3432,7 @@ characters={
 			slot = political_advisor
 			idea_token = GER_dietrich_bonhoeffer
 			allowed = {
-				original_tag = GER
+				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 				has_dlc = "Gotterdammerung"
 			}
 			visible = {
