@@ -1,52 +1,5 @@
 ﻿capital = 124
 
-set_global_flag = GEAF_the_four_year_plan_can_flag
-#CONSUMER GOODS INCREASE AND PENALTIES VARIABLES
-set_variable = { GER_monthly_consumer_goods_start = 0.03 } #Starting amount of monthly increasing CG for MEFO Bills 
-set_variable = { GER_change_monthly_CG_vichy_france = 0.005 } #Changing monthly CG when capitulating FRance
-set_variable = { GER_change_monthly_CG_price_controls = 0.005 } #Changing monthly CG when taking Price Controls focus
-set_variable = { GER_change_monthly_CG_occupied_states = 0.005 } #Changing monthly CG based on none-core states
-set_variable = { GER_expected_consumer_goods_penalty = 0.1} #Consumer Goods penalty when hitting 100% CGFF
-set_variable = { GER_factory_output_penalty = 0.2 } #Factory output penalty when hitting 100% CGFF
-set_variable = { GER_dockyard_output_penalty = 0.2 } #Dockyard output penalty when hitting 100% CGFF
-set_variable = { GER_reduce_russian_CG_bonus = 0 } #Used to reduce Soviet Gold Reserves if Germany has taken gold from various Soviet cities before capping them
-
-#INDUSTRAY: MEFO Bills/Economy of Conquest/Recovering Economy/Wirtschaftswunder
-#REMINDER to always update the fake NS if these numbers are altered!
-set_variable = { GER_monthly_consumer_goods_increase = GER_monthly_consumer_goods_start } #Amount of increasing CG each month
-set_variable = { GER_industrial_consumer_goods_factor = 0.1 } #Used for MEFO Bills, Economy of Conquest and Recovering Economy and Wirtschaftswunder - must correspond with the Fake MEFO Bills NS for the 1936 Bookmark
-set_variable = { GER_industrial_civilian_intel_to_others = -25 }
-set_variable = { GER_industrial_army_intel_to_others = -25 }
-set_variable = { GER_industrial_navy_intel_to_others = -25 }
-set_variable = { GER_industrial_airforce_intel_to_others = -25 }
-set_variable = { GER_industrial_production_speed_arms_factory_factor = 0.1 }
-set_variable = { GER_industrial_production_speed_dockyard_factor = 0.1 }
-set_variable = { GER_industrial_industrial_capacity_factory = 0 }
-set_variable = { GER_industrial_industrial_capacity_dockyard = 0 }
-set_variable = { GER_industrial_production_lack_of_resource_penalty_factor = 0 }
-set_variable = { GER_industrial_conversion_cost_civ_to_mil_factor = 0 }
-set_variable = { GER_industrial_industry_air_damage_factor = 0 }
-set_variable = { GER_industrial_resource_trade_cost_bonus_per_factory = 0 }
-set_variable = { GER_industrial_production_speed_buildings_factor = 0 }
-set_variable = { GER_industrial_research_speed_factor = 0 }
-set_variable = { GER_industrial_economy_cost_factor = 0 }
-set_variable = { GER_industrial_trade_laws_cost_factor = 0 }
-set_variable = { GER_recovering_economy_modifier_local_resources_factor = 0 }
-set_variable = { GER_industrial_production_factory_max_efficiency_factor = 0 }
-set_variable = { GER_industrial_production_factory_efficiency_gain_factor = 0 }
-set_variable = { GER_industrial_production_factory_start_efficiency_factor = 0 }
-set_variable = { GER_industrial_line_change_production_efficiency_factor = 0 }
-set_variable = { GER_industrial_equipment_conversion_speed = 0 }
-set_variable = { GER_industrial_consumer_goods_expected_value = 0 }
-set_variable = { GER_economic_crash_consumer_goods = 0.75 } #Amount of CGFF if the MEFO Bills gets canceled one way or another
-#WEHRWIRTSCHAFT
-#REMINDER to always update the fake NS if these numbers are altered!
-set_variable = { GER_wehrwirtschaft_local_resources_factor = 0 }
-set_variable = { GER_wehrwirtschaft_production_speed_buildings_factor = 0 }
-set_variable = { GER_wehrwirtschaft_production_oil_factor = 0 }
-set_variable = { GER_wehrwirtschaft_production_speed_synthetic_refinery_factor = 0 }
-set_variable = { GER_wehrwirtschaft_production_speed_fuel_silo_factor = 0 }
-
 # FINNISH ARMY NS
 set_variable = { GEK_german_nationalism_experience_gain_army_factor = 0.05 }
 set_variable = { GEK_german_nationalism_mobilization_speed = 0.05 }
@@ -60,18 +13,6 @@ set_variable = { GEK_german_nationalism_army_defence_factor = -0.10 }
 set_variable = { GEK_german_nationalism_army_attack_factor = -0.10 }
 set_variable = { GEK_german_nationalism_army_org_regain = 0.00 }
 
-set_variable = {
-	GEK_gottglaubig_modifier_political_power_facter = 0
-}
-set_variable = {
-	GEK_gottglaubig_modifier_war_support_factor = 0
-}
-set_variable = {
-	GEK_gottglaubig_modifier_army_org_factor = 0
-}
-set_variable = {
-	GEK_gottglaubig_modifier_army_morale_factor = 0
-}
 add_dynamic_modifier = {
 	modifier = GEK_german_nationalism
 }
@@ -91,43 +32,26 @@ add_breakthrough_progress = {
 	value = 0.3
 }
 
-#해군
-recruit_character = GEK_erich_raeder #지도자
-recruit_character = GEK_karl_donitz
-recruit_character = GEK_erich_bey
-recruit_character = GEK_gunther_lutjen스
-recruit_character = GEK_hermann_boehm
-recruit_character = GEK_wilhelm_marschall
-recruit_character = GEK_rolf_carls
-recruit_character = GEK_alfred_saalwachter
-recruit_character = GEK_viktor_schutze
-recruit_character = GEK_otto_ciliax
-recruit_character = GEK_central_navy_committee
-#라인하르트 하이드리히
-recruit_character = GEK_reinhard_heydrich
+#행정부
+recruit_character = GEK_hans_vogel # 민주주의 지도자
+recruit_character = GEK_otto_grotewohl # 공산주의 지도자
+recruit_character = GEK_carl_friedrich_goerdeler # 독일 제국 지도자
 
-# 스토리 아카이브 사용 시 정의
-set_variable = {
-	story_archive = 0
-}
-
-set_variable = {
-	story_event_var = 1
-}
-
-# 스토리 아카이브 코드 전쟁해군(4)
-add_to_array = {
-	story_archive_national_array = 4
-}
-
+recruit_character = GEK_ludwig_erhard #루트비히 에르하르트, 경제 성장 우선 중점
+recruit_character = GEK_paul_von_lettow_vorbeck # 독일 제국 육군
+recruit_character = GEK_hans_luther # 민간 은행가
+recruit_character = GEK_hanns_kerrl # 국가종무장관
+recruit_character = GEK_alfred_hugenberg # 독일 제국 정치고문
+recruit_character = GEK_wilhelm_zaisser # 공산주의 정보부
+recruit_character = GEK_hermann_duncker # 공산주의
+recruit_character = GEK_august_thalheimer # 공산주의
+recruit_character = GEK_hans_marchwitza # 국가인민군
+recruit_character = GEK_arno_von_lenski # 국가인민군
 
 add_ideas = {
-	GEK_didntknew_without_navy
-	GEK_swedish_hyupryuk
-	GEK_legitimacy
 	limited_exports
 	limited_conscription
-	low_economic_mobilisation
+	partial_economic_mobilisation
 }
 
 starting_train_buffer = 2
@@ -288,23 +212,21 @@ set_fuel_ratio = 0.8
 
 # 독일 기술/
 
-#/고유 정치
-	set_research_slots = 2
-	set_convoys = 150
-	set_stability = 0.05
-	set_war_support = 0.15
+set_research_slots = 2
+set_convoys = 150
+set_stability = 0.15
+set_war_support = 0.3
 
-	set_politics = {
-		ruling_party = neutrality
-		last_election = "1936.1.1"
-		election_frequency = 48
-		elections_allowed = no
-	}
-	set_popularities = {
-		neutrality = 60
-		fascism = 40
-	}
-#고유 정치/
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	neutrality = 60
+	fascism = 40
+}
 
 ###########이 밑으로는 독일 장비 복사 후 mio:GEK으로 교체
 

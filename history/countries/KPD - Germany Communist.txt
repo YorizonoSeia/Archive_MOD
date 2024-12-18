@@ -15,15 +15,12 @@ set_politics = {
 }
 
 recruit_character = KPD_thalman
-recruit_character = KPD_pieck
 recruit_character = KPD_walter
 recruit_character = KPD_lev_trotsky
 recruit_character = KPD_wilhelm_munzenberg
-recruit_character = KPD_otto_grotewohl
 recruit_character = KPD_richard_sorge
 recruit_character = KPD_max_seydewitz
 recruit_character = KPD_heinrich_brandler
-recruit_character = KPD_august_thalheimer
 recruit_character = KPD_fritz_selbmann
 recruit_character = KPD_bernhard_goring
 recruit_character = KPD_hans_jendretzky
@@ -32,10 +29,7 @@ recruit_character = KPD_felix_halle
 recruit_character = KPD_alexander_schwab
 recruit_character = KPD_wilhelm_leuschner
 recruit_character = KPD_wilhelm_reich
-recruit_character = KPD_otto
-recruit_character = KPD_kurt_schumacher
 recruit_character = KPD_werner_blumenberg
-recruit_character = KPD_julius_leber
 
 recruit_character = KPD_heinz_hoffmann
 recruit_character = KPD_willi_stoph

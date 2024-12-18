@@ -51,7 +51,6 @@ add_country_leader_role = {
 #recruit_character = GEK_victoria
 
 #일반
-recruit_character = GEK_august_von_mackensen
 recruit_character = GEK_werner_von_blomberg
 recruit_character = GEK_gunther_von_kluge
 recruit_character = GEK_werner_von_fritsch
@@ -67,9 +66,9 @@ recruit_character = GEK_johannes_blaskowitz
 recruit_character = GEK_hans_oster
 recruit_character = GEK_ferdinand_schorner
 recruit_character = GEK_hans_krebs
-recruit_character = GEK_jurgen_von_blumenthal
 recruit_character = GEK_walther_nehring
 recruit_character = GEK_oswald_lutz
+recruit_character = GEK_alfred_becker # 연구 (육군 중점에 있음)
 
 #recruit_character = GEK_vincenz_muller
 #recruit_character = GEK_hans_kahle
@@ -90,7 +89,6 @@ recruit_character = GEK_ludwig_beck
 recruit_character = GEK_maximilian_von_weichs
 recruit_character = GEK_walther_von_brauchitsch
 recruit_character = GEK_wilhelm_canaris
-recruit_character = GEK_paul_von_lettow_vorbeck # He is "new"
 
 add_ideas = {
 	limited_exports

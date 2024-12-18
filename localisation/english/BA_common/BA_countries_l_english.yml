@@ -298,6 +298,14 @@
  BLM_DEF:0 "브르타뉴"
  BLM_ADJ:0 "브르타뉴"
 
+ GE1:0 "서부 독일 행정부"
+ GE1_DEF:0 "서독 행정부"
+ GE1_ADJ:0 "서독 행정부"
+
+ GE2:0 "동부 독일 행정부"
+ GE2_DEF:0 "동독 행정부"
+ GE2_ADJ:0 "동독 행정부"
+
  GEK_fascism:0 "독일 전쟁해군"
  GEK_fascism_DEF:0 "독일 전쟁해군"
  GEK_democratic:0 "독일 연방해군"
