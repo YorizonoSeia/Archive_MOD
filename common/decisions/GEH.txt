@@ -255,7 +255,7 @@ political_actions = {
 			is_subject = no
 		}
 
-		cost = 25
+		cost = 0
 
 		complete_effect = {
 			custom_effect_tooltip = GEH_GEM_armistice_tt
