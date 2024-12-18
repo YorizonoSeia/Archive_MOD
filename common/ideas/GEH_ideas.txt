@@ -1950,18 +1950,9 @@ ideas = {
 			available = {
 				controls_province = 6469
 				OR = {
-					has_country_flag = GEM_corporate_headquarters_destroyed_flag
-					if = {
-						limit = {
-							GEM = {
-								exists = yes
-							}
-							GEM = { has_completed_focus = GEH_IG_farben }
-						}
-					}
-					else = {
-						GEK = { has_completed_focus = GEK_RM_eco_focus_5 }
-					}
+					has_global_flag = GEM_corporate_headquarters_destroyed_flag
+					GEM = { has_completed_focus = GEH_IG_farben }
+					GEK = { has_completed_focus = GEK_RM_eco_focus_5 }
 				}
 			}
 			
@@ -2000,18 +1991,9 @@ ideas = {
 				else = {
 					controls_province = 6469
 					OR = {
-						has_country_flag = GEM_corporate_headquarters_destroyed_flag
-						if = {
-							limit = {
-								GEM = {
-									exists = yes
-								}
-								GEM = { has_completed_focus = GEH_llinked_ruhr_industrial }
-							}
-						}
-						else = {
-							GEK = { has_completed_focus = GEK_RM_eco_focus_3 }
-						}
+						has_global_flag = GEM_corporate_headquarters_destroyed_flag
+						GEM = { has_completed_focus = GEH_llinked_ruhr_industrial }
+						GEK = { has_completed_focus = GEK_RM_eco_focus_3 }
 					}
 				}
 			}
@@ -2045,18 +2027,9 @@ ideas = {
 			available = {
 				controls_province = 692
 				OR = {
-					has_country_flag = GEM_corporate_headquarters_destroyed_flag
-					if = {
-						limit = {
-							GEM = {
-								exists = yes
-							}
-							GEM = { has_completed_focus = GEH_consumer_goods_augmentation }
-						}
-					}
-					else = {
-						GEK = { has_completed_focus = GEK_RM_eco_focus_4 }
-					}
+					has_global_flag = GEM_corporate_headquarters_destroyed_flag
+					GEM = { has_completed_focus = GEH_consumer_goods_augmentation }
+					GEK = { has_completed_focus = GEK_RM_eco_focus_4 }
 				}
 			}
 			
