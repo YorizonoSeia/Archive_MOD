@@ -147,9 +147,7 @@
  GEK_paramilitary_organization:0 "準軍事組織"
  GEK_send_volunteers_idea:0 "ドイツ戦争支援国"
  #ドイツ軍事政府 - ツールチップ
- GEK_absorbed_into_a_specific_country:0 "§Y特定の国§!に所属" #海軍用
- GEA_absorbed_into_a_specific_country:0 "§Y特定の国§!に所属" #陸軍用
- GEF_absorbed_into_a_specific_country:0 "§Y特定の国§!に所属" #空軍用
+ GER_absorbed_into_a_specific_country:0 "§Y特定の国§!に所属"
  GEK_communication_with_the_mainland_flag:0 "§Y本国の国防軍§!と接触した"
  GEK_restoration_decision_GEH_tt:0 "@GEH§Yゲヘナ学園§!の§Yドイツ領土§!支配"
  GEK_restoration_decision_TRM_tt:0 "@TRM§Yトリニティ総合学園§!の§Yドイツ領土§!支配"

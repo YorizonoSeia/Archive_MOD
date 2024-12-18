@@ -18,6 +18,8 @@ focus_tree = {
 	shared_focus = GEAF_expanding_the_luftwaffe
 	shared_focus = GEAF_strengthen_the_kriegsmarine
 	shared_focus = GEAF_Mefo_return
+	shared_focus = GE1_start_focus
+	shared_focus = GE2_start_focus
 
 	default = no
 	focus = {
@@ -2182,13 +2184,13 @@ focus_tree = {
 			FOCUS_FILTER_RESEARCH
 		}
 		available = {
-			GEF = { NOT = { has_country_flag = GEF_absorbed_into_a_specific_country }}
+			GEF = { NOT = { has_country_flag = GER_absorbed_into_a_specific_country }}
 		}
 		completion_reward = {
 			effect_tooltip = {
 				unlock_national_focus = GEAF_expanding_the_luftwaffe
 			}
-			set_country_flag =GEAF_expanding_the_luftwaffe_flag
+			set_country_flag = GEAF_expanding_the_luftwaffe_flag
 			GEF_give_airplane = yes
 			air_experience = 25
 			add_doctrine_cost_reduction = {
@@ -2714,7 +2716,7 @@ focus_tree = {
 				producer = GEA
 			}
 			add_ideas = general_staff
-			if = { limit = { GEA = { NOT = { has_country_flag = GEA_absorbed_into_a_specific_country }} }
+			if = { limit = { GEA = { NOT = { has_country_flag = GER_absorbed_into_a_specific_country }} }
 				GEA = {
 					custom_effect_tooltip = GEK_german_volunteer_air_force_GEA_tt
 					hidden_effect = {
@@ -2766,7 +2768,7 @@ focus_tree = {
 				uses = 1
 				category = battlefield_support_tree
 			}
-			if = { limit = { GEF = { NOT = { has_country_flag = GEF_absorbed_into_a_specific_country }} }
+			if = { limit = { GEF = { NOT = { has_country_flag = GER_absorbed_into_a_specific_country }} }
 				GEF = {
 					custom_effect_tooltip = GEK_german_volunteer_air_force_GEF_tt
 					hidden_effect = {

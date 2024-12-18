@@ -989,7 +989,7 @@ characters={
 		}
 	}
 
-	GEK_vincenz_muller = { # 동독 사용 : 국가인민군
+	GEK_vincenz_muller = { # 서독 사용 : 국가인민군
 		name = GER_vincenz_muller
 		portraits = {
 			army = {
@@ -1835,7 +1835,7 @@ characters={
 		}
 	}
 
-	GEK_hans_kahle = { # 동독 사용 : 육군 : 국가인민군
+	GEK_hans_kahle = { # 서독 사용 : 육군 : 국가인민군
 		name = GER_hans_kahle
 		portraits = {
 			army = {
@@ -2696,7 +2696,7 @@ characters={
 				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 			}
 			available = {
-				has_completed_focus = GE1_rocketry_innovations
+				has_completed_focus = GEAF_rocketry_innovations
 			}
 			traits = {
 				GER_head_of_the_missile_department
