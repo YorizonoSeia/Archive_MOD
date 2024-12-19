@@ -82,7 +82,6 @@ declare_war_on = {
 
 recruit_character = KPD_thalman
 recruit_character = KPD_walter
-recruit_character = KPD_lev_trotsky
 recruit_character = KPD_wilhelm_munzenberg
 recruit_character = KPD_richard_sorge
 recruit_character = KPD_max_seydewitz

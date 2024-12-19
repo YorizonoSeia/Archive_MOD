@@ -12,7 +12,7 @@
  TCA_hire_chennault:0 "미국인 장교단"
  #CHI_hire_chennault_desc:0 "클레어 셔놀트는 우리를 위해 일하는 데 관심을 보인 미국의 공중전 이론가입니다. 우리 공군을 재건하려면 그를 고용해야 합니다."
 
- TCA_mission_to_the_soviet_union:0 "[SOV.GetAdjective]과/와 외교 관계 수립"
+ TCA_mission_to_the_soviet_union:0 "[SOV.GetAdjective] 측과 외교 관계 수립"
  #TCA_mission_to_the_soviet_union_desc:0 "소비에트 연방은 일본의 팽창주의에 대한 균형추로서 중국에 관심을 보이고 있습니다. 우리의 목표가 일치하는지 확인하기 위해 모스크바로 사절단을 보낼 것입니다.
 
  TCA_rapprochement_with_soviet_union:0 "소비에트 연방과의 화해"

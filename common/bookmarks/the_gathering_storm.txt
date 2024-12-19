@@ -150,6 +150,9 @@ bookmarks = {
 			history = "KPD_GATHERING_STORM_DESC_1"
 			ideology = communism	
 			ideas = {
+				TCA_anti_trinity_war_idea
+				KPD_low_popular_support_3
+				KPD_no_rank_army
 			}
 			focuses = {
 			}
@@ -160,17 +163,7 @@ bookmarks = {
 			history = "NSD_GATHERING_STORM_DESC_1"
 			ideology = fascism	
 			ideas = {
-			}
-			focuses = {
-			}
-		}
-
-		"HUN" = {
-			minor = yes
-			history = "HUN_GATHERING_STORM_DESC_1"
-			ideology = fascism	
-			ideas = {
-				HUN_treaty_of_triannon
+				TCA_anti_trinity_war_idea
 			}
 			focuses = {
 			}
@@ -233,6 +226,7 @@ bookmarks = {
 			focuses = {
 			}
 		}
+
 		effect = {
 			randomize_weather = 22345 # <- Obligatory in every bookmark !
 			#123 = { rain_light = yes }
