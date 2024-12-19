@@ -8129,6 +8129,16 @@ shared_focus = { #서독 통일
 				set_nationality = ROOT
 			}
 		}
+		hidden_effect = {
+			country_event = {
+				id = GEK_rm_event.21
+				days = 10
+			}
+			country_event = {
+				id = GEK_rm_event.19
+				days = 5
+			}
+		}
 	}
 }
 
@@ -8356,7 +8366,7 @@ shared_focus = { #동독 통일
 			controls_state = 763
 		}
 	}
-	x = 32
+	x = 36
 	y = 0
 	cost = 2
 	completion_reward = {
@@ -8365,6 +8375,12 @@ shared_focus = { #동독 통일
 			set_country_flag = GER_absorbed_into_a_specific_country
 			every_character = {
 				set_nationality = ROOT
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = GEK_rm_event.21
+				days = 10
 			}
 		}
 	}
@@ -9276,7 +9292,7 @@ shared_focus = { #학생 정책
 		focus = GE2_start_focus
 	}
 	relative_position_id = GE1_start_focus
-	x = 24
+	x = 27
 	y = 1
 	cost = 2
 	completion_reward = {
@@ -9320,20 +9336,39 @@ shared_focus = { #경계
 		add_war_support = 0.05
 	}
 }
-shared_focus = { #동등한 권리
+shared_focus = { #게헨나 방위대
 	id = GEK_RM_kiv_focus_3
 	icon = GFX_goal_GEH_take_Benriya
 	prerequisite = {
-		focus = GEK_RM_kiv_focus_1
+		focus = GEK_RM_kiv_focus_4
+	}
+	available = {
+		AND = {
+			GEH = {
+				exists = no
+			}
+			GEM = {
+				exists = no
+			}
+			controls_state = 55
+		}
 	}
 	relative_position_id = GEK_RM_kiv_focus_0
 	x = -2
-	y = 2
+	y = 4
 	cost = 2
 	completion_reward = {
-		add_timed_idea = {
-			idea = GEK_student_citizenship
-			days = 480
+		add_to_variable = { ROOT.halo_militia_cap = 3 } 
+		GEK = {
+			set_division_template_cap = {  division_template = "Abteilung für Studenten" division_cap = ROOT.halo_militia_cap }
+		}
+		custom_effect_tooltip = GEK_RM_kiv_focus_4_tt
+		capital_scope = {
+			create_unit = {
+				division = "name = \"Gehenna Verteidigung\" division_template = \"Abteilung für Studenten\" start_experience_factor = 0.1" 
+				owner = ROOT
+				count = 3
+			}
 		}
 	}
 }
@@ -9341,7 +9376,7 @@ shared_focus = { #공동 복무
 	id = GEK_RM_kiv_focus_4
 	icon = GFX_focus_generic_advanced_military_studies
 	prerequisite = {
-		focus = GEK_RM_kiv_focus_3
+		focus = GEK_RM_kiv_focus_11
 	}
 	available = {
 		has_tech = kivotos_infantry_weapons
@@ -9356,20 +9391,25 @@ shared_focus = { #공동 복무
 			set_variable = { BA_halo_infantry_cap_edit_var = 3 }
 			BA_halo_infantry_cap_edit_effect = yes
 		}
-		capital_scope = {
-			create_unit = {
-				division = "division_template = \"Halo Infantry Division\" start_experience_factor = 1 start_equipment_factor = 1.0"
-				owner = ROOT
-				count = 3
-			}
-		}
+		add_manpower = 30000
 	}
 }
-shared_focus = { #이계의 협력자
+shared_focus = { #게헨나 협력자
 	id = GEK_RM_kiv_focus_5
 	icon = GFX_goal_GEH_bureaucracy
 	prerequisite = {
-		focus = GEK_RM_kiv_focus_3
+		focus = GEK_RM_kiv_focus_11
+	}
+	available = {
+		AND = {
+			GEH = {
+				exists = no
+			}
+			GEM = {
+				exists = no
+			}
+			controls_state = 55
+		}
 	}
 	relative_position_id = GEK_RM_kiv_focus_0
 	x = -1
@@ -9379,6 +9419,90 @@ shared_focus = { #이계의 협력자
 		country_event = {
 			id = GEK_rm_event.22
 			days = 2
+		}
+	}
+}
+shared_focus = { #동등한 권리
+	id = GEK_RM_kiv_focus_11
+	icon = GFX_focus_focus_fra_revolution_utmost
+	prerequisite = {
+		focus = GEK_RM_kiv_focus_1
+	}
+	relative_position_id = GEK_RM_kiv_focus_0
+	x = -2
+	y = 2
+	cost = 2
+	completion_reward = {
+		if = {
+			limit = {
+				has_idea = GEK_student_citizenship
+			}
+			modify_timed_idea = {
+				idea = GEK_student_citizenship
+				days = 480
+			}
+		}
+		else = {
+			add_timed_idea = {
+				idea = GEK_student_citizenship
+				days = 480
+			}
+		}
+	}
+}
+shared_focus = { #고서관 활용
+	id = GEK_RM_kiv_focus_12
+	icon = GFX_focus_SOV_third_rome
+	prerequisite = {
+		focus = GEK_RM_kiv_focus_11
+	}
+	available = {
+		TRM = {
+			exists = no
+		}
+		controls_state = 64
+	}
+	relative_position_id = GEK_RM_kiv_focus_0
+	x = -5
+	y = 3
+	cost = 2
+	completion_reward = {
+		add_tech_bonus = {
+			name = GEK_RM_kiv_focus_9
+			bonus = 0.2
+			uses = 2
+			category = mystic_engineering
+		}
+	}
+}
+shared_focus = { #아리우스 특수군
+	id = GEK_RM_kiv_focus_13
+	icon = GFX_focus_POL_belarus_army
+	prerequisite = {
+		focus = GEK_RM_kiv_focus_4	
+	}
+	available = {
+		ARI = {
+			exists = no
+		}
+		controls_state = 85
+	}
+	relative_position_id = GEK_RM_kiv_focus_0
+	x = -4
+	y = 4
+	cost = 2
+	completion_reward = {
+		custom_effect_tooltip = kivotos_halo_add3_tt
+		hidden_effect = {
+			set_variable = { BA_halo_infantry_cap_edit_var = 3 }
+			BA_halo_infantry_cap_edit_effect = yes
+		}
+		capital_scope = {
+			create_unit = {
+				division = "name = \"Arius Spezialtruppe\" division_template = \"Halo Infantry Division\" start_experience_factor = 1 start_equipment_factor = 1.0"
+				owner = ROOT
+				count = 3
+			}
 		}
 	}
 }
@@ -9415,14 +9539,34 @@ shared_focus = { #이계관리청
 		add_research_slot = 1
 	}
 }
-shared_focus = { #특수한 지위
+shared_focus = { #제2시민
 	id = GEK_RM_kiv_focus_8
 	icon = GFX_focus_usa_voter_registration_act
 	prerequisite = {
 		focus = GEK_RM_kiv_focus_2
 	}
+	mutually_exclusive = {
+		focus = GEK_RM_kiv_focus_15
+	}
 	relative_position_id = GEK_RM_kiv_focus_0
 	x = 2
+	y = 2
+	cost = 2
+	completion_reward = {
+		add_stability = 0.05
+	}
+}
+shared_focus = { #이계인 분리
+	id = GEK_RM_kiv_focus_15
+	icon = GFX_goal_generic_forceful_treaty
+	prerequisite = {
+		focus = GEK_RM_kiv_focus_2
+	}
+	mutually_exclusive = {
+		focus = GEK_RM_kiv_focus_8
+	}
+	relative_position_id = GEK_RM_kiv_focus_0
+	x = 4
 	y = 2
 	cost = 2
 	completion_reward = {
@@ -9433,38 +9577,72 @@ shared_focus = { #기술 확보
 	id = GEK_RM_kiv_focus_9
 	icon = GFX_focus_generic_university_3
 	prerequisite = {
-		focus = GEK_RM_kiv_focus_2
-	}
-	relative_position_id = GEK_RM_kiv_focus_0
-	x = 4
-	y = 2
-	cost = 2
-	completion_reward = {
-		add_tech_bonus = {
-			name = GEK_RM_kiv_focus_9
-			bonus = 0.2
-			uses = 2
-			category = mystic_engineering
-		}
-	}
-}
-shared_focus = { #학생 동원
-	id = GEK_RM_kiv_focus_10
-	icon = GFX_focus_generic_limited_social_mobilization
-	prerequisite = {
+		focus = GEK_RM_kiv_focus_15
 		focus = GEK_RM_kiv_focus_8
 	}
-	prerequisite = {
-		focus = GEK_RM_kiv_focus_9
+	relative_position_id = GEK_RM_kiv_focus_0
+	x = 5
+	y = 3
+	cost = 2
+	completion_reward = {
 	}
-	available = {
-		has_tech = kivotos_artificial_halo_replica_tech
+}
+shared_focus = { #이계 자산 활용
+	id = GEK_RM_kiv_focus_16
+	icon = GFX_focus_generic_industry_1
+	prerequisite = {
+		focus = GEK_RM_kiv_focus_8
+		focus = GEK_RM_kiv_focus_15
 	}
 	relative_position_id = GEK_RM_kiv_focus_0
 	x = 3
 	y = 3
 	cost = 5
 	completion_reward = {
+		if = {
+			limit = {
+				has_idea = GEK_eating_property
+			}
+			modify_timed_idea = {
+				idea = GEK_eating_property
+				days = 360
+			}
+		}
+		else = {
+			add_timed_idea = {
+				idea = GEK_eating_property
+				years = 1
+			}
+		}
+	}
+}
+shared_focus = { #게헨나 학생 동원
+	id = GEK_RM_kiv_focus_10
+	icon = GFX_focus_generic_limited_social_mobilization
+	prerequisite = {
+		focus = GEK_RM_kiv_focus_16
+	}
+	prerequisite = {
+		focus = GEK_RM_kiv_focus_7
+	}
+	available = {
+		has_tech = kivotos_artificial_halo_replica_tech
+		AND = {
+			GEH = {
+				exists = no
+			}
+			GEM = {
+				exists = no
+			}
+			controls_state = 55
+		}
+	}
+	relative_position_id = GEK_RM_kiv_focus_0
+	x = 4
+	y = 4
+	cost = 5
+	completion_reward = {
+		add_war_support = -0.05
 		add_to_variable = { ROOT.halo_militia_cap = 3 } 
 		GEK = {
 			set_division_template_cap = {  division_template = "Abteilung für Studenten" division_cap = ROOT.halo_militia_cap }
@@ -9472,7 +9650,43 @@ shared_focus = { #학생 동원
 		custom_effect_tooltip = GEK_RM_kiv_focus_4_tt
 		capital_scope = {
 			create_unit = {
-				division = "division_template = \"Abteilung für Studenten\" start_experience_factor = 0.1" 
+				division = "name = \"Gehenna Volksstrum\" division_template = \"Abteilung für Studenten\" start_experience_factor = 0.1" 
+				owner = ROOT
+				count = 3
+			}
+		}
+	}
+}
+shared_focus = { #트리니티 학생 동원
+	id = GEK_RM_kiv_focus_14
+	icon = GFX_focus_generic_limited_social_mobilization
+	prerequisite = {
+		focus = GEK_RM_kiv_focus_16
+	}
+	prerequisite = {
+		focus = GEK_RM_kiv_focus_7
+	}
+	available = {
+		has_tech = kivotos_artificial_halo_replica_tech
+		TRM = {
+			exists = no
+		}
+		controls_state = 64
+	}
+	relative_position_id = GEK_RM_kiv_focus_0
+	x = 2
+	y = 4
+	cost = 5
+	completion_reward = {
+		add_war_support = -0.05
+		add_to_variable = { ROOT.halo_militia_cap = 3 } 
+		GEK = {
+			set_division_template_cap = {  division_template = "Abteilung für Studenten" division_cap = ROOT.halo_militia_cap }
+		}
+		custom_effect_tooltip = GEK_RM_kiv_focus_4_tt
+		capital_scope = {
+			create_unit = {
+				division = "name = \"Trinity Volksstrum\" division_template = \"Abteilung für Studenten\" start_experience_factor = 0.1" 
 				owner = ROOT
 				count = 3
 			}

@@ -305,36 +305,42 @@ ideas = {
 			name = GEK_attacked_industry
 			picture = POL_disjointed_industry
 			modifier = {
-				consumer_goods_expected_value = 0.1
-				production_speed_buildings_factor = -0.2
-				economy_cost_factor = 0.25
-				industrial_capacity_factory = -0.2
+				consumer_goods_expected_value = 0.15
+				production_speed_buildings_factor = -0.25
+				economy_cost_factor = 0.2
+				industrial_capacity_factory = -0.25
 			}
 		}
 		GEK_attacked_industry_1 = { #손상된 산업
 			name = GEK_attacked_industry
 			picture = POL_disjointed_industry
 			modifier = {
-				consumer_goods_expected_value = 0.05
-				production_speed_buildings_factor = -0.1
-				economy_cost_factor = 0.125
-				industrial_capacity_factory = -0.1
+				consumer_goods_expected_value = 0.075
+				production_speed_buildings_factor = -0.125
+				economy_cost_factor = 0.1
+				industrial_capacity_factory = -0.125
 			}
 		}
 		GEK_student_resistance = { #사회적인 학생 저항
 			picture = chi_war_of_resistance
 			modifier = {
-				stability_factor = -0.1
-				war_support_factor = -0.1
-				political_power_cost = 0.1
+				stability_factor = -0.2
+				war_support_factor = -0.2
+				political_power_cost = 0.2
 			}
 		}
 		GEK_student_citizenship = { #이계인 시민권 지급
 			picture = generic_democratic_drift_bonus
 			modifier = {
-				political_power_cost = 0.15
-				consumer_goods_factor = 0.1
+				political_power_cost = 0.2
+				consumer_goods_factor = 0.15
 				stability_weekly = -0.002
+			}
+		}
+		GEK_eating_property = { #이계인 자산 활용
+			picture = SPR_seize_the_gold_reserves
+			modifier = {
+				consumer_goods_factor = -0.15
 			}
 		}
 

@@ -1610,12 +1610,6 @@ country_event = { #손상된 산업
 	option = { #
 		name = GEK_rm_event.19.a
 		add_ideas = GEK_attacked_industry
-		hidden_effect = {
-			country_event = {
-				id = GEK_rm_event.21
-				days = 5
-			}
-		}
 	}
 }
 country_event = { #학생 정책
@@ -1634,10 +1628,36 @@ country_event = { #학생 문제
 	title = GEK_rm_event.21.t
 	desc = GEK_rm_event.21.d
 	is_triggered_only = yes
-	fire_only_once = yes
 	option = { #
 		name = GEK_rm_event.21.a
 		add_ideas = GEK_student_resistance
+		if = { #재교육 2트
+			limit = {
+				has_completed_focus = GEK_RM_kiv_focus_6
+			}
+			custom_effect_tooltip = GEK_rm_event.21_tt_1
+			uncomplete_national_focus = {
+				focus = GEK_RM_kiv_focus_6
+			}
+		}
+		if = { #권리 2트
+			limit = {
+				has_completed_focus = GEK_RM_kiv_focus_11
+			}
+			custom_effect_tooltip = GEK_rm_event.21_tt_2
+			uncomplete_national_focus = {
+				focus = GEK_RM_kiv_focus_11
+			}
+		}
+		if = { #자산 2트
+			limit = {
+				has_completed_focus = GEK_RM_kiv_focus_16
+			}
+			custom_effect_tooltip = GEK_rm_event.21_tt_3
+			uncomplete_national_focus = {
+				focus = GEK_RM_kiv_focus_16
+			}
+		}
 	}
 }
 country_event = { #협력자 선정
