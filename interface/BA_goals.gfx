@@ -1,5 +1,13 @@
 spriteTypes = {
 	SpriteType = {
+		name = "GFX_focus_GE2_start_focus"
+		texturefile = "gfx/interface/goals/GER/focus_GE2_start_focus.tga"			
+	}
+	SpriteType = {
+		name = "GFX_focus_GE1_start_focus"
+		texturefile = "gfx/interface/goals/GER/focus_GE1_start_focus.tga"			
+	}
+	SpriteType = {
 		name = "GFX_focus_HYA_focus_110"
 		texturefile = "gfx/interface/goals/HYA/focus_HYA_focus_110.tga"			
 	}

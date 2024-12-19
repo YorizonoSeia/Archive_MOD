@@ -5250,7 +5250,7 @@ shared_focus = { #경제 정책
 	icon = GFX_goal_generic_consumer_goods
 	available = {
 		count_triggers = {
-			amount = 10
+			amount = 8
 			controls_state = 5
 			controls_state = 42
 			controls_state = 50
@@ -8096,7 +8096,7 @@ shared_focus = {
 
 shared_focus = { #서독 통일
 	id = GE1_start_focus
-	icon = GFX_focus_SWE_landsverk
+	icon = GFX_focus_GE1_start_focus
 	available = {
 		GE1 = { NOT = { has_country_flag = GER_absorbed_into_a_specific_country }}
 		count_triggers = {
@@ -8193,7 +8193,7 @@ shared_focus = { #국가인민군
 
 shared_focus = { #군주주의 정서
 	id = GE1_monarchist_sentiment 
-	icon = GFX_focus_SWE_landsverk
+	icon = GFX_focus_generic_monarchist_sentiment
 	prerequisite = {
 		focus = GE1_start_focus
 	}
@@ -8205,6 +8205,46 @@ shared_focus = { #군주주의 정서
 	y = 1
 	cost = 5
 	completion_reward = {
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.03
+		}	
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.03
+		}	
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		add_political_power = 50
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		set_party_name = {
+			ideology = neutrality 
+			long_name = GER_neutrality_party_kaiserreich_long 
+			name = GER_neutrality_party_kaiserreich 
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		if = {
+			limit = {
+				OR = {
+					has_character = GEK_andreas_hermes
+					has_character = GEK_wilhelm_von_gayl
+				}
+			}
+			custom_effect_tooltip = available_political_advisor
+		}
+		if = {
+			limit = { has_character = GEK_andreas_hermes }
+			show_ideas_tooltip = GER_andreas_hermes
+		}
+		if = {
+			limit = { has_character = GEK_wilhelm_von_gayl }
+			show_ideas_tooltip = GER_wilhelm_von_gayl
+		}
 	}
 }
 
@@ -8297,7 +8337,7 @@ shared_focus = { #자유군단
 
 shared_focus = { #동독 통일
 	id = GE2_start_focus
-	icon = GFX_focus_SWE_landsverk
+	icon = GFX_focus_GE2_start_focus
 	relative_position_id = GE1_start_focus
 	available = {
 		GE2 = { NOT = { has_country_flag = GER_absorbed_into_a_specific_country }}
@@ -8411,7 +8451,7 @@ shared_focus = { #공산 정보부
 
 shared_focus = { #제국
 	id = GE2_return_of_the_kaiserreich
-	icon = GFX_goal_generic_axis_build_infantry
+	icon = GFX_focus_ger_return_of_the_kaiser
 	prerequisite = {
 		focus = GE2_start_focus
 	}
@@ -8423,6 +8463,50 @@ shared_focus = { #제국
 	y = 1
 	cost = 5
 	completion_reward = {
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.03
+		}	
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.03
+		}	
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		add_political_power = 50
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		set_party_name = {
+			ideology = neutrality 
+			long_name = GER_neutrality_party_kaiserreich_long 
+			name = GER_neutrality_party_kaiserreich 
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		if = {
+			limit = {
+				OR = {
+					has_character = GEK_paul_von_lettow_vorbeck
+					has_character = GEK_alfred_hugenberg
+				}
+			}
+			custom_effect_tooltip = available_political_advisor
+		}
+		if = {
+			limit = { has_character = GEK_paul_von_lettow_vorbeck }
+			show_ideas_tooltip = GER_paul_von_lettow_vorbeck
+		}
+		if = {
+			limit = { has_character = GEK_alfred_hugenberg }
+			show_ideas_tooltip = GER_alfred_hugenberg
+		}
+		if = { 
+			limit = { has_character = GEK_paul_von_lettow_vorbeck }
+			show_unit_leaders_tooltip = GEK_paul_von_lettow_vorbeck
+		}
 	}
 }
 
