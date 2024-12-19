@@ -1,6 +1,6 @@
 ﻿capital = 124
 
-set_global_flag = GEAF_the_four_year_plan_can_flag
+set_country_flag = GEAF_the_four_year_plan_can_flag
 #CONSUMER GOODS INCREASE AND PENALTIES VARIABLES
 set_variable = { GER_monthly_consumer_goods_start = 0.03 } #Starting amount of monthly increasing CG for MEFO Bills 
 set_variable = { GER_change_monthly_CG_vichy_france = 0.005 } #Changing monthly CG when capitulating FRance
