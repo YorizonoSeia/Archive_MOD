@@ -36,6 +36,26 @@ ideas={
 	}
 	country = {
 
+		TCA_anti_trinity_war_idea = {
+
+			picture = GER_fan_prussian_militarism
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.10
+				war_support_factor = 0.10
+				cannot_call_allies_or_join_wars = 1
+			}
+		}
 		TCA_construction_battalions = {
 
 			picture = ast_all_in

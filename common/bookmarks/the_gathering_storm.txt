@@ -144,6 +144,26 @@ bookmarks = {
 			focuses = {
 			}
 		}
+		
+		"KPD" = {
+			minor = yes
+			history = "KPD_GATHERING_STORM_DESC_1"
+			ideology = communism	
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		
+		"NSD" = {
+			minor = yes
+			history = "NSD_GATHERING_STORM_DESC_1"
+			ideology = fascism	
+			ideas = {
+			}
+			focuses = {
+			}
+		}
 
 		"HUN" = {
 			minor = yes

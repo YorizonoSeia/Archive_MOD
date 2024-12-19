@@ -61,10 +61,7 @@ set_variable = { GEK_german_nationalism_army_attack_factor = -0.10 }
 set_variable = { GEK_german_nationalism_army_org_regain = 0.00 }
 
 set_popularities = {
-	communism = 60
-	democratic = 25
-	fascism = 10
-	neutrality = 5
+	communism = 100
 }
 		
 set_politics = {
@@ -72,6 +69,15 @@ set_politics = {
 	last_election = "1935.12.25"
 	election_frequency = 48
 	elections_allowed = no
+}
+
+country_lock_all_division_template = yes
+
+send_embargo = TRM
+
+declare_war_on = {
+	target = TRM
+	type = annex_everything
 }
 
 recruit_character = KPD_thalman
@@ -103,6 +109,7 @@ recruit_character = KPD_elected_officer_4
 recruit_character = KPD_elected_officer_5
 
 add_ideas = {
+	TCA_anti_trinity_war_idea
 	KPD_low_popular_support_3
 	KPD_conflict_with_the_social_democratic_left
 	KPD_economic_vacuum

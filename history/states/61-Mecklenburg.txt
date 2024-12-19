@@ -8,8 +8,9 @@ state = {
 
 	history = {
 
-		owner = TRM
-		add_core_of = TRM
+		owner = KPD
+		controller = TRM
+		add_core_of = KPD
 		add_core_of = MEK
 
 		victory_points = {

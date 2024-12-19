@@ -12,8 +12,9 @@ state = {
 
 	history = {
 
-		owner = TRM
-		add_core_of = TRM
+		owner = NSD
+		controller = TRM
+		add_core_of = NSD
 		add_core_of = SIL
 		add_core_of = PRE
 

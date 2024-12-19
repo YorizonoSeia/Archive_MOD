@@ -70,6 +70,19 @@ set_popularities = {
 	fascism = 100
 }
 
+country_lock_all_division_template = yes
+
+send_embargo = TRM
+
+declare_war_on = {
+	target = TRM
+	type = annex_everything
+}
+
+add_ideas = {
+	TCA_anti_trinity_war_idea
+}
+
 recruit_character = NSD_heydrich
 recruit_character = GEK_konstantin_von_neurath #나치외무장관
 #친위대

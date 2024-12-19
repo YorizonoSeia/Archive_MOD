@@ -137,6 +137,18 @@ on_actions = {
 					legitimacy = 5
 				}
 			}
+			NSD = {
+				become_exiled_in = {
+					target = ARI
+					legitimacy = 5
+				}
+			}
+			KPD = {
+				become_exiled_in = {
+					target = SOV
+					legitimacy = 5
+				}
+			}
 			HYA = {
 				country_event = {
 					id = HYA_event.4

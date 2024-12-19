@@ -1,0 +1,18 @@
+focus_tree = {
+	id = KPD_focus_tree
+	shared_focus = TCA_invite_foreign_investors
+	shared_focus = GEAF_Mefo_return
+	shared_focus = GE1_start_focus
+	shared_focus = GE2_start_focus
+	continuous_focus_position = {
+		x = 130
+		y = 900
+	}
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = NSD
+		}
+	}
+}
