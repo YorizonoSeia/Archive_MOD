@@ -253,6 +253,19 @@ on_actions = {
 	on_startup = {
 		effect = {
 			if = {
+				limit = { is_debug = no }
+				TRM = {
+					annex_country = {
+						target = KPD
+						transfer_troops = no
+					}
+					annex_country = {
+						target = NSD
+						transfer_troops = no
+					}
+				}
+			}
+			if = {
 				limit = {
 					has_game_rule = {
 						rule = shit_project_KV_rule
