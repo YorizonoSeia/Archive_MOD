@@ -1,6 +1,13 @@
 spriteTypes = {
 
 	spriteType = {
+		name = "GFX_TRM_anti_trinity_game_icon"
+		texturefile = "gfx/interface/decisions/icon/TRM_anti_trinity_game_icon.tga"
+		legacy_lazy_load = no
+		noOfFrames = 4
+	}
+
+	spriteType = {
 		name = "GFX_RED_redwinter_side_lock"
 		texturefile = "gfx/interface/decisions/icon/RED_redwinter_side_lock.tga"
 		legacy_lazy_load = no
@@ -937,7 +944,6 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_TUR_central_state_border"
 		textureFile = "gfx/interface/decisions/aby_descision_gui/export202412181118152962.tga"
-		scale = 0.25
 	}
 
 	
