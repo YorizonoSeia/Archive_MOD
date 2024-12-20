@@ -5,7 +5,24 @@ TRN_country_collapse_decisions = {
 	}
 	visible = {
 	}
-	priority = 100
+	priority = 200
+	
+	custom_icon = {
+		tag = KPD
+		value = KPD_country_collapse_decisions_value_tt
+		desc = KPD_country_collapse_decisions_value_tooltip
+		visible = {
+			KPD = { has_war_with = TRM }
+		}
+	}
+	custom_icon = {
+		tag = NSD
+		value =NSD_country_collapse_decisions_value_tt
+		desc = NSD_country_collapse_decisions_value_tooltip
+		visible = {
+			NSD = { has_war_with = TRM }
+		}
+	}
 }
 TRN_after_war_decisions = {
 	allowed = {

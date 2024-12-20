@@ -123,3 +123,90 @@
  TCA_pursuit_of_harmony_tt:0 "§Y헤일로 보병§! 연구 해금."
 
  TCA_anti_trinity_war_idea: "반 트리니티 저항군"
+
+
+ #트리니티 붕괴 위험
+ TRN_country_collapse_decisions: "스러져가는 여명"
+ TRN_country_collapse_decisions_desc: "\n\n£GFX_decisison_picture_trinity_country_collapse\n\n\n\n\n세상이 뒤집힌 그 날, 트리니티의 운명은 더 이상 키보토스에 머물지 않고, 알 수 없는 대지 위에 던져졌습니다. 우리는 혼란 속에서 주변이 낯설게 변해버린 것을 깨달았고, 그로 인해 혼돈이 찾아오는 것은 자연스러운 일이었습니다. 하지만 우리는 결코 포기하지 않았습니다. 트리니티의 숭고한 의지는 어디서든 빛을 잃어서는 안 되었기 때문입니다.\n\n그러나 위기의 물결은 금세 우리 앞에 밀려들었습니다. 이 새로운 세계의 원주민들 역시 혼란에 빠져 있었습니다. 갑작스레 사라진 그들의 정부를 대신해 군림하려는 불가사의한 존재들을 받아들일 수 없었던 것이죠. 우리 학생들과 그들 사이의 충돌은 불가피했고, 트리니티의 통치에 저항하는 결사대가 결성되었으며, 몇몇 지역에서는 소요 사태까지 일어났습니다. 그러던 중 트리니티 정보부는 적들이 준비한 가장 큰 시련이 우리 발밑에서 진행되고 있다는 경고를 보내왔습니다. 만약 우리가 이를 저지하지 못한다면, 트리니티는 그 찬란한 영광을 영원히 잃게 될 것입니다.\n\n이제 우리의 결단과 행동만이 이 위기를 막을 수 있습니다."
+ TRN_country_collapse_fali: "§t트리니티가 붕괴합니다§!"
+ TRN_country_collapse_success: "§Y트리니티의 붕괴§!를 막았습니다. 하지만 아직 §Y할 일이 많습니다.§!"
+ TRM_bunggoehajima: "§Y최소한의 조치를 취함§!"
+ TRM_calm_storm: "폭풍전야"
+ TRN_country_collapse_decisions_plz_time: "시간 벌기"
+
+ KPD_country_collapse_decisions_value_tooltip:0 "[ROOT.GetNameDefCap](은)는 [?global.KPD_country_collapse_decisions_value|0H%%]의 §H영향력 점수§!를 가짐\n"
+ NSD_country_collapse_decisions_value_tooltip:0 "[ROOT.GetNameDefCap](은)는 [?global.NSD_country_collapse_decisions_value|0H%%]의 §H영향력 점수§!를 가짐\n"
+
+ KPD_country_collapse_value_tt: "§H[KPD.GetNameWithFlag]§! 영향력 점수: $RIGHT|+=%%0$"
+ NSD_country_collapse_value_tt: "§H[NSD.GetNameWithFlag]§! 영향력 점수: $RIGHT|+=%%0$"
+
+ KPD_country_collapse_value_up_tt: "§H[KPD.GetNameWithFlag]§! 영향력 점수가 $RIGHT|%%0H$ 보다 큼"
+ NSD_country_collapse_value_up_tt: "§H[NSD.GetNameWithFlag]§! 영향력 점수가 $RIGHT|%%0H$ 보다 큼"
+
+ KPD_country_collapse_decisions_value_tt:0 "[?global.KPD_country_collapse_decisions_value|0H%%]"
+ NSD_country_collapse_decisions_value_tt:0 "[?global.NSD_country_collapse_decisions_value|0H%%]"
+
+ BA_GER_defense: "반트리니티 저항군 총사령부"
+ BA_GER_defense_week: "반트리니티 저항군"
+ BA_GER_defense_fail: "약화된 저항군"
+ TRM_unplanned_offensive: "계획되지 않은 공세"
+
+ TRN_collapse_idea: "트리니티의 혼란"
+ TRN_country_collapse_decisions_plz_time_tt: "§Y$TRN_collapse_idea$§! 변동치:\n매일 정치력 비용: §R+0.05§!\n안정도: §R-10.00%\n전쟁 지지도: §R-10.00%§!\n사단 회복률: §R-10.00%§!\n사단 조직력: §R-10.00%§!"
+
+ TRM_resistance_emerging_to_the_surface: "반트리니티 저항군 봉기"
+ TRM_resistance_emerging_to_the_surface_flag: "§Y$TRM_resistance_emerging_to_the_surface$§! 임무 시작:"
+ TRN_collapse_event_proceeding_flag: "저항군 봉기가 진행중임"
+
+ TRM_search_for_KPD: "독일 공산당 추적"
+ TRM_search_for_NSD: "독일 나치당 추적"
+ TRM_issuance_of_laws_for_local_humanity: "현지 인류를 위한 법안 발의"
+ TRM_issuance_of_laws_for_local_humanity_desc: "과감한 법안을 발의하여 현지 독일인들의 지지를 크게 끌어올리고, 우리를 향해 저항을 지속하는 유격대와 친위대를 향한 지지율을 감소시킬 것입니다."
+ TRM_ban_on_political_party_activities: "정당 활동 금지"
+ TRM_strengthening_of_urban_security: "시가지 보안 강화"
+
+ TRM_proclamation_of_mecklenburg_isolation_zone: "[61.GetName] 격리 조치"
+ TRM_proclamation_of_lower_schleswig_isolation_zone: "[66.GetName] 격리 조치"
+
+ TRM_commencement_of_anti_terrorism_operations_KPD: "@KPD 작전 : 대테러 소탕"
+ TRM_reinforcement_of_guard_forces_KPD: "@KPD 작전 : 경비 병력 증원"
+ TRM_urban_search_operations_KPD: "@KPD 작전 : 시가지 수색"
+ TRM_start_KPD_flag: "다른 작전이 진행중임"
+
+ TRN_collapse_event.11.t: "트리니티의 작전 성공"
+ TRN_collapse_event.12.t: "무력화된 작전"
+ TRN_collapse_event.13.t: "독일 유격대의 작전 성공"
+
+ TRN_collapse_event.11.desc1: "우리는 적의 작전을 완벽하게 파훼하여 승리를 거머쥐었습니다.\n\n저항군 놈들의 완전한 소탕이 멀지 않았습니다!"
+ TRN_collapse_event.12.desc1: "작전 계획서는 완벽했으나, 저항군 놈들도 우리와 비슷한 생각을 한게 분명합니다. 아쉽게도 작전은 실패하였습니다."
+ TRN_collapse_event.13.desc1: "우리가 다른 곳에 한눈을 판 사이 저항군 놈들이 우리의 거점을 가볍게 파괴하고 돌아갔습니다!\n\n승리가 다시 한 걸음 멀어져 간 것만 같습니다."
+
+ TRN_collapse_event.11.desc2: "적들은 우리의 작전 계획서를 완전히 관통한 작전을 수행했습니다.\n\n우리는 패배했습니다. 그러나, 다음번에는 아닐것입니다."
+ TRN_collapse_event.12.desc2: "작전 계획서는 완벽했으나, 트리니티 압제자 놈들도 우리와 비슷한 생각을 한게 분명합니다. 아쉽게도 작전은 실패하였습니다."
+ TRN_collapse_event.13.desc2: "트리니티의 수색조가 엉뚱한 곳을 수색하는 사이, 우리는 훌륭하게 목표를 완수했습니다.\n\n해방의 그 날이 가까워지고 있습니다."
+
+ TRN_collapse_event.11.a: "훌륭하군!"
+ TRN_collapse_event.12.a: "이런."
+ TRN_collapse_event.13.a: "안돼!"
+
+ TRN_collapse_event.11.b: "안돼!"
+ TRN_collapse_event.13.b: "훌륭하군!"
+
+ TRN_collapse_event.21.t: "트리니티의 작전 성공"
+ TRN_collapse_event.22.t: "무력화된 작전"
+ TRN_collapse_event.23.t: "독일 친위대의 작전 성공"
+
+ TRN_collapse_event.21.desc1: "우리는 친위대의 작전을 완벽하게 파훼하여 승리를 거머쥐었습니다.\n\n반란군 놈들의 완전한 소탕이 멀지 않았습니다!"
+ TRN_collapse_event.22.desc1: "작전 계획서는 완벽했으나, 반란군 놈들도 우리와 비슷한 생각을 한게 분명합니다. 아쉽게도 작전은 실패하였습니다."
+ TRN_collapse_event.23.desc1: "우리가 다른 곳에 한눈을 판 사이 반란군 놈들이 우리의 거점을 가볍게 파괴하고 돌아갔습니다!\n\n승리가 다시 한 걸음 멀어져 간 것만 같습니다."
+
+ TRN_collapse_event.21.desc2: "적들은 우리의 작전 계획서를 완전히 관통한 작전을 수행했습니다.\n\n현장 지휘관의 책임을 물어야 합니다."
+ TRN_collapse_event.22.desc2: "작전 계획서는 완벽했으나, 침략자들도 우리와 비슷한 생각을 한게 분명합니다. 아쉽게도 작전은 실패하였습니다."
+ TRN_collapse_event.23.desc2: "트리니티의 주력군이 다른 곳으로 이동한 사이, 우리는 완벽하게 목표를 달성했습니다.\n\n독일의 영광이 다시 한번 가까워지고 있습니다."
+
+ TRN_collapse_event.21.a: "훌륭하군!"
+ TRN_collapse_event.22.a: "이런."
+ TRN_collapse_event.23.a: "안돼!"
+
+ TRN_collapse_event.21.b: "안돼!"
+ TRN_collapse_event.23.b: "훌륭하군!"

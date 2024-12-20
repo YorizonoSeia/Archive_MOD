@@ -1,9 +1,6 @@
 TRM_debug_kpd_effect = {
-	KPD_country_creation_effect = yes
-	KPD = {
-		transfer_state = 65
-		change_tag_from = TRM
-	}
+	set_variable = { global.KPD_country_collapse_decisions_value = 18 }
+	set_variable = { global.NSD_country_collapse_decisions_value = 33 }
 }
 TRM_debug_kpd_effect2 = {
 	random_army_leader = {
@@ -49,60 +46,35 @@ TRM_debug_effect = {
 	}
 	country_event = TRN_faction_event.121
 }
-TRM_debug_effect2 = {
-	activate_mission = TRM_resistance_emerging_to_the_surface
-}
 TRN_country_collapse_up = {
-	if = {
-		limit = { has_idea = TRM_collapse_4 }
-		custom_effect_tooltip = TRN_country_collapse_fali
-		remove_ideas = TRM_collapse_4
-		hidden_effect = {
-			country_event = { id = TRN_collapse_event.6 }
+	if = { 
+		limit = { has_war_with = KPD KPD = { has_capitulated = yes } }
+		add_to_variable = {
+			global.KPD_country_collapse_decisions_value = 5
+			tooltip = KPD_country_collapse_value_tt
 		}
 	}
-	else_if = {
-		limit = { has_idea = TRM_collapse_3 }
-		swap_ideas = {
-			remove_idea = TRM_collapse_3
-			add_idea = TRM_collapse_4
-		}
-	}
-	else_if = {
-		limit = { has_idea = TRM_collapse_2 }
-		swap_ideas = {
-			remove_idea = TRM_collapse_2
-			add_idea = TRM_collapse_3
-		}
-	}
-	else_if = {
-		limit = { has_idea = TRM_collapse_1 }
-		swap_ideas = {
-			remove_idea = TRM_collapse_1
-			add_idea = TRM_collapse_2
+	if = { 
+		limit = { has_war_with = NSD NSD = { has_capitulated = yes } }
+		add_to_variable = {
+			global.NSD_country_collapse_decisions_value = 5
+			tooltip = NSD_country_collapse_value_tt
 		}
 	}
 }
 TRN_country_collapse_down = {
-	if = {
-		limit = { has_idea = TRM_collapse_4 }
-		swap_ideas = {
-			remove_idea = TRM_collapse_4
-			add_idea = TRM_collapse_3
+	if = { 
+		limit = { has_war_with = KPD KPD = { has_capitulated = yes } }
+		add_to_variable = {
+			global.KPD_country_collapse_decisions_value = -5
+			tooltip = KPD_country_collapse_value_tt
 		}
 	}
-	else_if = {
-		limit = { has_idea = TRM_collapse_3 }
-		swap_ideas = {
-			remove_idea = TRM_collapse_3
-			add_idea = TRM_collapse_2
-		}
-	}
-	else_if = {
-		limit = { has_idea = TRM_collapse_2 }
-		swap_ideas = {
-			remove_idea = TRM_collapse_2
-			add_idea = TRM_collapse_1
+	if = { 
+		limit = { has_war_with = NSD NSD = { has_capitulated = yes } }
+		add_to_variable = {
+			global.NSD_country_collapse_decisions_value = -5
+			tooltip = NSD_country_collapse_value_tt
 		}
 	}
 }
