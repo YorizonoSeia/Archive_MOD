@@ -342,7 +342,9 @@ country_event = {
 	
 	 option = {
 		name = usa_new_event.1
-		
+	    hidden_effect = {
+		    play_song = "USA_The_New_Order"
+		}
 
 	 }
 }
@@ -361,9 +363,9 @@ country_event = {
 	 option = {
 		name = usa_new_event.2
 		
-		hidden_effect = {
-				play_song = "USA_The_New_Order"
-			}
+		#hidden_effect = {
+		#		play_song = "USA_The_New_Order"
+		#	}
 	 }
 }
 
@@ -1193,37 +1195,17 @@ country_event = {
 	option = { # back down, for now
 		name = usa_new_civil_event.1.a
 		ai_chance = {
-			factor = 80
+			factor = 1
 		}
-		add_stability = 0.05
+		
 		add_ideas = week_faith_for_new_team
 
 		#add_popularity = {
 		#	ideology = democracy
 		#	popularity = 0.05
 		# }
-		
-		
 	}
-	option = { # Aggressive response
-		name = mtg_usa_civil_war_fascists.1.b
-		ai_chance = {
-			factor = 20
-		}
-		#custom_effect_tooltip = mtg_usa_civil_war_warning_tt
-		add_political_power = -100
-		add_stability = -0.1
-
-		USA_congress_small_opposition = yes
-
-		#add_popularity = {
-		#	ideology = democracy
-		#	popularity = -0.1
-		#}
-		
-
-		# country_event = { id = usa_new_civil_event.2 days = 90  }
-	}
+	
 }
 
 

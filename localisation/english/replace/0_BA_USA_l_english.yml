@@ -150,8 +150,8 @@
  USA_old_team: "구질서 수호"
  USA_old_team_desc: "이계인들이 유럽을 지배하며 새로운 질서를 세우는 사이, 우리 미국은 인내하고 또 인내했습니다. 이제는 고통 받고 있는 유럽인들을, 아니 인류를 해방시킬 때입니다."
 
- USA_support_alies: "스트레사 지원"
- USA_support_alies_desc: "프랑스와 영국, 그리고 이탈리아는 이계의 침략에 맞서 스트레사 전선을 조인했습니다. 그들의 투쟁심이라면 이계인을 물리칠 수 있을 겁니다."
+ USA_support_alies: "연합국 지원"
+ USA_support_alies_desc: "프랑스와 영국은 이계의 침략에 맞서 연합국을 조인했습니다. 그들의 투쟁과 단결력이라면 이계인을 물리칠 수 있을 겁니다."
 
  USA_attack_COU: "베네룩스 해방"
  USA_attack_COU_desc: "저지대 해방"
@@ -167,9 +167,6 @@
  
  USA_attack_MIL: "프랑스 해방"
  USA_attack_MIL_desc: "리오 공격"
- 
- USA_attack_BLM: "브르타뉴 해방"
- USA_attack_BLM_desc: "로리 앙~"
  
  USA_attack_TRM: "동독일 해방"
  USA_attack_TRM_desc: "나치가 기어코 인류를 배신하고 이계인과 협력했습니다! 지금, 정의가 살아있다는 것을 입증할 시간입니다."
@@ -203,8 +200,8 @@
  USA_new_team_TV: "선전"
  USA_new_team_TV_desc: "국민들은 신질서에 동참할 의무가 있다는 것을 깨달아야 합니다. 저희가 그 역할이 됩시다."
 
- USA_new_team_night: "압박"
- USA_new_team_night_desc: "모든 권력은 총구에서 나옵니다."
+ USA_new_team_marry: "이계 법안 발의"
+ USA_new_team_marry_desc: "이계인은 이제 우리 인류와 같은 권리를 갖게 됩니다. 서로를 존중하고, 사랑하는 세상이 될 수 있도록 말이죠."
 
  USA_new_team_anime: "애니메이션 상영"
  USA_new_team_anime_desc: "쭉쭉체조를 하는 모습, 정말 사랑스럽지 않나요?"
@@ -257,7 +254,17 @@
  USA_bad_kivotos_Mika_fanclub: "트리니티에 복종"
  USA_bad_kivotos_Mika_fanclub_desc: "되묻지 않고 그저 묵묵히 그녀의 지시에 따르는 것, 그것이 바로 우리의 사명입니다. §R당신이 지시할 수 있는 것은 이제 존재하지 않습니다.§R"
 
- 
+ USA_support_brazil: "남미 지원"
+ USA_support_brazil_desc: "브라질의 연금술 기술이라면 신질서 따윈 금방 이길 겁니다."
+
+ USA_support_spain: "이베리아 대륙 지원"
+ USA_support_spain_desc: "이베리아 대륙은 중요한 전략적 요충지입니다."
+
+ USA_support_ITA: "이탈리아 지원"
+ USA_support_ITA_desc: "유럽에서 제대로 된 열강은 이제 이탈리아밖에 없습니다. 그들과 손을 잡아야만 합니다."
+
+ USA_attack_SHA: "중부 유럽 해방"
+ USA_attack_SHA_desc: "중부 유럽에 아직 이계인이 있습니다. 우리는 아무리 약한 국가라도 해방해야 하는 의무를 지니고 있습니다."
 
 #######################################################
 #######################2차 대공황#######################
@@ -275,9 +282,11 @@
  USABA_secret_currency_issuance: "지하 화폐 발행"
  USABA_return_of_the_giant: "거인의 기상"
  USABA_special_demand_for_war: "전쟁 특수"
+ USA_pudding: "푸딩 배급제"
 
  USABA_forced_wake_up_tt: "대공황 해결시 제거:\n§Y2차 대공황§!, §Y대공황§!, §Y느린 회복§!, §Y느린 경제 성장§! 국민정신 미보유"
  USABA_second_great_depression_idea_tt: "2차 대공황 해결시 제거:\n§Y2차 대공황§! 국민정신 미보유"
+
  
 
 #디시전
@@ -492,3 +501,10 @@
 
 #캐릭터
  USPG_john_nance_garner: "존 낸스 가너" #부통령
+
+
+ ###########################################
+ ##############신질서 이벤트 미국#############
+ ###########################################
+
+ usa_new_event.1.t: "특별 선언을 하는 미국"

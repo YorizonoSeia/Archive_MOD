@@ -311,8 +311,8 @@ ideas = {
 			
 			modifier = {
 				political_power_gain = -0.2
-				consumer_goods_factor = -0.25
-				production_speed_buildings_factor = 0.3
+				consumer_goods_factor = -0.3
+				production_speed_buildings_factor = 0.1
 			    custom_modifier_tooltip = USABA_forced_wake_up_tt
 			}
         }
@@ -507,8 +507,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				political_power_gain = 0.50
-				stability_weekly = 0.0030
+				political_power_gain = 0.75
+				stability_weekly = 0.0050
 				consumer_goods_factor = -0.25
 				production_speed_buildings_factor = 0.25
 			}
@@ -668,7 +668,7 @@ ideas = {
 	   }
 
 
-	   # 분탕 미국
+	   # 푸딩 지급
 
 	   	 USA_pudding = {
             picture = generic_disjointed_gov
@@ -683,9 +683,67 @@ ideas = {
 
 			modifier = {
 				stability_factor = -0.1
-	   			stability_weekly = 0.01
+	   			stability_weekly = 0.0030
 			}
 	   }	
+
+	   # 게헨나 제병합동
+
+	   USA_GEM_train = {
+            picture = tfv_can_conscription_crisis
+
+			modifier = {
+				army_attack_factor = 0.2
+				army_defence_factor = -0.15
+				army_speed_factor = 0.05
+				army_org_regain = -0.1
+				training_time_army_factor = -0.1
+			}
+	   }
+       
+	   # 트리니티 제병합동
+	   USA_TRM_train = {
+            picture = SWE_varnplikt
+
+			modifier = {
+				breakthrough_factor = 0.1
+               
+			}
+	   }
+
+	   #나기사 화력우세(에덴 군사 중점)
+	   USA_nagisa_cannon = {
+        picture = generic_artillery_regiments
+
+		modifier = {
+           army_artillery_attack_factor = 0.15
+		}
+
+	}
+
+	# 이로하 기동전(에덴 군사 중점)
+
+       USA_iroha_tank = {
+        picture = generic_acquire_tanks
+
+		modifier = {
+           army_armor_attack_factor = 0.1
+           army_armor_defence_factor = 0.05
+		   army_armor_speed_factor = 0.05
+		}
+
+	}
+
+
+
+	  marshall_plan = {
+        picture = generic_artillery_regiments
+
+		modifier = {
+           consumer_goods_factor = 0.3
+		}
+
+	  }
 
   }
 }
