@@ -663,6 +663,11 @@ on_actions = {
 					FROM.FROM = {
 						NOT = { is_core_of = TRM }
 						BA_is_GER_core = yes
+						OR = {
+							is_core_of = GEM
+							is_core_of = GEH
+							is_core_of = HEU
+						}
 					}
 				}
 				log = "[GetDateText], [ROOT.GetName] control [FROM.FROM.GetName]"

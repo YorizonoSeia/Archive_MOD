@@ -206,7 +206,7 @@
  COU_resolution_47_of_THIS_tt: "§G해당 국가§!들이 §Y키보토스 협력기구§!에서 추방될 것입니다."
  COU_war_deterrence_tt: "§Y키보토스 협력기구§! 국가 간의 전쟁을 금지하는 법안이 추진될 것입니다."
  COU_establishment_of_autonomous_system: "자치 제도 확립"
-
+ COU_establishment_of_autonomous_system_desc: "권력 투쟁 속에서 승기를 잡은 우리는 유라기 모모카를 비상대책위원장 자리에 앉힐 수 있게 되었고, 이전에 현지인들에게 약속했던 자치에 대해 제도적 기반을 마련할 기회를 얻었습니다. 이를 통해 우리의 지지 기반을 더욱 다질 수 있을 것입니다."
  COU_autonomous_legislation: "주권법"
 
  COU_inclusion_of_union_in_administrative_committee: "행정위원회에 노동조합 등용"
@@ -231,9 +231,10 @@
  COU_workers_republic: "노동자 공화국"
 
  COU_leftward_shift: "좌경화"
+ COU_leftward_shift_desc: "때가 되었습니다. 비상대책위원회 위원장까지 스스로 물러난 지금 우리 키보토스 개혁위원회는 학생과 현지인 가릴 것 없이 모두가 평등하고 단결된 국가를 건설할 것입니다!\n\n§S만국의 노동자여, 단결하라!§!"
 
  COU_honorary_student_council_president: "명예 학생회장"
- COU_honorary_student_council_president_desc: "§p\"으응? 무슨 일이야?\"§!\n\n우리는 비록 유라기 모모카를 비상대책위원회의 위원장 자리에서 내려오게 했으나 개혁위원회의 생각에 따라 그녀를 명예직으로나마 학생회장에 임명해 두는 것이 총학생회 안정화에 도움이 될 것으로 판단하였습니다."
+ COU_honorary_student_council_president_desc: "§p\"으응? 이번에는 또 무슨 일이야?\"§!\n\n우리는 비록 유라기 모모카를 비상대책위원회의 위원장 자리에서 스스로 물러나게 했으나 개혁위원회의 생각에 따라 그녀를 명예직으로나마 학생회장에 임명해 두는 것이 총학생회 안정화에 도움이 될 것으로 판단하였습니다."
 
  COU_restoration_of_parliamentary_politics: "의회 정치 복원"
 

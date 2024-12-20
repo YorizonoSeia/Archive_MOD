@@ -1174,7 +1174,7 @@ GEM_state_government_takeover_categorie = {
 			factor = 200
 		}
 		visible = {
-			tag = GEK
+			original_tag = GEM
 		}
 		available = {
 			political_power_daily > 0

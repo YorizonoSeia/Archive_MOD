@@ -7,6 +7,14 @@ SHL_com_DEF: "독일 적색 유격대"
 RHI_dem: "공화파 독일"
 RHI_dem_ADJ: "공화파 독일"
 RHI_dem_DEF: "공화파 독일"
+
+TRM_isolation_zone1: "메클렌부르크 격리구역"
+TRM_isolation_zone1_ADJ: "격리구역"
+TRM_isolation_zone1_DEF: "메클렌부르크 격리구역"
+
+TRM_isolation_zone2: "니더슐레지엔 격리구역"
+TRM_isolation_zone2_ADJ: "격리구역"
+TRM_isolation_zone2_DEF: "니더슐레지엔 격리구역"
 #트리니티
  TRM_collapse_win_fascism:0 "독일국"
  TRM_collapse_win_fascism_DEF:0 "독일국"

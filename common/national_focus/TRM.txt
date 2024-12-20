@@ -1045,10 +1045,6 @@
 		x = 40
 		y = 0
 		completion_reward = {
-			add_days_mission_timeout = {
-				mission = TRN_country_collapse
-				days = 120
-			}
 			add_political_power = 120
 			add_stability = -0.2
 			hidden_effect = {
@@ -1074,7 +1070,6 @@
 		}
 		relative_position_id = TRM_newfocus_0
 		completion_reward = {
-			TRN_country_collapse_down = yes
 			add_stability = -0.05
 		}
 		x = -2
@@ -1127,7 +1122,6 @@
 		x = 0
 		y = 2
 		completion_reward = {
-			TRN_country_collapse_down = yes
 			add_war_support = 0.05
 			add_stability = 0.05
             effect_tooltip = {
@@ -1211,7 +1205,6 @@
 		y = 1
 		relative_position_id = TRN_yurijono_seia
 		completion_reward = {
-			TRN_country_collapse_down = yes
 			custom_effect_tooltip = TRM_TURIJONO_SEIA_TT
 			if = {
 				limit = {
@@ -1271,6 +1264,10 @@
 		x = 8
 		y = 1
 		completion_reward = {
+			add_to_variable = {
+				global.NSD_country_collapse_decisions_value = -10
+				tooltip = NSD_country_collapse_value_tt
+			}
 			unlock_decision_tooltip = TRN_pater_add
 			country_event = { id = TRM_event.6 hours = 1 }
 			
@@ -1316,10 +1313,6 @@
 		x = -1
 		y = 1
 		completion_reward = {
-			add_days_mission_timeout = {
-				mission = TRN_country_collapse
-				days = 50
-			}
 			custom_effect_tooltip = TRN_nagisa_cahin_2_tt
 			
 			custom_effect_tooltip = TRM_filius_loyalty__40_tt
@@ -1356,9 +1349,13 @@
 		x = 1
 		y = 1
 		completion_reward = {
-			TRN_country_collapse_down = yes
+			add_to_variable = {
+				global.NSD_country_collapse_decisions_value = -10
+				tooltip = NSD_country_collapse_value_tt
+			}
 			custom_effect_tooltip = TRM_lets_go_kill_Heydrich
             add_political_power = 15
+			NSD = { if = { limit = { has_character = NSD_heydrich } retire_character = NSD_heydrich } }
 		}
 
 	}
@@ -1380,7 +1377,6 @@
 		x = -1
 		y = 3
 		completion_reward = {
-			TRN_country_collapse_down = yes
 			add_political_power = 120
 			add_ideas = TRM_mika_trinity
 			country_event = { id = TRM_event.14 days = 3 } # 문제아 해결
@@ -1416,7 +1412,6 @@
 		x = 1
 		y = 3
 		completion_reward = {
-			TRN_country_collapse_down = yes
 			add_popularity = {
 				ideology = fascism
 				popularity = 0.99
@@ -1455,6 +1450,14 @@
 		x = 0
 		y = 4
 		completion_reward = {
+			add_to_variable = {
+				global.NSD_country_collapse_decisions_value = -10
+				tooltip = NSD_country_collapse_value_tt
+			}
+			add_to_variable = {
+				global.KPD_country_collapse_decisions_value = 5
+				tooltip = KPD_country_collapse_value_tt
+			}
 			#pater_nazism
 			set_cosmetic_tag = TRINITY_REICH
 			custom_effect_tooltip = steel_reich_tt
@@ -1502,11 +1505,6 @@
 					}
 				remove_ideas = TRM_troll_mika_2
 			}
-			add_days_mission_timeout = {
-				mission = TRN_country_collapse
-				days = 35
-			}
-			TRN_country_collapse_down = yes
 			custom_effect_tooltip = TRM_pater_union_tt
 			remove_country_leader_trait = TRM_pater_faction
 			set_variable = { TRM_internal_factions_remove_var = 0 } #지울 세력 코드
@@ -1559,10 +1557,6 @@
 				value = 1
 			}
             custom_effect_tooltip = tooltip_white_line
-			add_days_mission_timeout = {
-				mission = TRN_country_collapse
-				days = 80
-			}
             unlock_decision_category_tooltip = TRM_Iron_Sword_Operations_Categorie
 		}
 	}
@@ -1640,7 +1634,6 @@
 		y = 1
 		#relative_position_id = TRN_gisauihon
 		completion_reward = {
-			TRN_country_collapse_down = yes
 			add_political_power = 120
 			add_war_support = 0.05
 			country_event = { id = TRM_event.25 hours = 1 }
@@ -3362,7 +3355,6 @@
  ######    ####      ##    
 
 
-			TRN_country_collapse_down = yes
 			custom_effect_tooltip = TRM_tooltip_attack_gehenna
 			if = { 
 				limit = { 
@@ -5669,10 +5661,6 @@
 		relative_position_id = TRN_nagisa_gyehek
 		prerequisite = { focus = TRN_nagisa_gyehek }
 		completion_reward = {
-			add_days_mission_timeout = {
-				mission = TRN_country_collapse
-				days = 50
-			}
 			if = {
 				limit = {
 					check_variable = { TRM_pater_popularity > 1 }
@@ -5811,7 +5799,6 @@
 		prerequisite = { focus = TRN_Suppressing_mika }
 		prerequisite = { focus = TRN_please_shut_up }
 		completion_reward = {
-			TRN_country_collapse_down = yes
 			country_event = { id = TRM_event.364 hours = 8 }
 		}
 	}
@@ -5979,11 +5966,6 @@
 		relative_position_id = TRN_nagisa_gyehek
 		prerequisite = { focus = TRN_steel_of_woman focus = TRN_nagisa_lottery focus = TRN_united_academy }
 		completion_reward = {
-			add_days_mission_timeout = {
-				mission = TRN_country_collapse
-				days = 80
-			}
-			TRN_country_collapse_down = yes
 			add_political_power = 100
             remove_ideas = TRM_great_depression_2
 			add_dynamic_modifier = { modifier = TRN_trinity_uber_alles_idea }
@@ -7246,11 +7228,6 @@
 		}
 		relative_position_id = TRN_yurijono_seia_ser
 		completion_reward = {
-			TRN_country_collapse_down = yes
-			add_days_mission_timeout = {
-				mission = TRN_country_collapse
-				days = 50
-			}
 			ARI = { country_event = ARI_event.25 }
 		}
 
@@ -7534,7 +7511,6 @@
 			hidden_effect = {
 				country_event = { id = TRM_event.372 days = 170 }
 			}
-			TRN_country_collapse_down = yes
 		}
 	}
 
@@ -7949,7 +7925,6 @@
                 add_idea = TRN_Knight_Templar_2_idea
                 remove_idea = TRN_Knight_Templar_idea
             }
-			TRN_country_collapse_down = yes
 		}
 	}
 
@@ -7995,7 +7970,6 @@
 				set_variable = { TRM_internal_factions_loyalty_var = 5 }
 				TRM_internal_factions_loyalty_add = yes
 			}
-			TRN_country_collapse_down = yes
 		}
 	}
 
@@ -8095,7 +8069,6 @@
 			set_variable = { TRM_internal_factions_popularity_var = 15 }
 			TRM_internal_factions_popularity_add = yes
 
-			TRN_country_collapse_down = yes
 		}
 	}
 
@@ -8168,7 +8141,6 @@
 				idea = TRN_perceived_threats
 				days = 120
 			}
-			TRN_country_collapse_down = yes
 		}
 	}
 
@@ -8677,7 +8649,6 @@
 				set_variable = { TRM_internal_factions_loyalty_var = 5 }
 				TRM_internal_factions_loyalty_add = yes
 			}
-			TRN_country_collapse_down = yes
 
 			upgrade_economy_law = yes
 		}

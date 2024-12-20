@@ -1,4 +1,362 @@
 TRN_country_collapse_decisions = {
+	TRM_issuance_of_laws_for_local_humanity = {
+		icon = GFX_decision_eng_trade_unions_support
+		
+		allowed = {
+			original_tag = TRM
+		}
+		
+		visible = {
+			NOT = { has_global_flag = TRN_country_collapse_decisions_end_flag }
+			NOT = { has_global_flag = TRM_issuance_of_laws_for_local_humanity_flag }
+		}
+		
+		fire_only_once = yes
+		
+		cost = 150
+
+		ai_will_do = {
+			base = 4000
+		}
+
+		complete_effect = {
+			add_stability = -0.10
+			add_to_variable = {
+				global.NSD_country_collapse_decisions_value = -10
+				tooltip = NSD_country_collapse_value_tt
+			}
+			add_to_variable = {
+				global.KPD_country_collapse_decisions_value = -5
+				tooltip = KPD_country_collapse_value_tt
+			}
+			set_global_flag = TRM_issuance_of_laws_for_local_humanity_flag
+        }
+	}
+	TRM_ban_on_political_party_activities = {
+		icon = GFX_decision_generic_break_treaty
+		
+		allowed = {
+			original_tag = TRM
+		}
+		
+		visible = {
+			NOT = { has_global_flag = TRN_country_collapse_decisions_end_flag }
+			NOT = { has_global_flag = TRM_ban_on_political_party_activities_flag }
+		}
+		
+		fire_only_once = yes
+		
+		cost = 30
+
+		ai_will_do = {
+			base = 4000
+		}
+
+		complete_effect = {
+			add_stability = 0.01
+			add_to_variable = {
+				global.NSD_country_collapse_decisions_value = -5
+				tooltip = NSD_country_collapse_value_tt
+			}
+			add_to_variable = {
+				global.KPD_country_collapse_decisions_value = -5
+				tooltip = KPD_country_collapse_value_tt
+			}
+			set_global_flag = TRM_ban_on_political_party_activities_flag
+        }
+	}
+	TRM_strengthening_of_urban_security = {
+		icon = GFX_decision_generic_prepare_civil_war
+		
+		allowed = {
+			original_tag = TRM
+		}
+		
+		visible = {
+			NOT = { has_global_flag = TRN_country_collapse_decisions_end_flag }
+			NOT = { has_global_flag = TRM_ban_on_political_party_activities_flag }
+		}
+		
+		fire_only_once = yes
+		
+		cost = 30
+
+		ai_will_do = {
+			base = 4000
+		}
+
+		complete_effect = {
+			add_stability = 0.05
+			add_to_variable = {
+				global.NSD_country_collapse_decisions_value = -5
+				tooltip = NSD_country_collapse_value_tt
+			}
+			add_to_variable = {
+				global.KPD_country_collapse_decisions_value = -5
+				tooltip = KPD_country_collapse_value_tt
+			}
+        }
+	}
+	TRM_proclamation_of_mecklenburg_isolation_zone = {
+		icon = GFX_decision_eng_install_government
+		
+		allowed = {
+			original_tag = TRM
+		}
+		
+		visible = {
+			NOT = { has_global_flag = TRN_country_collapse_decisions_end_flag }
+			NOT = { has_global_flag = TRM_proclamation_of_mecklenburg_isolation_zone_flag }
+		}
+
+		available = {
+			check_variable = {
+				global.KPD_country_collapse_decisions_value > 45
+				tooltip = KPD_country_collapse_value_up_tt
+			}
+		}
+		
+		fire_only_once = yes
+		
+		cost = 200
+
+		ai_will_do = {
+			base = 4000
+		}
+
+		complete_effect = {
+			add_stability = 0.05
+			set_global_flag = TRM_proclamation_of_mecklenburg_isolation_zone_flag
+			add_to_variable = {
+				global.KPD_country_collapse_decisions_value = -10
+				tooltip = KPD_country_collapse_value_tt
+			}
+        }
+	}
+	TRM_proclamation_of_lower_schleswig_isolation_zone = {
+		icon = GFX_decision_eng_install_government
+		
+		allowed = {
+			original_tag = TRM
+		}
+		
+		visible = {
+			NOT = { has_global_flag = TRN_country_collapse_decisions_end_flag }
+			NOT = { has_global_flag = TRM_proclamation_of_lower_schleswig_isolation_zone_flag }
+		}
+
+		available = {
+			check_variable = {
+				global.NSD_country_collapse_decisions_value > 45
+				tooltip = NSD_country_collapse_value_up_tt
+			}
+		}
+		
+		fire_only_once = yes
+		
+		cost = 200
+
+		ai_will_do = {
+			base = 4000
+		}
+
+		complete_effect = {
+			add_stability = 0.05
+			set_global_flag = TRM_proclamation_of_lower_schleswig_isolation_zone_flag
+			add_to_variable = {
+				global.NSD_country_collapse_decisions_value = -10
+				tooltip = NSD_country_collapse_value_tt
+			}
+        }
+	}
+	TRM_search_for_KPD = {
+		icon = GFX_decision_infiltrate_state
+		
+		allowed = {
+			original_tag = TRM
+		}
+		
+		visible = {
+			NOT = { has_global_flag = TRN_country_collapse_decisions_end_flag }
+			has_war_with = KPD
+			NOT = { has_global_flag = TRM_search_for_KPD_flag }
+		}
+		custom_cost_text = decision_cost_ie_1000
+		
+		fire_only_once = yes
+
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 999 }
+		}
+
+		ai_will_do = {
+			base = 4000
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+			}
+			custom_effect_tooltip = enter_tt
+			add_to_variable = {
+				global.KPD_country_collapse_decisions_value = -5
+				tooltip = KPD_country_collapse_value_tt
+			}
+			set_global_flag = TRM_search_for_KPD_flag
+        }
+	}
+	TRM_search_for_NSD = {
+		icon = GFX_decision_infiltrate_state
+		
+		allowed = {
+			original_tag = TRM
+		}
+		
+		visible = {
+			NOT = { has_global_flag = TRN_country_collapse_decisions_end_flag }
+			has_war_with = NSD
+			NOT = { has_global_flag = TRM_search_for_NSD_flag }
+		}
+		custom_cost_text = decision_cost_ie_1000
+		
+		fire_only_once = yes
+
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 999 }
+		}
+
+		ai_will_do = {
+			base = 4000
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+			}
+			custom_effect_tooltip = enter_tt
+			add_to_variable = {
+				global.NSD_country_collapse_decisions_value = -5
+				tooltip = NSD_country_collapse_value_tt
+			}
+			set_global_flag = TRM_search_for_NSD_flag
+        }
+	}
+	TRM_commencement_of_anti_terrorism_operations_KPD = {
+		icon = GFX_decision_generic_prepare_civil_war
+		
+		allowed = {
+			original_tag = TRM
+		}
+		
+		visible = {
+			NOT = { has_global_flag = TRN_country_collapse_decisions_end_flag }
+			has_war_with = KPD
+			NOT = { has_global_flag = TRM_search_for_KPD_flag }
+		}
+		available = {
+			NOT = { has_country_flag = TRM_start_KPD_flag }
+		}
+		custom_cost_text = decision_cost_ie_1000
+		
+		fire_only_once = yes
+
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 999 }
+		}
+
+		ai_will_do = {
+			base = 4000
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+			}
+			set_country_flag = {
+				flag = TRM_start_KPD_flag
+				days = 70
+			}
+        }
+	}
+	TRM_reinforcement_of_guard_forces_KPD = {
+		icon = GFX_decision_generic_prepare_civil_war
+		
+		allowed = {
+			original_tag = TRM
+		}
+		
+		visible = {
+			NOT = { has_global_flag = TRN_country_collapse_decisions_end_flag }
+			has_war_with = KPD
+			NOT = { has_global_flag = TRM_search_for_KPD_flag }
+		}
+		available = {
+			NOT = { has_country_flag = TRM_start_KPD_flag }
+		}
+		custom_cost_text = decision_cost_ie_1000
+		
+		fire_only_once = yes
+
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 999 }
+		}
+
+		ai_will_do = {
+			base = 4000
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+			}
+			set_country_flag = {
+				flag = TRM_start_KPD_flag
+				days = 70
+			}
+        }
+	}
+	TRM_urban_search_operations_KPD = {
+		icon = GFX_decision_generic_prepare_civil_war
+		
+		allowed = {
+			original_tag = TRM
+		}
+		
+		visible = {
+			NOT = { has_global_flag = TRN_country_collapse_decisions_end_flag }
+			has_war_with = KPD
+			NOT = { has_global_flag = TRM_search_for_KPD_flag }
+		}
+		available = {
+			NOT = { has_country_flag = TRM_start_KPD_flag }
+		}
+		custom_cost_text = decision_cost_ie_1000
+		
+		fire_only_once = yes
+
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 999 }
+		}
+
+		ai_will_do = {
+			base = 4000
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+			}
+			set_country_flag = {
+				flag = TRM_start_KPD_flag
+				days = 70
+			}
+        }
+	}
 	TRM_resistance_emerging_to_the_surface = {
 		priority = 200
 		icon = GFX_decision_generic_prepare_civil_war
@@ -362,48 +720,6 @@ TRN_country_collapse_decisions = {
 				mission = TRM_resistance_emerging_to_the_surface
 				days = 50
 			}
-		}
-	}
-	TRN_country_collapse = {
-		icon = GFX_decision_generic_break_treaty
-
-		activation = {
-			OR = {
-				has_idea = TRM_collapse_4
-				has_idea = TRM_collapse_3
-				has_idea = TRM_collapse_2
-				has_idea = TRM_collapse_1
-			}
-	 	}
-
-		allowed = {
-			original_tag = TRM
-		}
-    	available = {
-			NOT = {
-				has_idea = TRM_collapse_4
-				has_idea = TRM_collapse_3
-				has_idea = TRM_collapse_2
-				has_idea = TRM_collapse_1
-			}
-    	} 
-		
-
-		visible = {
-		}
-		
-		is_good = no
-		modifier = {
-		}
-		days_mission_timeout = 120
-		timeout_effect = {
-			TRN_country_collapse_up = yes
-			activate_mission = TRN_country_collapse
-		}
-		complete_effect = {
-			remove_ideas = TRM_collapse_4
-			custom_effect_tooltip = TRN_country_collapse_success
-			add_stability = 0.05
 		}
 	}
 	TRM_calm_storm = {
@@ -3974,10 +4290,6 @@ TRM_Iron_Sword_Operations_Categorie = {
 		fire_only_once = no
 		
 		remove_effect = {
-			add_days_mission_timeout = {
-				mission = TRN_country_collapse
-				days = 70
-			}
 		}
 	}
 	TRM_Iron_Sword_decision_co_op = { # 발키리와 협동 수사 제안

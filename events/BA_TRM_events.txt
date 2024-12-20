@@ -5236,6 +5236,232 @@ country_event = {
 		add_stability = 0.05
 	}
 }
+country_event = { # 트리니티 vs KPD 승리
+	id = TRN_collapse_event.11
+	title = TRN_collapse_event.11.t
+	desc = {
+		text = TRN_collapse_event.11.desc1
+		trigger = {
+			original_tag = TRM
+		}
+	}
+	desc = {
+		text = TRN_collapse_event.11.desc2
+		trigger = {
+			NOT = { original_tag = TRM }
+		}
+	}
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no 
+	is_triggered_only = yes
+	
+	option = { #
+		name = TRN_collapse_event.11.a
+		trigger = {
+			original_tag = TRM
+		}
+		add_to_variable = {
+			global.KPD_country_collapse_decisions_value = -5
+			tooltip = KPD_country_collapse_value_tt
+		}
+	}
+	
+	option = { #
+		name = TRN_collapse_event.11.b
+		trigger = {
+			NOT = { original_tag = TRM }
+		}
+		effect_tooltip = {
+			add_to_variable = {
+				global.KPD_country_collapse_decisions_value = -5
+				tooltip = KPD_country_collapse_value_tt
+			}
+		}
+	}
+}
+country_event = { # 트리니티 vs KPD 무승부
+	id = TRN_collapse_event.12
+	title = TRN_collapse_event.12.t
+	desc = {
+		text = TRN_collapse_event.12.desc1
+		trigger = {
+			original_tag = TRM
+		}
+	}
+	desc = {
+		text = TRN_collapse_event.12.desc2
+		trigger = {
+			NOT = { original_tag = TRM }
+		}
+	}
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no 
+	is_triggered_only = yes
+	
+	option = { #
+		name = TRN_collapse_event.12.a
+		add_war_support = -0.01
+	}
+}
+country_event = { # 트리니티 vs KPD 패배
+	id = TRN_collapse_event.13
+	title = TRN_collapse_event.13.t
+	desc = {
+		text = TRN_collapse_event.13.desc1
+		trigger = {
+			original_tag = TRM
+		}
+	}
+	desc = {
+		text = TRN_collapse_event.13.desc2
+		trigger = {
+			NOT = { original_tag = TRM }
+		}
+	}
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no 
+	is_triggered_only = yes
+	
+	option = { #
+		name = TRN_collapse_event.13.a
+		trigger = {
+			original_tag = TRM
+		}
+		add_to_variable = {
+			global.KPD_country_collapse_decisions_value = 5
+			tooltip = KPD_country_collapse_value_tt
+		}
+	}
+	
+	option = { #
+		name = TRN_collapse_event.13.b
+		trigger = {
+			NOT = { original_tag = TRM }
+		}
+		effect_tooltip = {
+			add_to_variable = {
+				global.KPD_country_collapse_decisions_value = 5
+				tooltip = KPD_country_collapse_value_tt
+			}
+		}
+	}
+}
+country_event = { # 트리니티 vs NSD 승리
+	id = TRN_collapse_event.21
+	title = TRN_collapse_event.21.t
+	desc = {
+		text = TRN_collapse_event.21.desc1
+		trigger = {
+			original_tag = TRM
+		}
+	}
+	desc = {
+		text = TRN_collapse_event.21.desc2
+		trigger = {
+			NOT = { original_tag = TRM }
+		}
+	}
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no 
+	is_triggered_only = yes
+	
+	option = { #
+		name = TRN_collapse_event.21.a
+		trigger = {
+			original_tag = TRM
+		}
+		add_to_variable = {
+			global.NSD_country_collapse_decisions_value = -5
+			tooltip = NSD_country_collapse_value_tt
+		}
+	}
+	
+	option = { #
+		name = TRN_collapse_event.21.b
+		trigger = {
+			NOT = { original_tag = TRM }
+		}
+		effect_tooltip = {
+			add_to_variable = {
+				global.NSD_country_collapse_decisions_value = -5
+				tooltip = NSD_country_collapse_value_tt
+			}
+		}
+	}
+}
+country_event = { # 트리니티 vs NSD 무승부
+	id = TRN_collapse_event.22
+	title = TRN_collapse_event.22.t
+	desc = {
+		text = TRN_collapse_event.22.desc1
+		trigger = {
+			original_tag = TRM
+		}
+	}
+	desc = {
+		text = TRN_collapse_event.22.desc2
+		trigger = {
+			NOT = { original_tag = TRM }
+		}
+	}
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no 
+	is_triggered_only = yes
+	
+	option = { #
+		name = TRN_collapse_event.22.a
+		add_war_support = -0.01
+	}
+}
+country_event = { # 트리니티 vs NSD 패배
+	id = TRN_collapse_event.23
+	title = TRN_collapse_event.23.t
+	desc = {
+		text = TRN_collapse_event.23.desc1
+		trigger = {
+			original_tag = TRM
+		}
+	}
+	desc = {
+		text = TRN_collapse_event.23.desc2
+		trigger = {
+			NOT = { original_tag = TRM }
+		}
+	}
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no 
+	is_triggered_only = yes
+	
+	option = { #
+		name = TRN_collapse_event.23.a
+		trigger = {
+			original_tag = TRM
+		}
+		add_to_variable = {
+			global.NSD_country_collapse_decisions_value = 5
+			tooltip = NSD_country_collapse_value_tt
+		}
+	}
+	
+	option = { #
+		name = TRN_collapse_event.23.b
+		trigger = {
+			NOT = { original_tag = TRM }
+		}
+		effect_tooltip = {
+			add_to_variable = {
+				global.NSD_country_collapse_decisions_value = 5
+				tooltip = NSD_country_collapse_value_tt
+			}
+		}
+	}
+}
 country_event = { 
 	id = TRM_event.351
 	title = TRM_event.351.t
@@ -5463,10 +5689,6 @@ country_event = { # "서로 싸워라"
 	
 	option = { #
 		name = TRM_event.356.a
-		add_days_mission_timeout = {
-    		mission = TRN_country_collapse
-    		days = -106
-		}
 	}
 }
 country_event = { # 구호기사단 탈주

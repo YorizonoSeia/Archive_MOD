@@ -60,6 +60,9 @@ set_variable = { GEK_german_nationalism_army_defence_factor = -0.10 }
 set_variable = { GEK_german_nationalism_army_attack_factor = -0.10 }
 set_variable = { GEK_german_nationalism_army_org_regain = 0.00 }
 
+set_variable = { global.KPD_country_collapse_decisions_value = 18 }
+set_variable = { global.NSD_country_collapse_decisions_value = 33 }
+
 set_popularities = {
 	communism = 100
 }
