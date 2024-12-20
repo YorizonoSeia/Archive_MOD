@@ -1,6 +1,18 @@
 spriteTypes = {
 
 	spriteType = {
+		name = "GFX_TRM_anti_trinity_game_KPD_flag"
+		texturefile = "gfx/interface/decisions/icon/TRM_anti_trinity_game_KPD_flag.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_TRM_anti_trinity_game_NSD_flag"
+		texturefile = "gfx/interface/decisions/icon/TRM_anti_trinity_game_NSD_flag.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
 		name = "GFX_TRM_anti_trinity_game_icon"
 		texturefile = "gfx/interface/decisions/icon/TRM_anti_trinity_game_icon.tga"
 		legacy_lazy_load = no

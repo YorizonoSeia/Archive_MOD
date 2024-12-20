@@ -246,6 +246,8 @@ TRN_country_collapse_decisions = {
 	TRM_commencement_of_anti_terrorism_operations_KPD = {
 		icon = GFX_decision_generic_prepare_civil_war
 		
+		targets = { KPD }
+
 		allowed = {
 			original_tag = TRM
 		}
@@ -284,6 +286,8 @@ TRN_country_collapse_decisions = {
 	TRM_reinforcement_of_guard_forces_KPD = {
 		icon = GFX_decision_generic_prepare_civil_war
 		
+		targets = { KPD }
+		
 		allowed = {
 			original_tag = TRM
 		}
@@ -321,6 +325,8 @@ TRN_country_collapse_decisions = {
 	}
 	TRM_urban_search_operations_KPD = {
 		icon = GFX_decision_generic_prepare_civil_war
+		
+		targets = { KPD }
 		
 		allowed = {
 			original_tag = TRM

@@ -1,0 +1,27 @@
+scripted_gui = {
+
+	TRM_anti_trinity_game_ui = {
+		context_type = decision_category
+		window_name = "TRM_anti_trinity_game_ui_window"
+		
+		properties = {
+			TRM_anti_trinity_game_KPD_side_TRM = {
+				image = "GFX_TRM_anti_trinity_game_icon"
+				frame = TRM_anti_trinity_game_KPD_side_TRM_var
+			}
+			TRM_anti_trinity_game_NSD_side_TRM = {
+				image = "GFX_TRM_anti_trinity_game_icon"
+				frame = TRM_anti_trinity_game_NSD_side_TRM_var
+			}
+			TRM_anti_trinity_game_KPD_side_KPD = {
+				image = "GFX_TRM_anti_trinity_game_icon"
+				frame = TRM_anti_trinity_game_KPD_side_KPD_var
+			}
+			TRM_anti_trinity_game_NSD_side_NSD = {
+				image = "GFX_TRM_anti_trinity_game_icon"
+				frame = TRM_anti_trinity_game_NSD_side_NSD_var
+			}
+		}
+	}
+}
+
