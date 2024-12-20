@@ -172,7 +172,7 @@
  SHA_foc_2-3-7:0 "산하이징 진군"
  SHA_foc_2-3-8:0 "국가 연구소"
  SHA_foc_2-3-9:0 "우루시바라 동맹"
- SHA_foc_2-3-10:0 "백산전쟁"
+ SHA_foc_2-3-10:0 "남키보토스 전쟁"
  SHA_foc_2-3-11:0 "봄날의 끝"
  SHA_foc_2-3-12:0 "군수산업 국유화"
  SHA_foc_2-3-13:0 "동원령 선포"
@@ -427,7 +427,7 @@
  SHA_T16a:0 "권위주의자"
  SHA_T17a:0 "군국주의자"
  #디시전
- SHA_HYA_WAR_dec:0 "산해경-백귀야행 전쟁"
+ SHA_HYA_WAR_dec:0 "남키보토스 전쟁"
  SHA_HYA_WAR_dec_1:0 "공세 계획"
  SHA_MB_conscription:0 "현무상회 민병대 징병"
  SHA_revolutionGOGO:0 "혁명 전파"
@@ -645,6 +645,7 @@
  SHA_internal_solidarity: "내부 결속"
  SHA_Strengthening_Genryumon: "현룡문 강화"
  SHA_Strengthening_Kisaki: "문주 권한 강화"
+ SHA_Sstretching: "튼튼 체조"
  SHA_Genryumon_left_wing: "헌룡문 좌파"
  SHA_Contact_BTP: "현무상회와 협력"
  SHA_Genryumon_right_wing: "현룡문 우파"
@@ -694,6 +695,8 @@
  SHA_black_sun_and_black_dragon: "검은 태양, 검은 용"
  SHA_black_sun_and_black_dragon_desc: "[TRM.GetAdjective] 와의 비공식적인 접촉은 있었지만, 구체적이고 법적인 구속력을 가진 것은 거의 합의 되지 않았습니다. [TRM.GetAdjective](이)가 퇴폐적인 문화에 맞선 투쟁을 지속할때 우리는 그들과 함께 연합전선을 결성해야합니다."
 
+ SHA_The_Fire_Rise: "타오르는 불길"
+
 
  # 보수 혁명 루트
  SHA_conservative_revolution: "보수혁명"
@@ -709,6 +712,7 @@
  SHA_Cabinet_Secretariat_desc: ""
  SHA_Engine_of_conservative_revolution: "보수혁명의 원동기"
  SHA_Engine_of_conservative_revolution_desc: ""
+ SHA_2nd_conservative_revolution: "제 2차 보수혁명"
 
  # 공용
  SHA_Solving_the_Militia_Problem: "질서 회복"
@@ -790,7 +794,7 @@
  SHA_EAS_Budget_cuts: "예산안 삭감"
  SHA_remove_EAS_tooltip: "$SHA_Eastern_Alchemy_Society_cat$"
 
- SHA_invade_of_Hyakkiyako_cat: "산해경 - 백귀야행 전쟁"
+ SHA_invade_of_Hyakkiyako_cat: "남키보토스 전쟁"
  SHA_invade_of_Hyakkiyako_cat_desc: "산해경 군대는 성급한 공격으로 인해 준비가 부족한 상태에서 전쟁에 돌입했습니다. 그러나 기습을 받은 백귀야행 역시 큰 충격을 받아 공세 역량이 약화된 상황입니다. 이 틈을 타 산해경은 전시 체제를 신속히 완비하고 백귀야행을 항복시킬 계획입니다."
  SHA_operational_planning: "공세 계획 실행"
  SHA_shock_relief: "충격 완화"

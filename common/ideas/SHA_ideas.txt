@@ -975,6 +975,23 @@ ideas = {
 				political_advisor_cost_factor = -0.33
 			}
 		}
+		# 산해경 고립 - 보수 혁명 - 제 2차 보수 혁명
+		SHA_walking_the_dragon_5 = {
+			name = SHA_walking_the_dragon
+			picture = SHA_walking_the_dragon
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+
+			modifier = {
+				army_core_defence_factor = 0.1
+				consumer_goods_factor = -0.03
+				political_advisor_cost_factor = -0.33
+				neutrality_drift = 0.01
+				training_time_factor = -0.1
+				army_org_factor = 0.1
+				industrial_capacity_factory = 0.05
+			}
+		}
 		# 현무상회
 		SHA_Black_Tortoise_Promenade = {
 			picture = SHA_IdeaG_5

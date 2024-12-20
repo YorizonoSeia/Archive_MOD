@@ -58,3 +58,9 @@
  EFFECT_UNLOCK_DECISION_CATEGORY:0 "£decision_icon_small §Y결정 분류 해금§!: $NAME$"
  
  ITA_political_reformer_tt:1 "  - 모든 고문 비용: §G-25%§!"
+
+ 
+ # 아 이거 왜 바닐라에 없지;
+ terrain_penalty_reduction_tt: " $MODIFIER_TERRAIN_PENALTY_REDUCTION$: $RIGHT|+=%1$"
+ max_planning_tt: " $MODIFIER_MAX_PLANNING$: $RIGHT|+=%1$"
+ land_doctrine_tt: " $MODIFIER_LAND_REINFORCE_RATE$: $RIGHT|+=%1$"

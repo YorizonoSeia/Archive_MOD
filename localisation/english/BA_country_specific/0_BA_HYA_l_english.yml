@@ -2,8 +2,8 @@
  #글로벌 태그
  KIABOTOS_Escape:0 "§Y일곱 죄수§!가 §Y탈옥§!함"
  CFLAG_SHA:0 "현재 국가가 @SHA산해경 고급중학교"
- GFLAG_BAKSANWAR:0 "§R백귀야행-산해경 전쟁§!이 발발함."
- GFLAG_BAKSANWAR_END:0 "§R백귀야행-산해경 전쟁§!이 §0백귀야행의 승리§!로 끝남."
+ GFLAG_BAKSANWAR:0 "§R남키보토스 전쟁§!이 발발함."
+ GFLAG_BAKSANWAR_END:0 "§Y남키보토스 전쟁§!이 §Y백귀야행의 승리§!로 끝남."
  #툴팁
  HYA_tt_1:0 "§Y6개 보병으로 이루어진 4개 사단§!을 얻습니다."
  HYA_focus_46_tt:0 "§R만약 §Y파시즘 정당 지지도§!가 이 중점 완료 시점에서 §Y15%§! 보다 높을 시, 내전이 시작될 것입니다!§!"
@@ -58,7 +58,7 @@
  HYA_focus_9:0 "와라쿠 공주님"
  HYA_focus_10:0 "상인조합 억제"
  HYA_focus_11:0 "아편 무역 허용"
- HYA_focus_12:0 "백산전쟁"
+ HYA_focus_12:0 "남키보토스 전쟁"
  HYA_focus_13:0 "항전 개시"
  HYA_focus_14:0 "군수산업 동원"
  HYA_focus_15:0 "해방을 향하여"
@@ -174,7 +174,7 @@
  HYA_securing_balkan_hegemony_2: "패권국"
  HYA_merchant_association:0 "상인조합"
  HYA_merchant_association_desc:0 "상인조합의 회장인 냥테 마사무네는 백야행제로 벌어들이는 수익의 대부분을 미츠리부가 독점하는 것에 불만을 품고 있습니다."
- HYA_qortkswjswod:0 "백귀야행-산해경 전쟁"
+ HYA_qortkswjswod:0 "남키보토스 전쟁"
  HYA_bakyadang:0 "백야당"
  HYA_urban_legend:0 "도시전설"
  HYA_urban_legend_desc:0 "먼 과거 백화요란 분쟁조정위원회에 의해 토벌된 '화조풍월부'가 대전이 이후 다시 활동을 시작했다는 소문이 돌기 시작했습니다."

@@ -1,6 +1,6 @@
 focus_tree = {
 	id = SHA_focus_tree
-	continuous_focus_position = { x = -1000 y = 0 } 
+	#continuous_focus_position = { x = -1000 y = -1000 } 
 	shared_focus = BA_new_world_technology
 	country = {
 		factor = 0
@@ -11,12 +11,1455 @@ focus_tree = {
 	}
 	default = no
 
+	# 오스트리아인 탄압 지속
+	focus = {
+		id = SHA_Austrian_oppression_continues
+		icon = GFX_focus_GER_anschluss
+		x = 37
+		y = 0
+		cost = 10
+
+		prerequisite = { }
+		mutually_exclusive = { focus = SHA_Austrian_appeasement_policy }
+
+		available = {
+			has_country_flag = GAEBALJUNG
+		}
+		bypass = { }
+
+		allow_branch = {
+			IF = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = SHA_Austrian_appeasement_policy
+				}
+			}
+		}
+
+
+		completion_reward = {
+			remove_ideas = SHA_Austrian_fascist_militia
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				mark_focus_tree_layout_dirty = yes
+			}
+		}
+	}
+
+	# 내부 결속
+	focus = {
+		id = SHA_internal_solidarity
+		icon = GFX_focus_AUS_for_a_better_future
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_Austrian_oppression_continues }
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_Austrian_oppression_continues
+
+		completion_reward = {
+			
+		}
+	}
+
+	# 현룡문 강화
+	focus = {
+		id = SHA_Strengthening_Genryumon
+		icon = GFX_goal_SHA_Strengthening_Genryumon
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_internal_solidarity }
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_internal_solidarity
+
+		completion_reward = {
+			
+		}
+	}
+
+	# 키사키 권한 강화
+	focus = {
+		id = SHA_Strengthening_Kisaki
+		icon = GFX_goal_SHA_Cabinet_Secretariat
+		x = 4
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_Strengthening_Genryumon }
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_Strengthening_Genryumon
+
+		completion_reward = {
+			
+		}
+	}
+
+	# 쭉쭉 체조
+	focus = {
+		id = SHA_Sstretching
+		icon = GFX_goal_SHA_Nonglol
+		x = -1
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_Strengthening_Kisaki }
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_Strengthening_Kisaki
+
+		completion_reward = {
+			
+		}
+	}
+
+	# 현룡문 좌파
+	focus = {
+		id = SHA_Genryumon_left_wing
+		icon = GFX_goal_SHA_Genryumon_left_wing
+		x = -4
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_Strengthening_Genryumon }
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_Strengthening_Genryumon
+
+		completion_reward = {
+			
+		}
+	}
+
+	# 현무상회와 협력력
+	focus = {
+		id = SHA_Contact_BTP
+		icon = GFX_goal_SHA_Contact_BTP
+		x = 1
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_Genryumon_left_wing }
+		mutually_exclusive = { focus = SHA_Contact_POC }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_Genryumon_left_wing
+
+		completion_reward = {
+			
+		}
+	}
+
+	# 현룡문 우파
+	focus = {
+		id = SHA_Genryumon_right_wing
+		icon = GFX_goal_SHA_Genryumon_right_wing
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_Strengthening_Genryumon }
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_Strengthening_Genryumon
+
+		completion_reward = {
+			
+		}
+	}
+	
+	# 경극부와 협력
+	focus = {
+		id = SHA_Contact_POC
+		icon = GFX_goal_SHA_Contact_POC
+		x = -1
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_Genryumon_right_wing }
+		mutually_exclusive = { focus = SHA_Contact_BTP }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_Genryumon_right_wing
+
+		completion_reward = {
+			
+		}
+	}
+
+	# 오스트리아 유화 정책
+	focus = {
+		id = SHA_Austrian_appeasement_policy
+		icon = GFX_focus_generic_befriend_austria
+		x = -20
+		y = 0
+		cost = 2
+		offset = {
+			x = 1
+			trigger = {
+				has_completed_focus = SHA_gathering_of_radicals
+			}
+		}
+
+		prerequisite = { }
+		mutually_exclusive = { focus = SHA_Austrian_oppression_continues }
+
+		available = { }
+		bypass = { }
+
+		allow_branch = {
+			IF = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = SHA_Austrian_oppression_continues
+				}
+			}
+		}
+
+		relative_position_id = SHA_Austrian_oppression_continues
+
+
+		completion_reward = {
+			add_political_power = 25
+
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+					}
+					mark_focus_tree_layout_dirty = yes
+				}
+		}
+	}
+
+	# 급진파 결집
+	focus = {
+		id = SHA_gathering_of_radicals
+		icon = GFX_focus_generic_advanced_military_studies
+		x = 5
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_Austrian_appeasement_policy }
+		mutually_exclusive = { focus = SHA_local_harmony }
+
+		available = { }
+		bypass = { }
+
+		allow_branch = {
+			IF = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					OR = {
+						has_completed_focus = SHA_Austrian_oppression_continues
+						has_completed_focus = SHA_local_harmony
+					}
+				}
+			}
+		}
+		offset = {
+			x = -5
+			trigger = {
+				has_completed_focus = SHA_gathering_of_radicals
+			}
+		}
+
+		relative_position_id = SHA_Austrian_appeasement_policy
+
+		completion_reward = {
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+					}
+					mark_focus_tree_layout_dirty = yes
+				}
+			add_timed_idea = {
+				days = 180
+				idea = SHA_gathering_of_radicals_idea
+			}
+		}
+	}
+
+	# 오스트리아 민병대와 접촉
+	focus = {
+		id = SHA_Contact_with_Austrian_militia
+		icon = GFX_focus_AUS_osterreichische_bundesheer
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_gathering_of_radicals }
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_gathering_of_radicals
+
+		completion_reward = {
+			# 무슨 효과를 넣어야 할지는 모르겠는데
+			# 보수혁명 경로를 진행하고 싶을때는 이 중점이 필요 없도록 느껴지는 효과를 넣어주세요.. 하투 하투~
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = SHA_arthur_seyss_inquart_political_advisor
+			custom_effect_tooltip = tooltip_white_line 
+			swap_ideas = {
+				add_idea = SHA_Austrian_fascist_militia_weak
+				remove_idea = SHA_Austrian_fascist_militia
+			}
+		}
+	}
+
+	# 경극부 협력
+	focus = {
+		id = SHA_Cooperation_with_Kaguya
+		icon = GFX_goal_SHA_kaguya_focus
+		x = -2
+		y = 2
+		cost = 5
+
+		prerequisite = { focus = SHA_gathering_of_radicals }
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_gathering_of_radicals
+
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
+			custom_effect_tooltip = tooltip_white_line
+			if = { 
+				limit = {
+					has_character = SHA_KAGUYA
+				}
+				SHA_KAGUYA = { add_country_leader_trait = SHA_ardent_conservative }
+			}
+			add_field_marshal_role = {
+				character = SHA_KAGUYA
+				traits = {
+					old_guard
+					politically_connected
+					media_personality
+				}
+				skill=3
+				attack_skill=2
+				defense_skill=3
+				planning_skill=4
+				logistics_skill=3
+			}
+		}
+	}
+
+	# 연단방 협력
+	focus = {
+		id = SHA_podium_room_cooperation
+		icon = GFX_goal_SHA_podium_room_cooperation
+		x = 2
+		y = 2
+		cost = 5
+
+		prerequisite = { focus = SHA_gathering_of_radicals }
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_gathering_of_radicals
+
+		completion_reward = {
+			SHA_Eastern_Alchemy_Society_idea_up = yes
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
+		}
+	}
+
+	# 키사키 억제
+	focus = {
+		id = SHA_Kisaki_Suppression
+		icon = GFX_goal_SHA_Kisaki_locked
+		x = 2
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_Cooperation_with_Kaguya }
+		prerequisite = { focus = SHA_podium_room_cooperation }
+		mutually_exclusive = {  }
+
+		available = {
+			fascism > 0.34
+		}
+		bypass = { }
+
+		relative_position_id = SHA_Cooperation_with_Kaguya
+
+		completion_reward = {
+			set_country_flag = SHA_kisaki_house_arrest
+			country_event = { id = shafas.1 }
+			hidden_effect = { news_event = { id = shanews.01 days = 04 } }
+		}
+	}
+
+	# 카이 추종
+	focus = {
+		id = SHA_Shintani_Kai_Follow
+		icon = GFX_goal_Shintani_Kai_Follow
+		x = -3
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_Kisaki_Suppression }
+		mutually_exclusive = { focus = SHA_conservative_revolution }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_Kisaki_Suppression
+
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = SHA_KAI_political_advisor
+			add_corps_commander_role = {
+				Character = SHA_KAI
+				traits = {
+					harsh_leader
+					politically_connected
+					media_personality
+					inspirational_leader
+				}
+				skill=2
+				attack_skill=3 #+1
+				defense_skill=2
+				planning_skill=3
+				logistics_skill=3
+			}
+			SHA_KAI = { 
+				add_country_leader_role = {
+					country_leader = {
+						ideology = fascism_ideology
+						expire = "1965.1.1.1"
+						id = -1
+						traits = {
+							SHA_T3a
+							SHA_T4a
+						}
+					}
+					promote_leader = yes
+				}
+			}
+			hidden_effect = {
+				news_event = { id = shanews.03 days = 04 }
+			}
+		}
+	}
+
+	# 카구야 축출
+	focus = {
+		id = SHA_Kaguya_ousted
+		icon = GFX_goal_SHA_Kaguya_ousted
+		x = -3
+		y = 1
+		cost = 10
+
+		prerequisite = { focus = SHA_Shintani_Kai_Follow }
+		mutually_exclusive = { }
+
+		available = {
+			fascism > 0.45
+		}
+		bypass = { }
+
+		relative_position_id = SHA_Shintani_Kai_Follow
+
+		completion_reward = {
+			set_politics = { ruling_party = fascism }
+			set_party_name = {
+				ideology = fascism
+				long_name = SHA_Shintani_KAI_party_long
+				name = SHA_Shintani_KAI_party
+			}
+			BA_ban_democratic_effect = yes
+			BA_ban_communism_effect = yes
+			BA_ban_neutrality_effect = yes
+			if = { 
+				limit = { has_idea = SHA_Peking_Opera }
+				remove_ideas = SHA_Peking_Opera
+			}
+			custom_effect_tooltip = tooltip_white_line
+			add_dynamic_modifier = { modifier = SHA_Shanhaijinfascism }
+		}
+	}
+
+	# 산해경 파시즘
+	focus = {
+		id = SHA_Shanhaijing_fascism
+		icon = GFX_focus_generic_fascist_troops
+		x = 2
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_Kaguya_ousted }
+		mutually_exclusive = { focus = SHA_fascism_friend }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_Kaguya_ousted
+
+		completion_reward = {
+			custom_effect_tooltip = SHA_Shanhaijing_fascism_tt
+			add_to_variable = { 
+				SHA_Shanhaijinfascism_political_power_factor = 0.1 
+				tooltip = political_power_factor_tt
+			}
+			add_to_variable = { 
+				SHA_Shanhaijinfascism_fascism_drift = 0.03 
+				tooltip = fascism_drift_tt
+			}
+			add_to_variable = { 
+				SHA_Shanhaijinfascism_party_popularity_stability_factor = 0.15 
+				tooltip = party_popularity_stability_factor_tt
+			}
+		}
+	}
+
+	# 연단방 결속
+	focus = {
+		id = SHA_Eastern_Alchemy_Society_solidarity
+		icon = GFX_goal_SHA_Eastern_Alchemy_Society_solidarity
+		x = 2
+		y = 1
+		cost = 10
+
+		prerequisite = { focus = SHA_Shanhaijing_fascism }
+		mutually_exclusive = { }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_Shanhaijing_fascism
+
+		completion_reward = {
+			custom_effect_tooltip = SHA_Shanhaijing_fascism_tt
+			add_to_variable = {
+				SHA_Shanhaijinfascism_research_speed_factor = 0.1
+				tooltip = research_speed_factor_tt
+			}
+			custom_effect_tooltip = tooltip_white_line
+			add_research_slot = 1
+			custom_effect_tooltip = tooltip_white_line
+			swap_ruler_traits = { remove = SHA_T4a add = SHA_T4a_2 }
+			SHA_EAS_idea_remove = yes
+		}
+	}
+
+	# 오스트리아 산업 통합
+	focus = {
+		id = SHA_consolidate_industries
+		icon = GFX_focus_generic_modernize_industry
+		x = 0
+		y = 1
+		cost = 10
+
+		prerequisite = { focus = SHA_Shanhaijing_fascism }
+		mutually_exclusive = { }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_Shanhaijing_fascism
+
+		completion_reward = {
+			custom_effect_tooltip = SHA_Shanhaijing_fascism_tt
+			add_to_variable = {
+				SHA_Shanhaijinfascism_industrial_capacity_factor = 0.1
+				tooltip = industrial_capacity_factory_tt
+			}
+			add_to_variable = {
+				SHA_Shanhaijinfascism_production_speed_infrastructure_factor = 0.1
+				tooltip = production_speed_infrastructure_factor_tt
+			}
+			add_to_variable = {
+				SHA_Shanhaijinfascism_production_speed_arms_factory_factor = 0.1
+				tooltip = production_speed_arms_factory_factor_tt
+			}
+			add_to_variable = {
+				SHA_Shanhaijinfascism_production_speed_industrial_complex_factor = 0.1
+				tooltip = production_speed_industrial_complex_factor_tt
+				
+			}
+		}
+	}
+
+	# 선단 투여
+	focus = {
+		id = SHA_Sundan_dosage
+		icon = GFX_focus_generic_coffee
+		x = -1
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_Eastern_Alchemy_Society_solidarity }
+		prerequisite = { focus = SHA_consolidate_industries }
+		mutually_exclusive = { }
+
+		available = {
+			surrender_progress > 0.15
+		}
+		bypass = { }
+
+		relative_position_id = SHA_Eastern_Alchemy_Society_solidarity
+
+		completion_reward = {
+		}
+	}
+
+	# 새로운 파시즘 친구
+	focus = {
+		id = SHA_fascism_friend
+		icon = GFX_focus_chi_mission_to_the_TRN
+		x = -2
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_Kaguya_ousted }
+		mutually_exclusive = { focus = SHA_Shanhaijing_fascism }
+
+		available = {
+			NOT = { has_war_with = TRM }
+			TRM = {
+				#exist = yes
+				has_government = fascism
+				is_faction_leader = yes
+				is_puppet = no
+				has_civil_war = no
+			}
+		}
+		bypass = { }
+
+		relative_position_id = SHA_Kaguya_ousted
+
+		completion_reward = {
+			add_political_power = 150
+			TRM = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = GRE_fascist_leanings
+				}
+			}
+		
+		}
+	}
+
+	# 합동 군사 훈련
+	focus = {
+		id = SHA_joint_military_training
+		icon = GFX_goal_SHA_joint_military_training
+		x = -2
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_fascism_friend }
+		mutually_exclusive = { }
+
+		available = {
+
+		}
+		bypass = { }
+
+		relative_position_id = SHA_fascism_friend
+
+		completion_reward = {
+			custom_effect_tooltip = SHA_Shanhaijing_fascism_tt
+			add_to_variable = {
+				SHA_Shanhaijinfascism_conscription_factor = 0.30
+				tooltip = conscription_factor_tt
+			}
+			custom_effect_tooltip = tooltip_white_line
+			army_experience = 50
+		}
+	}
+
+	# 오스트리아 산업 중앙 집권화
+	focus = {
+		id = SHA_Austrian_industrial_centralization
+		icon = GFX_focus_AUS_apprentice_programmes
+		x = 0
+		y = 1
+		cost = 10
+
+		prerequisite = { focus = SHA_fascism_friend }
+		mutually_exclusive = { }
+
+		available = {
+
+		}
+		bypass = { }
+
+		relative_position_id = SHA_fascism_friend
+
+		completion_reward = {
+			custom_effect_tooltip = SHA_Shanhaijing_fascism_tt
+			add_to_variable = {
+				SHA_Shanhaijinfascism_industrial_capacity_factor = 0.1
+				tooltip = industrial_capacity_factory_tt
+			}
+			add_to_variable = {
+				SHA_Shanhaijinfascism_production_speed_infrastructure_factor = 0.1
+				tooltip = production_speed_infrastructure_factor_tt
+			}
+			add_to_variable = {
+				SHA_Shanhaijinfascism_production_speed_arms_factory_factor = 0.1
+				tooltip = production_speed_arms_factory_factor_tt
+			}
+			add_to_variable = {
+				SHA_Shanhaijinfascism_production_speed_industrial_complex_factor = 0.1
+				tooltip = production_speed_industrial_complex_factor_tt
+				
+			}
+		}
+	}
+
+	# 검은 태양, 검은 용
+	focus = {
+		id = SHA_black_sun_and_black_dragon
+		icon = GFX_goal_SHA_black_sun_and_black_dragon
+		x = 1
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_joint_military_training }
+		prerequisite = { focus = SHA_Austrian_industrial_centralization }
+		mutually_exclusive = { }
+
+		available = {
+
+		}
+		bypass = { }
+
+		relative_position_id = SHA_joint_military_training
+
+		completion_reward = {
+			TRM = {
+				country_event = { id = AAT_Sweden.23 }
+			}
+		}
+	}
+
+	# 쇄국정책 폐지
+	focus = {
+		id = SHA_Abolition_of_national_isolation_policy
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 2
+		cost = 10
+
+		prerequisite = { 
+			focus = SHA_Shanhaijing_fascism 
+			focus = SHA_fascism_friend
+		}
+		mutually_exclusive = { }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_Kaguya_ousted
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = SHA_isolation_economic }
+				swap_ideas = {
+					remove_idea = SHA_isolation_economic
+					add_idea = civilian_economy
+				}
+				else = {
+					add_political_power = 150
+				}
+			}
+		}
+	}
+
+	# 동원령
+	focus = {
+		id = SHA_Expansion_of_military_factories
+		icon = GFX_focus_generic_reorient_production
+		x = 0
+		y = 2
+		cost = 8
+
+		prerequisite = {
+			focus = SHA_consolidate_industries
+			focus = SHA_Austrian_industrial_centralization
+		}
+		mutually_exclusive = { }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_Abolition_of_national_isolation_policy
+
+		completion_reward = {
+			add_war_support = 0.05
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = SHA_Shanhaijing_fascism_tt
+			add_to_variable = {
+				SHA_Shanhaijinfascism_industrial_capacity_factor = 0.05
+				tooltip = industrial_capacity_factory_tt
+			}
+		}
+	}
+
+	# 보수 혁명
+	focus = {
+		id = SHA_conservative_revolution
+		icon = GFX_goal_SHA_Shanhaijing_conservative_revolution
+		x = 3
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_Kisaki_Suppression }
+		mutually_exclusive = { focus = SHA_Shintani_Kai_Follow }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_Kisaki_Suppression
+
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.1
+			custom_effect_tooltip = SHA_conservative_revolution_tt
+			set_temp_variable = {
+				var = conservative_revolution_var
+				value = party_popularity@fascism
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = conservative_revolution_var
+			}
+			multiply_temp_variable = {
+				var = conservative_revolution_var
+				value = -1
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = conservative_revolution_var
+			}
+			if = { 
+				limit = { 
+					NOT = { has_government = neutrality }
+				}
+				set_politics = {
+					ruling_party = neutrality
+					elections_allowed = no
+				}
+			}
+			if = {
+				limit = { has_idea = SHA_Peking_Opera }
+				swap_ideas = {
+					add_idea = SHA_Peking_Opera_conservative
+					remove_idea = SHA_Peking_Opera
+				}
+			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = SHA_KAGUYA_political_advisor
+			custom_effect_tooltip = tooltip_white_line
+			effect_tooltip = {
+				swap_ideas = {
+					add_idea = SHA_kaguya_idea_tooltip_2
+					remove_idea = SHA_kaguya_idea_tooltip
+				}
+			}
+			custom_effect_tooltip = SHA_Kisaki_is_Doorkeeper_tt
+			hidden_effect = {
+				SHA_KISAKI = { 
+					add_country_leader_role = {
+						country_leader = {
+							ideology = despotism
+							expire = "1965.1.1.1"
+							id = -1
+							traits = { 
+								SHA_T1a
+								SHA_T2a 
+							}
+						}
+					}
+				}
+				SHA_KAGUYA = { remove_country_leader_role = { ideology = despotism } }
+			}
+			hidden_effect = {
+				remove_trait = {
+					character = SHA_KAGUYA
+					slot = political_advisor
+					trait = SHA_ardent_conservative
+				}
+				add_trait = {
+					character = SHA_KAGUYA
+					slot = political_advisor
+					trait = SHA_ardent_conservative_2
+				}
+				news_event = { id = shanews.02 days = 04 }
+			}
+		}
+	}
+
+	# 새로운 산해경 보수주의
+	focus = {
+		id = SHA_new_shanhaijing_conservatism
+		icon = GFX_goal_SHA_new_shanhaijing_conservatism
+		x = 1
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_conservative_revolution }
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_conservative_revolution
+
+		completion_reward = {
+			add_ideas = SHA_walking_the_dragon_1
+		}
+	}
+
+	# 타 동아리 협력 확장
+	focus = {
+		id = SHA_Expansion_of_cooperation_with_other_clubs
+		icon = GFX_goal_SHA_Expansion_of_cooperation_with_other_clubs
+		x = -2
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_new_shanhaijing_conservatism }
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_new_shanhaijing_conservatism
+
+		completion_reward = {
+			if = { 
+				limit = { has_idea = SHA_walking_the_dragon_1 }
+				swap_ideas = {
+					add_idea = SHA_walking_the_dragon_3
+					remove_idea = SHA_walking_the_dragon_1
+				}
+				else_if = {
+					limit = { has_idea = SHA_walking_the_dragon_2 }
+					swap_ideas = {
+						add_idea = SHA_walking_the_dragon_4
+						remove_idea = SHA_walking_the_dragon_2
+					}
+				}
+				else = { 
+					effect_tooltip = {
+						swap_ideas = {
+							add_idea = SHA_walking_the_dragon_3
+							remove_idea = SHA_walking_the_dragon_1
+						}
+					}
+				}
+			}
+		}
+	}
+
+	# 새로운 헌룡문 - 경극부 관계
+	focus = {
+		id = SHA_New_Genryumon_Peking_Opera_Department_Relations
+		icon = GFX_goal_SHA_New_Genryumon_Peking_Opera_Department_Relations
+		x = 2
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_new_shanhaijing_conservatism }
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_new_shanhaijing_conservatism
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = SHA_walking_the_dragon_1 }
+				swap_ideas = {
+					add_idea = SHA_walking_the_dragon_2
+					remove_idea = SHA_walking_the_dragon_1
+				}
+				else_if = {
+					limit = { has_idea = SHA_walking_the_dragon_3 }
+					swap_ideas = {
+						add_idea = SHA_walking_the_dragon_4
+						remove_idea = SHA_walking_the_dragon_3
+					}
+				}
+				else = { 
+					effect_tooltip = {
+						swap_ideas = {
+							add_idea = SHA_walking_the_dragon_2
+							remove_idea = SHA_walking_the_dragon_1
+						}
+					}	
+				}
+			}
+		}
+	}
+
+	# 산해경 추밀원
+	focus = {
+		id = SHA_Cabinet_Secretariat
+		icon = GFX_goal_SHA_Cabinet_Secretariat
+		x = 0
+		y = 1
+		cost = 10
+
+		prerequisite = { focus = SHA_new_shanhaijing_conservatism }
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_new_shanhaijing_conservatism
+
+		completion_reward = {
+			effect_tooltip = {
+				swap_ideas = {
+					add_idea = SHA_kaguya_idea_tooltip_3
+					remove_idea = SHA_kaguya_idea_tooltip_2
+				}
+			}
+			hidden_effect = {
+				remove_trait = {
+					character = SHA_KAGUYA
+					slot = political_advisor
+					trait = SHA_ardent_conservative_2
+				}
+				add_trait = {
+					character = SHA_KAGUYA
+					slot = political_advisor
+					trait = SHA_ardent_conservative_3
+				}
+			}
+		}
+	}
+
+	# 보수혁명의 원동기
+	focus = {
+		id = SHA_Engine_of_conservative_revolution
+		icon = GFX_goal_SHA_Engine_of_conservative_revolution
+		x = 0
+		y = 1
+		cost = 10
+
+		prerequisite = { focus = SHA_Expansion_of_cooperation_with_other_clubs }
+		prerequisite = { focus = SHA_New_Genryumon_Peking_Opera_Department_Relations }
+		prerequisite = { focus = SHA_Cabinet_Secretariat }
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_Cabinet_Secretariat
+
+		completion_reward = {
+			add_stability = 0.1
+			add_war_support = 0.05
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					add_idea = SHA_kaguya_idea_tooltip_4
+					remove_idea = SHA_kaguya_idea_tooltip_3
+				}
+			}
+			hidden_effect = {
+				remove_trait = {
+					character = SHA_KAGUYA
+					slot = political_advisor
+					trait = SHA_ardent_conservative_3
+				}
+				add_trait = {
+					character = SHA_KAGUYA
+					slot = political_advisor
+					trait = SHA_ardent_conservative_4
+				}
+			}
+		}
+	}
+
+	# 질서 회복
+	focus = {
+		id = SHA_Solving_the_Militia_Problem
+		icon = GFX_focus_AUS_legitimistische_jugend
+		x = -1
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = SHA_Shintani_Kai_Follow 
+			focus = SHA_conservative_revolution
+		}
+		mutually_exclusive = {  }
+
+		available = {
+			NOT = { has_completed_focus = SHA_Contact_with_Austrian_militia }
+		}
+		bypass = { 
+			NOT = { has_idea = SHA_Austrian_fascist_militia }
+		}
+
+		relative_position_id = SHA_conservative_revolution
+
+		completion_reward = {
+			remove_ideas = SHA_Austrian_fascist_militia
+			if = {
+				limit = { has_character = SHA_arthur_seyss_inquart }
+				SHA_arthur_seyss_inquart = { retire = yes }
+			}
+		}
+	}
+
+	# 파업 진압
+	focus = {
+		id = SHA_strike_suppression
+		icon = GFX_focus_SWE_attack_landsorganisationen
+		x = 1
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = SHA_Shintani_Kai_Follow 
+			focus = SHA_conservative_revolution
+		}
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = {
+			NOT = { has_idea = SHA_faup_idea }
+		}
+
+		relative_position_id = SHA_Shintani_Kai_Follow
+
+		completion_reward = {
+			remove_ideas = SHA_faup_idea
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+		}
+	}
+
+	# 루미 경질
+	focus = {
+		id = SHA_Sack_of_Rumi
+		icon = GFX_goal_SHA_Sack_of_Rumi
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = SHA_strike_suppression
+		}
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_strike_suppression
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SHA_Black_Tortoise_Promenade
+				add_idea =SHA_suppressed_Black_Tortoise_Promenade
+			}
+			remove_mission = SHA_BTP_revolt_mission
+		}
+	}
+
+	# 비상 조치
+	focus = {
+		id = SHA_emergency_measures
+		icon = GFX_focus_generic_mass_production
+		x = 0
+		y = 3
+		cost = 10
+
+		prerequisite = {
+			focus = SHA_Shintani_Kai_Follow 
+			focus = SHA_conservative_revolution
+		}
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_Kisaki_Suppression
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = SHA_emergency_measures_idea
+				days = 720
+			}
+		}
+	}
+
+	# 학원 영토 수복
+	focus = {
+		id = SHA_invade_of_Hyakkiyako
+		icon = GFX_focus_attack_HYA
+		x = 0
+		y = 3
+		cost = 10
+
+		prerequisite = { focus = SHA_emergency_measures }
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = {
+			OR = {
+				has_global_flag = GFLAG_BAKSANWAR
+				has_war_with = HYA
+				HYA = {
+					exists = no
+				}
+				HYA = {
+					is_in_faction_with = SHA
+				}
+			}
+		}
+
+		relative_position_id = SHA_emergency_measures
+		
+		will_lead_to_war_with = HYA
+		
+		completion_reward = {
+			if = {
+				limit = { has_idea = SHA_shanhaijing_isolation }
+				remove_ideas = SHA_shanhaijing_isolation
+			}
+			if = {
+				limit = { has_idea = SHA_isolation_economic }
+				swap_ideas = {
+					remove_idea = SHA_isolation_economic
+					add_idea = low_economic_mobilisation
+				}
+			}
+			HYA = {
+				country_event = {
+					id = SHA_event.2
+				}
+			}
+			set_global_flag = GFLAG_FASI_BAKSANWAR
+			custom_effect_tooltip = tooltip_white_line 
+			unlock_decision_category_tooltip = SHA_invade_of_Hyakkiyako_cat
+		}
+	}
+	#########################
+	#### 급진파 결집 - 산해경 승전 루트####
+	#########################
+
+	# 제 2차 보수혁명
+	focus = {
+		id = SHA_2nd_conservative_revolution
+		icon = GFX_goal_SHA_conservative_revolution_2nd
+		x = 4
+		y = 1
+		cost = 10
+
+		prerequisite = { focus = SHA_invade_of_Hyakkiyako }
+		mutually_exclusive = { focus = SHA_The_Fire_Rise }
+
+		available = {
+			OR = {
+				NOT = { country_exists = HYA  }
+				owns_state = 972
+			}
+			NOT = { has_global_flag = GFLAG_BAKSANWAR_END }
+			has_completed_focus = SHA_Engine_of_conservative_revolution
+		}
+		bypass = { }
+
+		relative_position_id = SHA_invade_of_Hyakkiyako
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = SHA_walking_the_dragon_4 }
+				swap_ideas = {
+					remove_idea = SHA_walking_the_dragon_4
+					add_idea = SHA_walking_the_dragon_5
+				}
+			}
+			else = { add_ideas = SHA_walking_the_dragon_5 }
+		}
+	}
+
+	# 타오르는 불길
+	focus = {
+		id = SHA_The_Fire_Rise
+		icon = GFX_focus_ETH_african_wildfire
+		x = -4
+		y = 1
+		cost = 10
+
+		prerequisite = { focus = SHA_invade_of_Hyakkiyako }
+		mutually_exclusive = { focus = SHA_2nd_conservative_revolution }
+
+		available = {
+			OR = {
+				NOT = { country_exists = HYA  }
+				owns_state = 972
+			}
+				
+			NOT = { has_global_flag = GFLAG_BAKSANWAR_END }
+			has_completed_focus = SHA_Kaguya_ousted
+		}
+		bypass = { }
+
+		relative_position_id = SHA_invade_of_Hyakkiyako
+
+		completion_reward = {
+
+		}
+	}
+
+	# 현지 화합?
+	focus = {
+		id = SHA_local_harmony
+		icon = GFX_focus_AUS_diplomatic_effort
+		x = -7
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_Austrian_appeasement_policy }
+		mutually_exclusive = { focus = SHA_gathering_of_radicals }
+
+		available = {
+			has_country_flag = GAEBALJUNG
+		}
+		bypass = { }
+		allow_branch = {
+			IF = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = SHA_gathering_of_radicals
+					has_completed_focus = SHA_Austrian_oppression_continues
+				}
+			}
+		}
+		offset = {
+			x = 7
+			trigger = {
+				has_completed_focus = SHA_local_harmony
+			}
+		}
+		relative_position_id = SHA_Austrian_appeasement_policy
+
+		completion_reward = {
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+					}
+					mark_focus_tree_layout_dirty = yes
+				}
+
+		}
+	}
+	###############
+	###############
+	###############  Rework Focus
+	###############
+
 	# 디버그 중점 헬예
 	focus = {
 		id = SHA_debug_hellyeah
 		icon = GFX_focus_generic_befriend_austria
 		x = 15
-		y = 0
+		y = 30
 		cost = 5
 
 		prerequisite = { }
@@ -26,7 +1469,7 @@ focus_tree = {
 		bypass = { }
 
 		allow_branch = {
-			always = no
+			is_debug = yes
 		}
 		completion_reward = {
 
@@ -6717,7 +8160,7 @@ focus_tree = {
 		}
 		bypass = {
 		}
-		relative_position_id = SHA_debug_hellyeah
+		relative_position_id = SHA_Austrian_appeasement_policy
 		completion_reward = {
 			add_political_power = 50
 			army_experience = 20
@@ -7633,1343 +9076,6 @@ focus_tree = {
 				set_variable = { BA_halo_infantry_cap_edit_var = 6 }
 				BA_halo_infantry_cap_edit_effect = yes
 			}
-		}
-	}
-
-###################
-###################
-###################
-###################
-
-	# 오스트리아인 탄압 지속
-	focus = {
-		id = SHA_Austrian_oppression_continues
-		icon = GFX_focus_GER_anschluss
-		x = 37
-		y = 0
-		cost = 10
-
-		prerequisite = { }
-		mutually_exclusive = { focus = SHA_Austrian_appeasement_policy }
-
-		available = {
-			has_country_flag = GAEBALJUNG
-		}
-		bypass = { }
-
-		allow_branch = {
-			IF = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					has_completed_focus = SHA_Austrian_appeasement_policy
-				}
-			}
-		}
-
-
-		completion_reward = {
-			remove_ideas = SHA_Austrian_fascist_militia
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				mark_focus_tree_layout_dirty = yes
-			}
-		}
-	}
-
-	# 내부 결속
-	focus = {
-		id = SHA_internal_solidarity
-		icon = GFX_focus_AUS_for_a_better_future
-		x = 0
-		y = 1
-		cost = 5
-
-		prerequisite = { focus = SHA_Austrian_oppression_continues }
-		mutually_exclusive = {  }
-
-		available = { }
-		bypass = { }
-
-		relative_position_id = SHA_Austrian_oppression_continues
-
-		completion_reward = {
-			
-		}
-	}
-
-	# 현룡문 강화
-	focus = {
-		id = SHA_Strengthening_Genryumon
-		icon = GFX_goal_SHA_Strengthening_Genryumon
-		x = 0
-		y = 1
-		cost = 5
-
-		prerequisite = { focus = SHA_internal_solidarity }
-		mutually_exclusive = {  }
-
-		available = { }
-		bypass = { }
-
-		relative_position_id = SHA_internal_solidarity
-
-		completion_reward = {
-			
-		}
-	}
-
-	# 키사키 권한 강화
-	focus = {
-		id = SHA_Strengthening_Kisaki
-		icon = GFX_goal_SHA_Cabinet_Secretariat
-		x = 4
-		y = 1
-		cost = 5
-
-		prerequisite = { focus = SHA_Strengthening_Genryumon }
-		mutually_exclusive = {  }
-
-		available = { }
-		bypass = { }
-
-		relative_position_id = SHA_Strengthening_Genryumon
-
-		completion_reward = {
-			
-		}
-	}
-
-	# 현룡문 좌파
-	focus = {
-		id = SHA_Genryumon_left_wing
-		icon = GFX_goal_SHA_Genryumon_left_wing
-		x = -4
-		y = 1
-		cost = 5
-
-		prerequisite = { focus = SHA_Strengthening_Genryumon }
-		mutually_exclusive = {  }
-
-		available = { }
-		bypass = { }
-
-		relative_position_id = SHA_Strengthening_Genryumon
-
-		completion_reward = {
-			
-		}
-	}
-
-	# 현무상회와 협력력
-	focus = {
-		id = SHA_Contact_BTP
-		icon = GFX_goal_SHA_Contact_BTP
-		x = 1
-		y = 1
-		cost = 5
-
-		prerequisite = { focus = SHA_Genryumon_left_wing }
-		mutually_exclusive = { focus = SHA_Contact_POC }
-
-		available = { }
-		bypass = { }
-
-		relative_position_id = SHA_Genryumon_left_wing
-
-		completion_reward = {
-			
-		}
-	}
-
-	# 현룡문 우파
-	focus = {
-		id = SHA_Genryumon_right_wing
-		icon = GFX_goal_SHA_Genryumon_right_wing
-		x = 0
-		y = 1
-		cost = 5
-
-		prerequisite = { focus = SHA_Strengthening_Genryumon }
-		mutually_exclusive = {  }
-
-		available = { }
-		bypass = { }
-
-		relative_position_id = SHA_Strengthening_Genryumon
-
-		completion_reward = {
-			
-		}
-	}
-	
-	# 경극부와 협력
-	focus = {
-		id = SHA_Contact_POC
-		icon = GFX_goal_SHA_Contact_POC
-		x = -1
-		y = 1
-		cost = 5
-
-		prerequisite = { focus = SHA_Genryumon_right_wing }
-		mutually_exclusive = { focus = SHA_Contact_BTP }
-
-		available = { }
-		bypass = { }
-
-		relative_position_id = SHA_Genryumon_right_wing
-
-		completion_reward = {
-			
-		}
-	}
-
-	# 오스트리아 유화 정책
-	focus = {
-		id = SHA_Austrian_appeasement_policy
-		icon = GFX_focus_generic_befriend_austria
-		x = -20
-		y = 0
-		cost = 2
-
-		prerequisite = { }
-		mutually_exclusive = { focus = SHA_Austrian_oppression_continues }
-
-		available = { }
-		bypass = { }
-
-		allow_branch = {
-			IF = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					has_completed_focus = SHA_Austrian_oppression_continues
-				}
-			}
-		}
-
-		relative_position_id = SHA_Austrian_oppression_continues
-
-
-		completion_reward = {
-			add_political_power = 25
-
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					mark_focus_tree_layout_dirty = yes
-				}
-		}
-	}
-
-	# 급진파 결집
-	focus = {
-		id = SHA_gathering_of_radicals
-		icon = GFX_focus_generic_advanced_military_studies
-		x = 5
-		y = 1
-		cost = 5
-
-		prerequisite = { focus = SHA_Austrian_appeasement_policy }
-		mutually_exclusive = { focus = SHA_local_harmony }
-
-		available = { }
-		bypass = { }
-
-		allow_branch = {
-			IF = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					OR = {
-						has_completed_focus = SHA_Austrian_oppression_continues
-						has_completed_focus = SHA_local_harmony
-					}
-				}
-			}
-		}
-		offset = {
-			x = -5
-			trigger = {
-				has_completed_focus = SHA_gathering_of_radicals
-			}
-		}
-
-		relative_position_id = SHA_Austrian_appeasement_policy
-
-		completion_reward = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					mark_focus_tree_layout_dirty = yes
-				}
-			add_timed_idea = {
-				days = 180
-				idea = SHA_gathering_of_radicals_idea
-			}
-		}
-	}
-
-	# 오스트리아 민병대와 접촉
-	focus = {
-		id = SHA_Contact_with_Austrian_militia
-		icon = GFX_focus_AUS_osterreichische_bundesheer
-		x = 0
-		y = 1
-		cost = 5
-
-		prerequisite = { focus = SHA_gathering_of_radicals }
-		mutually_exclusive = {  }
-
-		available = { }
-		bypass = { }
-
-		relative_position_id = SHA_gathering_of_radicals
-
-		completion_reward = {
-			# 무슨 효과를 넣어야 할지는 모르겠는데
-			# 보수혁명 경로를 진행하고 싶을때는 이 중점이 필요 없도록 느껴지는 효과를 넣어주세요.. 하투 하투~
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = SHA_arthur_seyss_inquart_political_advisor
-			custom_effect_tooltip = tooltip_white_line 
-			swap_ideas = {
-				add_idea = SHA_Austrian_fascist_militia_weak
-				remove_idea = SHA_Austrian_fascist_militia
-			}
-		}
-	}
-
-	# 경극부 협력
-	focus = {
-		id = SHA_Cooperation_with_Kaguya
-		icon = GFX_goal_SHA_kaguya_focus
-		x = -2
-		y = 2
-		cost = 5
-
-		prerequisite = { focus = SHA_gathering_of_radicals }
-		mutually_exclusive = {  }
-
-		available = { }
-		bypass = { }
-
-		relative_position_id = SHA_gathering_of_radicals
-
-		completion_reward = {
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.1
-			}
-			custom_effect_tooltip = tooltip_white_line
-			if = { 
-				limit = {
-					has_character = SHA_KAGUYA
-				}
-				SHA_KAGUYA = { add_country_leader_trait = SHA_ardent_conservative }
-			}
-			add_field_marshal_role = {
-				character = SHA_KAGUYA
-				traits = {
-					old_guard
-					politically_connected
-					media_personality
-				}
-				skill=3
-				attack_skill=2
-				defense_skill=3
-				planning_skill=4
-				logistics_skill=3
-			}
-		}
-	}
-
-	# 연단방 협력
-	focus = {
-		id = SHA_podium_room_cooperation
-		icon = GFX_goal_SHA_podium_room_cooperation
-		x = 2
-		y = 2
-		cost = 5
-
-		prerequisite = { focus = SHA_gathering_of_radicals }
-		mutually_exclusive = {  }
-
-		available = { }
-		bypass = { }
-
-		relative_position_id = SHA_gathering_of_radicals
-
-		completion_reward = {
-			SHA_Eastern_Alchemy_Society_idea_up = yes
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.1
-			}
-		}
-	}
-
-	# 키사키 억제
-	focus = {
-		id = SHA_Kisaki_Suppression
-		icon = GFX_goal_SHA_Kisaki_locked
-		x = 2
-		y = 1
-		cost = 5
-
-		prerequisite = { focus = SHA_Cooperation_with_Kaguya }
-		prerequisite = { focus = SHA_podium_room_cooperation }
-		mutually_exclusive = {  }
-
-		available = {
-			fascism > 0.34
-		}
-		bypass = { }
-
-		relative_position_id = SHA_Cooperation_with_Kaguya
-
-		completion_reward = {
-			set_country_flag = SHA_kisaki_house_arrest
-			country_event = { id = shafas.1 }
-			hidden_effect = { news_event = { id = shanews.01 days = 04 } }
-		}
-	}
-
-	# 카이 추종
-	focus = {
-		id = SHA_Shintani_Kai_Follow
-		icon = GFX_goal_Shintani_Kai_Follow
-		x = -3
-		y = 1
-		cost = 5
-
-		prerequisite = { focus = SHA_Kisaki_Suppression }
-		mutually_exclusive = { focus = SHA_conservative_revolution }
-
-		available = { }
-		bypass = { }
-
-		relative_position_id = SHA_Kisaki_Suppression
-
-		completion_reward = {
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = SHA_KAI_political_advisor
-			add_corps_commander_role = {
-				Character = SHA_KAI
-				traits = {
-					harsh_leader
-					politically_connected
-					media_personality
-					inspirational_leader
-				}
-				skill=2
-				attack_skill=3 #+1
-				defense_skill=2
-				planning_skill=3
-				logistics_skill=3
-			}
-			SHA_KAI = { 
-				add_country_leader_role = {
-					country_leader = {
-						ideology = fascism_ideology
-						expire = "1965.1.1.1"
-						id = -1
-						traits = {
-							SHA_T3a
-							SHA_T4a
-						}
-					}
-					promote_leader = yes
-				}
-			}
-			hidden_effect = {
-				news_event = { id = shanews.03 days = 04 }
-			}
-		}
-	}
-
-	# 카구야 축출
-	focus = {
-		id = SHA_Kaguya_ousted
-		icon = GFX_goal_SHA_Kaguya_ousted
-		x = -3
-		y = 1
-		cost = 10
-
-		prerequisite = { focus = SHA_Shintani_Kai_Follow }
-		mutually_exclusive = { }
-
-		available = {
-			fascism > 0.45
-		}
-		bypass = { }
-
-		relative_position_id = SHA_Shintani_Kai_Follow
-
-		completion_reward = {
-			set_politics = { ruling_party = fascism }
-			set_party_name = {
-				ideology = fascism
-				long_name = SHA_Shintani_KAI_party_long
-				name = SHA_Shintani_KAI_party
-			}
-			BA_ban_democratic_effect = yes
-			BA_ban_communism_effect = yes
-			BA_ban_neutrality_effect = yes
-			if = { 
-				limit = { has_idea = SHA_Peking_Opera }
-				remove_ideas = SHA_Peking_Opera
-			}
-			custom_effect_tooltip = tooltip_white_line
-			add_dynamic_modifier = { modifier = SHA_Shanhaijinfascism }
-		}
-	}
-
-	# 산해경 파시즘
-	focus = {
-		id = SHA_Shanhaijing_fascism
-		icon = GFX_focus_generic_fascist_troops
-		x = 2
-		y = 1
-		cost = 5
-
-		prerequisite = { focus = SHA_Kaguya_ousted }
-		mutually_exclusive = { focus = SHA_fascism_friend }
-
-		available = { }
-		bypass = { }
-
-		relative_position_id = SHA_Kaguya_ousted
-
-		completion_reward = {
-			custom_effect_tooltip = SHA_Shanhaijing_fascism_tt
-			add_to_variable = { 
-				SHA_Shanhaijinfascism_political_power_factor = 0.1 
-				tooltip = political_power_factor_tt
-			}
-			add_to_variable = { 
-				SHA_Shanhaijinfascism_fascism_drift = 0.03 
-				tooltip = fascism_drift_tt
-			}
-			add_to_variable = { 
-				SHA_Shanhaijinfascism_party_popularity_stability_factor = 0.15 
-				tooltip = party_popularity_stability_factor_tt
-			}
-		}
-	}
-
-	# 연단방 결속
-	focus = {
-		id = SHA_Eastern_Alchemy_Society_solidarity
-		icon = GFX_goal_SHA_Eastern_Alchemy_Society_solidarity
-		x = 2
-		y = 1
-		cost = 10
-
-		prerequisite = { focus = SHA_Shanhaijing_fascism }
-		mutually_exclusive = { }
-
-		available = { }
-		bypass = { }
-
-		relative_position_id = SHA_Shanhaijing_fascism
-
-		completion_reward = {
-			custom_effect_tooltip = SHA_Shanhaijing_fascism_tt
-			add_to_variable = {
-				SHA_Shanhaijinfascism_research_speed_factor = 0.1
-				tooltip = research_speed_factor_tt
-			}
-			custom_effect_tooltip = tooltip_white_line
-			add_research_slot = 1
-			custom_effect_tooltip = tooltip_white_line
-			swap_ruler_traits = { remove = SHA_T4a add = SHA_T4a_2 }
-			SHA_EAS_idea_remove = yes
-		}
-	}
-
-	# 오스트리아 산업 통합
-	focus = {
-		id = SHA_consolidate_industries
-		icon = GFX_focus_generic_modernize_industry
-		x = 0
-		y = 1
-		cost = 10
-
-		prerequisite = { focus = SHA_Shanhaijing_fascism }
-		mutually_exclusive = { }
-
-		available = { }
-		bypass = { }
-
-		relative_position_id = SHA_Shanhaijing_fascism
-
-		completion_reward = {
-			custom_effect_tooltip = SHA_Shanhaijing_fascism_tt
-			add_to_variable = {
-				SHA_Shanhaijinfascism_industrial_capacity_factor = 0.1
-				tooltip = industrial_capacity_factory_tt
-			}
-			add_to_variable = {
-				SHA_Shanhaijinfascism_production_speed_infrastructure_factor = 0.1
-				tooltip = production_speed_infrastructure_factor_tt
-			}
-			add_to_variable = {
-				SHA_Shanhaijinfascism_production_speed_arms_factory_factor = 0.1
-				tooltip = production_speed_arms_factory_factor_tt
-			}
-			add_to_variable = {
-				SHA_Shanhaijinfascism_production_speed_industrial_complex_factor = 0.1
-				tooltip = production_speed_industrial_complex_factor_tt
-				
-			}
-		}
-	}
-
-	# 선단 투여
-	focus = {
-		id = SHA_Sundan_dosage
-		icon = GFX_focus_generic_coffee
-		x = -1
-		y = 1
-		cost = 5
-
-		prerequisite = { focus = SHA_Eastern_Alchemy_Society_solidarity }
-		prerequisite = { focus = SHA_consolidate_industries }
-		mutually_exclusive = { }
-
-		available = {
-			surrender_progress > 0.15
-		}
-		bypass = { }
-
-		relative_position_id = SHA_Eastern_Alchemy_Society_solidarity
-
-		completion_reward = {
-		}
-	}
-
-	# 새로운 파시즘 친구
-	focus = {
-		id = SHA_fascism_friend
-		icon = GFX_focus_chi_mission_to_the_TRN
-		x = -2
-		y = 1
-		cost = 5
-
-		prerequisite = { focus = SHA_Kaguya_ousted }
-		mutually_exclusive = { focus = SHA_Shanhaijing_fascism }
-
-		available = {
-			NOT = { has_war_with = TRM }
-			TRM = {
-				#exist = yes
-				has_government = fascism
-				is_faction_leader = yes
-				is_puppet = no
-				has_civil_war = no
-			}
-		}
-		bypass = { }
-
-		relative_position_id = SHA_Kaguya_ousted
-
-		completion_reward = {
-			add_political_power = 150
-			TRM = {
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = GRE_fascist_leanings
-				}
-			}
-		
-		}
-	}
-
-	# 합동 군사 훈련
-	focus = {
-		id = SHA_joint_military_training
-		icon = GFX_goal_SHA_joint_military_training
-		x = -2
-		y = 1
-		cost = 5
-
-		prerequisite = { focus = SHA_fascism_friend }
-		mutually_exclusive = { }
-
-		available = {
-
-		}
-		bypass = { }
-
-		relative_position_id = SHA_fascism_friend
-
-		completion_reward = {
-			custom_effect_tooltip = SHA_Shanhaijing_fascism_tt
-			add_to_variable = {
-				SHA_Shanhaijinfascism_conscription_factor = 0.30
-				tooltip = conscription_factor_tt
-			}
-			custom_effect_tooltip = tooltip_white_line
-			army_experience = 50
-		}
-	}
-
-	# 오스트리아 산업 중앙 집권화
-	focus = {
-		id = SHA_Austrian_industrial_centralization
-		icon = GFX_focus_AUS_apprentice_programmes
-		x = 0
-		y = 1
-		cost = 10
-
-		prerequisite = { focus = SHA_fascism_friend }
-		mutually_exclusive = { }
-
-		available = {
-
-		}
-		bypass = { }
-
-		relative_position_id = SHA_fascism_friend
-
-		completion_reward = {
-			custom_effect_tooltip = SHA_Shanhaijing_fascism_tt
-			
-			add_to_variable = { SHA_Shanhaijinfascism_production_speed_industrial_complex_factor = 0.1 tooltip = production_speed_industrial_complex_factor_tt }
-			add_to_variable = { SHA_Shanhaijinfascism_production_speed_arms_factory_factor = 0.1 tooltip = production_speed_arms_factory_factor_tt }
-		
-		}
-	}
-
-	# 검은 태양, 검은 용
-	focus = {
-		id = SHA_black_sun_and_black_dragon
-		icon = GFX_goal_SHA_black_sun_and_black_dragon
-		x = 1
-		y = 1
-		cost = 5
-
-		prerequisite = { focus = SHA_joint_military_training }
-		prerequisite = { focus = SHA_Austrian_industrial_centralization }
-		mutually_exclusive = { }
-
-		available = {
-
-		}
-		bypass = { }
-
-		relative_position_id = SHA_joint_military_training
-
-		completion_reward = {
-			TRM = {
-				country_event = { id = AAT_Sweden.23 }
-			}
-		}
-	}
-
-	# 쇄국정책 폐지
-	focus = {
-		id = SHA_Abolition_of_national_isolation_policy
-		icon = GFX_goal_generic_demand_territory
-		x = 0
-		y = 2
-		cost = 10
-
-		prerequisite = { 
-			focus = SHA_Shanhaijing_fascism 
-			focus = SHA_fascism_friend
-		}
-		mutually_exclusive = { }
-
-		available = { }
-		bypass = { }
-
-		relative_position_id = SHA_Kaguya_ousted
-
-		completion_reward = {
-			if = {
-				limit = { has_idea = SHA_isolation_economic }
-				swap_ideas = {
-					remove_idea = SHA_isolation_economic
-					add_idea = civilian_economy
-				}
-				else = {
-					add_political_power = 150
-				}
-			}
-		}
-	}
-
-	# 동원령
-	focus = {
-		id = SHA_Expansion_of_military_factories
-		icon = GFX_focus_generic_reorient_production
-		x = 0
-		y = 2
-		cost = 8
-
-		prerequisite = {
-			focus = SHA_consolidate_industries
-			focus = SHA_Austrian_industrial_centralization
-		}
-		mutually_exclusive = { }
-
-		available = { }
-		bypass = { }
-
-		relative_position_id = SHA_Abolition_of_national_isolation_policy
-
-		completion_reward = {
-			add_war_support = 0.05
-			random_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = SHA_Shanhaijing_fascism_tt
-			add_to_variable = {
-				SHA_Shanhaijinfascism_industrial_capacity_factor = 0.05
-				tooltip = industrial_capacity_factory_tt
-			}
-		}
-	}
-
-	# 보수 혁명
-	focus = {
-		id = SHA_conservative_revolution
-		icon = GFX_goal_SHA_Shanhaijing_conservative_revolution
-		x = 3
-		y = 1
-		cost = 5
-
-		prerequisite = { focus = SHA_Kisaki_Suppression }
-		mutually_exclusive = { focus = SHA_Shintani_Kai_Follow }
-
-		available = { }
-		bypass = { }
-
-		relative_position_id = SHA_Kisaki_Suppression
-
-		completion_reward = {
-			add_political_power = 100
-			add_stability = 0.1
-			custom_effect_tooltip = SHA_conservative_revolution_tt
-			set_temp_variable = {
-				var = conservative_revolution_var
-				value = party_popularity@fascism
-			}
-			add_popularity = {
-				ideology = neutrality
-				popularity = conservative_revolution_var
-			}
-			multiply_temp_variable = {
-				var = conservative_revolution_var
-				value = -1
-			}
-			add_popularity = {
-				ideology = fascism
-				popularity = conservative_revolution_var
-			}
-			if = { 
-				limit = { 
-					NOT = { has_government = neutrality }
-				}
-				set_politics = {
-					ruling_party = neutrality
-					elections_allowed = no
-				}
-			}
-			if = {
-				limit = { has_idea = SHA_Peking_Opera }
-				swap_ideas = {
-					add_idea = SHA_Peking_Opera_conservative
-					remove_idea = SHA_Peking_Opera
-				}
-			}
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = SHA_KAGUYA_political_advisor
-			custom_effect_tooltip = tooltip_white_line
-			effect_tooltip = {
-				swap_ideas = {
-					add_idea = SHA_kaguya_idea_tooltip_2
-					remove_idea = SHA_kaguya_idea_tooltip
-				}
-			}
-			custom_effect_tooltip = SHA_Kisaki_is_Doorkeeper_tt
-			hidden_effect = {
-				SHA_KISAKI = { 
-					add_country_leader_role = {
-						country_leader = {
-							ideology = despotism
-							expire = "1965.1.1.1"
-							id = -1
-							traits = { 
-								SHA_T1a
-								SHA_T2a 
-							}
-						}
-					}
-				}
-				SHA_KAGUYA = { remove_country_leader_role = { ideology = despotism } }
-			}
-			hidden_effect = {
-				remove_trait = {
-					character = SHA_KAGUYA
-					slot = political_advisor
-					trait = SHA_ardent_conservative
-				}
-				add_trait = {
-					character = SHA_KAGUYA
-					slot = political_advisor
-					trait = SHA_ardent_conservative_2
-				}
-				news_event = { id = shanews.02 days = 04 }
-			}
-		}
-	}
-
-	# 새로운 산해경 보수주의
-	focus = {
-		id = SHA_new_shanhaijing_conservatism
-		icon = GFX_goal_SHA_new_shanhaijing_conservatism
-		x = 1
-		y = 1
-		cost = 5
-
-		prerequisite = { focus = SHA_conservative_revolution }
-		mutually_exclusive = {  }
-
-		available = { }
-		bypass = { }
-
-		relative_position_id = SHA_conservative_revolution
-
-		completion_reward = {
-			add_ideas = SHA_walking_the_dragon_1
-		}
-	}
-
-	# 타 동아리 협력 확장
-	focus = {
-		id = SHA_Expansion_of_cooperation_with_other_clubs
-		icon = GFX_goal_SHA_Expansion_of_cooperation_with_other_clubs
-		x = -2
-		y = 1
-		cost = 5
-
-		prerequisite = { focus = SHA_new_shanhaijing_conservatism }
-		mutually_exclusive = {  }
-
-		available = { }
-		bypass = { }
-
-		relative_position_id = SHA_new_shanhaijing_conservatism
-
-		completion_reward = {
-			if = { 
-				limit = { has_idea = SHA_walking_the_dragon_1 }
-				swap_ideas = {
-					add_idea = SHA_walking_the_dragon_3
-					remove_idea = SHA_walking_the_dragon_1
-				}
-				else_if = {
-					limit = { has_idea = SHA_walking_the_dragon_2 }
-					swap_ideas = {
-						add_idea = SHA_walking_the_dragon_4
-						remove_idea = SHA_walking_the_dragon_2
-					}
-				}
-				else = { 
-					effect_tooltip = {
-						swap_ideas = {
-							add_idea = SHA_walking_the_dragon_3
-							remove_idea = SHA_walking_the_dragon_1
-						}
-					}
-				}
-			}
-		}
-	}
-
-	# 새로운 헌룡문 - 경극부 관계
-	focus = {
-		id = SHA_New_Genryumon_Peking_Opera_Department_Relations
-		icon = GFX_goal_SHA_New_Genryumon_Peking_Opera_Department_Relations
-		x = 2
-		y = 1
-		cost = 5
-
-		prerequisite = { focus = SHA_new_shanhaijing_conservatism }
-		mutually_exclusive = {  }
-
-		available = { }
-		bypass = { }
-
-		relative_position_id = SHA_new_shanhaijing_conservatism
-
-		completion_reward = {
-			if = {
-				limit = { has_idea = SHA_walking_the_dragon_1 }
-				swap_ideas = {
-					add_idea = SHA_walking_the_dragon_2
-					remove_idea = SHA_walking_the_dragon_1
-				}
-				else_if = {
-					limit = { has_idea = SHA_walking_the_dragon_3 }
-					swap_ideas = {
-						add_idea = SHA_walking_the_dragon_4
-						remove_idea = SHA_walking_the_dragon_3
-					}
-				}
-				else = { 
-					effect_tooltip = {
-						swap_ideas = {
-							add_idea = SHA_walking_the_dragon_2
-							remove_idea = SHA_walking_the_dragon_1
-						}
-					}	
-				}
-			}
-		}
-	}
-
-	# 산해경 추밀원
-	focus = {
-		id = SHA_Cabinet_Secretariat
-		icon = GFX_goal_SHA_Cabinet_Secretariat
-		x = 0
-		y = 1
-		cost = 10
-
-		prerequisite = { focus = SHA_new_shanhaijing_conservatism }
-		mutually_exclusive = {  }
-
-		available = { }
-		bypass = { }
-
-		relative_position_id = SHA_new_shanhaijing_conservatism
-
-		completion_reward = {
-			effect_tooltip = {
-				swap_ideas = {
-					add_idea = SHA_kaguya_idea_tooltip_3
-					remove_idea = SHA_kaguya_idea_tooltip_2
-				}
-			}
-			hidden_effect = {
-				remove_trait = {
-					character = SHA_KAGUYA
-					slot = political_advisor
-					trait = SHA_ardent_conservative_2
-				}
-				add_trait = {
-					character = SHA_KAGUYA
-					slot = political_advisor
-					trait = SHA_ardent_conservative_3
-				}
-			}
-		}
-	}
-
-	# 보수혁명의 원동기
-	focus = {
-		id = SHA_Engine_of_conservative_revolution
-		icon = GFX_goal_SHA_Engine_of_conservative_revolution
-		x = 0
-		y = 1
-		cost = 10
-
-		prerequisite = { focus = SHA_Expansion_of_cooperation_with_other_clubs }
-		prerequisite = { focus = SHA_New_Genryumon_Peking_Opera_Department_Relations }
-		prerequisite = { focus = SHA_Cabinet_Secretariat }
-		mutually_exclusive = {  }
-
-		available = { }
-		bypass = { }
-
-		relative_position_id = SHA_Cabinet_Secretariat
-
-		completion_reward = {
-			add_stability = 0.1
-			add_war_support = 0.05
-			add_popularity = {
-				ideology = neutrality
-				popularity = 0.05
-			}
-			effect_tooltip = {
-				swap_ideas = {
-					add_idea = SHA_kaguya_idea_tooltip_4
-					remove_idea = SHA_kaguya_idea_tooltip_3
-				}
-			}
-			hidden_effect = {
-				remove_trait = {
-					character = SHA_KAGUYA
-					slot = political_advisor
-					trait = SHA_ardent_conservative_3
-				}
-				add_trait = {
-					character = SHA_KAGUYA
-					slot = political_advisor
-					trait = SHA_ardent_conservative_4
-				}
-			}
-		}
-	}
-
-	# 질서 회복
-	focus = {
-		id = SHA_Solving_the_Militia_Problem
-		icon = GFX_focus_AUS_legitimistische_jugend
-		x = -1
-		y = 1
-		cost = 5
-
-		prerequisite = {
-			focus = SHA_Shintani_Kai_Follow 
-			focus = SHA_conservative_revolution
-		}
-		mutually_exclusive = {  }
-
-		available = {
-			NOT = { has_completed_focus = SHA_Contact_with_Austrian_militia }
-		}
-		bypass = { 
-			NOT = { has_idea = SHA_Austrian_fascist_militia }
-		}
-
-		relative_position_id = SHA_conservative_revolution
-
-		completion_reward = {
-			remove_ideas = SHA_Austrian_fascist_militia
-			if = {
-				limit = { has_character = SHA_arthur_seyss_inquart }
-				SHA_arthur_seyss_inquart = { retire = yes }
-			}
-		}
-	}
-
-	# 파업 진압
-	focus = {
-		id = SHA_strike_suppression
-		icon = GFX_focus_SWE_attack_landsorganisationen
-		x = 1
-		y = 1
-		cost = 5
-
-		prerequisite = {
-			focus = SHA_Shintani_Kai_Follow 
-			focus = SHA_conservative_revolution
-		}
-		mutually_exclusive = {  }
-
-		available = { }
-		bypass = {
-			NOT = { has_idea = SHA_faup_idea }
-		}
-
-		relative_position_id = SHA_Shintani_Kai_Follow
-
-		completion_reward = {
-			remove_ideas = SHA_faup_idea
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.05
-			}
-		}
-	}
-
-	# 루미 경질
-	focus = {
-		id = SHA_Sack_of_Rumi
-		icon = GFX_goal_SHA_Sack_of_Rumi
-		x = 0
-		y = 1
-		cost = 5
-
-		prerequisite = {
-			focus = SHA_strike_suppression
-		}
-		mutually_exclusive = {  }
-
-		available = { }
-		bypass = { }
-
-		relative_position_id = SHA_strike_suppression
-
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = SHA_Black_Tortoise_Promenade
-				add_idea =SHA_suppressed_Black_Tortoise_Promenade
-			}
-			remove_mission = SHA_BTP_revolt_mission
-		}
-	}
-
-	# 비상 조치
-	focus = {
-		id = SHA_emergency_measures
-		icon = GFX_focus_generic_mass_production
-		x = 0
-		y = 3
-		cost = 10
-
-		prerequisite = {
-			focus = SHA_Shintani_Kai_Follow 
-			focus = SHA_conservative_revolution
-		}
-		mutually_exclusive = {  }
-
-		available = { }
-		bypass = { }
-
-		relative_position_id = SHA_Kisaki_Suppression
-
-		completion_reward = {
-			add_timed_idea = {
-				idea = SHA_emergency_measures_idea
-				days = 720
-			}
-		}
-	}
-
-	# 학원 영토 수복
-	focus = {
-		id = SHA_invade_of_Hyakkiyako
-		icon = GFX_focus_attack_HYA
-		x = 0
-		y = 3
-		cost = 10
-
-		prerequisite = { focus = SHA_emergency_measures }
-		mutually_exclusive = {  }
-
-		available = { }
-		bypass = {
-			OR = {
-				has_global_flag = GFLAG_BAKSANWAR
-				has_war_with = HYA
-				HYA = {
-					exists = no
-				}
-				HYA = {
-					is_in_faction_with = SHA
-				}
-			}
-		}
-
-		relative_position_id = SHA_emergency_measures
-		
-		will_lead_to_war_with = HYA
-		
-		completion_reward = {
-			if = {
-				limit = { has_idea = SHA_shanhaijing_isolation }
-				remove_ideas = SHA_shanhaijing_isolation
-			}
-			if = {
-				limit = { has_idea = SHA_isolation_economic }
-				swap_ideas = {
-					remove_idea = SHA_isolation_economic
-					add_idea = low_economic_mobilisation
-				}
-			}
-			HYA = {
-				country_event = {
-					id = SHA_event.2
-				}
-			}
-			set_global_flag = GFLAG_FASI_BAKSANWAR
-			custom_effect_tooltip = tooltip_white_line 
-			unlock_decision_category_tooltip = SHA_invade_of_Hyakkiyako_cat
-		}
-	}
-
-	# 현지 화합?
-	focus = {
-		id = SHA_local_harmony
-		icon = GFX_focus_AUS_diplomatic_effort
-		x = -7
-		y = 1
-		cost = 5
-
-		prerequisite = { focus = SHA_Austrian_appeasement_policy }
-		mutually_exclusive = { focus = SHA_gathering_of_radicals }
-
-		available = {
-			has_country_flag = GAEBALJUNG
-		}
-		bypass = { }
-		allow_branch = {
-			IF = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					has_completed_focus = SHA_gathering_of_radicals
-					has_completed_focus = SHA_Austrian_oppression_continues
-				}
-			}
-		}
-		offset = {
-			x = 7
-			trigger = {
-				has_completed_focus = SHA_local_harmony
-			}
-		}
-		relative_position_id = SHA_Austrian_appeasement_policy
-
-		completion_reward = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					mark_focus_tree_layout_dirty = yes
-				}
-
 		}
 	}
 }
