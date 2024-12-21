@@ -1441,6 +1441,9 @@ country_event = { #만마전 유저에게 기회 주기
 		name = GEK_rm_event.13.b
 		GEK = {
 			set_country_flag = GEK_i_want_war_by_GEM
+			hidden_effect = {
+				add_ideas = GEK_ai
+			}
 		}
 		custom_effect_tooltip = GEK_rm_event.13_tt
 	}
@@ -1656,6 +1659,24 @@ country_event = { #학생 문제
 			custom_effect_tooltip = GEK_rm_event.21_tt_3
 			uncomplete_national_focus = {
 				focus = GEK_RM_kiv_focus_16
+			}
+		}
+		if = { #제2시민 2트
+			limit = {
+				has_completed_focus = GEK_RM_kiv_focus_8
+			}
+			custom_effect_tooltip = GEK_rm_event.21_tt_4
+			uncomplete_national_focus = {
+				focus = GEK_RM_kiv_focus_8
+			}
+		}
+		if = { #분리 2트
+			limit = {
+				has_completed_focus = GEK_RM_kiv_focus_15
+			}
+			custom_effect_tooltip = GEK_rm_event.21_tt_5
+			uncomplete_national_focus = {
+				focus = GEK_RM_kiv_focus_15
 			}
 		}
 	}

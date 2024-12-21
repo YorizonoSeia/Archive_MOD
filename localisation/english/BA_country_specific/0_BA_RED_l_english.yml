@@ -1437,6 +1437,8 @@
  RED_population_issue_down_to_country: "하방 운동"
  RED_population_issue_suburbanization: "의도적 교외화"
  RED_population_issue_mobilisation: "해결을 위한 징병제"
+ RED_population_issue_free_meal: "무료 급식소 운영"
+ RED_population_issue_distribution_system: "일시적인 배급제 실시"
  RED_population_issue_import_food: "긴급한 식량 수입"
  RED_population_issue_no_food: "다가오는 식량 부족 사태"
  RED_population_issue_no_goods: "다가오는 소비재 부족 사태"

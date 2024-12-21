@@ -3341,11 +3341,27 @@ RED_demand_cat = {
 		#체리노그라드 수호
 		icon = GFX_decision_generic_fortification
 		days_mission_timeout = 240
-		available = {
-			OR={NOT = {
-				controls_state = 141
-			}
+		cancel_trigger = {
 			has_war = no
+		}
+		cancel_effect = {
+			hidden_effect = {
+				RED_the_public = {
+					unit_leader_event = RED_missions_char.3
+				}
+			}
+			add_to_variable = {
+				RED_public_mission_activated = -1
+			}
+			add_to_variable = {
+				RED_public_mission_completed = 1
+			}
+			custom_effect_tooltip = RED_winterarmy_advance_tt
+			custom_effect_tooltip = RED_trench_exp_tt
+		}
+		available = {
+			NOT = {
+				controls_state = 141
 			}
 		}
 		highlight_states = {
@@ -3737,10 +3753,10 @@ RED_population_issue_cat = { #인구문제
 			add_stability = -0.05
 			RED_population_solve = yes
 			913 = {
-				add_manpower = 1000000
+				add_manpower = 100000
 			}
 			139 = {
-				add_manpower = 1000000
+				add_manpower = 100000
 			}
 		}
 	}
@@ -3758,10 +3774,10 @@ RED_population_issue_cat = { #인구문제
 			add_stability = -0.05
 			RED_population_solve = yes
 			38 = {
-				add_manpower = 1000000
+				add_manpower = 100000
 			}
 			919 = {
-				add_manpower = 1000000
+				add_manpower = 100000
 			}
 		}
 	}
@@ -3780,36 +3796,36 @@ RED_population_issue_cat = { #인구문제
 			RED_population_solve = yes
 			917 = {
 				add_extra_state_shared_building_slots = 1
-				add_manpower = 200000
+				add_manpower = 20000
 			}
 			916 = {
 				add_extra_state_shared_building_slots = 1
-				add_manpower = 200000
+				add_manpower = 20000
 			}
 			918 = {
 				add_extra_state_shared_building_slots = 1
-				add_manpower = 200000}
+				add_manpower = 20000}
 			666 = {
 				add_extra_state_shared_building_slots = 1
-				add_manpower = 200000}
+				add_manpower = 20000}
 			924 = {
 				add_extra_state_shared_building_slots = 1
-				add_manpower = 200000}
+				add_manpower = 20000}
 			144 = {
 				add_extra_state_shared_building_slots = 1
-				add_manpower = 200000}
+				add_manpower = 20000}
 			923 = {
 				add_extra_state_shared_building_slots = 1
-				add_manpower = 200000}
+				add_manpower = 20000}
 			143 = {
 				add_extra_state_shared_building_slots = 1
-				add_manpower = 200000}
+				add_manpower = 20000}
 			920 = {
 				add_extra_state_shared_building_slots = 1
-				add_manpower = 200000}
+				add_manpower = 20000}
 			921 = {
 				add_extra_state_shared_building_slots = 1
-				add_manpower = 200000}
+				add_manpower = 20000}
 		}
 	}
 	RED_population_issue_suburbanization = { #의도적 교외화
@@ -3828,13 +3844,13 @@ RED_population_issue_cat = { #인구문제
 		remove_effect = {
 			RED_population_solve = yes
 			141 = {
-				add_manpower = 1000000
+				add_manpower = 100000
 			}
 			140 = {
-				add_manpower = 500000
+				add_manpower = 50000
 			}
 			140 = {
-				add_manpower = 500000
+				add_manpower = 50000
 			}
 		}
 	}
@@ -3867,8 +3883,41 @@ RED_population_issue_cat = { #인구문제
 						is_core_of = DEN
 					}
 				}
-				add_manpower = 125000
+				add_manpower = 12500
 			}
+		}
+	}
+	RED_population_issue_free_meal = { #무료 급식소
+		icon = GFX_decision_SWI_dismiss_council
+		fire_only_once = yes
+		ai_will_do = {
+			base = 999
+		}
+		cost = 30
+		days_remove = 180
+		modifier = {
+			consumer_goods_factor = 0.35
+		}
+		complete_effect = {
+			RED_population_solve = yes
+		}
+	}
+	RED_population_issue_distribution_system = { #배급제
+		icon = GFX_decision_generic_fundraising
+		fire_only_once = yes
+		ai_will_do = {
+			base = 999
+		}
+		available = {
+			has_completed_focus = RED_club_focus_0
+		}
+		cost = 30
+		days_remove = 180
+		modifier = {
+			political_power_cost = 0.2
+		}
+		complete_effect = {
+			RED_population_solve = yes
 		}
 	}
 	RED_population_issue_import_food = { #긴급한 식량 수입
@@ -3883,6 +3932,7 @@ RED_population_issue_cat = { #인구문제
 			consumer_goods_expected_value = 0.1
 		}
 		complete_effect = {
+			RED_population_solve = yes
 			add_days_mission_timeout = {
 				mission = RED_population_issue_no_food
 				days = 180

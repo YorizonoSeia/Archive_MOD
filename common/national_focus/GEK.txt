@@ -1794,7 +1794,7 @@ focus_tree = {
 			focus = GEK_popular_front_focus_0
 		}
 		relative_position_id = GEK_popular_front_focus_0
-		x = -3
+		x = -4
 		y = 1
 		cost = 2
 		completion_reward = {
@@ -1808,7 +1808,7 @@ focus_tree = {
 		}
 		relative_position_id = GEK_popular_front_focus_1
 		x = -1
-		y = 1
+		y = 2
 		cost = 2
 		completion_reward = {
 		}
@@ -1821,12 +1821,12 @@ focus_tree = {
 		}
 		relative_position_id = GEK_popular_front_focus_1
 		x = 1
-		y = 1
+		y = 2
 		cost = 2
 		completion_reward = {
 		}
 	}
-	focus = { #국가당: 급진민주당 포섭섭
+	focus = { #국가당: 급진민주당 포섭
 		id = GEK_popular_front_DStP_focus_0
 		icon = GFX_focus_deal_with_DStP
 		prerequisite = {
@@ -1834,7 +1834,33 @@ focus_tree = {
 		}
 		relative_position_id = GEK_popular_front_focus_1
 		x = 0
-		y = 2
+		y = 1
+		cost = 2
+		completion_reward = {
+		}
+	}
+	focus = { #바이에른 인민당: 바이에른에서의 양보
+		id = GEK_popular_front_bvp_focus_0
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = {
+			focus = GEK_popular_front_focus_1
+		}
+		relative_position_id = GEK_popular_front_focus_1
+		x = 2
+		y = 1
+		cost = 2
+		completion_reward = {
+		}
+	}
+	focus = { #통합 게헨나: 이계관리청장 양보
+		id = GEK_popular_front_vgp_focus_0
+		icon = GFX_goal_GEH_Pax_Gehennia
+		prerequisite = {
+			focus = GEK_popular_front_focus_1
+		}
+		relative_position_id = GEK_popular_front_focus_1
+		x = -2
+		y = 1
 		cost = 2
 		completion_reward = {
 		}

@@ -44,6 +44,12 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			if = {
+				limit = {
+					has_completed_focus = RED_land_research
+				}
+				unlock_decision_tooltip = RED_population_issue_to_south
+			}
 		}
 	}
 	focus = { # 북부 도로 재개발
@@ -75,6 +81,12 @@ focus_tree = {
 					level = 1
 					instant_build = yes
 				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = RED_land_research
+				}
+				unlock_decision_tooltip = RED_population_issue_to_north
 			}
 		}
 	}
@@ -203,6 +215,14 @@ focus_tree = {
 			if = {
 				limit = {has_idea = BA_railway_gauge_issue}
 				remove_ideas = BA_railway_gauge_issue
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = RED_population_issue_solved_flag
+					}
+				}
+				unlock_decision_tooltip = RED_population_issue_down_to_country
 			}
 		}
 	}
@@ -1529,7 +1549,7 @@ focus_tree = {
 			}
 		}
 	}
-	focus = { # 동아리 정책
+	focus = { # 붉은겨울 전산국
 		id = RED_club_focus_0
 
 		icon = GFX_focus_generic_self_management
@@ -1555,6 +1575,14 @@ focus_tree = {
 			add_political_power = 120
 			effect_tooltip = {
 				unlock_national_focus = RED_rearming_focus_0
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = RED_population_issue_solved_flag
+					}
+				}
+				unlock_decision_tooltip = RED_population_issue_distribution_system
 			}
 		}
 	}
@@ -5316,12 +5344,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			every_state = {
-				limit = {
-					is_controlled_by_ROOT_or_ally = yes
-				}
-				add_manpower = 80000
-			}
 			RED_population_solve = yes
 			custom_effect_tooltip = RED_labor_world_tt
 		}

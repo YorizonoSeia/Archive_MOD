@@ -330,7 +330,20 @@ GEK_protestant_state = { # 주 모디파이어
 	
 }
 GEK_spirit_of_capitalism_state = { # 주 모디파이어
-	enable = { always = yes }
+	enable = { 
+		OR = {
+			is_controlled_by = GEK
+			is_controlled_by = GEA
+			is_controlled_by = NSD
+			is_controlled_by = KPD
+		}
+		OR = {
+			is_owned_by = GEK
+			is_owned_by = GEA
+			is_owned_by = NSD
+			is_owned_by = KPD
+		}
+	}
 	icon = GFX_modifiers_GEK_spirit_of_capitalism
 
 	state_production_speed_buildings_factor = 0.05
@@ -341,8 +354,23 @@ GEK_protestant_patriotism = { #애국주의적 개신교
 		TRM = {
 			exists = yes
 		}
-		GEK = {
-			exists = yes
+		OR = {
+			GEK = {
+				exists = yes
+				has_completed_focus = GEK_RM_rel_focus_5
+			}
+			NSD = {
+				exists = yes
+				has_completed_focus = GEK_RM_rel_focus_5
+			}
+			GEA = {
+				exists = yes
+				has_completed_focus = GEK_RM_rel_focus_5
+			}
+			KPD = {
+				exists = yes
+				has_completed_focus = GEK_RM_rel_focus_5
+			}
 		}
 	}
 	icon = GFX_modifiers_GEK_spirit_of_capitalism
@@ -369,7 +397,20 @@ GEK_catholic_state = { # 주 모디파이어
 	
 }
 GEK_catholic_trade_union = { # 가톨릭 노동조합
-	enable = { always = yes }
+	enable = {
+		OR = {
+			is_controlled_by = GEK
+			is_controlled_by = GEA
+			is_controlled_by = NSD
+			is_controlled_by = KPD
+		}
+		OR = {
+			is_owned_by = GEK
+			is_owned_by = GEA
+			is_owned_by = NSD
+			is_owned_by = KPD
+		}
+	}
 
 	icon = GFX_modifiers_GEK_catholic_state
 	local_factories = 0.1
@@ -388,7 +429,20 @@ GEK_no_religion = { # 주 모디파이어
 	
 }
 GEK_materialism = { # 유물론과 생산성
-	enable = { always = yes }
+	enable = {
+		OR = {
+			is_controlled_by = GEK
+			is_controlled_by = GEA
+			is_controlled_by = NSD
+			is_controlled_by = KPD
+		}
+		OR = {
+			is_owned_by = GEK
+			is_owned_by = GEA
+			is_owned_by = NSD
+			is_owned_by = KPD
+		}
+	}
 
 	icon = GFX_modifiers_GEK_materialism
 	
@@ -407,4 +461,40 @@ ARI_Gottglaubig_religion = {
 
 	icon = GFX_modifiers_ARI_gottglaubig
 
+}
+GEK_secondary_citizenship = { #제2시민권
+	enable = {
+		OR = {
+			is_controlled_by = GEK
+			is_controlled_by = GEA
+			is_controlled_by = NSD
+			is_controlled_by = KPD
+		}
+		OR = {
+			is_owned_by = GEK
+			is_owned_by = GEA
+			is_owned_by = NSD
+			is_owned_by = KPD
+		}
+	}
+	recruitable_population_factor = 0.05
+	icon = GFX_modifiers_ARI_gottglaubig
+}
+GEK_separation_law = { #이계인 분리
+	enable = {
+		OR = {
+			is_controlled_by = GEK
+			is_controlled_by = GEA
+			is_controlled_by = NSD
+			is_controlled_by = KPD
+		}
+		OR = {
+			is_owned_by = GEK
+			is_owned_by = GEA
+			is_owned_by = NSD
+			is_owned_by = KPD
+		}
+	}
+	local_building_slots_factor	= 0.05
+	icon = GFX_modifiers_ARI_gottglaubig
 }

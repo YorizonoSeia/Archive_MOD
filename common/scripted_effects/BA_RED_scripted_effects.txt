@@ -399,29 +399,11 @@ RED_population_solve = {
 		limit = {
 			has_idea = RED_population_saturation_4
 		}
-		141 = {
-			add_manpower = -1000000
-		}
-		140 = {
-			add_manpower = -500000
-		}
-		140 = {
-			add_manpower = -500000
-		}
 		remove_ideas = RED_population_saturation_4
 	}
 	if = {
 		limit = {
 			has_idea = RED_population_saturation_3
-		}
-		141 = {
-			add_manpower = -1000000
-		}
-		140 = {
-			add_manpower = -500000
-		}
-		140 = {
-			add_manpower = -500000
 		}
 		swap_ideas = {
 			remove_idea = RED_population_saturation_3
@@ -432,15 +414,6 @@ RED_population_solve = {
 		limit = {
 			has_idea = RED_population_saturation_2
 		}
-		141 = {
-			add_manpower = -1000000
-		}
-		140 = {
-			add_manpower = -500000
-		}
-		140 = {
-			add_manpower = -500000
-		}
 		swap_ideas = {
 			remove_idea = RED_population_saturation_2
 			add_idea = RED_population_saturation_3
@@ -450,15 +423,6 @@ RED_population_solve = {
 		limit = {
 			has_idea = RED_population_saturation_1
 		}
-		141 = {
-			add_manpower = -1000000
-		}
-		140 = {
-			add_manpower = -500000
-		}
-		140 = {
-			add_manpower = -500000
-		}
 		swap_ideas = {
 			remove_idea = RED_population_saturation_1
 			add_idea = RED_population_saturation_2
@@ -467,15 +431,6 @@ RED_population_solve = {
 	if = {
 		limit = {
 			has_idea = RED_population_saturation
-		}
-		141 = {
-			add_manpower = -1000000
-		}
-		140 = {
-			add_manpower = -500000
-		}
-		140 = {
-			add_manpower = -500000
 		}
 		swap_ideas = {
 			remove_idea = RED_population_saturation

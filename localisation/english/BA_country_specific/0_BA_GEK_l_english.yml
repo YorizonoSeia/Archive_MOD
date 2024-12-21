@@ -18,6 +18,9 @@
  GEK_materialism_desc: "비생산적이고 착취적이며 억압적인 기성 종교 대신, 우리는 카를 마르크스의 가르침 속 유물론적 세계관을 통해 현실을 직시하고 분석하고 변혁하는 능동적인 노동자성을 기를 수 있습니다."
  GEK_catholic_trade_union: "가톨릭 노동조합"
  GEK_catholic_trade_union_desc: ""
+ GEK_secondary_citizenship: "제2시민 제도"
+ GEK_secondary_citizenship_desc: ""
+ GEK_separation_law: "이계인 분리"
 
  NSD_the_SS_went_to_america: "§Y$reinhard_heydrich$§!가 §Y[USA.GetNameWithFlag]§!에 있음"
  NSD_the_SS_went_to_arius: "§Y$reinhard_heydrich$§!가 §Y[ARI.GetNameWithFlag]§!에 있음"
@@ -119,6 +122,8 @@
  GEK_rm_event.21_tt_1: "\n§g우리는 학생들의 저항을 해결하기 위해 재교육 캠프를 다시 한 번 운영해야 할 필요가 있습니다.§!"
  GEK_rm_event.21_tt_2: "\n§g우리는 이 학원의 학생들에게 또한 시민권을 부여하여야 합니다.§!"
  GEK_rm_event.21_tt_3: "\n§g우리는 이계의 추가적인 자산을 활용할 수 있게 되었습니다.§!"
+ GEK_rm_event.21_tt_4: "\n§g우리는 다시 한 번 이계인들의 권리를 설정해주어야 합니다.§!"
+ GEK_rm_event.21_tt_5: "\n§g우리는 다시 한 번 분리 작업을 진행해야 합니다.§!"
  GEK_rm_event.22.t: "협력자 선정"
  GEK_rm_event.22.d: "게헨나 학원이라고 해서 모두가 일치단결한 목적과 생각을 공유하는 것이 아닙니다.\n\n... 오히려 그 반대일 정도로 이들은 분열되어 산산히 파편회된 상태입니다. 이런 상황에서 여럿의 단체와 협력하는 것은 좋은 생각이 아닙니다. 우리는 특정 단체와 협력해서 협력 관계에의 안정을 챙기도록 할 것입니다."
  GEK_rm_event.22.a: "만마전과 협력하자."
@@ -185,6 +190,7 @@
  GEK_student_resistance: "사회적인 학생 저항"
  GEK_student_citizenship: "이계인 시민권 지급"
  GEK_eating_property: "이계인 자산 활용"
+ GEK_ai: "불굴의 의지"
 
  GEK_didntknew_without_navy:0 "해군국"
  GEK_swedish_hyupryuk:0 "스웨덴계 협력"
@@ -369,6 +375,8 @@
  GEK_popular_front_spd_focus_0: "사민당: 민주적 가치 재확인"
  GEK_popular_front_spd_focus_1: "사민당: 재분배 정책"
  GEK_popular_front_DStP_focus_0: "국가당: 급진민주당 포섭"
+ GEK_popular_front_bvp_focus_0: "바이에른 인민당:\n 바이에른에서의 양보"
+ GEK_popular_front_vgp_focus_0: "통합 게헨나:\n 이계관리청장 양보"
  
 
 
