@@ -18,6 +18,9 @@ state={
 			infrastructure = 4 #was: 5
 			industrial_complex = 1
 			air_base = 2
+			299 = {
+				naval_base = 1
+			}
 		}
 		add_core_of = SWE
 	}
