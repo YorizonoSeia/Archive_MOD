@@ -489,6 +489,14 @@
  KPD_joint_military_training: "소련 영토 적응"
 
 #리워크 - 중점
+ KPD_repetition_of_resistance: "반복되는 저항"
+ KPD_end_of_trinity: "트리니티의 끝"
+ KPD_anti_trinity_uprising: "반트리니티 봉기"
+ KPD_replication_of_mystic_weaver: "신비 직조기 복제"
+ KPD_temporary_equality_manifesto: "임시 평등 강령 발효"
+ KPD_securing_of_wartime_supplies: "전시 물자 확보"
+ KPD_declaration_of_emergency_mobilization_order: "비상 동원령"
+ KPD_additional_militia_organization: "추가적인 민병대 조직"
  KPD_dissolution_of_joint_supreme_command: "연합최고사령부 해산"
 
 #디시전

@@ -564,14 +564,225 @@ focus_tree = {
 			}
 		}
 	}
-	focus = { #연합최고사령부 해산
-		id = KPD_dissolution_of_joint_supreme_command
-		icon = GFX_goal_anschluss
-		cost = 5
-		x = 25
+	focus = { #반복되는 저항
+		id = KPD_repetition_of_resistance
+		icon = GFX_focus_GER_end_european_communism
+		cost = 20
+		available_if_capitulated = yes
+		x = 20
 		y = 0
 		available = {
+		}
+		bypass = {
 			NOT = { has_war_with = TRM }
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_to_variable = {
+				global.KPD_country_collapse_decisions_value = 5
+				tooltip = KPD_country_collapse_value_tt
+			}
+		}
+	}
+	focus = { #트리니티의 끝
+		id = KPD_end_of_trinity
+		icon = GFX_focus_GER_strike_at_the_rising_sun
+		cost = 5
+		prerequisite = {
+			focus = KPD_repetition_of_resistance
+		}
+		available_if_capitulated = yes
+		x = 0
+		y = 3
+		relative_position_id = KPD_repetition_of_resistance
+		available = {
+			NOT = { has_war_with = TRM }
+		}
+		bypass = {
+			
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_state_core = 5
+			add_state_core = 60
+			add_state_core = 61
+			add_state_core = 62
+			add_state_core = 63
+			add_state_core = 64
+			add_state_core = 65
+			add_state_core = 66
+			add_state_core = 67
+			add_state_core = 68
+			add_state_core = 763
+		}
+	}
+	focus = { #반트리니티 봉기
+		id = KPD_anti_trinity_uprising
+		icon = GFX_focus_generic_spur_communist_revolutions
+		cost = 2
+		x = 5
+		y = 0
+		relative_position_id = KPD_repetition_of_resistance
+		available = {
+		}
+		bypass = {
+			NOT = { has_war_with = TRM }
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_political_power = 60
+			upgrade_economy_law = yes
+		}
+	}
+	focus = { #신비 직조기 복제
+		id = KPD_replication_of_mystic_weaver
+		icon = GFX_goal_generic_production
+		cost = 2
+		prerequisite = {
+			focus = KPD_anti_trinity_uprising
+		}
+		x = -2
+		y = 1
+		relative_position_id = KPD_anti_trinity_uprising
+		available = {
+		}
+		bypass = {
+			NOT = { has_war_with = TRM }
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			set_technology = {
+				kivotos_artificial_halo_replica_tech = 1
+			}
+		}
+	}
+	focus = { #임시 평등 강령
+		id = KPD_temporary_equality_manifesto
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 2
+		prerequisite = {
+			focus = KPD_replication_of_mystic_weaver
+		}
+		x = -2
+		y = 3
+		relative_position_id = KPD_anti_trinity_uprising
+		available = {
+		}
+		bypass = {
+			NOT = { has_war_with = TRM }
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_manpower = 30000
+		}
+	}
+	focus = { #전시 물자 확보
+		id = KPD_securing_of_wartime_supplies
+		icon = GFX_goal_generic_construction
+		cost = 5
+		prerequisite = {
+			focus = KPD_anti_trinity_uprising
+		}
+		x = 1
+		y = 2
+		relative_position_id = KPD_anti_trinity_uprising
+		available = {
+		}
+		bypass = {
+			NOT = { has_war_with = TRM }
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 2300
+			}
+		}
+	}
+	focus = { #비상 동원령
+		id = KPD_declaration_of_emergency_mobilization_order
+		icon = GFX_focus_generic_little_entente
+		cost = 2
+		prerequisite = {
+			focus = KPD_anti_trinity_uprising
+		}
+		x = 3
+		y = 1
+		relative_position_id = KPD_anti_trinity_uprising
+		available = {
+		}
+		bypass = {
+			NOT = { has_war_with = TRM }
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_manpower = 280000
+		}
+	}
+	focus = { #추가적인 민병대 조직
+		id = KPD_additional_militia_organization
+		icon = GFX_goal_generic_secret_weapon
+		cost = 5
+		prerequisite = {
+			focus = KPD_declaration_of_emergency_mobilization_order
+		}
+		x = 3
+		y = 2
+		relative_position_id = KPD_anti_trinity_uprising
+		available = {
+		}
+		bypass = {
+			NOT = { has_war_with = TRM }
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_manpower = 280000
+			capital_scope = {
+				create_unit = {
+					division = "name = \"Militia\" division_template = \"Peoples Militia\" start_experience_factor = 0.1 start_equipment_factor = 1"
+					owner = KPD
+					count = 3
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+		}
+	}
+	focus = { #연합최고사령부 해산
+		id = KPD_dissolution_of_joint_supreme_command
+		icon = GFX_focus_GER_establish_volkskommissariats
+		cost = 5
+		prerequisite = {
+			focus = KPD_end_of_trinity
+		}
+		prerequisite = {
+			focus = KPD_temporary_equality_manifesto
+		}
+		prerequisite = {
+			focus = KPD_securing_of_wartime_supplies
+			focus = KPD_additional_militia_organization
+		}
+		x = 5
+		y = 1
+		relative_position_id = KPD_end_of_trinity
+		available = {
+		}
+		bypass = {
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -585,6 +796,105 @@ focus_tree = {
 				}
 			}
 			set_cosmetic_tag = TRM_collapse_win
+		}
+	}
+	focus = { #연합최고사령부 해산
+		id = KPD_dissolution_of_joint_supreme_command
+		icon = GFX_focus_GER_establish_volkskommissariats
+		cost = 5
+		prerequisite = {
+			focus = KPD_end_of_trinity
+		}
+		prerequisite = {
+			focus = KPD_temporary_equality_manifesto
+		}
+		prerequisite = {
+			focus = KPD_securing_of_wartime_supplies
+			focus = KPD_additional_militia_organization
+		}
+		x = 5
+		y = 1
+		relative_position_id = KPD_end_of_trinity
+		available = {
+		}
+		bypass = {
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_political_power = 120
+			hidden_effect = {
+				country_event = {
+					id = KPD_event.13
+					days = 10
+				}
+			}
+			set_cosmetic_tag = TRM_collapse_win
+		}
+	}
+	focus = { #산업 국유화
+		id = KPD_nationalization_of_industries
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10
+		prerequisite = {
+			focus = KPD_dissolution_of_joint_supreme_command
+		}
+		mutually_exclusive = {
+			focus = KPD_establishment_of_factory_councils
+		}
+		x = -3
+		y = 1
+		relative_position_id = KPD_dissolution_of_joint_supreme_command
+		available = {
+			has_political_power > 200
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		cancelable = no
+		select_effect = {
+			add_political_power = -200
+		}
+		completion_reward = {
+			custom_effect_tooltip = SOV_focus_select_effect_tt
+			effect_tooltip = {
+				add_political_power = -200
+			}
+			custom_effect_tooltip = SOV_focus_complete_effect_tt
+			remove_ideas = KPD_economic_vacuum
+		}
+	}
+	focus = { #공장위원회 설치
+		id = KPD_establishment_of_factory_councils
+		icon = GFX_focus_FIN_socialist_welfare
+		cost = 5
+		prerequisite = {
+			focus = KPD_dissolution_of_joint_supreme_command
+		}
+		mutually_exclusive = {
+			focus = KPD_nationalization_of_industries
+		}
+		x = -1
+		y = 1
+		relative_position_id = KPD_dissolution_of_joint_supreme_command
+		available = {
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = KPD_economic_vacuum
+				add_idea = KPD_factory_councils
+			}
+			hidden_effect = {
+				country_event = { id = KPD_event.14 days = 70 }
+				country_event = { id = KPD_event.15 days = 140 }
+				country_event = { id = KPD_event.16 days = 210 }
+			}
 		}
 	}
 }

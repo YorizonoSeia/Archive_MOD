@@ -27,32 +27,35 @@ technologies = {
 				set_variable = { ROOT.halo_infantry_cap = 0 } # 사단 제한, 헤일로 보병의 사단 제한과 같아야 함'
 				if = {
 					limit = {
-						NOT = { has_template = "Halo Infantry Division" }
+						has_template = "Halo Infantry Division"
 					}
+					delete_unit_template_and_units = {
+						division_template = "Halo Infantry Division"
+					}
+				}
 					
-					division_template = {
-						name = "Halo Infantry Division"		
-						division_names_group = BA_HAL_01
-						is_locked = yes
-						force_allow_recruiting = yes
-						division_cap = 0
-						regiments = {
-							halo_infantry = { x = 0 y = 0 }
-							halo_infantry = { x = 0 y = 1 }
-							halo_infantry = { x = 0 y = 2 }
-							halo_infantry = { x = 1 y = 0 }
-							halo_infantry = { x = 1 y = 1 }
-							halo_infantry = { x = 1 y = 2 }
-							halo_infantry = { x = 2 y = 0 }
-							halo_infantry = { x = 2 y = 1 }
-							halo_infantry = { x = 2 y = 2 }
-						}
-						support = {
-							halo_recon = { x = 0 y = 0 }
-							engineer = { x = 0 y = 1 }
-							artillery = { x = 0 y = 2 }
-							anti_air = { x = 0 y = 3 }
-						}
+				division_template = {
+					name = "Halo Infantry Division"		
+					division_names_group = BA_HAL_01
+					is_locked = yes
+					force_allow_recruiting = yes
+					division_cap = 0
+					regiments = {
+						halo_infantry = { x = 0 y = 0 }
+						halo_infantry = { x = 0 y = 1 }
+						halo_infantry = { x = 0 y = 2 }
+						halo_infantry = { x = 1 y = 0 }
+						halo_infantry = { x = 1 y = 1 }
+						halo_infantry = { x = 1 y = 2 }
+						halo_infantry = { x = 2 y = 0 }
+						halo_infantry = { x = 2 y = 1 }
+						halo_infantry = { x = 2 y = 2 }
+					}
+					support = {
+						halo_recon = { x = 0 y = 0 }
+						engineer = { x = 0 y = 1 }
+						artillery = { x = 0 y = 2 }
+						anti_air = { x = 0 y = 3 }
 					}
 				}
 				set_variable = { BA_halo_infantry_cap_edit_var = 6 }

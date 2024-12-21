@@ -608,7 +608,10 @@ country_event = { #연합 분열
 	is_triggered_only = yes
 	option = {
 		name = KPD_event.13.a
-		add_ideas = KPD_coalition_split_accelerates
+		swap_ideas = {
+			remove_idea = KPD_conflict_with_the_social_democratic_left
+			add_idea = KPD_coalition_split_accelerates
+		}
 	}
 }
 
