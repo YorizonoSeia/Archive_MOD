@@ -1,6 +1,10 @@
 TRN_country_collapse_decisions = {
 	allowed = {
-		tag = TRM
+		OR = { 
+			tag = KPD
+			tag = NSD
+			tag = TRM
+		}
 		NOT = { has_country_flag = ARI_puppet_state }
 	}
 	visible = {

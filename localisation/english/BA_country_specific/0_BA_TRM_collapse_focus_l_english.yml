@@ -177,6 +177,26 @@
  TRM_urban_search_operations_KPD: "작전 : 시가지 수색"
  TRM_start_KPD_flag: "다른 작전이 진행중임"
 
+ TRM_commencement_of_anti_terrorism_operations_NSD: "작전 : 대테러 소탕"
+ TRM_reinforcement_of_guard_forces_NSD: "작전 : 정의실현부 추가 배치"
+ TRM_urban_search_operations_NSD: "작전 : 나치 당원 체포"
+ TRM_start_NSD_flag: "다른 작전이 진행중임"
+
+ TRM_operation_outcome_NSD: "@NSD 작전 실행 중"
+ TRM_impending_operation_NSD: "임박한 독일인의 투쟁"
+ NSD_drafting_of_counterinsurgency_plan_NSD: "작전 : 트리니티 수색조 파괴"
+ NSD_bombing_of_administrative_buildings_NSD: "작전 : 본부 기습"
+ NSD_expansion_of_influence_NSD: "작전 : 민간인 모병"
+
+ TRM_operation_outcome_KPD: "@KPD 작전 실행 중"
+ TRM_impending_operation_KPD: "임박한 대트리니티 작전"
+ KPD_drafting_of_counterinsurgency_plan_KPD: "작전 : 반소탕전"
+ KPD_bombing_of_administrative_buildings_KPD: "작전 : 행정 청사 공격"
+ KPD_expansion_of_influence_KPD: "작전: 민간 영향력 확대"
+
+ KPD_start_KPD_flag: "이미 작전을 입안함"
+ NSD_start_NSD_flag: "이미 작전을 입안함"
+
  TRN_collapse_event.11.t: "트리니티의 작전 성공"
  TRN_collapse_event.12.t: "무력화된 작전"
  TRN_collapse_event.13.t: "독일 유격대의 작전 성공"

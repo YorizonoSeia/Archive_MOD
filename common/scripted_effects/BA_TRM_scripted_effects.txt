@@ -1,6 +1,98 @@
 TRM_debug_kpd_effect = {
-	set_variable = { global.KPD_country_collapse_decisions_value = 18 }
-	set_variable = { global.NSD_country_collapse_decisions_value = 33 }
+	set_variable = { TRM_anti_trinity_game_KPD_side_TRM_var = global.TRM_KPD_country_collapse_decisions_rps }
+	set_variable = { TRM_anti_trinity_game_KPD_side_KPD_var = global.KPD_country_collapse_decisions_rps }
+	hidden_effect = {
+		if = { # 비김
+			limit = {
+				check_variable = {
+					global.TRM_KPD_country_collapse_decisions_rps = global.KPD_country_collapse_decisions_rps
+				}
+			}
+			country_event = { id = TRN_collapse_event.12 days = 3 }
+		}
+		else_if = { # 가위 vs 바위 저항군 승
+			limit = {
+				check_variable = {
+					global.TRM_KPD_country_collapse_decisions_rps = 2
+				} 
+				check_variable = {
+					global.KPD_country_collapse_decisions_rps = 3
+				}
+			}
+			country_event = { id = TRN_collapse_event.13 days = 3 }
+		}
+		else_if = { # 가위 vs 보 트리니티 승
+			limit = {
+				check_variable = {
+					global.TRM_KPD_country_collapse_decisions_rps = 2
+				} 
+				check_variable = {
+					global.KPD_country_collapse_decisions_rps = 4
+				}
+			}
+			country_event = { id = TRN_collapse_event.12 days = 3 }
+		}
+		else_if = { # 바위 vs 가위 트리니티 승
+			limit = {
+				check_variable = {
+					global.TRM_KPD_country_collapse_decisions_rps = 3
+				} 
+				check_variable = {
+					global.KPD_country_collapse_decisions_rps = 2
+				}
+			}
+			country_event = { id = TRN_collapse_event.12 days = 3 }
+		}
+		else_if = { # 바위 vs 보 저항군 승
+			limit = {
+				check_variable = {
+					global.TRM_KPD_country_collapse_decisions_rps = 3
+				} 
+				check_variable = {
+					global.KPD_country_collapse_decisions_rps = 4
+				}
+			}
+			country_event = { id = TRN_collapse_event.13 days = 3 }
+		}
+		else_if = { # 보 vs 가위 저항군 승
+			limit = {
+				check_variable = {
+					global.TRM_KPD_country_collapse_decisions_rps = 4
+				} 
+				check_variable = {
+					global.KPD_country_collapse_decisions_rps = 2
+				}
+			}
+			country_event = { id = TRN_collapse_event.13 days = 3 }
+		}
+		else_if = { # 보 vs 바위 트리니티 승
+			limit = {
+				check_variable = {
+					global.TRM_KPD_country_collapse_decisions_rps = 4
+				} 
+				check_variable = {
+					global.KPD_country_collapse_decisions_rps = 3
+				}
+			}
+			country_event = { id = TRN_collapse_event.12 days = 3 }
+		}
+		else_if = { # 안내면 진거 트리니티
+			limit = {
+				check_variable = {
+					global.TRM_KPD_country_collapse_decisions_rps = 0
+				}
+			}
+			country_event = { id = TRN_collapse_event.13 days = 3 }
+		}
+		else_if = { # 안내면 진거 저항군
+			limit = {
+				check_variable = {
+					global.KPD_country_collapse_decisions_rps = 0
+				}
+			}
+			country_event = { id = TRN_collapse_event.12 days = 3 }
+		}
+	}
 }
 TRM_debug_kpd_effect2 = {
 	random_army_leader = {

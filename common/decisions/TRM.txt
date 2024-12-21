@@ -16,7 +16,7 @@ TRN_country_collapse_decisions = {
 		cost = 150
 
 		ai_will_do = {
-			base = 4000
+			base = 0
 		}
 
 		complete_effect = {
@@ -121,7 +121,7 @@ TRN_country_collapse_decisions = {
 		cost = 200
 
 		ai_will_do = {
-			base = 4000
+			base = 2
 		}
 
 		complete_effect = {
@@ -157,7 +157,7 @@ TRN_country_collapse_decisions = {
 		cost = 200
 
 		ai_will_do = {
-			base = 4000
+			base = 2
 		}
 
 		complete_effect = {
@@ -243,7 +243,7 @@ TRN_country_collapse_decisions = {
 			set_global_flag = TRM_search_for_NSD_flag
         }
 	}
-	TRM_commencement_of_anti_terrorism_operations_KPD = {
+	TRM_commencement_of_anti_terrorism_operations_KPD = { # TRM = 가위 : KPD
 		icon = GFX_decision_generic_prepare_civil_war
 		
 		targets = { KPD }
@@ -255,35 +255,62 @@ TRN_country_collapse_decisions = {
 		visible = {
 			NOT = { has_global_flag = TRN_country_collapse_decisions_end_flag }
 			has_war_with = KPD
-			NOT = { has_global_flag = TRM_search_for_KPD_flag }
 		}
 		available = {
 			NOT = { has_country_flag = TRM_start_KPD_flag }
 		}
-		custom_cost_text = decision_cost_ie_1000
+		custom_cost_text = decision_cost_ie_500
 		
-		fire_only_once = yes
+		fire_only_once = no
 
 		custom_cost_trigger = {
-			has_equipment = { infantry_equipment > 999 }
+			has_equipment = { infantry_equipment > 499 }
 		}
 
 		ai_will_do = {
-			base = 4000
+			base = 1000
+			modifier = {
+				has_country_flag = TRM_ai_guid_KPD_2_flag
+				factor = 0.1
+			}
+			modifier = {
+				has_country_flag = TRM_ai_guid_KPD_2_go_flag
+				factor = 10
+			}
 		}
 
 		complete_effect = {
+			set_variable = { global.TRM_KPD_country_collapse_decisions_rps = 2 }
+			set_variable = { TRM_anti_trinity_game_KPD_side_TRM_var = 2 }
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
-				amount = -1000
+				amount = -500
 			}
 			set_country_flag = {
 				flag = TRM_start_KPD_flag
-				days = 70
+				days = 80
+				value = 1
+			}
+			if = {
+				limit = { NOT = { has_active_mission = TRM_operation_outcome_KPD } }
+				FROM = {
+					activate_mission = TRM_impending_operation_KPD
+				}
+				activate_mission = TRM_operation_outcome_KPD
+			}
+			set_country_flag = {
+				flag = TRM_ai_guid_KPD_2_flag
+				days = 180
+				value = 1
+			}
+			random_list = {
+				1 = { set_country_flag = { flag = TRM_ai_guid_KPD_2_go_flag days = 100 value = 1 } }
+				1 = { set_country_flag = { flag = TRM_ai_guid_KPD_3_go_flag days = 100 value = 1 } }
+				1 = { set_country_flag = { flag = TRM_ai_guid_KPD_4_go_flag days = 100 value = 1 } }
 			}
         }
 	}
-	TRM_reinforcement_of_guard_forces_KPD = {
+	TRM_reinforcement_of_guard_forces_KPD = { # TRM = 바위 : KPD
 		icon = GFX_decision_generic_prepare_civil_war
 		
 		targets = { KPD }
@@ -295,35 +322,62 @@ TRN_country_collapse_decisions = {
 		visible = {
 			NOT = { has_global_flag = TRN_country_collapse_decisions_end_flag }
 			has_war_with = KPD
-			NOT = { has_global_flag = TRM_search_for_KPD_flag }
 		}
 		available = {
 			NOT = { has_country_flag = TRM_start_KPD_flag }
 		}
-		custom_cost_text = decision_cost_ie_1000
+		custom_cost_text = decision_cost_ie_500
 		
-		fire_only_once = yes
+		fire_only_once = no
 
 		custom_cost_trigger = {
-			has_equipment = { infantry_equipment > 999 }
+			has_equipment = { infantry_equipment > 499 }
 		}
 
 		ai_will_do = {
-			base = 4000
+			base = 1000
+			modifier = {
+				has_country_flag = TRM_ai_guid_KPD_3_flag
+				factor = 0.1
+			}
+			modifier = {
+				has_country_flag = TRM_ai_guid_KPD_3_go_flag
+				factor = 10
+			}
 		}
 
 		complete_effect = {
+			set_variable = { global.TRM_KPD_country_collapse_decisions_rps = 3 }
+			set_variable = { TRM_anti_trinity_game_KPD_side_TRM_var = 3 }
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
-				amount = -1000
+				amount = -500
 			}
 			set_country_flag = {
 				flag = TRM_start_KPD_flag
-				days = 70
+				days = 80
+				value = 1
+			}
+			if = {
+				limit = { NOT = { has_active_mission = TRM_operation_outcome_KPD } }
+				FROM = {
+					activate_mission = TRM_impending_operation_KPD
+				}
+				activate_mission = TRM_operation_outcome_KPD
+			}
+			set_country_flag = {
+				flag = TRM_ai_guid_KPD_3_flag
+				days = 180
+				value = 1
+			}
+			random_list = {
+				1 = { set_country_flag = { flag = TRM_ai_guid_KPD_2_go_flag days = 100 value = 1 } }
+				1 = { set_country_flag = { flag = TRM_ai_guid_KPD_3_go_flag days = 100 value = 1 } }
+				1 = { set_country_flag = { flag = TRM_ai_guid_KPD_4_go_flag days = 100 value = 1 } }
 			}
         }
 	}
-	TRM_urban_search_operations_KPD = {
+	TRM_urban_search_operations_KPD = { # TRM = 보 : KPD
 		icon = GFX_decision_generic_prepare_civil_war
 		
 		targets = { KPD }
@@ -335,31 +389,1151 @@ TRN_country_collapse_decisions = {
 		visible = {
 			NOT = { has_global_flag = TRN_country_collapse_decisions_end_flag }
 			has_war_with = KPD
-			NOT = { has_global_flag = TRM_search_for_KPD_flag }
 		}
 		available = {
 			NOT = { has_country_flag = TRM_start_KPD_flag }
 		}
-		custom_cost_text = decision_cost_ie_1000
+		custom_cost_text = decision_cost_ie_500
 		
-		fire_only_once = yes
+		fire_only_once = no
 
 		custom_cost_trigger = {
-			has_equipment = { infantry_equipment > 999 }
+			has_equipment = { infantry_equipment > 499 }
 		}
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				has_country_flag = TRM_ai_guid_KPD_4_flag
+				factor = 0.1
+			}
+			modifier = {
+				has_country_flag = TRM_ai_guid_KPD_4_go_flag
+				factor = 10
+			}
+		}
+
+		complete_effect = {
+			set_variable = { global.TRM_KPD_country_collapse_decisions_rps = 4 }
+			set_variable = { TRM_anti_trinity_game_KPD_side_TRM_var = 4 }
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+			}
+			set_country_flag = {
+				flag = TRM_start_KPD_flag
+				days = 80
+				value = 1
+			}
+			if = {
+				limit = { NOT = { has_active_mission = TRM_operation_outcome_KPD } }
+				FROM = {
+					activate_mission = TRM_impending_operation_KPD
+				}
+				activate_mission = TRM_operation_outcome_KPD
+			}
+			set_country_flag = {
+				flag = TRM_ai_guid_KPD_4_flag
+				days = 180
+				value = 1
+			}
+			random_list = {
+				1 = { set_country_flag = { flag = TRM_ai_guid_KPD_2_go_flag days = 100 value = 1 } }
+				1 = { set_country_flag = { flag = TRM_ai_guid_KPD_3_go_flag days = 100 value = 1 } }
+				1 = { set_country_flag = { flag = TRM_ai_guid_KPD_4_go_flag days = 100 value = 1 } }
+			}
+        }
+	}
+	TRM_operation_outcome_KPD = { # 트리니티 측 완료용 타이머
+		icon = GFX_decision_generic_prepare_civil_war
+		
+		allowed = {
+			original_tag = TRM
+		}
+
+		activation = {
+			always = no
+		}
+
+		is_good = no
+
+		days_mission_timeout = 70
+
+		available = {
+			always = no
+		}
+
+		timeout_effect = {
+			set_variable = { TRM_anti_trinity_game_KPD_side_TRM_var = global.TRM_KPD_country_collapse_decisions_rps }
+			set_variable = { TRM_anti_trinity_game_KPD_side_KPD_var = global.KPD_country_collapse_decisions_rps }
+			hidden_effect = {
+				if = { # 비김
+					limit = {
+						check_variable = {
+							global.TRM_KPD_country_collapse_decisions_rps = global.KPD_country_collapse_decisions_rps
+						}
+					}
+					country_event = { id = TRN_collapse_event.12 days = 3 }
+				}
+				else_if = { # 가위 vs 바위 저항군 승
+					limit = {
+						check_variable = {
+							global.TRM_KPD_country_collapse_decisions_rps = 2
+						} 
+						check_variable = {
+							global.KPD_country_collapse_decisions_rps = 3
+						}
+					}
+					country_event = { id = TRN_collapse_event.13 days = 3 }
+				}
+				else_if = { # 가위 vs 보 트리니티 승
+					limit = {
+						check_variable = {
+							global.TRM_KPD_country_collapse_decisions_rps = 2
+						} 
+						check_variable = {
+							global.KPD_country_collapse_decisions_rps = 4
+						}
+					}
+					country_event = { id = TRN_collapse_event.11 days = 3 }
+				}
+				else_if = { # 바위 vs 가위 트리니티 승
+					limit = {
+						check_variable = {
+							global.TRM_KPD_country_collapse_decisions_rps = 3
+						} 
+						check_variable = {
+							global.KPD_country_collapse_decisions_rps = 2
+						}
+					}
+					country_event = { id = TRN_collapse_event.11 days = 3 }
+				}
+				else_if = { # 바위 vs 보 저항군 승
+					limit = {
+						check_variable = {
+							global.TRM_KPD_country_collapse_decisions_rps = 3
+						} 
+						check_variable = {
+							global.KPD_country_collapse_decisions_rps = 4
+						}
+					}
+					country_event = { id = TRN_collapse_event.13 days = 3 }
+				}
+				else_if = { # 보 vs 가위 저항군 승
+					limit = {
+						check_variable = {
+							global.TRM_KPD_country_collapse_decisions_rps = 4
+						} 
+						check_variable = {
+							global.KPD_country_collapse_decisions_rps = 2
+						}
+					}
+					country_event = { id = TRN_collapse_event.13 days = 3 }
+				}
+				else_if = { # 보 vs 바위 트리니티 승
+					limit = {
+						check_variable = {
+							global.TRM_KPD_country_collapse_decisions_rps = 4
+						} 
+						check_variable = {
+							global.KPD_country_collapse_decisions_rps = 3
+						}
+					}
+					country_event = { id = TRN_collapse_event.11 days = 3 }
+				}
+				else_if = { # 안내면 진거 트리니티
+					limit = {
+						check_variable = {
+							global.TRM_KPD_country_collapse_decisions_rps = 0
+						}
+					}
+					country_event = { id = TRN_collapse_event.13 days = 3 }
+				}
+				else_if = { # 안내면 진거 저항군
+					limit = {
+						check_variable = {
+							global.KPD_country_collapse_decisions_rps = 0
+						}
+					}
+					country_event = { id = TRN_collapse_event.11 days = 3 }
+				}
+			}
+		}
+
+		fire_only_once = no
 
 		ai_will_do = {
 			base = 4000
 		}
+	}
+	TRM_impending_operation_KPD = { # 저항군 측 완료용 타이머
+		icon = GFX_decision_generic_prepare_civil_war
+		
+		allowed = {
+			original_tag = KPD
+		}
+
+		activation = {
+			always = no
+		}
+
+		is_good = no
+
+		days_mission_timeout = 70
+
+		available = {
+			always = no
+		}
+
+		timeout_effect = {
+			set_variable = { TRM_anti_trinity_game_KPD_side_TRM_var = global.TRM_KPD_country_collapse_decisions_rps }
+			set_variable = { TRM_anti_trinity_game_KPD_side_KPD_var = global.KPD_country_collapse_decisions_rps }
+			hidden_effect = {
+				if = { # 비김
+					limit = {
+						check_variable = {
+							global.TRM_KPD_country_collapse_decisions_rps = global.KPD_country_collapse_decisions_rps
+						}
+					}
+					country_event = { id = TRN_collapse_event.12 days = 3 }
+				}
+				else_if = { # 가위 vs 바위 저항군 승
+					limit = {
+						check_variable = {
+							global.TRM_KPD_country_collapse_decisions_rps = 2
+						} 
+						check_variable = {
+							global.KPD_country_collapse_decisions_rps = 3
+						}
+					}
+					country_event = { id = TRN_collapse_event.13 days = 3 }
+				}
+				else_if = { # 가위 vs 보 트리니티 승
+					limit = {
+						check_variable = {
+							global.TRM_KPD_country_collapse_decisions_rps = 2
+						} 
+						check_variable = {
+							global.KPD_country_collapse_decisions_rps = 4
+						}
+					}
+					country_event = { id = TRN_collapse_event.11 days = 3 }
+				}
+				else_if = { # 바위 vs 가위 트리니티 승
+					limit = {
+						check_variable = {
+							global.TRM_KPD_country_collapse_decisions_rps = 3
+						} 
+						check_variable = {
+							global.KPD_country_collapse_decisions_rps = 2
+						}
+					}
+					country_event = { id = TRN_collapse_event.11 days = 3 }
+				}
+				else_if = { # 바위 vs 보 저항군 승
+					limit = {
+						check_variable = {
+							global.TRM_KPD_country_collapse_decisions_rps = 3
+						} 
+						check_variable = {
+							global.KPD_country_collapse_decisions_rps = 4
+						}
+					}
+					country_event = { id = TRN_collapse_event.13 days = 3 }
+				}
+				else_if = { # 보 vs 가위 저항군 승
+					limit = {
+						check_variable = {
+							global.TRM_KPD_country_collapse_decisions_rps = 4
+						} 
+						check_variable = {
+							global.KPD_country_collapse_decisions_rps = 2
+						}
+					}
+					country_event = { id = TRN_collapse_event.13 days = 3 }
+				}
+				else_if = { # 보 vs 바위 트리니티 승
+					limit = {
+						check_variable = {
+							global.TRM_KPD_country_collapse_decisions_rps = 4
+						} 
+						check_variable = {
+							global.KPD_country_collapse_decisions_rps = 3
+						}
+					}
+					country_event = { id = TRN_collapse_event.11 days = 3 }
+				}
+				else_if = { # 안내면 진거 트리니티
+					limit = {
+						check_variable = {
+							global.TRM_KPD_country_collapse_decisions_rps = 0
+						}
+					}
+					country_event = { id = TRN_collapse_event.13 days = 3 }
+				}
+				else_if = { # 안내면 진거 저항군
+					limit = {
+						check_variable = {
+							global.KPD_country_collapse_decisions_rps = 0
+						}
+					}
+					country_event = { id = TRN_collapse_event.11 days = 3 }
+				}
+			}
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+			base = 4000
+		}
+	}
+	KPD_drafting_of_counterinsurgency_plan_KPD = { # KPD = 가위
+		icon = GFX_decision_generic_prepare_civil_war
+		
+		targets = { TRM }
+
+		allowed = {
+			original_tag = KPD
+		}
+		
+		visible = {
+			NOT = { has_global_flag = TRN_country_collapse_decisions_end_flag }
+			has_war_with = TRM
+		}
+		available = {
+			NOT = { has_country_flag = KPD_start_KPD_flag }
+		}
+		custom_cost_text = decision_cost_ie_500
+		
+		fire_only_once = no
+
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 499 }
+		}
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				has_country_flag = KPD_ai_guid_2_flag
+				factor = 0.1
+			}
+			modifier = {
+				has_country_flag = KPD_ai_guid_2_go_flag
+				factor = 10
+			}
+		}
 
 		complete_effect = {
+			set_variable = { global.KPD_country_collapse_decisions_rps = 2 }
+			set_variable = { TRM_anti_trinity_game_KPD_side_KPD_var = 2 }
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
-				amount = -1000
+				amount = -500
 			}
 			set_country_flag = {
-				flag = TRM_start_KPD_flag
-				days = 70
+				flag = KPD_start_KPD_flag
+				days = 80
+				value = 1
+			}
+			if = {
+				limit = { NOT = { has_active_mission = TRM_impending_operation_KPD } }
+				FROM = {
+					activate_mission = TRM_operation_outcome_KPD
+				}
+				activate_mission = TRM_impending_operation_KPD
+			}
+			set_country_flag = {
+				flag = KPD_ai_guid_2_flag
+				days = 180
+				value = 1
+			}
+			random_list = {
+				1 = { set_country_flag = { flag = KPD_ai_guid_2_go_flag days = 100 value = 1 } }
+				1 = { set_country_flag = { flag = KPD_ai_guid_3_go_flag days = 100 value = 1 } }
+				1 = { set_country_flag = { flag = KPD_ai_guid_4_go_flag days = 100 value = 1 } }
+			}
+        }
+	}
+	KPD_bombing_of_administrative_buildings_KPD = { # KPD = 바위
+		icon = GFX_decision_generic_prepare_civil_war
+		
+		targets = { TRM }
+
+		allowed = {
+			original_tag = KPD
+		}
+		
+		visible = {
+			NOT = { has_global_flag = TRN_country_collapse_decisions_end_flag }
+			has_war_with = TRM
+		}
+		available = {
+			NOT = { has_country_flag = KPD_start_KPD_flag }
+		}
+		custom_cost_text = decision_cost_ie_500
+		
+		fire_only_once = no
+
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 499 }
+		}
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				has_country_flag = KPD_ai_guid_3_flag
+				factor = 0.1
+			}
+			modifier = {
+				has_country_flag = KPD_ai_guid_3_go_flag
+				factor = 10
+			}
+		}
+
+		complete_effect = {
+			set_variable = { global.KPD_country_collapse_decisions_rps = 3 }
+			set_variable = { TRM_anti_trinity_game_KPD_side_KPD_var = 3 }
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+			}
+			set_country_flag = {
+				flag = KPD_start_KPD_flag
+				days = 80
+				value = 1
+			}
+			if = {
+				limit = { NOT = { has_active_mission = TRM_impending_operation_KPD } }
+				FROM = {
+					activate_mission = TRM_operation_outcome_KPD
+				}
+				activate_mission = TRM_impending_operation_KPD
+			}
+			set_country_flag = {
+				flag = KPD_ai_guid_3_flag
+				days = 180
+				value = 1
+			}
+			random_list = {
+				1 = { set_country_flag = { flag = KPD_ai_guid_2_go_flag days = 100 value = 1 } }
+				1 = { set_country_flag = { flag = KPD_ai_guid_3_go_flag days = 100 value = 1 } }
+				1 = { set_country_flag = { flag = KPD_ai_guid_4_go_flag days = 100 value = 1 } }
+			}
+        }
+	}
+	KPD_expansion_of_influence_KPD = { # KPD = 보
+		icon = GFX_decision_generic_prepare_civil_war
+		
+		targets = { TRM }
+
+		allowed = {
+			original_tag = KPD
+		}
+		
+		visible = {
+			NOT = { has_global_flag = TRN_country_collapse_decisions_end_flag }
+			has_war_with = TRM
+		}
+		available = {
+			NOT = { has_country_flag = KPD_start_KPD_flag }
+		}
+		custom_cost_text = decision_cost_ie_500
+		
+		fire_only_once = no
+
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 499 }
+		}
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				has_country_flag = KPD_ai_guid_4_flag
+				factor = 0.1
+			}
+			modifier = {
+				has_country_flag = KPD_ai_guid_4_go_flag
+				factor = 10
+			}
+		}
+
+		complete_effect = {
+
+			set_variable = { global.KPD_country_collapse_decisions_rps = 4 }
+			set_variable = { TRM_anti_trinity_game_KPD_side_KPD_var = 4 }
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+			}
+			set_country_flag = {
+				flag = KPD_start_KPD_flag
+				days = 80
+				value = 1
+			}
+			if = {
+				limit = { NOT = { has_active_mission = TRM_impending_operation_KPD } }
+				FROM = {
+					activate_mission = TRM_operation_outcome_KPD
+				}
+				activate_mission = TRM_impending_operation_KPD
+			}
+			set_country_flag = {
+				flag = KPD_ai_guid_4_flag
+				days = 180
+				value = 1
+			}
+			random_list = {
+				1 = { set_country_flag = { flag = KPD_ai_guid_2_go_flag days = 100 value = 1 } }
+				1 = { set_country_flag = { flag = KPD_ai_guid_3_go_flag days = 100 value = 1 } }
+				1 = { set_country_flag = { flag = KPD_ai_guid_4_go_flag days = 100 value = 1 } }
+			}
+        }
+	}
+	TRM_commencement_of_anti_terrorism_operations_NSD = { # TRM = 가위 : NSD
+		icon = GFX_decision_generic_prepare_civil_war
+		
+		targets = { NSD }
+
+		allowed = {
+			original_tag = TRM
+		}
+		
+		visible = {
+			NOT = { has_global_flag = TRN_country_collapse_decisions_end_flag }
+			has_war_with = NSD
+		}
+		available = {
+			NOT = { has_country_flag = TRM_start_NSD_flag }
+		}
+		custom_cost_text = decision_cost_ie_500
+		
+		fire_only_once = no
+
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 499 }
+		}
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				has_country_flag = TRM_ai_guid_NSD_2_flag
+				factor = 0.1
+			}
+			modifier = {
+				has_country_flag = TRM_ai_guid_NSD_2_go_flag
+				factor = 10
+			}
+		}
+
+		complete_effect = {
+			set_variable = { global.TRM_NSD_country_collapse_decisions_rps = 2 }
+			set_variable = { TRM_anti_trinity_game_NSD_side_TRM_var = 2 }
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+			}
+			set_country_flag = {
+				flag = TRM_start_NSD_flag
+				days = 80
+				value = 1
+			}
+			if = {
+				limit = { NOT = { has_active_mission = TRM_operation_outcome_NSD } }
+				FROM = {
+					activate_mission = TRM_impending_operation_NSD
+				}
+				activate_mission = TRM_operation_outcome_NSD
+			}
+			set_country_flag = {
+				flag = TRM_ai_guid_NSD_2_flag
+				days = 180
+				value = 1
+			}
+			random_list = {
+				1 = { set_country_flag = { flag = TRM_ai_guid_NSD_2_go_flag days = 100 value = 1 } }
+				1 = { set_country_flag = { flag = TRM_ai_guid_NSD_3_go_flag days = 100 value = 1 } }
+				1 = { set_country_flag = { flag = TRM_ai_guid_NSD_4_go_flag days = 100 value = 1 } }
+			}
+        }
+	}
+	TRM_reinforcement_of_guard_forces_NSD = { # TRM = 바위 : NSD
+		icon = GFX_decision_generic_prepare_civil_war
+		
+		targets = { NSD }
+		
+		allowed = {
+			original_tag = TRM
+		}
+		
+		visible = {
+			NOT = { has_global_flag = TRN_country_collapse_decisions_end_flag }
+			has_war_with = NSD
+		}
+		available = {
+			NOT = { has_country_flag = TRM_start_NSD_flag }
+		}
+		custom_cost_text = decision_cost_ie_500
+		
+		fire_only_once = no
+
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 499 }
+		}
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				has_country_flag = TRM_ai_guid_NSD_3_flag
+				factor = 0.1
+			}
+			modifier = {
+				has_country_flag = TRM_ai_guid_NSD_3_go_flag
+				factor = 10
+			}
+		}
+
+		complete_effect = {
+			set_variable = { global.TRM_NSD_country_collapse_decisions_rps = 3 }
+			set_variable = { TRM_anti_trinity_game_NSD_side_TRM_var = 3 }
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+			}
+			set_country_flag = {
+				flag = TRM_start_NSD_flag
+				days = 80
+				value = 1
+			}
+			if = {
+				limit = { NOT = { has_active_mission = TRM_operation_outcome_NSD } }
+				FROM = {
+					activate_mission = TRM_impending_operation_NSD
+				}
+				activate_mission = TRM_operation_outcome_NSD
+			}
+			set_country_flag = {
+				flag = TRM_ai_guid_NSD_3_flag
+				days = 180
+				value = 1
+			}
+			random_list = {
+				1 = { set_country_flag = { flag = TRM_ai_guid_NSD_2_go_flag days = 100 value = 1 } }
+				1 = { set_country_flag = { flag = TRM_ai_guid_NSD_3_go_flag days = 100 value = 1 } }
+				1 = { set_country_flag = { flag = TRM_ai_guid_NSD_4_go_flag days = 100 value = 1 } }
+			}
+        }
+	}
+	TRM_urban_search_operations_NSD = { # TRM = 보 : NSD
+		icon = GFX_decision_generic_prepare_civil_war
+		
+		targets = { NSD }
+		
+		allowed = {
+			original_tag = TRM
+		}
+		
+		visible = {
+			NOT = { has_global_flag = TRN_country_collapse_decisions_end_flag }
+			has_war_with = NSD
+		}
+		available = {
+			NOT = { has_country_flag = TRM_start_NSD_flag }
+		}
+		custom_cost_text = decision_cost_ie_500
+		
+		fire_only_once = no
+
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 499 }
+		}
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				has_country_flag = TRM_ai_guid_NSD_4_flag
+				factor = 0.1
+			}
+			modifier = {
+				has_country_flag = TRM_ai_guid_NSD_4_go_flag
+				factor = 10
+			}
+		}
+
+		complete_effect = {
+			set_variable = { global.TRM_NSD_country_collapse_decisions_rps = 4 }
+			set_variable = { TRM_anti_trinity_game_NSD_side_TRM_var = 4 }
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+			}
+			set_country_flag = {
+				flag = TRM_start_NSD_flag
+				days = 80
+				value = 1
+			}
+			if = {
+				limit = { NOT = { has_active_mission = TRM_operation_outcome_NSD } }
+				FROM = {
+					activate_mission = TRM_impending_operation_NSD
+				}
+				activate_mission = TRM_operation_outcome_NSD
+			}
+			set_country_flag = {
+				flag = TRM_ai_guid_NSD_4_flag
+				days = 180
+				value = 1
+			}
+			random_list = {
+				1 = { set_country_flag = { flag = TRM_ai_guid_NSD_2_go_flag days = 100 value = 1 } }
+				1 = { set_country_flag = { flag = TRM_ai_guid_NSD_3_go_flag days = 100 value = 1 } }
+				1 = { set_country_flag = { flag = TRM_ai_guid_NSD_4_go_flag days = 100 value = 1 } }
+			}
+        }
+	}
+	TRM_operation_outcome_NSD = { # 트리니티 측 완료용 타이머
+		icon = GFX_decision_generic_prepare_civil_war
+		
+		allowed = {
+			original_tag = TRM
+		}
+
+		activation = {
+			always = no
+		}
+
+		is_good = no
+
+		days_mission_timeout = 70
+
+		available = {
+			always = no
+		}
+
+		timeout_effect = {
+			set_variable = { TRM_anti_trinity_game_NSD_side_TRM_var = global.TRM_NSD_country_collapse_decisions_rps }
+			set_variable = { TRM_anti_trinity_game_NSD_side_NSD_var = global.NSD_country_collapse_decisions_rps }
+			hidden_effect = {
+				if = { # 비김
+					limit = {
+						check_variable = {
+							global.TRM_NSD_country_collapse_decisions_rps = global.NSD_country_collapse_decisions_rps
+						}
+					}
+					country_event = { id = TRN_collapse_event.21 days = 3 }
+				}
+				else_if = { # 가위 vs 바위 저항군 승
+					limit = {
+						check_variable = {
+							global.TRM_NSD_country_collapse_decisions_rps = 2
+						} 
+						check_variable = {
+							global.NSD_country_collapse_decisions_rps = 3
+						}
+					}
+					country_event = { id = TRN_collapse_event.23 days = 3 }
+				}
+				else_if = { # 가위 vs 보 트리니티 승
+					limit = {
+						check_variable = {
+							global.TRM_NSD_country_collapse_decisions_rps = 2
+						} 
+						check_variable = {
+							global.NSD_country_collapse_decisions_rps = 4
+						}
+					}
+					country_event = { id = TRN_collapse_event.21 days = 3 }
+				}
+				else_if = { # 바위 vs 가위 트리니티 승
+					limit = {
+						check_variable = {
+							global.TRM_NSD_country_collapse_decisions_rps = 3
+						} 
+						check_variable = {
+							global.NSD_country_collapse_decisions_rps = 2
+						}
+					}
+					country_event = { id = TRN_collapse_event.21 days = 3 }
+				}
+				else_if = { # 바위 vs 보 저항군 승
+					limit = {
+						check_variable = {
+							global.TRM_NSD_country_collapse_decisions_rps = 3
+						} 
+						check_variable = {
+							global.NSD_country_collapse_decisions_rps = 4
+						}
+					}
+					country_event = { id = TRN_collapse_event.23 days = 3 }
+				}
+				else_if = { # 보 vs 가위 저항군 승
+					limit = {
+						check_variable = {
+							global.TRM_NSD_country_collapse_decisions_rps = 4
+						} 
+						check_variable = {
+							global.NSD_country_collapse_decisions_rps = 2
+						}
+					}
+					country_event = { id = TRN_collapse_event.23 days = 3 }
+				}
+				else_if = { # 보 vs 바위 트리니티 승
+					limit = {
+						check_variable = {
+							global.TRM_NSD_country_collapse_decisions_rps = 4
+						} 
+						check_variable = {
+							global.NSD_country_collapse_decisions_rps = 3
+						}
+					}
+					country_event = { id = TRN_collapse_event.21 days = 3 }
+				}
+				else_if = { # 안내면 진거 트리니티
+					limit = {
+						check_variable = {
+							global.TRM_NSD_country_collapse_decisions_rps = 0
+						}
+					}
+					country_event = { id = TRN_collapse_event.23 days = 3 }
+				}
+				else_if = { # 안내면 진거 저항군
+					limit = {
+						check_variable = {
+							global.NSD_country_collapse_decisions_rps = 0
+						}
+					}
+					country_event = { id = TRN_collapse_event.21 days = 3 }
+				}
+			}
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+			base = 4000
+		}
+	}
+	TRM_impending_operation_NSD = { # 저항군 측 완료용 타이머
+		icon = GFX_decision_generic_prepare_civil_war
+		
+		allowed = {
+			original_tag = NSD
+		}
+
+		activation = {
+			always = no
+		}
+
+		is_good = no
+
+		days_mission_timeout = 70
+
+		available = {
+			always = no
+		}
+
+		timeout_effect = {
+			set_variable = { TRM_anti_trinity_game_NSD_side_TRM_var = global.TRM_NSD_country_collapse_decisions_rps }
+			set_variable = { TRM_anti_trinity_game_NSD_side_NSD_var = global.NSD_country_collapse_decisions_rps }
+			hidden_effect = {
+				if = { # 비김
+					limit = {
+						check_variable = {
+							global.TRM_NSD_country_collapse_decisions_rps = global.NSD_country_collapse_decisions_rps
+						}
+					}
+					country_event = { id = TRN_collapse_event.21 days = 3 }
+				}
+				else_if = { # 가위 vs 바위 저항군 승
+					limit = {
+						check_variable = {
+							global.TRM_NSD_country_collapse_decisions_rps = 2
+						} 
+						check_variable = {
+							global.NSD_country_collapse_decisions_rps = 3
+						}
+					}
+					country_event = { id = TRN_collapse_event.23 days = 3 }
+				}
+				else_if = { # 가위 vs 보 트리니티 승
+					limit = {
+						check_variable = {
+							global.TRM_NSD_country_collapse_decisions_rps = 2
+						} 
+						check_variable = {
+							global.NSD_country_collapse_decisions_rps = 4
+						}
+					}
+					country_event = { id = TRN_collapse_event.21 days = 3 }
+				}
+				else_if = { # 바위 vs 가위 트리니티 승
+					limit = {
+						check_variable = {
+							global.TRM_NSD_country_collapse_decisions_rps = 3
+						} 
+						check_variable = {
+							global.NSD_country_collapse_decisions_rps = 2
+						}
+					}
+					country_event = { id = TRN_collapse_event.21 days = 3 }
+				}
+				else_if = { # 바위 vs 보 저항군 승
+					limit = {
+						check_variable = {
+							global.TRM_NSD_country_collapse_decisions_rps = 3
+						} 
+						check_variable = {
+							global.NSD_country_collapse_decisions_rps = 4
+						}
+					}
+					country_event = { id = TRN_collapse_event.23 days = 3 }
+				}
+				else_if = { # 보 vs 가위 저항군 승
+					limit = {
+						check_variable = {
+							global.TRM_NSD_country_collapse_decisions_rps = 4
+						} 
+						check_variable = {
+							global.NSD_country_collapse_decisions_rps = 2
+						}
+					}
+					country_event = { id = TRN_collapse_event.23 days = 3 }
+				}
+				else_if = { # 보 vs 바위 트리니티 승
+					limit = {
+						check_variable = {
+							global.TRM_NSD_country_collapse_decisions_rps = 4
+						} 
+						check_variable = {
+							global.NSD_country_collapse_decisions_rps = 3
+						}
+					}
+					country_event = { id = TRN_collapse_event.21 days = 3 }
+				}
+				else_if = { # 안내면 진거 트리니티
+					limit = {
+						check_variable = {
+							global.TRM_NSD_country_collapse_decisions_rps = 0
+						}
+					}
+					country_event = { id = TRN_collapse_event.23 days = 3 }
+				}
+				else_if = { # 안내면 진거 저항군
+					limit = {
+						check_variable = {
+							global.NSD_country_collapse_decisions_rps = 0
+						}
+					}
+					country_event = { id = TRN_collapse_event.21 days = 3 }
+				}
+			}
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+			base = 4000
+		}
+	}
+	NSD_drafting_of_counterinsurgency_plan_NSD = { # NSD = 가위
+		icon = GFX_decision_generic_prepare_civil_war
+		
+		targets = { TRM }
+
+		allowed = {
+			original_tag = NSD
+		}
+		
+		visible = {
+			NOT = { has_global_flag = TRN_country_collapse_decisions_end_flag }
+			has_war_with = TRM
+		}
+		available = {
+			NOT = { has_country_flag = NSD_start_NSD_flag }
+		}
+		custom_cost_text = decision_cost_ie_500
+		
+		fire_only_once = no
+
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 499 }
+		}
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				has_country_flag = NSD_ai_guid_2_flag
+				factor = 0.1
+			}
+			modifier = {
+				has_country_flag = NSD_ai_guid_2_go_flag
+				factor = 10
+			}
+		}
+
+		complete_effect = {
+			set_variable = { global.NSD_country_collapse_decisions_rps = 2 }
+			set_variable = { TRM_anti_trinity_game_NSD_side_NSD_var = 2 }
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+			}
+			set_country_flag = {
+				flag = NSD_start_NSD_flag
+				days = 80
+				value = 1
+			}
+			if = {
+				limit = { NOT = { has_active_mission = TRM_impending_operation_NSD } }
+				FROM = {
+					activate_mission = TRM_operation_outcome_NSD
+				}
+				activate_mission = TRM_impending_operation_NSD
+			}
+			set_country_flag = {
+				flag = NSD_ai_guid_2_flag
+				days = 180
+				value = 1
+			}
+			random_list = {
+				1 = { set_country_flag = { flag = NSD_ai_guid_2_go_flag days = 100 value = 1 } }
+				1 = { set_country_flag = { flag = NSD_ai_guid_3_go_flag days = 100 value = 1 } }
+				1 = { set_country_flag = { flag = NSD_ai_guid_4_go_flag days = 100 value = 1 } }
+			}
+        }
+	}
+	NSD_bombing_of_administrative_buildings_NSD = { # NSD = 바위
+		icon = GFX_decision_generic_prepare_civil_war
+		
+		targets = { TRM }
+
+		allowed = {
+			original_tag = NSD
+		}
+		
+		visible = {
+			NOT = { has_global_flag = TRN_country_collapse_decisions_end_flag }
+			has_war_with = TRM
+		}
+		available = {
+			NOT = { has_country_flag = NSD_start_NSD_flag }
+		}
+		custom_cost_text = decision_cost_ie_500
+		
+		fire_only_once = no
+
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 499 }
+		}
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				has_country_flag = NSD_ai_guid_3_flag
+				factor = 0.1
+			}
+			modifier = {
+				has_country_flag = NSD_ai_guid_3_go_flag
+				factor = 10
+			}
+		}
+
+		complete_effect = {
+			set_variable = { global.NSD_country_collapse_decisions_rps = 3 }
+			set_variable = { TRM_anti_trinity_game_NSD_side_NSD_var = 3 }
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+			}
+			set_country_flag = {
+				flag = NSD_start_NSD_flag
+				days = 80
+				value = 1
+			}
+			if = {
+				limit = { NOT = { has_active_mission = TRM_impending_operation_NSD } }
+				FROM = {
+					activate_mission = TRM_operation_outcome_NSD
+				}
+				activate_mission = TRM_impending_operation_NSD
+			}
+			set_country_flag = {
+				flag = NSD_ai_guid_3_flag
+				days = 180
+				value = 1
+			}
+			random_list = {
+				1 = { set_country_flag = { flag = NSD_ai_guid_2_go_flag days = 100 value = 1 } }
+				1 = { set_country_flag = { flag = NSD_ai_guid_3_go_flag days = 100 value = 1 } }
+				1 = { set_country_flag = { flag = NSD_ai_guid_4_go_flag days = 100 value = 1 } }
+			}
+        }
+	}
+	NSD_expansion_of_influence_NSD = { # NSD = 보
+		icon = GFX_decision_generic_prepare_civil_war
+		
+		targets = { TRM }
+
+		allowed = {
+			original_tag = NSD
+		}
+		
+		visible = {
+			NOT = { has_global_flag = TRN_country_collapse_decisions_end_flag }
+			has_war_with = TRM
+		}
+		available = {
+			NOT = { has_country_flag = NSD_start_NSD_flag }
+		}
+		custom_cost_text = decision_cost_ie_500
+		
+		fire_only_once = no
+
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 499 }
+		}
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				has_country_flag = NSD_ai_guid_4_flag
+				factor = 0.1
+			}
+			modifier = {
+				has_country_flag = NSD_ai_guid_4_go_flag
+				factor = 10
+			}
+		}
+
+		complete_effect = {
+
+			set_variable = { global.NSD_country_collapse_decisions_rps = 4 }
+			set_variable = { TRM_anti_trinity_game_NSD_side_NSD_var = 4 }
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+			}
+			set_country_flag = {
+				flag = NSD_start_NSD_flag
+				days = 80
+				value = 1
+			}
+			if = {
+				limit = { NOT = { has_active_mission = TRM_impending_operation_NSD } }
+				FROM = {
+					activate_mission = TRM_operation_outcome_NSD
+				}
+				activate_mission = TRM_impending_operation_NSD
+			}
+			set_country_flag = {
+				flag = NSD_ai_guid_4_flag
+				days = 180
+				value = 1
+			}
+			random_list = {
+				1 = { set_country_flag = { flag = NSD_ai_guid_2_go_flag days = 100 value = 1 } }
+				1 = { set_country_flag = { flag = NSD_ai_guid_3_go_flag days = 100 value = 1 } }
+				1 = { set_country_flag = { flag = NSD_ai_guid_4_go_flag days = 100 value = 1 } }
 			}
         }
 	}

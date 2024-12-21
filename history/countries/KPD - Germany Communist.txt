@@ -62,9 +62,18 @@ set_variable = { GEK_german_nationalism_army_org_regain = 0.00 }
 
 set_variable = { global.KPD_country_collapse_decisions_value = 18 }
 set_variable = { global.NSD_country_collapse_decisions_value = 33 }
+set_variable = { global.TRM_KPD_country_collapse_decisions_rps = 0 }
+set_variable = { global.TRM_NSD_country_collapse_decisions_rps = 0 }
+set_variable = { global.KPD_country_collapse_decisions_rps = 0 }
+set_variable = { global.NSD_country_collapse_decisions_rps = 0 }
 
 set_popularities = {
 	communism = 100
+}
+
+add_offsite_building = {
+	type = arms_factory
+	level = 5
 }
 		
 set_politics = {
@@ -74,9 +83,19 @@ set_politics = {
 	elections_allowed = no
 }
 
-country_lock_all_division_template = yes
-
 send_embargo = TRM
+
+add_equipment_to_stockpile = {
+	producer = SOV
+	type = infantry_equipment_0
+	amount = 400
+}
+
+random_list = {
+	1 = { set_country_flag = { flag = KPD_ai_guid_2_go_flag days = 100 value = 1 } }
+	1 = { set_country_flag = { flag = KPD_ai_guid_3_go_flag days = 100 value = 1 } }
+	1 = { set_country_flag = { flag = KPD_ai_guid_4_go_flag days = 100 value = 1 } }
+}
 
 declare_war_on = {
 	target = TRM

@@ -1521,22 +1521,7 @@
 			focus = TRM_newfocus_27
 		}
 		available = {
-			if = { limit = { has_global_flag = TRN_collapse_event_proceeding_flag }
-				NOT = {
-					any_country = {
-						NOT = {
-							original_tag = KPD
-							original_tag = NSD
-							original_tag = TRM
-							original_tag = POL
-						}
-						has_war_with = ROOT
-					}
-				}
-			}
-			else = {
-				has_war = no
-			}
+			has_war_with_major = no
 		}
 		ai_will_do = {
 			base = 100
@@ -2110,22 +2095,6 @@
 			focus = TRM_newfocus_27
 		}
 		available = {
-			if = { limit = { has_global_flag = TRN_collapse_event_proceeding_flag }
-				NOT = {
-					any_country = {
-						NOT = {
-							original_tag = KPD
-							original_tag = NSD
-							original_tag = TRM
-							original_tag = POL
-						}
-						has_war_with = ROOT
-					}
-				}
-			}
-			else = {
-				has_war = no
-			}
 		}
 		ai_will_do = {
 			base = 100
@@ -2135,13 +2104,6 @@
 		y = 1
 		completion_reward = {
 			add_war_support = 0.05
-			
-            random_country = {
-				limit = {
-					tag = global.kivotos_alliance_leader
-				}
-				country_event = { id = COU_event.3 hours = 8 }
-			}
 		}
 	}
 	
@@ -2153,7 +2115,7 @@
             focus = TRM_oetzi
         }
 		available = {
-			has_war = no
+			has_war_with_major = no
 			custom_trigger_tooltip = {
 				tooltip = TRM_Last_Focus_trigger_tt
 				OR = {
@@ -2436,23 +2398,10 @@
 		prerequisite = {
 			focus = TRM_oetzi
 		}
+		mutually_exclusive = {
+			focus = TRM_Trinity_Supremacy
+		}
 		available = {
-			if = { limit = { has_global_flag = TRN_collapse_event_proceeding_flag }
-				NOT = {
-					any_country = {
-						NOT = {
-							original_tag = KPD
-							original_tag = NSD
-							original_tag = TRM
-							original_tag = POL
-						}
-						has_war_with = ROOT
-					}
-				}
-			}
-			else = {
-				has_war = no
-			}
 		}
 		ai_will_do = {
 			base = 100
@@ -2472,23 +2421,10 @@
 		prerequisite = {
 			focus = TRM_oetzi
 		}
+		mutually_exclusive = {
+			focus = TRM_maintain_a_compromise_system
+		}
 		available = {
-			if = { limit = { has_global_flag = TRN_collapse_event_proceeding_flag }
-				NOT = {
-					any_country = {
-						NOT = {
-							original_tag = KPD
-							original_tag = NSD
-							original_tag = TRM
-							original_tag = POL
-						}
-						has_war_with = ROOT
-					}
-				}
-			}
-			else = {
-				has_war = no
-			}
 		}
 		ai_will_do = {
 			base = 100
@@ -2517,7 +2453,7 @@
 		relative_position_id = TRM_Trinity_Supremacy
 		cost = 5
 		available = {
-			has_war = no
+			has_war_with_major = no
 		}
 
 		search_filters = {}
@@ -2592,7 +2528,7 @@
 		relative_position_id = TRM_war_preparations
 		cost = 5
 		available = {
-			has_war = no
+			has_war_with_major = no
 		}
 
 		search_filters = {}
@@ -3046,9 +2982,9 @@
 		available = {
 			is_subject = no
 			has_government = fascism
-			has_war = no
+			has_war_with_major = no
 			RED = {
-				has_war = no
+				has_war_with_major = no
 				NOT = { has_war_with = TRM }
 				is_subject = no
 			}
@@ -3231,18 +3167,16 @@
             NOT = { 
 				has_government = communism 
 			}
-			NOT = {
 			has_country_flag = {
 				flag = TRM_We_need_Denmark_milk_flag
-				days < 180
+				days > 180
 			}
 			custom_trigger_tooltip = {
 				tooltip = TRM_We_need_Denmark_milk_flag_tt
 				has_country_flag = {
 					flag = TRM_We_need_Denmark_milk_flag
-					days < 180
+					days > 180
 				}
-			}
 			}
 		}
 		bypass = {
