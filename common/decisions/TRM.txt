@@ -303,7 +303,7 @@ TRN_country_collapse_decisions = {
 			}
 			set_country_flag = {
 				flag = TRM_start_KPD_flag
-				days = 37
+				days = 45
 				value = 1
 			}
 			if = {
@@ -387,7 +387,7 @@ TRN_country_collapse_decisions = {
 			}
 			set_country_flag = {
 				flag = TRM_start_KPD_flag
-				days = 37
+				days = 45
 				value = 1
 			}
 			if = {
@@ -471,7 +471,7 @@ TRN_country_collapse_decisions = {
 			}
 			set_country_flag = {
 				flag = TRM_start_KPD_flag
-				days = 37
+				days = 45
 				value = 1
 			}
 			if = {
@@ -788,7 +788,7 @@ TRN_country_collapse_decisions = {
 			}
 			set_country_flag = {
 				flag = KPD_start_KPD_flag
-				days = 37
+				days = 45
 				value = 1
 			}
 			if = {
@@ -861,7 +861,7 @@ TRN_country_collapse_decisions = {
 			}
 			set_country_flag = {
 				flag = KPD_start_KPD_flag
-				days = 37
+				days = 45
 				value = 1
 			}
 			if = {
@@ -935,7 +935,7 @@ TRN_country_collapse_decisions = {
 			}
 			set_country_flag = {
 				flag = KPD_start_KPD_flag
-				days = 37
+				days = 45
 				value = 1
 			}
 			if = {
@@ -1019,7 +1019,7 @@ TRN_country_collapse_decisions = {
 			}
 			set_country_flag = {
 				flag = TRM_start_NSD_flag
-				days = 37
+				days = 45
 				value = 1
 			}
 			if = {
@@ -1103,7 +1103,7 @@ TRN_country_collapse_decisions = {
 			}
 			set_country_flag = {
 				flag = TRM_start_NSD_flag
-				days = 37
+				days = 45
 				value = 1
 			}
 			if = {
@@ -1187,7 +1187,7 @@ TRN_country_collapse_decisions = {
 			}
 			set_country_flag = {
 				flag = TRM_start_NSD_flag
-				days = 37
+				days = 45
 				value = 1
 			}
 			if = {
@@ -1504,7 +1504,7 @@ TRN_country_collapse_decisions = {
 			}
 			set_country_flag = {
 				flag = NSD_start_NSD_flag
-				days = 37
+				days = 45
 				value = 1
 			}
 			if = {
@@ -1577,7 +1577,7 @@ TRN_country_collapse_decisions = {
 			}
 			set_country_flag = {
 				flag = NSD_start_NSD_flag
-				days = 37
+				days = 45
 				value = 1
 			}
 			if = {
@@ -1651,7 +1651,7 @@ TRN_country_collapse_decisions = {
 			}
 			set_country_flag = {
 				flag = NSD_start_NSD_flag
-				days = 37
+				days = 45
 				value = 1
 			}
 			if = {
