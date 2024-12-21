@@ -43,12 +43,9 @@ SHA_invade_of_Hyakkiyako_cat = {
 	}
 
 	visible = {
-		OR = {
-			is_debug = yes
-			AND = {
-				has_completed_focus = SHA_invade_of_Hyakkiyako
-				has_war_with = HYA
-			}
+		AND = {
+			has_completed_focus = SHA_invade_of_Hyakkiyako
+			has_war_with = HYA
 		}
 	}
 }

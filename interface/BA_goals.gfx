@@ -1729,6 +1729,14 @@ spriteTypes = {
 		name = "GFX_goal_SHA_conservative_revolution_2nd"
 		texturefile = "gfx/interface/goals/SHA/SHA_conservative_revolution_2nd.tga"  
 	}
+	SpriteType = {
+		name = "GFX_goal_SHA_ascend"
+		texturefile = "gfx/interface/goals/SHA/SHA_ascend.tga"  
+	}
+	SpriteType = {
+		name = "GFX_goal_SHA_Establishment_of_the_Governor_General"
+		texturefile = "gfx/interface/goals/SHA/SHA_Establishment_of_the_Governor_General.tga"  
+	}
 	SpriteType = { 	
 		name = "GFX_goal_ROM_invite_german_advisorsr"
 		texturefile = "gfx/interface/goals/ROM/ROM_invite_german_advisors.tga"  

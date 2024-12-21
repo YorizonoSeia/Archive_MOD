@@ -695,7 +695,10 @@
  SHA_black_sun_and_black_dragon: "검은 태양, 검은 용"
  SHA_black_sun_and_black_dragon_desc: "[TRM.GetAdjective] 와의 비공식적인 접촉은 있었지만, 구체적이고 법적인 구속력을 가진 것은 거의 합의 되지 않았습니다. [TRM.GetAdjective](이)가 퇴폐적인 문화에 맞선 투쟁을 지속할때 우리는 그들과 함께 연합전선을 결성해야합니다."
 
- SHA_The_Fire_Rise: "타오르는 불길"
+ SHA_ascension: "승천"
+ SHA_ascension_desc: ""
+ SHA_Establishment_of_the_Governor_General: "백귀야행 총독부"
+ SHA_Establishment_of_the_Governor_General_desc: ""
 
 
  # 보수 혁명 루트
@@ -725,6 +728,9 @@
  SHA_emergency_measures_desc: ""
  SHA_invade_of_Hyakkiyako: "학원 영토 수복"
  SHA_invade_of_Hyakkiyako_desc: ""
+
+ # 승전 공용
+ SHA_Special_Military_Operation_for_Abydos: "아비도스 격퇴"
 
  # 국민정신
  SHA_Austrian_fascist_militia: "오스트리아인 민병대"

@@ -503,9 +503,6 @@ focus_tree = {
 					promote_leader = yes
 				}
 			}
-			hidden_effect = {
-				news_event = { id = shanews.03 days = 04 }
-			}
 		}
 	}
 
@@ -543,6 +540,9 @@ focus_tree = {
 			}
 			custom_effect_tooltip = tooltip_white_line
 			add_dynamic_modifier = { modifier = SHA_Shanhaijinfascism }
+			hidden_effect = {
+				news_event = { id = shanews.03 days = 04 }
+			}
 		}
 	}
 
@@ -572,9 +572,9 @@ focus_tree = {
 				SHA_Shanhaijinfascism_fascism_drift = 0.03 
 				tooltip = fascism_drift_tt
 			}
-			add_to_variable = { 
-				SHA_Shanhaijinfascism_party_popularity_stability_factor = 0.15 
-				tooltip = party_popularity_stability_factor_tt
+			add_to_variable = {
+				SHA_Shanhaijinfascism_drift_defence_factor = 0.2
+				tooltip = drift_defence_factor_tt
 			}
 		}
 	}
@@ -1344,7 +1344,7 @@ focus_tree = {
 		cost = 10
 
 		prerequisite = { focus = SHA_invade_of_Hyakkiyako }
-		mutually_exclusive = { focus = SHA_The_Fire_Rise }
+		mutually_exclusive = { focus = SHA_ascension }
 
 		available = {
 			OR = {
@@ -1352,13 +1352,16 @@ focus_tree = {
 				owns_state = 972
 			}
 			NOT = { has_global_flag = GFLAG_BAKSANWAR_END }
-			has_completed_focus = SHA_Engine_of_conservative_revolution
+			has_completed_focus = SHA_New_Genryumon_Peking_Opera_Department_Relations
+			has_completed_focus = SHA_Expansion_of_cooperation_with_other_clubs
 		}
 		bypass = { }
 
 		relative_position_id = SHA_invade_of_Hyakkiyako
 
 		completion_reward = {
+			add_stability = 0.15
+			add_war_support = 0.15
 			if = {
 				limit = { has_idea = SHA_walking_the_dragon_4 }
 				swap_ideas = {
@@ -1370,10 +1373,10 @@ focus_tree = {
 		}
 	}
 
-	# 타오르는 불길
+	# 승천
 	focus = {
-		id = SHA_The_Fire_Rise
-		icon = GFX_focus_ETH_african_wildfire
+		id = SHA_ascension
+		icon = GFX_goal_SHA_ascend
 		x = -4
 		y = 1
 		cost = 10
@@ -1395,7 +1398,74 @@ focus_tree = {
 		relative_position_id = SHA_invade_of_Hyakkiyako
 
 		completion_reward = {
+			add_stability = 0.15
+			add_war_support = 0.1
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = SHA_Shanhaijing_fascism_tt
+			add_to_variable = {
+				SHA_Shanhaijinfascism_war_support_factor = 0.05
+				tooltip = war_support_factor_tt
+			}
+			add_to_variable = { 
+				SHA_Shanhaijinfascism_party_popularity_stability_factor = 0.15 
+				tooltip = party_popularity_stability_factor_tt
+			}
+		}
+	}
 
+	# 총독부 설치
+	focus = {
+		id = SHA_Establishment_of_the_Governor_General
+		icon = GFX_goal_SHA_Establishment_of_the_Governor_General
+		x = -1
+		y = 1
+		cost = 10
+
+		prerequisite = { focus = SHA_ascension }
+		mutually_exclusive = { }
+
+		available = { 
+		}
+		bypass = { }
+
+		relative_position_id = SHA_ascension
+
+		completion_reward = {
+
+		}
+	}
+
+	# 아비도스 석권
+	focus = {
+		id = SHA_Special_Military_Operation_for_Abydos
+		icon = GFX_focus_attack_ABY
+		x = 0
+		y = 2
+		cost = 2
+
+		prerequisite = {
+			focus = SHA_2nd_conservative_revolution 
+			focus = SHA_ascension 
+		}
+		mutually_exclusive = { }
+
+		available = {
+			ABY = { exists = yes }
+		}
+		bypass = {
+			NOT = { country_exists = ABY }
+		}
+
+		relative_position_id = SHA_invade_of_Hyakkiyako
+		
+		
+		will_lead_to_war_with = ABY
+
+		completion_reward = {
+			create_wargoal = {
+				target = ABY
+				type = puppet_wargoal_focus
+			}
 		}
 	}
 
@@ -1465,7 +1535,10 @@ focus_tree = {
 		prerequisite = { }
 		mutually_exclusive = {  }
 
-		available = { }
+		available = {
+			is_ai = no
+			is_ai = yes
+		}
 		bypass = { }
 
 		allow_branch = {
