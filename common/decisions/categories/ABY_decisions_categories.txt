@@ -604,9 +604,9 @@ ABY_descision_category_abydos_highschool = { #전공투
 	visible = { 
 		is_debug = yes
 	}                  
-	priority = 500
+	priority = 500  
 
-	scripted_gui = TUR_centralization_GUI
+	scripted_gui = ABY_rework_GUI                        
 
 	visible_when_empty = yes
 }

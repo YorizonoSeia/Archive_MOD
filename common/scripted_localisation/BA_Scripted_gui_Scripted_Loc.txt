@@ -497,6 +497,174 @@ defined_text = {
 }
 
 defined_text = {
+    name = GFX_ABY_map_select_text
+    text = {
+        trigger = {
+            has_country_flag = ABY_flag_develop
+            NOT = { has_country_flag = ABY_flag_rebuild }
+            NOT = { has_country_flag = ABY_flag_unite }
+        }
+        localization_key = GFX_ABY_central_state
+    }
+    text = {
+        trigger = {
+            has_country_flag = ABY_flag_rebuild
+            NOT = { has_country_flag = ABY_flag_develop }
+            NOT = { has_country_flag = ABY_flag_unite }
+        }
+        localization_key = GFX_ABY_rebuild_state
+    }
+    text = {
+        trigger = {
+            has_country_flag = ABY_flag_unite
+            NOT = { has_country_flag = ABY_flag_rebuild }
+            NOT = { has_country_flag = ABY_flag_develop }
+        }
+        localization_key = GFX_ABY_unite_state
+    }
+}
+
+defined_text = {
+    name = ABY_develop_progress_text
+    text = {
+        trigger = {
+            has_country_flag = ABY_flag_develop
+            NOT = { has_country_flag = ABY_flag_rebuild }
+            NOT = { has_country_flag = ABY_flag_unite }
+        }
+        localization_key = ABY_industry_progress_text
+    }
+    text = {
+        trigger = {
+            has_country_flag = ABY_flag_rebuild
+            NOT = { has_country_flag = ABY_flag_develop }
+            NOT = { has_country_flag = ABY_flag_unite }
+        }
+        localization_key = ABY_rebuild_progress_text
+    }
+    text = {
+        trigger = {
+            has_country_flag = ABY_flag_unite
+            NOT = { has_country_flag = ABY_flag_rebuild }
+            NOT = { has_country_flag = ABY_flag_develop }
+        }
+        localization_key = ABY_unite_progress_text
+    }
+}
+
+defined_text = {
+    name = ABY_develop_info_text
+    text = {
+        trigger = {
+            has_country_flag = ABY_flag_develop
+            NOT = { has_country_flag = ABY_flag_rebuild }
+            NOT = { has_country_flag = ABY_flag_unite }
+        }
+        localization_key = ABY_industry_info_text
+    }
+    text = {
+        trigger = {
+            has_country_flag = ABY_flag_rebuild
+            NOT = { has_country_flag = ABY_flag_develop }
+            NOT = { has_country_flag = ABY_flag_unite }
+        }
+        localization_key = ABY_rebuild_info_text
+    }
+    text = {
+        trigger = {
+            has_country_flag = ABY_flag_unite
+            NOT = { has_country_flag = ABY_flag_rebuild }
+            NOT = { has_country_flag = ABY_flag_develop }
+        }
+        localization_key = ABY_unite_info_text
+    }
+}
+
+defined_text = {
+    name = ABY_now_map_text
+    text = {
+        trigger = {
+            has_country_flag = ABY_flag_develop
+            NOT = { has_country_flag = ABY_flag_rebuild }
+            NOT = { has_country_flag = ABY_flag_unite }
+        }
+        localization_key = ABY_develop_map_text
+    }
+    text = {
+        trigger = {
+            has_country_flag = ABY_flag_rebuild
+            NOT = { has_country_flag = ABY_flag_develop }
+            NOT = { has_country_flag = ABY_flag_unite }
+        }
+        localization_key = ABY_rebuild_map_text
+    }
+    text = {
+        trigger = {
+            has_country_flag = ABY_flag_unite
+            NOT = { has_country_flag = ABY_flag_rebuild }
+            NOT = { has_country_flag = ABY_flag_develop }
+        }
+        localization_key = ABY_unite_map_text
+    }
+}
+
+defined_text = {
+    name = ABY_left_text
+    text = {
+        trigger = {
+            has_country_flag = ABY_flag_develop
+            NOT = { has_country_flag = ABY_flag_rebuild }
+            NOT = { has_country_flag = ABY_flag_unite }
+        }
+        localization_key = ABY_to_rebuild_map_text
+    }
+    text = {
+        trigger = {
+            has_country_flag = ABY_flag_rebuild
+            NOT = { has_country_flag = ABY_flag_develop }
+            NOT = { has_country_flag = ABY_flag_unite }
+        }
+        localization_key = ABY_to_unite_map_text
+    }
+    text = {
+        trigger = {
+            has_country_flag = ABY_flag_unite
+            NOT = { has_country_flag = ABY_flag_rebuild }
+            NOT = { has_country_flag = ABY_flag_develop }
+        }
+        localization_key = ABY_to_develop_map_text
+    }
+}
+
+defined_text = {
+    name = ABY_right_text
+    text = {
+        trigger = {
+            has_country_flag = ABY_flag_develop
+            NOT = { has_country_flag = ABY_flag_rebuild }
+            NOT = { has_country_flag = ABY_flag_unite }
+        }
+        localization_key = ABY_to_unite_map_text
+    }
+    text = {
+        trigger = {
+            has_country_flag = ABY_flag_rebuild
+            NOT = { has_country_flag = ABY_flag_develop }
+            NOT = { has_country_flag = ABY_flag_unite }
+        }
+        localization_key = ABY_to_develop_map_text
+    }
+    text = {
+        trigger = {
+            has_country_flag = ABY_flag_unite
+            NOT = { has_country_flag = ABY_flag_rebuild }
+            NOT = { has_country_flag = ABY_flag_develop }
+        }
+        localization_key = ABY_to_rebuild_map_text
+    }
+}
+
+defined_text = {
     name = ABY_rhdghkwjstjs_tlstjdrnrrkduseo_gfx_text
     text = {
         trigger = {

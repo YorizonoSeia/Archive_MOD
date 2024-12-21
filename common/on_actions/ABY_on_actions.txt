@@ -6,6 +6,22 @@ on_actions = {
 			}
 		}
 	}
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					FROM.FROM = {
+						every_state = {
+							is_owned_by = ABY
+						}
+					}
+				}
+				ABY = {
+					central_map_calculate_frame = yes
+				}
+			}
+		}
+	}
 	on_declare_war = {
 		effect = {
 			if = {

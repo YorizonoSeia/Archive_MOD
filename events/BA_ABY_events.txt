@@ -1830,12 +1830,16 @@ country_event = {
 	fire_only_once = yes
 	trigger = {
 		ABY = {
-			exists = yes
-			is_puppet = no
+			AND = {
+				exists = yes
+				is_puppet = no
+			}
 		}
 		CZE = {
-			exists = yes
-			is_puppet = no
+			AND = {
+				exists = yes
+				is_puppet = no
+			}
 		}
 		tag = CZE
 	}

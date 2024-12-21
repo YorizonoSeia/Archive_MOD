@@ -18828,3 +18828,117 @@ ABY_descision_category_debug = {
 		}
 	}
 }
+ABY_descision_category_abydos_highschool = {
+	ABY_descision_debug_rebuild_map = {
+        priority = 1
+
+        allowed = {
+            tag = ABY
+        }
+
+		visible = {
+			is_debug = yes
+		}
+
+        available = {
+        }
+
+		cost = 0
+
+		days_remove = 0
+
+        complete_effect = {
+			every_state = {
+				clr_state_flag = ABY_flag_develop
+				set_state_flag = ABY_flag_rebuild
+				clr_state_flag = ABY_flag_unite
+			}
+			clr_country_flag = ABY_flag_develop
+			set_country_flag = ABY_flag_rebuild
+			clr_country_flag = ABY_flag_unite
+			central_map_calculate_frame = yes
+        }
+	}
+	ABY_descision_debug_unite_map = {
+        priority = 1
+
+        allowed = {
+            tag = ABY
+        }
+
+		visible = {
+			is_debug = yes
+		}
+
+        available = {
+        }
+
+		cost = 0
+
+		days_remove = 0
+
+        complete_effect = {
+			every_state = {
+				clr_state_flag = ABY_flag_develop
+				clr_state_flag = ABY_flag_rebuild
+				set_state_flag = ABY_flag_unite
+			}
+			clr_country_flag = ABY_flag_develop
+			clr_country_flag = ABY_flag_rebuild
+			set_country_flag = ABY_flag_unite
+			central_map_calculate_frame = yes
+        }
+	}
+	ABY_descision_debug_develop_map = {
+        priority = 1
+
+        allowed = {
+            tag = ABY
+        }
+
+		visible = {
+			is_debug = yes
+		}
+
+        available = {
+        }
+
+		cost = 0
+
+		days_remove = 0
+
+        complete_effect = {
+			every_state = {
+				clr_state_flag = ABY_flag_develop
+				clr_state_flag = ABY_flag_rebuild
+				set_state_flag = ABY_flag_unite
+			}
+			set_country_flag = ABY_flag_develop
+			clr_country_flag = ABY_flag_rebuild
+			clr_country_flag = ABY_flag_unite
+			central_map_calculate_frame = yes
+        }
+	}
+	ABY_descision_debug_setup_map = {
+        priority = 1
+
+        allowed = {
+            tag = ABY
+        }
+
+		visible = {
+			is_debug = yes
+		}
+
+        available = {
+        }
+
+		cost = 0
+
+		days_remove = 0
+
+        complete_effect = {
+			central_map_calculate_frame = yes
+        }
+	}
+}

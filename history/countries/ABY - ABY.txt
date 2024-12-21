@@ -76,6 +76,14 @@ set_variable = {ABY_var_experience_gain_army_factor = 0}
 set_variable = {ABY_var_political_power_cost = 0}
 set_variable = {ABY_var_compliance_gain = 0}
 
+set_variable = {ABY_gov_stability_var = 70}
+set_variable = {ABY_gov_stability_change_var = -5}
+set_variable = {ABY_gov_stability_line_var = 0}
+
+set_variable = {ABY_industry_progress_var = 0}
+set_variable = {ABY_rebuild_progress_var = 0}
+set_variable = {ABY_unite_progress_var = 0}
+
 every_state = {
     limit = {
         OR = {
