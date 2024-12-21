@@ -57,6 +57,15 @@ intelligence_agency = {
 
 intelligence_agency = {
 
+	picture = GFX_intelligence_agency_logo_HEU
+	names = { "Benriya 68" }
+	
+	default = { tag = HEU }
+	available = { original_tag = HEU }
+}
+
+intelligence_agency = {
+
 	picture = GFX_intelligence_agency_logo_usa
 	names = { "Office of Strategic Services" }
 	
