@@ -280,14 +280,19 @@ TRN_country_collapse_decisions = {
 			}
 			modifier = {
 				has_country_flag = TRM_ai_guid_KPD_2_go_flag
-				NSD = { is_ai = no }
+				KPD = { is_ai = no }
 				check_variable = { global.KPD_country_collapse_decisions_rps = 4 }
 				factor = 0.1
 			}
 			modifier = {
-				NSD = { is_ai = no }
+				KPD = { is_ai = no }
 				check_variable = { global.KPD_country_collapse_decisions_rps = 4 }
 				factor = 0.7
+			}
+			modifier = {
+				KPD = { is_ai = yes }
+				check_variable = { global.KPD_country_collapse_decisions_rps = 4 }
+				factor = 8
 			}
 		}
 
@@ -364,14 +369,19 @@ TRN_country_collapse_decisions = {
 			}
 			modifier = {
 				has_country_flag = TRM_ai_guid_KPD_3_go_flag
-				NSD = { is_ai = no }
+				KPD = { is_ai = no }
 				check_variable = { global.KPD_country_collapse_decisions_rps = 2 }
 				factor = 0.1
 			}
 			modifier = {
-				NSD = { is_ai = no }
+				KPD = { is_ai = no }
 				check_variable = { global.KPD_country_collapse_decisions_rps = 2 }
 				factor = 0.7
+			}
+			modifier = {
+				KPD = { is_ai = yes }
+				check_variable = { global.KPD_country_collapse_decisions_rps = 2 }
+				factor = 8
 			}
 		}
 
@@ -448,14 +458,19 @@ TRN_country_collapse_decisions = {
 			}
 			modifier = {
 				has_country_flag = TRM_ai_guid_KPD_4_go_flag
-				NSD = { is_ai = no }
+				KPD = { is_ai = no }
 				check_variable = { global.KPD_country_collapse_decisions_rps = 3 }
 				factor = 0.1
 			}
 			modifier = {
-				NSD = { is_ai = no }
+				KPD = { is_ai = no }
 				check_variable = { global.KPD_country_collapse_decisions_rps = 3 }
 				factor = 0.7
+			}
+			modifier = {
+				KPD = { is_ai = yes }
+				check_variable = { global.KPD_country_collapse_decisions_rps = 3 }
+				factor = 8
 			}
 		}
 
@@ -512,6 +527,10 @@ TRN_country_collapse_decisions = {
 
 		available = {
 			always = no
+		}
+
+		cancel_trigger = {
+			has_global_flag = TRN_country_collapse_decisions_end_flag
 		}
 
 		timeout_effect = {
@@ -634,6 +653,10 @@ TRN_country_collapse_decisions = {
 
 		available = {
 			always = no
+		}
+
+		cancel_trigger = {
+			has_global_flag = TRN_country_collapse_decisions_end_flag
 		}
 
 		timeout_effect = {
@@ -1005,6 +1028,11 @@ TRN_country_collapse_decisions = {
 				check_variable = { global.NSD_country_collapse_decisions_rps = 4 }
 				factor = 0.7
 			}
+			modifier = {
+				NSD = { is_ai = yes }
+				check_variable = { global.NSD_country_collapse_decisions_rps = 4 }
+				factor = 8
+			}
 		}
 
 		complete_effect = {
@@ -1088,6 +1116,11 @@ TRN_country_collapse_decisions = {
 				NSD = { is_ai = no }
 				check_variable = { global.NSD_country_collapse_decisions_rps = 2 }
 				factor = 0.7
+			}
+			modifier = {
+				NSD = { is_ai = yes }
+				check_variable = { global.NSD_country_collapse_decisions_rps = 2 }
+				factor = 8
 			}
 		}
 
@@ -1173,6 +1206,11 @@ TRN_country_collapse_decisions = {
 				check_variable = { global.NSD_country_collapse_decisions_rps = 3 }
 				factor = 0.7
 			}
+			modifier = {
+				NSD = { is_ai = yes }
+				check_variable = { global.NSD_country_collapse_decisions_rps = 3 }
+				factor = 8
+			}
 		}
 
 		complete_effect = {
@@ -1228,6 +1266,10 @@ TRN_country_collapse_decisions = {
 
 		available = {
 			always = no
+		}
+
+		cancel_trigger = {
+			has_global_flag = TRN_country_collapse_decisions_end_flag
 		}
 
 		timeout_effect = {
@@ -1350,6 +1392,10 @@ TRN_country_collapse_decisions = {
 
 		available = {
 			always = no
+		}
+
+		cancel_trigger = {
+			has_global_flag = TRN_country_collapse_decisions_end_flag
 		}
 
 		timeout_effect = {
@@ -2216,7 +2262,7 @@ TRN_country_collapse_decisions = {
 			add_political_power = 25
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
-				amount = 150
+				amount = -150
 			}
         }
 	}
@@ -2257,7 +2303,7 @@ TRN_country_collapse_decisions = {
 			add_political_power = 25
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
-				amount = 150
+				amount = -150
 			}
         }
 	}
