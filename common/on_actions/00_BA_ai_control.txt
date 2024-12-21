@@ -1,6 +1,30 @@
 on_actions = {
 	on_startup = {
 		effect = {
+			TRM = {
+				random_list = {
+					1 = { set_country_flag = { flag = TRM_ai_guid_KPD_2_go_flag days = 100 value = 1 } }
+					1 = { set_country_flag = { flag = TRM_ai_guid_KPD_3_go_flag days = 100 value = 1 } }
+					1 = { set_country_flag = { flag = TRM_ai_guid_KPD_4_go_flag days = 100 value = 1 } }
+					1 = { set_country_flag = { flag = TRM_ai_guid_NSD_2_go_flag days = 100 value = 1 } }
+					1 = { set_country_flag = { flag = TRM_ai_guid_NSD_3_go_flag days = 100 value = 1 } }
+					1 = { set_country_flag = { flag = TRM_ai_guid_NSD_4_go_flag days = 100 value = 1 } }
+				}
+			}
+			KPD = {
+				random_list = {
+					1 = { set_country_flag = { flag = KPD_ai_guid_2_go_flag days = 100 value = 1 } }
+					1 = { set_country_flag = { flag = KPD_ai_guid_3_go_flag days = 100 value = 1 } }
+					1 = { set_country_flag = { flag = KPD_ai_guid_4_go_flag days = 100 value = 1 } }
+				}
+			}
+			NSD = {
+				random_list = {
+					1 = { set_country_flag = { flag = NSD_ai_guid_2_go_flag days = 100 value = 1 } }
+					1 = { set_country_flag = { flag = NSD_ai_guid_3_go_flag days = 100 value = 1 } }
+					1 = { set_country_flag = { flag = NSD_ai_guid_4_go_flag days = 100 value = 1 } }
+				}
+			}
 			COU = {
 				#
 				#

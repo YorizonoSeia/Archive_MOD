@@ -85,18 +85,6 @@ set_politics = {
 
 send_embargo = TRM
 
-add_equipment_to_stockpile = {
-	producer = SOV
-	type = infantry_equipment_0
-	amount = 400
-}
-
-random_list = {
-	1 = { set_country_flag = { flag = KPD_ai_guid_2_go_flag days = 100 value = 1 } }
-	1 = { set_country_flag = { flag = KPD_ai_guid_3_go_flag days = 100 value = 1 } }
-	1 = { set_country_flag = { flag = KPD_ai_guid_4_go_flag days = 100 value = 1 } }
-}
-
 declare_war_on = {
 	target = TRM
 	type = annex_everything

@@ -196,6 +196,9 @@
 
  KPD_start_KPD_flag: "이미 작전을 입안함"
  NSD_start_NSD_flag: "이미 작전을 입안함"
+ 
+ TRM_decision_cost_ie_150_pp_25: "£infantry_equipment_text_icon  §Y150§!  £pol_power  §Y25§!"
+ TRM_decision_cost_ie_150_pp_25_blocked: "£infantry_equipment_text_icon  §R150§!  £pol_power  §R25§!"
 
  TRN_collapse_event.11.t: "트리니티의 작전 성공"
  TRN_collapse_event.12.t: "무력화된 작전"

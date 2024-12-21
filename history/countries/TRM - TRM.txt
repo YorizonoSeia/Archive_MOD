@@ -10,15 +10,6 @@ if = {
 	set_air_oob = "zzz_TRM_air_legacy"
 }
 
-random_list = {
-	1 = { set_country_flag = { flag = TRM_ai_guid_KPD_2_go_flag days = 100 value = 1 } }
-	1 = { set_country_flag = { flag = TRM_ai_guid_KPD_3_go_flag days = 100 value = 1 } }
-	1 = { set_country_flag = { flag = TRM_ai_guid_KPD_4_go_flag days = 100 value = 1 } }
-	1 = { set_country_flag = { flag = TRM_ai_guid_NSD_2_go_flag days = 100 value = 1 } }
-	1 = { set_country_flag = { flag = TRM_ai_guid_NSD_3_go_flag days = 100 value = 1 } }
-	1 = { set_country_flag = { flag = TRM_ai_guid_NSD_4_go_flag days = 100 value = 1 } }
-}
-
 add_breakthrough_progress = {
 	specialization = specialization_land
 	value = 1.0

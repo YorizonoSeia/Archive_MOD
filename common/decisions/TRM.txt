@@ -259,12 +259,13 @@ TRN_country_collapse_decisions = {
 		available = {
 			NOT = { has_country_flag = TRM_start_KPD_flag }
 		}
-		custom_cost_text = decision_cost_ie_500
+		custom_cost_text = TRM_decision_cost_ie_150_pp_25
 		
 		fire_only_once = no
 
 		custom_cost_trigger = {
-			has_equipment = { infantry_equipment > 499 }
+			has_equipment = { infantry_equipment > 149 }
+			has_political_power > 24
 		}
 
 		ai_will_do = {
@@ -326,12 +327,13 @@ TRN_country_collapse_decisions = {
 		available = {
 			NOT = { has_country_flag = TRM_start_KPD_flag }
 		}
-		custom_cost_text = decision_cost_ie_500
+		custom_cost_text = TRM_decision_cost_ie_150_pp_25
 		
 		fire_only_once = no
 
 		custom_cost_trigger = {
-			has_equipment = { infantry_equipment > 499 }
+			has_equipment = { infantry_equipment > 149 }
+			has_political_power > 24
 		}
 
 		ai_will_do = {
@@ -393,12 +395,13 @@ TRN_country_collapse_decisions = {
 		available = {
 			NOT = { has_country_flag = TRM_start_KPD_flag }
 		}
-		custom_cost_text = decision_cost_ie_500
+		custom_cost_text = TRM_decision_cost_ie_150_pp_25
 		
 		fire_only_once = no
 
 		custom_cost_trigger = {
-			has_equipment = { infantry_equipment > 499 }
+			has_equipment = { infantry_equipment > 149 }
+			has_political_power > 24
 		}
 
 		ai_will_do = {
@@ -704,12 +707,13 @@ TRN_country_collapse_decisions = {
 		available = {
 			NOT = { has_country_flag = KPD_start_KPD_flag }
 		}
-		custom_cost_text = decision_cost_ie_500
+		custom_cost_text = TRM_decision_cost_ie_150_pp_25
 		
 		fire_only_once = no
 
 		custom_cost_trigger = {
-			has_equipment = { infantry_equipment > 499 }
+			has_equipment = { infantry_equipment > 149 }
+			has_political_power > 24
 		}
 
 		ai_will_do = {
@@ -771,12 +775,13 @@ TRN_country_collapse_decisions = {
 		available = {
 			NOT = { has_country_flag = KPD_start_KPD_flag }
 		}
-		custom_cost_text = decision_cost_ie_500
+		custom_cost_text = TRM_decision_cost_ie_150_pp_25
 		
 		fire_only_once = no
 
 		custom_cost_trigger = {
-			has_equipment = { infantry_equipment > 499 }
+			has_equipment = { infantry_equipment > 149 }
+			has_political_power > 24
 		}
 
 		ai_will_do = {
@@ -838,12 +843,13 @@ TRN_country_collapse_decisions = {
 		available = {
 			NOT = { has_country_flag = KPD_start_KPD_flag }
 		}
-		custom_cost_text = decision_cost_ie_500
+		custom_cost_text = TRM_decision_cost_ie_150_pp_25
 		
 		fire_only_once = no
 
 		custom_cost_trigger = {
-			has_equipment = { infantry_equipment > 499 }
+			has_equipment = { infantry_equipment > 149 }
+			has_political_power > 24
 		}
 
 		ai_will_do = {
@@ -906,12 +912,13 @@ TRN_country_collapse_decisions = {
 		available = {
 			NOT = { has_country_flag = TRM_start_NSD_flag }
 		}
-		custom_cost_text = decision_cost_ie_500
+		custom_cost_text = TRM_decision_cost_ie_150_pp_25
 		
 		fire_only_once = no
 
 		custom_cost_trigger = {
-			has_equipment = { infantry_equipment > 499 }
+			has_equipment = { infantry_equipment > 149 }
+			has_political_power > 24
 		}
 
 		ai_will_do = {
@@ -973,12 +980,13 @@ TRN_country_collapse_decisions = {
 		available = {
 			NOT = { has_country_flag = TRM_start_NSD_flag }
 		}
-		custom_cost_text = decision_cost_ie_500
+		custom_cost_text = TRM_decision_cost_ie_150_pp_25
 		
 		fire_only_once = no
 
 		custom_cost_trigger = {
-			has_equipment = { infantry_equipment > 499 }
+			has_equipment = { infantry_equipment > 149 }
+			has_political_power > 24
 		}
 
 		ai_will_do = {
@@ -1040,12 +1048,13 @@ TRN_country_collapse_decisions = {
 		available = {
 			NOT = { has_country_flag = TRM_start_NSD_flag }
 		}
-		custom_cost_text = decision_cost_ie_500
+		custom_cost_text = TRM_decision_cost_ie_150_pp_25
 		
 		fire_only_once = no
 
 		custom_cost_trigger = {
-			has_equipment = { infantry_equipment > 499 }
+			has_equipment = { infantry_equipment > 149 }
+			has_political_power > 24
 		}
 
 		ai_will_do = {
@@ -1351,12 +1360,13 @@ TRN_country_collapse_decisions = {
 		available = {
 			NOT = { has_country_flag = NSD_start_NSD_flag }
 		}
-		custom_cost_text = decision_cost_ie_500
+		custom_cost_text = TRM_decision_cost_ie_150_pp_25
 		
 		fire_only_once = no
 
 		custom_cost_trigger = {
-			has_equipment = { infantry_equipment > 499 }
+			has_equipment = { infantry_equipment > 149 }
+			has_political_power > 24
 		}
 
 		ai_will_do = {
@@ -1418,12 +1428,13 @@ TRN_country_collapse_decisions = {
 		available = {
 			NOT = { has_country_flag = NSD_start_NSD_flag }
 		}
-		custom_cost_text = decision_cost_ie_500
+		custom_cost_text = TRM_decision_cost_ie_150_pp_25
 		
 		fire_only_once = no
 
 		custom_cost_trigger = {
-			has_equipment = { infantry_equipment > 499 }
+			has_equipment = { infantry_equipment > 149 }
+			has_political_power > 24
 		}
 
 		ai_will_do = {
@@ -1485,12 +1496,13 @@ TRN_country_collapse_decisions = {
 		available = {
 			NOT = { has_country_flag = NSD_start_NSD_flag }
 		}
-		custom_cost_text = decision_cost_ie_500
+		custom_cost_text = TRM_decision_cost_ie_150_pp_25
 		
 		fire_only_once = no
 
 		custom_cost_trigger = {
-			has_equipment = { infantry_equipment > 499 }
+			has_equipment = { infantry_equipment > 149 }
+			has_political_power > 24
 		}
 
 		ai_will_do = {

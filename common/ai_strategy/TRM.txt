@@ -5,8 +5,14 @@ TRM_raids_store_some_equipment = {
 	enable = {
 		OR = { has_war_with = KPD has_war_with = NSD }
 		OR = {
-			has_active_mission = TRM_operation_outcome_KPD
-			has_active_mission = TRM_operation_outcome_NSD
+			AND = { 
+				NOT = { has_country_flag = TRM_start_NSD_flag }
+				has_active_mission = TRM_operation_outcome_NSD
+			}
+			AND = { 
+				NOT = { has_country_flag = TRM_start_KPD_flag }
+				has_active_mission = TRM_operation_outcome_KPD
+			}
 		}
 	}
 	abort_when_not_enabled = yes

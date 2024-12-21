@@ -54,6 +54,8 @@ ideas={
 				stability_factor = -0.10
 				war_support_factor = 0.10
 				cannot_call_allies_or_join_wars = 1
+				industrial_capacity_factory = 0.20
+				production_lack_of_resource_penalty_factor = -0.20
 			}
 		}
 		TCA_construction_battalions = {

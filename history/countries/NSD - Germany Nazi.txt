@@ -75,18 +75,6 @@ add_offsite_building = {
 	level = 5
 }
 
-add_equipment_to_stockpile = {
-	producer = GER
-	type = infantry_equipment_1
-	amount = 1000
-}
-
-random_list = {
-	1 = { set_country_flag = { flag = NSD_ai_guid_2_go_flag days = 100 value = 1 } }
-	1 = { set_country_flag = { flag = NSD_ai_guid_3_go_flag days = 100 value = 1 } }
-	1 = { set_country_flag = { flag = NSD_ai_guid_4_go_flag days = 100 value = 1 } }
-}
-
 send_embargo = TRM
 
 declare_war_on = {
