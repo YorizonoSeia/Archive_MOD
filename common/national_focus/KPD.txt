@@ -798,41 +798,6 @@ focus_tree = {
 			set_cosmetic_tag = TRM_collapse_win
 		}
 	}
-	focus = { #연합최고사령부 해산
-		id = KPD_dissolution_of_joint_supreme_command
-		icon = GFX_focus_GER_establish_volkskommissariats
-		cost = 5
-		prerequisite = {
-			focus = KPD_end_of_trinity
-		}
-		prerequisite = {
-			focus = KPD_temporary_equality_manifesto
-		}
-		prerequisite = {
-			focus = KPD_securing_of_wartime_supplies
-			focus = KPD_additional_militia_organization
-		}
-		x = 5
-		y = 1
-		relative_position_id = KPD_end_of_trinity
-		available = {
-		}
-		bypass = {
-		}
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		completion_reward = {
-			add_political_power = 120
-			hidden_effect = {
-				country_event = {
-					id = KPD_event.13
-					days = 10
-				}
-			}
-			set_cosmetic_tag = TRM_collapse_win
-		}
-	}
 	focus = { #산업 국유화
 		id = KPD_nationalization_of_industries
 		icon = GFX_goal_generic_construct_civ_factory
