@@ -202,6 +202,9 @@
  
  TRM_decision_cost_ie_150_pp_25: "£infantry_equipment_text_icon  §Y150§!  £pol_power  §Y25§!"
  TRM_decision_cost_ie_150_pp_25_blocked: "£infantry_equipment_text_icon  §R150§!  £pol_power  §R25§!"
+ 
+ TRM_decision_cost_ie_150: "£infantry_equipment_text_icon  §Y150§!"
+ TRM_decision_cost_ie_150_blocked: "£infantry_equipment_text_icon  §R150§!"
 
  KPD_equipment_request_to_soviet_union: "소련에 장비 요청"
 

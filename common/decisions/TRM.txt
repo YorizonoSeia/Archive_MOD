@@ -2132,9 +2132,14 @@ TRN_country_collapse_decisions = {
 		}
 
 		complete_effect = {
+			set_global_flag = TRM_declaration_of_extermination_campaign_KPD_flag
 			annex_country = {
 				target = KPD
 				transfer_troops = no
+			}
+			if = {
+				limit = { has_global_flag = TRM_declaration_of_extermination_campaign_NSD_flag }
+				set_global_flag = TRN_country_collapse_decisions_end_flag
 			}
 		}
 	}
@@ -2163,11 +2168,98 @@ TRN_country_collapse_decisions = {
 		}
 
 		complete_effect = {
+			set_global_flag = TRM_declaration_of_extermination_campaign_NSD_flag
 			annex_country = {
 				target = NSD
 				transfer_troops = no
 			}
+			if = {
+				limit = { has_global_flag = TRM_declaration_of_extermination_campaign_KPD_flag }
+				set_global_flag = TRN_country_collapse_decisions_end_flag
+			}
 		}
+	}
+	KPD_recruitment_campaign = {
+		icon = GFX_decision_generic_prepare_civil_war
+		
+		targets = { TRM }
+
+		allowed = {
+			original_tag = KPD
+		}
+		
+		visible = {
+			NOT = { has_global_flag = TRN_country_collapse_decisions_end_flag }
+			has_war_with = TRM
+		}
+		available = {
+		}
+		custom_cost_text = TRM_decision_cost_ie_150
+		
+		fire_only_once = no
+
+		days_re_enable = 55
+
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 149 }
+		}
+
+		ai_will_do = {
+			base = 2000
+			modifier = {
+				TRM = { is_ai = no }
+				factor = 0
+			}
+		}
+
+		complete_effect = {
+			add_political_power = 25
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 150
+			}
+        }
+	}
+	NSD_recruitment_campaign = {
+		icon = GFX_decision_generic_prepare_civil_war
+		
+		targets = { TRM }
+
+		allowed = {
+			original_tag = NSD
+		}
+		
+		visible = {
+			NOT = { has_global_flag = TRN_country_collapse_decisions_end_flag }
+			has_war_with = TRM
+		}
+		available = {
+		}
+		custom_cost_text = TRM_decision_cost_ie_150
+		
+		fire_only_once = no
+
+		days_re_enable = 55
+
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 149 }
+		}
+
+		ai_will_do = {
+			base = 2000
+			modifier = {
+				TRM = { is_ai = no }
+				factor = 0
+			}
+		}
+
+		complete_effect = {
+			add_political_power = 25
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 150
+			}
+        }
 	}
 	TRM_resistance_emerging_to_the_surface = {
 		priority = 200
