@@ -2322,12 +2322,147 @@ country_event = { #흥신소의 일상
 
 	option = { 
 		name = HEU.persona_event.100.a 
+		random_list = {
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^1 = 2
+					tooltip = HEU_aru_persona_kindness_edit_tt
+				}
+			}
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^1 = 3
+					tooltip = HEU_aru_persona_kindness_edit_tt
+				}
+			}
+		}
+		HEU_aru_persona_setting = yes
 
 	}
 
 	option = { 
 		name = HEU.persona_event.100.b
+		random_list = {
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^0 = 2
+					tooltip = HEU_aru_persona_wisdom_edit_tt
+				}
+			}
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^0 = 3
+					tooltip = HEU_aru_persona_wisdom_edit_tt
+				}
+			}
+		}
+		HEU_aru_persona_setting = yes
 
+	}
+}
+
+country_event = { #하루카의 공부
+	id = HEU.persona_event.101
+	title = HEU.persona_event.101.t
+	
+	desc = {
+		text = HEU.persona_event.101.desc.a
+		trigger = { 
+			date < 1939.12.31
+		}
+	}
+	
+	desc = {
+		text = HEU.persona_event.101.desc.b
+		trigger = { 
+			date < 1939.12.31
+		}
+	}
+
+	picture = GFX_report_event_haruka_igusa
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.persona_event.101.a 
+		random_list = {
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^0 = 2
+					tooltip = HEU_aru_persona_wisdom_edit_tt
+				}
+			}
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^0 = 3
+					tooltip = HEU_aru_persona_wisdom_edit_tt
+				}
+			}
+		}
+		HEU_aru_persona_setting = yes
+	}
+
+	option = { 
+		name = HEU.persona_event.101.b
+		random_list = {
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^1 = 2
+					tooltip = HEU_aru_persona_kindness_edit_tt
+				}
+			}
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^1 = 3
+					tooltip = HEU_aru_persona_kindness_edit_tt
+				}
+			}
+		}
+		HEU_aru_persona_setting = yes
+
+	}
+}
+
+country_event = { #감사의 마음을 전하기
+	id = HEU.persona_event.102
+	title = HEU.persona_event.102.t
+	desc = HEU.persona_event.102.desc
+	picture = GFX_report_event_haruka_igusa
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.persona_event.102.a
+		if = {
+			limit = {
+				check_variable = { global.aru_schedule_point < 6 }
+			}
+			add_to_variable = { global.aru_schedule_point = 1 }
+			add_political_power = 30
+		}
+		else = {
+			add_political_power = 35
+		}
+	}
+}
+
+country_event = { #흥신소의 저녁
+	id = HEU.persona_event.103
+	title = HEU.persona_event.103.t
+	desc = HEU.persona_event.103.desc
+	picture = GFX_report_event_haruka_igusa
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.persona_event.103.a
+		if = {
+			limit = {
+				check_variable = { global.aru_schedule_point < 6 }
+			}
+			add_to_variable = { global.aru_schedule_point = 1 }
+			add_political_power = 30
+		}
+		else = {
+			add_political_power = 35
+		}
 	}
 }
 
@@ -2340,12 +2475,828 @@ country_event = { #하루카의 불행
 
 	option = { 
 		name = HEU.persona_event.104.a 
-
+		random_list = {
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^2 = 3
+					tooltip = HEU_aru_persona_resolution_edit_tt
+				}
+			}
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^2 = 4
+					tooltip = HEU_aru_persona_resolution_edit_tt
+				}
+			}
+		}
+		random_list = {
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^1 = -2
+					tooltip = HEU_aru_persona_kindness_edit_tt
+				}
+			}
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^1 = -3
+					tooltip = HEU_aru_persona_kindness_edit_tt
+				}
+			}
+		}
+		HEU_aru_persona_setting = yes
 	}
 
 	option = { 
 		name = HEU.persona_event.104.b
+		random_list = {
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^1 = 3
+					tooltip = HEU_aru_persona_kindness_edit_tt
+				}
+			}
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^1 = 4
+					tooltip = HEU_aru_persona_kindness_edit_tt
+				}
+			}
+		}
+		random_list = {
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^2 = -2
+					tooltip = HEU_aru_persona_resolution_edit_tt
+				}
+			}
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^2 = -3
+					tooltip = HEU_aru_persona_resolution_edit_tt
+				}
+			}
+		}
+		HEU_aru_persona_setting = yes
 
+	}
+}
+
+country_event = { #고민 상담
+	id = HEU.persona_event.105
+	title = HEU.persona_event.105.t
+	desc = HEU.persona_event.105.desc
+	picture = GFX_report_event_haruka_igusa
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.persona_event.105.a 
+		random_list = {
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^1 = 1
+					tooltip = HEU_aru_persona_kindness_edit_tt
+				}
+			}
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^1 = 2
+					tooltip = HEU_aru_persona_kindness_edit_tt
+				}
+			}
+		}
+		add_to_variable = {
+			global.aru_stat_point_array^0 = -1
+			tooltip = HEU_aru_persona_wisdom_edit_tt
+		}
+		HEU_aru_persona_setting = yes
+	}
+
+	option = { 
+		name = HEU.persona_event.105.b
+		random_list = {
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^0 = 1
+					tooltip = HEU_aru_persona_wisdom_edit_tt
+				}
+			}
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^0 = 2
+					tooltip = HEU_aru_persona_wisdom_edit_tt
+				}
+			}
+		}
+		add_to_variable = {
+			global.aru_stat_point_array^1 = -1
+			tooltip = HEU_aru_persona_kindness_edit_tt
+		}
+		HEU_aru_persona_setting = yes
+	}
+}
+
+country_event = { #잡초 키우기
+	id = HEU.persona_event.106
+	title = HEU.persona_event.106.t
+	desc = HEU.persona_event.106.desc
+	picture = GFX_report_event_haruka_igusa
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.persona_event.106.a
+		add_political_power = 50
+	}
+}
+
+country_event = { #고민 상담
+	id = HEU.persona_event.107
+	title = HEU.persona_event.107.t
+	desc = HEU.persona_event.107.desc
+	picture = GFX_report_event_kayoko_onikata
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.persona_event.107.a
+		random_list = {
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^2 = 3
+					tooltip = HEU_aru_persona_resolution_edit_tt
+				}
+			}
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^2 = 4
+					tooltip = HEU_aru_persona_resolution_edit_tt
+				}
+			}
+		}
+		random_list = {
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^1 = -2
+					tooltip = HEU_aru_persona_kindness_edit_tt
+				}
+			}
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^1 = -3
+					tooltip = HEU_aru_persona_kindness_edit_tt
+				}
+			}
+		}
+		HEU_aru_persona_setting = yes
+	}
+
+	option = { 
+		name = HEU.persona_event.107.b
+		random_list = {
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^3 = 1
+					tooltip = HEU_aru_persona_charisma_edit_tt
+				}
+			}
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^3 = 2
+					tooltip = HEU_aru_persona_charisma_edit_tt
+				}
+			}
+		}
+		HEU_aru_persona_setting = yes
+	}
+
+	option = { 
+		name = HEU.persona_event.107.c
+		random_list = {
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^1 = 1
+					tooltip = HEU_aru_persona_kindness_edit_tt
+				}
+			}
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^1 = 2
+					tooltip = HEU_aru_persona_kindness_edit_tt
+				}
+			}
+		}
+		HEU_aru_persona_setting = yes
+	}
+}
+
+country_event = { #흥신소의 저녁
+	id = HEU.persona_event.108
+	title = HEU.persona_event.108.t
+	desc = HEU.persona_event.108.desc
+	picture = GFX_report_event_kayoko_onikata
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.persona_event.108.a
+		if = {
+			limit = {
+				check_variable = { global.aru_schedule_point < 6 }
+			}
+			add_to_variable = { global.aru_schedule_point = 1 }
+			add_political_power = 30
+		}
+		else = {
+			add_political_power = 35
+		}
+	}
+}
+
+country_event = { #카요코의 선물
+	id = HEU.persona_event.109
+	title = HEU.persona_event.109.t
+	desc = HEU.persona_event.109.desc
+	picture = GFX_report_event_kayoko_onikata
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.persona_event.109.a
+		add_stability = 0.01
+	}
+}
+
+country_event = { #고양이
+	id = HEU.persona_event.110
+	title = HEU.persona_event.110.t
+	desc = HEU.persona_event.110.desc
+	picture = GFX_report_event_kayoko_onikata
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.persona_event.110.a
+		random_list = {
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^1 = 1
+					tooltip = HEU_aru_persona_kindness_edit_tt
+				}
+			}
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^1 = 2
+					tooltip = HEU_aru_persona_kindness_edit_tt
+				}
+			}
+		}
+		HEU_aru_persona_setting = yes
+	}
+
+	option = { 
+		name = HEU.persona_event.110.b
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.02
+		}
+		add_stability = 0.01
+	}
+}
+
+country_event = { #길가
+	id = HEU.persona_event.111
+	title = HEU.persona_event.111.t
+	desc = HEU.persona_event.111.desc
+	picture = GFX_report_event_kayoko_onikata
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.persona_event.111.a
+		add_political_power = 35
+	}
+}
+
+country_event = { #현지 음악이 싫어
+	id = HEU.persona_event.112
+	title = HEU.persona_event.112.t
+	desc = HEU.persona_event.112.desc
+	picture = GFX_report_event_kayoko_onikata
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.persona_event.112.a
+		add_political_power = 25
+	}
+	
+	option = { 
+		name = HEU.persona_event.112.b
+		add_political_power = -50
+
+		add_breakthrough_progress = {
+			specialization = specialization_land
+			value = 0.1
+		}
+	}
+}
+
+country_event = { #식물도 음악을 들을까?
+	id = HEU.persona_event.113
+	title = HEU.persona_event.113.t
+	desc = HEU.persona_event.113.desc
+	picture = GFX_report_event_kayoko_onikata
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.persona_event.113.a
+		add_political_power = 25
+	}
+	
+	option = { 
+		name = HEU.persona_event.113.b
+		add_political_power = -50
+
+		add_breakthrough_progress = {
+			specialization = specialization_land
+			value = 0.1
+		}
+	}
+}
+
+country_event = { #자그마한 장난
+	id = HEU.persona_event.114
+	title = HEU.persona_event.114.t
+	desc = HEU.persona_event.114.desc
+	picture = GFX_report_event_mutsuki_asagi_dress
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.persona_event.114.a
+		add_political_power = -25
+		random_list = {
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^1 = 2
+					tooltip = HEU_aru_persona_kindness_edit_tt
+				}
+			}
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^1 = 3
+					tooltip = HEU_aru_persona_kindness_edit_tt
+				}
+			}
+		}
+		HEU_aru_persona_setting = yes
+	}
+	
+	option = { 
+		name = HEU.persona_event.114.b
+		add_political_power = 25
+		random_list = {
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^0 = 1
+					tooltip = HEU_aru_persona_wisdom_edit_tt
+				}
+			}
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^0 = 2
+					tooltip = HEU_aru_persona_wisdom_edit_tt
+				}
+			}
+		}
+		HEU_aru_persona_setting = yes
+	}
+}
+
+country_event = { #지루함
+	id = HEU.persona_event.115
+	title = HEU.persona_event.115.t
+	desc = HEU.persona_event.115.desc
+	picture = GFX_report_event_luxembourg_city
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.persona_event.115.a
+		random_list = {
+			5 = {
+				add_to_variable = {
+					global.aru_stat_point_array^2 = 3
+					tooltip = HEU_aru_persona_resolution_edit_tt
+				}
+			}
+			10 = {
+				add_political_power = 25
+			}
+		}
+		HEU_aru_persona_setting = yes
+	}
+	
+	option = { 
+		name = HEU.persona_event.115.b
+		random_list = {
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^2 = 2
+					tooltip = HEU_aru_persona_resolution_edit_tt
+				}
+			}
+			10 = {
+				add_breakthrough_progress = {
+					specialization = specialization_land
+					value = 0.1
+				}
+			}
+		}
+		HEU_aru_persona_setting = yes
+	}
+}
+
+country_event = { #좀 위험한 장난
+	id = HEU.persona_event.116
+	title = HEU.persona_event.116.t
+	desc = HEU.persona_event.116.desc
+	picture = GFX_report_event_mutsuki_asagi_dress
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.persona_event.116.a
+		add_stability = -0.01
+		random_list = {
+			1 = {
+				add_manpower = -1
+			}
+			10 = {
+				
+			}
+		}
+	}
+	
+	option = { 
+		name = HEU.persona_event.116.b
+		add_political_power = -25
+	}
+}
+
+country_event = { #무츠키는 어떤 간식이 좋아?
+	id = HEU.persona_event.117
+	title = HEU.persona_event.117.t
+	desc = HEU.persona_event.117.desc
+	picture = GFX_report_event_mutsuki_asagi_dress
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.persona_event.117.a
+		add_political_power = 35
+	}
+}
+
+country_event = { #아하하 팝콘 같아!
+	id = HEU.persona_event.118
+	title = HEU.persona_event.118.t
+	desc = HEU.persona_event.118.desc
+	picture = GFX_report_event_mutsuki_asagi_dress
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.persona_event.118.a
+		add_breakthrough_progress = {
+			specialization = specialization_air
+			value = 0.25
+		}
+	}
+
+	option = { 
+		name = HEU.persona_event.118.b
+		random_list = {
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^1 = 2
+					tooltip = HEU_aru_persona_kindness_edit_tt
+				}
+			}
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^1 = 3
+					tooltip = HEU_aru_persona_kindness_edit_tt
+				}
+			}
+		}
+		HEU_aru_persona_setting = yes
+	}
+}
+
+country_event = { #아루와 함께 보내는 시간
+	id = HEU.persona_event.119
+	title = HEU.persona_event.119.t
+	desc = HEU.persona_event.119.desc
+	picture = GFX_report_event_mutsuki_asagi_dress
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.persona_event.119.a
+		random_list = {
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^3 = 2
+					tooltip = HEU_aru_persona_charisma_edit_tt
+				}
+			}
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^3 = 3
+					tooltip = HEU_aru_persona_charisma_edit_tt
+				}
+			}
+		}
+		HEU_aru_persona_setting = yes
+	}
+}
+
+country_event = { #아루 짱은 이런 거 좋아해?
+	id = HEU.persona_event.120
+	title = HEU.persona_event.120.t
+	desc = HEU.persona_event.120.desc
+	picture = GFX_report_event_aru_rikuhachima_smile
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.persona_event.120.a
+		random_list = {
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^3 = 2
+					tooltip = HEU_aru_persona_charisma_edit_tt
+				}
+			}
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^3 = 3
+					tooltip = HEU_aru_persona_charisma_edit_tt
+				}
+			}
+		}
+		HEU_aru_persona_setting = yes
+	}
+}
+
+country_event = { #무츠키 같은 그... 없나?
+	id = HEU.persona_event.121
+	title = HEU.persona_event.121.t
+	desc = HEU.persona_event.121.desc
+	picture = GFX_report_event_grand_ducal_palace_luxembourg
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.persona_event.121.a
+		random_list = {
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^3 = -1
+					tooltip = HEU_aru_persona_charisma_edit_tt
+				}
+			}
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^3 = -2
+					tooltip = HEU_aru_persona_charisma_edit_tt
+				}
+			}
+		}
+		HEU_aru_persona_setting = yes
+	}
+}
+
+country_event = { #일일일악 정산
+	id = HEU.persona_event.122
+	title = HEU.persona_event.122.t
+	desc = HEU.persona_event.122.desc
+	picture = GFX_report_event_aru_rikuhachima
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.persona_event.122.a
+		random_list = {
+			10 = {
+				add_political_power = 75
+			}
+			10 = {
+				add_stability = 0.02
+			}
+			10 = {
+				add_war_support = 0.02
+			}
+		}
+	}
+}
+
+country_event = { #눈이 아파
+	id = HEU.persona_event.123
+	title = HEU.persona_event.123.t
+	desc = HEU.persona_event.123.desc
+	picture = GFX_report_event_aru_rikuhachima
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.persona_event.123.a
+		add_political_power = -25
+	}
+	
+	option = { 
+		name = HEU.persona_event.123.b
+
+	}
+}
+
+country_event = { #죽여주마 리쿠하치마 아루
+	id = HEU.persona_event.124
+	title = HEU.persona_event.124.t
+	desc = HEU.persona_event.124.desc
+	picture = GFX_report_event_aru_rikuhachima
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.persona_event.124.a
+		random_list = {
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^2 = 3
+					tooltip = HEU_aru_persona_resolution_edit_tt
+				}
+			}
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^2 = 4
+					tooltip = HEU_aru_persona_resolution_edit_tt
+				}
+			}
+		}
+		random_list = {
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^1 = -2
+					tooltip = HEU_aru_persona_kindness_edit_tt
+				}
+			}
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^1 = -3
+					tooltip = HEU_aru_persona_kindness_edit_tt
+				}
+			}
+		}
+		HEU_aru_persona_setting = yes
+	}
+	
+	option = { 
+		name = HEU.persona_event.124.b
+		random_list = {
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^1 = 3
+					tooltip = HEU_aru_persona_kindness_edit_tt
+				}
+			}
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^1 = 4
+					tooltip = HEU_aru_persona_kindness_edit_tt
+				}
+			}
+		}
+		random_list = {
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^2 = -2
+					tooltip = HEU_aru_persona_resolution_edit_tt
+				}
+			}
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^2 = -3
+					tooltip = HEU_aru_persona_resolution_edit_tt
+				}
+			}
+		}
+		HEU_aru_persona_setting = yes
+
+	}
+}
+
+country_event = { #오늘은 기분 좋은 식사를
+	id = HEU.persona_event.125
+	title = HEU.persona_event.125.t
+	desc = HEU.persona_event.125.desc
+	picture = GFX_report_event_aru_rikuhachima_smile
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.persona_event.125.a
+		add_stability = 0.03
+	}
+
+	option = { 
+		name = HEU.persona_event.125.b
+		add_war_support = 0.03
+	}
+}
+
+country_event = { #허당 아니야
+	id = HEU.persona_event.126
+	title = HEU.persona_event.126.t
+	desc = HEU.persona_event.126.desc
+	picture = GFX_report_event_aru_rikuhachima
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.persona_event.126.a
+		random_list = {
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^2 = -2
+					tooltip = HEU_aru_persona_resolution_edit_tt
+				}
+			}
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^2 = -3
+					tooltip = HEU_aru_persona_resolution_edit_tt
+				}
+			}
+		}
+		HEU_aru_persona_setting = yes
+	}
+}
+
+country_event = { #기분 나쁜 출근길
+	id = HEU.persona_event.127
+	title = HEU.persona_event.127.t
+	desc = HEU.persona_event.127.desc
+	
+	picture = GFX_report_event_aru_rikuhachima
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.persona_event.127.a
+		random_list = {
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^3 = -1
+					tooltip = HEU_aru_persona_charisma_edit_tt
+				}
+			}
+			10 = {
+				add_to_variable = {
+					global.aru_stat_point_array^3 = -2
+					tooltip = HEU_aru_persona_charisma_edit_tt
+				}
+			}
+			10 = {
+
+			}
+		}
+		HEU_aru_persona_setting = yes
+	}
+}
+
+country_event = { #사격 연습
+	id = HEU.persona_event.128
+	title = HEU.persona_event.128.t
+	
+	desc = {
+		text = HEU.persona_event.128.desc.b
+		trigger = { 
+			HEU_aru = { has_character_flag = HEU_aru_visually_impaired }
+		}
+	}
+
+	desc = {
+		text = HEU.persona_event.128.desc.a
+
+	}
+	
+	picture = GFX_report_event_aru_rikuhachima
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.persona_event.128.a
+		add_political_power = -25
+	}
+}
+
+country_event = { #감기
+	id = HEU.persona_event.129
+	title = HEU.persona_event.129.t
+	desc = HEU.persona_event.129.desc
+	
+	picture = GFX_report_event_aru_rikuhachima
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.persona_event.129.a
+
+		HEU_aru = {
+			add_timed_unit_leader_trait = {
+				trait = sick
+				days = 7
+			}
+		}
 	}
 }
 

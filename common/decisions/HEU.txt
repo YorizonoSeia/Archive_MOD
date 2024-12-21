@@ -377,6 +377,128 @@ HEU_aru_persona_decision_category = {
 		}
 	}
 	
+	HEU_aru_persona_random_events  = {
+		icon = GFX_decision_Gehenna_Emblem
+
+		priority = 99
+
+		allowed = {
+
+		}
+
+		visible = {
+			always = yes
+		}
+
+		is_good = yes
+		available = { hidden_trigger = { always = no } }
+
+		activation = {
+			#has_completed_focus = HEU_luxembourg_benriya_68 
+		}
+
+		days_mission_timeout = 140
+
+		timeout_effect = {
+			custom_effect_tooltip = HEU_aru_persona_random_events_tt
+			hidden_effect = {
+				random_list = {
+					1 = {
+						country_event = { id = HEU.persona_event.100 }
+					}
+					1 = {
+						country_event = { id = HEU.persona_event.101 }
+					}
+					1 = {
+						country_event = { id = HEU.persona_event.102 }
+					}
+					1 = {
+						country_event = { id = HEU.persona_event.103 }
+					}
+					1 = {
+						country_event = { id = HEU.persona_event.104 }
+					}
+					1 = {
+						country_event = { id = HEU.persona_event.105 }
+					}
+					1 = {
+						country_event = { id = HEU.persona_event.106 }
+					}
+					1 = {
+						country_event = { id = HEU.persona_event.107 }
+					}
+					1 = {
+						country_event = { id = HEU.persona_event.108 }
+					}
+					1 = {
+						country_event = { id = HEU.persona_event.109 }
+					}
+					1 = {
+						country_event = { id = HEU.persona_event.110 }
+					}
+					1 = {
+						country_event = { id = HEU.persona_event.111 }
+					}
+					1 = {
+						country_event = { id = HEU.persona_event.112 }
+					}
+					1 = {
+						country_event = { id = HEU.persona_event.113 }
+					}
+					1 = {
+						country_event = { id = HEU.persona_event.114 }
+					}
+					1 = {
+						country_event = { id = HEU.persona_event.115 }
+					}
+					1 = {
+						country_event = { id = HEU.persona_event.116 }
+					}
+					1 = {
+						country_event = { id = HEU.persona_event.117 }
+					}
+					1 = {
+						country_event = { id = HEU.persona_event.118 }
+					}
+					1 = {
+						country_event = { id = HEU.persona_event.119 }
+					}
+					1 = {
+						country_event = { id = HEU.persona_event.120 }
+					}
+					1 = {
+						country_event = { id = HEU.persona_event.121 }
+					}
+					1 = {
+						country_event = { id = HEU.persona_event.122 }
+					}
+					1 = {
+						country_event = { id = HEU.persona_event.123 }
+					}
+					1 = {
+						country_event = { id = HEU.persona_event.124 }
+					}
+					1 = {
+						country_event = { id = HEU.persona_event.125 }
+					}
+					1 = {
+						country_event = { id = HEU.persona_event.126 }
+					}
+					1 = {
+						country_event = { id = HEU.persona_event.127 }
+					}
+					1 = {
+						country_event = { id = HEU.persona_event.128 }
+					}
+					1 = {
+						country_event = { id = HEU.persona_event.129 }
+					}
+				}
+
+				activate_mission = HEU_aru_persona_random_events
+			}
+		}
+	}
 }
 
 HEU_rikuhachimaism_decision_category = {
