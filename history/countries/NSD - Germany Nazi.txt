@@ -1,5 +1,7 @@
 ﻿capital = 66
 
+oob = NSD_1936
+
 #COMMUNIST INTEL MODIFIER
 set_variable = { GER_communist_intel_drift_defence_factor = 0.2 }
 set_variable = { GER_communist_intel_communism_drift = 0.05 }

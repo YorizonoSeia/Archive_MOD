@@ -147,6 +147,9 @@
  KPD_country_collapse_value_up_tt: "§H[KPD.GetNameWithFlag]§! 영향력 점수가 $RIGHT|%%0H$ 보다 큼"
  NSD_country_collapse_value_up_tt: "§H[NSD.GetNameWithFlag]§! 영향력 점수가 $RIGHT|%%0H$ 보다 큼"
 
+ KPD_country_collapse_value_down_tt: "§H[KPD.GetNameWithFlag]§! 영향력 점수가 $RIGHT|%%0H$ 보다 작음"
+ NSD_country_collapse_value_down_tt: "§H[NSD.GetNameWithFlag]§! 영향력 점수가 $RIGHT|%%0H$ 보다 작음"
+
  KPD_country_collapse_decisions_value_tt:0 "[?global.KPD_country_collapse_decisions_value|0H%%]"
  NSD_country_collapse_decisions_value_tt:0 "[?global.NSD_country_collapse_decisions_value|0H%%]"
 
@@ -200,6 +203,17 @@
  TRM_decision_cost_ie_150_pp_25: "£infantry_equipment_text_icon  §Y150§!  £pol_power  §Y25§!"
  TRM_decision_cost_ie_150_pp_25_blocked: "£infantry_equipment_text_icon  §R150§!  £pol_power  §R25§!"
 
+ KPD_equipment_request_to_soviet_union: "소련에 장비 요청"
+
+ KPD_weapon_smuggling: "무기 밀수"
+ NSD_weapon_smuggling: "무기 밀수"
+
+ KPD_declaration_of_resistance: "마지막 혁명 선포"
+ NSD_declaration_of_resistance: "최후의 전쟁 선포"
+
+ TRM_declaration_of_extermination_campaign_KPD: "유격대 파괴"
+ TRM_declaration_of_extermination_campaign_NSD: "친위대 파괴"
+
  TRN_collapse_event.11.t: "트리니티의 작전 성공"
  TRN_collapse_event.12.t: "무력화된 작전"
  TRN_collapse_event.13.t: "독일 유격대의 작전 성공"
@@ -237,3 +251,16 @@
 
  TRN_collapse_event.21.b: "안돼!"
  TRN_collapse_event.23.b: "훌륭하군!"
+
+ TRN_collapse_event.9.t:0 "[KPD.GetName]의 보병 장비 요청"
+ TRN_collapse_event.9.desc:0 "[KPD.GetName](이)가 트리니티와의 유격전을 위한 보병 장비 지원을 요청했습니다. [KPD.GetAdjective]군은 기본 장비조차 없어 병력들을 충분히 무장시킬 수 없습니다. 하지만 우리가 저들에게 장비를 지원하면 [TRM.GetName](와)과의 관계가 분명히 더욱 악화될 겁니다."
+ TRN_collapse_event.9.a:0 "당연히 우리는 그들을 지원할 것이다."
+ TRN_collapse_event.9.b:0 "물론, 우리는 그들을 도울 것이다...은밀하게."
+
+ TRN_collapse_event.91.t:0 "[SOV.GetNameDefCap]의 보병 장비 지원"
+ TRN_collapse_event.91.desc:0 "[SOV.GetName](이)가 [TRM.GetName](와)과의 투쟁을 지원하기 위해 우리가 요청한 보병 장비를 보내왔습니다.이로써 압제자들을 상대로 확실히 승리할 수 있을 겁니다."
+ TRN_collapse_event.91.a:0 "훌륭한 결과다."
+
+ TRN_collapse_event.92.t:0 "[SOV.GetNameDefCap]의 비밀 운송 조약"
+ TRN_collapse_event.92.desc:0 "[SOV.GetName](이)가 [TRM.GetName](와)과의 투쟁을 지원하기 위해 비밀리에 지원하기로 서명했습니다."
+ TRN_collapse_event.92.a:0 "[TRM.GetName] 측과의 충돌을 피하는가?"

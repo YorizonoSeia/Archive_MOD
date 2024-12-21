@@ -5236,6 +5236,91 @@ country_event = {
 		add_stability = 0.05
 	}
 }
+country_event = { # 
+	id = TRN_collapse_event.9
+	title = TRN_collapse_event.9.t
+	desc = TRN_collapse_event.9.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no 
+	is_triggered_only = yes
+	
+	option = { #
+		name = TRN_collapse_event.9.a
+		ai_chance = {
+			factor = 10
+		}
+		send_equipment = {
+			type = infantry_equipment_1 
+			amount = 3000  
+			target = KPD
+		}
+		FROM = { country_event = TRN_collapse_event.91 }
+	}
+	
+	option = { #
+		name = TRN_collapse_event.9.b
+		ai_chance = {
+			factor = 20
+		}
+		send_equipment = {
+			type = infantry_equipment_1 
+			amount = 500  
+			target = KPD
+		}
+		FROM = { country_event = TRN_collapse_event.92 }
+	}
+}
+country_event = { # 
+	id = TRN_collapse_event.91
+	title = TRN_collapse_event.91.t
+	desc = TRN_collapse_event.91.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no 
+	is_triggered_only = yes
+	
+	option = { #
+		name = TRN_collapse_event.91.a
+		ai_chance = {
+			factor = 10
+		}
+		effect_tooltip = {
+			SOV = { 
+				send_equipment = {
+					type = infantry_equipment_1 
+					amount = 3000  
+					target = KPD
+				}
+			}
+		}
+	}
+}
+country_event = { # 
+	id = TRN_collapse_event.92
+	title = TRN_collapse_event.92.t
+	desc = TRN_collapse_event.92.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no 
+	is_triggered_only = yes
+	
+	option = { #
+		name = TRN_collapse_event.92.a
+		ai_chance = {
+			factor = 10
+		}
+		effect_tooltip = {
+			SOV = { 
+				send_equipment = {
+					type = infantry_equipment_1 
+					amount = 500  
+					target = KPD
+				}
+			}
+		}
+	}
+}
 country_event = { # 트리니티 vs KPD 승리
 	id = TRN_collapse_event.11
 	title = TRN_collapse_event.11.t
@@ -5353,6 +5438,12 @@ country_event = { # 트리니티 vs KPD 패배
 	immediate = {
 		set_variable = { global.KPD_country_collapse_decisions_rps = 0 }
 		set_variable = { global.TRM_KPD_country_collapse_decisions_rps = 0 }
+		if = { limit = { has_country_flag = KPD_start_KPD_flag }
+			clr_country_flag = KPD_start_KPD_flag
+		}
+		if = { limit = { has_country_flag = TRM_start_KPD_flag }
+			clr_country_flag = TRM_start_KPD_flag
+		}
 	}
 
 	fire_only_once = no 

@@ -278,6 +278,17 @@ TRN_country_collapse_decisions = {
 				has_country_flag = TRM_ai_guid_KPD_2_go_flag
 				factor = 10
 			}
+			modifier = {
+				has_country_flag = TRM_ai_guid_KPD_2_go_flag
+				NSD = { is_ai = no }
+				check_variable = { global.KPD_country_collapse_decisions_rps = 4 }
+				factor = 0.1
+			}
+			modifier = {
+				NSD = { is_ai = no }
+				check_variable = { global.KPD_country_collapse_decisions_rps = 4 }
+				factor = 0.7
+			}
 		}
 
 		complete_effect = {
@@ -285,11 +296,14 @@ TRN_country_collapse_decisions = {
 			set_variable = { TRM_anti_trinity_game_KPD_side_TRM_var = 2 }
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
-				amount = -500
+				amount = -150
+			}
+			hidden_effect = {
+				add_political_power = -25
 			}
 			set_country_flag = {
 				flag = TRM_start_KPD_flag
-				days = 80
+				days = 37
 				value = 1
 			}
 			if = {
@@ -301,13 +315,15 @@ TRN_country_collapse_decisions = {
 			}
 			set_country_flag = {
 				flag = TRM_ai_guid_KPD_2_flag
-				days = 180
+				days = 45
 				value = 1
 			}
-			random_list = {
-				1 = { set_country_flag = { flag = TRM_ai_guid_KPD_2_go_flag days = 100 value = 1 } }
-				1 = { set_country_flag = { flag = TRM_ai_guid_KPD_3_go_flag days = 100 value = 1 } }
-				1 = { set_country_flag = { flag = TRM_ai_guid_KPD_4_go_flag days = 100 value = 1 } }
+			hidden_effect = {
+				random_list = {
+					1 = { set_country_flag = { flag = TRM_ai_guid_KPD_2_go_flag days = 100 value = 1 } }
+					1 = { set_country_flag = { flag = TRM_ai_guid_KPD_3_go_flag days = 100 value = 1 } }
+					1 = { set_country_flag = { flag = TRM_ai_guid_KPD_4_go_flag days = 100 value = 1 } }
+				}
 			}
         }
 	}
@@ -346,6 +362,17 @@ TRN_country_collapse_decisions = {
 				has_country_flag = TRM_ai_guid_KPD_3_go_flag
 				factor = 10
 			}
+			modifier = {
+				has_country_flag = TRM_ai_guid_KPD_3_go_flag
+				NSD = { is_ai = no }
+				check_variable = { global.KPD_country_collapse_decisions_rps = 2 }
+				factor = 0.1
+			}
+			modifier = {
+				NSD = { is_ai = no }
+				check_variable = { global.KPD_country_collapse_decisions_rps = 2 }
+				factor = 0.7
+			}
 		}
 
 		complete_effect = {
@@ -353,11 +380,14 @@ TRN_country_collapse_decisions = {
 			set_variable = { TRM_anti_trinity_game_KPD_side_TRM_var = 3 }
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
-				amount = -500
+				amount = -150
+			}
+			hidden_effect = {
+				add_political_power = -25
 			}
 			set_country_flag = {
 				flag = TRM_start_KPD_flag
-				days = 80
+				days = 37
 				value = 1
 			}
 			if = {
@@ -369,13 +399,15 @@ TRN_country_collapse_decisions = {
 			}
 			set_country_flag = {
 				flag = TRM_ai_guid_KPD_3_flag
-				days = 180
+				days = 45
 				value = 1
 			}
-			random_list = {
-				1 = { set_country_flag = { flag = TRM_ai_guid_KPD_2_go_flag days = 100 value = 1 } }
-				1 = { set_country_flag = { flag = TRM_ai_guid_KPD_3_go_flag days = 100 value = 1 } }
-				1 = { set_country_flag = { flag = TRM_ai_guid_KPD_4_go_flag days = 100 value = 1 } }
+			hidden_effect = {
+				random_list = {
+					1 = { set_country_flag = { flag = TRM_ai_guid_KPD_2_go_flag days = 100 value = 1 } }
+					1 = { set_country_flag = { flag = TRM_ai_guid_KPD_3_go_flag days = 100 value = 1 } }
+					1 = { set_country_flag = { flag = TRM_ai_guid_KPD_4_go_flag days = 100 value = 1 } }
+				}
 			}
         }
 	}
@@ -414,6 +446,17 @@ TRN_country_collapse_decisions = {
 				has_country_flag = TRM_ai_guid_KPD_4_go_flag
 				factor = 10
 			}
+			modifier = {
+				has_country_flag = TRM_ai_guid_KPD_4_go_flag
+				NSD = { is_ai = no }
+				check_variable = { global.KPD_country_collapse_decisions_rps = 3 }
+				factor = 0.1
+			}
+			modifier = {
+				NSD = { is_ai = no }
+				check_variable = { global.KPD_country_collapse_decisions_rps = 3 }
+				factor = 0.7
+			}
 		}
 
 		complete_effect = {
@@ -421,11 +464,14 @@ TRN_country_collapse_decisions = {
 			set_variable = { TRM_anti_trinity_game_KPD_side_TRM_var = 4 }
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
-				amount = -500
+				amount = -150
+			}
+			hidden_effect = {
+				add_political_power = -25
 			}
 			set_country_flag = {
 				flag = TRM_start_KPD_flag
-				days = 80
+				days = 37
 				value = 1
 			}
 			if = {
@@ -437,13 +483,15 @@ TRN_country_collapse_decisions = {
 			}
 			set_country_flag = {
 				flag = TRM_ai_guid_KPD_4_flag
-				days = 180
+				days = 45
 				value = 1
 			}
-			random_list = {
-				1 = { set_country_flag = { flag = TRM_ai_guid_KPD_2_go_flag days = 100 value = 1 } }
-				1 = { set_country_flag = { flag = TRM_ai_guid_KPD_3_go_flag days = 100 value = 1 } }
-				1 = { set_country_flag = { flag = TRM_ai_guid_KPD_4_go_flag days = 100 value = 1 } }
+			hidden_effect = {
+				random_list = {
+					1 = { set_country_flag = { flag = TRM_ai_guid_KPD_2_go_flag days = 100 value = 1 } }
+					1 = { set_country_flag = { flag = TRM_ai_guid_KPD_3_go_flag days = 100 value = 1 } }
+					1 = { set_country_flag = { flag = TRM_ai_guid_KPD_4_go_flag days = 100 value = 1 } }
+				}
 			}
         }
 	}
@@ -460,7 +508,7 @@ TRN_country_collapse_decisions = {
 
 		is_good = no
 
-		days_mission_timeout = 70
+		days_mission_timeout = 35
 
 		available = {
 			always = no
@@ -582,7 +630,7 @@ TRN_country_collapse_decisions = {
 
 		is_good = no
 
-		days_mission_timeout = 70
+		days_mission_timeout = 35
 
 		available = {
 			always = no
@@ -733,11 +781,14 @@ TRN_country_collapse_decisions = {
 			set_variable = { TRM_anti_trinity_game_KPD_side_KPD_var = 2 }
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
-				amount = -500
+				amount = -150
+			}
+			hidden_effect = {
+				add_political_power = -25
 			}
 			set_country_flag = {
 				flag = KPD_start_KPD_flag
-				days = 80
+				days = 37
 				value = 1
 			}
 			if = {
@@ -749,13 +800,15 @@ TRN_country_collapse_decisions = {
 			}
 			set_country_flag = {
 				flag = KPD_ai_guid_2_flag
-				days = 180
+				days = 45
 				value = 1
 			}
-			random_list = {
-				1 = { set_country_flag = { flag = KPD_ai_guid_2_go_flag days = 100 value = 1 } }
-				1 = { set_country_flag = { flag = KPD_ai_guid_3_go_flag days = 100 value = 1 } }
-				1 = { set_country_flag = { flag = KPD_ai_guid_4_go_flag days = 100 value = 1 } }
+			hidden_effect = {
+				random_list = {
+					1 = { set_country_flag = { flag = KPD_ai_guid_2_go_flag days = 100 value = 1 } }
+					1 = { set_country_flag = { flag = KPD_ai_guid_3_go_flag days = 100 value = 1 } }
+					1 = { set_country_flag = { flag = KPD_ai_guid_4_go_flag days = 100 value = 1 } }
+				}
 			}
         }
 	}
@@ -801,11 +854,14 @@ TRN_country_collapse_decisions = {
 			set_variable = { TRM_anti_trinity_game_KPD_side_KPD_var = 3 }
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
-				amount = -500
+				amount = -150
+			}
+			hidden_effect = {
+				add_political_power = -25
 			}
 			set_country_flag = {
 				flag = KPD_start_KPD_flag
-				days = 80
+				days = 37
 				value = 1
 			}
 			if = {
@@ -817,13 +873,15 @@ TRN_country_collapse_decisions = {
 			}
 			set_country_flag = {
 				flag = KPD_ai_guid_3_flag
-				days = 180
+				days = 45
 				value = 1
 			}
-			random_list = {
-				1 = { set_country_flag = { flag = KPD_ai_guid_2_go_flag days = 100 value = 1 } }
-				1 = { set_country_flag = { flag = KPD_ai_guid_3_go_flag days = 100 value = 1 } }
-				1 = { set_country_flag = { flag = KPD_ai_guid_4_go_flag days = 100 value = 1 } }
+			hidden_effect = {
+				random_list = {
+					1 = { set_country_flag = { flag = KPD_ai_guid_2_go_flag days = 100 value = 1 } }
+					1 = { set_country_flag = { flag = KPD_ai_guid_3_go_flag days = 100 value = 1 } }
+					1 = { set_country_flag = { flag = KPD_ai_guid_4_go_flag days = 100 value = 1 } }
+				}
 			}
         }
 	}
@@ -870,11 +928,14 @@ TRN_country_collapse_decisions = {
 			set_variable = { TRM_anti_trinity_game_KPD_side_KPD_var = 4 }
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
-				amount = -500
+				amount = -150
+			}
+			hidden_effect = {
+				add_political_power = -25
 			}
 			set_country_flag = {
 				flag = KPD_start_KPD_flag
-				days = 80
+				days = 37
 				value = 1
 			}
 			if = {
@@ -886,13 +947,15 @@ TRN_country_collapse_decisions = {
 			}
 			set_country_flag = {
 				flag = KPD_ai_guid_4_flag
-				days = 180
+				days = 45
 				value = 1
 			}
-			random_list = {
-				1 = { set_country_flag = { flag = KPD_ai_guid_2_go_flag days = 100 value = 1 } }
-				1 = { set_country_flag = { flag = KPD_ai_guid_3_go_flag days = 100 value = 1 } }
-				1 = { set_country_flag = { flag = KPD_ai_guid_4_go_flag days = 100 value = 1 } }
+			hidden_effect = {
+				random_list = {
+					1 = { set_country_flag = { flag = KPD_ai_guid_2_go_flag days = 100 value = 1 } }
+					1 = { set_country_flag = { flag = KPD_ai_guid_3_go_flag days = 100 value = 1 } }
+					1 = { set_country_flag = { flag = KPD_ai_guid_4_go_flag days = 100 value = 1 } }
+				}
 			}
         }
 	}
@@ -931,6 +994,17 @@ TRN_country_collapse_decisions = {
 				has_country_flag = TRM_ai_guid_NSD_2_go_flag
 				factor = 10
 			}
+			modifier = {
+				has_country_flag = TRM_ai_guid_NSD_2_go_flag
+				NSD = { is_ai = no }
+				check_variable = { global.NSD_country_collapse_decisions_rps = 4 }
+				factor = 0.1
+			}
+			modifier = {
+				NSD = { is_ai = no }
+				check_variable = { global.NSD_country_collapse_decisions_rps = 4 }
+				factor = 0.7
+			}
 		}
 
 		complete_effect = {
@@ -938,11 +1012,14 @@ TRN_country_collapse_decisions = {
 			set_variable = { TRM_anti_trinity_game_NSD_side_TRM_var = 2 }
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
-				amount = -500
+				amount = -150
+			}
+			hidden_effect = {
+				add_political_power = -25
 			}
 			set_country_flag = {
 				flag = TRM_start_NSD_flag
-				days = 80
+				days = 37
 				value = 1
 			}
 			if = {
@@ -954,13 +1031,15 @@ TRN_country_collapse_decisions = {
 			}
 			set_country_flag = {
 				flag = TRM_ai_guid_NSD_2_flag
-				days = 180
+				days = 45
 				value = 1
 			}
-			random_list = {
-				1 = { set_country_flag = { flag = TRM_ai_guid_NSD_2_go_flag days = 100 value = 1 } }
-				1 = { set_country_flag = { flag = TRM_ai_guid_NSD_3_go_flag days = 100 value = 1 } }
-				1 = { set_country_flag = { flag = TRM_ai_guid_NSD_4_go_flag days = 100 value = 1 } }
+			hidden_effect = {
+				random_list = {
+					1 = { set_country_flag = { flag = TRM_ai_guid_NSD_2_go_flag days = 100 value = 1 } }
+					1 = { set_country_flag = { flag = TRM_ai_guid_NSD_3_go_flag days = 100 value = 1 } }
+					1 = { set_country_flag = { flag = TRM_ai_guid_NSD_4_go_flag days = 100 value = 1 } }
+				}
 			}
         }
 	}
@@ -999,6 +1078,17 @@ TRN_country_collapse_decisions = {
 				has_country_flag = TRM_ai_guid_NSD_3_go_flag
 				factor = 10
 			}
+			modifier = {
+				has_country_flag = TRM_ai_guid_NSD_3_go_flag
+				NSD = { is_ai = no }
+				check_variable = { global.NSD_country_collapse_decisions_rps = 2 }
+				factor = 0.1
+			}
+			modifier = {
+				NSD = { is_ai = no }
+				check_variable = { global.NSD_country_collapse_decisions_rps = 2 }
+				factor = 0.7
+			}
 		}
 
 		complete_effect = {
@@ -1006,11 +1096,14 @@ TRN_country_collapse_decisions = {
 			set_variable = { TRM_anti_trinity_game_NSD_side_TRM_var = 3 }
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
-				amount = -500
+				amount = -150
+			}
+			hidden_effect = {
+				add_political_power = -25
 			}
 			set_country_flag = {
 				flag = TRM_start_NSD_flag
-				days = 80
+				days = 37
 				value = 1
 			}
 			if = {
@@ -1022,13 +1115,15 @@ TRN_country_collapse_decisions = {
 			}
 			set_country_flag = {
 				flag = TRM_ai_guid_NSD_3_flag
-				days = 180
+				days = 45
 				value = 1
 			}
-			random_list = {
-				1 = { set_country_flag = { flag = TRM_ai_guid_NSD_2_go_flag days = 100 value = 1 } }
-				1 = { set_country_flag = { flag = TRM_ai_guid_NSD_3_go_flag days = 100 value = 1 } }
-				1 = { set_country_flag = { flag = TRM_ai_guid_NSD_4_go_flag days = 100 value = 1 } }
+			hidden_effect = {
+				random_list = {
+					1 = { set_country_flag = { flag = TRM_ai_guid_NSD_2_go_flag days = 100 value = 1 } }
+					1 = { set_country_flag = { flag = TRM_ai_guid_NSD_3_go_flag days = 100 value = 1 } }
+					1 = { set_country_flag = { flag = TRM_ai_guid_NSD_4_go_flag days = 100 value = 1 } }
+				}
 			}
         }
 	}
@@ -1067,6 +1162,17 @@ TRN_country_collapse_decisions = {
 				has_country_flag = TRM_ai_guid_NSD_4_go_flag
 				factor = 10
 			}
+			modifier = {
+				has_country_flag = TRM_ai_guid_NSD_4_go_flag
+				NSD = { is_ai = no }
+				check_variable = { global.NSD_country_collapse_decisions_rps = 3 }
+				factor = 0.1
+			}
+			modifier = {
+				NSD = { is_ai = no }
+				check_variable = { global.NSD_country_collapse_decisions_rps = 3 }
+				factor = 0.7
+			}
 		}
 
 		complete_effect = {
@@ -1074,11 +1180,14 @@ TRN_country_collapse_decisions = {
 			set_variable = { TRM_anti_trinity_game_NSD_side_TRM_var = 4 }
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
-				amount = -500
+				amount = -150
+			}
+			hidden_effect = {
+				add_political_power = -25
 			}
 			set_country_flag = {
 				flag = TRM_start_NSD_flag
-				days = 80
+				days = 37
 				value = 1
 			}
 			if = {
@@ -1090,13 +1199,15 @@ TRN_country_collapse_decisions = {
 			}
 			set_country_flag = {
 				flag = TRM_ai_guid_NSD_4_flag
-				days = 180
+				days = 45
 				value = 1
 			}
-			random_list = {
-				1 = { set_country_flag = { flag = TRM_ai_guid_NSD_2_go_flag days = 100 value = 1 } }
-				1 = { set_country_flag = { flag = TRM_ai_guid_NSD_3_go_flag days = 100 value = 1 } }
-				1 = { set_country_flag = { flag = TRM_ai_guid_NSD_4_go_flag days = 100 value = 1 } }
+			hidden_effect = {
+				random_list = {
+					1 = { set_country_flag = { flag = TRM_ai_guid_NSD_2_go_flag days = 100 value = 1 } }
+					1 = { set_country_flag = { flag = TRM_ai_guid_NSD_3_go_flag days = 100 value = 1 } }
+					1 = { set_country_flag = { flag = TRM_ai_guid_NSD_4_go_flag days = 100 value = 1 } }
+				}
 			}
         }
 	}
@@ -1113,7 +1224,7 @@ TRN_country_collapse_decisions = {
 
 		is_good = no
 
-		days_mission_timeout = 70
+		days_mission_timeout = 35
 
 		available = {
 			always = no
@@ -1235,7 +1346,7 @@ TRN_country_collapse_decisions = {
 
 		is_good = no
 
-		days_mission_timeout = 70
+		days_mission_timeout = 35
 
 		available = {
 			always = no
@@ -1386,11 +1497,14 @@ TRN_country_collapse_decisions = {
 			set_variable = { TRM_anti_trinity_game_NSD_side_NSD_var = 2 }
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
-				amount = -500
+				amount = -150
+			}
+			hidden_effect = {
+				add_political_power = -25
 			}
 			set_country_flag = {
 				flag = NSD_start_NSD_flag
-				days = 80
+				days = 37
 				value = 1
 			}
 			if = {
@@ -1402,13 +1516,15 @@ TRN_country_collapse_decisions = {
 			}
 			set_country_flag = {
 				flag = NSD_ai_guid_2_flag
-				days = 180
+				days = 45
 				value = 1
 			}
-			random_list = {
-				1 = { set_country_flag = { flag = NSD_ai_guid_2_go_flag days = 100 value = 1 } }
-				1 = { set_country_flag = { flag = NSD_ai_guid_3_go_flag days = 100 value = 1 } }
-				1 = { set_country_flag = { flag = NSD_ai_guid_4_go_flag days = 100 value = 1 } }
+			hidden_effect = {
+				random_list = {
+					1 = { set_country_flag = { flag = NSD_ai_guid_2_go_flag days = 100 value = 1 } }
+					1 = { set_country_flag = { flag = NSD_ai_guid_3_go_flag days = 100 value = 1 } }
+					1 = { set_country_flag = { flag = NSD_ai_guid_4_go_flag days = 100 value = 1 } }
+				}
 			}
         }
 	}
@@ -1454,11 +1570,14 @@ TRN_country_collapse_decisions = {
 			set_variable = { TRM_anti_trinity_game_NSD_side_NSD_var = 3 }
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
-				amount = -500
+				amount = -150
+			}
+			hidden_effect = {
+				add_political_power = -25
 			}
 			set_country_flag = {
 				flag = NSD_start_NSD_flag
-				days = 80
+				days = 37
 				value = 1
 			}
 			if = {
@@ -1470,13 +1589,15 @@ TRN_country_collapse_decisions = {
 			}
 			set_country_flag = {
 				flag = NSD_ai_guid_3_flag
-				days = 180
+				days = 45
 				value = 1
 			}
-			random_list = {
-				1 = { set_country_flag = { flag = NSD_ai_guid_2_go_flag days = 100 value = 1 } }
-				1 = { set_country_flag = { flag = NSD_ai_guid_3_go_flag days = 100 value = 1 } }
-				1 = { set_country_flag = { flag = NSD_ai_guid_4_go_flag days = 100 value = 1 } }
+			hidden_effect = {
+				random_list = {
+					1 = { set_country_flag = { flag = NSD_ai_guid_2_go_flag days = 100 value = 1 } }
+					1 = { set_country_flag = { flag = NSD_ai_guid_3_go_flag days = 100 value = 1 } }
+					1 = { set_country_flag = { flag = NSD_ai_guid_4_go_flag days = 100 value = 1 } }
+				}
 			}
         }
 	}
@@ -1523,11 +1644,14 @@ TRN_country_collapse_decisions = {
 			set_variable = { TRM_anti_trinity_game_NSD_side_NSD_var = 4 }
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
-				amount = -500
+				amount = -150
+			}
+			hidden_effect = {
+				add_political_power = -25
 			}
 			set_country_flag = {
 				flag = NSD_start_NSD_flag
-				days = 80
+				days = 37
 				value = 1
 			}
 			if = {
@@ -1539,15 +1663,503 @@ TRN_country_collapse_decisions = {
 			}
 			set_country_flag = {
 				flag = NSD_ai_guid_4_flag
-				days = 180
+				days = 45
 				value = 1
 			}
-			random_list = {
-				1 = { set_country_flag = { flag = NSD_ai_guid_2_go_flag days = 100 value = 1 } }
-				1 = { set_country_flag = { flag = NSD_ai_guid_3_go_flag days = 100 value = 1 } }
-				1 = { set_country_flag = { flag = NSD_ai_guid_4_go_flag days = 100 value = 1 } }
+			hidden_effect = {
+				random_list = {
+					1 = { set_country_flag = { flag = NSD_ai_guid_2_go_flag days = 100 value = 1 } }
+					1 = { set_country_flag = { flag = NSD_ai_guid_3_go_flag days = 100 value = 1 } }
+					1 = { set_country_flag = { flag = NSD_ai_guid_4_go_flag days = 100 value = 1 } }
+				}
 			}
         }
+	}
+	KPD_equipment_request_to_soviet_union = { # KPD 소련에 무기 요청
+		icon = GFX_decision_generic_prepare_civil_war
+		
+		allowed = {
+			original_tag = KPD
+		}
+		
+		visible = {
+			NOT = { has_global_flag = TRN_country_collapse_decisions_end_flag }
+			has_war_with = TRM
+		}
+		available = {
+			is_in_faction_with = SOV
+		}
+
+		cost = 100
+		
+		fire_only_once = yes
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				has_political_power > 75
+				add = 1000
+			}
+		}
+
+		complete_effect = {
+			SOV = { country_event = { id = TRN_collapse_event.9 hours = 8 } }
+        }
+	}
+	KPD_weapon_smuggling = { # 밀수
+		icon = GFX_decision_generic_prepare_civil_war
+		
+		allowed = {
+			original_tag = KPD
+		}
+		
+		visible = {
+			NOT = { has_global_flag = TRN_country_collapse_decisions_end_flag }
+			has_war_with = TRM
+		}
+		available = {
+		}
+
+		cost = 25
+		
+		fire_only_once = yes
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				has_political_power > 75
+				add = 1000
+			}
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 200
+			}
+        }
+	}
+	NSD_weapon_smuggling = { # 밀수
+		icon = GFX_decision_generic_prepare_civil_war
+		
+		allowed = {
+			original_tag = NSD
+		}
+		
+		visible = {
+			NOT = { has_global_flag = TRN_country_collapse_decisions_end_flag }
+			has_war_with = TRM
+		}
+		available = {
+		}
+
+		cost = 25
+		
+		fire_only_once = yes
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				has_political_power > 75
+				add = 1000
+			}
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 200
+			}
+        }
+	}
+	KPD_declaration_of_resistance = { # 항쟁 선포
+		icon = GFX_decision_generic_form_nation
+		
+		allowed = {
+			original_tag = KPD
+		}
+		
+		visible = {
+			has_war_with = TRM
+		}
+		available = {
+			check_variable = {
+				global.KPD_country_collapse_decisions_value > 50
+				tooltip = KPD_country_collapse_value_up_tt
+			}
+		}
+		
+		fire_only_once = yes
+
+		ai_will_do = {
+			base = 4000
+		}
+
+		complete_effect = {
+			end_exile = KPD
+			transfer_state = 61
+			set_capital = {
+				state = 61
+				remember_old_capital = no
+			}
+			set_temp_variable = { KPD_temp = global.KPD_country_collapse_decisions_value }
+			multiply_temp_variable = { KPD_temp = 0.01 }
+			divide_temp_variable = { KPD_temp = 2 }
+			TRM = {
+				transfer_units_fraction = {
+					target = ROOT
+					size = var:KPD_temp
+					navy_ratio = 0
+					air_ratio = 0
+					keep_unit_leaders_trigger = {
+						always = yes
+					}
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = { check_variable = { global.KPD_country_collapse_decisions_value > 80 } }
+					61 = {
+						create_unit = {
+							division = "name = \"Rote Armee\" division_template = \"Revolution army\" start_experience_factor = 1"
+							owner = KPD
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "name = \"Rote Armee\" division_template = \"Revolution army\" start_experience_factor = 0.5"
+							owner = KPD
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "name = \"Rote Armee\" division_template = \"Peoples Militia\" start_experience_factor = 1 start_equipment_factor = 0.7"
+							owner = KPD
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "name = \"Rote Armee\" division_template = \"Peoples Militia\" start_experience_factor = 0.8 start_equipment_factor = 0.7"
+							owner = KPD
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "name = \"Militia\" division_template = \"Peoples Militia\" start_experience_factor = 0.8 start_equipment_factor = 0.3"
+							owner = KPD
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "name = \"Militia\" division_template = \"Peoples Militia\" start_experience_factor = 0.6 start_equipment_factor = 0.3"
+							owner = KPD
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "name = \"Militia\" division_template = \"Peoples Militia\" start_experience_factor = 0.6 start_equipment_factor = 0.3"
+							owner = KPD
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "name = \"Vanguard\" division_template = \"Vanguard\" start_experience_factor = 0.6 start_equipment_factor = 0.5"
+							owner = KPD
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "name = \"Vanguard\" division_template = \"Vanguard\" start_experience_factor = 0.6 start_equipment_factor = 0.2"
+							owner = KPD
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "name = \"Vanguard\" division_template = \"Vanguard\" start_experience_factor = 0.6 start_equipment_factor = 0.2"
+							owner = KPD
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+				}
+				else_if = {
+					limit = { check_variable = { global.KPD_country_collapse_decisions_value > 60 } }
+					61 = {
+						create_unit = {
+							division = "name = \"Rote Armee\" division_template = \"Revolution army\" start_experience_factor = 1"
+							owner = KPD
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "name = \"Rote Armee\" division_template = \"Revolution army\" start_experience_factor = 0.5"
+							owner = KPD
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "name = \"Rote Armee\" division_template = \"Peoples Militia\" start_experience_factor = 1 start_equipment_factor = 0.7"
+							owner = KPD
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "name = \"Militia\" division_template = \"Peoples Militia\" start_experience_factor = 0.8 start_equipment_factor = 0.3"
+							owner = KPD
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "name = \"Militia\" division_template = \"Peoples Militia\" start_experience_factor = 0.6 start_equipment_factor = 0.3"
+							owner = KPD
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "name = \"Vanguard\" division_template = \"Vanguard\" start_experience_factor = 0.6 start_equipment_factor = 0.5"
+							owner = KPD
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "name = \"Vanguard\" division_template = \"Vanguard\" start_experience_factor = 0.6 start_equipment_factor = 0.2"
+							owner = KPD
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+				}
+				else = {
+					61 = {
+						create_unit = {
+							division = "name = \"Rote Armee\" division_template = \"Revolution army\" start_experience_factor = 1"
+							owner = KPD
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "name = \"Rote Armee\" division_template = \"Revolution army\" start_experience_factor = 0.5"
+							owner = KPD
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "name = \"Militia\" division_template = \"Peoples Militia\" start_experience_factor = 0.8 start_equipment_factor = 0.3"
+							owner = KPD
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "name = \"Militia\" division_template = \"Peoples Militia\" start_experience_factor = 0.6 start_equipment_factor = 0.3"
+							owner = KPD
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "name = \"Vanguard\" division_template = \"Vanguard\" start_experience_factor = 0.6 start_equipment_factor = 0.2"
+							owner = KPD
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+				}
+			}
+        }
+	}
+	NSD_declaration_of_resistance = { # 항쟁 선포
+		icon = GFX_decision_generic_form_nation
+		
+		allowed = {
+			original_tag = NSD
+		}
+		
+		visible = {
+			has_war_with = TRM
+		}
+		available = {
+			check_variable = {
+				global.NSD_country_collapse_decisions_value > 50
+				tooltip = NSD_country_collapse_value_up_tt
+			}
+		}
+		
+		fire_only_once = yes
+
+		ai_will_do = {
+			base = 4000
+		}
+
+		complete_effect = {
+			end_exile = NSD
+			transfer_state = 66
+			set_capital = {
+				state = 66
+				remember_old_capital = no
+			}
+			set_temp_variable = { NSD_temp = global.NSD_country_collapse_decisions_value }
+			multiply_temp_variable = { NSD_temp = 0.01 }
+			divide_temp_variable = { NSD_temp = 2 }
+			TRM = {
+				transfer_units_fraction = {
+					target = ROOT
+					size = var:NSD_temp
+					navy_ratio = 0
+					air_ratio = 0
+					keep_unit_leaders_trigger = {
+						always = yes
+					}
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = { check_variable = { global.NSD_country_collapse_decisions_value > 80 } }
+					66 = {
+						create_unit = {
+							division = "name = \"Schutzstaffel\" division_template = \"Schutzstaffel\" start_experience_factor = 0.9"
+							owner = NSD
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "name = \"Schutzstaffel\" division_template = \"Schutzstaffel\" start_experience_factor = 1 start_equipment_factor = 0.7"
+							owner = NSD
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "name = \"Schutzstaffel\" division_template = \"Schutzstaffel\" start_experience_factor = 0.8 start_equipment_factor = 0.7"
+							owner = NSD
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "name = \"Schutzstaffel\" division_template = \"Schutzstaffel\" start_experience_factor = 0.8 start_equipment_factor = 0.9"
+							owner = NSD
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "name = \"Sturmabteilung\" division_template = \"Sturmabteilung\" start_experience_factor = 0.6 start_equipment_factor = 0.3"
+							owner = NSD
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "name = \"Sturmabteilung\" division_template = \"Sturmabteilung\" start_experience_factor = 0.6 start_equipment_factor = 0.5"
+							owner = NSD
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "name = \"Sturmabteilung\" division_template = \"Sturmabteilung\" start_experience_factor = 0.6 start_equipment_factor = 0.4"
+							owner = NSD
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "name = \"Sturmabteilung\" division_template = \"Sturmabteilung\" start_experience_factor = 0.6 start_equipment_factor = 0.4"
+							owner = NSD
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+				}
+				else_if = {
+					limit = { check_variable = { global.NSD_country_collapse_decisions_value > 60 } }
+					66 = {
+						create_unit = {
+							division = "name = \"Schutzstaffel\" division_template = \"Schutzstaffel\" start_experience_factor = 0.9"
+							owner = NSD
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "name = \"Schutzstaffel\" division_template = \"Schutzstaffel\" start_experience_factor = 1 start_equipment_factor = 0.7"
+							owner = NSD
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "name = \"Schutzstaffel\" division_template = \"Schutzstaffel\" start_experience_factor = 0.8 start_equipment_factor = 0.7"
+							owner = NSD
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "name = \"Schutzstaffel\" division_template = \"Schutzstaffel\" start_experience_factor = 0.8 start_equipment_factor = 0.9"
+							owner = NSD
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "name = \"Sturmabteilung\" division_template = \"Sturmabteilung\" start_experience_factor = 0.6 start_equipment_factor = 0.3"
+							owner = NSD
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "name = \"Sturmabteilung\" division_template = \"Sturmabteilung\" start_experience_factor = 0.6 start_equipment_factor = 0.5"
+							owner = NSD
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+				}
+				else = {
+					66 = {
+						create_unit = {
+							division = "name = \"Schutzstaffel\" division_template = \"Schutzstaffel\" start_experience_factor = 0.9"
+							owner = NSD
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "name = \"Schutzstaffel\" division_template = \"Schutzstaffel\" start_experience_factor = 1 start_equipment_factor = 0.7"
+							owner = NSD
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "name = \"Schutzstaffel\" division_template = \"Schutzstaffel\" start_experience_factor = 0.8 start_equipment_factor = 0.7"
+							owner = NSD
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "name = \"Schutzstaffel\" division_template = \"Schutzstaffel\" start_experience_factor = 0.8 start_equipment_factor = 0.9"
+							owner = NSD
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "name = \"Sturmabteilung\" division_template = \"Sturmabteilung\" start_experience_factor = 0.6 start_equipment_factor = 0.3"
+							owner = NSD
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+				}
+			}
+        }
+	}
+	TRM_declaration_of_extermination_campaign_KPD = {
+		icon = GFX_decision_generic_form_nation
+		
+		allowed = {
+			original_tag = TRM
+		}
+		
+		visible = {
+			has_war_with = KPD
+		}
+		available = {
+			check_variable = {
+				global.KPD_country_collapse_decisions_value < 0
+				tooltip = KPD_country_collapse_value_down_tt
+			}
+		}
+		
+		fire_only_once = yes
+
+		ai_will_do = {
+			base = 4000
+		}
+
+		complete_effect = {
+			annex_country = {
+				target = KPD
+				transfer_troops = no
+			}
+		}
+	}
+	TRM_declaration_of_extermination_campaign_NSD = {
+		icon = GFX_decision_generic_form_nation
+		
+		allowed = {
+			original_tag = TRM
+		}
+		
+		visible = {
+			has_war_with = NSD
+		}
+		available = {
+			check_variable = {
+				global.NSD_country_collapse_decisions_value < 0
+				tooltip = NSD_country_collapse_value_down_tt
+			}
+		}
+		
+		fire_only_once = yes
+
+		ai_will_do = {
+			base = 4000
+		}
+
+		complete_effect = {
+			annex_country = {
+				target = NSD
+				transfer_troops = no
+			}
+		}
 	}
 	TRM_resistance_emerging_to_the_surface = {
 		priority = 200
