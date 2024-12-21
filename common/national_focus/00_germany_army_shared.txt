@@ -8460,7 +8460,7 @@ shared_focus = { #공산 정보부
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = GEK_wilhelm_zaisser			
+			show_ideas_tooltip = GER_wilhelm_zaisser			
 		}
 	}
 }

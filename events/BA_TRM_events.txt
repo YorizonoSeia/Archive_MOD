@@ -5361,8 +5361,12 @@ country_event = { # 트리니티 vs KPD 승리
 			global.KPD_country_collapse_decisions_value = -5
 			tooltip = KPD_country_collapse_value_tt
 		}
-		set_variable = { TRM_anti_trinity_game_KPD_side_TRM_var = 0 }
-		set_variable = { TRM_anti_trinity_game_KPD_side_KPD_var = 0 }
+		if = { limit = { NOT = { has_country_flag = KPD_start_KPD_flag } }
+			set_variable = { TRM_anti_trinity_game_KPD_side_KPD_var = 0 }
+		}
+		if = { limit = { NOT = { has_country_flag = TRM_start_KPD_flag } }
+			set_variable = { TRM_anti_trinity_game_KPD_side_TRM_var = 0 }
+		}
 	}
 	
 	option = { #
@@ -5376,8 +5380,12 @@ country_event = { # 트리니티 vs KPD 승리
 				tooltip = KPD_country_collapse_value_tt
 			}
 		}
-		set_variable = { TRM_anti_trinity_game_KPD_side_TRM_var = 0 }
-		set_variable = { TRM_anti_trinity_game_KPD_side_KPD_var = 0 }
+		if = { limit = { NOT = { has_country_flag = KPD_start_KPD_flag } }
+			set_variable = { TRM_anti_trinity_game_KPD_side_KPD_var = 0 }
+		}
+		if = { limit = { NOT = { has_country_flag = TRM_start_KPD_flag } }
+			set_variable = { TRM_anti_trinity_game_KPD_side_TRM_var = 0 }
+		}
 	}
 }
 country_event = { # 트리니티 vs KPD 무승부
@@ -5414,8 +5422,12 @@ country_event = { # 트리니티 vs KPD 무승부
 	option = { #
 		name = TRN_collapse_event.12.a
 		add_war_support = -0.01
-		set_variable = { TRM_anti_trinity_game_KPD_side_TRM_var = 0 }
-		set_variable = { TRM_anti_trinity_game_KPD_side_KPD_var = 0 }
+		if = { limit = { NOT = { has_country_flag = KPD_start_KPD_flag } }
+			set_variable = { TRM_anti_trinity_game_KPD_side_KPD_var = 0 }
+		}
+		if = { limit = { NOT = { has_country_flag = TRM_start_KPD_flag } }
+			set_variable = { TRM_anti_trinity_game_KPD_side_TRM_var = 0 }
+		}
 	}
 }
 country_event = { # 트리니티 vs KPD 패배
@@ -5458,13 +5470,11 @@ country_event = { # 트리니티 vs KPD 패배
 			global.KPD_country_collapse_decisions_value = 5
 			tooltip = KPD_country_collapse_value_tt
 		}
-		set_variable = { TRM_anti_trinity_game_KPD_side_TRM_var = 0 }
-		set_variable = { TRM_anti_trinity_game_KPD_side_KPD_var = 0 }
-		if = { limit = { has_country_flag = KPD_start_KPD_flag }
-			clr_country_flag = KPD_start_KPD_flag
+		if = { limit = { NOT = { has_country_flag = KPD_start_KPD_flag } }
+			set_variable = { TRM_anti_trinity_game_KPD_side_KPD_var = 0 }
 		}
-		if = { limit = { has_country_flag = TRM_start_KPD_flag }
-			clr_country_flag = TRM_start_KPD_flag
+		if = { limit = { NOT = { has_country_flag = TRM_start_KPD_flag } }
+			set_variable = { TRM_anti_trinity_game_KPD_side_TRM_var = 0 }
 		}
 	}
 	
@@ -5479,8 +5489,12 @@ country_event = { # 트리니티 vs KPD 패배
 				tooltip = KPD_country_collapse_value_tt
 			}
 		}
-		set_variable = { TRM_anti_trinity_game_KPD_side_TRM_var = 0 }
-		set_variable = { TRM_anti_trinity_game_KPD_side_KPD_var = 0 }
+		if = { limit = { NOT = { has_country_flag = KPD_start_KPD_flag } }
+			set_variable = { TRM_anti_trinity_game_KPD_side_KPD_var = 0 }
+		}
+		if = { limit = { NOT = { has_country_flag = TRM_start_KPD_flag } }
+			set_variable = { TRM_anti_trinity_game_KPD_side_TRM_var = 0 }
+		}
 	}
 }
 country_event = { # 트리니티 vs NSD 승리
@@ -5523,8 +5537,12 @@ country_event = { # 트리니티 vs NSD 승리
 			global.NSD_country_collapse_decisions_value = -5
 			tooltip = NSD_country_collapse_value_tt
 		}
-		set_variable = { TRM_anti_trinity_game_NSD_side_TRM_var = 0 }
-		set_variable = { TRM_anti_trinity_game_NSD_side_NSD_var = 0 }
+		if = { limit = { NOT = { has_country_flag = NSD_start_NSD_flag } }
+			set_variable = { TRM_anti_trinity_game_NSD_side_NSD_var = 0 }
+		}
+		if = { limit = { NOT = { has_country_flag = TRM_start_NSD_flag } }
+			set_variable = { TRM_anti_trinity_game_NSD_side_TRM_var = 0 }
+		}
 	}
 	
 	option = { #
@@ -5538,8 +5556,12 @@ country_event = { # 트리니티 vs NSD 승리
 				tooltip = NSD_country_collapse_value_tt
 			}
 		}
-		set_variable = { TRM_anti_trinity_game_NSD_side_TRM_var = 0 }
-		set_variable = { TRM_anti_trinity_game_NSD_side_NSD_var = 0 }
+		if = { limit = { NOT = { has_country_flag = NSD_start_NSD_flag } }
+			set_variable = { TRM_anti_trinity_game_NSD_side_NSD_var = 0 }
+		}
+		if = { limit = { NOT = { has_country_flag = TRM_start_NSD_flag } }
+			set_variable = { TRM_anti_trinity_game_NSD_side_TRM_var = 0 }
+		}
 	}
 }
 country_event = { # 트리니티 vs NSD 무승부
@@ -5576,8 +5598,12 @@ country_event = { # 트리니티 vs NSD 무승부
 	option = { #
 		name = TRN_collapse_event.22.a
 		add_war_support = -0.01
-		set_variable = { TRM_anti_trinity_game_NSD_side_TRM_var = 0 }
-		set_variable = { TRM_anti_trinity_game_NSD_side_NSD_var = 0 }
+		if = { limit = { NOT = { has_country_flag = NSD_start_NSD_flag } }
+			set_variable = { TRM_anti_trinity_game_NSD_side_NSD_var = 0 }
+		}
+		if = { limit = { NOT = { has_country_flag = TRM_start_NSD_flag } }
+			set_variable = { TRM_anti_trinity_game_NSD_side_TRM_var = 0 }
+		}
 	}
 }
 country_event = { # 트리니티 vs NSD 패배
@@ -5620,8 +5646,12 @@ country_event = { # 트리니티 vs NSD 패배
 			global.NSD_country_collapse_decisions_value = 5
 			tooltip = NSD_country_collapse_value_tt
 		}
-		set_variable = { TRM_anti_trinity_game_NSD_side_TRM_var = 0 }
-		set_variable = { TRM_anti_trinity_game_NSD_side_NSD_var = 0 }
+		if = { limit = { NOT = { has_country_flag = NSD_start_NSD_flag } }
+			set_variable = { TRM_anti_trinity_game_NSD_side_NSD_var = 0 }
+		}
+		if = { limit = { NOT = { has_country_flag = TRM_start_NSD_flag } }
+			set_variable = { TRM_anti_trinity_game_NSD_side_TRM_var = 0 }
+		}
 	}
 	
 	option = { #
@@ -5635,8 +5665,12 @@ country_event = { # 트리니티 vs NSD 패배
 				tooltip = NSD_country_collapse_value_tt
 			}
 		}
-		set_variable = { TRM_anti_trinity_game_NSD_side_TRM_var = 0 }
-		set_variable = { TRM_anti_trinity_game_NSD_side_NSD_var = 0 }
+		if = { limit = { NOT = { has_country_flag = NSD_start_NSD_flag } }
+			set_variable = { TRM_anti_trinity_game_NSD_side_NSD_var = 0 }
+		}
+		if = { limit = { NOT = { has_country_flag = TRM_start_NSD_flag } }
+			set_variable = { TRM_anti_trinity_game_NSD_side_TRM_var = 0 }
+		}
 	}
 }
 country_event = { 
