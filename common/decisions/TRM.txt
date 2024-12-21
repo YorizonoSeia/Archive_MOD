@@ -1796,6 +1796,8 @@ TRN_country_collapse_decisions = {
 		}
 
 		complete_effect = {
+			custom_effect_tooltip = KPD_declaration_of_resistance_tt
+			set_global_flag = KPD_declaration_of_resistance_flag
 			end_exile = KPD
 			transfer_state = 61
 			set_capital = {
@@ -1942,6 +1944,7 @@ TRN_country_collapse_decisions = {
 					}
 				}
 			}
+			set_variable = { global.KPD_country_collapse_decisions_value = 0 }
         }
 	}
 	NSD_declaration_of_resistance = { # 항쟁 선포
@@ -1968,6 +1971,8 @@ TRN_country_collapse_decisions = {
 		}
 
 		complete_effect = {
+			custom_effect_tooltip = NSD_declaration_of_resistance_tt
+			set_global_flag = NSD_declaration_of_resistance_flag
 			end_exile = NSD
 			transfer_state = 66
 			set_capital = {
@@ -2099,6 +2104,7 @@ TRN_country_collapse_decisions = {
 					}
 				}
 			}
+			set_variable = { global.NSD_country_collapse_decisions_value = 0 }
         }
 	}
 	TRM_declaration_of_extermination_campaign_KPD = {
@@ -2116,6 +2122,7 @@ TRN_country_collapse_decisions = {
 				global.KPD_country_collapse_decisions_value < 0
 				tooltip = KPD_country_collapse_value_down_tt
 			}
+			NOT = { has_global_flag = KPD_declaration_of_resistance_flag }
 		}
 		
 		fire_only_once = yes
@@ -2146,6 +2153,7 @@ TRN_country_collapse_decisions = {
 				global.NSD_country_collapse_decisions_value < 0
 				tooltip = NSD_country_collapse_value_down_tt
 			}
+			NOT = { has_global_flag = NSD_declaration_of_resistance_flag }
 		}
 		
 		fire_only_once = yes

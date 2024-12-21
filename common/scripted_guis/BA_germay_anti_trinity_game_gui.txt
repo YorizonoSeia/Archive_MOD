@@ -25,79 +25,31 @@ scripted_gui = {
 
 		triggers = {
 			TRM_anti_trinity_game_KPD_flag_visible = {
-				if = {
-					limit = { original_tag = TRM }
-					has_war_with = KPD
-				}
-				else = {
-					has_war_with = TRM
-				}
+				TRM = { has_war_with = KPD }
 			}
 			TRM_anti_trinity_game_KPD_side_TRM_visible = {
-				if = {
-					limit = { original_tag = TRM }
-					has_war_with = KPD
-				}
-				else = {
-					has_war_with = TRM
-				}
+				TRM = { has_war_with = KPD }
 			}
 			TRM_anti_trinity_game_KPD_side_KPD_visible = {
-				if = {
-					limit = { original_tag = TRM }
-					has_war_with = KPD
-				}
-				else = {
-					has_war_with = TRM
-				}
+				TRM = { has_war_with = KPD }
 			}
 			TRM_anti_trinity_game_stat_KPD_visible = {
-				if = {
-					limit = { original_tag = TRM }
-					has_war_with = KPD
-				}
-				else = {
-					has_war_with = TRM
-				}
+				TRM = { has_war_with = KPD }
 			}
 		}
 
 		triggers = {
 			TRM_anti_trinity_game_NSD_flag_visible = {
-				if = {
-					limit = { original_tag = TRM }
-					has_war_with = NSD
-				}
-				else = {
-					has_war_with = TRM
-				}
+				TRM = { has_war_with = NSD }
 			}
 			TRM_anti_trinity_game_NSD_side_TRM_visible = {
-				if = {
-					limit = { original_tag = TRM }
-					has_war_with = NSD
-				}
-				else = {
-					has_war_with = TRM
-				}
+				TRM = { has_war_with = NSD }
 			}
 			TRM_anti_trinity_game_NSD_side_NSD_visible = {
-				if = {
-					limit = { original_tag = TRM }
-					has_war_with = NSD
-				}
-				else = {
-					has_war_with = TRM
-				}
+				TRM = { has_war_with = NSD }
 			}
 			TRM_anti_trinity_game_stat_NSD_visible = {
-				if = {
-					limit = { original_tag = TRM }
-					has_war_with = NSD
-				}
-				else = {
-					has_war_with = TRM
-				}
+				TRM = { has_war_with = NSD }
 			}
 		}
 	}

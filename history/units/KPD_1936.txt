@@ -30,3 +30,10 @@ division_template = {
 		irregular_infantry = { x = 1 y = 1 }
 	}
 }
+division_template = {
+	name = "Guard"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+	}
+}

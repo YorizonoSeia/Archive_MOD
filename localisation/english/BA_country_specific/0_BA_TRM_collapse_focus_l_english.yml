@@ -211,8 +211,14 @@
  KPD_declaration_of_resistance: "마지막 혁명 선포"
  NSD_declaration_of_resistance: "최후의 전쟁 선포"
 
+ KPD_declaration_of_resistance_tt: "우리의 §Y영향력§!이 0으로 설정됩니다."
+ NSD_declaration_of_resistance_tt: "우리의 §Y영향력§!이 0으로 설정됩니다."
+
  TRM_declaration_of_extermination_campaign_KPD: "유격대 파괴"
  TRM_declaration_of_extermination_campaign_NSD: "친위대 파괴"
+
+ KPD_declaration_of_resistance_flag: "@KPD 저항군이 집단 봉기함"
+ NSD_declaration_of_resistance_flag: "@NSD 저항군이 집단 봉기함"
 
  TRN_collapse_event.11.t: "트리니티의 작전 성공"
  TRN_collapse_event.12.t: "무력화된 작전"
