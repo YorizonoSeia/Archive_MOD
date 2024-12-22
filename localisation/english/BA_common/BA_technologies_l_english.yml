@@ -55,14 +55,3 @@
  # 스프(대충 스페셜 프로젝트라는 말)
  BA_sp_air_helicopter: "키보토스 헬리콥터"
  helicopter_equipment_2: "키보토스 헬리콥터"
-
- # 로컬 비적용 대응 (차후 한패팀에서 대응 시 삭제)
- early_ship_hull_light: "초기형 구축함 함체"
- basic_ship_hull_light: "1936형 구축함 함체"
- improved_ship_hull_light: "1940형 구축함 함체"
- advanced_ship_hull_light: "1944형 구축함 함체"
-
- early_destroyer: "초기형 구축함"
- basic_destroyer: "1936형 구축함"
- improved_destroyer: "1940형 구축함"
- advanced_destroyer: "1944형 구축함"
