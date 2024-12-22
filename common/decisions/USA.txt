@@ -4517,6 +4517,8 @@ political_actions = {
 	USABA_usa_government_restored = {
 		icon = GFX_decision_generic_civil_support
 
+		allowed = { tag = usa }
+
 		visible = {
 			has_global_flag = BA_shotdown_USA_congress
 		}
