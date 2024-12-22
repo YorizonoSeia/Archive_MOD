@@ -2,9 +2,9 @@ objectTypes = {
 	pdxmesh = {
 		name = "Sematha_railway_gun_mesh"
 		file = "gfx/models/vehicles/Sematha_railway_gun.mesh"
-		# animation = { id = "idle" type = "generic_railway_gun_idle_animation" }
-		# animation = { id = "attack" type = "generic_railway_gun_attack_animation" }
-		# animation = { id = "move" type = "generic_railway_gun_moving_animation" }
+		animation = { id = "idle" type = "large_railway_gun_idle_animation" }
+		animation = { id = "attack" type = "large_railway_gun_attack_animation" }
+		animation = { id = "move" type = "large_railway_gun_moving_animation" }
 
 		meshsettings = {
 			name = "Sematha_railway_gun_Shape"
