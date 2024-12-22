@@ -2,7 +2,7 @@
 {
 	name = "Halo Infantry Division"
 
-	can_use = { always = yes }
+	can_use = { has_tech = kivotos_infantry_weapons }
 
 	division_types = { "low_halo_infantry" "halo_infantry" }
 
