@@ -25,9 +25,9 @@ BA_sp_land_syemmata_railway_gun = {
 		}
 	}
 
-	prototype_time = sp_time.prototype.long
+	prototype_time = sp_time.prototype.short
 
-	complexity = sp_complexity.medium
+	complexity = sp_complexity.small
 
 	breakthrough_cost = {
 		specialization_land = 1
@@ -61,6 +61,7 @@ BA_sp_land_syemmata_railway_gun = {
 				create_railway_gun = {
 					equipment = syemmata_railway_gun_equipment_1
 					name = "Syemmata Railway Gun"
+					location = 3418
 				}
 			}
 		}

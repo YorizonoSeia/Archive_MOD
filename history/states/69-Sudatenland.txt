@@ -20,7 +20,11 @@ state = {
 		}
 
 		victory_points = {
-			11401 5
+			11401 3
+		}
+
+		victory_points = {
+			3418 2
 		}
 
 		owner = ABY

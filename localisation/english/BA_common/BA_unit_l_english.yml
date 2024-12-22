@@ -39,6 +39,7 @@
  kivotos_dron_equipment_0: "키보토스 드론 장비"
  kivotos_dron_equipment_desc: "키보토스에서 운용하는 드론에 사용되는 장비입니다."
 
+ syemmata_railway_gun: "셰마타급 열차포"
  syemmata_railway_gun_equipment: "셰마타급 열차포"
  syemmata_railway_gun_equipment_short: "셰마타급 열차포"
  syemmata_railway_gun_equipment_desc: "게헨나와 아비도스 협력의 증거인 이 거대한 무기는 타의 추종을 불허하는 힘과 500km반경의 타격반경에 대한 고도의 정밀성을 지닌 완벽한 비대칭전략병기로써 우리 국가에 강력한 패권을 가져다 줄 것입니다."
@@ -49,7 +50,7 @@
 
  BA_sp_land_syemmata_railway_gun: "셰마타급 열차포"
  ABY_BA_sp_land_syemmata_railway_gun: "셰마타 열차포"
- BA_sp_land_super_heavy_railway_gun_desc: "게헨나와 아비도스 협력의 증거인 이 거대한 무기는 타의 추종을 불허하는 힘과 500km반경의 타격반경에 대한 고도의 정밀성을 지닌 완벽한 비대칭전략병기로써 우리 국가에 강력한 패권을 가져다 줄 것입니다."
+ BA_sp_land_syemmata_railway_gun_desc: "게헨나와 아비도스 협력의 증거인 이 거대한 무기는 타의 추종을 불허하는 힘과 500km반경의 타격반경에 대한 고도의 정밀성을 지닌 완벽한 비대칭전략병기로써 우리 국가에 강력한 패권을 가져다 줄 것입니다."
 
 #모듈
   EQ_MOD_CAT_helicopter_engine_type_TITLE: "헬리콥터 엔진"
