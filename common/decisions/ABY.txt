@@ -17556,7 +17556,7 @@ ABY_descision_category_debug = {
 				project = sp:BA_sp_land_syemmata_railway_gun
 			}
 			create_railway_gun = {  
-				equipment = syemmata_railway_gun_equipment_1        
+				equipment = syemmata_railway_gun_equipment_1            
 				name = "Syemmata Railway Gun"
 			} 
 		}
