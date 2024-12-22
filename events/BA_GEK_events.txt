@@ -2541,3 +2541,78 @@ country_event = { # 자동 완료
         }
 	}
 }
+
+country_event = { #MEFO Bills are getting a bit expensive and players must be warned, but nothing too urgent
+	id = GEK_event.19
+	title = germany_mefo_bills.2.t
+	desc = germany_mefo_bills.2.desc
+	picture = GFX_report_event_tank_factory
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = GEK
+		OR = {
+			has_dynamic_modifier = { modifier = GER_mefo_bills_modifier }
+			has_dynamic_modifier = { modifier = GER_economy_of_conquest_modifier }
+		}
+		check_variable = { GER_industrial_consumer_goods_factor > 0.245 }
+	}
+
+	option = { 
+		name = germany_mefo_bills.2.a
+
+		custom_effect_tooltip = GER_mefo_bills_warning_tt
+			
+	}
+}
+
+country_event = { #MEFO Bills are getting expensive and players must be warned, you might want to keep an eye on them
+	id = GEK_event.20
+	title = germany_mefo_bills.3.t
+	desc = germany_mefo_bills.3.desc
+	picture = GFX_report_event_tank_factory
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = GEK
+		OR = {
+			has_dynamic_modifier = { modifier = GER_mefo_bills_modifier }
+			has_dynamic_modifier = { modifier = GER_economy_of_conquest_modifier }
+		}
+		check_variable = { GER_industrial_consumer_goods_factor > 0.495 }
+	}
+
+	option = { 
+		name = germany_mefo_bills.3.a
+
+		custom_effect_tooltip = GER_mefo_bills_warning_tt
+			
+	}
+}
+
+country_event = { #MEFO Bills have gotten real expensive and players must be warned, the economy is tanking!
+	id = GEK_event.21
+	title = germany_mefo_bills.4.t
+	desc = germany_mefo_bills.4.desc
+	picture = GFX_report_event_tank_factory
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = GEK
+		OR = {
+			has_dynamic_modifier = { modifier = GER_mefo_bills_modifier }
+			has_dynamic_modifier = { modifier = GER_economy_of_conquest_modifier }
+		}
+		check_variable = { var = GER_industrial_consumer_goods_factor value = 1 compare = greater_than_or_equals }
+	}
+
+	option = { 
+		name = germany_mefo_bills.4.a
+
+		custom_effect_tooltip = GER_mefo_bills_warning_tt
+			
+	}
+}
