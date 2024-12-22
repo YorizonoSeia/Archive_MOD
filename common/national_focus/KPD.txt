@@ -69,22 +69,28 @@ focus_tree = {
 					modifier = KPD_the_red_army_dynamic_modifier
 				}
 			}
+			custom_effect_tooltip = KPD_germany_red_army_tt
 			add_to_variable = {
-				KPD_army_mobilization_speed = 0.05
+				GER_military_mobilization_speed = 0.05
+				tooltip = mobilization_speed_tt
 			}
 			add_to_variable = {
-				KPD_army_army_org_factor = -0.05
+				GER_military_army_org_factor = -0.05
+				tooltip = army_org_factor_tt
 			}
 			add_to_variable = {
-				KPD_army_experience_gain_army_factor = -0.1
+				GER_military_experience_gain_army_factor = -0.1
+				tooltip = experience_gain_army_factor_tt
 			}
 			add_to_variable = {
 				KPD_army_experience_loss_factor = -0.15
+				tooltip = experience_loss_factor_tt
 			}
 			add_to_variable = {
 				KPD_army_mobilization_laws_cost_factor = -0.2
+				tooltip = mobilization_laws_cost_factor_tt
 			}
-			custom_effect_tooltip = KPD_germany_red_army_tt
+			custom_effect_tooltip = enter_tt
 			add_political_power = 60
 		}
 	}
@@ -116,19 +122,24 @@ focus_tree = {
 					modifier = KPD_prussian_army_dynamic_modifier
 				}
 			}
+			custom_effect_tooltip = KPD_prussian_army_tt
 			add_to_variable = {
-				KPD_army_mobilization_speed = -0.05
+				GER_military_mobilization_speed = -0.05
+				tooltip = mobilization_speed_tt
 			}
 			add_to_variable = {
 				KPD_army_conscription = 0.01
+				tooltip = conscription_tt
 			}
 			add_to_variable = {
-				KPD_army_army_org_factor = 0.05
+				GER_military_army_org_factor = 0.05
+				tooltip = army_org_factor_tt
 			}
 			add_to_variable = {
 				KPD_army_experience_loss_factor = -0.25
+				tooltip = experience_loss_factor_tt
 			}
-			custom_effect_tooltip = KPD_prussian_army_tt
+			custom_effect_tooltip = enter_tt
 			add_stability = -0.05
 			add_popularity = {
 				ideology = communism
@@ -160,13 +171,16 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			custom_effect_tooltip = KPD_army_dynamic_modifier_tt
 			add_to_variable = {
 				KPD_army_experience_loss_factor = -0.1
+				tooltip = experience_loss_factor_tt
 			}
 			add_to_variable = {
 				KPD_army_max_command_power_mult = 0.1
+				tooltip = max_command_power_mult_tt
 			}
-			custom_effect_tooltip = KPD_introduction_of_ranks_within_the_military_tt
+			custom_effect_tooltip = enter_tt
 			if = {
 				limit = {
 					has_idea = KPD_no_rank_army
@@ -254,19 +268,23 @@ focus_tree = {
 			FOCUS_FILTER_ARMY_XP
 		}
 		completion_reward = {
+			custom_effect_tooltip = KPD_army_dynamic_modifier_tt
 			add_to_variable = {
 				KPD_army_winter_attrition_factor = -0.05
+				tooltip = winter_attrition_factor_tt
 			}
 			add_to_variable = {
-				KPD_army_acclimatization_cold_climate_gain_factor = 0.1
+				GER_military_acclimatization_cold_climate_gain_factor = 0.1
+				tooltip = acclimatization_cold_climate_gain_factor_tt
 			}
 			add_to_variable = {
-				KPD_army_acclimatization_hot_climate_gain_factor = 0.05
+				GER_military_acclimatization_hot_climate_gain_factor = 0.05
+				tooltip = acclimatization_hot_climate_gain_factor_tt
 			}
 			add_to_variable = {
 				KPD_army_terrain_penalty_reduction = 0.05
+				tooltip = terrain_penalty_reduction_tt
 			}
-			custom_effect_tooltip = KPD_joint_military_training_tt
 		}
 	}
 	focus = {
@@ -286,13 +304,15 @@ focus_tree = {
 			FOCUS_FILTER_ARMY_XP
 		}
 		completion_reward = {
+			custom_effect_tooltip = KPD_army_dynamic_modifier_tt
 			add_to_variable = {
 				KPD_army_conscription_factor = 0.03
+				tooltip = conscription_factor_tt
 			}
 			add_to_variable = {
 				KPD_army_training_time_factor = -0.05
+				tooltip = training_time_factor_tt
 			}
-			custom_effect_tooltip = KPD_vanguard_disbanded_tt
 			delete_unit_template_and_units = {
 				division_template = "Vanguard"
 				disband = yes				#will refund equipment and manpower
@@ -405,16 +425,20 @@ focus_tree = {
 			FOCUS_FILTER_ARMY_XP
 		}
 		completion_reward = {
+			custom_effect_tooltip = KPD_army_dynamic_modifier_tt
 			add_to_variable = {
 				KPD_army_conscription_factor = 0.03
+				tooltip = conscription_factor_tt
 			}
 			add_to_variable = {
 				KPD_army_army_org_regain = 0.1
+				tooltip = army_org_regain_tt
 			}
 			add_to_variable = {
 				KPD_army_experience_loss_factor = -0.1
+				tooltip = experience_loss_factor_tt
 			}
-			custom_effect_tooltip = KPD_no_military_corruption_tt
+			custom_effect_tooltip = enter_tt
 			add_stability = 0.05
 			add_popularity = {
 				ideology = communism
@@ -442,13 +466,15 @@ focus_tree = {
 			FOCUS_FILTER_ARMY_XP
 		}
 		completion_reward = {
+			custom_effect_tooltip = KPD_army_dynamic_modifier_tt
 			add_to_variable = {
-				KPD_army_army_org_factor = 0.05
+				GER_military_army_org_factor = 0.05
+				tooltip = army_org_factor_tt
 			}
 			add_to_variable = {
 				KPD_army_experience_loss_factor = -0.25
+				tooltip = experience_loss_factor_tt
 			}
-			custom_effect_tooltip = KPD_discipline_comes_first_tt
 		}
 	}
 	focus = {

@@ -221,7 +221,7 @@ shared_focus = {
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
-		GER_modify_army_modifier = yes			
+		BA_GER_modify_army_modifier = yes			
 		add_to_variable = { 
 			GER_military_org_loss_when_moving = -0.1
 			tooltip = org_loss_when_moving_tt
@@ -304,7 +304,7 @@ shared_focus = {
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
-		GER_modify_army_modifier = yes
+		BA_GER_modify_army_modifier = yes
 		add_to_variable = { 
 			GER_military_max_dig_in_factor = 0.1
 			tooltip = max_dig_in_factor_tt
@@ -421,7 +421,7 @@ shared_focus = {
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
-		GER_modify_army_modifier = yes
+		BA_GER_modify_army_modifier = yes
 		add_to_variable = { 
 			GER_military_army_artillery_defence_factor = 0.1
 			tooltip = army_artillery_defence_factor_tt
@@ -673,7 +673,7 @@ shared_focus = {
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
-		GER_modify_army_modifier = yes
+		BA_GER_modify_army_modifier = yes
 		add_to_variable = { 
 			GER_military_equipment_capture = 0.05
 			tooltip = equipment_capture_tt
@@ -725,7 +725,7 @@ shared_focus = {
 		
 		custom_effect_tooltip = generic_skip_one_line_tt
 
-		GER_modify_army_modifier = yes
+		BA_GER_modify_army_modifier = yes
 		add_to_variable = { 
 			GER_military_initiative_factor = 0.1
 			tooltip = initiative_factor_tt
@@ -840,7 +840,7 @@ shared_focus = {
 			}
 		}
 
-		GER_modify_army_modifier = yes
+		BA_GER_modify_army_modifier = yes
 		add_to_variable = { 
 			GER_military_acclimatization_hot_climate_gain_factor = 0.1
 			tooltip = acclimatization_hot_climate_gain_factor_tt
@@ -868,7 +868,7 @@ shared_focus = {
 	search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_RESEARCH }
 
 	completion_reward = {
-		GER_modify_army_modifier = yes
+		BA_GER_modify_army_modifier = yes
 		add_to_variable = { 
 			GER_military_special_forces_cap = 0.05
 			tooltip = special_forces_cap_tt
@@ -1235,7 +1235,7 @@ shared_focus = {
 	search_filters = {}
 
 	completion_reward = {
-		GER_modify_army_modifier = yes
+		BA_GER_modify_army_modifier = yes
 		add_to_variable = { 
 			GER_military_supply_factor = 0.15
 			tooltip = supply_factor_tt
@@ -1581,7 +1581,7 @@ shared_focus = {
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
-		GER_modify_army_modifier = yes			
+		BA_GER_modify_army_modifier = yes			
 		add_to_variable = { 
 			GER_military_org_loss_when_moving = -0.1
 			tooltip = org_loss_when_moving_tt
@@ -1683,7 +1683,7 @@ shared_focus = {
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
-		GER_modify_army_modifier = yes
+		BA_GER_modify_army_modifier = yes
 		add_to_variable = { 
 			GER_military_coordination_bonus = 0.05
 			tooltip = coordination_bonus_tt
@@ -1905,7 +1905,7 @@ shared_focus = {
 	search_filters = { FOCUS_FILTER_HISTORICAL }
 
 	completion_reward = {
-		GER_modify_army_modifier = yes
+		BA_GER_modify_army_modifier = yes
 		add_to_variable = { 
 			GER_military_air_superiority_bonus_in_combat = 0.1
 			tooltip = air_superiority_bonus_in_combat_tt
@@ -2649,7 +2649,7 @@ shared_focus = {
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
-		GER_modify_army_modifier = yes
+		BA_GER_modify_army_modifier = yes
 		add_to_variable = { 
 			GER_military_special_forces_cap = 0.05
 			tooltip = special_forces_cap_tt
@@ -4458,7 +4458,7 @@ shared_focus = {
 		}
 
 		custom_effect_tooltip = generic_skip_one_line_tt
-		GER_modify_army_modifier = yes
+		BA_GER_modify_army_modifier = yes
 		add_to_variable = { 
 			GER_military_special_forces_cap = 0.05
 			tooltip = special_forces_cap_tt
@@ -8160,7 +8160,7 @@ shared_focus = { #국가인민군
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
-		GER_modify_army_modifier = yes
+		BA_GER_modify_army_modifier = yes
 		add_to_variable = { GER_military_planning_speed = -0.1 tooltip = planning_speed_factor_tt }
 		add_to_variable = { GER_military_unit_leader_as_advisor_cp_cost_factor = -0.1 tooltip = unit_leader_as_advisor_cp_cost_factor_tt }
 
@@ -8366,7 +8366,7 @@ shared_focus = { #동독 통일
 			controls_state = 763
 		}
 	}
-	x = 36
+	x = 40
 	y = 0
 	cost = 2
 	completion_reward = {
@@ -8386,25 +8386,116 @@ shared_focus = { #동독 통일
 	}
 }
 
-shared_focus = { #국가인민군
-	id = GE2_reorganize_nationale_volksarmee  
-	icon = GFX_goal_generic_axis_build_infantry
-	prerequisite = {
-		focus = GE2_start_focus
+shared_focus = {
+	id = GE2_start_the_proletarian_revolution
+	icon = GFX_focus_SWE_refuge_for_revolutionaries
+	mutually_exclusive = {
+		focus = GE2_return_of_the_kaiserreich
 	}
+	prerequisite = { focus = GE2_start_focus }
+
+	x = -4
+	y = 1
 	relative_position_id = GE2_start_focus
+	cost = 2
 	available = {
 		has_government = communism
 	}
-	x = -2
-	y = 2
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL_CHARACTER } 
+
+	completion_reward = {
+		add_political_power = 60
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
+	}
+}
+
+shared_focus = {
+	id = GE2_ressurect_the_red_front_fighters_league
+	text = GER_ressurect_the_red_front_fighters_league
+	icon = GFX_focus_YUG_pan_slavic_congress
+	prerequisite = { focus = GE2_start_the_proletarian_revolution }
+
+	x = 2
+	y = 1
+	relative_position_id = GE2_start_the_proletarian_revolution
 	cost = 5
+	available = {
+		has_government = communism
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL_CHARACTER } 
+
+	completion_reward = {
+		add_popularity = {
+			ideology = communism
+			popularity = 0.03
+		}
+		add_war_support = 0.05
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		division_template = {
+			name = "Roter Frontkämpferbund Division"
+			priority = 1
+			division_names_group = GEK_MIL_03
+			template_counter = 69 #nice!
+			is_locked = no
+			regiments = {
+				militia = { x = 0 y = 0 }
+				militia = { x = 0 y = 1 }
+				militia = { x = 0 y = 2 }
+				militia = { x = 1 y = 0 }
+				militia = { x = 1 y = 1 }
+			
+			}
+			override_model = GER_militia_alt_0_entity
+		}
+		every_core_state = {
+			limit = {
+				controller = {
+					has_government = communism
+					original_tag = ROOT
+				}
+			}
+			random_select_amount = 3
+
+			create_unit = {
+				division = "division_template =\"Roter Frontkämpferbund Division\" start_experience_factor = 0.2 start_equipment_factor = 0.7"
+				owner = PREV
+				count = 2
+			}
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		add_country_leader_trait = GER_proletarian_leader
+	}
+}
+shared_focus = {
+	id = GE2_reorganize_nationale_volksarmee
+	icon = GFX_focus_generic_full_social_mobilization
+	prerequisite = { focus = GE2_ressurect_the_red_front_fighters_league }
+
+	x = -1
+	y = 1
+	relative_position_id = GE2_ressurect_the_red_front_fighters_league
+	cost = 5
+	available = {
+		has_civil_war = no
+	}
+
+	search_filters = { FOCUS_FILTER_MILITARY_CHARACTER }
+
 	completion_reward = {
 		add_command_power = 15
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
-		GER_modify_army_modifier = yes
+		BA_GER_modify_army_modifier = yes
 		add_to_variable = { GER_military_planning_speed = -0.1 tooltip = planning_speed_factor_tt }
 		add_to_variable = { GER_military_unit_leader_as_advisor_cp_cost_factor = -0.1 tooltip = unit_leader_as_advisor_cp_cost_factor_tt }
 
@@ -8434,18 +8525,81 @@ shared_focus = { #국가인민군
 		}
 	}
 }
+shared_focus = {
+	id = GE2_political_commissars
+	text = GER_political_commissars
+	icon = GFX_focus_SOV_mobilization_plan
+	prerequisite = { focus = GE2_ressurect_the_red_front_fighters_league }
+
+	x = 1
+	y = 1
+	relative_position_id = GE2_ressurect_the_red_front_fighters_league
+	cost = 5
+	available = {
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward = {
+		add_popularity = {
+			ideology = communism
+			popularity = 0.03
+		}
+		add_command_power = 15
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		BA_GER_modify_army_modifier = yes
+		add_to_variable = { GER_military_army_morale_factor = 0.1 tooltip = army_morale_factor_tt }
+		add_to_variable = { GER_military_army_org_factor = -0.05 tooltip = army_org_factor_tt }
+		add_to_variable = { GER_military_command_power_gain_mult = 0.1 tooltip = command_power_gain_mult_tt }		
+	}
+}
+shared_focus = {
+	id = GE2_rapid_army_expansion
+	text = GER_rapid_army_expansion
+	icon = GFX_focus_SOV_the_glory_of_the_red_army_communism
+	prerequisite = { focus = GE2_reorganize_nationale_volksarmee }
+	prerequisite = { focus = GE2_political_commissars }
+
+	x = 1
+	y = 1
+	relative_position_id = GE2_reorganize_nationale_volksarmee
+	cost = 10
+	available = {
+	}
+
+	search_filters = { FOCUS_FILTER_MANPOWER }
+
+	completion_reward = {
+
+
+		GER_add_or_modify_politburo = yes
+		add_to_variable = { GER_politburo_mobilization_laws_cost_factor = -0.15 tooltip = mobilization_laws_cost_factor_tt }
+		add_to_variable = { GER_politburo_conscription_factor = 0.05 tooltip = conscription_factor_tt }
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		BA_GER_modify_army_modifier = yes
+		add_to_variable = { GER_military_mobilization_speed = 0.1 tooltip = mobilization_speed_tt }
+		add_to_variable = { GER_military_experience_gain_army_factor = -0.1 tooltip = experience_gain_army_factor_tt }
+		add_to_variable = { GER_military_minimum_training_level = -0.1 tooltip = minimum_training_level_tt }
+
+		
+	}
+}
 
 shared_focus = { #공산 정보부
 	id = GE2_formalize_the_intelligence_wing
-	icon = GFX_goal_generic_axis_build_infantry
+	icon = GFX_focus_generic_whispers
 	prerequisite = {
-		focus = GE2_reorganize_nationale_volksarmee
+		focus = GE2_start_the_proletarian_revolution
 	}
-	relative_position_id = GE2_reorganize_nationale_volksarmee
+	relative_position_id = GE2_start_the_proletarian_revolution
 	available = {
 		has_government = communism
 	}
-	x = 0
+	x = -2
 	y = 1
 	cost = 5
 	completion_reward = {
@@ -8464,10 +8618,228 @@ shared_focus = { #공산 정보부
 		}
 	}
 }
+	
+shared_focus = {
+	id = GE2_form_the_stasi
+	text = GER_form_the_stasi
+	icon = GFX_focus_GER_form_the_stasi
+	prerequisite = { focus = GE2_formalize_the_intelligence_wing }
+
+	x = 1
+	y = 1
+	relative_position_id = GE2_formalize_the_intelligence_wing
+	cost = 10
+	available = {
+		has_government = communism
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL_CHARACTER }
+
+	completion_reward = {
+
+		IF = {
+			limit = { has_dlc = "La Resistance" }
+
+			IF = {
+				limit = { has_intelligence_agency = no }
+
+				create_intelligence_agency = {
+					name = "Stasi"
+					icon = GFX_intelligence_agency_logo_GER_stasi
+				}
+			}
+			ELSE = {
+				gain_random_agency_upgrade = yes
+			}
+
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			remove_dynamic_modifier = { #for tooltip reasons this appears twice
+				modifier = GER_communist_intel_modifier
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			add_dynamic_modifier = {
+				modifier = GER_stasi_modifier
+			}
+
+			IF = {
+				limit = {
+					NOT = {
+						has_country_flag = GER_has_done_stasi_focus_flag
+					}
+				}
+				add_to_variable = { GER_communist_intel_operative_slot = 1 tooltip = operative_slot_tt }
+				add_to_variable = { GER_communist_intel_stability_factor = -0.05 tooltip = stability_factor_tt }
+			}
+
+			set_country_flag = GER_has_done_stasi_focus_flag
+		}
+
+		ELSE = {
+
+			remove_dynamic_modifier = { #for tooltip reasons this appears twice
+				modifier = GER_communist_intel_modifier
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			add_dynamic_modifier = {
+				modifier = GER_stasi_modifier
+			}
+
+			add_to_variable = { GER_communist_intel_subversive_activities_upkeep = -0.3 tooltip = subversive_activites_upkeep_tt }
+			add_to_variable = { GER_communist_intel_stability_factor = -0.05 tooltip = stability_factor_tt }
+		}
+
+		if = {
+			limit = {
+				has_dlc = "La Resistance"
+				has_character = GEK_wilhelm_zaisser
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			GEK_wilhelm_zaisser = {
+				remove_trait = {
+					slot = political_advisor
+					trait = GER_intelligence_coordinator
+				}
+			}
+			GEK_wilhelm_zaisser = {
+				 add_trait = { 
+					 slot = political_advisor
+					 trait = GER_secretary_of_state_security
+				 }
+			 }
+		}
+	}
+}
+shared_focus = {
+	id = GE2_effective_operations
+	text = GER_effective_operations
+	icon = GFX_focus_generic_secret_service_agency
+	prerequisite = { focus = GE2_formalize_the_intelligence_wing }
+
+	x = -1
+	y = 1
+	relative_position_id = GE2_formalize_the_intelligence_wing
+	cost = 5
+	available = {
+	}
+
+	search_filters = {}
+
+	completion_reward = {
+		IF = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = GER_stasi_modifier
+				}
+			}
+			custom_effect_tooltip = GER_stasi_modifier_intro_tt
+		}
+		ELSE = {
+			custom_effect_tooltip = GER_communist_intel_modifier_intro_tt
+		}
+
+		IF = {
+			limit = { has_dlc = "La Resistance" }
+
+
+			add_to_variable = { GER_communist_intel_subversive_activities_upkeep = -0.25 tooltip = subversive_activites_upkeep_tt }
+			add_to_variable = { GER_communist_intel_intel_network_gain = 0.2 tooltip = intel_network_gain_factor_tt }
+		}
+		ELSE = {
+			add_to_variable = { GER_communist_intel_decryption_factor = 0.2 tooltip = decryption_factor_tt }
+			add_to_variable = { GER_communist_intel_encryption_factor = 0.2 tooltip = encryption_factor_tt }
+
+		}
+	}
+}
+shared_focus = {
+	id = GE2_assemble_red_orchestra
+	text = GER_assemble_red_orchestra
+	icon = GFX_focus_SWI_embrace_rote_drei
+	prerequisite = { focus = GE2_form_the_stasi }
+	prerequisite = { focus = GE2_effective_operations }
+
+	x = 1
+	y = 1
+	relative_position_id = GE2_effective_operations
+	cost = 5
+	available = {
+	}
+
+	search_filters = {}
+
+	completion_reward = {
+
+		IF = {
+			limit = { has_dlc = "La Resistance"}
+
+			create_operative_leader = {
+				name = GER_erich_mielke
+				bypass_recruitment = no 
+				traits = { operative_commando operative_escape_artist operative_master_interrogator }
+				available_to_spy_master = yes  
+				GFX = GFX_portrait_GER_erich_mielke
+				gender = male
+			}
+
+			create_operative_leader = {
+				name = GER_marie_luise_hammerstein
+				bypass_recruitment = no 
+				traits = { operative_natural_orator }
+				available_to_spy_master = yes 
+				nationalities = { GER SOU } 
+				GFX = GFX_portrait_GER_marie_luise_hammerstein
+				gender = female
+			}
+
+			create_operative_leader = {
+				name = GER_rudolf_herrnstadt
+				bypass_recruitment = no 
+				traits = { operative_linguist }
+				available_to_spy_master = yes 
+				nationalities = { GER SOU } 
+				GFX = GFX_portrait_GER_rudolf_herrnstadt
+				gender = male
+			}
+
+			create_operative_leader = {
+				name = GER_ernst_wollweber
+				bypass_recruitment = no 
+				traits = { operative_tough }
+				available_to_spy_master = yes 
+				nationalities = { GER SOU } 
+				GFX = GFX_portrait_GER_ernst_wollweber
+				gender = male
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = GER_stasi_modifier_intro_tt
+
+			add_to_variable = { GER_communist_intel_operative_slot = 2 tooltip = operative_slot_tt }
+		}
+
+		ELSE = {
+			custom_effect_tooltip = GER_stasi_modifier_intro_tt
+			add_to_variable = { GER_communist_intel_decryption_factor = 0.2 tooltip = decryption_factor_tt }
+			add_to_variable = { GER_communist_intel_encryption_factor = 0.2 tooltip = encryption_factor_tt }
+		}
+
+		
+	}
+}
 
 shared_focus = { #제국
 	id = GE2_return_of_the_kaiserreich
 	icon = GFX_focus_ger_return_of_the_kaiser
+	mutually_exclusive = {
+		focus = GE2_start_the_proletarian_revolution
+	}
 	prerequisite = {
 		focus = GE2_start_focus
 	}
@@ -8475,7 +8847,7 @@ shared_focus = { #제국
 	available = {
 		has_government = neutrality
 	}
-	x = 3
+	x = 5
 	y = 1
 	cost = 5
 	completion_reward = {

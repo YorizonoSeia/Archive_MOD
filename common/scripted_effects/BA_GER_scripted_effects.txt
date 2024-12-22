@@ -1,3 +1,23 @@
+BA_GER_modify_army_modifier = {
+	if = {
+		limit = { 
+			has_dynamic_modifier = { modifier = GER_army_modifier }
+		}
+		custom_effect_tooltip = GER_modify_army_modifier_tt
+	}
+	else_if = {
+		limit = { 
+			has_dynamic_modifier = { modifier = GER_army_communist_modifier }
+		}
+		custom_effect_tooltip = GER_modify_army_communist_modifier_tt
+	}
+	else_if = {
+		limit = { 
+			original_tag = KPD
+		}
+		custom_effect_tooltip = KPD_army_dynamic_modifier_tt
+	}
+}
 GEK_enhance_spd = {
 	if = {
 		limit = { 
