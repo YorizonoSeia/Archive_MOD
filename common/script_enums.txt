@@ -187,6 +187,8 @@ script_enum_equipment_bonus_type = {
 		helicopter_airframe_artillery_equipment_1
 		helicopter_airframe_destroyer_equipment_1
 		helicopter_equipment_2
+		syemmata_railway_gun_equipment
+		syemmata_railway_gun_equipment_1
 	#BA_MOD_FIX/
 
 	convoy

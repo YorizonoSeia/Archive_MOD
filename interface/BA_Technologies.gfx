@@ -34,6 +34,10 @@ spriteTypes = {
     	name = "GFX_decagrammaton_weapons_3_medium"
 	    texturefile = "gfx/interface/technologies/decagrammaton_equipment.dds"
    	}
+	SpriteType = {
+		name = "GFX_syemmata_railway_gun_equipment_medium"
+		texturefile = "gfx/interface/technologies/generic_super_heavy_railway_gun.dds"
+	}
 
 
 	spriteType = {

@@ -1,0 +1,13 @@
+sub_units = {
+	syemmata_railway_gun = {
+		sprite = super_heavy_railway_gun
+		map_icon_category = other
+		priority = 1
+		active = yes
+		type = { railway_gun }
+		need = { syemmata_railway_gun_equipment = 1 }
+		weight = 1
+		supply_consumption = 0.9
+		max_strength = 10000
+	}
+}
