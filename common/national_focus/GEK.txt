@@ -2396,6 +2396,16 @@ focus_tree = {
 				id = BAY_power_balance
 				value = 0.1
 			}
+			every_owned_state = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GEH_state_government
+					}
+				}
+				remove_dynamic_modifier = {
+					modifier = GEH_state_government
+				}
+			}
 		}
 	}
 	focus = {
@@ -2422,6 +2432,16 @@ focus_tree = {
 			add_power_balance_value = {
 				id = BAY_power_balance
 				value = -0.1
+			}
+			every_owned_state = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GEH_state_government
+					}
+				}
+				remove_dynamic_modifier = {
+					modifier = GEH_state_government
+				}
 			}
 		}
 	}
