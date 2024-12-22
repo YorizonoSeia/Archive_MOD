@@ -190,6 +190,8 @@ country_event = {
 
 	immediate = {
 		clr_global_flag = BA_shotdown_USA_congress
+		clr_country_flag = USABA_government_official_exile
+		clr_country_flag = USABA_relocation_of_naval_headquarters
 		add_popularity = {
 			ideology = democratic
 			popularity = 0.30
@@ -198,7 +200,13 @@ country_event = {
 	
 	option = {
 		name = usa_chroma_event.4.a
-		if = { limit = { country_exists = USP } annex_country = { target = USP } }
+		if = {
+			limit = { country_exists = USP }
+			annex_country = {
+				target = USP
+				transfer_troops = yes
+			}
+		}
 		drop_cosmetic_tag = yes
 		remove_country_leader_role = {
 			character = USA_douglas_macarthur
