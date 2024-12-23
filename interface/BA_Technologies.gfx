@@ -36,11 +36,11 @@ spriteTypes = {
    	}
 	SpriteType = {
 		name = "GFX_syemmata_railway_gun_equipment_medium"
-		texturefile = "gfx/interface/technologies/generic_super_heavy_railway_gun.dds"
+		texturefile = "gfx/interface/technologies/ABY_syemmata_railway_gun.dds"
 	}
 	SpriteType = { #OLD DORA ICON FROM NSB
 		name = "GFX_ABY_syemmata_railway_gun_equipment_medium"
-		texturefile = "gfx/interface/technologies/GER_super_heavy_railway_gun.dds"
+		texturefile = "gfx/interface/technologies/ABY_syemmata_railway_gun.dds"
 	}
 
 

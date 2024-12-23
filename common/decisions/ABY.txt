@@ -17595,6 +17595,26 @@ ABY_descision_category_debug = {
 			}
 		}
 	}
+	ABY_descision_debug_focus_tree = {
+		priority = 1
+		
+		visible = {       
+			tag = ABY
+			is_debug = yes
+		}
+		                 
+        allowed = {
+            tag = ABY
+        }                     
+
+		complete_effect = {
+            load_focus_tree = {
+                tree = ABC_focus_tree
+                keep_completed = yes
+            }
+            mark_focus_tree_layout_dirty = yes
+		}
+	}
 	ABY_descision_debug_ennead = {
 		priority = 1
 		

@@ -271,7 +271,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_BA_sp_land_syemmata_railway_gun"
-		texturefile = "gfx/interface/special_project/project_icons/sp_land_super_heavy_railway_gun.dds"
+		texturefile = "gfx/interface/special_project/project_icons/sp_land_syemmata_railway_gun.dds"
 	}
 	spriteType = {
 		name = "GFX_sp_land_v3"
