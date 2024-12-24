@@ -1424,7 +1424,7 @@ RED_minori_revolution_decision = {
 			}
 		}
 		ai_will_do = {
-			base = 999
+			base = 9999
 		}
 		fire_only_once = yes
 		allowed = {
@@ -2718,7 +2718,7 @@ RED_demand_cat = {
 			has_completed_focus = RED_minori_diplo_6
 			has_completed_focus = RED_rehabilitated_military
 			has_army_manpower = {
-				size > 399999
+				size > 3999999
 			}
 		}
 		activation = {
@@ -3743,7 +3743,7 @@ RED_population_issue_cat = { #인구문제
 		icon = GFX_decision_generic_motorized
 		fire_only_once = yes
 		ai_will_do = {
-			base = 999
+			base = 9999
 		}
 		available = {
 			has_completed_focus = RED_road_to_south	
@@ -3764,7 +3764,7 @@ RED_population_issue_cat = { #인구문제
 		icon = GFX_decision_generic_trucks
 		fire_only_once = yes
 		ai_will_do = {
-			base = 999
+			base = 9999
 		}
 		available = {
 			has_completed_focus = RED_road_to_north
@@ -3785,7 +3785,7 @@ RED_population_issue_cat = { #인구문제
 		icon = GFX_decision_generic_train
 		fire_only_once = yes
 		ai_will_do = {
-			base = 999
+			base = 9999
 		}
 		available = {
 			has_completed_focus = RED_improve_railway_network
@@ -3832,7 +3832,7 @@ RED_population_issue_cat = { #인구문제
 		icon = GFX_decision_SOV_place_hq
 		fire_only_once = yes
 		ai_will_do = {
-			base = 999
+			base = 9999
 		}
 		available = {
 		}
@@ -3858,7 +3858,7 @@ RED_population_issue_cat = { #인구문제
 		icon = GFX_decision_generic_reorganize_irregulars
 		fire_only_once = yes
 		ai_will_do = {
-			base = 999
+			base = 9999
 		}
 		available = {
 			AND = {
@@ -3891,7 +3891,7 @@ RED_population_issue_cat = { #인구문제
 		icon = GFX_decision_SWI_dismiss_council
 		fire_only_once = yes
 		ai_will_do = {
-			base = 999
+			base = 9999
 		}
 		cost = 30
 		days_remove = 180
@@ -3906,7 +3906,7 @@ RED_population_issue_cat = { #인구문제
 		icon = GFX_decision_generic_fundraising
 		fire_only_once = yes
 		ai_will_do = {
-			base = 999
+			base = 9999
 		}
 		available = {
 			has_completed_focus = RED_club_focus_0
@@ -3924,7 +3924,7 @@ RED_population_issue_cat = { #인구문제
 		icon = GFX_decision_eng_trade_unions_support
 		fire_only_once = yes
 		ai_will_do = {
-			base = 999
+			base = 99999
 		}
 		cost = 10
 		days_remove = 180

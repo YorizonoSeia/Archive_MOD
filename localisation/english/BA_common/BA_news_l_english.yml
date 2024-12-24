@@ -190,6 +190,7 @@
  BA_news.34.b: "이는 큰 파장을 일으킬 것이다."
 
  #프랑스 기습시위!!
+ # ㄴ 나 프랑스 모던데 그거 참 미안하게 됐다 
  BA_news.35.t:0 "$FRA_prov_event.71.t$"
  BA_news.35.d:0 "$FRA_prov_event.71.d$"
  FRA_prov_event.38.t:0 "프랑스의 귀환"

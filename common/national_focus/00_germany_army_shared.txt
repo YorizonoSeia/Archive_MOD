@@ -8139,6 +8139,25 @@ shared_focus = { #서독 통일
 				days = 5
 			}
 		}
+		if = {
+			limit = {
+				any_owned_state = {
+					has_dynamic_modifier = {
+						modifier = GEK_protestant_patriotism_for_TRM
+					}
+				}
+			}
+			every_controlled_state = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GEK_protestant_patriotism_for_TRM
+					}
+				}
+				remove_dynamic_modifier = {
+					modifier = GEK_protestant_patriotism_for_TRM
+				}
+			}
+		}
 	}
 }
 
@@ -8381,6 +8400,25 @@ shared_focus = { #동독 통일
 			country_event = {
 				id = GEK_rm_event.21
 				days = 10
+			}
+		}
+		if = {
+			limit = {
+				any_owned_state = {
+					has_dynamic_modifier = {
+						modifier = GEK_protestant_patriotism_for_TRM
+					}
+				}
+			}
+			every_controlled_state = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GEK_protestant_patriotism_for_TRM
+					}
+				}
+				remove_dynamic_modifier = {
+					modifier = GEK_protestant_patriotism_for_TRM
+				}
 			}
 		}
 	}
@@ -9916,15 +9954,7 @@ shared_focus = { #게헨나 방위대
 		focus = GEK_RM_kiv_focus_4
 	}
 	available = {
-		AND = {
-			GEH = {
-				exists = no
-			}
-			GEM = {
-				exists = no
-			}
-			controls_state = 55
-		}
+		has_completed_focus = GE1_start_focus
 	}
 	relative_position_id = GEK_RM_kiv_focus_0
 	x = -2
@@ -9951,9 +9981,6 @@ shared_focus = { #공동 복무
 	prerequisite = {
 		focus = GEK_RM_kiv_focus_11
 	}
-	available = {
-		has_tech = kivotos_infantry_weapons
-	}
 	relative_position_id = GEK_RM_kiv_focus_0
 	x = -3
 	y = 3
@@ -9974,15 +10001,7 @@ shared_focus = { #게헨나 협력자
 		focus = GEK_RM_kiv_focus_11
 	}
 	available = {
-		AND = {
-			GEH = {
-				exists = no
-			}
-			GEM = {
-				exists = no
-			}
-			controls_state = 55
-		}
+		has_completed_focus = GE1_start_focus
 	}
 	relative_position_id = GEK_RM_kiv_focus_0
 	x = -1
@@ -10030,10 +10049,7 @@ shared_focus = { #고서관 활용
 		focus = GEK_RM_kiv_focus_11
 	}
 	available = {
-		TRM = {
-			exists = no
-		}
-		controls_state = 64
+		has_completed_focus = GE2_start_focus
 	}
 	relative_position_id = GEK_RM_kiv_focus_0
 	x = -5
@@ -10233,16 +10249,7 @@ shared_focus = { #게헨나 학생 동원
 		focus = GEK_RM_kiv_focus_7
 	}
 	available = {
-		has_tech = kivotos_artificial_halo_replica_tech
-		AND = {
-			GEH = {
-				exists = no
-			}
-			GEM = {
-				exists = no
-			}
-			controls_state = 55
-		}
+		has_completed_focus = GE1_start_focus
 	}
 	relative_position_id = GEK_RM_kiv_focus_0
 	x = 4
@@ -10274,11 +10281,7 @@ shared_focus = { #트리니티 학생 동원
 		focus = GEK_RM_kiv_focus_7
 	}
 	available = {
-		has_tech = kivotos_artificial_halo_replica_tech
-		TRM = {
-			exists = no
-		}
-		controls_state = 64
+		has_completed_focus = GE2_start_focus
 	}
 	relative_position_id = GEK_RM_kiv_focus_0
 	x = 2
