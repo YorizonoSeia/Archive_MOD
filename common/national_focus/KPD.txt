@@ -824,18 +824,93 @@ focus_tree = {
 			set_cosmetic_tag = TRM_collapse_win
 		}
 	}
+	focus = { #스탈린주의자 숙청
+		id = KPD_expulsion_of_stalinists
+		icon = GFX_focus_GER_proletarian_solidarity
+		cost = 5
+		prerequisite = {
+			focus = KPD_dissolution_of_joint_supreme_command
+		}
+		mutually_exclusive = {
+			focus = KPD_purge_of_anti_leftists
+		}
+		x = -5
+		y = 1
+		relative_position_id = KPD_dissolution_of_joint_supreme_command
+		available = {
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			if = {
+				limit =  { NOT = { has_completed_focus = GE2_legacy_of_the_spartacus_league } }
+				add_country_leader_role = {
+					character = KPD_heinrich_brandler
+					promote_leader = yes
+					country_leader = {
+						ideology = marxism
+						expire = 1965.1.1
+						traits = { GER_pragmatic_trade_unionist } 
+					}
+				}
+			}
+			if = { limit = { has_character = KPD_thalman } KPD_thalman = { retire = yes } }
+			if = { limit = { has_character = KPD_richard_sorge } KPD_richard_sorge = { retire = yes } }
+			if = {
+				limit = { has_idea = KPD_conflict_with_the_social_democratic_left }
+				remove_ideas = KPD_conflict_with_the_social_democratic_left
+			}
+			if = {
+				limit = { has_idea = KPD_coalition_split_accelerates }
+				remove_ideas = KPD_coalition_split_accelerates
+			}
+		}
+	}
+	focus = { #반대 좌파 숙청
+		id = KPD_purge_of_anti_leftists
+		icon = GFX_focus_SOV_the_last_purge
+		cost = 5
+		prerequisite = {
+			focus = KPD_dissolution_of_joint_supreme_command
+		}
+		mutually_exclusive = {
+			focus = KPD_expulsion_of_stalinists
+		}
+		x = 5
+		y = 1
+		relative_position_id = KPD_dissolution_of_joint_supreme_command
+		available = {
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			if = { limit = { has_character = KPD_max_seydewitz } KPD_max_seydewitz = { retire = yes } }
+			if = { limit = { has_character = KPD_heinrich_brandler } KPD_heinrich_brandler = { retire = yes } }
+			if = {
+				limit = { has_idea = KPD_conflict_with_the_social_democratic_left }
+				remove_ideas = KPD_conflict_with_the_social_democratic_left
+			}
+			if = {
+				limit = { has_idea = KPD_coalition_split_accelerates }
+				remove_ideas = KPD_coalition_split_accelerates
+			}
+		}
+	}
 	focus = { #산업 국유화
 		id = KPD_nationalization_of_industries
 		icon = GFX_goal_generic_construct_civ_factory
 		cost = 10
 		prerequisite = {
-			focus = KPD_dissolution_of_joint_supreme_command
+			focus = KPD_expulsion_of_stalinists
+			focus = KPD_purge_of_anti_leftists
 		}
 		mutually_exclusive = {
 			focus = KPD_establishment_of_factory_councils
 		}
-		x = -3
-		y = 1
+		x = -1
+		y = 2
 		relative_position_id = KPD_dissolution_of_joint_supreme_command
 		available = {
 			has_political_power > 200
@@ -863,13 +938,14 @@ focus_tree = {
 		icon = GFX_focus_FIN_socialist_welfare
 		cost = 5
 		prerequisite = {
-			focus = KPD_dissolution_of_joint_supreme_command
+			focus = KPD_expulsion_of_stalinists
+			focus = KPD_purge_of_anti_leftists
 		}
 		mutually_exclusive = {
 			focus = KPD_nationalization_of_industries
 		}
-		x = -1
-		y = 1
+		x = 1
+		y = 2
 		relative_position_id = KPD_dissolution_of_joint_supreme_command
 		available = {
 		}

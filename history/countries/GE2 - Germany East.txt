@@ -94,6 +94,7 @@ recruit_character = GEK_hermann_duncker # 공산주의
 recruit_character = GEK_august_thalheimer # 공산주의
 recruit_character = GEK_hans_marchwitza # 국가인민군
 recruit_character = GEK_arno_von_lenski # 국가인민군
+recruit_character = KPD_fritz_selbmann # 현실 동독 경제관료
 
 add_ideas = {
 	limited_exports

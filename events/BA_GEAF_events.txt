@@ -1,0 +1,56 @@
+add_namespace = GE1_event
+add_namespace = GE2_event
+
+country_event = { #Spartacus leader election
+	id = GE2_event.1
+	title = wuw_GER_german_politics.02.t
+	desc = wuw_GER_german_politics.02.desc
+	picture = GFX_report_event_election_vote
+
+	is_triggered_only = yes
+
+	fire_only_once = yes 
+
+	option = { #Brandler
+		name = GE2_event.1.a
+		trigger = {
+			has_character = KPD_alexander_schwab
+		}
+
+		ai_chance = {
+			base = 0.001
+		}
+
+		add_country_leader_role = {
+			character = KPD_alexander_schwab
+			promote_leader = yes
+			country_leader = {
+				ideology = left_council_communism
+				expire = 1965.1.1
+				traits = { KPD_left_communist } 
+			}
+		}
+	}
+
+	option = { #
+		name = GE2_event.1.c
+		trigger = {
+			has_character = GEK_otto_grotewohl
+		}
+		ai_chance = {
+			base = 5
+		}
+
+		GEK_otto_grotewohl = {
+			add_country_leader_role = {
+				character = GEK_otto_grotewohl
+				promote_leader = yes
+				country_leader = {
+					ideology = marxism
+					expire = 1965.1.1
+					traits = { popular_figurehead } 
+				}
+			}
+		}
+	}
+}

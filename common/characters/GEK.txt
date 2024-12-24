@@ -71,6 +71,12 @@ characters={
 			slot = political_advisor
 			idea_token = KPD_walter_idea
 			available = {
+				NOT = {
+					has_country_leader = {
+						character = KPD_heinrich_brandler
+						ruling_only = yes
+					}
+				}
 			}
 			traits = { GER_inflexible_communist_organizer }
 		}
@@ -100,6 +106,12 @@ characters={
 			slot = political_advisor
 			idea_token = KPD_wilhelm_munzenberg_idea
 			available = {
+				NOT = {
+					has_country_leader = {
+						character = KPD_heinrich_brandler
+						ruling_only = yes
+					}
+				}
 			}
 			traits = { KPD_communist_propaganda }
 		}
@@ -146,11 +158,17 @@ characters={
 			slot = political_advisor
 			idea_token = KPD_heinrich_brandler_idea
 			available = {
+				NOT = {
+					has_country_leader = {
+						character = KPD_heinrich_brandler
+						ruling_only = yes
+					}
+				}
 			}
 			traits = { KPD_right_party }
 		}
 	}
-	KPD_fritz_selbmann = { #프리츠 젤브만
+	KPD_fritz_selbmann = { #프리츠 젤브만 : 서독 사용 : 공산주의 경제고문
 		name = KPD_fritz_selbmann
 		portraits = {
 			civilian = {
@@ -160,9 +178,16 @@ characters={
 		advisor = {
 			slot = political_advisor
 			idea_token = KPD_fritz_selbmann_idea
-			available = {
+			allowed = {
+				
 			}
-			traits = { economy_reformer }
+			available = {
+				OR = {
+					has_government = communism
+					has_government = democratic
+				}
+			}
+			traits = { economist }
 		}
 	}
 	KPD_richard_sorge = { #리하르트 조르게 : 소련 첩보관
@@ -617,11 +642,6 @@ characters={
 		#	traits = { GER_pragmatic_socialist }
 		#	expire = "1965.1.1.1"
 		#}
-		country_leader = { #Gets his role through an event
-			ideology = marxism
-			traits = { GER_pragmatic_socialist }
-			expire = "1965.1.1.1"
-		}
 	}
 	
 	GEK_carl_friedrich_goerdeler = { # 동독 사용 : 독일 제국 지도자
@@ -3325,6 +3345,7 @@ characters={
 			}
 			available = {
 				has_government = communism
+				has_completed_focus = GE2_legacy_of_the_spartacus_league
 			}
 
 			traits = {
