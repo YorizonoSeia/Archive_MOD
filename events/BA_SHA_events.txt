@@ -1205,6 +1205,7 @@ country_event = {
 	option = {
 		name = shafas.2.a
 		activate_mission = SHA_BTP_revolt_mission
+		add_ideas = SHA_faup_idea
 		hidden_effect = {
 			country_event = { id = shafas.3 days = 03 }
 		}

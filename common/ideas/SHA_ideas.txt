@@ -937,7 +937,7 @@ ideas = {
 				army_core_defence_factor = 0.1
 			}
 		}
-		# 산해경 고립 - 보수 혁명
+		# 산해경 고립 - 보수 혁명 - 새로운 현룡문 - 경극부 관계
 		SHA_walking_the_dragon_2 = {
 			name = SHA_walking_the_dragon
 			picture = SHA_walking_the_dragon
@@ -950,7 +950,7 @@ ideas = {
 
 			}
 		}
-		# 산해경 고립 - 보수 혁명
+		# 산해경 고립 - 보수 혁명 - 타 동아리 협력 확대
 		SHA_walking_the_dragon_3 = {
 			name = SHA_walking_the_dragon
 			picture = SHA_walking_the_dragon
@@ -962,7 +962,7 @@ ideas = {
 				political_advisor_cost_factor = -0.33
 			}
 		}
-		# 산해경 고립 - 보수 혁명
+		# 산해경 고립 - 보수 혁명 - ALL
 		SHA_walking_the_dragon_4 = {
 			name = SHA_walking_the_dragon
 			picture = SHA_walking_the_dragon
@@ -992,6 +992,32 @@ ideas = {
 				industrial_capacity_factory = 0.05
 			}
 		}
+		
+		# 유기적 국가 건설
+		SHA_corporate_state_idea_1 = {
+			name = SHA_corporate_state_idea
+			picture = SHA_corporate_state
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+
+			modifier = {
+				political_power_factor = 0.15
+			}
+		}
+		
+		# 유기적 국가 건설 - 2
+		SHA_corporate_state_idea_2 = {
+			name = SHA_corporate_state_idea
+			picture = SHA_corporate_state
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+
+			modifier = {
+				political_power_factor = 0.15
+				party_popularity_stability_factor = 0.2
+			}
+		}
+
 		# 현무상회
 		SHA_Black_Tortoise_Promenade = {
 			picture = SHA_IdeaG_5
@@ -1005,6 +1031,7 @@ ideas = {
 				democratic_drift = 0.1
 			}
 		}
+		
 		# 현무상회 - 억제 됨
 		SHA_suppressed_Black_Tortoise_Promenade = {
 			picture = SHA_IdeaG_5
@@ -1081,5 +1108,38 @@ ideas = {
 			}
 		}
 
+	}
+	industrial_concern = {
+
+		SHA_bbo_improved = {
+			name = AUS_bbo_improved
+			picture = AUS_bbo
+
+			allowed = {
+				original_tag = SHA
+			}
+
+			available = {
+				
+			}
+
+			visible = {
+				has_completed_focus = SHA_Federal_Railroad_Absorption
+			}
+
+			ai_will_do = {
+				base = 0
+			}
+
+			research_bonus = {
+			}
+		
+			traits = { improved_railway_company } 
+
+			modifier = {
+				#production_speed_rail_way_factor = 0.2
+			}
+
+		}
 	}
 }

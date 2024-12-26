@@ -260,7 +260,7 @@
  SHA_isolation_economic:0 "쇄국 정책"
  SHA_nojo:0 "전국센가이쿄노동조합총연맹"
  SHA_NONGSANMUL_BANCHUL:0 "농산물 반출"
- SHA_faup_idea:0 "12월 총파업"
+ SHA_faup_idea:0 "[GetMonth] 총파업"
  SHA_opera_idea:0 "경극부"
  SHA_opera_idea2:0 "힘을 얻은 경극부"
  SHA_opera_idea3:0 "경극연구부"
@@ -640,6 +640,31 @@
 #################################
 ################################# Rework
 #################################
+
+ # 경제도 잘하고 문화도 잘하고 못하는게 없는데
+ SHA_relief_work: "구제 사업 조직"
+ SHA_relief_work_desc: "기존 오스트리아에는 불황이 닥쳐왔고 이는 산해경에게도 크나큰 여파를 남겼습니다. 더욱더 많은 오스트리아 실업자들이 생기기 전에 과감한 조치를 통해 이를 해결해야 합니다."
+ SHA_establish_the_SEZ: "경제특구 설립"
+ SHA_establish_the_SEZ_desc: ""
+ SHA_architechtual_advancements: "$AUS_architechtual_advancements$"
+ SHA_architechtual_advancements_desc: "X"
+ SHA_autobahn_connection: "고속도로 연결"
+ SHA_autobahn_connection_desc: ""
+ SHA_improving_the_rail_network: "철도망 개선"
+ SHA_improving_the_rail_network_desc: ""
+ SHA_Federal_Railroad_Absorption: "오스트리아 연방 철도 인수"
+ SHA_Federal_Railroad_Absorption_desc: ""
+ SHA_Construction_of_Kolnbrein_Dam: "쾰른브레인 댐 건설"
+ SHA_austria_unemployment_relief: "오스트리아 실업자 구제"
+ SHA_invest_in_erzberg_steel_mines: "$AUS_invest_in_erzberg_steel_mines$"
+ SHA_courting_the_princess_of_industry: "산업의 공주 초청"
+ SHA_urban_housing_projects: "도시 주택 계획"
+ SHA_expand_stpoltner_steelworks: "$AUS_expand_stpoltner_steelworks$"
+ SHA_invest_in_semperit_synthetics: "$AUS_invest_in_semperit_synthetics$"
+ SHA_pulverfabrik_skodawerke: "$AUS_pulverfabrik_skodawerke$"
+ SHA_the_matzen_oil_fields: "$AUS_the_matzen_oil_fields$"
+
+ # 정치
  SHA_Austrian_oppression_continues: "오스트리아 탄압 지속"
  SHA_Austrian_oppression_continues_desc: "오스트리아인들은 지속적으로 우리 산해경의 지배에 반대하며 훼방을 놓는 데만 열을 올려왔습니다. 이제 그들의 저항을 단호히 뿌리 뽑아야 할 때입니다. 우리는 대대적으로 현룡문의 요원들을 투입해 이들의 반발을 철저히 제압하고, 그들이 산해경 체제 아래에 완전히 복속되도록 만들어야 합니다."
  SHA_internal_solidarity: "내부 결속"
@@ -709,10 +734,16 @@
  SHA_new_shanhaijing_conservatism_desc: ""
  SHA_Expansion_of_cooperation_with_other_clubs: "타 동아리 협력 확대"
  SHA_Expansion_of_cooperation_with_other_clubs_desc: ""
- SHA_New_Genryumon_Peking_Opera_Department_Relations: "새로운 현룡문 - 경극부 관계"
- SHA_New_Genryumon_Peking_Opera_Department_Relations_desc: ""
+ SHA_anti_socialist_law: "반 사회주의 법"
+ SHA_anti_socialist_law_desc: ""
  SHA_Cabinet_Secretariat: "산해경 추밀원"
  SHA_Cabinet_Secretariat_desc: ""
+ SHA_organic_national_polity: "유기적 국체"
+ SHA_organic_national_polity_desc: ""
+ SHA_Democratic_Culture_Censorship: "반키보토스적 민주주의 문화 척결"
+ SHA_Democratic_Culture_Censorship_desc: ""
+ SHA_New_Genryumon_Peking_Opera_Department_Relations: "새로운 현룡문 - 경극부 관계"
+ SHA_New_Genryumon_Peking_Opera_Department_Relations_desc: ""
  SHA_Engine_of_conservative_revolution: "보수혁명의 원동기"
  SHA_Engine_of_conservative_revolution_desc: ""
  SHA_2nd_conservative_revolution: "제 2차 보수혁명"
@@ -756,6 +787,7 @@
  SHA_suppressed_Black_Tortoise_Promenade_desc: "키보토스 전역의 식자재가 모이는 상인연합회로 명성을 떨치던 동아리이었습니다만, 현재는 산해경의 현룡문 통제를 받고 있습니다. 조금이라도 현룡문의 전통에서 벗어나는 행위는 철저한 규제의 대상이 되며, 이로 인해 정치적 기반을 사실상 완전히 상실했습니다.\n\n한때 키보토스의 다양한 식문화를 선도하던 상인연합회는 이제 과거의 영광을 그리워하며, 보수적인 제약 속에서 겨우 명맥을 이어가고 있습니다."
  SHA_Shanhaijinfascism: "산해경 파시즘"
  SHA_Shanhaijinfascism_desc: "산해경 파시즘은 산해경의 전통적 가치관을 정면으로 반박하는 급진적이고 이단적인 사상입니다. 산해경의 고립주의가 장기화되면서 내부에서 급진파와 개화파가 등장하였으며, 이들은 현룡문이 더 이상 개혁의 의지가 없다는 판단 아래 비밀 조직을 결성해 활동해 왔습니다.\n\n최근 정권을 잡은 오욕의 미후, 신타니 카이의 집권은 이들에게 오히려 기회로 작용하고 있습니다. 신타니 카이는 실용주의를 표방하며, 기존 질서에 얽매이지 않는 개혁적 행보를 보이고 있습니다. 이에 현룡문의 개혁파와 급진파는 그녀의 집권을 긍정적으로 평가하며 지지를 보냈습니다.\n\n이들이 주장하는 산해경 파시즘은 산해경 고급중학교 제일주의를  표방하고, 대전이 사건 이후 산해경의 영토를 침탈한 백귀야행에 대한 강한 적대감을 드러냅니다. 이들은 백귀야행에 빼앗긴 영토를 되찾고 산해경의 위상을 회복하기 위해 강경한 대외 정책과 내부 개혁을 요구하고 있습니다.\n\n결국 산해경 파시즘은 기존의 고립주의와는 완전히 단절된, 산해경의 전통적 질서를 뒤흔드는 새로운 정치 이념으로 부상하고 있습니다. 그러나 이러한 급진적 변화가 산해경 사회에 긍정적인 결과를 가져올지, 아니면 더 큰 분열을 초래할지는 아직 미지수입니다."
+ SHA_corporate_state_idea: "유기적 국가 건설"
 
  # 이벤트
  shafas.1.t: "경극부의 쿠데타!"

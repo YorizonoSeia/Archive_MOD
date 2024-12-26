@@ -30,7 +30,6 @@ add_ideas = {
 	SHA_Black_Tortoise_Promenade
 	SHA_Eastern_Alchemy_Society_low
 	SHA_aoghkdnjs_idea
-	SHA_faup_idea
 	SHA_Austrian_fascist_militia
 }
 add_ideas = BA_student_conscription_idea

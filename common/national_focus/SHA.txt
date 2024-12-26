@@ -11,11 +11,15 @@ focus_tree = {
 	}
 	default = no
 
+	#############
+	####정치중점####
+	#############
+
 	# 오스트리아인 탄압 지속
 	focus = {
 		id = SHA_Austrian_oppression_continues
 		icon = GFX_focus_GER_anschluss
-		x = 37
+		x = 14
 		y = 0
 		cost = 10
 
@@ -228,7 +232,7 @@ focus_tree = {
 	focus = {
 		id = SHA_Austrian_appeasement_policy
 		icon = GFX_focus_generic_befriend_austria
-		x = -20
+		x = 20
 		y = 0
 		cost = 2
 		offset = {
@@ -552,6 +556,7 @@ focus_tree = {
 		icon = GFX_focus_generic_fascist_troops
 		x = 2
 		y = 1
+		relative_position_id = SHA_Kaguya_ousted
 		cost = 5
 
 		prerequisite = { focus = SHA_Kaguya_ousted }
@@ -560,7 +565,6 @@ focus_tree = {
 		available = { }
 		bypass = { }
 
-		relative_position_id = SHA_Kaguya_ousted
 
 		completion_reward = {
 			custom_effect_tooltip = SHA_Shanhaijing_fascism_tt
@@ -585,6 +589,7 @@ focus_tree = {
 		icon = GFX_goal_SHA_Eastern_Alchemy_Society_solidarity
 		x = 2
 		y = 1
+		relative_position_id = SHA_Shanhaijing_fascism
 		cost = 10
 
 		prerequisite = { focus = SHA_Shanhaijing_fascism }
@@ -593,7 +598,6 @@ focus_tree = {
 		available = { }
 		bypass = { }
 
-		relative_position_id = SHA_Shanhaijing_fascism
 
 		completion_reward = {
 			custom_effect_tooltip = SHA_Shanhaijing_fascism_tt
@@ -615,6 +619,7 @@ focus_tree = {
 		icon = GFX_focus_generic_modernize_industry
 		x = 0
 		y = 1
+		relative_position_id = SHA_Shanhaijing_fascism
 		cost = 10
 
 		prerequisite = { focus = SHA_Shanhaijing_fascism }
@@ -623,7 +628,6 @@ focus_tree = {
 		available = { }
 		bypass = { }
 
-		relative_position_id = SHA_Shanhaijing_fascism
 
 		completion_reward = {
 			custom_effect_tooltip = SHA_Shanhaijing_fascism_tt
@@ -653,6 +657,7 @@ focus_tree = {
 		icon = GFX_focus_generic_coffee
 		x = -1
 		y = 1
+		relative_position_id = SHA_Eastern_Alchemy_Society_solidarity
 		cost = 5
 
 		prerequisite = { focus = SHA_Eastern_Alchemy_Society_solidarity }
@@ -664,7 +669,6 @@ focus_tree = {
 		}
 		bypass = { }
 
-		relative_position_id = SHA_Eastern_Alchemy_Society_solidarity
 
 		completion_reward = {
 		}
@@ -996,11 +1000,70 @@ focus_tree = {
 		}
 	}
 
+	# 유기적 국체
+	focus = {
+		id = SHA_organic_national_polity
+		icon = GFX_goal_SHA_Jingle_Bell_Rock
+		x = 3
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_conservative_revolution }
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_conservative_revolution
+
+		completion_reward = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.03
+			}
+			add_political_power = 50
+			add_ideas = SHA_corporate_state_idea_1
+
+		}
+	}
+
+	# 민주주의 문화 검열
+	focus = {
+		id = SHA_Democratic_Culture_Censorship
+		icon = GFX_goal_authority
+		x = 0
+		y = 2
+		relative_position_id = SHA_organic_national_polity
+		cost = 5
+
+		prerequisite = { focus = SHA_organic_national_polity }
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.15
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = -0.05
+			}
+			swap_ideas = {
+				remove_idea = SHA_corporate_state_idea_1
+				add_idea = SHA_corporate_state_idea_2
+			}
+		}
+	}
+
 	# 타 동아리 협력 확장
 	focus = {
 		id = SHA_Expansion_of_cooperation_with_other_clubs
 		icon = GFX_goal_SHA_Expansion_of_cooperation_with_other_clubs
-		x = -2
+		x = 1
 		y = 1
 		cost = 5
 
@@ -1035,6 +1098,7 @@ focus_tree = {
 					}
 				}
 			}
+			add_one_random_civilian_factory = yes
 		}
 	}
 
@@ -1042,7 +1106,7 @@ focus_tree = {
 	focus = {
 		id = SHA_New_Genryumon_Peking_Opera_Department_Relations
 		icon = GFX_goal_SHA_New_Genryumon_Peking_Opera_Department_Relations
-		x = 2
+		x = -1
 		y = 1
 		cost = 5
 
@@ -1077,6 +1141,7 @@ focus_tree = {
 					}	
 				}
 			}
+			add_one_random_civilian_factory = yes
 		}
 	}
 
@@ -1084,17 +1149,18 @@ focus_tree = {
 	focus = {
 		id = SHA_Cabinet_Secretariat
 		icon = GFX_goal_SHA_Cabinet_Secretariat
-		x = 0
+		x = 1
 		y = 1
 		cost = 10
 
-		prerequisite = { focus = SHA_new_shanhaijing_conservatism }
+		prerequisite = { focus = SHA_New_Genryumon_Peking_Opera_Department_Relations }
+		prerequisite = { focus = SHA_Expansion_of_cooperation_with_other_clubs }
 		mutually_exclusive = {  }
 
 		available = { }
 		bypass = { }
 
-		relative_position_id = SHA_new_shanhaijing_conservatism
+		relative_position_id = SHA_New_Genryumon_Peking_Opera_Department_Relations
 
 		completion_reward = {
 			effect_tooltip = {
@@ -1122,19 +1188,18 @@ focus_tree = {
 	focus = {
 		id = SHA_Engine_of_conservative_revolution
 		icon = GFX_goal_SHA_Engine_of_conservative_revolution
-		x = 0
+		x = 1
 		y = 1
+		relative_position_id = SHA_Cabinet_Secretariat
 		cost = 10
-
-		prerequisite = { focus = SHA_Expansion_of_cooperation_with_other_clubs }
-		prerequisite = { focus = SHA_New_Genryumon_Peking_Opera_Department_Relations }
+		
 		prerequisite = { focus = SHA_Cabinet_Secretariat }
+		prerequisite = { focus = SHA_Democratic_Culture_Censorship }
 		mutually_exclusive = {  }
 
 		available = { }
 		bypass = { }
 
-		relative_position_id = SHA_Cabinet_Secretariat
 
 		completion_reward = {
 			add_stability = 0.1
@@ -1352,8 +1417,7 @@ focus_tree = {
 				owns_state = 972
 			}
 			NOT = { has_global_flag = GFLAG_BAKSANWAR_END }
-			has_completed_focus = SHA_New_Genryumon_Peking_Opera_Department_Relations
-			has_completed_focus = SHA_Expansion_of_cooperation_with_other_clubs
+			has_completed_focus = SHA_Cabinet_Secretariat
 		}
 		bypass = { }
 
@@ -1519,6 +1583,853 @@ focus_tree = {
 
 		}
 	}
+
+	
+	##############
+	####경제 중점#####
+	##############
+
+	# 구제 사업 조직
+	focus = {
+		id = SHA_relief_work
+		icon = GFX_focus_ICE_embrace_the_workers_revolution
+		x = 24
+		y = 0
+		relative_position_id = SHA_Austrian_appeasement_policy
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
+		cost = 5
+
+		prerequisite = { }
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
+		}
+	}
+
+	# 경제특구 설립
+	focus = {
+		id = SHA_establish_the_SEZ
+		icon = GFX_focus_ICE_embrace_the_workers_revolution
+		x = 6
+		y = 1
+		relative_position_id = SHA_relief_work
+		cost = 5
+
+		prerequisite = { focus = SHA_relief_work }
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
+		}
+	}
+
+	# 오스트리아 실업자 구제
+	focus = {
+		id = SHA_austria_unemployment_relief
+		icon = GFX_focus_ICE_embrace_the_workers_revolution
+		x = 0
+		y = 1
+		relative_position_id = SHA_relief_work
+		cost = 5
+
+		prerequisite = { focus = SHA_relief_work }
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+		}
+	}
+
+	# 예르츠베르크 철광 투자
+	focus = { 
+		id = SHA_invest_in_erzberg_steel_mines
+		icon = GFX_focus_generic_mining_industry
+		prerequisite = { focus = SHA_austria_unemployment_relief}
+		mutually_exclusive = { }
+		x = 3
+		y = 1
+		relative_position_id = SHA_austria_unemployment_relief
+
+		search_filters = { }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+			976 = {
+				is_owned_and_controlled_by = ROOT
+			}
+			has_tech = excavation1
+		}
+		
+		bypass = {
+			
+			976 = {
+				NOT = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+
+			
+			976 = {
+				add_resource = {
+					type = steel
+					amount = 12
+				}	
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}	
+			}
+
+		}
+	}
+
+	# 묄트너 제철소 확장
+	focus = { 
+		id = SHA_expand_stpoltner_steelworks
+		icon = GFX_focus_generic_steel
+		prerequisite = { focus = SHA_invest_in_erzberg_steel_mines}
+		mutually_exclusive = { }
+		x = 0
+		y = 1
+		relative_position_id = SHA_invest_in_erzberg_steel_mines
+
+		search_filters = { }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			152 = {
+				is_owned_and_controlled_by = ROOT
+			}
+			has_tech = excavation2
+		}
+		
+		bypass = {
+			152 = {
+				NOT = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+
+			152 = {
+				add_resource = {
+					type = steel
+					amount = 14
+				}	
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}	
+			}
+
+		}
+	}
+
+	# 젬페리트 줜테틱스 투자자
+	focus = {
+		id = SHA_invest_in_semperit_synthetics
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = SHA_expand_stpoltner_steelworks}
+		mutually_exclusive = { }
+		x = -1 
+		y = 1
+		relative_position_id = SHA_expand_stpoltner_steelworks
+
+		search_filters = { }
+
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			4 = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+		
+		bypass = {
+			4 = {
+				NOT = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+
+			IF = {
+				limit = {
+					NOT = {
+						has_tech = fuel_silos
+						has_tech = synth_oil_experiments
+					}
+				}
+
+				set_technology = { fuel_silos = 1 }
+				set_technology = { synth_oil_experiments = 1 }
+				
+			}
+			ELSE_IF = {
+				limit = {
+					has_tech = fuel_silos
+					NOT = {
+						has_tech = synth_oil_experiments
+					}
+				}
+
+				set_technology = { synth_oil_experiments = 1 }
+						
+			}
+
+			4 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}	
+			}
+
+			add_tech_bonus = {
+				name = SHA_invest_in_semperit_synthetics_bonus
+				bonus = 0.25
+				uses = 2
+				category = synth_resources	
+			}
+
+		}
+	}
+
+	# 풀페르파브리크 슈코다베르케 투자
+	focus = { 
+		id = SHA_pulverfabrik_skodawerke
+		icon = GFX_focus_generic_industry_1
+		prerequisite = { focus = SHA_expand_stpoltner_steelworks}
+		mutually_exclusive = { }
+		x = 1
+		y = 1
+		relative_position_id = SHA_expand_stpoltner_steelworks
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			4 = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+		
+		bypass = {
+			4 = {
+				NOT = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+
+			4 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}	
+			}
+
+			IF = {
+				limit = {
+					has_tech = fuel_silos
+				}
+				4 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = fuel_silo
+						level = 2
+						instant_build = yes
+					}	
+				}
+			}
+			ELSE_IF = {
+				limit = {
+					NOT = {
+						has_tech = fuel_silos
+					}
+				}
+
+				custom_effect_tooltip = AUS_pulverfabrik_skodawerke_tt
+
+				hidden_effect = {
+					add_tech_bonus = {
+						name = SHA_pulverfabrik_skodawerke_bonus
+						bonus = 0.25
+						uses = 3
+						technology  = fuel_silos
+						technology  = fuel_refining
+						technology  = fuel_refining2
+						technology  = fuel_refining3
+						technology  = fuel_refining4
+						technology  = fuel_refining5
+					}
+				}
+							
+			}
+
+		}
+	}
+
+	# 마첸 유전 개발
+	focus = {
+		id = SHA_the_matzen_oil_fields
+		icon = GFX_focus_AUS_the_matzen_oil_fields
+		prerequisite = { focus = SHA_pulverfabrik_skodawerke focus = SHA_invest_in_semperit_synthetics}
+		mutually_exclusive = { }
+		x = -1
+		y = 1
+		relative_position_id = SHA_pulverfabrik_skodawerke
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_tech = excavation3
+			975 = {
+				is_owned_and_controlled_by = ROOT
+			}
+			4 = {
+				is_owned_and_controlled_by = ROOT
+			}
+			
+		}
+		
+		bypass = {
+
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+
+			975 = {
+				add_resource = {
+					type = oil
+					amount = 8
+				}	
+			}
+
+			4 = {
+				add_resource = {
+					type = oil
+					amount = 10
+				}	
+			}
+
+		}
+	}
+	
+	# 산업화 주력
+	focus = {
+		id = SHA_industrialization_effort
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = SHA_austria_unemployment_relief}
+		mutually_exclusive = { }
+		x = -3
+		y = 1
+		relative_position_id = SHA_austria_unemployment_relief
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			any_core_state = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+
+				prioritize = { 4 152 976 975 } #Niederösterreich, Oberösterreich, Steirmark-Kärntern, Burgenland
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+
+		}
+	}
+
+	# 알파인 전력 회사
+	focus = {
+		id = SHA_invest_in_alpen_elektrowerke
+		icon = GFX_focus_AUS_invest_in_alpen_elektrowerke
+		prerequisite = { focus = SHA_industrialization_effort}
+		mutually_exclusive = { focus = SHA_invest_in_kapsch }
+		x = -1
+		y = 1
+		relative_position_id = SHA_industrialization_effort
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			any_core_state = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				prioritize = { 4 152 976 975 } #Niederösterreich, Oberösterreich, Steirmark-Kärntern, Burgenland
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			custom_effect_tooltip = available_industrial_concern
+			show_ideas_tooltip = AUS_alpen_elektrowerke_designer
+
+		}
+	}
+
+	# 전화 및 전신 공장 
+	focus = { 
+		id = SHA_invest_in_kapsch
+		icon = GFX_focus_AUS_invest_in_kapsch
+		prerequisite = { focus = SHA_industrialization_effort}
+		mutually_exclusive = { focus = SHA_invest_in_alpen_elektrowerke }
+		x = 1
+		y = 1
+		relative_position_id = SHA_industrialization_effort
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			any_core_state = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				prioritize = { 4 152 976 975 } #Niederösterreich, Oberösterreich, Steirmark-Kärntern, Burgenland
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			custom_effect_tooltip = available_industrial_concern
+			show_ideas_tooltip = AUS_kapsch
+
+		}
+	}
+
+	# 건설조합 설립
+	focus = { 
+		id = SHA_construction_guilds
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = SHA_invest_in_kapsch focus = SHA_invest_in_alpen_elektrowerke}
+		mutually_exclusive = { }
+		x = -1
+		y = 1
+		relative_position_id = SHA_invest_in_kapsch
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = { 
+
+		}
+		
+		bypass = {
+
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+
+			add_timed_idea = {
+				idea = AUS_construction_guilds_idea
+				days = 720
+			}
+
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				set_state_flag = SHA_construction_guilds_building_slot_added_flag
+			}
+
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					NOT = { 
+						has_state_flag = SHA_construction_guilds_building_slot_added_flag
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				set_state_flag = SHA_construction_guilds_building_slot_added_flag
+			}
+		}
+	}
+
+	# 도제 프로그램 개시
+	focus = {
+		id = SHA_apprentice_programmes
+		icon = GFX_focus_AUS_apprentice_programmes
+		prerequisite = { focus = SHA_construction_guilds }
+		mutually_exclusive = { }
+		x = 0
+		y = 1
+		relative_position_id = SHA_construction_guilds
+
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			#has_idea = AUS_widespread_unemployment
+		}
+		
+		bypass = {
+
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+
+			#swap_ideas = {
+			#	remove_idea = AUS_widespread_unemployment
+			#	add_idea = AUS_employment_efforts
+			#}	
+
+		}
+	}
+	
+	# 산업의 공주 초청
+	focus = { 
+		id = SHA_courting_the_princess_of_industry
+		icon = GFX_focus_AUS_courting_the_princess_of_industry
+		prerequisite = { focus = SHA_austria_unemployment_relief}
+		mutually_exclusive = { }
+		x = 0
+		y = 1
+		relative_position_id = SHA_austria_unemployment_relief
+
+		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_POLITICAL }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+
+			add_political_power = 100
+
+			custom_effect_tooltip = available_political_advisor
+			#show_ideas_tooltip = AUS_elizabet_von_gutmann
+
+		}
+	}
+	
+	# 도시 주택 계획
+	focus = {
+		id = SHA_urban_housing_projects
+		icon = GFX_focus_generic_low_cost_housing
+		prerequisite = { focus = SHA_courting_the_princess_of_industry}
+		mutually_exclusive = { }
+		x = 0
+		y = 1
+		relative_position_id = SHA_courting_the_princess_of_industry
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+
+			add_political_power = 25
+			add_stability = 0.5
+
+			986 = { BA_increase_state_category_by_one_level = yes }
+			4 = { BA_increase_state_category_by_one_level = yes }
+			975 = { BA_increase_state_category_by_one_level = yes }
+			976 = { BA_increase_state_category_by_one_level = yes }
+			152 = { BA_increase_state_category_by_one_level = yes }
+		}
+	}
+
+	# 건축 발전
+	focus = {
+		id = SHA_architechtual_advancements
+		icon = GFX_focus_ICE_embrace_the_workers_revolution
+		x = -7
+		y = 1
+		relative_position_id = SHA_relief_work
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		cost = 5
+
+		prerequisite = { 
+			focus = SHA_relief_work 
+		}
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+		}
+	}
+
+	# 고속도로 연결
+	focus = {
+		id = SHA_autobahn_connection
+		icon = GFX_focus_ICE_embrace_the_workers_revolution
+		x = -2
+		y = 1
+		relative_position_id = SHA_architechtual_advancements
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		cost = 5
+
+		prerequisite = { focus = SHA_architechtual_advancements }
+		mutually_exclusive = {  }
+
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+		}
+	}
+
+	# 철도망 개선
+	focus = {
+		id = SHA_improving_the_rail_network
+		icon = GFX_focus_ICE_embrace_the_workers_revolution
+		x = 0
+		y = 1
+		relative_position_id = SHA_architechtual_advancements
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		cost = 5
+
+		prerequisite = { focus = SHA_architechtual_advancements }
+		mutually_exclusive = {  }
+
+
+		available = {
+			has_idea = BA_railway_gauge_issue
+		}
+		bypass = {
+			NOT = { has_idea = BA_railway_gauge_issue }
+		}
+
+		completion_reward = {
+			modify_timed_idea = {
+				idea = BA_railway_gauge_issue
+				days = -280
+			}
+		}
+	}
+
+	# 오스트리아 연방 철도 인수
+	focus = {
+		id = SHA_Federal_Railroad_Absorption
+		icon = GFX_focus_AUS_bbo_focus
+		x = -1
+		y = 1
+		relative_position_id = SHA_improving_the_rail_network
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		cost = 5
+
+		prerequisite = { 
+			focus = SHA_improving_the_rail_network 
+			focus = SHA_autobahn_connection
+		}
+		mutually_exclusive = {  }
+
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+			add_political_power = 75
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = available_industrial_concern
+			show_ideas_tooltip = SHA_bbo_improved
+		}
+	}
+
+	# 쾰른브레인 댐 건설설
+	focus = {
+		id = SHA_Construction_of_Kolnbrein_Dam
+		icon = GFX_focus_generic_hydroelectric_energy
+		x = 2
+		y = 1
+		relative_position_id = SHA_architechtual_advancements
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		cost = 5
+
+		prerequisite = { focus = SHA_architechtual_advancements }
+		mutually_exclusive = {  }
+
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+		}
+	}
+
+
 	###############
 	###############
 	###############  Rework Focus
@@ -8209,22 +9120,7 @@ focus_tree = {
 		#mutually_exclusive = { focus = SHA_foc_ }
 		cost = 1.43
 		x = 40
-		y = 1
-		offset = {
-			x = -15
-			y = -1
-			trigger = {
-				has_completed_focus = SHA_Austrian_appeasement_policy
-			}
-		}
-		offset = {
-			x = -5
-			y = -0
-			trigger = {
-				has_completed_focus = SHA_Austrian_appeasement_policy
-				has_completed_focus = SHA_gathering_of_radicals
-			}
-		}
+		y = 31
 		available = {
 			OR = {
 				has_completed_focus = SHA_Austrian_appeasement_policy
