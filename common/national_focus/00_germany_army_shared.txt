@@ -4745,7 +4745,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GEAF_cruiser_warfare
-		text = GER_cruiser_warfare
+	text = GER_cruiser_warfare
 	icon = GFX_focus_generic_cruiser2
 	prerequisite = { focus = GEAF_trade_interdiction }
 
@@ -5395,10 +5395,8 @@ shared_focus = { #경제 성장 우선
 		}
 
 		custom_effect_tooltip = generic_skip_one_line_tt
-		add_dynamic_modifier = {
-			modifier = GER_recovering_economy_modifier
-		}
 
+		GEK_stop_rearmament = yes
 	}
 }
 

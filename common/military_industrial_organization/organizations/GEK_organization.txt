@@ -665,11 +665,7 @@ GEK_alkett_organization = {
 		available = {
 			#TODO_Danne fix this with a flag or something! GER should integrate CZE industries or something before doing this
 			FROM = {
-				OR = {
-					has_completed_focus = GER_fate_of_czechoslovakia
-					has_completed_focus = GER_integrate_czechoslovakia
-					has_completed_focus = GER_carve_up_czechoslovakia
-				}
+				controls_state = 69
 			}
 		}
 
@@ -987,12 +983,22 @@ GEK_deschimag_organization = {
 		any_parent = { generic_mio_trait_anti_air_ships generic_mio_trait_escort_in_force }
 
 		position = { x=0 y=1 } 
+		
+		visible = {
+			FROM = {
+				OR = {
+					tag = GEK
+					tag = KPD
+					tag = NSD
+				} 
+			}
+		}
 
-		#available = {
-		#	FROM = {
-		#		has_completed_focus = GER_high_seas_fleet
-		#	}
-		#}
+		available = {
+			FROM = {
+				has_completed_focus = GEAF_high_seas_fleet
+			}
+		}
 
 		equipment_bonus = {
 			lg_attack = 0.05
@@ -1015,12 +1021,22 @@ GEK_deschimag_organization = {
 		all_parents = { GEK_mio_trait_krupp_contacts }
 
 		position = { x=0 y=1 } 
+		
+		visible = {
+			FROM = {
+				OR = {
+					tag = GEK
+					tag = KPD
+					tag = NSD
+				} 
+			}
+		}
 
-		#available = {
-		#	FROM = {
-		#		has_completed_focus = GER_high_seas_fleet
-		#	}
-		#}
+		available = {
+			FROM = {
+				has_completed_focus = GEAF_high_seas_fleet
+			}
+		}
 
 		equipment_bonus = {
 			armor_value = 0.07
@@ -1040,12 +1056,22 @@ GEK_deschimag_organization = {
 		relative_position_id = generic_mio_trait_fleet_escorts 
 
 		position = { x=3 y=0 } 
+		
+		visible = {
+			FROM = {
+				OR = {
+					tag = GEK
+					tag = KPD
+					tag = NSD
+				} 
+			}
+		}
 
-		#available = {
-		#	FROM = {
-		#		has_completed_focus = GER_u_boat_efforts
-		#	}
-		#}
+		available = {
+			FROM = {
+				has_completed_focus = GEAF_u_boat_efforts
+			}
+		}
 
 		production_bonus = {
 			production_capacity_factor = 0.05
@@ -1127,10 +1153,20 @@ GEK_germaniawerft_organization = {
 		relative_position_id = generic_mio_trait_internal_armor_belt
 
 		position = { x=1 y=0 }  
+		
+		visible = {
+			FROM = {
+				OR = {
+					tag = GEK
+					tag = KPD
+					tag = NSD
+				} 
+			}
+		}
 
 		available = {
             FROM = {
-                has_completed_focus = GER_plan_z
+                has_completed_focus = GEAF_plan_z
             }
         }
 
@@ -1156,10 +1192,20 @@ GEK_germaniawerft_organization = {
 
 		all_parents = { GEK_mio_trait_history_of_battleships }
 		position = { x=0 y=1 }  
+		
+		visible = {
+			FROM = {
+				OR = {
+					tag = GEK
+					tag = KPD
+					tag = NSD
+				} 
+			}
+		}
 
 		available = {
 			FROM = {
-				has_completed_focus = GER_grosskampfschiff_construction
+				has_completed_focus = GEAF_grosskampfschiff_construction
 			}
 		}
 
@@ -1184,10 +1230,20 @@ GEK_germaniawerft_organization = {
 		all_parents = { GEK_mio_trait_krupp_guns }
 
 		position = { x=0 y=1 }  
+		
+		visible = {
+			FROM = {
+				OR = {
+					tag = GEK
+					tag = KPD
+					tag = NSD
+				} 
+			}
+		}
 
 		available = {
 			FROM = {
-				has_completed_focus = GER_grosskampfschiff_construction
+				has_completed_focus = GEAF_grosskampfschiff_construction
 			}
 		}
 
@@ -1270,10 +1326,20 @@ GEK_blohm_und_voss_organization = {
 		all_parents = { generic_mio_trait_raiding_capital_ships }
 
 		position = { x=-2 y=1 }  
+		
+		visible = {
+			FROM = {
+				OR = {
+					tag = GEK
+					tag = KPD
+					tag = NSD
+				} 
+			}
+		}
 
 		available = {
             FROM = {
-                has_completed_focus = GER_cruiser_warfare
+                has_completed_focus = GEAF_cruiser_warfare
             }
         }
 
@@ -1301,10 +1367,20 @@ GEK_blohm_und_voss_organization = {
 		all_parents = { GEK_mio_trait_heavy_raiders }
 
 		position = { x=0 y=1 }  
+		
+		visible = {
+			FROM = {
+				OR = {
+					tag = GEK
+					tag = KPD
+					tag = NSD
+				} 
+			}
+		}
 
 		available = {
 			FROM = {
-				has_completed_focus = GER_panzerschiff_raiders
+				has_completed_focus = GEAF_panzerschiff_raiders
 			}
 		}
 
@@ -1332,10 +1408,20 @@ GEK_blohm_und_voss_organization = {
 		all_parents = { generic_mio_trait_raiding_submarines }
 
 		position = { x=2 y=1 }  
+		
+		visible = {
+			FROM = {
+				OR = {
+					tag = GEK
+					tag = KPD
+					tag = NSD
+				} 
+			}
+		}
 
 		available = {
             FROM = {
-                has_completed_focus = GER_u_boat_efforts
+                has_completed_focus = GEAF_u_boat_efforts
             }
         }
 
@@ -1428,10 +1514,20 @@ GEK_hdw_organization = {
 		all_parents = { generic_mio_trait_long_range_raiding }
 
 		position = { x=0 y=1 }  
+		
+		visible = {
+			FROM = {
+				OR = {
+					tag = GEK
+					tag = KPD
+					tag = NSD
+				} 
+			}
+		}
 
 		available = {
 			FROM = {
-				has_completed_focus = GER_u_boat_efforts
+				has_completed_focus = GEAF_u_boat_efforts
 			}
 		}
 
@@ -1456,10 +1552,20 @@ GEK_hdw_organization = {
 		all_parents = { generic_mio_trait_submarine_mass_production }
 
 		position = { x=0 y=1 }  
+		
+		visible = {
+			FROM = {
+				OR = {
+					tag = GEK
+					tag = KPD
+					tag = NSD
+				} 
+			}
+		}
 
 		available = {
 			FROM = {
-				has_completed_focus = GER_u_boat_efforts
+				has_completed_focus = GEAF_u_boat_efforts
 			}
 		}
 
@@ -1526,10 +1632,20 @@ GEK_hdw_organization = {
 		all_parents = { GEK_mio_trait_excellent_diving_performance }
 
 		position = { x=0 y=1 } 
+		
+		visible = {
+			FROM = {
+				OR = {
+					tag = GEK
+					tag = KPD
+					tag = NSD
+				} 
+			}
+		}
 
 		available = {
 			FROM = {
-				has_completed_focus = GER_u_boat_efforts
+				has_completed_focus = GEAF_u_boat_efforts
 			}
 		}
 
@@ -1622,12 +1738,22 @@ GEK_deutsche_werke_organization = {
 		
 
 		position = { x=2 y=0 } 
+		
+		visible = {
+			FROM = {
+				OR = {
+					tag = GEK
+					tag = KPD
+					tag = NSD
+				} 
+			}
+		}
 
-		#available = {
-		#	FROM = {
-		#		has_completed_focus = GER_u_boat_efforts
-		#	}
-		#}
+		available = {
+			FROM = {
+				has_completed_focus = GEAF_u_boat_efforts
+			}
+		}
 
 		organization_modifier = {
 			military_industrial_organization_research_bonus = 0.05
@@ -1648,12 +1774,22 @@ GEK_deutsche_werke_organization = {
 		relative_position_id = generic_mio_trait_long_range_cruising
 		
 		any_parent = { generic_mio_trait_long_range_cruising generic_mio_trait_high_speed_cruising }
+		
+		visible = {
+			FROM = {
+				OR = {
+					tag = GEK
+					tag = KPD
+					tag = NSD
+				} 
+			}
+		}
 
-		#available = {
-		#	FROM = {
-		#		has_completed_focus = GER_u_boat_efforts
-		#	}
-		#}
+		available = {
+			FROM = {
+				has_completed_focus = GEAF_u_boat_efforts
+			}
+		}
 
 		limit_to_equipment_type = { screen_ship }
 
@@ -1677,12 +1813,22 @@ GEK_deutsche_werke_organization = {
 		relative_position_id = generic_mio_trait_splinter_protection
 		
 		any_parent = { generic_mio_trait_splinter_protection  }
+		
+		visible = {
+			FROM = {
+				OR = {
+					tag = GEK
+					tag = KPD
+					tag = NSD
+				} 
+			}
+		}
 
-		#available = {
-		#	FROM = {
-		#		has_completed_focus = GER_u_boat_efforts
-		#	}
-		#}
+		available = {
+			FROM = {
+				has_completed_focus = GEAF_u_boat_efforts
+			}
+		}
 
 		limit_to_equipment_type = { screen_ship }
 
@@ -1706,12 +1852,22 @@ GEK_deutsche_werke_organization = {
 		relative_position_id = GEK_mio_trait_fast_raiders
 		
 		all_parents = { GEK_mio_trait_fast_raiders  }
+		
+		visible = {
+			FROM = {
+				OR = {
+					tag = GEK
+					tag = KPD
+					tag = NSD
+				} 
+			}
+		}
 
-		#available = {
-		#	FROM = {
-		#		has_completed_focus = GER_u_boat_efforts
-		#	}
-		#}
+		available = {
+			FROM = {
+				has_completed_focus = GEAF_u_boat_efforts
+			}
+		}
 
 		limit_to_equipment_type = { mio_cat_eq_all_carrier }
 
@@ -1778,9 +1934,19 @@ GEK_kriegsmarinewerft_wilhelmshaven_organization = {
 
 		position = { x=8 y=0 }
 		
+		visible = {
+			FROM = {
+				OR = {
+					tag = GEK
+					tag = KPD
+					tag = NSD
+				} 
+			}
+		}
+		
 		available = {
 			FROM = {
-				has_completed_focus = GER_expand_kriegsmarinewerft
+				has_completed_focus = GEAF_expand_kriegsmarinewerft
 			}
 		}
 
@@ -1801,11 +1967,21 @@ GEK_kriegsmarinewerft_wilhelmshaven_organization = {
 
 		position = { x=9 y=0 }
 		
-		#available = {
-		#	FROM = {
-		#		has_completed_focus = GER_u_boat_efforts
-		#	}
-		#}
+		visible = {
+			FROM = {
+				OR = {
+					tag = GEK
+					tag = KPD
+					tag = NSD
+				} 
+			}
+		}
+		
+		available = {
+			FROM = {
+				has_completed_focus = GEAF_u_boat_efforts
+			}
+		}
 
 		limit_to_equipment_type = { ship_hull_cruiser }
 
@@ -1831,11 +2007,21 @@ GEK_kriegsmarinewerft_wilhelmshaven_organization = {
 
 		position = { x=0 y=1 }
 		
-		#available = {
-		#	FROM = {
-		#		has_completed_focus = GER_u_boat_efforts
-		#	}
-		#}
+		visible = {
+			FROM = {
+				OR = {
+					tag = GEK
+					tag = KPD
+					tag = NSD
+				} 
+			}
+		}
+		
+		available = {
+			FROM = {
+				has_completed_focus = GEAF_u_boat_efforts
+			}
+		}
 
 		limit_to_equipment_type = { capital_ship }
 
@@ -1985,10 +2171,20 @@ GEK_messerschmitt_organization = {
 		relative_position_id = generic_mio_trait_advanced_aerodynamics
 
 		position = { x = 2 y = 0 }
+		
+		visible = {
+			FROM = {
+				OR = {
+					tag = GEK
+					tag = KPD
+					tag = NSD
+				} 
+			}
+		}
 
 		available = {
 			FROM = {
-				has_completed_focus = GER_aerodynamic_research_institute
+				has_completed_focus = GEAF_aerodynamic_research_institute
 				NOT = { has_country_flag = GER_mio_trait_aerodynamic_research_insitute_taken_flag }
 			}
 		}
@@ -2022,10 +2218,20 @@ GEK_messerschmitt_organization = {
 		visible = {
 			has_dlc = "Gotterdammerung"
 		}
+		
+		visible = {
+			FROM = {
+				OR = {
+					tag = GEK
+					tag = KPD
+					tag = NSD
+				} 
+			}
+		}
 
 		available = {
 			owner = {
-				has_completed_focus = GER_amerikabomber
+				has_completed_focus = GEAF_amerikabomber
 				has_country_flag = GER_amerikabomber_messerschmitt_flag
 			}
 		}
@@ -2154,10 +2360,20 @@ GEK_junkers_organization = {
 		relative_position_id = generic_mio_trait_reinforced_wings
 
 		position = { x = 2 y = 1 }  
+		
+		visible = {
+			FROM = {
+				OR = {
+					tag = GEK
+					tag = KPD
+					tag = NSD
+				} 
+			}
+		}
 		 
 		available = {
 			FROM = {
-				has_completed_focus = GER_aerodynamic_research_institute
+				has_completed_focus = GEAF_aerodynamic_research_institute
 				NOT = { has_country_flag = GER_mio_trait_aerodynamic_research_insitute_taken_flag }
 			}
 		}
@@ -2190,11 +2406,18 @@ GEK_junkers_organization = {
 
 		visible = {
 			has_dlc = "Gotterdammerung"
+			FROM = {
+				OR = {
+					tag = GEK
+					tag = KPD
+					tag = NSD
+				} 
+			}
 		}
 
 		available = {
 			owner = {
-				has_completed_focus = GER_amerikabomber
+				has_completed_focus = GEAF_amerikabomber
 				has_country_flag = GER_amerikabomber_junkers_flag
 			}
 		}
@@ -2284,10 +2507,20 @@ GEK_focke_wulf_organization = {
 		relative_position_id = GEK_mio_trait_work_horse_design_philosophy
 
 		position = { x = 0 y = 1 }  
+		
+		visible = {
+			FROM = {
+				OR = {
+					tag = GEK
+					tag = KPD
+					tag = NSD
+				} 
+			}
+		}
 		 
 		available = {
 			FROM = {
-				has_completed_focus = GER_aerodynamic_research_institute
+				has_completed_focus = GEAF_aerodynamic_research_institute
 				NOT = { has_country_flag = GER_mio_trait_aerodynamic_research_insitute_taken_flag }
 			}
 		}
@@ -2410,11 +2643,18 @@ GEK_focke_wulf_organization = {
 
 		visible = {
 			has_dlc = "Gotterdammerung"
+			FROM = {
+				OR = {
+					tag = GEK
+					tag = KPD
+					tag = NSD
+				} 
+			}
 		}
 
 		available = {
 			owner = {
-				has_completed_focus = GER_amerikabomber
+				has_completed_focus = GEAF_amerikabomber
 				has_country_flag = GER_amerikabomber_focke_wulf_flag
 			}
 		}
@@ -2586,10 +2826,20 @@ GEK_heinkel_organization = {
 		relative_position_id = generic_mio_trait_air_deployed_sonobuoys
 
 		position = { x = 1 y = 0 }  
+		
+		visible = {
+			FROM = {
+				OR = {
+					tag = GEK
+					tag = KPD
+					tag = NSD
+				} 
+			}
+		}
 		 
 		available = {
 			FROM = {
-				has_completed_focus = GER_aerodynamic_research_institute
+				has_completed_focus = GEAF_aerodynamic_research_institute
 				NOT = { has_country_flag = GER_mio_trait_aerodynamic_research_insitute_taken_flag }
 			}
 		}
@@ -2622,11 +2872,18 @@ GEK_heinkel_organization = {
 
 		visible = {
 			has_dlc = "Gotterdammerung"
+			FROM = {
+				OR = {
+					tag = GEK
+					tag = KPD
+					tag = NSD
+				} 
+			}
 		}
 
 		available = {
 			owner = {
-				has_completed_focus = GER_amerikabomber
+				has_completed_focus = GEAF_amerikabomber
 				has_country_flag = GER_amerikabomber_heinkel_flag
 			}
 		}
@@ -2760,10 +3017,20 @@ GEK_dornier_organization = {
 		relative_position_id = GEK_mio_trait_flying_boat_specialist
 
 		position = { x = 2 y = 0 }  
+		
+		visible = {
+			FROM = {
+				OR = {
+					tag = GEK
+					tag = KPD
+					tag = NSD
+				} 
+			}
+		}
 		 
 		available = {
 			FROM = {
-				has_completed_focus = GER_aerodynamic_research_institute
+				has_completed_focus = GEAF_aerodynamic_research_institute
 				NOT = { has_country_flag = GER_mio_trait_aerodynamic_research_insitute_taken_flag }
 			}
 		}
@@ -2892,10 +3159,20 @@ GEK_arado_flugzeugwerke_organization = {
 		relative_position_id = GEK_mio_trait_hamburger_flugzeugbau
 
 		position = { x = -1 y = 0 }  
+		
+		visible = {
+			FROM = {
+				OR = {
+					tag = GEK
+					tag = KPD
+					tag = NSD
+				} 
+			}
+		}
 		 
 		available = {
 			FROM = {
-				has_completed_focus = GER_aerodynamic_research_institute
+				has_completed_focus = GEAF_aerodynamic_research_institute
 				NOT = { has_country_flag = GER_mio_trait_aerodynamic_research_insitute_taken_flag }
 			}
 		}
@@ -3002,10 +3279,20 @@ GEK_fieseler_organization = {
 		relative_position_id = GEK_mio_trait_hamburger_flugzeugbau
 
 		position = { x = 0 y = 1 }  
+		
+		visible = {
+			FROM = {
+				OR = {
+					tag = GEK
+					tag = KPD
+					tag = NSD
+				} 
+			}
+		}
 		 
 		available = {
 			FROM = {
-				has_completed_focus = GER_aerodynamic_research_institute
+				has_completed_focus = GEAF_aerodynamic_research_institute
 				NOT = { has_country_flag = GER_mio_trait_aerodynamic_research_insitute_taken_flag }
 			}
 		}
@@ -3113,10 +3400,20 @@ GEK_focke_achgelis_organization = {
 		relative_position_id = GEK_mio_trait_hamburger_flugzeugbau
 
 		position = { x = 0 y = 1 }  
+		
+		visible = {
+			FROM = {
+				OR = {
+					tag = GEK
+					tag = KPD
+					tag = NSD
+				} 
+			}
+		}
 		 
 		available = {
 			FROM = {
-				has_completed_focus = GER_aerodynamic_research_institute
+				has_completed_focus = GEAF_aerodynamic_research_institute
 				NOT = { has_country_flag = GER_mio_trait_aerodynamic_research_insitute_taken_flag }
 			}
 		}
@@ -3492,10 +3789,20 @@ GEK_opel_organization = {
 		special_trait_background = yes
 
 		position = { x=9 y=0 }  
+		
+		visible = {
+			FROM = {
+				OR = {
+					tag = GEK
+					tag = KPD
+					tag = NSD
+				} 
+			}
+		}
  
 		available = { 
 			FROM = {
-				has_completed_focus = GER_nationalize_ford_factories
+				has_completed_focus = GEAF_nationalize_ford_factories
 			}
 		}
 
@@ -3516,10 +3823,20 @@ GEK_opel_organization = {
 		special_trait_background = yes
 
 		position = { x=9 y=1 }  
+		
+		visible = {
+			FROM = {
+				OR = {
+					tag = GEK
+					tag = KPD
+					tag = NSD
+				} 
+			}
+		}
  
 		available = {
 			FROM = {
-				has_completed_focus = GER_nationalize_ford_factories
+				has_completed_focus = GEAF_nationalize_ford_factories
 			}
 		}
 
@@ -3751,10 +4068,20 @@ GEK_auto_union_organization = {
 		relative_position_id = generic_mio_trait_defensive_equipment
 
 		all_parents = { generic_mio_trait_defensive_equipment }
+		
+		visible = {
+			FROM = {
+				OR = {
+					tag = GEK
+					tag = KPD
+					tag = NSD
+				} 
+			}
+		}
 
 		available = { 
 			FROM = {
-				has_completed_focus = GER_panzergrenadier
+				has_completed_focus = GEAF_panzergrenadier
 			}
 		}
 
