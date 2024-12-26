@@ -679,4 +679,42 @@ spriteTypes = {
 		name = "GFX_report_event_mutsuki_asagi_dress"
 		texturefile = "gfx/event_pictures/HEU/mutsuki_asagi_dress.dds"
 	}
+
+	# 밀레니엄 - 아리스루트
+	spriteType = {
+		name = "GFX_report_event_MIL_ARIS_1"
+		texturefile = "gfx/event_pictures/MIL_ARIS/MIL_ARIS_1.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_MIL_ARIS_2" 
+		texturefile = "gfx/event_pictures/MIL_ARIS/MIL_ARIS_2.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_MIL_ARIS_al1s"
+		texturefile = "gfx/event_pictures/MIL_ARIS/MIL_ARIS_al1s.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_MIL_ARIS_alone"
+		texturefile = "gfx/event_pictures/MIL_ARIS/MIL_ARIS_alone.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_MIL_ARIS_ancient_buildings"
+		texturefile = "gfx/event_pictures/MIL_ARIS/MIL_ARIS_ancient_buildings.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_MIL_ARIS_ark"
+		texturefile = "gfx/event_pictures/MIL_ARIS/MIL_ARIS_ark.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_MIL_ARIS_Bombered"
+		texturefile = "gfx/event_pictures/MIL_ARIS/MIL_ARIS_Bombered.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_MIL_ARIS_robot"
+		texturefile = "gfx/event_pictures/MIL_ARIS/MIL_ARIS_robot.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_MIL_ARIS_al1s_destroy"
+		texturefile = "gfx/event_pictures/MIL_ARIS/MIL_ARIS_al1s_destroy.dds"
+	}
 }
