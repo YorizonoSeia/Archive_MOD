@@ -516,8 +516,9 @@
  KPD_purge_of_anti_leftists: "반대 좌파 숙청"
  KPD_purge_of_anti_leftists_desc: "당의 분열을 유도하고 연합전선의 위기를 초래하려 한 독일 공산당 반대파 - 사회민주당 좌파 블록을 파괴해야만 합니다."
 
- GE2_event.1.a: "알렉산더 슈밥 동지가 우리를 이끌 것이다!"
+ GE2_event.1.a: "알렉산더 슈밥 동지가 새로운 혁명을 이끌 것이다!"
  GE2_event.1.c: "오토 그로테블이 사회민주당의 민주주의를 이뤄낼 것이다!"
+ GE2_event.1.d: "우리의 지도력은 유지되어야 한다."
 
 #디시전
  KPD_stop_great_leap_forward: "대약진 운동 중단"

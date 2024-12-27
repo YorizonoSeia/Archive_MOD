@@ -815,6 +815,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_political_power = 120
+			remove_ideas = TCA_anti_trinity_war_idea
 			hidden_effect = {
 				country_event = {
 					id = KPD_event.13
@@ -958,9 +959,9 @@ focus_tree = {
 				add_idea = KPD_factory_councils
 			}
 			hidden_effect = {
-				country_event = { id = KPD_event.14 days = 70 }
-				country_event = { id = KPD_event.15 days = 140 }
-				country_event = { id = KPD_event.16 days = 210 }
+				country_event = { id = KPD_event.14 days = 95 }
+				country_event = { id = KPD_event.15 days = 190 }
+				country_event = { id = KPD_event.16 days = 285 }
 			}
 		}
 	}

@@ -15,6 +15,7 @@ country_event = { #Spartacus leader election
 		name = GE2_event.1.a
 		trigger = {
 			has_character = KPD_alexander_schwab
+			OR = { has_completed_focus = KPD_expulsion_of_stalinists has_completed_focus = KPD_purge_of_anti_leftists }
 		}
 
 		ai_chance = {
@@ -30,6 +31,29 @@ country_event = { #Spartacus leader election
 				traits = { KPD_left_communist } 
 			}
 		}
+		add_stability = -0.10
+	}
+
+	option = { #Brandler
+		name = wuw_GER_german_politics.02.a
+		trigger = {
+			has_character = KPD_heinrich_brandler
+			NOT = { has_completed_focus = KPD_expulsion_of_stalinists has_completed_focus = KPD_purge_of_anti_leftists }
+		}
+
+		ai_chance = {
+			base = 0.001
+		}
+
+		add_country_leader_role = {
+			character = KPD_heinrich_brandler
+			promote_leader = yes
+			country_leader = {
+				ideology = left_council_communism
+				expire = 1965.1.1
+				traits = { GER_pragmatic_trade_unionist } 
+			}
+		}
 	}
 
 	option = { #
@@ -38,7 +62,7 @@ country_event = { #Spartacus leader election
 			has_character = GEK_otto_grotewohl
 		}
 		ai_chance = {
-			base = 5
+			base = 2
 		}
 
 		GEK_otto_grotewohl = {
@@ -52,5 +76,29 @@ country_event = { #Spartacus leader election
 				}
 			}
 		}
+	}
+
+	option = { #
+		name = GE2_event.1.d
+		trigger = {
+			OR = {
+				has_country_leader = {
+					character = GEK_otto_grotewohl
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = KPD_heinrich_brandler
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = KPD_alexander_schwab
+					ruling_only = yes
+				}
+			}
+		}
+		ai_chance = {
+			base = 10
+		}
+		add_political_power = 25
 	}
 }
