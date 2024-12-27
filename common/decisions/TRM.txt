@@ -2153,6 +2153,68 @@ TRN_country_collapse_decisions = {
 			set_variable = { global.NSD_country_collapse_decisions_value = 0 }
         }
 	}
+	TCA_declaration_of_resistance = { # 항쟁 선포
+		icon = GFX_decision_generic_form_nation
+		
+		allowed = {
+			OR = {
+				original_tag = KPD
+				original_tag = NSD
+			}
+		}
+		
+		visible = {
+			has_war_with = TRM
+			NOT = { has_global_flag = TRN_country_collapse_decisions_end_flag }
+			TRM = {
+				NOT = { 
+					controls_state = 5
+					controls_state = 60
+					controls_state = 61
+					controls_state = 62
+					controls_state = 63
+					controls_state = 64
+					controls_state = 65
+					controls_state = 66
+					controls_state = 67
+					controls_state = 68
+					controls_state = 763
+				}
+			}
+		}
+		available = {
+			TRM = {
+				NOT = { 
+					controls_state = 5
+					controls_state = 60
+					controls_state = 61
+					controls_state = 62
+					controls_state = 63
+					controls_state = 64
+					controls_state = 65
+					controls_state = 66
+					controls_state = 67
+					controls_state = 68
+					controls_state = 763
+				}
+			}
+		}
+		
+		fire_only_once = yes
+
+		ai_will_do = {
+			base = 4000
+		}
+
+		complete_effect = {
+			set_global_flag = TRN_country_collapse_decisions_end_flag
+			TRM = { leave_faction = yes add_ideas = TRM_isolation_idea }
+			every_country = {
+				limit = { has_war_with = ROOT }
+				white_place = ROOT
+			}
+        }
+	}
 	TRM_declaration_of_extermination_campaign_KPD = {
 		icon = GFX_decision_generic_form_nation
 		

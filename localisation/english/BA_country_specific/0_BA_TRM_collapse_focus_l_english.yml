@@ -158,6 +158,11 @@
  BA_GER_defense_fail: "약화된 저항군"
  TRM_unplanned_offensive: "계획되지 않은 공세"
 
+ TRM_isolation_idea: "패전"
+ TRM_isolation_idea_desc: "우리는 패배했습니다, 봉기한 저항군에 의해 모든 독일의 영토를 상실하고 극소수의 영토만이 남아있습니다."
+
+ TRN_country_collapse_decisions_end_flag: "모든 것이 끝났다."
+
  TRN_collapse_idea: "트리니티의 혼란"
  TRN_country_collapse_decisions_plz_time_tt: "§Y$TRN_collapse_idea$§! 변동치:\n매일 정치력 비용: §R+0.05§!\n안정도: §R-10.00%\n전쟁 지지도: §R-10.00%§!\n사단 회복률: §R-10.00%§!\n사단 조직력: §R-10.00%§!"
 
@@ -213,6 +218,8 @@
 
  KPD_declaration_of_resistance: "마지막 혁명 선포"
  NSD_declaration_of_resistance: "최후의 전쟁 선포"
+
+ TCA_declaration_of_resistance: "트리니티의 끝 선포"
 
  KPD_declaration_of_resistance_tt: "우리의 §Y영향력§!이 0으로 설정됩니다."
  NSD_declaration_of_resistance_tt: "우리의 §Y영향력§!이 0으로 설정됩니다."
