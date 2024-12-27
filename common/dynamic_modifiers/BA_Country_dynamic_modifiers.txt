@@ -2103,3 +2103,9 @@ SHA_Shanhaijinfascism = {
 	justify_war_goal_time = SHA_Shanhaijinfascism_justify_war_goal_time
 
 }
+
+SHA_aup_modifier = {
+	political_power_cost = SHA_aup_pp
+	stability_factor = SHA_aup_stability
+	industrial_capacity_factory = SHA_aup_factory_output
+}

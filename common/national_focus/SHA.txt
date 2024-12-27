@@ -235,6 +235,9 @@ focus_tree = {
 		x = 20
 		y = 0
 		cost = 2
+		relative_position_id = SHA_Austrian_oppression_continues
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		offset = {
 			x = 1
 			trigger = {
@@ -262,7 +265,6 @@ focus_tree = {
 			}
 		}
 
-		relative_position_id = SHA_Austrian_oppression_continues
 
 
 		completion_reward = {
@@ -287,6 +289,9 @@ focus_tree = {
 		x = 5
 		y = 1
 		cost = 5
+		relative_position_id = SHA_Austrian_appeasement_policy
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		prerequisite = { focus = SHA_Austrian_appeasement_policy }
 		mutually_exclusive = { focus = SHA_local_harmony }
@@ -317,7 +322,6 @@ focus_tree = {
 			}
 		}
 
-		relative_position_id = SHA_Austrian_appeasement_policy
 
 		completion_reward = {
 				if = {
@@ -343,6 +347,9 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 5
+		relative_position_id = SHA_gathering_of_radicals
+
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL_CHARACTER }
 
 		prerequisite = { focus = SHA_gathering_of_radicals }
 		mutually_exclusive = {  }
@@ -350,7 +357,6 @@ focus_tree = {
 		available = { }
 		bypass = { }
 
-		relative_position_id = SHA_gathering_of_radicals
 
 		completion_reward = {
 			# 무슨 효과를 넣어야 할지는 모르겠는데
@@ -372,6 +378,9 @@ focus_tree = {
 		x = -2
 		y = 2
 		cost = 5
+		relative_position_id = SHA_gathering_of_radicals
+
+		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_POLITICAL }
 
 		prerequisite = { focus = SHA_gathering_of_radicals }
 		mutually_exclusive = {  }
@@ -379,9 +388,9 @@ focus_tree = {
 		available = { }
 		bypass = { }
 
-		relative_position_id = SHA_gathering_of_radicals
 
 		completion_reward = {
+			add_political_power = 25
 			add_popularity = {
 				ideology = fascism
 				popularity = 0.1
@@ -416,6 +425,9 @@ focus_tree = {
 		x = 2
 		y = 2
 		cost = 5
+		relative_position_id = SHA_gathering_of_radicals
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
 
 		prerequisite = { focus = SHA_gathering_of_radicals }
 		mutually_exclusive = {  }
@@ -423,7 +435,6 @@ focus_tree = {
 		available = { }
 		bypass = { }
 
-		relative_position_id = SHA_gathering_of_radicals
 
 		completion_reward = {
 			SHA_Eastern_Alchemy_Society_idea_up = yes
@@ -431,6 +442,7 @@ focus_tree = {
 				ideology = fascism
 				popularity = 0.1
 			}
+			add_political_power = 25
 		}
 	}
 
@@ -464,7 +476,7 @@ focus_tree = {
 	focus = {
 		id = SHA_Shintani_Kai_Follow
 		icon = GFX_goal_Shintani_Kai_Follow
-		x = -3
+		x = 3
 		y = 1
 		cost = 5
 
@@ -514,9 +526,9 @@ focus_tree = {
 	focus = {
 		id = SHA_Kaguya_ousted
 		icon = GFX_goal_SHA_Kaguya_ousted
-		x = -3
+		x = 3
 		y = 1
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = SHA_Shintani_Kai_Follow }
 		mutually_exclusive = { }
@@ -889,7 +901,7 @@ focus_tree = {
 	focus = {
 		id = SHA_conservative_revolution
 		icon = GFX_goal_SHA_Shanhaijing_conservative_revolution
-		x = 3
+		x = -3
 		y = 1
 		cost = 5
 
@@ -904,6 +916,10 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 100
 			add_stability = 0.1
+			effect_tooltip = {
+				country_event = shafas.6
+			}
+			custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = SHA_conservative_revolution_tt
 			set_temp_variable = {
 				var = conservative_revolution_var
@@ -961,7 +977,10 @@ focus_tree = {
 						}
 					}
 				}
-				SHA_KAGUYA = { remove_country_leader_role = { ideology = despotism } }
+				SHA_KAGUYA = { 
+					remove_country_leader_role = { ideology = despotism } 
+			        unit_leader_event = shafas.6
+				}
 			}
 			hidden_effect = {
 				remove_trait = {
@@ -983,7 +1002,7 @@ focus_tree = {
 	focus = {
 		id = SHA_new_shanhaijing_conservatism
 		icon = GFX_goal_SHA_new_shanhaijing_conservatism
-		x = 1
+		x = -1
 		y = 1
 		cost = 5
 
@@ -1004,7 +1023,7 @@ focus_tree = {
 	focus = {
 		id = SHA_organic_national_polity
 		icon = GFX_goal_SHA_Jingle_Bell_Rock
-		x = 3
+		x = -3
 		y = 1
 		cost = 5
 
@@ -1188,7 +1207,7 @@ focus_tree = {
 	focus = {
 		id = SHA_Engine_of_conservative_revolution
 		icon = GFX_goal_SHA_Engine_of_conservative_revolution
-		x = 1
+		x = -1
 		y = 1
 		relative_position_id = SHA_Cabinet_Secretariat
 		cost = 10
@@ -1233,7 +1252,7 @@ focus_tree = {
 	focus = {
 		id = SHA_Solving_the_Militia_Problem
 		icon = GFX_focus_AUS_legitimistische_jugend
-		x = -1
+		x = 5
 		y = 1
 		cost = 5
 
@@ -1265,7 +1284,7 @@ focus_tree = {
 	focus = {
 		id = SHA_strike_suppression
 		icon = GFX_focus_SWE_attack_landsorganisationen
-		x = 1
+		x = -5
 		y = 1
 		cost = 5
 
@@ -1296,7 +1315,7 @@ focus_tree = {
 		id = SHA_Sack_of_Rumi
 		icon = GFX_goal_SHA_Sack_of_Rumi
 		x = 0
-		y = 1
+		y = 2
 		cost = 5
 
 		prerequisite = {
@@ -1404,7 +1423,7 @@ focus_tree = {
 	focus = {
 		id = SHA_2nd_conservative_revolution
 		icon = GFX_goal_SHA_conservative_revolution_2nd
-		x = 4
+		x = -4
 		y = 1
 		cost = 10
 
@@ -1441,7 +1460,7 @@ focus_tree = {
 	focus = {
 		id = SHA_ascension
 		icon = GFX_goal_SHA_ascend
-		x = -4
+		x = 4
 		y = 1
 		cost = 10
 
@@ -1482,17 +1501,17 @@ focus_tree = {
 		id = SHA_Establishment_of_the_Governor_General
 		icon = GFX_goal_SHA_Establishment_of_the_Governor_General
 		x = -1
-		y = 1
+		y = 2
 		cost = 10
 
-		prerequisite = { focus = SHA_ascension }
+		prerequisite = { focus = SHA_ascension focus = SHA_2nd_conservative_revolution }
 		mutually_exclusive = { }
 
 		available = { 
 		}
 		bypass = { }
 
-		relative_position_id = SHA_ascension
+		relative_position_id = SHA_invade_of_Hyakkiyako
 
 		completion_reward = {
 
@@ -1503,7 +1522,7 @@ focus_tree = {
 	focus = {
 		id = SHA_Special_Military_Operation_for_Abydos
 		icon = GFX_focus_attack_ABY
-		x = 0
+		x = 1
 		y = 2
 		cost = 2
 
@@ -1609,13 +1628,14 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.05
 			add_political_power = 50
+			country_event = { id = shafas.5 }
 		}
 	}
 
 	# 경제특구 설립
 	focus = {
 		id = SHA_establish_the_SEZ
-		icon = GFX_focus_ICE_embrace_the_workers_revolution
+		icon = GFX_goal_state_economy
 		x = 6
 		y = 1
 		relative_position_id = SHA_relief_work
@@ -1629,16 +1649,142 @@ focus_tree = {
 
 
 		completion_reward = {
-			add_stability = 0.05
-			add_political_power = 50
+			
+		}
+	}
+
+	# 중앙계획위원회 구성
+	focus = {
+		id = SHA_central_planning
+		icon = GFX_focus_generic_central_planning
+		x = 1
+		y = 1
+		relative_position_id = SHA_establish_the_SEZ
+		cost = 5
+
+		prerequisite = { focus = SHA_establish_the_SEZ }
+		prerequisite = { focus = SHA_architechtual_advancements }
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+
+		}
+	}
+
+	# 노동조합 통제
+	focus = {
+		id = SHA_union_control
+		icon = GFX_focus_GER_total_control_over_domestic_affairs
+		x = -1
+		y = 1
+		relative_position_id = SHA_establish_the_SEZ
+		cost = 5
+
+		prerequisite = { focus = SHA_establish_the_SEZ }
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+
+		}
+	}
+
+	# 최고경제위원회 설립
+	focus = {
+		id = SHA_establish_the_VES
+		icon = GFX_goal_agency
+		x = -1
+		y = 1
+		relative_position_id = SHA_central_planning
+		cost = 5
+
+		prerequisite = { focus = SHA_central_planning }
+		prerequisite = { focus = SHA_union_control }
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+
+		}
+	}
+
+	# 목적론적 산업 계획
+	focus = {
+		id = SHA_teleological_planning
+		icon = GFX_focus_GER_prioritize_the_four_year_plan
+		x = -4
+		y = 1
+		relative_position_id = SHA_establish_the_VES
+		cost = 5
+
+		prerequisite = { focus = SHA_establish_the_VES }
+		mutually_exclusive = { focus = SHA_solidarist_representation }
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+
+		}
+	}
+
+	# 협동조합주의적 대표성
+	focus = {
+		id = SHA_solidarist_representation
+		icon = GFX_focus_ICE_state_corporatism
+		x = -1
+		y = 1
+		relative_position_id = SHA_establish_the_VES
+		cost = 5
+
+		prerequisite = { focus = SHA_establish_the_VES }
+		mutually_exclusive = { focus = SHA_teleological_planning }
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+
+		}
+	}
+
+	# 남키보토스 원조회의
+	focus = {
+		id = SHA_economic_organisation_of_SKivotos
+		icon = GFX_focus_generic_national_security
+		x = 1
+		y = 1
+		relative_position_id = SHA_establish_the_VES
+		cost = 5
+
+		prerequisite = { focus = SHA_establish_the_VES }
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+
 		}
 	}
 
 	# 오스트리아 실업자 구제
 	focus = {
 		id = SHA_austria_unemployment_relief
-		icon = GFX_focus_ICE_embrace_the_workers_revolution
-		x = 0
+		icon = GFX_focus_ETH_adopt_the_lira
+		x = -6
 		y = 1
 		relative_position_id = SHA_relief_work
 		cost = 5
@@ -1651,6 +1797,8 @@ focus_tree = {
 
 
 		completion_reward = {
+			set_temp_variable = { SHA_anger_change = -1 }
+			SHA_change_aup_anger = yes
 		}
 	}
 
@@ -1660,7 +1808,7 @@ focus_tree = {
 		icon = GFX_focus_generic_mining_industry
 		prerequisite = { focus = SHA_austria_unemployment_relief}
 		mutually_exclusive = { }
-		x = 3
+		x = 2
 		y = 1
 		relative_position_id = SHA_austria_unemployment_relief
 
@@ -1986,10 +2134,10 @@ focus_tree = {
 	# 산업화 주력
 	focus = {
 		id = SHA_industrialization_effort
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_focus_generic_military_industry
 		prerequisite = { focus = SHA_austria_unemployment_relief}
 		mutually_exclusive = { }
-		x = -3
+		x = -1
 		y = 1
 		relative_position_id = SHA_austria_unemployment_relief
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2034,6 +2182,7 @@ focus_tree = {
 	# 알파인 전력 회사
 	focus = {
 		id = SHA_invest_in_alpen_elektrowerke
+		text = AUS_invest_in_alpen_elektrowerke
 		icon = GFX_focus_AUS_invest_in_alpen_elektrowerke
 		prerequisite = { focus = SHA_industrialization_effort}
 		mutually_exclusive = { focus = SHA_invest_in_kapsch }
@@ -2076,7 +2225,7 @@ focus_tree = {
 			}
 
 			custom_effect_tooltip = available_industrial_concern
-			show_ideas_tooltip = AUS_alpen_elektrowerke_designer
+			show_ideas_tooltip = SHA_alpen_elektrowerke_designer
 
 		}
 	}
@@ -2084,6 +2233,7 @@ focus_tree = {
 	# 전화 및 전신 공장 
 	focus = { 
 		id = SHA_invest_in_kapsch
+		text = AUS_invest_in_kapsch
 		icon = GFX_focus_AUS_invest_in_kapsch
 		prerequisite = { focus = SHA_industrialization_effort}
 		mutually_exclusive = { focus = SHA_invest_in_alpen_elektrowerke }
@@ -2126,7 +2276,7 @@ focus_tree = {
 			}
 
 			custom_effect_tooltip = available_industrial_concern
-			show_ideas_tooltip = AUS_kapsch
+			show_ideas_tooltip = SHA_kapsch
 
 		}
 	}
@@ -2134,7 +2284,7 @@ focus_tree = {
 	# 건설조합 설립
 	focus = { 
 		id = SHA_construction_guilds
-		icon = GFX_goal_generic_construction
+		icon = GFX_focus_GER_customs_union
 		prerequisite = { focus = SHA_invest_in_kapsch focus = SHA_invest_in_alpen_elektrowerke}
 		mutually_exclusive = { }
 		x = -1
@@ -2199,14 +2349,15 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 
-		cost = 10
+		cost = 15
+		cancelable = no
 
 		ai_will_do = {
 			factor = 1
 		}
 
 		available = {
-			#has_idea = AUS_widespread_unemployment
+			has_idea = SHA_austria_unemployment_problem
 		}
 		
 		bypass = {
@@ -2216,7 +2367,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-
+			custom_effect_tooltip = SHA_apprentice_programmes_tt
 			#swap_ideas = {
 			#	remove_idea = AUS_widespread_unemployment
 			#	add_idea = AUS_employment_efforts
@@ -2224,91 +2375,12 @@ focus_tree = {
 
 		}
 	}
-	
-	# 산업의 공주 초청
-	focus = { 
-		id = SHA_courting_the_princess_of_industry
-		icon = GFX_focus_AUS_courting_the_princess_of_industry
-		prerequisite = { focus = SHA_austria_unemployment_relief}
-		mutually_exclusive = { }
-		x = 0
-		y = 1
-		relative_position_id = SHA_austria_unemployment_relief
-
-		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_POLITICAL }
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		available_if_capitulated = no
-
-		completion_reward = {
-
-			add_political_power = 100
-
-			custom_effect_tooltip = available_political_advisor
-			#show_ideas_tooltip = AUS_elizabet_von_gutmann
-
-		}
-	}
-	
-	# 도시 주택 계획
-	focus = {
-		id = SHA_urban_housing_projects
-		icon = GFX_focus_generic_low_cost_housing
-		prerequisite = { focus = SHA_courting_the_princess_of_industry}
-		mutually_exclusive = { }
-		x = 0
-		y = 1
-		relative_position_id = SHA_courting_the_princess_of_industry
-
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		available_if_capitulated = no
-
-		completion_reward = {
-
-			add_political_power = 25
-			add_stability = 0.5
-
-			986 = { BA_increase_state_category_by_one_level = yes }
-			4 = { BA_increase_state_category_by_one_level = yes }
-			975 = { BA_increase_state_category_by_one_level = yes }
-			976 = { BA_increase_state_category_by_one_level = yes }
-			152 = { BA_increase_state_category_by_one_level = yes }
-		}
-	}
 
 	# 건축 발전
 	focus = {
 		id = SHA_architechtual_advancements
-		icon = GFX_focus_ICE_embrace_the_workers_revolution
-		x = -7
+		icon = GFX_focus_GER_kdf_wagen
+		x = 0
 		y = 1
 		relative_position_id = SHA_relief_work
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2324,13 +2396,22 @@ focus_tree = {
 
 
 		completion_reward = {
+			add_political_power = 100
+
+			add_tech_bonus = {
+				name = AUS_architechtual_advancements
+				bonus = 0.5
+				uses = 2
+				category = construction_tech
+			}
+
 		}
 	}
 
 	# 고속도로 연결
 	focus = {
 		id = SHA_autobahn_connection
-		icon = GFX_focus_ICE_embrace_the_workers_revolution
+		icon = GFX_focus_CHL_domestic_production_of_the_willys_mb
 		x = -2
 		y = 1
 		relative_position_id = SHA_architechtual_advancements
@@ -2352,7 +2433,7 @@ focus_tree = {
 	# 철도망 개선
 	focus = {
 		id = SHA_improving_the_rail_network
-		icon = GFX_focus_ICE_embrace_the_workers_revolution
+		icon = GFX_focus_BEL_engine_of_the_economy
 		x = 0
 		y = 1
 		relative_position_id = SHA_architechtual_advancements
@@ -2406,18 +2487,97 @@ focus_tree = {
 			show_ideas_tooltip = SHA_bbo_improved
 		}
 	}
+	
+	# 산업의 공주 초청
+	focus = { 
+		id = SHA_courting_the_princess_of_industry
+		icon = GFX_focus_AUS_courting_the_princess_of_industry
+		prerequisite = { focus = SHA_architechtual_advancements}
+		mutually_exclusive = { }
+		x = 2
+		y = 1
+		relative_position_id = SHA_architechtual_advancements
+
+		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_POLITICAL }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+
+			add_political_power = 100
+
+			custom_effect_tooltip = available_political_advisor
+			#show_ideas_tooltip = AUS_elizabet_von_gutmann
+
+		}
+	}
+	
+	# 도시 주택 계획
+	focus = {
+		id = SHA_urban_housing_projects
+		icon = GFX_focus_generic_low_cost_housing
+		prerequisite = { focus = SHA_courting_the_princess_of_industry}
+		mutually_exclusive = { }
+		x = 1
+		y = 1
+		relative_position_id = SHA_courting_the_princess_of_industry
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+
+			add_political_power = 25
+			add_stability = 0.05
+
+			986 = { BA_increase_state_category_by_one_level = yes }
+			4 = { BA_increase_state_category_by_one_level = yes }
+			975 = { BA_increase_state_category_by_one_level = yes }
+			976 = { BA_increase_state_category_by_one_level = yes }
+			152 = { BA_increase_state_category_by_one_level = yes }
+		}
+	}
 
 	# 쾰른브레인 댐 건설설
 	focus = {
 		id = SHA_Construction_of_Kolnbrein_Dam
 		icon = GFX_focus_generic_hydroelectric_energy
-		x = 2
+		x = -1
 		y = 1
-		relative_position_id = SHA_architechtual_advancements
+		relative_position_id = SHA_courting_the_princess_of_industry
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		cost = 5
 
-		prerequisite = { focus = SHA_architechtual_advancements }
+		prerequisite = { focus = SHA_courting_the_princess_of_industry }
 		mutually_exclusive = {  }
 
 
@@ -9116,10 +9276,10 @@ focus_tree = {
 		#relative_position_id = SHA_foc_
 		id = SHA_foc_3
 		icon = GFX_goal_generic_consumer_goods
-		#prerequisite = { focus = SHA_debug_hellyeah }
+		prerequisite = { focus = SHA_debug_hellyeah }
 		#mutually_exclusive = { focus = SHA_foc_ }
 		cost = 1.43
-		x = 40
+		x = 20
 		y = 31
 		available = {
 			OR = {

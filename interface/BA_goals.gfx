@@ -1945,6 +1945,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/thxKRteam/authority.tga"  
 	}
 	SpriteType = {
+		name = "GFX_goal_agency"
+		texturefile = "gfx/interface/goals/thxKRteam/agency.tga"  
+	}
+	SpriteType = {
 		name = "GFX_goal_focus_MIL_cooperation"
 		texturefile = "gfx/interface/goals/thxKRteam/focus_MIL_cooperation.tga"  
 	}

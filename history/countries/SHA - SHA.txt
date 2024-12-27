@@ -24,6 +24,7 @@ add_ideas = {
 	BA_isolation
 
 	SHA_shanhaijing_isolation
+	SHA_austria_unemployment_problem
 	SHA_isolation_economic
 
 	SHA_Peking_Opera
@@ -32,6 +33,14 @@ add_ideas = {
 	SHA_aoghkdnjs_idea
 	SHA_Austrian_fascist_militia
 }
+add_dynamic_modifier = {
+	modifier = SHA_aup_modifier
+}
+set_variable = { SHA_aup_pp = 0.07 }
+set_variable = { SHA_aup_stability = -0.21 }
+set_variable = { SHA_aup_factory_output = -0.21 }
+set_variable = { SHA_aup_anger = 7 }
+
 add_ideas = BA_student_conscription_idea
 set_technology = {
 	kivotos_infantry_weapons = 1 #키보토스 아티팩트

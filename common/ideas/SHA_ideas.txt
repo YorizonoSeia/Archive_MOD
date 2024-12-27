@@ -1041,6 +1041,22 @@ ideas = {
 				industrial_factory_donations = 2
 			}
 		}
+		
+		# 오스트리아 실업자 문제
+		SHA_austria_unemployment_problem = {
+			picture = generic_disjointed_gov
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			on_add = {
+				add_dynamic_modifier = { modifier = SHA_aup_modifier }
+			}
+			on_remove = {
+				remove_dynamic_modifier = { modifier = SHA_aup_modifier }
+			}
+			modifier = {
+				custom_modifier_tooltip = SHA_austria_unemployment_problem_tt
+			}
+		}
 
 
 
@@ -1138,6 +1154,72 @@ ideas = {
 
 			modifier = {
 				#production_speed_rail_way_factor = 0.2
+			}
+
+		}
+
+		SHA_alpen_elektrowerke_designer = {
+			name = AUS_alpen_elektrowerke_designer
+			picture = AUS_alpen_elektrowerke
+
+			allowed = {
+				original_tag = SHA
+				has_dlc = "Gotterdammerung"
+			}
+
+			available = {
+				has_completed_focus = SHA_invest_in_alpen_elektrowerke
+			}
+
+			visible = {
+				has_completed_focus = SHA_invest_in_alpen_elektrowerke
+			}
+
+			research_bonus = {
+				electronics = 0.15
+			}
+		
+			traits = { electronics_concern } 
+
+			modifier = {
+		
+			}
+
+			ai_will_do = {
+				base = 1
+			}
+
+		}
+
+		SHA_kapsch = {
+			name = AUS_kapsch
+			picture = AUS_kapsch
+
+			allowed = {
+				original_tag = SHA
+				has_dlc = "Gotterdammerung"
+			}
+
+			available = {
+				has_completed_focus = SHA_invest_in_kapsch
+			}
+
+			visible = {
+				has_completed_focus = SHA_invest_in_kapsch
+			}
+
+			research_bonus = {
+				
+			}
+		
+			traits = { telephone_company } 
+
+			modifier = {
+				
+			}
+
+			ai_will_do = {
+				base = 1
 			}
 
 		}

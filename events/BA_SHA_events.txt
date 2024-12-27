@@ -1270,6 +1270,36 @@ country_event = {
 	}
 }
 
+# 대공황(무섭다)
+country_event = {
+	id = shafas.5
+	title = shafas.5.t
+	desc = shafas.5.d
+	picture = GFX_report_event_crowd_in_prague
+
+    is_triggered_only = yes
+
+	option = {
+		name = shafas.5.a
+		set_temp_variable = { SHA_anger_change = -1 }
+		SHA_change_aup_anger = yes
+	}
+}
+
+# 산해경 보수혁명
+unit_leader_event = {
+	id = shafas.6
+	title = shafas.6.t
+	desc = shafas.6.d
+	picture = GFX_report_event_spain_civil_war_volunteers_02
+
+    is_triggered_only = yes
+
+	option = {
+		name = shafas.6.a
+	}
+}
+
 
 # 뉴스
 news_event = {
