@@ -2153,7 +2153,7 @@ TRN_country_collapse_decisions = {
 			set_variable = { global.NSD_country_collapse_decisions_value = 0 }
         }
 	}
-	TCA_declaration_of_resistance = { # 항쟁 선포
+	TCA_declaration_of_resistance = { # 
 		icon = GFX_decision_generic_form_nation
 		
 		allowed = {
@@ -2211,7 +2211,7 @@ TRN_country_collapse_decisions = {
 			TRM = { add_ideas = TRM_isolation_idea }
 			every_country = {
 				limit = { has_war_with = ROOT }
-				white_place = ROOT
+				white_peace = ROOT
 			}
         }
 	}
