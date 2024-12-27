@@ -2208,7 +2208,7 @@ TRN_country_collapse_decisions = {
 
 		complete_effect = {
 			set_global_flag = TRN_country_collapse_decisions_end_flag
-			TRM = { leave_faction = yes add_ideas = TRM_isolation_idea }
+			TRM = { add_ideas = TRM_isolation_idea }
 			every_country = {
 				limit = { has_war_with = ROOT }
 				white_place = ROOT
