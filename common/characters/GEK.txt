@@ -1519,7 +1519,7 @@ characters={
 		}
 	}
 
-	GEK_felix_steiner = { # 육군
+	GEK_felix_steiner = { # 친위대
 		name = GER_felix_steiner
 		portraits = {
 			army = {
@@ -1537,10 +1537,6 @@ characters={
 			#legacy_id = 35
 
 			visible = {
-				OR = {
-					has_completed_focus = GER_strengthen_the_waffen_ss
-					has_global_flag = GER_civil_war_has_started
-				}
 			}
 		}
 	}
