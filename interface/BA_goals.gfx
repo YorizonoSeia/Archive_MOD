@@ -1741,6 +1741,10 @@ spriteTypes = {
 		name = "GFX_goal_SHA_Jingle_Bell_Rock"
 		texturefile = "gfx/interface/goals/SHA/SHA_Jingle_Bell_Rock.tga"  
 	}
+	SpriteType = {
+		name = "GFX_goal_SHA_Army_Training"
+		texturefile = "gfx/interface/goals/SHA/SHA_Army_Training.tga"  
+	}
 	SpriteType = { 	
 		name = "GFX_goal_ROM_invite_german_advisorsr"
 		texturefile = "gfx/interface/goals/ROM/ROM_invite_german_advisors.tga"  

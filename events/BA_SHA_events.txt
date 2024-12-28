@@ -1300,6 +1300,20 @@ unit_leader_event = {
 	}
 }
 
+# 군대 평가
+unit_leader_event = {
+	id = shafas.7
+	title = shafas.7.t
+	desc = shafas.7.d
+	picture = GFX_report_event_french_liberation
+
+    is_triggered_only = yes
+
+	option = {
+		name = shafas.7.a
+	}
+}
+
 
 # 뉴스
 news_event = {

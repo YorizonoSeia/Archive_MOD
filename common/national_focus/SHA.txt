@@ -10,6 +10,27 @@ focus_tree = {
 		}
 	}
 	default = no
+	
+
+	shortcut = {
+		name = SHA_non_history_path_shortcut
+		target = SHA_Austrian_oppression_continues 
+		scroll_wheel_factor = 0.75
+	}
+	
+
+	shortcut = {
+		name = SHA_history_path_shortcut
+		target = SHA_Kisaki_Suppression 
+		scroll_wheel_factor = 0.65
+	}
+	
+
+	shortcut = {
+		name = SHA_economic_path_shortcut
+		target = SHA_relief_work 
+		scroll_wheel_factor = 0.75
+	}
 
 	#############
 	####정치중점####
@@ -27,7 +48,11 @@ focus_tree = {
 		mutually_exclusive = { focus = SHA_Austrian_appeasement_policy }
 
 		available = {
-			has_country_flag = GAEBALJUNG
+			custom_trigger_tooltip = {
+				tooltip = GAEBALJUNG
+				is_debug = yes
+				is_ai = no
+			}
 		}
 		bypass = { }
 
@@ -239,7 +264,7 @@ focus_tree = {
 		
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		offset = {
-			x = 1
+			x = -16
 			trigger = {
 				has_completed_focus = SHA_gathering_of_radicals
 			}
@@ -1614,6 +1639,18 @@ focus_tree = {
 		icon = GFX_focus_ICE_embrace_the_workers_revolution
 		x = 24
 		y = 0
+		offset = {
+			x = -6
+			trigger = {
+				has_completed_focus = SHA_gathering_of_radicals
+			}
+		}
+		offset = {
+			x = -25
+			trigger = {
+				has_completed_focus = SHA_Austrian_oppression_continues
+			}
+		}
 		relative_position_id = SHA_Austrian_appeasement_policy
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 		cost = 5
@@ -1657,7 +1694,7 @@ focus_tree = {
 	focus = {
 		id = SHA_central_planning
 		icon = GFX_focus_generic_central_planning
-		x = 1
+		x = -1
 		y = 1
 		relative_position_id = SHA_establish_the_SEZ
 		cost = 5
@@ -1679,7 +1716,7 @@ focus_tree = {
 	focus = {
 		id = SHA_union_control
 		icon = GFX_focus_GER_total_control_over_domestic_affairs
-		x = -1
+		x = 1
 		y = 1
 		relative_position_id = SHA_establish_the_SEZ
 		cost = 5
@@ -1700,10 +1737,10 @@ focus_tree = {
 	focus = {
 		id = SHA_establish_the_VES
 		icon = GFX_goal_agency
-		x = -1
+		x = 1
 		y = 1
 		relative_position_id = SHA_central_planning
-		cost = 5
+		cost = 10
 
 		prerequisite = { focus = SHA_central_planning }
 		prerequisite = { focus = SHA_union_control }
@@ -1725,7 +1762,7 @@ focus_tree = {
 		x = -4
 		y = 1
 		relative_position_id = SHA_establish_the_VES
-		cost = 5
+		cost = 10
 
 		prerequisite = { focus = SHA_establish_the_VES }
 		mutually_exclusive = { focus = SHA_solidarist_representation }
@@ -1746,7 +1783,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SHA_establish_the_VES
-		cost = 5
+		cost = 10
 
 		prerequisite = { focus = SHA_establish_the_VES }
 		mutually_exclusive = { focus = SHA_teleological_planning }
@@ -1841,7 +1878,9 @@ focus_tree = {
 
 		completion_reward = {
 
-			
+			set_temp_variable = { SHA_anger_change = -1 }
+			SHA_change_aup_anger = yes
+
 			976 = {
 				add_resource = {
 					type = steel
@@ -1894,6 +1933,9 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			
+			set_temp_variable = { SHA_anger_change = -1 }
+			SHA_change_aup_anger = yes
 
 			152 = {
 				add_resource = {
@@ -2586,6 +2628,53 @@ focus_tree = {
 
 
 		completion_reward = {
+		}
+	}
+
+
+	#############
+	####군사 중점####
+	#############
+	
+
+	# 구제 사업 조직
+	focus = {
+		id = SHA_army_review
+		icon = GFX_goal_SHA_Army_Training
+		x = 24
+		y = 7
+		offset = {
+			x = -6
+			trigger = {
+				has_completed_focus = SHA_gathering_of_radicals
+			}
+		}
+		offset = {
+			x = -25
+			trigger = {
+				has_completed_focus = SHA_Austrian_oppression_continues
+			}
+		}
+		relative_position_id = SHA_Austrian_appeasement_policy
+		search_filters = { }
+		cost = 5
+
+		prerequisite = { }
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+			army_experience = 50
+			add_political_power = 75
+			effect_tooltip = {
+				country_event = shafas.7
+			}
+			hidden_effect = {
+				SHA_MINA = { unit_leader_event = shafas.7  }
+			}
 		}
 	}
 
@@ -9279,8 +9368,8 @@ focus_tree = {
 		prerequisite = { focus = SHA_debug_hellyeah }
 		#mutually_exclusive = { focus = SHA_foc_ }
 		cost = 1.43
-		x = 20
-		y = 31
+		x = 40
+		y = 0
 		available = {
 			OR = {
 				has_completed_focus = SHA_Austrian_appeasement_policy
@@ -9289,7 +9378,7 @@ focus_tree = {
 		}
 		bypass = {
 		}
-		relative_position_id = SHA_Austrian_appeasement_policy
+		relative_position_id = SHA_debug_hellyeah
 		completion_reward = {
 			add_political_power = 50
 			army_experience = 20
