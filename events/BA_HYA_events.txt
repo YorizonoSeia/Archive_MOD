@@ -48,12 +48,6 @@ country_event = {
 				idea = HYA_SHA_wjswodqotkd
 				days = 1800
 			}
-			if = {
-				limit = {
-					has_completed_focus = SHA_foc_2-3
-				}
-				complete_national_focus = SHA_foc_2-5
-			}
 			leave_faction = yes
 			#delete_unit = {} # Will delete all units
 			add_ideas = volunteer_only

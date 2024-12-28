@@ -414,25 +414,7 @@ BA_from_southern_kivotos = {
 			add_state_core = 54
 			if = {
 				limit = {
-					has_completed_focus = SHA_foc_2-2-31
-				}
-				set_cosmetic_tag = southern_kivoto_kingdom
-			}
-			else_if = {
-				limit = {
-					has_completed_focus = SHA_foc_2-2-4
-				}
-				set_cosmetic_tag = southern_kivoto_emperor
-			}
-			else_if = {
-				limit = {
 					has_completed_focus = HYA_focus_97
-				}
-				set_cosmetic_tag = southern_kivoto
-			}
-			else_if = {
-				limit = {
-					has_completed_focus = SHA_foc_1-1-6
 				}
 				set_cosmetic_tag = southern_kivoto
 			}

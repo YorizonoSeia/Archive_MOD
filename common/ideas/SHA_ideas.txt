@@ -4,7 +4,6 @@ ideas = {
 			picture = SOV_stakhanovite_movement
 			allowed = {
 				original_tag = SHA
-				has_completed_focus = SHA_foc_1-1-7
 			}
 			research_bonus = {
 				industry = 0.05
@@ -1055,6 +1054,74 @@ ideas = {
 			}
 			modifier = {
 				custom_modifier_tooltip = SHA_austria_unemployment_problem_tt
+			}
+		}
+		
+		# 중앙경제위원회
+		SHA_supreme_economic_council = {
+			picture = SOV_fourth_five_year_plan
+			modifier = {
+				political_power_gain = 0.2
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = -0.2
+				conscription = -0.005
+			}
+			research_bonus = {
+				industry = 0.1
+			}
+		}
+		SHA_supreme_economic_council_2 = {
+			name = SHA_supreme_economic_council
+			picture = SOV_fourth_five_year_plan
+			modifier = {
+				political_power_gain = 0.1
+				production_factory_max_efficiency_factor = 0.15
+				production_speed_buildings_factor = 0.1
+				production_factory_efficiency_gain_factor = -0.1
+				conscription = -0.0075
+			}
+			research_bonus = {
+				industry = 0.1
+			}
+		}
+		SHA_supreme_economic_council_3 = { #Teleological Industrial Planning
+			name = SHA_supreme_economic_council
+			picture = SOV_fourth_five_year_plan
+			modifier = {
+				political_power_gain = 0.05
+				production_factory_max_efficiency_factor = 0.2
+				production_speed_buildings_factor = 0.1
+				research_speed_factor = 0.05
+				production_factory_efficiency_gain_factor = -0.1
+				production_factory_start_efficiency_factor = 0.1
+				conscription = -0.0075
+			}
+			research_bonus = {
+				industry = 0.1
+			}
+		}
+		SHA_ASFTU = {
+			picture = generic_fascist_workers
+			modifier = {
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		SHA_ASFTU_2 = {
+			name = SHA_ASFTU
+			picture = generic_fascist_workers
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				consumer_goods_factor = -0.15
+			}
+		}
+		SHA_ASFTU_3 = {
+			name = SHA_ASFTU
+			picture = generic_fascist_workers
+			modifier = {
+				stability_factor = 0.1
+				production_speed_buildings_factor = 0.15
+				consumer_goods_factor = -0.15
+				production_factory_max_efficiency_factor = -0.1
 			}
 		}
 

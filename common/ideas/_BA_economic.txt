@@ -453,14 +453,6 @@ ideas = {
 			}
 
 			allowed_to_remove = {
-				if = {
-					limit = {
-						original_tag = SHA
-					}
-					NOT = {
-						has_completed_focus = SHA_foc_2-2
-					}
-				}
 				OR = {
 					AND = {
 						has_war_support > 0.5

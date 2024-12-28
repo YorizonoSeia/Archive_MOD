@@ -149,7 +149,6 @@ BA_from_southern_kivotos = {
 			original_tag = HYA
 		}
 		NOT = {
-			has_completed_focus = SHA_foc_2-5
 			has_completed_focus = HYA_focus_70
 		}
 	}

@@ -99,9 +99,6 @@ characters={
 				original_tag = SHA
 			}
 			available = {
-				NOT = {
-					has_completed_focus = SHA_foc_2-3-5
-				}
 			}
 			traits = {
 				army_chief_offensive_2
@@ -441,10 +438,7 @@ characters={
 				original_tag = SHA
 			}
 			available = {
-				NOT = {
-					has_completed_focus = SHA_foc_2-2-1
-					has_completed_focus = SHA_foc_2-3-1
-				}
+
 			}
 			traits = {
 				SHA_T7a
@@ -571,6 +565,40 @@ characters={
 			cost = 150
 			ai_will_do = {
 				factor = 1.000
+			}
+		}
+	}
+
+	SHA_elizabet_von_gutmann = {
+		advisor = {
+			slot = political_advisor
+			idea_token = SHA_elizabet_von_gutmann_idea
+			allowed = { 
+				original_tag = SHA
+			}
+			available = {
+				has_completed_focus = SHA_courting_the_princess_of_industry
+			}
+			visible = {
+				has_completed_focus = SHA_courting_the_princess_of_industry
+			}
+			traits = { 
+				AUS_resourceful_princess
+			}
+
+			ai_will_do = {
+				base = 1
+				modifier = {
+					factor = 3
+					has_government = neutrality
+					has_completed_focus = SHA_courting_the_princess_of_industry
+				}
+			}
+		}
+		name = AUS_elizabet_von_gutmann
+		portraits = {
+			civilian = {
+				small = "GFX_portrait_AUS_elisabeth_von_gutmann_small"
 			}
 		}
 	}

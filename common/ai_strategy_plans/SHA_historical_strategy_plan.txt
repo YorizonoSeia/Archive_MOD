@@ -26,10 +26,8 @@ SHA_historical = {
 		
 		SHA_emergency_measures
 		SHA_invade_of_Hyakkiyako
-
-		SHA_foc_3
-		SHA_foc_3-5
-		SHA_foc_3-2
+		
+		SHA_address_the_army
 	}
 
 	weight = {

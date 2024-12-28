@@ -1191,22 +1191,6 @@ The_new_order = { # The new order - Last day of europe
     }
 }
 
-SHA_nazi = { # 산낙지
-    possible = {
-        has_any_custom_difficulty_setting = no
-        game_rules_allow_achievements = yes
-        difficulty > 1
-        custom_trigger_tooltip = {
-            tooltip = TRIGGER_IS_IRONMAN
-            is_ironman = yes
-        }
-        original_tag = SHA
-    }
-    happened = {
-        has_completed_focus = SHA_foc_2-5-4
-    }
-}
-
 Reverse_assasination = { # 리버스 암살
     possible = {
         has_any_custom_difficulty_setting = no

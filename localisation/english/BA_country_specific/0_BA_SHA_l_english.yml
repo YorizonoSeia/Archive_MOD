@@ -676,9 +676,6 @@
  SHA_the_matzen_oil_fields_desc: ""
  SHA_construction_guilds: "$AUS_construction_guilds$"
  SHA_construction_guilds_desc: ""
- SHA_apprentice_programmes: "$AUS_apprentice_programmes$"
- SHA_apprentice_programmes_desc: ""
- SHA_apprentice_programmes_tt: "실업자 단계를 낮추는 일련의 사건들이 발생합니다."
  SHA_industrialization_effort: "$AUS_industrialization_effort$"
  SHA_industrialization_effort_desc: ""
  SHA_establish_the_SEZ: "경제특구 설립"
@@ -687,8 +684,9 @@
  SHA_central_planning_desc: ""
  SHA_union_control: "산해경 전국총공회 설립"
  SHA_union_control_desc: ""
- SHA_establish_the_VES: "최고경제위원회 설립"
+ SHA_establish_the_VES: "중앙계획위원회 재편"
  SHA_establish_the_VES_desc: ""
+ SHA_economic_health_2_tt: "§C대공황 단계§!가 §Y2§!보다 낮거나 같음"
  SHA_teleological_planning: "목적론적 산업 계획"
  SHA_teleological_planning_desc: ""
  SHA_solidarist_representation: "협동조합주의적 대표성"
@@ -697,6 +695,22 @@
  SHA_economic_organisation_of_SKivotos_desc: ""
 
  # 산해경 군사 중점
+ SHA_address_the_army: "방위군 개편"
+ SHA_address_the_army_desc: "오스트리아 연방군과의 전쟁에서 산해경 육군의 심각한 결점이 드러났습니다. $SHA_MINA$의 노력으로 일부 현대화가 이루어졌지만, 전 세계적으로 긴장이 고조되고 군비 경쟁이 격화되는 지금, 군대를 현대적 수준으로 유지하기 위해 주저할 시간이 없습니다."
+ SHA_Following_doorkeeper_footsteps: "전대 문주의 유산"
+ SHA_Following_doorkeeper_footsteps_desc: ""
+ SHA_Central_Military_Commission: "중앙군사위원회 설립"
+ SHA_Central_Military_Commission_desc: ""
+ SHA_Command_integration: "지휘부 통합"
+ SHA_Command_integration_desc: ""
+ SHA_Three_Military_Training: "3단계 군사 훈련"
+ SHA_Three_Military_Training_desc: ""
+ SHA_instill_auftragstaktik: "$GER_instill_auftragstaktik$"
+ SHA_instill_auftragstaktik_desc: ""
+ SHA_unity_of_doctrine: "교리 통합"
+ SHA_unity_of_doctrine_desc: ""
+ SHA_Shanhaijing_Orchestra: "산해경 관현악단"
+ SHA_Shanhaijing_Orchestra_desc: ""
 
  # 정치
  SHA_Austrian_oppression_continues: "오스트리아 탄압 지속"
@@ -828,6 +842,11 @@
  SHA_austria_unemployment_problem_desc: "§C대공황 단계§!: §Y[?SHA_aup_anger|0]§!\n1929년에 발생한 미국의 대공황은 머나먼 유럽의 오스트리아까지 영향을 미쳤습니다. 그러나 이전 오스트리아 정부의 무능과 정책 실패로 인해 이 문제의 부담은 산해경이 고스란히 떠안게 되었습니다.\n\n거리에는 실업자가 넘쳐나고, 노동자들은 빵을 요구하고 있습니다. 이러한 문제는 대공황이 계속되는 한 해결되지 않을 것입니다."
  RUS_increase_pop_anger: "§R대공황 단계가 [?SHA_anger_change]만큼 변화합니다.§!"
  RUS_decrease_pop_anger: "§G대공황 단계가 [?SHA_anger_change]만큼 변화합니다.§!"
+ SHA_supreme_economic_council: "중앙경제위원회"
+ SHA_ASFTU: "전국총공회"
+
+ SHA_industrial_region: "경제특구"
+ SHA_industrial_region_2: "$SHA_industrial_region$"
 
  # 이벤트
  shafas.1.t: "경극부의 쿠데타!"
@@ -855,9 +874,17 @@
  shafas.6.d: "두 달 전 발생한 대전이 사태와 현무상회의 목표를 저지하기 위해, 사상과 이해가 유사한 정파들을 통합하려 모색했던 경극부는 산해경의 이익을 수호하는 데 있어 중요한 역할을 수행했습니다. 경극부의 활약으로 현무상회의 목표는 무산되었고, 대전이 사태의 여파 역시 최소화되며 그 영향력을 억제할 수 있었습니다.\n\n그러나 산해경은 외부의 위협을 넘어 내부의 결함으로부터도 위기에 처해 있습니다. 문주의 나약한 의회주의적 정책 방향은 그를 꼭두각시로 전락시킬 뿐만 아니라, 산해경 보수주의의 존립 기반 자체를 파멸로 몰아넣을 가능성을 내포하고 있었습니다. 이를 막기 위해 경극부는 학원을 상대로 혁명의 깃발을 올렸습니다.\n\n경극부장 우루시바라 카구야의 탁월한 지도력 아래, 현룡문의 보수파들이 사소한 경쟁심과 결단력 부족으로 인해 이루지 못했던 과업들이 마침내 결실을 보게 되었습니다. 케케묵은 분쟁은 마침내 종결되었고, 과거 보수주의 운동과 현대 보수주의 운동을 이어주는 다리가 놓였습니다. 의회주의라는 목적 없는 이상론과 현무상회의 유사 좌파적 실험의 시대는 이제 종언을 고했습니다.\n\n이제 진정한 경극부가 과거의 부패한 권력 구조를 무너뜨리고, 보수 혁명의 서막을 여는 시점이 임박했습니다."
  shafas.6.a: "시작해보자."
 
- shafas.7.t: "산해경 육군"
- shafas.7.d: "산해경의 육군은 지상전과 국토방위를 책임지는 핵심 전력으로, 국가를 수호하는 역할을 맡고 있습니다. 그러나 이들은 산해경이라는 국가를 따르기보다는 현룡문을 충성의 대상으로 삼는 당군에 더 가깝습니다. 육군의 통수권자는 현재의 문주, [SHA.GetLeader]이며, 그 아래로 집행부장 $SHA_MINA$가 실질적인 지휘를 담당하고 있습니다.\n\n산해경 육군의 역사는 의외로 짧습니다. 전대 문주의 확장적 정책이 군사력을 필요로 하며 육군이 창설되었고, 이는 현룡문 산하의 군사 조직으로 재편되었습니다. 그러나 전대 문주가 실각하며 확장 정책이 폐지되었고, 이로 인해 산해경 육군은 소규모로 축소되었습니다.\n\n그럼에도 불구하고, 산해경 육군은 중요한 순간마다 활약했습니다. 타 학원과의 충돌에서 산해경의 영토를 방어하며 국가의 존립을 지켰고, 신타니 카이의 추방 과정에서도 결정적인 역할을 수행했습니다.\n\n대전이 사태 당시, 산해경 육군은 다시 한 번 전투에 나서게 되었습니다. 그러나 류우게 키사키의 군축정책은 육군의 전력을 크게 약화시켰습니다. 장비 부족과 정치적 긴장 속에서, 산해경 육군은 오스트리아 연방군과의 충돌에서 패배 위기에 몰렸습니다. 하지만 류우게 키사키와 집행부장 $SHA_MINA$의 뛰어난 지도력 덕분에, 육군은 파비우스의 승리를 거두며 산해경을 방어하는 데 성공했습니다.\n\n오늘날 산해경 육군의 상황은 결코 낙관적이지 않습니다. 지속적인 군축정책과 전력 약화로 인해 내부적으로는 조직 정비가 미흡하고, 외부적으로는 위협에 대응하기 어려운 상태에 놓여 있습니다. 급변하는 국제 정세 속에서 산해경 육군은 더 이상 현재의 상태에 머물러 있을 수 없습니다."
+ shafas.7.t: "산해경 방위군"
+ shafas.7.d: "산해경의 방위군은 지상전과 국토방위를 책임지는 핵심 전력으로, 국가를 수호하는 역할을 맡고 있습니다. 그러나 이들은 산해경이라는 국가를 따르기보다는 현룡문을 충성의 대상으로 삼는 당군에 더 가깝습니다. 방위군의 통수권자는 현재의 문주, [SHA.GetLeader]이며, 그 아래로 집행부장 $SHA_MINA$가 실질적인 지휘를 담당하고 있습니다.\n\n산해경 방위군의 역사는 의외로 짧습니다. 전대 문주의 확장적 정책이 군사력을 필요로 하며 방위군이 창설되었고, 이는 현룡문 산하의 군사 조직으로 재편되었습니다. 그러나 전대 문주가 실각하며 확장 정책이 폐지되었고, 이로 인해 산해경 방위군은 소규모로 축소되었습니다.\n\n그럼에도 불구하고, 산해경 방위군은 중요한 순간마다 활약했습니다. 타 학원과의 충돌에서 산해경의 영토를 방어하며 국가의 존립을 지켰고, 신타니 카이의 추방 과정에서도 결정적인 역할을 수행했습니다.\n\n대전이 사태 당시, 산해경 방위군은 다시 한 번 전투에 나서게 되었습니다. 그러나 류우게 키사키의 군축정책은 방위군의 전력을 크게 약화시켰습니다. 장비 부족과 정치적 긴장 속에서, 산해경 방위군은 오스트리아 연방군과의 충돌에서 패배 위기에 몰렸습니다. 하지만 류우게 키사키와 집행부장 $SHA_MINA$의 뛰어난 지도력 덕분에, 방위군은 파비우스의 승리를 거두며 산해경을 방어하는 데 성공했습니다.\n\n오늘날 산해경 방위군의 상황은 결코 낙관적이지 않습니다. 지속적인 군축정책과 전력 약화로 인해 내부적으로는 조직 정비가 미흡하고, 외부적으로는 위협에 대응하기 어려운 상태에 놓여 있습니다. 급변하는 국제 정세 속에서 산해경 방위군은 더 이상 현재의 상태에 머물러 있을 수 없습니다."
  shafas.7.a: "충성!"
+
+ shafas.8.t: "최후통첩"
+ shafas.8.d: "산해경 정부는 백귀야행이 무력으로 점령한 [972.GetName]에 대해 자국의 영유권을 주장하며, 해당 영토를 즉각 반환할 것을 요구하고 있습니다. 만약 48시간 이내에 응답이 없을 경우, 두 국가는 전쟁 상태에 돌입하게 될 것이라는 경고문은 이 요구가 결코 허울뿐인 협박이 아님을 분명히 보여줍니다.\n\n한편, 우리 또한 산해경이 불법으로 점거하고 있는 [986.GetName]에 대한 영유권 문제를 안고 있지만, 이러한 상황에서 이를 언급하는 것은 자칫 산해경 측에 전쟁 의지를 표명하는 것으로 해석될 수 있습니다. 이는 현재의 긴장을 더욱 악화시킬 위험이 있어 신중한 접근이 필요합니다."
+ shafas.8.a: "우리는 물러서지 않는다!"
+
+ shafas.9.t: "우리의 요구를 거부한 [FROM.GetAdjective]!"
+ shafas.9.d: "긴 말을 할 필요가 있습니까?"
+ shafas.9.a: "그렇다면 전쟁 뿐이다!"
 
  # 툴팁
  SHA_Shanhaijing_fascism_tt: "§Y$SHA_Shanhaijinfascism$§! 변동치: "

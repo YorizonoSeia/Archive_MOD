@@ -3340,7 +3340,6 @@ news_event = {
 		}
 		SHA = {
 			exists = yes
-			has_completed_focus = SHA_foc_2-3-29
 		}
 		has_global_flag = GFLAG_BAKSANWAR
 	}

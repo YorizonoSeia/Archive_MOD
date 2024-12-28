@@ -128,6 +128,7 @@ recruit_character = SHA_ROUMI
 recruit_character = SHA_REIJO
 recruit_character = SHA_KAGUYA
 recruit_character = SHA_secret_agent
+recruit_character = SHA_elizabet_von_gutmann
 
 recruit_character = SHA_arthur_seyss_inquart
 

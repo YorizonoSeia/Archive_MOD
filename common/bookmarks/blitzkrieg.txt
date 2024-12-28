@@ -89,9 +89,9 @@ bookmarks = {
 				SHA_Eastern_alchemy_society
 			}	
 			focuses = {
-				SHA_foc_1-1-4
-				SHA_foc_2-4
-				SHA_foc_2-3-33
+				SHA_gathering_of_radicals
+				SHA_Strengthening_Genryumon
+				SHA_local_harmony
 			}		
 		}
 		"---"={
