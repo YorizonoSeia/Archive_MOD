@@ -370,11 +370,11 @@
  GEK_reaction_focus_4: "국방국가"
  GEK_reaction_focus_5: "카이저라이히 재건"
 
- GEK_popular_front_kpd_focus_0: "공산당: 12월 테제"
- GEK_popular_front_kpd_focus_1: "공산당: 노동조합 대표자"
- GEK_popular_front_spd_focus_0: "사민당: 민주적 가치 재확인"
- GEK_popular_front_spd_focus_1: "사민당: 재분배 정책"
- GEK_popular_front_DStP_focus_0: "국가당: 급진민주당 포섭"
+ GEK_popular_front_kpd_focus_0: "독일 공산당:\n 12월 테제"
+ GEK_popular_front_kpd_focus_1: "독일 공산당:\n 노동조합 대표자"
+ GEK_popular_front_spd_focus_0: "독일 사회민주당:\n민주적 가치 재확인"
+ GEK_popular_front_spd_focus_1: "독일 사회민주당:\n 재분배 정책"
+ GEK_popular_front_DStP_focus_0: "독일 국가당:\n 급진민주당 포섭"
  GEK_popular_front_bvp_focus_0: "바이에른 인민당:\n 바이에른에서의 양보"
  GEK_popular_front_vgp_focus_0: "통합 게헨나:\n 이계관리청장 양보"
  
@@ -501,6 +501,7 @@
  GEK_seize_gold_reserves: "$GER_seize_gold_reserves$"
  GEK_seize_russian_citites_gold_reserves: "$GER_seize_russian_citites_gold_reserves$"
  GEA_contact_the_war_navy:0 "전쟁해군에 연락"
+ GEK_operational_planning_category: "$GER_operational_planning_category$"
 
  GEK_restoration_decision:0 "독일 영토 수복"
  GEK_berlin_reconstruction:0 "베를린 재건"

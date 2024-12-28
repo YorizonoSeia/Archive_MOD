@@ -2718,7 +2718,7 @@ RED_demand_cat = {
 			has_completed_focus = RED_minori_diplo_6
 			has_completed_focus = RED_rehabilitated_military
 			has_army_manpower = {
-				size > 3999999
+				size > 399999
 			}
 		}
 		activation = {

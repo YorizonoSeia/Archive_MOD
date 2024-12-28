@@ -373,7 +373,7 @@ GEK_protestant_patriotism = { #애국주의적 개신교
 			}
 		}
 	}
-	icon = GFX_modifiers_GEK_spirit_of_capitalism
+	icon = GFX_modifiers_GEK_patriot_protestant
 
 	recruitable_population_factor = 0.15
 }
@@ -386,7 +386,7 @@ GEK_protestant_patriotism_for_TRM = { #애국주의적 개신교
 			exists = yes
 		}
 	}
-	icon = GFX_modifiers_GEK_spirit_of_capitalism
+	icon = GFX_modifiers_GEK_patriot_protestant
 
 	recruitable_population_factor = -0.15
 }
@@ -478,7 +478,7 @@ GEK_secondary_citizenship = { #제2시민권
 		}
 	}
 	recruitable_population_factor = 0.05
-	icon = GFX_modifiers_ARI_gottglaubig
+	icon = GFX_modifiers_GEK_secondary_citizenship
 }
 GEK_separation_law = { #이계인 분리
 	enable = {
@@ -496,5 +496,5 @@ GEK_separation_law = { #이계인 분리
 		}
 	}
 	local_building_slots_factor	= 0.05
-	icon = GFX_modifiers_ARI_gottglaubig
+	icon = GFX_modifiers_GEK_separation
 }

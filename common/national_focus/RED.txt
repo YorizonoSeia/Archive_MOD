@@ -7595,6 +7595,8 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = RED_rearming_focus_6
+		}
+		prerequisite = {
 			focus = RED_artillery
 		}
 		available = {

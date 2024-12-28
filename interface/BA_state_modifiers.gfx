@@ -11,6 +11,18 @@ spriteTypes = {
     	name = "GFX_modifiers_TRM_Gehenna_resistant"
     	textureFile = "gfx/interface/state_modifiers/modifiers_TRM_Gehenna_resistant.dds"
    	}
+    spriteType = { 
+	    name = "GFX_modifiers_GEK_separation"
+	    textureFile = "gfx/interface/state_modifiers/modifiers_GEK_separation.dds"
+	}
+    spriteType = { 
+	    name = "GFX_modifiers_GEK_secondary_citizenship"
+	    textureFile = "gfx/interface/state_modifiers/modifiers_GEK_secondary_citizenship.dds"
+	}
+	spriteType = { 
+    	name = "GFX_modifiers_GEK_patriot_protestant"
+    	textureFile = "gfx/interface/state_modifiers/modifiers_GEK_patriot_protestant.dds"
+   	}
 	spriteType = { 
     	name = "GFX_modifiers_GEK_materialism"
     	textureFile = "gfx/interface/state_modifiers/modifiers_GEK_materialism.dds"

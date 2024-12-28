@@ -224,4 +224,60 @@ on_actions = {
 			}
 		}
 	}
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = {
+					FROM = { 
+						OR = {
+							original_tag = GEK
+							is_subject_of = GEK
+						}
+					}
+				}
+				ROOT = {
+					set_country_flag = GEK_has_capitulated_to_germany
+				}
+			}
+			if = {
+				limit = {
+					FROM = { 
+						OR = {
+							original_tag = GEA
+							is_subject_of = GEA
+						}
+					}
+				}
+				ROOT = {
+					set_country_flag = GEA_has_capitulated_to_germany
+				}
+			}
+			if = {
+				limit = {
+					FROM = { 
+						OR = {
+							original_tag = KPD
+							is_subject_of = KPD
+						}
+					}
+				}
+				ROOT = {
+					set_country_flag = KPD_has_capitulated_to_germany
+				}
+			}
+			if = {
+				limit = {
+					FROM = { 
+						OR = {
+							original_tag = NSD
+							is_subject_of = NSD
+						}
+					}
+				}
+				ROOT = {
+					set_country_flag = NSD_has_capitulated_to_germany
+				}
+			}
+		}
+	}
 }
