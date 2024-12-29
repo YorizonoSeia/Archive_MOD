@@ -1018,10 +1018,6 @@
 			NOT = {
 				has_country_flag = TRN_country_collapse_yes
 			}
-			has_game_rule = {
-				rule = trn_collapse_rule
-				option = trn_collapse_rule_off
-			}
 		}
 		offset = {
 			x = -7

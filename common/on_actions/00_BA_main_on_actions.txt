@@ -253,6 +253,16 @@ on_actions = {
 	on_startup = {
 		effect = {
 			if = {
+				limit = {
+					has_game_rule = {
+						rule = trn_collapse_rule
+						option = trn_collapse_rule_on
+					}
+				}
+				set_variable = { global.NSD_country_collapse_decisions_value = 100 }
+				set_variable = { global.KPD_country_collapse_decisions_value = 100 }
+			}
+			if = {
 				limit = { is_debug = no }
 				TRM = {
 					annex_country = {
