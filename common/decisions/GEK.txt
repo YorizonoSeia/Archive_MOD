@@ -1006,9 +1006,8 @@ GEK_religion_issue_cat = { #종교 정책
 			factor = 200
 		}
 		visible = {
-		OR = {
+			OR = {
 				original_tag = GEK
-				original_tag = GEA
 				original_tag = NSD
 				original_tag = KPD
 			}
@@ -1131,7 +1130,6 @@ GEK_religion_issue_cat = { #종교 정책
 		visible = {
 			OR = {
 				original_tag = GEK
-				original_tag = GEA
 				original_tag = NSD
 				original_tag = KPD
 			}
@@ -1184,7 +1182,6 @@ GEK_religion_issue_cat = { #종교 정책
 		visible = {
 			OR = {
 				original_tag = GEK
-				original_tag = GEA
 				original_tag = NSD
 				original_tag = KPD
 			}
@@ -1307,7 +1304,6 @@ GEK_religion_issue_cat = { #종교 정책
 		visible = {
 			OR = {
 				original_tag = GEK
-				original_tag = GEA
 				original_tag = NSD
 				original_tag = KPD
 			}
@@ -1363,7 +1359,6 @@ GEK_religion_issue_cat = { #종교 정책
 		visible = {
 			OR = {
 				original_tag = GEK
-				original_tag = GEA
 				original_tag = NSD
 				original_tag = KPD
 			}
@@ -1506,7 +1501,6 @@ GEK_religion_issue_cat = { #종교 정책
 		visible = {
 		OR = {
 				original_tag = GEK
-				original_tag = GEA
 				original_tag = NSD
 				original_tag = KPD
 			}
@@ -1637,9 +1631,8 @@ GEK_religion_issue_cat = { #종교 정책
 			factor = 200
 		}
 		visible = {
-		OR = {
+			OR = {
 				original_tag = GEK
-				original_tag = GEA
 				original_tag = NSD
 				original_tag = KPD
 			}
@@ -2306,7 +2299,6 @@ GEK_operational_planning_category = {
 		allowed = {
 			OR = {
 				original_tag = GEK
-				original_tag = GEA
 				original_tag = NSD
 				original_tag = KPD
 			}
@@ -2548,7 +2540,6 @@ GEK_operational_planning_category = {
 		allowed = {
 			OR = {
 				original_tag = GEK
-				original_tag = GEA
 				original_tag = NSD
 				original_tag = KPD
 			}
