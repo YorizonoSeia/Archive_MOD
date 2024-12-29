@@ -1157,6 +1157,7 @@ focus_tree = {
 				has_global_flag = NSD_the_SS_went_to_america
 				has_global_flag = NSD_the_SS_went_to_gottland
 			}
+			NOT = { country_exists = NSD }
 		}
 		mutually_exclusive = { focus = ARI_dismantling_nazism focus = ARI_we_are_arians }
 		cost = 10
