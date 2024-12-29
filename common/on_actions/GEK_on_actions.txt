@@ -184,6 +184,9 @@ on_actions = {
 			}
 		}
 	}
+	#ROOT = 공격하는 쪽
+	#FROM = 방어 측
+	#두 국가가 서로 전쟁을 벌일 때 발동됨(on_war는 한 국가가 다른 국가와 전쟁을 벌일 때 발동되며, 먼저 평화로 가지 않는 한 다른 국가와 전쟁을 벌일 때는 다시 발동되지 않음).
 	on_war_relation_added = {
 		effect = { 
 			if = {
@@ -220,6 +223,70 @@ on_actions = {
 				}
 				FROM = {
 					country_event = { id = germany_mefo_bills.1 hours = 2 }
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					ROOT = { original_tag = GEK }
+					ROOT = { GER_has_mefo_bills = yes }
+					NOT = { FROM = { original_tag = GEK } }
+				}
+				ROOT = {
+					GER_remove_mefo_bills = yes
+					set_country_flag = mefo_bills_removed_through_war
+				}
+			}
+			if = {
+				limit = {
+					FROM = { original_tag = GEK }
+					FROM = { GER_has_mefo_bills = yes }
+					NOT = { ROOT = { original_tag = GEK } }
+				}
+				FROM = {
+					GER_remove_mefo_bills = yes
+					set_country_flag = mefo_bills_removed_through_war
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						OR = {
+							original_tag = GEK
+							original_tag = NSD
+							original_tag = KPD
+						}
+					}
+					NOT = { FROM = { original_tag = ROOT } }
+				}
+				FROM = {
+					add_to_array = { 
+						array = ROOT.GER_war_targets_array 
+						value = THIS
+					}
+					log = "[THIS.GetName] was added to array"
+				}
+			}
+			if = {
+				limit = {
+					FROM = {
+						OR = {
+							original_tag = GEK
+							original_tag = NSD
+							original_tag = KPD
+						}
+					}
+					NOT = { ROOT = { original_tag = FROM } }
+				}
+				ROOT = {
+					add_to_array = {
+						array = FROM.GER_war_targets_array 
+						value = THIS
+					}
+					log = "[THIS.GetName] was added to array"
 				}
 			}
 		}
