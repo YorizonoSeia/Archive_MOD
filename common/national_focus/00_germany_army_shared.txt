@@ -5377,8 +5377,11 @@ shared_focus = { #경제 성장 우선
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
-		custom_effect_tooltip = available_political_advisor
-		show_ideas_tooltip = GER_ludwig_erhard
+		if = {
+			limit = { has_character = GEK_ludwig_erhard }
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = GER_ludwig_erhard
+		}
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
