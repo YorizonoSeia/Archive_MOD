@@ -3616,7 +3616,6 @@
 		}
 
 		bypass = {
-			has_completed_focus = JAP_support_the_kodoha_faction
 		}
 
 		cancel_if_invalid = yes
@@ -3654,7 +3653,6 @@
 		}
 
 		bypass = {
-			has_completed_focus = JAP_support_the_kodoha_faction
 		}
 
 		cancel_if_invalid = yes
@@ -4068,7 +4066,6 @@
 		}
 
 		bypass = {
-			has_completed_focus = JAP_support_the_kodoha_faction
 		}
 
 		cancel_if_invalid = yes
@@ -4119,7 +4116,6 @@
 		}
 
 		bypass = {
-			has_completed_focus = JAP_support_the_kodoha_faction
 		}
 
 		cancel_if_invalid = yes
@@ -4172,7 +4168,6 @@
 		}
 
 		bypass = {
-			has_completed_focus = JAP_support_the_kodoha_faction
 		}
 
 		cancel_if_invalid = yes
@@ -5726,7 +5721,6 @@
 		}
 
 		bypass = {
-			has_completed_focus = JAP_support_the_kodoha_faction
 		}
 
 		cancel_if_invalid = yes
