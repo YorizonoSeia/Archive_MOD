@@ -88,6 +88,7 @@ JAP_manchukuo_player_historical_plan = {
 		JAP_army_expansion_law	
 		JAP_fighter_modernization #September 30 1937	
 		JAP_new_naval_estimates
+		JAP_economic_stimulus_plan
 		JAP_guide_the_zaibatsus
 		JAP_carrier_warfare_experiments #December 10 1937	
 		JAP_supremacy_of_technology #February 20 1938	
@@ -278,6 +279,7 @@ JAP_alternate_plan_strike_north = {
 		JAP_support_the_kodoha_faction
 		JAP_army_expansion_law
 		JAP_way_of_japanese_fascism
+		JAP_economic_stimulus_plan
 		JAP_challenge_the_zaibatsus
 		JAP_small_arms_modernization
 		JAP_army_expansion

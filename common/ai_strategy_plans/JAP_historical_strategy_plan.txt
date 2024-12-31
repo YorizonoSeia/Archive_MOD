@@ -37,6 +37,7 @@ JAP_historical_plan = {
 		JAP_nation_of_the_rising_sun
 		JAP_purge_the_kodoha_faction #March 10 1936	
 		JAP_army_expansion_law #May 20 1936	
+		JAP_economic_stimulus_plan
 		JAP_guide_the_zaibatsus #July 30 1936	
 		JAP_new_naval_estimates #October 10 1936	
 		JAP_army_expansion #December 20 1936	
