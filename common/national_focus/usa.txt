@@ -11092,7 +11092,7 @@ focus_tree = {
 			}
 			add_to_variable = {
 				USABA_GER_modfiy_production_speed_industrial_complex_factor = -0.05
-				tooltip = production_speed_arms_factory_factor_tt
+				tooltip = production_speed_industrial_complex_factor_tt
 			}
 			add_to_variable = {
 				USABA_GER_modfiy_production_speed_arms_factory_factor = 0.05
@@ -11200,7 +11200,9 @@ focus_tree = {
 		continue_if_invalid = yes
 
 		available = {
+			has_government = democratic
 			NOT = { has_completed_focus = USABA_rise_to_power }
+			NOT = { has_completed_focus = USABA_compromise_plan }
 		}
 		bypass = {
 		}
@@ -11235,7 +11237,9 @@ focus_tree = {
 		continue_if_invalid = yes
 
 		available = {
+			has_government = democratic
 			NOT = { has_completed_focus = USABA_rise_to_power }
+			NOT = { has_completed_focus = USABA_compromise_plan }
 		}
 		bypass = {
 		}
@@ -11270,7 +11274,9 @@ focus_tree = {
 		continue_if_invalid = yes
 
 		available = {
+			has_government = democratic
 			NOT = { has_completed_focus = USABA_rise_to_power }
+			NOT = { has_completed_focus = USABA_compromise_plan }
 		}
 		bypass = {
 		}
@@ -11309,6 +11315,7 @@ focus_tree = {
 		continue_if_invalid = yes
 
 		available = {
+			has_government = democratic
 		}
 		bypass = {
 		}
@@ -11317,7 +11324,43 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = USABA_towards_a_new_era_in_america_tt
 			remove_dynamic_modifier = { modifier = USABA_german_ch_idea }
+			uncomplete_national_focus = {
+				focus = USABA_german_national_protection_law
+				refund_political_power = yes
+			}
+
+			hidden_effect = {
+				if = {
+					limit = {
+						has_shine_effect_on_focus = USABA_revolutionaries_of_the_nation
+					}
+					clr_country_flag = USABA_revolutionaries_of_the_nation_in_progress_flag
+					deactivate_shine_on_focus = USABA_revolutionaries_of_the_nation
+				}
+				if = {
+					limit = {
+						has_shine_effect_on_focus = USABA_strong_propaganda
+					}
+					clr_country_flag = USABA_strong_propaganda_in_progress_flag
+					deactivate_shine_on_focus = USABA_strong_propaganda
+				}
+				if = {
+					limit = {
+						has_shine_effect_on_focus = USABA_expansion_of_influence_in_america
+					}
+					clr_country_flag = USABA_expansion_of_influence_in_america_in_progress_flag
+					deactivate_shine_on_focus = USABA_expansion_of_influence_in_america
+				}
+				if = {
+					limit = {
+						has_shine_effect_on_focus = USABA_destruction_of_jewish_groups
+					}
+					clr_country_flag = USABA_destruction_of_jewish_groups_in_progress_flag
+					deactivate_shine_on_focus = USABA_destruction_of_jewish_groups
+				}
+			}
 		}
 	}
 

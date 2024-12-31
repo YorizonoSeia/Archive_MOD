@@ -161,6 +161,8 @@
  JBP_weakening_of_control_faction: "통제파 약화"
  JBP_continuing_disarmament: "군축 지속"
  JBP_release_of_political_prisoners: "정치범 석방"
+ JBP_support_of_his_imperial_highness: "천황의 재가"
+ JBP_support_of_his_imperial_highness_desc: "천황 폐하의 재가를 받아낼 수만 있다면 통제파의 축출에 강력한 동력으로 작용할 것입니다."
 
 #메인루트 포커스
  JAP_economic_stimulus_plan: "경기 부양책"
