@@ -1993,6 +1993,23 @@ country_event = {
 }
 
 country_event = {
+    id = GEI_event.50
+    is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		every_country = {
+			limit = { original_tag = GEI }
+			ROOT = {
+				annex_country = {
+					target = GEI
+					transfer_troops = no
+				}
+			}
+		}
+	}
+}
+
+country_event = {
 	id = GEI_event.debug
 	title = mtg_usa_civil_war_fascists.14.t
 	desc = mtg_usa_civil_war_fascists.14.desc

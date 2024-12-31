@@ -1,0 +1,30 @@
+on_actions = {
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = {
+					original_tag = GEI
+					NOT = { has_global_flag = GEI_end_flag }
+					has_country_flag = The_Colour_country_flag
+				}
+				set_global_flag = GEI_end_flag
+				FROM = { set_country_flag = GEI_end_FROM_flag }
+			}
+		}
+	}
+	on_peaceconference_ended = {
+		effect = {
+			if = {
+				limit = {
+					has_country_flag = GEI_end_FROM_flag
+				}
+				country_event = { id = GEI_event.50 }
+				GEI = {
+					every_core_state = {
+						remove_core_of = GEI
+					}
+				}
+			}
+		}
+	}
+}
