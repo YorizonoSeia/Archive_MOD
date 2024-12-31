@@ -19,96 +19,96 @@ setup_central_map = {
 		clear_array = ABY_map_x
 		clear_array = ABY_map_y
 
-		add_to_array = { ABY_rework_map_array = 797 }
+		add_to_array = { ABY_rework_map_array = 69 }
 		add_to_array = { ABY_map_x = 10 }
 		add_to_array = { ABY_map_y = 50 }
-		set_variable = { 797:ABY_central_var = 0 }
-		set_variable = { 797:ABY_unite_var = 0 }
-		set_variable = { 797:ABY_rebuild_var = 0 }
+		set_variable = { 69:ABY_central_var = 4 }
+		set_variable = { 69:ABY_unite_var = 3 }
+		set_variable = { 69:ABY_rebuild_var = 2 }
 
-		add_to_array = { ABY_rework_map_array = 339 }
+		add_to_array = { ABY_rework_map_array = 9 }
 		add_to_array = { ABY_map_x = 10 }
 		add_to_array = { ABY_map_y = 50 }
-		set_variable = { 339:ABY_central_var = 0 }
-		set_variable = { 339:ABY_unite_var = 0 }
-		set_variable = { 339:ABY_rebuild_var = 0 }
+		set_variable = { 9:ABY_central_var = 0 }
+		set_variable = { 9:ABY_unite_var = 0 }
+		set_variable = { 9:ABY_rebuild_var = 0 }
 
-		add_to_array = { ABY_rework_map_array = 347 }
+		add_to_array = { ABY_rework_map_array = 74 }
 		add_to_array = { ABY_map_x = 10 }
 		add_to_array = { ABY_map_y = 50 }
-		set_variable = { 347:ABY_central_var = 0 }
-		set_variable = { 347:ABY_unite_var = 0 }
-		set_variable = { 347:ABY_rebuild_var = 0 }
+		set_variable = { 74:ABY_central_var = 0 }
+		set_variable = { 74:ABY_unite_var = 0 }
+		set_variable = { 74:ABY_rebuild_var = 0 }
 
-		add_to_array = { ABY_rework_map_array = 49 }
+		add_to_array = { ABY_rework_map_array = 72 }
 		add_to_array = { ABY_map_x = 10 }
 		add_to_array = { ABY_map_y = 50 }
-		set_variable = { 49:ABY_central_var = 0 }
-		set_variable = { 49:ABY_unite_var = 0 }
-		set_variable = { 49:ABY_rebuild_var = 0 }
+		set_variable = { 72:ABY_central_var = 0 }
+		set_variable = { 72:ABY_unite_var = 0 }
+		set_variable = { 72:ABY_rebuild_var = 0 }
 
-		add_to_array = { ABY_rework_map_array = 342 }
+		add_to_array = { ABY_rework_map_array = 75 }
 		add_to_array = { ABY_map_x = 10 }
 		add_to_array = { ABY_map_y = 50 }
-		set_variable = { 342:ABY_central_var = 0 }
-		set_variable = { 342:ABY_unite_var = 0 }
-		set_variable = { 342:ABY_rebuild_var = 0 }
+		set_variable = { 75:ABY_central_var = 0 }
+		set_variable = { 75:ABY_unite_var = 0 }
+		set_variable = { 75:ABY_rebuild_var = 0 }
 
-		add_to_array = { ABY_rework_map_array = 344 }
+		add_to_array = { ABY_rework_map_array = 972 }
 		add_to_array = { ABY_map_x = 10 }
 		add_to_array = { ABY_map_y = 50 }
-		set_variable = { 344:ABY_central_var = 0 }
-		set_variable = { 344:ABY_unite_var = 0 }
-		set_variable = { 344:ABY_rebuild_var = 0 }
+		set_variable = { 972:ABY_central_var = 0 }
+		set_variable = { 972:ABY_unite_var = 0 }
+		set_variable = { 972:ABY_rebuild_var = 0 }
 
-		add_to_array = { ABY_rework_map_array = 353 }
+		add_to_array = { ABY_rework_map_array = 986 }
 		add_to_array = { ABY_map_x = 10 }
 		add_to_array = { ABY_map_y = 50 }
-		set_variable = { 353:ABY_central_var = 0 }
-		set_variable = { 353:ABY_unite_var = 0 }
-		set_variable = { 353:ABY_rebuild_var = 0 }
+		set_variable = { 986:ABY_central_var = 0 }
+		set_variable = { 986:ABY_unite_var = 0 }
+		set_variable = { 986:ABY_rebuild_var = 0 }
 
-		add_to_array = { ABY_rework_map_array = 680 }
+		add_to_array = { ABY_rework_map_array = 975 }
 		add_to_array = { ABY_map_x = 10 }
 		add_to_array = { ABY_map_y = 50 }
-		set_variable = { 680:ABY_central_var = 0 }
-		set_variable = { 680:ABY_unite_var = 0 }
-		set_variable = { 680:ABY_rebuild_var = 0 }
+		set_variable = { 975:ABY_central_var = 0 }
+		set_variable = { 975:ABY_unite_var = 0 }
+		set_variable = { 975:ABY_rebuild_var = 0 }
 
-		add_to_array = { ABY_rework_map_array = 454 }
+		add_to_array = { ABY_rework_map_array = 4 }
 		add_to_array = { ABY_map_x = 10 }
 		add_to_array = { ABY_map_y = 50 }
-		set_variable = { 454:ABY_central_var = 0 }
-		set_variable = { 454:ABY_unite_var = 0 }
-		set_variable = { 454:ABY_rebuild_var = 0 }
+		set_variable = { 4:ABY_central_var = 0 }
+		set_variable = { 4:ABY_unite_var = 0 }
+		set_variable = { 4:ABY_rebuild_var = 0 }
 
-		add_to_array = { ABY_rework_map_array = 291 }
+		add_to_array = { ABY_rework_map_array = 976 }
 		add_to_array = { ABY_map_x = 10 }
 		add_to_array = { ABY_map_y = 50 }
-		set_variable = { 291:ABY_central_var = 0 }
-		set_variable = { 291:ABY_unite_var = 0 }
-		set_variable = { 291:ABY_rebuild_var = 0 }
+		set_variable = { 976:ABY_central_var = 0 }
+		set_variable = { 976:ABY_unite_var = 0 }
+		set_variable = { 976:ABY_rebuild_var = 0 }
 
-		add_to_array = { ABY_rework_map_array = 855 }
+		add_to_array = { ABY_rework_map_array = 152 }
 		add_to_array = { ABY_map_x = 10 }
 		add_to_array = { ABY_map_y = 50 }
-		set_variable = { 855:ABY_central_var = 0 }
-		set_variable = { 855:ABY_unite_var = 0 }
-		set_variable = { 855:ABY_rebuild_var = 0 }
+		set_variable = { 152:ABY_central_var = 0 }
+		set_variable = { 152:ABY_unite_var = 0 }
+		set_variable = { 152:ABY_rebuild_var = 0 }
 
-		add_to_array = { ABY_rework_map_array = 273 }
+		add_to_array = { ABY_rework_map_array = 153 }
 		add_to_array = { ABY_map_x = 10 }
 		add_to_array = { ABY_map_y = 50 }
-		set_variable = { 273:ABY_central_var = 0 }
-		set_variable = { 273:ABY_unite_var = 0 }
-		set_variable = { 273:ABY_rebuild_var = 0 }
+		set_variable = { 153:ABY_central_var = 0 }
+		set_variable = { 153:ABY_unite_var = 0 }
+		set_variable = { 153:ABY_rebuild_var = 0 }
 
-		add_to_array = { ABY_rework_map_array = 936 }
+		add_to_array = { ABY_rework_map_array = 848 }
 		add_to_array = { ABY_map_x = 10 }
 		add_to_array = { ABY_map_y = 50 }
-		set_variable = { 936:ABY_central_var = 0 }
-		set_variable = { 936:ABY_unite_var = 0 }
-		set_variable = { 936:ABY_rebuild_var = 0 }
+		set_variable = { 848:ABY_central_var = 0 }
+		set_variable = { 848:ABY_unite_var = 0 }
+		set_variable = { 848:ABY_rebuild_var = 0 }
 
 		every_state = {
 			limit = {
@@ -134,14 +134,2200 @@ setup_central_map = {
 	}
 	central_map_calculate_frame = yes
 }
+ABY_69_develop_effect = {
+	hidden_effect = {
+		set_variable = { ABY_selected_state = 69 }
+		if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 0 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
+			add_to_variable = { ABY_industry_progress_var = 1 }
+			69 = {
+            	add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 1 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
+			add_to_variable = { ABY_industry_progress_var = 1 }
+			69 = {
+				add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 2 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
+			add_to_variable = { ABY_industry_progress_var = 1 }
+			69 = {
+				add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 3 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
+			add_to_variable = { ABY_industry_progress_var = 1 }
+			69 = {
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_develop
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 4 }
+			}
+			69 = {
+				add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	central_map_calculate_frame = yes
+}
+ABY_69_unite_effect = {
+	hidden_effect = {
+		set_variable = { ABY_selected_state = 69 }
+		if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_unite_var = 0 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_unite_var = 1 }
+			add_to_variable = { ABY_unite_progress_var = 1 }
+			69 = {
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_unite_1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_unite_var = 1 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_unite_var = 1 }
+			add_to_variable = { ABY_unite_progress_var = 1 }
+			69 = {
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_unite_1
+				}
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_unite_2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_unite_var = 2 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_unite_var = 1 }
+			add_to_variable = { ABY_unite_progress_var = 1 }
+			add_to_variable = {ABY_var_political_power_factor = 0.025}
+			add_to_variable = {ABY_var_stability_factor = 0.025}
+			add_to_variable = {ABY_var_war_support_factor = 0.025}
+			add_to_variable = {ABY_var_surrender_limit = 0.05}
+			add_to_variable = {ABY_var_drift_defence_factor = 0.1}
+			add_to_variable = {ABY_var_compliance_gain = 0.01}
+			add_to_variable = {ABY_var_resistance_target_on_our_occupied_states = 0.1}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_unite_var = 3 }
+			}
+			69 = {
+				add_manpower = 50000
+			}
+		}
+	}
+	central_map_calculate_frame = yes
+}
+ABY_69_rebuild_effect = {
+	hidden_effect = {
+		set_variable = { ABY_selected_state = 69 }
+		if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_rebuild_var = 0 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
+			add_to_variable = { ABY_rebuild_progress_var = 1 }
+			69 = {
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_1
+				}
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
+			add_to_variable = { ABY_rebuild_progress_var = 1 }
+			69 = {
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_rebuild_var = 2 }
+			}
+		}
+	}
+	central_map_calculate_frame = yes
+}
+ABY_9_develop_effect = {
+	hidden_effect = {
+		set_variable = { ABY_selected_state = 9 }
+		if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 0 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
+			add_to_variable = { ABY_industry_progress_var = 1 }
+			9 = {
+            	add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 1 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
+			add_to_variable = { ABY_industry_progress_var = 1 }
+			9 = {
+				add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 2 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
+			add_to_variable = { ABY_industry_progress_var = 1 }
+			9 = {
+				add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 3 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
+			add_to_variable = { ABY_industry_progress_var = 1 }
+			9 = {
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_develop
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 4 }
+			}
+			9 = {
+				add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	central_map_calculate_frame = yes
+}
+ABY_9_unite_effect = {
+	hidden_effect = {
+		set_variable = { ABY_selected_state = 9 }
+		if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_unite_var = 0 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_unite_var = 1 }
+			add_to_variable = { ABY_unite_progress_var = 1 }
+			9 = {
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_unite_1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_unite_var = 1 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_unite_var = 1 }
+			add_to_variable = { ABY_unite_progress_var = 1 }
+			9 = {
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_unite_1
+				}
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_unite_2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_unite_var = 2 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_unite_var = 1 }
+			add_to_variable = { ABY_unite_progress_var = 1 }
+			add_to_variable = {ABY_var_political_power_factor = 0.025}
+			add_to_variable = {ABY_var_stability_factor = 0.025}
+			add_to_variable = {ABY_var_war_support_factor = 0.025}
+			add_to_variable = {ABY_var_surrender_limit = 0.05}
+			add_to_variable = {ABY_var_drift_defence_factor = 0.1}
+			add_to_variable = {ABY_var_compliance_gain = 0.01}
+			add_to_variable = {ABY_var_resistance_target_on_our_occupied_states = 0.1}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_unite_var = 3 }
+			}
+			9 = {
+				add_manpower = 50000
+			}
+		}
+	}
+	central_map_calculate_frame = yes
+}
+ABY_9_rebuild_effect = {
+	hidden_effect = {
+		set_variable = { ABY_selected_state = 9 }
+		if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_rebuild_var = 0 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
+			add_to_variable = { ABY_rebuild_progress_var = 1 }
+			9 = {
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_1
+				}
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
+			add_to_variable = { ABY_rebuild_progress_var = 1 }
+			9 = {
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_rebuild_var = 2 }
+			}
+		}
+	}
+	central_map_calculate_frame = yes
+}
+ABY_74_develop_effect = {
+	hidden_effect = {
+		set_variable = { ABY_selected_state = 74 }
+		if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 0 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
+			add_to_variable = { ABY_industry_progress_var = 1 }
+			74 = {
+            	add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 1 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
+			add_to_variable = { ABY_industry_progress_var = 1 }
+			74 = {
+				add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 2 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
+			add_to_variable = { ABY_industry_progress_var = 1 }
+			74 = {
+				add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 3 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
+			add_to_variable = { ABY_industry_progress_var = 1 }
+			74 = {
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_develop
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 4 }
+			}
+			74 = {
+				add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	central_map_calculate_frame = yes
+}
+ABY_74_unite_effect = {
+	hidden_effect = {
+		set_variable = { ABY_selected_state = 74 }
+		if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_unite_var = 0 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_unite_var = 1 }
+			add_to_variable = { ABY_unite_progress_var = 1 }
+			74 = {
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_unite_1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_unite_var = 1 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_unite_var = 1 }
+			add_to_variable = { ABY_unite_progress_var = 1 }
+			74 = {
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_unite_1
+				}
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_unite_2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_unite_var = 2 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_unite_var = 1 }
+			add_to_variable = { ABY_unite_progress_var = 1 }
+			add_to_variable = {ABY_var_political_power_factor = 0.025}
+			add_to_variable = {ABY_var_stability_factor = 0.025}
+			add_to_variable = {ABY_var_war_support_factor = 0.025}
+			add_to_variable = {ABY_var_surrender_limit = 0.05}
+			add_to_variable = {ABY_var_drift_defence_factor = 0.1}
+			add_to_variable = {ABY_var_compliance_gain = 0.01}
+			add_to_variable = {ABY_var_resistance_target_on_our_occupied_states = 0.1}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_unite_var = 3 }
+			}
+			74 = {
+				add_manpower = 50000
+			}
+		}
+	}
+	central_map_calculate_frame = yes
+}
+ABY_74_rebuild_effect = {
+	hidden_effect = {
+		set_variable = { ABY_selected_state = 74 }
+		if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_rebuild_var = 0 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
+			add_to_variable = { ABY_rebuild_progress_var = 1 }
+			74 = {
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_1
+				}
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
+			add_to_variable = { ABY_rebuild_progress_var = 1 }
+			74 = {
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_rebuild_var = 2 }
+			}
+		}
+	}
+	central_map_calculate_frame = yes
+}
+ABY_72_develop_effect = {
+	hidden_effect = {
+		set_variable = { ABY_selected_state = 72 }
+		if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 0 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
+			add_to_variable = { ABY_industry_progress_var = 1 }
+			72 = {
+            	add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 1 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
+			add_to_variable = { ABY_industry_progress_var = 1 }
+			72 = {
+				add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 2 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
+			add_to_variable = { ABY_industry_progress_var = 1 }
+			72 = {
+				add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 3 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
+			add_to_variable = { ABY_industry_progress_var = 1 }
+			72 = {
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_develop
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 4 }
+			}
+			72 = {
+				add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	central_map_calculate_frame = yes
+}
+ABY_72_unite_effect = {
+	hidden_effect = {
+		set_variable = { ABY_selected_state = 72 }
+		if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_unite_var = 0 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_unite_var = 1 }
+			add_to_variable = { ABY_unite_progress_var = 1 }
+			72 = {
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_unite_1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_unite_var = 1 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_unite_var = 1 }
+			add_to_variable = { ABY_unite_progress_var = 1 }
+			72 = {
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_unite_1
+				}
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_unite_2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_unite_var = 2 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_unite_var = 1 }
+			add_to_variable = { ABY_unite_progress_var = 1 }
+			add_to_variable = {ABY_var_political_power_factor = 0.025}
+			add_to_variable = {ABY_var_stability_factor = 0.025}
+			add_to_variable = {ABY_var_war_support_factor = 0.025}
+			add_to_variable = {ABY_var_surrender_limit = 0.05}
+			add_to_variable = {ABY_var_drift_defence_factor = 0.1}
+			add_to_variable = {ABY_var_compliance_gain = 0.01}
+			add_to_variable = {ABY_var_resistance_target_on_our_occupied_states = 0.1}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_unite_var = 3 }
+			}
+			72 = {
+				add_manpower = 50000
+			}
+		}
+	}
+	central_map_calculate_frame = yes
+}
+ABY_72_rebuild_effect = {
+	hidden_effect = {
+		set_variable = { ABY_selected_state = 72 }
+		if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_rebuild_var = 0 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
+			add_to_variable = { ABY_rebuild_progress_var = 1 }
+			72 = {
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_1
+				}
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
+			add_to_variable = { ABY_rebuild_progress_var = 1 }
+			72 = {
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_rebuild_var = 2 }
+			}
+		}
+	}
+	central_map_calculate_frame = yes
+}
+ABY_75_develop_effect = {
+	hidden_effect = {
+		set_variable = { ABY_selected_state = 75 }
+		if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 0 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
+			add_to_variable = { ABY_industry_progress_var = 1 }
+			75 = {
+            	add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 1 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
+			add_to_variable = { ABY_industry_progress_var = 1 }
+			75 = {
+				add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 2 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
+			add_to_variable = { ABY_industry_progress_var = 1 }
+			75 = {
+				add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 3 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
+			add_to_variable = { ABY_industry_progress_var = 1 }
+			75 = {
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_develop
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 4 }
+			}
+			75 = {
+				add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	central_map_calculate_frame = yes
+}
+ABY_75_unite_effect = {
+	hidden_effect = {
+		set_variable = { ABY_selected_state = 75 }
+		if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_unite_var = 0 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_unite_var = 1 }
+			add_to_variable = { ABY_unite_progress_var = 1 }
+			75 = {
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_unite_1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_unite_var = 1 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_unite_var = 1 }
+			add_to_variable = { ABY_unite_progress_var = 1 }
+			75 = {
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_unite_1
+				}
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_unite_2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_unite_var = 2 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_unite_var = 1 }
+			add_to_variable = { ABY_unite_progress_var = 1 }
+			add_to_variable = {ABY_var_political_power_factor = 0.025}
+			add_to_variable = {ABY_var_stability_factor = 0.025}
+			add_to_variable = {ABY_var_war_support_factor = 0.025}
+			add_to_variable = {ABY_var_surrender_limit = 0.05}
+			add_to_variable = {ABY_var_drift_defence_factor = 0.1}
+			add_to_variable = {ABY_var_compliance_gain = 0.01}
+			add_to_variable = {ABY_var_resistance_target_on_our_occupied_states = 0.1}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_unite_var = 3 }
+			}
+			75 = {
+				add_manpower = 50000
+			}
+		}
+	}
+	central_map_calculate_frame = yes
+}
+ABY_75_rebuild_effect = {
+	hidden_effect = {
+		set_variable = { ABY_selected_state = 75 }
+		if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_rebuild_var = 0 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
+			add_to_variable = { ABY_rebuild_progress_var = 1 }
+			75 = {
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_1
+				}
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
+			add_to_variable = { ABY_rebuild_progress_var = 1 }
+			75 = {
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_rebuild_var = 2 }
+			}
+		}
+	}
+	central_map_calculate_frame = yes
+}
+ABY_972_develop_effect = {
+	hidden_effect = {
+		set_variable = { ABY_selected_state = 972 }
+		if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 0 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
+			add_to_variable = { ABY_industry_progress_var = 1 }
+			972 = {
+            	add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 1 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
+			add_to_variable = { ABY_industry_progress_var = 1 }
+			972 = {
+				add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 2 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
+			add_to_variable = { ABY_industry_progress_var = 1 }
+			972 = {
+				add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 3 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
+			add_to_variable = { ABY_industry_progress_var = 1 }
+			972 = {
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_develop
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 4 }
+			}
+			972 = {
+				add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	central_map_calculate_frame = yes
+}
+ABY_972_unite_effect = {
+	hidden_effect = {
+		set_variable = { ABY_selected_state = 972 }
+		if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_unite_var = 0 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_unite_var = 1 }
+			add_to_variable = { ABY_unite_progress_var = 1 }
+			972 = {
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_unite_1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_unite_var = 1 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_unite_var = 1 }
+			add_to_variable = { ABY_unite_progress_var = 1 }
+			972 = {
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_unite_1
+				}
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_unite_2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_unite_var = 2 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_unite_var = 1 }
+			add_to_variable = { ABY_unite_progress_var = 1 }
+			add_to_variable = {ABY_var_political_power_factor = 0.025}
+			add_to_variable = {ABY_var_stability_factor = 0.025}
+			add_to_variable = {ABY_var_war_support_factor = 0.025}
+			add_to_variable = {ABY_var_surrender_limit = 0.05}
+			add_to_variable = {ABY_var_drift_defence_factor = 0.1}
+			add_to_variable = {ABY_var_compliance_gain = 0.01}
+			add_to_variable = {ABY_var_resistance_target_on_our_occupied_states = 0.1}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_unite_var = 3 }
+			}
+			972 = {
+				add_manpower = 50000
+			}
+		}
+	}
+	central_map_calculate_frame = yes
+}
+ABY_972_rebuild_effect = {
+	hidden_effect = {
+		set_variable = { ABY_selected_state = 972 }
+		if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_rebuild_var = 0 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
+			add_to_variable = { ABY_rebuild_progress_var = 1 }
+			972 = {
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_1
+				}
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
+			add_to_variable = { ABY_rebuild_progress_var = 1 }
+			972 = {
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_rebuild_var = 2 }
+			}
+		}
+	}
+	central_map_calculate_frame = yes
+}
+ABY_986_develop_effect = {
+	hidden_effect = {
+		set_variable = { ABY_selected_state = 986 }
+		if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 0 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
+			add_to_variable = { ABY_industry_progress_var = 1 }
+			986 = {
+            	add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 1 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
+			add_to_variable = { ABY_industry_progress_var = 1 }
+			986 = {
+				add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 2 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
+			add_to_variable = { ABY_industry_progress_var = 1 }
+			986 = {
+				add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 3 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
+			add_to_variable = { ABY_industry_progress_var = 1 }
+			986 = {
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_develop
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 4 }
+			}
+			986 = {
+				add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	central_map_calculate_frame = yes
+}
+ABY_986_unite_effect = {
+	hidden_effect = {
+		set_variable = { ABY_selected_state = 986 }
+		if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_unite_var = 0 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_unite_var = 1 }
+			add_to_variable = { ABY_unite_progress_var = 1 }
+			986 = {
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_unite_1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_unite_var = 1 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_unite_var = 1 }
+			add_to_variable = { ABY_unite_progress_var = 1 }
+			986 = {
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_unite_1
+				}
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_unite_2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_unite_var = 2 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_unite_var = 1 }
+			add_to_variable = { ABY_unite_progress_var = 1 }
+			add_to_variable = {ABY_var_political_power_factor = 0.025}
+			add_to_variable = {ABY_var_stability_factor = 0.025}
+			add_to_variable = {ABY_var_war_support_factor = 0.025}
+			add_to_variable = {ABY_var_surrender_limit = 0.05}
+			add_to_variable = {ABY_var_drift_defence_factor = 0.1}
+			add_to_variable = {ABY_var_compliance_gain = 0.01}
+			add_to_variable = {ABY_var_resistance_target_on_our_occupied_states = 0.1}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_unite_var = 3 }
+			}
+			986 = {
+				add_manpower = 50000
+			}
+		}
+	}
+	central_map_calculate_frame = yes
+}
+ABY_986_rebuild_effect = {
+	hidden_effect = {
+		set_variable = { ABY_selected_state = 986 }
+		if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_rebuild_var = 0 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
+			add_to_variable = { ABY_rebuild_progress_var = 1 }
+			986 = {
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_1
+				}
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
+			add_to_variable = { ABY_rebuild_progress_var = 1 }
+			986 = {
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_rebuild_var = 2 }
+			}
+		}
+	}
+	central_map_calculate_frame = yes
+}
+ABY_975_develop_effect = {
+	hidden_effect = {
+		set_variable = { ABY_selected_state = 975 }
+		if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 0 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
+			add_to_variable = { ABY_industry_progress_var = 1 }
+			975 = {
+            	add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 1 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
+			add_to_variable = { ABY_industry_progress_var = 1 }
+			975 = {
+				add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 2 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
+			add_to_variable = { ABY_industry_progress_var = 1 }
+			975 = {
+				add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 3 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
+			add_to_variable = { ABY_industry_progress_var = 1 }
+			975 = {
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_develop
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 4 }
+			}
+			975 = {
+				add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	central_map_calculate_frame = yes
+}
+ABY_975_unite_effect = {
+	hidden_effect = {
+		set_variable = { ABY_selected_state = 975 }
+		if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_unite_var = 0 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_unite_var = 1 }
+			add_to_variable = { ABY_unite_progress_var = 1 }
+			975 = {
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_unite_1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_unite_var = 1 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_unite_var = 1 }
+			add_to_variable = { ABY_unite_progress_var = 1 }
+			975 = {
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_unite_1
+				}
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_unite_2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_unite_var = 2 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_unite_var = 1 }
+			add_to_variable = { ABY_unite_progress_var = 1 }
+			add_to_variable = {ABY_var_political_power_factor = 0.025}
+			add_to_variable = {ABY_var_stability_factor = 0.025}
+			add_to_variable = {ABY_var_war_support_factor = 0.025}
+			add_to_variable = {ABY_var_surrender_limit = 0.05}
+			add_to_variable = {ABY_var_drift_defence_factor = 0.1}
+			add_to_variable = {ABY_var_compliance_gain = 0.01}
+			add_to_variable = {ABY_var_resistance_target_on_our_occupied_states = 0.1}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_unite_var = 3 }
+			}
+			975 = {
+				add_manpower = 50000
+			}
+		}
+	}
+	central_map_calculate_frame = yes
+}
+ABY_975_rebuild_effect = {
+	hidden_effect = {
+		set_variable = { ABY_selected_state = 975 }
+		if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_rebuild_var = 0 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
+			add_to_variable = { ABY_rebuild_progress_var = 1 }
+			975 = {
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_1
+				}
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
+			add_to_variable = { ABY_rebuild_progress_var = 1 }
+			975 = {
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_rebuild_var = 2 }
+			}
+		}
+	}
+	central_map_calculate_frame = yes
+}
+ABY_4_develop_effect = {
+	hidden_effect = {
+		set_variable = { ABY_selected_state = 4 }
+		if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 0 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
+			add_to_variable = { ABY_industry_progress_var = 1 }
+			4 = {
+            	add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 1 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
+			add_to_variable = { ABY_industry_progress_var = 1 }
+			4 = {
+				add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 2 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
+			add_to_variable = { ABY_industry_progress_var = 1 }
+			4 = {
+				add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 3 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
+			add_to_variable = { ABY_industry_progress_var = 1 }
+			4 = {
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_develop
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 4 }
+			}
+			4 = {
+				add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	central_map_calculate_frame = yes
+}
+ABY_4_unite_effect = {
+	hidden_effect = {
+		set_variable = { ABY_selected_state = 4 }
+		if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_unite_var = 0 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_unite_var = 1 }
+			add_to_variable = { ABY_unite_progress_var = 1 }
+			4 = {
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_unite_1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_unite_var = 1 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_unite_var = 1 }
+			add_to_variable = { ABY_unite_progress_var = 1 }
+			4 = {
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_unite_1
+				}
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_unite_2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_unite_var = 2 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_unite_var = 1 }
+			add_to_variable = { ABY_unite_progress_var = 1 }
+			add_to_variable = {ABY_var_political_power_factor = 0.025}
+			add_to_variable = {ABY_var_stability_factor = 0.025}
+			add_to_variable = {ABY_var_war_support_factor = 0.025}
+			add_to_variable = {ABY_var_surrender_limit = 0.05}
+			add_to_variable = {ABY_var_drift_defence_factor = 0.1}
+			add_to_variable = {ABY_var_compliance_gain = 0.01}
+			add_to_variable = {ABY_var_resistance_target_on_our_occupied_states = 0.1}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_unite_var = 3 }
+			}
+			4 = {
+				add_manpower = 50000
+			}
+		}
+	}
+	central_map_calculate_frame = yes
+}
+ABY_4_rebuild_effect = {
+	hidden_effect = {
+		set_variable = { ABY_selected_state = 4 }
+		if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_rebuild_var = 0 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
+			add_to_variable = { ABY_rebuild_progress_var = 1 }
+			4 = {
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_1
+				}
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
+			add_to_variable = { ABY_rebuild_progress_var = 1 }
+			4 = {
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_rebuild_var = 2 }
+			}
+		}
+	}
+	central_map_calculate_frame = yes
+}
+ABY_976_develop_effect = {
+	hidden_effect = {
+		set_variable = { ABY_selected_state = 976 }
+		if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 0 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
+			add_to_variable = { ABY_industry_progress_var = 1 }
+			976 = {
+            	add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 1 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
+			add_to_variable = { ABY_industry_progress_var = 1 }
+			976 = {
+				add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 2 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
+			add_to_variable = { ABY_industry_progress_var = 1 }
+			976 = {
+				add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 3 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
+			add_to_variable = { ABY_industry_progress_var = 1 }
+			976 = {
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_develop
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 4 }
+			}
+			976 = {
+				add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	central_map_calculate_frame = yes
+}
+ABY_976_unite_effect = {
+	hidden_effect = {
+		set_variable = { ABY_selected_state = 976 }
+		if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_unite_var = 0 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_unite_var = 1 }
+			add_to_variable = { ABY_unite_progress_var = 1 }
+			976 = {
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_unite_1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_unite_var = 1 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_unite_var = 1 }
+			add_to_variable = { ABY_unite_progress_var = 1 }
+			976 = {
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_unite_1
+				}
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_unite_2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_unite_var = 2 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_unite_var = 1 }
+			add_to_variable = { ABY_unite_progress_var = 1 }
+			add_to_variable = {ABY_var_political_power_factor = 0.025}
+			add_to_variable = {ABY_var_stability_factor = 0.025}
+			add_to_variable = {ABY_var_war_support_factor = 0.025}
+			add_to_variable = {ABY_var_surrender_limit = 0.05}
+			add_to_variable = {ABY_var_drift_defence_factor = 0.1}
+			add_to_variable = {ABY_var_compliance_gain = 0.01}
+			add_to_variable = {ABY_var_resistance_target_on_our_occupied_states = 0.1}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_unite_var = 3 }
+			}
+			976 = {
+				add_manpower = 50000
+			}
+		}
+	}
+	central_map_calculate_frame = yes
+}
+ABY_976_rebuild_effect = {
+	hidden_effect = {
+		set_variable = { ABY_selected_state = 976 }
+		if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_rebuild_var = 0 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
+			add_to_variable = { ABY_rebuild_progress_var = 1 }
+			976 = {
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_1
+				}
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
+			add_to_variable = { ABY_rebuild_progress_var = 1 }
+			976 = {
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_rebuild_var = 2 }
+			}
+		}
+	}
+	central_map_calculate_frame = yes
+}
+ABY_152_develop_effect = {
+	hidden_effect = {
+		set_variable = { ABY_selected_state = 152 }
+		if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 0 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
+			add_to_variable = { ABY_industry_progress_var = 1 }
+			152 = {
+            	add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 1 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
+			add_to_variable = { ABY_industry_progress_var = 1 }
+			152 = {
+				add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 2 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
+			add_to_variable = { ABY_industry_progress_var = 1 }
+			152 = {
+				add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 3 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
+			add_to_variable = { ABY_industry_progress_var = 1 }
+			152 = {
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_develop
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 4 }
+			}
+			152 = {
+				add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	central_map_calculate_frame = yes
+}
+ABY_152_unite_effect = {
+	hidden_effect = {
+		set_variable = { ABY_selected_state = 152 }
+		if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_unite_var = 0 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_unite_var = 1 }
+			add_to_variable = { ABY_unite_progress_var = 1 }
+			152 = {
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_unite_1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_unite_var = 1 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_unite_var = 1 }
+			add_to_variable = { ABY_unite_progress_var = 1 }
+			152 = {
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_unite_1
+				}
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_unite_2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_unite_var = 2 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_unite_var = 1 }
+			add_to_variable = { ABY_unite_progress_var = 1 }
+			add_to_variable = {ABY_var_political_power_factor = 0.025}
+			add_to_variable = {ABY_var_stability_factor = 0.025}
+			add_to_variable = {ABY_var_war_support_factor = 0.025}
+			add_to_variable = {ABY_var_surrender_limit = 0.05}
+			add_to_variable = {ABY_var_drift_defence_factor = 0.1}
+			add_to_variable = {ABY_var_compliance_gain = 0.01}
+			add_to_variable = {ABY_var_resistance_target_on_our_occupied_states = 0.1}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_unite_var = 3 }
+			}
+			152 = {
+				add_manpower = 50000
+			}
+		}
+	}
+	central_map_calculate_frame = yes
+}
+ABY_152_rebuild_effect = {
+	hidden_effect = {
+		set_variable = { ABY_selected_state = 152 }
+		if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_rebuild_var = 0 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
+			add_to_variable = { ABY_rebuild_progress_var = 1 }
+			152 = {
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_1
+				}
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
+			add_to_variable = { ABY_rebuild_progress_var = 1 }
+			152 = {
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_rebuild_var = 2 }
+			}
+		}
+	}
+	central_map_calculate_frame = yes
+}
+ABY_153_develop_effect = {
+	hidden_effect = {
+		set_variable = { ABY_selected_state = 153 }
+		if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 0 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
+			add_to_variable = { ABY_industry_progress_var = 1 }
+			153 = {
+            	add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 1 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
+			add_to_variable = { ABY_industry_progress_var = 1 }
+			153 = {
+				add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 2 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
+			add_to_variable = { ABY_industry_progress_var = 1 }
+			153 = {
+				add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 3 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
+			add_to_variable = { ABY_industry_progress_var = 1 }
+			153 = {
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_develop
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 4 }
+			}
+			153 = {
+				add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	central_map_calculate_frame = yes
+}
+ABY_153_unite_effect = {
+	hidden_effect = {
+		set_variable = { ABY_selected_state = 153 }
+		if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_unite_var = 0 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_unite_var = 1 }
+			add_to_variable = { ABY_unite_progress_var = 1 }
+			153 = {
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_unite_1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_unite_var = 1 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_unite_var = 1 }
+			add_to_variable = { ABY_unite_progress_var = 1 }
+			153 = {
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_unite_1
+				}
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_unite_2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_unite_var = 2 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_unite_var = 1 }
+			add_to_variable = { ABY_unite_progress_var = 1 }
+			add_to_variable = {ABY_var_political_power_factor = 0.025}
+			add_to_variable = {ABY_var_stability_factor = 0.025}
+			add_to_variable = {ABY_var_war_support_factor = 0.025}
+			add_to_variable = {ABY_var_surrender_limit = 0.05}
+			add_to_variable = {ABY_var_drift_defence_factor = 0.1}
+			add_to_variable = {ABY_var_compliance_gain = 0.01}
+			add_to_variable = {ABY_var_resistance_target_on_our_occupied_states = 0.1}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_unite_var = 3 }
+			}
+			153 = {
+				add_manpower = 50000
+			}
+		}
+	}
+	central_map_calculate_frame = yes
+}
+ABY_153_rebuild_effect = {
+	hidden_effect = {
+		set_variable = { ABY_selected_state = 153 }
+		if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_rebuild_var = 0 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
+			add_to_variable = { ABY_rebuild_progress_var = 1 }
+			153 = {
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_1
+				}
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
+			add_to_variable = { ABY_rebuild_progress_var = 1 }
+			153 = {
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_rebuild_var = 2 }
+			}
+		}
+	}
+	central_map_calculate_frame = yes
+}
+ABY_848_develop_effect = {
+	hidden_effect = {
+		set_variable = { ABY_selected_state = 848 }
+		if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 0 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
+			add_to_variable = { ABY_industry_progress_var = 1 }
+			848 = {
+            	add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 1 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
+			add_to_variable = { ABY_industry_progress_var = 1 }
+			848 = {
+				add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 2 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
+			add_to_variable = { ABY_industry_progress_var = 1 }
+			848 = {
+				add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 3 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
+			add_to_variable = { ABY_industry_progress_var = 1 }
+			848 = {
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_develop
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_central_var = 4 }
+			}
+			848 = {
+				add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	central_map_calculate_frame = yes
+}
+ABY_848_unite_effect = {
+	hidden_effect = {
+		set_variable = { ABY_selected_state = 848 }
+		if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_unite_var = 0 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_unite_var = 1 }
+			add_to_variable = { ABY_unite_progress_var = 1 }
+			848 = {
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_unite_1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_unite_var = 1 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_unite_var = 1 }
+			add_to_variable = { ABY_unite_progress_var = 1 }
+			848 = {
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_unite_1
+				}
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_unite_2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_unite_var = 2 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_unite_var = 1 }
+			add_to_variable = { ABY_unite_progress_var = 1 }
+			add_to_variable = {ABY_var_political_power_factor = 0.025}
+			add_to_variable = {ABY_var_stability_factor = 0.025}
+			add_to_variable = {ABY_var_war_support_factor = 0.025}
+			add_to_variable = {ABY_var_surrender_limit = 0.05}
+			add_to_variable = {ABY_var_drift_defence_factor = 0.1}
+			add_to_variable = {ABY_var_compliance_gain = 0.01}
+			add_to_variable = {ABY_var_resistance_target_on_our_occupied_states = 0.1}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_unite_var = 3 }
+			}
+			848 = {
+				add_manpower = 50000
+			}
+		}
+	}
+	central_map_calculate_frame = yes
+}
+ABY_848_rebuild_effect = {
+	hidden_effect = {
+		set_variable = { ABY_selected_state = 848 }
+		if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_rebuild_var = 0 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
+			add_to_variable = { ABY_rebuild_progress_var = 1 }
+			848 = {
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_1
+				}
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
+			}
+			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
+			add_to_variable = { ABY_rebuild_progress_var = 1 }
+			848 = {
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ABY_selected_state:ABY_rebuild_var = 2 }
+			}
+		}
+	}
+	central_map_calculate_frame = yes
+}
 central_map_calculate_frame = {
 	for_each_loop = {
 		array = ABY_rework_map_array
 		var:v = {
 			if = {
 				limit = {
-					has_state_flag = ABY_flag_develop
-					check_variable = { ABY_central_var = 0 }
+					AND = {
+						has_state_flag = ABY_flag_develop
+						check_variable = { ABY_central_var = 0 }
+					}
 				}
 
 				set_variable = { controlling_faction = 3 }
@@ -152,8 +2338,10 @@ central_map_calculate_frame = {
 			}
 			else_if = {
 				limit = {
-					has_state_flag = ABY_flag_develop
-					check_variable = { ABY_central_var = 1 }
+					AND = {
+						has_state_flag = ABY_flag_develop
+						check_variable = { ABY_central_var = 1 }
+					}
 				}
 
 				set_variable = { controlling_faction = 4 }
@@ -164,8 +2352,10 @@ central_map_calculate_frame = {
 			}
 			else_if = {
 				limit = {
-					has_state_flag = ABY_flag_develop
-					check_variable = { ABY_central_var = 2 }
+					AND = {
+						has_state_flag = ABY_flag_develop
+						check_variable = { ABY_central_var = 2 }
+					}
 				}
 
 				set_variable = { controlling_faction = 5 }
@@ -176,8 +2366,10 @@ central_map_calculate_frame = {
 			}
 			else_if = {
 				limit = {
-					has_state_flag = ABY_flag_develop
-					check_variable = { ABY_central_var = 3 }
+					AND = {
+						has_state_flag = ABY_flag_develop
+						check_variable = { ABY_central_var = 3 }
+					}
 				}
 
 				set_variable = { controlling_faction = 6 }
@@ -187,8 +2379,10 @@ central_map_calculate_frame = {
 			}
 			else_if = {
 				limit = {
-					has_state_flag = ABY_flag_develop
-					check_variable = { ABY_central_var = 4 }
+					AND = {
+						has_state_flag = ABY_flag_develop
+						check_variable = { ABY_central_var = 4 }
+					}
 				}
 
 				set_variable = { controlling_faction = 7 }
@@ -199,8 +2393,10 @@ central_map_calculate_frame = {
 			
 			else_if = {
 				limit = {
-					has_state_flag = ABY_flag_unite
-					check_variable = { ABY_unite_var = 0 }
+					AND = {
+						has_state_flag = ABY_flag_unite
+						check_variable = { ABY_unite_var = 0 }
+					}
 				}
 
 				set_variable = { controlling_faction = 3 }
@@ -211,8 +2407,10 @@ central_map_calculate_frame = {
 			}
 			else_if = {
 				limit = {
-					has_state_flag = ABY_flag_unite
-					check_variable = { ABY_unite_var = 1 }
+					AND = {
+						has_state_flag = ABY_flag_unite
+						check_variable = { ABY_unite_var = 1 }
+					}
 				}
 
 				set_variable = { controlling_faction = 4 }
@@ -223,8 +2421,10 @@ central_map_calculate_frame = {
 			}
 			else_if = {
 				limit = {
-					has_state_flag = ABY_flag_unite
-					check_variable = { ABY_unite_var = 2 }
+					AND = {
+						has_state_flag = ABY_flag_unite
+						check_variable = { ABY_unite_var = 2 }
+					}
 				}
 
 				set_variable = { controlling_faction = 5 }
@@ -235,8 +2435,10 @@ central_map_calculate_frame = {
 			}
 			else_if = {
 				limit = {
-					has_state_flag = ABY_flag_unite
-					check_variable = { ABY_unite_var = 3 }
+					AND = {
+						has_state_flag = ABY_flag_unite
+						check_variable = { ABY_unite_var = 3 }
+					}
 				}
 
 				set_variable = { controlling_faction = 6 }
@@ -247,8 +2449,10 @@ central_map_calculate_frame = {
 			
 			else_if = {
 				limit = {
-					has_state_flag = ABY_flag_rebuild
-					check_variable = { ABY_rebuild_var = 0 }
+					AND = {
+						has_state_flag = ABY_flag_rebuild
+						check_variable = { ABY_rebuild_var = 0 }
+					}
 				}
 
 				set_variable = { controlling_faction = 3 }
@@ -259,8 +2463,10 @@ central_map_calculate_frame = {
 			}
 			else_if = {
 				limit = {
-					has_state_flag = ABY_flag_rebuild
-					check_variable = { ABY_rebuild_var = 1 }
+					AND = {
+						has_state_flag = ABY_flag_rebuild
+						check_variable = { ABY_rebuild_var = 1 }
+					}
 				}
 
 				set_variable = { controlling_faction = 4 }
@@ -271,8 +2477,10 @@ central_map_calculate_frame = {
 			}
 			else_if = {
 				limit = {
-					has_state_flag = ABY_flag_rebuild
-					check_variable = { ABY_rebuild_var = 2 }
+					AND = {
+						has_state_flag = ABY_flag_rebuild
+						check_variable = { ABY_rebuild_var = 2 }
+					}
 				}
 
 				set_variable = { controlling_faction = 5 }
@@ -287,7 +2495,7 @@ central_map_calculate_frame = {
 					ABY = {
 						OR = {
 							AND = {
-								check_variable = { v = 797 }
+								check_variable = { v = 69 }
 								NOT = {
 									69 = {
 										is_controlled_by = ABY
@@ -295,7 +2503,7 @@ central_map_calculate_frame = {
 								}
 							}
 							AND = {
-								check_variable = { v = 339 }
+								check_variable = { v = 9 }
 								NOT = {
 									9 = {
 										is_controlled_by = ABY
@@ -303,7 +2511,7 @@ central_map_calculate_frame = {
 								}
 							}
 							AND = {
-								check_variable = { v = 347 }
+								check_variable = { v = 74 }
 								NOT = {
 									74 = {
 										is_controlled_by = ABY
@@ -311,7 +2519,7 @@ central_map_calculate_frame = {
 								}
 							}
 							AND = {
-								check_variable = { v = 49 }
+								check_variable = { v = 72 }
 								NOT = {
 									72 = {
 										is_controlled_by = ABY
@@ -319,7 +2527,7 @@ central_map_calculate_frame = {
 								}
 							}
 							AND = {
-								check_variable = { v = 342 }
+								check_variable = { v = 75 }
 								NOT = {
 									75 = {
 										is_controlled_by = ABY
@@ -327,7 +2535,7 @@ central_map_calculate_frame = {
 								}
 							}
 							AND = {
-								check_variable = { v = 344 }
+								check_variable = { v = 972 }
 								NOT = {
 									972 = {
 										is_controlled_by = ABY
@@ -335,7 +2543,7 @@ central_map_calculate_frame = {
 								}
 							}
 							AND = {
-								check_variable = { v = 353 }
+								check_variable = { v = 986 }
 								NOT = {
 									986 = {
 										is_controlled_by = ABY
@@ -343,7 +2551,7 @@ central_map_calculate_frame = {
 								}
 							}
 							AND = {
-								check_variable = { v = 680 }
+								check_variable = { v = 975 }
 								NOT = {
 									975 = {
 										is_controlled_by = ABY
@@ -351,7 +2559,7 @@ central_map_calculate_frame = {
 								}
 							}
 							AND = {
-								check_variable = { v = 454 }
+								check_variable = { v = 4 }
 								NOT = {
 									4 = {
 										is_controlled_by = ABY
@@ -359,7 +2567,7 @@ central_map_calculate_frame = {
 								}
 							}
 							AND = {
-								check_variable = { v = 291 }
+								check_variable = { v = 976 }
 								NOT = {
 									976 = {
 										is_controlled_by = ABY
@@ -367,7 +2575,7 @@ central_map_calculate_frame = {
 								}
 							}
 							AND = {
-								check_variable = { v = 855 }
+								check_variable = { v = 152 }
 								NOT = {
 									152 = {
 										is_controlled_by = ABY
@@ -375,7 +2583,7 @@ central_map_calculate_frame = {
 								}
 							}
 							AND = {
-								check_variable = { v = 273 }
+								check_variable = { v = 153 }
 								NOT = {
 									153 = {
 										is_controlled_by = ABY
@@ -383,7 +2591,7 @@ central_map_calculate_frame = {
 								}
 							}
 							AND = {
-								check_variable = { v = 936 }
+								check_variable = { v = 848 }
 								NOT = {
 									848 = {
 										is_controlled_by = ABY

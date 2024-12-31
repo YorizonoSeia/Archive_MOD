@@ -436,7 +436,6 @@ characters={
 			can_be_fired = no
 			available = {
 				NOT = { has_idea = Venes }
-				NOT = { has_idea = Gottwald }
 			}
 			allowed  = {
 				original_tag  = ABY
@@ -583,8 +582,8 @@ characters={
 
 
 
- 	ABY_czech_KG={
-		name=ABY_czech_KG
+ 	ABY_czech_SKN={
+		name=ABY_czech_SKN
 		portraits={
 			army={
 				small = GFX_portrait_CZE_klement_gottwald_small
@@ -595,7 +594,7 @@ characters={
 		}
 		advisor={
 			slot = political_advisor
-			idea_token = Gottwald
+			idea_token = stanislav
 			available = {
 			}
 			allowed  = {
@@ -612,8 +611,8 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=stalinism
-			traits={ ABY_trait_communist }
+			ideology=syndicalism
+			traits={ ABY_trait_anarcho_communist }
 			expire="1965.1.1.1"
 		}
 	} #"클레멘트 고트발트"
@@ -1283,23 +1282,47 @@ characters={
 				small="gfx/interface/advisors/ABY/ABY_not_made_idea.tga"
 			}
 		}
-		country_leader={
-			ideology=nazism
-			traits={  }
-			expire="1965.1.1.1"
-		}
 		advisor={
 			slot = political_advisor
 			idea_token = german
 			can_be_fired = no
 			available = {
-				NOT = { has_country_flag = ABY_flag_with_czech }
+				NOT = { has_idea = henrein }
 			}
 			allowed  = {
 				original_tag  = ABY
 			}
 			traits  = {
 				ABY_trait_sudety_council
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
+	} #"주데텐 위원회"
+ 	ABY_german_CH={
+		name=ABY_german_CH
+		portraits={
+			civilian={
+				large="gfx/leaders/ABY/xd.tga"
+			}
+			army={
+				large= "gfx/leaders/ABY/xd.tga"
+				small="gfx/interface/advisors/ABY/ABY_not_made_idea.tga"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = henrein
+			can_be_fired = no
+			available = {
+				NOT = { has_idea = german }
+			}
+			allowed  = {
+				original_tag  = ABY
+			}
+			traits  = {
+				ABY_trait_sudeten_nationalist
 			}
 			ai_will_do  = {
 				factor  = 1.000
@@ -1397,8 +1420,8 @@ characters={
 			}
 		} #"수데티 임시정부"
 		country_leader={
-			ideology=Government_Federalism
-			traits={ ABY_trait_hard_government }
+			ideology=Cohabitism
+			traits={  }
 			expire="1965.1.1.1"
 		}
  	}
@@ -1552,7 +1575,7 @@ characters={
 			}
 		} #카를 헤르만 프랑크"
 		country_leader={
-			ideology=pater_nazism
+			ideology=nazism
 			traits={ ABY_trait_brutal_2 }
 			expire="1965.1.1.1"
 		}

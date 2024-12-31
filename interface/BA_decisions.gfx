@@ -576,85 +576,85 @@ spriteTypes = {
 
 	#아비도스 엔네아드#
 	spriteType = {
-		name = "GFX_ABY_central_state_selected_797"
+		name = "GFX_ABY_central_state_selected_69"
 		textureFile = "gfx/interface/decisions/aby_descision_gui/export202412161405461175_small.tga"
 		transparencecheck = yes
 		noofframes = 2
 	}
 	spriteType = {
-		name = "GFX_ABY_central_state_selected_339"
+		name = "GFX_ABY_central_state_selected_9"
 		textureFile = "gfx/interface/decisions/aby_descision_gui/export202412161405561924_small.tga"
 		transparencecheck = yes
 		noofframes = 2
 	}
 	spriteType = {
-		name = "GFX_ABY_central_state_selected_347"
+		name = "GFX_ABY_central_state_selected_74"
 		textureFile = "gfx/interface/decisions/aby_descision_gui/export202412161406238360_small.tga"
 		transparencecheck = yes
 		noofframes = 2
 	}
 	spriteType = {
-		name = "GFX_ABY_central_state_selected_49"
+		name = "GFX_ABY_central_state_selected_72"
 		textureFile = "gfx/interface/decisions/aby_descision_gui/export202412161406354145_small.tga"
 		transparencecheck = yes
 		noofframes = 2
 	}
 	spriteType = {
-		name = "GFX_ABY_central_state_selected_342"
+		name = "GFX_ABY_central_state_selected_75"
 		textureFile = "gfx/interface/decisions/aby_descision_gui/export202412161406505499_small.tga"
 		transparencecheck = yes
 		noofframes = 2
 	}
 	spriteType = {
-		name = "GFX_ABY_central_state_selected_344"
+		name = "GFX_ABY_central_state_selected_972"
 		textureFile = "gfx/interface/decisions/aby_descision_gui/export202412161406599463_small.tga"
 		transparencecheck = yes
 		noofframes = 2
 	}
 	spriteType = {
-		name = "GFX_ABY_central_state_selected_353"
+		name = "GFX_ABY_central_state_selected_986"
 		textureFile = "gfx/interface/decisions/aby_descision_gui/export202412161407100481_small.tga"
 		transparencecheck = yes
 		noofframes = 2
 	}
 	spriteType = {
-		name = "GFX_ABY_central_state_selected_680"
+		name = "GFX_ABY_central_state_selected_975"
 		textureFile = "gfx/interface/decisions/aby_descision_gui/export202412161407196344_small.tga"
 		transparencecheck = yes
 		noofframes = 2
 	}
 	spriteType = {
-		name = "GFX_ABY_central_state_selected_454"
+		name = "GFX_ABY_central_state_selected_4"
 		textureFile = "gfx/interface/decisions/aby_descision_gui/export202412161407292286_small.tga"
 		transparencecheck = yes
 		noofframes = 2
 	}
 	spriteType = {
-		name = "GFX_ABY_central_state_selected_291"
+		name = "GFX_ABY_central_state_selected_976"
 		textureFile = "gfx/interface/decisions/aby_descision_gui/export202412161407395987_small.tga"
 		transparencecheck = yes
 		noofframes = 2
 	}
 	spriteType = {
-		name = "GFX_ABY_central_state_selected_855"
+		name = "GFX_ABY_central_state_selected_152"
 		textureFile = "gfx/interface/decisions/aby_descision_gui/export202412161407490287_small.tga"
 		transparencecheck = yes
 		noofframes = 2
 	}
 	spriteType = {
-		name = "GFX_ABY_central_state_selected_273"
+		name = "GFX_ABY_central_state_selected_153"
 		textureFile = "gfx/interface/decisions/aby_descision_gui/export202412161407587459_small.tga"
 		transparencecheck = yes
 		noofframes = 2
 	}
 	spriteType = {
-		name = "GFX_ABY_central_state_selected_936"
+		name = "GFX_ABY_central_state_selected_848"
 		textureFile = "gfx/interface/decisions/aby_descision_gui/export202412161408082834_small.tga"
 		transparencecheck = yes
 		noofframes = 2
 	}
 	progressbartype = {
-		name = "GFX_ABY_central_state_797"
+		name = "GFX_ABY_central_state_69"
 		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161405461175.tga"
 		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_develop.dds"
 		color = { 0.010 0.0 0.0 0.10 }
@@ -667,7 +667,7 @@ spriteTypes = {
 		steps = 10000
 	}
 	progressbartype = {
-		name = "GFX_ABY_central_state_339"
+		name = "GFX_ABY_central_state_9"
 		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161405561924.tga"
 		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_develop.dds"
 		color = { 0.010 0.0 0.0 0.10 }
@@ -680,7 +680,7 @@ spriteTypes = {
 		steps = 10000
 	}
 	progressbartype = {
-		name = "GFX_ABY_central_state_347"
+		name = "GFX_ABY_central_state_74"
 		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161406238360.tga"
 		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_develop.dds"
 		color = { 0.010 0.0 0.0 0.10 }
@@ -693,7 +693,7 @@ spriteTypes = {
 		steps = 10000
 	}
 	progressbartype = {
-		name = "GFX_ABY_central_state_49"
+		name = "GFX_ABY_central_state_72"
 		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161406354145.tga"
 		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_develop.dds"
 		color = { 0.010 0.0 0.0 0.10 }
@@ -706,7 +706,7 @@ spriteTypes = {
 		steps = 10000
 	}
 	progressbartype = {
-		name = "GFX_ABY_central_state_342"
+		name = "GFX_ABY_central_state_75"
 		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161406505499.tga"
 		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_develop.dds"
 		color = { 0.010 0.0 0.0 0.10 }
@@ -719,7 +719,7 @@ spriteTypes = {
 		steps = 10000
 	}
 	progressbartype = {
-		name = "GFX_ABY_central_state_344"
+		name = "GFX_ABY_central_state_972"
 		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161406599463.tga"
 		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_develop.dds"
 		color = { 0.010 0.0 0.0 0.10 }
@@ -732,7 +732,7 @@ spriteTypes = {
 		steps = 10000
 	}
 	progressbartype = {
-		name = "GFX_ABY_central_state_353"
+		name = "GFX_ABY_central_state_986"
 		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161407100481.tga"
 		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_develop.dds"
 		color = { 0.010 0.0 0.0 0.10 }
@@ -745,7 +745,7 @@ spriteTypes = {
 		steps = 10000
 	}
 	progressbartype = {
-		name = "GFX_ABY_central_state_680"
+		name = "GFX_ABY_central_state_975"
 		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161407196344.tga"
 		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_develop.dds"
 		color = { 0.010 0.0 0.0 0.10 }
@@ -758,7 +758,7 @@ spriteTypes = {
 		steps = 10000
 	}
 	progressbartype = {
-		name = "GFX_ABY_central_state_454"
+		name = "GFX_ABY_central_state_4"
 		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161407292286.tga"
 		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_develop.dds"
 		color = { 0.010 0.0 0.0 0.10 }
@@ -771,7 +771,7 @@ spriteTypes = {
 		steps = 10000
 	}
 	progressbartype = {
-		name = "GFX_ABY_central_state_291"
+		name = "GFX_ABY_central_state_976"
 		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161407395987.tga"
 		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_develop.dds"
 		color = { 0.010 0.0 0.0 0.10 }
@@ -784,7 +784,7 @@ spriteTypes = {
 		steps = 10000
 	}
 	progressbartype = {
-		name = "GFX_ABY_central_state_855"
+		name = "GFX_ABY_central_state_152"
 		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161407490287.tga"
 		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_develop.dds"
 		color = { 0.010 0.0 0.0 0.10 }
@@ -797,7 +797,7 @@ spriteTypes = {
 		steps = 10000
 	}
 	progressbartype = {
-		name = "GFX_ABY_central_state_273"
+		name = "GFX_ABY_central_state_153"
 		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161407587459.tga"
 		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_develop.dds"
 		color = { 0.010 0.0 0.0 0.10 }
@@ -810,7 +810,7 @@ spriteTypes = {
 		steps = 10000
 	}
 	progressbartype = {
-		name = "GFX_ABY_central_state_936"
+		name = "GFX_ABY_central_state_848"
 		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161408082834.tga"
 		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_develop.dds"
 		color = { 0.010 0.0 0.0 0.10 }
@@ -824,7 +824,7 @@ spriteTypes = {
 	}
 	
 	progressbartype = {
-		name = "GFX_ABY_unite_state_797"
+		name = "GFX_ABY_unite_state_69"
 		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161405461175.tga"
 		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_unite.dds"
 		color = { 0.010 0.0 0.0 0.10 }
@@ -837,7 +837,7 @@ spriteTypes = {
 		steps = 10000
 	}
 	progressbartype = {
-		name = "GFX_ABY_unite_state_339"
+		name = "GFX_ABY_unite_state_9"
 		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161405561924.tga"
 		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_unite.dds"
 		color = { 0.010 0.0 0.0 0.10 }
@@ -850,7 +850,7 @@ spriteTypes = {
 		steps = 10000
 	}
 	progressbartype = {
-		name = "GFX_ABY_unite_state_347"
+		name = "GFX_ABY_unite_state_74"
 		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161406238360.tga"
 		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_unite.dds"
 		color = { 0.010 0.0 0.0 0.10 }
@@ -863,7 +863,7 @@ spriteTypes = {
 		steps = 10000
 	}
 	progressbartype = {
-		name = "GFX_ABY_unite_state_49"
+		name = "GFX_ABY_unite_state_72"
 		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161406354145.tga"
 		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_unite.dds"
 		color = { 0.010 0.0 0.0 0.10 }
@@ -876,7 +876,7 @@ spriteTypes = {
 		steps = 10000
 	}
 	progressbartype = {
-		name = "GFX_ABY_unite_state_342"
+		name = "GFX_ABY_unite_state_75"
 		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161406505499.tga"
 		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_unite.dds"
 		color = { 0.010 0.0 0.0 0.10 }
@@ -889,7 +889,7 @@ spriteTypes = {
 		steps = 10000
 	}
 	progressbartype = {
-		name = "GFX_ABY_unite_state_344"
+		name = "GFX_ABY_unite_state_972"
 		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161406599463.tga"
 		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_unite.dds"
 		color = { 0.010 0.0 0.0 0.10 }
@@ -902,7 +902,7 @@ spriteTypes = {
 		steps = 10000
 	}
 	progressbartype = {
-		name = "GFX_ABY_unite_state_353"
+		name = "GFX_ABY_unite_state_986"
 		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161407100481.tga"
 		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_unite.dds"
 		color = { 0.010 0.0 0.0 0.10 }
@@ -915,7 +915,7 @@ spriteTypes = {
 		steps = 10000
 	}
 	progressbartype = {
-		name = "GFX_ABY_unite_state_680"
+		name = "GFX_ABY_unite_state_975"
 		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161407196344.tga"
 		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_unite.dds"
 		color = { 0.010 0.0 0.0 0.10 }
@@ -928,7 +928,7 @@ spriteTypes = {
 		steps = 10000
 	}
 	progressbartype = {
-		name = "GFX_ABY_unite_state_454"
+		name = "GFX_ABY_unite_state_4"
 		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161407292286.tga"
 		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_unite.dds"
 		color = { 0.010 0.0 0.0 0.10 }
@@ -941,7 +941,7 @@ spriteTypes = {
 		steps = 10000
 	}
 	progressbartype = {
-		name = "GFX_ABY_unite_state_291"
+		name = "GFX_ABY_unite_state_976"
 		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161407395987.tga"
 		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_unite.dds"
 		color = { 0.010 0.0 0.0 0.10 }
@@ -954,7 +954,7 @@ spriteTypes = {
 		steps = 10000
 	}
 	progressbartype = {
-		name = "GFX_ABY_unite_state_855"
+		name = "GFX_ABY_unite_state_152"
 		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161407490287.tga"
 		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_unite.dds"
 		color = { 0.010 0.0 0.0 0.10 }
@@ -967,7 +967,7 @@ spriteTypes = {
 		steps = 10000
 	}
 	progressbartype = {
-		name = "GFX_ABY_unite_state_273"
+		name = "GFX_ABY_unite_state_153"
 		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161407587459.tga"
 		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_unite.dds"
 		color = { 0.010 0.0 0.0 0.10 }
@@ -980,7 +980,7 @@ spriteTypes = {
 		steps = 10000
 	}
 	progressbartype = {
-		name = "GFX_ABY_unite_state_936"
+		name = "GFX_ABY_unite_state_848"
 		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161408082834.tga"
 		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_unite.dds"
 		color = { 0.010 0.0 0.0 0.10 }
@@ -994,7 +994,7 @@ spriteTypes = {
 	}
 	
 	progressbartype = {
-		name = "GFX_ABY_rebuild_state_797"
+		name = "GFX_ABY_rebuild_state_69"
 		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161405461175.tga"
 		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_rebuild.dds"
 		color = { 0.010 0.0 0.0 0.10 }
@@ -1007,7 +1007,7 @@ spriteTypes = {
 		steps = 10000
 	}
 	progressbartype = {
-		name = "GFX_ABY_rebuild_state_339"
+		name = "GFX_ABY_rebuild_state_9"
 		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161405561924.tga"
 		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_rebuild.dds"
 		color = { 0.010 0.0 0.0 0.10 }
@@ -1020,7 +1020,7 @@ spriteTypes = {
 		steps = 10000
 	}
 	progressbartype = {
-		name = "GFX_ABY_rebuild_state_347"
+		name = "GFX_ABY_rebuild_state_74"
 		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161406238360.tga"
 		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_rebuild.dds"
 		color = { 0.010 0.0 0.0 0.10 }
@@ -1033,7 +1033,7 @@ spriteTypes = {
 		steps = 10000
 	}
 	progressbartype = {
-		name = "GFX_ABY_rebuild_state_49"
+		name = "GFX_ABY_rebuild_state_72"
 		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161406354145.tga"
 		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_rebuild.dds"
 		color = { 0.010 0.0 0.0 0.10 }
@@ -1046,7 +1046,7 @@ spriteTypes = {
 		steps = 10000
 	}
 	progressbartype = {
-		name = "GFX_ABY_rebuild_state_342"
+		name = "GFX_ABY_rebuild_state_75"
 		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161406505499.tga"
 		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_rebuild.dds"
 		color = { 0.010 0.0 0.0 0.10 }
@@ -1059,7 +1059,7 @@ spriteTypes = {
 		steps = 10000
 	}
 	progressbartype = {
-		name = "GFX_ABY_rebuild_state_344"
+		name = "GFX_ABY_rebuild_state_972"
 		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161406599463.tga"
 		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_rebuild.dds"
 		color = { 0.010 0.0 0.0 0.10 }
@@ -1072,7 +1072,7 @@ spriteTypes = {
 		steps = 10000
 	}
 	progressbartype = {
-		name = "GFX_ABY_rebuild_state_353"
+		name = "GFX_ABY_rebuild_state_986"
 		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161407100481.tga"
 		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_rebuild.dds"
 		color = { 0.010 0.0 0.0 0.10 }
@@ -1085,7 +1085,7 @@ spriteTypes = {
 		steps = 10000
 	}
 	progressbartype = {
-		name = "GFX_ABY_rebuild_state_680"
+		name = "GFX_ABY_rebuild_state_975"
 		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161407196344.tga"
 		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_rebuild.dds"
 		color = { 0.010 0.0 0.0 0.10 }
@@ -1098,7 +1098,7 @@ spriteTypes = {
 		steps = 10000
 	}
 	progressbartype = {
-		name = "GFX_ABY_rebuild_state_454"
+		name = "GFX_ABY_rebuild_state_4"
 		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161407292286.tga"
 		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_rebuild.dds"
 		color = { 0.010 0.0 0.0 0.10 }
@@ -1111,7 +1111,7 @@ spriteTypes = {
 		steps = 10000
 	}
 	progressbartype = {
-		name = "GFX_ABY_rebuild_state_291"
+		name = "GFX_ABY_rebuild_state_976"
 		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161407395987.tga"
 		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_rebuild.dds"
 		color = { 0.010 0.0 0.0 0.10 }
@@ -1124,7 +1124,7 @@ spriteTypes = {
 		steps = 10000
 	}
 	progressbartype = {
-		name = "GFX_ABY_rebuild_state_855"
+		name = "GFX_ABY_rebuild_state_152"
 		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161407490287.tga"
 		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_rebuild.dds"
 		color = { 0.010 0.0 0.0 0.10 }
@@ -1137,7 +1137,7 @@ spriteTypes = {
 		steps = 10000
 	}
 	progressbartype = {
-		name = "GFX_ABY_rebuild_state_273"
+		name = "GFX_ABY_rebuild_state_153"
 		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161407587459.tga"
 		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_rebuild.dds"
 		color = { 0.010 0.0 0.0 0.10 }
@@ -1150,7 +1150,7 @@ spriteTypes = {
 		steps = 10000
 	}
 	progressbartype = {
-		name = "GFX_ABY_rebuild_state_936"
+		name = "GFX_ABY_rebuild_state_848"
 		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161408082834.tga"
 		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_rebuild.dds"
 		color = { 0.010 0.0 0.0 0.10 }

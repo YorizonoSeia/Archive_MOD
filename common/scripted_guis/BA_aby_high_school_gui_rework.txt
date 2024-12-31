@@ -265,77 +265,77 @@ scripted_gui = {
 				set_variable = { ABY_selected_state = ABY_cen_map_v }
 				if = {
 					limit = {
-						check_variable = { ABY_selected_state = 797 }
+						check_variable = { ABY_selected_state = 69 }
 					}
 					set_variable = { ABY_map_info_x = 115 }
 					set_variable = { ABY_map_info_y = 125 }
 				}
 				else_if = {
 					limit = {
-						check_variable = { ABY_selected_state = 339 }
+						check_variable = { ABY_selected_state = 9 }
 					}
 					set_variable = { ABY_map_info_x = 80 }
 					set_variable = { ABY_map_info_y = 110 }
 				}
 				else_if = {
 					limit = {
-						check_variable = { ABY_selected_state = 347 }
+						check_variable = { ABY_selected_state = 74 }
 					}
 					set_variable = { ABY_map_info_x = 45 }
 					set_variable = { ABY_map_info_y = 125 }
 				}
 				else_if = {
 					limit = {
-						check_variable = { ABY_selected_state = 49 }
+						check_variable = { ABY_selected_state = 72 }
 					}
 					set_variable = { ABY_map_info_x = 83 }
 					set_variable = { ABY_map_info_y = 105 }
 				}
 				else_if = {
 					limit = {
-						check_variable = { ABY_selected_state = 342 }
+						check_variable = { ABY_selected_state = 75 }
 					}
 					set_variable = { ABY_map_info_x = 73 }
 					set_variable = { ABY_map_info_y = 105 }
 				}
 				else_if = {
 					limit = {
-						check_variable = { ABY_selected_state = 344 }
+						check_variable = { ABY_selected_state = 972 }
 					}
 					set_variable = { ABY_map_info_x = 90 }
 					set_variable = { ABY_map_info_y = 105 }
 				}
 				else_if = {
 					limit = {
-						check_variable = { ABY_selected_state = 353 }
+						check_variable = { ABY_selected_state = 986 }
 					}
 					set_variable = { ABY_map_info_x = 103 }
 					set_variable = { ABY_map_info_y = 105 }
 				}
 				else_if = {
 					limit = {
-						check_variable = { ABY_selected_state = 680 }
+						check_variable = { ABY_selected_state = 975 }
 					}
 					set_variable = { ABY_map_info_x = 100 }
 					set_variable = { ABY_map_info_y = 100 }
 				}
 				else_if = {
 					limit = {
-						check_variable = { ABY_selected_state = 454 }
+						check_variable = { ABY_selected_state = 4 }
 					}
 					set_variable = { ABY_map_info_x = 122 }
 					set_variable = { ABY_map_info_y = 105 }
 				}
 				else_if = {
 					limit = {
-						check_variable = { ABY_selected_state = 291 }
+						check_variable = { ABY_selected_state = 976 }
 					}
 					set_variable = { ABY_map_info_x = 90 }
 					set_variable = { ABY_map_info_y = 85 }
 				}
 				else_if = {
 					limit = {
-						check_variable = { ABY_selected_state = 936 }
+						check_variable = { ABY_selected_state = 152 }
 					}
 					set_variable = { ABY_map_info_x = 120 }
 					set_variable = { ABY_map_info_y = 105 }

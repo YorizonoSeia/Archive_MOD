@@ -953,6 +953,18 @@ ideas = {
 				weekly_manpower = 1500
 			}
 		}
+		ABY_idea_jew_comming = {
+			picture = tur_coordinated_balkan_armed_forces
+
+			allowed_civil_war = {
+					always = yes
+			}
+
+			modifier = {
+				weekly_manpower = 500
+				industrial_capacity_factory = 0.1
+			}
+		}
 		ABY_idea_no_people = {
 			picture = gre_venerate_the_ancient_hellenes
 
@@ -1625,7 +1637,7 @@ ideas = {
 			#picture = 
 			targeted_modifier = {
 				tag = SHA
-				army_attack_factor = 0.05
+				army_attack_factor = 0.1
 				army_defence_factor = 0.05
 			}
 		}# #"산불 작전"
@@ -3719,7 +3731,7 @@ ideas = {
 					always = yes
 			}
 			modifier = {
-				stability_factor = -0.05
+				stability_factor = -0.1
 				political_power_factor = -0.3
 			}
 		}
@@ -3730,8 +3742,8 @@ ideas = {
 					always = yes
 			}
 			modifier = {
-				stability_factor = -0.05
-				political_power_factor = -0.1
+				stability_factor = -0.1
+				political_power_factor = -0.2
 			}
 		}
 		ABY_idea_no_command_5 = {
@@ -3741,8 +3753,8 @@ ideas = {
 					always = yes
 			}
 			modifier = {
-				stability_factor = 0.05
-				political_power_factor = 0.1
+				stability_factor = -0.1
+				political_power_factor = -0.1
 			}
 		}
 		ABY_idea_no_command_6 = {
@@ -3752,8 +3764,8 @@ ideas = {
 					always = yes
 			}
 			modifier = {
-				stability_factor = 0.15
-				political_power_factor = 0.3
+				stability_factor = -0.05
+				political_power_factor = -0.1
 			}
 		}
 		ABY_idea_no_command_4_1 = {
@@ -4970,25 +4982,15 @@ ideas = {
                 always = yes
             }
 			removal_cost = -1 
-			cancel = {
-				SHA = {
-					all_core_state = {
-						is_controlled_by_ROOT_or_subject = yes
-					}
-				}
-				HYA = {
-					all_core_state = {
-						is_controlled_by_ROOT_or_subject = yes
-					}
-				}
-			}
 			# picture = 
 			modifier = {
 				conscription = 0.03
-				stability_weekly = -0.001
-				war_support_factor = 0.1
-				surrender_limit = 0.25
-				custom_modifier_tooltip = ABY_have_cze_aus_tt
+				industrial_capacity_factory = 0.3
+				stability_factor = -0.5
+				war_support_factor = 0.25
+				surrender_limit = 0.5
+				communism_drift = 0.15
+				custom_modifier_tooltip = ABY_tt_governmant_0
 			}
 		}
 		ABY_idea_bohemia_and_austria_2 = {
@@ -5124,7 +5126,7 @@ ideas = {
 			removal_cost = -1 
 			# picture = 
 			modifier = {
-				production_speed_infrastructure_factor = 0.05
+				production_speed_infrastructure_factor = 0.1
 				local_resources_factor = 0.15
 			}
 		}
@@ -5509,6 +5511,82 @@ ideas = {
 				consumer_goods_expected_value = -0.005
 			}
 		}
+		ABY_idea_two_00 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				political_power_factor = -0.2
+				stability_factor = -0.2
+				war_support_factor = -0.2
+				surrender_limit = -0.35
+				drift_defence_factor = -0.7
+				resistance_target_on_our_occupied_states = -0.2
+			}
+		}
+		ABY_idea_two_01 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				political_power_factor = -0.175
+				stability_factor = -0.175
+				war_support_factor = -0.175
+				surrender_limit = -0.3
+				drift_defence_factor = -0.6
+				resistance_target_on_our_occupied_states = -0.1
+			}
+		}
+		ABY_idea_two_000 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				political_power_factor = -0.2
+				stability_factor = -0.2
+				war_support_factor = -0.2
+				surrender_limit = -0.35
+				drift_defence_factor = -0.7
+				resistance_target_on_our_occupied_states = -0.2
+				conscription_factor = 0.1
+				monthly_population = 0.5
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+			}
+		}
+		ABY_idea_two_001 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				political_power_factor = -0.2
+				stability_factor = -0.2
+				war_support_factor = -0.2
+				surrender_limit = -0.35
+				drift_defence_factor = -0.7
+				resistance_target_on_our_occupied_states = -0.2
+				industrial_capacity_factory = 0.15
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		ABY_idea_rebuild = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				war_support_weekly = -0.01
+			}
+		}
 	}
 	industrial_concern = {
 		ABY_industrial_concern_neptis_group = {
@@ -5627,6 +5705,7 @@ ideas = {
 			}
 
 			visible = {
+				NOT = {has_completed_focus = ABY_focus_unite_rothschild}
 				NOT = {has_completed_focus = ABY_focus_more_war_industry}
 			}
 			
@@ -5660,6 +5739,7 @@ ideas = {
 			}
 
 			visible = {
+				NOT = {has_completed_focus = ABY_focus_unite_rothschild}
 				has_completed_focus = ABY_focus_more_war_industry
 				NOT = {has_completed_focus = ABY_focus_war_industry}
 			}
@@ -5694,6 +5774,7 @@ ideas = {
 			}
 
 			visible = {
+				NOT = {has_completed_focus = ABY_focus_unite_rothschild}
 				has_completed_focus = ABY_focus_war_industry
 			}
 			
@@ -5707,6 +5788,109 @@ ideas = {
 			}
 			
 			traits = { rothschild }
+			
+			# assembled hawk II and hawk III fighter bombers as well as the Vultee V-11 ground attackers
+						
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		ABY_industrial_concern_rothschild_swiss = {
+
+			picture = generic_industrial_concern_3
+			
+			allowed = {
+				tag = ABY
+			}
+
+			available = {
+				has_completed_focus = ABY_focus_swiss_rothschild
+			}
+
+			visible = {
+				NOT = {has_completed_focus = ABY_focus_unite_rothschild}
+			}
+			
+			research_bonus = {
+				industry = 0.15
+			}
+
+			modifier = {	
+				consumer_goods_factor = -0.1
+				research_speed_factor = 0.05
+			}
+			
+			traits = { rothschild_swiss }
+			
+			# assembled hawk II and hawk III fighter bombers as well as the Vultee V-11 ground attackers
+						
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		ABY_industrial_concern_rothschild_america = {
+
+			picture = generic_industrial_concern_3
+			
+			allowed = {
+				tag = ABY
+			}
+
+			available = {
+				has_completed_focus = ABY_focus_america_rothschild
+			}
+
+			visible = {
+				NOT = {has_completed_focus = ABY_focus_unite_rothschild}
+			}
+			
+			research_bonus = {
+				industry = 0.15
+			}
+
+			modifier = {	
+				local_resources_factor = 0.1
+				resource_trade_cost_bonus_per_factory = 4
+			}
+			
+			traits = { rothschild_america }
+			
+			# assembled hawk II and hawk III fighter bombers as well as the Vultee V-11 ground attackers
+						
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		ABY_industrial_concern_rothschild_unite = {
+
+			picture = generic_industrial_concern_3
+			
+			allowed = {
+				tag = ABY
+			}
+
+			available = {
+				has_completed_focus = ABY_focus_america_rothschild
+			}
+
+			visible = {
+				has_completed_focus = ABY_focus_unite_rothschild
+			}
+			
+			research_bonus = {
+				industry = 0.15
+			}
+
+			modifier = {	
+				political_power_cost = 0.3
+				local_resources_factor = 0.25
+				resource_trade_cost_bonus_per_factory = 4
+				consumer_goods_factor = -0.1
+				research_speed_factor = 0.05
+				production_speed_infrastructure_factor = 0.1
+			}
+			
+			traits = { rothschild_unite }
 			
 			# assembled hawk II and hawk III fighter bombers as well as the Vultee V-11 ground attackers
 						

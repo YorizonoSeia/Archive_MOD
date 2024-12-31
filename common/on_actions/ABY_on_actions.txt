@@ -54,30 +54,18 @@ on_actions = {
 					add_ideas = {
 						ABY_idea_sword_to_bohemia
 					}
-					if = {
-						limit = { has_country_flag = ABY_flag_czech_resistance }
-						9 = {
-							add_dynamic_modifier = {
-								modifier = ABY_modifier_czech_resistance
-								days = 30
-								scope = HYA
-							}
-						}
-					}
 				}
 				if = {
 					limit = {
 						OR = {
+							has_country_flag = ABY_flag_german_resistance_0
 							has_country_flag = ABY_flag_german_resistance_1
 							has_country_flag = ABY_flag_german_resistance_2
 							has_country_flag = ABY_flag_german_resistance_3
 						}
 						FROM = {
-							OR = {
-								NOT = { has_global_flag = ABY_idea_HYA_suspecious_flag }
-								has_idea = ABY_idea_HYA_suspecious
-							}
 							controls_state = 74
+							controls_state = 72
 						}
 					}
 					FROM = { country_event = { id = ABY_new_event.201 hours = 8 } }
@@ -97,30 +85,18 @@ on_actions = {
 					add_ideas = {
 						ABY_idea_sword_to_bohemia
 					}
-					if = {
-						limit = { has_country_flag = ABY_flag_czech_resistance }
-						9 = {
-							add_dynamic_modifier = {
-								modifier = ABY_modifier_czech_resistance
-								days = 30
-								scope = HYA
-							}
-						}
-					}
 				}
 				ROOT = {
 					if = {
 						limit = { 
 							OR = {
+								has_country_flag = ABY_flag_german_resistance_0
 								has_country_flag = ABY_flag_german_resistance_1
 								has_country_flag = ABY_flag_german_resistance_2
 								has_country_flag = ABY_flag_german_resistance_3
 							}
-							OR = {
-								NOT = { has_global_flag = ABY_idea_HYA_suspecious_flag }
-								has_idea = ABY_idea_HYA_suspecious
-							}
 							controls_state = 74
+							controls_state = 72
 						}
 						country_event = { id = ABY_new_event.201 hours = 8 }
 					}

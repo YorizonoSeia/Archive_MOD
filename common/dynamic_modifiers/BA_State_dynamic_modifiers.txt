@@ -178,6 +178,48 @@ ABY_abydos_sandstorm = { # 모래바람
 	state_production_speed_buildings_factor = -0.10
 	state_resources_factor = -0.50
 }
+ABY_modifier_develop = { # 
+	enable = { always = yes }
+
+	icon = GFX_modifiers_ABY_abydos_sandstorm
+	
+	state_production_speed_buildings_factor = 0.10
+	state_resources_factor = 0.10
+}
+ABY_modifier_unite_1 = { # 
+	enable = { always = yes }
+
+	icon = GFX_modifiers_ABY_abydos_sandstorm
+	
+	state_resources_factor = 0.05
+	recruitable_population_factor = 0.1
+	local_factories = 0.05
+}
+ABY_modifier_unite_2 = { # 
+	enable = { always = yes }
+
+	icon = GFX_modifiers_ABY_abydos_sandstorm
+	
+	recruitable_population_factor = 0.2
+	local_factories = 0.1
+	state_resources_factor = 0.10
+}
+ABY_modifier_rebuild_1 = { # 
+	enable = { always = yes }
+
+	icon = GFX_modifiers_ABY_abydos_sandstorm
+	
+	state_resources_factor = -0.5
+	state_production_speed_buildings_factor = -0.5
+}
+ABY_modifier_rebuild_2 = { # 
+	enable = { always = yes }
+
+	icon = GFX_modifiers_ABY_abydos_sandstorm
+	
+	state_resources_factor = -0.25
+	state_production_speed_buildings_factor = -0.25
+}
 ABY_modifier_czech_resistance = {
 	enable = { always = yes }
 

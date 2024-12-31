@@ -601,7 +601,7 @@ ABY_descision_category_abydos_highschool = { #전공투
 		original_tag = ABY
 	}
 	visible = { 
-		is_debug = yes
+		has_country_flag = ABY_flag_map_descision
 	}                  
 	priority = 500  
 

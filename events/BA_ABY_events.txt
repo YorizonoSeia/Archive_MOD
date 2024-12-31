@@ -1254,11 +1254,6 @@ country_event = {
 	option = {
 		name = ABY_new_event.22.b
 		ai_chance = { factor = 50 }
-		add_to_variable = {
-            var = ABY_num_of_students_var
-            value = 250
-            tooltip = ABY_exiles_var_tt_11
-        }
 		add_stability = -0.05
 		add_political_power = -50
 		69 = {
@@ -2162,19 +2157,7 @@ country_event = {
 	id = ABY_new_event.43
 	title = ABY_new_event.43.t
 	desc = ABY_new_event.43.d
-	trigger = {
-		tag = SHA
-		HYA = {
-			exists = no
-		}
-		OR = {
-			9 = {is_controlled_by = ABY}
-			972 = {is_controlled_by = ABY}
-			72 = {is_controlled_by = ABY}
-			74 = {is_controlled_by = ABY}
-			75 = {is_controlled_by = ABY}
-		}
-	}
+	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
@@ -2612,8 +2595,8 @@ country_event = {
 	fire_only_once = yes
 
 	option = {
-		name = ABY_new_event.63.a
-		ai_chance = { factor = 100 }
+		name = ABY_new_event.63.a 
+		ai_chance = { factor = 100 } 
 	}
 }
 
@@ -3690,12 +3673,29 @@ country_event = {
 	title = ABY_new_event.108.t
 	desc = ABY_new_event.108.d
 
-	is_triggered_only = yes
 	fire_only_once = yes
+
+	trigger = {
+		date > 1938.01.03
+		tag = ABY
+	}
 
 	option = {
 		name = ABY_new_event.108.a
 		ai_chance = { factor = 100 }
+		set_country_flag = ABY_flag_czech_dead
+		if = {
+			limit = {
+				has_idea = german
+			}
+			retire_character = ABY_german
+			activate_advisor = ABY_german_CH
+		}
+		custom_effect_tooltip = ABY_retire_czech_tt
+		hidden_effect = {
+			retire_character = ABY_german
+		}
+		set_country_flag = ABY_czech_dead
 	}
 }
 
@@ -9014,6 +9014,11 @@ country_event = {
 	option = {
 		name = ABY_new_event.179.a
 		ai_chance = { factor = 100 }
+		country_event = {
+			id = ABY_new_event.180
+		}
+		activate_advisor = Masarik
+		activate_advisor = german
 	}
 }
 
@@ -9028,6 +9033,10 @@ country_event = {
 	option = {
 		name = ABY_new_event.180.a
 		ai_chance = { factor = 100 }
+		country_event = {
+			id = ABY_new_event.181
+		}
+		activate_advisor = HYA_mini
 	}
 }
 
@@ -9042,6 +9051,29 @@ country_event = {
 	option = {
 		name = ABY_new_event.181.a
 		ai_chance = { factor = 100 }
+		set_country_flag = ABY_flag_map_descision
+		hidden_effect = {
+			every_state = {
+				clr_state_flag = ABY_flag_develop
+				clr_state_flag = ABY_flag_rebuild
+				set_state_flag = ABY_flag_unite
+			}
+			set_country_flag = ABY_flag_develop
+			clr_country_flag = ABY_flag_rebuild
+			clr_country_flag = ABY_flag_unite
+			central_map_calculate_frame = yes 
+		}
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.5
+		}
+		set_party_name = {
+			ideology = neutrality
+    		long_name = ABY_neutrality_governmant_party
+    		name = ABY_neutrality_governmant_party
+		}
+		add_country_leader_trait = ABY_trait_emergency_government
+		set_cosmetic_tag = ABY_cze_government
 	}
 }
 
@@ -9056,6 +9088,17 @@ country_event = {
 	option = {
 		name = ABY_new_event.182.a
 		ai_chance = { factor = 100 }
+		country_event = {
+			id = ABY_new_event.183
+		}
+	}
+
+	option = {
+		name = ABY_new_event.182.b
+		ai_chance = { factor = 100 }
+		country_event = {
+			id = ABY_new_event.184
+		}
 	}
 }
 
@@ -9107,7 +9150,7 @@ country_event = {
 		retire_character = ABY_czech_EV
 		retire_character = ABY_czech_SO
 		retire_character = ABY_czech_PC
-		retire_character = ABY_czech_KG
+		retire_character = ABY_czech_SKN
 		retire_character = ABY_czech_YT
 		retire_character = ABY_czech_GH
 		retire_character = ABY_czech_KB
@@ -9748,15 +9791,11 @@ country_event = {
 						owner = ABY
 						allow_spawning_on_enemy_provs = yes
 					}
-				}
-				74 = {
 					create_unit = {
 						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0 start_equipment_factor = 0.8"
 						owner = ABY
 						allow_spawning_on_enemy_provs = yes
 					}
-				}
-				74 = {
 					create_unit = {
 						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0 start_equipment_factor = 0.8"
 						owner = ABY
@@ -9774,29 +9813,21 @@ country_event = {
 						owner = ABY
 						allow_spawning_on_enemy_provs = yes
 					}
-				}
-				74 = {
 					create_unit = {
 						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
 						owner = ABY
 						allow_spawning_on_enemy_provs = yes
 					}
-				}
-				74 = {
 					create_unit = {
 						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
 						owner = ABY
 						allow_spawning_on_enemy_provs = yes
 					}
-				}
-				74 = {
 					create_unit = {
 						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
 						owner = ABY
 						allow_spawning_on_enemy_provs = yes
 					}
-				}
-				74 = {
 					create_unit = {
 						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
 						owner = ABY
@@ -9814,59 +9845,60 @@ country_event = {
 						owner = ABY
 						allow_spawning_on_enemy_provs = yes
 					}
-				}
-				74 = {
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
 					create_unit = {
 						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
 						owner = ABY
 						allow_spawning_on_enemy_provs = yes
 					}
 				}
-				74 = {
+			}
+			if = {
+				limit = {
+					FROM = { has_country_flag = ABY_flag_german_resistance_0 }
+				}
+				72 = {
 					create_unit = {
-						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0 start_equipment_factor = 0.8"
 						owner = ABY
 						allow_spawning_on_enemy_provs = yes
 					}
-				}
-				74 = {
 					create_unit = {
-						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
-						owner = ABY
-						allow_spawning_on_enemy_provs = yes
-					}
-				}
-				74 = {
-					create_unit = {
-						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
-						owner = ABY
-						allow_spawning_on_enemy_provs = yes
-					}
-				}
-				74 = {
-					create_unit = {
-						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
-						owner = ABY
-						allow_spawning_on_enemy_provs = yes
-					}
-				}
-				74 = {
-					create_unit = {
-						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
-						owner = ABY
-						allow_spawning_on_enemy_provs = yes
-					}
-				}
-				74 = {
-					create_unit = {
-						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
-						owner = ABY
-						allow_spawning_on_enemy_provs = yes
-					}
-				}
-				74 = {
-					create_unit = {
-						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0 start_equipment_factor = 0.8"
 						owner = ABY
 						allow_spawning_on_enemy_provs = yes
 					}
@@ -9899,15 +9931,244 @@ country_event = {
 	title = ABY_new_event.203.t
 	desc = ABY_new_event.203.d
 
+	immediate = {
+		hidden_effect = {
+			FROM = {
+				country_event = ABY_new_event.202
+				if = {
+					limit = {
+						NOT = { has_template = "German resistances" }
+					}
+					division_template = {
+						name = "German resistances"
+						priority = 0
+						division_names_group = ABY_INF_04
+						is_locked = no
+						regiments = {
+							militia = { x = 0 y = 0 }
+							militia = { x = 0 y = 1 }
+							militia = { x = 0 y = 2 }
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					FROM = { has_country_flag = ABY_flag_tirol_resistance_00 }
+				}
+				152 = {
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+				4 = {
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+				976 = {
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+				986 = {
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					FROM = { has_country_flag = ABY_flag_tirol_resistance_000 }
+				}
+				152 = {
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+				4 = {
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+				976 = {
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+				986 = {
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					FROM = { has_country_flag = ABY_flag_tirol_resistance_1 }
+				}
+				153 = {
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					FROM = { has_country_flag = ABY_flag_tirol_resistance_2 }
+				}
+				153 = {
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					FROM = { has_country_flag = ABY_flag_tirol_resistance_3 }
+				}
+				153 = {
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					FROM = { has_country_flag = ABY_flag_tirol_resistance_0 }
+				}
+				848 = {
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0 start_equipment_factor = 0.8"
+						owner = ABY
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+			}
+		}
+	}
+
 	is_triggered_only = yes
-	fire_only_once = yes
 
 	option = {
 		name = ABY_new_event.203.a
 		ai_chance = { factor = 100 }
-		add_ideas = {
-			ABY_idea_confusing_government
-		}
 	}
 }
 
@@ -9917,39 +10178,10 @@ country_event = {
 	desc = ABY_new_event.204.d
 
 	is_triggered_only = yes
-	fire_only_once = yes
 
 	option = {
 		name = ABY_new_event.204.a
-		ai_chance = { factor = 50 }
-		add_power_balance_value = {
-			id = ABY_power_balance
-			value = -0.05
-		}
-		build_railway = {
-			level = 5
-			path = { 3585 3418 11432 469 11401 }
-		}
-		69 = {
-			add_building_construction = {
-				type = supply_node
-				level = 1
-				province = 11401
-				instant_build = yes
-			}
-		}
-	}
-	option = {
-		name = ABY_new_event.204.b
-		ai_chance = { factor = 50 }
-		add_power_balance_value = {
-			id = ABY_power_balance
-			value = 0.05
-		}
-		add_timed_idea = {
-			idea = ABY_idea_weapon_produce
-			days = 180
-		}
+		ai_chance = { factor = 100 }
 	}
 }
 
@@ -9964,6 +10196,12 @@ country_event = {
 	option = {
 		name = ABY_new_event.205.a
 		ai_chance = { factor = 100 }
+		hidden_effect = {
+			country_event = {
+				id = ABY_new_event.206
+				days = 30
+			}
+		}
 	}
 }
 
@@ -9978,87 +10216,8 @@ country_event = {
 	option = {
 		name = ABY_new_event.206.a
 		ai_chance = { factor = 100 }
-		add_to_variable = {
-            var = ABY_num_of_students_var
-            value = 2000
-            tooltip = ABY_recruit_event_2000_tt
-        }
-		add_stability = -0.1
-		add_political_power = -200
-		add_power_balance_value = {
-			id = ABY_power_balance
-			value = -0.1
-		}
-		9 = {
-			set_state_name = ABY_state_bohemia
-		}
-		75 = {
-			set_state_name = ABY_state_morava
-		}
-		set_province_name = {
-			id = 11542
-			name = ABY_HYA_capital
-		}
-	}
-	option = {
-		name = ABY_new_event.206.b
-		ai_chance = { factor = 100 }
-		add_to_variable = {
-            var = ABY_num_of_students_var
-            value = 1000
-            tooltip = ABY_recruit_event_1000_tt
-        }
-		add_stability = -0.05
-		add_political_power = -50
-		add_power_balance_value = {
-			id = ABY_power_balance
-			value = -0.05
-		}
-		9 = {
-			set_state_name = ABY_state_bohemia
-		}
-		75 = {
-			set_state_name = ABY_state_morava
-		}
-		set_province_name = {
-			id = 11542
-			name = ABY_HYA_capital_2
-		}
-	}
-	option = {
-		name = ABY_new_event.206.c
-		ai_chance = { factor = 100 }
-		add_to_variable = {
-            var = ABY_num_of_students_var
-            value = 500
-            tooltip = ABY_recruit_event_500_tt
-        }
-		add_political_power = 100
-		9 = {
-			set_state_name = ABY_state_bohemia
-		}
-		75 = {
-			set_state_name = ABY_state_morava
-		}
-		set_province_name = {
-			id = 11542
-			name = ABY_prague_name
-		}
-		set_province_name = {
-			id = 6418
-			name = ABY_pilsen
-		}
-		set_province_name = {
-			id = 9569
-			name = ABY_tavor
-		}
-		set_province_name = {
-			id = 3569
-			name = ABY_vrno
-		}
-		set_province_name = {
-			id = 6562
-			name = ABY_olomoutz
+		986 = {
+			set_demilitarized_zone = no
 		}
 	}
 }
@@ -10074,74 +10233,24 @@ country_event = {
 	option = {
 		name = ABY_new_event.207.a
 		ai_chance = { factor = 100 }
-		add_to_variable = {
-            var = ABY_num_of_students_var
-            value = 2000
-            tooltip = ABY_recruit_event_2000_tt
-        }
-		add_stability = -0.1
-		add_political_power = -200
-		add_power_balance_value = {
-			id = ABY_power_balance
-			value = -0.1
-		}
-		set_province_name = {
-			id = 11666
-			name = ABY_SHA_capital
+		ABY = {
+			96 = {
+				transfer_state_to = TRM
+			}
+			diplomatic_relation = { 
+				country = TRM
+				relation = non_aggression_pact 
+				active = yes
+			}
+			set_capital = {
+				state = 986
+				remember_old_capital = yes
+			}
 		}
 	}
 	option = {
 		name = ABY_new_event.207.b
-		ai_chance = { factor = 100 }
-		add_to_variable = {
-            var = ABY_num_of_students_var
-            value = 1000
-            tooltip = ABY_recruit_event_1000_tt
-        }
-		add_stability = -0.05
-		add_political_power = -50
-		add_power_balance_value = {
-			id = ABY_power_balance
-			value = -0.05
-		}
-		set_province_name = {
-			id = 11666
-			name = ABY_SHA_capital_2
-		}
-	}
-	option = {
-		name = ABY_new_event.207.c
-		ai_chance = { factor = 100 }
-		add_to_variable = {
-            var = ABY_num_of_students_var
-            value = 500
-            tooltip = ABY_recruit_event_500_tt
-        }
-		add_political_power = 100
-		set_province_name = {
-			id = 11666
-			name = ABY_vienna
-		}
-		set_province_name = {
-			id = 688
-			name = ABY_linz
-		}
-		set_province_name = {
-			id = 732
-			name = ABY_zalzburg
-		}
-		set_province_name = {
-			id = 9665
-			name = ABY_vells
-		}
-		set_province_name = {
-			id = 3673
-			name = ABY_klakenfurt
-		}
-		set_province_name = {
-			id = 9648
-			name = ABY_graz
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -10156,6 +10265,13 @@ country_event = {
 	option = {
 		name = ABY_new_event.208.a
 		ai_chance = { factor = 100 }
+		TRM = {
+			country_event = {
+				id = ABY_new_event.207
+				hours = 8
+			}
+		}
+		add_stability = -0.15
 	}
 }
 
@@ -10170,57 +10286,7 @@ country_event = {
 	option = {
 		name = ABY_new_event.209.a
 		ai_chance = { factor = 100 }
-		if = {
-			limit = {
-				AND = {
-					has_government = fascism
-				}
-			}
-			complete_national_focus = ABY_focus_with_german
-		}
-		if = {
-			limit = {
-				AND = {
-					has_government = communism
-				}
-			}
-		}
-		if = {
-			limit = {
-				AND = {
-					has_government = democratic
-				}
-			}
-			complete_national_focus = ABY_focus_with_czech
-			set_country_flag = ABY_flag_with_czech
-		}
-		if = {
-			limit = {
-				AND = {
-					has_government = neutrality
-					has_country_flag = ABY_flag_neptis
-				}
-			}
-			complete_national_focus = ABY_focus_neptis_cooperation_country
-			set_country_flag = ABY_flag_neptis_cooperation_country
-		}
-		if = {
-			limit = {
-				AND = {
-					has_government = neutrality
-					NOT = {has_country_flag = ABY_flag_neptis}
-				}
-			}
-			complete_national_focus = ABY_focus_abydos_schoolcountry
-			set_country_flag = ABY_flag_abydos_schoolcountry
-		}
-		hidden_effect = {
-            load_focus_tree = {
-                tree = ABY_focus_tree
-                keep_completed = yes
-            }
-            mark_focus_tree_layout_dirty = yes
-        }
+		add_stability = 0.1
 	}
 }
 
@@ -10235,12 +10301,6 @@ country_event = {
 	option = {
 		name = ABY_new_event.210.a
 		ai_chance = { factor = 100 }
-		hidden_effect = {
-			country_event = {
-				id = ABY_new_event.211
-				days = 14
-			}
-		}
 	}
 }
 
@@ -10268,10 +10328,6 @@ country_event = {
 
 	option = {
 		name = ABY_new_event.212.a
-		ai_chance = { factor = 100 }
-	}
-	option = {
-		name = ABY_new_event.212.b
 		ai_chance = { factor = 100 }
 	}
 }
@@ -15317,7 +15373,7 @@ country_event = {
 		retire_character = ABY_czech_EV
 		retire_character = ABY_czech_SO
 		retire_character = ABY_czech_PC
-		retire_character = ABY_czech_KG
+		retire_character = ABY_czech_SKN
 		retire_character = ABY_czech_YT
 		retire_character = ABY_czech_GH
 		retire_character = ABY_czech_KB

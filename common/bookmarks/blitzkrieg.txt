@@ -133,7 +133,7 @@ bookmarks = {
 			ideas = {
 				ABY_idea_eocordnldnjsghl
 				ABY_idea_bohemia_and_austria
-				ABY_idea_no_command
+				ABY_idea_two_00
 			}
 			focuses = {
 				ABY_focus_neptis_cooperation_country
