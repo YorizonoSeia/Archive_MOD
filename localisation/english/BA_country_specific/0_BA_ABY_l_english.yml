@@ -73,6 +73,8 @@ ABY_guide: "목표\n\n£white_dot 연립정부를 설립하십시오.\n£white_d
  ABY_czech_JS:0 "요세프 슈네이다레크"
  ABY_czech_LT:0 "리하르트 테사르지크"
  ABY_czech_SB:0 "세르게이 보이체호프스키"
+ ABY_czech_EH:0 "에밀 하하"
+ ABY_czech_RR:0 "루이스 로스차일드"
 
 #단체
 # ABYDOS_ 로 변경할 것
@@ -1338,6 +1340,7 @@ ABY_poland_over_100_tt:0 "§Y[POL.GetNameWithFlag]§!의 §Y통합 지지도§!�
 ABY_zapadoslavia_large_tt:0 "§Y우크라이나, 리투아니아, 벨라루스가 같은 세력일 시, 그들도 통합에 동참할 것입니다!§!"
 ABY_hungary_over_100_tt:0 "§Y[HUN.GetNameWithFlag]§!의 §Y통합 지지도§!가 §Y100%§!"
 ABY_descision_promote_shiroko:0 "국방사령관 축출"
+ABY_rothschild_recruit_tt: "§Y루이스 로스차일드§!(이)가 정치고문이 됩니다. "
 ABY_flag_believe:0 "£decision_icon_small §Y마사리크의 유산 재건§! 결정 완료"
 ABY_flag_annex_slovakia:0 "£decision_icon_small §Y슬로바키아 병합§! 결정 완료"
 ABY_flag_suspecious_control:0 "방위사령부에서 수상한 움직임이 감지됨"

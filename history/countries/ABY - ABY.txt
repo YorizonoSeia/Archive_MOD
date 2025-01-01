@@ -224,6 +224,8 @@ set_technology = {
  recruit_character = ABYDOS_pre_gov
  recruit_character = ABYDO_Yume
  recruit_character = ABY_german_CH
+ recruit_character = ABY_czech_EH
+ recruit_character = ABY_czech_RR
 set_convoys = 0
 
 set_politics = {

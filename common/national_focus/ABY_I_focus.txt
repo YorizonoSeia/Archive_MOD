@@ -3341,6 +3341,7 @@ focus_tree = {
 				id = ABY_new_event.211
 			}
 			custom_effect_tooltip = ABY_industrial_concern_allow_2
+			custom_effect_tooltip = ABY_rothschild_recruit_tt
 		}
 	}
 	focus = {

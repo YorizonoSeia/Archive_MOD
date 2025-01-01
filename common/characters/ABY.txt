@@ -427,7 +427,7 @@ characters={
 		portraits={
 			army={
 				large= "gfx/leaders/ABY/ABY_not_made.tga"
-				small="gfx/interface/advisors/ABY/ABY_not_made_idea.tga"
+				small="gfx/interface/ideas/ABY/ABY_idea_CZKE_tgm.dds"
 			}
 		}
 		advisor={
@@ -474,7 +474,6 @@ characters={
 				original_tag  = ABY
 			}
 			traits  = {
-				ABY_trait_president
 				ABY_trait_resistance
 			}
 			ai_will_do  = {
@@ -482,6 +481,69 @@ characters={
 			}
 		}
 	} #"에드바르트 베네시"
+
+
+
+	ABY_czech_EH={
+		name=ABY_czech_EH
+		portraits={
+			civilian={
+				large="gfx/leaders/ABY/ComfyUI_temp_shztv_00030_.tga"
+			}
+			army={
+				small="gfx/interface/advisors/ABY/export202412311438334914.tga"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = Haha
+			available = {
+				NOT = {has_government = communism}
+				NOT = {has_government = fascism}
+			}
+			allowed  = {
+				original_tag  = ABY
+			}
+			traits  = {
+				ABY_trait_unitist
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
+	} #"에밀 하하"
+
+
+
+	ABY_czech_RR={
+		name=ABY_czech_RR
+		portraits={
+			civilian={
+				large="gfx/leaders/ABY/ComfyUI_temp_shztv_00030_.tga"
+			}
+			army={
+				small="gfx/interface/advisors/ABY/export202412311439265273.tga"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = Louis_Rothschild
+			available = {
+			}
+			visible = {
+				has_completed_focus = ABY_focus_support_native_geeup
+			}
+			allowed  = {
+				original_tag  = ABY
+			}
+			traits  = {
+				captain_of_industry
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
+	} #"루이스 로스차일드"
 
 
 
@@ -689,6 +751,7 @@ characters={
 		name=ABY_czech_KBP
 		portraits={
 			army={
+				large= "gfx/leaders/ABY/ComfyUI_temp_shztv_00024_.tga"
 				small="GFX_idea_CZE_karel_vaclav_petrik"
 			}
 		}
@@ -755,7 +818,7 @@ characters={
 		name=ABY_czech_YG
 		portraits={
 			army={
-				large= "gfx/leaders/ABY/ABY_portrait_jan_golian.png"
+				large= "gfx/leaders/ABY/ABY_portrait_jan_golian.tga"
 				small="GFX_idea_CZE_jan_golian"
 			}
 		}
@@ -857,7 +920,7 @@ characters={
 		name=ABY_czech_FH
 		portraits={
 			army={
-				large= "gfx/leaders/ABY/ABY_not_made.tga"
+				large= "gfx/leaders/ABY/ComfyUI_temp_shztv_00057_.tga"
 				small="GFX_idea_CZE_frantisek_havel"
 			}
 		}
@@ -899,8 +962,8 @@ characters={
 		name=ABY_czech_CK
 		portraits={
 			army={
-				large= "gfx/leaders/ABY/ABY_not_made.tga"
-				small="gfx/interface/advisors/ABY/ABY_not_made_idea.tga"
+				large= "gfx/leaders/ABY/ComfyUI_temp_shztv_00043_.tga"
+				small="gfx/interface/advisors/ABY/export202412311438081397.tga"
 			}
 		}
 		advisor={
@@ -981,7 +1044,7 @@ characters={
 		name=ABY_czech_LS
 		portraits={
 			army={
-				large= "gfx/leaders/ABY/ABY_not_made.tga"
+				large= "gfx/leaders/ABY/ComfyUI_temp_shztv_00039_.tga"
 				small="GFX_idea_CZE_ludvik_svoboda"
 			}
 		}
@@ -1022,8 +1085,8 @@ characters={
 		name=ABY_czech_AE
 		portraits={
 			army={
-				large= "gfx/leaders/ABY/ABY_not_made.tga"
-				small="gfx/interface/advisors/ABY/ABY_not_made_idea.tga"
+				large= "gfx/leaders/ABY/ComfyUI_temp_shztv_00079_.tga"
+				small="gfx/interface/advisors/ABY/export202412311438259773.tga"
 			}
 		}
 		advisor={
@@ -1086,7 +1149,7 @@ characters={
 		portraits={
 			army={
 				large= "gfx/leaders/ABY/ABY_not_made.tga"
-				small="gfx/interface/advisors/ABY/ABY_not_made_idea.tga"
+				small="GFX_idea_generic_navy_europe_1"
 			}
 		}
 		advisor={
@@ -1275,11 +1338,11 @@ characters={
 		name=ABY_german
 		portraits={
 			civilian={
-				large="gfx/leaders/ABY/xd.tga"
+				large="gfx/leaders/ABY/ComfyUI_temp_shztv_00025_.tga"
 			}
 			army={
-				large= "gfx/leaders/ABY/xd.tga"
-				small="gfx/interface/advisors/ABY/ABY_not_made_idea.tga"
+				large= "gfx/leaders/ABY/ComfyUI_temp_shztv_00025_.tga"
+				small="gfx/interface/advisors/ABY/export202412311438528532.tga"
 			}
 		}
 		advisor={
@@ -1307,8 +1370,7 @@ characters={
 				large="gfx/leaders/ABY/xd.tga"
 			}
 			army={
-				large= "gfx/leaders/ABY/xd.tga"
-				small="gfx/interface/advisors/ABY/ABY_not_made_idea.tga"
+				small="GFX_idea_CZE_konrad_henlein"
 			}
 		}
 		advisor={
