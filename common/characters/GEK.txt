@@ -51,6 +51,9 @@ characters={
 		advisor = {
 			slot = political_advisor
 			idea_token = NSD_erich_julius_eberhard_von_zelewski
+			allowed = {
+				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
+			}
 			available = {
 			}
 			traits = { prince_of_terror }
@@ -83,6 +86,9 @@ characters={
 		advisor = {
 			slot = political_advisor
 			idea_token = NSD_friedrich_jeckeln
+			allowed = {
+				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
+			}
 			available = {
 			}
 			traits = { silent_workhorse }
@@ -107,6 +113,9 @@ characters={
 		advisor = {
 			slot = high_command
 			idea_token = NSD_herbert_otto_gille
+			allowed = {
+				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
+			}
 			available = {
 			}
 			traits = { army_armored_1 }
@@ -123,6 +132,9 @@ characters={
 		advisor = {
 			slot = political_advisor
 			idea_token = NSD_oswald_pohl
+			allowed = {
+				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
+			}
 			available = {
 			}
 			traits = { war_industrialist }
