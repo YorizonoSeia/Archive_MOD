@@ -233,6 +233,68 @@ country_event = {
 	}
 }
 
+# 코노에 미나의 역할
+unit_leader_event = {
+	id = shafas.10
+	title = shafas.10.t
+	desc = shafas.10.d
+	picture = GFX_event_Shanhaijing_Konoe_Mina
+
+    is_triggered_only = yes
+
+	option = {
+		name = shafas.10.a
+		add_advisor_role = {
+			character = SHA_MINA
+			advisor = {
+				slot = army_chief
+				idea_token = SHA_MINA_army_chief
+				cost = 75
+				traits = { army_chief_offensive_2 }
+			}
+		}
+	}
+
+	option = {
+		name = shafas.10.b
+		add_advisor_role = {
+			character = SHA_MINA
+			advisor = {
+				slot = army_chief
+				idea_token = SHA_MINA_army_chief
+				cost = 75
+				traits = { army_chief_defensive_2 }
+			}
+		}
+	}
+
+	option = {
+		name = shafas.10.c
+		add_advisor_role = {
+			character = SHA_MINA
+			advisor = {
+				slot = army_chief
+				idea_token = SHA_MINA_army_chief
+				cost = 75
+				traits = { army_chief_maneuver_2 }
+			}
+		}
+	}
+
+	option = {
+		name = shafas.10.e
+		add_advisor_role = {
+			character = SHA_MINA
+			advisor = {
+				slot = army_chief
+				idea_token = SHA_MINA_army_chief
+				cost = 75
+				traits = { army_chief_organizational_2 }
+			}
+		}
+	}
+}
+
 
 # 뉴스
 news_event = {

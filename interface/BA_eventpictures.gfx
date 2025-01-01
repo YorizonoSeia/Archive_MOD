@@ -234,6 +234,11 @@ spriteTypes = {
 # 국가 이벤트 
 
 	spriteType = {
+		name = "GFX_event_Shanhaijing_Konoe_Mina"
+		texturefile = "gfx/event_pictures/Shanhaijing_Konoe_Mina.tga"
+	}
+
+	spriteType = {
 		name = "GFX_event_report_KAP_officers"
 		texturefile = "gfx/event_pictures/KAP/report_event_KAP_officers.dds"
 	}

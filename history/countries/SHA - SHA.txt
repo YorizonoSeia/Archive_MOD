@@ -181,3 +181,13 @@ set_variable = { SHA_Shanhaijinfascism_economy_cost_factor = 0 }
 set_variable = { SHA_Shanhaijinfascism_mobilization_laws_cost_factor = 0 } 
 set_variable = { SHA_Shanhaijinfascism_trade_laws_cost_factor = 0 } 
 set_variable = { SHA_Shanhaijinfascism_justify_war_goal_time = 0 } 
+
+set_variable = { SHA_military_army_speed_factor = 0 }
+set_variable = { SHA_military_breakthrough_factor = 0 }
+set_variable = { SHA_military_army_speed_factor = 0 }
+set_variable = { SHA_military_training_time_factor = 0 }
+set_variable = { SHA_military_conscription = 0 }
+set_variable = { SHA_military_weekly_casualties_war_support = 0 }
+set_variable = { SHA_military_mobilization_speed = 0 }
+set_variable = { SHA_military_minimum_training_level = 0 }
+set_variable = { SHA_military_land_doctrine_cost_factor = 0 }

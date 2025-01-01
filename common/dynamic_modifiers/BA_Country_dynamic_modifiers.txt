@@ -2107,6 +2107,26 @@ SHA_Shanhaijinfascism = {
 
 }
 
+SHA_Shanhaijin_Army = {
+	enable = { always = yes }
+	icon = GFX_idea_SHA_Shanhaijinfascism
+	
+	army_morale_factor = SHA_military_army_morale_factor
+	breakthrough_factor = SHA_military_breakthrough_factor
+	army_speed_factor = SHA_military_army_speed_factor
+
+	weekly_casualties_war_support = SHA_military_weekly_casualties_war_support
+	conscription = SHA_military_conscription
+	training_time_factor = SHA_military_training_time_factor
+
+	mobilization_speed = SHA_military_mobilization_speed
+	minimum_training_level = SHA_military_minimum_training_level
+
+	land_doctrine_cost_factor = SHA_military_land_doctrine_cost_factor
+
+
+}
+
 SHA_aup_modifier = {
 	political_power_cost = SHA_aup_pp
 	stability_factor = SHA_aup_stability

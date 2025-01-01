@@ -7,8 +7,6 @@ focus_tree = {
 		modifier = {
 			add = 50
 			tag = SHA
-
-			has_dlc = "Gotterdammerung"
 		}
 	}
 	default = no
@@ -31,6 +29,13 @@ focus_tree = {
 	shortcut = {
 		name = SHA_economic_path_shortcut
 		target = SHA_relief_work 
+		scroll_wheel_factor = 1
+	}
+	
+
+	shortcut = {
+		name = SHA_militray_path_shortcut
+		target = SHA_civic_militarism
 		scroll_wheel_factor = 1
 	}
 
@@ -1000,6 +1005,7 @@ focus_tree = {
 							traits = { 
 								SHA_T1a
 								SHA_T2a 
+								SHA_sick_trait
 							}
 						}
 					}
@@ -1883,12 +1889,16 @@ focus_tree = {
 
 		completion_reward = {
 			if = {
-				limit = { SHA_aup_anger > 1 }
+				limit = { 
+					check_variable = { SHA_aup_anger > 1 }
+				}
 				set_temp_variable = { SHA_anger_change = -1 }
 				SHA_change_aup_anger = yes
 			}
 			else_if = {
-				limit = { SHA_aup_anger = 1 }
+				limit = { 
+					check_variable = { SHA_aup_anger = 1 }
+				}
 				remove_ideas = SHA_austria_unemployment_problem
 			}
 		}
@@ -2872,8 +2882,64 @@ focus_tree = {
 		}
 	}
 	
+	# 미나한테 역할 부여
+	focus = {
+		id = SHA_Giving_role_to_Mina
+		icon = GFX_goal_SHA_Giving_role_to_Mina
+		x = 1
+		y = 2
+		relative_position_id = SHA_address_the_army
+		search_filters = { }
+		cost = 5
 
-	# 전 문주의 발자취를 따라 / 대전략
+		prerequisite = {
+			focus = SHA_Central_Military_Commission 
+			focus = SHA_Following_doorkeeper_footsteps 
+		}
+		mutually_exclusive = { }
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+			SHA_MINA = {
+				unit_leader_event = shafas.10
+			}
+		}
+	}
+	
+	# 사관학교 설립
+	focus = {
+		id = SHA_Establishment_of_military_academy
+		icon = GFX_focus_generic_military_mission
+		x = -1
+		y = 2
+		relative_position_id = SHA_address_the_army
+		search_filters = { }
+		cost = 5
+
+		prerequisite = {
+			focus = SHA_Central_Military_Commission 
+			focus = SHA_Following_doorkeeper_footsteps 
+		}
+		mutually_exclusive = { }
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+			custom_effect_tooltip = SHA_military_change
+			add_to_variable = {
+				SHA_military_land_doctrine_cost_factor = -0.15
+				tooltip = land_doctrine_cost_factor_tt
+			}
+		}
+	}
+	
+
+	# 전대 문주의 유산
 	focus = {
 		id = SHA_Following_doorkeeper_footsteps
 		icon = GFX_focus_BRA_anaue
@@ -2881,7 +2947,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = SHA_address_the_army
 		search_filters = { }
-		cost = 5
+		cost = 3
 
 		prerequisite = { focus = SHA_address_the_army }
 		mutually_exclusive = { focus = SHA_Central_Military_Commission }
@@ -2891,6 +2957,139 @@ focus_tree = {
 
 
 		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = SHA_National_Guard_Expansion
+				cost_reduction = 0.33
+				uses = 1
+				category = land_doctrine
+			}
+
+			add_dynamic_modifier = { modifier = SHA_Shanhaijin_Army }
+		}
+	}
+	
+	# 방위군 확장
+	focus = {
+		id = SHA_National_Guard_Expansion
+		icon = GFX_goal_SHA_National_Guard_Expansion
+		x = -1
+		y = 1
+		relative_position_id = SHA_Following_doorkeeper_footsteps
+		search_filters = { }
+		cost = 5
+
+		prerequisite = { focus = SHA_Following_doorkeeper_footsteps }
+		mutually_exclusive = { }
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+			custom_effect_tooltip = SHA_military_change
+			add_to_variable = {
+				SHA_military_mobilization_speed = 0.1
+				tooltip = mobilization_speed_tt
+			}
+			add_to_variable = {
+				SHA_military_training_time_factor = -0.15
+				tooltip = training_time_factor_tt
+			}
+			add_to_variable = {
+				SHA_military_minimum_training_level = -0.1
+				tooltip = minimum_training_level_tt
+			}
+		}
+	}
+	
+	# 영웅주의 교육
+	focus = {
+		id = SHA_heroism_education
+		icon = GFX_SOV_positive_heroism_ccp_2d_sov_compatibility
+		x = 1
+		y = 1
+		relative_position_id = SHA_National_Guard_Expansion
+		search_filters = { }
+		cost = 5
+
+		prerequisite = { focus = SHA_National_Guard_Expansion }
+		mutually_exclusive = { }
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+			custom_effect_tooltip = SHA_military_change
+			add_to_variable = {
+				SHA_military_breakthrough_factor = 0.1
+				tooltip = breakthrough_factor_tt
+			}
+			add_to_variable = {
+				SHA_military_army_morale_factor = 0.1
+				tooltip = army_morale_factor_tt
+			}
+			add_to_variable = {
+				SHA_military_army_speed_factor = 0.05
+				tooltip = army_speed_factor_tt
+			}
+		}
+	}
+	
+	# 육군 선전국
+	focus = {
+		id = SHA_propaganda_bureau_of_army
+		icon = GFX_focus_hol_war_on_pacifism
+		x = -1
+		y = 1
+		relative_position_id = SHA_National_Guard_Expansion
+		search_filters = { }
+		cost = 5
+
+		prerequisite = { focus = SHA_National_Guard_Expansion }
+		mutually_exclusive = { }
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+			# 결정 해금
+		}
+	}
+	
+	# 시민 군국주의
+	focus = {
+		id = SHA_civic_militarism
+		icon = GFX_focus_generic_full_social_mobilization
+		x = 1
+		y = 1
+		relative_position_id = SHA_propaganda_bureau_of_army
+		search_filters = { }
+		cost = 5
+
+		prerequisite = { focus = SHA_propaganda_bureau_of_army }
+		prerequisite = { focus = SHA_heroism_education }
+		mutually_exclusive = { }
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+			custom_effect_tooltip = SHA_military_change
+			add_to_variable = {
+				SHA_military_training_time_factor = -0.15
+				tooltip = training_time_factor_tt
+			}
+			add_to_variable = {
+				SHA_military_conscription = 0.01
+				tooltip = conscription_tt
+			}
+			add_to_variable = {
+				SHA_military_weekly_casualties_war_support = 0.0005
+				tooltip = weekly_casualties_war_support_tt
+			}
 
 		}
 	}
@@ -2903,7 +3102,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = SHA_address_the_army
 		search_filters = { }
-		cost = 5
+		cost = 3
 
 		prerequisite = { focus = SHA_address_the_army }
 		mutually_exclusive = { focus = SHA_Following_doorkeeper_footsteps }
@@ -2913,122 +3112,14 @@ focus_tree = {
 
 
 		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = SHA_Central_Military_Commission
+				cost_reduction = 0.33
+				uses = 1
+				category = land_doctrine
+			}
 
-		}
-	}
-
-	# 지휘부 통합
-	focus = {
-		id = SHA_Command_integration
-		icon = GFX_focus_generic_military_academy
-		x = 1
-		y = 1
-		relative_position_id = SHA_Central_Military_Commission
-		search_filters = { }
-		cost = 5
-
-		allow_branch = {
-			always =no 
-		}
-
-		prerequisite = { focus = SHA_Central_Military_Commission }
-		mutually_exclusive = {  }
-
-		available = { }
-		bypass = { }
-
-
-		completion_reward = {
-
-		}
-	}
-
-	# 3단계 군사 훈련
-	focus = {
-		id = SHA_Three_Military_Training
-		icon = GFX_focus_SOV_mobilization_plan
-		x = -1
-		y = 1
-		relative_position_id = SHA_Command_integration
-		search_filters = { }
-		cost = 5
-
-		prerequisite = { focus = SHA_Command_integration }
-		mutually_exclusive = {  }
-
-		available = { }
-		bypass = { }
-
-
-		completion_reward = {
-
-		}
-	}
-
-	# 임무형 전술
-	focus = {
-		id = SHA_instill_auftragstaktik
-		icon = GFX_focus_generic_military_mission
-		x = 1
-		y = 1
-		relative_position_id = SHA_Command_integration
-		search_filters = { }
-		cost = 5
-
-		prerequisite = { focus = SHA_Command_integration }
-		mutually_exclusive = {  }
-
-		available = { }
-		bypass = { }
-
-
-		completion_reward = {
-
-		}
-	}
-
-	# 교리 통합
-	focus = {
-		id = SHA_unity_of_doctrine
-		icon = GFX_goal_generic_army_mass_assault
-		x = 1
-		y = 1
-		relative_position_id = SHA_Three_Military_Training
-		search_filters = { }
-		cost = 5
-
-		prerequisite = { focus = SHA_instill_auftragstaktik }
-		prerequisite = { focus = SHA_Three_Military_Training }
-		mutually_exclusive = {  }
-
-		available = { }
-		bypass = { }
-
-
-		completion_reward = {
-
-		}
-	}
-
-	# 산해경 관현악단
-	focus = {
-		id = SHA_Shanhaijing_Orchestra
-		icon = GFX_goal_generic_army_mass_assault
-		x = -1
-		y = 1
-		relative_position_id = SHA_unity_of_doctrine
-		search_filters = { }
-		cost = 5
-
-		prerequisite = { focus = SHA_unity_of_doctrine }
-		mutually_exclusive = {  }
-
-		available = { }
-		bypass = { }
-
-
-		completion_reward = {
-
+			add_dynamic_modifier = { modifier = SHA_Shanhaijin_Army }
 		}
 	}
 

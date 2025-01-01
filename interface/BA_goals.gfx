@@ -1749,6 +1749,14 @@ spriteTypes = {
 		name = "GFX_goal_SHA_Central_Military_Commission"
 		texturefile = "gfx/interface/goals/SHA/SHA_Central_Military_Commission.tga"  
 	}
+	SpriteType = {
+		name = "GFX_goal_SHA_Giving_role_to_Mina"
+		texturefile = "gfx/interface/goals/SHA/SHA_Giving_role_to_Mina.tga"  
+	}
+	SpriteType = {
+		name = "GFX_goal_SHA_National_Guard_Expansion"
+		texturefile = "gfx/interface/goals/SHA/SHA_National_Guard_Expansion.tga"  
+	}
 	SpriteType = { 	
 		name = "GFX_goal_ROM_invite_german_advisorsr"
 		texturefile = "gfx/interface/goals/ROM/ROM_invite_german_advisors.tga"  
@@ -2395,5 +2403,33 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_goal_JAP_MarcoPolo_incident"
 		textureFile = "gfx/interface/goals/JAP/JAP_MarcoPolo_incident.tga"
+	}
+	spriteType = {
+		name = "GFX_goal_JAP_liaison_conference"
+		textureFile = "gfx/interface/goals/JAP/ADDON_JAP_liaison_conference.tga"
+	}
+	spriteType = {
+		name = "GFX_goal_JAP_non_aggression_pact_with_the_soviet_union"
+		textureFile = "gfx/interface/goals/JAP/ADDON_JAP_non_aggression_pact_with_the_soviet_union.tga"
+	}
+	spriteType = {
+		name = "GFX_goal_JAP_purge_the_kodoha_faction"
+		textureFile = "gfx/interface/goals/JAP/ADDON_JAP_purge_the_kodoha_faction.tga"
+	}
+	spriteType = {
+		name = "GFX_goal_JAP_secure_china"
+		textureFile = "gfx/interface/goals/JAP/ADDON_JAP_secure_china.tga"
+	}
+	spriteType = {
+		name = "GFX_goal_JAP_greater_east_asian_co_prosperity_sphere"
+		textureFile = "gfx/interface/goals/JAP/ADDON_JAP_greater_east_asian_co_prosperity_sphere.tga"
+	}
+	spriteType = {
+		name = "GFX_goal_JAP_bypass_the_philippines"
+		textureFile = "gfx/interface/goals/JAP/ADDON_JAP_bypass_the_philippines.tga"
+	}
+	spriteType = {
+		name = "GFX_goal_JAP_strengthen_the_divine_wind"
+		textureFile = "gfx/interface/goals/JAP/ADDON_JAP_strengthen_the_divine_wind.tga"
 	}
 }

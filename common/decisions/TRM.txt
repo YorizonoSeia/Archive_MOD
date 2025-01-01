@@ -6105,12 +6105,7 @@ TRM_Iron_Sword_Operations_Categorie = {
             }
 		}
 		available = {
-            OR = {
-                has_idea = TRM_collapse_1
-                has_idea = TRM_collapse_2
-                has_idea = TRM_collapse_3
-                has_idea = TRM_collapse_4
-            }
+			
 		}
 		
 		fire_only_once = yes
@@ -6219,89 +6214,6 @@ TRM_Iron_Sword_Operations_Categorie = {
 			custom_effect_tooltip = GEI_Secure_Royal_Blood_decision_battle_up_tt
 			add_to_variable = { GEI_Secure_Royal_Blood_Battle_var = 5 } #-> 교전
 			add_to_variable = { GEI_Secure_Royal_Blood_Battle_back_var = -5 } #-> 교전 반대
-		}
-	}
-	TRM_Iron_Sword_decision_idea_down = { # 치안 강화 
-
-		icon = GFX_decision_generic_police_action
-
-		visible = {
-			has_country_flag = TRM_Iron_Sword_Operations_flag
-            NOT = { has_country_flag = TRM_tail_chasing_flag }
-		}
-		available = {
-		}
-        ai_will_do = {
-            base = 0 
-			modifier = {
-                add = 4000
-				has_idea = TRM_collapse_4
-			}
-			modifier = {
-                add = 80
-				has_idea = TRM_collapse_3
-			}
-			modifier = {
-                add = 40
-				has_idea = TRM_collapse_2
-			}
-			modifier = {
-                add = 20
-				has_idea = TRM_collapse_1
-			}
-        }
-        cost = 50
-
-		days_remove = 70
-        days_re_enable = 70
-
-		modifier = {
-			consumer_goods_factor = 0.15
-		}
-		
-		fire_only_once = no
-		
-		complete_effect = {
-            TRN_country_collapse_down = yes
-		}
-	}
-	TRM_Iron_Sword_decision_time_increases = { # 테러리스트 체포
-
-		icon = GFX_decision_generic_arrest
-
-		visible = {
-			has_country_flag = TRM_Iron_Sword_Operations_flag
-            NOT = { has_country_flag = TRM_tail_chasing_flag }
-		}
-		available = {
-		}
-        ai_will_do = {
-            base = 0
-			modifier = {
-                add = 40
-				has_idea = TRM_collapse_4
-			}
-			modifier = {
-                add = 20
-				has_idea = TRM_collapse_3
-			}
-			modifier = {
-                add = 20
-				has_idea = TRM_collapse_2
-			}
-			modifier = {
-				add = 0
-				has_idea = TRM_collapse_1
-			}
-        }
-
-		days_remove = 5
-        days_re_enable = 90
-        cost = 5
-		
-		fire_only_once = no
-		
-		remove_effect = {
 		}
 	}
 	TRM_Iron_Sword_decision_co_op = { # 발키리와 협동 수사 제안

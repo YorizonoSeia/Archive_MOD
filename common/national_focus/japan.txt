@@ -1686,7 +1686,7 @@
 
 	focus = {
 		id = JAP_purge_the_kodoha_faction
-		icon = GFX_goal_generic_major_war
+		icon = GFX_goal_JAP_purge_the_kodoha_faction
 		prerequisite = { focus = JAP_nation_of_the_rising_sun }
 		mutually_exclusive = { focus = JAP_opposition_to_the_army focus = JAP_support_the_kodoha_faction }
 		x = -8
@@ -1827,7 +1827,7 @@
 
 	focus = {
 		id = JAP_liaison_conference
-		icon = GFX_goal_generic_intelligence_exchange
+		icon = GFX_goal_JAP_liaison_conference
 		prerequisite = { focus = JAP_purge_the_kodoha_faction }
 		x = 0
 		y = 1
@@ -1909,7 +1909,7 @@
 
 	focus = {
 		id = JAP_non_aggression_pact_with_the_soviet_union
-		icon = GFX_goal_generic_dangerous_deal
+		icon = GFX_goal_JAP_non_aggression_pact_with_the_soviet_union
 		prerequisite = { focus = JAP_strike_south_doctrine }
 		x = 0
 		y = 2
@@ -1944,7 +1944,7 @@
 
 	focus = {
 		id = JAP_bypass_the_philippines
-		icon = GFX_goal_generic_position_armies
+		icon = GFX_goal_JAP_bypass_the_philippines
 		prerequisite = { focus = JAP_non_aggression_pact_with_the_soviet_union }
 		mutually_exclusive = { focus = JAP_secure_the_philippines }
 		x = -1
@@ -2352,7 +2352,7 @@
 	focus = {
 		id = JAP_greater_east_asian_co_prosperity_sphere
 		###BA_MOD_FIX
-		icon = GFX_goal_JAP_sphere
+		icon = GFX_goal_JAP_greater_east_asian_co_prosperity_sphere
 		###BA_MOD_FIX
 		prerequisite = { focus = JAP_nation_of_the_rising_sun }
 		x = 20
@@ -2512,7 +2512,7 @@
 
 	focus = {
 		id = JAP_secure_china
-		icon = GFX_focus_ETH_an_empire_in_the_shade_of_the_sun
+		icon = GFX_goal_JAP_secure_china
 		prerequisite = { focus = JAP_intervene_in_china }
 		x = 0
 		y = 1
@@ -3306,7 +3306,7 @@
 
 	focus = {
 		id = JAP_strengthen_the_divine_wind
-		icon = GFX_goal_generic_secret_weapon
+		icon = GFX_goal_JAP_strengthen_the_divine_wind
 		prerequisite = { focus = JAP_spiritual_mobilization }
 		prerequisite = { focus = JAP_warrior_spirit }
 		x = 1

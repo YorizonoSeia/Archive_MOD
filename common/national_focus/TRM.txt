@@ -2607,6 +2607,7 @@
 		available = {
 			country_exists = SHA
 			is_subject = no
+			is_neighbor_of = SHA
 		}
 		will_lead_to_war_with = SHA
 
@@ -2825,9 +2826,6 @@
 		
 		prerequisite = { 
 			focus = TRM_SMO_for_Abydos
-		}
-		available = {
-			is_subject = no
 		}
 		x = 0
 		y = 1

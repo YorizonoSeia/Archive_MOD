@@ -644,6 +644,7 @@
  SHA_economic_path_shortcut: "$GER_economic_path_shortcut$"
  SHA_non_history_path_shortcut: "$GER_oppose_hitler_shortcut$"
  SHA_history_path_shortcut: "$GER_historical_path_shortcut$"
+ SHA_militray_path_shortcut: "$GER_military_doctrine_shortcut$"
 
  # 경제도 잘하고 문화도 잘하고 못하는게 없는데
  SHA_relief_work: "구제 사업 조직"
@@ -697,20 +698,23 @@
  # 산해경 군사 중점
  SHA_address_the_army: "방위군 개편"
  SHA_address_the_army_desc: "오스트리아 연방군과의 전쟁에서 산해경 육군의 심각한 결점이 드러났습니다. $SHA_MINA$의 노력으로 일부 현대화가 이루어졌지만, 전 세계적으로 긴장이 고조되고 군비 경쟁이 격화되는 지금, 군대를 현대적 수준으로 유지하기 위해 주저할 시간이 없습니다."
+ 
  SHA_Following_doorkeeper_footsteps: "전대 문주의 유산"
  SHA_Following_doorkeeper_footsteps_desc: ""
+ SHA_National_Guard_Expansion: "육군 확대"
+ SHA_National_Guard_Expansion_desc: ""
+ SHA_heroism_education: "영웅주의 교육"
+ SHA_heroism_education_desc: ""
+ SHA_propaganda_bureau_of_army: "육군 선전국"
+ SHA_propaganda_bureau_of_army_desc: ""
+ SHA_civic_militarism: "시민군국주의"
+ SHA_civic_militarism_desc: ""
+
  SHA_Central_Military_Commission: "중앙군사위원회 설립"
  SHA_Central_Military_Commission_desc: ""
- SHA_Command_integration: "지휘부 통합"
- SHA_Command_integration_desc: ""
- SHA_Three_Military_Training: "3단계 군사 훈련"
- SHA_Three_Military_Training_desc: ""
- SHA_instill_auftragstaktik: "$GER_instill_auftragstaktik$"
- SHA_instill_auftragstaktik_desc: ""
- SHA_unity_of_doctrine: "교리 통합"
- SHA_unity_of_doctrine_desc: ""
- SHA_Shanhaijing_Orchestra: "산해경 관현악단"
- SHA_Shanhaijing_Orchestra_desc: ""
+
+ SHA_Giving_role_to_Mina: "코노에 미나에게 역할 부여"
+ SHA_Establishment_of_military_academy: "사관학교 설립"
 
  # 정치
  SHA_Austrian_oppression_continues: "오스트리아 탄압 지속"
@@ -848,6 +852,9 @@
  SHA_industrial_region: "경제특구"
  SHA_industrial_region_2: "$SHA_industrial_region$"
 
+ SHA_Shanhaijin_Army: "산해경 육군"
+ SHA_military_change: "§Y$SHA_Shanhaijin_Army$§! 변동치"
+
  # 이벤트
  shafas.1.t: "경극부의 쿠데타!"
  shafas.1.d: "\"산해경의 전통의 이름 아래, 현룡문의 문주 $SHA_KISAKI$, 규탄한다!\"\n\n경극이 예정되었던 운명의 날, 백호 광장에는 수백의 관중과 경극부가 운집했습니다. 그러나 이날 선보인 경극은 단순한 예술적 공연이 아니었습니다. 이는 현 산해경 현룡문의 문주인 $SHA_KISAKI$를 \"검은 군주\"에 비유하며 직접적으로 겨냥한 날카로운 풍자극이었습니다.\n\n경극의 줄거리는 어리석은 검은 군주가 변혁의 바람을 맞이하겠다며 성문을 함부로 열어 난세를 초래하고 백성을 혼란에 빠뜨린다는 내용이었습니다. 공연은 무대 위에서 펼쳐지는 환상적인 장면들과 함께 문주를 향한 강렬한 비판의 메시지를 담아냈습니다. 경극이 끝나자마자 광장은 함성으로 들끓었고, 현룡문의 급진파들이 본격적으로 활동하기 시작하였습니다.\n\n결국 이 날의 공연은 단순한 연극이 아닌 혁명의 신호탄이었습니다. 급진파들은 경극부와 합세하여 백호 광장에서 문주 $SHA_KISAKI$의 축출을 선언했고, 현장은 혼란과 분노로 뒤덮였습니다. 전통을 내세운 이들의 외침은 단순한 구호가 아닌, 문주의 권위를 무너뜨리는 날카로운 칼날이 되었던 것입니다.\n\n현재 $SHA_KISAKI$는 VIP 자택에 연금된 상황입니다. 전 문주라는 지위 덕분에 일정한 예우를 받고 있는 상황입니다. 그러나 그의 몰락 이후 산해경의 미래는 여전히 안갯속에 가려져 있습니다. 새롭게 문주의 자리에 오른 $SHA_KAGUYA$의 정책 방향이 무엇일지, 사람들 사이에서는 설왕설래가 이어지고 있습니다.\n\n그러나 내부적으로 우려의 목소리가 나오고 있습니다. 몇 년전 산해경의 치안을 어지럽힌 $SHA_KAI$의 처분을 취소시키고 다시 복학 시킨다는 위험한 소문이 돌고 있습니다..."
@@ -866,7 +873,7 @@
  shafas.4.a: "현무상회가 쿠데타를 성공시켰다!"
  shafas.4.b: "그들은 배반의 대가를 치룰 것이다!"
 
- shafas.5.t: "두 달 전"
+ shafas.5.t: "2달 전"
  shafas.5.d: "1929년, 미국에서 시작된 경제 공황의 여파는 머나먼 유럽의 오스트리아에도 도달했습니다. 대공황의 충격으로 많은 시민들이 일자리를 잃었고, 거리로 나와 빵과 일자리를 요구하며 시위를 벌였습니다. 그러나 정치인들의 대공황 대처 노력은 무색하게도 모두 실패로 돌아갔습니다.\n\n그러던 중, 11월 1일 대전이 사태가 발생하며 산해경 또한 휘말려 오스트리아에 도착하게 되었습니다. 중앙 정부는 무력화되었고, 산해경 현룡문이 입법, 사법, 행정을 모두 장악하며 오스트리아의 새로운 주체로 자리 잡았습니다. 그러나 경제 문제 또한 산해경이 고스란히 떠안아야 했습니다.\n\n산해경 현룡문은 곧바로 임시 법안을 선포하여 실업자 문제를 효과적으로 해결하는 데 성공했습니다. 하지만 이로 인해 대공황이 끝난 것은 아닙니다. 앞으로도 수많은 장애물과 복잡한 선택의 기로가 남아 있습니다. 현명한 선택과 집중을 통해 이 문제들을 해결해 나가야 할 것입니다."
  shafas.5.a: "도전 해보자!"
 
@@ -885,6 +892,13 @@
  shafas.9.t: "우리의 요구를 거부한 [FROM.GetAdjective]!"
  shafas.9.d: "긴 말을 할 필요가 있습니까?"
  shafas.9.a: "그렇다면 전쟁 뿐이다!"
+
+ shafas.10.t: "코노에 미나의 역할"
+ shafas.10.d: "코노에 미나는 오스트리아 연방군과 민병대를 완벽하게 색출하는 데 성공하며, 그 공로로 명예의 훈장을 가슴에 달게 되었습니다. 그녀의 지휘력과 전략적 판단은 군 내외에서 큰 찬사를 받았으며, 이는 산해경의 군사력과 정보 역량을 한 단계 끌어올리는 데 결정적인 역할을 했습니다. 그러나, 이러한 업적에도 불구하고 그녀의 공식 직함은 여전히 \"집행부장\"이라는 애매모호한 명칭에 머물러 있어, 그녀의 위치와 권한이 명확히 드러나지 않는 상태입니다.\n\n이제 산해경 정부는 더 이상 미루지 않고 그녀에게 적합한 직책과 권위를 부여해야 할 시점에 이르렀습니다. 이는 단지 개인의 명예를 위한 조치가 아니라, 군 내부의 사기를 높이고 조직 체계를 더욱 견고히 다지기 위한 필수 과제일 것입니다."
+ shafas.10.a: "그녀의 공세 능력을 추켜세우자."
+ shafas.10.b: "그녀의 방어 능력을 추켜세우자."
+ shafas.10.c: "그녀의 기동 능력을 추켜세우자."
+ shafas.10.e: "그녀의 편셩 능력을 추켜세우자."
 
  # 툴팁
  SHA_Shanhaijing_fascism_tt: "§Y$SHA_Shanhaijinfascism$§! 변동치: "
