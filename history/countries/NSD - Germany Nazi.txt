@@ -96,6 +96,11 @@ recruit_character = GEK_paul_hausser
 recruit_character = GEK_sepp_dietrich
 recruit_character = GEK_felix_steiner
 recruit_character = GEK_walter_kruger
+recruit_character = NSD_erich_julius_eberhard_von_zelewski
+recruit_character = NSD_friedrich_jeckeln
+recruit_character = NSD_friedrich_wilhelm_kruger
+recruit_character = NSD_herbert_otto_gille
+recruit_character = NSD_oswald_pohl
 
 #oob = ""
 

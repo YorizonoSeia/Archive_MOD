@@ -12,6 +12,12 @@ characters={
 			expire="1965.1.1.1"
 		}
 	}
+
+#	 #	 ####	####
+##	 #	#		#  	#
+# ## #	 ### 	#  	#
+#   ##	    #	#  	#
+#	 #	#### 	####
 	NSD_heydrich = {
 		name = NSD_heydrich
 		portraits = {
@@ -24,6 +30,102 @@ characters={
 			ideology = nazism
 			traits={ dictator }
 			expire="1965.1.1.1"
+		}
+	}
+	NSD_erich_julius_eberhard_von_zelewski = {
+		name = NSD_erich_julius_eberhard_von_zelewski
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_nsd_erich_julius_eberhard_von_zelewski"
+				small = "GFX_idea_nsd_erich_julius_eberhard_von_zelewski"
+			}
+		}
+		corps_commander = {
+			traits={ militias_officer }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = NSD_erich_julius_eberhard_von_zelewski
+			available = {
+			}
+			traits = { prince_of_terror }
+		}
+	}
+	NSD_friedrich_jeckeln = {
+		name = NSD_friedrich_jeckeln
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_nsd_friedrich_jeckeln"
+				small = "GFX_idea_nsd_friedrich_jeckeln"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = NSD_friedrich_jeckeln
+			available = {
+			}
+			traits = { head_of_intelligence }
+		}
+	}
+	NSD_friedrich_wilhelm_kruger = {
+		name = NSD_friedrich_wilhelm_kruger
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_nsd_friedrich_wilhelm_kruger"
+				small = "GFX_idea_nsd_friedrich_wilhelm_kruger"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = NSD_friedrich_jeckeln
+			available = {
+			}
+			traits = { silent_workhorse }
+		}
+	}
+	NSD_herbert_otto_gille = {
+		name = NSD_herbert_otto_gille
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_nsd_herbert_otto_gille"
+				small = "GFX_idea_nsd_herbert_otto_gille"
+			}
+		}
+		corps_commander = {
+			traits={ militias_officer armor_officer trickster }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = high_command
+			idea_token = NSD_herbert_otto_gille
+			available = {
+			}
+			traits = { army_armored_1 }
+		}
+	}
+	NSD_oswald_pohl = {
+		name = NSD_oswald_pohl
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_nsd_oswald_pohl"
+				small = "GFX_idea_nsd_oswald_pohl"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = NSD_oswald_pohl
+			available = {
+			}
+			traits = { war_industrialist }
 		}
 	}
 
@@ -2628,7 +2730,7 @@ characters={
 
 
 
-	GEK_joachim_von_ribbentrop = { # 독일 장관
+	GEK_joachim_von_ribbentrop = { # 독일 장관 : 외무
 		name = GER_joachim_von_ribbentrop
 		portraits = {
 			army = {
@@ -2642,8 +2744,14 @@ characters={
 				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 			}
 			visible = {
+				has_country_flag = Kick_GEK_konstantin_von_neurath
 			}
 			available = {
+				hidden_trigger = {
+					has_country_flag = Kick_GEK_konstantin_von_neurath
+				}
+				NOT  = { has_idea  = konstantin_von_neurath }
+				NOT = { has_government = communism }
 			}
 
 			cost = 50
@@ -2672,8 +2780,13 @@ characters={
 				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 			}
 			visible = {
+				NOT = { has_country_flag = Kick_GEK_konstantin_von_neurath }
 			}
 			available = {
+				hidden_trigger = {
+					NOT = { has_country_flag = Kick_GEK_konstantin_von_neurath }
+				}
+				NOT  = { has_idea  = joachim_von_ribbentrop }
 				NOT = { has_government = communism }
 			}
 			cost = 50

@@ -21,18 +21,21 @@ GEK_SOV_morozov_design_bureau_organization = {
 	
 	allowed = {	
 		OR = {
-			tag = GEK
-			tag = GEA
-			tag = GEF
-			tag = GE1
-			tag = GE2
-			tag = GEM
-			tag = GEH
-			tag = TRM
-			tag = TRC
-			tag = ARI
-			tag = HEU
-			BA_trinity_civil_war_state_tag = yes
+			original_tag = GEK
+			original_tag = GEA
+			original_tag = GEF
+			original_tag = GE1
+			original_tag = GE2
+			original_tag = GEM
+			original_tag = GEH
+			original_tag = TRM
+			original_tag = TRC
+			original_tag = ARI
+			original_tag = HEU
+			original_tag = NSD
+			original_tag = KPD
+			original_tag = GE1
+			original_tag = GE2
 		} 
 	}
 
@@ -55,18 +58,21 @@ GEK_porsche_organization = {
 	
 	allowed = {	
 		OR = {
-			tag = GEK
-			tag = GEA
-			tag = GEF
-			tag = GE1
-			tag = GE2
-			tag = GEM
-			tag = GEH
-			tag = TRM
-			tag = TRC
-			tag = ARI
-			tag = HEU
-			BA_trinity_civil_war_state_tag = yes
+			original_tag = GEK
+			original_tag = GEA
+			original_tag = GEF
+			original_tag = GE1
+			original_tag = GE2
+			original_tag = GEM
+			original_tag = GEH
+			original_tag = TRM
+			original_tag = TRC
+			original_tag = ARI
+			original_tag = HEU
+			original_tag = NSD
+			original_tag = KPD
+			original_tag = GE1
+			original_tag = GE2
 		} 
 	}
 
@@ -273,18 +279,21 @@ GEK_henschel_organization = {
 	
 	allowed = {	
 		OR = {
-			tag = GEK
-			tag = GEA
-			tag = GEF
-			tag = GE1
-			tag = GE2
-			tag = GEM
-			tag = GEH
-			tag = TRM
-			tag = TRC
-			tag = ARI
-			tag = HEU
-			BA_trinity_civil_war_state_tag = yes
+			original_tag = GEK
+			original_tag = GEA
+			original_tag = GEF
+			original_tag = GE1
+			original_tag = GE2
+			original_tag = GEM
+			original_tag = GEH
+			original_tag = TRM
+			original_tag = TRC
+			original_tag = ARI
+			original_tag = HEU
+			original_tag = NSD
+			original_tag = KPD
+			original_tag = GE1
+			original_tag = GE2
 		} 
 	}
 
@@ -372,18 +381,21 @@ GEK_man_organization = {
 	
 	allowed = {	
 		OR = {
-			tag = GEK
-			tag = GEA
-			tag = GEF
-			tag = GE1
-			tag = GE2
-			tag = GEM
-			tag = GEH
-			tag = TRM
-			tag = TRC
-			tag = ARI
-			tag = HEU
-			BA_trinity_civil_war_state_tag = yes
+			original_tag = GEK
+			original_tag = GEA
+			original_tag = GEF
+			original_tag = GE1
+			original_tag = GE2
+			original_tag = GEM
+			original_tag = GEH
+			original_tag = TRM
+			original_tag = TRC
+			original_tag = ARI
+			original_tag = HEU
+			original_tag = NSD
+			original_tag = KPD
+			original_tag = GE1
+			original_tag = GE2
 		} 
 	}
 	
@@ -525,18 +537,21 @@ GEK_alkett_organization = {
 	
 	allowed = {	
 		OR = {
-			tag = GEK
-			tag = GEA
-			tag = GEF
-			tag = GE1
-			tag = GE2
-			tag = GEM
-			tag = GEH
-			tag = TRM
-			tag = TRC
-			tag = ARI
-			tag = HEU
-			BA_trinity_civil_war_state_tag = yes
+			original_tag = GEK
+			original_tag = GEA
+			original_tag = GEF
+			original_tag = GE1
+			original_tag = GE2
+			original_tag = GEM
+			original_tag = GEH
+			original_tag = TRM
+			original_tag = TRC
+			original_tag = ARI
+			original_tag = HEU
+			original_tag = NSD
+			original_tag = KPD
+			original_tag = GE1
+			original_tag = GE2
 		} 
 	}
 
@@ -691,18 +706,21 @@ GEK_daimler_benz_organization = {
 	
 	allowed = {	
 		OR = {
-			tag = GEK
-			tag = GEA
-			tag = GEF
-			tag = GE1
-			tag = GE2
-			tag = GEM
-			tag = GEH
-			tag = TRM
-			tag = TRC
-			tag = ARI
-			tag = HEU
-			BA_trinity_civil_war_state_tag = yes
+			original_tag = GEK
+			original_tag = GEA
+			original_tag = GEF
+			original_tag = GE1
+			original_tag = GE2
+			original_tag = GEM
+			original_tag = GEH
+			original_tag = TRM
+			original_tag = TRC
+			original_tag = ARI
+			original_tag = HEU
+			original_tag = NSD
+			original_tag = KPD
+			original_tag = GE1
+			original_tag = GE2
 		} 
 	}
 
@@ -935,18 +953,21 @@ GEK_deschimag_organization = {
 	
 	allowed = {	
 		OR = {
-			tag = GEK
-			tag = GEA
-			tag = GEF
-			tag = GE1
-			tag = GE2
-			tag = GEM
-			tag = GEH
-			tag = TRM
-			tag = TRC
-			tag = ARI
-			tag = HEU
-			BA_trinity_civil_war_state_tag = yes
+			original_tag = GEK
+			original_tag = GEA
+			original_tag = GEF
+			original_tag = GE1
+			original_tag = GE2
+			original_tag = GEM
+			original_tag = GEH
+			original_tag = TRM
+			original_tag = TRC
+			original_tag = ARI
+			original_tag = HEU
+			original_tag = NSD
+			original_tag = KPD
+			original_tag = GE1
+			original_tag = GE2
 		} 
 	}
 	
@@ -1107,18 +1128,21 @@ GEK_germaniawerft_organization = {
 	
 	allowed = {	
 		OR = {
-			tag = GEK
-			tag = GEA
-			tag = GEF
-			tag = GE1
-			tag = GE2
-			tag = GEM
-			tag = GEH
-			tag = TRM
-			tag = TRC
-			tag = ARI
-			tag = HEU
-			BA_trinity_civil_war_state_tag = yes
+			original_tag = GEK
+			original_tag = GEA
+			original_tag = GEF
+			original_tag = GE1
+			original_tag = GE2
+			original_tag = GEM
+			original_tag = GEH
+			original_tag = TRM
+			original_tag = TRC
+			original_tag = ARI
+			original_tag = HEU
+			original_tag = NSD
+			original_tag = KPD
+			original_tag = GE1
+			original_tag = GE2
 		} 
 	}
 	
@@ -1278,18 +1302,21 @@ GEK_blohm_und_voss_organization = {
 	
 	allowed = {	
 		OR = {
-			tag = GEK
-			tag = GEA
-			tag = GEF
-			tag = GE1
-			tag = GE2
-			tag = GEM
-			tag = GEH
-			tag = TRM
-			tag = TRC
-			tag = ARI
-			tag = HEU
-			BA_trinity_civil_war_state_tag = yes
+			original_tag = GEK
+			original_tag = GEA
+			original_tag = GEF
+			original_tag = GE1
+			original_tag = GE2
+			original_tag = GEM
+			original_tag = GEH
+			original_tag = TRM
+			original_tag = TRC
+			original_tag = ARI
+			original_tag = HEU
+			original_tag = NSD
+			original_tag = KPD
+			original_tag = GE1
+			original_tag = GE2
 		} 
 	}
 	
@@ -1466,18 +1493,21 @@ GEK_hdw_organization = {
 	
 	allowed = {	
 		OR = {
-			tag = GEK
-			tag = GEA
-			tag = GEF
-			tag = GE1
-			tag = GE2
-			tag = GEM
-			tag = GEH
-			tag = TRM
-			tag = TRC
-			tag = ARI
-			tag = HEU
-			BA_trinity_civil_war_state_tag = yes
+			original_tag = GEK
+			original_tag = GEA
+			original_tag = GEF
+			original_tag = GE1
+			original_tag = GE2
+			original_tag = GEM
+			original_tag = GEH
+			original_tag = TRM
+			original_tag = TRC
+			original_tag = ARI
+			original_tag = HEU
+			original_tag = NSD
+			original_tag = KPD
+			original_tag = GE1
+			original_tag = GE2
 		} 
 	}
 	
@@ -1689,18 +1719,21 @@ GEK_deutsche_werke_organization = {
 	
 	allowed = {	
 		OR = {
-			tag = GEK
-			tag = GEA
-			tag = GEF
-			tag = GE1
-			tag = GE2
-			tag = GEM
-			tag = GEH
-			tag = TRM
-			tag = TRC
-			tag = ARI
-			tag = HEU
-			BA_trinity_civil_war_state_tag = yes
+			original_tag = GEK
+			original_tag = GEA
+			original_tag = GEF
+			original_tag = GE1
+			original_tag = GE2
+			original_tag = GEM
+			original_tag = GEH
+			original_tag = TRM
+			original_tag = TRC
+			original_tag = ARI
+			original_tag = HEU
+			original_tag = NSD
+			original_tag = KPD
+			original_tag = GE1
+			original_tag = GE2
 		} 
 	}
 	
@@ -1889,18 +1922,21 @@ GEK_kriegsmarinewerft_wilhelmshaven_organization = {
 	
 	allowed = {	
 		OR = {
-			tag = GEK
-			tag = GEA
-			tag = GEF
-			tag = GE1
-			tag = GE2
-			tag = GEM
-			tag = GEH
-			tag = TRM
-			tag = TRC
-			tag = ARI
-			tag = HEU
-			BA_trinity_civil_war_state_tag = yes
+			original_tag = GEK
+			original_tag = GEA
+			original_tag = GEF
+			original_tag = GE1
+			original_tag = GE2
+			original_tag = GEM
+			original_tag = GEH
+			original_tag = TRM
+			original_tag = TRC
+			original_tag = ARI
+			original_tag = HEU
+			original_tag = NSD
+			original_tag = KPD
+			original_tag = GE1
+			original_tag = GE2
 		} 
 	}
 	
@@ -2053,18 +2089,21 @@ GEK_messerschmitt_organization = {
 	
 	allowed = {	
 		OR = {
-			tag = GEK
-			tag = GEA
-			tag = GEF
-			tag = GE1
-			tag = GE2
-			tag = GEM
-			tag = GEH
-			tag = TRM
-			tag = TRC
-			tag = ARI
-			tag = HEU
-			BA_trinity_civil_war_state_tag = yes
+			original_tag = GEK
+			original_tag = GEA
+			original_tag = GEF
+			original_tag = GE1
+			original_tag = GE2
+			original_tag = GEM
+			original_tag = GEH
+			original_tag = TRM
+			original_tag = TRC
+			original_tag = ARI
+			original_tag = HEU
+			original_tag = NSD
+			original_tag = KPD
+			original_tag = GE1
+			original_tag = GE2
 		} 
 	}
 
@@ -2250,18 +2289,21 @@ GEK_junkers_organization = {
 	
 	allowed = {	 
 		OR = {
-			tag = GEK
-			tag = GEA
-			tag = GEF
-			tag = GE1
-			tag = GE2
-			tag = GEM
-			tag = GEH
-			tag = TRM
-			tag = TRC
-			tag = ARI
-			tag = HEU
-			BA_trinity_civil_war_state_tag = yes
+			original_tag = GEK
+			original_tag = GEA
+			original_tag = GEF
+			original_tag = GE1
+			original_tag = GE2
+			original_tag = GEM
+			original_tag = GEH
+			original_tag = TRM
+			original_tag = TRC
+			original_tag = ARI
+			original_tag = HEU
+			original_tag = NSD
+			original_tag = KPD
+			original_tag = GE1
+			original_tag = GE2
 		} 
 	}
 
@@ -2437,18 +2479,21 @@ GEK_focke_wulf_organization = {
 	
 	allowed = {	
 		OR = {
-			tag = GEK
-			tag = GEA
-			tag = GEF
-			tag = GE1
-			tag = GE2
-			tag = GEM
-			tag = GEH
-			tag = TRM
-			tag = TRC
-			tag = ARI
-			tag = HEU
-			BA_trinity_civil_war_state_tag = yes
+			original_tag = GEK
+			original_tag = GEA
+			original_tag = GEF
+			original_tag = GE1
+			original_tag = GE2
+			original_tag = GEM
+			original_tag = GEH
+			original_tag = TRM
+			original_tag = TRC
+			original_tag = ARI
+			original_tag = HEU
+			original_tag = NSD
+			original_tag = KPD
+			original_tag = GE1
+			original_tag = GE2
 		} 
 	}
 
@@ -2673,18 +2718,21 @@ GEK_heinkel_organization = {
 	
 	allowed = {	
 		OR = {
-			tag = GEK
-			tag = GEA
-			tag = GEF
-			tag = GE1
-			tag = GE2
-			tag = GEM
-			tag = GEH
-			tag = TRM
-			tag = TRC
-			tag = ARI
-			tag = HEU
-			BA_trinity_civil_war_state_tag = yes
+			original_tag = GEK
+			original_tag = GEA
+			original_tag = GEF
+			original_tag = GE1
+			original_tag = GE2
+			original_tag = GEM
+			original_tag = GEH
+			original_tag = TRM
+			original_tag = TRC
+			original_tag = ARI
+			original_tag = HEU
+			original_tag = NSD
+			original_tag = KPD
+			original_tag = GE1
+			original_tag = GE2
 		} 
 	}
 
@@ -2903,18 +2951,21 @@ GEK_dornier_organization = {
 	
 	allowed = {	
 		OR = {
-			tag = GEK
-			tag = GEA
-			tag = GEF
-			tag = GE1
-			tag = GE2
-			tag = GEM
-			tag = GEH
-			tag = TRM
-			tag = TRC
-			tag = ARI
-			tag = HEU
-			BA_trinity_civil_war_state_tag = yes
+			original_tag = GEK
+			original_tag = GEA
+			original_tag = GEF
+			original_tag = GE1
+			original_tag = GE2
+			original_tag = GEM
+			original_tag = GEH
+			original_tag = TRM
+			original_tag = TRC
+			original_tag = ARI
+			original_tag = HEU
+			original_tag = NSD
+			original_tag = KPD
+			original_tag = GE1
+			original_tag = GE2
 		} 
 	}
 
@@ -3058,18 +3109,21 @@ GEK_arado_flugzeugwerke_organization = {
 	
 	allowed = {	
 		OR = {
-			tag = GEK
-			tag = GEA
-			tag = GEF
-			tag = GE1
-			tag = GE2
-			tag = GEM
-			tag = GEH
-			tag = TRM
-			tag = TRC
-			tag = ARI
-			tag = HEU
-			BA_trinity_civil_war_state_tag = yes
+			original_tag = GEK
+			original_tag = GEA
+			original_tag = GEF
+			original_tag = GE1
+			original_tag = GE2
+			original_tag = GEM
+			original_tag = GEH
+			original_tag = TRM
+			original_tag = TRC
+			original_tag = ARI
+			original_tag = HEU
+			original_tag = NSD
+			original_tag = KPD
+			original_tag = GE1
+			original_tag = GE2
 		} 
 	}
 
@@ -3200,18 +3254,21 @@ GEK_fieseler_organization = {
 	
 	allowed = {	
 		OR = {
-			tag = GEK
-			tag = GEA
-			tag = GEF
-			tag = GE1
-			tag = GE2
-			tag = GEM
-			tag = GEH
-			tag = TRM
-			tag = TRC
-			tag = ARI
-			tag = HEU
-			BA_trinity_civil_war_state_tag = yes
+			original_tag = GEK
+			original_tag = GEA
+			original_tag = GEF
+			original_tag = GE1
+			original_tag = GE2
+			original_tag = GEM
+			original_tag = GEH
+			original_tag = TRM
+			original_tag = TRC
+			original_tag = ARI
+			original_tag = HEU
+			original_tag = NSD
+			original_tag = KPD
+			original_tag = GE1
+			original_tag = GE2
 		} 
 	}
 
@@ -3321,18 +3378,21 @@ GEK_focke_achgelis_organization = {
 	
 	allowed = {	
 		OR = {
-			tag = GEK
-			tag = GEA
-			tag = GEF
-			tag = GE1
-			tag = GE2
-			tag = GEM
-			tag = GEH
-			tag = TRM
-			tag = TRC
-			tag = ARI
-			tag = HEU
-			BA_trinity_civil_war_state_tag = yes
+			original_tag = GEK
+			original_tag = GEA
+			original_tag = GEF
+			original_tag = GE1
+			original_tag = GE2
+			original_tag = GEM
+			original_tag = GEH
+			original_tag = TRM
+			original_tag = TRC
+			original_tag = ARI
+			original_tag = HEU
+			original_tag = NSD
+			original_tag = KPD
+			original_tag = GE1
+			original_tag = GE2
 		} 	
 	}
 
@@ -3453,18 +3513,21 @@ GEK_rheinmetall_organization = {
 	
 	allowed = {	
 		OR = {
-			tag = GEK
-			tag = GEA
-			tag = GEF
-			tag = GE1
-			tag = GE2
-			tag = GEM
-			tag = GEH
-			tag = TRM
-			tag = TRC
-			tag = ARI
-			tag = HEU
-			BA_trinity_civil_war_state_tag = yes
+			original_tag = GEK
+			original_tag = GEA
+			original_tag = GEF
+			original_tag = GE1
+			original_tag = GE2
+			original_tag = GEM
+			original_tag = GEH
+			original_tag = TRM
+			original_tag = TRC
+			original_tag = ARI
+			original_tag = HEU
+			original_tag = NSD
+			original_tag = KPD
+			original_tag = GE1
+			original_tag = GE2
 		} 
 	}
 
@@ -3609,18 +3672,21 @@ GEK_mauser_organization = {
 	
 	allowed = {	 
 		OR = {
-			tag = GEK
-			tag = GEA
-			tag = GEF
-			tag = GE1
-			tag = GE2
-			tag = GEM
-			tag = GEH
-			tag = TRM
-			tag = TRC
-			tag = ARI
-			tag = HEU
-			BA_trinity_civil_war_state_tag = yes
+			original_tag = GEK
+			original_tag = GEA
+			original_tag = GEF
+			original_tag = GE1
+			original_tag = GE2
+			original_tag = GEM
+			original_tag = GEH
+			original_tag = TRM
+			original_tag = TRC
+			original_tag = ARI
+			original_tag = HEU
+			original_tag = NSD
+			original_tag = KPD
+			original_tag = GE1
+			original_tag = GE2
 		} 
 	}
 
@@ -3745,18 +3811,21 @@ GEK_opel_organization = {
 	
 	allowed = {	
 		OR = {
-			tag = GEK
-			tag = GEA
-			tag = GEF
-			tag = GE1
-			tag = GE2
-			tag = GEM
-			tag = GEH
-			tag = TRM
-			tag = TRC
-			tag = ARI
-			tag = HEU
-			BA_trinity_civil_war_state_tag = yes
+			original_tag = GEK
+			original_tag = GEA
+			original_tag = GEF
+			original_tag = GE1
+			original_tag = GE2
+			original_tag = GEM
+			original_tag = GEH
+			original_tag = TRM
+			original_tag = TRC
+			original_tag = ARI
+			original_tag = HEU
+			original_tag = NSD
+			original_tag = KPD
+			original_tag = GE1
+			original_tag = GE2
 		} 
 	}
 
@@ -3898,18 +3967,21 @@ GEK_carl_walther_organization = {
 	
 	allowed = {	
 		OR = {
-			tag = GEK
-			tag = GEA
-			tag = GEF
-			tag = GE1
-			tag = GE2
-			tag = GEM
-			tag = GEH
-			tag = TRM
-			tag = TRC
-			tag = ARI
-			tag = HEU
-			BA_trinity_civil_war_state_tag = yes
+			original_tag = GEK
+			original_tag = GEA
+			original_tag = GEF
+			original_tag = GE1
+			original_tag = GE2
+			original_tag = GEM
+			original_tag = GEH
+			original_tag = TRM
+			original_tag = TRC
+			original_tag = ARI
+			original_tag = HEU
+			original_tag = NSD
+			original_tag = KPD
+			original_tag = GE1
+			original_tag = GE2
 		} 
 	}
 
@@ -3980,18 +4052,21 @@ GEK_auto_union_organization = {
 	
 	allowed = {	
 		OR = {
-			tag = GEK
-			tag = GEA
-			tag = GEF
-			tag = GE1
-			tag = GE2
-			tag = GEM
-			tag = GEH
-			tag = TRM
-			tag = TRC
-			tag = ARI
-			tag = HEU
-			BA_trinity_civil_war_state_tag = yes
+			original_tag = GEK
+			original_tag = GEA
+			original_tag = GEF
+			original_tag = GE1
+			original_tag = GE2
+			original_tag = GEM
+			original_tag = GEH
+			original_tag = TRM
+			original_tag = TRC
+			original_tag = ARI
+			original_tag = HEU
+			original_tag = NSD
+			original_tag = KPD
+			original_tag = GE1
+			original_tag = GE2
 		} 
 	}
 

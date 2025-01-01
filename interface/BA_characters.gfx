@@ -1,5 +1,56 @@
 spriteTypes = {
-	#게헨나
+#NSD
+	spriteType = {
+		name = "GFX_portrait_nsd_erich_julius_eberhard_von_zelewski"
+		textureFile = "gfx/leaders/NSD/portrait_nsd_erich_julius_eberhard_von_zelewski.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_portrait_nsd_friedrich_jeckeln"
+		textureFile = "gfx/leaders/NSD/portrait_nsd_friedrich_jeckeln.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_portrait_nsd_friedrich_wilhelm_kruger"
+		textureFile = "gfx/leaders/NSD/portrait_nsd_friedrich_wilhelm_kruger.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_portrait_nsd_herbert_otto_gille"
+		textureFile = "gfx/leaders/NSD/portrait_nsd_herbert_otto_gille.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_portrait_nsd_oswald_pohl"
+		textureFile = "gfx/leaders/NSD/portrait_nsd_oswald_pohl.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_idea_nsd_erich_julius_eberhard_von_zelewski"
+		textureFile = "gfx/interface/advisors/NSD/idea_nsd_erich_julius_eberhard_von_zelewski.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_idea_nsd_friedrich_jeckeln"
+		textureFile = "gfx/interface/advisors/NSD/idea_nsd_friedrich_jeckeln.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_idea_nsd_friedrich_wilhelm_kruger"
+		textureFile = "gfx/interface/advisors/NSD/idea_nsd_friedrich_wilhelm_kruger.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_idea_nsd_herbert_otto_gille"
+		textureFile = "gfx/interface/advisors/NSD/idea_nsd_herbert_otto_gille.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_idea_nsd_oswald_pohl"
+		textureFile = "gfx/interface/advisors/NSD/idea_nsd_oswald_pohl.tga"
+		legacy_lazy_load = no
+	}
+#게헨나
 	spriteType = {
 		name = "GFX_idea_GEH_ibuki"
 		textureFile = "gfx/interface/advisors/GEH/dlqnzl.dds"
@@ -980,5 +1031,4 @@ spriteTypes = {
 		textureFile = "gfx/leaders/KAP/portrait_KAP_ju_at_su_Kaoru.dds"
 		legacy_lazy_load = no
 	}
-
 }
