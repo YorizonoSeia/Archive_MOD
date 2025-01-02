@@ -23,7 +23,7 @@ focus_tree = {
 		icon = GFX_goal_HEU_aru_rikuhachima_1
 
 		cost = 10.00
-		x = 18
+		x = 20
 		y = 0
 
 		available = {
@@ -406,6 +406,511 @@ focus_tree = {
 		}
 	}
 	
+	focus = {
+		id = HEU_no_more_french
+		
+		relative_position_id = HEU_we_still_hope
+
+		icon = GFX_focus_attack_france
+
+		prerequisite = { 
+			focus = HEU_we_still_hope
+		}
+
+		ai_will_do = {
+			factor = 6
+		}
+
+		search_filters = {  }
+
+		cost = 5.00
+
+		x = -1
+		y = 1
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_research_slot = 1
+			HEU_bop_medium_increase_effect = yes
+		}
+	}
+	
+	focus = {
+		id = HEU_nationalization_of_education
+		
+		relative_position_id = HEU_no_more_french
+
+		icon = GFX_focus_NOR_approach_kretsen
+
+		prerequisite = { 
+			focus = HEU_no_more_french
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {  }
+
+		cost = 5.00
+
+		x = -1
+		y = 1
+
+		search_filters = {  }
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = HEU_catholicism_for_aru
+		
+		relative_position_id = HEU_no_more_french
+
+		icon = GFX_focus_ARG_liberation_theology #GFX_focus_secularism
+
+		prerequisite = { 
+			focus = HEU_no_more_french
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {  }
+
+		cost = 5.00
+
+		x = -3
+		y = 1
+
+		search_filters = {  }
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = HEU_liberation_theology
+		
+		relative_position_id = HEU_no_more_french
+
+		icon = GFX_focus_mex_triumph_over_the_cristeros
+
+		prerequisite = { 
+			focus = HEU_catholicism_for_aru
+		}
+
+		prerequisite = { 
+			focus = HEU_nationalization_of_education
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {  }
+
+		cost = 5.00
+
+		x = -2
+		y = 2
+
+		search_filters = {  }
+
+		completion_reward = {
+		    set_rule = { can_generate_female_aces = yes }
+		}
+	}
+	
+	focus = {
+		id = HEU_sovereignty_act
+		
+		relative_position_id = HEU_no_more_french
+
+		icon = GFX_focus_ETH_re-convene_the_parliament
+
+		prerequisite = { 
+			focus = HEU_liberation_theology
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {  }
+
+		cost = 5.00
+
+		x = -2
+		y = 3
+
+		search_filters = {  }
+
+		completion_reward = {
+		    set_rule = { can_generate_female_aces = yes }
+			custom_effect_tooltip = kivotos_halo_add3_tt
+			hidden_effect = {
+				set_variable = { BA_halo_infantry_cap_edit_var = 3 }
+				BA_halo_infantry_cap_edit_effect = yes
+			}
+		}
+	}
+	
+	focus = {
+		id = HEU_national_security_agency
+		
+		relative_position_id = HEU_no_more_french
+
+		icon = GFX_focus_SWI_embrace_rote_drei
+
+		prerequisite = { 
+			focus = HEU_no_more_french
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {  }
+
+		cost = 5.00
+
+		x = 0
+		y = 2
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_intelligence_agency = no
+				}
+				create_intelligence_agency = yes
+			}
+			else = {
+				upgrade_intelligence_agency = upgrade_army_department 
+			}
+		}
+	}
+	
+	focus = {
+		id = HEU_preparation_for_confusion
+		
+		relative_position_id = HEU_no_more_french
+
+		icon = GFX_focus_generic_reinforcing_the_supply_network
+
+		prerequisite = { 
+			focus = HEU_national_security_agency
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {  }
+
+		cost = 5.00
+
+		x = 0
+		y = 3
+
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+			army_experience = 50
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.50
+				category = land_doctrine
+				uses = 1
+			}
+		}
+	}
+
+	focus = {
+		id = HEU_unwelcome_school
+		
+		relative_position_id = HEU_we_still_hope
+
+		icon = GFX_focus_BRA_end_the_state_of_emergency
+
+		prerequisite = { 
+			focus = HEU_we_still_hope
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {  }
+
+		cost = 5.00
+
+		x = 1
+		y = 1
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = HEU_execution_for_all
+		
+		relative_position_id = HEU_unwelcome_school
+
+		icon = GFX_focus_SOV_restore_cossack_units
+
+		prerequisite = { 
+			focus = HEU_unwelcome_school
+		}
+
+		mutually_exclusive = {
+			focus = HEU_mercy_but_not_foget
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {  }
+
+		cost = 5.00
+
+		x = 1
+		y = 1
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+			HEU_bop_medium_increase_effect = yes
+
+			custom_effect_tooltip = kivotos_halo_add2_tt
+			hidden_effect = {
+				set_variable = { BA_halo_infantry_cap_edit_var = 2 }
+				BA_halo_infantry_cap_edit_effect = yes
+			}
+		}
+	}
+
+	focus = {
+		id = HEU_mercy_but_not_foget
+		
+		relative_position_id = HEU_unwelcome_school
+
+		icon = GFX_focus_SWE_attack_landsorganisationen
+
+		prerequisite = { 
+			focus = HEU_unwelcome_school
+		}
+
+		mutually_exclusive = {
+			focus = HEU_execution_for_all
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {  }
+
+		cost = 5.00
+
+		x = -1
+		y = 1
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = kivotos_halo_add6_tt
+			hidden_effect = {
+				set_variable = { BA_halo_infantry_cap_edit_var = 6 }
+				BA_halo_infantry_cap_edit_effect = yes
+			}
+
+			add_stability = -0.1
+		}
+	}
+
+	focus = {
+		id = HEU_for_you
+		
+		relative_position_id = HEU_unwelcome_school
+
+		icon = GFX_focus_focus_fra_fascist_threat
+
+		prerequisite = { 
+			focus = HEU_mercy_but_not_foget
+			focus = HEU_execution_for_all
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {  }
+
+		cost = 5.00
+
+		x = 0
+		y = 2
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = HEU_for_you_2
+		
+		relative_position_id = HEU_unwelcome_school
+
+		icon = GFX_goal_TRN_cant_with_gehenna
+
+		prerequisite = { 
+			focus = HEU_for_you
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {  }
+
+		cost = 5.00
+
+		x = 0
+		y = 3
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = HEU_for_you_3
+		
+		relative_position_id = HEU_unwelcome_school
+
+		icon = GFX_goal_HEU_rikuhachimaism_focus_5_2 #GFX_goal_SHA_Jingle_Bell_Rock
+
+		prerequisite = { 
+			focus = HEU_for_you_2
+		}
+
+		prerequisite = { 
+			focus = HEU_sovereignty_act
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {  }
+
+		cost = 5.00
+
+		x = -2
+		y = 4
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = HEU_question_of_succession_law
+		
+		relative_position_id = HEU_unwelcome_school
+
+		icon = GFX_focus_BRA_restore_brazilian_honor
+
+		prerequisite = { 
+			focus = HEU_for_you_3
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {  }
+
+		cost = 10.00
+
+		x = -2
+		y = 5
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	
 
 	focus = {
 		id = HEU_no_more_hope
@@ -451,6 +956,7 @@ focus_tree = {
 			set_portraits = {
 				character = HEU_aru
 				army = { large ="GFX_HEU_aru_rikuhachima_fascist_Portrait" }
+				civilian = { large ="GFX_HEU_aru_rikuhachima_fascist_Portrait" }
 			}
 
 			add_popularity = {
@@ -1588,6 +2094,7 @@ focus_tree = {
 				set_portraits = {
 					character = HEU_aru
 					army = { large ="GFX_HEU_aru_rikuhachima_fascist_Portrait" }
+					civilian = { large ="GFX_HEU_aru_rikuhachima_fascist_Portrait" }
 				}
 			}
 
@@ -3344,7 +3851,7 @@ focus_tree = {
 		icon = GFX_goal_GEH_Pax_Gehennia
 
 		cost = 10.00
-		x = 78
+		x = 80
 		y = 0
 
 		available = {
@@ -4328,7 +4835,7 @@ focus_tree = {
 		icon = GFX_focus_CHL_strengthen_the_central_bank
 
 		cost = 5.00
-		x = 44
+		x = 46
 		y = 0
 
 		available = {
@@ -5800,7 +6307,7 @@ focus_tree = {
 		icon = GFX_goal_fortify_the_westwall
 
 		cost = 5.00
-		x = 60
+		x = 62
 		y = 0
 
 		available = {

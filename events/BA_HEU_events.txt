@@ -3,12 +3,13 @@ add_namespace = HEU_news
 add_namespace = HEU.flavor_event
 add_namespace = HEU.persona_event
 
-country_event = { #환영합니다!
+country_event = { #1936년 신년사, 국회 본회의장 속기록
 	id = HEU_event.0
 	title = HEU_event.0.t
 	desc = HEU_event.0.desc
-	picture = GFX_report_event_Problem_Solver_68
+	picture = GFX_report_event_grand_ducal_palace_luxembourg
     is_triggered_only = yes
+
 	option = { 
 		name = HEU_event.0.a 
 		country_event = HEU_event.1001
@@ -41,49 +42,19 @@ country_event = { #환영합니다!
 			}
 		}
 	}
-	option = { 
-		name = HEU_event.0.b
-		if = {
-			limit = {
-				has_game_rule = {
-					rule = HEU_dress_Portrait_Rule
-					option = HEU_dress_Portrait_Rule_on
-				}
-			}
-			set_portraits = {
-				character = HEU_aru
-				civilian = { large = GFX_HEU_ARU_DRESS_Portrait }
-				army = { large = GFX_HEU_ARU_DRESS_Portrait }
-			}
-			set_portraits = {
-				character = HEU_ancmzl
-				civilian = { large = GFX_HEU_MUTSUKI_DRESS_Portrait }
-				army = { large = GFX_HEU_MUTSUKI_DRESS_Portrait }
-			}
-			set_portraits = {
-				character = HEU_zkdyzh
-				civilian = { large = GFX_HEU_KAYOKO_DRESS_Portrait }
-				army = { large = GFX_HEU_KAYOKO_DRESS_Portrait }
-			}
-			set_portraits = {
-				character = HEU_gkfnzk
-				civilian = { large = GFX_HEU_HARUKA_DRESS_Portrait }
-				army = { large = GFX_HEU_HARUKA_DRESS_Portrait }
-			}
-		}
-	}
 }
-country_event = { #환영합니다!
+
+country_event = { #1936년 신년사, 국회 본회의장 속기록
 	id = HEU_event.1001
 	title = HEU_event.1001.t
 	desc = HEU_event.1001.desc
-	picture = GFX_report_event_Problem_Solver_68
+	picture = GFX_report_event_aru_rikuhachima_dress
     is_triggered_only = yes
 	option = { 
 		name = HEU_event.1001.a 
-		country_event = HEU_event.1002
 	}
 }
+
 country_event = { #환영합니다!
 	id = HEU_event.1002
 	title = HEU_event.1002.t
@@ -116,6 +87,7 @@ country_event = { #환영합니다!
 		name = HEU_event.1004.a 
 	}
 }
+
 country_event = { #플레이해주셔서 감사합니다
 	id = HEU_event.1000
 	title = HEU_event.1000.t
@@ -128,6 +100,7 @@ country_event = { #플레이해주셔서 감사합니다
 		add_political_power = 68
 	}
 }
+
 country_event = { #룩셈부르크-만마전 조약
 	id = HEU_event.1
 	title = HEU_event.1.t
@@ -1496,6 +1469,190 @@ country_event = { #관용차 예산 지원
 		name = HEU_event.143.b
 	}
 	
+}
+
+country_event = { #자유 룩셈부르크 여단
+	id = HEU_event.146
+	title = HEU_event.146.t
+	desc = HEU_event.146.desc
+	picture = GFX_report_event_spain_civil_war_volunteers_01
+
+    fire_only_once = yes
+
+	trigger = {
+		original_tag = HEU
+		has_defensive_war = yes
+	}
+
+	option = { 
+		name = HEU_event.146.a
+		add_manpower = 300
+
+		HEU_victor_bodson = {
+			add_corps_commander_role = {
+				traits = { militias_officer media_personality }
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 2
+				skill = 1
+				legacy_id=-1
+			}					
+		}
+	}
+	
+}
+country_event = { #신 쿠데타 계획
+	id = HEU_event.147
+	title = HEU_event.147.t
+	desc = HEU_event.147.desc
+	picture = GFX_report_event_fascist_gathering
+
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.147.a 
+
+	}
+}
+
+country_event = { #신 쿠데타 계획
+	id = HEU_event.149
+	title = HEU_event.149.t
+	desc = HEU_event.149.desc
+	picture = GFX_report_event_fascist_gathering
+
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.149.a 
+		HEU_aru = {
+			unit_leader_event = HEU_event.150
+		}
+	}
+}
+
+unit_leader_event = { #민권법 공개 토론회
+	id = HEU_event.150
+	title = HEU_event.150.t
+	desc = HEU_event.150.desc
+	picture = GFX_report_event_fascist_gathering
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.150.a 
+		HEU_aru = {
+			unit_leader_event = HEU_event.151
+		}
+
+	}
+}
+
+unit_leader_event = { #민권법 공개 토론회
+	id = HEU_event.151
+	title = HEU_event.151.t
+	desc = HEU_event.151.desc
+	picture = GFX_report_event_fascist_gathering
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.151.a 
+		custom_effect_tooltip = HEU_event.151.a.tt
+		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = HEU_debate_wisdom_tt
+		HEU_aru = {
+			unit_leader_event = HEU_event.152
+		}
+	}
+
+	option = { 
+		name = HEU_event.151.b
+
+	}
+
+	option = { 
+		name = HEU_event.151.c
+
+	}
+}
+
+unit_leader_event = { #민권법 공개 토론회
+	id = HEU_event.152
+	title = HEU_event.152.t
+	desc = HEU_event.152.desc
+	picture = GFX_report_event_fascist_gathering
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.152.a 
+		HEU_aru = {
+			unit_leader_event = HEU_event.153
+		}
+	}
+
+	option = { 
+		name = HEU_event.152.b
+
+	}
+
+	option = { 
+		name = HEU_event.152.c
+
+	}
+}
+
+unit_leader_event = { #민권법 공개 토론회
+	id = HEU_event.153
+	title = HEU_event.153.t
+	desc = HEU_event.153.desc
+	picture = GFX_report_event_fascist_gathering
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.153.a 
+		HEU_aru = {
+			unit_leader_event = HEU_event.154
+		}
+	}
+
+	option = { 
+		name = HEU_event.153.b
+
+	}
+
+	option = { 
+		name = HEU_event.153.c
+
+	}
+}
+
+unit_leader_event = { #민권법 공개 토론회
+	id = HEU_event.154
+	title = HEU_event.154.t
+	desc = HEU_event.154.desc
+	picture = GFX_report_event_fascist_gathering
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.154.a 
+	}
+
+	option = { 
+		name = HEU_event.154.b
+
+	}
+
+	option = { 
+		name = HEU_event.154.c
+
+	}
 }
 
 country_event = { #룩셈부르크 대공국의 멸망

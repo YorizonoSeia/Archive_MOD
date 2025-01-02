@@ -781,6 +781,39 @@ characters={
 		}
 	}
 
+	HEU_victor_bodson={
+		portraits={
+			army={
+				large="gfx/leaders/HEU/HEU_victor_bodson.dds"
+				small= "gfx/interface/advisors/HEU/HEU_victor_bodson.dds"
+			}
+		}
+
+
+		advisor={
+			slot = political_advisor
+			idea_token = HEU_victor_bodson
+
+			allowed = {
+				original_tag = HEU
+			}
+
+			available = {
+				
+			}
+
+			traits = {
+				HEU_victor_bodson_trait
+			}
+
+			cost = 150
+
+			ai_will_do = {
+				factor = 17.000
+			}
+		}
+	}
+
 	HEU_pandemonium_society_spy ={
 		portraits={
 			army={

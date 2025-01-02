@@ -125,6 +125,7 @@ recruit_character = HEU_zenon_bernard
 # 기타
 recruit_character = HEU_guillaume_kroll
 recruit_character = HEU_jean_paul_sartre
+recruit_character = HEU_victor_bodson
 recruit_character = HEU_pandemonium_society_spy
 
 # 장군
@@ -182,6 +183,10 @@ set_variable = { HEU_sanup_dynamic_industrial_capacity_dockyard = 0 }
 set_variable = { HEU_sanup_dynamic_production_factory_efficiency_gain_factor = 0.05 }
 set_variable = { HEU_sanup_dynamic_production_factory_max_efficiency_factor = 0.05 }
 set_variable = { HEU_sanup_dynamic_local_resources_factor = 0 }
+
+# 토론회
+set_variable = { benriya_debate^0 = 4 }
+set_variable = { benriya_debate^1 = 6 }
 
 #룩셈부르크군
 set_variable = { HEU_luxembourg_army_land_doctrine_cost_factor = -0.1 }
