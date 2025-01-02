@@ -2415,12 +2415,18 @@ leader_traits = {
 		attrition = -0.08
 		max_planning_factor = 0.10	
 		planning_speed = 0.20
+
+		command_cap_increase = @tier3_cp_cap_increase
+		command_power = @tier3_cp_cost
 	}		
 	HEU_HARUKA_T2 = { #폭주의 공격자	
 		random = no
 		sprite = 5
 		army_infantry_attack_factor = 0.15
 		army_infantry_defence_factor = 0.05
+
+		command_cap_increase = @tier3_cp_cap_increase
+		command_power = @tier3_cp_cost
 	}	
 	HEU_KAYOKO_T3 = { #천재 이론가
 		random = no
@@ -2562,6 +2568,15 @@ leader_traits = {
 		research_speed_factor = 0.05
 		compliance_gain = 0.05
 		resistance_decay = 0.1
+	}
+
+	HEU_victor_bodson_trait = { # 사회주의자 인권운동가
+		random = no
+		sprite = 13
+		compliance_growth = 0.05
+		defensive_war_stability_factor = 0.05
+		non_core_manpower = 0.05
+		resistance_damage_to_garrison = -0.15
 	}
 
 	##아리우스##
