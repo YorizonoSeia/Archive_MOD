@@ -90,7 +90,7 @@
 		}
 	}
 	offset = {
-		x = -5
+		x = -2
 		y = 10
 		trigger = {
 			OR = {
