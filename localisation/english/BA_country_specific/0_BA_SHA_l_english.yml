@@ -1,7 +1,4 @@
 ﻿l_english:
- SHA_country_intro_header: "오랜 전통의 산해경 고급중학교"
- SHA_country_intro_content: "키보토스 외각에 위치한 오래된 전통의 학원인 산해경 고급중학교는 다른 학원과 차별화된 고유의 문화를 가지고 있는 아름다운 학원이었습니다. 현무상회를 비롯한 관광업이 성행했고, 상당히 발전한 학원이었습니다.\n\n그러나 산해경 고급중학교는 현룡문과 현무상회 두 세력으로 갈라져 있습니다. 류우게 키사키의 현룡문은 전통주의를 고수하고 있고, 아케시로 루미의 현무상회는 다문화주의를 주장하고 있습니다.\n갑작스러운 대이변으로, 총학생회의 영향이 줄어든 현 상황에서 산해경은 내전의 불길에 휘말릴 수도, 피의 폭풍이 불 수도 있습니다.\n\n그러나 산해경 고급중학교는 어떠한 불길에도, 어떠한 폭풍에도 무너지지 않을 것입니다.\n우리 산해경 고급중학교의 학생들이 있는 한, 키보토스가 안정이 지속되는 한 말이죠..\n\n§Y개발 : jindoi§!"
- SHA_guide: "\n진보와 혁신\n\n£white_dot 혁명을 완수해 공화국을 건설하십시오.\n£white_dot 키보토스에 새 시대의 시작을 알리십시오.\n£white_dot 남부의 혁명을 지속하십시오.\n£white_dot 알프스와 키보토스를 사회주의라는 이념 하에 통치하십시오.\n\n\n민주주의의 선도자\n\n£white_dot 민주주의의 시대를 여십시오.\n£white_dot 총선거를 통해 새 지도자를 선출하십시오.\n£white_dot 지도자의 정책을 성공적으로 완수하십시오.\n£white_dot 키보토스의 경제대국이자 민주주의의 선도자로 우뚝 서십시오.\n\n\n키사키 여제의 산해경 제국\n\n£white_dot 빨갱이를 제거하고 이계와 절연하십시오.\n£white_dot 키사키 여제를 즉위시키십시오.\n£white_dot 성리학을 따르십시오.\n£white_dot 우리의 고토를 통합하십시오.\n£white_dot 제국을 건설하고 서방, 그리고 곰과 맞서십시오.\n\n\n깨어난 검은 용\n\n£white_dot 신타니 카이를 집권시키십시오.\n£white_dot 민족의 혼을 되찾으십시오.\n£white_dot 백귀야행을 해방하십시오.\n£white_dot 승리를 거둬 백귀야행을 본토로 편입하십시오.\n£white_dot 세계를 산해경의 깃발 안에 종속시키십시오.\n"
 
  SHA_flag_1:0 "§Y자동§!으로 §Y통과§!될 것입니다."
  SHA_flag_2:0 "§Y미국§!의 §Y요구를 받아들일 것으로 결정함.§!"
@@ -641,9 +638,14 @@
 ################################# Rework
 #################################
 
+ SHA_country_intro_header: "전통과 미식의 학원 [SHA.GetName]"
+ SHA_country_intro_content: "키보토스 외각에 위치한 오래된 전통의 학원인 산해경 고급중학교는 다른 학원과 차별화된 고유의 문화를 가지고 있는 아름다운 학원이었습니다. 현무상회를 비롯한 관광업이 성행했고, 상당히 발전한 학원이었습니다.\n\n산해경 내부의 권력 투쟁은 그 갈등이 너무나 심각하여, 산해경이 어떻게 유지되고 있는지조차 의문이 들 정도입니다. 전대 문주의 실각과 류우게 키사키 문주의 취임은 현룡문 내부의 급진파와 보수파 모두에게 큰 충격을 안겼습니다. 특히 키사키 문주의 취임 이후, 키사키 파벌과 온건파가 급성장하면서 급진파와 보수파와 함께 권력투쟁이 더욱 격화되었습니다. 이들은 산해경의 중심인 현룡문의 문주 자리를 놓고 첨예한 대립을 이어가고 있습니다.\n\n그러나 이러한 권력투쟁은 현룡문에만 국한되지 않습니다. 현룡문 다음으로 강력한 세력인 현무상회는 관광업과 요식업에서 선구적인 역할을 하며 타 학원들과의 접촉이 잦아졌습니다. 이러한 흐름 속에서 현무상회는 자연스럽게 개혁개방을 주장하게 되었고, 산해경의 보수적 가치를 지키려는 현룡문과 갈등을 빚고 있습니다.\n\n§Y개발 : jindoi§!"
+ SHA_guide: "WIP"
+
  SHA_economic_path_shortcut: "$GER_economic_path_shortcut$"
- SHA_non_history_path_shortcut: "$GER_oppose_hitler_shortcut$"
- SHA_history_path_shortcut: "$GER_historical_path_shortcut$"
+ SHA_non_history_path_shortcut: "정치: 찬성파"
+ SHA_history_path_shortcut: "정치: 반대파"
+ SHA_democracy_path_shortcut: "정치: 민주/공산"
  SHA_militray_path_shortcut: "$GER_military_doctrine_shortcut$"
 
  # 경제도 잘하고 문화도 잘하고 못하는게 없는데
@@ -696,7 +698,7 @@
  SHA_economic_organisation_of_SKivotos_desc: ""
 
  # 산해경 군사 중점
- SHA_address_the_army: "방위군 개편"
+ SHA_address_the_army: "[SHA.GetAdjective] 방위군 개편"
  SHA_address_the_army_desc: "오스트리아 연방군과의 전쟁에서 산해경 육군의 심각한 결점이 드러났습니다. $SHA_MINA$의 노력으로 일부 현대화가 이루어졌지만, 전 세계적으로 긴장이 고조되고 군비 경쟁이 격화되는 지금, 군대를 현대적 수준으로 유지하기 위해 주저할 시간이 없습니다."
  
  SHA_Following_doorkeeper_footsteps: "전대 문주의 유산"
@@ -710,11 +712,24 @@
  SHA_civic_militarism: "시민군국주의"
  SHA_civic_militarism_desc: ""
 
- SHA_Central_Military_Commission: "중앙군사위원회 설립"
+
+ SHA_Central_Military_Commission: "[SHA.GetName] 중앙군사위원회 설립"
  SHA_Central_Military_Commission_desc: ""
+ SHA_Joint_Chiefs_of_Staff: "연합참모부 설립"
+ SHA_Joint_Chiefs_of_Staff_desc: ""
+ SHA_cohesion_first: "결속 우선"
+ SHA_cohesion_first_desc: ""
+ SHA_Mission_Command: "장군 의사결정 권한 확대"
+ SHA_Mission_Command_desc: ""
+ SHA_emergency_command_system: "비상 지휘 체계"
+ SHA_emergency_command_system_desc: ""
 
  SHA_Giving_role_to_Mina: "코노에 미나에게 역할 부여"
+ SHA_Giving_role_to_Mina_desc: ""
  SHA_Establishment_of_military_academy: "사관학교 설립"
+ SHA_Establishment_of_military_academy_desc: ""
+ SHA_professional_camouflage: "전문적 위장"
+ SHA_professional_camouflage_desc: ""
 
  # 정치
  SHA_Austrian_oppression_continues: "오스트리아 탄압 지속"
@@ -776,6 +791,7 @@
  SHA_ascension_desc: ""
  SHA_Establishment_of_the_Governor_General: "백귀야행 총독부"
  SHA_Establishment_of_the_Governor_General_desc: ""
+ SHA_Establishment_of_the_Governor_General_tt: "아무 §Y@HYA[HYA.GetAdjective]§! 핵심 주 소유중 일시 효과 발동."
 
 
  # 보수 혁명 루트
@@ -854,6 +870,8 @@
 
  SHA_Shanhaijin_Army: "산해경 육군"
  SHA_military_change: "§Y$SHA_Shanhaijin_Army$§! 변동치"
+
+ SHA_Hyakkiyako_governor: "백귀야행 총독부"
 
  # 이벤트
  shafas.1.t: "경극부의 쿠데타!"

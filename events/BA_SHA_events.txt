@@ -244,6 +244,7 @@ unit_leader_event = {
 
 	option = {
 		name = shafas.10.a
+		ai_chance = { base = 10 }
 		add_advisor_role = {
 			character = SHA_MINA
 			advisor = {
@@ -257,6 +258,7 @@ unit_leader_event = {
 
 	option = {
 		name = shafas.10.b
+		ai_chance = { base = 1 }
 		add_advisor_role = {
 			character = SHA_MINA
 			advisor = {
@@ -270,6 +272,7 @@ unit_leader_event = {
 
 	option = {
 		name = shafas.10.c
+		ai_chance = { base = 1 }
 		add_advisor_role = {
 			character = SHA_MINA
 			advisor = {
@@ -283,6 +286,7 @@ unit_leader_event = {
 
 	option = {
 		name = shafas.10.e
+		ai_chance = { base = 1 }
 		add_advisor_role = {
 			character = SHA_MINA
 			advisor = {

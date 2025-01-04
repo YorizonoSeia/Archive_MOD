@@ -710,11 +710,21 @@ focus_tree = {
 
 		available = {
 			surrender_progress > 0.15
+			has_completed_focus = SHA_Following_doorkeeper_footsteps
 		}
 		bypass = { }
 
 
 		completion_reward = {
+			custom_effect_tooltip = SHA_military_change
+			add_to_variable = {
+				SHA_militray_army_attack_factor = 0.05
+				tooltip = army_attack_factor_tt
+			}
+			add_to_variable = {
+				SHA_militray_army_org_factor = -0.05
+				tooltip = army_org_factor_tt
+			}
 		}
 	}
 
@@ -1541,13 +1551,38 @@ focus_tree = {
 		mutually_exclusive = { }
 
 		available = { 
+			any_state = {
+				is_core_of = HYA
+				is_owned_by = SHA
+				NOT = { state = 986 }
+				NOT = { state = 972 }
+			}
 		}
 		bypass = { }
 
 		relative_position_id = SHA_invade_of_Hyakkiyako
 
 		completion_reward = {
-
+			if = {
+				limit = {
+					any_state = {
+						is_core_of = HYA
+						is_owned_by = SHA
+						NOT = { state = 986 }
+						NOT = { state = 972 }
+					}
+				}
+				every_owned_state = {
+					limit = {
+						is_core_of = HYA
+						NOT = { is_core_of = SHA }
+					}
+					add_dynamic_modifier = { modifier = SHA_Hyakkiyako_governor }
+				}
+			}
+			else = {
+				custom_effect_tooltip = SHA_Establishment_of_the_Governor_General_tt
+			}
 		}
 	}
 
@@ -2919,9 +2954,9 @@ focus_tree = {
 		search_filters = { }
 		cost = 5
 
-		prerequisite = {
-			focus = SHA_Central_Military_Commission 
+		prerequisite = { 
 			focus = SHA_Following_doorkeeper_footsteps 
+			focus = SHA_Central_Military_Commission
 		}
 		mutually_exclusive = { }
 
@@ -2938,6 +2973,38 @@ focus_tree = {
 		}
 	}
 	
+	# 전문적 위장
+	focus = {
+		id = SHA_professional_camouflage
+		icon = GFX_focus_SWE_beneath_sticks_and_stone
+		x = -1
+		y = 2
+		relative_position_id = SHA_Giving_role_to_Mina
+		search_filters = { }
+		cost = 8
+
+		prerequisite = { 
+			focus = SHA_Giving_role_to_Mina 
+			focus = SHA_Establishment_of_military_academy
+		}
+		mutually_exclusive = { }
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+			custom_effect_tooltip = SHA_military_change
+			add_to_variable = {
+				SHA_military_cas_damage_reduction = 0.10
+				tooltip = cas_damage_reduction_tt
+			}
+			add_to_variable = {
+				SHA_military_enemy_army_bonus_air_superiority_factor = 0.10
+				tooltip = enemy_army_bonus_air_superiority_factor_tt
+			}
+		}
+	}
 
 	# 전대 문주의 유산
 	focus = {
@@ -2965,6 +3032,12 @@ focus_tree = {
 			}
 
 			add_dynamic_modifier = { modifier = SHA_Shanhaijin_Army }
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = SHA_military_change
+			add_to_variable = {
+				SHA_militray_army_attack_factor = 0.05
+				tooltip = army_attack_factor_tt
+			}
 		}
 	}
 	
@@ -3054,6 +3127,13 @@ focus_tree = {
 
 
 		completion_reward = {
+			add_political_power = 75
+			add_war_support = 0.1
+			custom_effect_tooltip = SHA_military_change
+			add_to_variable = {
+				SHA_military_weekly_casualties_war_support = 0.0005
+				tooltip = weekly_casualties_war_support_tt
+			}
 			# 결정 해금
 		}
 	}
@@ -3086,10 +3166,6 @@ focus_tree = {
 				SHA_military_conscription = 0.01
 				tooltip = conscription_tt
 			}
-			add_to_variable = {
-				SHA_military_weekly_casualties_war_support = 0.0005
-				tooltip = weekly_casualties_war_support_tt
-			}
 
 		}
 	}
@@ -3120,6 +3196,143 @@ focus_tree = {
 			}
 
 			add_dynamic_modifier = { modifier = SHA_Shanhaijin_Army }
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = SHA_military_change
+			add_to_variable = {
+				SHA_militray_army_org_factor = 0.05
+				tooltip = army_org_factor_tt
+			}
+		}
+	}
+
+	# 연합참모부 설립
+	focus = {
+		id = SHA_Joint_Chiefs_of_Staff
+		icon = GFX_focus_generic_manpower
+		x = 1
+		y = 1
+		relative_position_id = SHA_Central_Military_Commission
+		search_filters = { }
+		cost = 5
+
+		prerequisite = { focus = SHA_Central_Military_Commission }
+		mutually_exclusive = { }
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+			custom_effect_tooltip = SHA_military_change
+			add_to_variable = {
+				SHA_militray_initiative_factor = 0.1
+				tooltip = initiative_factor_tt
+			}
+			add_to_variable = {
+				SHA_militray_planning_speed = 0.1
+				tooltip = planning_speed_tt
+			}
+		}
+	}
+
+	# 임무형지휘
+	focus = {
+		id = SHA_Mission_Command
+		icon = GFX_focus_ETH_peacekeeping_forces
+		x = 1
+		y = 1
+		relative_position_id = SHA_Joint_Chiefs_of_Staff
+		search_filters = { }
+		cost = 5
+
+		prerequisite = { focus = SHA_Joint_Chiefs_of_Staff }
+		mutually_exclusive = { }
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = SHA_Mission_Command
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+
+			custom_effect_tooltip = SHA_military_change
+			add_to_variable = {
+				SHA_militray_army_attack_factor = 0.05
+				tooltip = army_attack_factor_tt
+			}
+			add_to_variable = {
+				SHA_militray_planning_speed = 0.15
+				tooltip = planning_speed_tt
+			}
+
+		}
+	}
+
+	# 결속 우선
+	focus = {
+		id = SHA_cohesion_first
+		icon = GFX_SOV_cohesion_first_ccp_2d_sov_compatibility
+		x = -1
+		y = 1
+		relative_position_id = SHA_Joint_Chiefs_of_Staff
+		search_filters = { }
+		cost = 5
+
+		prerequisite = { focus = SHA_Joint_Chiefs_of_Staff }
+		mutually_exclusive = { }
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+
+			custom_effect_tooltip = SHA_military_change
+			add_to_variable = {
+				SHA_militray_army_org_factor = 0.05
+				tooltip = army_org_factor_tt
+			}
+			add_to_variable = {
+				SHA_military_training_time_factor = 0.1
+				tooltip = training_time_factor_tt
+			}
+
+		}
+	}
+
+	# 비상 지휘 체계
+	focus = {
+		id = SHA_emergency_command_system
+		icon = GFX_goal_generic_military_sphere
+		x = -1
+		y = 1
+		relative_position_id = SHA_Mission_Command
+		search_filters = { }
+		cost = 5
+
+		prerequisite = { focus = SHA_Mission_Command }
+		prerequisite = { focus = SHA_cohesion_first }
+		mutually_exclusive = { }
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+			custom_effect_tooltip = SHA_military_change
+			add_to_variable = {
+				SHA_military_org_loss_when_moving = -0.1
+				tooltip = org_loss_when_moving_tt
+			}
+			add_to_variable = {
+				SHA_militray_army_defence_factor = 0.05
+				tooltip = army_defence_factor_tt
+			}
 		}
 	}
 

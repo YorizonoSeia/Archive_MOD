@@ -191,3 +191,16 @@ set_variable = { SHA_military_weekly_casualties_war_support = 0 }
 set_variable = { SHA_military_mobilization_speed = 0 }
 set_variable = { SHA_military_minimum_training_level = 0 }
 set_variable = { SHA_military_land_doctrine_cost_factor = 0 }
+
+set_variable = { SHA_militray_army_org_factor = 0 }
+set_variable = { SHA_militray_army_attack_factor = 0 }
+set_variable = { SHA_militray_army_defence_factor = 0 }
+set_variable = { SHA_militray_army_org_regain = 0 }
+set_variable = { SHA_militray_planning_speed = 0 }
+set_variable = { SHA_militray_initiative_factor = 0 }
+
+set_variable = { SHA_military_heat_attrition_factor = 0 }
+set_variable = { SHA_military_winter_attrition_factor = 0 }
+
+set_variable = { SHA_military_enemy_army_bonus_air_superiority_factor = 0 }
+set_variable = { SHA_military_cas_damage_reduction = 0 }

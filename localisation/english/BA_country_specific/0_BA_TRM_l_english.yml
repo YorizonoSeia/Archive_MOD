@@ -1928,7 +1928,7 @@
  TRM_restoration_and_development: "복구와 개발"
  TRM_Reichsland: "국가령"
  TRM_Reichsland_2: "준국가령"
- TRM_Military_occupation: "[FROM.GetName] 군민정청"
+ TRM_Military_occupation: "게헨나 군민정청"
  TRM_Terrestrial_Dreadnoughts_idea: "육상 전함"
  TRM_trinity_artillery: "[TRM.GetAdjective] 야포"
  TRM_superb_training_idea: "소수정예"

@@ -1884,10 +1884,10 @@ TRM_NEW_ORDER_SIBERIA = {
 		transfer_state = 564
 		transfer_state = 565
         create_country_leader = {
-			name = "NO NAME"
+			name = SOV_supreme_soviet
 			desc = "" 
-			picture = "gfx/leaders/ZZZ/Portrait_ZZZ_Anarchy.dds"
-			expire = "1965.1.1"
+			picture = GFX_portrait_SOV_supreme_soviet
+			expire = "3000.1.1" # 3000 만큼 사랑해
 			ideology = marxism
 			traits = { }
         }

@@ -4097,7 +4097,11 @@ TRN_after_war_decisions = {
 			highlight_states_trigger = { 
 				AND = {
 					BA_is_GER_core = yes
-					NOT = { is_core_of = TRM }
+					NOT = { 
+						is_core_of = TRM 
+						state = 61
+						state = 66
+					}
 				}
 				controller = {
 					tag = TRM
@@ -4129,7 +4133,11 @@ TRN_after_war_decisions = {
 			every_owned_state = {
 				limit = { 
 					BA_is_GER_core = yes
-					NOT = { is_core_of = TRM }
+					NOT = { 
+						is_core_of = TRM 
+						state = 61
+						state = 66
+					}
 				}
 				add_dynamic_modifier = { modifier = TRM_Military_occupation }
 			}
@@ -4148,7 +4156,11 @@ TRN_after_war_decisions = {
 			FROM = {
 				AND = {
 					BA_is_GER_core = yes
-					NOT = { is_core_of = TRM }
+					NOT = { 
+						is_core_of = TRM 
+						state = 61
+						state = 66
+					}
 				}
 				NOT = { has_dynamic_modifier =  { modifier = TRM_Military_occupation } }
 				is_fully_controlled_by = ROOT

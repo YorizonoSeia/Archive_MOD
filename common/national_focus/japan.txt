@@ -1982,7 +1982,7 @@
 
 	focus = {
 		id = JAP_secure_the_philippines
-		icon = GFX_goal_generic_occupy_states_ongoing_war
+		icon = GFX_goal_JAP_secure_the_philippines
 		prerequisite = { focus = JAP_non_aggression_pact_with_the_soviet_union }
 		mutually_exclusive = { focus = JAP_bypass_the_philippines }
 		x = 1

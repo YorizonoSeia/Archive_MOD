@@ -1,31 +1,7 @@
 spriteTypes = {
 	spriteType = {
-		name = "GFX_idea_SHA_corporate_state"
-		texturefile = "gfx/interface/ideas/SHA/SHA_corporate_state.tga"
-	}
-	spriteType = {
 		name = "GFX_idea_USABA_fascism_idea"
 		texturefile = "gfx/interface/ideas/USABA_fascism_idea.tga"
-	}
-	spriteType = {
-		name = "GFX_idea_SHA_black_dragon"
-		texturefile = "gfx/interface/ideas/SHA/walking_the_black_dragon.tga"
-	}
-	spriteType = {
-		name = "GFX_idea_SHA_Shanhaijinfascism"
-		texturefile = "gfx/interface/ideas/SHA/idea_SHA_Shanhaijinfascism.tga"
-	}
-	spriteType = {
-		name = "GFX_idea_SHA_walking_the_dragon"
-		texturefile = "gfx/interface/ideas/SHA/new_shanhaijing_conservatism.tga"
-	}
-	spriteType = {
-		name = "GFX_idea_SHA_Peking_Opera"
-		texturefile = "gfx/interface/ideas/SHA/SHA_Peking_Opera.tga"
-	}
-	spriteType = {
-		name = "GFX_idea_SHA_shanhaijing_isolation"
-		texturefile = "gfx/interface/ideas/SHA/idea_Shanhaijing_isolation.tga"
 	}
 	spriteType = {
 		name = "GFX_idea_BLM_resistance_of_helmet_gang"
@@ -645,6 +621,34 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_SHA_IdeaG_13"
 		texturefile = "gfx/interface/ideas/SHA/SHA_IdeaG_13.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SHA_black_dragon"
+		texturefile = "gfx/interface/ideas/SHA/walking_the_black_dragon.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SHA_Shanhaijinfascism"
+		texturefile = "gfx/interface/ideas/SHA/idea_SHA_Shanhaijinfascism.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SHA_walking_the_dragon"
+		texturefile = "gfx/interface/ideas/SHA/new_shanhaijing_conservatism.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SHA_Peking_Opera"
+		texturefile = "gfx/interface/ideas/SHA/SHA_Peking_Opera.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SHA_shanhaijing_isolation"
+		texturefile = "gfx/interface/ideas/SHA/idea_Shanhaijing_isolation.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SHA_Military"
+		texturefile = "gfx/interface/ideas/SHA/idea_SHA_Military.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SHA_corporate_state"
+		texturefile = "gfx/interface/ideas/SHA/SHA_corporate_state.tga"
 	}
 	spriteType = {
 		name = "GFX_idea_HYA_organization_recruitment"

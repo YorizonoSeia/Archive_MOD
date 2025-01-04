@@ -423,6 +423,9 @@ MIL_Millennium_robot_army_idea = { #자동 기계 전쟁
 	custom_modifier_tooltip = MIL_Millennium_robot_army_idea_tt
 }
 
+## 백귀야행 ##
+
+
 HYA_hyakkayouran_conflict_resolution_council = { #백화요란 분쟁조정위원회
 	enable = { always = yes }
 
@@ -735,7 +738,7 @@ COU_RIN_policy_lead_idea = { #린 루트 - 균형 잡힌 행정 [균형 잡힌 �
 	production_speed_buildings_factor = COU_RIN_policy_balance_idea_production_speed_buildings_factor #건설속도 기본 0%
 }
 
-#발키리 경찰국가
+##발키리 경찰국가##
 
 KSP_police_society_idea = {
 	icon = GFX_idea_saf_ossewabrandwag
@@ -946,6 +949,8 @@ RED_war_engineering_modifier = { #전쟁공학
 	unit_motorized_design_cost_factor = RED_war_unit_motorized_design_cost_factor
 	fighter_sortie_efficiency = RED_war_fighter_sortie_efficiency
 }
+
+## 독일계 국가 ##
 
 GEK_german_nationalism = {
 	enable = { always = yes }
@@ -2078,6 +2083,9 @@ USABA_german_ch_idea = { #독일인 대표 위원회
 	production_factory_efficiency_gain_factor = USABA_GER_modfiy_production_factory_efficiency_gain_factor
 }
 
+
+## 산해경 ##
+
 SHA_Shanhaijinfascism = {
 	enable = { always = yes }
 	icon = GFX_idea_SHA_Shanhaijinfascism
@@ -2109,7 +2117,7 @@ SHA_Shanhaijinfascism = {
 
 SHA_Shanhaijin_Army = {
 	enable = { always = yes }
-	icon = GFX_idea_SHA_Shanhaijinfascism
+	icon = GFX_idea_SHA_Military
 	
 	army_morale_factor = SHA_military_army_morale_factor
 	breakthrough_factor = SHA_military_breakthrough_factor
@@ -2123,8 +2131,23 @@ SHA_Shanhaijin_Army = {
 	minimum_training_level = SHA_military_minimum_training_level
 
 	land_doctrine_cost_factor = SHA_military_land_doctrine_cost_factor
+	
+	#
+	army_org_factor = SHA_militray_army_org_factor
+	army_attack_factor = SHA_militray_army_attack_factor
+	army_defence_factor = SHA_militray_army_defence_factor
+	
+    army_org_regain = SHA_militray_army_org_regain
+    planning_speed = SHA_militray_planning_speed
+    initiative_factor = SHA_militray_initiative_factor
 
-
+	org_loss_when_moving = SHA_military_org_loss_when_moving
+	
+	heat_attrition_factor = SHA_military_heat_attrition_factor #-0.1 -> An Adaptable Army
+	winter_attrition_factor = SHA_military_winter_attrition_factor #-0.1 -> An Adaptable Army
+	
+	cas_damage_reduction = SHA_military_cas_damage_reduction
+	enemy_army_bonus_air_superiority_factor = SHA_military_enemy_army_bonus_air_superiority_factor
 }
 
 SHA_aup_modifier = {

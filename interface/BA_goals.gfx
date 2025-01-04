@@ -2433,6 +2433,10 @@ spriteTypes = {
 		textureFile = "gfx/interface/goals/JAP/ADDON_JAP_bypass_the_philippines.tga"
 	}
 	spriteType = {
+		name = "GFX_goal_JAP_secure_the_philippines"
+		textureFile = "gfx/interface/goals/JAP/ADDON_JAP_secure_the_philippines.tga"
+	}
+	spriteType = {
 		name = "GFX_goal_JAP_strengthen_the_divine_wind"
 		textureFile = "gfx/interface/goals/JAP/ADDON_JAP_strengthen_the_divine_wind.tga"
 	}
