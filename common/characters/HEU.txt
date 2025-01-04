@@ -168,7 +168,7 @@ characters={
 			available = {
 			}
 			traits = {
-				HEU_KAYOKO_T2
+				army_logistics_3 #HEU_KAYOKO_T2
 			}
 			ai_will_do = {
 				factor = 24.000
@@ -236,16 +236,21 @@ characters={
 
 		advisor={
 			cost = 150
+
 			slot = high_command
 			idea_token = HEU_ancmzl_
+
 			allowed = {
 				original_tag = HEU
 			}
+
 			available = {
 			}
+
 		    traits = {
-				HEU_MUTSUKI_T2
+				army_artillery_3 #HEU_MUTSUKI_T2
 			}
+
 			ai_will_do = {
 				factor = 24.000
 			}
@@ -292,11 +297,14 @@ characters={
 			allowed = {
 				original_tag = HEU
 			}
+
 			available = {
 			}
+
 		    traits = {
-				HEU_HARUKA_T2
+				army_infantry_3
 			}
+
 			ai_will_do = {
 				factor = 24.000
 			}

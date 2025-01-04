@@ -1329,6 +1329,7 @@ country_event = { #보고서 - 작전 계획 '퇴마'
 
 	option = { 
 		name = HEU_event.134.a 
+		country_event = { id = HEU_event.135 days = 3 }
 	}
 	
 }
@@ -1343,6 +1344,7 @@ country_event = { #가장 긴 밤
 
 	option = { 
 		name = HEU_event.135.a 
+		country_event = { id = HEU_event.136 hours = 3 }
 	}
 	
 }
@@ -1357,6 +1359,13 @@ country_event = { #경찰
 
 	option = { 
 		name = HEU_event.136.a 
+		country_event = { id = HEU_event.137 hours = 3 }
+		HEU_aru = {
+			add_timed_unit_leader_trait = {
+				trait = wounded
+				days = 30
+			}
+		}
 	}
 	
 }
@@ -1371,6 +1380,7 @@ country_event = { #담당의사 소견서
 
 	option = { 
 		name = HEU_event.137.a 
+		country_event = { id = HEU_event.138 days = 4 }
 	}
 	
 }
@@ -1385,6 +1395,7 @@ country_event = { #군의관 면담
 
 	option = { 
 		name = HEU_event.138.a 
+		MIL = { country_event = { id = HEU_event.139 days = 2 } }
 	}
 	
 }
@@ -1399,10 +1410,13 @@ country_event = { #룩셈부르크 대공국의 협진 요청
 
 	option = { 
 		name = HEU_event.139.a 
+		add_political_power = 25
+		HEU = { country_event = { id = HEU_event.140 } }
 	}
 
 	option = { 
 		name = HEU_event.139.b
+		HEU = { country_event = { id = HEU_event.141 } }
 	}
 	
 }
@@ -1415,8 +1429,15 @@ country_event = { #밀레니엄제 의안
 
     is_triggered_only = yes
 
+	immediate = {
+		set_country_flag = HEU_aru_attacked
+	}
+
 	option = { 
 		name = HEU_event.140.a 
+		hidden_effect = {
+			country_event = { id = HEU_event.142 days = 7 }
+		}
 	}
 	
 }
@@ -1429,8 +1450,15 @@ country_event = { #평범한 의안
 
     is_triggered_only = yes
 
+	immediate = {
+		set_country_flag = HEU_aru_attacked
+	}
+
 	option = { 
 		name = HEU_event.141.a 
+		hidden_effect = {
+			country_event = { id = HEU_event.142 days = 7 }
+		}
 	}
 	
 }
@@ -1443,12 +1471,34 @@ country_event = { #룩셈부르크 내전 위기
 
     is_triggered_only = yes
 
+	immediate = {
+		hidden_effect = {
+			country_event = { id = HEU_event.143 days = 7 }
+		}
+	}
+
 	option = { 
 		name = HEU_event.142.a 
+		HEU_pierre_prum = { retire = yes }
+		add_manpower = -14
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.04
+		}
 	}
 
 	option = { 
 		name = HEU_event.142.b
+		HEU_pierre_prum = { retire = yes }
+		add_manpower = -32
+		add_popularity = {
+			ideology = communism
+			popularity = 0.04
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.04
+		}
 	}
 	
 }
@@ -1463,12 +1513,50 @@ country_event = { #관용차 예산 지원
 
 	option = { 
 		name = HEU_event.143.a 
+		HEU_bop_medium_decrease_effect = yes
+		add_political_power = 25
 	}
 
 	option = { 
 		name = HEU_event.143.b
+		HEU_bop_medium_increase_effect = yes
+		add_stability = 0.01
 	}
 	
+}
+
+country_event = { #첫 협력자
+	id = HEU_event.144
+	title = HEU_event.144.t
+	desc = HEU_event.144.desc
+	picture = GFX_report_event_communist_leader
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.144.a 
+		hidden_effect = {
+			country_event = { id = HEU_event.145 days = 3 }
+		}
+
+	}
+}
+
+country_event = { #공산당과의 협력
+	id = HEU_event.145
+	title = HEU_event.145.t
+	desc = HEU_event.145.desc
+	picture = GFX_report_event_communists_cheer
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.145.a 
+		add_popularity = {
+			ideology = communism
+			popularity = 0.01
+		}
+	}
 }
 
 country_event = { #자유 룩셈부르크 여단
@@ -1502,6 +1590,7 @@ country_event = { #자유 룩셈부르크 여단
 	}
 	
 }
+
 country_event = { #신 쿠데타 계획
 	id = HEU_event.147
 	title = HEU_event.147.t
@@ -1517,7 +1606,24 @@ country_event = { #신 쿠데타 계획
 	}
 }
 
-country_event = { #신 쿠데타 계획
+country_event = { #민권법 계획안
+	id = HEU_event.148
+	title = HEU_event.148.t
+	desc = HEU_event.148.desc
+	picture = GFX_report_event_Problem_Solver_68
+
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.148.a 
+		hidden_effect = {
+			country_event = { id = HEU_event.149 days = 3 }
+		}
+	}
+}
+
+country_event = { #운명의 토론회
 	id = HEU_event.149
 	title = HEU_event.149.t
 	desc = HEU_event.149.desc
@@ -2467,6 +2573,19 @@ country_event = { #블루 아카이브: 흥신소 68 업무일지
 		}
 
 		add_political_power = 25
+	}
+}
+
+country_event = { #사장은 왜 여기 있는 거야?
+	id = HEU.flavor_event.34
+	title = HEU.flavor_event.34.t
+	desc = HEU.flavor_event.34.desc
+	picture = GFX_report_event_grand_ducal_palace_luxembourg
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.flavor_event.34.a 
+
 	}
 }
 
@@ -3497,19 +3616,6 @@ news_event = {
 		trigger = {
 			tag = HEU
 		}
-		#hidden_effect = {
-		#	if = {
-		#		limit = {
-		#				is_ai = no
-		#		}
-		#		scoped_play_song = "BA_protests_of_1968"
-		#		set_global_flag = {
-		#			flag = BA_Super_Event_Visible
-		#			value = 25
-		#			days = 15
-		#		}
-		#	}
-		#}
 	}
 
 	option = {
@@ -3609,12 +3715,38 @@ news_event = {
 		trigger = {
 			tag = HEU
 		}
+		hidden_effect = {
+			if = {
+				limit = {
+						is_ai = no
+				}
+				scoped_play_song = "BA_protests_of_1968"
+				set_global_flag = {
+					flag = BA_Super_Event_Visible
+					value = 25
+					days = 15
+				}
+			}
+		}
 	}
 
 	option = {
 		name = HEU_news.5.b
 		trigger = {
 			NOT = { tag = HEU }
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+						is_ai = no
+				}
+				scoped_play_song = "BA_protests_of_1968"
+				set_global_flag = {
+					flag = BA_Super_Event_Visible
+					value = 25
+					days = 15
+				}
+			}
 		}
 	}
 }

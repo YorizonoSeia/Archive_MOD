@@ -154,6 +154,11 @@ add_timed_idea = {
     days = 210
 }
 
+country_event = {
+	id = HEU.flavor_event.34
+	days = 62
+}
+
 add_ideas = {
 	disarmed_nation
 	BA_isolation
