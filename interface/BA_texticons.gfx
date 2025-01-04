@@ -18,6 +18,31 @@ spriteTypes = {
 		texturefile = "gfx/texticons/schedule_ticket_texticon.dds"
 		legacy_lazy_load = no
 	}
+	
+	spriteType = {
+		name = "GFX_benriya_centre_texticon"
+		texturefile = "gfx/texticons/benriya_centre_texticon.dds"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_benriya_left_texticon"
+		texturefile = "gfx/texticons/benriya_left_texticon.dds"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_benriya_right_texticon"
+		texturefile = "gfx/texticons/benriya_right_texticon.dds"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_benriya_kivotos_texticon"
+		texturefile = "gfx/texticons/benriya_kivotos_texticon.dds"
+		legacy_lazy_load = no
+	}
+
 	spriteType = {
 		name = "GFX_unit_syemmata_railway_gun_icon_small_texticon"
 		texturefile = "gfx/texticons/unit_super_heavy_railway_gun_icon_small.dds"
