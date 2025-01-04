@@ -444,7 +444,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				stability_weekly = 0.0005
+				stability_weekly = 0.0050
                 consumer_goods_factor = -0.15
                 production_speed_infrastructure_factor = 0.10
 			}
@@ -553,7 +553,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				stability_factor = -0.25
+				stability_factor = -0.20
 				conscription = 0.02
 			}
 		}
@@ -735,9 +735,15 @@ ideas = {
 	}
 
 
-
+      # 마셜 플랜
 	  marshall_plan = {
         picture = generic_artillery_regiments
+        allowed = {
+		 AND = { 
+			  is_in_faction_with = USA
+			  has_war_with = no
+		 }
+		}
 
 		modifier = {
            consumer_goods_factor = 0.3
@@ -763,14 +769,45 @@ ideas = {
 
 		modifier = {
 			production_factory_efficiency_gain_factor = 0.1
-			production_factory_max_efficiency_factor = 0.1
-			experience_gain_army_factor = 0.20
-            consumer_goods_factor = 0.15
+			production_factory_max_efficiency_factor = 0.15
+            consumer_goods_factor = -0.1
 			democratic_drift = 0.05
             production_speed_arms_factory_factor = 0.20
               
 		}
 	  }
+    
+	# 구질서 훈련
+    old_fast_train = {
+		picture = generic_artillery_regiments
+        
+		
+		modifier = {
+			experience_gain_army_factor = 0.20
+            training_time_army_factor = -0.15
+		}
+	}
+
+   # 독일 제병합동(구질서 독일 지원)
+
+   support_GEK = {
+	    picture = ger_revive_the_kaiserreich
+
+
+		modifier = {
+             
+		}
+   }
+
+      support_FIN = {
+	    picture = SWE_save_finland
+
+
+		modifier = {
+             acclimatization_cold_climate_gain_factor = 0.10
+		}
+   }
+
 
   }
 }

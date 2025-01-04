@@ -1985,7 +1985,6 @@ focus_tree = {
 					clr_state_flag = USABA_regression_strategy__1IC
 				}
 			}
-			USA_congress_medium_opposition = yes
 		}
 	}
 	#주 권한의 확대
@@ -3416,7 +3415,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = USABA_american_reindustrialization
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -3441,7 +3440,7 @@ focus_tree = {
 			add_stability = 0.2
 			add_war_support = 0.2
 			hidden_effect = {
-			  country_event = { id = usa_event.1 days = 1 }
+			  country_event = { id = usa_event.1 days = 2 }
 			}
 			USA_congress_large_support = yes
 		}
@@ -3597,13 +3596,13 @@ focus_tree = {
 
 
 focus = {
-		id = USA_tank_genius
-		icon = GFX_focus_generic_league_of_nations
+		id = USA_fast_train
+		icon = GFX_SOV_an_adaptable_army_ccp_2d_sov_compatibility
 		prerequisite = { focus = USA_arsenal_of_democracy }
 		x = -4
 		y = 1
 		relative_position_id = USA_arsenal_of_democracy
-		cost = 5
+		cost = 8
 		ai_will_do = {
 			factor = 1
 		}
@@ -3615,7 +3614,10 @@ focus = {
 			has_government = democratic
 		}
 		completion_reward = {
-
+              add_timed_idea = {
+				idea = old_fast_train
+				days = 360
+			  }
 		}
 	}
 
@@ -4050,7 +4052,10 @@ focus = {
 		}
 
 		completion_reward = {
-			add_ideas = wartime_industry_focus
+			add_timed_idea = {
+				idea = wartime_industry_focus
+				days = 360
+			}
 			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = USA_general_motors
 		}
@@ -4074,7 +4079,7 @@ focus = {
 		completion_reward = {
 				add_timed_idea = {
 					idea = wakeup_giant
-					days = 540
+					days = 210
 				}
 
 		}
@@ -4276,6 +4281,13 @@ focus = {
 
 			}
 		completion_reward = {	
+			# 만슈타인 임명
+			add_doctrine_cost_reduction = {
+				name = GER_adopt_new_panzer_doctrine
+				cost_reduction = 0.75
+				uses = 1
+				category = cat_mobile_warfare
+			}
 		}
 	}
 
@@ -4432,7 +4444,7 @@ focus = {
 
 
 
-
+        # 미완
 		focus = {
 			id = USA_support_FIN
 			icon = GFX_focus_invite_finland
@@ -4452,6 +4464,8 @@ focus = {
 	
 			}
 			completion_reward = {
+				army_experience = 15
+                add_ideas = support_FIN
 
 			}
 		}
@@ -4540,7 +4554,10 @@ focus = {
 	
 			}
 			completion_reward = {
-
+			 add_to_variable = { 
+			 	GER_industrial_production_lack_of_resource_penalty_factor = -0.25
+			 	tooltip = production_lack_of_resource_penalty_factor_tt
+			 }
 			}
 		}
 
@@ -4657,8 +4674,10 @@ focus = {
 			if = { limit = { has_country_flag = USABA_government_official_exile }
 				NOT = { has_country_flag = USABA_government_official_exile }
 			}
-
+			 has_war = no
 		}
+		    
+	
 		completion_reward = {
             add_ideas = marshall_plan
 		}
@@ -4922,7 +4941,7 @@ focus = {
 		x = 12
 		y = 1
 		relative_position_id = USABA_american_reindustrialization
-		cost = 10
+		cost = 5
 		#ai_will_do = {
 		#	factor = 1
 		#}
@@ -5111,11 +5130,12 @@ focus = {
 		icon = GFX_goal_support_democracy
 		prerequisite = { focus = USA_new_team_civilwar }
 		mutually_exclusive = { focus = USA_bad_kivotos }
+		mutually_exclusive = { focus = USA_surprise_kivotos }
 
 		x = -1
 		y = 3
 		relative_position_id = USA_new_team
-		cost = 5
+		cost = 3
 		ai_will_do = {
 			factor = 1
 		}
@@ -5487,11 +5507,12 @@ focus = {
 		icon = GFX_focus_generic_strike_at_democracy2
 		prerequisite = { focus = USA_new_team_civilwar }
 		mutually_exclusive = { focus = USA_blue_kivotos }
+		mutually_exclusive = { focus = USA_surprise_kivotos }
 
 		x = 4
 		y = 3
 		relative_position_id = USA_new_team
-		cost = 5
+		cost = 3
 		ai_will_do = {
 			factor = 1
 		}
@@ -5720,10 +5741,12 @@ focus = {
 		id = USA_surprise_kivotos
 		icon = GFX_goal_support_communism
 		prerequisite = { focus = USA_new_team_civilwar }
+		mutually_exclusive = { focus = USA_blue_kivotos }
+		mutually_exclusive = { focus = USA_bad_kivotos }
 		x = 9
 		y = 1
 		relative_position_id = USA_new_team_civilwar
-		cost = 5
+		cost = 3
 		ai_will_do = {
 			factor = 10
 		}
@@ -5737,7 +5760,7 @@ focus = {
 		completion_reward = {
             add_popularity = {
 				ideology = communism
-				popularity = 0.15
+				popularity = 0.1
 			}
 			USA_congress_small_opposition = yes
 		}

@@ -3536,6 +3536,14 @@ news_event = {
 			TAG = INK
 		}
 	}
+				hidden_effect = {
+				scoped_play_song = "imperterrita" #BA_united_nations_music 
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 21
+					days = 15
+				}
+			}
 }
 
     option = {  # 지구 국가 반응
@@ -3565,6 +3573,14 @@ news_event = {
 			}
 		}
  	}
+				hidden_effect = {
+				scoped_play_song = "imperterrita" #BA_united_nations_music
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 21
+					days = 15
+				}
+			}
  }
 }
 # 미국 신질서 편입 선언
@@ -3576,20 +3592,19 @@ news_event = {
 	
 	major = yes
 	is_triggered_only = yes
-
-	#hidden_effect = {
-	#	scoped_play_song = "USA_The_New_Order"
-	#}
 	
 	option = {  # 미국 반응
 		name = BA_news.97.a
 		trigger = {
 			OR = {
 		        TAG = USA
-		}
+		 }
+	    }
+		hidden_effect = {
+		scoped_play_song = "USA_The_New_Order"
+	  }
 	}
 
-}
 	option = { # 키보토스 반응
 		name = BA_news.97.b
 		trigger = {
@@ -3612,7 +3627,11 @@ news_event = {
 				TAG = INK
 			}
 		}
+				hidden_effect = {
+		scoped_play_song = "USA_The_New_Order"
 	}
+	}
+
 
 	option = {  # 지구 국가 반응
 		name = BA_news.97.c
@@ -3641,6 +3660,9 @@ news_event = {
 				}
 			}
 		}
+				hidden_effect = {
+		scoped_play_song = "USA_The_New_Order"
+	}
 	}
 }
 news_event = {
