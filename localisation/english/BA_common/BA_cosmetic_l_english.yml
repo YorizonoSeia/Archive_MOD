@@ -441,6 +441,10 @@ TRM_isolation_zone2_DEF: "니더슐레지엔 격리구역"
  GEK_RM_DEF: "전독일연합해방전선"
  GEK_RM_ADJ: "독일"
 
+ GEK_in_civil_war: "공화파 독일"
+ GEK_in_civil_war_ADJ: "공화파 독일"
+ GEK_in_civil_war_DEF: "공화파 독일"
+
  JAP_TORESEN:0 "트레센 학원"
  KOR_UMA:0 "한국마사회" #이름 알아서 바꾸십쇼
  MAN_UMA:0 "트레센 학원 만주지부" #이름 알아서 바꾸십쇼

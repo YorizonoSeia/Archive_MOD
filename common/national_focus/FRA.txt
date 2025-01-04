@@ -5617,28 +5617,6 @@ focus_tree = {
 		}
 	}
 	focus = {
-		# 대통령 탄핵
-		id = FRA_start_4
-		icon = GFX_focus_generic_improve_the_administration
-		cost = 2
-		x = 6
-		y = 2
-		available = {
-		}
-		prerequisite = {
-			focus = FRA_start_2
-		}
-		prerequisite = {
-			focus = FRA_start_3
-		}
-		prerequisite = {
-			focus = FRA_start_1
-		}
-		completion_reward = {
-			retire_country_leader = yes
-		}
-	}
-	focus = {
 		#예상치 못한 동맹
 		icon = GFX_goal_generic_dangerous_deal
 		id = FRA_an_unexpected_ally

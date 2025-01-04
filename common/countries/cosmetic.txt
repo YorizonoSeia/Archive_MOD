@@ -2634,7 +2634,11 @@ GEK_military_government = {
 	color = HSV { 0.1 0.15 0.4 }
 	color_ui = rgb { 138 155 116 }
 }
+GEK_in_civil_war = {
+	color = rgb { 0 153 51 }
+	color_ui = rgb { 0 77 26 }
+}
 TRM_isolation_zone = {
-	color = rgb { 255 181 69 }
-	color_ui = rgb { 255 181 69 }
+	color = rgb { 0 153 51 }
+	color_ui = rgb { 0 77 26 }
 }

@@ -103,6 +103,7 @@ ideas = {
             modifier = {
                 send_volunteer_divisions_required = -0.5
                 send_volunteers_tension = -0.5
+                send_volunteer_size = -1
             }
             available = {
                 SPR_scw_in_progress = yes
@@ -119,7 +120,6 @@ ideas = {
             picture = generic_secret_police
             modifier = {
                 send_volunteer_divisions_required = -1
-                send_volunteer_size = 1
                 send_volunteers_tension = -1
                 consumer_goods_factor = 0.03
             }

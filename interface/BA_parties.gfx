@@ -12,4 +12,8 @@ spriteTypes = {
 		name = "GFX_frontend_logo_SR" 
 		textureFile = "gfx/interface/BA_starry_revolution_logo.png"
 	}
+	spriteType = {
+		name = "GFX_frontend_logo_GER" 
+		textureFile = "gfx/interface/BA_german_logo.png"
+	}
 }

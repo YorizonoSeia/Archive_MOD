@@ -10,6 +10,14 @@ music = {
 	}
 }
 music = {
+	song = "maintheme_5"
+	chance = {
+		modifier = {
+			factor = 0.2
+		}		
+	}
+}
+music = {
 	song = "maintheme_2"
 	chance = {
 		modifier = {
