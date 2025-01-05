@@ -182,6 +182,11 @@ ideologies = {
 				can_be_randomly_selected = no
 				color = { 124 0 0 }
 			}
+
+			monarchist_socialism = {
+				can_be_randomly_selected = no
+				color = { 118 29 144 }
+			}
 		#BA_MOD_FIX/
 		}
 
