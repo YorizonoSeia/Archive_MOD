@@ -1,0 +1,7 @@
+scripted_gui = {
+	BA_topbar = {
+		context_type = player_context
+		parent_window_token = top_bar
+		window_name = "BA_topbar_window"
+	}
+}
