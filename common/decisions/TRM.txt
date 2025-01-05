@@ -244,7 +244,7 @@ TRN_country_collapse_decisions = {
         }
 	}
 	TRM_commencement_of_anti_terrorism_operations_KPD = { # TRM = 가위 : KPD
-		icon = GFX_decision_generic_prepare_civil_war
+		icon = GFX_decision_scissors
 		
 		targets = { KPD }
 
@@ -333,7 +333,7 @@ TRN_country_collapse_decisions = {
         }
 	}
 	TRM_reinforcement_of_guard_forces_KPD = { # TRM = 바위 : KPD
-		icon = GFX_decision_generic_prepare_civil_war
+		icon = GFX_decision_rock
 		
 		targets = { KPD }
 		
@@ -422,7 +422,7 @@ TRN_country_collapse_decisions = {
         }
 	}
 	TRM_urban_search_operations_KPD = { # TRM = 보 : KPD
-		icon = GFX_decision_generic_prepare_civil_war
+		icon = GFX_decision_paper
 		
 		targets = { KPD }
 		
@@ -763,7 +763,7 @@ TRN_country_collapse_decisions = {
 		}
 	}
 	KPD_drafting_of_counterinsurgency_plan_KPD = { # KPD = 가위
-		icon = GFX_decision_generic_prepare_civil_war
+		icon = GFX_decision_scissors
 		
 		targets = { TRM }
 
@@ -836,7 +836,7 @@ TRN_country_collapse_decisions = {
         }
 	}
 	KPD_bombing_of_administrative_buildings_KPD = { # KPD = 바위
-		icon = GFX_decision_generic_prepare_civil_war
+		icon = GFX_decision_rock
 		
 		targets = { TRM }
 
@@ -909,7 +909,7 @@ TRN_country_collapse_decisions = {
         }
 	}
 	KPD_expansion_of_influence_KPD = { # KPD = 보
-		icon = GFX_decision_generic_prepare_civil_war
+		icon = GFX_decision_paper
 		
 		targets = { TRM }
 
@@ -983,7 +983,7 @@ TRN_country_collapse_decisions = {
         }
 	}
 	TRM_commencement_of_anti_terrorism_operations_NSD = { # TRM = 가위 : NSD
-		icon = GFX_decision_generic_prepare_civil_war
+		icon = GFX_decision_scissors
 		
 		targets = { NSD }
 
@@ -1072,7 +1072,7 @@ TRN_country_collapse_decisions = {
         }
 	}
 	TRM_reinforcement_of_guard_forces_NSD = { # TRM = 바위 : NSD
-		icon = GFX_decision_generic_prepare_civil_war
+		icon = GFX_decision_rock
 		
 		targets = { NSD }
 		
@@ -1161,7 +1161,7 @@ TRN_country_collapse_decisions = {
         }
 	}
 	TRM_urban_search_operations_NSD = { # TRM = 보 : NSD
-		icon = GFX_decision_generic_prepare_civil_war
+		icon = GFX_decision_paper
 		
 		targets = { NSD }
 		
@@ -1502,7 +1502,7 @@ TRN_country_collapse_decisions = {
 		}
 	}
 	NSD_drafting_of_counterinsurgency_plan_NSD = { # NSD = 가위
-		icon = GFX_decision_generic_prepare_civil_war
+		icon = GFX_decision_scissors
 		
 		targets = { TRM }
 
@@ -1575,7 +1575,7 @@ TRN_country_collapse_decisions = {
         }
 	}
 	NSD_bombing_of_administrative_buildings_NSD = { # NSD = 바위
-		icon = GFX_decision_generic_prepare_civil_war
+		icon = GFX_decision_rock
 		
 		targets = { TRM }
 
@@ -1648,7 +1648,7 @@ TRN_country_collapse_decisions = {
         }
 	}
 	NSD_expansion_of_influence_NSD = { # NSD = 보
-		icon = GFX_decision_generic_prepare_civil_war
+		icon = GFX_decision_paper
 		
 		targets = { TRM }
 

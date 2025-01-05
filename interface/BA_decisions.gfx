@@ -1,6 +1,24 @@
 spriteTypes = {
 
 	spriteType = {
+		name = "GFX_decision_scissors"
+		texturefile = "gfx/interface/decisions/decision_scissors.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_decision_rock"
+		texturefile = "gfx/interface/decisions/decision_rock.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_decision_paper"
+		texturefile = "gfx/interface/decisions/decision_paper.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
 		name = "GFX_TRM_anti_trinity_game_KPD_flag"
 		texturefile = "gfx/interface/decisions/icon/TRM_anti_trinity_game_KPD_flag.tga"
 		legacy_lazy_load = no

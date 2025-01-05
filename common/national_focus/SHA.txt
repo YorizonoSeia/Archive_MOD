@@ -1,3 +1,16 @@
+### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+### search_filters = {FOCUS_FILTER_SOV_POLITICAL_PARANOIA}
+### search_filters = {FOCUS_FILTER_PROPAGANDA}
+### search_filters = {FOCUS_FILTER_ARMY_XP}
+### search_filters = {FOCUS_FILTER_NAVY_XP}
+### search_filters = {FOCUS_FILTER_AIR_XP}
+
 focus_tree = {
 	id = SHA_focus_tree
 	#continuous_focus_position = { x = -1000 y = -1000 } 
@@ -720,6 +733,10 @@ focus_tree = {
 			add_to_variable = {
 				SHA_militray_army_attack_factor = 0.05
 				tooltip = army_attack_factor_tt
+			}
+			add_to_variable = {
+				SHA_military_army_morale_factor = 0.05
+				tooltip = army_morale_factor_tt
 			}
 			add_to_variable = {
 				SHA_militray_army_org_factor = -0.05
@@ -1543,7 +1560,7 @@ focus_tree = {
 	focus = {
 		id = SHA_Establishment_of_the_Governor_General
 		icon = GFX_goal_SHA_Establishment_of_the_Governor_General
-		x = -1
+		x = 0
 		y = 2
 		cost = 10
 
@@ -1586,13 +1603,95 @@ focus_tree = {
 		}
 	}
 
+	# 산업 수탈
+	focus = {
+		id = SHA_industrial_exploitation
+		icon = GFX_focus_DEN_heavy_regulations
+		x = -1
+		y = 1
+		cost = 8
+
+		prerequisite = { focus = SHA_Establishment_of_the_Governor_General }
+		mutually_exclusive = { }
+
+		available = {
+			any_state = {
+				is_core_of = HYA
+				is_owned_by = SHA
+				NOT = { state = 986 }
+				NOT = { state = 972 }
+			}
+		}
+		bypass = { }
+
+		relative_position_id = SHA_Establishment_of_the_Governor_General
+
+		completion_reward = {
+			if = {
+				limit = { owns_state = 9 }
+				9 = {
+					remove_building = {
+						type = arms_factory
+						level = 1
+					}
+					remove_building = {
+						type = industrial_complex
+						level = 1
+					}
+				}
+				4 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			else = {
+				random_owned_state = {
+					limit = { 
+						is_core_of = HYA
+						NOT = { is_core_of = SHA }
+					}
+					remove_building = {
+						type = arms_factory
+						level = 1
+					}
+					remove_building = {
+						type = industrial_complex
+						level = 1
+					}
+				}
+				4 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
 	# 아비도스 석권
 	focus = {
 		id = SHA_Special_Military_Operation_for_Abydos
 		icon = GFX_focus_attack_ABY
-		x = 1
+		x = 2
 		y = 2
-		cost = 2
+		cost = 5
 
 		prerequisite = {
 			focus = SHA_2nd_conservative_revolution 
@@ -1619,6 +1718,44 @@ focus_tree = {
 			}
 		}
 	}
+
+	# 슬로바키아 제압
+	focus = {
+		id = SHA_Special_Military_Operation_for_slovakia
+		icon = GFX_focus_generic_attack_slovakia
+		x = -2
+		y = 2
+		cost = 5
+
+		prerequisite = {
+			focus = SHA_2nd_conservative_revolution 
+			focus = SHA_ascension 
+		}
+		mutually_exclusive = { }
+
+		available = {
+			SLO = { exists = yes }
+		}
+		bypass = {
+			NOT = { country_exists = SLO }
+		}
+
+		relative_position_id = SHA_invade_of_Hyakkiyako
+		
+		
+		will_lead_to_war_with = SLO
+
+		completion_reward = {
+			create_wargoal = {
+				target = SLO
+				type = puppet_wargoal_focus
+			}
+		}
+	}
+	
+	#########################
+	#### 급진파 결집 - 산해경 승전 루트####
+	#########################
 
 	# 현지 화합?
 	focus = {
@@ -2883,7 +3020,7 @@ focus_tree = {
 		x = 24
 		y = 7
 		offset = {
-			x = -6
+			x = -2
 			trigger = {
 				has_completed_focus = SHA_gathering_of_radicals
 			}
@@ -2895,7 +3032,7 @@ focus_tree = {
 			}
 		}
 		relative_position_id = SHA_Austrian_appeasement_policy
-		search_filters = { }
+		search_filters = { FOCUS_FILTER_ARMY_XP }
 		cost = 3
 
 		prerequisite = { }
@@ -3014,7 +3151,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = SHA_address_the_army
 		search_filters = { }
-		cost = 3
+		cost = 7
 
 		prerequisite = { focus = SHA_address_the_army }
 		mutually_exclusive = { focus = SHA_Central_Military_Commission }
@@ -3116,7 +3253,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SHA_National_Guard_Expansion
-		search_filters = { }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
 		cost = 5
 
 		prerequisite = { focus = SHA_National_Guard_Expansion }
@@ -3145,7 +3282,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SHA_propaganda_bureau_of_army
-		search_filters = { }
+		search_filters = { FOCUS_FILTER_MANPOWER }
 		cost = 5
 
 		prerequisite = { focus = SHA_propaganda_bureau_of_army }
@@ -3177,8 +3314,8 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = SHA_address_the_army
-		search_filters = { }
-		cost = 3
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		cost = 7
 
 		prerequisite = { focus = SHA_address_the_army }
 		mutually_exclusive = { focus = SHA_Following_doorkeeper_footsteps }
@@ -3212,7 +3349,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SHA_Central_Military_Commission
-		search_filters = { }
+		search_filters = { FOCUS_FILTER_ARMY_XP }
 		cost = 5
 
 		prerequisite = { focus = SHA_Central_Military_Commission }
@@ -3333,6 +3470,32 @@ focus_tree = {
 				SHA_militray_army_defence_factor = 0.05
 				tooltip = army_defence_factor_tt
 			}
+		}
+	}
+
+	# 현대화 전쟁
+	focus = {
+		id = SHA_military_production
+		icon = GFX_focus_generic_reorient_production
+		x = -6
+		y = 1
+		relative_position_id = SHA_address_the_army
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		cost = 7
+
+		prerequisite = { focus = SHA_address_the_army }
+		mutually_exclusive = { }
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+			975 = { # 부르겐란트
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = arms_factory level = 2 }
+			}
+
 		}
 	}
 

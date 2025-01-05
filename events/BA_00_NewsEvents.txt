@@ -3329,8 +3329,32 @@ news_event = {
 news_event = {
 	id = BA_news.91
 	title = BA_news.91.t
-	desc = BA_news.91.desc
-	picture = GFX_event_news_event_5
+	desc = {
+		text = BA_news.91.desc
+		trigger = { 
+			SHA = { 
+				NOT = { has_completed_focus = SHA_Shintani_Kai_Follow }
+				NOT = { has_completed_focus = SHA_conservative_revolution }
+			}
+		}
+	}
+	desc = {
+		text = BA_news.91.2.desc
+		trigger = { 
+			SHA = { 
+				has_completed_focus = SHA_Shintani_Kai_Follow
+			}
+		}
+	}
+	desc = {
+		text = BA_news.91.3.desc
+		trigger = { 
+			SHA = { 
+				has_completed_focus = SHA_conservative_revolution
+			}
+		}
+	}
+	picture = GFX_event_Shanhaijing_won_news
 	
 	major = yes
 	
@@ -3350,15 +3374,76 @@ news_event = {
 	
 	option = {
 		name = BA_news.91.a
-		trigger = {
-			TAG = SHA
+		trigger = { 
+			TAG = SHA 
+			NOT = { has_completed_focus = SHA_Shintani_Kai_Follow }
+		}
+	}
+	
+	option = {
+		name = BA_news.91.b
+		trigger = { 
+			TAG = SHA 
+			has_completed_focus = SHA_Shintani_Kai_Follow
 		}
 	}
 	option = { 
-		name = BA_news.91.b
+		name = BA_news.91.c
 		trigger = { 
-			NOT = {
-				TAG = SHA
+			NOT = { 
+				tag = SHA 
+				tag = HYA
+				SHA = { has_completed_focus = SHA_Shintani_Kai_Follow }
+			}
+			OR = {
+				tag = TRM
+				tag = GEM
+				tag = GEH
+				tag = SHE
+				tag = COU
+				tag = KSP
+				tag = HEU
+				tag = MIL
+				tag = BLM
+				tag = ABY
+				#tag = HYA
+				tag = ARI
+				tag = KAI
+				tag = RE1
+				tag = RE2
+				tag = RE3
+				tag = RE4
+				tag = RED
+			}
+		}
+	}
+	option = { 
+		name = BA_news.91.d
+		trigger = { 
+			NOT = { 
+				tag = SHA 
+				tag = HYA
+			}
+			SHA = { has_completed_focus = SHA_Shintani_Kai_Follow }
+			OR = {
+				tag = TRM
+				tag = GEM
+				tag = GEH
+				tag = SHE
+				tag = COU
+				tag = KSP
+				tag = HEU
+				tag = MIL
+				tag = BLM
+				tag = ABY
+				#tag = HYA
+				tag = ARI
+				tag = KAI
+				tag = RE1
+				tag = RE2
+				tag = RE3
+				tag = RE4
+				tag = RED
 			}
 		}
 	}

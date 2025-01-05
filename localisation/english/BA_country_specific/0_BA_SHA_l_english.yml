@@ -731,6 +731,8 @@
  SHA_professional_camouflage: "전문적 위장"
  SHA_professional_camouflage_desc: ""
 
+ SHA_military_production: "현대화 전쟁"
+
  # 정치
  SHA_Austrian_oppression_continues: "오스트리아 탄압 지속"
  SHA_Austrian_oppression_continues_desc: "오스트리아인들은 지속적으로 우리 산해경의 지배에 반대하며 훼방을 놓는 데만 열을 올려왔습니다. 이제 그들의 저항을 단호히 뿌리 뽑아야 할 때입니다. 우리는 대대적으로 현룡문의 요원들을 투입해 이들의 반발을 철저히 제압하고, 그들이 산해경 체제 아래에 완전히 복속되도록 만들어야 합니다."
@@ -789,9 +791,6 @@
 
  SHA_ascension: "승천"
  SHA_ascension_desc: ""
- SHA_Establishment_of_the_Governor_General: "백귀야행 총독부"
- SHA_Establishment_of_the_Governor_General_desc: ""
- SHA_Establishment_of_the_Governor_General_tt: "아무 §Y@HYA[HYA.GetAdjective]§! 핵심 주 소유중 일시 효과 발동."
 
 
  # 보수 혁명 루트
@@ -830,6 +829,13 @@
 
  # 승전 공용
  SHA_Special_Military_Operation_for_Abydos: "아비도스 격퇴"
+ SHA_Special_Military_Operation_for_Abydos_desc: ""
+ SHA_Special_Military_Operation_for_slovakia: "슬로바키아 제압"
+ SHA_Special_Military_Operation_for_slovakia_desc: ""
+ SHA_Establishment_of_the_Governor_General: "백귀야행 총독부"
+ SHA_Establishment_of_the_Governor_General_desc: ""
+ SHA_Establishment_of_the_Governor_General_tt: "아무 §Y@HYA[HYA.GetAdjective]§! 핵심 주 소유중 일시 효과 발동."
+ SHA_industrial_exploitation: "산업 수탈"
 
  # 국민정신
  SHA_Austrian_fascist_militia: "오스트리아인 민병대"
