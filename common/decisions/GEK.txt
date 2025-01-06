@@ -8,7 +8,7 @@
 			highlight_color_while_active = 3
 			highlight_color_before_active = 2
 		}
-		target_array = GEK.controlled_states
+		target_array = ROOT.controlled_states
 		state_target = yes
 		target_trigger = {
 			FROM = {
@@ -981,7 +981,7 @@ GEK_religion_issue_cat = { #종교 정책
 			highlight_color_while_active = 3
 			highlight_color_before_active = 2
 		}
-		target_array = GEK.controlled_states
+		target_array = ROOT.controlled_states
 		state_target = yes
 		target_trigger = {
 			FROM = {
@@ -1107,7 +1107,7 @@ GEK_religion_issue_cat = { #종교 정책
 			highlight_color_while_active = 3
 			highlight_color_before_active = 2
 		}
-		target_array = GEK.controlled_states
+		target_array = ROOT.controlled_states
 		state_target = yes
 		target_trigger = {
 			FROM = {
@@ -1155,7 +1155,7 @@ GEK_religion_issue_cat = { #종교 정책
 			highlight_color_while_active = 3
 			highlight_color_before_active = 2
 		}
-		target_array = GEK.controlled_states
+		target_array = ROOT.controlled_states
 		state_target = yes
 		target_trigger = {
 			FROM = {
@@ -1281,7 +1281,7 @@ GEK_religion_issue_cat = { #종교 정책
 			highlight_color_while_active = 3
 			highlight_color_before_active = 2
 		}
-		target_array = GEK.controlled_states
+		target_array = ROOT.controlled_states
 		state_target = yes
 		target_trigger = {
 			FROM = {
@@ -1329,7 +1329,7 @@ GEK_religion_issue_cat = { #종교 정책
 			highlight_color_while_active = 3
 			highlight_color_before_active = 2
 		}
-		target_array = GEK.controlled_states
+		target_array = ROOT.controlled_states
 		state_target = yes
 		target_trigger = {
 			FROM = {
@@ -1474,7 +1474,7 @@ GEK_religion_issue_cat = { #종교 정책
 			highlight_color_while_active = 3
 			highlight_color_before_active = 2
 		}
-		target_array = GEK.controlled_states
+		target_array = ROOT.controlled_states
 		state_target = yes
 		target_trigger = {
 			FROM = {
@@ -1610,7 +1610,7 @@ GEK_religion_issue_cat = { #종교 정책
 			highlight_color_while_active = 3
 			highlight_color_before_active = 2
 		}
-		target_array = GEK.controlled_states
+		target_array = ROOT.controlled_states
 		state_target = yes
 		target_trigger = {
 			FROM = {

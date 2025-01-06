@@ -1134,12 +1134,6 @@ country_event = { #금이 가는 연정
 	option = {
 		name = GEK_rm_event.9.a
 		activate_mission = GEK_flatering_coalition
-		hidden_effect = {
-			country_event = {
-				id = GEK_rm_event.19
-				days = 5
-			}
-		}
 	}
 }
 country_event = { #독일국가인민당과의 연합

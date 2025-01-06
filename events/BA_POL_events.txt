@@ -26,6 +26,7 @@ country_event = {
 	fire_only_once = yes
 	option = {
 		name = BA_pol_event.2.a
+		custom_effect_tooltip = BA_pol_event.2_tt
 		98 = {
 			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
@@ -47,8 +48,10 @@ country_event = {
 				level = 1
 			}
 		}
+		custom_effect_tooltip = BA_pol_event.2_tt_1
+		add_ideas = export_focus
+		custom_effect_tooltip = BA_pol_event.2_tt_2
 		upgrade_economy_law = yes
-		custom_effect_tooltip = BA_pol_event.2_tt
 	}
 }
 
@@ -628,6 +631,78 @@ country_event = {
 			days = 5
 		}
 	}
+	option = { #프로이센
+		name = BA_pol_event.20.e
+		ai_chance = {
+			base = 0
+		}
+		62 = {
+			transfer_state_to = PRE
+			add_core_of = PRE
+		}
+		65 = {
+			transfer_state_to = PRE
+			add_core_of = PRE
+		}
+		64 = {
+			transfer_state_to = PRE
+			add_core_of = PRE
+		}
+		PRE = {
+			add_ai_strategy = {
+				type = alliance
+				id = POL
+				value = 200
+			}
+			if = {
+				limit = {
+					POL = {
+						has_government = democratic
+					}
+				}
+				set_politics = {
+					ruling_party = democratic
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.5
+				}
+			}
+			if = {
+				limit = {
+					POL = {
+						has_government = communism
+					}
+				}
+				set_politics = {
+					ruling_party = communism
+				}
+				add_popularity = {
+					ideology = communism
+					popularity = 0.5
+				}
+			}
+			if = {
+				limit = {
+					POL = {
+						has_government = fascism
+					}
+				}
+				set_politics = {
+					ruling_party = fascism
+				}
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.5
+				}
+			}
+		}
+		add_to_faction = PRE
+		country_event = {
+			id = BA_pol_event.21
+			days = 5
+		}
+	}
 	option = { #내가먹을랭
 		name = BA_pol_event.20.c
 		ai_chance = {
@@ -738,6 +813,11 @@ country_event = {
 			transfer_state_to = GEA
 			add_core_of = GEA
 		}
+		trigger = {
+			GEA = {
+				exists = yes
+			}
+		}
 		country_event = {
 			id = BA_pol_event.23
 			days = 5
@@ -749,6 +829,11 @@ country_event = {
 			transfer_state_to = PRE
 			add_core_of = PRE
 		}
+		trigger = {
+			PRE = {
+				exists = no
+			}
+		}
 		POL = {
 			set_autonomy = {
 				target = PRE
@@ -756,6 +841,22 @@ country_event = {
 			}
 			PRE = {
 				set_cosmetic_tag = PRE_dominion
+			}
+		}
+		country_event = {
+			id = BA_pol_event.23
+			days = 5
+		}
+	}
+	option = { #프로이센 주기
+		name = BA_pol_event.22.g
+		763 = {
+			transfer_state_to = PRE
+			add_core_of = PRE
+		}
+		trigger = {
+			PRE = {
+				exists = yes
 			}
 		}
 		country_event = {
@@ -984,6 +1085,17 @@ country_event = {
 				}
 			}
 		}
+		random_other_country = {
+			limit = {
+				owns_state = 64
+			}
+			transfer_state = 807
+			transfer_state = 86
+			transfer_state = 762
+			add_state_core = 807
+			add_state_core = 86
+			add_state_core = 762
+		}
 		ai_chance = {
 			base = 0
 		}
@@ -1022,19 +1134,16 @@ country_event = {
 			add_core_of = SIL
 		}
 		SIL = {
-			add_ai_strategy = {
-				type = alliance
-				id = POL
-				value = 200
+			set_variable = { collaboration_formed_by = ROOT }
+			ROOT = {
+				puppet = prev
+				set_autonomy = {
+					target = prev
+					autonomy_state = autonomy_collaboration_government
+				}
 			}
 		}
 		add_to_faction = SIL
-		POL = {
-			set_autonomy = {
-				target = SIL
-				autonomy_state = autonomy_supervised_state
-			}
-		}
 		ai_chance = {
 			base = 0
 		}
@@ -1125,19 +1234,11 @@ country_event = {
 			transfer_state = 56
 			transfer_state = 57
 			transfer_state = 55
-			transfer_state = 51
-			transfer_state = 987
-			transfer_state = 990
 			transfer_state = 42
 			add_state_core = 56
 			add_state_core = 57
 			add_state_core = 55
-			add_state_core = 51
-			add_state_core = 987
-			add_state_core = 990
 			add_state_core = 42
-			transfer_state = 50
-			add_state_core = 50
 		}
 		country_event = {
 			id = BA_pol_event.30
@@ -1150,20 +1251,59 @@ country_event = {
 			transfer_state = 56
 			transfer_state = 57
 			transfer_state = 55
-			transfer_state = 51
-			transfer_state = 987
-			transfer_state = 990
+			transfer_state = 978
+			add_state_core = 978
 			transfer_state = 42
 			add_state_core = 56
 			add_state_core = 57
 			add_state_core = 55
-			add_state_core = 51
-			add_state_core = 987
-			add_state_core = 990
 			add_state_core = 42
 			transfer_state = 50
 			add_state_core = 50
 		}
+		country_event = {
+			id = BA_pol_event.30
+			days = 5
+		}
+	}
+	option = { #프로이센을 중심으로 파편화하자
+		name = BA_pol_event.29.c
+		trigger = {
+			64 = {
+				is_owned_by = PRE
+			}
+		}
+		PRE = {
+			transfer_state = 56
+			transfer_state = 57
+			transfer_state = 55
+			transfer_state = 42
+			add_state_core = 56
+			add_state_core = 57
+			add_state_core = 55
+			add_state_core = 42
+		}
+		country_event = {
+			id = BA_pol_event.30
+			days = 5
+		}
+	}
+	option = { #완전히 파편화하자
+		name = BA_pol_event.29.e
+		trigger = {
+			64 = {
+				is_owned_by = PRE
+			}
+		}
+		HAN = {
+			transfer_state = 56
+			transfer_state = 57
+		}
+		HES = {
+			transfer_state = 55
+		}
+		transfer_state = 42
+		add_state_core = 42
 		country_event = {
 			id = BA_pol_event.30
 			days = 5
@@ -1284,13 +1424,14 @@ country_event = {
 			days = 5
 		}
 	}
-	option = { #붉은겨울
+	option = { #북방국가에게
 		name = BA_pol_event.31.c
-		RED = {
+		random_other_country = {
+			limit = {
+				owns_state = 912
+			}
 			transfer_state = 58
 			transfer_state = 909
-			add_state_core = 58
-			add_state_core = 909
 		}
 		country_event = {
 			id = BA_pol_event.32
@@ -1315,6 +1456,38 @@ country_event = {
 			days = 5
 		}
 	}
+	option = { #트리니티에게 주자
+		name = BA_pol_event.31.f
+		SHL = {
+			transfer_state = 58
+			transfer_state = 909
+		}
+		country_event = {
+			id = BA_pol_event.32
+			days = 5
+		}
+	}
+	option = { #북방국가와 프로이센이 분할하자.
+		name = BA_pol_event.31.g
+		random_other_country = {
+			limit = {
+				owns_state = 912
+			}
+			transfer_state = 909
+		}
+		trigger = {
+			PRE = {
+				owns_state = 64
+			}
+		}
+		PRE = {
+			transfer_state = 58
+		}
+		country_event = {
+			id = BA_pol_event.32
+			days = 5
+		}
+	}
 }
 country_event = {
 	#베저엠스
@@ -1332,7 +1505,17 @@ country_event = {
 			transfer_state = 59
 			add_state_core = 59
 		}
-		complete_national_focus = POL_inter_37
+		trigger = {
+			58 = {
+				NOT = {
+					is_owned_by = PRE
+				}
+			}
+		}
+		country_event = {
+			id = BA_pol_event.39
+			days = 5
+		}
 	}
 	option = { #동독
 		name = BA_pol_event.32.b
@@ -1348,7 +1531,10 @@ country_event = {
 			transfer_state = 59
 			add_state_core = 59
 		}
-		complete_national_focus = POL_inter_37
+		country_event = {
+			id = BA_pol_event.39
+			days = 5
+		}
 	}
 }
 country_event = {
@@ -1555,5 +1741,234 @@ country_event = { # 인터마리움에 가입 할거임? -> 찬성 반응
 				transfer_troops = yes
 			}
 		}
+	}
+}
+
+country_event = {#라인란트의 운명
+	######독일땅따먹기에서이어집니다
+	id = BA_pol_event.39
+	title = BA_pol_event.39.t
+	desc = BA_pol_event.39.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { #서독
+		name = BA_pol_event.39.a
+		random_other_country = {
+			limit = {
+				owns_state = 57
+			}
+			transfer_state = 51
+			add_state_core = 51
+			transfer_state = 987
+			add_state_core = 987
+			transfer_state = 990
+			add_state_core = 990
+		}
+		trigger = {
+			HAN = {
+				exists = no
+			}
+		}
+		country_event = {
+			id = BA_pol_event.40
+			days = 5
+		}
+	}
+	option = { #라인란트를 독립시키자.
+		name = BA_pol_event.39.b
+		RHI = {
+			transfer_state = 51
+			add_state_core = 51
+			transfer_state = 987
+			add_state_core = 987
+			transfer_state = 990
+			add_state_core = 990
+			if = {
+				limit = {
+					42 = {
+						AND = {
+							NOT = {
+								is_owned_by = PRE
+								is_owned_by = GEA
+								is_owned_by = GEM
+							}
+						}
+					}
+				}
+				transfer_state = 41
+				add_state_core = 41
+			}
+		}
+		country_event = {
+			id = BA_pol_event.40
+			days = 5
+		}
+	}
+}
+country_event = { #바덴-뷔르템베르크의 운명
+	id = BA_pol_event.40
+	title = BA_pol_event.40.t
+	desc = BA_pol_event.40.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { #서독에 주자
+		name = BA_pol_event.40.a
+		random_other_country = {
+			limit = {
+				owns_state = 55
+			}
+			transfer_state = 50
+			transfer_state = 978
+		}
+		trigger = {
+			PRE = {
+				NOT = {
+					owns_state = 64
+				}
+			}
+		}
+		if = {
+			limit = {
+				PRE = {
+					owns_state = 64
+				}
+			}
+			country_event = {
+				id =  BA_pol_event.41
+				days = 3
+			}
+		}
+		else = {
+			complete_national_focus = POL_inter_37
+		}
+	}
+	option = { #남독일에 주자.
+		name = BA_pol_event.40.b
+		random_other_country = {
+			limit = {
+				owns_state = 52
+			}
+			transfer_state = 50
+			transfer_state = 978
+		}
+		trigger = {
+			BAY = {
+				NOT = {
+					owns_state = 52
+				}
+			}
+		}
+		if = {
+			limit = {
+				PRE = {
+					owns_state = 64
+				}
+			}
+			country_event = {
+				id =  BA_pol_event.41
+				days = 3
+			}
+		}
+		else = {
+			complete_national_focus = POL_inter_37
+		}
+	}
+	option = { #독립시키자.
+		name = BA_pol_event.40.c
+		WUR = {
+			transfer_state = 50
+			transfer_state = 978
+		}
+		if = {
+			limit = {
+				PRE = {
+					owns_state = 64
+				}
+			}
+			country_event = {
+				id =  BA_pol_event.41
+				days = 3
+			}
+		}
+		else = {
+			complete_national_focus = POL_inter_37
+		}
+	}
+	option = { #남독일을 만들자.
+		name = BA_pol_event.40.e
+		BAY = {
+			transfer_state = 50
+			transfer_state = 978
+			add_State_core = 50
+			add_State_core = 978
+			set_cosmetic_tag = unified_southern_deutschland
+		}
+		if = {
+			limit = {
+				PRE = {
+					owns_state = 64
+				}
+			}
+			country_event = {
+				id =  BA_pol_event.41
+				days = 3
+			}
+		}
+		else = {
+			complete_national_focus = POL_inter_37
+		}
+	}
+}
+country_event = { #메클렌부르크와 튀링겐의 운명
+	id = BA_pol_event.41
+	title = BA_pol_event.41.t
+	desc = BA_pol_event.41.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { #해방하자.
+		name = BA_pol_event.41.a
+		MEK = {
+			transfer_state = 61
+		}
+		THU = {
+			transfer_state = 60
+		}
+		complete_national_focus = POL_inter_37
+	}
+	option = { #프로이센의 제후국으로 만들자.
+		name = BA_pol_event.41.b
+		PRE = {
+			MEK = {
+				transfer_state = 61
+				set_variable = { collaboration_formed_by = PREV }
+				PREV = {
+					puppet = prev
+					set_autonomy = {
+						target = prev
+						autonomy_state = autonomy_collaboration_government
+					}
+				}
+			}
+			THU = {
+				transfer_state = 60
+				set_variable = { collaboration_formed_by = PREV }
+				PREV = {
+					puppet = prev
+					set_autonomy = {
+						target = prev
+						autonomy_state = autonomy_collaboration_government
+					}
+				}
+			}
+		}
+		complete_national_focus = POL_inter_37
+	}
+	option = { #프로이센에 병합하자.
+		name = BA_pol_event.40.c
+		PRE = {
+			transfer_state = 61
+			transfer_state = 60
+		}
+		complete_national_focus = POL_inter_37
 	}
 }

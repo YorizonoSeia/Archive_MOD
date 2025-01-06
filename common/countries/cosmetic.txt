@@ -2639,6 +2639,6 @@ GEK_in_civil_war = {
 	color_ui = rgb { 0 77 26 }
 }
 TRM_isolation_zone = {
-	color = rgb { 0 153 51 }
-	color_ui = rgb { 0 77 26 }
+	color = rgb { 255 181 69 }
+	color_ui = rgb { 255 181 69 }
 }
