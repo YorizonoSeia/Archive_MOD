@@ -105,6 +105,10 @@ focus_tree = {
 			factor = 10
 		}
 
+		select_effect = {
+			country_event = { id = HEU_event.132 days = 10 }
+		}
+
 		cost = 5.00
 
 		x = -10
@@ -122,6 +126,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			hidden_effect = {
+				country_event = { id = HEU_event.134 }
+			}
 
 		}
 	}
@@ -142,13 +149,16 @@ focus_tree = {
 
 		search_filters = {  }
 
-		cost = 4.00
+		cost = 2
 
 		x = -2
 		y = 1
 
 		available = { 
-
+            custom_trigger_tooltip = {
+                tooltip = HEU_aru_attacked_tt
+			    has_country_flag = HEU_aru_attacked
+            }
 		}
 
 		bypass = {
@@ -176,15 +186,22 @@ focus_tree = {
 			factor = 10
 		}
 
+		select_effect = {
+			country_event = { id = HEU_event.147 }
+		}
+
 		search_filters = {  }
 
-		cost = 4.00
+		cost = 2
 
 		x = 2
 		y = 1
 
 		available = { 
-
+            custom_trigger_tooltip = {
+                tooltip = HEU_aru_attacked_tt
+			    has_country_flag = HEU_aru_attacked
+            }
 		}
 
 		bypass = {
@@ -196,6 +213,7 @@ focus_tree = {
 				ideology = communism
 				popularity = 0.1
 			}
+			country_event = { id = HEU_event.144 }
 		}
 	}
 
@@ -219,9 +237,13 @@ focus_tree = {
 			factor = 10
 		}
 
+		select_effect = {
+			country_event = { id = HEU_event.148 }
+		}
+
 		search_filters = {  }
 
-		cost = 10.00
+		cost = 15.00
 
 		x = 0
 		y = 2
@@ -372,7 +394,7 @@ focus_tree = {
 				character = HEU_aru
 				promote_leader = yes
 				country_leader = {
-					ideology = marxism
+					ideology = monarchist_socialism #marxism
 					desc = "HEU_aru_communist_leader_desc"
 					traits = { 
 						HEU_ARU_T1
@@ -393,14 +415,14 @@ focus_tree = {
 			hidden_effect = {
 				set_party_name = {
 					ideology = neutrality
-					long_name = HEU_benriya_party
-					name = HEU_benriya_party
+					long_name = HEU_rechtspartei_party
+					name = HEU_rechtspartei_party
 				}
 				
 				set_party_name = {
 					ideology = communism
-					long_name = HEU_neutrality_party_long
-					name = HEU_neutrality_party 
+					long_name = HEU_grand_coalition_party_long_1
+					name = HEU_grand_coalition_party 
 				}
 			}
 		}
@@ -461,6 +483,11 @@ focus_tree = {
 		search_filters = {  }
 
 		completion_reward = {
+			custom_effect_tooltip = HEU_modify_luxembourgism_intro
+			add_to_variable = {
+				HEU_aru_var_research_speed_factor = 0.05
+				tooltip = research_speed_factor_tt
+			}
 			
 		}
 	}
@@ -490,6 +517,12 @@ focus_tree = {
 		search_filters = {  }
 
 		completion_reward = {
+			
+			custom_effect_tooltip = HEU_modify_luxembourgism_intro
+			add_to_variable = {
+				HEU_aru_var_communism_drift = 0.05
+				tooltip = communism_drift_factor_tt
+			}
 			
 		}
 	}
@@ -524,6 +557,12 @@ focus_tree = {
 
 		completion_reward = {
 		    set_rule = { can_generate_female_aces = yes }
+			
+			custom_effect_tooltip = HEU_modify_luxembourgism_intro
+			add_to_variable = {
+				HEU_aru_var_drift_defence_factor = 0.1
+				tooltip = drift_defence_factor_tt
+			}
 		}
 	}
 	
@@ -552,11 +591,21 @@ focus_tree = {
 		search_filters = {  }
 
 		completion_reward = {
-		    set_rule = { can_generate_female_aces = yes }
 			custom_effect_tooltip = kivotos_halo_add3_tt
 			hidden_effect = {
 				set_variable = { BA_halo_infantry_cap_edit_var = 3 }
 				BA_halo_infantry_cap_edit_effect = yes
+			}
+			
+			custom_effect_tooltip = HEU_modify_luxembourgism_intro
+			add_to_variable = {
+				HEU_aru_var_research_speed_factor = 0.02
+				tooltip = research_speed_factor_tt
+			}
+			
+			add_to_variable = {
+				HEU_aru_var_non_core_manpower = 0.01
+				tooltip = non_core_manpower_factor_tt
 			}
 		}
 	}
@@ -670,6 +719,11 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = HEU_modify_luxembourgism_intro
+			add_to_variable = {
+				HEU_aru_var_communism_drift = 0.05
+				tooltip = communism_drift_factor_tt
+			}
 		}
 	}
 
@@ -762,6 +816,11 @@ focus_tree = {
 			}
 
 			add_stability = -0.1
+			
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			}
 		}
 	}
 
@@ -797,7 +856,16 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = HEU_modify_luxembourgism_intro
+			add_to_variable = {
+				HEU_aru_var_drift_defence_factor = 0.05
+				tooltip = drift_defence_factor_tt
+			}
 
+			add_to_variable = {
+				HEU_aru_var_modifier_army_sub_unit_halo_infantry_attack_factor = 0.05
+				tooltip = HEU_rikuhachimaism_focus_3_1_tt
+			}
 		}
 	}
 
@@ -832,7 +900,17 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			custom_effect_tooltip = kivotos_halo_add3_tt
+			hidden_effect = {
+				set_variable = { BA_halo_infantry_cap_edit_var = 3 }
+				BA_halo_infantry_cap_edit_effect = yes
+			}
+			
+			custom_effect_tooltip = HEU_modify_luxembourgism_intro
+			add_to_variable = {
+				HEU_aru_var_non_core_manpower = 0.02
+				tooltip = non_core_manpower_factor_tt
+			}
 		}
 	}
 
@@ -1099,7 +1177,16 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
 
+			custom_effect_tooltip = HEU_modify_rikuhachimaism_intro
+			add_to_variable = {
+				HEU_aru_var_research_speed_factor = 0.03
+				tooltip = research_speed_factor_tt
+			}
 		}
 	}
 
@@ -1134,6 +1221,16 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = HEU_modify_rikuhachimaism_intro
+			add_to_variable = {
+				HEU_aru_var_stability_factor = 0.1
+				tooltip = stability_factor_tt
+			}
+
+			add_to_variable = {
+				HEU_aru_var_conscription_factor = 0.1
+				tooltip = conscription_factor_tt
+			}
 
 		}
 	}
@@ -1244,6 +1341,16 @@ focus_tree = {
 
 		completion_reward = {
 			
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
+
+			custom_effect_tooltip = HEU_modify_rikuhachimaism_intro
+			add_to_variable = {
+				HEU_aru_var_modifier_army_sub_unit_category_halo_org_recovery_cap_factor = 0.03
+				tooltip = HEU_rikuhachimaism_infrastructure_for_disabled_1_tt
+			}
 		}
 	}
 
@@ -1278,6 +1385,16 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = HEU_modify_rikuhachimaism_intro
+			add_to_variable = {
+				HEU_aru_var_stability_factor = -0.05
+				tooltip = stability_factor_tt
+			}
+
+			add_to_variable = {
+				HEU_aru_var_conscription_factor = 0.1
+				tooltip = conscription_factor_tt
+			}
 
 		}
 	}
@@ -1313,7 +1430,20 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			mio:generic_kivotos_infantry_equipment_organization = {
+				add_mio_size = 1
+			}
 
+			custom_effect_tooltip = HEU_modify_rikuhachimaism_intro
+			add_to_variable = {
+				HEU_aru_var_stability_factor = -0.05
+				tooltip = stability_factor_tt
+			}
+
+			add_to_variable = {
+				HEU_aru_var_political_power_factor = 0.05
+				tooltip = political_power_factor_tt
+			}
 		}
 	}
 
@@ -1348,7 +1478,41 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			division_template = { #흥신소 돌격대
+				name = "Benriya Sturmabteilung" 
+				division_names_group = KIV_SEC_01
+				#template_counter = 68
+				is_locked = yes
+				force_allow_recruiting = yes
+				division_cap = 0
 
+				regiments = { 
+					halo_militia = { x = 0 y = 0 }
+					halo_militia = { x = 0 y = 1 }
+					halo_militia = { x = 0 y = 2 }
+					halo_militia = { x = 1 y = 0 }
+					halo_militia = { x = 1 y = 1 }
+					halo_militia = { x = 1 y = 2 }
+				}
+				support = { 
+					halo_recon = { x = 0 y = 0 }
+				}
+			}
+
+			set_division_template_cap = {
+				division_template = "Benriya Sturmabteilung"
+				division_cap = halo_militia_cap
+			}
+
+			capital_scope = {
+				create_unit = {
+					division = "division_template = \"Benriya Sturmabteilung\" start_experience_factor = 0.5 start_equipment_factor = 1.0"
+					owner = ROOT
+					count = 5
+				}
+			}
+
+			add_stability = -0.1
 		}
 	}
 	
@@ -1414,7 +1578,11 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			custom_effect_tooltip = HEU_modify_rikuhachimaism_intro
+			add_to_variable = {
+				HEU_aru_var_fascism_drift = 0.1
+				tooltip = fascism_drift_factor_tt
+			}
 		}
 	}
 
@@ -1449,7 +1617,20 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = kivotos_halo_add6_tt
+			hidden_effect = {
+				set_variable = { BA_halo_infantry_cap_edit_var = 6 }
+				BA_halo_infantry_cap_edit_effect = yes
+			}
 
+			custom_effect_tooltip = HEU_modify_rikuhachimaism_intro
+			add_to_variable = {
+				HEU_aru_var_war_support_factor = 0.1
+				tooltip = war_support_factor_tt
+			}
+
+			add_political_power = -100
+			add_stability = -0.1
 		}
 	}
 
@@ -1465,6 +1646,13 @@ focus_tree = {
 		prerequisite = { 
 			focus = HEU_no_more_hope
 			focus = HEU_we_still_hope
+		}
+
+		available = {
+			OR = {
+				has_completed_focus = HEU_neutralization_rietspartei
+				has_completed_focus = HEU_unwelcome_school
+			}
 		}
 
 		ai_will_do = {
@@ -5316,6 +5504,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = HEU_modify_luxembourgism_intro
+			add_to_variable = {
+				HEU_aru_var_non_core_manpower = 0.02
+				tooltip = non_core_manpower_factor_tt
+			}
+
 		}
 	}
 	
@@ -6056,7 +6250,7 @@ focus_tree = {
 		cost = 10.00
 
 		ai_will_do = {
-			base = 0
+			base = 6
 		}
 
 		x = 4
