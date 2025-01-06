@@ -309,10 +309,6 @@ country_event = {
 		name = usa_event.1
         #event = BA_super.21
 		add_war_support = 0.20
-		
-		hidden_effect = {
-				# play_song = "imperterrita"
-			}
 	 }
 }
 
@@ -353,27 +349,6 @@ country_event = {
 	    hidden_effect = {
 		    play_song = "USA_The_New_Order"
 		}
-
-	 }
-}
-
-country_event = {
-
-	id = usa_new_event.2
-	title = usa_new_event.2.t
-	desc = usa_new_event.2.d
-	
-	picture = GFX_report_event_generic_read_write
-	
-	fire_only_once = yes
-	is_triggered_only = yes
-	
-	 option = {
-		name = usa_new_event.2
-		
-		#hidden_effect = {
-		#		play_song = "USA_The_New_Order"
-		#	}
 	 }
 }
 

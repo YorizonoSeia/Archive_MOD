@@ -3709,7 +3709,7 @@ USA_recover_from_2nd_great_depression_categorie = {
 		visible = {
 			has_completed_focus = USABA_american_reindustrialization
 		}
-		cost = 100
+		cost = 50
 		cancel_trigger = {
 			custom_trigger_tooltip = {
 				tooltip = USA_recover_from_2nd_great_depression_haswar_cancel_tt
@@ -3843,7 +3843,7 @@ USA_recover_from_2nd_great_depression_categorie = {
 		visible = {
 			has_completed_focus = USABA_american_reindustrialization
 		}
-		cost = 200
+		cost = 75
 		cancel_trigger = {
 			custom_trigger_tooltip = {
 				tooltip = USA_recover_from_2nd_great_depression_haswar_cancel_tt
@@ -3982,7 +3982,7 @@ USA_recover_from_2nd_great_depression_categorie = {
 				has_idea = USABA_famine_2
 			}
 		}
-		cost = 75
+		cost = 30
 		cancel_trigger = {
 			custom_trigger_tooltip = {
 				tooltip = USA_recover_from_2nd_great_depression_haswar_cancel_tt
@@ -4075,7 +4075,7 @@ USA_recover_from_2nd_great_depression_categorie = {
 				has_idea = USABA_famine_2
 			}
 		}
-		cost = 100
+		cost = 50
 		cancel_trigger = {
 			custom_trigger_tooltip = {
 				tooltip = USA_recover_from_2nd_great_depression_haswar_cancel_tt
@@ -4171,7 +4171,7 @@ USA_recover_from_2nd_great_depression_categorie = {
 				has_idea = USABA_famine_1
 			}
 		}
-		cost = 75
+		cost = 30
 		complete_effect = {
 			set_country_flag = USA_recover_from_2nd_great_depression_rebuild_war_flan_flag
 		}

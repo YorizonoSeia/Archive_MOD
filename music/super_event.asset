@@ -164,3 +164,9 @@ music = { # First Strike(독일 DLC 트레일러 브금)
 	file = "super_event/USA_The_New_Order.ogg"
 	volume =  0.90
 }
+
+music = {
+	name = "USA_The_Old_Order"
+	file = "super_event/USA_The_Old_Order.ogg"
+	volume =  0.90
+}

@@ -521,7 +521,7 @@ country_event = {	# 국제연맹의 부활
 	
 	option = {
 		name = BA_super.1.a
-		scoped_play_song = "imperterrita" #BA_united_nations_music
+		scoped_play_song = "USA_The_Old_Order"
 		set_country_flag = {
 			flag = BA_Super_Event_Visible
 			value = 21

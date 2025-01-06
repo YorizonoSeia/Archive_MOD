@@ -3415,7 +3415,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = USABA_american_reindustrialization
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
@@ -3426,12 +3426,13 @@ focus_tree = {
 			}
 			threat > 0.8
 			has_government = democratic
+		custom_trigger_tooltip = {
+			tooltip = ITA_human_fascism_tt
+			NOT = { has_country_flag = ITA_human_fascism_lock_trigger_flag }
+		}
 		}
 		completion_reward = {
 			create_faction = USA_NATO_FACTION
-			set_rule = {
-				can_create_factions = yes
-			}
 			news_event = { id = BA_news.96 }
 			add_popularity = {
               ideology = democratic
@@ -4023,7 +4024,15 @@ focus = {
 			}
 			air_experience = 50
 			navy_experience = 50
-			army_experience = 10			
+			army_experience = 10
+			add_tech_bonus = {
+				name = special_bonus
+				bonus = 1.0
+				uses = 1
+				technology = tech_engineers
+				technology = tech_engineers2
+				technology = tech_engineers3
+			}	
 		}
 	}
 
@@ -4934,7 +4943,7 @@ focus = {
 
 	focus = {
 		id = USA_new_team
-		icon = GFX_SOV_strengthen_the_mobilization_plan_ccp_2d_sov_compatibility
+		icon = GFX_focus_generic_little_entente
 		prerequisite = { focus = USABA_american_reindustrialization }
 		mutually_exclusive = { focus = USA_old_team focus = USA_soviet_team focus = USABA_german_national_protection_law }
 
@@ -4971,7 +4980,7 @@ focus = {
 		x = -3
 		y = 1
 		relative_position_id = USA_new_team
-		cost = 8
+		cost = 3
 		ai_will_do = {
 			factor = 1
 		}
@@ -4980,7 +4989,7 @@ focus = {
 
 		}
 		completion_reward = {
-			add_war_support = 0.1
+			add_war_support = 0.15
 			add_stability = -0.1
 			add_popularity = {
 				ideology = democratic
@@ -5011,10 +5020,6 @@ focus = {
 		completion_reward = {
 			USA_congress_medium_support = yes
 			add_stability = -0.05
-			add_popularity = {
-				ideology = democratic
-				popularity = -0.1
-			}
 		}
 	}
 
@@ -5091,7 +5096,15 @@ focus = {
 		completion_reward = {
 			add_threat = 15
 			news_event = { id = BA_news.97 }
-			country_event = { id = usa_new_event.2 days = 3 }
+			start_civil_war = {
+              ideology = democratic
+              size = 0.8
+              only_own_territory = no
+              capital = 358
+              states = { 
+                357 358 360 68 378 386 387 385 388 381 389 390 
+                }
+            } 
 			#hidden_effect = {
             #
 			#}

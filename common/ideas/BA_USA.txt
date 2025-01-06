@@ -707,7 +707,6 @@ ideas = {
 
 			modifier = {
 				breakthrough_factor = 0.1
-               
 			}
 	   }
 
@@ -768,11 +767,14 @@ ideas = {
         picture = generic_artillery_regiments
 
 		modifier = {
-			production_factory_efficiency_gain_factor = 0.1
+			stability_weekly = 0.005
+			war_support_weekly = 0.005
+			production_factory_efficiency_gain_factor = 0.2
 			production_factory_max_efficiency_factor = 0.15
-            consumer_goods_factor = -0.1
-			democratic_drift = 0.05
-            production_speed_arms_factory_factor = 0.20
+            consumer_goods_factor = -0.2
+			democratic_drift = 0.1
+			production_speed_buildings_factor = 0.2
+            production_speed_arms_factory_factor = 0.15
               
 		}
 	  }
