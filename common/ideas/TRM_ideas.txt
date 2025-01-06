@@ -868,6 +868,10 @@ ideas = {
 				tag = GEH
 				attack_bonus_against = -0.1
 			}
+			targeted_modifier = {
+				tag = HEU
+				attack_bonus_against = -0.1
+			}
 		}
 		TRN_new_administration = { #
 			allowed = { always = no }

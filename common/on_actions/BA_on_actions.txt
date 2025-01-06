@@ -1050,12 +1050,18 @@ on_actions = {
 					}
 					TRM = {
 						set_country_flag = TRM_industry_focus_locked_flag
-							if = { #
+						if = { #
 							limit = {
 								has_war_with = GEM
 								GEM = { is_major = yes }
 							}
 							GEM = { set_country_flag = TRM_focus_locked_disruptor_flag }
+						}
+						if = { #
+							limit = {
+								has_war_with = GEH
+							}
+							GEH = { set_country_flag = TRM_focus_locked_disruptor_flag }
 						}
 						else = { #If no pandemonium society, choose a random enemy major
 							random_enemy_country = {

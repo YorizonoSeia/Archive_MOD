@@ -7987,3 +7987,16 @@ country_event = { # 트리니티의 개쩌는 사업 아이템!
 		name = trnstory.5.a
 	}
 }
+country_event = { # 선전물 배포 - 1 ""
+	id = trnstory.6
+	title = trnstory.6.t
+	desc = trnstory.6.desc
+	picture = GFX_report_event_journalists_speech
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trnstory.6.a
+	}
+}
