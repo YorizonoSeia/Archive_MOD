@@ -159,6 +159,7 @@ guiTypes = {
 			spriteType = "GFX_frontend_logo_GER"
 			position = { x= 0 y = 400 }
 			pdx_tooltip = "BA_ger_update_tt"
+			pdx_tooltip_delayed = BA_ger_update_tt_delayed
 		}
 		
 	}
