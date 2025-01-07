@@ -11554,5 +11554,25 @@ focus = {
 		}
 	}
 
+	 focus = {
+		id = USA_finial_torch_2
+		icon = GFX_focus_generic_the_giant_wakes
+		x = 0
+		y = 1
+		relative_position_id = USA_finial_torch_2
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available_if_capitulated = yes
+		available = {
+			has_civil_war = yes
+			ideology = neutrality
+		}
+		completion_reward = {
+		}
+	}
+
+
 
 

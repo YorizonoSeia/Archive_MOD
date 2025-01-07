@@ -3691,7 +3691,6 @@ news_event = {
 		    start_civil_war = {
             ideology = neutrality
             size = 0.6
-            only_own_territory = no
             capital = 358
             states = { 
                357 358 360 359 261 393 378
