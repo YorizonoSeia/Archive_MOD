@@ -3358,19 +3358,8 @@ news_event = {
 	
 	major = yes
 	
-	trigger = {
-		HYA = {
-			exists = no
-		}
-		SHA = {
-			exists = yes
-		}
-		has_global_flag = GFLAG_BAKSANWAR
-	}
+	is_triggered_only = yes
     fire_only_once = yes
-    mean_time_to_happen = {
-        days=1
-    }
 	
 	option = {
 		name = BA_news.91.a
@@ -3447,6 +3436,13 @@ news_event = {
 			}
 		}
 	}
+	option = { 
+		name = BA_news.91.e
+		trigger = { 
+			tag = HYA
+		}
+		mark_focus_tree_layout_dirty = yes
+	}
 }
 news_event = {
 	id = BA_news.92
@@ -3456,16 +3452,8 @@ news_event = {
 	
 	major = yes
 	
-	trigger = {
-		HYA = {
-			exists = yes
-		}
-		has_global_flag = GFLAG_BAKSANWAR_END
-	}
+	is_triggered_only = yes
     fire_only_once = yes
-    mean_time_to_happen = {
-        days=1
-    }
 	
 	option = {
 		name = BA_news.92.a
@@ -3478,7 +3466,14 @@ news_event = {
 		trigger = { 
 			NOT = {
 				TAG = HYA
+				TAG = SHA
 			}
+		}
+	}
+	option = {
+		name = BA_news.92.c
+		trigger = {
+			TAG = SHA
 		}
 	}
 }

@@ -505,3 +505,27 @@ HYA_centralization_power_balance_decisions = {
 		}
 	}
 }
+war_measures = {
+	HYA_war_with_southern_kivotos_decision = {
+		priority = 100
+		icon = GFX_decision_generic_political_rally
+		activation = {
+			always = no
+		}
+		available = {
+			has_war_with = SHA
+			any_war_score > 35
+			SHA = { surrender_progress > 0.35 }
+		}
+		cancel_trigger = {
+			has_war_with = SHA
+			surrender_progress > 0.35
+			SHA = { any_war_score > 35 }
+		}
+		is_good = no
+		days_mission_timeout = 365
+
+		complete_effect = { SHA = { country_event = HYA_event.1 } }
+		cancel_effect = { country_event = HYA_event.14 }
+	}
+}

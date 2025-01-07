@@ -75,7 +75,7 @@ focus_tree = {
 		#mutually_exclusive = { focus = HYA_focus_ }
 		x = -1
 		y = 1
-		cost = 10
+		cost = 5
 		search_filters = {FOCUS_FILTER_AIR_XP FOCUS_FILTER_RESEARCH}
 		bypass = {
 		}
@@ -97,7 +97,7 @@ focus_tree = {
 		#mutually_exclusive = { focus = HYA_focus_ }
 		x = 1
 		y = 1
-		cost = 10
+		cost = 5
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		bypass = {
 		}
@@ -146,7 +146,7 @@ focus_tree = {
 		#mutually_exclusive = { focus = HYA_focus_ }
 		x = -1
 		y = 1
-		cost = 10
+		cost = 5
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		bypass = {
 		}
@@ -168,7 +168,7 @@ focus_tree = {
 		#mutually_exclusive = { focus = HYA_focus_ }
 		x = 1
 		y = 1
-		cost = 10
+		cost = 5
 		bypass = {
 		}
 		completion_reward = {
@@ -189,7 +189,7 @@ focus_tree = {
 		#mutually_exclusive = { focus = HYA_focus_ }
 		x = -1
 		y = 1
-		cost = 10
+		cost = 5
 		bypass = {
 		}
 		completion_reward = {
@@ -219,7 +219,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = jet_rocket_bonus
 				ahead_reduction = 3
-				uses = 1
+				uses = 2
 				category = rocketry
 				category = jet_technology
 			}
@@ -233,7 +233,7 @@ focus_tree = {
 		#mutually_exclusive = { focus = HYA_focus_ }
 		x = 0
 		y = 2
-		cost = 10
+		cost = 5
 		search_filters = {FOCUS_FILTER_AIR_XP}
 		bypass = {
 		}
@@ -283,7 +283,6 @@ focus_tree = {
 		}   
 		bypass = {
 			OR = {
-				has_global_flag = GFLAG_BAKSANWAR
 			}
 		}
 		ai_will_do = {
@@ -298,6 +297,9 @@ focus_tree = {
 			}
 			set_global_flag = GFLAG_BAKSANWAR
 			set_global_flag = GFLAG_BAK_BAKSANWAR
+			set_country_flag = HYA_focus_12_flag
+			custom_effect_tooltip = HYA_war_with_southern_kivotos_decision_tt
+			custom_effect_tooltip = HYA_war_with_southern_kivotos_decision_def_tt
 		}
 	}
 	focus = { #
@@ -310,11 +312,15 @@ focus_tree = {
 		y = 1
 		cost = 5
 		available = {
+			has_war_with = SHA
 			has_defensive_war = yes
 		}   
 		bypass = {
 			OR = {
-				has_offensive_war = yes
+				AND = {
+					has_war_with = SHA
+					has_offensive_war = yes
+				}
 				has_global_flag = GFLAG_BAKSANWAR_END
 			}
 		}
@@ -379,12 +385,15 @@ focus_tree = {
 	}
 	focus = { #
 		relative_position_id = HYA_focus_12
-		id = HYA_focus_victory
-		icon = GFX_focus_HYA_focus_victory
+		id = HYA_focus_scattered_cherry_blossoms
+		icon = GFX_goal_generic_dangerous_deal
 		prerequisite = { focus = HYA_focus_13 }
 		#mutually_exclusive = { focus = HYA_focus_ }
+		allow_branch = {
+			has_global_flag = CFLAG_BAKSANWAR_END
+		}
 		x = 0
-		y = 3
+		y = 2
 		cost = 2
 		available = {
 			has_global_flag = GFLAG_BAKSANWAR_END
@@ -395,19 +404,82 @@ focus_tree = {
 		}
 	}
 	focus = { #
+		relative_position_id = HYA_focus_12
+		id = HYA_focus_victory
+		icon = GFX_focus_HYA_focus_victory
+		prerequisite = { focus = HYA_focus_13 }
+		#mutually_exclusive = { focus = HYA_focus_ }
+		allow_branch = {
+			NOT = { has_global_flag = CFLAG_BAKSANWAR_END }
+		}
+		x = 0
+		y = 2
+		cost = 2
+		available = {
+			has_global_flag = GFLAG_BAKSANWAR_END
+		}   
+		bypass = {
+		}
+		completion_reward = {
+			add_stability = 0.15
+		}
+	}
+	focus = { #
 		relative_position_id = HYA_focus_victory
 		id = HYA_focus_expulsion_of_sanhaegyeong_in_country
 		icon = GFX_focus_generic_air_defense
 		prerequisite = { focus = HYA_focus_victory }
 		#mutually_exclusive = { focus = HYA_focus_ }
-		x = -1
+		x = 0
 		y = 1
 		cost = 5
 		available = {
+			OR = {
+				controls_state = 972
+				controls_state = 986
+			}
 		}   
 		bypass = {
 		}
 		completion_reward = {
+			if = {
+				limit = { controls_state = 972 }
+				972 = {
+					add_manpower = -12000
+					remove_core_of = SHA
+				}
+				SHA = {
+					random_core_state = {
+						limit = {
+							NOT = {
+								state = 972
+								state = 986
+							}
+						}
+						prioritize = { 4 152 }
+						add_manpower = 12000
+					}
+				}
+			}
+			if = {
+				limit = { controls_state = 986 }
+				986 = {
+					add_manpower = -12000
+					remove_core_of = SHA
+				}
+				SHA = {
+					random_core_state = {
+						limit = {
+							NOT = {
+								state = 972
+								state = 986
+							}
+						}
+						prioritize = { 976 153 }
+						add_manpower = 12000
+					}
+				}
+			}
 		}
 	}
 	focus = { #
@@ -416,7 +488,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = HYA_focus_victory }
 		#mutually_exclusive = { focus = HYA_focus_ }
-		x = 1
+		x = -2
 		y = 1
 		cost = 5
 		available = {
@@ -3424,7 +3496,7 @@ focus_tree = {
 		#mutually_exclusive = { focus = HYA_focus_ }
 		x = 2
 		y = 5
-		cost = 10
+		cost = 5
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		available = {
 			has_character = HYA_MICHIRU

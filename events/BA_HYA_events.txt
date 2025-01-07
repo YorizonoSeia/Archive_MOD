@@ -5,28 +5,25 @@ country_event = {
 	title = HYA_event.1.t
 	desc = HYA_event.1.desc
 	picture = GFX_report_event_dead_soldiers
-	is_triggered_only = no
+
+	is_triggered_only = yes
 	fire_only_once = yes
-	trigger = {
-		has_country_flag = CFLAG_SHA
-		has_global_flag = GFLAG_BAKSANWAR
-		OR = {
-			has_global_flag = GFLAG_BAK_BAKSANWAR
-			has_global_flag = GFLAG_FASI_BAKSANWAR
-		}
-		NOT = { has_global_flag = GFLAG_BAKSANWAR_END }
-		SHA = { has_war = yes }
-		HYA = { has_war = yes }
-		SHA = { surrender_progress > 0.60 }
-	}
+
 	option = { 
 		name = HYA_event.1.a
+		ai_chance = {
+			factor = 10
+		}
 		HYA = {
 			country_event = {
 				id = HYA_event.2
-				hours = 12
+				hours = 2
 			}
 		}
+	}
+	option = { 
+		name = HYA_event.1.b
+		add_war_support = -0.25
 	}
 }
 country_event = { 
@@ -80,6 +77,14 @@ country_event = {
 		if = {
 			limit = {
 				SHA = {
+					owns_state = 972
+				}
+			}
+			transfer_state = 972
+		}
+		if = {
+			limit = {
+				SHA = {
 					owns_state = 986
 				}
 			}
@@ -88,26 +93,24 @@ country_event = {
 		if = {
 			limit = {
 				SHA = {
-					owns_state = 848
+					owns_state = 152
 				}
 			}
-			848 = {
+			152 = {
 				set_demilitarized_zone = yes
 			}
 		}
 		set_global_flag = GFLAG_BAKSANWAR_END
-		news_event = {
-			id = SHA_news.4
-			hours = 6
-		}
+		news_event = { id = BA_news.92 hours = 6 }
 	}
 	option = { 
 		name = HYA_event.2.b
 		ai_chance = {
 			factor = 0
 		}
-		add_threat = 5
+		add_threat = 2
 		set_global_flag = GFLAG_BAKSANWAR_END
+		FROM = { country_event = { id = HYA_event.16 hours = 2 } }
 	}
 }
 country_event = {
@@ -418,5 +421,111 @@ country_event = {
 		name = HYA_event.13.a
 		add_war_support = 0.05
 		add_to_variable = { HYA_event_11_var = 0.05 }
+	}
+}
+country_event = { 
+	id = HYA_event.14
+	title = HYA_event.14.t
+	desc = HYA_event.14.desc
+	picture = GFX_report_event_dead_soldiers
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = HYA_event.14.a
+		ai_chance = {
+			factor = 10
+		}
+		SHA = {
+			country_event = {
+				id = HYA_event.15
+				hours = 2
+			}
+		}
+	}
+	option = { 
+		name = HYA_event.14.b
+		add_war_support = -0.25
+	}
+}
+country_event = { 
+	id = HYA_event.15
+	title = HYA_event.15.t
+	desc = HYA_event.15.desc
+	picture = GFX_report_event_generic_sign_treaty1
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { 
+		name = HYA_event.15.a
+		ai_chance = {
+			factor = 10
+		}
+		white_peace = HYA
+		HYA = {
+			#add_ideas = HYA_SHA_huzika
+			#add_timed_idea = {
+			#	idea = HYA_SHA_wjswodqotkd
+			#	days = 1800
+			#}
+			leave_faction = yes
+			#delete_unit = {} # Will delete all units
+			add_ideas = volunteer_only
+			add_ideas = civilian_economy
+		}
+		every_country = {
+			limit = { is_puppet_of = HYA }
+			HYA = {
+				end_puppet = PREV
+			}
+		}
+		if = {
+			limit = {
+				HYA = {
+					owns_state = 972
+				}
+			}
+			transfer_state = 972
+		}
+		if = {
+			limit = {
+				HYA = {
+					owns_state = 986
+				}
+			}
+			transfer_state = 986
+		}
+		if = {
+			limit = {
+				HYA = {
+					owns_state = 75
+				}
+			}
+			75 = {
+				set_demilitarized_zone = yes
+			}
+		}
+		set_global_flag = CFLAG_BAKSANWAR_END
+		news_event = { id = BA_news.91 hours = 6 }
+	}
+	option = { 
+		name = HYA_event.15.b
+		ai_chance = {
+			factor = 0
+		}
+		add_threat = 2
+		set_global_flag = CFLAG_BAKSANWAR_END
+		FROM = { country_event = { id = HYA_event.16 hours = 2 } }
+	}
+}
+country_event = { 
+	id = HYA_event.16
+	title = HYA_event.16.t
+	desc = HYA_event.16.desc
+	picture = GFX_report_event_generic_sign_treaty1
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { 
+		name = HYA_event.16.b
 	}
 }

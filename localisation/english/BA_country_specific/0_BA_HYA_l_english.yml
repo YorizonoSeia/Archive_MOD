@@ -4,6 +4,7 @@
  CFLAG_SHA:0 "현재 국가가 @SHA산해경 고급중학교"
  GFLAG_BAKSANWAR:0 "§R남키보토스 전쟁§!이 발발함."
  GFLAG_BAKSANWAR_END:0 "§Y남키보토스 전쟁§!이 §Y백귀야행의 승리§!로 끝남."
+ CFLAG_BAKSANWAR_END:0 "§Y남키보토스 전쟁§!이 §Y산해경의 승리§!로 끝남."
  #툴팁
  HYA_tt_1:0 "§Y6개 보병으로 이루어진 4개 사단§!을 얻습니다."
  HYA_focus_46_tt:0 "§R만약 §Y파시즘 정당 지지도§!가 이 중점 완료 시점에서 §Y15%§! 보다 높을 시, 내전이 시작될 것입니다!§!"
@@ -11,8 +12,9 @@
  HYA_focus_65_tt2:0 "만약 §Y비동맹주의 정당 지지도§!가 이 중점 완료 시점에서 §Y45%§! 보다 높을 시, 정권이 교체될 것입니다."
  #이벤트
  HYA_event.1.t:0 "패전"
- HYA_event.1.desc:0 "전황을 뒤집으려고 노력하고, 더 노력했습니다만, 우리는 백귀야행과의 전쟁에서 패배했습니다. 더 이상 물러날 곳은 없으며 전쟁에서 패배한 것은 이미 기정 사실입니다. 우리는 백귀야행에게 항복을 청했습니다."
+ HYA_event.1.desc:0 "전황을 뒤집으려고 노력하고, 더 노력했습니다만, 우리는 백귀야행과의 전쟁에서 패배했습니다. 더 이상 물러날 곳은 없으며 전쟁에서 패배한 것은 이미 기정 사실입니다.\n\n우리는 백귀야행에게 청하거나...마지막 결사 항전을 준비해야 합니다."
  HYA_event.1.a:0 "산해경, 산해경이여.."
+ HYA_event.1.b:0 "최후의 최후까지...싸우자."
  HYA_event.2.t:0 "산해경의 항복 제의"
  HYA_event.2.desc:0 "우리가 산해경과의 전쟁에서 앞서나가는 가운데, 산해경 정부는 우리에게 항복을 청했습니다.\n\n우리는 전쟁에서 승리했습니다!"
  HYA_event.2.a:0 "우리의 승리!"
@@ -45,6 +47,17 @@
  HYA_event.13.t:0 "불개입 조약을 거절한 [FROM.GetName]"
  HYA_event.13.desc:0 "[FROM.GetName] 측은 불개입 조약은 우리의 이익을 챙기려는 특정 목적을 달성하려는게 분명하다는 불분명한 이유로 조약을 거절했습니다."
  HYA_event.13.a:0 "흠..."
+ HYA_event.14.t:0 "패전"
+ HYA_event.14.desc:0 "전황을 뒤집으려고 노력하고, 더 노력했습니다만, 우리는 산해경과의 전쟁에서 패배했습니다. 더 이상 물러날 곳은 없으며 전쟁에서 패배한 것은 이미 기정 사실입니다.\n\n일부 지휘관들은 산해경에게 집단으로 항복하고 있는 것이 적발되었으며, 전황이 호전될 가능성은 전무합니다."
+ HYA_event.14.a:0 "벚꽃이 스러진다..."
+ HYA_event.14.b:0 "전원, 총옥쇄."
+ HYA_event.15.t:0 "백귀야행의 항복 제의"
+ HYA_event.15.desc:0 "우리가 백귀야행과의 전쟁에서 앞서나가는 가운데, 백귀야행의 지도부는 우리에게 항복을 청했습니다.\n\n우리는 전쟁에서 승리했습니다!"
+ HYA_event.15.a:0 "다시, 산해경의 땅은 돌아왔다."
+ HYA_event.15.b:0 "완전히 그들을 합병할 것이다!"
+ HYA_event.16.t:0 "[From.GetNameDef] 측의 항복 거부"
+ HYA_event.16.desc:0 "우리의 항복 제의를 [From.GetNameDef] 측은 거절했습니다. 저들은 우리의 온전한 끝을 바라보는 것 같습니다..."
+ HYA_event.16.a:0 "...."
 
  #중점
  HYA_focus_1:0 "연합학원의 상황"
@@ -164,6 +177,7 @@
  HYA_focus_117:0 "남부 평정"
  HYA_focus_118:0 "게헨나 남부 침략"
 
+ HYA_focus_scattered_cherry_blossoms: "흐트러진 벚꽃"
  HYA_focus_victory: "승전"
  HYA_focus_expulsion_of_sanhaegyeong_in_country: "학원 내 산해경인 추방"
  HYA_focus_exploitative_industrial_reconstruction: "수탈적 산업 재건"
@@ -217,6 +231,10 @@
  HYA_anarchist_culture:0 "문화적 아나키즘"
  HYA_fort_idea:0 "백귀야행 요새 위원회"
  #디시전
+ HYA_war_with_southern_kivotos_decision:0 "속전 속결의 전쟁"
+ HYA_war_with_southern_kivotos_decision_tt:0 "전쟁 발발 §Y365일§! 이내 [SHA.GetNameDef] 측의 항복도를 크게 떨어뜨린다면, [SHA.GetNameDef] 측은 무조건 평화를 수락하거나 치명적인 사기 저하에 직면하게 될 것입니다."
+ HYA_war_with_southern_kivotos_decision_def_tt:0 "§R전쟁 발발 §Y365일§! 이내 우리의 항복도가 크게 떨어진다면, 우리는 무조건 평화를 수락하거나 치명적인 사기 저하에 직면하게 될 것입니다.§!"
+
  HYA_centralization_power_balance_decisions:0 "학원 권위의 균형"
  HYA_compromise_with_cantons:0 "동아리 협력 강화"
  HYA_consolidate_council_power:0 "백귀야행 학생회 강화"
