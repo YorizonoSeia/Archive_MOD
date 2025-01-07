@@ -38,18 +38,18 @@ SHA_historical = {
 		SHA_central_planning
 		
 		SHA_emergency_measures
+		
+		SHA_invade_of_Hyakkiyako
+		
 		SHA_address_the_army
 		SHA_Following_doorkeeper_footsteps
 		SHA_National_Guard_Expansion
 		
-		SHA_invade_of_Hyakkiyako
 
 		SHA_heroism_education
 
 		SHA_union_control
 		SHA_establish_the_VES
-
-		
 	}
 
 	weight = {

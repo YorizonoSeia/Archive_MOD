@@ -169,3 +169,304 @@ JAP_balance_of_power_category = {
 		}
 	}
 }
+JAP_Greater_East_Asia_Co_Prosperity_Sphere = {
+	JAP_china_puppet = {
+		icon = GFX_decision_jap_geacps
+		allowed = { }
+		available = { 
+            609 = { is_controlled_by_ROOT_or_subject = yes }
+            608 = { is_controlled_by_ROOT_or_subject = yes }
+            614 = { is_controlled_by_ROOT_or_subject = yes }
+            597 = { is_controlled_by_ROOT_or_subject = yes }
+            743 = { is_controlled_by_ROOT_or_subject = yes }
+		}
+        highlight_states = {
+            highlight_state_targets = {
+                state = 609
+                state = 608
+                state = 614
+                state = 597
+                state = 743
+            }
+        }
+		visible = { }
+		ai_will_do = { factor = 3 }
+		fire_only_once = yes
+		complete_effect = {
+			if = {
+				limit = {
+					743 = { is_owned_or_subject_trigger = yes }
+				}
+				JCH = { 
+					transfer_state = 609 
+					transfer_state = 743
+					JAP = {
+						set_autonomy = {
+							target = PREV
+							autonomy_state = autonomy_wtt_imperial_subject
+						}
+					}
+				}
+				every_state = {	
+					limit = {
+						OR = {
+							state = 608
+							state = 614
+							state = 597
+						}
+						NOT = {
+							OR = {
+								is_owned_by = ROOT
+								any_country = {
+									is_subject_of = ROOT
+									owns_state = PREV
+								}
+							}
+						}
+					}
+					add_contested_owner = JCH
+					set_state_controller_to = JCH
+					add_claim_by = JCH
+					add_compliance = 25
+				}
+				every_state = {
+					limit = {
+						OR = {
+							state = 608
+							state = 614
+							state = 597
+						}
+						OR = {
+							is_owned_by = ROOT
+							owner = { is_subject_of = ROOT }
+						}
+					}
+					transfer_state_to = JCH
+					add_compliance = 25
+				}
+			}
+			if = {
+				limit = {
+					743 = { is_owned_by = CHI }
+				}
+				JCH = { 
+					transfer_state = 609 
+					JAP = {
+						set_autonomy = {
+							target = PREV
+							autonomy_state = autonomy_wtt_imperial_subject
+						}
+					}
+				}
+				every_state = {	
+					limit = {
+						OR = {
+							state = 608
+							state = 614
+							state = 597
+							state = 743
+						}
+						NOT = {
+							OR = {
+								is_owned_by = ROOT
+								any_country = {
+									is_subject_of = ROOT
+									owns_state = PREV
+								}
+							}
+						}
+					}
+					add_contested_owner = JCH
+					set_state_controller_to = JCH
+					add_claim_by = JCH
+					add_compliance = 25
+				}
+				every_state = {
+					limit = {
+						OR = {
+							state = 608
+							state = 614
+							state = 597
+							state = 743
+						}
+						OR = {
+							is_owned_by = ROOT
+							owner = { is_subject_of = ROOT }
+						}
+					}
+					transfer_state_to = JCH
+					add_compliance = 25
+				}
+			}
+		}
+	}
+
+	JAP_china_puppet_2 = {
+		icon = GFX_decision_jap_geacps
+		allowed = { }
+		available = { 
+            996 = { is_controlled_by_ROOT_or_subject = yes }
+            598 = { is_controlled_by_ROOT_or_subject = yes }
+            613 = { is_controlled_by_ROOT_or_subject = yes }
+		}
+        highlight_states = {
+            highlight_state_targets = {
+				state = 996
+                state = 598
+                state = 613
+            }
+        }
+		visible = { }
+		
+		ai_will_do = { factor = 3 }
+		
+		fire_only_once = yes
+		
+		complete_effect = {
+			WCH = {
+				transfer_state = 996
+				JAP = {
+					set_autonomy = {
+						target = PREV
+						autonomy_state = autonomy_wtt_imperial_subject
+					}
+				}
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 598
+						state = 613
+						state = 996
+					}
+					OR = {
+						is_owned_by = ROOT
+						owner = { is_subject_of = ROOT }
+					}
+				}
+				transfer_state_to = WCH
+				add_compliance = 25
+			}
+			every_state = {	
+				limit = {
+					OR = {
+						state = 598
+						state = 613
+						state = 996
+					}
+					NOT = {
+						OR = {
+							is_owned_by = ROOT
+							any_country = {
+								is_subject_of = ROOT
+								owns_state = PREV
+							}
+						}
+					}
+				}
+				add_contested_owner = WCH
+				set_state_controller_to = WCH
+				add_claim_by = WCH
+				add_compliance = 25
+			}
+		}
+	}
+
+	JAP_Wang_appeasement = {
+		icon = GFX_decision_onmap_recruit_operative
+		allowed = {}
+		
+		available = {
+			CHI = {
+				NOT = { controls_province = 4619 }
+				NOT = { has_government = fascism }
+				has_character = CHI_wang_jingwei
+			}
+			WCH = { exists = yes }
+		}
+		visible = {
+			#has_completed_focus = JAP_intervene_in_china
+		}
+		
+		fire_only_once = yes
+
+		ai_will_do = { base = 999 }
+
+		complete_effect = {
+			CHI = {
+				if = {
+					limit = { has_character = CHI_wang_jingwei }
+					country_event = BA_japan.40
+					CHI_wang_jingwei = {
+						set_nationality = { target_country = WCH }
+					}
+					CHI = {
+						# 이후 파시즘 지도자는 후쭝난
+						add_country_leader_role = {
+							character = CHI_hu_zongnan
+							promote_leader = yes
+							country_leader = {
+								ideology = fascism_ideology
+								expire = "1965.1.1.1"
+								traits = {  }
+							}
+						}
+						# 나도 이게 고증에 맞는지는 잘 모르겠는데, 어차피 대전이 설정으로 키보토스 애들이 유럽에 상륙한 것부터가 말이 안 되니깐 넘어가자
+					}
+					WCH = {
+						add_country_leader_role = {
+							character = CHI_wang_jingwei
+							promote_leader = yes
+							country_leader = {
+								ideology = despotism
+								expire = "1965.1.1.1"
+								traits = {  }
+							}
+						}
+						add_country_leader_role = {
+							character = CHI_wang_jingwei
+							promote_leader = yes
+							country_leader = {
+								ideology = socialism
+								expire = "1965.1.1.1"
+								traits = {  }
+							}	
+						}
+					}		
+				}
+				else = { add_stability = -0.03 }
+			}	
+		}
+	}
+
+	JAP_china_puppet_3 = {
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		allowed = { }
+		available = {
+			WCH = {
+				has_character = CHI_wang_jingwei
+				has_country_leader = {
+					character = CHI_wang_jingwei
+					ruling_only = yes
+				}
+			}
+		}
+		complete_effect = {
+			WCH = {
+				set_cosmetic_tag = WCH_Nanjing_NG
+				annex_country = { target = JCH }
+			}
+			every_state = {
+				limit = {  is_claimed_by = JCH  }
+				add_claim_by = WCH
+				remove_claim_by = JCH
+			}
+			every_state = {
+				limit = { is_core_of = CHI }
+				add_claim_by = WCH
+			}
+		}
+	}
+
+}

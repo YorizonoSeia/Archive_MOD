@@ -382,3 +382,29 @@
  GRE_TRM_autonomy_holy_dminion_ADJ:0 "그리스 신성통치령"
  SWI_TRM_autonomy_holy_dminion_ADJ:0 "스위스 기사단국"
  FIN_TRM_autonomy_holy_dminion_ADJ:0 "핀란드국"
+
+ 
+
+ MAN_JAP_fascism_autonomy_puppet:0 "대만주제국"
+ MAN_JAP_fascism_autonomy_reichsprotectorate:0 "만주국"
+ MAN_JAP_fascism_autonomy_colony:0 "제국령 만주"
+ MAN_JAP_fascism_autonomy_dominion:0 "만주제국"
+ MAN_JAP_fascism_autonomy_satellite:0 "만주제국"
+
+ MAN_JAP_fascism_autonomy_puppet_DEF:0 "만주국"
+ MAN_JAP_fascism_autonomy_reichsprotectorate_DEF:0 "만주국"
+ MAN_JAP_fascism_autonomy_colony_DEF:0 "제국령 만주"
+ MAN_JAP_fascism_autonomy_dominion_DEF:0 "만주제국"
+ MAN_JAP_fascism_autonomy_satellite_DEF:0 "만주제국"
+
+ MAN_JAP_fascism_autonomy_integrated_puppet:0 "대만주제국"
+ MAN_JAP_fascism_autonomy_reichskommissariat:0 "대만주제국"
+ MAN_JAP_fascism_autonomy_wtt_imperial_protectorate:0 "대만주제국"
+ MAN_JAP_fascism_autonomy_wtt_imperial_subject:0 "대만주제국"
+ MAN_JAP_fascism_autonomy_wtt_imperial_associate:0 "대만주제국"
+
+ MAN_JAP_fascism_autonomy_integrated_puppet_DEF:0 "만주국"
+ MAN_JAP_fascism_autonomy_reichskommissariat_DEF:0 "만주국"
+ MAN_JAP_fascism_autonomy_wtt_imperial_protectorate_DEF:0 "만주국"
+ MAN_JAP_fascism_autonomy_wtt_imperial_subject_DEF:0 "만주국"
+ MAN_JAP_fascism_autonomy_wtt_imperial_associate_DEF:0 "만주제국"

@@ -1642,3 +1642,20 @@ country_event = { # 총리 사임 7 도조 히데키 사임
 		set_country_flag = JAP_prime_minister_is_koiso_kuniaki
 	}
 }
+
+
+country_event = { # 왕징웨이의 전향
+	id = BA_japan.40
+	title = BA_japan.40.t
+	desc = BA_japan.40.d
+	picture = GFX_report_event_generic_handshake
+	
+	is_triggered_only = yes
+	fire_only_once = no 
+	
+	option = {
+		name = BA_japan.40.a
+		custom_effect_tooltip = BA_japan_40_tt
+		add_stability = -0.03
+	}
+}

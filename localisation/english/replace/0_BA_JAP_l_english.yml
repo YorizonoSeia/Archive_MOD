@@ -140,6 +140,11 @@
  BA_japan.32.t: "[JAP_tojo_hideki_end.GetName] 점령의 책임을 지고 물러난 도조 히데키"
  BA_japan.32.d: "우리가 [USA.GetName] 측과 전쟁을 준비하는 동안 도조 히데키 총리는 여러 가지 반대를 들어왔습니다. 그리고 이제는 도조 히데키 내각의 지도하에 전쟁을 벌이던 상황에서 [USA.GetName] 측이 우리의 영토를 점거하는 일까지 벌어졌으니 도조 히데키는 이제 자리에서 물러나야만 합니다.\n\n정치적 압박 속에 사임한 도조 히데키의 후임으로는 전 조선총독 고이소 구니아키가 임명되었습니다."
  BA_japan.32.a: "고이소 구니아키가 상황을 타개할 수 있을까?"
+
+ BA_japan.40.t: "일본으로 전향한 왕징웨이!"
+ BA_japan.40.d: "충격적인 전언입니다. 혁명의 영웅이자 쑨원의 후계자로 알려졌던 왕징웨이가 충칭을 탈출해 현재 일본이 점령 중인 상하이에 도착했다는 소식이 전해졌습니다.\n\n장왕합작으로 부터 시작된 장제스와의 권력 갈등은 그를 점점 고립시켰습니다. 특히, 장제스가 국민당 총재에 오르며 왕징웨이를 부총재로 밀어내자 두 사람의 관계는 완전히 틀어졌습니다.\n\n이후 왕징웨이는 우한이 함락되자 항전이 더 이상 의미 없다고 판단하고 일본과 밀약을 맺은 뒤 충칭을 탈출해 하노이로 건너갔습니다. 이러한 행동은 변절로 의심받기에 충분했으며, 국민정부는 왕징웨이의 암살을 명령했습니다. 그러나 그는 운 좋게 암살 시도를 피했고, 자신이 확실한 매국 행위를 한 적이 없음에도 무력을 사용한 국민정부와 장제스와 단절하였습니다."
+ BA_japan.40.a: "\"형은 쉬운 길을 가십시오. 동생은 어려운 길을 가겠습니다.\""
+ BA_japan_40_tt: "\"비통하고 안타깝다. 오로지 자성하고 돌아오기만을 바란다.\"\n-장제스"
  JAP_civilian_control_of_the_military_idea: "문민통제"
  JAP_KOR_industrial_support: "[JAP.GetAdjective]의 경제적 지원"
  JAP_national_liberation_committee: "일본 국민해방위원회"
@@ -239,3 +244,11 @@
  JAP_government_1: "$JAP_government_side$의 우위"
  JAP_government_2: "$JAP_government_side$의 완전한 우위"
  JAP_government_3: "$JAP_government_side$의 지배"
+
+ # 대동아공영권 결정
+ JAP_Greater_East_Asia_Co_Prosperity_Sphere: "대동아공영권"
+ JAP_Greater_East_Asia_Co_Prosperity_Sphere_desc: "\n\n£GFX_decision_daitoakyoaeigen\n\n\n\n\n아시아의 민족들은 100년 전부터 지금까지 제국주의라는 명분 아래 서양 열강의 억압에 고통받고 있습니다. 이 고통에서 벗어나기 위해, 일본을 중심으로 한 단결된 아시아 세력권을 구축하여 서양 열강으로부터 아시아 민족들을 해방시켜야 합니다."
+ JAP_Wang_appeasement: "왕징웨이 공작"
+ JAP_china_puppet: "임시정부 수립"
+ JAP_china_puppet_2: "유신정부 수립"
+ JAP_china_puppet_3: "중화민국 난징 국민정부 선포"
