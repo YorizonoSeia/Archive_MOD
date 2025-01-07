@@ -47,7 +47,7 @@ country_event = {
 			}
 			leave_faction = yes
 			#delete_unit = {} # Will delete all units
-			add_ideas = volunteer_only
+			add_ideas = disarmed_nation
 			add_ideas = civilian_economy
 		}
 		hidden_effect = {
@@ -434,6 +434,9 @@ country_event = {
 
 	option = { 
 		name = HYA_event.14.a
+		trigger = {
+			NOT = { has_completed_focus = HYA_focus_70 }
+		}
 		ai_chance = {
 			factor = 10
 		}
@@ -470,7 +473,7 @@ country_event = {
 			#}
 			leave_faction = yes
 			#delete_unit = {} # Will delete all units
-			add_ideas = volunteer_only
+			add_ideas = disarmed_nation
 			add_ideas = civilian_economy
 		}
 		every_country = {

@@ -396,11 +396,13 @@ focus_tree = {
 		y = 2
 		cost = 2
 		available = {
-			has_global_flag = GFLAG_BAKSANWAR_END
+			has_global_flag = CFLAG_BAKSANWAR_END
 		}   
 		bypass = {
 		}
 		completion_reward = {
+			add_stability = -0.05
+			add_political_power = 60
 		}
 	}
 	focus = { #
@@ -1745,6 +1747,9 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		available = {
 			NOT = { has_idea = HYA_public_justice }
+			hidden_trigger = {
+				NOT = { has_global_flag = CFLAG_BAKSANWAR_END }
+			}
 		}   
 		bypass = {
 		}
