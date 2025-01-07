@@ -295,7 +295,6 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
-			add_political_power = 100
 			add_stability = 0.05
 			add_popularity = {
 				ideology = communism
@@ -991,7 +990,8 @@ focus_tree = {
 	           ideology = communism
 	           popularity = 0.1
             }
-			add_stability = -0.05
+			add_stability = -0.1
+			add_war_support =-0.05
 			USA_congress_medium_opposition = yes
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = harry_white
@@ -1167,6 +1167,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			USA_congress_large_opposition = yes
+			add_ideas = why_am_i_fight
 			if = {
 				limit = {
 					ENG = {
@@ -1791,6 +1793,7 @@ focus_tree = {
 		}
 		search_filters = {FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
+			add_political_power = 100
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = USA_charles_lindbergh_political_advisor
 			custom_effect_tooltip = USABA_maintenance_of_isolation_policy_desc_cst
@@ -3433,7 +3436,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			create_faction = USA_NATO_FACTION
-			news_event = { id = BA_news.96 }
+			news_event = { id = BA_news.96 } #BA_super.21
 			add_popularity = {
               ideology = democratic
 	          popularity = 0.2
@@ -3617,7 +3620,7 @@ focus = {
 		completion_reward = {
               add_timed_idea = {
 				idea = old_fast_train
-				days = 360
+				days = 720
 			  }
 		}
 	}
@@ -4963,7 +4966,6 @@ focus = {
 			congress_high_support_trigger = yes
 		}
 		completion_reward = {
-			country_event = { id = usa_new_event.1 days = 3 }
 			USA_congress_large_opposition = yes
 		}
 	}
@@ -5095,19 +5097,7 @@ focus = {
 		}
 		completion_reward = {
 			add_threat = 15
-			news_event = { id = BA_news.97 }
-			start_civil_war = {
-              ideology = democratic
-              size = 0.8
-              only_own_territory = no
-              capital = 358
-              states = { 
-                357 358 360 68 378 386 387 385 388 381 389 390 
-                }
-            } 
-			#hidden_effect = {
-            #
-			#}
+			country_event = { id = BA_news.97 days = 3 }
 		}
 	}
 
@@ -5157,6 +5147,7 @@ focus = {
 			if = { limit = { has_country_flag = USABA_government_official_exile }
 				NOT = { has_country_flag = USABA_government_official_exile }
 			}
+			has_civil_war = no
 
 		}
 		completion_reward = {
@@ -5327,7 +5318,6 @@ focus = {
 			if = { limit = { has_country_flag = USABA_government_official_exile }
 				NOT = { has_country_flag = USABA_government_official_exile }
 			}
-
 		}
 		completion_reward = {
               give_guarantee = COU
@@ -5534,6 +5524,7 @@ focus = {
 			if = { limit = { has_country_flag = USABA_government_official_exile }
 				NOT = { has_country_flag = USABA_government_official_exile}
 			}
+			has_civil_war = no
 
 		}
 		completion_reward = {
@@ -5750,6 +5741,30 @@ focus = {
 		}
 	}
 
+	# 총동원령
+	focus = {
+		id = USA_bad_kivotos_totalwar
+		icon = GFX_focus_generic_strike_at_democracy1
+		prerequisite = { focus = USA_bad_kivotos focus = USA_surprise_kivotos}
+		x = 3
+		y = 1
+		relative_position_id = USA_bad_kivotos
+		cost = 2
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = yes
+		available = {
+			if = { limit = { has_country_flag = USABA_government_official_exile }
+				NOT = { has_country_flag = USABA_government_official_exile }
+			}
+
+		}
+		completion_reward = {
+		}
+	}
+
+
 	focus = {
 		id = USA_surprise_kivotos
 		icon = GFX_goal_support_communism
@@ -5768,7 +5783,7 @@ focus = {
 			if = { limit = { has_country_flag = USABA_government_official_exile }
 				NOT = { has_country_flag = USABA_government_official_exile }
 			}
-
+            has_civil_war = no
 		}
 		completion_reward = {
             add_popularity = {
@@ -6014,6 +6029,43 @@ focus = {
 			}
 		}
 	}
+    
+	# 전시 선전
+
+	focus = {
+		id = USA_add_war_propaganda
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = USA_continue_the_new_deal focus = USA_reestablish_the_gold_standard }
+		available = {
+			if = { limit = { has_country_flag = USABA_government_official_exile }
+				NOT = { has_country_flag = USABA_government_official_exile }
+			}
+		}
+		bypass = {
+			
+		}
+
+		available_if_capitulated = yes
+		relative_position_id = USA_reestablish_the_gold_standard
+		continue_if_invalid = yes
+		x = 0
+		y = 1
+		cost = 5
+		completion_reward = {
+			add_war_support = 0.1
+			if = {
+				limit = {
+					has_war_support < 0.4
+				}
+				USA_congress_small_opposition = yes
+			}
+		}
+}
+
+
+
+
+
 	focus = {
 		id = USA_adjusted_compensation_act
 		icon = GFX_goal_generic_consumer_goods
@@ -11475,6 +11527,32 @@ focus = {
 		}
 	}
 }
+
+
+
+
+
+# 신질서 내전 반란군 전용 중점
+
+	   focus = {
+		id = USA_finial_torch_1
+		icon = GFX_focus_generic_the_giant_wakes
+		x = -2
+		y = 2
+		relative_position_id = USA_Pax_Americana
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available_if_capitulated = yes
+		available = {
+			has_civil_war = yes
+			ideology = neutrality
+		}
+		completion_reward = {
+            add_ideas = strong_faith_for_old_team
+		}
+	}
 
 
 

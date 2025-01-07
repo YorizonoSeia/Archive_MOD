@@ -310,8 +310,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				political_power_gain = -0.2
-				consumer_goods_factor = -0.3
+				political_power_gain = -0.1
+				consumer_goods_factor = -0.15
 				production_speed_buildings_factor = 0.1
 			    custom_modifier_tooltip = USABA_forced_wake_up_tt
 			}
@@ -646,10 +646,12 @@ ideas = {
 			}
 	   }
 
+
+
     # 구질서 수호 반란 미국 국민정신 
 
 	 strong_faith_for_old_team = {
-            picture = generic_disjointed_gov
+            picture = generic_fascism_banned
             
 			allowed = {
                 tag = USA
@@ -809,6 +811,26 @@ ideas = {
              acclimatization_cold_climate_gain_factor = 0.10
 		}
    }
+     
+	 # 명분 없는 전쟁
+   	    why_am_i_fight = {
+            picture = generic_disjointed_gov
+            
+			allowed = {
+                tag = USA
+            }
+
+			modifier = {
+				stability_factor = -0.2
+				war_support_factor = -0.5
+				stability_weekly = -0.005
+				war_support_weekly = -0.005
+				war_stability_factor = -0.2
+				experience_gain_army_factor = -0.20
+                political_power_gain = -0.2
+			}
+	   }
+
 
 
   }

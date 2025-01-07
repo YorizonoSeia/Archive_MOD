@@ -346,9 +346,6 @@ country_event = {
 	
 	 option = {
 		name = usa_new_event.1
-	    hidden_effect = {
-		    play_song = "USA_The_New_Order"
-		}
 	 }
 }
 

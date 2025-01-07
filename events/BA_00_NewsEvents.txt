@@ -3589,7 +3589,7 @@ news_event = {
 				is_ai = no
 			}
 			hidden_effect = {
-				scoped_play_song = "imperterrita" #BA_united_nations_music
+				scoped_play_song = "USA_The_Old_Order"
 				set_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 21
@@ -3659,7 +3659,7 @@ news_event = {
 		}
  	}
 				hidden_effect = {
-				scoped_play_song = "imperterrita" #BA_united_nations_music
+				scoped_play_song = "imperterrita"
 				set_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 21
@@ -3686,7 +3686,17 @@ news_event = {
 		 }
 	    }
 		hidden_effect = {
-		scoped_play_song = "USA_The_New_Order"
+	     	scoped_play_song = "USA_The_New_Order"
+
+		    start_civil_war = {
+            ideology = neutrality
+            size = 0.6
+            only_own_territory = no
+            capital = 358
+            states = { 
+               357 358 360 359 261 393 378
+            }
+        } 
 	  }
 	}
 
@@ -3712,7 +3722,7 @@ news_event = {
 				TAG = INK
 			}
 		}
-				hidden_effect = {
+	hidden_effect = {
 		scoped_play_song = "USA_The_New_Order"
 	}
 	}
