@@ -628,7 +628,7 @@ focus_tree = {
 			factor = 4000
 		}
 		available = {
-			fascism > 0.45
+			fascism > 0.30
 			has_country_flag = {
 				flag = HYA_focus_scattered_cherry_blossoms_flag
 				days > 240
@@ -642,6 +642,10 @@ focus_tree = {
 			set_politics = {
 				ruling_party = fascism
 				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.15
 			}
 			random_owned_state = {
 				add_extra_state_shared_building_slots = 1
