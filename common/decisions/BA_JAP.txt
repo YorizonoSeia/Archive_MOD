@@ -88,7 +88,7 @@ political_actions = {
 			factor = 999
 		}
 
-		days_remove = 70
+		days_remove = 35
 		fire_only_once = yes
 
 		modifier = {
@@ -498,6 +498,10 @@ JAP_Greater_East_Asia_Co_Prosperity_Sphere = {
 
 		fire_only_once = yes
 
+		ai_will_do = {
+			base = 40 
+		}
+
 		complete_effect = {
 			every_state = {
 				limit = {
@@ -545,7 +549,6 @@ JAP_Greater_East_Asia_Co_Prosperity_Sphere = {
 				NOT = { has_government = fascism }
 				has_character = CHI_wang_jingwei
 			}
-			WCH = { exists = yes }
 		}
 		visible = {
 			#has_completed_focus = JAP_intervene_in_china
@@ -595,10 +598,17 @@ JAP_Greater_East_Asia_Co_Prosperity_Sphere = {
 				has_country_flag = WANG_IN_WCH
 			}
 			WCH = { has_character = KMT_Wang_Jingwei }
+			country_exists = WCH
 		}
 		visible = {
 			has_country_flag = WANG_IN_WCH
 		}
+		ai_will_do = {
+			factor = 9999
+		}
+		
+		fire_only_once = yes 
+
 		complete_effect = {
 			WCH = {
 				set_cosmetic_tag = WCH_Nanjing_NG
@@ -680,6 +690,7 @@ JAP_Greater_East_Asia_Co_Prosperity_Sphere = {
 				JAP = { is_neighbor_of = TIB }
 				WCH = { is_neighbor_of = TIB }
 			}
+			CHI = { exists = no }
 		}
 		visible = {
 			country_exists = TIB
@@ -687,6 +698,10 @@ JAP_Greater_East_Asia_Co_Prosperity_Sphere = {
 				JAP = { is_neighbor_of = TIB }
 				WCH = { is_neighbor_of = TIB }
 			}
+		}
+
+		ai_will_do = {
+			factor = 99
 		}
 
 		fire_only_once = yes

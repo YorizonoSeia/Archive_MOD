@@ -1,0 +1,147 @@
+# Scripted AI desire for peace actions.
+# See documentation.info file for more detailed scripting information.
+
+peace_ai_desires = {
+
+
+    # don't create warlord or PRC puppets
+    JAP_avoid_puppeting_warlords_prc = {
+        peace_action_type = { puppet force_government }
+        enable = {
+            FROM = {
+                OR = {
+                    tag = PRC
+                    WTT_is_chinese_warlord = yes
+                }
+            }
+            ROOT = { original_tag = JAP }
+        }
+        ai_desire = -200
+    }
+
+
+    # Try to grab cities and hainan
+    # 블아 모드에서는 해당 주를 가져오지 않음음
+    JAP_take_chinese_cities_if_possible = {
+        peace_action_type = take_states
+        enable = {
+            FROM.FROM.FROM = {
+               is_state_japan_wants = yes
+            }
+            ROOT = { original_tag = JAP }
+        }
+        ai_desire = -150
+    }
+
+
+    # If Mengkukuo exists, increase the Inner Mongolian state
+    JAP_inner_mongolia = {
+        peace_action_type = take_states
+        enable = {
+            FROM = {
+                original_tag = MEN
+                is_subject_of = ROOT
+            }
+            FROM.FROM.FROM = {
+                OR = {
+                    state = 621 # 쑤이위안
+                    state = 746 # 오르도스
+                }
+            }
+            ROOT = { original_tag = JAP }
+        }
+        ai_desire = 100
+    }
+
+
+    # Create a chinese puppet state from the rest of China
+    # 블아 모드에서는 괴뢰국을 제작하지 않음
+    JAP_create_chinese_puppet = {
+        peace_action_type = puppet
+        enable = {
+            FROM.FROM = {
+                original_tag = CHI
+            }
+            FROM.FROM.FROM = {
+                NOT = {
+                    is_state_japan_wants = yes
+                }
+                any_neighbor_state = {
+                    OR = {
+                        is_owned_by = ROOT.FROM
+                        pc_is_state_claimed_by = ROOT
+                        is_coastal = yes
+                    }
+                }
+            }
+            ROOT = { original_tag = JAP }
+        }
+        ai_desire = -150
+    }
+	
+	 JAP_dont_eat_chinese_puppet = {
+        peace_action_type = take_states
+        enable = {
+            FROM.FROM = {
+                original_tag = CHI
+            }
+            FROM.FROM.FROM = {
+                NOT = {
+                    is_state_japan_wants = yes
+                }
+            }
+            ROOT = { original_tag = JAP }
+        }
+        ai_desire = -100
+    }
+
+
+    #Don't give things to communist china
+    JAP_dont_support_prc = {
+        peace_action_type = take_states
+        enable = {
+            FROM = {
+                OR = {
+                    tag = PRC
+                    tag = SIK
+                }
+                has_government = communism
+            }
+            ROOT = {
+                original_tag = JAP
+                NOT = { has_government = communism }
+            }
+        }
+        ai_desire = -200
+    }
+
+    # 프로젝트 KV 씨발련들한테 땅을 주지 마세요!
+    JAP_dont_support_project_kv = {
+        peace_action_type = take_states
+        enable = {
+            FROM = { tag = KAP }
+
+            ROOT = { original_tag = JAP }
+        }
+        ai_desire = -200
+    }
+
+    # WCH 에게 땅 몰아주기
+    JAP_give_wangs_chines = {
+        peace_action_type = take_states
+        enable = {
+            FROM = { 
+                original_tag = WCH 
+            }
+            
+            FROM.FROM.FROM = { 
+                is_core_of = CHI 
+            }
+
+            ROOT = { 
+                original_tag = JAP 
+            }
+        }
+        ai_desire = 200
+    }
+}
