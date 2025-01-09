@@ -66,7 +66,7 @@ ideas = {
 				stability_weekly = 0.002
 				war_support_factor = 0.10
 				production_speed_arms_factory_factor = 0.30
-				conscription_factor = 0.30
+				conscription_factor = 0.60
 				custom_modifier_tooltip = SHA_HYA_anti_huzika_tt
 			}
 		}

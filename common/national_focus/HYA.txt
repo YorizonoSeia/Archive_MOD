@@ -786,10 +786,20 @@ focus_tree = {
 			factor = 4000
 		}
 		available = {
-			has_army_manpower = { size > 249999 }
-			custom_trigger_tooltip = {
-				tooltip = HYA_focus_second_shock_eq_trigger_tt
-				check_variable = { num_equipment_in_armies_k@infantry_equipment > 15 }
+			is_subject = no
+			if = {
+				limit = { has_dlc = "Gotterdammerung" }
+				fighting_army_strength_ratio = {
+					tag = SHA
+					ratio > 1
+				}
+			}
+			else = {
+				has_army_manpower = { size > 249999 }
+				custom_trigger_tooltip = {
+					tooltip = HYA_focus_second_shock_eq_trigger_tt
+					check_variable = { num_equipment_in_armies_k@infantry_equipment > 15 }
+				}
 			}
 		}   
 		bypass = {

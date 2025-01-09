@@ -198,6 +198,7 @@
  HYA_focus_scattered_cherry_blossoms_flag: "§Y$HYA_focus_scattered_cherry_blossoms$§! 중점 완료"
  HYA_focus_hyakkiyagyo_national_reform_theory_tt: "우리가 $HYA_WAKAMO$를 정학했기에 §Y안정도§! 불이익 획득:"
  HYA_focus_second_shock_eq_trigger_tt:0 "육군 내 보병 장비 §Y15000§!개 초과"
+ HYA_focus_second_shock_trigger_tt: "제대로 장비가 갖춰진 부대 만으로 계산하였을 때 §Y[ROOT.GetAdjective]§! 군대가 §Y[SHA.GetAdjective]§! 군대보다 적어도 §Y1§! 배 이상이어야 함."
 
  #아이디어
  SHA_HYA_huzika: "산하이베이 조약"
