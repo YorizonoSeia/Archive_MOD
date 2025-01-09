@@ -72,6 +72,12 @@ BA_Li_Zongren: "리쭝런"
 KMT_RCA_supereme: "국민당 개조동지회"
 KMT_Lin_Sen: "린썬"
  
- CHI_dai_li_upgrade: "최고사령부 방첩국장"
+CHI_dai_li_upgrade: "최고사령부 방첩국장"
+
+
+WCH_Orthodox_government_declaration: "정통정부 선언"
+WCH_Orthodox_government_declaration_desc: "$CHI_one_china_policy_desc$"
+KMT_Wang_Kemin: "왕커민"
+KMT_Liang_Hongzhi: "량훙즈"
  
  

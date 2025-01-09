@@ -145,6 +145,29 @@
  BA_japan.40.d: "충격적인 전언입니다. 혁명의 영웅이자 쑨원의 후계자로 알려졌던 왕징웨이가 충칭을 탈출해 현재 일본이 점령 중인 상하이에 도착했다는 소식이 전해졌습니다.\n\n장왕합작으로 부터 시작된 장제스와의 권력 갈등은 그를 점점 고립시켰습니다. 특히, 장제스가 국민당 총재에 오르며 왕징웨이를 부총재로 밀어내자 두 사람의 관계는 완전히 틀어졌습니다.\n\n이후 왕징웨이는 우한이 함락되자 항전이 더 이상 의미 없다고 판단하고 일본과 밀약을 맺은 뒤 충칭을 탈출해 하노이로 건너갔습니다. 이러한 행동은 변절로 의심받기에 충분했으며, 국민정부는 왕징웨이의 암살을 명령했습니다. 그러나 그는 운 좋게 암살 시도를 피했고, 자신이 확실한 매국 행위를 한 적이 없음에도 무력을 사용한 국민정부와 장제스와 단절하였습니다."
  BA_japan.40.a: "\"형은 쉬운 길을 가십시오. 동생은 어려운 길을 가겠습니다.\""
  BA_japan_40_tt: "\"비통하고 안타깝다. 오로지 자성하고 돌아오기만을 바란다.\"\n-장제스"
+
+ BA_japan.41.t: "유신정부에 가담한 왕징웨이"
+ BA_japan.41.d: "트라우만 공작의 실패와 장기화 되던 중일 전쟁을 끝내기 위해 시도한 왕징웨이 공작이 성공하였습니다! 왕징웨이는 상하이에 도착하여 수많은 친일 인사들과 함께 왕징웨이 주도 하의 중화민국 국민정부에 대해서 논의하기 시작하였습니다."
+ BA_japan.41.a: "전쟁은 곧 끝날 것이다!"
+
+ BA_japan.42.t: "[MEN.GetName]의 운명"
+ BA_japan.42.d: "[MEN.GetName]은 상당히 모순적인 정부입니다. 몽골인을 위해 설립되었지만, 실효 지배 중인 영토에는 몽골인보다 오히려 중국인과 만주인이 더 많이 거주하고 있습니다. 이제 우리는 그들의 운명을 결정해야 합니다."
+ BA_japan.42.a: "[MON.GetAdjective]을 집어삼키기 위한 전초기지로 활용하자"
+ BA_japan.42.b: "이젠 필요 없으니 [WCH.GetAdjective]의 자치정부로 격하하자"
+ BA_japan.42.c: "[WCH.GetAdjective]의 자치정부로 격하하고, 이를 명분 삼아 [MON.GetAdjective]에게 영유권을 주장하자"
+
+ BA_japan.43.t: "[TIB.GetAdjective]와 협상"
+ BA_japan.43.d: "티베트는 중국의 변방에 위치하지만, 영국의 식민지인 인도 바로 위에 위치 했기 때문에 측면 공격에 유리합니다. 그러나 이는 반대로, 영국이 티베트에 영향력을 끼치고 식민지로 편입한다면 중국의 측면이 위험하다는 소리이기도 합니다. 그렇기에 우리는 티베트를 대동아공영권 세력으로 확실이 이끌어야 합니다."
+ BA_japan.43.b: "[601.GetName]와 [604.GetName]를 넘긴다면, 우리와 뜻을 같이 할 것이다."
+
+ BA_japan.44.t: "[FROM.GetAdjective]와 협상?"
+ BA_japan.44.d: "블라블라블라 솔직히 말하자면 그 누가 티베트를 잡고 플레이 하겠어? 나는 그럴 사람이 없다고 생각해"
+ BA_japan.44.a: "마침 이게 필요했어"
+
+ BA_japan.45.t: "우리의 대의에 참여하기로 결정한 [FROM.GetAdjective]"
+ BA_japan.45.d: "[FROM.GetAdjective] 측은 우리의 대의에 참여하기로 결정했습니다! 이로써 대동아 공영에 한 발짝 더 가까워졌습니다."
+ BA_japan.43.a: "반자이!"
+
  JAP_civilian_control_of_the_military_idea: "문민통제"
  JAP_KOR_industrial_support: "[JAP.GetAdjective]의 경제적 지원"
  JAP_national_liberation_committee: "일본 국민해방위원회"
@@ -251,4 +274,12 @@
  JAP_Wang_appeasement: "왕징웨이 공작"
  JAP_china_puppet: "임시정부 수립"
  JAP_china_puppet_2: "유신정부 수립"
+ JAP_transfer_state_to_men: "[MEN.GetName]에게 영토 반환"
  JAP_china_puppet_3: "중화민국 난징 국민정부 선포"
+ JAP_china_puppet_3_tt: "$BA_japan.41.t$"
+ JAP_fate_of_men: "[MEN.GetName]의 운명"
+ JAP_Tibet_appeasement_plan: "티베트 회유책"
+
+ # 일본 괴뢰국 결정
+ MEN_add_core_of_mongolia: "몽골 통합"
+ MEN_add_core_of_mongolia_desc: "수 년전 부터 몽골에 대한 영유권을 주장하였지만, 울란바토르 불법 정부는 우리의 정당한 요구를 거부하고 영토 침탈을 계속해왔습니다. 그러나 우리의 가장 믿음직스런 동맹국 [JAP.GetAdjective](이)가 울란바토르 불법 정부를 축출하였고 정당한 지배권을 우리에게 돌려줬습니다. 이제 몽골에 대한 정통성을 주장하고 몽골인들을 단일된 정부 아래에 통합 시켜야 할 것입니다."

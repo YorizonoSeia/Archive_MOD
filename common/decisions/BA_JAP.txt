@@ -67,6 +67,80 @@ political_actions = {
 			}
 		}
 	}
+
+	WCH_Orthodox_government_declaration = {
+		allowed = { tag = WCH }
+
+		priority = 200
+		icon = GFX_decision_generic_form_nation
+		
+		visible = {
+			CHI = { exists = no }
+		}
+		available = {
+			CHI = { exists = no }
+			owns_state = 608
+			owns_state = 613
+			owns_state = 605
+		}
+
+		ai_will_do = {
+			factor = 999
+		}
+
+		days_remove = 70
+		fire_only_once = yes
+
+		modifier = {
+			political_power_cost = 1
+		}
+
+		remove_effect = {
+			every_state = {
+				limit = { is_claimed_by = ROOT }
+				add_core_of = ROOT 
+				remove_claim_by = ROOT
+			}
+			news_event = BA_news.118
+		}
+
+	}
+
+	MEN_add_core_of_mongolia = {
+		allowed = { 
+			tag = MEN 
+		}
+
+		priority = 200
+		icon = GFX_decision_generic_form_nation
+		
+		visible = { }
+
+		available = {
+			MON = { exists = no }
+			owns_state = 330
+		}
+
+		ai_will_do = {
+			base = 40 
+		}
+
+		days_remove = 35
+		fire_only_once = yes
+
+		modifier = {
+			political_power_cost = 1
+		}
+
+		remove_effect = {
+			every_owned_state = {
+				limit = { is_core_of = MON }
+				add_core_of = MEN 
+			}
+		}
+
+	}
+
 }
 JAP_balance_of_power_category = {
 	JBP_weakening_of_control_faction = {
@@ -298,6 +372,26 @@ JAP_Greater_East_Asia_Co_Prosperity_Sphere = {
 					add_compliance = 25
 				}
 			}
+			JCH = {
+				add_country_leader_role = {
+					character = KMT_Wang_Kemin
+					promote_leader = yes
+					country_leader = {
+						ideology = despotism
+						expire = "1965.1.1.1"
+						traits = {  }
+					}
+				}
+				add_country_leader_role = {
+					character = KMT_Wang_Kemin
+					promote_leader = yes
+					country_leader = {
+						ideology = fascism_ideology
+						expire = "1965.1.1.1"
+						traits = {  }
+					}
+				}
+			}
 		}
 	}
 
@@ -325,6 +419,24 @@ JAP_Greater_East_Asia_Co_Prosperity_Sphere = {
 		complete_effect = {
 			WCH = {
 				transfer_state = 996
+				add_country_leader_role = {
+					character = KMT_Liang_Hongzhi
+					promote_leader = yes
+					country_leader = {
+						ideology = despotism
+						expire = "1965.1.1.1"
+						traits = {  }
+					}
+				}
+				add_country_leader_role = {
+					character = KMT_Liang_Hongzhi
+					promote_leader = yes
+					country_leader = {
+						ideology = fascism_ideology
+						expire = "1965.1.1.1"
+						traits = {  }
+					}
+				}
 				JAP = {
 					set_autonomy = {
 						target = PREV
@@ -372,6 +484,57 @@ JAP_Greater_East_Asia_Co_Prosperity_Sphere = {
 		}
 	}
 
+	JAP_transfer_state_to_men = {
+		icon = GFX_decision_eng_trade_unions_support
+
+		allowed = { }
+		
+		available = {
+			country_exists = MEN
+			MEN = { is_puppet_of = JAP }
+			621 = { is_controlled_by_ROOT_or_subject = yes }
+			746 = { is_controlled_by_ROOT_or_subject = yes }
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 621
+						state = 746
+					}
+					OR = {
+						is_owned_by = ROOT
+						owner = { is_subject_of = ROOT }
+					}
+				}
+				transfer_state_to = MEN
+			}
+			every_state = {	
+				limit = {
+					OR = {
+						state = 621
+						state = 746
+					}
+					NOT = {
+						OR = {
+							is_owned_by = ROOT
+							any_country = {
+								is_subject_of = ROOT
+								owns_state = PREV
+							}
+						}
+					}
+				}
+				add_contested_owner = MEN
+				set_state_controller_to = MEN
+				add_compliance = 25
+			}
+		}
+	}
+
 	JAP_Wang_appeasement = {
 		icon = GFX_decision_onmap_recruit_operative
 		allowed = {}
@@ -397,8 +560,11 @@ JAP_Greater_East_Asia_Co_Prosperity_Sphere = {
 				if = {
 					limit = { has_character = CHI_wang_jingwei }
 					country_event = BA_japan.40
-					CHI_wang_jingwei = {
-						set_nationality = { target_country = WCH }
+					hidden_effect = { retire_character = CHI_wang_jingwei }
+					effect_tooltip = {
+						CHI_wang_jingwei = {
+							set_nationality = { target_country = WCH }
+						}
 					}
 					CHI = {
 						# 이후 파시즘 지도자는 후쭝난
@@ -413,30 +579,10 @@ JAP_Greater_East_Asia_Co_Prosperity_Sphere = {
 						}
 						# 나도 이게 고증에 맞는지는 잘 모르겠는데, 어차피 대전이 설정으로 키보토스 애들이 유럽에 상륙한 것부터가 말이 안 되니깐 넘어가자
 					}
-					WCH = {
-						add_country_leader_role = {
-							character = CHI_wang_jingwei
-							promote_leader = yes
-							country_leader = {
-								ideology = despotism
-								expire = "1965.1.1.1"
-								traits = {  }
-							}
-						}
-						add_country_leader_role = {
-							character = CHI_wang_jingwei
-							promote_leader = yes
-							country_leader = {
-								ideology = socialism
-								expire = "1965.1.1.1"
-								traits = {  }
-							}	
-						}
-					}		
 				}
-				else = { add_stability = -0.03 }
-			}	
-		}
+			}
+			else = { add_stability = -0.03 }
+		}	
 	}
 
 	JAP_china_puppet_3 = {
@@ -444,29 +590,109 @@ JAP_Greater_East_Asia_Co_Prosperity_Sphere = {
 
 		allowed = { }
 		available = {
-			WCH = {
-				has_character = CHI_wang_jingwei
-				has_country_leader = {
-					character = CHI_wang_jingwei
-					ruling_only = yes
-				}
+			custom_trigger_tooltip = {
+				tooltip = JAP_china_puppet_3_tt
+				has_country_flag = WANG_IN_WCH
 			}
+			WCH = { has_character = KMT_Wang_Jingwei }
+		}
+		visible = {
+			has_country_flag = WANG_IN_WCH
 		}
 		complete_effect = {
 			WCH = {
 				set_cosmetic_tag = WCH_Nanjing_NG
 				annex_country = { target = JCH }
-			}
-			every_state = {
-				limit = {  is_claimed_by = JCH  }
-				add_claim_by = WCH
-				remove_claim_by = JCH
-			}
-			every_state = {
-				limit = { is_core_of = CHI }
-				add_claim_by = WCH
+				add_country_leader_role = {
+					character = KMT_Wang_Jingwei
+					promote_leader = yes
+					country_leader = {
+						ideology = despotism
+						expire = "1965.1.1.1"
+						traits = {  }
+					}
+				}
+				add_country_leader_role = {
+					character = KMT_Wang_Jingwei
+					promote_leader = yes
+					country_leader = {
+						ideology = fascism_ideology
+						expire = "1965.1.1.1"
+						traits = {  }
+					}
+				}
+				add_country_leader_role = {
+					character = KMT_Wang_Jingwei
+					promote_leader = yes
+					country_leader = {
+						ideology = stalinism
+						expire = "1965.1.1.1"
+						traits = {  }
+					}
+				}
+				every_state = {
+					limit = { has_contested_owner = JCH  }
+					add_contested_owner = WCH
+					remove_contested_owner = JCH
+				}
+				every_state = {
+					limit = { is_claimed_by = JCH  }
+					add_claim_by = WCH
+					remove_claim_by = JCH
+				}
+				every_state = {
+					limit = { is_core_of = CHI }
+					add_claim_by = WCH
+				}
 			}
 		}
 	}
 
+	JAP_fate_of_men = {
+		icon = GFX_decision_eng_trade_unions_support
+
+		allowed = { }
+		
+		available = {
+			country_exists = MEN
+			MEN = { is_puppet_of = JAP }
+		}
+		visible = {
+			WCH = { 
+				has_cosmetic_tag = WCH_Nationalist_Government
+			}
+			country_exists = MEN
+		}
+
+		complete_effect = {
+			country_event = BA_japan.42
+		}
+	}
+
+	JAP_Tibet_appeasement_plan = {
+		icon = GFX_decision_infiltrate_state
+
+		allowed = { }
+		
+		available = {
+			country_exists = TIB
+			OR = {
+				JAP = { is_neighbor_of = TIB }
+				WCH = { is_neighbor_of = TIB }
+			}
+		}
+		visible = {
+			country_exists = TIB
+			OR = {
+				JAP = { is_neighbor_of = TIB }
+				WCH = { is_neighbor_of = TIB }
+			}
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			country_event = BA_japan.43
+		}
+	}
 }

@@ -2,6 +2,10 @@
 
 set_stability = 0.2
 set_war_support = 0.5
+
+recruit_character = KMT_Liang_Hongzhi
+recruit_character = KMT_Wang_Jingwei
+
 # Starting tech
 set_technology = {
 	infantry_weapons = 1

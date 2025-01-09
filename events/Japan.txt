@@ -1657,5 +1657,141 @@ country_event = { # 왕징웨이의 전향
 		name = BA_japan.40.a
 		custom_effect_tooltip = BA_japan_40_tt
 		add_stability = -0.03
+		hidden_effect = { 
+			JAP = { 
+				country_event = { id = BA_japan.41 days = 02}
+			}
+		}
+	}
+}
+country_event = { # 왕징웨이의 전향
+	id = BA_japan.41
+	title = BA_japan.41.t
+	desc = BA_japan.41.d
+	picture = GFX_report_event_generic_handshake
+	
+	is_triggered_only = yes
+	fire_only_once = no 
+	
+	option = {
+		name = BA_japan.41.a
+		add_stability = 0.03
+		set_country_flag = WANG_IN_WCH
+		unlock_decision_tooltip = JAP_china_puppet_3
+	}
+}
+
+country_event = { # 몽강의 운명
+	id = BA_japan.42
+	title = BA_japan.42.t
+	desc = BA_japan.42.d
+	picture = GFX_report_event_generic_handshake
+	
+	is_triggered_only = yes
+	fire_only_once = no 
+	
+	option = {
+		name = BA_japan.42.a
+		every_state = {
+			limit = { is_core_of = MON }
+			add_claim_by = MEN
+		}
+		set_country_flag = JAP_select_MEN_1
+	}
+	
+	option = {
+		name = BA_japan.42.b
+		ai_chance = { base = 40 }
+		WCH = { 
+			annex_country = { target = MEN }
+		}
+		every_state = {
+			limit = {
+				OR = {
+					is_core_of = MEN
+					is_claimed_by = MEN
+				}
+			}
+			add_claim_by = WCH
+			remove_claim_by = MEN
+		}
+	}
+	
+	option = {
+		name = BA_japan.42.c
+		set_country_flag = JAP_select_MEN_2
+		WCH = {
+			annex_country = { target = MEN }
+		}
+		every_state = {
+			limit = {
+				OR = {
+					is_core_of = MEN
+					is_claimed_by = MEN
+					is_core_of = MON 
+				}
+			}
+			add_claim_by = WCH
+			remove_claim_by = MEN
+		}
+	}
+}
+
+country_event = { # 티베트와 협상
+	id = BA_japan.43
+	title = BA_japan.43.t
+	desc = BA_japan.43.d
+	picture = GFX_report_event_japanese_soldiers_01
+	
+	is_triggered_only = yes
+	fire_only_once = no 
+	
+	option = {
+		name = BA_japan.43.b
+		ai_chance = { base = 999 }
+		TIB = {
+			country_event = { id = BA_japan.44 hours = 04 }
+		}
+	}
+}
+
+country_event = { # 티베트와 협상
+	id = BA_japan.44
+	title = BA_japan.44.t
+	desc = BA_japan.44.d
+	picture = GFX_report_event_japanese_soldiers_01
+	
+	is_triggered_only = yes
+	fire_only_once = no 
+	
+	option = {
+		name = BA_japan.43.a
+		effect_tooltip = {
+			transfer_state = 601
+			transfer_state = 604
+			JAP = { add_to_faction = TIB }
+		}
+		JAP = { 
+			country_event = { id = BA_japan.45 hours = 04 } 
+		}
+	}
+}
+
+country_event = { # 티베트와 협상
+	id = BA_japan.45
+	title = BA_japan.45.t
+	desc = BA_japan.45.d
+	picture = GFX_report_event_japanese_soldiers_01
+	
+	is_triggered_only = yes
+	fire_only_once = no 
+	
+	option = {
+		name = BA_japan.43.a
+		TIB = {
+			transfer_state = 601
+			transfer_state = 604
+		}
+		JAP = { add_to_faction = TIB }
 	}
 }

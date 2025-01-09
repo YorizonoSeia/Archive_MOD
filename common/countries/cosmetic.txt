@@ -2646,3 +2646,11 @@ TRM_isolation_zone = {
 	color = rgb { 255 181 69 }
 	color_ui = rgb { 255 181 69 }
 }
+WCH_Nanjing_NG = {
+	color = rgb { 224 60 0 }
+	color_ui = rgb { 224 60 0 }
+}
+WCH_Nationalist_Government = {
+	color = rgb { 224 60 0 }
+	color_ui = rgb { 224 60 0 }
+}

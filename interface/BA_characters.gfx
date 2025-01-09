@@ -1,4 +1,16 @@
 spriteTypes = {
+# EAST ASIA
+	spriteType = {
+		name = "GFX_portrait_KMT_Liang_hongzhi"
+		textureFile = "gfx/leaders/CHI/량훙즈.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_portrait_KMT_Wang_Kemin"
+		textureFile = "gfx/leaders/CHI/왕커민.tga"
+		legacy_lazy_load = no
+	}
+
 #NSD
 	spriteType = {
 		name = "GFX_portrait_nsd_erich_julius_eberhard_von_zelewski"

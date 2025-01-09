@@ -4464,6 +4464,45 @@ news_event = { # 미국의 붉은겨울 따르기
     }
 }
 
+news_event = { # 왕징웨이의 국민정부 선언
+    id = BA_news.118
+    title = BA_news.118.t
+    desc = BA_news.118.d
+    picture = GFX_news_event_WCH_wang_victory
+
+    major = yes
+    is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			WCH = { set_cosmetic_tag = WCH_Nationalist_Government }
+		}
+	}
+
+    option = {
+        name = BA_news.118.a
+        trigger = {
+			OR = {
+				tag = WCH
+				tag = JAP
+				tag = MAN
+				tag = MEN
+			}
+        }
+    }
+    option = {
+        name = BA_news.118.b
+        trigger = {
+			NOT = {
+				tag = WCH
+				tag = JAP
+				tag = MAN
+				tag = MEN
+			}
+        }
+    }
+}
+
 
 
 

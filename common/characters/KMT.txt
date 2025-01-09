@@ -23,4 +23,30 @@ characters={
 			}
 		}
 	}
+
+	### 일본 괴뢰국 지도자
+	KMT_Wang_Kemin={
+		name=KMT_Wang_Kemin
+		portraits={
+			civilian={
+				large = "GFX_portrait_KMT_Wang_Kemin"
+			}
+		}
+	}
+	KMT_Liang_Hongzhi={
+		name=KMT_Liang_Hongzhi
+		portraits={
+			civilian={
+				large= "GFX_portrait_KMT_Liang_hongzhi"
+			}
+		}
+	}
+	KMT_Wang_Jingwei={
+		name=CHI_wang_jingwei
+		portraits={
+			civilian={
+				large="GFX_portrait_chi_wang_jingwei"
+			}
+		}
+	}
 }
