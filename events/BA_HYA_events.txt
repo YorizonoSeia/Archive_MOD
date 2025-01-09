@@ -46,9 +46,20 @@ country_event = {
 				days = 1800
 			}
 			leave_faction = yes
-			#delete_unit = {} # Will delete all units
+			delete_unit = { 
+				disband = yes
+			}
 			add_ideas = disarmed_nation
 			add_ideas = civilian_economy
+			set_variable = {
+				BA_halo_infantry_cap_edit_var = -6
+				tooltip = kivotos_halo_add_tt
+			}
+			hidden_effect = { BA_halo_infantry_cap_edit_effect = yes }
+			add_popularity = {
+				ideology = THIS
+				popularity = -0.20
+			}
 		}
 		hidden_effect = {
 			SHA = {
@@ -466,15 +477,26 @@ country_event = {
 		}
 		white_peace = HYA
 		HYA = {
-			#add_ideas = HYA_SHA_huzika
-			#add_timed_idea = {
-			#	idea = HYA_SHA_wjswodqotkd
-			#	days = 1800
-			#}
+			add_ideas = SHA_HYA_huzika
+			add_timed_idea = {
+				idea = SHA_HYA_wjswodqotkd
+				days = 1800
+			}
 			leave_faction = yes
-			#delete_unit = {} # Will delete all units
+			delete_unit = { 
+				disband = yes
+			}
 			add_ideas = disarmed_nation
 			add_ideas = civilian_economy
+			set_variable = {
+				BA_halo_infantry_cap_edit_var = -6
+				tooltip = kivotos_halo_add_tt
+			}
+			hidden_effect = { BA_halo_infantry_cap_edit_effect = yes }
+			add_popularity = {
+				ideology = THIS
+				popularity = -0.20
+			}
 		}
 		every_country = {
 			limit = { is_puppet_of = HYA }

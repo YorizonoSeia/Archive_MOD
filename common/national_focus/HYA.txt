@@ -282,8 +282,7 @@ focus_tree = {
 		available = {
 		}   
 		bypass = {
-			OR = {
-			}
+			has_global_flag = GFLAG_BAKSANWAR
 		}
 		ai_will_do = {
 			factor = 0
@@ -383,7 +382,7 @@ focus_tree = {
 			add_ideas = HYA_ghkreoehlswldqudeotkd
 		}
 	}
-	focus = { #
+	focus = { # 패전
 		relative_position_id = HYA_focus_12
 		id = HYA_focus_scattered_cherry_blossoms
 		icon = GFX_goal_generic_dangerous_deal
@@ -395,6 +394,9 @@ focus_tree = {
 		x = 0
 		y = 2
 		cost = 2
+		ai_will_do = {
+			factor = 4000
+		}
 		available = {
 			has_global_flag = CFLAG_BAKSANWAR_END
 		}   
@@ -403,9 +405,409 @@ focus_tree = {
 		completion_reward = {
 			add_stability = -0.05
 			add_political_power = 60
+			set_country_flag = HYA_focus_scattered_cherry_blossoms_flag
 		}
 	}
-	focus = { #
+	focus = { # 백귀야행 국가개조
+		relative_position_id = HYA_focus_scattered_cherry_blossoms
+		id = HYA_focus_hyakkiyagyo_national_reform_theory
+		icon = GFX_focus_generic_fascist_propaganda
+		prerequisite = { focus = HYA_focus_scattered_cherry_blossoms }
+		prerequisite = { focus = HYA_focus_44 focus = HYA_focus_45 }
+		mutually_exclusive = { focus = HYA_focus_restoration_of_government_leadership }
+		allow_branch = {
+		}
+		x = 2
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 4000
+		}
+		available = {
+			NOT = { has_idea = HYA_flower_bird_wind_moon_club }
+			has_country_flag = {
+				flag = HYA_focus_scattered_cherry_blossoms_flag
+				days > 120
+			}
+		}   
+		bypass = {
+		}
+		completion_reward = {
+			set_party_name = {
+				ideology = fascism
+				long_name = HYA_hyakkiyagyo_national_reform_party_long
+				name = HYA_hyakkiyagyo_national_reform_party
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.10
+			}
+			if = {
+				limit = { has_completed_focus = HYA_focus_45 }
+				custom_effect_tooltip = HYA_focus_hyakkiyagyo_national_reform_theory_tt
+			}
+			if = {
+				limit = { has_character = HYA_WAKAMO }
+				if = {
+					limit = { HYA_WAKAMO = { is_corps_commander = yes } }
+					HYA_WAKAMO = {
+						promote_leader = yes
+					}
+				}
+				add_country_leader_role = {
+					character = HYA_WAKAMO
+					promote_leader = yes
+					country_leader = {
+						ideology = fascism_ideology
+						traits = {
+							HYA_broken_dagger
+						}
+					}
+				}
+			}
+			else = {
+				create_country_leader = {
+					name = "Kosaka Wakamo"
+					picture = "gfx/leaders/HYA/HYA_pot_12.tga"
+					ideology = fascism_ideology
+					traits = {
+						HYA_broken_dagger
+					}
+				}
+			}
+			add_trait = {
+				character = HYA_SHIZUKO
+				slot = political_advisor
+				trait = fascist_demagogue
+			}
+		}
+	}
+	focus = { # 정부 지도력 회복
+		relative_position_id = HYA_focus_scattered_cherry_blossoms
+		id = HYA_focus_restoration_of_government_leadership
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = HYA_focus_scattered_cherry_blossoms }
+		mutually_exclusive = { focus = HYA_focus_hyakkiyagyo_national_reform_theory }
+		allow_branch = {
+		}
+		x = -2
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 4000
+		}
+		available = {
+			OR = {
+				has_completed_focus = HYA_focus_46
+				has_completed_focus = HYA_focus_96
+				has_completed_focus = HYA_focus_97
+			}
+			OR = {
+				has_government = democratic
+				has_government = neutrality
+			}
+			has_country_flag = {
+				flag = HYA_focus_scattered_cherry_blossoms_flag
+				days > 120
+			}
+		}   
+		bypass = {
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = ROOT
+				popularity = 0.15
+			}
+		}
+	}
+	focus = { # 재무장
+		relative_position_id = HYA_focus_scattered_cherry_blossoms
+		id = HYA_focus_secret_militarization
+		icon = GFX_focus_generic_military_industry
+		prerequisite = { focus = HYA_focus_hyakkiyagyo_national_reform_theory focus = HYA_focus_restoration_of_government_leadership }
+		allow_branch = {
+		}
+		x = 0
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 4000
+		}
+		available = {
+			has_country_flag = {
+				flag = HYA_focus_scattered_cherry_blossoms_flag
+				days > 180
+			}
+		}   
+		bypass = {
+		}
+		completion_reward = {
+			add_ideas = SHA_HYA_anti_huzika
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = { # 배상금 납부 거부
+		relative_position_id = HYA_focus_secret_militarization
+		id = HYA_focus_refusal_to_pay_reparations
+		icon = GFX_focus_generic_economic_recovery
+		prerequisite = { focus = HYA_focus_secret_militarization }
+		allow_branch = {
+		}
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 4000
+		}
+		available = {
+		}   
+		bypass = {
+			NOT = {
+				has_idea = SHA_HYA_wjswodqotkd
+				has_idea = SHA_HYA_wjswodqotkd2
+			}
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SHA_HYA_wjswodqotkd
+				add_idea = SHA_HYA_wjswodqotkd2
+			}
+		}
+	}
+	focus = { # 민족주의적 광풍
+		relative_position_id = HYA_focus_secret_militarization
+		id = HYA_focus_nationalistic_spirit
+		icon = GFX_goal_generic_secret_weapon
+		prerequisite = { focus = HYA_focus_secret_militarization }
+		allow_branch = {
+		}
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 4000
+		}
+		available = {
+		}   
+		bypass = {
+		}
+		completion_reward = {
+			set_variable = {
+				BA_halo_infantry_cap_edit_var = 6
+				tooltip = kivotos_halo_add_tt
+			}
+			hidden_effect = { BA_halo_infantry_cap_edit_effect = yes }
+		}
+	}
+	focus = { # 하키야코우 진군
+		relative_position_id = HYA_focus_hyakkiyagyo_national_reform_theory
+		id = HYA_focus_march_on_hyakkiyagyo
+		icon = GFX_focus_generic_advanced_military_studies
+		prerequisite = { focus = HYA_focus_hyakkiyagyo_national_reform_theory }
+		allow_branch = {
+		}
+		x = 0
+		y = 3
+		cost = 5
+		ai_will_do = {
+			factor = 4000
+		}
+		available = {
+			fascism > 0.45
+			has_country_flag = {
+				flag = HYA_focus_scattered_cherry_blossoms_flag
+				days > 240
+			}
+		}   
+		bypass = {
+		}
+		completion_reward = {
+			set_cosmetic_tag = HYA_government_of_national_salvation
+			add_political_power = 120
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = { # 지도부 교체
+		relative_position_id = HYA_focus_restoration_of_government_leadership
+		id = HYA_focus_removal_of_leader
+		icon = GFX_focus_HYA_attck
+		prerequisite = { focus = HYA_focus_restoration_of_government_leadership }
+		allow_branch = {
+		}
+		x = 0
+		y = 3
+		cost = 5
+		ai_will_do = {
+			factor = 4000
+		}
+		available = {
+			has_country_flag = {
+				flag = HYA_focus_scattered_cherry_blossoms_flag
+				days > 240
+			}
+		}   
+		bypass = {
+		}
+		completion_reward = {
+			set_cosmetic_tag = HYA_government_of_national_salvation
+			if = {
+				limit = {
+					has_government = democratic
+				}
+				if = {
+					limit = { has_character = HYA_KAHO }
+					if = {
+						limit = { HYA_KAHO = { is_corps_commander = yes } }
+						HYA_KAHO = {
+							promote_leader = yes
+						}
+					}
+					add_country_leader_role = {
+						character = HYA_KAHO
+						promote_leader = yes
+						country_leader = {
+							ideology = socialism
+							traits = {
+								HYA_fox_of_revenge
+							}
+						}
+					}
+				}
+				else = {
+					create_country_leader = {
+						name = "Kuwakami Kaho"
+						picture = "gfx/leaders/HYA/HYA_pot_2.tga"
+						ideology = socialism
+						traits = {
+							HYA_fox_of_revenge
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_government = neutrality
+				}
+				if = {
+					limit = { has_character = HYA_Yukari }
+					if = {
+						limit = { HYA_Yukari = { is_corps_commander = yes } }
+						HYA_Yukari = {
+							promote_leader = yes
+						}
+					}
+					add_country_leader_role = {
+						character = HYA_Yukari
+						promote_leader = yes
+						country_leader = {
+							ideology = oligarchism
+							traits = {
+								HYA_successor_of_the_white_flower_rebellion
+							}
+						}
+					}
+				}
+				else = {
+					create_country_leader = {
+						name = "Kadenokouji Yukari"
+						picture = "gfx/leaders/HYA/HYA_pot_17.tga"
+						ideology = oligarchism
+						traits = {
+							HYA_successor_of_the_white_flower_rebellion
+						}
+					}
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = { # 두 번째 충격
+		relative_position_id = HYA_focus_march_on_hyakkiyagyo
+		id = HYA_focus_second_shock
+		icon = GFX_focus_attack_SHA
+		prerequisite = { focus = HYA_focus_march_on_hyakkiyagyo focus = HYA_focus_removal_of_leader }
+		prerequisite = { focus = HYA_focus_refusal_to_pay_reparations }
+		prerequisite = { focus = HYA_focus_nationalistic_spirit }
+		allow_branch = {
+		}
+		x = -2
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 4000
+		}
+		available = {
+			has_army_manpower = { size > 249999 }
+			custom_trigger_tooltip = {
+				tooltip = HYA_focus_second_shock_eq_trigger_tt
+				check_variable = { num_equipment_in_armies_k@infantry_equipment > 15 }
+			}
+		}   
+		bypass = {
+		}
+		completion_reward = {
+			remove_ideas = SHA_HYA_huzika
+			every_controlled_state = {
+				limit = { is_demilitarized_zone = yes }
+				set_demilitarized_zone = no
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = SHA
+				generator = { 972 986 }
+			}
+		}
+	}
+	focus = { # 승전
 		relative_position_id = HYA_focus_12
 		id = HYA_focus_victory
 		icon = GFX_focus_HYA_focus_victory
@@ -498,6 +900,10 @@ focus_tree = {
 		bypass = {
 		}
 		completion_reward = {
+			add_timed_idea = {
+				idea = HYA_focus_exploitative_industrial_reconstruction_idea
+				days = 365
+			}
 		}
 	}
 	focus = {
@@ -530,7 +936,7 @@ focus_tree = {
 		mutually_exclusive = { focus = HYA_focus_45 }
 		x = 2
 		y = 1
-		cost = 10
+		cost = 5
 		available = {
 			has_global_flag = KIABOTOS_Escape
 			has_character = HYA_WAKAMO
@@ -2004,7 +2410,7 @@ focus_tree = {
 						add_idea = HYA_criminal_state
 					}
 				}
-				else = {
+				else_if = {
 					limit = { has_idea = HYA_mangryangz }
 					swap_ideas = {
 						remove_idea = HYA_mangryangz

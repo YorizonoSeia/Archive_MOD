@@ -3442,6 +3442,33 @@ news_event = {
 		}
 		mark_focus_tree_layout_dirty = yes
 	}
+	option = { 
+		name = BA_news.91.f
+		trigger = { 
+			NOT = { 
+				tag = SHA 
+				tag = HYA
+				tag = TRM
+				tag = GEM
+				tag = GEH
+				tag = SHE
+				tag = COU
+				tag = KSP
+				tag = HEU
+				tag = MIL
+				tag = BLM
+				tag = ABY
+				#tag = HYA
+				tag = ARI
+				tag = KAI
+				tag = RE1
+				tag = RE2
+				tag = RE3
+				tag = RE4
+				tag = RED
+			}
+		}
+	}
 }
 news_event = {
 	id = BA_news.92

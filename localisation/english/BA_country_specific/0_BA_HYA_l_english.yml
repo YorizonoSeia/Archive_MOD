@@ -178,6 +178,15 @@
  HYA_focus_118:0 "게헨나 남부 침략"
 
  HYA_focus_scattered_cherry_blossoms: "흐트러진 벚꽃"
+ HYA_focus_hyakkiyagyo_national_reform_theory: "백귀야행 국가개조론"
+ HYA_focus_restoration_of_government_leadership: "정부 지도력 회복"
+ HYA_focus_secret_militarization: "재무장"
+ HYA_focus_refusal_to_pay_reparations: "배상금 납부 거부"
+ HYA_focus_nationalistic_spirit: "민족주의적 광풍"
+ HYA_focus_march_on_hyakkiyagyo: "[ROOT.Capital.GetCapitalVictoryPointName] 진군"
+ HYA_focus_removal_of_leader: "지도부 교체"
+ HYA_focus_second_shock: "두 번째 충격"
+
  HYA_focus_victory: "승전"
  HYA_focus_expulsion_of_sanhaegyeong_in_country: "학원 내 산해경인 추방"
  HYA_focus_exploitative_industrial_reconstruction: "수탈적 산업 재건"
@@ -186,8 +195,15 @@
  HYA_focus_105_tt: "모든 §Y남부 유럽 또는 발칸 국가§!와 인접한 주의 국경에 §G4§!개의 §Y요새§! 추가:"
  HYA_focus_107_tt: "§Y$HYA_focus_103$§! 중점과 §Y$HYA_focus_105$§! 중점으로 요새가 건설된 §Y모든 주§!에 §G2§!개의 §Y요새§! 추가:"
  HYA_focus_106_tt2: "불개입 조약에 반대한 국가: §Y[?HYA_temp]x§!가지 비용 §G75%§! 감소: §Y육군 교리§!"
+ HYA_focus_scattered_cherry_blossoms_flag: "§Y$HYA_focus_scattered_cherry_blossoms$§! 중점 완료"
+ HYA_focus_hyakkiyagyo_national_reform_theory_tt: "우리가 $HYA_WAKAMO$를 정학했기에 §Y안정도§! 불이익 획득:"
+ HYA_focus_second_shock_eq_trigger_tt:0 "육군 내 보병 장비 §Y15000§!개 초과"
 
  #아이디어
+ SHA_HYA_huzika: "산하이베이 조약"
+ SHA_HYA_anti_huzika: "재무장 계획"
+ SHA_HYA_anti_huzika_tt: "$SHA_HYA_huzika$ 제거 시 제거:\n§Y$SHA_HYA_huzika$§! 미보유"
+ HYA_focus_exploitative_industrial_reconstruction_idea: "조약에 의거한 무관세 수출"
  HYA_securing_balkan_hegemony: "백귀야행 패권주의"
  HYA_securing_balkan_hegemony_2: "패권국"
  HYA_merchant_association:0 "상인조합"
@@ -304,16 +320,6 @@
  HYA_Coquelico:0 "코쿠리코"
  HYA_Shuro:0 "야부키 슈로"
  HYA_NYANG:0 "냥테 마사무네"
- #트레잇
- HYA_T1a:0 "낙천적인 음양부장"
- HYA_T1a_up:0 "백귀야행의 음양부장"
- HYA_T2a:0 "음양부 임원"
- HYA_T3a:0 "조용한 문학가"
- HYA_T4a:0 "마츠리부 임원"
- HYA_T5a:0 "수행부 임원"
- HYA_T6a:0 "인법연구부 임원"
- HYA_T7a:0 "재액의 여우"
- HYA_T8a:0 "선도부장 (임시)"
 
 #다이나믹 모디파이어
  HYA_hyakkayouran_conflict_resolution_council:0 "백화요란 분쟁조정위원회"

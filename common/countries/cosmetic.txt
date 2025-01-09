@@ -2091,6 +2091,10 @@ HYA_flower_bird_wind_moon_club_cosmetic = {
 	color = rgb { 158 75 105 }
 	color_ui = rgb { 158 75 105 }
 }
+HYA_government_of_national_salvation = {
+	color = rgb { 156 19 69 }
+	color_ui = rgb { 156 19 69 }
+}
 FRA_uprise = {
 	color = rgb { 175 13 0 }
 	color_ui = rgb { 175 13 0 }

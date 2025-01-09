@@ -110,8 +110,8 @@
 		}
 	}
 	offset = {
-		x = -28
-		y = 8
+		x = 16
+		y = 0
 		trigger = {
 			OR = {
 				original_tag = HYA

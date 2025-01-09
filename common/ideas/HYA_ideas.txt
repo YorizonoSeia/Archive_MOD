@@ -23,6 +23,87 @@ ideas = {
 		}
 	}
 	country = {
+		SHA_HYA_wjswodqotkd = { 
+			name = HYA_SHA_wjswodqotkd
+			picture = SPR_seize_the_gold_reserves
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			modifier = {
+			}
+			targeted_modifier = {
+				tag = SHA
+				cic_to_target_factor = 0.75
+			}
+		}
+		SHA_HYA_wjswodqotkd2 = { 
+			name = HYA_SHA_wjswodqotkd2
+			picture = SPR_seize_the_gold_reserves
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			modifier = {
+			}
+			targeted_modifier = {
+				tag = SHA
+				cic_to_target_factor = 0.30
+			}
+		}
+		SHA_HYA_anti_huzika = { 
+			picture = generic_acquire_tanks
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			cancel = {
+				NOT = { has_idea = SHA_HYA_huzika }
+			}
+			research_bonus = {
+				armor = 0.5
+				air_equipment = 0.5
+				naval_equipment = 0.5
+				infantry_weapons = 0.25
+				artillery = 0.25
+				motorized_equipment = 0.25
+			}
+			modifier = {
+				stability_weekly = 0.002
+				war_support_factor = 0.10
+				production_speed_arms_factory_factor = 0.30
+				conscription_factor = 0.30
+				custom_modifier_tooltip = SHA_HYA_anti_huzika_tt
+			}
+		}
+		SHA_HYA_huzika = { 
+			picture = HUN_treaty_of_triannon
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			research_bonus = {
+				armor = -1
+				air_equipment = -1
+				naval_equipment = -1
+				infantry_weapons = -0.5
+				artillery = -0.5
+				motorized_equipment = -0.5
+			}
+			modifier = {
+				stability_weekly = -0.003
+				stability_factor = -0.10
+				war_support_factor = -0.10
+				production_speed_arms_factory_factor = -0.50
+				conscription_factor = -0.90
+				production_cost_max_ship_hull_heavy = 6600
+				production_cost_max_ship_hull_carrier = 6600
+				production_cost_max_ship_hull_cruiser = 2500
+				production_cost_max_ship_hull_light = 1000
+				production_cost_max_ship_hull_submarine = 250
+			}
+		}
+		HYA_focus_exploitative_industrial_reconstruction_idea = {
+			picture = generic_foreign_capital
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			modifier = {
+				consumer_goods_factor = -0.30
+				production_speed_buildings_factor = 0.25
+			}
+		}
 		HYA_securing_balkan_hegemony_2 = {
 			picture = generic_fascism_rising
 			allowed = {	always = no	}

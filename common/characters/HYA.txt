@@ -287,6 +287,10 @@ characters={
 				original_tag = HYA
 			}
 			available = {
+				if = {
+					limit = { has_completed_focus = HYA_focus_hyakkiyagyo_national_reform_theory }
+					is_subject = no
+				}
 			}
 			traits = {
 				HYA_T4a
@@ -654,6 +658,12 @@ characters={
 			}
 			available = {
 				has_completed_focus = HYA_focus_44
+				NOT = {
+					has_country_leader = {
+						character = HYA_WAKAMO
+						ruling_only = yes
+					}
+				}
 			}
 			traits = {
 				HYA_T7a
