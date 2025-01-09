@@ -674,6 +674,10 @@ JAP_Greater_East_Asia_Co_Prosperity_Sphere = {
 			country_exists = MEN
 		}
 
+		ai_will_do = {
+			factor = 33
+		}
+
 		complete_effect = {
 			country_event = BA_japan.42
 		}

@@ -1701,7 +1701,6 @@ country_event = { # 몽강의 운명
 	
 	option = {
 		name = BA_japan.42.b
-		ai_chance = { base = 40 }
 		WCH = { 
 			annex_country = { target = MEN }
 		}
@@ -1719,6 +1718,7 @@ country_event = { # 몽강의 운명
 	
 	option = {
 		name = BA_japan.42.c
+		ai_chance = { base = 40 }
 		set_country_flag = JAP_select_MEN_2
 		WCH = {
 			annex_country = { target = MEN }
@@ -1733,6 +1733,7 @@ country_event = { # 몽강의 운명
 			}
 			add_claim_by = WCH
 			remove_claim_by = MEN
+			remove_contested_owner = MEN
 		}
 	}
 }
