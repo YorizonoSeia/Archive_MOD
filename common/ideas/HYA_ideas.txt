@@ -23,6 +23,26 @@ ideas = {
 		}
 	}
 	country = {
+		HYA_focus_nationalistic_spirit_idea = {
+			
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+		
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				democratic_drift = -0.02
+				neutrality_drift = -0.01
+			}
+		}
 		SHA_HYA_wjswodqotkd = { 
 			name = HYA_SHA_wjswodqotkd
 			picture = SPR_seize_the_gold_reserves
@@ -586,6 +606,12 @@ ideas = {
 			allowed_civil_war = { always = yes }
 			modifier = {
 				consumer_goods_factor = -0.05
+			}
+			on_remove = {
+				if = {
+					limit = { has_idea = HYA_merchant_association }
+					remove_ideas = HYA_merchant_association
+				}
 			}
 		}
 		HYA_dkvus = {

@@ -11,8 +11,10 @@ HYA_anarchism = { #
 	allowed = {
 		original_tag = HYA
 	}
-    available = {
-    } 
+
+	visible = {
+		has_completed_focus = HYA_focus_90
+	}
     icon = GFX_decision_category_SOV_permanent_revolution
 }
 HYA_centralization_power_balance_decisions = {
@@ -24,5 +26,17 @@ HYA_centralization_power_balance_decisions = {
 
 	visible = {
 		has_completed_focus = HYA_focus_1
+	}
+}
+HYA_revenge_drama = {
+    icon = GFX_decision_category_usa_congress
+	priority = 100
+
+	allowed = {
+		original_tag = HYA
+	}
+
+	visible = {
+		has_completed_focus = HYA_focus_second_shock
 	}
 }

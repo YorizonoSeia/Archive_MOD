@@ -2918,6 +2918,32 @@ leader_traits = {
         ai_desired_divisions_factor = 0.30
         weekly_casualties_war_support = 0.002
 	}
+	HYA_broken_dagger_2 = { #와카모
+		random = no
+		stability_factor = -0.05
+		war_support_factor = 0.05
+		consumer_goods_factor = -0.15
+		army_attack_factor = 0.05
+		army_defence_factor = 0.10
+		annex_cost_factor = -0.15
+	}
+	HYA_fox_of_revenge_2 = { #카호
+		random = no
+		stability_factor = 0.05
+		war_support_factor = 0.10
+		land_doctrine_cost_factor = -0.05
+		mobilization_speed = 0.05
+		conscription = 0.01
+	}
+	HYA_successor_of_the_white_flower_rebellion_2 = { #유카리
+		random = no
+		political_power_factor = 0.15
+		stability_factor = 0.05
+        ai_desired_divisions_factor = 0.20
+        weekly_casualties_war_support = 0.001
+		army_attack_factor = 0.05
+		army_speed_factor = 0.05
+	}
 	SRT_T1a = { #RABBIT 소대의 소대장
 		random = no
 		sprite = 13

@@ -612,6 +612,19 @@ focus_tree = {
 				tooltip = kivotos_halo_add_tt
 			}
 			hidden_effect = { BA_halo_infantry_cap_edit_effect = yes }
+			if = {
+				limit = { has_completed_focus = HYA_focus_hyakkiyagyo_national_reform_theory }
+				add_timed_idea = {
+					idea = HYA_focus_nationalistic_spirit_idea
+					days = 280
+				}
+			}
+			else = {
+				add_popularity = {
+					ideology = ROOT
+					popularity = 0.05
+				}
+			}
 		}
 	}
 	focus = { # 하키야코우 진군
@@ -819,6 +832,7 @@ focus_tree = {
 				target = SHA
 				generator = { 972 986 }
 			}
+			unlock_decision_tooltip = HYA_revenge_drama_dd
 		}
 	}
 	focus = { # 승전
@@ -1155,7 +1169,12 @@ focus_tree = {
 			}
 			add_timed_idea = {
 				idea = HYA_tkddlswhgkqwotksdkqfb
-				days = 720
+				days = 180
+			}
+			custom_effect_tooltip = enter_tt
+			custom_effect_tooltip = HYA_focus_10_tt
+			effect_tooltip = {
+				remove_ideas = HYA_merchant_association
 			}
 		}
 	}
@@ -1766,7 +1785,7 @@ focus_tree = {
 						}
 					}
 				}
-				custom_effect_tooltip = HYA_focus_69_tt
+				custom_effect_tooltip = HYA_focus_95_tt2
 				add_stability  = -0.10
 			}
 			add_political_power = 60
@@ -2727,10 +2746,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_political_power = 120
-			72 = { add_core_of = INK }
+			72 = { add_core_of = SUH }
 			74 = { add_core_of = INK }
 			75 = { add_core_of = BAC }
-			69 = { add_core_of = SUH }
 		}
 	}
 	focus = { #강제 합병

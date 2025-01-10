@@ -49,6 +49,7 @@ HYA_anarchism = {
 		priority = 100
 		icon = GFX_decision_generic_political_rally
 		activation = {
+			has_completed_focus = HYA_focus_90
 			OR = {
 				has_idea = limited_conscription
 				has_idea = extensive_conscription
@@ -527,5 +528,64 @@ war_measures = {
 
 		complete_effect = { SHA = { country_event = HYA_event.1 } }
 		cancel_effect = { country_event = HYA_event.14 }
+	}
+}
+HYA_revenge_drama = {
+
+	HYA_revenge_drama_dd = {
+		
+		icon = GFX_decision_generic_civil_support
+
+		priority = 99
+
+		allowed = { original_tag = HYA }
+
+		visible = {
+			has_completed_focus = HYA_focus_second_shock
+		}
+
+		fire_only_once = yes
+
+		available = {
+			controls_state = 972
+			controls_state = 986
+		}
+
+		complete_effect = {	
+			set_cosmetic_tag = HYA_government_of_national_salvation_win
+			add_war_support = 0.10
+			add_stability = 0.10
+			if = {
+				limit = {
+					has_country_leader_with_trait = HYA_broken_dagger
+				}
+				swap_ruler_traits = {
+					remove = HYA_broken_dagger
+					add = HYA_broken_dagger_2
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_leader_with_trait = HYA_fox_of_revenge
+				}
+				swap_ruler_traits = {
+					remove = HYA_fox_of_revenge
+					add = HYA_fox_of_revenge_2
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_leader_with_trait = HYA_successor_of_the_white_flower_rebellion
+				}
+				swap_ruler_traits = {
+					remove = HYA_successor_of_the_white_flower_rebellion
+					add = HYA_successor_of_the_white_flower_rebellion_2
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 4000
+		}
 	}
 }
