@@ -3804,7 +3804,7 @@ focus_tree = {
 		#mutually_exclusive = { focus = HYA_focus_ }
 		x = -1
 		y = 1
-		cost = 10
+		cost = 5
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		available = {
 		}   
@@ -3830,7 +3830,15 @@ focus_tree = {
 				}
 				add_resource = {
 					type = steel
+					amount = 10
+				}
+				add_resource = {
+					type = tungsten
 					amount = 8
+				}
+				add_resource = {
+					type = aluminium
+					amount = 12
 				}
 			}
 			
