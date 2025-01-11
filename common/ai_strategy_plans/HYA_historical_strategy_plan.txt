@@ -22,9 +22,10 @@ HYA_historical = {
 		HYA_focus_6
 		HYA_focus_31
 		HYA_focus_7
-		HYA_focus_12 #백산전쟁 중점
 		HYA_focus_26
 		HYA_focus_28
 		HYA_focus_30
+		HYA_focus_12 #백산전쟁 중점
+		HYA_focus_47
 	}
 }
