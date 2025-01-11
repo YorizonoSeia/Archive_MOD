@@ -883,7 +883,7 @@ focus_tree = {
 		icon = GFX_goal_generic_demand_territory
 		x = 0
 		y = 2
-		cost = 10
+		cost = 5
 
 		prerequisite = { 
 			focus = SHA_Shanhaijing_fascism 
@@ -1609,7 +1609,7 @@ focus_tree = {
 		icon = GFX_focus_DEN_heavy_regulations
 		x = -1
 		y = 1
-		cost = 8
+		cost = 5
 
 		prerequisite = { focus = SHA_Establishment_of_the_Governor_General }
 		mutually_exclusive = { }
@@ -1679,6 +1679,69 @@ focus_tree = {
 						type = arms_factory
 						level = 1
 						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	# 학원 내 백귀야행인 추방
+	focus = {
+		id = SHA_Leave_SHA
+		icon = GFX_focus_DEN_heavy_regulations
+		x = 1
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_Establishment_of_the_Governor_General }
+		mutually_exclusive = { }
+
+		available = {
+			OR = {
+				controls_state = 972
+				controls_state = 986
+			}
+		}
+		bypass = { }
+
+		relative_position_id = SHA_Establishment_of_the_Governor_General
+
+		completion_reward = {
+			if = {
+				limit = { controls_state = 972 }
+				972 = {
+					add_manpower = -12000
+					remove_core_of = HYA
+				}
+				HYA = {
+					random_core_state = {
+						limit = {
+							NOT = {
+								state = 972
+								state = 986
+							}
+						}
+						prioritize = { 4 152 }
+						add_manpower = 12000
+					}
+				}
+			}
+			if = {
+				limit = { controls_state = 986 }
+				986 = {
+					add_manpower = -12000
+					remove_core_of = HYA
+				}
+				HYA = {
+					random_core_state = {
+						limit = {
+							NOT = {
+								state = 972
+								state = 986
+							}
+						}
+						prioritize = { 976 153 }
+						add_manpower = 12000
 					}
 				}
 			}

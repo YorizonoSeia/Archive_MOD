@@ -836,6 +836,9 @@
  SHA_Establishment_of_the_Governor_General_desc: ""
  SHA_Establishment_of_the_Governor_General_tt: "아무 §Y@HYA[HYA.GetAdjective]§! 핵심 주 소유중 일시 효과 발동."
  SHA_industrial_exploitation: "산업 수탈"
+ SHA_industrial_exploitation_desc: ""
+ SHA_Leave_SHA: "학원 내 백귀야행인 추방"
+ SHA_Leave_SHA_desc: ""
 
  # 국민정신
  SHA_Austrian_fascist_militia: "오스트리아인 민병대"

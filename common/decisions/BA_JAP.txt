@@ -582,9 +582,9 @@ JAP_Greater_East_Asia_Co_Prosperity_Sphere = {
 						}
 						# 나도 이게 고증에 맞는지는 잘 모르겠는데, 어차피 대전이 설정으로 키보토스 애들이 유럽에 상륙한 것부터가 말이 안 되니깐 넘어가자
 					}
+					else = { add_stability = -0.03 }
 				}
 			}
-			else = { add_stability = -0.03 }
 		}	
 	}
 
