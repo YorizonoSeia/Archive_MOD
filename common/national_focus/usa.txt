@@ -204,10 +204,7 @@ focus_tree = {
 			add_ideas = USABA_forced_wake_up
 			add_war_support = -0.05
 			add_stability = -0.1
-			add_popularity = {
-				ideology = ROOT
-				popularity = -0.1
-			}
+            USA_congress_large_opposition = yes
 		}
 	}
 
@@ -1851,7 +1848,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = USABA_maintenance_of_isolation_policy
 
-		cost = 10
+		cost = 8	
 		#ai_will_do = {
 		#	factor = 1
 		#}
@@ -1873,6 +1870,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.10
+			USA_congress_small_opposition = yes
 		}
 	}
 	#정부 선전
@@ -5722,8 +5720,7 @@ focus = {
 
 		}
 		completion_reward = {
-
-
+            set_technology = { kivotos_artificial_halo = 1 } 
 		}
 	}
 

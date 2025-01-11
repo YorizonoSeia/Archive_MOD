@@ -279,9 +279,9 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				political_power_gain = 0.15
+				political_power_gain = 0.75
 				stability_weekly = 0.005
-				consumer_goods_factor = -0.1
+				consumer_goods_factor = -0.2
 				custom_modifier_tooltip = USABA_second_great_depression_idea_tt
 			}
         }
@@ -311,8 +311,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				political_power_gain = -0.1
-				consumer_goods_factor = -0.15
+				political_power_gain = -0.3
+				consumer_goods_factor = -0.2
 				production_speed_buildings_factor = 0.1
 			    custom_modifier_tooltip = USABA_forced_wake_up_tt
 			}
