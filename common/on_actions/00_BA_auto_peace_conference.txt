@@ -251,6 +251,18 @@ on_actions = {
 					}
 				}
 				TRM = {
+					if = {
+						limit = {
+							NSD = {
+								has_war_with = TRM
+								has_capitulated = yes
+							}
+						}
+						annex_country = {
+							target = NSD
+							transfer_troops = no
+						}
+					}
 					annex_country = {
 						target = ARI
 						transfer_troops = no
