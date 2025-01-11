@@ -799,9 +799,6 @@ country_event = { #철도 버프 이벤트를 위한 무한 반복
 	option = { 
 		name = Highlander.2.a
 		random_list = {
-			3 = { #아무것도 안줌
-
-			}
 			5 = { #철도 개선
 				modifier = {
 					factor = 0.5
@@ -818,12 +815,6 @@ country_event = { #철도 버프 이벤트를 위한 무한 반복
 				country_event =  Highlander.9
 			}
 			1 = { #철도 건설 속도
-				modifier = {
-					factor = 0
-					check_variable = {
-						BA_highlander_invest < 5
-					}
-				}
 				country_event =  Highlander.3
 			}
 			1 = { #무료 민간 열차
