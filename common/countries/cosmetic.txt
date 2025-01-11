@@ -2658,3 +2658,15 @@ WCH_Nationalist_Government = {
 	color = rgb { 224 60 0 }
 	color_ui = rgb { 224 60 0 }
 }
+HEU_GSC = {
+	color = rgb { 154  64  81 }
+	color_ui = rgb { 154  64  81 }
+}
+HEU_luxembourg_benriya = {
+	color = rgb { 154  64  81 }
+	color_ui = rgb { 154  64  81 }
+}
+HEU_luxembourg = {
+	color = rgb { 65 175 179 }
+	color_ui = rgb { 85 228 233 }
+}
