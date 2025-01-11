@@ -4064,6 +4064,15 @@ focus = {
 		}
 
 		completion_reward = {
+			if = {
+			limit = {
+				has_idea = undisturbed_isolation
+			}
+			swap_ideas = {
+				remove_idea = undisturbed_isolation
+				add_idea = civilian_economy
+			}
+		}
 			add_timed_idea = {
 				idea = wartime_industry_focus
 				days = 360
@@ -4080,7 +4089,7 @@ focus = {
 		x = 0
 		y = 2
 		relative_position_id = USA_arsenal_of_democracy
-		cost = 8
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
@@ -4300,6 +4309,8 @@ focus = {
 				uses = 1
 				category = cat_mobile_warfare
 			}
+		     add_ideas = ITA_german_millitary_cooperation_focus
+
 		}
 	}
 
@@ -4449,7 +4460,6 @@ focus = {
 					idea = support_north_europe
 					days = 180
 				} }
-				   add_political_power = -100
 			}
 		}
 
@@ -4649,7 +4659,7 @@ focus = {
 		x = 0
 		y = 4
 		relative_position_id = USA_old_team
-		cost = 10
+		cost = 1
 		ai_will_do = {
 			factor = 1
 		}
@@ -4657,6 +4667,22 @@ focus = {
 		available = {
 			if = { limit = { has_country_flag = USABA_government_official_exile }
 				NOT = { has_country_flag = USABA_government_official_exile }
+			}
+			NOT = {
+			 country_exists = MIL
+			 country_exists = TRM
+			 country_exists = GEM
+			 country_exists = GEH
+			 country_exists = ABY
+			 country_exists = SHA
+			 country_exists = SHE
+			 country_exists = COU
+			 country_exists = KSP
+			 country_exists = HEU
+             country_exists = BLM
+			 country_exists = ARI
+			 country_exists = KAI
+			 country_exists = GEI
 			}
 		}
 		completion_reward = {
@@ -5178,6 +5204,7 @@ focus = {
 			if = { limit = { has_country_flag = USABA_government_official_exile }
 				NOT = { has_country_flag = USABA_government_official_exile }
 			}
+			NOT = { has_War_with = MIL}
 
 		}
 		completion_reward = {
@@ -5263,9 +5290,38 @@ focus = {
 
 		}
 		completion_reward = {
+			custom_effect_tooltip = kivotos_research_on
+			set_country_flag = kivotos_research_on
 
 		}
 	}
+
+		focus = {
+		id = USA_blue_kivotos_MIL3_drone
+		icon = GFX_focus_ABY_drone
+		prerequisite = { focus = USA_blue_kivotos_MIL3_halo }
+
+		x = 0
+		y = 1
+		relative_position_id = USA_blue_kivotos_MIL3_halo
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available_if_capitulated = yes
+		available = {
+			if = { limit = { has_country_flag = USABA_government_official_exile }
+				NOT = { has_country_flag = USABA_government_official_exile }
+			}
+
+		}
+		completion_reward = {
+			custom_effect_tooltip = kivotos_dron_research_on
+			set_country_flag = kivotos_dron_research_on
+
+		}
+	}
+
 
     # 로켓 연구
 	focus = {
@@ -5290,12 +5346,38 @@ focus = {
 		completion_reward = {
             add_tech_bonus = {
 				name = MIL_go_to_the_space
-				bonus = 1.0
-				uses = 2
+				ahead_reduction = 1
+				bonus = 1
+				uses = 1
 				category = rocketry
 			}
 		}
 	}
+
+		focus = {
+		id = USA_blue_kivotos_MIL3_missile_submarines
+		icon = GFX_focus_rocketry
+		prerequisite = { focus = USA_blue_kivotos_MIL3_rocket }
+
+		x = 0
+		y = 1
+		relative_position_id = USA_blue_kivotos_MIL3_rocket
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available_if_capitulated = yes
+		available = {
+			if = { limit = { has_country_flag = USABA_government_official_exile }
+				NOT = { has_country_flag = USABA_government_official_exile }
+			}
+
+		}
+		completion_reward = {
+             #set_technology = { missile_launching_submarines = 1 }
+		}
+	}
+
 
 
 
@@ -5318,6 +5400,8 @@ focus = {
 			if = { limit = { has_country_flag = USABA_government_official_exile }
 				NOT = { has_country_flag = USABA_government_official_exile }
 			}
+			NOT = { has_War_with = COU}
+
 		}
 		completion_reward = {
               give_guarantee = COU
@@ -5398,6 +5482,12 @@ focus = {
 					is_in_faction_with = GEM
 				}
 			}
+			NOT = { has_War_with = GEH}
+			NOT = { has_War_with = GEM}
+			NOT = { has_War_with = TRM}
+
+
+
 		}
 		completion_reward = {
             give_guarantee = TRM
@@ -5555,7 +5645,8 @@ focus = {
 				if = { limit = { has_country_flag = USABA_government_official_exile }
 					NOT = { has_country_flag = USABA_government_official_exile }
 				}
-	
+	            NOT = { has_War_with = GEM}
+
 			}
 			completion_reward = {
 			add_popularity = {
@@ -5595,6 +5686,8 @@ focus = {
 					has_government = fascism
 				}
 			}
+			NOT = { has_War_with = TRM}
+
 
 		}
 		completion_reward = {
@@ -5683,7 +5776,6 @@ focus = {
 
 		}
 		completion_reward = {
-
             add_ideas = USA_TRM_train
 		}
 	}
@@ -5710,8 +5802,18 @@ focus = {
 	
 			}
 			completion_reward = {
-	
-	
+			add_war_support = 0.05
+			add_political_power = 60
+						TRM = {custom_effect_tooltip = TRM_pater_loyalty_10_tt
+			set_variable = { TRM_internal_factions_loyalty_target = 0 }
+			set_variable = { TRM_internal_factions_loyalty_var = 15 }
+			TRM_internal_factions_loyalty_add = yes
+
+			custom_effect_tooltip = TRM_pater_popularity_10_tt
+			set_variable = { TRM_internal_factions_popularity_target = 0 }
+			set_variable = { TRM_internal_factions_popularity_var = 15 }
+			TRM_internal_factions_popularity_add = yes
+			}
 			}
 		}
         
@@ -5749,7 +5851,7 @@ focus = {
 		x = 3
 		y = 1
 		relative_position_id = USA_bad_kivotos
-		cost = 2
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -5761,6 +5863,7 @@ focus = {
 
 		}
 		completion_reward = {
+			add_ideas = tot_economic_mobilisation
 		}
 	}
 
@@ -9355,7 +9458,7 @@ focus = {
 		x = -2
 		y = 1
 		relative_position_id = USA_selective_training_act
-		cost = 10
+		cost = 8
 		ai_will_do = {
 			factor = 1
 		}
@@ -9363,7 +9466,7 @@ focus = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			army_experience = 5
+			army_experience = 20
 			add_tech_bonus = {
 				name = special_bonus
 				bonus = 1.0
@@ -9388,7 +9491,7 @@ focus = {
 		y = 1
 		prerequisite = { focus = USA_selective_training_act }
 		relative_position_id = USA_selective_training_act
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1

@@ -331,6 +331,12 @@ is_triggered_only = yes
  }
 }
 
+
+
+
+
+
+
 #신질서 편입 # 관계 개선 모디파이어 줄 것 
 
 country_event = {
@@ -1162,6 +1168,7 @@ country_event = {
 
 
 
+
  # 신질서 내전
 country_event = {
 	id = usa_new_civil_event.1
@@ -1386,3 +1393,4 @@ country_event = {
 		}
 	}
 }
+

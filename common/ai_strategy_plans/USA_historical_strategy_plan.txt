@@ -43,60 +43,47 @@ USA_historical_plan = {
 
 	ai_national_focuses = {
 		USA_continue_the_new_deal
-		USA_wpa
-		USABA_fireside_chats
 		USABA_maintenance_of_isolation_policy
-		USABA_government_propaganda
-		#1937
-		USABA_unrestricted_inflation_permitted
-		USABA_contact_with_opposition
-		USABA_blurring_focus
-		USABA_secret_economic_program
+        USABA_massive_bailout
+		USABA_expansion_of_state_authority
+        USABA_fireside_chats
 		USABA_regression_strategy
-
-        # 1차 대공황
+		USABA_government_propaganda
+		USA_wpa
 		USA_agricultural_adjustment_act
-		USA_war_plans_division
-		USA_intervention_in_kivotos
-		USA_intervention_in_europe
-		USA_war_plan_TRM
-		USA_war_plan_KAI
-		#1939
-		USA_war_plan_black
-		USA_destroyers_for_bases
-		USA_fair_labour_standards_act
 		USA_war_department
 		USA_build_the_pentagon
+		USA_war_plans_division
+		USA_intervention_in_kivotos
 		USA_department_of_defense
-		#1940
-		USA_selective_training_act
-		USA_louisiana_maneuvers
-		USA_army_of_the_united_states
-		USA_federal_housing_act
-
-		USA_maritime_commission
+		USA_fair_labour_standards_act
+		USA_war_plan_black
 		USA_air_war_plans_division
 		USA_air_support
+		USA_intervention_in_europe
+		USA_intervention_in_asia
+		USA_war_plan_orange
+		USA_federal_housing_act
+		USA_selective_training_act
+		USA_louisiana_maneuvers
+	    USABA_contact_with_opposition
+		USA_two_ocean_navy_act
+		USA_bureau_of_ships
+		USA_army_of_the_united_states
+		USA_war_plan_TRM
 		USA_support_rock_island
-		#1942
-		USA_tank_experiments	
-
-        
-
-	    #NATO 창립
+		USABA_blurring_focus
 		USA_old_team
-		USA_support_GEK
+		USA_arsenal_of_democracy
+		USA_the_giant_wakes
+		USA_military_construction
+	    USA_support_GEK
 		USA_attack_TRM
-		USA_support_alies
-		USA_attack_MIL
-		USA_attack_GEH
-		USA_support_north_europe
-		USA_attack_RED
-		USA_attack_KAI
-		USA_attack_COU
-		USA_old_team_guardian
-		USA_marshall_plan
-		USA_Pax_Americana
+		USA_fast_train
+		USABA_resistance_to_mainland_invasion
+		USABA_nationalization_of_wartime_industry
+		USABA_mass_mobilizaion
+		USABA_eisenhower_defense_line
 	}
 
 	focus_factors = {
