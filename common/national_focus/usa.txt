@@ -2026,7 +2026,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 200
 			add_ideas = USABA_strengthening_state_authority
-			USA_congress_small_support = yes
+			USA_congress_normal_support = yes
 		}
 	}
 	#야당과 접촉
