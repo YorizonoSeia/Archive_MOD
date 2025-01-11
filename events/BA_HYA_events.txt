@@ -39,6 +39,7 @@ country_event = {
 			factor = 10
 		}
 		white_peace = SHA
+		set_global_flag = GFLAG_BAKSANWAR_END
 		SHA = {
 			add_ideas = HYA_SHA_huzika
 			add_timed_idea = {
@@ -60,6 +61,7 @@ country_event = {
 				ideology = THIS
 				popularity = -0.20
 			}
+			mark_focus_tree_layout_dirty = yes
 		}
 		hidden_effect = {
 			SHA = {
@@ -111,7 +113,6 @@ country_event = {
 				set_demilitarized_zone = yes
 			}
 		}
-		set_global_flag = GFLAG_BAKSANWAR_END
 		news_event = { id = BA_news.92 hours = 6 }
 	}
 	option = { 
@@ -476,6 +477,7 @@ country_event = {
 			factor = 10
 		}
 		white_peace = HYA
+		set_global_flag = CFLAG_BAKSANWAR_END
 		HYA = {
 			add_ideas = SHA_HYA_huzika
 			add_timed_idea = {
@@ -497,6 +499,7 @@ country_event = {
 				ideology = THIS
 				popularity = -0.20
 			}
+			mark_focus_tree_layout_dirty = yes
 		}
 		every_country = {
 			limit = { is_puppet_of = HYA }
@@ -530,7 +533,6 @@ country_event = {
 				set_demilitarized_zone = yes
 			}
 		}
-		set_global_flag = CFLAG_BAKSANWAR_END
 		news_event = { id = BA_news.91 hours = 6 }
 	}
 	option = { 

@@ -3440,7 +3440,6 @@ news_event = {
 		trigger = { 
 			tag = HYA
 		}
-		mark_focus_tree_layout_dirty = yes
 	}
 	option = { 
 		name = BA_news.91.f
