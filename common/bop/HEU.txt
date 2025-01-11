@@ -30,7 +30,9 @@ HEU_power_balance = {
 			min = 0.0
 			max = 0.4
 			modifier = {
-				
+				non_core_manpower = 0.1
+				compliance_growth = 0.1
+				compliance_growth_on_our_occupied_states = -0.1
 			}
 			on_activate = {
 				set_power_balance_gfx = {
@@ -52,7 +54,10 @@ HEU_power_balance = {
 			min = 0.4
 			max = 0.7
 			modifier = {
-
+				non_core_manpower = 0.15
+				research_speed_factor = 0.075
+				compliance_growth = 0.15
+				compliance_growth_on_our_occupied_states = -0.1
 			}
 			on_activate = {
 				set_power_balance_gfx = {
@@ -74,7 +79,10 @@ HEU_power_balance = {
 			min = 0.7
 			max = 1
 			modifier = {
-
+				non_core_manpower = 0.2
+				research_speed_factor = 0.075
+				compliance_growth = 0.25
+				compliance_growth_on_our_occupied_states = -0.2
 			}
 			on_activate = {
 				set_power_balance_gfx = {
@@ -103,7 +111,9 @@ HEU_power_balance = {
 			min = -0.4
 			max = 0.0
 			modifier = {
-
+				max_command_power = 15
+				required_garrison_factor = -0.1
+				resistance_target_on_our_occupied_states = 0.1
 			}
 			on_activate = {
 				set_power_balance_gfx = {
@@ -125,6 +135,9 @@ HEU_power_balance = {
 			min = -0.7
 			max = -0.4
 			modifier = {
+				max_command_power = 20
+				required_garrison_factor = -0.2
+				resistance_target_on_our_occupied_states = 0.15
 			}
 			on_activate = {
 				set_power_balance_gfx = {
@@ -146,7 +159,9 @@ HEU_power_balance = {
 			min = -1
 			max = -0.7
 			modifier = {
-
+				max_command_power = 25
+				required_garrison_factor = -0.25
+				resistance_target_on_our_occupied_states = 0.2
 			}
 			on_activate = {
 				set_power_balance_gfx = {

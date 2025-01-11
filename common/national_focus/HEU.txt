@@ -300,6 +300,9 @@ focus_tree = {
 		completion_reward = {
 			HEU_bop_high_increase_effect = yes
 			add_ideas = HEU_civil_rights_idea
+			hidden_effect = {
+				country_event = { id = HEU_event.160 }
+			}
 		}
 	}
 
@@ -342,6 +345,9 @@ focus_tree = {
 
 		completion_reward = {
 			HEU_bop_high_decrease_effect = yes
+			hidden_effect = {
+				
+			}
 		}
 	}
 	focus = {
@@ -366,7 +372,13 @@ focus_tree = {
 
 		search_filters = {  }
 
-		cost = 3.00
+		select_effect = {
+			country_event = { id = HEU_event.161 }
+			country_event = { id = HEU_event.162 days = 7 }
+			country_event = { id = HEU_event.163 days = 14 }
+		}
+
+		cost = 4.00
 
 		x = -6
 		y = 2
@@ -383,7 +395,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			set_cosmetic_tag = HEU_luxembourg
+			set_cosmetic_tag = HEU_luxembourg_benriya
 			HEU_bop_high_increase_effect = yes
 			add_popularity = {
 				ideology = communism
@@ -413,6 +425,29 @@ focus_tree = {
 			}
 
 			hidden_effect = {
+
+				if = {
+					limit = {
+						HEU_aru = {
+							has_character_flag = HEU_aru_good_artificial_eye
+						}
+					}
+					set_portraits = {
+						character = HEU_aru
+						army = { large ="GFX_HEU_aru_rikuhachima_communist_Portrait" }
+						civilian = { large ="GFX_HEU_aru_rikuhachima_communist_Portrait" }
+					}
+				}
+				else = {
+					set_portraits = {
+						character = HEU_aru
+						army = { large ="GFX_HEU_aru_rikuhachima_artificial_eyes_communist_Portrait" }
+						civilian = { large ="GFX_HEU_aru_rikuhachima_artificial_eyes_communist_Portrait" }
+					}
+				}
+
+				country_event = { id = HEU_event.164 }
+
 				set_party_name = {
 					ideology = neutrality
 					long_name = HEU_rechtspartei_party
@@ -1031,10 +1066,24 @@ focus_tree = {
 		completion_reward = {
 			HEU_bop_high_decrease_effect = yes
 				
-			set_portraits = {
-				character = HEU_aru
-				army = { large ="GFX_HEU_aru_rikuhachima_fascist_Portrait" }
-				civilian = { large ="GFX_HEU_aru_rikuhachima_fascist_Portrait" }
+			if = {
+				limit = {
+					HEU_aru = {
+						has_character_flag = HEU_aru_good_artificial_eye
+					}
+				}
+				set_portraits = {
+					character = HEU_aru
+					army = { large ="GFX_HEU_aru_rikuhachima_fascist_Portrait" }
+					civilian = { large ="GFX_HEU_aru_rikuhachima_fascist_Portrait" }
+				}
+			}
+			else = {
+				set_portraits = {
+					character = HEU_aru
+					army = { large ="GFX_HEU_aru_rikuhachima_artificial_eyes_fascist_Portrait" }
+					civilian = { large ="GFX_HEU_aru_rikuhachima_artificial_eyes_fascist_Portrait" }
+				}
 			}
 
 			add_popularity = {
@@ -1651,7 +1700,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_completed_focus = HEU_neutralization_rietspartei
-				has_completed_focus = HEU_unwelcome_school
+				has_completed_focus = HEU_luxembourgism_focus_1
 			}
 		}
 
@@ -3597,6 +3646,113 @@ focus_tree = {
 	}
 	
 	focus = {
+		id = HEU_luxembourgism_focus_1
+		
+		relative_position_id = HEU_rikuhachima_governemnt
+
+		icon = GFX_goal_HEU_fnrtpa
+
+		prerequisite = { 
+			focus = HEU_negotiations_with_parties 
+			focus = HEU_rikuhachima_governemnt 
+		}
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		search_filters = {  }
+
+		cost = 3.00
+
+		x = -11
+		y = 1
+
+		available = {
+			has_dynamic_modifier = {
+				modifier = HEU_luxembourgism_idea
+			}
+		}
+
+		search_filters = {  }
+
+		completion_reward = {
+			unlock_decision_category_tooltip = HEU_memorial_park_decision_category
+		}
+	}
+	
+	focus = {
+		id = HEU_luxembourgism_focus_2
+		
+		relative_position_id = HEU_luxembourgism_focus_1
+
+		icon = GFX_focus_generic_mining_industry
+
+		prerequisite = { 
+			focus = HEU_luxembourgism_focus_1
+		}
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		search_filters = {  }
+
+		cost = 8.00
+
+		x = 1
+		y = 1
+
+		available = {
+
+		}
+
+		search_filters = {  }
+
+		completion_reward = {
+			8 = {
+				add_resource = {
+					type = steel
+					amount = 14
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = HEU_luxembourgism_focus_3
+		
+		relative_position_id = HEU_luxembourgism_focus_1
+
+		icon = GFX_focus_generic_diplomatic_treaty
+
+		prerequisite = { 
+			focus = HEU_luxembourgism_focus_2
+		}
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		search_filters = {  }
+
+		cost = 8.00
+
+		x = 1
+		y = 3
+
+		available = {
+			has_completed_focus = HEU_germany_union
+		}
+
+		search_filters = {  }
+
+		completion_reward = {
+
+		}
+	}
+	
+	focus = {
 		id = HEU_rikuhachimaism_focus_1
 		
 		relative_position_id = HEU_rikuhachima_governemnt
@@ -3805,6 +3961,7 @@ focus_tree = {
 		icon = GFX_goal_HEU_rikuhachimaism_focus_5_2
 
 		prerequisite = { 
+			focus = HEU_luxembourgism_focus_3 
 			focus = HEU_rikuhachimaism_focus_5 
 		}
 
@@ -3818,6 +3975,13 @@ focus_tree = {
 		y = 4
 
 		available = {
+			custom_trigger_tooltip = {
+				tooltip = HEU_no_depression_tt
+				AND = {
+					NOT = { has_country_leader_with_trait = HEU_aru_depression_1 }
+					NOT = { has_country_leader_with_trait = HEU_aru_depression_2 }
+				}
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER }
@@ -3846,6 +4010,7 @@ focus_tree = {
 		icon = GFX_goal_HEU_gkfnzk
 
 		prerequisite = { 
+			focus = HEU_luxembourgism_focus_3 
 			focus = HEU_rikuhachimaism_focus_5 
 		}
 
@@ -3855,6 +4020,16 @@ focus_tree = {
 
 		mutually_exclusive = {
 			focus = HEU_rikuhachimaism_focus_kayoko
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = HEU_no_depression_tt
+				AND = {
+					NOT = { has_country_leader_with_trait = HEU_aru_depression_1 }
+					NOT = { has_country_leader_with_trait = HEU_aru_depression_2 }
+				}
+			}
 		}
 
 		ai_will_do = {
@@ -3867,9 +4042,6 @@ focus_tree = {
 
 		x = -2
 		y = 5
-
-		available = {
-		}
 		
 		search_filters = {  }
 
@@ -3892,6 +4064,7 @@ focus_tree = {
 		icon = GFX_goal_HEU_ancmzl
 
 		prerequisite = { 
+			focus = HEU_luxembourgism_focus_3 
 			focus = HEU_rikuhachimaism_focus_5 
 		}
 
@@ -3901,6 +4074,16 @@ focus_tree = {
 
 		mutually_exclusive = {
 			focus = HEU_rikuhachimaism_focus_kayoko
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = HEU_no_depression_tt
+				AND = {
+					NOT = { has_country_leader_with_trait = HEU_aru_depression_1 }
+					NOT = { has_country_leader_with_trait = HEU_aru_depression_2 }
+				}
+			}
 		}
 
 		ai_will_do = {
@@ -3913,9 +4096,6 @@ focus_tree = {
 
 		x = 0
 		y = 5
-
-		available = {
-		}
 		
 		search_filters = {  }
 
@@ -3938,6 +4118,7 @@ focus_tree = {
 		icon = GFX_goal_HEU_zkdyzh
 
 		prerequisite = { 
+			focus = HEU_luxembourgism_focus_3 
 			focus = HEU_rikuhachimaism_focus_5 
 		}
 
@@ -3960,7 +4141,15 @@ focus_tree = {
 		x = 2
 		y = 5
 
+
 		available = {
+			custom_trigger_tooltip = {
+				tooltip = HEU_no_depression_tt
+				AND = {
+					NOT = { has_country_leader_with_trait = HEU_aru_depression_1 }
+					NOT = { has_country_leader_with_trait = HEU_aru_depression_2 }
+				}
+			}
 		}
 		
 		search_filters = {  }

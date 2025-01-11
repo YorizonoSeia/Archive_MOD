@@ -5,3 +5,53 @@ scripted_gui = {
 		
 	}
 }
+
+scripted_gui = {
+	HEU_abgeordnetenkammer_decision_ui = {
+		context_type = decision_category
+		window_name = "HEU_abgeordnetenkammer_gui_window"
+
+		properties = {
+		}
+
+		triggers = {
+			benriya_right_text_1_visible = {
+				NOT = {
+					HEU = {
+						has_country_flag = HEU_banish_right
+					}
+				}
+			}
+			benriya_right_text_2_visible = {
+				HEU = {
+					has_country_flag = HEU_add_rikuhachima_faction
+				}
+			}
+			benriya_centre_text_1_visible = {
+				NOT = {
+					HEU = {
+						has_country_flag = HEU_banish_centre
+					}
+				}
+			}
+			benriya_centre_text_2_visible = {
+				HEU = {
+					has_country_flag = HEU_add_rikuhachima_faction
+				}
+			}
+			benriya_left_text_1_visible = {
+				NOT = {
+					HEU = {
+						has_country_flag = HEU_banish_left
+					}
+				}
+			}
+			benriya_left_text_2_visible = {
+				HEU = {
+					has_country_flag = HEU_add_rikuhachima_faction
+				}
+			}
+		}
+
+	}
+}

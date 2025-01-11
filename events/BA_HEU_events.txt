@@ -1444,6 +1444,10 @@ country_event = { #밀레니엄제 의안
 		hidden_effect = {
 			country_event = { id = HEU_event.142 days = 7 }
 		}
+		HEU_aru = {
+			set_character_flag = HEU_aru_one_eyed
+			set_character_flag = HEU_aru_good_artificial_eye
+		}
 	}
 	
 }
@@ -1464,6 +1468,9 @@ country_event = { #평범한 의안
 		name = HEU_event.141.a 
 		hidden_effect = {
 			country_event = { id = HEU_event.142 days = 7 }
+		}
+		HEU_aru = {
+			set_character_flag = HEU_aru_one_eyed
 		}
 	}
 	
@@ -1676,19 +1683,63 @@ unit_leader_event = { #민권법 공개 토론회
 		custom_effect_tooltip = HEU_event.151.a.tt
 		custom_effect_tooltip = generic_skip_one_line_tt
 		custom_effect_tooltip = HEU_debate_wisdom_tt
-		HEU_aru = {
-			unit_leader_event = HEU_event.152
+
+		hidden_effect = {
+			if = {
+				limit = {
+					check_variable = { benriya_debate^0 < 1 }
+				}
+				country_event = { id = HEU_event.159 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { benriya_debate^1 < 1 }
+				}
+				country_event = { id = HEU_event.158 }
+			}
+			else = {
+				HEU_aru = {
+					unit_leader_event = HEU_event.152
+				}
+			}
 		}
 	}
 
 	option = { 
 		name = HEU_event.151.b
+		custom_effect_tooltip = HEU_event.151.b.tt
+		custom_effect_tooltip = generic_skip_one_line_tt
 
+		hidden_effect = {
+			if = {
+				limit = {
+					check_variable = { benriya_debate^0 < 1 }
+				}
+				country_event = { id = HEU_event.159 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { benriya_debate^1 < 1 }
+				}
+				country_event = { id = HEU_event.158 }
+			}
+			else = {
+				HEU_aru = {
+					unit_leader_event = HEU_event.152
+				}
+			}
+		}
 	}
 
 	option = { 
 		name = HEU_event.151.c
+		ai_chance = {
+			base = 0
+		}
+		custom_effect_tooltip = HEU_event.151.c.tt
+		custom_effect_tooltip = generic_skip_one_line_tt
 
+		country_event = { id = HEU_event.159 }
 	}
 }
 
@@ -1702,20 +1753,56 @@ unit_leader_event = { #민권법 공개 토론회
 
 	option = { 
 		name = HEU_event.152.a 
-		HEU_aru = {
-			unit_leader_event = HEU_event.153
+		custom_effect_tooltip = HEU_event.152.a.tt
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		hidden_effect = {
+			if = {
+				limit = {
+					check_variable = { benriya_debate^0 < 1 }
+				}
+				country_event = { id = HEU_event.159 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { benriya_debate^1 < 1 }
+				}
+				country_event = { id = HEU_event.158 }
+			}
+			else = {
+				HEU_aru = {
+					unit_leader_event = HEU_event.153
+				}
+			}
 		}
 	}
 
 	option = { 
 		name = HEU_event.152.b
-
+		custom_effect_tooltip = HEU_event.152.b.tt
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		hidden_effect = {
+			if = {
+				limit = {
+					check_variable = { benriya_debate^0 < 1 }
+				}
+				country_event = { id = HEU_event.159 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { benriya_debate^1 < 1 }
+				}
+				country_event = { id = HEU_event.158 }
+			}
+			else = {
+				HEU_aru = {
+					unit_leader_event = HEU_event.153
+				}
+			}
+		}
 	}
 
-	option = { 
-		name = HEU_event.152.c
-
-	}
 }
 
 unit_leader_event = { #민권법 공개 토론회
@@ -1728,19 +1815,54 @@ unit_leader_event = { #민권법 공개 토론회
 
 	option = { 
 		name = HEU_event.153.a 
-		HEU_aru = {
-			unit_leader_event = HEU_event.154
+		custom_effect_tooltip = HEU_event.153.a.tt
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		hidden_effect = {
+			if = {
+				limit = {
+					check_variable = { benriya_debate^0 < 1 }
+				}
+				country_event = { id = HEU_event.159 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { benriya_debate^1 < 1 }
+				}
+				country_event = { id = HEU_event.158 }
+			}
+			else = {
+				HEU_aru = {
+					unit_leader_event = HEU_event.154
+				}
+			}
 		}
 	}
 
 	option = { 
 		name = HEU_event.153.b
+		custom_effect_tooltip = HEU_event.153.b.tt
+		custom_effect_tooltip = generic_skip_one_line_tt
 
-	}
-
-	option = { 
-		name = HEU_event.153.c
-
+		hidden_effect = {
+			if = {
+				limit = {
+					check_variable = { benriya_debate^0 < 1 }
+				}
+				country_event = { id = HEU_event.159 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { benriya_debate^1 < 1 }
+				}
+				country_event = { id = HEU_event.158 }
+			}
+			else = {
+				HEU_aru = {
+					unit_leader_event = HEU_event.154
+				}
+			}
+		}
 	}
 }
 
@@ -1754,16 +1876,406 @@ unit_leader_event = { #민권법 공개 토론회
 
 	option = { 
 		name = HEU_event.154.a 
+		custom_effect_tooltip = HEU_event.154.a.tt
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		hidden_effect = {
+			if = {
+				limit = {
+					check_variable = { benriya_debate^0 < 1 }
+				}
+				country_event = { id = HEU_event.159 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { benriya_debate^1 < 1 }
+				}
+				country_event = { id = HEU_event.158 }
+			}
+			else = {
+				HEU_aru = {
+					unit_leader_event = HEU_event.155
+				}
+			}
+		}
 	}
 
 	option = { 
 		name = HEU_event.154.b
+		custom_effect_tooltip = HEU_event.154.b.tt
+		custom_effect_tooltip = generic_skip_one_line_tt
 
+		hidden_effect = {
+			if = {
+				limit = {
+					check_variable = { benriya_debate^0 < 1 }
+				}
+				country_event = { id = HEU_event.159 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { benriya_debate^1 < 1 }
+				}
+				country_event = { id = HEU_event.158 }
+			}
+			else = {
+				HEU_aru = {
+					unit_leader_event = HEU_event.155
+				}
+			}
+		}
+	}
+}
+
+unit_leader_event = { #민권법 공개 토론회
+	id = HEU_event.155
+	title = HEU_event.155.t
+	desc = HEU_event.155.desc
+	picture = GFX_report_event_fascist_gathering
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.155.a 
+		custom_effect_tooltip = HEU_event.155.a.tt
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		hidden_effect = {
+			if = {
+				limit = {
+					check_variable = { benriya_debate^0 < 1 }
+				}
+				country_event = { id = HEU_event.159 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { benriya_debate^1 < 1 }
+				}
+				country_event = { id = HEU_event.158 }
+			}
+			else = {
+				HEU_aru = {
+					unit_leader_event = HEU_event.155
+				}
+			}
+		}
 	}
 
 	option = { 
-		name = HEU_event.154.c
+		name = HEU_event.155.b
+		custom_effect_tooltip = HEU_event.155.b.tt
+		custom_effect_tooltip = generic_skip_one_line_tt
 
+		hidden_effect = {
+			if = {
+				limit = {
+					check_variable = { benriya_debate^0 < 1 }
+				}
+				country_event = { id = HEU_event.159 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { benriya_debate^1 < 1 }
+				}
+				country_event = { id = HEU_event.158 }
+			}
+			else = {
+				HEU_aru = {
+					unit_leader_event = HEU_event.155
+				}
+			}
+		}
+	}
+}
+
+unit_leader_event = { #민권법 공개 토론회
+	id = HEU_event.156
+	title = HEU_event.156.t
+	desc = HEU_event.156.desc
+	picture = GFX_report_event_fascist_gathering
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.156.a 
+		custom_effect_tooltip = HEU_event.156.a.tt
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		hidden_effect = {
+			if = {
+				limit = {
+					check_variable = { benriya_debate^0 < 1 }
+				}
+				country_event = { id = HEU_event.159 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { benriya_debate^1 < 1 }
+				}
+				country_event = { id = HEU_event.158 }
+			}
+			else = {
+				HEU_aru = {
+					unit_leader_event = HEU_event.157
+				}
+			}
+		}
+	}
+
+	option = { 
+		name = HEU_event.156.b
+		custom_effect_tooltip = HEU_event.156.b.tt
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		hidden_effect = {
+			if = {
+				limit = {
+					check_variable = { benriya_debate^0 < 1 }
+				}
+				country_event = { id = HEU_event.159 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { benriya_debate^1 < 1 }
+				}
+				country_event = { id = HEU_event.158 }
+			}
+			else = {
+				HEU_aru = {
+					unit_leader_event = HEU_event.157
+				}
+			}
+		}
+	}
+
+	option = { 
+		name = HEU_event.156.c
+		custom_effect_tooltip = HEU_event.156.c.tt
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		hidden_effect = {
+			if = {
+				limit = {
+					check_variable = { benriya_debate^0 < 1 }
+				}
+				country_event = { id = HEU_event.159 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { benriya_debate^1 < 1 }
+				}
+				country_event = { id = HEU_event.158 }
+			}
+			else = {
+				HEU_aru = {
+					unit_leader_event = HEU_event.157
+				}
+			}
+		}
+	}
+}
+
+unit_leader_event = { #민권법 공개 토론회
+	id = HEU_event.157
+	title = HEU_event.157.t
+	desc = HEU_event.157.desc
+	picture = GFX_report_event_fascist_gathering
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.157.a
+
+		custom_effect_tooltip = HEU_event.157.a.tt
+
+		hidden_effect = {
+			if = {
+				limit = {
+					check_variable = { benriya_debate^0 > benriya_debate^1 }
+				}
+				country_event = { id = HEU_event.158 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { benriya_debate^0 = benriya_debate^1 }
+				}
+				country_event = { id = HEU_event.158 }
+			}
+			else = {
+				country_event = { id = HEU_event.159 }
+			}
+		}
+	}
+
+}
+
+country_event = { #여론조사 발표
+	id = HEU_event.158
+	title = HEU_event.158.t
+	desc = HEU_event.158.desc
+	picture = GFX_report_event_aru_rikuhachima
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.158.a 
+		complete_national_focus = HEU_civil_rights_act_1
+	}
+
+}
+
+country_event = { #여론조사 발표
+	id = HEU_event.159
+	title = HEU_event.159.t
+	desc = HEU_event.159.desc
+	picture = GFX_report_event_aru_rikuhachima
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.159.a 
+		complete_national_focus = HEU_civil_rights_act_2
+	}
+
+}
+
+country_event = { #생각해 둔 방법
+	id = HEU_event.160
+	title = HEU_event.160.t
+	desc = HEU_event.160.desc
+	picture = GFX_report_event_german_speech
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.160.a 
+	}
+
+}
+
+country_event = { #연립여당
+	id = HEU_event.161
+	title = HEU_event.161.t
+	desc = HEU_event.161.desc
+	picture = GFX_report_event_communists_cheer
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.161.a 
+	}
+
+}
+
+country_event = { #경고
+	id = HEU_event.162
+	title = HEU_event.162.t
+	desc = HEU_event.162.desc
+	picture = GFX_report_event_aru_rikuhachima_senaka
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.162.a 
+	}
+
+}
+
+country_event = { #현지인의 개
+	id = HEU_event.163
+	title = HEU_event.163.t
+	desc = HEU_event.163.desc
+	picture = GFX_report_event_gathering_protest
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.163.a 
+	}
+
+}
+
+country_event = { #대연정 축하해!
+	id = HEU_event.164
+	title = HEU_event.164.t
+	desc = HEU_event.164.desc
+	picture = GFX_report_event_aru_rikuhachima
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.164.a 
+		country_event = { id = HEU_event.165 }
+		HEU_aru = {
+			add_timed_unit_leader_trait = {
+				trait = wounded
+				days = 7
+			}
+		}
+	}
+
+}
+
+country_event = { #나는 행복합니다
+	id = HEU_event.165
+	title = HEU_event.165.t
+	desc = HEU_event.165.desc
+	picture = GFX_report_event_kayoko_onikata
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.165.a 
+		add_country_leader_trait = HEU_aru_depression_1
+	}
+}
+
+country_event = { #죄인
+	id = HEU_event.200
+	title = HEU_event.200.t
+	desc = HEU_event.200.desc
+	picture = GFX_report_event_generic_ruins
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.200.a 
+	}
+
+}
+
+country_event = { #죄인
+	id = HEU_event.201
+	title = HEU_event.201.t
+	desc = HEU_event.201.desc
+	picture = GFX_report_event_SOV_young_builders_of_communism
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.201.a 
+	}
+
+	option = { 
+		name = HEU_event.201.b
+	}
+}
+
+country_event = { #빌헬름 폐하의 우울한 하루
+	id = HEU_event.202
+	title = HEU_event.202.t
+	desc = HEU_event.202.desc
+	picture = GFX_report_event_royal_parade
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.202.a 
+		add_war_support = 0.03
+		add_to_variable = {
+			HEU_memorial_support_people = 2
+			tooltip = HEU_memorial_support_people_edit_tt
+		}
 	}
 }
 

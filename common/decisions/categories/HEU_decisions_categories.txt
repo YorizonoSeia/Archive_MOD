@@ -133,3 +133,43 @@ HEU_aru_GSC_annex_decision_category = { #총학생회장 리쿠하치마 아루
 
 	visible_when_empty = yes
 }
+
+HEU_abgeordnetenkammer_decision_category = { #68혁명
+    priority = 25
+	allowed = {
+		original_tag = HEU
+	}
+
+    visible = {
+        is_debug = yes
+    }
+
+    available = {
+    } 
+
+    icon = GFX_decision_category_usa_intervention_mandate
+
+    scripted_gui = HEU_abgeordnetenkammer_decision_ui
+    
+	visible_when_empty = yes
+}
+
+HEU_memorial_park_decision_category = { #68혁명
+    priority = 25
+	allowed = {
+		original_tag = HEU
+	}
+
+    visible = {
+        is_debug = yes
+    }
+
+    available = {
+    } 
+
+    icon = GFX_decision_category_usa_intervention_mandate
+
+	picture = GFX_decision_cat_picture_SWI_federal_council
+    
+	visible_when_empty = yes
+}
