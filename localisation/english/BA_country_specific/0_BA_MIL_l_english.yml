@@ -1459,6 +1459,8 @@
  MIL_supervise_spain:0 "밀레니엄의 감시"
  MIL_refugee:0 "난민 문제"
  MIL_help_SPR:0 "스페인 의용대"
+ MIL_attack_spr: "총체적 개입"
+ MIL_help_SPA_tt: "\n조건 충족 시 제거: 스페인 내전이 끝남\n"
  MIL_financial_collective_industry_idea:0 "금융 집산적 산업"
  FRA_production_acceleration:0 "생산 라인 최대화"
  FRA_mil_incuser_resistance:0 "레지스탕스 혁명"

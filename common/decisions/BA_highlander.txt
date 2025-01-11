@@ -82,9 +82,58 @@ BA_highlander = { #하이랜더 철도학원
 			has_idea = BA_highlander_academy_generic
 		}
 		remove_effect = {
-			add_offsite_building = {
-				type = industrial_complex
-				level = 1
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						BA_highlander_invest > 9
+					}
+				}
+				add_offsite_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						BA_highlander_invest > 19
+					}
+				}
+				add_offsite_building = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						BA_highlander_invest > 29
+					}
+				}
+				add_offsite_building = {
+					type = industrial_complex
+					level = 3
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						BA_highlander_invest > 39
+					}
+				}
+				add_offsite_building = {
+					type = industrial_complex
+					level = 4
+				}
 			}
 			set_country_flag = BA_nationalized_highlander
 			multiply_variable = {

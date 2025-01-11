@@ -755,9 +755,20 @@ country_event = { #투자
     }
 	option = { #대규모 투자
 		name = Highlander.1.f
-		add_timed_idea = {
-			idea = BA_highlander_invest_big
-			days = 90
+		if = {
+			limit = {
+				has_country_flag = BA_highlander_discount
+			}
+			add_timed_idea = {
+				idea = BA_highlander_invest_mid
+				days = 90
+			}
+		}
+		else = {
+			add_timed_idea = {
+				idea = BA_highlander_invest_big
+				days = 90
+			}
 		}
 		custom_effect_tooltip = BA_highlander_invest_big_tt
 		add_to_variable = {
@@ -889,6 +900,17 @@ country_event = { #철도 버프 이벤트를 위한 무한 반복
 					is_ai = yes
 				}
 				country_event =  Highlander.12
+			}
+			1 = { #가격 완화
+				modifier = {
+					factor = 0
+					has_country_flag = BA_highlander_discount
+				}
+				modifier = {
+					factor = 0.5
+					is_ai = yes
+				}
+				country_event =  Highlander.13
 			}
 		}
     }
@@ -1134,6 +1156,17 @@ country_event = { #철도 불황
 		}
 	}
 }
+country_event = { #가격 완화
+	id = Highlander.13
+	title = Highlander.13.t
+	desc = Highlander.13.d
+	is_triggered_only = yes
+	option = {
+		name = Highlander.13.a
+		custom_effect_tooltip = Highlander.13_tt
+		set_country_flag = BA_highlander_discount
+	}
+}
 
 add_namespace = BA_kiovotos_spain_event #간섭위원회
 
@@ -1315,37 +1348,42 @@ country_event = { #간섭위원회 설치
 		}
 		name = BA_kiovotos_spain_event.4.a
 		add_ideas = BA_interference_committee
-		hidden_effect = {
-			if = {
-				limit = {
-					OR = {
-						has_government = fascism
-						has_government = neutrality
-						tag = TRM
-					}
-				}
-				add_ai_strategy = {
-					type = send_volunteers_desire
-					id = SPA
-					value = 50
+		if = {
+			limit = {
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+					tag = TRM
 				}
 			}
-			else_if = {
-				limit = {
+			add_ai_strategy = {
+				type = send_volunteers_desire
+				id = SPA
+				value = 50
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
 					has_completed_focus = RED_dipose_cherino
-				}
-				add_ai_strategy = {
-					type = send_volunteers_desire
-					id = SPC
-					value = 50
+					has_completed_focus = HYA_focus_90
 				}
 			}
-			else = {
-				add_ai_strategy = {
-					type = send_volunteers_desire
-					id = SPD
-					value = 50
-				}
+			add_relation_rule_override = {
+				target = SPC
+				can_send_volunteers = yes
+			}
+			add_ai_strategy = {
+				type = send_volunteers_desire
+				id = SPC
+				value = 50
+			}
+		}
+		else = {
+			add_ai_strategy = {
+				type = send_volunteers_desire
+				id = SPD
+				value = 50
 			}
 		}
 	}

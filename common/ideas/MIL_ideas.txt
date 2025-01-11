@@ -241,6 +241,30 @@ ideas = {
                 SPR_scw_in_progress = yes
             }
         }
+        MIL_attack_spr = { #총체적 개입
+            picture = generic_intel_bonus
+            targeted_modifier = {
+                tag = SPD
+                attack_bonus_against = 0.15
+            }
+            targeted_modifier = {
+                tag = SPC
+                attack_bonus_against = 0.15
+            }
+            targeted_modifier = {
+                tag = SPA
+                attack_bonus_against = 0.15
+            }
+            modifier = {
+                army_core_defence_factor = -0.3
+                disable_strategic_redeployment = 1
+
+                custom_modifier_tooltip = MIL_help_SPA_tt
+            }
+            available = {
+                SPR_scw_in_progress = yes
+            }
+        }
         FRA_production_acceleration = { # 생산 가속
             picture = generic_license_production
 

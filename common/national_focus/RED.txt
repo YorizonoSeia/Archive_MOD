@@ -5758,12 +5758,12 @@ focus_tree = {
 			}
 		}
 	}
-	focus = { #자율적인 지역 평의회
+	focus = { #청년-생도 평의회
 		id = RED_freedom_of_thought
 		prerequisite = { focus = RED_deal_with_ger }
 		prerequisite = { focus = RED_maintaining_the_fire }
 		
-		icon = GFX_focus_generic_improve_the_administration
+		icon = GFX_SOV_military_engineering_university_ccp_2d_sov_compatibility
 		x = -1
 		y = 1
 		ai_will_do = {
@@ -5792,6 +5792,13 @@ focus_tree = {
 					}
 				}
 				hidden_effect = {add_command_power = 1000}
+			}
+			141 = {
+				create_unit = {
+					division = "name = \"Student Organisation\" division_template = \"Redwinter Garde populaire\" start_experience_factor = 0.1 start_equipment_factor = 0.9"
+					owner = RED
+					count = 4
+				}
 			}
 		}
 	}

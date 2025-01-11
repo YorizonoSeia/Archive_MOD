@@ -319,7 +319,7 @@ spriteTypes = {
 
 
 	SpriteType = {
-		name = "GFX_focus_work_assist_catholic_shine"
+		name = "GFX_focus_assist_catholic_shine"
 		texturefile = "gfx/interface/goals/GER/assist_catholic.tga"			
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {

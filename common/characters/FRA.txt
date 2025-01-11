@@ -204,10 +204,6 @@ characters={
 			}
 		}
 		
-		
-		
-		
-		
 	}
 
 	FRA_jean_de_lattre_de_tassigny={

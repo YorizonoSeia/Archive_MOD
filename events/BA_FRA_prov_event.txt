@@ -7173,3 +7173,223 @@ country_event = { # 공장 노획
 		}
 	}
 }
+
+add_namespace = FRA_MIL_event
+country_event = { # 연합 ㄱㄱ?
+	id = FRA_MIL_event.1
+	title = FRA_MIL_event.1.t
+	desc = FRA_MIL_event.1.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = { #ㄱㄱ
+		name = FRA_MIL_event.1.a
+		set_variable = {
+			FRA_MIL_veto = 2
+		}
+		set_variable = {
+			FRA_MIL_demand = 4
+		}
+		FRA = {
+			set_variable = {
+				FRA_MIL_veto = 2
+			}
+			set_variable = {
+				FRA_MIL_demand = 4
+			}
+		}
+	}
+	option = { #ㄴㄴ
+		name = FRA_MIL_event.1.b
+		FRA = {
+			country_event = {
+				id = FRA_MIL_event.2
+				days = 2
+			}
+		}
+	}
+}
+country_event = { # 거절
+	id = FRA_MIL_event.2
+	title = FRA_MIL_event.2.t
+	desc = FRA_MIL_event.2.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = { #ㄱㄱ
+		name = FRA_MIL_event.2.a
+		set_country_flag = FRA_MIL_dont_want_FMUS_flag
+	}
+}
+country_event = { # 프랑스의 요구
+	id = FRA_MIL_event.3
+	title = FRA_MIL_event.3.t
+	desc = FRA_MIL_event.3.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+		clr_country_flag = FRA_MIL_fra_demanded_research
+		clr_country_flag = FRA_MIL_fra_demanded_economy
+		clr_country_flag = FRA_MIL_fra_demanded_navy
+		clr_country_flag = FRA_MIL_fra_demanded_territory
+	}
+	option = { #해군 주도권
+		name = FRA_MIL_event.3.a
+		set_country_flag = FRA_MIL_fra_demanded_navy
+		trigger = {
+			check_variable = {
+				var = FRA_MIL_demand
+				value = 1
+				compare = greater_than_or_equals
+			}
+		}
+		add_to_variable = {
+			FRA_MIL_demand = -1
+		}
+		ai_chance = {
+			base = 3
+		}
+	}
+	option = { #남프랑스 영토
+		set_country_flag = FRA_MIL_fra_demanded_territory
+		name = FRA_MIL_event.3.b
+		trigger = {
+			check_variable = {
+				var = FRA_MIL_demand
+				value = 1
+				compare = greater_than_or_equals
+			}
+		}
+		add_to_variable = {
+			FRA_MIL_demand = -1
+		}
+		ai_chance = {
+			base = 3
+		}
+	}
+	option = { #경제 통합
+		set_country_flag = FRA_MIL_fra_demanded_economy
+		name = FRA_MIL_event.3.c
+		trigger = {
+			check_variable = {
+				var = FRA_MIL_demand
+				value = 1
+				compare = greater_than_or_equals
+			}
+		}
+		add_to_variable = {
+			FRA_MIL_demand = -1
+		}
+		ai_chance = {
+			base = 3
+		}
+	}
+	option = { #연구 지원
+		set_country_flag = FRA_MIL_fra_demanded_research
+		name = FRA_MIL_event.3.e
+		trigger = {
+			check_variable = {
+				var = FRA_MIL_demand
+				value = 1
+				compare = greater_than_or_equals
+			}
+		}
+		add_to_variable = {
+			FRA_MIL_demand = -1
+		}
+		ai_chance = {
+			base = 3
+		}
+	}
+	option = { #요구는 여기까지
+		name = FRA_MIL_event.3.f
+		clear_variable = FRA_MIL_demand
+		clear_variable = FRA_MIL_veto
+		trigger = {
+			check_variable = {
+				var = FRA_MIL_demand
+				value = 4
+				compare = less_than
+			}
+		}
+	}
+}
+country_event = { # 거절
+	id = FRA_MIL_event.4
+	title = FRA_MIL_event.4.t
+	desc = {
+		text = FRA_MIL_event.4.d_1
+		trigger = {
+			FRA = {
+				has_country_flag = FRA_MIL_fra_demanded_navy
+			}
+		}
+	}
+	desc = {
+		text = FRA_MIL_event.4.d_2
+		trigger = {
+			FRA = {
+				has_country_flag = FRA_MIL_fra_demanded_territory
+			}
+		}
+	}
+	desc = {
+		text = FRA_MIL_event.4.d_3
+		trigger = {
+			FRA = {
+				has_country_flag = FRA_MIL_fra_demanded_economy
+			}
+		}
+	}
+	desc = {
+		text = FRA_MIL_event.4.d_4
+		trigger = {
+			FRA = {
+				has_country_flag = FRA_MIL_fra_demanded_research
+			}
+		}
+	}
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = { #ㄱㄱ
+		name = FRA_MIL_event.2.a
+	}
+	option = { #ㅗ
+		trigger = {
+			check_variable = {
+				var = FRA_MIL_veto
+				value = 0
+				compare = greater_than
+			}
+		}
+		name = FRA_MIL_event.4.b
+	}
+}
+country_event = { # 수락
+	id = FRA_MIL_event.5
+	title = FRA_MIL_event.5.t
+	desc = FRA_MIL_event.5.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = { #ㄱㄱ
+		name = FRA_MIL_event.2.a
+		if = {
+			limit = {
+				has_country_flag = FRA_MIL_fra_demanded_navy
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = FRA_MIL_fra_demanded_democratic
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = FRA_MIL_fra_demanded_navy
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = FRA_MIL_fra_demanded_navy
+			}
+		}
+	}
+}
