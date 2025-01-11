@@ -1794,6 +1794,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
 			add_political_power = 100
+			USA_congress_large_support = yes
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = USA_charles_lindbergh_political_advisor
 			custom_effect_tooltip = USABA_maintenance_of_isolation_policy_desc_cst
@@ -2026,7 +2027,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 200
 			add_ideas = USABA_strengthening_state_authority
-			USA_congress_normal_support = yes
+			USA_congress_small_support = yes
 		}
 	}
 	#야당과 접촉

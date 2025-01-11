@@ -3733,7 +3733,7 @@ USA_recover_from_2nd_great_depression_categorie = {
 			}
 		}
 		fire_only_once = yes
-		days_remove = 150
+		days_remove = 100
 		modifier = {
 			political_power_cost = 0.50
 			consumer_goods_factor = 0.15
@@ -3843,7 +3843,7 @@ USA_recover_from_2nd_great_depression_categorie = {
 		visible = {
 			has_completed_focus = USABA_american_reindustrialization
 		}
-		cost = 75
+		cost = 60
 		cancel_trigger = {
 			custom_trigger_tooltip = {
 				tooltip = USA_recover_from_2nd_great_depression_haswar_cancel_tt
@@ -3867,7 +3867,7 @@ USA_recover_from_2nd_great_depression_categorie = {
 			}
 		}
 		fire_only_once = yes
-		days_remove = 150
+		days_remove = 120
 		modifier = {
 			political_power_cost = 0.50
 			consumer_goods_factor = 0.15
@@ -4006,7 +4006,7 @@ USA_recover_from_2nd_great_depression_categorie = {
 			}
 		}
 		fire_only_once = yes
-		days_remove = 100
+		days_remove = 60
 		modifier = {
 			political_power_cost = 0.25
 			consumer_goods_factor = 0.15
@@ -4103,7 +4103,7 @@ USA_recover_from_2nd_great_depression_categorie = {
 			}
 		}
 		fire_only_once = yes
-		days_remove = 120
+		days_remove = 90
 		modifier = {
 			political_power_cost = 0.25
 			consumer_goods_factor = 0.15
@@ -4176,7 +4176,7 @@ USA_recover_from_2nd_great_depression_categorie = {
 			set_country_flag = USA_recover_from_2nd_great_depression_rebuild_war_flan_flag
 		}
 		fire_only_once = yes
-		days_remove = 75
+		days_remove = 60
 		modifier = {
 			political_power_cost = 0.75
 			consumer_goods_factor = 0.15
