@@ -1504,7 +1504,7 @@ focus_tree = {
 				country_event = { id = HYA_event.17 hours = 24 random_hours = 12 }
 			}
 			every_other_country = {
-				limit = { NOT = { Kivotos_school_tag = yes } is_major = yes NOT = { has_war_with = ROOT } }
+				limit = { NOT = { Kivotos_tag = yes } is_major = yes NOT = { has_war_with = ROOT } }
 				country_event = { id = HYA_event.18 hours = 24 random_hours = 12 }
 			}
 		}
@@ -1516,7 +1516,7 @@ focus_tree = {
 					country_event = { id = HYA_event.17 hours = 24 random_hours = 12 }
 				}
 				every_other_country = {
-					limit = { NOT = { Kivotos_school_tag = yes } is_major = yes }
+					limit = { NOT = { Kivotos_tag = yes } is_major = yes }
 					country_event = { id = HYA_event.18 hours = 24 random_hours = 12 }
 				}
 			}
