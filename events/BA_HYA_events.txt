@@ -556,3 +556,61 @@ country_event = {
 		name = HYA_event.16.b
 	}
 }
+country_event = { 
+	id = HYA_event.17
+	title = HYA_event.17.t
+	desc = HYA_event.17.desc
+	picture = GFX_event_mega_cities_HYA
+	is_triggered_only = yes
+	option = { 
+		name = HYA_event.17.a
+		ai_chance = {
+			factor = 10
+		}
+		add_to_variable = { FROM.HYA_focus_25_var = 1 }
+		add_popularity = {
+			ideology = ROOT
+			popularity = 0.05
+		}
+		add_stability = 0.05
+		add_war_support = -0.01
+	}
+	option = {
+		name = HYA_event.17.b
+		ai_chance = {
+			factor = 7
+		}
+		add_war_support = 0.02
+	}
+}
+country_event = { 
+	id = HYA_event.18
+	title = HYA_event.18.t
+	desc = HYA_event.18.desc
+	picture = GFX_event_mega_cities_HYA
+	is_triggered_only = yes
+	option = { 
+		name = HYA_event.18.a
+		ai_chance = {
+			factor = 9
+		}
+		add_to_variable = { FROM.HYA_focus_25_var = 1 }
+		add_popularity = {
+			ideology = ROOT
+			popularity = 0.05
+		}
+		add_stability = 0.05
+		add_war_support = -0.05
+	}
+	option = {
+		name = HYA_event.18.b
+		ai_chance = {
+			factor = 7
+		}
+		add_popularity = {
+			ideology = ROOT
+			popularity = 0.05
+		}
+		add_war_support = 0.05
+	}
+}

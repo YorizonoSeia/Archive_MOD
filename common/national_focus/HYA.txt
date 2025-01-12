@@ -1188,12 +1188,12 @@ focus_tree = {
 	}
 	focus = { #마츠리부
 		id = HYA_focus_2
-		icon = GFX_goal_unknown
+		icon = GFX_focus_HYA_focus_2
 		#prerequisite = { focus = HYA_focus_ }
 		#mutually_exclusive = { focus = HYA_focus_ }
 		x = 24
 		y = 0
-		cost = 2
+		cost = 5
 		search_filters = {FOCUS_FILTER_STABILITY}
 		available = {
 		}   
@@ -1201,6 +1201,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_stability = 0.05
+			add_offsite_building = {
+				type = industrial_complex
+				level = 2
+			}
 		}
 	}
 	focus = { #
@@ -1211,7 +1215,7 @@ focus_tree = {
 		#mutually_exclusive = { focus = HYA_focus_ }
 		x = -1
 		y = 1
-		cost = 10
+		cost = 5
 		available = {
 		}   
 		bypass = {
@@ -1251,7 +1255,7 @@ focus_tree = {
 		#mutually_exclusive = { focus = HYA_focus_ }
 		x = 1
 		y = 1
-		cost = 10
+		cost = 5
 		available = {
 			has_character = HYA_SHIZUKO
 		}   
@@ -1266,11 +1270,19 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			add_trait = {
-				character = HYA_SHIZUKO
-				slot = political_advisor
-				trait = Captain_of_Industry
-		   }
+			if = {
+				limit = { has_character = HYA_SHIZUKO }
+				remove_trait = {
+					character = HYA_SHIZUKO
+					slot = political_advisor
+					trait = HYA_T4a
+				   }
+				add_trait = {
+					character = HYA_SHIZUKO
+					slot = political_advisor
+					trait = HYA_T4a_2
+				   }
+			}
 		}
 	}
 	focus = { #
@@ -1318,7 +1330,7 @@ focus_tree = {
 		#mutually_exclusive = { focus = HYA_focus_ }
 		x = 0
 		y = 2
-		cost = 10
+		cost = 5
 		available = {
 			OR = {
 				has_government = democratic
@@ -1349,6 +1361,10 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			add_offsite_building = {
+				type = industrial_complex
+				level = 2
+			}
 		}
 	}
 	focus = { #
@@ -1359,7 +1375,7 @@ focus_tree = {
 		#mutually_exclusive = { focus = HYA_focus_ }
 		x = 0
 		y = 3
-		cost = 10
+		cost = 5
 		available = {
 			OR = {
 				has_government = democratic
@@ -1371,7 +1387,7 @@ focus_tree = {
 		completion_reward = {
 			add_timed_idea = {
 				idea = HYA_rhdehdcnrwpdnldnjsghl
-				days = 730
+				days = 280
 			}
 		}
 	}
@@ -1383,7 +1399,7 @@ focus_tree = {
 		#mutually_exclusive = { focus = HYA_focus_ }
 		x = -1
 		y = 4
-		cost = 10
+		cost = 5
 		available = {
 			OR = {
 				has_government = democratic
@@ -1414,6 +1430,10 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			add_offsite_building = {
+				type = industrial_complex
+				level = 2
+			}
 		}
 	}
 	focus = { #
@@ -1424,13 +1444,12 @@ focus_tree = {
 		#mutually_exclusive = { focus = HYA_focus_ }
 		x = 1
 		y = 4
-		cost = 10
+		cost = 5
 		available = {
 			OR = {
 				has_government = democratic
 				has_government = neutrality
 			}
-			controls_state = 9
 		}   
 		bypass = {
 		}
@@ -1448,12 +1467,16 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			add_offsite_building = {
+				type = industrial_complex
+				level = 2
+			}
 		}
 	}
 	focus = { #
 		relative_position_id = HYA_focus_2
 		id = HYA_focus_25
-		icon = GFX_goal_unknown
+		icon = GFX_focus_HYA_focus_25
 		prerequisite = { focus = HYA_focus_22 }
 		prerequisite = { focus = HYA_focus_23 }
 		prerequisite = { focus = HYA_focus_24 }
@@ -1467,15 +1490,50 @@ focus_tree = {
 				has_government = democratic
 				has_government = neutrality
 			}
-			has_war = no
+			has_war_with_major = no
 			NOT = {
 				has_idea = HYA_rhdehdcnrwpdnldnjsghl
 			}
 		}   
 		bypass = {
 		}
+		select_effect = {
+			set_variable = { HYA_focus_25_var = 0 }
+			every_other_country = {
+				limit = { Kivotos_school_tag = yes NOT = { has_war_with = ROOT } }
+				country_event = { id = HYA_event.17 hours = 24 random_hours = 12 }
+			}
+			every_other_country = {
+				limit = { NOT = { Kivotos_school_tag = yes } is_major = yes NOT = { has_war_with = ROOT } }
+				country_event = { id = HYA_event.18 hours = 24 random_hours = 12 }
+			}
+		}
 		completion_reward = {
-			add_stability = 0.20
+			custom_effect_tooltip = SOV_focus_select_effect_tt
+			effect_tooltip = {
+				every_other_country = {
+					limit = { Kivotos_school_tag = yes }
+					country_event = { id = HYA_event.17 hours = 24 random_hours = 12 }
+				}
+				every_other_country = {
+					limit = { NOT = { Kivotos_school_tag = yes } is_major = yes }
+					country_event = { id = HYA_event.18 hours = 24 random_hours = 12 }
+				}
+			}
+			custom_effect_tooltip = SOV_focus_complete_effect_tt
+			add_country_leader_trait = HYA_T9a
+			add_stability = 0.10
+			if = {
+				limit = { check_variable = { HYA_focus_25_var = 0 } }
+				custom_effect_tooltip = HYA_focus_25_tt
+			}
+			else = {
+				add_offsite_building = {
+					type = industrial_complex
+					level = var:HYA_focus_25_var
+				}
+			}
+			add_threat = -2
 			news_event = {
 				id = BA_news.77
 				hours = 2

@@ -671,7 +671,7 @@ ideas = {
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
 			modifier = {
-				consumer_goods_factor = -0.02
+				consumer_goods_factor = -0.05
 				production_speed_industrial_complex_factor = 0.15
 				production_speed_infrastructure_factor = 0.20
 			}
