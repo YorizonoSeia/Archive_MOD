@@ -81,12 +81,15 @@
  KAP_ban_the_opium_trade_desc:0 "아편은 서구 열강이 우리를 굴복시킨 도구였습니다. 이 악이 퍼지는 것을 용납할 수 없습니다."
  KAP_abolish_the_land_rent:1 "지대 폐지"
  KAP_abolish_the_land_rent_desc:0 "토지의 개인 소유권은 터무니없는 개념입니다. 토지는 그곳에서 일하는 사람의 것입니다. 농민들이 스스로 조직하도록 허용하면 그들의 지지를 보장할 수 있을 것입니다."
- KAP_literacy_programs:0 "문해 계획"
- KAP_literacy_programs_desc:0 "현대 사회를 만들기 위한 첫걸음은 모든 시민이 여러 사안들을 이해하고 해결하는 데 기여할 수 있도록 하는 것입니다."
- KAP_KAPna_medical_university:0 "중국의과대학"
- KAP_KAPna_medical_university_desc:0 "위생과 의료는 우리 군대를 야전에서 유지하고 시민들의 삶을 개선할 수 있게 해줄 것입니다. 우리는 이러한 분야에서 새로운 방법을 개발하고 이를 사람들에게 가르칠 것입니다."
- KAP_form_the_academy_of_sciences:0 "과학학술원 설립"
- KAP_form_the_academy_of_sciences_desc:0 "우리의 여러 연구 시설과 대학을 규합해서 더욱 효율적인 관리가 가능한 새로운 조직을 만들 것입니다." 
+ KAP_literacy_programs:0 "수업의 재개"
+ KAP_literacy_programs_desc:0 "상황이 여의치는 않지만 배움의 중단은 결코 돌이킬 수 없는 \n퇴화의 길을 걷게 될 것입니다. \n미래를 위해 우리는 다시 배움을 추구해야합니다"
+ KAP_land_redistribution:0 "재정비 시작"
+ KAP_land_redistribution_desc:0 "갑자기 들이닥친 상황에 모두가 혼란을 겪고 있습니다. \n우리에겐 지금 당장 필요한 것이 무엇인지 생각할 시간이 필요합니다."
+ KAP_literacy_programs:0 "아"
+ KAP_KAPna_medical_university:0 "고급 교육"
+ KAP_KAPna_medical_university_desc:0 "물적 자원에서 여유가 생긴 지금이 바로 \n배움의 폭을 넓혀, 끝없는 배움을 갈구할 때입니다"
+ KAP_form_the_academy_of_sciences:0 "이해가 쏙쏙 되잖아"
+ KAP_form_the_academy_of_sciences_desc:0 "젠장 코하네 이해가 쏙쏙 되잖아." 
 
  #캐릭터 이름
  KAP_Kohane: "오히토메 코하네"
@@ -97,3 +100,8 @@
  KAP_reconnaissance_Kaoru: "감시한다"
  KAP_in_jang_jujack_Kaoru: "인장주작은 뭐야"
  KAP_Zotdam_Kaoru: "좆됐네"
+
+ #국민정신
+ KAP_gongsadamang:0 "코하네 좆돼다"
+ KAP_kohane_vanjyai:0 "동경하는 소녀, 코하네"
+ KAP_halo_and_sword:0 "빛을내는 광륜, 찬란한 칼날"

@@ -19,3 +19,29 @@ ideas = {
 		}
 	}
 }
+
+ideas = {
+	country = {
+		KAP_halo_and_sword = {
+			picture = KAP_halo_and_sword
+			
+			allowed = {
+				tag = KAP
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				command_power_gain = 0.1
+            	army_org_factor = 0.1
+				army_core_attack_factor = 0.25
+				army_core_defence_factor = 0.25
+				custom_modifier_tooltip =  "광륜의 빛에 칼날이 찬란한 물결 내뿜으면, 두려움 없이 앞으로 전진하리라."
+			}
+		}
+	}
+}

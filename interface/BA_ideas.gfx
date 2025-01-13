@@ -881,4 +881,9 @@ spriteTypes = {
 		name = "GFX_idea_KAP_zotdam"
 		textureFile = "gfx/interface/ideas/KAP/KAP_zotdam.tga"
 	}
+
+	spriteType = {
+		name = "GFX_idea_KAP_halo_and_sword"
+		textureFile = "gfx/interface/ideas/KAP/KAP_halo_and_sword"
+	}
 }

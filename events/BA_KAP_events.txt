@@ -1,0 +1,37 @@
+add_namespace = KAP_event
+
+news_event = {
+	id = KAP_event.1
+	title = KAP_event.1.t
+	desc = KAP_event.1.desc
+	picture = GFX_event_KAP_declared
+
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = KAP_event.1.a
+		trigger = {
+			original_tag = KAP
+		}
+	}
+	option = {
+		name = KAP_event.1.b
+		trigger = {
+			is_literally_china = yes
+			NOT = {
+				original_tag = KAP
+			}
+		}
+	}
+	option = {
+		name = KAP_event.1.d
+		trigger = {
+			NOT = {
+				original_tag = CHI
+				original_tag = KAP
+				is_literally_china = yes
+			}
+		}
+	}
+}
