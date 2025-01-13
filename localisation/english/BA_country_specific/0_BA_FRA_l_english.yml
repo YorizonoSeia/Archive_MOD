@@ -841,8 +841,6 @@
  FRA_MIL_basement_economy_desc:0 "우리가 통제하지 못하는 지하경제가 존재합니다. 언젠가 손 볼 필요가 있습니다."
  FRA_revenge_ism:0 "타오르는 보복주의"
  FRA_economy_hege:0 "프랑스 경제 패권"
- FRA_not_united_military:0 "망명 부대"
- FRA_not_united_military_desc:0 "급하게 망명을 함에 따라, 군조직은 무질서해졌습니다. 우리는 군제 개혁을 통해 이러한 문제점들을 해결해야 합니다."
  FRA_promise_cut:0 "강력한 식민지인 저항"
  FRA_promise_cut_desc:0 "정부의 약속을 믿고 수십만의 식민지인 남성들이 전장에서 목숨을 잃었고, 수십만의 식민지인 여성들이 밤낮없이 작업장에서 일했습니다. 그들은 더 이상 정부를 신뢰할 수 없으며, 독립을 얻기 위해 그들의 망가진 삶을 언제든지 내던질 수 있습니다."
  FRA_promise:0 "마지막 약속"
@@ -961,6 +959,13 @@
  FRA_start_2_desc:0 "본토에서의 전쟁 동안, 세계 곳곳의 해외 영토들은 중앙 정부의 통제에서 벗어나 독자적으로 행동하거나, 외부 세력의 공격에 노출되었습니다. 우리는 식민지 행정을 복구하기 위해 식민지와의 연락을 시도할 것입니다."
  FRA_start_3:0 "외교적 입지 재확인"
  FRA_start_3_desc:0 "'대전이'로부터 유럽 세계를 지키기 위해 결성된 스트레사 전선은 프랑스 정부가 비록 망명 중임에도 유효합니다. 우리는 국제적 공조를 통해 본토 수복을 준비하여야 합니다."
+
+ FRA_focus_shortcut_industry: "산업화"
+ FRA_focus_shortcut_diplomacy: "외교"
+ FRA_focus_shortcut_intervention: "개입"
+ FRA_focus_shortcut_military: "군사"
+ FRA_focus_shortcut_resistance: "레지스탕스"
+ FRA_focus_shortcut_resist: "거센 저항"
 
  FRA_focus.1:0 "망명은 끝이다!"
  FRA_focus.1_desc:0 "페텡은 다시 본토를 회복하자는 결의를 불태웠습니다."

@@ -15,6 +15,37 @@ focus_tree = {
         x = 10
         y = 0
     }
+	shortcut = {
+		name = FRA_focus_shortcut_resist
+		target = FRA_focus_resist_1
+		scroll_wheel_factor = 0.7
+	}
+	shortcut = {
+		name = FRA_focus_shortcut_resistance
+		target = FRA_focus_resistance_1
+		scroll_wheel_factor = 1
+	}
+	shortcut = {
+		name = FRA_focus_shortcut_military
+		target = FRA_focus_arm_1
+		scroll_wheel_factor = 1
+	}
+	shortcut = {
+		name = FRA_focus_shortcut_intervention
+		target = FRA_focus_spain_4
+		scroll_wheel_factor = 1
+	}
+	shortcut = {
+		name = FRA_focus_shortcut_diplomacy
+		target = FRA_focus_london_5
+		scroll_wheel_factor = 1
+	}
+	shortcut = {
+		name = FRA_focus_shortcut_industry
+		target = FRA_focus_2 
+		scroll_wheel_factor = 1
+	}
+
 	focus = {
 		#망명은 끝이다!
 		id = FRA_focus.1
@@ -771,10 +802,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_political_power = 50
-			swap_ideas = {
-				remove_idea = FRA_not_united_military
-				add_idea = FRA_not_united_military_1
-			}
 		}
 	}
 	focus = {
@@ -795,10 +822,6 @@ focus_tree = {
 			focus = FRA_focus_arm_3
 		}
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = FRA_not_united_military_1
-				add_idea = FRA_not_united_military_2
-			}
 			army_experience = 50
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.5
@@ -825,10 +848,6 @@ focus_tree = {
 			focus = FRA_focus_arm_2
 		}
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = FRA_not_united_military_1
-				add_idea = FRA_not_united_military_2
-			}
 			army_experience = 50
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.5
@@ -855,10 +874,6 @@ focus_tree = {
 			focus = FRA_focus_arm_3
 		}
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = FRA_not_united_military_1
-				add_idea = FRA_not_united_military_2
-			}
 			army_experience = 50
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.5
@@ -908,21 +923,6 @@ focus_tree = {
 			focus = FRA_focus_new_arm_0
 		}
 		completion_reward = {
-			if = {
-				limit = {
-					has_idea = FRA_not_united_military_3
-				}
-				swap_ideas = {
-					remove_idea = FRA_not_united_military_3
-					add_idea = FRA_not_united_military_air_first
-				}
-			}
-			else_if = {
-				limit = {
-					has_idea = FRA_not_united_military_navy_first
-				}
-				remove_ideas = FRA_not_united_military_navy_first
-			}
 			air_experience = 50
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.2
@@ -943,21 +943,6 @@ focus_tree = {
 			focus = FRA_focus_new_arm_0
 		}
 		completion_reward = {
-			if = {
-				limit = {
-					has_idea = FRA_not_united_military_3
-				}
-				swap_ideas = {
-					remove_idea = FRA_not_united_military_3
-					add_idea = FRA_not_united_military_navy_first
-				}
-			}
-			else_if = {
-				limit = {
-					has_idea = FRA_not_united_military_air_first
-				}
-				remove_ideas = FRA_not_united_military_air_first
-			}
 			navy_experience = 50
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.2
@@ -1121,15 +1106,6 @@ focus_tree = {
 			focus = FRA_focus_arm_3
 		}
 		completion_reward = {
-			if = {
-				limit = {
-					has_idea = FRA_not_united_military_2
-				}
-				swap_ideas = {
-					remove_idea = FRA_not_united_military_2
-					add_idea = FRA_not_united_military_3
-				}
-			}
 			army_experience = 10
 			add_tech_bonus = {
 				category = infantry_weapons
@@ -1152,15 +1128,6 @@ focus_tree = {
 			focus = FRA_focus_arm_3.5
 		}
 		completion_reward = {
-			if = {
-				limit = {
-					has_idea = FRA_not_united_military_2
-				}
-				swap_ideas = {
-					remove_idea = FRA_not_united_military_2
-					add_idea = FRA_not_united_military_3
-				}
-			}
 			army_experience = 10
 			set_technology = {
 				tech_military_police = 1
@@ -1188,15 +1155,6 @@ focus_tree = {
 			focus = FRA_focus_arm_3
 		}
 		completion_reward = {
-			if = {
-				limit = {
-					has_idea = FRA_not_united_military_2
-				}
-				swap_ideas = {
-					remove_idea = FRA_not_united_military_2
-					add_idea = FRA_not_united_military_3
-				}
-			}
 			army_experience = 10
 			add_tech_bonus = {
 				category = artillery
@@ -1219,15 +1177,6 @@ focus_tree = {
 			focus = FRA_focus_arm_3.5
 		}
 		completion_reward = {
-			if = {
-				limit = {
-					has_idea = FRA_not_united_military_2
-				}
-				swap_ideas = {
-					remove_idea = FRA_not_united_military_2
-					add_idea = FRA_not_united_military_3
-				}
-			}
 			army_experience = 10
 			add_tech_bonus = {
 				category = artillery
@@ -1264,15 +1213,6 @@ focus_tree = {
 			focus = FRA_focus_arm_3.5
 		}
 		completion_reward = {
-			if = {
-				limit = {
-					has_idea = FRA_not_united_military_2
-				}
-				swap_ideas = {
-					remove_idea = FRA_not_united_military_2
-					add_idea = FRA_not_united_military_3
-				}
-			}
 			army_experience = 10
 			add_tech_bonus = {
 				category = engineers_tech
@@ -1293,15 +1233,6 @@ focus_tree = {
 			focus = FRA_focus_arm_3.5
 		}
 		completion_reward = {
-			if = {
-				limit = {
-					has_idea = FRA_not_united_military_2
-				}
-				swap_ideas = {
-					remove_idea = FRA_not_united_military_2
-					add_idea = FRA_not_united_military_3
-				}
-			}
 			add_tech_bonus = {
 				category = motorized_equipment
 				uses = 1
