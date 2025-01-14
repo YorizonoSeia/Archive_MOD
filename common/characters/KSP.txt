@@ -147,7 +147,7 @@ characters={
 		}
 		gender = female
 		country_leader={
-			ideology=police_democratic
+			ideology=police_neutralism
 			traits = {  }
 			expire="1965.1.1.1"
 			id=-1
@@ -226,7 +226,7 @@ characters={
 		}
 		gender = female
 		country_leader={
-			ideology=police_neutralism
+			ideology=police_democratic
 			traits = {  }
 			expire="1965.1.1.1"
 			id=-1

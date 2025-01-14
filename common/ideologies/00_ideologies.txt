@@ -52,7 +52,7 @@ ideologies = {
 
 			police_democratic = {
 				can_be_randomly_selected = no
-				color = { 182 186 221 }
+				color = { 189 153 161 }
 			}
 
 			srt_democratic = {
@@ -170,7 +170,7 @@ ideologies = {
 
 			police_communism = {
 				can_be_randomly_selected = no
-				color = { 182 186 221 }
+				color = { 219 93 111 }
 			}
 
 			srt_communism = {
@@ -431,7 +431,6 @@ ideologies = {
 
 			police_neutralism = {
 				can_be_randomly_selected = no
-				color = { 182 186 221 }
 			}
 
 			srt_neutralism = {
