@@ -2201,31 +2201,6 @@ news_event = { #발키리 괴뢰화
 	is_triggered_only = yes
 	
 	option = {
-		trigger = {
-			tag = SHE
-		}
-		name = BA_news.61.a
-		puppet = {
-			target = KSP
-			end_wars = yes
-		}
-		KSP = {
-			BA_puppet_on_action_effect = yes
-			set_politics = {
-				ruling_party = communism
-			}
-			add_popularity = {
-				ideology = communism
-				popularity = 0.60
-			}
-		}
-	}
-	option = {
-		trigger = {
-			NOT = {
-				tag = SHE
-		   }
-		}
 		name = BA_news.61.a
 	}
 }
@@ -2749,6 +2724,17 @@ news_event = { #죄수탈옥
 
 	major = yes	
 	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = KIABOTOS_Escape
+			KSP = {
+				set_country_flag = KSP_wakamo_sabotage_activated
+				#complete_national_focus = KSP_wakamo_problem
+				add_ideas = KSP_wakamo_sabotage
+			}
+		}
+	}
 		
 	option = {
 		name = BBA_italo_ethiopian_war_events.302.a
@@ -2757,22 +2743,11 @@ news_event = { #죄수탈옥
 				TAG = KSP
 			}
 		}
-		hidden_effect = {
-			set_global_flag = KIABOTOS_Escape
-		}
 	}
 	option = {
 		name = BA_news.76.b
 		trigger = {	
 			TAG = KSP
-		}
-		hidden_effect = {
-			set_global_flag = KIABOTOS_Escape
-			KSP = {
-				set_country_flag = KSP_wakamo_sabotage_activated
-				#complete_national_focus = KSP_wakamo_problem
-				add_ideas = KSP_wakamo_sabotage
-			}
 		}
 	}
 }

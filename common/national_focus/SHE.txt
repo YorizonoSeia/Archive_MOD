@@ -693,12 +693,7 @@ focus_tree = {
 		}
 		available = {
 			OR = {
-				AND = {
-					country_exists = KSP
-					NOT = {
-						is_in_faction_with = KSP
-					}
-				}
+				is_in_faction_with = KSP
 				has_completed_focus = SHE_hanayikibotoseu
 				KSP = { is_subject_of = ROOT }
 			}

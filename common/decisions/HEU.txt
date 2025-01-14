@@ -1745,9 +1745,9 @@ HEU_aru_GSC_defiance_decision_category = {
 				defender = {
 					state = 980
 					num_provinces = 4
-					on_win = HEU_event.4
-					on_lose = HEU_event.5
-					on_cancel = HEU_event.6
+					on_win = HEU_event.13
+					on_lose = HEU_event.14
+					on_cancel = HEU_event.15
 				}
 			}
 			add_to_variable = {
@@ -1853,9 +1853,9 @@ HEU_aru_GSC_defiance_decision_category = {
 				defender = {
 					state = 989
 					num_provinces = 4
-					on_win = HEU_event.4
-					on_lose = HEU_event.5
-					on_cancel = HEU_event.6
+					on_win = HEU_event.13
+					on_lose = HEU_event.14
+					on_cancel = HEU_event.15
 				}
 			}
 			add_to_variable = {

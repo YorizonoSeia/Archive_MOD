@@ -2106,12 +2106,15 @@ SHA_Shanhaijinfascism = {
 	
 	conscription_factor = SHA_Shanhaijinfascism_conscription_factor
 	army_org_factor = SHA_Shanhaijinfascism_army_org_factor
+	army_morale_factor =SHA_Shanhaijinfascism_army_morale_factor
 	research_speed_factor = SHA_Shanhaijinfascism_research_speed_factor
 	
 	economy_cost_factor = SHA_Shanhaijinfascism_economy_cost_factor
 	mobilization_laws_cost_factor = SHA_Shanhaijinfascism_mobilization_laws_cost_factor
 	trade_laws_cost_factor = SHA_Shanhaijinfascism_trade_laws_cost_factor
 	justify_war_goal_time = SHA_Shanhaijinfascism_justify_war_goal_time
+
+	production_lack_of_resource_penalty_factor = SHA_Shanhaijinfascism_production_lack_of_resource_penalty_factor
 
 }
 

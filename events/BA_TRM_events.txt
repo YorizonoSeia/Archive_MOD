@@ -4485,6 +4485,125 @@ country_event = {
 		}
 	}
 }
+
+# 군민정청
+country_event = { 
+	id = TRN_after_war_event.20
+	title = TRN_after_war_event.20.t
+	desc = TRN_after_war_event.20.desc
+	picture = GFX_event_none_picture
+	
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	option = { #
+		name = TRN_after_war_event.20.a
+		every_owned_state = {
+			limit = {
+				OR = {
+					is_core_of = GEM
+					is_core_of = GEH
+				}
+			}
+			add_resistance = 25
+		}
+		set_variable = { TRM_GehennaResistance_speed = 50 }
+		activate_mission = TRM_loop_Gehenna_Resistance
+		hidden_effect = {
+			country_event = { id = TRN_after_war_event.21 hours = 02 }
+		}
+	}
+}
+
+# 군정장관 임명명
+country_event = { 
+	id = TRN_after_war_event.21
+	title = TRN_after_war_event.21.t
+	desc = TRN_after_war_event.21.desc
+	picture = GFX_event_none_picture
+	
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	option = { #
+		name = TRN_after_war_event.21.a
+		every_owned_state = {
+			limit = {
+				OR = {
+					is_core_of = GEM
+					is_core_of = GEH
+				}
+			}
+			add_compliance = 3
+			add_resistance = -3
+		}
+		add_political_power = 25
+		hidden_effect = {
+			TRN_gktmal = {
+				unit_leader_event = {
+					id = TRN_after_war_event.22
+					#days = 04
+				}
+			}
+		}
+	}
+	
+	option = { #
+		name = TRN_after_war_event.21.b
+		every_owned_state = {
+			limit = {
+				OR = {
+					is_core_of = GEM
+					is_core_of = GEH
+				}
+			}
+			add_resistance = -5
+		}
+		add_war_support = 0.05
+		hidden_effect = {
+			TRN_tmwmal = {
+				unit_leader_event = {
+					id = TRN_after_war_event.23
+					#days = 04
+				}
+			}
+		}
+	}
+}
+
+# 하스미
+unit_leader_event = { 
+	id = TRN_after_war_event.22
+	title = TRN_after_war_event.22.t
+	desc = TRN_after_war_event.22.desc
+	picture = GFX_event_none_picture
+	
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	option = { #
+		name = TRN_after_war_event.22.a
+		add_war_support = 0.005
+		set_country_flag = TRM_hasumi_military_occ
+	}
+}
+
+# 스즈미 반응 
+unit_leader_event = {
+	id = TRN_after_war_event.23
+	title = TRN_after_war_event.23.t
+	desc = TRN_after_war_event.23.desc
+	picture = GFX_event_none_picture
+	
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	option = { #
+		name = TRN_after_war_event.22.a
+		add_war_support = -0.005
+		set_country_flag = TRM_suzumi_military_occ
+	}
+}
 country_event = {  # 디버그 이벤트
 	id = TRM_event.1000
 	title = TRM_event.1000.t
@@ -4530,6 +4649,7 @@ country_event = {  # 디버그 이벤트
 		
 		option = { #
 			name = TRM_event.1001.a
+			clr_global_flag = TRN_country_collapse_decisions_end_flag
 		}
 	}
 

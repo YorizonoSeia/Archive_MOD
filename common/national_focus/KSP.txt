@@ -170,8 +170,6 @@ focus_tree = {
 		}
 	}
 
-	#연정 x루트
-
 	focus = {
 		id = KSP_belgium_baechuk
 		icon = GFX_goal_generic_demand_territory
@@ -196,17 +194,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 150
-			#add_ideas = KSP_belgium_banbal
-			#if = {
-			#	limit = { has_idea = KSP_hyeongiin_help }
-			#	remove_ideas = KSP_hyeongiin_help
-			#}
-			#if = {
-			#	limit = { has_idea = KSP_hyeongiin_help_1 }
-			#	remove_ideas = KSP_hyeongiin_help_1
-			#}
-			#add_country_leader_trait = KSP_KANNA_SET0_0
+			country_event = { id = KSP_event.17 hours = 8 }
 		}
 	}
 
@@ -230,7 +218,10 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 50
 			add_stability = 0.05
-			remove_ideas = KSP_valkyrie_chaos
+			swap_ideas = {
+				remove_idea = KSP_valkyrie_chaos
+				add_idea = KSP_new_systems
+			}
 		}
 	}
 	focus = {
@@ -247,7 +238,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = 50
-			add_ideas = KSP_new_systems
+			KSP_spread_out_officers_modifier_down = yes
 		}
 	}
 	focus = {
@@ -320,8 +311,8 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.05
 			add_popularity = {
-				ideology = neutrality
-				popularity = 0.10
+				ideology = fascism
+				popularity = -0.10
 			}
 			remove_ideas = KSP_new_systems
 
@@ -549,6 +540,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 50
 			add_stability = 0.05
+			KSP_spread_out_officers_modifier_down = yes
 		}
 	}
 	focus = {
@@ -738,7 +730,7 @@ focus_tree = {
 				value = 0.010
 				tooltip = conscription_tt
 			}
-
+			KSP_spread_out_officers_modifier_down = yes
 		}
 	}
 	# focus = {
@@ -883,9 +875,10 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.10
 			add_popularity = {
-				ideology = neutrality
+				ideology = democratic
 				popularity = 0.10
 			}
+			KSP_spread_out_officers_modifier_down = yes
 		}
 	}
 	focus = {
@@ -1175,6 +1168,7 @@ focus_tree = {
 			add_stability = 0.10
 			remove_ideas = KSP_damaged_country
 			remove_ideas = KSP_gaebaljaegundanguk
+			KSP_spread_out_officers_modifier_down = yes
 		}
 	}
 	# focus = {
@@ -1423,13 +1417,23 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 10
 			remove_ideas = KSP_duties_of_the_police_academy
-			remove_ideas = KSP_new_systems
-			remove_ideas = KSP_spread_out_officers_modifier_1
+			remove_ideas = KSP_valkyrie_chaos
 			add_timed_idea = {
 				idea = KSP_sanghwal_safety_coup_idea
 				days = 730
 			}
 			retire_character = KSP_Ogata_Kanna
+			set_politics = {
+				ruling_party = communism
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.60
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.35
+			}
 			news_event = BA_news.61
 		}
 		
@@ -2728,7 +2732,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.05
 			add_popularity = {
-				ideology = neutrality
+				ideology = democratic
 				popularity = 0.10
 			}
 			hidden_effect = {
@@ -2768,10 +2772,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = KSP_spread_out_officers_modifier_1
-				add_idea = KSP_spread_out_officers_modifier_3
-			}
+			KSP_spread_out_officers_modifier_down = yes
 		}
 	}
 
@@ -3578,7 +3579,7 @@ focus_tree = {
 			add_political_power = 15
 			add_stability = 0.10
 			add_popularity = {
-				ideology = neutrality
+				ideology = democratic
 				popularity = 0.10
 			}
 		}
@@ -3613,7 +3614,7 @@ focus_tree = {
 			}
 			add_to_variable = {
 				var = KSP_kspd_stability_factor
-				value = 0.10
+				value = 0.05
 				tooltip = stability_factor_tt
 			}
 			add_to_variable = {
@@ -3657,7 +3658,7 @@ focus_tree = {
 			custom_effect_tooltip = KSP_kspd
 			add_to_variable = {
 				var = KSP_kspd_army_org_factor
-				value = 0.04
+				value = 0.10
 				tooltip = army_org_factor_tt
 			}
 			add_to_variable = {
@@ -3667,17 +3668,17 @@ focus_tree = {
 			}
 			add_to_variable = {
 				var = KSP_kspd_consumer_goods_factor
-				value = 0.12
+				value = 0.10
 				tooltip = consumer_goods_factor_tt
 			}
 			add_to_variable = {
 				var = KSP_kspd_stability_factor
-				value = 0.10
+				value = 0.05
 				tooltip = stability_factor_tt
 			}
 			add_to_variable = {
 				var = KSP_kspd_industrial_capacity_factory
-				value = 0.08
+				value = 0.02
 				tooltip = industrial_capacity_factory_tt
 			}
 		}
@@ -3761,7 +3762,7 @@ focus_tree = {
 			}
 			add_to_variable = {
 				var = KSP_kspd_production_speed_buildings_factor
-				value = 0.15
+				value = 0.05
 				tooltip = production_speed_buildings_factor_tt
 			}
 		}
@@ -3824,7 +3825,7 @@ focus_tree = {
 			custom_effect_tooltip = KSP_kspd
 			add_to_variable = {
 				var = KSP_kspd_global_building_slots_factor
-				value = 0.20
+				value = 0.10
 				tooltip = global_building_slots_factor_tt
 			}
 			add_to_variable = {
@@ -3834,12 +3835,12 @@ focus_tree = {
 			}
 			add_to_variable = {
 				var = KSP_kspd_industrial_capacity_factory
-				value = 0.20
+				value = 0.05
 				tooltip = industrial_capacity_factory_tt
 			}
 			add_to_variable = {
 				var = KSP_kspd_industrial_capacity_dockyard
-				value = 0.25
+				value = 0.05
 				tooltip = industrial_capacity_dockyard_tt
 			}
 		}
@@ -3878,7 +3879,7 @@ focus_tree = {
 			}
 			add_to_variable = {
 				var = KSP_kspd_war_support_factor
-				value = 0.10
+				value = 0.05
 				tooltip = war_support_factor_tt
 			}
 			add_to_variable = {
@@ -3913,13 +3914,8 @@ focus_tree = {
 			custom_effect_tooltip = KSP_kspd
 			add_to_variable = {
 				var = KSP_kspd_consumer_goods_factor
-				value = -0.12
+				value = -0.10
 				tooltip = consumer_goods_factor_tt
-			}
-			add_to_variable = {
-				var = KSP_kspd_war_support_factor
-				value = 0.05
-				tooltip = war_support_factor_tt
 			}
 			add_to_variable = {
 				var = KSP_kspd_stability_factor
@@ -4004,12 +4000,12 @@ focus_tree = {
 			custom_effect_tooltip = KSP_kspd
 			add_to_variable = {
 				var = KSP_kspd_consumer_goods_factor
-				value = -0.075
+				value = -0.05
 				tooltip = consumer_goods_factor_tt
 			}
 			add_to_variable = {
 				var = KSP_kspd_production_speed_buildings_factor
-				value = 0.15
+				value = 0.05
 				tooltip = production_speed_buildings_factor_tt
 			}
 			add_to_variable = {
@@ -4128,16 +4124,13 @@ focus_tree = {
 		relative_position_id = KSP_work_with_ant
 
 		completion_reward = {
-			set_rule = {
-				desc = KSP_valkyrie_federation_rule
-				can_create_factions = yes
-			}
+			remove_ideas = KSP_new_systems
 		}
 	}
 
 	focus = {
 		id = KSP_independence_claim_1 # 샬레 수사권 완전 박탈
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_focus_generic_support_the_left_right
 		cost = 10
 
 		available = {
@@ -4152,11 +4145,9 @@ focus_tree = {
 		relative_position_id = KSP_valkyrie_federation
 
 		completion_reward = {
-			SHE = {
-				set_autonomy = {
-					target = ROOT
-					autonomy_state = autonomy_dominion
-				}
+			news_event = {
+				id = BA_news.67
+				hours = 6
 			}
 		}
 
@@ -4179,7 +4170,6 @@ focus_tree = {
 		}
 
 		bypass = {
-			is_subject = no
 		}
 
 		x = 0
@@ -4187,19 +4177,11 @@ focus_tree = {
 		relative_position_id = KSP_independence_claim_1
 
 		completion_reward = {
-			OVERLORD = {
-				end_puppet = ROOT
-				set_temp_variable = { KSP_independence_claim_2_var = THIS }
-			}
-			declare_war_on = {
-				target = var:KSP_independence_claim_2_var
-				type = independence_wargoal
+			set_rule = {
+				desc = KSP_valkyrie_federation_rule
+				can_create_factions = yes
 			}
 			create_faction = KSP_valkyrie_alliance
-			news_event = {
-				id = BA_news.67
-				hours = 6
-			}
 		}
 
 		# 가급적 늦게

@@ -241,4 +241,8 @@ opinion_modifiers = {
 	USA_civil_war_commitments = {
 		value = 25
 	}
+	
+	SHA_menacing_ambition = {
+		value = -100
+	}
 }
