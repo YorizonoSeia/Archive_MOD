@@ -375,6 +375,15 @@ BA_from_southern_kivotos = {
 			NOT = { has_country_flag = form_southern_kivotos_nation_flag }
 			NOT = { has_global_flag = form_southern_kivotos_flag }
 		}
+		available = { 
+			OR = {
+				AND = {
+					original_tag = SHA
+					has_completed_focus = SHA_the_third_kivotos
+				}
+				original_tag = HYA
+			}
+		}
 
 		available = {
 			controls_state = 4

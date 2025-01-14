@@ -1,0 +1,192 @@
+TRM_line_infantry = {
+
+	available_for = {
+		TRM
+	}
+
+	upgrade_prio = {
+		factor = 10
+	}
+	
+	role = infantry
+
+	infantry_default = {
+		upgrade_prio = {
+			base = 1
+		}
+
+		can_upgrade_in_field = {
+			surrender_progress < 0.15
+		}
+
+		target_template = {
+			regiments = {
+				infantry = 9
+				artillery_brigade = 1
+			}
+
+			support = {
+				artillery = 1
+				anti_air = 1
+				engineer = 1
+				logistics_company = 1
+				field_hospital = 1
+			}
+		}
+	}
+
+	infantry_upgraded = {
+		upgrade_prio = {
+			base = 1
+			modifier = {
+				factor = 0
+				num_of_military_factories < 45 #90% of previous threshold
+			}
+			modifier = {
+				add = 1
+			}
+			modifier = {
+				add = 1
+				num_of_military_factories > 99
+			}
+		}
+
+		can_upgrade_in_field = {
+			surrender_progress < 0.15
+		}
+
+		target_template = {
+			regiments = {
+				infantry = 9
+				artillery_brigade = 3
+			}
+
+			support = {
+				artillery = 1
+				anti_air = 1
+				engineer = 1
+				logistics_company = 1
+				field_hospital = 1
+			}
+		}
+	}
+
+	infantry_motorised = {
+		upgrade_prio = {
+			base = 1
+			modifier = {
+				factor = 0
+				NOT = { has_tech = motorised_infantry }
+			}
+			modifier = {
+				factor = 0
+				num_of_military_factories < 90 #90% of previous threshold
+			}
+			modifier = {
+				add = 1
+			}
+			modifier = {
+				add = 2
+				num_of_military_factories > 149
+			}
+		}
+
+		can_upgrade_in_field = {
+			surrender_progress < 0.15
+		}
+
+		target_template = {
+			regiments = {
+				motorized = 9
+				mot_artillery_brigade = 3
+			}
+
+			support = {
+				engineer = 1
+				artillery = 1
+				anti_air = 1
+				logistics_company = 1
+				field_hospital = 1
+			}
+		}
+	}
+
+	infantry_mechanised = {
+		upgrade_prio = {
+			base = 1
+			modifier = {
+				factor = 0
+				NOT = { has_tech = mechanised_infantry }
+			}
+			modifier = {
+				factor = 0
+				num_of_military_factories < 135 #90% of previous threshold
+			}
+			modifier = {
+				add = 1
+			}
+			modifier = {
+				add = 3
+				num_of_military_factories > 199
+			}
+		}
+
+		can_upgrade_in_field = {
+			surrender_progress < 0.15
+		}
+
+		target_template = {
+			regiments = {
+				mechanized = 9
+				mot_artillery_brigade = 3
+			}
+
+			support = {
+				artillery = 1
+				anti_air = 1
+				engineer = 1
+				logistics_company = 1
+				field_hospital = 1
+			}
+		}
+	}
+}
+
+
+# REGIMENTS:
+#infantry
+#light_armor
+#super_heavy_armor
+#modern_armor
+#heavy_armor
+#medium_armor
+#light_armor
+#anti_tank
+#cavalry
+#motorized
+#mechanized
+#marine
+#mountaineers
+#paratrooper
+#rocket_artillery
+#light_tank_destroyer
+#medium_tank_destroyer_brigade
+#heavy_tank_destroyer_brigade
+#super_heavy_tank_destroyer_brigade
+#modern_tank_destroyer_brigade
+#anti_air
+#artillery
+
+# SUPPORT:
+#engineer
+#recon
+#signal_company
+#maintenance_company
+#anti_tank_brigade
+#anti_air_brigade
+#artillery_brigade
+#field_hospital
+#logistics_company
+#military_police
+#light_sp_anti_air_brigade
+#light_sp_artillery_brigade

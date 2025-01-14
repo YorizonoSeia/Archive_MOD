@@ -540,45 +540,6 @@
 
 	}
 	focus = {
-		id = TRN_prepare_for_the_inevitable # 동원령
-		available = {
-		}
-		ai_will_do = {
-			base = 100
-		}
-        prerequisite = { focus = TRN_kickstart_the_war_industry }
-
-		icon = GFX_focus_generic_workers
-
-		x = 0
-		y = 1
-		relative_position_id = TRN_kickstart_the_war_industry
-		cost = 10.00
-		completion_reward = {
-			#add_ideas = TRN_wareconomy
-			add_ideas = TRN_mobilisation
-            custom_effect_tooltip = tooltip_white_line
-            if = {
-                limit = {
-                    has_idea = civilian_economy
-                }
-                swap_ideas = {
-                    remove_idea = civilian_economy
-                    add_idea = low_economic_mobilisation
-                }
-            }
-            if = {
-                limit = {
-                    has_idea = low_economic_mobilisation
-                }
-                swap_ideas = {
-                    remove_idea = low_economic_mobilisation
-                    add_idea = partial_economic_mobilisation
-                }
-            }
-		}
-	}
-	focus = {
 		id = TRN_Siemens_grant
 		icon = GFX_goal_generic_construct_infrastructure
 		cost = 5.00
@@ -3522,13 +3483,77 @@
 		relative_position_id = TRM_invade_benelux
 
 		will_lead_to_war_with = MIL
-		x = 1
+		x = -1
 		y = 1
 		completion_reward = {
             create_wargoal = {
     			type = annex_everything
                 target = 16.controller
             }
+		}
+	}
+    
+	focus = {
+		id = TRM_war_with_the_ussr
+		icon = GFX_focus_attack_soviet
+		cost = 10
+		available = {
+			is_subject = no
+		}
+		bypass = {
+			OR = {
+				has_war_with = SOV
+				SOV = {
+					exists = no
+				}
+			}
+		}
+		cancel = {
+			is_subject = yes
+			NOT = { country_exists = SOV }
+		}
+		will_lead_to_war_with = SOV
+		ai_will_do = {
+			base = 500
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+			}
+		}
+		prerequisite = { 
+			focus = TRM_Invasion_of_Millennium
+			focus = TRM_Invasion_of_Poland
+			focus = TRM_operation_of_Terra_Recta
+			focus = TRM_form_Rome_Eden_axis
+		}
+		relative_position_id = TRM_Invasion_of_Millennium
+		x = -1
+		y = 2
+		completion_reward = {
+			IF = {
+				limit = { SOV = { has_civil_war = no } }
+				create_wargoal = {
+					type = annex_everything
+					target = SOV
+					expire = 0
+				}
+			}
+			ELSE = {
+				every_country = {
+					limit = { original_tag = SOV }
+					TRM = {
+						create_wargoal = {
+							type = annex_everything
+							target = PREV
+							expire = 0
+						}
+					}
+				}
+			}
 		}
 	}
 
@@ -3553,7 +3578,7 @@
 		relative_position_id = TRM_invade_benelux
 
 		will_lead_to_war_with = SWI
-		x = -1
+		x = 3
 		y = 1
 		completion_reward = {
             create_wargoal = {
@@ -3589,77 +3614,13 @@
 		relative_position_id = TRM_invade_benelux
 
 		will_lead_to_war_with = POL
-		x = 3
+		x = 1
 		y = 1
 		completion_reward = {
             create_wargoal = {
     			type = annex_everything
                 target = POL
             }
-		}
-	}
-    
-	focus = {
-		id = TRM_war_with_the_ussr
-		icon = GFX_focus_attack_soviet
-		cost = 20
-		prerequisite = { 
-			#focus = TRM_Invasion_of_Poland 
-		}
-		available = {
-			is_subject = no
-		}
-		bypass = {
-			OR = {
-				has_war_with = SOV
-				SOV = {
-					exists = no
-				}
-			}
-		}
-		cancel = {
-			is_subject = yes
-			NOT = { country_exists = SOV }
-		}
-		will_lead_to_war_with = SOV
-		ai_will_do = {
-			base = 500
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-			modifier = {
-				factor = 0.5
-				has_war = no
-			}
-		}
-		prerequisite = { focus = TRM_Invasion_of_Poland }
-		prerequisite = { focus = TRM_Invasion_of_Millennium }
-		prerequisite = { focus = TRM_war_with_Swiss }
-		relative_position_id = TRM_Invasion_of_Poland
-		x = -2
-		y = 2
-		completion_reward = {
-			IF = {
-				limit = { SOV = { has_civil_war = no } }
-				create_wargoal = {
-					type = annex_everything
-					target = SOV
-					expire = 0
-				}
-			}
-			ELSE = {
-				every_country = {
-					limit = { original_tag = SOV }
-					TRM = {
-						create_wargoal = {
-							type = annex_everything
-							target = PREV
-							expire = 0
-						}
-					}
-				}
-			}
 		}
 	}
 
@@ -3898,10 +3859,9 @@
 		id = TRM_operation_isabella
 		text = GER_operation_isabella
 		icon = GFX_focus_generic_attack_portugal
+		prerequisite = { focus = TRM_form_Rome_Eden_axis focus = TRM_operation_of_Terra_Recta }
 
-		prerequisite = { focus = TRM_operation_of_Terra_Recta }
-
-		x = -0
+		x = -1
 		y = 1
 		relative_position_id = TRM_operation_of_Terra_Recta
 
