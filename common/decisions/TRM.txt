@@ -2249,7 +2249,6 @@ TRN_country_collapse_decisions = {
 				limit = { has_global_flag = TRM_declaration_of_extermination_campaign_NSD_flag }
 				set_global_flag = TRN_country_collapse_decisions_end_flag
 			}
-			unlock_decision_tooltip = TRM_add_core_of_state_61
 		}
 	}
 	TRM_declaration_of_extermination_campaign_NSD = {
@@ -2286,7 +2285,6 @@ TRN_country_collapse_decisions = {
 				limit = { has_global_flag = TRM_declaration_of_extermination_campaign_KPD_flag }
 				set_global_flag = TRN_country_collapse_decisions_end_flag
 			}
-			unlock_decision_tooltip = TRM_add_core_of_state_65
 		}
 	}
 	KPD_recruitment_campaign = {
