@@ -1395,6 +1395,14 @@ RED_minori_revolution_decision = {
 						owner = RE2
 					}
 				}
+			}
+			every_country = {
+				limit = {
+					OR = {
+						tag = RE2
+						is_puppet_of = RE2
+					}
+				}
 				declare_war_on = {
 					target = RED
 					type = civil_war

@@ -535,6 +535,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			set_cosmetic_tag = KAP_proclaimed
+			
 
 			every_state = {
 				limit = {
@@ -624,7 +625,7 @@ focus_tree = {
 				create_country_leader = {
 					name = "이토코노우에 카오루"
 					desc = "POLITICS_ZHANG_LAN_DESC"
-					picture = "GFX_portrait_KAP_zhang_lan"
+					picture = "GFX_portrait_KAP_Kaoru"
 					expire = "1965.1.1"
 					ideology = manyoshu
 					traits = {
@@ -1442,7 +1443,24 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_STABILITY }
 		completion_reward = {
-			add_stability = 0.1
+			set_cosmetic_tag = KAP_carrot
+
+			promote_character = KAP_seia
+
+			set_party_name = {
+				ideology = communism
+				long_name = seia
+				name = seia
+			}
+
+			set_politics = {
+				ruling_party = communism
+			}
+
+			add_popularity = {
+				ideology = communism
+				popularity = 3
+			}
 		}
 	}
 
@@ -1597,7 +1615,6 @@ focus_tree = {
 		id = KAP_permit_opium_trade
 		icon = GFX_goal_generic_forceful_treaty
 		prerequisite = { focus = KAP_enforce_the_three_rules}
-		mutually_exclusive = { focus = KAP_ban_the_opium_trade }
 		x = -1
 		y = 1
 		relative_position_id = KAP_enforce_the_three_rules
@@ -1629,7 +1646,6 @@ focus_tree = {
 	focus = {
 		id = KAP_ban_the_opium_trade
 		icon = GFX_goal_generic_political_pressure
-		mutually_exclusive = { focus = KAP_permit_opium_trade }
 		prerequisite = { focus = KAP_enforce_the_three_rules }
 		x = 1
 		y = 1
@@ -1662,7 +1678,8 @@ focus_tree = {
 	focus = {
 		id = KAP_abolish_the_land_rent
 		icon = GFX_focus_generic_support_the_left_right
-		prerequisite = { focus = KAP_permit_opium_trade focus = KAP_ban_the_opium_trade }
+		prerequisite = { focus = KAP_permit_opium_trade }
+		prerequisite = { focus = KAP_ban_the_opium_trade }
 		x = 0
 		y = 2
 		relative_position_id = KAP_enforce_the_three_rules
@@ -1739,7 +1756,6 @@ focus_tree = {
 
 		available = {
 			num_of_factories > 34
-			amount_research_slots < 5
 		}
 
 		bypass = {
@@ -1772,7 +1788,6 @@ focus_tree = {
 
 		available = {
 			num_of_factories > 69
-			amount_research_slots < 5
 		}
 
 		bypass = {

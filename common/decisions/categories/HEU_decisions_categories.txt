@@ -171,7 +171,7 @@ HEU_memorial_park_decision_category = { #추모공원 건립
 
 	picture = GFX_decision_cat_picture_SWI_federal_council
     
-	visible_when_empty = yes
+	#visible_when_empty = yes
 }
 
 HEU_benriya_ally_decision_category = { #동맹국 찾기

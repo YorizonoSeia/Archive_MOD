@@ -1,6 +1,11 @@
 spriteTypes = {
 
 	spriteType = {
+        name = GFX_ideology_seia
+    	texturefile = gfx/interface/ideologies/seia.dds
+    }
+	
+	spriteType = {
         name = GFX_ideology_manyoshu
         texturefile = gfx/interface/ideologies/manyoshu.dds
     }

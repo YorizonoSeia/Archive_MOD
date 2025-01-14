@@ -470,7 +470,13 @@
  yunowka_desc:0 "오래전 폐쇄되어 방치되어 있던 온천 숙소를 수리하여 기숙사로 이용하고 있다. 낡은 목조건물 때문에 기숙사생들의 원성이 자자하지만 그래도 대욕장만은 좋은 평판을 얻고 있다. 풍문으로는 기숙사 어딘가에 아주 멋진 노천탕이 숨겨져 있다나 뭐라나."
  yunowka_long:0 "유노오카"
 
-KAP_communism_party:0 "유노오카"
-KAP_democratic_party:0 "만요슈"
-KAP_fascism_party:0 "신기칸"
-KAP_neutrality_party:0 "우라노츠카사"
+ seia:0 "상투스"
+ seia_noun:0 "상투스"
+ seia_desc:0 "두 번째 신비의 시작"
+ seia_long:0 "상투스"
+ 
+
+ KAP_communism_party:0 "유노오카"
+ KAP_democratic_party:0 "만요슈"
+ KAP_fascism_party:0 "신기칸"
+ KAP_neutrality_party:0 "우라노츠카사"
