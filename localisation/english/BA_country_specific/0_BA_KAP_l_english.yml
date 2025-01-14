@@ -39,8 +39,21 @@
  KAP_KAPna_medical_university_desc:0 "물적 자원에서 여유가 생긴 지금이 바로 \n배움의 폭을 넓혀, 끝없는 배움을 갈구할 때입니다"
  KAP_form_the_academy_of_sciences:0 "이해가 쏙쏙 되잖아"
  KAP_form_the_academy_of_sciences_desc:0 "젠장 코하네 이해가 쏙쏙 되잖아." 
+ KAP_enforce_the_three_rules:0 "불안감 잠재우기"
+ KAP_enforce_the_three_rules_desc:0 "이 상황에 냉정할 수 있는 사람이 몇이나 될까요. \n우리가 그들을 진정시키지 않으면 불은 절대 꺼지지 않을겁니다."
+ KAP_permit_opium_trade:0 "설득을 위한 채찍질"
+ KAP_permit_opium_trade_desc:0 "가끔은 다소 거친 방법이 필요한 법입니다."
+ KAP_ban_the_opium_trade:0 "합일을 위한 당근"
+ KAP_ban_the_opium_trade_desc:0 "완벽히 하나가 되기 위해선 논리대신 작은 보상도 있어야 하는 법이죠."
+ KAP_abolish_the_land_rent:0 "우리가 낸 결론"
+ KAP_abolish_the_land_rent_desc:0 "각자 기숙사는 달라도, 결국 우리는 같은 학료도시 카필라에서 왔습니다. \n우리는 누가 뭐래도 같이 배움을 갈구하는 '동료'입니다."
 
- #캐릭터 이름
+ KAP_military_intelligence_department:0 "상상도 못한 만남"
+ KAP_military_intelligence_department_desc:0 "어느 날 코하네는 꿈에서 정체모를 이상하리 만치 깨어있는듯한 \n느낌을 느끼며 수상한 공간에서 눈을 뜹니다. \n그리고는 인간이라는 존재들 보단 우리쪽에 가까워 보이는 소녀를 만납니다. \n그녀는 자신을 키보토스에서 왔다고 설명함과 동시에 자신을 \n유리조노 세이아라고 덫붙였습니다."
+ KAP_central_security_bureau:0 "왠지 모를 이끌림"
+ KAP_central_security_bureau_desc:0 "뭔가 그녀라면... 그녀라면 믿고 맡겨도 될 것 같아....."
+
+#캐릭터 이름
  KAP_Kohane: "오히토메 코하네"
  KAP_Kaoru: "이토코노우에 카오루"
  KAP_koito: "아시하라츠모리 코이토"
@@ -49,8 +62,10 @@
  KAP_reconnaissance_Kaoru: "감시한다"
  KAP_in_jang_jujack_Kaoru: "인장주작은 뭐야"
  KAP_Zotdam_Kaoru: "좆됐네"
-
+ KAP_seia: "유리조노 세이아"
+ KAP_SEIA_DESC: "왠지 불쌍해 보이는 초짜 모더입니다, 항상 얻어맞는 포지션이라 이래저래 당근을 흔들어 보지만 아무래도 여전히 모딩하라고 협박을 당하고 있는 것 같습니다."
  #국민정신
- KAP_gongsadamang:0 "코하네 좆돼다"
+ KAP_gongsadamang:0 "혼란의 불씨"
  KAP_kohane_vanjyai:0 "동경하는 소녀, 코하네"
  KAP_halo_and_sword:0 "빛을내는 광륜, 찬란한 칼날"
+ KAP_2nd_sin_B:0 "두 번째 신비"

@@ -145,6 +145,11 @@ ideologies = {
 				color = { 204 41 66 }
 			}
 
+			seia = {
+				can_be_randomly_selected = no
+				color = { 242  205  94 }
+			}
+
 		#/BA_MOD_FIX
 			technocracy_communism = {
 				can_be_randomly_selected = no

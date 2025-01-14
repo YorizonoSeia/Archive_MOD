@@ -40,6 +40,7 @@ recruit_character = KAP_liu_shaoqi
 recruit_character = KAP_lin_bojiu
 recruit_character = KAP_dong_biwu
 recruit_character = KAP_he_yuandang
+recruit_character = KAP_seia
 
 set_politics = {
 	ruling_party = communism

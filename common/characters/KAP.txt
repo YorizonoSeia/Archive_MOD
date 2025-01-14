@@ -143,7 +143,7 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=manyoshu
+			ideology= manyoshu
 			traits={ hawk }
 			expire="1948.1.1.12"
 			id=-1
@@ -158,7 +158,7 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=singican
+			ideology= singican
 			traits={ financial_expert armaments_organizer }
 			expire="1956.1.1.12"
 			id=-1
@@ -172,10 +172,25 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=uranotsukasa
+			ideology= uranotsukasa
 			traits={ financial_expert }
 			expire="1949.1.1.12"
 			id=-1
+		}
+	}
+
+	KAP_seia={
+		name=KAP_seia
+		portraits={
+			civilian={
+				large=GFX_portrait_KAP_seia
+			}
+		}
+		country_leader={
+			ideology = seia
+			traits={ KAP_2nd_sin_B }
+			expire="1949.1.1.12"
+			desc = "KAP_SEIA_DESC"
 		}
 	}
 
