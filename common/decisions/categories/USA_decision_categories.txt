@@ -129,3 +129,10 @@ USA_decolonisation = {
 		priority = 95
 	}
 #BA_MOD_FIX/
+	USA_ai_congress = {
+	    allowed = {
+			original_tag = USA
+		}
+		priority = 75
+	}
+#AI 강화

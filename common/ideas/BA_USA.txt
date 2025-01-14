@@ -703,14 +703,28 @@ ideas = {
 				training_time_army_factor = -0.1
 			}
 	   }
+     
+	  # 선도부 제병합동
+
+	   	USA_GEH_train = {
+            picture = tfv_can_conscription_crisis
+
+			modifier = {
+				army_org_regain = 0.1
+				army_org_factor = 0.1
+				#training_time_army_factor = 0.1
+			}
+	   }
+
        
 	   # 트리니티 제병합동
 	   USA_TRM_train = {
             picture = SWE_varnplikt
 
 			modifier = {
-				breakthrough_factor = 0.1
-				experience_loss_factor = -0.15
+				breakthrough_factor = 0.2
+				experience_loss_factor = -0.2
+				training_time_army_factor = 0.1
 			}
 	   }
 
@@ -730,12 +744,22 @@ ideas = {
         picture = generic_acquire_tanks
 
 		modifier = {
-           army_armor_attack_factor = 0.1
-           army_armor_defence_factor = 0.05
-		   army_armor_speed_factor = 0.05
+           #army_armor_attack_factor = 0.1
+           #army_armor_defence_factor = 0.05
+		   #army_armor_speed_factor = 0.1
 		}
-
-	}
+		equipment_bonus = {
+				heavy_tank_chassis = {
+				soft_attack = 0.1
+				hard_attack = 0.1
+				build_cost_ic = -0.1
+				breakthrough = 0.15
+				defense = 0.05
+				instant = yes
+		 }
+		}
+	   }
+		
 
 
       # 마셜 플랜
@@ -835,7 +859,17 @@ ideas = {
 			}
 	   }
 
-
-
+        
+		together_train = {
+            picture = tfv_can_conscription_crisis
+			allowed = {
+                tag = USA
+            }
+			modifier = {
+				modifier_army_sub_unit_category_halo_attack_factor = 0.15
+				modifier_army_sub_unit_category_halo_defence_factor = 0.15
+				modifier_army_sub_unit_category_halo_org_recovery_cap_factor = 0.1
+			}
+	   }
   }
 }
