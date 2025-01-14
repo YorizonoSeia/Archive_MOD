@@ -17,6 +17,51 @@ focus_tree = {
 	# 흥신소 정치
 	#
 	###############
+	
+	shortcut = {
+		name = HEU_end_of_holding_act_shortcut
+		target = HEU_end_of_holding_act 
+		scroll_wheel_factor = 1
+		trigger = {
+
+		}
+	}
+	
+	shortcut = {
+		name = HEU_schuster_line_shortcut
+		target = HEU_schuster_line
+		scroll_wheel_factor = 1
+		trigger = {
+
+		}
+	}
+	
+	shortcut = {
+		name = HEU_unified_gehenna_shortcut
+		target = HEU_unified_gehenna
+		scroll_wheel_factor = 1
+		trigger = {
+
+		}
+	}
+	
+	shortcut = {
+		name = HEU_watch_gehenna_shortcut
+		target = HEU_watch_gehenna 
+		scroll_wheel_factor = 0.8
+		trigger = {
+
+		}
+	}
+	
+	shortcut = {
+		name = HEU_watch_right_wing_party_shortcut
+		target = HEU_watch_right_wing_party 
+		scroll_wheel_factor = 0.8
+		trigger = {
+
+		}
+	}
 
 	focus = { 
 		id = HEU_road_to_regency
@@ -679,6 +724,8 @@ focus_tree = {
 			else = {
 				upgrade_intelligence_agency = upgrade_army_department 
 			}
+
+			add_ideas = HEU_stasi
 		}
 	}
 	
@@ -1104,6 +1151,8 @@ focus_tree = {
 				}
 			}
 
+			add_ideas = HEU_civil_rights_idea
+
 			set_politics = {
 				ruling_party = fascism
 				elections_allowed = no
@@ -1315,7 +1364,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			swap_ideas = {
+				remove_idea = HEU_civil_rights_idea
+				add_idea = HEU_civil_rights_idea_2
+			}
 		}
 	}
 
@@ -1350,7 +1402,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			add_ideas = HEU_progressive_conservatism
 		}
 	}
 
