@@ -126,6 +126,11 @@
  FRA_prov_event.31.t:0 "광범위한 선전"
  FRA_prov_event.31.d:0 "전국 각지에서 프랑스의 독립을 촉구하는 민족주의적 선전물이 부착된 것이 확인되었으며, 길거리에서의 독립을 지지하는 대중 연설의 빈도가 크게 증가했습니다. 외부에서의 지원 혹은 개입이 있는 것이 분명합니다."
  FRA_prov_event.31.a:0 "올 것이 왔다."
+ FRA_prov_event.32.t: "포대 운용"
+ FRA_prov_event.32.d: "적에게 가장 효율적으로 대응할 수 있는 포대 운용 전술을 택하고 이를 지원할 필요가 있습니다."
+ FRA_prov_event.32.a: "적당한 화력의 야포에 집중하자."
+ FRA_prov_event.32.b: "로켓포를 통한 대인공격에 집중하자."
+ FRA_prov_event.32.c: "승리는 포의 크기에서 비롯된다!"
  FRA_prov_event.33.t:0 "국방 채권의 상환을 요구하는 기업들!"
  FRA_prov_event.33.d:0 "우리가 본토를 수복함에 따라, 기업들을 비롯한 채권자들은 정부가 국방 채권을 상환할 것을 요구하고 있습니다."
  FRA_prov_event.33.a:0 "저들이 맞다."
@@ -773,6 +778,16 @@
  FRA_rebuild_dec_desc:0 "우리는 프랑스를 재건하여야 합니다. 만약 재건이 지체된다면, 프랑스의 민중들이 피로감에 휩싸여 새로운 정권을 갈구하게 될 것입니다."
 
  #국민정신
+ FRA_rebuilding_army: "병종 재건"
+ FRA_focus_on_field_gun: "야포 주력"
+ FRA_focus_on_rocket: "로켓포 주력"
+ FRA_focus_on_big_gun: "초중곡사포 주력"
+ FRA_mountain_cannon: "산악 포대"
+ FRA_manoeuvre_n_strike: "기동과 타격"
+ FRA_infantry_tactics: "보병 전술"
+ FRA_elan_vital: "'Élan Vital'"
+			
+
  FRA_building_sahara_rail:0 "사하라 철도 건설"
  FRA_industry_tools:0 "추가적인 산업 용구"
  FRA_pet_one_union:0 "단일 노동조합"

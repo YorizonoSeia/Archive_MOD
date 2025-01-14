@@ -2721,6 +2721,9 @@ FRA_propaganda = {
 				}
 			}
 		}
+		available = {
+			has_completed_focus = FRA_focus_new_arm_11
+		}
 		days_re_enable = 60
 		days_remove = 120
 		cost = 15
