@@ -6627,7 +6627,6 @@ political_actions = {
 		targets = { KPD }
 
 		visible = {
-			has_global_flag = TRN_country_collapse_decisions_end_flag
 			OR = {
 				has_completed_focus = TRM_naechi
 				has_completed_focus = TRN_uber_alles
@@ -6657,7 +6656,6 @@ political_actions = {
 		targets = { NSD }
 
 		visible = {
-			has_global_flag = TRN_country_collapse_decisions_end_flag
 			OR = {
 				has_completed_focus = TRM_naechi
 				has_completed_focus = TRN_uber_alles
