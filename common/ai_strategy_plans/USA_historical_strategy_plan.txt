@@ -64,9 +64,10 @@ USA_historical_plan = {
 		USA_intervention_in_asia
 		USA_war_plan_orange
 		USA_federal_housing_act
+		USABA_american_reindustrialization
 		USA_selective_training_act
 		USA_louisiana_maneuvers
-	    USABA_contact_with_opposition
+		USA_war_plan_KAI
 		USA_two_ocean_navy_act
 		USA_bureau_of_ships
 		USA_army_of_the_united_states
@@ -77,8 +78,8 @@ USA_historical_plan = {
 		USA_arsenal_of_democracy
 		USA_the_giant_wakes
 		USA_military_construction
-	    USA_support_GEK
-		USA_attack_TRM
+	    USA_support_alies
+		USA_attack_KAI
 		USA_fast_train
 	}
 
@@ -94,7 +95,7 @@ USA_historical_plan = {
 
 	}
 	traits = {
-		war_industrialist = 1
+		war_industrialist = 1	`
 		financial_expert = 1
 		silent_workhorse = 50
 	}

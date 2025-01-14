@@ -252,20 +252,6 @@ characters={
 				small="gfx/interface/advisors/SHA/SHA_Spot_6.tga"
 			}
 		}
-		advisor={	
-			slot = political_advisor
-			idea_token = SHA_RORISHUN_1
-			allowed = {
-				original_tag = SHA
-			}
-			traits = {
-				SHA_T5a
-			}
-			cost = 150
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
 		advisor={
 			slot = air_chief
 			idea_token = SHA_RORISHUN_2
@@ -280,6 +266,21 @@ characters={
 			}
 			ai_will_do = {
 				factor = 1.000
+			}
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = SHA_RORISHUN_theorist
+			ledger = army
+			allowed = {
+				original_tag = SHA
+			}
+			ai_will_do = {
+				factor = 2.000 
+			}
+			traits = {
+				military_theorist
 			}
 		}
 		corps_commander={
@@ -416,7 +417,7 @@ characters={
 			legacy_id=-1
 		}
 		advisor={	
-			slot = high_command
+			slot = army_chief
 			idea_token = SHA_REIJO_1
 			allowed = {
 				original_tag = SHA
@@ -425,9 +426,9 @@ characters={
 
 			}
 			traits = {
-				SHA_T7a
+				army_chief_organizational_2
 			}
-			cost = 150
+			cost = 100
 			ai_will_do = {
 				factor = 1.000
 			}

@@ -791,12 +791,19 @@
 
  SHA_ascension: "승천"
  SHA_ascension_desc: ""
+ SHA_Alchemy_and_modern_science: "연금술과 현대 과학"
+ SHA_Alchemy_and_modern_science_desc: ""
+ SHA_supremacy_of_will: "의지의 우월성"
+ SHA_supremacy_of_technology: "기술의 우월성"
+ SHA_Twilight_of_the_Gods: "신들의 황혼"
+ SHA_Ragnarok: "라그나로크"
 
 
  # 보수 혁명 루트
  SHA_conservative_revolution: "보수혁명"
  SHA_conservative_revolution_tt: "현재 §Y파시즘 지지율§!을 §Y비동맹주의 지지율§!로 변환합니다."
  SHA_conservative_revolution_desc: "수 년 넘게 산해경엔 제대로 된 보수파 문주가 없었으며, 전 문주의 짧았던 임기를 감안해봤을 때 이 퇴폐의 공백은 수십 년 이상으로 늘어납니다. 이러한 가식은 끝나야 합니다. 우리는 웅대한 보수혁명 속에서 올바른 산해경 애국자들의 이상에 따라 산해경을 재편해야 합니다."
+ SHA_conservative_is_not_work: "§t승전 이후의 중점이 제작되지 않았습니다! 따라서 파시즘 경로를 진행해주시길 권장합니다. 만약 이 경고를 숙지하고도 보수혁명 경로를 선택하신다면, 그로 인한 결과는 전적으로 플레이어의 선택에 따른 것임을 명심해주세요!§!"
  SHA_new_shanhaijing_conservatism: "새로운 산해경 보수주의"
  SHA_new_shanhaijing_conservatism_desc: ""
  SHA_Expansion_of_cooperation_with_other_clubs: "타 동아리 협력 확대"
@@ -813,7 +820,18 @@
  SHA_New_Genryumon_Peking_Opera_Department_Relations_desc: ""
  SHA_Engine_of_conservative_revolution: "보수혁명의 원동기"
  SHA_Engine_of_conservative_revolution_desc: ""
+ 
  SHA_2nd_conservative_revolution: "제 2차 보수혁명"
+ SHA_2nd_conservative_revolution_desc: "퇴폐의 20년이 지나고, 우리는 진정한 보수적 지도자를 만나 웅대한 보수혁명의 가치를 바로 세웠습니다. 또한, 백귀야행에게 빼앗겼던 영토를 되찾으며 보수혁명을 성공적으로 완수했습니다. 그러나 사회 곳곳에는 여전히 퇴폐적인 문화의 잔재가 남아 있습니다. 이러한 잔재를 완전히 없애고자 우리는 제2차 보수혁명을 시작해야 합니다. 이는 애국자들의 이상을 온전히 실현하기 위한 중요한 발걸음이 될 것입니다."
+ SHA_eradication_of_liberalism: "자유주의 척결"
+ SHA_eradication_of_liberalism_desc: ""
+ SHA_Resurrection_of_the_Soul_of_Shanhaijing: "산해경 영혼의 부활"
+ SHA_Resurrection_of_the_Soul_of_Shanhaijing_desc: ""
+ SHA_Establishment_of_the_National_Council: "학원평의회 설립"
+ SHA_Establishment_of_the_National_Council_desc: ""
+ SHA_Kivotos_conservative: "보수혁명 전파"
+ SHA_clash_of_civilizations: "문명의 충돌"
+ SHA_clash_of_civilizations_desc: ""
 
  # 공용
  SHA_Solving_the_Militia_Problem: "질서 회복"
@@ -839,6 +857,12 @@
  SHA_industrial_exploitation_desc: ""
  SHA_Leave_SHA: "학원 내 백귀야행인 추방"
  SHA_Leave_SHA_desc: ""
+ SHA_the_third_kivotos: "제3키보토스"
+ SHA_the_third_kivotos_desc: "산해경과 백귀야행은 키보토스의 지리적 변방에 위치해 왔습니다. 이러한 지리적 특성은 우리만의 독특한 문화와 정체성을 발전시키는 데 있어 유리한 조건으로 작용했습니다. 게헨나, 트리니티, 밀레니엄으로 대표되는 3대 학원과 그 영향권 아래 형성된 제1, 제2 키보토스의 그늘에서 벗어나, 기존 질서에 얽매이지 않는 새로운 제3의 키보토스를 선포할 것입니다."
+ SHA_Liberation_of_South_Kivotos: "남키보토스 해방"
+ SHA_Liberation_of_South_Kivotos_desc: ""
+ SHA_Utopia: "이상향"
+ SHA_Utopia_desc: "피로 물든 싸움 아래에 남키보토스는 하나의 학원으로 통합되었고 모든 이들은 남키보토스 통합에 대해 축배를 들며 모두가 기뻐하고 있습니다. 모든 이들의 이상향에 도달하게 되었고 우리 모든 남키보토스인들은 풍요롭고 안전하게 살 것입니다."
 
  # 국민정신
  SHA_Austrian_fascist_militia: "오스트리아인 민병대"
@@ -884,7 +908,7 @@
 
  # 이벤트
  shafas.1.t: "경극부의 쿠데타!"
- shafas.1.d: "\"산해경의 전통의 이름 아래, 현룡문의 문주 $SHA_KISAKI$, 규탄한다!\"\n\n경극이 예정되었던 운명의 날, 백호 광장에는 수백의 관중과 경극부가 운집했습니다. 그러나 이날 선보인 경극은 단순한 예술적 공연이 아니었습니다. 이는 현 산해경 현룡문의 문주인 $SHA_KISAKI$를 \"검은 군주\"에 비유하며 직접적으로 겨냥한 날카로운 풍자극이었습니다.\n\n경극의 줄거리는 어리석은 검은 군주가 변혁의 바람을 맞이하겠다며 성문을 함부로 열어 난세를 초래하고 백성을 혼란에 빠뜨린다는 내용이었습니다. 공연은 무대 위에서 펼쳐지는 환상적인 장면들과 함께 문주를 향한 강렬한 비판의 메시지를 담아냈습니다. 경극이 끝나자마자 광장은 함성으로 들끓었고, 현룡문의 급진파들이 본격적으로 활동하기 시작하였습니다.\n\n결국 이 날의 공연은 단순한 연극이 아닌 혁명의 신호탄이었습니다. 급진파들은 경극부와 합세하여 백호 광장에서 문주 $SHA_KISAKI$의 축출을 선언했고, 현장은 혼란과 분노로 뒤덮였습니다. 전통을 내세운 이들의 외침은 단순한 구호가 아닌, 문주의 권위를 무너뜨리는 날카로운 칼날이 되었던 것입니다.\n\n현재 $SHA_KISAKI$는 VIP 자택에 연금된 상황입니다. 전 문주라는 지위 덕분에 일정한 예우를 받고 있는 상황입니다. 그러나 그의 몰락 이후 산해경의 미래는 여전히 안갯속에 가려져 있습니다. 새롭게 문주의 자리에 오른 $SHA_KAGUYA$의 정책 방향이 무엇일지, 사람들 사이에서는 설왕설래가 이어지고 있습니다.\n\n그러나 내부적으로 우려의 목소리가 나오고 있습니다. 몇 년전 산해경의 치안을 어지럽힌 $SHA_KAI$의 처분을 취소시키고 다시 복학 시킨다는 위험한 소문이 돌고 있습니다..."
+ shafas.1.d: "\"산해경의 전통의 이름 아래, 현룡문의 문주 $SHA_KISAKI$, 규탄한다!\"\n\n경극이 예정되었던 운명의 날, 백호 광장에는 수백의 관중과 경극부가 운집했습니다. 그러나 이날 선보인 경극은 단순한 공연이 아니었습니다. 이는 현 산해경 현룡문의 문주인 $SHA_KISAKI$를 \"검은 군주\"에 비유하며 직접적으로 겨냥한 날카로운 풍자극이었습니다.\n\n경극의 줄거리는 어리석은 검은 군주가 변혁의 바람을 맞이하겠다며 성문을 함부로 열어 난세를 초래하고 백성을 혼란에 빠뜨린다는 내용이었습니다. 공연은 무대 위에서 펼쳐지는 환상적인 장면들과 함께 문주를 향한 강렬한 비판의 메시지를 담아냈습니다. 경극이 끝나자마자 광장은 함성으로 들끓었고, 현룡문의 급진파와 보수파들이 본격적으로 활동하기 시작하였습니다.\n\n결국 이 날의 공연은 단순한 경극이 아닌 혁명의 신호탄이 되었습니다.. 급진파와 보수파들은 경극부와 합세하여 백호 광장에서 문주 $SHA_KISAKI$의 축출을 선언했고, 현장은 혼란과 분노로 뒤덮였습니다.\n\n현재 $SHA_KISAKI$는 VIP 자택에 연금된 상황입니다. 전 문주라는 지위 덕분에 일정한 예우를 받고 있는 상황입니다. 그러나 그의 몰락 이후 산해경의 미래는 여전히 안갯속에 가려져 있습니다. 새롭게 문주의 자리에 오른 $SHA_KAGUYA$의 정책 방향이 무엇일지, 사람들 사이에서는 설왕설래가 이어지고 있습니다.\n\n그러나 내부적으로 우려의 목소리가 나오고 있습니다. 몇 년전 산해경의 치안을 어지럽힌 $SHA_KAI$의 처분을 취소시키고 다시 복학 시킨다는 위험한 소문이 돌고 있습니다..."
  shafas.1.a: "우리의 전통을 수호하자!"
 
  shafas.2.t: "현무상회의 반대!"
@@ -940,6 +964,9 @@
  SHA_ardent_conservative_3: "$SHA_ardent_conservative$"
  SHA_ardent_conservative_4: "보수의 선구자"
  SHA_sick_trait: "병약"
+ SHA_herald_of_third_kivotos: "세 번째 키보토스의 전령"
+ SHA_rider_of_revolution: "혁명의 기수"
+ SHA_revolutionary_genius: "비상한 천재"
 
  # 결정
  SHA_coup_of_Black_Tortoise_Promenade: "현무상회의 인내심 악화"

@@ -2724,6 +2724,17 @@ news_event = { #죄수탈옥
 
 	major = yes	
 	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = KIABOTOS_Escape
+			KSP = {
+				set_country_flag = KSP_wakamo_sabotage_activated
+				#complete_national_focus = KSP_wakamo_problem
+				add_ideas = KSP_wakamo_sabotage
+			}
+		}
+	}
 		
 	option = {
 		name = BBA_italo_ethiopian_war_events.302.a
@@ -2732,22 +2743,11 @@ news_event = { #죄수탈옥
 				TAG = KSP
 			}
 		}
-		hidden_effect = {
-			set_global_flag = KIABOTOS_Escape
-		}
 	}
 	option = {
 		name = BA_news.76.b
 		trigger = {	
 			TAG = KSP
-		}
-		hidden_effect = {
-			set_global_flag = KIABOTOS_Escape
-			KSP = {
-				set_country_flag = KSP_wakamo_sabotage_activated
-				#complete_national_focus = KSP_wakamo_problem
-				add_ideas = KSP_wakamo_sabotage
-			}
 		}
 	}
 }
@@ -3616,8 +3616,8 @@ news_event = {
 			TAG = INK
 		}
 	}
-				hidden_effect = {
-				scoped_play_song = "imperterrita" #BA_united_nations_music 
+			hidden_effect = {
+				scoped_play_song = "USA_The_Old_Order"
 				set_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 21
@@ -3653,8 +3653,8 @@ news_event = {
 			}
 		}
  	}
-				hidden_effect = {
-				scoped_play_song = "imperterrita"
+			hidden_effect = {
+				scoped_play_song = "USA_The_Old_Order"
 				set_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 21
@@ -3682,13 +3682,12 @@ news_event = {
 	    }
 		hidden_effect = {
 	     	scoped_play_song = "USA_The_New_Order"
-
 		    start_civil_war = {
             ideology = neutrality
-            size = 0.6
+            size = 0.7
             capital = 358
             states = { 
-               357 358 360 359 261 393 378
+               357 358 360 359 261 393 378 385 379
             }
         } 
 	  }
@@ -3749,7 +3748,7 @@ news_event = {
 				}
 			}
 		}
-				hidden_effect = {
+		hidden_effect = {
 		scoped_play_song = "USA_The_New_Order"
 	}
 	}

@@ -1940,8 +1940,7 @@ USA_war_plans = {
 		fire_only_once = yes
 		days_remove = 180
 		modifier = {
-			#돌파 관련 효과 넣을 것
-			#research_speed_factor = 0.1
+			army_org_regain = 0.1
 		}
 		targeted_modifier = {
 			tag = TRM
@@ -1964,8 +1963,7 @@ USA_war_plans = {
 		fire_only_once = yes
 		days_remove = 180
 		modifier = {
-			#해군 관련 효과 넣을 것
-			#research_speed_factor = 0.1
+			naval_damage_factor = 0.1
 		}
 		targeted_modifier = {
 			tag = KAI
@@ -1990,8 +1988,7 @@ USA_war_plans = {
 		fire_only_once = yes
 		days_remove = 180
 		modifier = {
-			# 정치 변경 관련 효과 넣을 것
-			# research_speed_factor = 0.1
+			winter_attrition = -0.1
 		}
 		targeted_modifier = {
 			tag = RED
@@ -2006,7 +2003,6 @@ USA_war_plans = {
 			or = {
 				has_war_with = GEM
 				has_war_with = GEH
-
 			}
 		}
 
@@ -2019,11 +2015,14 @@ USA_war_plans = {
 		fire_only_once = yes
 		days_remove = 180
 		modifier = {
-			#정보원 관련 효과 넣을 것
-			#research_speed_factor = 0.1
+			combat_width_factor = -0.1
 		}
 		targeted_modifier = {
 			tag = GEM
+			attack_bonus_against = 0.1
+			defense_bonus_against = 0.1
+		}
+		targeted_modifier = {
 			tag = GEH
 			attack_bonus_against = 0.1
 			defense_bonus_against = 0.1
@@ -2172,8 +2171,11 @@ USA_war_plans = {
 		}
 		fire_only_once = yes
 		days_remove = 180
+		modifier = {
+			army_core_attack_factor = 0.05
+            army_core_defence_factor = 0.05
+		}
 		targeted_modifier = {
-			# 항복 관련 효과 넣을 것
 			tag = GEI
 			attack_bonus_against = 0.1
 			defense_bonus_against = 0.1
@@ -3622,6 +3624,8 @@ USA_2nd_great_depression_activated_categorie = {
 	}
 }
 
+
+# 대공황 해결 마무리
 USA_recover_from_2nd_great_depression_categorie = {
 	USA_recover_from_2nd_great_depression_failure_mission = {
 		priority = 91
@@ -3867,7 +3871,7 @@ USA_recover_from_2nd_great_depression_categorie = {
 			}
 		}
 		fire_only_once = yes
-		days_remove = 120
+		days_remove = 100
 		modifier = {
 			political_power_cost = 0.50
 			consumer_goods_factor = 0.15
@@ -4010,7 +4014,7 @@ USA_recover_from_2nd_great_depression_categorie = {
 		modifier = {
 			political_power_cost = 0.25
 			consumer_goods_factor = 0.15
-			production_speed_buildings_factor = -0.15
+			production_speed_buildings_factor = -0.1
 		}
 
 		remove_effect = {
@@ -4107,7 +4111,7 @@ USA_recover_from_2nd_great_depression_categorie = {
 		modifier = {
 			political_power_cost = 0.25
 			consumer_goods_factor = 0.15
-			production_speed_buildings_factor = -0.15
+			production_speed_buildings_factor = -0.1
 		}
 
 		remove_effect = {
@@ -4178,7 +4182,7 @@ USA_recover_from_2nd_great_depression_categorie = {
 		fire_only_once = yes
 		days_remove = 60
 		modifier = {
-			political_power_cost = 0.75
+			political_power_cost = 0.5
 			consumer_goods_factor = 0.15
 			production_speed_buildings_factor = -0.15
 		}
@@ -4548,5 +4552,34 @@ political_actions = {
 		remove_effect = {
 			country_event = usa_chroma_event.4
 		}
+	}
+}
+
+
+USA_ai_congress = {
+	USA_ai_gain_congress = {
+		icon = GFX_decision_generic_USA_flag
+
+		allowed = { original_tag = USA }
+
+		visible = {
+			is_ai = yes
+		}
+
+		available = {
+				OR = {
+				   has_idea = second_great_depression
+				}
+		}
+
+		ai_will_do = {
+			factor = 4000
+		}
+		days_remove = 100
+
+		remove_effect = {
+			USA_congress_large_support = yes
+		}
+
 	}
 }

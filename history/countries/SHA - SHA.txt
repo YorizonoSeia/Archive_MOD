@@ -173,6 +173,7 @@ set_variable = { SHA_Shanhaijinfascism_production_speed_arms_factory_factor = 0 
 
 set_variable = { SHA_Shanhaijinfascism_conscription_factor = 0 } 
 set_variable = { SHA_Shanhaijinfascism_army_org_factor = 0 }
+set_variable = { SHA_Shanhaijinfascism_army_morale_factor = 0 }
 set_variable = { SHA_Shanhaijinfascism_research_speed_factor = 0 }
 
 set_variable = { SHA_Shanhaijinfascism_industrial_capacity_factor = 0 }
@@ -181,6 +182,8 @@ set_variable = { SHA_Shanhaijinfascism_economy_cost_factor = 0 }
 set_variable = { SHA_Shanhaijinfascism_mobilization_laws_cost_factor = 0 } 
 set_variable = { SHA_Shanhaijinfascism_trade_laws_cost_factor = 0 } 
 set_variable = { SHA_Shanhaijinfascism_justify_war_goal_time = 0 } 
+
+set_variable = { SHA_Shanhaijinfascism_production_lack_of_resource_penalty_factor = 0 }
 
 set_variable = { SHA_military_army_speed_factor = 0 }
 set_variable = { SHA_military_breakthrough_factor = 0 }

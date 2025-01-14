@@ -523,7 +523,7 @@ focus_tree = {
 		icon = GFX_goal_Shintani_Kai_Follow
 		x = 3
 		y = 1
-		cost = 5
+		cost = 2
 
 		prerequisite = { focus = SHA_Kisaki_Suppression }
 		mutually_exclusive = { focus = SHA_conservative_revolution }
@@ -573,6 +573,14 @@ focus_tree = {
 		icon = GFX_goal_SHA_Kaguya_ousted
 		x = 3
 		y = 1
+		offset = {
+			trigger = { has_completed_focus = SHA_fascism_friend }
+			x = -1
+		}
+		offset = {
+			trigger = { has_completed_focus = SHA_Shanhaijing_fascism }
+			x = -1
+		}
 		cost = 5
 
 		prerequisite = { focus = SHA_Shintani_Kai_Follow }
@@ -613,6 +621,10 @@ focus_tree = {
 		icon = GFX_focus_generic_fascist_troops
 		x = 2
 		y = 1
+		offset = {
+			trigger = { has_completed_focus = SHA_Shanhaijing_fascism }
+			x = -2
+		}
 		relative_position_id = SHA_Kaguya_ousted
 		cost = 5
 
@@ -621,6 +633,21 @@ focus_tree = {
 
 		available = { }
 		bypass = { }
+		
+
+		allow_branch = {
+			IF = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = SHA_fascism_friend
+				}
+			}
+		}
 
 
 		completion_reward = {
@@ -751,6 +778,10 @@ focus_tree = {
 		icon = GFX_focus_chi_mission_to_the_TRN
 		x = -2
 		y = 1
+		offset = {
+			trigger = { has_completed_focus = SHA_fascism_friend }
+			x = 2
+		}
 		cost = 5
 
 		prerequisite = { focus = SHA_Kaguya_ousted }
@@ -767,6 +798,21 @@ focus_tree = {
 			}
 		}
 		bypass = { }
+		
+
+		allow_branch = {
+			IF = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = SHA_Shanhaijing_fascism
+				}
+			}
+		}
 
 		relative_position_id = SHA_Kaguya_ousted
 
@@ -883,6 +929,14 @@ focus_tree = {
 		icon = GFX_goal_generic_demand_territory
 		x = 0
 		y = 2
+		offset = {
+			trigger = { has_completed_focus = SHA_Shanhaijing_fascism }
+			x = -2
+		}
+		offset = {
+			trigger = { has_completed_focus = SHA_fascism_friend }
+			x = 2
+		}
 		cost = 5
 
 		prerequisite = { 
@@ -915,7 +969,15 @@ focus_tree = {
 		id = SHA_Expansion_of_military_factories
 		icon = GFX_focus_generic_reorient_production
 		x = 0
-		y = 2
+		y = 1
+		offset = {
+			trigger = { has_completed_focus = SHA_Shanhaijing_fascism }
+			x = 1
+		}
+		offset = {
+			trigger = { has_completed_focus = SHA_fascism_friend }
+			x = -1
+		}
 		cost = 8
 
 		prerequisite = {
@@ -973,6 +1035,7 @@ focus_tree = {
 		relative_position_id = SHA_Kisaki_Suppression
 
 		completion_reward = {
+			custom_effect_tooltip = SHA_conservative_is_not_work
 			add_political_power = 100
 			add_stability = 0.1
 			effect_tooltip = {
@@ -1314,7 +1377,7 @@ focus_tree = {
 		icon = GFX_focus_AUS_legitimistische_jugend
 		x = 5
 		y = 1
-		cost = 5
+		cost = 3
 
 		prerequisite = {
 			focus = SHA_Shintani_Kai_Follow 
@@ -1416,10 +1479,31 @@ focus_tree = {
 
 		relative_position_id = SHA_Kisaki_Suppression
 
-		completion_reward = {
+		select_effect = {
 			add_timed_idea = {
 				idea = SHA_emergency_measures_idea
 				days = 720
+			}
+		}
+		
+		completion_reward = {
+			custom_effect_tooltip = tooltip_immediate_effect_upon_focus_start
+			effect_tooltip = {
+				add_timed_idea = {
+					idea = SHA_emergency_measures_idea
+					days = 720
+				}
+			}
+			custom_effect_tooltip = tooltip_effect_upon_focus_completion
+			army_experience = 50
+			add_command_power = 25
+			random_owned_state = {	
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
 			}
 		}
 	}
@@ -1440,12 +1524,8 @@ focus_tree = {
 			OR = {
 				has_global_flag = GFLAG_BAKSANWAR
 				has_war_with = HYA
-				HYA = {
-					exists = no
-				}
-				HYA = {
-					is_in_faction_with = SHA
-				}
+				HYA = { exists = no }
+				HYA = { is_in_faction_with = SHA }
 			}
 		}
 
@@ -1491,12 +1571,16 @@ focus_tree = {
 		mutually_exclusive = { focus = SHA_ascension }
 
 		available = {
-			OR = {
-				NOT = { country_exists = HYA  }
-				owns_state = 972
+			#OR = {
+			#	NOT = { country_exists = HYA  }
+			#owns_state = 972
+			#}
+			#NOT = { has_global_flag = GFLAG_BAKSANWAR_END }
+			#has_completed_focus = SHA_Cabinet_Secretariat
+			custom_trigger_tooltip = {
+				tooltip = GAEBALJUNG
+				always = no
 			}
-			NOT = { has_global_flag = GFLAG_BAKSANWAR_END }
-			has_completed_focus = SHA_Cabinet_Secretariat
 		}
 		bypass = { }
 
@@ -1514,6 +1598,182 @@ focus_tree = {
 			}
 			else = { add_ideas = SHA_walking_the_dragon_5 }
 		}
+	}
+
+	# 자유주의 척결
+	focus = {
+		id = SHA_eradication_of_liberalism
+		icon = GFX_focus_ITA_generic_fascist_workers
+		x = 0
+		y = 1
+		relative_position_id = SHA_2nd_conservative_revolution
+		cost = 5
+
+		prerequisite = {
+			focus = SHA_2nd_conservative_revolution
+		}
+		mutually_exclusive = { }
+
+		available = {
+		}
+		bypass = {
+		}
+
+		completion_reward = {
+		
+		}
+	}
+
+	# 산해경 영혼의 부활
+	focus = {
+		id = SHA_Resurrection_of_the_Soul_of_Shanhaijing
+		icon = GFX_goal_generic_army_mass_assault
+		x = 1
+		y = 1
+		relative_position_id = SHA_eradication_of_liberalism
+		cost = 5
+
+		prerequisite = {
+			focus = SHA_eradication_of_liberalism
+		}
+		mutually_exclusive = { }
+
+		available = {
+		}
+		bypass = {
+		}
+
+		completion_reward = {
+			# add_country_leader_trait
+		}
+	}
+
+	# 국가평의회 설립
+	focus = {
+		id = SHA_Establishment_of_the_National_Council
+		icon = GFX_focus_ETH_re-convene_the_parliament
+		x = -1
+		y = 1
+		relative_position_id = SHA_eradication_of_liberalism
+		cost = 5
+
+		prerequisite = {
+			focus = SHA_eradication_of_liberalism
+		}
+		mutually_exclusive = { }
+
+		available = {
+		}
+		bypass = {
+		}
+
+		completion_reward = {
+		
+		}
+	}
+
+	# 키보토스 보수주의
+	focus = {
+		id = SHA_Kivotos_conservative
+		icon = GFX_goal_SHA_clash_of_civilizations
+		x = 1
+		y = 1
+		relative_position_id = SHA_Establishment_of_the_National_Council
+		cost = 10
+
+		prerequisite = { focus = SHA_Resurrection_of_the_Soul_of_Shanhaijing }
+		prerequisite = { focus = SHA_Establishment_of_the_National_Council }
+		mutually_exclusive = { 
+			focus = SHA_the_third_kivotos
+			focus = SHA_Twilight_of_the_Gods
+		}
+
+		available = {
+		}
+		bypass = {
+		}
+
+		completion_reward = {
+			add_country_leader_trait = SHA_rider_of_revolution
+
+			set_rule = { can_create_factions = yes }
+			create_faction = Shanhaijing_faction
+		}
+	}
+
+	# 문명의 충돌
+	focus = {
+		id = SHA_clash_of_civilizations
+		icon = GFX_focus_usa_focus_on_europe
+		x = 0
+		y = 2
+		relative_position_id = SHA_Kivotos_conservative
+		cost = 10
+
+		prerequisite = { focus = SHA_Kivotos_conservative }
+		available = {
+		}
+		bypass = {
+		}
+		cancelable = no
+
+		completion_reward = {
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = TRM
+						is_core_of = GEM
+						is_core_of = GEH
+						is_core_of = MIL
+						is_core_of = ABY
+						is_core_of = HYA
+						is_core_of = ARI
+						is_core_of = SHE
+						is_core_of = COU
+						is_core_of = KSP
+						is_core_of = HEU
+						is_core_of = BLM
+						is_core_of = RED
+						is_core_of = RE1
+						is_core_of = RE2
+						is_core_of = RE3
+						is_core_of = RE4
+					}
+				}
+				add_claim_by = SHA
+			}
+			every_country = {
+				limit = { Kivotos_school_tag = yes }
+				create_wargoal = {
+					target = PREV
+					type = puppet_wargoal_focus
+				}
+			}
+			every_country = {
+				limit = { 
+					NOT = { 
+						is_puppet_of = ROOT
+					}
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = SHA_menacing_ambition
+				}
+			}
+		}
+		
+		will_lead_to_war_with = TRM
+		will_lead_to_war_with = GEM
+		will_lead_to_war_with = GEH
+		will_lead_to_war_with = ABY
+		will_lead_to_war_with = HYA
+		will_lead_to_war_with = SHE
+		will_lead_to_war_with = COU
+		will_lead_to_war_with = KSP
+		will_lead_to_war_with = HEU
+		will_lead_to_war_with = MIL
+		will_lead_to_war_with = BLM
+		will_lead_to_war_with = RED
 	}
 
 	# 승천
@@ -1552,6 +1812,199 @@ focus_tree = {
 			add_to_variable = { 
 				SHA_Shanhaijinfascism_party_popularity_stability_factor = 0.15 
 				tooltip = party_popularity_stability_factor_tt
+			}
+		}
+	}
+
+	# 연금술과 현대 과학
+	focus = {
+		id = SHA_Alchemy_and_modern_science
+		icon = GFX_focus_generic_air_research_boost
+		x = 0
+		y = 1
+		relative_position_id = SHA_ascension
+		cost = 8
+
+		prerequisite = { focus = SHA_ascension }
+		mutually_exclusive = { }
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+			custom_effect_tooltip = SHA_Shanhaijing_fascism_tt
+			add_to_variable = {
+				SHA_Shanhaijinfascism_production_lack_of_resource_penalty_factor = -0.1
+				tooltip = production_lack_of_resource_penalty_factor_tt
+			}
+			add_to_variable = {
+				SHA_Shanhaijinfascism_research_speed_factor = 0.05
+				tooltip = research_speed_factor_tt
+			}
+			custom_effect_tooltip = tooltip_white_line
+			add_tech_bonus = {
+				name = SHA_Alchemy_and_modern_science
+				bonus = 5
+				uses = 1
+				category = nuclear
+			}
+			add_tech_bonus = {
+				name = SHA_Alchemy_and_modern_science
+				bonus = 5
+				uses = 1
+				category = rocketry
+			}
+			custom_effect_tooltip = tooltip_white_line
+			add_breakthrough_points = {
+				specialization = specialization_air
+			    value = 1
+			}
+			add_breakthrough_points = {
+				specialization = specialization_nuclear
+			    value = 1
+			}
+		}
+	}
+
+	# 의지의 우월성
+	focus = {
+		id = SHA_supremacy_of_will
+		icon = GFX_focus_generic_total_war
+		x = -1
+		y = 1
+		relative_position_id = SHA_Alchemy_and_modern_science
+		cost = 5
+
+		prerequisite = { focus = SHA_Alchemy_and_modern_science }
+		mutually_exclusive = { }
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+			custom_effect_tooltip = SHA_Shanhaijing_fascism_tt
+			add_to_variable = {
+				SHA_Shanhaijinfascism_army_org_factor = 0.06
+				tooltip = army_org_factor_tt
+			}
+			add_to_variable = {
+				SHA_Shanhaijinfascism_army_morale_factor = 0.1
+				tooltip = army_morale_factor_tt
+			}
+
+		}
+	}
+
+	# 기술의 우월성
+	focus = {
+		id = SHA_supremacy_of_technology
+		icon = GFX_focus_GER_amerikabomber
+		x = 1
+		y = 1
+		relative_position_id = SHA_Alchemy_and_modern_science
+		cost = 10
+
+		prerequisite = { focus = SHA_Alchemy_and_modern_science }
+		mutually_exclusive = { }
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+			custom_effect_tooltip = SHA_Shanhaijing_fascism_tt
+			add_to_variable = {
+				SHA_Shanhaijinfascism_production_lack_of_resource_penalty_factor = -0.1
+				tooltip = production_lack_of_resource_penalty_factor_tt
+			}
+			custom_effect_tooltip = tooltip_white_line
+			add_tech_bonus = {
+				name = SHA_Alchemy_and_modern_science
+				bonus = 2
+				uses = 10
+				category = cat_production
+				category = industry
+			}
+			add_tech_bonus = {
+				name = SHA_Alchemy_and_modern_science
+				bonus = 2
+				uses = 6
+				category = construction_tech
+			}
+			add_tech_bonus = {
+				name = SHA_Alchemy_and_modern_science
+				bonus = 3
+				uses = 15
+				category = light_air
+				category = light_fighter
+				category = cas_bomber
+				category = naval_air
+				category = naval_bomber
+				category = air_equipment
+				category = mio_cat_all_light_fighter_and_modules
+				category = mio_cat_all_cas_and_modules
+				category = mio_cat_all_naval_bomber_and_modules
+				category = mio_cat_all_light_aircraft_and_modules
+			}
+
+		}
+	}
+
+	# 신들의 황혼
+	focus = {
+		id = SHA_Twilight_of_the_Gods
+		icon = GFX_focus_GER_wunderwaffe
+		x = 1
+		y = 1
+		relative_position_id = SHA_supremacy_of_will
+		cost = 10
+
+		prerequisite = { focus = SHA_supremacy_of_technology }
+		prerequisite = { focus = SHA_supremacy_of_will }
+		mutually_exclusive = {
+			focus = SHA_the_third_kivotos
+			focus = SHA_Kivotos_conservative
+		}
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+			add_country_leader_trait = SHA_revolutionary_genius
+
+			set_rule = { can_create_factions = yes }
+			create_faction = Shanhaijing_faction
+
+		}
+	}
+
+	# 라그나로크
+	focus = {
+		id = SHA_Ragnarok
+		icon = GFX_focus_GER_our_place_in_the_sun
+		x = 0
+		y = 2
+		relative_position_id = SHA_Twilight_of_the_Gods
+		cost = 5
+
+		prerequisite = { focus = SHA_Twilight_of_the_Gods }
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+			custom_effect_tooltip = SHA_Shanhaijing_fascism_tt
+			add_to_variable = {
+				SHA_Shanhaijinfascism_justify_war_goal_time = -0.75
+				tooltip = justify_war_goal_time_tt
+			}
+			create_wargoal = {
+				target = PREV
+				type = puppet_wargoal_focus
 			}
 		}
 	}
@@ -1688,7 +2141,7 @@ focus_tree = {
 	# 학원 내 백귀야행인 추방
 	focus = {
 		id = SHA_Leave_SHA
-		icon = GFX_focus_DEN_heavy_regulations
+		icon = GFX_focus_CHL_revise_the_social_classes
 		x = 1
 		y = 1
 		cost = 5
@@ -1748,6 +2201,130 @@ focus_tree = {
 		}
 	}
 
+	# 제3키보토스
+	focus = {
+		id = SHA_the_third_kivotos
+		icon = GFX_focus_SOV_third_rome
+		x = 1
+		y = 1
+		cost = 10
+		
+		prerequisite = { focus = SHA_Establishment_of_the_Governor_General }
+		mutually_exclusive = { 
+			focus = SHA_Kivotos_conservative 
+			focus = SHA_Twilight_of_the_Gods 
+		}
+
+		available = {
+
+		}
+		bypass = { }
+
+		relative_position_id = SHA_industrial_exploitation
+
+		completion_reward = {
+			add_country_leader_trait = SHA_herald_of_third_kivotos
+
+			set_rule = { can_create_factions = yes }
+			create_faction = Shanhaijing_faction
+			
+			#mark_focus_tree_layout_dirty = yes
+		}
+	}
+
+	# 남키보토스 해방
+	focus = {
+		id = SHA_Liberation_of_South_Kivotos
+		icon = GFX_goal_RUS_liberation_march
+		x = 0
+		y = 2
+		cost = 5
+		
+		prerequisite = { focus = SHA_the_third_kivotos }
+		mutually_exclusive = { }
+
+		available = {
+
+		}
+		bypass = { }
+
+		allow_branch = {
+			OR = {
+				has_country_flag = SHA_started_Liberation_SK
+				NOT = {
+					AND = {
+						owns_state = 52
+						owns_state = 53
+						owns_state = 54
+					}
+				}
+			}
+		}
+
+		relative_position_id = SHA_the_third_kivotos
+
+		completion_reward = {
+			set_country_flag = SHA_started_Liberation_SK # South Korea 아님 ㅎㅎ
+			if = { 
+				limit = { country_exists = GEH }	
+				create_wargoal = {
+					target = GEH
+					type = annex_everything
+				}
+			}
+			else_if = {
+				limit = { 
+					GEH = { exists = no }
+				}
+				every_country = {
+					limit = {
+						OR = {
+							owns_state = 52
+							owns_state = 53
+							owns_state = 54
+						}
+					}
+					create_wargoal = {
+						target = PREV
+						type = take_state_focus
+						generator = { 52 53 54 }
+					}
+				}
+			}
+		}
+	}
+
+	# 이상향
+	focus = {
+		id = SHA_Utopia
+		icon = GFX_focus_ARG_march_to_la_casa_rosada
+		x = 0
+		y = 2
+		cost = 4
+		
+		prerequisite = { focus = SHA_the_third_kivotos }
+		mutually_exclusive = { }
+
+		available = {
+
+		}
+		bypass = { }
+
+		allow_branch = {
+			AND = {
+				owns_state = 52
+				owns_state = 53
+				owns_state = 54
+			}
+			NOT = { has_country_flag = SHA_started_Liberation_SK }
+		}
+
+		relative_position_id = SHA_the_third_kivotos
+
+		completion_reward = {
+		}
+	}
+
 	# 아비도스 석권
 	focus = {
 		id = SHA_Special_Military_Operation_for_Abydos
@@ -1764,6 +2341,7 @@ focus_tree = {
 
 		available = {
 			ABY = { exists = yes }
+			is_neighbor_of = ABY
 		}
 		bypass = {
 			NOT = { country_exists = ABY }
@@ -1798,6 +2376,7 @@ focus_tree = {
 
 		available = {
 			SLO = { exists = yes }
+			is_neighbor_of = SLO
 		}
 		bypass = {
 			NOT = { country_exists = SLO }
@@ -2151,7 +2730,7 @@ focus_tree = {
 
 		search_filters = { }
 
-		cost = 10
+		cost = 7
 
 		ai_will_do = {
 			factor = 1
@@ -2162,7 +2741,6 @@ focus_tree = {
 			976 = {
 				is_owned_and_controlled_by = ROOT
 			}
-			has_tech = excavation1
 		}
 		
 		bypass = {
@@ -2209,7 +2787,7 @@ focus_tree = {
 
 		search_filters = { }
 
-		cost = 10
+		cost = 7
 
 		ai_will_do = {
 			factor = 1
@@ -2219,7 +2797,6 @@ focus_tree = {
 			152 = {
 				is_owned_and_controlled_by = ROOT
 			}
-			has_tech = excavation2
 		}
 		
 		bypass = {
@@ -2247,7 +2824,7 @@ focus_tree = {
 					type = industrial_complex
 					level = 1
 					instant_build = yes
-				}	
+				}
 			}
 
 		}
@@ -2438,7 +3015,6 @@ focus_tree = {
 		}
 
 		available = {
-			has_tech = excavation3
 			975 = {
 				is_owned_and_controlled_by = ROOT
 			}
@@ -3170,6 +3746,13 @@ focus_tree = {
 				SHA_military_land_doctrine_cost_factor = -0.15
 				tooltip = land_doctrine_cost_factor_tt
 			}
+
+			custom_effect_tooltip = tooltip_white_line
+
+			swap_ideas = {
+				remove_idea = SHA_aoghkdnjs_idea
+				add_idea = SHA_Plum_Garden_Military_academy_idea
+			}
 		}
 	}
 	
@@ -3283,7 +3866,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = SHA_National_Guard_Expansion
 		search_filters = { }
-		cost = 5
+		cost = 7
 
 		prerequisite = { focus = SHA_National_Guard_Expansion }
 		mutually_exclusive = { }

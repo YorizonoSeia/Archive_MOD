@@ -263,6 +263,7 @@ country_event = {
 	
 	option = {
 		name = KSP_event.17.a
+		add_stability = -0.05
 	}
 }
 country_event = {

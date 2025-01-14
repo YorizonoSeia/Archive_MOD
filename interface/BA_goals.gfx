@@ -1769,6 +1769,10 @@ spriteTypes = {
 		name = "GFX_goal_SHA_National_Guard_Expansion"
 		texturefile = "gfx/interface/goals/SHA/SHA_National_Guard_Expansion.tga"  
 	}
+	SpriteType = {
+		name = "GFX_goal_SHA_clash_of_civilizations"
+		texturefile = "gfx/interface/goals/SHA/SHA_clash_of_civilizations.tga"  
+	}
 	SpriteType = { 	
 		name = "GFX_goal_ROM_invite_german_advisorsr"
 		texturefile = "gfx/interface/goals/ROM/ROM_invite_german_advisors.tga"  
@@ -1975,6 +1979,10 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_goal_agency"
 		texturefile = "gfx/interface/goals/thxKRteam/agency.tga"  
+	}
+	SpriteType = {
+		name = "GFX_goal_RUS_liberation_march"
+		texturefile = "gfx/interface/goals/thxKRteam/RUS_liberation_march.tga"  
 	}
 	SpriteType = {
 		name = "GFX_goal_focus_MIL_cooperation"
