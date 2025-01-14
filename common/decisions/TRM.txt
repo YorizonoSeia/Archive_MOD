@@ -6624,8 +6624,6 @@ political_actions = {
 		}
 		priority = 999
 
-		targets = { KPD }
-
 		visible = {
 			OR = {
 				has_completed_focus = TRM_naechi
@@ -6652,8 +6650,6 @@ political_actions = {
 			original_tag = TRM
 		}
 		priority = 999
-
-		targets = { NSD }
 
 		visible = {
 			OR = {
