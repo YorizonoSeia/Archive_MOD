@@ -31,4 +31,8 @@ KSP_spread_out_officers_modifier_down = {
 		limit = { has_idea = KSP_spread_out_officers_modifier_5 }
 		remove_ideas = KSP_spread_out_officers_modifier_5
 	}
+	add_equipment_to_stockpile = {
+		type = kivotos_infantry_equipment
+		amount = 750
+	}
 }
