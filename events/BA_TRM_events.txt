@@ -4649,6 +4649,7 @@ country_event = {  # 디버그 이벤트
 		
 		option = { #
 			name = TRM_event.1001.a
+			clr_global_flag = TRN_country_collapse_decisions_end_flag
 		}
 	}
 

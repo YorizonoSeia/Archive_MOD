@@ -17,7 +17,6 @@ state = {
 		add_core_of = NSD
 		add_core_of = SIL
 		add_core_of = PRE
-		add_core_of = TRM
 
 		victory_points = {
 			9570 10 # Breslau
