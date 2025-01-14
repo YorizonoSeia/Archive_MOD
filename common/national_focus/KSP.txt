@@ -170,8 +170,6 @@ focus_tree = {
 		}
 	}
 
-	#연정 x루트
-
 	focus = {
 		id = KSP_belgium_baechuk
 		icon = GFX_goal_generic_demand_territory
@@ -196,17 +194,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 150
-			#add_ideas = KSP_belgium_banbal
-			#if = {
-			#	limit = { has_idea = KSP_hyeongiin_help }
-			#	remove_ideas = KSP_hyeongiin_help
-			#}
-			#if = {
-			#	limit = { has_idea = KSP_hyeongiin_help_1 }
-			#	remove_ideas = KSP_hyeongiin_help_1
-			#}
-			#add_country_leader_trait = KSP_KANNA_SET0_0
+			country_event = { id = KSP_event.17 hours = 8 }
 		}
 	}
 
@@ -230,7 +218,10 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 50
 			add_stability = 0.05
-			remove_ideas = KSP_valkyrie_chaos
+			swap_ideas = {
+				remove_idea = KSP_valkyrie_chaos
+				add_idea = KSP_new_systems
+			}
 		}
 	}
 	focus = {
@@ -247,7 +238,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = 50
-			add_ideas = KSP_new_systems
+			KSP_spread_out_officers_modifier_down = yes
 		}
 	}
 	focus = {
@@ -549,6 +540,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 50
 			add_stability = 0.05
+			KSP_spread_out_officers_modifier_down = yes
 		}
 	}
 	focus = {
@@ -738,7 +730,7 @@ focus_tree = {
 				value = 0.010
 				tooltip = conscription_tt
 			}
-
+			KSP_spread_out_officers_modifier_down = yes
 		}
 	}
 	# focus = {
@@ -886,6 +878,7 @@ focus_tree = {
 				ideology = democratic
 				popularity = 0.10
 			}
+			KSP_spread_out_officers_modifier_down = yes
 		}
 	}
 	focus = {
@@ -1175,6 +1168,7 @@ focus_tree = {
 			add_stability = 0.10
 			remove_ideas = KSP_damaged_country
 			remove_ideas = KSP_gaebaljaegundanguk
+			KSP_spread_out_officers_modifier_down = yes
 		}
 	}
 	# focus = {
@@ -2778,10 +2772,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = KSP_spread_out_officers_modifier_1
-				add_idea = KSP_spread_out_officers_modifier_3
-			}
+			KSP_spread_out_officers_modifier_down = yes
 		}
 	}
 
@@ -4139,7 +4130,7 @@ focus_tree = {
 
 	focus = {
 		id = KSP_independence_claim_1 # 샬레 수사권 완전 박탈
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_focus_generic_support_the_left_right
 		cost = 10
 
 		available = {

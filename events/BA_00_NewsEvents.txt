@@ -2724,6 +2724,17 @@ news_event = { #죄수탈옥
 
 	major = yes	
 	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = KIABOTOS_Escape
+			KSP = {
+				set_country_flag = KSP_wakamo_sabotage_activated
+				#complete_national_focus = KSP_wakamo_problem
+				add_ideas = KSP_wakamo_sabotage
+			}
+		}
+	}
 		
 	option = {
 		name = BBA_italo_ethiopian_war_events.302.a
@@ -2732,22 +2743,11 @@ news_event = { #죄수탈옥
 				TAG = KSP
 			}
 		}
-		hidden_effect = {
-			set_global_flag = KIABOTOS_Escape
-		}
 	}
 	option = {
 		name = BA_news.76.b
 		trigger = {	
 			TAG = KSP
-		}
-		hidden_effect = {
-			set_global_flag = KIABOTOS_Escape
-			KSP = {
-				set_country_flag = KSP_wakamo_sabotage_activated
-				#complete_national_focus = KSP_wakamo_problem
-				add_ideas = KSP_wakamo_sabotage
-			}
 		}
 	}
 }
