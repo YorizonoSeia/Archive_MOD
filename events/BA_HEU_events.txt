@@ -454,14 +454,12 @@ country_event = { #핵개발 3
 		}
 	}
 }
-
 country_event = { #국경분쟁 승리 (적)
 	id = HEU_event.13
 	title = HEU_event.13.t
 	desc = HEU_event.13.desc
 	picture = GFX_report_event_soviet_german_soldier_handshake
     is_triggered_only = yes
-
 	option = { 
 		name = HEU_event.13.a
 		add_war_support = 0.05
@@ -474,7 +472,6 @@ country_event = { #국경분쟁 패배 (적)
 	desc = HEU_event.14.desc
 	picture = GFX_report_event_spr_civil_war_faction_defeated
     is_triggered_only = yes
-
 	option = { 
 		name = HEU_event.14.a 
 		add_war_support = -0.05
@@ -486,7 +483,6 @@ country_event = { #진전 없는 국경 분쟁 (적)
 	desc = HEU_event.15.desc
 	picture = GFX_report_event_military_planning
     is_triggered_only = yes
-
 	option = { 
 		name = HEU_event.15.a 
 	}
@@ -2316,6 +2312,71 @@ country_event = { #빌헬름 폐하의 우울한 하루
 	}
 }
 
+country_event = { #공산당 내부의 분열된 반응
+	id = HEU_event.203
+	title = HEU_event.203.t
+	desc = HEU_event.203.desc
+	picture = GFX_report_event_SOV_purge_administration
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.203.a 
+	}
+}
+
+country_event = { #공산당 강경파와 게헨나의 결탁 
+	id = HEU_event.204
+	title = HEU_event.204.t
+	desc = HEU_event.204.desc
+	picture = GFX_report_event_SOV_purge_young_officers 
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.204.a 
+	}
+}
+
+country_event = { #와장창!
+	id = HEU_event.205
+	title = HEU_event.205.t
+	desc = HEU_event.205.desc
+	picture = GFX_report_event_luxembourg_army_1
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.205.a 
+	}
+}
+
+country_event = { #추모공원은 화합의 장으로
+	id = HEU_event.206
+	title = HEU_event.206.t
+	desc = HEU_event.206.desc
+	picture = GFX_report_event_royal_parade
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.206.a 
+	}
+}
+
+country_event = { #게헨나계와 공산당원들의 진입 시도
+	id = HEU_event.207
+	title = HEU_event.207.t
+	desc = HEU_event.207.desc
+	picture = GFX_report_event_luxembourg_army_1
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.207.a 
+	}
+}
+
 country_event = { #룩셈부르크 대공국의 멸망
 	id = HEU_event.2000
 	title = HEU_event.2000.t
@@ -3186,6 +3247,102 @@ country_event = { #대공궁 습격 사건의 종료
 	option = { 
 		name = HEU.flavor_event.36.a 
 		add_manpower = -3
+	}
+}
+
+country_event = { #키보토스식 신사에 가자!
+	id = HEU.flavor_event.39
+	title = HEU.flavor_event.39.t
+
+	desc = {
+		text = HEU.flavor_event.39.desc.a
+		trigger = { 
+			has_dynamic_modifier = {
+				modifier = HEU_luxembourgism_idea
+			} 
+		}
+
+	}
+
+	desc = {
+		text = HEU.flavor_event.39.desc.b
+		trigger = { 
+			has_dynamic_modifier = {
+				modifier = HEU_rikuhachimaism_idea
+			} 
+		}
+	}
+
+	picture = GFX_report_event_aru_rikuhachima_senaka
+
+	is_triggered_only = yes
+
+	option = { 
+		name = HEU.flavor_event.39.a 
+	}
+}
+
+country_event = { #네 소원은 뭐야?
+	id = HEU.flavor_event.40
+	title = HEU.flavor_event.40.t
+
+	desc = {
+		text = HEU.flavor_event.40.desc.a
+		trigger = { 
+			has_dynamic_modifier = {
+				modifier = HEU_luxembourgism_idea
+			} 
+		}
+
+	}
+
+	desc = {
+		text = HEU.flavor_event.40.desc.b
+		trigger = { 
+			has_dynamic_modifier = {
+				modifier = HEU_rikuhachimaism_idea
+			} 
+		}
+	}
+
+	picture = GFX_report_event_luxembourg_city
+
+	is_triggered_only = yes
+
+	option = { 
+		name = HEU.flavor_event.40.a 
+	}
+}
+
+country_event = { #무한히 회전하는 정의
+	id = HEU.flavor_event.41
+	title = HEU.flavor_event.41.t
+
+	desc = {
+		text = HEU.flavor_event.41.desc.a
+		trigger = { 
+			has_dynamic_modifier = {
+				modifier = HEU_luxembourgism_idea
+			} 
+		}
+
+	}
+
+	desc = {
+		text = HEU.flavor_event.41.desc.b
+		trigger = { 
+			has_dynamic_modifier = {
+				modifier = HEU_rikuhachimaism_idea
+			} 
+		}
+	}
+
+	picture = GFX_report_event_haruka_igusa
+
+	is_triggered_only = yes
+
+	option = { 
+		name = HEU.flavor_event.41.a 
 	}
 }
 
@@ -4633,6 +4790,33 @@ news_event = {
 
 	option = {
 		name = HEU_news.14.b
+		trigger = {
+			NOT = { tag = HEU }
+		}
+	}
+
+}
+
+# 룩셈부르크 대연정 성공
+news_event = {
+	id = HEU_news.15
+	title = HEU_news.15.t
+	desc = HEU_news.15.desc
+	picture = GFX_news_event_generic_rally_3
+	
+	major = yes
+	is_triggered_only = yes
+
+
+	option = {
+		name = HEU_news.15.a
+		trigger = {
+			tag = HEU
+		}
+	}
+
+	option = {
+		name = HEU_news.15.b
 		trigger = {
 			NOT = { tag = HEU }
 		}

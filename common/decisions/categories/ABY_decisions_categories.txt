@@ -593,7 +593,7 @@ ABY_descision_category_debug = {
 	}
 }
 
-ABY_descision_category_abydos_highschool = { #전공투 
+ABY_descision_category_abydos_highschool = { 
 
 	icon = GFX_decision_category_SOV_civil_puppet_interaction
 	

@@ -1665,6 +1665,34 @@ characters={
 	############################################################
 	####################################################################################################
 
+	ABY_Sou={
+		name=ABY_Sou
+		portraits={
+			civilian={
+				large="gfx/leaders/ABY/sou_portrait.tga"
+			}
+			army={
+				large="gfx/leaders/ABY/sou_portrait.tga"
+				small="gfx/interface/ideas/ABY/idea_sou.tga"
+			}
+		}
+		gender = female
+		field_marshal={
+			traits = {
+				adaptable harsh_leader aggressive_assaulter
+			}
+			skill=4
+			attack_skill=5
+			defense_skill=3
+			planning_skill=4
+			logistics_skill=2
+			legacy_id=-1
+			visible = {
+				has_country_flag = ABY_flag_suo_recruit
+			}
+		}
+	}
+
 	ABYDO_Hoshino={
 		name=ABYDOS_Hoshino
 		portraits={
@@ -1688,11 +1716,11 @@ characters={
 			logistics_skill=4
 			legacy_id=-1
 			visible = {
-				has_country_flag = ABY_flag_abydos_army
 			}
 		}
 		advisor={
 			slot = political_advisor
+			desc = ABY_Hoshino_advisor_desc
 			idea_token = ABY_Hoshino_political_advisor
 			allowed = {
 				original_tag = ABY
@@ -1707,6 +1735,7 @@ characters={
 		}
 		advisor={	
 			slot = high_command
+			desc = ABY_Hoshino_advisor_desc
 			idea_token = ABY_Hoshino_high_command
 			allowed = {
 				original_tag = ABY
@@ -1775,6 +1804,7 @@ characters={
 		}
 		advisor={
 			slot = political_advisor
+			desc = ABY_Shiroko_advisor_desc
 			idea_token = ABY_shiroko_political_advisor
 			allowed = {
 				original_tag = ABY
@@ -1798,11 +1828,11 @@ characters={
 			logistics_skill=1
 			legacy_id=-1
 			visible = {
-				has_country_flag = ABY_flag_abydos_army
 			}
 		}
 		advisor={
 			slot = high_command
+			desc = ABY_Shiroko_advisor_desc
 			idea_token = ABY_Sirocco_4
 			allowed = {
 				original_tag = ABY
@@ -1835,6 +1865,7 @@ characters={
 		}
 		advisor={
 			slot = political_advisor
+			desc = ABY_Serika_advisor_desc
 			idea_token = ABY_serika_political_advisor
 			allowed = {
 				original_tag = ABY
@@ -1858,11 +1889,11 @@ characters={
 			logistics_skill=3
 			legacy_id=-1
 			visible = {
-				has_country_flag = ABY_flag_abydos_army
 			}
 		}
 		advisor={
 			slot = high_command
+			desc = ABY_Serika_advisor_desc
 			idea_token = ABY_cerika
 			allowed = {
 				original_tag = ABY
@@ -1896,11 +1927,11 @@ characters={
 			logistics_skill=7
 			legacy_id=-1
 			visible = {
-				has_country_flag = ABY_flag_abydos_army
 			}
 		}
 		advisor={
 			slot = political_advisor
+			desc = ABY_Nonomi_advisor_desc
 			idea_token = ABY_nonomie_1
 			allowed = {
 				original_tag = ABY
@@ -1915,6 +1946,7 @@ characters={
 		}
 		advisor={	
 			slot = high_command
+			desc = ABY_Nonomi_advisor_desc
 			idea_token = ABY_nonomie_high_command
 			allowed = {
 				original_tag = ABY
@@ -1948,11 +1980,11 @@ characters={
 			logistics_skill=4
 			legacy_id=-1
 			visible = {
-				has_country_flag = ABY_flag_abydos_army
 			}
 		}
 		advisor={
 			slot = political_advisor
+			desc = ABY_Ayane_advisor_desc
 			idea_token = ABY_ayane_political_advisor
 			allowed = {
 				original_tag = ABY
@@ -1967,6 +1999,7 @@ characters={
 		}
 		advisor={
 			slot = theorist
+			desc = ABY_Ayane_advisor_desc
 			idea_token = ABY_Ayane_2
 			allowed = {
 				original_tag = ABY
@@ -1981,6 +2014,7 @@ characters={
 		}
 		advisor={
 			slot = air_chief
+			desc = ABY_Ayane_advisor_desc
 			idea_token = ABY_Ayane_3
 			allowed = {
 				original_tag = ABY
@@ -1995,6 +2029,7 @@ characters={
 		}
 		advisor={
 			slot = navy_chief
+			desc = ABY_Ayane_advisor_desc
 			idea_token = ABY_Ayane_4
 			allowed = {
 				original_tag = ABY
@@ -2009,6 +2044,7 @@ characters={
 		}
 		advisor={	
 			slot = army_chief
+			desc = ABY_Ayane_advisor_desc
 			idea_token = ABY_Ayane
 			allowed = {
 				original_tag = ABY
@@ -2085,6 +2121,1100 @@ characters={
 			legacy_id=-1
 			visible = {
 				has_country_flag = ABY_flag_horus
+			}
+		}
+	}
+	####################################################################################################
+	############################################################
+	#####독일계#########################
+	############################################################
+	####################################################################################################
+
+
+	#######################
+	#######GENERALS########
+	#######################
+
+	ABY_AUS_karl_eglseer = {
+		name = AUS_karl_eglseer
+		portraits = {
+			army = {
+				large = "GFX_portrait_AUS_karl_eglseer"
+				small = "GFX_portrait_AUS_karl_eglseer_small"
+				
+			}
+		}
+		corps_commander = {
+			traits = { trickster trait_mountaineer }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
+			legacy_id = -1
+			visible = {
+				has_country_flag = ABY_accepted_AUS_flag
+			}
+		}
+	}
+
+	ABY_AUS_friedrich_materna = {
+		name = AUS_friedrich_materna
+		portraits = {
+			army = {
+				large = "GFX_portrait_AUS_friedrich_materna"
+				small = "GFX_portrait_AUS_friedrich_materna_small"
+				
+			}
+		}
+
+		corps_commander = {
+			traits = { infantry_leader }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id = -1
+			visible = {
+				has_country_flag = ABY_accepted_AUS_flag
+			}
+		}
+	}
+
+	ABY_AUS_emil_liebitzky = {
+		name = AUS_emil_liebitzky
+		portraits = {
+			army = {
+				large = "GFX_portrait_AUS_emil_liebitzky"
+				small = "GFX_portrait_AUS_emil_liebitzky_small"
+			}
+		}
+		corps_commander = {
+			traits = { media_personality }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id = -1
+			visible = {
+				has_country_flag = ABY_accepted_AUS_flag
+			}
+		}
+	}
+
+	ABY_AUS_ludwig_von_eimannsberger = {
+		name = AUS_ludwig_von_eimannsberger
+		portraits = {
+			army = {
+				large = "GFX_portrait_AUS_ludwig_von_eimannsberger"
+				small = "GFX_portrait_AUS_ludwig_von_eimannsberger_small"
+				
+			}
+		}
+		corps_commander = {
+			traits = { panzer_leader }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+			legacy_id = -1
+			visible = {
+				has_country_flag = ABY_accepted_AUS_flag
+			}
+		}
+	}
+
+	ABY_AUS_alfred_ritter_von_hubicki = {
+		name = AUS_alfred_ritter_von_hubicki
+		portraits = {
+			army = {
+				large = "GFX_portrait_AUS_alfred_ritter_von_hubicki"
+				small = "GFX_portrait_AUS_alfred_ritter_von_hubicki_small"
+				
+			}
+		}
+		corps_commander = {
+			traits = { armor_officer panzer_leader }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+			legacy_id = -1
+			visible = {
+				has_country_flag = ABY_accepted_AUS_flag
+			}
+		}
+	}
+
+	ABY_AUS_ernst_hammer = {
+		name = AUS_ernst_hammer
+		portraits = {
+			army = {
+				large = GFX_portrait_AUS_ernst_hammer
+				small = GFX_portrait_AUS_ernst_hammer_small
+				
+			}
+		}
+		corps_commander = {
+			traits = { trait_engineer }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id = -1
+			visible = {
+				has_country_flag = ABY_accepted_AUS_flag
+			}
+		}
+	}
+
+	ABY_AUS_eduard_barger = {
+		name = AUS_eduard_barger
+		portraits = {
+			army = {
+				large = "GFX_portrait_AUS_eduard_barger"
+				small = "GFX_portrait_AUS_eduard_barger_small"
+			}
+		}
+		corps_commander = {
+			traits = {  }
+			skill = 1
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+			legacy_id = -1
+			visible = {
+				has_country_flag = ABY_accepted_AUS_flag
+			}
+		}
+	}
+
+	ABY_AUS_curt_von_jesser = {
+		name = AUS_curt_von_jesser
+		portraits = {
+			army = {
+				large = "GFX_portrait_AUS_curt_von_jesser"
+				small = "GFX_portrait_AUS_curt_von_jesser_small"
+			}
+		}
+		corps_commander = {
+			traits = { trait_reckless }
+			skill = 1
+			attack_skill = 2
+			defense_skill = 0
+			planning_skill = 0
+			logistics_skill = 1
+			legacy_id = -1
+			visible = {
+				has_country_flag = ABY_accepted_AUS_flag
+			}
+		}
+	}
+
+	ABY_AUS_anton_kienbauer = {
+		name = AUS_anton_kienbauer
+		portraits = {
+			army = {
+				large = "GFX_portrait_AUS_anton_kienbauer"
+				small = "GFX_portrait_AUS_anton_kienbauer_small"
+			}
+		}
+		corps_commander = {
+			traits = {  }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 0
+			legacy_id = -1
+			visible = {
+				has_country_flag = ABY_accepted_AUS_flag
+			}
+		}
+	}
+
+	###########################
+	#######FIELD MARSHALS######
+	###########################
+	ABY_AUS_wilhelm_gebauer = {
+		name = AUS_wilhelm_gebauer
+		portraits = {
+			army = {
+				large = "GFX_portrait_AUS_wilhelm_gebauer"
+				small = "GFX_portrait_AUS_wilhelm_gebauer_small"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = AUS_wilhelm_gebauer
+			allowed = {
+				OR = {
+					original_tag = ABY
+					original_tag = GER
+				}
+				
+			}
+			visible = {
+				has_country_flag = ABY_accepted_AUS_flag
+			}
+			available = {
+				OR = {
+					has_completed_focus = AUS_bring_generals_out_of_retirement
+					has_completed_focus = GER_the_austrian_question
+				}
+				
+			}
+			traits = {
+				army_chief_morale_3
+			}
+			cost = 100
+			ai_will_do = {
+				base = 1
+			}
+		}
+		field_marshal = {
+			traits = { brilliant_strategist war_hero inspirational_leader skilled_staffer }
+			skill = 5
+			attack_skill = 5
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 3
+			legacy_id = -1
+			visible = {
+				has_country_flag = ABY_accepted_AUS_flag
+			}
+		}
+	}
+	#############################
+	######CHIEF OF AR/N/AI#######
+	#############################
+
+	ABY_AUS_franz_von_keil = { 
+		advisor = {
+			slot = navy_chief
+			idea_token = AUS_franz_von_keil
+			allowed = {
+				original_tag = ABY
+			}
+			visible = {
+				has_country_flag = ABY_accepted_AUS_flag
+			}
+			traits = {
+				navy_chief_decisive_battle_2 
+			}
+			cost = 100
+			ai_will_do = {
+				base = 1
+				modifier = {
+					factor = 0.1
+					any_controlled_state = {
+						is_coastal = no
+					}
+				}
+			}
+		}
+		name = AUS_franz_von_keil
+		portraits = {
+			army = {
+				small = "GFX_portrait_AUS_franz_von_keil_small"
+
+			}
+		}
+	}
+
+	ABY_AUS_gottfried_freiherr_von_banfeld = {
+		advisor = {	
+			slot = navy_chief
+			idea_token = AUS_gottfried_freiherr_von_banfeld
+			allowed = {
+				original_tag = ABY
+			}
+			visible = {
+				has_country_flag = ABY_accepted_AUS_flag
+			}
+			traits = {
+				navy_chief_naval_aviation_2
+			}
+			cost = 100
+			ai_will_do = {
+				base = 1
+				modifier = {
+					factor = 0.1
+					any_controlled_state = {
+						is_coastal = no
+					}
+				}
+			}
+		}
+		name = AUS_gottfried_freiherr_von_banfeld
+		portraits = {
+			army = {
+				small = "GFX_portrait_AUS_gottfried_freiherr_von_banfield_small"
+
+			}
+		}
+	}
+	
+	#############################
+	#########THEORISTS###########
+	#############################
+
+	ABY_AUS_alois_schonburg_hartenstein = {
+		advisor = {
+			cost = 100
+			slot = theorist
+			idea_token = AUS_alois_schonburg_hartenstein
+			ledger = air
+			allowed = {
+				original_tag = ABY
+			}
+			visible = {
+				has_country_flag = ABY_accepted_AUS_flag
+			}
+			
+			traits = {
+				grand_battle_plan_expert
+			}
+			ai_will_do = {
+				base = 1
+			}
+		}
+		name = AUS_alois_schonburg_hartenstein
+		portraits = {
+			army = {
+				small = "GFX_portrait_AUS_alois_schonburg_hartenstein_small"
+			}
+		}
+	}
+
+	########################
+	##MILITARY HIGH COMMAND#
+	########################
+
+	ABY_AUS_wilhelm_zehner = {
+		instance = {
+			allowed = {
+				has_dlc = "Gotterdammerung"
+			}
+
+			advisor = {
+				slot = high_command
+				idea_token = AUS_wilhelm_zehner
+				ledger = army
+				allowed = {
+					original_tag = ABY
+				}
+				visible = {
+					has_country_flag = ABY_accepted_AUS_flag
+				}
+				traits = {
+					army_regrouping_2
+				}
+				cost = 100
+				ai_will_do = {
+					base = 1
+				}
+			}
+			name = AUS_wilhelm_zehner
+			portraits = { #add new art here
+				army = {
+					small = "GFX_portrait_AUS_wilhelm_zehner_small"
+				}
+			}
+		}
+
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Gotterdammerung"}
+			}
+
+			advisor = {
+				slot = high_command
+				idea_token = AUS_wilhelm_zehner
+				ledger = army
+				allowed = {
+					original_tag = ABY
+				}
+				visible = {
+					has_country_flag = ABY_accepted_AUS_flag
+				}
+				traits = {
+					army_regrouping_2
+				}
+				cost = 100
+				ai_will_do = {
+					base = 1.000
+				}
+			}
+			name = AUS_wilhelm_zehner
+			portraits = {
+				army = {
+					small = "GFX_idea_generic_army_europe_4"
+				}
+			}
+		}
+
+	}
+	
+	ABY_AUS_viktor_seebauer = {
+		advisor = {		
+			slot = high_command
+			idea_token = AUS_viktor_seebauer
+			ledger = air
+			allowed = {
+				original_tag = ABY
+			}
+			visible = {
+				has_country_flag = ABY_accepted_AUS_flag
+			}
+			traits = {
+				air_bomber_interception_2
+			}
+			cost = 100
+			ai_will_do = {
+				base = 1.000
+			}
+		}
+		name = AUS_viktor_seebauer
+		portraits = { #keep generic art
+			army = {
+				small = "GFX_idea_generic_air_europe_2"
+			}
+		}
+	}
+	
+	ABY_AUS_eugen_beyer = {
+		instance = {
+			allowed = {
+				has_dlc = "Gotterdammerung"
+			}
+
+			advisor = {	
+				slot = high_command
+				idea_token = AUS_eugen_beyer
+				ledger = army
+				allowed = {
+					OR = {
+						original_tag = ABY
+						original_tag = GER
+					}
+				}
+				visible = {
+					has_country_flag = ABY_accepted_AUS_flag
+				}
+				traits = {
+					army_commando_2
+				}
+				cost = 100
+				ai_will_do = {
+					base= 1
+				}
+			}
+			name = AUS_eugen_beyer
+			portraits = { 
+				army = {
+					large = "GFX_portrait_AUS_eugen_beyer"
+					small = "GFX_portrait_AUS_eugen_beyer_small"
+
+				}
+			}
+	
+			field_marshal = {
+				traits = { offensive_doctrine commando career_officer}
+				skill = 2
+				attack_skill = 1
+				defense_skill = 3
+				planning_skill = 3
+				logistics_skill = 2
+				legacy_id = -1
+				visible = {
+					has_country_flag = ABY_accepted_AUS_flag
+				}
+			}
+		}
+
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Gotterdammerung"}
+			}
+			
+			advisor = {	
+				slot = high_command
+				idea_token = AUS_eugen_beyer
+				ledger = army
+				allowed = {
+					original_tag = ABY
+				}
+				visible = {
+					has_country_flag = ABY_accepted_AUS_flag
+				}
+				traits = {
+					army_commando_2
+				}
+				cost = 100
+				ai_will_do = {
+					base = 1
+				}
+			}
+			name = AUS_eugen_beyer
+			portraits = {
+				army = {
+					small = "GFX_idea_generic_army_europe_5"
+				}
+			}
+	
+		}
+	}
+
+	ABY_AUS_arthur_von_pongracz = {
+		advisor = {
+			slot = high_command
+			idea_token = AUS_arthur_von_pongracz
+			ledger = army
+			allowed = {
+				original_tag = ABY
+			}
+			traits = {
+				army_cavalry_2
+			}
+			visible = {
+				has_country_flag = ABY_accepted_AUS_flag
+			}
+			cost = 100
+			ai_will_do = {
+				base = 1
+			}
+		}
+		name = AUS_arthur_von_pongracz
+		portraits = {
+			army = {
+				small = "GFX_portrait_AUS_arthur_von_pongracz_small"
+			}
+		}
+	}
+
+	ABY_AUS_theodor_korner = {
+		advisor = {	
+			slot = high_command
+			idea_token = AUS_theodor_korner
+			ledger = army
+			allowed = {
+				original_tag = ABY
+			}
+			visible = {
+				has_country_flag = ABY_accepted_AUS_flag
+			}
+			traits = {
+				army_concealment_1
+			}
+			cost = 50
+			ai_will_do = {
+				base = 1
+			}
+		}
+
+		corps_commander = {
+			traits = { militias_officer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = -1
+			visible = {
+				has_country_flag = ABY_accepted_AUS_flag
+			}
+		}
+		name = AUS_theodor_korner
+		portraits = {
+			army = {
+				small = "GFX_portrait_AUS_theodor_korner_small"
+				large = "GFX_portrait_AUS_theodor_korner"
+			}
+		}
+	}
+	
+	ABY_AUS_josef_brunner = {
+		advisor = {	
+			slot = high_command 
+			idea_token = AUS_josef_brunner
+			allowed = {
+					original_tag = ABY
+				}
+				traits = {
+					air_air_superiority_2
+				}
+				visible = {
+					has_country_flag = ABY_accepted_AUS_flag
+				}
+				cost = 100
+				ai_will_do = {
+					base = 1
+				}
+		}
+		name = AUS_josef_brunner
+		portraits = {
+			army = {
+				small = "GFX_portrait_AUS_josef_brunner_small" 
+			}
+		}
+	}
+
+	ABY_AUS_ernst_rudiger_starhemberg = {
+		name = AUS_ernst_rudiger_starhemberg
+
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_AUS_ernst_rudiger_starhemberg"
+				small = "GFX_portrait_AUS_ernst_rudiger_starhemberg_civilian_small"
+			}
+
+			army = {
+				large = "GFX_portrait_AUS_ernst_rudiger_starhemberg"
+				small = "GFX_portrait_AUS_ernst_rudiger_starhemberg_military_small"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1965.1.1.1"
+			id = -1
+			traits = { anti_communist }
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = AUS_ernst_rudiger_starhemberg
+			allowed = {
+				original_tag = ABY
+			}
+			traits = {
+				AUS_prince_of_starhemberg
+			}
+			visible = {
+				has_country_flag = ABY_accepted_AUS_flag
+			}
+
+			available = {
+				has_completed_focus = AUS_repeal_the_adelsaufhebungsgesetz
+				NOT = {
+					has_country_leader = {
+						ruling_only = yes
+						character = AUS_ernst_rudiger_starhemberg
+					}
+				}
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			ai_will_do = {
+				base = 2
+			}
+		}
+
+		corps_commander = {
+			traits = { militias_officer politically_connected }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id = -1
+			visible = {
+				has_country_flag = ABY_accepted_AUS_flag
+			}
+		}
+	}
+
+	########################
+	#######ADVISORS#########
+	########################
+
+	ABY_AUS_leopold_figl = {
+		instance = {
+			allowed = {
+				has_dlc = "Gotterdammerung"
+			}
+
+			advisor = {
+				slot = political_advisor
+				idea_token = AUS_leopold_figl
+				allowed = {
+					original_tag = ABY
+				}
+				available = {
+					NOT = {
+						has_government = fascism
+					}
+				}
+				visible = {
+					has_country_flag = ABY_accepted_AUS_flag
+				}
+				traits = {
+					popular_figurehead 
+				}
+
+				ai_will_do = {
+					base = 2
+				}
+			}
+			name = AUS_leopold_figl
+			portraits = { 
+				civilian = {
+					small = "GFX_portrait_AUS_leopold_figl_small"
+				}
+			}
+		}
+
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Gotterdammerung" }
+			}
+
+			advisor = {
+				slot = political_advisor
+				idea_token = AUS_leopold_figl
+				allowed = {
+					original_tag = ABY
+				}
+				available = {
+					NOT = {
+						has_government = fascism
+					}
+				}
+				visible = {
+					has_country_flag = ABY_accepted_AUS_flag
+				}
+				traits = {
+					popular_figurehead 
+				}
+
+				ai_will_do = {
+					base = 2
+				}
+			}
+			name = AUS_leopold_figl
+			portraits = {
+				civilian = {
+					small = "GFX_idea_generic_political_advisor_europe_2"
+				}
+			}
+		}
+	}
+
+	ABY_AUS_ludwig_von_mises = {
+		advisor = {
+			slot = political_advisor
+			idea_token = AUS_ludwig_von_mises
+			allowed = { 
+				original_tag = ABY
+			}
+			traits = { 
+				AUS_treasurer_of_the_monarchy
+			}
+			visible = {
+				has_country_flag = ABY_accepted_AUS_flag
+			}
+			ai_will_do = {
+				base = 1
+				modifier = {
+					factor = 10
+					has_completed_focus = AUS_reinstate_the_imperial_council
+				}
+				modifier = {
+					factor = 0
+					has_completed_focus = AUS_austromarxism_focus
+				}
+			}
+		}
+		name = AUS_ludwig_von_mises
+		portraits = {
+			civilian = {
+				small = "GFX_portrait_AUS_ludwig_von_mises_small"
+			}
+		}
+	}
+
+	ABY_AUS_hans_pertner = {
+		advisor = {
+			slot = political_advisor
+			idea_token = AUS_hans_pertner
+			allowed = { 
+				original_tag = ABY
+			}
+			available = {
+				NOT = { has_government = fascism }
+			}
+			traits = { 
+				AUS_minister_of_education 
+			}
+			visible = {
+				has_country_flag = ABY_accepted_AUS_flag
+			}
+
+			ai_will_do = {
+				base = 2
+			}
+		}
+		name = AUS_hans_pertner
+		portraits = {
+			civilian = {
+				small = "GFX_portrait_AUS_hans_pernter_small"
+			}
+		}
+	}
+
+	ABY_AUS_heinrich_maier = {
+		advisor = {
+			slot = political_advisor
+			idea_token = AUS_heinrich_maier
+			allowed = {
+				original_tag = ABY
+				has_dlc = "La Resistance"
+			}
+			available = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+			visible = {
+				has_country_flag = ABY_accepted_AUS_flag
+			}
+
+			ai_will_do = {
+				base = 1
+			}
+
+			traits = { 
+				AUS_secretive_priest
+			}
+		}
+		name = AUS_heinrich_maier
+		portraits = {
+			civilian = {
+				small = "GFX_portrait_AUS_heinrich_maier_small" 
+			}
+		}
+	}
+
+	ABY_AUS_bruno_kreisky = {
+		advisor = {
+			slot = political_advisor
+			idea_token = AUS_bruno_kreisky
+			allowed = { 
+				original_tag = ABY
+			}
+			traits = { 
+				AUS_meticulous_lawyer
+			}
+			available = {
+			}
+			visible = {
+				has_country_flag = ABY_accepted_AUS_flag
+			}
+
+			ai_will_do = {
+				base = 1
+				modifier = {
+					factor = 10
+					has_government = democratic
+				}
+			}
+		}
+		name = AUS_bruno_kreisky
+		portraits = {
+			civilian = {
+				small = "GFX_portrait_AUS_bruno_kreisky_small"
+			}
+		}
+	}
+
+	ABY_AUS_theodor_innitzer = {
+		advisor = {
+			slot = political_advisor
+			idea_token = AUS_theodor_innitzer
+			allowed = { 
+				original_tag = ABY
+			}
+			available = {
+				NOT = {
+					has_completed_focus = AUS_cut_ties_with_the_church
+				}
+			}
+			visible = {
+				has_country_flag = ABY_accepted_AUS_flag
+			}
+			traits = { #this will be changed in an event
+				AUS_fascist_cardinal 
+			}
+
+			ai_will_do = {
+				base = 1
+			}
+		}
+		name = AUS_theodor_innitzer
+		portraits = {
+			civilian = {
+				small = "GFX_portrait_AUS_theodor_innitzer_small"
+			}
+		}
+	}
+
+	ABY_AUS_adolf_scharf = {
+		advisor = {
+			slot = political_advisor
+			idea_token = AUS_adolf_scharf
+			allowed = { 
+				original_tag = ABY
+			}
+			visible = {
+				has_country_flag = ABY_accepted_AUS_flag
+			}
+			traits = { 
+				silent_workhorse
+			}
+			ai_will_do = {
+				base = 1
+			}
+		}
+		name = AUS_adolf_scharf
+		portraits = {
+			civilian = {
+				small = "GFX_portrait_AUS_adolf_scharf_small"
+			}
+		}
+	}
+
+	ABY_AUS_adolf_hoch = {
+		advisor = {
+			slot = political_advisor
+			idea_token = AUS_adolf_hoch
+			allowed = { 
+				original_tag = ABY
+			}
+			visible = {
+				has_country_flag = ABY_accepted_AUS_flag
+			}
+			available = {
+				has_completed_focus = AUS_architechtual_advancements
+			}
+			traits = { 
+				AUS_reknowned_architecht
+			}
+			ai_will_do = {
+				base = 1
+			}
+		}
+		name = AUS_adolf_hoch
+		portraits = {
+			civilian = {
+				small = "GFX_portrait_AUS_adolf_hoch_small"
+			}
+		}
+	}
+
+	ABY_AUS_otto_bauer = {
+		advisor = {
+			slot = political_advisor
+			idea_token = AUS_otto_bauer
+			allowed = { 
+				original_tag = ABY
+			}
+			visible = {
+				has_country_flag = ABY_accepted_AUS_flag
+			}
+			available = {
+				OR = {
+					has_completed_focus = AUS_austromarxism_focus
+					AND = {
+						has_completed_focus = AUS_pardon_political_exiles
+						has_government = democratic
+						NOT = {
+							has_country_leader = {
+								character = AUS_vinzenz_schumy
+							}
+						}
+					}
+				}
+			}
+			traits = { 
+				AUS_the_father_of_austromarxism 
+			}
+
+			ai_will_do = {
+				base = 2
+				modifier = {
+					factor = 5
+					has_completed_focus = AUS_austromarxism_focus
+				}
+			}
+		}
+		name = AUS_otto_bauer
+		portraits = {
+			civilian = {
+				small = "GFX_portrait_AUS_otto_bauer_small"
+			}
+		}
+	}
+
+	ABY_AUS_maximilian_ronge = {
+		
+		advisor = {
+			slot = political_advisor
+			idea_token = AUS_maximilian_ronge
+			allowed = { 
+				original_tag = ABY
+				has_dlc = "La Resistance"
+			}
+			visible = {
+				has_country_flag = ABY_accepted_AUS_flag
+			}
+			available = {
+				NOT = { has_government = fascism }
+			}
+			traits = {
+				AUS_veteran_head_of_agency 
+			}
+
+			ai_will_do = {
+				base = 0
+			}
+		}
+		portraits = {
+			civilian = {
+				small = "GFX_portrait_AUS_maximilian_ronge_small" 
+			}
+		}
+	}
+
+	ABY_AUS_friedrich_mandl = {
+		
+		advisor = {
+			slot = political_advisor
+			idea_token = AUS_friedrich_mandl
+			allowed = { 
+				original_tag = ABY
+			}
+			visible = {
+				has_country_flag = ABY_accepted_AUS_flag
+			}
+			traits = {
+				war_industrialist
+			}
+
+			ai_will_do = {
+				base = 0
+			}
+		}
+		portraits = {
+			civilian = {
+				small = "GFX_idea_europe_generic_5" 
 			}
 		}
 	}

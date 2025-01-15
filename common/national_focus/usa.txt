@@ -3433,7 +3433,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			create_faction = USA_NATO_FACTION
-			news_event = { id = BA_news.96 } #BA_super.21
+			news_event = { id = BA_news.96 days = 3 } #BA_super.21
 			add_popularity = {
               ideology = democratic
 	          popularity = 0.2
@@ -3441,7 +3441,7 @@ focus_tree = {
 			add_stability = 0.2
 			add_war_support = 0.2
 			hidden_effect = {
-			  country_event = { id = usa_event.1 days = 2 }
+			  country_event = { id = usa_event.1 days = 1 }
 			}
 			USA_congress_large_support = yes
 		}
@@ -5174,6 +5174,7 @@ focus = {
 				NOT = { has_country_flag = USABA_government_official_exile }
 			}
 			has_civil_war = no
+			NOT = { has_war_with = OFN }
 
 		}
 		completion_reward = {

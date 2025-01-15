@@ -779,7 +779,7 @@ ideas = {
 		}
 
 		HEU_gehenna_immigration	= { #게헨나 이민정책
-			picture = generic_manpower_bonus
+			picture = citizen_militia_1
 
 			allowed = {
 				original_tag = HEU
@@ -1119,6 +1119,191 @@ ideas = {
                 industrial_capacity_factory = -0.1
                 industrial_capacity_dockyard = -0.1 
                 #research_speed_factor = -0.2 
+			}
+		}
+
+		########### 반게헨나 ###########
+		
+		HEU_civil_rights_idea_2 = { #민권법
+
+			picture = ARG_maintain_neutrality
+
+			allowed = {
+				original_tag = HEU
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+                consumer_goods_factor = -0.1
+				defensive_war_stability_factor = 0.1
+				conscription_factor = 0.15
+			}
+		}
+		
+		HEU_progressive_conservatism = { #진보적 보수주의
+
+			picture = NORDIC_army_monarchist
+
+			allowed = {
+				original_tag = HEU
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industry_free_repair_factor = 0.15
+				conscription = 0.03
+				civilian_intel_to_others = -10.0
+			}
+		}
+		
+		HEU_stasi = { #슈타지
+
+			picture = GFX_idea_generic_spy_intel
+
+			allowed = {
+				original_tag = HEU
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				civilian_intel_to_others = -20.0
+				army_intel_to_others = -10.0
+				navy_intel_to_others = -10.0
+				airforce_intel_to_others = -10.0
+				intelligence_agency_defense = 0.1
+			}
+		}
+		
+		HEU_way_to_forgiveness_fall = { #추모공원 실패
+
+			picture = BEL_legacy_of_the_great_war
+
+			allowed = {
+				original_tag = HEU
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+                consumer_goods_factor = 0.20
+				stability_factor = -0.2
+				war_support_factor = -0.2
+			}
+		}
+		
+		HEU_way_to_forgiveness_1 = { #추모공원 성공 (현지인 지지 <5)
+			name = HEU_way_to_forgiveness
+
+			picture = BEL_legacy_of_the_great_war
+
+			allowed = {
+				original_tag = HEU
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_advisor_cost_factor = -0.1
+				surrender_limit = 0.05
+			}
+		}
+		
+		HEU_way_to_forgiveness_2 = { #추모공원 성공 (현지인 지지 6)
+			name = HEU_way_to_forgiveness
+
+			picture = BEL_legacy_of_the_great_war
+
+			allowed = {
+				original_tag = HEU
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_advisor_cost_factor = -0.1
+				surrender_limit = 0.05
+				command_power_gain = 0.1
+			}
+		}
+		
+		HEU_way_to_forgiveness_3 = { #추모공원 성공 (현지인 지지 7-8)
+			name = HEU_way_to_forgiveness
+
+			picture = BEL_legacy_of_the_great_war
+
+			allowed = {
+				original_tag = HEU
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_advisor_cost_factor = -0.2
+				surrender_limit = 0.1
+				command_power_gain = 0.15
+				conscription = 0.02
+			}
+		}
+		
+		HEU_way_to_forgiveness_4 = { #추모공원 성공 (현지인 지지 9 이상)
+			name = HEU_way_to_forgiveness
+
+			picture = BEL_legacy_of_the_great_war
+
+			allowed = {
+				original_tag = HEU
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_advisor_cost_factor = -0.33
+				surrender_limit = 0.2
+				command_power_gain = 0.2
+				conscription = 0.03
 			}
 		}
 	}

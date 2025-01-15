@@ -1907,14 +1907,29 @@ country_event = {
 }
 
 country_event = {
-	#안 씀
+	#포대 운용
 	id = FRA_prov_event.32
 	title = FRA_prov_event.32.t
 	desc = FRA_prov_event.32.d
 	fire_only_once = yes
 	is_triggered_only = yes
-	hidden = yes
 	option = {
+		name = FRA_prov_event.32.a
+		add_ideas = FRA_focus_on_field_gun
+	}
+	option = {
+		name = FRA_prov_event.32.b
+		set_technology = {
+			rocket_artillery = 1
+		}
+		add_ideas = FRA_focus_on_rocket
+	}
+	option = {
+		name = FRA_prov_event.32.c
+		complete_special_project = {
+			project = sp:sp_land_super_heavy_howitzer
+		}
+		add_ideas = FRA_focus_on_big_gun
 	}
 }
 
@@ -4263,15 +4278,49 @@ country_event = {
 }
 
 country_event = {
-	#안 씀
+	#호치민과의 협상
 	id = FRA_prov_event.99
 	title = FRA_prov_event.99.t
 	desc = FRA_prov_event.99.d
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
-		#ㅇㅋ
 		name = FRA_prov_event.99.a
+		add_timed_idea = {
+			idea = FRA_good_retreat
+			years = 2
+		}
+		end_puppet = VIN
+		hidden_effect = {
+			set_country_flag = FRA_has_indochina_war
+			VIN = {
+				set_cosmetic_tag = VIN_com
+				set_politics = {
+					ruling_party = communism
+				}
+				add_popularity = {
+					ideology = communism
+					popularity = 0.5
+				}
+				remove_ideas = FRA_government_general_2
+				remove_ideas = FRA_government_general_1
+				remove_ideas = FRA_government_general
+				remove_ideas = VIN_colonists_resist_0
+				remove_ideas = VIN_colonists_resist_1
+				remove_ideas = VIN_colonists_resist_2
+				remove_ideas = VIN_colonists_resist_3
+			}
+			news_event = {
+				id = BA_news.119
+				days = 5
+			}
+		}
+		741 = {
+			set_demilitarized_zone = yes
+		}
+		286 = {
+			set_demilitarized_zone = yes
+		}
 	}
 }
 

@@ -3135,6 +3135,11 @@ leader_traits = {
 		random = no
 		political_power_factor = -0.30
 	}
+	KSP_misukan_leader_2 = { #친절한 리더
+		random = no
+		political_power_factor = -0.15
+		resistance_target = -0.05
+	}
 	KSP_nemugaki_fubuki_set_1 = { #게으른 경찰관
 		sprite = 10
 		random = no
@@ -3142,6 +3147,12 @@ leader_traits = {
 		surrender_limit = 0.10
 		stability_factor = 0.10
 		war_support_factor = 0.10
+	}
+	KSP_nemugaki_fubuki_set_2 = { #게으른 경찰관
+		random = no
+		political_power_factor = -0.05
+		surrender_limit = 0.05
+		conscription_factor = 0.10
 	}
 	KSP_Ogata_Kanna_set_1 = {
 		sprite = 10

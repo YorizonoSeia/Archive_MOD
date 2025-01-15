@@ -3411,16 +3411,17 @@ HEU_memorial_park_decision_category = {
 		}
 
 		is_good = yes
+
 		available = { hidden_trigger = { always = no } }
 
 		activation = {
-			#has_completed_focus = HEU_luxembourg_benriya_68 
+			has_completed_focus = HEU_luxembourgism_focus_1 
 		}
 
 		days_mission_timeout = 365
 
 		timeout_effect = {
-
+			custom_effect_tooltip = HEU_memorial_park_completion_tt
 		}
 	}
 
@@ -3441,12 +3442,50 @@ HEU_memorial_park_decision_category = {
 		available = { hidden_trigger = { always = no } }
 
 		activation = {
-			#has_completed_focus = HEU_luxembourg_benriya_68 
+			has_completed_focus = HEU_luxembourgism_focus_1
 		}
 
-		days_mission_timeout = 40
+		days_mission_timeout = 55
 
 		timeout_effect = {
+			add_to_variable = {
+				HEU_something_KPL = 1
+			}
+			
+			if = {
+				limit = {
+					check_variable = { HEU_something_KPL = 1 }
+				}
+				country_event = { id = HEU_event.203 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { HEU_something_KPL = 2 }
+				}
+				country_event = { id = HEU_event.204 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { HEU_something_KPL = 3 }
+				}
+				country_event = { id = HEU_event.201 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { HEU_something_KPL = 4 }
+				}
+				country_event = { id = HEU_event.205 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { HEU_something_KPL = 5 }
+				}
+				country_event = { id = HEU_event.206 }
+			}
+			else = {
+				country_event = { id = HEU_event.207 }
+			}
+
 			activate_mission = HEU_memorial_park_something_KPL
 		}
 	}
@@ -3468,13 +3507,17 @@ HEU_memorial_park_decision_category = {
 		available = { hidden_trigger = { always = no } }
 
 		activation = {
-			#has_completed_focus = HEU_luxembourg_benriya_68 
+			has_completed_focus = HEU_luxembourgism_focus_1
 		}
 
 		days_mission_timeout = 60
 
 		timeout_effect = {
 			activate_mission = HEU_memorial_park_something_gehenna
+			add_to_variable = {
+				HEU_memorial_angry_gehenna = 1
+				tooltip = HEU_memorial_angry_gehenna_edit_tt
+			}
 		}
 	}
 
@@ -3639,7 +3682,13 @@ HEU_memorial_park_decision_category = {
 
 		}
 
-		ai_will_do = { base = 24 } #
+		ai_will_do = { 
+			base = 15
+			modifier = {
+				factor = 4
+				check_variable = { HEU_memorial_angry_gehenna > 2 }
+			}
+		}
 
 		cost = 10
 

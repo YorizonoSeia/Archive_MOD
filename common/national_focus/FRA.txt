@@ -692,14 +692,19 @@ focus_tree = {
 		#인도차이나 개발
 		id = FRA_focus_14
 		cost = 5.8
-		x = 5
+		x = 3
 		y = 6
 		icon = GFX_goal_FRA_Indochina_tooja
 		prerequisite = {
-			focus = FRA_focus_10
+			focus = FRA_focus_13
 		}
 		mutually_exclusive = {
 			focus = FRA_focus_15
+		}
+		bypass = {
+			VIN = {
+				has_government = communism
+			}
 		}
 		available = {
 			VIN = {
@@ -757,14 +762,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		#인도차이나 판매
+		#호치민과의 타협
 		id = FRA_focus_15
-		cost = 5.8
-		x = 3
+		cost = 5
+		x = 5
 		y = 6
-		icon = GFX_goal_generic_forceful_treaty
+		icon = GFX_goal_generic_dangerous_deal
 		prerequisite = {
-			focus = FRA_focus_13
+			focus = FRA_focus_10
 		}
 		mutually_exclusive = {
 			focus = FRA_focus_14
@@ -776,6 +781,10 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			country_event = {
+				id = FRA_prov_event.99
+				days = 2
+			}
 		}
 	}
 	#군사중점
@@ -826,7 +835,7 @@ focus_tree = {
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.5
 				category = cat_grand_battle_plan
-				uses = 2
+				uses = 1
 			}
 		}
 	}
@@ -852,7 +861,7 @@ focus_tree = {
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.5
 				category = cat_superior_firepower
-				uses = 2
+				uses = 1
 			}
 		}
 	}
@@ -878,7 +887,7 @@ focus_tree = {
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.5
 				category = cat_mobile_warfare
-				uses = 2
+				uses = 1
 			}
 		}
 	}
@@ -894,6 +903,10 @@ focus_tree = {
 			focus = FRA_focus_arm_1
 		}
 		completion_reward = {
+			add_timed_idea = {
+				idea = FRA_rebuilding_army
+				months = 8
+			}
 		}
 	}
 	focus = {
@@ -909,6 +922,20 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_research_slot = 1
+			if = {
+				limit = {
+					OR = {
+                        has_idea = FRA_rebuilding_army
+                        NOT = {
+                            has_completed_focus = FRA_focus_new_arm_0
+                        }
+                    }                       
+				}
+				modify_timed_idea = {
+					idea = FRA_rebuilding_army
+					months = 2
+				}
+			}
 		}
 	}
 	focus = {
@@ -929,7 +956,22 @@ focus_tree = {
 				category = air_doctrine
 				uses = 1
 			}
+			if = {
+				limit = {
+					OR = {
+                        has_idea = FRA_rebuilding_army
+                        NOT = {
+                            has_completed_focus = FRA_focus_new_arm_0
+                        }
+                    }                       
+				}
+				modify_timed_idea = {
+					idea = FRA_rebuilding_army
+					months = 2
+				}
+			}
 		}
+		
 	}
 	focus = {
 		#해군 재규합
@@ -947,7 +989,20 @@ focus_tree = {
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.2
 				category = naval_doctrine
-				
+			}
+			if = {
+				limit = {
+					OR = {
+                        has_idea = FRA_rebuilding_army
+                        NOT = {
+                            has_completed_focus = FRA_focus_new_arm_0
+                        }
+                    }        
+				}
+				modify_timed_idea = {
+					idea = FRA_rebuilding_army
+					months = 2
+				}
 			}
 		}
 	}
@@ -973,6 +1028,19 @@ focus_tree = {
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.2
 				category = cat_paratroopers_doctrine
+			}if = {
+				limit = {
+					OR = {
+                        has_idea = FRA_rebuilding_army
+                        NOT = {
+                            has_completed_focus = FRA_focus_new_arm_0
+                        }
+                    }                       
+				}
+				modify_timed_idea = {
+					idea = FRA_rebuilding_army
+					months = 2
+				}
 			}
 		}
 	}
@@ -996,6 +1064,19 @@ focus_tree = {
 				category = air_equipment
 				uses = 3
 				bonus = 0.2
+			}if = {
+				limit = {
+					OR = {
+                        has_idea = FRA_rebuilding_army
+                        NOT = {
+                            has_completed_focus = FRA_focus_new_arm_0
+                        }
+                    }                       
+				}
+				modify_timed_idea = {
+					idea = FRA_rebuilding_army
+					months = 2
+				}
 			}
 		}
 	}
@@ -1017,6 +1098,19 @@ focus_tree = {
 				add_building_construction = {
 					type = arms_factory
 					level = 1
+				}
+			}if = {
+				limit = {
+					OR = {
+                        has_idea = FRA_rebuilding_army
+                        NOT = {
+                            has_completed_focus = FRA_focus_new_arm_0
+                        }
+                    }                       
+				}
+				modify_timed_idea = {
+					idea = FRA_rebuilding_army
+					months = 2
 				}
 			}
 		}
@@ -1040,6 +1134,20 @@ focus_tree = {
 				landing_craft = 1
 			}
 			navy_experience = 10
+			if = {
+				limit = {
+					OR = {
+                        has_idea = FRA_rebuilding_army
+                        NOT = {
+                            has_completed_focus = FRA_focus_new_arm_0
+                        }
+                    }                       
+				}
+				modify_timed_idea = {
+					idea = FRA_rebuilding_army
+					months = 2
+				}
+			}
 		}
 	}
 	focus = {
@@ -1064,6 +1172,19 @@ focus_tree = {
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.2
 				category = cat_marines_doctrine
+			}if = {
+				limit = {
+					OR = {
+                        has_idea = FRA_rebuilding_army
+                        NOT = {
+                            has_completed_focus = FRA_focus_new_arm_0
+                        }
+                    }                       
+				}
+				modify_timed_idea = {
+					idea = FRA_rebuilding_army
+					months = 2
+				}
 			}
 		}
 	}
@@ -1090,6 +1211,19 @@ focus_tree = {
 					type = dockyard
 					level = 3
 				}
+			}if = {
+				limit = {
+					OR = {
+                        has_idea = FRA_rebuilding_army
+                        NOT = {
+                            has_completed_focus = FRA_focus_new_arm_0
+                        }
+                    }                       
+				}
+				modify_timed_idea = {
+					idea = FRA_rebuilding_army
+					months = 2
+				}
 			}
 		}
 	}
@@ -1110,7 +1244,7 @@ focus_tree = {
 			add_tech_bonus = {
 				category = infantry_weapons
 				uses = 2
-				bonus = 0.5
+				bonus = 0.2
 			}
 		}
 	}
@@ -1155,11 +1289,9 @@ focus_tree = {
 			focus = FRA_focus_arm_3
 		}
 		completion_reward = {
-			army_experience = 10
-			add_tech_bonus = {
-				category = artillery
-				uses = 2
-				bonus = 0.5
+			country_event = {
+				id = FRA_prov_event.32
+				days = 2
 			}
 		}
 	}
@@ -1181,7 +1313,7 @@ focus_tree = {
 			add_tech_bonus = {
 				category = artillery
 				uses = 2
-				bonus = 0.5
+				bonus = 0.25
 			}
 		}
 	}
@@ -1198,6 +1330,12 @@ focus_tree = {
 			focus = FRA_focus_new_arm_5
 		}
 		completion_reward = {
+			army_experience = 10
+			add_tech_bonus = {
+				category = cat_anti_tank
+				uses = 2
+				bonus = 0.25
+			}
 		}
 	}
 	focus = {
@@ -1233,24 +1371,16 @@ focus_tree = {
 			focus = FRA_focus_arm_3.5
 		}
 		completion_reward = {
+			army_experience = 20
 			add_tech_bonus = {
 				category = motorized_equipment
 				uses = 1
-				bonus = 0.4
+				bonus = 0.25
 			}
 			add_tech_bonus = {
 				category = cat_mechanized_equipment
 				uses = 1
-				bonus = 0.4
-			}
-			random_state = {
-				limit = {
-					state = 460
-				}
-				custom_effect_tooltip = FRA_focus_arm_11_tt
-			}
-			hidden_effect = {
-				load_oob = FRA_light_tank
+				bonus = 0.25
 			}
 		}
 	}
@@ -1269,6 +1399,12 @@ focus_tree = {
 			focus = FRA_focus_new_arm_6
 		}
 		completion_reward = {
+			add_tech_bonus = {
+				category = cat_light_armor
+				uses = 1
+				bonus = 0.25
+			}
+			add_ideas = FRA_manoeuvre_n_strike
 		}
 	}
 	focus = {
@@ -1282,7 +1418,14 @@ focus_tree = {
 		prerequisite = {
 			focus = FRA_focus_new_arm_7
 		}
+		available = {
+			has_completed_focus = FRA_focus_arm_7
+		}
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRA_manoeuvre_n_strike
+				add_idea = FRA_manoeuvre_n_strike_1
+			}
 		}
 	}
 	focus = {
@@ -1316,6 +1459,7 @@ focus_tree = {
 			focus = FRA_focus_arm_2
 		}
 		completion_reward = {
+			add_ideas = FRA_infantry_tactics
 		}
 	}
 	focus = {
@@ -1333,6 +1477,10 @@ focus_tree = {
 			focus = FRA_focus_new_arm_1
 		}
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRA_infantry_tactics
+				add_idea = FRA_infantry_tactics_1
+			}
 		}
 	}
 	focus = {
@@ -1350,6 +1498,10 @@ focus_tree = {
 			focus = FRA_focus_new_arm_2
 		}
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRA_infantry_tactics
+				add_idea = FRA_infantry_tactics_2
+			}
 		}
 	}
 	focus = {
@@ -1365,6 +1517,21 @@ focus_tree = {
 			focus = FRA_focus_new_arm_3
 		}
 		completion_reward = {
+			if = {
+				limit = {
+					has_idea = FRA_infantry_tactics_1
+				}
+				swap_ideas = {
+					remove_idea = FRA_infantry_tactics_1
+					add_idea = FRA_elan_vital
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = FRA_infantry_tactics_2
+					add_idea = FRA_elan_vital_1
+				}
+			}
 		}
 	}
 	focus = {
@@ -1382,6 +1549,12 @@ focus_tree = {
 			focus = FRA_focus_new_arm_5
 		}
 		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.35
+				category = cat_mountaineers_doctrine
+				uses = 2
+			}
+			add_ideas = FRA_mountain_cannon
 		}
 	}
 	focus = {
@@ -1399,13 +1572,37 @@ focus_tree = {
 			focus = FRA_focus_new_arm_6
 		}
 		completion_reward = {
+			if = {
+				limit = {
+					has_idea = FRA_focus_on_big_gun
+				}
+				swap_ideas = {
+					remove_idea = FRA_focus_on_big_gun
+					add_idea = FRA_scorched-earth_operation_2
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = FRA_focus_on_rocket
+				}
+				swap_ideas = {
+					remove_idea = FRA_focus_on_rocket
+					add_idea = FRA_scorched-earth_operation_1
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = FRA_focus_on_field_gun
+					add_idea = FRA_scorched-earth_operation
+				}
+			}
 		}
 	}
 	focus = {
 		#대육군의 영광
 		icon = GFX_focus_generic_little_entente
 		id = FRA_focus_new_arm_11
-		cost = 4
+		cost = 2
 		x = 0
 		y = 3
 		relative_position_id = FRA_focus_arm_14
@@ -1415,6 +1612,8 @@ focus_tree = {
 			focus = FRA_focus_new_arm_10
 		}
 		completion_reward = {
+			unlock_decision_tooltip = FRA_propaganda_2
+			add_war_support = 0.1
 		}
 	}
 	focus = {
@@ -1733,6 +1932,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100
 		}
+		available = {
+			has_global_flag = spanish_civil_war
+		}
 		prerequisite = {
 			focus = FRA_focus_spain_civilwar
 		}
@@ -2015,14 +2217,12 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = FRA_focus_german_1
 		}
-		bypass = {NOT={
+		available = {
 			ETH = {
 				exists = yes
 				has_war_with = ITA
 				has_capitulated = no
-			}}
-		}
-		available = {
+			}
 			has_war = no
 			is_embargoing = ITA
 		}
@@ -3327,7 +3527,7 @@ focus_tree = {
 			base = 10
 		}
 		offset = {
-			x = -5
+			x = 4
 			trigger = {
 				has_completed_focus =  FRA_focus_resist_4
 			}			
@@ -3363,12 +3563,6 @@ focus_tree = {
 		ai_will_do = {
 			base = 10
 		}
-		offset = {
-			x = -9
-			trigger = {
-				has_completed_focus =  FRA_focus_resist_4
-			}			
-		}
 		prerequisite = {
 			focus = FRA_focus_par_1
 		}
@@ -3395,6 +3589,9 @@ focus_tree = {
 		allow_branch = {
 			NOT = {
 				has_completed_focus = FRA_focus_par_9
+			}
+			NOT = {
+				has_completed_focus = FRA_focus_resist_3
 			}
 			has_country_flag = FRA_strong_resist
 		}
@@ -3551,6 +3748,9 @@ focus_tree = {
 		allow_branch = {
 			NOT = {
 				has_completed_focus = FRA_focus_par_4
+			}
+			NOT = {
+				has_completed_focus = FRA_focus_resist_3
 			}
 			has_country_flag = FRA_strong_resist
 		}
@@ -4368,7 +4568,7 @@ focus_tree = {
 			}
 		}
 		offset = {
-			x = -15
+			x = -9
 			trigger = {
 				has_completed_focus = FRA_focus_par_4
 			}
@@ -4926,7 +5126,7 @@ focus_tree = {
 	focus = {
 		#지하 경제 
 		id = FRA_focus_6.8
-		icon = GFX_focus_generic_modernize_industry
+		icon = GFX_focus_DEN_heavy_regulations
 		cost = 4.4
 		x = -0
 		y = 1
@@ -4967,6 +5167,9 @@ focus_tree = {
 		completion_reward = {
 			MIL = {
 				random_owned_state = {
+					limit = {
+						industrial_complex > 1
+					}
 					remove_building = {
 						type = industrial_complex
 						level = 2
@@ -5088,12 +5291,12 @@ focus_tree = {
 		}
 		completion_reward = {
 			MIL = {
-				effect_tooltip = {
-					MIL_Resistance_idea_up = yes
-				}
 				country_event = {
 					id = FRA_prov_event.119
 					days = 3
+				}
+				effect_tooltip = {
+					MIL_Resistance_idea_up = yes
 				}
 			}
 		}
@@ -5174,7 +5377,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = FRA_focus_resistance_9
 		prerequisite = {
-			focus = FRA_focus_resistance_3
+			focus = FRA_focus_resistance_4
 		}
 		completion_reward = {
 			swap_ideas = {

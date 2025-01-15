@@ -166,87 +166,143 @@
  USA_old_team_desc: "이계인들이 유럽을 지배하며 새로운 질서를 세우는 사이, 우리 미국은 인내하고 또 인내했습니다. 이제는 고통 받고 있는 유럽인들을, 아니 인류를 해방시킬 때입니다."
 
  USA_support_alies: "연합국 지원"
- USA_support_alies_desc: "프랑스와 영국은 이계의 침략에 맞서 연합국을 조인했습니다. 그들의 투쟁과 단결력이라면 이계인을 물리칠 수 있을 겁니다."
+ USA_support_alies_desc: "본토를 빼앗기고 식민지로 피난온 영국과 프랑스는 서로 연합하여 본토 수복에 대한 결의로 불타오르고 있습니다. 이들을 군사적으로 지원하여 유럽 해방을 위한 기틀을 다져야합니다."
 
  USA_attack_COU: "베네룩스 해방"
- USA_attack_COU_desc: "저지대 해방"
+ USA_attack_COU_desc: "저지대 지역은 미국이 이계인들에게 점령당한 유럽으로 수월하게 나아가기 위한 유일한 관문이자, 전략적 요충지입니다. 우린 이계인들의 침략으로 고통받는 저지대 국민들을 해방하며 유럽으로 향하는 관문을 열어젖혀야 합니다."
 
  USA_support_GEK: "독일 지원"
- USA_support_GEK_desc: "독일은 이계인에 의해 가장 많이 피해를 보았으며, 많은 독일인들이 본토를 그리워하고 있습니다. 우리는 이 목소리를 무시할 수 없습니다."
+ USA_support_GEK_desc: "독일은 두 이계인 세력에 의해 양분되어 대전쟁의 총알받이로 무참히 학살당하고 있습니다. 우린 피난온 독일인 난민들을 지원하고 본토 해방을 약속할 것입니다."
  
  USA_support_north_europe: "북유럽 지원"
- USA_support_north_europe_desc: "북유럽은 그들의 의지와 관계없이 강제로 공산화 당했습니다. 우리는 이계의 붉은 역병으로부터 구해줄 의무가 있습니다."
+ USA_support_north_europe_desc: "노르웨이, 스웨덴, 덴마크는 이계인들의 침공과 급진주의적 사상에 물들어 고통받고 있습니다. 이들을 비밀스럽게 지원하여 북유럽에서 붉은 역병을 몰아낼 기회를 엿볼 것입니다."
  
  USA_attack_KAI: "영국 해방"
- USA_attack_KAI_desc: "영국 본토 수복"
+ USA_attack_KAI_desc: "영국은 본토를 빼앗겼지만, 여전히 항전의 의지를 내비치고 있습니다. 우리는 그들과 함께 이계인들을 물리쳐 영국인들에게 고토를 돌려줄 것입니다."
  
  USA_attack_MIL: "프랑스 해방"
- USA_attack_MIL_desc: "리오 공격"
+ USA_attack_MIL_desc: "자유와 평등, 그리고 박애를 외치던 프랑스인들은 감정 없는 기계를 위한 노예가 되버렸습니다. 그들을 해방시켜 아직 민주주의가 지지 않았다는 것을 보여줍시다."
  
  USA_attack_TRM: "동독일 해방"
  USA_attack_TRM_desc: "나치가 기어코 인류를 배신하고 이계인과 협력했습니다! 지금, 정의가 살아있다는 것을 입증할 시간입니다."
 
  USA_attack_GEH: "서독일 해방"
- USA_attack_GEH_desc: "이부키를 국회로!"
+ USA_attack_GEH_desc: "전이한 악마들이 한 짓은 아무 이유 없이 민간인에게 총을 쏜 것이었습니다. 우리는 악마들로부터 독일인을 해방시키고 완전히 몰아낼 것입니다."
 
  USA_support_FIN: "핀란드 지원"
- USA_support_FIN_desc: "시수 개사기"
+ USA_support_FIN_desc: "핀란드는 스칸디나비아 반도의 이계인들의 침략에서 본토를 수복해낸 국가이나, 이들의 군사적 역량은 재침공을 견뎌낼 수준이 아닙니다. 우린 핀란드를 지원하여 이를를 교두보로 삼아 스칸디나비아 반도를 해방시킬 준비를 할 것입니다. "
 
  USA_attack_RED: "북유럽 해방"
- USA_attack_RED_desc: "해방의 때가 찾아왔습니다. 소중한 민주주의를 이계의 붉은 역병으로부터 해방할 때가 도래한 것입니다!"
+ USA_attack_RED_desc: "오랜 기다림 끝에, 스칸디나비아 해방을 위한 준비가 모두 끝났습니다. 붉은 역병을 퍼뜨리는 이계인에 맞서, 소중한 민주주의를 해방시킬 때가 왔습니다."
 
  USA_old_team_guardian: "승리 선언"
- USA_old_team_guardian_desc: "신질서가 패배하고, 질서가 다시 본래 자리를 잡았습니다. 잘 했습니다."
+ USA_old_team_guardian_desc: "대전이가 일어나고, 이계인들과의 총력전이 벌어진지 많은 시간이 지났습니다. 적들의 모든 전략전술에도 불구하고, 우리 군대는 승리하였습니다. 미국은 또 다시, 자유를 위협하는 압제자들에게서 승리하였습니다!"
 
  USA_marshall_plan: "마셜 플랜"
- USA_marshall_plan_desc: "전쟁은 이겼지만, 모든 상황이 끝나지 않았습니다. 황폐화된 유럽을 복귀할 시간입니다."
+ USA_marshall_plan_desc: "전쟁은 이겼지만, 유럽의 상황은 좋지 않습니다. 이대로라면 또 다른 갈등으로 인해 새로운 전쟁이 터질지도 모르는 일입니다. 조지 마셜이 제안한 '마셜 플랜'은 유럽 국가들을 경제적으로 지원하여 대전이 이전으로 복구시킬 것입니다. "
 
  USA_attack_abyss: "최후의 전쟁"
  USA_attack_abyss_desc: "진정한 적이 따로 있었습니다. 형용할 수 없는 공포가 압도하지만, 저희는 해야만 합니다."
 
  USA_Pax_Americana: "§CPax§! §tAmericana§!"
- USA_Pax_Americana_desc: "저희의 주도로 세계는 안전해졌습니다. §C팍스§! §t아메리카나!!§!"
+ USA_Pax_Americana_desc: "수많은 전쟁과 피를 흘린 끝에, 위대한 미국의 주도로 유럽, 그리고 세계는 이계인의 침공을 극복하고 그 상흔을 치료하는 중에 있습니다. 이제 식민제국이 주도하는 낡은 질서에서 벗어난, '미국이 주도하는 신질서'의 시대가 도래한 것입니다. §C팍스§! §t아메리카나!!§!"
 
 
  #신질서 편입
  USA_new_team: "신질서 편승"
- USA_new_team_desc: "유럽인들은 언제나 강력한 국력으로 세계를 착취하며 구시대적인 질서를 유지했습니다. 우리는 새로운 시대를 이끌어 나가는 이계인에 동참해야만 합니다.  §R우리는 대의를 위해 모든 것을 포기할 겁니다. 당신도 동참하실 겁니까?§R"
+ USA_new_team_desc: "강력한 국력으로 세계의 질서를 휘어잡던 유럽인들의 제국이 대전이로 인해 무너졌습니다. 우리는 구질서를 몰락시킨 이들과 우호적인 관계를 맺어 새로운 질서를 수립해야 할 것입니다. §R우리는 대의를 위해 모든 것을 포기할 겁니다. 당신도 동참하실 겁니까?§R"
 
  USA_new_team_TV: "선전"
- USA_new_team_TV_desc: "국민들은 신질서에 동참할 의무가 있다는 것을 깨달아야 합니다. 저희가 그 역할이 됩시다."
+ USA_new_team_TV_desc: "아직 이계인들과의 친선에 의문을 표하는 이들이 적잖이 존재합니다. 약간의 선전을 통해서, 이계인과의 친선에 관한 장점들을 강조하며 이들을 우리 편으로 만들 수 있을 것입니다."
 
  USA_new_team_marry: "이계 법안 발의"
- USA_new_team_marry_desc: "이계인은 이제 우리 인류와 같은 권리를 갖게 됩니다. 서로를 존중하고, 사랑하는 세상이 될 수 있도록 말이죠."
+ USA_new_team_marry_desc: "미국으로 넘어오는 몇몇 이계인들은 현지 법의 경계에 걸쳐있는 이주 애매한 존재들입니다. 이들을 법적으로 보호하고, 후일에 생길 혼란을 막기 위해선 이계인들을 위한 특별 법안이 필요합니다."
 
  USA_new_team_anime: "애니메이션 상영"
- USA_new_team_anime_desc: "쭉쭉체조를 하는 모습, 정말 사랑스럽지 않나요?"
+ USA_new_team_anime_desc: "산해경의 문주, 키사키의 쭉쭉체조가 담긴 영상이 유럽의 남녀노소를 가리지 않고 선풍적인 인기를 끌고 있습니다. 이계인의 고정관념을 풀기 위해서, 이 영상을 상영해야합니다."
 
  USA_new_team_civilwar: "결단"
  USA_new_team_civilwar_desc: "더 나은 미래를 위해 우리는 여태까지 쉽지 않은 결정을 했습니다. 이제는 결단을 내릴 차례입니다. 모든 사람들이 우리를 가리키며 인류를 버린 배신자라고 비난하지만 마지막에는 저희가 옳았다는 것을 알게 될 겁니다."
  
+ USA_new_team_threat: "설득과 회유"
+ USA_new_team_threat_desc: "정부의 결정에 반대하는 의원들이 여전히 존재합니다. 이들에게 신질서에 편승한 미국이 보여줄 더 나은 미래를 강조하며 설득하면 설득될지도 모릅니다. "
+
  USA_new_team_help: "신질서에 의용군 요청"
  USA_new_team_help_desc: "우리의 진심을 보이기 위해 같은 가족끼리 총을 겨누기까지 했습니다. 이제 우리가 그들의 진심을 확인할 차례입니다."
 
  USA_blue_kivotos: "민주 신질서"
- USA_blue_kivotos_desc: " "
+ USA_blue_kivotos_desc: "이계인들 사이에선 우리의 정치 사상과 매우 유사한 정치체계가 존재합니다. 이들과 함께하여 신질서에 편승한다면 적어도 이념에 관한 마찰은 존재하지 않을 것입니다."
 
  USA_bad_kivotos: "국민 신질서"
- USA_bad_kivotos_desc: "신질서에 장애물이 될 만한 것은 과감하게 버려야 합니다. 그것이 설령 수 백년 동안 보존한 이념이랄 지도요."
+ USA_bad_kivotos_desc: "신질서를 따르기 위해선, 굴욕적일지 몰라도 우리 본래의 이념을 벗어던지고 이들을 마주해야 할지도 모릅니다. 그 이념이 수백년동안 피를 흘려 보존한 아념일지라도요."
 
  USA_blue_kivotos_MIL: "밀레니엄 따르기"
- USA_blue_kivotos_MIL_desc: "압도적인 과학 문물이 넘치는 밀레니엄 사이언스 스쿨이 바로 우리가 따라가야 할 국가입니다."
+ USA_blue_kivotos_MIL_desc: "우리, 심지어 같은 이계인들과 비교해도 압도적인 과학 기술을 가진 밀레니엄 사이언스 스쿨과 함께한다면, 미국의 기술력에 관한 전진이 있을 것입니다."
+
+ USA_bad_kivotos_Eden: "에덴 조약 따르기"
+ USA_bad_kivotos_Eden_desc: "평화와 공존이 불가능할 것 같은 두 국가가 서로 손을 잡았습니다. 현재로써 이계인들의 국가중 이보다 강한 연합이 존재하지 않기에, 우린 이들이 주도하는 질서에 편승하여 국력을 보존할 것입니다."
 
  USA_bad_kivotos_COU: "총학생회 따르기"
- USA_bad_kivotos_COU_desc: "조사한 바로는, 총학생회는 신질서 중 가장 권한이 높은 국가였습니다. 우리는 그들을 도와 다시 전성기 시대로 돌아가게 해야 합니다."
+ USA_bad_kivotos_COU_desc: "총학생회는 이계인들의 국가중 가장 높은 권한을 가지고 있던 컨트롤 타워같은 국가였습니다. 우린 이들의 재건을 도와 우호적인 관계를 다지며 다른 이계인들의 국가에 개입할 수 있는 권한을 얻어내야합니다."
 
  USA_bad_kivotos_GEM: "게헨나 따르기"
  USA_bad_kivotos_GEM_desc: "예로부터 세상은 약육강식의 법칙으로 흘려갔습니다. 이 사실을 진작 알고 있으며, 이 법칙을 따르는 게헨나에 동참해야 합니다."
 
  USA_bad_kivotos_TRM: "트리니티 따르기"
- USA_bad_kivotos_TRM_desc: "빠와 까 모두를 미치게 하는 트리니티의 수장, 미소노 미카에 동참해야 합니다."
+ USA_bad_kivotos_TRM_desc: "심성이 고우며, 우아한 천사의 모습을 한 그들이야말로 신질서의 모범입니다. 그들을 따릅시다."
+
+ USA_bad_kivotos_support_hina: "히나를 선택하기"
+ USA_bad_kivotos_support_hina_desc: "게헨나를 연구할수록, 실망이 커져만 갔습니다. 다만 선도부는 만마전과 달리 유능한 집단입니다. 그들의 수장인 히나를 따릅시다."
+
+ USA_bad_kivotos_support_makoto: "마코토를 선택하기"
+ USA_bad_kivotos_support_makoto_desc: "마코토는 솔직히 말하면 무능한 편에 속합니다. 하지만 제멋대로인 악마를 상대로 권력을 잡으며, 가끔씩 놀라운 통찰력을 지닌 그녀라면 믿고 따를 수 있습니다."
+ 
+ USA_bad_kivotos_support_mika: "미카를 선택하기"
+ USA_bad_kivotos_support_mika_desc: "미카는 우리의 생각과는 다르게, 동화 속 공주처럼 감성적이고 순진했습니다. 하지만 약한 마음이 약한 힘을 의미하진 않습니다. 우리는 그녀를 따라야 합니다."
+
+ USA_bad_kivotos_support_hina_2: "선도부원들 조언 구하기"
+ USA_bad_kivotos_support_hina_2_desc: "유능한 것은 히나뿐만이 아닙니다. 선도부원들을 초빙하면 내전으로 엉망이 된 본토를 복구할 수 있을 겁니다."
+
+ USA_bad_kivotos_GEH_halo_infantry: "선도부 연합 제병합동"
+ USA_bad_kivotos_GEH_halo_infantry_desc: "선도부는 히나 개인의 무력에 의존하고 있습니다. 우리와 연합 훈련을 한다면, 그들은 더 이상 히나에 의지하지 않아도 될 겁니다."
+ 
+ USA_bad_kivotos_GEM_tank: "만마전 중전차 도입"
+ USA_bad_kivotos_GEM_tank_desc: "우리가 주목해야 할 것은 바로 게헨나의 중전차 대대입니다. 게헨나의 중전차, 토라마루를 벤치마킹해 중전차 설계를 하여 대대적인 군사 개편을 합시다."
+
+ USA_bad_kivotos_GEM_halo_infantry: "게헨나 제병합동"
+ USA_bad_kivotos_GEM_halo_infantry_desc: "게헨나는 압도적인 초인이 부족할 뿐, 병력과 군사 기술 자체는 뛰어난 편입니다. 게헨나의 군사 기술과 협력으로 미군을 개편합시다."
+
+ USA_bad_kivotos_support_iroha: "게헨나의 실장"
+ USA_bad_kivotos_support_iroha_desc: "이로하는 만마전의 몇 없는 상식인이자, 유능한 실장입니다. 그녀의 조언을 구하고 정책을 펼친다면 내전의 여파를 쉽게 해결할 수 있을 겁니다."
+ 
+ USA_bad_kivotos_support_ibuki: "게헨나의 대공녀"
+ USA_bad_kivotos_support_ibuki_desc: "이 세상에 그녀만큼 귀여운 존재가 또 있을까요? 이부키를 파티에 초청합시다. 그녀의 존재는 미국인에게 큰 버팀목이 될 겁니다."
+ 
+ USA_bad_kivotos_support_GEM_club: "동아리 로비 그룹 제작"
+ USA_bad_kivotos_support_GEM_club_desc: "그들은 게헨나 내에서, 아니 모든 학원에서 주의 대상이지만 개개인의 능력만 보았을 때는 유능한 편입니다. 그들의 재능을 펼칠 수 있게 로비 그룹을 만듭시다."
+
+ USA_bad_kivotos_totalwar: "총력전 선언"
+ USA_bad_kivotos_totalwar_desc: "낡은 질서를 버리고 새로운 질서를 따라야 합니다. 말 뿐으로 따르는 게 아니라, 남녀노소 모두 행동으로 실천해야 합니다."
+ 
+ USA_bad_kivotos_support_TRM_club: "도서부와 협력"
+ USA_bad_kivotos_support_TRM_club_desc: "트리니티 도서부는 매우 규모가 크고, 엄격한 동아리입니다. 우리는 트리니티와 정식으로 조약을 맺어 그 곳의 지식을 공유할 겁니다."
+
+ USA_bad_kivotos_TRM_halo_infantry: "트리니티 제병합동"
+ USA_bad_kivotos_TRM_halo_infantry_desc: "트리니티 학생들은 대체로 얌전한 편이지만, 그들의 군사력은 높은 수준입니다. 특히 아군 지원에 출중하며, 우리는 그 능력에 집중하여 함께 제병합동을 할 겁니다."
+
+ USA_bad_kivotos_justice: "정의실현부와 협력"
+ USA_bad_kivotos_justice_desc: "정의실현부는 무력이 매우 뛰어난 자치 경찰 단체입니다. 그들과 협력하면 반 국가 세력들을 축출할 수 있을 겁니다."
+
+ USA_bad_kivotos_justice_sword: "트리니티의 검"
+ USA_bad_kivotos_justice_sword_desc: "트리니티의 검과 방패가 되어줍시다. 트리니티를 위협하는 세력을 모두 제거합시다. 정의실현부와 함께 정의를 실천합시다."
+
+ USA_bad_kivotos_halo_infantry_2: "'제 3의 길'"
+ USA_bad_kivotos_halo_infantry_2_desc: "신질서의 기술을 적용한 새로운 연대를 편성하고, 연합 훈련의 교훈을 접목합시다. 그 누구도 가지 않았던 길을, 우리가 지금 걷고 있습니다!"
+
+
 
  USA_bad_kivotos_RED: "붉은겨울 따르기"
- USA_bad_kivotos_RED_desc: "그들을 따르면 푸딩을 먹을 수 있을 겁니다."
+ USA_bad_kivotos_RED_desc: "매우 황당하고 멍청한 선택 같지만, 의외로 좋은 선택일 지도 모릅니다..."
 
  USA_blue_kivotos_MIL2: "미국-밀레니엄 주둔군 조약"
  USA_blue_kivotos_MIL2_desc: "그들의 골칫거리인 빨갱이 레지스탕스를 모두 쓸어버립시다."
@@ -257,7 +313,7 @@
  USA_blue_kivotos_MIL3_halo: "신비 파악"
  USA_blue_kivotos_MIL3_halo_desc: "갑작스레 등장한 이계인의 비밀을 파헤칠 수 있는 기회입니다."
 
- USA_blue_kivotos_MIL3_rocket: "위공위성 개발"
+ USA_blue_kivotos_MIL3_rocket: "인공위성 개발"
  USA_blue_kivotos_MIL3_rocket_desc: "상상해본 적 있습니까? 그저 눈으로 좇아야만 했던 우주에 인류의 흔적을 남긴다는 것을!"
 
  USA_bad_kivotos_halo_infantry_division: "헤일로 보병 파악"
@@ -273,7 +329,7 @@
  USA_support_brazil_desc: "브라질의 연금술 기술이라면 신질서 따윈 금방 이길 겁니다."
 
  USA_support_spain: "이베리아 대륙 지원"
- USA_support_spain_desc: "이베리아 대륙은 중요한 전략적 요충지입니다."
+ USA_support_spain_desc: "이베리아 대륙은 중요한 전략적 요충지입니다. 그것 뿐만이 아니라, 미적지근한 반응을 보이는 그들을 포섭한다면 국제 연맹의 참가 의사가 훨씬 많아질 것입니다."
 
  USA_support_ITA: "이탈리아 지원"
  USA_support_ITA_desc: "유럽에서 제대로 된 열강은 이제 이탈리아밖에 없습니다. 그들과 손을 잡아야만 합니다."
