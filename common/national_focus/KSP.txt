@@ -3564,6 +3564,9 @@ focus_tree = {
 		available = {
 
 		}
+		bypass = {
+			has_completed_focus = KSP_kirino_plan
+		}
 		prerequisite = {
 			focus = KSP_sanghwal_safety_coup
 		}
@@ -3581,6 +3584,9 @@ focus_tree = {
 			add_popularity = {
 				ideology = democratic
 				popularity = 0.10
+			}
+			set_politics = {
+				ruling_party = democratic
 			}
 		}
 	}
@@ -3776,6 +3782,9 @@ focus_tree = {
 		available = {
 
 		}
+		bypass = {
+			has_completed_focus = KSP_fubuki_plan
+		}
 		prerequisite = {
 			focus = KSP_sanghwal_safety_coup
 		}
@@ -3789,10 +3798,14 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = 25
-			add_war_support = 0.15
+			add_war_support = 0.10
 			add_popularity = {
 				ideology = communism
-				popularity = 0.15
+				popularity = 0.10
+			}
+			swap_ruler_traits = {
+				remove = KSP_misukan_leader
+				add = KSP_misukan_leader_2
 			}
 		}
 	}

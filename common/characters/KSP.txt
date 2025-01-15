@@ -227,7 +227,7 @@ characters={
 		gender = female
 		country_leader={
 			ideology=police_democratic
-			traits = {  }
+			traits = { KSP_nemugaki_fubuki_set_2 }
 			expire="1965.1.1.1"
 			id=-1
 		}
