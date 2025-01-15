@@ -330,8 +330,9 @@
  FRA_prov_event.98.t:0 "스위스의 거절"
  FRA_prov_event.98.d:0 "스위스는 우리의 요청을 거절했습니다."
  FRA_prov_event.98.a:0 "무력은 이따금 최선의 수단이다."
- FRA_prov_event.99.t:0 "군부의 권력 강화"
- FRA_prov_event.99.d:0 "군부는 현 사태가 혁파해야 할 대상이며, 군부가 국가와 정의를 위해 궐기하였음을 선언하였습니다."
+ FRA_prov_event.99.t: "호치민과의 협상"
+ FRA_prov_event.99.d: "우리는 더 이상 인도차이나를 유지할 수 없다는 것은 분명해지고 있습니다. 우리는 질서있는 철수를 통해 최대한 이익을 보전한 채로 식민지를 포기할 것입니다."
+ FRA_prov_event.99.a: "이게 맞다."
  FRA_prov_event.99.a:0 "예상했어."
  FRA_prov_event.100.t:0 ""
  FRA_prov_event.100.d:0 "" 
@@ -786,7 +787,6 @@
  FRA_manoeuvre_n_strike: "기동과 타격"
  FRA_infantry_tactics: "보병 전술"
  FRA_elan_vital: "'Élan Vital'"
-			
 
  FRA_building_sahara_rail:0 "사하라 철도 건설"
  FRA_industry_tools:0 "추가적인 산업 용구"
@@ -809,6 +809,7 @@
  FRA_village_sab_idea:0 "농촌 저항"
  FRA_naval_block:0 "해상 봉쇄"
  FRA_german_scientist:0 "독일 과학자들"
+
  VIN_fucked_up:0 "불구가 된 식민지"
  FRA_involve_indochina_tt:0 "§Y[FRA.getname]§!(이)가 인도차이나에 개입했습니다."
  VIN_indochina_war_idea:0 "인도차이나 내전"
@@ -820,6 +821,8 @@
  VIN_expand_industry:0 "프랑스 산업 진출"
  VIN_expand_resource:0 "자원 채굴 확대"
  FRA_government_general:0 "인도차이나 총독부"
+ FRA_good_retreat: "질서 있는 철수"
+
  FRA_franc:0 "화폐 개혁"
  FRA_MEFO:0 "군수 산업 기획"
  FRA_less_working_1:0 "보편 복지"
@@ -1030,7 +1033,7 @@
  FRA_focus_13_desc:0 "본토에서 쫓겨났지만, 우리는 거대한 아프리카 땅에서 다시 일어섰습니다. 이젠 식민지 따위가 아닌 지중해로 눈을 돌릴 때입니다."
  FRA_focus_14:0 "인도차이나 투자"
  FRA_focus_14_desc:0 "우리의 식민지 개발엔 바다 건너 아시아에도 적용해야 합니다. 인도차이나반도를 강화하여 부족한 물자를 수급합시다."
- FRA_focus_15:0 "인도차이나 판매"
+ FRA_focus_15:0 "호치민과의 타협"
 
  FRA_focus_new_arm_0: "병종 재건"
  FRA_focus_new_arm_1: "보병 운용 교리"

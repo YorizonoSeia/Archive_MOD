@@ -4485,6 +4485,40 @@ news_event = { # 왕징웨이의 국민정부 선언
     }
 }
 
+news_event = { # 프랑스의 인도차이나 철수
+    id = BA_news.119
+    title = BA_news.119.t
+    desc = BA_news.119.d
+    picture = GFX_news_event_HUN_hungary_occupies_area
+
+    major = yes
+    is_triggered_only = yes
+
+
+    option = {
+        name = BA_news.119.a
+        trigger = {
+			tag = FRA
+        }
+    }
+    option = {
+        name = BA_news.119.b
+        trigger = {
+			NOT = {
+				tag = FRA
+				has_government = communism
+			}
+        }
+    }
+    option = {
+        name = BA_news.119.c
+        trigger = {
+			has_government = communism
+        }
+    }
+}
+
+
 
 #news_event = { # 미국 트리니티 에덴 점령
 #    id = BA_news.112

@@ -438,6 +438,14 @@ ideas = {
 				has_government = neutrality
 			}
 		}
+		FRA_good_retreat = {
+			picture = eng_a_change_in_course
+			modifier = {
+				country_resource_tungsten = 10
+				country_resource_rubber = 20
+				consumer_goods_factor = -0.05
+			}
+		}
 		FRA_franc = { #화폐 개혁
 			picture = ITA_devaluated_lira
 			allowed = {
@@ -1679,7 +1687,7 @@ ideas = {
 				original_tag = fra
 			}
 			modifier = {
-				command_power_gain = -0.1
+				command_power_gain = -0.4
 				experience_gain_factor = -0.2
 				neutrality_drift = -0.03
 			}

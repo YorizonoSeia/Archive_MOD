@@ -692,11 +692,11 @@ focus_tree = {
 		#인도차이나 개발
 		id = FRA_focus_14
 		cost = 5.8
-		x = 5
+		x = 3
 		y = 6
 		icon = GFX_goal_FRA_Indochina_tooja
 		prerequisite = {
-			focus = FRA_focus_10
+			focus = FRA_focus_13
 		}
 		mutually_exclusive = {
 			focus = FRA_focus_15
@@ -762,14 +762,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		#인도차이나 판매
+		#호치민과의 타협
 		id = FRA_focus_15
-		cost = 5.8
-		x = 3
+		cost = 5
+		x = 5
 		y = 6
-		icon = GFX_goal_generic_forceful_treaty
+		icon = GFX_goal_generic_dangerous_deal
 		prerequisite = {
-			focus = FRA_focus_13
+			focus = FRA_focus_10
 		}
 		mutually_exclusive = {
 			focus = FRA_focus_14
@@ -781,6 +781,10 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			country_event = {
+				id = FRA_prov_event.99
+				days = 2
+			}
 		}
 	}
 	#군사중점
@@ -831,6 +835,7 @@ focus_tree = {
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.5
 				category = cat_grand_battle_plan
+				uses = 1
 			}
 		}
 	}
@@ -1546,7 +1551,7 @@ focus_tree = {
 		completion_reward = {
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.35
-				category = mountaineers_tech
+				category = cat_mountaineers_doctrine
 				uses = 2
 			}
 			add_ideas = FRA_mountain_cannon
@@ -1927,6 +1932,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100
 		}
+		available = {
+			has_global_flag = spanish_civil_war
+		}
 		prerequisite = {
 			focus = FRA_focus_spain_civilwar
 		}
@@ -2209,14 +2217,12 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = FRA_focus_german_1
 		}
-		bypass = {NOT={
+		available = {
 			ETH = {
 				exists = yes
 				has_war_with = ITA
 				has_capitulated = no
-			}}
-		}
-		available = {
+			}
 			has_war = no
 			is_embargoing = ITA
 		}
@@ -3521,7 +3527,7 @@ focus_tree = {
 			base = 10
 		}
 		offset = {
-			x = -5
+			x = 4
 			trigger = {
 				has_completed_focus =  FRA_focus_resist_4
 			}			
@@ -3557,12 +3563,6 @@ focus_tree = {
 		ai_will_do = {
 			base = 10
 		}
-		offset = {
-			x = -9
-			trigger = {
-				has_completed_focus =  FRA_focus_resist_4
-			}			
-		}
 		prerequisite = {
 			focus = FRA_focus_par_1
 		}
@@ -3589,6 +3589,9 @@ focus_tree = {
 		allow_branch = {
 			NOT = {
 				has_completed_focus = FRA_focus_par_9
+			}
+			NOT = {
+				has_completed_focus = FRA_focus_resist_3
 			}
 			has_country_flag = FRA_strong_resist
 		}
@@ -3745,6 +3748,9 @@ focus_tree = {
 		allow_branch = {
 			NOT = {
 				has_completed_focus = FRA_focus_par_4
+			}
+			NOT = {
+				has_completed_focus = FRA_focus_resist_3
 			}
 			has_country_flag = FRA_strong_resist
 		}
@@ -4562,7 +4568,7 @@ focus_tree = {
 			}
 		}
 		offset = {
-			x = -15
+			x = -9
 			trigger = {
 				has_completed_focus = FRA_focus_par_4
 			}
@@ -5120,7 +5126,7 @@ focus_tree = {
 	focus = {
 		#지하 경제 
 		id = FRA_focus_6.8
-		icon = GFX_focus_generic_modernize_industry
+		icon = GFX_focus_DEN_heavy_regulations
 		cost = 4.4
 		x = -0
 		y = 1
@@ -5161,6 +5167,9 @@ focus_tree = {
 		completion_reward = {
 			MIL = {
 				random_owned_state = {
+					limit = {
+						industrial_complex > 1
+					}
 					remove_building = {
 						type = industrial_complex
 						level = 2
@@ -5282,12 +5291,12 @@ focus_tree = {
 		}
 		completion_reward = {
 			MIL = {
-				effect_tooltip = {
-					MIL_Resistance_idea_up = yes
-				}
 				country_event = {
 					id = FRA_prov_event.119
 					days = 3
+				}
+				effect_tooltip = {
+					MIL_Resistance_idea_up = yes
 				}
 			}
 		}
@@ -5368,7 +5377,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = FRA_focus_resistance_9
 		prerequisite = {
-			focus = FRA_focus_resistance_3
+			focus = FRA_focus_resistance_4
 		}
 		completion_reward = {
 			swap_ideas = {
