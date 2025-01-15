@@ -5174,6 +5174,7 @@ focus = {
 				NOT = { has_country_flag = USABA_government_official_exile }
 			}
 			has_civil_war = no
+			NOT = { has_war_with = OFN }
 
 		}
 		completion_reward = {
