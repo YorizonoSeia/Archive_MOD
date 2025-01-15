@@ -135,7 +135,6 @@ setup_central_map = {
 	central_map_calculate_frame = yes
 }
 ABY_69_develop_effect = {
-	hidden_effect = {
 		set_variable = { ABY_selected_state = 69 }
 		if = {
 			limit = {
@@ -206,11 +205,9 @@ ABY_69_develop_effect = {
 				}
 			}
 		}
-	}
 	central_map_calculate_frame = yes
 }
 ABY_69_unite_effect = {
-	hidden_effect = {
 		set_variable = { ABY_selected_state = 69 }
 		if = {
 			limit = {
@@ -252,6 +249,12 @@ ABY_69_unite_effect = {
 			add_to_variable = {ABY_var_drift_defence_factor = 0.1}
 			add_to_variable = {ABY_var_compliance_gain = 0.01}
 			add_to_variable = {ABY_var_resistance_target_on_our_occupied_states = 0.1}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_two_00
+					add_idea = ABY_idea_two_01
+				}
+			}
 		}
 		else_if = {
 			limit = {
@@ -261,11 +264,9 @@ ABY_69_unite_effect = {
 				add_manpower = 50000
 			}
 		}
-	}
 	central_map_calculate_frame = yes
 }
 ABY_69_rebuild_effect = {
-	hidden_effect = {
 		set_variable = { ABY_selected_state = 69 }
 		if = {
 			limit = {
@@ -274,12 +275,7 @@ ABY_69_rebuild_effect = {
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			69 = {
-				remove_dynamic_modifier = {
-					modifier = ABY_modifier_rebuild_1
-				}
-				add_dynamic_modifier = {
-					modifier = ABY_modifier_rebuild_2
-				}
+				add_compliance = 50
 			}
 		}
 		else_if = {
@@ -289,9 +285,7 @@ ABY_69_rebuild_effect = {
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			69 = {
-				remove_dynamic_modifier = {
-					modifier = ABY_modifier_rebuild_2
-				}
+				add_core_of = ABY
 			}
 		}
 		else_if = {
@@ -299,11 +293,9 @@ ABY_69_rebuild_effect = {
 				check_variable = { ABY_selected_state:ABY_rebuild_var = 2 }
 			}
 		}
-	}
 	central_map_calculate_frame = yes
 }
 ABY_9_develop_effect = {
-	hidden_effect = {
 		set_variable = { ABY_selected_state = 9 }
 		if = {
 			limit = {
@@ -374,11 +366,9 @@ ABY_9_develop_effect = {
 				}
 			}
 		}
-	}
 	central_map_calculate_frame = yes
 }
 ABY_9_unite_effect = {
-	hidden_effect = {
 		set_variable = { ABY_selected_state = 9 }
 		if = {
 			limit = {
@@ -420,6 +410,12 @@ ABY_9_unite_effect = {
 			add_to_variable = {ABY_var_drift_defence_factor = 0.1}
 			add_to_variable = {ABY_var_compliance_gain = 0.01}
 			add_to_variable = {ABY_var_resistance_target_on_our_occupied_states = 0.1}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_two_00
+					add_idea = ABY_idea_two_01
+				}
+			}
 		}
 		else_if = {
 			limit = {
@@ -429,11 +425,9 @@ ABY_9_unite_effect = {
 				add_manpower = 50000
 			}
 		}
-	}
 	central_map_calculate_frame = yes
 }
 ABY_9_rebuild_effect = {
-	hidden_effect = {
 		set_variable = { ABY_selected_state = 9 }
 		if = {
 			limit = {
@@ -442,12 +436,7 @@ ABY_9_rebuild_effect = {
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			9 = {
-				remove_dynamic_modifier = {
-					modifier = ABY_modifier_rebuild_1
-				}
-				add_dynamic_modifier = {
-					modifier = ABY_modifier_rebuild_2
-				}
+				add_compliance = 50
 			}
 		}
 		else_if = {
@@ -457,9 +446,7 @@ ABY_9_rebuild_effect = {
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			9 = {
-				remove_dynamic_modifier = {
-					modifier = ABY_modifier_rebuild_2
-				}
+				add_core_of = ABY
 			}
 		}
 		else_if = {
@@ -467,11 +454,9 @@ ABY_9_rebuild_effect = {
 				check_variable = { ABY_selected_state:ABY_rebuild_var = 2 }
 			}
 		}
-	}
 	central_map_calculate_frame = yes
 }
 ABY_74_develop_effect = {
-	hidden_effect = {
 		set_variable = { ABY_selected_state = 74 }
 		if = {
 			limit = {
@@ -542,11 +527,9 @@ ABY_74_develop_effect = {
 				}
 			}
 		}
-	}
 	central_map_calculate_frame = yes
 }
 ABY_74_unite_effect = {
-	hidden_effect = {
 		set_variable = { ABY_selected_state = 74 }
 		if = {
 			limit = {
@@ -588,6 +571,12 @@ ABY_74_unite_effect = {
 			add_to_variable = {ABY_var_drift_defence_factor = 0.1}
 			add_to_variable = {ABY_var_compliance_gain = 0.01}
 			add_to_variable = {ABY_var_resistance_target_on_our_occupied_states = 0.1}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_two_00
+					add_idea = ABY_idea_two_01
+				}
+			}
 		}
 		else_if = {
 			limit = {
@@ -597,11 +586,9 @@ ABY_74_unite_effect = {
 				add_manpower = 50000
 			}
 		}
-	}
 	central_map_calculate_frame = yes
 }
 ABY_74_rebuild_effect = {
-	hidden_effect = {
 		set_variable = { ABY_selected_state = 74 }
 		if = {
 			limit = {
@@ -610,12 +597,7 @@ ABY_74_rebuild_effect = {
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			74 = {
-				remove_dynamic_modifier = {
-					modifier = ABY_modifier_rebuild_1
-				}
-				add_dynamic_modifier = {
-					modifier = ABY_modifier_rebuild_2
-				}
+				add_compliance = 50
 			}
 		}
 		else_if = {
@@ -625,9 +607,7 @@ ABY_74_rebuild_effect = {
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			74 = {
-				remove_dynamic_modifier = {
-					modifier = ABY_modifier_rebuild_2
-				}
+				add_core_of = ABY
 			}
 		}
 		else_if = {
@@ -635,11 +615,9 @@ ABY_74_rebuild_effect = {
 				check_variable = { ABY_selected_state:ABY_rebuild_var = 2 }
 			}
 		}
-	}
 	central_map_calculate_frame = yes
 }
 ABY_72_develop_effect = {
-	hidden_effect = {
 		set_variable = { ABY_selected_state = 72 }
 		if = {
 			limit = {
@@ -710,11 +688,9 @@ ABY_72_develop_effect = {
 				}
 			}
 		}
-	}
 	central_map_calculate_frame = yes
 }
 ABY_72_unite_effect = {
-	hidden_effect = {
 		set_variable = { ABY_selected_state = 72 }
 		if = {
 			limit = {
@@ -756,6 +732,12 @@ ABY_72_unite_effect = {
 			add_to_variable = {ABY_var_drift_defence_factor = 0.1}
 			add_to_variable = {ABY_var_compliance_gain = 0.01}
 			add_to_variable = {ABY_var_resistance_target_on_our_occupied_states = 0.1}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_two_00
+					add_idea = ABY_idea_two_01
+				}
+			}
 		}
 		else_if = {
 			limit = {
@@ -765,11 +747,9 @@ ABY_72_unite_effect = {
 				add_manpower = 50000
 			}
 		}
-	}
 	central_map_calculate_frame = yes
 }
 ABY_72_rebuild_effect = {
-	hidden_effect = {
 		set_variable = { ABY_selected_state = 72 }
 		if = {
 			limit = {
@@ -778,12 +758,7 @@ ABY_72_rebuild_effect = {
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			72 = {
-				remove_dynamic_modifier = {
-					modifier = ABY_modifier_rebuild_1
-				}
-				add_dynamic_modifier = {
-					modifier = ABY_modifier_rebuild_2
-				}
+				add_compliance = 50
 			}
 		}
 		else_if = {
@@ -793,9 +768,7 @@ ABY_72_rebuild_effect = {
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			72 = {
-				remove_dynamic_modifier = {
-					modifier = ABY_modifier_rebuild_2
-				}
+				add_core_of = ABY
 			}
 		}
 		else_if = {
@@ -803,11 +776,9 @@ ABY_72_rebuild_effect = {
 				check_variable = { ABY_selected_state:ABY_rebuild_var = 2 }
 			}
 		}
-	}
 	central_map_calculate_frame = yes
 }
 ABY_75_develop_effect = {
-	hidden_effect = {
 		set_variable = { ABY_selected_state = 75 }
 		if = {
 			limit = {
@@ -878,11 +849,9 @@ ABY_75_develop_effect = {
 				}
 			}
 		}
-	}
 	central_map_calculate_frame = yes
 }
 ABY_75_unite_effect = {
-	hidden_effect = {
 		set_variable = { ABY_selected_state = 75 }
 		if = {
 			limit = {
@@ -924,6 +893,12 @@ ABY_75_unite_effect = {
 			add_to_variable = {ABY_var_drift_defence_factor = 0.1}
 			add_to_variable = {ABY_var_compliance_gain = 0.01}
 			add_to_variable = {ABY_var_resistance_target_on_our_occupied_states = 0.1}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_two_00
+					add_idea = ABY_idea_two_01
+				}
+			}
 		}
 		else_if = {
 			limit = {
@@ -933,11 +908,9 @@ ABY_75_unite_effect = {
 				add_manpower = 50000
 			}
 		}
-	}
 	central_map_calculate_frame = yes
 }
 ABY_75_rebuild_effect = {
-	hidden_effect = {
 		set_variable = { ABY_selected_state = 75 }
 		if = {
 			limit = {
@@ -946,12 +919,7 @@ ABY_75_rebuild_effect = {
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			75 = {
-				remove_dynamic_modifier = {
-					modifier = ABY_modifier_rebuild_1
-				}
-				add_dynamic_modifier = {
-					modifier = ABY_modifier_rebuild_2
-				}
+				add_compliance = 50
 			}
 		}
 		else_if = {
@@ -961,9 +929,7 @@ ABY_75_rebuild_effect = {
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			75 = {
-				remove_dynamic_modifier = {
-					modifier = ABY_modifier_rebuild_2
-				}
+				add_core_of = ABY
 			}
 		}
 		else_if = {
@@ -971,11 +937,9 @@ ABY_75_rebuild_effect = {
 				check_variable = { ABY_selected_state:ABY_rebuild_var = 2 }
 			}
 		}
-	}
 	central_map_calculate_frame = yes
 }
 ABY_972_develop_effect = {
-	hidden_effect = {
 		set_variable = { ABY_selected_state = 972 }
 		if = {
 			limit = {
@@ -1046,11 +1010,9 @@ ABY_972_develop_effect = {
 				}
 			}
 		}
-	}
 	central_map_calculate_frame = yes
 }
 ABY_972_unite_effect = {
-	hidden_effect = {
 		set_variable = { ABY_selected_state = 972 }
 		if = {
 			limit = {
@@ -1092,6 +1054,12 @@ ABY_972_unite_effect = {
 			add_to_variable = {ABY_var_drift_defence_factor = 0.1}
 			add_to_variable = {ABY_var_compliance_gain = 0.01}
 			add_to_variable = {ABY_var_resistance_target_on_our_occupied_states = 0.1}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_two_00
+					add_idea = ABY_idea_two_01
+				}
+			}
 		}
 		else_if = {
 			limit = {
@@ -1101,11 +1069,9 @@ ABY_972_unite_effect = {
 				add_manpower = 50000
 			}
 		}
-	}
 	central_map_calculate_frame = yes
 }
 ABY_972_rebuild_effect = {
-	hidden_effect = {
 		set_variable = { ABY_selected_state = 972 }
 		if = {
 			limit = {
@@ -1114,12 +1080,7 @@ ABY_972_rebuild_effect = {
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			972 = {
-				remove_dynamic_modifier = {
-					modifier = ABY_modifier_rebuild_1
-				}
-				add_dynamic_modifier = {
-					modifier = ABY_modifier_rebuild_2
-				}
+				add_compliance = 50
 			}
 		}
 		else_if = {
@@ -1129,9 +1090,7 @@ ABY_972_rebuild_effect = {
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			972 = {
-				remove_dynamic_modifier = {
-					modifier = ABY_modifier_rebuild_2
-				}
+				add_core_of = ABY
 			}
 		}
 		else_if = {
@@ -1139,11 +1098,9 @@ ABY_972_rebuild_effect = {
 				check_variable = { ABY_selected_state:ABY_rebuild_var = 2 }
 			}
 		}
-	}
 	central_map_calculate_frame = yes
 }
 ABY_986_develop_effect = {
-	hidden_effect = {
 		set_variable = { ABY_selected_state = 986 }
 		if = {
 			limit = {
@@ -1214,11 +1171,9 @@ ABY_986_develop_effect = {
 				}
 			}
 		}
-	}
 	central_map_calculate_frame = yes
 }
 ABY_986_unite_effect = {
-	hidden_effect = {
 		set_variable = { ABY_selected_state = 986 }
 		if = {
 			limit = {
@@ -1260,6 +1215,12 @@ ABY_986_unite_effect = {
 			add_to_variable = {ABY_var_drift_defence_factor = 0.1}
 			add_to_variable = {ABY_var_compliance_gain = 0.01}
 			add_to_variable = {ABY_var_resistance_target_on_our_occupied_states = 0.1}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_two_00
+					add_idea = ABY_idea_two_01
+				}
+			}
 		}
 		else_if = {
 			limit = {
@@ -1269,11 +1230,9 @@ ABY_986_unite_effect = {
 				add_manpower = 50000
 			}
 		}
-	}
 	central_map_calculate_frame = yes
 }
 ABY_986_rebuild_effect = {
-	hidden_effect = {
 		set_variable = { ABY_selected_state = 986 }
 		if = {
 			limit = {
@@ -1282,12 +1241,7 @@ ABY_986_rebuild_effect = {
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			986 = {
-				remove_dynamic_modifier = {
-					modifier = ABY_modifier_rebuild_1
-				}
-				add_dynamic_modifier = {
-					modifier = ABY_modifier_rebuild_2
-				}
+				add_compliance = 50
 			}
 		}
 		else_if = {
@@ -1297,9 +1251,7 @@ ABY_986_rebuild_effect = {
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			986 = {
-				remove_dynamic_modifier = {
-					modifier = ABY_modifier_rebuild_2
-				}
+				add_core_of = ABY
 			}
 		}
 		else_if = {
@@ -1307,11 +1259,9 @@ ABY_986_rebuild_effect = {
 				check_variable = { ABY_selected_state:ABY_rebuild_var = 2 }
 			}
 		}
-	}
 	central_map_calculate_frame = yes
 }
 ABY_975_develop_effect = {
-	hidden_effect = {
 		set_variable = { ABY_selected_state = 975 }
 		if = {
 			limit = {
@@ -1382,11 +1332,9 @@ ABY_975_develop_effect = {
 				}
 			}
 		}
-	}
 	central_map_calculate_frame = yes
 }
 ABY_975_unite_effect = {
-	hidden_effect = {
 		set_variable = { ABY_selected_state = 975 }
 		if = {
 			limit = {
@@ -1428,6 +1376,12 @@ ABY_975_unite_effect = {
 			add_to_variable = {ABY_var_drift_defence_factor = 0.1}
 			add_to_variable = {ABY_var_compliance_gain = 0.01}
 			add_to_variable = {ABY_var_resistance_target_on_our_occupied_states = 0.1}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_two_00
+					add_idea = ABY_idea_two_01
+				}
+			}
 		}
 		else_if = {
 			limit = {
@@ -1437,11 +1391,9 @@ ABY_975_unite_effect = {
 				add_manpower = 50000
 			}
 		}
-	}
 	central_map_calculate_frame = yes
 }
 ABY_975_rebuild_effect = {
-	hidden_effect = {
 		set_variable = { ABY_selected_state = 975 }
 		if = {
 			limit = {
@@ -1450,12 +1402,7 @@ ABY_975_rebuild_effect = {
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			975 = {
-				remove_dynamic_modifier = {
-					modifier = ABY_modifier_rebuild_1
-				}
-				add_dynamic_modifier = {
-					modifier = ABY_modifier_rebuild_2
-				}
+				add_compliance = 50
 			}
 		}
 		else_if = {
@@ -1465,9 +1412,7 @@ ABY_975_rebuild_effect = {
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			975 = {
-				remove_dynamic_modifier = {
-					modifier = ABY_modifier_rebuild_2
-				}
+				add_core_of = ABY
 			}
 		}
 		else_if = {
@@ -1475,11 +1420,9 @@ ABY_975_rebuild_effect = {
 				check_variable = { ABY_selected_state:ABY_rebuild_var = 2 }
 			}
 		}
-	}
 	central_map_calculate_frame = yes
 }
 ABY_4_develop_effect = {
-	hidden_effect = {
 		set_variable = { ABY_selected_state = 4 }
 		if = {
 			limit = {
@@ -1550,11 +1493,9 @@ ABY_4_develop_effect = {
 				}
 			}
 		}
-	}
 	central_map_calculate_frame = yes
 }
 ABY_4_unite_effect = {
-	hidden_effect = {
 		set_variable = { ABY_selected_state = 4 }
 		if = {
 			limit = {
@@ -1596,6 +1537,12 @@ ABY_4_unite_effect = {
 			add_to_variable = {ABY_var_drift_defence_factor = 0.1}
 			add_to_variable = {ABY_var_compliance_gain = 0.01}
 			add_to_variable = {ABY_var_resistance_target_on_our_occupied_states = 0.1}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_two_00
+					add_idea = ABY_idea_two_01
+				}
+			}
 		}
 		else_if = {
 			limit = {
@@ -1605,11 +1552,9 @@ ABY_4_unite_effect = {
 				add_manpower = 50000
 			}
 		}
-	}
 	central_map_calculate_frame = yes
 }
 ABY_4_rebuild_effect = {
-	hidden_effect = {
 		set_variable = { ABY_selected_state = 4 }
 		if = {
 			limit = {
@@ -1618,12 +1563,7 @@ ABY_4_rebuild_effect = {
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			4 = {
-				remove_dynamic_modifier = {
-					modifier = ABY_modifier_rebuild_1
-				}
-				add_dynamic_modifier = {
-					modifier = ABY_modifier_rebuild_2
-				}
+				add_compliance = 50
 			}
 		}
 		else_if = {
@@ -1633,9 +1573,7 @@ ABY_4_rebuild_effect = {
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			4 = {
-				remove_dynamic_modifier = {
-					modifier = ABY_modifier_rebuild_2
-				}
+				add_core_of = ABY
 			}
 		}
 		else_if = {
@@ -1643,11 +1581,9 @@ ABY_4_rebuild_effect = {
 				check_variable = { ABY_selected_state:ABY_rebuild_var = 2 }
 			}
 		}
-	}
 	central_map_calculate_frame = yes
 }
 ABY_976_develop_effect = {
-	hidden_effect = {
 		set_variable = { ABY_selected_state = 976 }
 		if = {
 			limit = {
@@ -1718,11 +1654,9 @@ ABY_976_develop_effect = {
 				}
 			}
 		}
-	}
 	central_map_calculate_frame = yes
 }
 ABY_976_unite_effect = {
-	hidden_effect = {
 		set_variable = { ABY_selected_state = 976 }
 		if = {
 			limit = {
@@ -1764,6 +1698,12 @@ ABY_976_unite_effect = {
 			add_to_variable = {ABY_var_drift_defence_factor = 0.1}
 			add_to_variable = {ABY_var_compliance_gain = 0.01}
 			add_to_variable = {ABY_var_resistance_target_on_our_occupied_states = 0.1}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_two_00
+					add_idea = ABY_idea_two_01
+				}
+			}
 		}
 		else_if = {
 			limit = {
@@ -1773,11 +1713,9 @@ ABY_976_unite_effect = {
 				add_manpower = 50000
 			}
 		}
-	}
 	central_map_calculate_frame = yes
 }
 ABY_976_rebuild_effect = {
-	hidden_effect = {
 		set_variable = { ABY_selected_state = 976 }
 		if = {
 			limit = {
@@ -1786,12 +1724,7 @@ ABY_976_rebuild_effect = {
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			976 = {
-				remove_dynamic_modifier = {
-					modifier = ABY_modifier_rebuild_1
-				}
-				add_dynamic_modifier = {
-					modifier = ABY_modifier_rebuild_2
-				}
+				add_compliance = 50
 			}
 		}
 		else_if = {
@@ -1801,9 +1734,7 @@ ABY_976_rebuild_effect = {
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			976 = {
-				remove_dynamic_modifier = {
-					modifier = ABY_modifier_rebuild_2
-				}
+				add_core_of = ABY
 			}
 		}
 		else_if = {
@@ -1811,11 +1742,9 @@ ABY_976_rebuild_effect = {
 				check_variable = { ABY_selected_state:ABY_rebuild_var = 2 }
 			}
 		}
-	}
 	central_map_calculate_frame = yes
 }
 ABY_152_develop_effect = {
-	hidden_effect = {
 		set_variable = { ABY_selected_state = 152 }
 		if = {
 			limit = {
@@ -1886,11 +1815,9 @@ ABY_152_develop_effect = {
 				}
 			}
 		}
-	}
 	central_map_calculate_frame = yes
 }
 ABY_152_unite_effect = {
-	hidden_effect = {
 		set_variable = { ABY_selected_state = 152 }
 		if = {
 			limit = {
@@ -1932,6 +1859,12 @@ ABY_152_unite_effect = {
 			add_to_variable = {ABY_var_drift_defence_factor = 0.1}
 			add_to_variable = {ABY_var_compliance_gain = 0.01}
 			add_to_variable = {ABY_var_resistance_target_on_our_occupied_states = 0.1}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_two_00
+					add_idea = ABY_idea_two_01
+				}
+			}
 		}
 		else_if = {
 			limit = {
@@ -1941,11 +1874,9 @@ ABY_152_unite_effect = {
 				add_manpower = 50000
 			}
 		}
-	}
 	central_map_calculate_frame = yes
 }
 ABY_152_rebuild_effect = {
-	hidden_effect = {
 		set_variable = { ABY_selected_state = 152 }
 		if = {
 			limit = {
@@ -1954,12 +1885,7 @@ ABY_152_rebuild_effect = {
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			152 = {
-				remove_dynamic_modifier = {
-					modifier = ABY_modifier_rebuild_1
-				}
-				add_dynamic_modifier = {
-					modifier = ABY_modifier_rebuild_2
-				}
+				add_compliance = 50
 			}
 		}
 		else_if = {
@@ -1969,9 +1895,7 @@ ABY_152_rebuild_effect = {
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			152 = {
-				remove_dynamic_modifier = {
-					modifier = ABY_modifier_rebuild_2
-				}
+				add_core_of = ABY
 			}
 		}
 		else_if = {
@@ -1979,11 +1903,9 @@ ABY_152_rebuild_effect = {
 				check_variable = { ABY_selected_state:ABY_rebuild_var = 2 }
 			}
 		}
-	}
 	central_map_calculate_frame = yes
 }
 ABY_153_develop_effect = {
-	hidden_effect = {
 		set_variable = { ABY_selected_state = 153 }
 		if = {
 			limit = {
@@ -2054,11 +1976,9 @@ ABY_153_develop_effect = {
 				}
 			}
 		}
-	}
 	central_map_calculate_frame = yes
 }
 ABY_153_unite_effect = {
-	hidden_effect = {
 		set_variable = { ABY_selected_state = 153 }
 		if = {
 			limit = {
@@ -2100,6 +2020,12 @@ ABY_153_unite_effect = {
 			add_to_variable = {ABY_var_drift_defence_factor = 0.1}
 			add_to_variable = {ABY_var_compliance_gain = 0.01}
 			add_to_variable = {ABY_var_resistance_target_on_our_occupied_states = 0.1}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_two_00
+					add_idea = ABY_idea_two_01
+				}
+			}
 		}
 		else_if = {
 			limit = {
@@ -2109,11 +2035,9 @@ ABY_153_unite_effect = {
 				add_manpower = 50000
 			}
 		}
-	}
 	central_map_calculate_frame = yes
 }
 ABY_153_rebuild_effect = {
-	hidden_effect = {
 		set_variable = { ABY_selected_state = 153 }
 		if = {
 			limit = {
@@ -2122,12 +2046,7 @@ ABY_153_rebuild_effect = {
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			153 = {
-				remove_dynamic_modifier = {
-					modifier = ABY_modifier_rebuild_1
-				}
-				add_dynamic_modifier = {
-					modifier = ABY_modifier_rebuild_2
-				}
+				add_compliance = 50
 			}
 		}
 		else_if = {
@@ -2137,9 +2056,7 @@ ABY_153_rebuild_effect = {
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			153 = {
-				remove_dynamic_modifier = {
-					modifier = ABY_modifier_rebuild_2
-				}
+				add_core_of = ABY
 			}
 		}
 		else_if = {
@@ -2147,11 +2064,9 @@ ABY_153_rebuild_effect = {
 				check_variable = { ABY_selected_state:ABY_rebuild_var = 2 }
 			}
 		}
-	}
 	central_map_calculate_frame = yes
 }
 ABY_848_develop_effect = {
-	hidden_effect = {
 		set_variable = { ABY_selected_state = 848 }
 		if = {
 			limit = {
@@ -2222,11 +2137,9 @@ ABY_848_develop_effect = {
 				}
 			}
 		}
-	}
 	central_map_calculate_frame = yes
 }
 ABY_848_unite_effect = {
-	hidden_effect = {
 		set_variable = { ABY_selected_state = 848 }
 		if = {
 			limit = {
@@ -2268,6 +2181,12 @@ ABY_848_unite_effect = {
 			add_to_variable = {ABY_var_drift_defence_factor = 0.1}
 			add_to_variable = {ABY_var_compliance_gain = 0.01}
 			add_to_variable = {ABY_var_resistance_target_on_our_occupied_states = 0.1}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_two_00
+					add_idea = ABY_idea_two_01
+				}
+			}
 		}
 		else_if = {
 			limit = {
@@ -2277,11 +2196,9 @@ ABY_848_unite_effect = {
 				add_manpower = 50000
 			}
 		}
-	}
 	central_map_calculate_frame = yes
 }
 ABY_848_rebuild_effect = {
-	hidden_effect = {
 		set_variable = { ABY_selected_state = 848 }
 		if = {
 			limit = {
@@ -2290,12 +2207,7 @@ ABY_848_rebuild_effect = {
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			848 = {
-				remove_dynamic_modifier = {
-					modifier = ABY_modifier_rebuild_1
-				}
-				add_dynamic_modifier = {
-					modifier = ABY_modifier_rebuild_2
-				}
+				add_compliance = 50
 			}
 		}
 		else_if = {
@@ -2305,9 +2217,7 @@ ABY_848_rebuild_effect = {
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			848 = {
-				remove_dynamic_modifier = {
-					modifier = ABY_modifier_rebuild_2
-				}
+				add_core_of = ABY
 			}
 		}
 		else_if = {
@@ -2315,7 +2225,6 @@ ABY_848_rebuild_effect = {
 				check_variable = { ABY_selected_state:ABY_rebuild_var = 2 }
 			}
 		}
-	}
 	central_map_calculate_frame = yes
 }
 central_map_calculate_frame = {

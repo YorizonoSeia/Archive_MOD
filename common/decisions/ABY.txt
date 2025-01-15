@@ -19037,4 +19037,1084 @@ ABY_descision_category_abydos_highschool = {
 			central_map_calculate_frame = yes      
         }
 	}
+	ABY_descision_develop_9 = {
+        priority = 1
+
+        allowed = {
+            tag = ABY
+        }
+
+		visible = {
+			check_variable = { ABY_selected_state = 9 }
+		}
+
+        available = {
+			custom_trigger_tooltip = {
+				check_variable = {
+					var = ABY_selected_state:ABY_central_var
+					value = 4
+					compare = less_than
+				}
+				tooltip = ABY_tt_develop_full
+			}
+        }
+
+		cost = ABY_industry_cost_var
+
+		days_remove = 70
+
+        remove_effect = {   
+			ABY_9_develop_effect = yes
+        }
+	}
+	ABY_descision_unite_9 = {
+        priority = 1
+
+        allowed = {
+            tag = ABY
+        }
+
+		visible = {
+			check_variable = { ABY_selected_state = 9 }
+		}
+
+        available = {
+			custom_trigger_tooltip = {
+				check_variable = {
+					var = ABY_selected_state:ABY_unite_var
+					value = 3
+					compare = less_than
+				}
+				tooltip = ABY_tt_unite_full
+			}
+        }
+
+		cost = ABY_unite_cost_var
+
+		days_remove = 70
+
+        remove_effect = {   
+			ABY_9_unite_effect = yes
+        }
+	}
+	ABY_descision_rebuild_9 = {
+        priority = 1
+
+        allowed = {
+            tag = ABY
+        }
+
+		visible = {
+			check_variable = { ABY_selected_state = 9 }
+		}
+
+        available = {
+			custom_trigger_tooltip = {
+				check_variable = {
+					var = ABY_selected_state:ABY_rebuild_var
+					value = 2
+					compare = less_than
+				}
+				tooltip = ABY_tt_rebuild_full
+			}
+        }
+
+		cost = ABY_rebuild_cost_var
+
+		days_remove = 70
+
+        remove_effect = {   
+			ABY_9_rebuild_effect = yes
+        }
+	}
+	ABY_descision_develop_74 = {
+        priority = 1
+
+        allowed = {
+            tag = ABY
+        }
+
+		visible = {
+			check_variable = { ABY_selected_state = 74 }
+		}
+
+        available = {
+			custom_trigger_tooltip = {
+				check_variable = {
+					var = ABY_selected_state:ABY_central_var
+					value = 4
+					compare = less_than
+				}
+				tooltip = ABY_tt_develop_full
+			}
+        }
+
+		cost = ABY_industry_cost_var
+
+		days_remove = 70
+
+        remove_effect = {   
+			ABY_74_develop_effect = yes
+        }
+	}
+	ABY_descision_unite_74 = {
+        priority = 1
+
+        allowed = {
+            tag = ABY
+        }
+
+		visible = {
+			check_variable = { ABY_selected_state = 74 }
+		}
+
+        available = {
+			custom_trigger_tooltip = {
+				check_variable = {
+					var = ABY_selected_state:ABY_unite_var
+					value = 3
+					compare = less_than
+				}
+				tooltip = ABY_tt_unite_full
+			}
+        }
+
+		cost = ABY_unite_cost_var
+
+		days_remove = 70
+
+        remove_effect = {   
+			ABY_74_unite_effect = yes
+        }
+	}
+	ABY_descision_rebuild_74 = {
+        priority = 1
+
+        allowed = {
+            tag = ABY
+        }
+
+		visible = {
+			check_variable = { ABY_selected_state = 74 }
+		}
+
+        available = {
+			custom_trigger_tooltip = {
+				check_variable = {
+					var = ABY_selected_state:ABY_rebuild_var
+					value = 2
+					compare = less_than
+				}
+				tooltip = ABY_tt_rebuild_full
+			}
+        }
+
+		cost = ABY_rebuild_cost_var
+
+		days_remove = 70
+
+        remove_effect = {   
+			ABY_74_rebuild_effect = yes
+        }
+	}
+	ABY_descision_develop_72 = {
+        priority = 1
+
+        allowed = {
+            tag = ABY
+        }
+
+		visible = {
+			check_variable = { ABY_selected_state = 72 }
+		}
+
+        available = {
+			custom_trigger_tooltip = {
+				check_variable = {
+					var = ABY_selected_state:ABY_central_var
+					value = 4
+					compare = less_than
+				}
+				tooltip = ABY_tt_develop_full
+			}
+        }
+
+		cost = ABY_industry_cost_var
+
+		days_remove = 70
+
+        remove_effect = {   
+			ABY_72_develop_effect = yes
+        }
+	}
+	ABY_descision_unite_72 = {
+        priority = 1
+
+        allowed = {
+            tag = ABY
+        }
+
+		visible = {
+			check_variable = { ABY_selected_state = 72 }
+		}
+
+        available = {
+			custom_trigger_tooltip = {
+				check_variable = {
+					var = ABY_selected_state:ABY_unite_var
+					value = 3
+					compare = less_than
+				}
+				tooltip = ABY_tt_unite_full
+			}
+        }
+
+		cost = ABY_unite_cost_var
+
+		days_remove = 70
+
+        remove_effect = {   
+			ABY_72_unite_effect = yes
+        }
+	}
+	ABY_descision_rebuild_72 = {
+        priority = 1
+
+        allowed = {
+            tag = ABY
+        }
+
+		visible = {
+			check_variable = { ABY_selected_state = 72 }
+		}
+
+        available = {
+			custom_trigger_tooltip = {
+				check_variable = {
+					var = ABY_selected_state:ABY_rebuild_var
+					value = 2
+					compare = less_than
+				}
+				tooltip = ABY_tt_rebuild_full
+			}
+        }
+
+		cost = ABY_rebuild_cost_var
+
+		days_remove = 70
+
+        remove_effect = {   
+			ABY_72_rebuild_effect = yes
+        }
+	}
+	ABY_descision_develop_75 = {
+        priority = 1
+
+        allowed = {
+            tag = ABY
+        }
+
+		visible = {
+			check_variable = { ABY_selected_state = 75 }
+		}
+
+        available = {
+			custom_trigger_tooltip = {
+				check_variable = {
+					var = ABY_selected_state:ABY_central_var
+					value = 4
+					compare = less_than
+				}
+				tooltip = ABY_tt_develop_full
+			}
+        }
+
+		cost = ABY_industry_cost_var
+
+		days_remove = 70
+
+        remove_effect = {   
+			ABY_75_develop_effect = yes
+        }
+	}
+	ABY_descision_unite_75 = {
+        priority = 1
+
+        allowed = {
+            tag = ABY
+        }
+
+		visible = {
+			check_variable = { ABY_selected_state = 75 }
+		}
+
+        available = {
+			custom_trigger_tooltip = {
+				check_variable = {
+					var = ABY_selected_state:ABY_unite_var
+					value = 3
+					compare = less_than
+				}
+				tooltip = ABY_tt_unite_full
+			}
+        }
+
+		cost = ABY_unite_cost_var
+
+		days_remove = 70
+
+        remove_effect = {   
+			ABY_75_unite_effect = yes
+        }
+	}
+	ABY_descision_rebuild_75 = {
+        priority = 1
+
+        allowed = {
+            tag = ABY
+        }
+
+		visible = {
+			check_variable = { ABY_selected_state = 75 }
+		}
+
+        available = {
+			custom_trigger_tooltip = {
+				check_variable = {
+					var = ABY_selected_state:ABY_rebuild_var
+					value = 2
+					compare = less_than
+				}
+				tooltip = ABY_tt_rebuild_full
+			}
+        }
+
+		cost = ABY_rebuild_cost_var
+
+		days_remove = 70
+
+        remove_effect = {   
+			ABY_75_rebuild_effect = yes
+        }
+	}
+	ABY_descision_develop_972 = {
+        priority = 1
+
+        allowed = {
+            tag = ABY
+        }
+
+		visible = {
+			check_variable = { ABY_selected_state = 972 }
+		}
+
+        available = {
+			custom_trigger_tooltip = {
+				check_variable = {
+					var = ABY_selected_state:ABY_central_var
+					value = 4
+					compare = less_than
+				}
+				tooltip = ABY_tt_develop_full
+			}
+        }
+
+		cost = ABY_industry_cost_var
+
+		days_remove = 70
+
+        remove_effect = {   
+			ABY_972_develop_effect = yes
+        }
+	}
+	ABY_descision_unite_972 = {
+        priority = 1
+
+        allowed = {
+            tag = ABY
+        }
+
+		visible = {
+			check_variable = { ABY_selected_state = 972 }
+		}
+
+        available = {
+			custom_trigger_tooltip = {
+				check_variable = {
+					var = ABY_selected_state:ABY_unite_var
+					value = 3
+					compare = less_than
+				}
+				tooltip = ABY_tt_unite_full
+			}
+        }
+
+		cost = ABY_unite_cost_var
+
+		days_remove = 70
+
+        remove_effect = {   
+			ABY_972_unite_effect = yes
+        }
+	}
+	ABY_descision_rebuild_972 = {
+        priority = 1
+
+        allowed = {
+            tag = ABY
+        }
+
+		visible = {
+			check_variable = { ABY_selected_state = 972 }
+		}
+
+        available = {
+			custom_trigger_tooltip = {
+				check_variable = {
+					var = ABY_selected_state:ABY_rebuild_var
+					value = 2
+					compare = less_than
+				}
+				tooltip = ABY_tt_rebuild_full
+			}
+        }
+
+		cost = ABY_rebuild_cost_var
+
+		days_remove = 70
+
+        remove_effect = {   
+			ABY_972_rebuild_effect = yes
+        }
+	}
+	ABY_descision_develop_986 = {
+        priority = 1
+
+        allowed = {
+            tag = ABY
+        }
+
+		visible = {
+			check_variable = { ABY_selected_state = 986 }
+		}
+
+        available = {
+			custom_trigger_tooltip = {
+				check_variable = {
+					var = ABY_selected_state:ABY_central_var
+					value = 4
+					compare = less_than
+				}
+				tooltip = ABY_tt_develop_full
+			}
+        }
+
+		cost = ABY_industry_cost_var
+
+		days_remove = 70
+
+        remove_effect = {   
+			ABY_986_develop_effect = yes
+        }
+	}
+	ABY_descision_unite_986 = {
+        priority = 1
+
+        allowed = {
+            tag = ABY
+        }
+
+		visible = {
+			check_variable = { ABY_selected_state = 986 }
+		}
+
+        available = {
+			custom_trigger_tooltip = {
+				check_variable = {
+					var = ABY_selected_state:ABY_unite_var
+					value = 3
+					compare = less_than
+				}
+				tooltip = ABY_tt_unite_full
+			}
+        }
+
+		cost = ABY_unite_cost_var
+
+		days_remove = 70
+
+        remove_effect = {   
+			ABY_986_unite_effect = yes
+        }
+	}
+	ABY_descision_rebuild_986 = {
+        priority = 1
+
+        allowed = {
+            tag = ABY
+        }
+
+		visible = {
+			check_variable = { ABY_selected_state = 986 }
+		}
+
+        available = {
+			custom_trigger_tooltip = {
+				check_variable = {
+					var = ABY_selected_state:ABY_rebuild_var
+					value = 2
+					compare = less_than
+				}
+				tooltip = ABY_tt_rebuild_full
+			}
+        }
+
+		cost = ABY_rebuild_cost_var
+
+		days_remove = 70
+
+        remove_effect = {   
+			ABY_986_rebuild_effect = yes
+        }
+	}
+	ABY_descision_develop_4 = {
+        priority = 1
+
+        allowed = {
+            tag = ABY
+        }
+
+		visible = {
+			check_variable = { ABY_selected_state = 4 }
+		}
+
+        available = {
+			custom_trigger_tooltip = {
+				check_variable = {
+					var = ABY_selected_state:ABY_central_var
+					value = 4
+					compare = less_than
+				}
+				tooltip = ABY_tt_develop_full
+			}
+        }
+
+		cost = ABY_industry_cost_var
+
+		days_remove = 70
+
+        remove_effect = {   
+			ABY_4_develop_effect = yes
+        }
+	}
+	ABY_descision_unite_4 = {
+        priority = 1
+
+        allowed = {
+            tag = ABY
+        }
+
+		visible = {
+			check_variable = { ABY_selected_state = 4 }
+		}
+
+        available = {
+			custom_trigger_tooltip = {
+				check_variable = {
+					var = ABY_selected_state:ABY_unite_var
+					value = 3
+					compare = less_than
+				}
+				tooltip = ABY_tt_unite_full
+			}
+        }
+
+		cost = ABY_unite_cost_var
+
+		days_remove = 70
+
+        remove_effect = {   
+			ABY_4_unite_effect = yes
+        }
+	}
+	ABY_descision_rebuild_4 = {
+        priority = 1
+
+        allowed = {
+            tag = ABY
+        }
+
+		visible = {
+			check_variable = { ABY_selected_state = 4 }
+		}
+
+        available = {
+			custom_trigger_tooltip = {
+				check_variable = {
+					var = ABY_selected_state:ABY_rebuild_var
+					value = 2
+					compare = less_than
+				}
+				tooltip = ABY_tt_rebuild_full
+			}
+        }
+
+		cost = ABY_rebuild_cost_var
+
+		days_remove = 70
+
+        remove_effect = {   
+			ABY_4_rebuild_effect = yes
+        }
+	}
+	ABY_descision_develop_152 = {
+        priority = 1
+
+        allowed = {
+            tag = ABY
+        }
+
+		visible = {
+			check_variable = { ABY_selected_state = 152 }
+		}
+
+        available = {
+			custom_trigger_tooltip = {
+				check_variable = {
+					var = ABY_selected_state:ABY_central_var
+					value = 4
+					compare = less_than
+				}
+				tooltip = ABY_tt_develop_full
+			}
+        }
+
+		cost = ABY_industry_cost_var
+
+		days_remove = 70
+
+        remove_effect = {   
+			ABY_152_develop_effect = yes
+        }
+	}
+	ABY_descision_unite_152 = {
+        priority = 1
+
+        allowed = {
+            tag = ABY
+        }
+
+		visible = {
+			check_variable = { ABY_selected_state = 152 }
+		}
+
+        available = {
+			custom_trigger_tooltip = {
+				check_variable = {
+					var = ABY_selected_state:ABY_unite_var
+					value = 3
+					compare = less_than
+				}
+				tooltip = ABY_tt_unite_full
+			}
+        }
+
+		cost = ABY_unite_cost_var
+
+		days_remove = 70
+
+        remove_effect = {   
+			ABY_152_unite_effect = yes
+        }
+	}
+	ABY_descision_rebuild_152 = {
+        priority = 1
+
+        allowed = {
+            tag = ABY
+        }
+
+		visible = {
+			check_variable = { ABY_selected_state = 152 }
+		}
+
+        available = {
+			custom_trigger_tooltip = {
+				check_variable = {
+					var = ABY_selected_state:ABY_rebuild_var
+					value = 2
+					compare = less_than
+				}
+				tooltip = ABY_tt_rebuild_full
+			}
+        }
+
+		cost = ABY_rebuild_cost_var
+
+		days_remove = 70
+
+        remove_effect = {   
+			ABY_152_rebuild_effect = yes
+        }
+	}
+	ABY_descision_develop_153 = {
+        priority = 1
+
+        allowed = {
+            tag = ABY
+        }
+
+		visible = {
+			check_variable = { ABY_selected_state = 153 }
+		}
+
+        available = {
+			custom_trigger_tooltip = {
+				check_variable = {
+					var = ABY_selected_state:ABY_central_var
+					value = 4
+					compare = less_than
+				}
+				tooltip = ABY_tt_develop_full
+			}
+        }
+
+		cost = ABY_industry_cost_var
+
+		days_remove = 70
+
+        remove_effect = {   
+			ABY_153_develop_effect = yes
+        }
+	}
+	ABY_descision_unite_153 = {
+        priority = 1
+
+        allowed = {
+            tag = ABY
+        }
+
+		visible = {
+			check_variable = { ABY_selected_state = 153 }
+		}
+
+        available = {
+			custom_trigger_tooltip = {
+				check_variable = {
+					var = ABY_selected_state:ABY_unite_var
+					value = 3
+					compare = less_than
+				}
+				tooltip = ABY_tt_unite_full
+			}
+        }
+
+		cost = ABY_unite_cost_var
+
+		days_remove = 70
+
+        remove_effect = {   
+			ABY_153_unite_effect = yes
+        }
+	}
+	ABY_descision_rebuild_153 = {
+        priority = 1
+
+        allowed = {
+            tag = ABY
+        }
+
+		visible = {
+			check_variable = { ABY_selected_state = 153 }
+		}
+
+        available = {
+			custom_trigger_tooltip = {
+				check_variable = {
+					var = ABY_selected_state:ABY_rebuild_var
+					value = 2
+					compare = less_than
+				}
+				tooltip = ABY_tt_rebuild_full
+			}
+        }
+
+		cost = ABY_rebuild_cost_var
+
+		days_remove = 70
+
+        remove_effect = {   
+			ABY_153_rebuild_effect = yes
+        }
+	}
+	ABY_descision_develop_976 = {
+        priority = 1
+
+        allowed = {
+            tag = ABY
+        }
+
+		visible = {
+			check_variable = { ABY_selected_state = 976 }
+		}
+
+        available = {
+			custom_trigger_tooltip = {
+				check_variable = {
+					var = ABY_selected_state:ABY_central_var
+					value = 4
+					compare = less_than
+				}
+				tooltip = ABY_tt_develop_full
+			}
+        }
+
+		cost = ABY_industry_cost_var
+
+		days_remove = 70
+
+        remove_effect = {   
+			ABY_976_develop_effect = yes
+        }
+	}
+	ABY_descision_unite_976 = {
+        priority = 1
+
+        allowed = {
+            tag = ABY
+        }
+
+		visible = {
+			check_variable = { ABY_selected_state = 976 }
+		}
+
+        available = {
+			custom_trigger_tooltip = {
+				check_variable = {
+					var = ABY_selected_state:ABY_unite_var
+					value = 3
+					compare = less_than
+				}
+				tooltip = ABY_tt_unite_full
+			}
+        }
+
+		cost = ABY_unite_cost_var
+
+		days_remove = 70
+
+        remove_effect = {   
+			ABY_976_unite_effect = yes
+        }
+	}
+	ABY_descision_rebuild_976 = {
+        priority = 1
+
+        allowed = {
+            tag = ABY
+        }
+
+		visible = {
+			check_variable = { ABY_selected_state = 976 }
+		}
+
+        available = {
+			custom_trigger_tooltip = {
+				check_variable = {
+					var = ABY_selected_state:ABY_rebuild_var
+					value = 2
+					compare = less_than
+				}
+				tooltip = ABY_tt_rebuild_full
+			}
+        }
+
+		cost = ABY_rebuild_cost_var
+
+		days_remove = 70
+
+        remove_effect = {   
+			ABY_976_rebuild_effect = yes
+        }
+	}
+	ABY_descision_develop_848 = {
+        priority = 1
+
+        allowed = {
+            tag = ABY
+        }
+
+		visible = {
+			check_variable = { ABY_selected_state = 848 }
+		}
+
+        available = {
+			custom_trigger_tooltip = {
+				check_variable = {
+					var = ABY_selected_state:ABY_central_var
+					value = 4
+					compare = less_than
+				}
+				tooltip = ABY_tt_develop_full
+			}
+        }
+
+		cost = ABY_industry_cost_var
+
+		days_remove = 70
+
+        remove_effect = {   
+			ABY_848_develop_effect = yes
+        }
+	}
+	ABY_descision_unite_848 = {
+        priority = 1
+
+        allowed = {
+            tag = ABY
+        }
+
+		visible = {
+			check_variable = { ABY_selected_state = 848 }
+		}
+
+        available = {
+			custom_trigger_tooltip = {
+				check_variable = {
+					var = ABY_selected_state:ABY_unite_var
+					value = 3
+					compare = less_than
+				}
+				tooltip = ABY_tt_unite_full
+			}
+        }
+
+		cost = ABY_unite_cost_var
+
+		days_remove = 70
+
+        remove_effect = {   
+			ABY_848_unite_effect = yes
+        }
+	}
+	ABY_descision_rebuild_848 = {
+        priority = 1
+
+        allowed = {
+            tag = ABY
+        }
+
+		visible = {
+			check_variable = { ABY_selected_state = 848 }
+		}
+
+        available = {
+			custom_trigger_tooltip = {
+				check_variable = {
+					var = ABY_selected_state:ABY_rebuild_var
+					value = 2
+					compare = less_than
+				}
+				tooltip = ABY_tt_rebuild_full
+			}
+        }
+
+		cost = ABY_rebuild_cost_var
+
+		days_remove = 70
+
+        remove_effect = {   
+			ABY_848_rebuild_effect = yes
+        }
+	}
+	ABY_descision_develop_975 = {
+        priority = 1
+
+        allowed = {
+            tag = ABY
+        }
+
+		visible = {
+			check_variable = { ABY_selected_state = 975 }
+		}
+
+        available = {
+			custom_trigger_tooltip = {
+				check_variable = {
+					var = ABY_selected_state:ABY_central_var
+					value = 4
+					compare = less_than
+				}
+				tooltip = ABY_tt_develop_full
+			}
+        }
+
+		cost = ABY_industry_cost_var
+
+		days_remove = 70
+
+        remove_effect = {   
+			ABY_975_develop_effect = yes
+        }
+	}
+	ABY_descision_unite_975 = {
+        priority = 1
+
+        allowed = {
+            tag = ABY
+        }
+
+		visible = {
+			check_variable = { ABY_selected_state = 975 }
+		}
+
+        available = {
+			custom_trigger_tooltip = {
+				check_variable = {
+					var = ABY_selected_state:ABY_unite_var
+					value = 3
+					compare = less_than
+				}
+				tooltip = ABY_tt_unite_full
+			}
+        }
+
+		cost = ABY_unite_cost_var
+
+		days_remove = 70
+
+        remove_effect = {   
+			ABY_975_unite_effect = yes
+        }
+	}
+	ABY_descision_rebuild_975 = {
+        priority = 1
+
+        allowed = {
+            tag = ABY
+        }
+
+		visible = {
+			check_variable = { ABY_selected_state = 975 }
+		}
+
+        available = {
+			custom_trigger_tooltip = {
+				check_variable = {
+					var = ABY_selected_state:ABY_rebuild_var
+					value = 2
+					compare = less_than
+				}
+				tooltip = ABY_tt_rebuild_full
+			}
+        }
+
+		cost = ABY_rebuild_cost_var
+
+		days_remove = 70
+
+        remove_effect = {   
+			ABY_975_rebuild_effect = yes
+        }
+	}
 }

@@ -87,6 +87,10 @@ set_variable = {ABY_industry_progress_var = 0}
 set_variable = {ABY_rebuild_progress_var = 0}
 set_variable = {ABY_unite_progress_var = 0}
 
+set_variable = {ABY_industry_cost_var = 50}
+set_variable = {ABY_rebuild_cost_var = 50}
+set_variable = {ABY_unite_cost_var = 50}
+
 every_state = {
     limit = {
         OR = {
@@ -205,6 +209,7 @@ set_technology = {
  recruit_character = ABYDOS_emergence_gov # "아비도스 비상정부"
  #recruit_character = ABYDOS_gkrtodghlwkd # "아비도스 학생회장"
  recruit_character = ABY_HYA
+ recruit_character = ABY_Sou
  recruit_character = ABYDO_Hoshino # "타카나시 호시노"
  recruit_character = ABYDO_Hoshino_2 # "타카나시 호시노"
  recruit_character = ABYDO_Shiroko # "스나오오카미 시로코"
@@ -226,6 +231,38 @@ set_technology = {
  recruit_character = ABY_german_CH
  recruit_character = ABY_czech_EH
  recruit_character = ABY_czech_RR
+ recruit_character = ABY_AUS_karl_eglseer
+ recruit_character = ABY_AUS_friedrich_materna
+ recruit_character = ABY_AUS_emil_liebitzky
+ recruit_character = ABY_AUS_ludwig_von_eimannsberger
+ recruit_character = ABY_AUS_alfred_ritter_von_hubicki
+ recruit_character = ABY_AUS_ernst_hammer
+ recruit_character = ABY_AUS_eduard_barger
+ recruit_character = ABY_AUS_curt_von_jesser
+ recruit_character = ABY_AUS_anton_kienbauer
+ recruit_character = ABY_AUS_wilhelm_gebauer
+ recruit_character = ABY_AUS_franz_von_keil
+ recruit_character = ABY_AUS_gottfried_freiherr_von_banfeld
+ recruit_character = ABY_AUS_alois_schonburg_hartenstein
+ recruit_character = ABY_AUS_wilhelm_zehner
+ recruit_character = ABY_AUS_viktor_seebauer
+ recruit_character = ABY_AUS_eugen_beyer
+ recruit_character = ABY_AUS_arthur_von_pongracz
+ recruit_character = ABY_AUS_theodor_korner
+ recruit_character = ABY_AUS_josef_brunner
+ recruit_character = ABY_AUS_ernst_rudiger_starhemberg
+ recruit_character = ABY_AUS_leopold_figl
+ recruit_character = ABY_AUS_ludwig_von_mises
+ recruit_character = ABY_AUS_hans_pertner
+ recruit_character = ABY_AUS_heinrich_maier
+ recruit_character = ABY_AUS_bruno_kreisky
+ recruit_character = ABY_AUS_theodor_innitzer
+ recruit_character = ABY_AUS_adolf_scharf
+ recruit_character = ABY_AUS_adolf_hoch
+ recruit_character = ABY_AUS_otto_bauer
+ recruit_character = ABY_AUS_maximilian_ronge
+ recruit_character = ABY_AUS_friedrich_mandl
+
 set_convoys = 0
 
 set_politics = {

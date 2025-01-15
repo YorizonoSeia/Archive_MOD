@@ -9073,7 +9073,7 @@ country_event = {
     		name = ABY_neutrality_governmant_party
 		}
 		add_country_leader_trait = ABY_trait_emergency_government
-		set_cosmetic_tag = ABY_cze_government
+		set_cosmetic_tag = ABY_provisional_government
 	}
 }
 
