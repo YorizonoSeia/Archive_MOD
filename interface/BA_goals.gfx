@@ -147,6 +147,22 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/JAP/focus_JAP_way_of_japanese_fascism.tga"			
 	}
 
+	#프로젝트 KV
+	SpriteType = {
+	name = "GFX_goal_focus_KAP_kv19"
+	texturefile = "gfx/interface/goals/KAP/focus_KAP_kv19.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_focus_KAP_kv18"
+	texturefile = "gfx/interface/goals/KAP/focus_KAP_kv18.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_focus_KAP_kv17"
+	texturefile = "gfx/interface/goals/KAP/focus_KAP_kv17.dds"			
+	}
+
 	SpriteType = {
 	name = "GFX_goal_focus_KAP_kv16"
 	texturefile = "gfx/interface/goals/KAP/focus_KAP_kv16.dds"			

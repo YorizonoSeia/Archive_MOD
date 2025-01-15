@@ -764,7 +764,7 @@ focus_tree = {
 		}
 
 		available = {
-			WTT_has_politcal_support_points_30 = yes
+			
 		}
 
 		bypass = {
@@ -776,18 +776,13 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			KAP = {
-				kill_country_leader = yes
-				custom_effect_tooltip = loses_political_support_points_15
-				subtract_from_variable = { other_political_support = 15 }
-			}
-			WTT_political_struggle_recalculate_support = yes			
+						
 		}
 	}
 
 	focus = {
 		id = KAP_land_redistribution
-		icon = GFX_goal_generic_construction
+		icon = GFX_goal_focus_KAP_kv19
 		x = 10
 		y = 0
 		relative_position_id = KAP_strengthen_the_central_secretariat
@@ -842,25 +837,15 @@ focus_tree = {
 		available_if_capitulated = no
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
-		complete_tooltip = {
-			622 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 1
-			}
-		}
-
+		
 		completion_reward = {
 			622 = {
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 3
 					instant_build = yes
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 5
 			}
 		}
 	}
@@ -886,13 +871,11 @@ focus_tree = {
 		}
 
 		available = {
-			not = {
-				is_subject_of = JAP
-			}
+		
 		}
 
 		bypass = {
-			has_war_with = JAP
+			
 		}
 
 		cancel_if_invalid = yes
@@ -901,7 +884,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 		completion_reward = {
-			add_war_support = 0.1
+			
 		}
 	}
 
@@ -920,14 +903,11 @@ focus_tree = {
 		}
 
 		available = {
-			NOT = {
-				has_war_with = KAP
-			}
-			is_subject = no
+			
 		}
 
 		bypass = {
-			is_in_faction = yes
+			
 		}
 
 		cancel_if_invalid = yes
@@ -954,48 +934,11 @@ focus_tree = {
 		}
 
 		available = {
-			is_subject = no
+
 		}
 
 		bypass = {
-			OR = {
-				AND = {
-					is_in_faction = yes
-					not = { is_in_faction_with = KAP } #in any other faction that doesn't include KAP
-				}
-				AND = {
-					YUN = {
-						OR = {
-							exists = no
-							is_in_faction_with = ROOT
-						}
-					}
-					GXC = {
-						OR = {
-							exists = no
-							is_in_faction_with = ROOT
-						}
-					}
-					SHX = {
-						OR = {
-							exists = no
-							is_in_faction_with = ROOT
-						}
-					}
-					XSM = {
-						OR = {
-							exists = no
-							is_in_faction_with = ROOT
-						}
-					}
-					SIK = {
-						OR = {
-							exists = no
-							is_in_faction_with = ROOT
-						}
-					}
-				}
-			}
+			
 		}
 
 		cancel_if_invalid = yes
@@ -1010,7 +953,7 @@ focus_tree = {
 
 	focus = {
 		id = KAP_anti_japanese_expedition
-		icon = GFX_focus_AST_war_japan
+		icon = GFX_focus_ETH_freedom_at_gunpoint
 		prerequisite = { focus = KAP_prepare_for_war_with_japan}
 		x = -3
 		y = 1
@@ -1029,45 +972,11 @@ focus_tree = {
 		}
 
 		available = {
-			OR = {
-				MAN = {
-					OR = {
-						is_subject_of = JAP
-						has_cosmetic_tag = MAN_kwantung_army
-					}
-				}
-				AND = {
-					MAN = {
-						exists = no
-					}
-					JAP = {
-						owns_state = 612
-						owns_state = 611
-						owns_state = 610
-					}
-				}
-			}
-			NOT = {
-				is_subject_of = JAP
-			}
+			
 		}
 
 		bypass = {
-			has_war_with = JAP
-			OR = {
-				has_war_with = JAP
-				AND = {
-					MAN = {
-						is_subject = no
-					}
-					JAP = {
-						NOT = {
-							owns_state = 525
-							owns_state = 527
-						}
-					}
-				}
-			}
+			
 		}
 
 		cancel_if_invalid = yes
@@ -1112,7 +1021,7 @@ focus_tree = {
 
 	focus = {
 		id = KAP_provoke_japan
-		icon = GFX_goal_generic_position_armies
+		icon = GFX_focus_SWE_let_fly_all_guns
 		prerequisite = { focus = KAP_revolutionary_military_commission }
 		prerequisite = { focus = KAP_anti_japanese_expedition }
 		x = -3
@@ -1132,26 +1041,11 @@ focus_tree = {
 		}
 
 		available = {
-			NOT = {
-				is_subject_of = JAP #was fun while it lasted
-			}
+
 		}
 
 		bypass = {
-			OR = {
-				has_war_with = JAP
-				AND = {
-					MAN = {
-						is_subject = no
-					}
-					JAP = {
-						NOT = {
-							owns_state = 525
-							owns_state = 527
-						}
-					}
-				}
-			}
+
 		}
 
 		cancel_if_invalid = yes
@@ -1166,9 +1060,8 @@ focus_tree = {
 
 	focus = {
 		id = KAP_protracted_warfare
-		icon = GFX_goal_generic_army_doctrines
+		icon = GFX_goal_focus_KAP_kv17
 		prerequisite = { focus = KAP_provoke_japan }
-		mutually_exclusive = { focus = KAP_mobile_warfare }
 		x = -1
 		y = 1
 		relative_position_id = KAP_provoke_japan
@@ -1198,9 +1091,8 @@ focus_tree = {
 
 	focus = {
 		id = KAP_mobile_warfare
-		icon = GFX_goal_generic_cavalry
+		icon = GFX_focus_generic_self_propelled_gun
 		prerequisite = { focus = KAP_provoke_japan }
-		mutually_exclusive = { focus = KAP_protracted_warfare }
 		x = 1
 		y = 1
 		relative_position_id = KAP_provoke_japan
@@ -1230,7 +1122,7 @@ focus_tree = {
 
 	focus = {
 		id = KAP_peoples_war
-		icon = GFX_focus_generic_support_the_left_right
+		icon = GFX_goal_focus_KAP_kv18
 		prerequisite = { focus = KAP_protracted_warfare }
 		x = -1
 		y = 2
@@ -1261,7 +1153,7 @@ focus_tree = {
 
 	focus = {
 		id = KAP_100_regiments_campaign
-		icon = GFX_goal_generic_territory_or_war
+		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = KAP_mobile_warfare }
 		x = 1
 		y = 2
@@ -1325,6 +1217,7 @@ focus_tree = {
 		id = KAP_peoples_liberation_army
 		icon = GFX_goal_generic_attack_allies
 		prerequisite = { focus = KAP_central_military_commission }
+		mutually_exclusive = { focus = KAP_peoples_volunteer_army }
 		x = 0
 		y = 1
 		relative_position_id = KAP_central_military_commission
@@ -1356,6 +1249,7 @@ focus_tree = {
 		id = KAP_peoples_volunteer_army
 		icon = GFX_goal_generic_special_forces
 		prerequisite = { focus = KAP_central_military_commission }
+		mutually_exclusive = { focus = KAP_peoples_liberation_army }
 		x = 2
 		y = 1
 		relative_position_id = KAP_central_military_commission
@@ -1490,7 +1384,13 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-
+			custom_effect_tooltip = BA_factoriesof_new_world_tt
+		set_country_flag = BA_can_remove_isolation_flag
+		if = {
+			limit = {
+				has_idea = civilian_economy
+			}
+		}
 		}
 	}
 
@@ -1509,17 +1409,11 @@ focus_tree = {
 		}
 
 		available = {
-			OR = {
-				SHX = { can_ROOT_get_wargoal_on_THIS = yes }
-				XSM = { can_ROOT_get_wargoal_on_THIS = yes }
-			}
+
 		}
 
 		bypass = {
-			OR = {
-				has_war_with = SHX
-				has_war_with = XSM
-			}
+
 		}
 
 		cancel_if_invalid = yes
@@ -1528,24 +1422,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
-			if = {
-				limit = {
-					SHX = { can_ROOT_get_wargoal_on_THIS = yes }
-				}
-				create_wargoal = {
-					type = annex_everything
-					target = SHX
-				}
-			}
-			if = {
-				limit = {
-					XSM = { can_ROOT_get_wargoal_on_THIS = yes }
-				}
-				create_wargoal = {
-					type = annex_everything
-					target = XSM
-				}
-			}
+			add_ideas = partial_economic_mobilisation
 		}
 	}
 
