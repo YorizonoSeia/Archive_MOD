@@ -3575,15 +3575,14 @@ news_event = {
 	
 	major = yes
 	is_triggered_only = yes
-	fire_only_once = yes
 
 	option = {
 		name = BA_news.96.a
-		if = {
-			limit = {
-				is_ai = no
-			}
-			hidden_effect = {
+		trigger = {
+			TAG = USA
+		}
+		hidden_effect = {
+			if = {
 				scoped_play_song = "USA_The_Old_Order"
 				set_country_flag = {
 					flag = BA_Super_Event_Visible
@@ -3592,6 +3591,7 @@ news_event = {
 				}
 			}
 		}
+		
 	}
 
     option = { # 키보토스 반응
@@ -3603,6 +3603,7 @@ news_event = {
 			TAG = RED
 			TAG = KAI
 			TAG = MIL
+			TAG = TRM
 			TAG = GEH
 			TAG = GEM
 			TAG = SRT
@@ -3616,14 +3617,16 @@ news_event = {
 			TAG = INK
 		}
 	}
-			hidden_effect = {
-				scoped_play_song = "USA_The_Old_Order"
-				set_country_flag = {
-					flag = BA_Super_Event_Visible
-					value = 21
-					days = 15
-				}
+	hidden_effect = {
+		if = {
+			scoped_play_song = "USA_The_Old_Order"
+			set_country_flag = {
+				flag = BA_Super_Event_Visible
+				value = 21
+				days = 15
 			}
+		}
+	}
 }
 
     option = {  # 지구 국가 반응
@@ -3653,7 +3656,8 @@ news_event = {
 			}
 		}
  	}
-			hidden_effect = {
+		hidden_effect = {
+			if = {
 				scoped_play_song = "USA_The_Old_Order"
 				set_country_flag = {
 					flag = BA_Super_Event_Visible
@@ -3661,8 +3665,13 @@ news_event = {
 					days = 15
 				}
 			}
+		}
  }
 }
+
+
+
+
 # 미국 신질서 편입 선언
 news_event = { 
     id = BA_news.97
@@ -4477,13 +4486,6 @@ news_event = { # 왕징웨이의 국민정부 선언
 }
 
 
-
-
-
-
-
-
-
 #news_event = { # 미국 트리니티 에덴 점령
 #    id = BA_news.112
 #    title = BA_news.112.t
@@ -4539,3 +4541,5 @@ news_event = { # 왕징웨이의 국민정부 선언
 #    }
 #		 
 #}
+
+
