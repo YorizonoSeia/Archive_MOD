@@ -10196,11 +10196,10 @@ country_event = {
 	option = {
 		name = ABY_new_event.205.a
 		ai_chance = { factor = 100 }
-		hidden_effect = {
-			country_event = {
-				id = ABY_new_event.206
-				days = 30
-			}
+		custom_effect_tooltip = ABY_30_days_tt
+		country_event = {
+			id = ABY_new_event.206
+			days = 30
 		}
 	}
 }

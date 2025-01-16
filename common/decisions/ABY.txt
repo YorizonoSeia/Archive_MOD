@@ -17545,6 +17545,7 @@ ABY_descision_category_debug = {
 		                 
         allowed = {
             tag = ABY
+			is_ai = no
         }                     
 
 		complete_effect = {
@@ -17572,6 +17573,7 @@ ABY_descision_category_debug = {
 		                 
         allowed = {
             tag = ABY
+			is_ai = no
         }                     
 
 		complete_effect = {
@@ -17605,6 +17607,7 @@ ABY_descision_category_debug = {
 		                 
         allowed = {
             tag = ABY
+			is_ai = no
         }                     
 
 		complete_effect = {
@@ -17625,6 +17628,7 @@ ABY_descision_category_debug = {
 		                 
         allowed = {
             tag = ABY
+			is_ai = no
         }                     
 
 		complete_effect = {
@@ -17641,6 +17645,7 @@ ABY_descision_category_debug = {
 		                 
         allowed = {
             tag = ABY
+			is_ai = no
         }                     
 
 		complete_effect = {
@@ -17664,6 +17669,7 @@ ABY_descision_category_debug = {
 		                 
         allowed = {
             tag = ABY
+			is_ai = no
         }                     
 
 		complete_effect = {
@@ -17687,6 +17693,7 @@ ABY_descision_category_debug = {
 		                 
         allowed = {
             tag = ABY
+			is_ai = no
         }                     
 
 		complete_effect = {
@@ -17710,6 +17717,7 @@ ABY_descision_category_debug = {
 		                 
         allowed = {
             tag = ABY
+			is_ai = no
         }                     
 
 		complete_effect = {
@@ -17733,6 +17741,7 @@ ABY_descision_category_debug = {
 		                 
         allowed = {
             tag = ABY
+			is_ai = no
         }                     
 
 		complete_effect = {
@@ -17875,6 +17884,7 @@ ABY_descision_category_debug = {
 		                 
         allowed = {
             tag = ABY
+			is_ai = no
         }                     
 
 		complete_effect = {
@@ -18153,6 +18163,7 @@ ABY_descision_category_debug = {
 		                 
         allowed = {
             tag = ABY
+			is_ai = no
         }                     
 
 		complete_effect = {
@@ -18643,6 +18654,7 @@ ABY_descision_category_debug = {
 		                 
         allowed = {
             tag = ABY
+			is_ai = no
         }  
 		
 		complete_effect = {
@@ -18836,6 +18848,7 @@ ABY_descision_category_debug = {
 		                 
         allowed = {
             tag = ABY
+			is_ai = no
         }  
 		
 		complete_effect = {
