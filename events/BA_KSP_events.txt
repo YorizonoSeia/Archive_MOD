@@ -272,11 +272,31 @@ country_event = {
 	desc = KSP_event.18.d
 	picture = none
 
-	fire_only_once = yes
 	is_triggered_only = yes
 	
 	option = {
 		name = KSP_event.18.a
+		ai_chance = {
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 20
+			}
+			modifier = {
+				KSP = { is_ai = no }
+				factor = 20
+			}
+		}
+		effect_tooltip = {
+			FROM = {
+				set_global_flag = KSP_division_of_military_flag
+				unlock_decision_category_tooltip = KSP_division_of_military
+			}
+		}
+		FROM = { country_event = { id = KSP_event.19 hours = 2 } }
+	}
+	option = {
+		name = KSP_event.18.b
+		FROM = { country_event = { id = KSP_event.20 hours = 2 } }
 	}
 }
 country_event = {
@@ -285,11 +305,17 @@ country_event = {
 	desc = KSP_event.19.d
 	picture = none
 
-	fire_only_once = yes
 	is_triggered_only = yes
 	
 	option = {
 		name = KSP_event.19.a
+		set_global_flag = KSP_division_of_military_flag
+		unlock_decision_category_tooltip = KSP_division_of_military
+		set_variable = {
+			global.KSP_division_of_military_value = 15
+			tooltip = KSP_strengthening_influence_tt
+		}
+		activate_mission = KSP_mission_division_of_military
 	}
 }
 country_event = {
@@ -298,7 +324,6 @@ country_event = {
 	desc = KSP_event.20.d
 	picture = none
 
-	fire_only_once = yes
 	is_triggered_only = yes
 	
 	option = {
@@ -569,54 +594,22 @@ country_event = {
 	desc = KSP_event.36.d
 	picture = none
 
-	trigger = {
-		tag = KSP
-		7 = {
-			is_owned_and_controlled_by = KSP
-		}
-		35 = {
-			is_owned_and_controlled_by = KSP
-		}
-		6 = {
-			is_owned_and_controlled_by = KSP
-		}
-		29 = {
-			is_owned_and_controlled_by = KSP
-		}
-		36 = {
-			is_owned_and_controlled_by = KSP
-		}
-	}
-	
-	mean_time_to_happen = { days = 2 }
-	fire_only_once = yes
+	is_triggered_only = yes
 	
 	option = {
 		name = KSP_event.36.a
+        7 = { set_state_flag = SHE_war_cou_flag }
+        35 = { set_state_flag = SHE_war_cou_flag }
+        977 = { set_state_flag = SHE_war_cou_flag }
+        6 = {  set_state_flag = SHE_war_cou_flag  }
+        29 = { set_state_flag = SHE_war_cou_flag  }
+        36 = {  set_state_flag = SHE_war_cou_flag  }
 		add_state_claim = 7
-        7 = {
-             set_state_flag = SHE_war_cou_flag
-        }
         add_state_claim = 35
-        35 = {
-            set_state_flag = SHE_war_cou_flag
-        }
         add_state_claim = 977
-        977 = {
-            set_state_flag = SHE_war_cou_flag
-        }
 		add_state_claim = 6
-        6 = {
-            set_state_flag = SHE_war_cou_flag
-        }
         add_state_claim = 29
-        29 = {
-            set_state_flag = SHE_war_cou_flag
-        }
 		add_state_claim = 36
-        36 = {
-            set_state_flag = SHE_war_cou_flag
-        }
 	}
 }
 

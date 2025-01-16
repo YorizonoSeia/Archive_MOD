@@ -6,13 +6,13 @@ focus_tree = {
 		focus = ABY_focus_order_111
 	}
 	continuous_focus_position = { x = 325 y = 850 }
-	#country = {
-	#	factor = 0
-	#	modifier = {
-	#		add = 100
-	#		tag = ABY
-	#	}
-	#}
+	country = {
+		factor = 0
+		modifier = {
+			add = 0
+			tag = ABY
+		}
+	}
 	default = no
 	
 	focus = {
@@ -442,6 +442,13 @@ focus_tree = {
 			#중점 통과 조건
 		}
 		available = {
+			SHA = {
+				any_controlled_state = {
+					any_neighbor_state = {
+						is_controlled_by = ABY
+					}
+				}
+			}
 			#중점 선행조건
 		}
 

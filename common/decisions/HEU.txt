@@ -511,6 +511,13 @@ HEU_rikuhachimaism_decision_category = {
 
 		}
 
+		visible = {
+			AND = {
+				NOT = { has_idea = HEU_civil_rights_idea }
+				NOT = { has_idea = HEU_civil_rights_idea_2 }
+			}
+		}
+
 		ai_will_do = { factor = 100 }
 
 		cost = 100
@@ -3412,16 +3419,33 @@ HEU_memorial_park_decision_category = {
 
 		is_good = yes
 
-		available = { hidden_trigger = { always = no } }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = HEU_memorial_park_fall_tt
+				check_variable = { HEU_memorial_angry_gehenna > 5 }
+			}
+    	}
 
 		activation = {
 			has_completed_focus = HEU_luxembourgism_focus_1 
+			NOT =  { has_country_flag = HEU_end_memorial_park }
 		}
 
 		days_mission_timeout = 365
 
+		complete_effect = {
+			set_country_flag = HEU_end_memorial_park
+			country_event = {
+				id = HEU_event.200
+			}
+		}
+
 		timeout_effect = {
 			custom_effect_tooltip = HEU_memorial_park_completion_tt
+			set_country_flag = HEU_end_memorial_park
+			hidden_effect = {
+				country_event = { id = HEU_event.208 }
+			}
 		}
 	}
 
@@ -3439,10 +3463,11 @@ HEU_memorial_park_decision_category = {
 		}
 
 		is_good = no
-		available = { hidden_trigger = { always = no } }
+		available = { has_country_flag = HEU_end_memorial_park }
 
 		activation = {
 			has_completed_focus = HEU_luxembourgism_focus_1
+			NOT =  { has_country_flag = HEU_end_memorial_park }
 		}
 
 		days_mission_timeout = 55
@@ -3504,10 +3529,11 @@ HEU_memorial_park_decision_category = {
 		}
 
 		is_good = no
-		available = { hidden_trigger = { always = no } }
+		available = { has_country_flag = HEU_end_memorial_park }
 
 		activation = {
 			has_completed_focus = HEU_luxembourgism_focus_1
+			NOT =  { has_country_flag = HEU_end_memorial_park }
 		}
 
 		days_mission_timeout = 60
@@ -3603,6 +3629,7 @@ HEU_memorial_park_decision_category = {
 				HEU_memorial_support_people = 1
 				tooltip = HEU_memorial_support_people_edit_tt
 			}
+			HEU_memorial_setting = yes
 		}
 
 	}
@@ -3670,6 +3697,7 @@ HEU_memorial_park_decision_category = {
 				HEU_memorial_support_people = 1
 				tooltip = HEU_memorial_support_people_edit_tt
 			}
+			HEU_memorial_setting = yes
 		}
 
 	}
@@ -3682,11 +3710,19 @@ HEU_memorial_park_decision_category = {
 
 		}
 
+		visible = {
+			check_variable = { HEU_memorial_angry_gehenna > 0 }
+		}
+
 		ai_will_do = { 
 			base = 15
 			modifier = {
 				factor = 4
 				check_variable = { HEU_memorial_angry_gehenna > 2 }
+			}
+			modifier = {
+				factor = 0
+				check_variable = { HEU_memorial_angry_gehenna < 1 }
 			}
 		}
 
@@ -3699,6 +3735,7 @@ HEU_memorial_park_decision_category = {
 				HEU_memorial_angry_gehenna = -1
 				tooltip = HEU_memorial_angry_gehenna_edit_tt
 			}
+			HEU_memorial_setting = yes
 		}
 	}
 
@@ -3720,6 +3757,16 @@ HEU_memorial_park_decision_category = {
 
 		complete_effect = {
 			set_country_flag = HEU_memorial_park_tombstone_flag
+			add_to_variable = {
+				HEU_memorial_angry_gehenna = 1
+				tooltip = HEU_memorial_angry_gehenna_edit_tt
+			}
+
+			add_to_variable = {
+				HEU_memorial_support_people = 1
+				tooltip = HEU_memorial_support_people_edit_tt
+			}
+			HEU_memorial_setting = yes
 		}
 
 		fire_only_once = yes
@@ -3738,12 +3785,29 @@ HEU_memorial_park_decision_category = {
 			NOT = { has_country_flag = HEU_memorial_park_tombstone_flag }
 		}
 
-		ai_will_do = { base = 24 } #
+		ai_will_do = { 
+			base = 24
+		
+			modifier = {
+				factor = 0
+				check_variable = { HEU_memorial_angry_gehenna > 2 }
+			}
+		} #
 
 		cost = 35
 
 		complete_effect = {
 			set_country_flag = HEU_memorial_park_tombstone_flag
+			add_to_variable = {
+				HEU_memorial_angry_gehenna = 2
+				tooltip = HEU_memorial_angry_gehenna_edit_tt
+			}
+
+			add_to_variable = {
+				HEU_memorial_support_people = 2
+				tooltip = HEU_memorial_support_people_edit_tt
+			}
+			HEU_memorial_setting = yes
 		}
 
 		fire_only_once = yes
@@ -3773,6 +3837,7 @@ HEU_memorial_park_decision_category = {
 				HEU_memorial_support_people = 1
 				tooltip = HEU_memorial_support_people_edit_tt
 			}
+			HEU_memorial_setting = yes
 		}
 	}
 	

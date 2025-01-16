@@ -1360,6 +1360,7 @@ ABY_tt_governmant_0:0 "§Y정부 안정도§!가 §Y0§!미만으로 하락하�
 
 ABY_every_month_tt:0 "매월:"
 ABY_70_days_tt:0 "70일 후:"
+ABY_30_days_tt:0 "30일 후:"
 ABY_have_idea_tt:0 "§Y[Root.GetABYDOSarmyname]§!국민정신 소유 시:"
 ABY_final_tt:0 "§R당신의 국가는 합병됩니다. 당신으로 인해 게임이 종료됩니다.§!" 
 ABY_autofocus_flag:0 "§R추후 자동으로 완료됨§!" 

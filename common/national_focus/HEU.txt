@@ -174,7 +174,7 @@ focus_tree = {
 			hidden_effect = {
 				country_event = { id = HEU_event.134 }
 			}
-
+			HEU_bop_medium_increase_effect = yes
 		}
 	}
 	focus = {
@@ -302,6 +302,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = HEU_end_debate_tt
 		}
 	}
 
@@ -400,7 +401,7 @@ focus_tree = {
 		
 		relative_position_id = HEU_negotiations_with_parties
 
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_goal_HEU_we_still_hope
 
 		prerequisite = { 
 			focus = HEU_civil_rights_act_1
@@ -504,6 +505,10 @@ focus_tree = {
 					long_name = HEU_grand_coalition_party_long_1
 					name = HEU_grand_coalition_party 
 				}
+				
+				country_event = { id = HEU.flavor_event.35 days = 30 random_days = 30 }
+				country_event = { id = HEU.flavor_event.37 days = 60 random_days = 30 }
+				country_event = { id = HEU.flavor_event.39 days = 21 random_days = 14 }
 			}
 		}
 	}
@@ -535,6 +540,7 @@ focus_tree = {
 		completion_reward = {
 			add_research_slot = 1
 			HEU_bop_medium_increase_effect = yes
+			country_event = { id = HEU.flavor_event.38 }
 		}
 	}
 	
@@ -604,6 +610,9 @@ focus_tree = {
 				tooltip = communism_drift_factor_tt
 			}
 			
+			hidden_effect = {
+				country_event = { id = HEU.flavor_event.44 }
+			}
 		}
 	}
 	
@@ -775,7 +784,7 @@ focus_tree = {
 		
 		relative_position_id = HEU_we_still_hope
 
-		icon = GFX_focus_BRA_end_the_state_of_emergency
+		icon = GFX_goal_HEU_unwelcome_school
 
 		prerequisite = { 
 			focus = HEU_we_still_hope
@@ -1040,10 +1049,14 @@ focus_tree = {
 		
 		relative_position_id = HEU_unwelcome_school
 
-		icon = GFX_focus_BRA_restore_brazilian_honor
+		icon = GFX_goal_HEU_question_of_succession_law
 
 		prerequisite = { 
 			focus = HEU_for_you_3
+		}
+
+		available = {
+			has_completed_focus = HEU_germany_union
 		}
 
 		ai_will_do = {
@@ -1077,7 +1090,7 @@ focus_tree = {
 		
 		relative_position_id = HEU_negotiations_with_parties
 
-		icon = GFX_focus_generic_strike_at_democracy2
+		icon = GFX_goal_HEU_aru_rikuhachima_puppet
 
 		prerequisite = { 
 			#focus = HEU_civil_rights_act_1
@@ -1613,6 +1626,13 @@ focus_tree = {
 				}
 			}
 
+			random_owned_state = {
+				damage_building = {
+					type = infrastructure
+					damage = 1
+				}
+			}
+
 			add_stability = -0.1
 		}
 	}
@@ -1738,11 +1758,11 @@ focus_tree = {
 	### 외교 중점 (자립) ###
 
 	focus = {
-		id = HEU_doubt_pandemonium_society
+		id = HEU_representative_of_the_germanic
 		
 		relative_position_id = HEU_negotiations_with_parties
 
-		icon = GFX_goal_hmmngshinso_broken
+		icon = GFX_focus_GER_brothers_in_arms
 
 		prerequisite = { 
 			focus = HEU_no_more_hope
@@ -1757,13 +1777,53 @@ focus_tree = {
 		}
 
 		ai_will_do = {
+			factor = 4
+		}
+
+		cost = 5.00
+
+		x = 0
+		y = 3
+
+		search_filters = {  }
+
+		completion_reward = {
+			set_rule = { can_declare_war_without_wargoal_when_in_war = yes }
+		
+			hidden_effect = {
+				if = {
+					limit = {
+						has_completed_focus = HEU_we_still_hope
+					}
+					country_event = { id = HEU.flavor_event.43 }
+					
+				}
+			}
+
+			custom_effect_tooltip = aru_despair_1_tt
+		}
+	}
+
+	focus = {
+
+		id = HEU_doubt_pandemonium_society
+		
+		relative_position_id = HEU_representative_of_the_germanic
+
+		icon = GFX_goal_hmmngshinso_broken
+
+		prerequisite = { 
+			focus = HEU_representative_of_the_germanic
+		}
+
+		ai_will_do = {
 			factor = 6
 		}
 
 		cost = 3.00
 
 		x = 0
-		y = 3
+		y = 1
 
 		search_filters = {  }
 
@@ -1774,24 +1834,34 @@ focus_tree = {
 				}
 				add_claim_by = HEU
 			}
-
-			custom_effect_tooltip = aru_despair_1_tt
 		}
 	}
 
 	focus = {
 		id = HEU_ally_with_the_devil
 		
-		relative_position_id = HEU_doubt_pandemonium_society
+		relative_position_id = HEU_representative_of_the_germanic
 
-		icon = GFX_goal_TRN_domination
+		icon = GFX_goal_HEU_ally_with_the_devil
 
 		prerequisite = { 
-			focus = HEU_doubt_pandemonium_society
+			focus = HEU_representative_of_the_germanic
 		}
 
 		ai_will_do = {
 			factor = 6
+		}
+
+		available = {
+			AND = {
+				country_exists = TRM
+				TRM = {
+					has_country_leader = {
+                        character = TRN_alzk
+                        ruling_only = yes
+					}
+				}
+			}
 		}
 
 		cost = 2.00
@@ -1802,65 +1872,21 @@ focus_tree = {
 		search_filters = {  }
 
 		completion_reward = {
-
+			TRM = {
+				country_event = { id = HEU_event.209 }
+			}
 		}
 	}
 	
-	focus = {
-		id = HEU_representative_of_the_germanic
-		
-		relative_position_id = HEU_doubt_pandemonium_society
-
-		icon = GFX_focus_GER_brothers_in_arms
-
-		prerequisite = { 
-			focus = HEU_doubt_pandemonium_society
-		}
-
-		ai_will_do = {
-			factor = 4
-		}
-
-		cost = 5.00
-
-		x = 0
-		y = 1
-
-		search_filters = {  }
-
-		completion_reward = {
-			set_rule = { can_declare_war_without_wargoal_when_in_war = yes }
-
-			if = {
-				limit = {
-					has_government = communism
-				}
-				add_popularity = {
-					ideology = communism
-					popularity = 0.05
-				}
-			}
-			
-			if = {
-				limit = {
-					has_government = fascism
-				}
-				add_popularity = {
-					ideology = fascism
-					popularity = 0.05
-				}
-			}
-		}
-	}
 	
 	focus = {
 		id = HEU_war_industry_alt
 
-		prerequisite = { focus = HEU_doubt_pandemonium_society }
+		prerequisite = { focus = HEU_representative_of_the_germanic }
 
 		icon = GFX_goal_generic_small_arms #GFX_goal_generic_army_artillery2
 
-		relative_position_id = HEU_doubt_pandemonium_society
+		relative_position_id = HEU_representative_of_the_germanic
 
 		x = 2
 		y = 1
@@ -1995,7 +2021,7 @@ focus_tree = {
 		icon = GFX_focus_attack_GEH
 
 		prerequisite = { 
-			focus = HEU_representative_of_the_germanic
+			focus = HEU_doubt_pandemonium_society
 		}
 
 		available = {
@@ -2015,7 +2041,7 @@ focus_tree = {
 		cost = 2.00
 
 		x = -1
-		y = 2
+		y = 1
 
 		search_filters = {  }
 
@@ -2035,7 +2061,7 @@ focus_tree = {
 		icon = GFX_focus_SWE_let_fly_all_guns
 
 		prerequisite = { 
-			focus = HEU_representative_of_the_germanic
+			focus = HEU_doubt_pandemonium_society
 		}
 
 		available = {
@@ -2055,7 +2081,7 @@ focus_tree = {
 		cost = 2.00
 
 		x = 1
-		y = 2
+		y = 1
 
 		search_filters = {  }
 
@@ -2102,7 +2128,7 @@ focus_tree = {
 		cost = 2.00
 
 		x = 0
-		y = 3
+		y = 2
 
 		search_filters = {  }
 
@@ -2144,7 +2170,7 @@ focus_tree = {
 		}
 
 		x = 0
-		y = 4
+		y = 3
 
 		completion_reward = {
 			#add_threat = 5
@@ -3625,7 +3651,7 @@ focus_tree = {
 		
 		relative_position_id = HEU_one_evil_one_day
 
-		icon = GFX_focus_BRA_restore_brazilian_honor
+		icon = GFX_goal_HEU_question_of_succession_law
 
 		prerequisite = { 
 			focus = HEU_aru_fan_club_2
@@ -3730,6 +3756,9 @@ focus_tree = {
 
 		completion_reward = {
 			unlock_decision_category_tooltip = HEU_memorial_park_decision_category
+			hidden_effect = {
+				country_event = { id = HEU.flavor_event.42 }
+			}
 		}
 	}
 	

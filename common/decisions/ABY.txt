@@ -17545,7 +17545,10 @@ ABY_descision_category_debug = {
 		                 
         allowed = {
             tag = ABY
-        }                     
+        }     
+		available = {
+			is_ai = no
+		}                
 
 		complete_effect = {
 			set_technology = {
@@ -17572,7 +17575,10 @@ ABY_descision_category_debug = {
 		                 
         allowed = {
             tag = ABY
-        }                     
+        }     
+		available = {
+			is_ai = no
+		}                
 
 		complete_effect = {
 
@@ -17605,7 +17611,10 @@ ABY_descision_category_debug = {
 		                 
         allowed = {
             tag = ABY
-        }                     
+        }    
+		available = {
+			is_ai = no
+		}                 
 
 		complete_effect = {
             load_focus_tree = {
@@ -17625,7 +17634,10 @@ ABY_descision_category_debug = {
 		                 
         allowed = {
             tag = ABY
-        }                     
+        }   
+		available = {
+			is_ai = no
+		}                  
 
 		complete_effect = {
 			set_country_flag = ABY_flag_map_descision     
@@ -17641,7 +17653,10 @@ ABY_descision_category_debug = {
 		                 
         allowed = {
             tag = ABY
-        }                     
+        }        
+		available = {
+			is_ai = no
+		}             
 
 		complete_effect = {
 			complete_national_focus = ABY_focus_get_power_of_student_council
@@ -17664,7 +17679,10 @@ ABY_descision_category_debug = {
 		                 
         allowed = {
             tag = ABY
-        }                     
+        }        
+		available = {
+			is_ai = no
+		}             
 
 		complete_effect = {
 			complete_national_focus = ABY_focus_abydos_federal_republic
@@ -17687,7 +17705,10 @@ ABY_descision_category_debug = {
 		                 
         allowed = {
             tag = ABY
-        }                     
+        }         
+		available = {
+			is_ai = no
+		}            
 
 		complete_effect = {
 			complete_national_focus = ABY_focus_holy_empire
@@ -17710,7 +17731,10 @@ ABY_descision_category_debug = {
 		                 
         allowed = {
             tag = ABY
-        }                     
+        }         
+		available = {
+			is_ai = no
+		}            
 
 		complete_effect = {
 			complete_national_focus = ABY_focus_with_german
@@ -17733,7 +17757,10 @@ ABY_descision_category_debug = {
 		                 
         allowed = {
             tag = ABY
-        }                     
+        }               
+		available = {
+			is_ai = no
+		}      
 
 		complete_effect = {
 			HUN = {
@@ -17875,7 +17902,10 @@ ABY_descision_category_debug = {
 		                 
         allowed = {
             tag = ABY
-        }                     
+        }      
+		available = {
+			is_ai = no
+		}               
 
 		complete_effect = {
 			SHL = {
@@ -18153,7 +18183,10 @@ ABY_descision_category_debug = {
 		                 
         allowed = {
             tag = ABY
-        }                     
+        }    
+		available = {
+			is_ai = no
+		}                 
 
 		complete_effect = {
 			CZE = {
@@ -18644,6 +18677,9 @@ ABY_descision_category_debug = {
         allowed = {
             tag = ABY
         }  
+		available = {
+			is_ai = no
+		}
 		
 		complete_effect = {
 			GAL = {
@@ -18837,6 +18873,9 @@ ABY_descision_category_debug = {
         allowed = {
             tag = ABY
         }  
+		available = {
+			is_ai = no
+		}
 		
 		complete_effect = {
 			SER = {
