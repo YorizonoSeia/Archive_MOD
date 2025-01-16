@@ -1653,6 +1653,26 @@ spriteTypes = {
 		name = "GFX_goal_HEU_GSC_president_rikuhachima"
 		textureFile = "gfx/interface/goals/HEU/HEU_GSC_president_rikuhachima.dds"
 	}
+	spriteType = {
+		name = "GFX_goal_HEU_aru_rikuhachima_puppet"
+		textureFile = "gfx/interface/goals/HEU/HEU_aru_rikuhachima_puppet.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEU_ally_with_the_devil"
+		textureFile = "gfx/interface/goals/HEU/HEU_ally_with_the_devil.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEU_we_still_hope"
+		textureFile = "gfx/interface/goals/HEU/HEU_we_still_hope.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEU_question_of_succession_law"
+		textureFile = "gfx/interface/goals/HEU/HEU_question_of_succession_law.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEU_unwelcome_school"
+		textureFile = "gfx/interface/goals/HEU/HEU_unwelcome_school.dds"
+	}
 	SpriteType = { 	
 		name = "GFX_goal_SHA_KISAKI"
 		texturefile = "gfx/interface/goals/SHA/키사키.tga"  
