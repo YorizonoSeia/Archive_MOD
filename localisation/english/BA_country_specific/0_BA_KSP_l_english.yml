@@ -16,6 +16,7 @@ KSP_attempt_to_gain_control_of_the_srt_desc: "현재 총학생회장이 실종�
 KSP_division_of_military: "SRT 특수부대의 행방"
 KSP_division_of_military_desc: "발키리 경찰학교의 주장으로 시작된 SRT 행방 논의는 현재 격렬하게 진행되고 있습니다. 발키리 경찰학교의 주장대로 SRT가 발키리에 병합되거나, SRT가 총학생회에 잔류하게 되는 것. 두 가지 결과만이 남게 될 것입니다."
 KSP_mission_division_of_military_trigger_tooltip: "@KSP 영향력 점수 §Y100§! 이상"
+KSP_mission_division_of_military: "포섭전"
 KSP_strengthening_influence_pp: "정치적 영향력 강화"
 KSP_strengthening_influence_cp: "SRT 지휘관 포섭"
 KSP_strengthening_influence_stv: "총학생회장의 부재에 대한 연설"
