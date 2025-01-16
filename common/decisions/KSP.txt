@@ -1740,21 +1740,12 @@ KSP_annex_cou = {
 				NOT = {
 					country_exists = SHE
 				}
-				29 = {
-					is_controlled_by = KSP
-				}
-				6 = {
-					is_controlled_by = KSP
-				}
-				35 = {
-					is_controlled_by = KSP
-				}
-				7 = {
-					is_controlled_by = KSP
-				}
-				36 = {
-					is_controlled_by = KSP
-				}					
+				controls_state = 29
+				controls_state = 6
+				controls_state = 35
+				controls_state = 7
+				controls_state = 977
+				controls_state = 36				
 			}
 		}
 
@@ -1763,21 +1754,28 @@ KSP_annex_cou = {
 		}
 
 		complete_effect = {
-			29 = {
-				add_core_of = ROOT
+			if = {
+				limit = { NOT = { tag = global.kivotos_alliance_leader } }
+				custom_effect_tooltip = kivotos_alliance_leader_change_tt
+				set_variable = { global.kivotos_alliance_leader = ROOT }
 			}
-			6 = {
-				add_core_of = ROOT
+
+			if = {
+				limit = {
+					NOT = {
+						is_in_array = {
+							array = global.kivotos_alliance
+							value = THIS
+						}
+					}
+				}
+				add_to_array = { #키보토스 국가
+					array = global.kivotos_alliance
+					value = THIS
+				}
 			}
-			35 = {
-				add_core_of = ROOT
-			}
-			7 = {
-				add_core_of = ROOT
-			}
-			36 = {
-				add_core_of = ROOT
-			}
+
+			country_event = KSP_event.36
 		}
 
 		fire_only_once = yes
