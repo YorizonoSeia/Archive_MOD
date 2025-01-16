@@ -162,6 +162,7 @@ HEU_memorial_park_decision_category = { #추모공원 건립
 
     visible = {
         has_completed_focus = HEU_luxembourgism_focus_1
+        NOT = { has_country_flag = HEU_end_memorial_park }
     }
 
     available = {

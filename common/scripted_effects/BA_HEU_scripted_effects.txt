@@ -133,3 +133,17 @@ HEU_aru_GSC_annex_setting = {
 		max = 100
 	}
 }
+
+
+HEU_memorial_setting = {
+	clamp_variable = {
+		var = HEU_memorial_angry_gehenna
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = HEU_memorial_support_people
+		min = 0
+		max = 100
+	}
+}
