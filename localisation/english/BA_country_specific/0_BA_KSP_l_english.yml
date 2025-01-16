@@ -10,7 +10,26 @@ KSP_guide: "목표\n\n£white_dot. 현 사태를 파악하고 대처하세요.\n
  KSP_show_story_archive_gui: "발키리 스토리 아카이브"
  KSP_show_story_archive_gui_desc: "발키리와 벨기에에 엮인 사이드 스토리를 열람할 수 있습니다. 게임 시스템과는 무관하며 단순히 게임 내 국가와 관련된 사이드 스토리를 즐기기 위한 목적으로 제작되었습니다. 시간과 사건이 경과될수록 새로운 스토리가 추가될 수 있습니다. 부디 재밌게 즐겨주시길 바랍니다."
 
+KSP_attempt_to_gain_control_of_the_srt: "SRT 통제권 확보 시도"
+KSP_attempt_to_gain_control_of_the_srt_desc: "현재 총학생회장이 실종되며 SRT의 통제권한이 붕 떠버린 이상, 우리 발키리가 이들의 신변을 양도받고 임시로 SRT 특수부대의 역할을 이양받아야만 합니다."
 
+KSP_division_of_military: "SRT 특수부대의 행방"
+KSP_division_of_military_desc: "발키리 경찰학교의 주장으로 시작된 SRT 행방 논의는 현재 격렬하게 진행되고 있습니다. 발키리 경찰학교의 주장대로 SRT가 발키리에 병합되거나, SRT가 총학생회에 잔류하게 되는 것. 두 가지 결과만이 남게 될 것입니다."
+KSP_mission_division_of_military_trigger_tooltip: "@KSP 영향력 점수 §Y100§! 이상"
+KSP_strengthening_influence_pp: "정치적 영향력 강화"
+KSP_strengthening_influence_cp: "SRT 지휘관 포섭"
+KSP_strengthening_influence_stv: "총학생회장의 부재에 대한 연설"
+KSP_strengthening_influence_civ: "SRT 부지 확보"
+KSP_strengthening_influence_mp: "투자 인력 확충"
+KSP_strengthening_influence_civ_tt: "£civ_factory  §Y1§!"
+KSP_strengthening_influence_civ_tt_blocked: "£civ_factory  §R1§!"
+KSP_strengthening_influence_mp_tt: "£manpower_texticon  §Y1000§!"
+KSP_strengthening_influence_mp_tt_blocked: "£manpower_texticon  §R1000§!"
+
+KSP_strengthening_influence_tt: "@KSP 영향력 $RIGHT|+=%%0$\n"
+
+ KSP_division_of_military_value_tooltip: "[ROOT.GetNameDefCap](은)는 [?global.KSP_division_of_military_value|0H%%]의 §H영향력 점수§!를 가짐\n"
+ KSP_division_of_military_value_tt: "[?global.KSP_division_of_military_value|0H%%]"
 # 칸나
 KSP_kanna_banned: "§Y건강 악화§!"
 KSP_kanna_dictator: "독재"
@@ -978,6 +997,19 @@ KSP_event.6.a:0 "..."
 KSP_event.17.t:0 "벨기에 대표단과의 협상"
 KSP_event.17.d:0 "긴 시간 동안, 벨기에 대표단과의 협상을 진행했으나, 양 측의 요구는 허공을 가로지를 뿐이었습니다. 결국, 발키리의 대표단이 먼저 자리를 박차고 나가며 엄포를 놓은 것을 시작으로 협상은 끝을 맺었습니다.\n\n생활안전국을 주도로 협상 실패에 대한 공안국 책임론이 대두되고 있으며, 발키리 경찰학교의 정세는 더 미궁 속으로 빠져들고 있습니다. 우리는 현 상황을 해결해야만 합니다."
 KSP_event.17.a:0 "이제, 발키리 경찰학교의 미래를 만들러 가 봅시다."
+
+KSP_event.18.t:0 "발키리 경찰학교에 SRT 특수부대 병합"
+KSP_event.18.d:0 "총학생회장이 실종된 현재, 발키리 경찰학교 측에서 SRT 특수학원을 자신들의 관할에 이관받고 싶다는 요청을 해오고 있습니다.\n\n과거 총학생회장의 유산인 SRT 특수학원은 총학생회장이 실종된 이후 통제권이 확실하지 않은 현재, 우리는 이들의 운명을 결정지어야 합니다."
+KSP_event.18.a:0 "승인한다. 발키리 경찰학교를 돕자."
+KSP_event.18.b:0 "거절한다. 우리가 알아서 할 수 있다."
+
+KSP_event.19.t:0 "총학생회의 승인"
+KSP_event.19.d:0 "총학생회는 자신들이 벌이는 샬레와의 영향력 경쟁을 이유로 SRT의 이관을 승인했습니다. 이제 우리는 샬레의 영향력을 축출하고 SRT 특수학원을 우리 학원에 병합하기 위한 정치적 공세를 동원해야만 합니다."
+KSP_event.19.a:0 "훌륭한 결과다."
+
+KSP_event.20.t:0 "총학생회의 거절"
+KSP_event.20.d:0 "총학생회는 샬레와의 영향력 경쟁을 벌이는, 실질적인 내전 직전의 상황에서도 불구하고, 자신들이 SRT 특수학원을 잘 통제하고 있다는 명목 아래에 요청을 거절했습니다."
+KSP_event.20.a:0 "어리석군."
 
 #캐릭터 이름
  KSP_Ogata_Kanna:0 "오가타 칸나"

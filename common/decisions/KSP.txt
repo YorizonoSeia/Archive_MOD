@@ -1,4 +1,262 @@
+KSP_division_of_military = {
+	KSP_mission_division_of_military = {
+		activation = {
+			always = no
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = KSP_mission_division_of_military_trigger_tooltip
+				OR = {
+					check_variable = { global.KSP_division_of_military_value = 100 }
+					check_variable = { global.KSP_division_of_military_value > 100 }
+				}
+			}
+		}
+		cancel_trigger = {
+			SHE = { has_completed_focus = SHE_conghagsaenghoetongjegweoninsu }
+		}
+		is_good = no
+		days_mission_timeout = 365
+		cancel_effect = {
+			clr_global_flag = KSP_division_of_military_flag
+		}
+		remove_effect = {
+			clr_global_flag = KSP_division_of_military_flag
+		}
+		complete_effect = {
+			clr_global_flag = KSP_division_of_military_flag
+			KVT = {
+				transfer_units_fraction = {
+					target = KSP
+					size = 0.30
+					navy_ratio = 0
+					air_ratio = 0
+					keep_unit_leaders_trigger = {
+						always = yes
+					}
+				}
+			}
+		}
+	}
+    KSP_strengthening_influence_pp = {
+		icon = GFX_decision_eng_propaganda_campaigns
+		allowed = {
+			original_tag = KSP
+		}
 
+		visible = {
+		}
+
+		ai_will_do = {
+			base = 20
+			modifier = {
+				has_political_power > 50
+				factor = 1.5
+			}
+			modifier = {
+				has_political_power > 100
+				factor = 2.0
+			}
+			modifier = {
+				has_political_power < 30
+				factor = 0.5
+			}
+		}
+
+		days_remove = 25
+
+		cost = 25
+
+		remove_effect = {
+			add_to_variable = {
+				global.KSP_division_of_military_value = 5
+				tooltip = KSP_strengthening_influence_tt
+			}
+			clamp_variable = {
+				var = global.KSP_division_of_military_value
+				min = 0
+			}
+			clamp_variable = {
+				var = global.KSP_division_of_military_value
+				max = 100
+			}
+		}
+	}
+    KSP_strengthening_influence_cp = {
+		icon = GFX_decision_generic_army_support
+		allowed = {
+			original_tag = KSP
+		}
+
+		visible = {
+		}
+
+		ai_will_do = {
+			base = 40
+		}
+
+		days_remove = 25
+
+		custom_cost_text = COU_strengthening_influence_cp_tt
+		custom_cost_trigger = {
+			command_power > 9.9
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -20
+			}
+		}
+
+		remove_effect = {
+			add_to_variable = {
+				global.KSP_division_of_military_value = 5
+				tooltip = KSP_strengthening_influence_tt
+			}
+			clamp_variable = {
+				var = global.KSP_division_of_military_value
+				min = 0
+			}
+			clamp_variable = {
+				var = global.KSP_division_of_military_value
+				max = 100
+			}
+		}
+	}
+    KSP_strengthening_influence_stv = {
+		icon = GFX_decision_generic_political_rally
+		allowed = {
+			original_tag = KSP
+		}
+
+		visible = {
+		}
+
+		ai_will_do = {
+			base = 20
+			modifier = {
+				has_stability < 0.40
+				factor = 0
+			}
+		}
+
+		days_remove = 25
+
+		custom_cost_text = COU_strengthening_influence_stv_tt
+		custom_cost_trigger = {
+			has_stability > 0.049
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				add_stability = -0.05
+			}
+		}
+
+		remove_effect = {
+			add_to_variable = {
+				global.KSP_division_of_military_value = 5
+				tooltip = KSP_strengthening_influence_tt
+			}
+			clamp_variable = {
+				var = global.KSP_division_of_military_value
+				min = 0
+			}
+			clamp_variable = {
+				var = global.KSP_division_of_military_value
+				max = 100
+			}
+		}
+	}
+    KSP_strengthening_influence_civ = {
+		icon = GFX_decision_generic_construction
+		allowed = {
+			original_tag = KSP
+		}
+
+		visible = {
+		}
+
+		ai_will_do = {
+			base = 20
+			modifier = {
+				has_stability < 0.40
+				factor = 0
+			}
+		}
+
+		days_remove = 70
+
+		custom_cost_text = KSP_strengthening_influence_civ_tt
+		custom_cost_trigger = {
+			num_of_available_civilian_factories > 0
+		}
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+
+		remove_effect = {
+			add_to_variable = {
+				global.KSP_division_of_military_value = 5
+				tooltip = KSP_strengthening_influence_tt
+			}
+			clamp_variable = {
+				var = global.KSP_division_of_military_value
+				min = 0
+			}
+			clamp_variable = {
+				var = global.KSP_division_of_military_value
+				max = 100
+			}
+		}
+	}
+    KSP_strengthening_influence_mp = {
+		icon = GFX_decision_generic_reorganize_irregulars
+		allowed = {
+			original_tag = KSP
+		}
+
+		visible = {
+		}
+
+		ai_will_do = {
+			base = 20
+			modifier = {
+				has_stability < 0.40
+				factor = 0
+			}
+		}
+
+		days_remove = 25
+
+		custom_cost_text = KSP_strengthening_influence_mp_tt
+		custom_cost_trigger = {
+			has_manpower > 1000
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				add_manpower = -1000
+			}
+		}
+
+		remove_effect = {
+			add_to_variable = {
+				global.KSP_division_of_military_value = 5
+				tooltip = KSP_strengthening_influence_tt
+			}
+			clamp_variable = {
+				var = global.KSP_division_of_military_value
+				min = 0
+			}
+			clamp_variable = {
+				var = global.KSP_division_of_military_value
+				max = 100
+			}
+		}
+	}
+}
 KSP_fight_with_wakamo = {
 	KSP_wakamo_sabotage_mission = { # 와카모 테러 행각
 		activation = {
