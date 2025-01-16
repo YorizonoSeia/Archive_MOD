@@ -627,6 +627,7 @@ BA_kivotos_school_country_category = {
 		visible = {
 			tag = global.kivotos_alliance_leader
 			KSP = { has_idea = KSP_duties_of_the_police_academy }
+			NOT = { original_tag = KSP }
 		}
 
 		available = {
