@@ -1834,6 +1834,15 @@ focus_tree = {
 				}
 				add_claim_by = HEU
 			}
+			
+			hidden_effect = {
+				if = {
+					limit = {
+						has_completed_focus = HEU_we_still_hope
+					}
+					country_event = { id = HEU.flavor_event.45 }
+				}
+			}
 		}
 	}
 

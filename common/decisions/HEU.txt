@@ -3842,3 +3842,229 @@ HEU_memorial_park_decision_category = {
 	}
 	
 }
+
+HEU_total_assault_kaitenger_decision_category = {
+	
+	HEU_total_assault_kaiten_EX = {
+		icon = GFX_decision_border_war
+
+		priority = 80
+
+		allowed = {
+
+		}
+
+		visible = {
+			always = yes
+		}
+
+		is_good = no
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = HEU_total_assault_kaiten_fall_tt
+				check_variable = { kaitenger_hp < 1 }
+			}
+		}
+
+		activation = {
+			has_country_flag = HEU_total_assault_kaitenger
+		}
+
+		days_mission_timeout = 30
+
+		complete_effect = {
+			clr_country_flag = HEU_total_assault_kaitenger
+			country_event = {
+				id = HEU_event.215
+			}
+		}
+
+		timeout_effect = {
+			activate_mission = HEU_total_assault_kaiten_EX
+			
+			random_owned_state = {
+				damage_building = {
+					type = infrastructure
+					damage = 1
+				}
+			}
+			random_owned_state = {
+				damage_building = {
+					type = industrial_complex
+					damage = 1
+				}
+			}
+		}
+	}
+
+	HEU_total_assault_aru_EX = {
+
+		icon = GFX_decision_Gehenna_Emblem
+
+		available = {
+			command_power > 4.9
+
+		}
+
+		ai_will_do = { base = 10 } #
+
+		custom_cost_trigger = {
+			command_power > 4.9
+		}
+
+		custom_cost_text = decision_cost_5_cp
+
+		cost = 0
+
+		days_re_enable = 3
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -5
+			}
+			custom_effect_tooltip = HEU_total_assault_aru_EX_tt
+			random_list = {
+				1 = {
+					subtract_from_variable = {
+						kaitenger_hp = global.aru_stat_point_array^3 # 카리스마
+						tooltip = HEU_damage_kaitenger_tt
+					}
+				}
+				1 = {
+					subtract_from_variable = {
+						kaitenger_hp = global.aru_stat_point_array^2 # 결의
+						tooltip = HEU_damage_kaitenger_tt
+					}
+				}
+			}
+		}
+	}
+
+	HEU_total_assault_mutsuki_EX = {
+
+		icon = GFX_decision_Gehenna_Emblem
+
+		available = {
+			command_power > 4.9
+		}
+
+		ai_will_do = { base = 10 } #
+
+		custom_cost_trigger = {
+			command_power > 4.9
+		}
+
+		custom_cost_text = decision_cost_5_cp
+
+		cost = 0
+
+		days_re_enable = 3
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -5
+			}
+			custom_effect_tooltip = HEU_total_assault_mutsuki_EX_tt
+			random_list = {
+				1 = {
+					subtract_from_variable = {
+						kaitenger_hp = global.aru_stat_point_array^2 # 결의
+						tooltip = HEU_damage_kaitenger_tt
+					}
+				}
+				1 = {
+					subtract_from_variable = {
+						kaitenger_hp = global.aru_stat_point_array^0 # 지혜
+						tooltip = HEU_damage_kaitenger_tt
+					}
+				}
+			}
+		}
+	}
+
+	HEU_total_assault_kayoko_EX = {
+
+		icon = GFX_decision_Gehenna_Emblem
+
+		available = {
+
+		}
+
+		ai_will_do = { base = 10 } #
+
+		cost = 10
+
+		days_re_enable = 3
+
+		remove_effect = {
+			add_command_power = 20
+		}
+	}
+
+	HEU_total_assault_haruka_EX = {
+
+		icon = GFX_decision_Gehenna_Emblem
+
+		available = {
+			command_power > 4.9
+		}
+
+		ai_will_do = { base = 10 } #
+
+		custom_cost_trigger = {
+			command_power > 4.9
+		}
+
+		custom_cost_text = decision_cost_5_cp
+
+		cost = 0
+
+		days_re_enable = 3
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -5
+			}
+			custom_effect_tooltip = HEU_total_assault_haruka_EX_tt
+			random_list = {
+				1 = {
+					subtract_from_variable = {
+						kaitenger_hp = global.aru_stat_point_array^0 # 지혜
+						tooltip = HEU_damage_kaitenger_tt
+					}
+				}
+				1 = {
+					subtract_from_variable = {
+						kaitenger_hp = global.aru_stat_point_array^1 # 상냥함
+						tooltip = HEU_damage_kaitenger_tt
+					}
+				}
+			}
+		}
+	}
+
+	HEU_total_assault_debug_EX = {
+
+		icon = GFX_decision_Gehenna_Emblem
+
+		visible = {
+			is_debug = yes
+		}
+
+		ai_will_do = { base = 0 } #
+
+		cost = 0
+
+		complete_effect = {
+			custom_effect_tooltip = HEU_total_assault_haruka_EX_tt
+			subtract_from_variable = {
+				kaitenger_hp = 100
+				tooltip = HEU_damage_kaitenger_tt
+			}
+		}
+
+	}
+
+
+}

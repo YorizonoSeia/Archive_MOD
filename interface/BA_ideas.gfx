@@ -468,6 +468,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/HEU/HEU_benriya_army.dds"
 	}
 	spriteType = {
+		name = "GFX_idea_HEU_grand_ducal_gendarmerie_organization"
+		texturefile = "gfx/interface/ideas/HEU/HEU_grand_ducal_gendarmerie_organization.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_HEU_kaiten_organization"
+		texturefile = "gfx/interface/ideas/HEU/HEU_kaiten_organization.dds"
+	}
+	spriteType = {
 		name = "GFX_idea_GEM_pandemonium_modifier"
 		texturefile = "gfx/interface/ideas/geh/GEM_pandemonium_modifier.tga"
 	}

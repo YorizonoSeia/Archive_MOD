@@ -1333,4 +1333,16 @@ spriteTypes = {
         texturefile = "gfx/interface/decisions/heu_benriya_decisions/problem_solver_68_system.dds"
         legacy_lazy_load = no
     }
+
+	spriteType = {
+        name = "GFX_HEU_abgeordnetenkammer"
+        texturefile = "gfx/interface/decisions/heu_benriya_decisions/HEU_abgeordnetenkammer.dds"
+        legacy_lazy_load = no
+    }
+
+	spriteType = {
+        name = "GFX_HEU_total_assault_kaitenger"
+        texturefile = "gfx/interface/decisions/heu_benriya_decisions/HEU_total_assault_kaitenger.dds"
+        legacy_lazy_load = no
+    }
 }

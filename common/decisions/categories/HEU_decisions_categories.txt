@@ -195,3 +195,22 @@ HEU_benriya_ally_decision_category = { #동맹국 찾기
     
 	visible_when_empty = yes
 }
+
+HEU_total_assault_kaitenger_decision_category = { #카이텐져 총력전
+    priority = 90
+
+	allowed = {
+		original_tag = HEU
+	}
+
+    visible = {
+        has_country_flag = HEU_total_assault_kaitenger
+    }
+
+    available = {
+    } 
+
+    icon = GFX_decision_category_border_conflicts
+    
+	visible_when_empty = yes
+}

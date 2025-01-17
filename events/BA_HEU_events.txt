@@ -2769,6 +2769,44 @@ country_event = { #일시적 동맹의 끝
 	}
 }
 
+country_event = { #카이텐져의 귀환
+	id = HEU_event.214
+	title = HEU_event.214.t
+	desc = HEU_event.214.desc
+	picture = GFX_report_event_luxembourg_city
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.214.a 
+		ai_chance = {
+			base = 100
+		}
+		set_country_flag = HEU_total_assault_kaitenger
+	}
+}
+
+country_event = { #카이텐져의 귀환
+	id = HEU_event.215
+	title = HEU_event.215.t
+	desc = HEU_event.215.desc
+	picture = GFX_report_event_luxembourg_city
+
+    is_triggered_only = yes
+
+	option = {
+		name = HEU_event.215.a 
+		ai_chance = {
+			base = 100
+		}
+		set_country_flag = HEU_victory_kaitenger
+		#add_stability = 0.05
+		
+		custom_effect_tooltip = available_industrial_concern
+		show_mio_tooltip = HEU_kaiten_organization
+	}
+}
+
 country_event = { #룩셈부르크 대공국의 멸망
 	id = HEU_event.2000
 	title = HEU_event.2000.t
@@ -3793,6 +3831,9 @@ country_event = { #무한히 회전하는 정의
 
 	option = { 
 		name = HEU.flavor_event.41.a 
+		hidden_effect = {
+			country_event = { id = HEU_event.214 days = 400 }
+		}
 	}
 }
 
@@ -3821,6 +3862,7 @@ country_event = { #오니카타 과장님
 
 	}
 }
+
 country_event = { #나는 공산당이 싫어요
 	id = HEU.flavor_event.44
 	title = HEU.flavor_event.44.t
@@ -3834,6 +3876,19 @@ country_event = { #나는 공산당이 싫어요
 			ideology = neutrality
 			popularity = 0.01
 		}
+	}
+}
+
+country_event = { #무츠키의 보고서
+	id = HEU.flavor_event.45
+	title = HEU.flavor_event.45.t
+	desc = HEU.flavor_event.45.desc
+	picture = GFX_report_event_she_all_integration
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.flavor_event.45.a 
+
 	}
 }
 
