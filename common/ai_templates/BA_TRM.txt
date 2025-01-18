@@ -58,7 +58,7 @@ TRM_line_infantry = {
 		target_template = {
 			regiments = {
 				infantry = 9
-				artillery_brigade = 3
+				artillery_brigade = 1
 			}
 
 			support = {
@@ -98,7 +98,7 @@ TRM_line_infantry = {
 		target_template = {
 			regiments = {
 				motorized = 9
-				mot_artillery_brigade = 3
+				mot_artillery_brigade = 1
 			}
 
 			support = {
@@ -138,7 +138,7 @@ TRM_line_infantry = {
 		target_template = {
 			regiments = {
 				mechanized = 9
-				mot_artillery_brigade = 3
+				mot_artillery_brigade = 1
 			}
 
 			support = {

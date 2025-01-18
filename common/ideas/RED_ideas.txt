@@ -1466,6 +1466,8 @@ ideas = {
 		RED_trotskyite_run = { #트로츠키파의 도주
 			removal_cost = -1
 
+			picture = trotskyite_plot
+
 			allowed = {
 				always = no # Added via focus
 			}

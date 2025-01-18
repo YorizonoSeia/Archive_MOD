@@ -2184,8 +2184,8 @@ leader_traits = {
 	TRN_suzume_trait = {
 		random = no
 		sprite = 13
-		war_support_factor = 0.05
 		stability_factor = 0.05
+		compliance_gain = 0.01
 	}
 	TRN_fake_chonghak = {
 		random = no

@@ -34,26 +34,6 @@ peace_ai_desires = {
     }
 
 
-    # If Mengkukuo exists, increase the Inner Mongolian state
-    JAP_inner_mongolia = {
-        peace_action_type = take_states
-        enable = {
-            FROM = {
-                original_tag = MEN
-                is_subject_of = ROOT
-            }
-            FROM.FROM.FROM = {
-                OR = {
-                    state = 621 # 쑤이위안
-                    state = 746 # 오르도스
-                }
-            }
-            ROOT = { original_tag = JAP }
-        }
-        ai_desire = 100
-    }
-
-
     # Create a chinese puppet state from the rest of China
     # 블아 모드에서는 괴뢰국을 제작하지 않음
     JAP_create_chinese_puppet = {
@@ -126,16 +106,42 @@ peace_ai_desires = {
         ai_desire = -200
     }
 
+
+    # If Mengkukuo exists, increase the Inner Mongolian state
+    # 몽강이 존재한다면 내몽골 주를 넘겨 받음
+    JAP_inner_mongolia = {
+        peace_action_type = take_states
+        enable = {
+            FROM = {
+                original_tag = MEN
+                is_subject_of = ROOT
+            }
+            FROM.FROM.FROM = {
+                OR = {
+                    state = 621 # 쑤이위안
+                    state = 746 # 오르도스
+                }
+            }
+            ROOT = { original_tag = JAP }
+        }
+        ai_desire = 100
+    }
+
     # WCH 에게 땅 몰아주기
     JAP_give_wangs_chines = {
         peace_action_type = take_states
         enable = {
             FROM = { 
                 original_tag = WCH 
+                is_subject_of = ROOT
             }
             
             FROM.FROM.FROM = { 
-                is_core_of = CHI 
+                is_core_of = CHI
+                NOT = {
+                    state = 621
+                    state = 746
+                }
             }
 
             ROOT = { 

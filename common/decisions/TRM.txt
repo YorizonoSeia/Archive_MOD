@@ -4111,7 +4111,7 @@ TRN_after_war_decisions = {
 		
 		on_map_mode = decision_view_only
 
-		days_remove = 30
+		days_remove = 14
 		
 		custom_cost_trigger = {
 			command_power > 24.99
@@ -4201,8 +4201,8 @@ TRN_after_war_decisions = {
 				OR = {
 					is_core_of = GEM
 					is_core_of = GEH
-					state = 58
-					state = 909
+					#state = 58
+					#state = 909
 				}
 			}
 		}
@@ -4549,7 +4549,7 @@ TRN_after_war_decisions = {
 
 	TRM_loop_Gehenna_Resistance = {
 		icon = GFX_decision_revolt
-
+		priority = 50
 		allowed = { always = no }
 		available = { hidden_trigger = { always = no } }
 		
@@ -4561,26 +4561,111 @@ TRN_after_war_decisions = {
 
 		timeout_effect = {
 			activate_mission = TRM_loop_Gehenna_Resistance
+			add_to_variable = { TRM_GehennaResistance_speed = 5 }
 			hidden_effect = {
 				random_list = {
-					25 = { # 하스미면 이쪽 이벤트가 잘 터짐
+					1 = { # 다치는 이벤트
 						modifier = {
-							add = 20
-							has_country_flag = TRM_hasumi_military_occ
-							NOT = { has_country_flag = TRM_suzumi_military_occ }
+							add = 10
+							core_resistance = {
+								occupied_country_tag = GEM
+								value > 90
+							}	
 						}
-
+						random_unit_leader = {
+							limit = { has_character_flag = TRM_GEM_governor }
+							unit_leader_event = TRN_after_war_event.30
+						}
 					}
-					25 = { # 스즈미면 이쪽 이벤트가 잘 터짐
+					10 = {
 						modifier = {
 							add = 20
-							has_country_flag = TRM_suzumi_military_occ
-							NOT = { has_country_flag = TRM_hasumi_military_occ }
+							core_resistance = {
+								occupied_country_tag = GEM
+								value > 75
+							}
 						}
+						country_event = { # 발생한 전투
+							id = TRN_after_war_event.26
+						}
+					}
+					10 = {
+						modifier = {
+							add = 20
+							has_war = no
+						}
+						country_event = { # 비폭력 저항 운동
+							id = TRN_after_war_event.28
+						}
+					}
+					10 = {
+						modifier = {
+							add = 20
+							has_war = no
+						}
+						country_event = { # 비폭력 저항 운동
+							id = TRN_after_war_event.29
+						}
+					}
+					10 = {
+						modifier = {
+							add = 20
+							has_war = yes
+						}
+						country_event = { # 대규모 시위
+							id = TRN_after_war_event.27
+						}
+					}
+					10 = {
+						effect_tooltip = NO_EFFECT
 					}
 				}
 			}
 		}
+	}
+
+	TRM_United_Law = { # \"연합법\"
+		icon = GFX_decision_SWE_paid_holidays_policy
+
+		visible = {
+		}
+		available = {
+			has_completed_focus = TRM_germany_union
+			has_stability > 0.6
+			GEM = {
+				all_core_state = {
+					OR = {
+						compliance > 75
+						resistance < 5
+						is_core_of = TRM
+						NOT = { is_owned_by = TRM }
+					}
+				}
+			}
+		}
+		
+		on_map_mode = decision_view_only
+		
+		cost = 100
+		
+		fire_only_once = yes
+
+		ai_will_do = {
+			base = 1000
+		}
+        modifier = { }
+        complete_effect = {
+			remove_mission = TRM_loop_Gehenna_Resistance
+			every_owned_state = {
+				limit = {
+					OR = {
+						is_core_of = GEM
+						is_core_of = GEH
+					}
+				}
+				add_core_of = TRM
+			}
+        }
 	}
 
 }

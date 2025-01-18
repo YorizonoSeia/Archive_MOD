@@ -349,20 +349,18 @@ country_event = { #게헨나 항복 이벤트
 				is_subject = yes
 			}
 		}
-		OR = {
-			GEH = {
-				OR = {
-					exists = no
-					has_capitulated = yes
-					is_subject = yes
-				}
+		GEH = {
+			OR = {
+				exists = no
+				has_capitulated = yes
+				is_subject = yes
 			}
-			HEU = {
-				OR = {
-					exists = no
-					has_capitulated = yes
-					is_subject = yes
-				}
+		}
+		HEU = {
+			OR = {
+				exists = no
+				has_capitulated = yes
+				is_subject = yes
 			}
 		}
 	}
@@ -829,7 +827,7 @@ country_event = { # 안씀
 		set_cosmetic_tag = TRM_germany
 	}
 }
-country_event = {  # 안씀
+country_event = {  # 트리니티 산업개발부 전문화
 	id = TRM_event.38
 	title = TRM_event.38.t
 	desc = TRM_event.38.desc
@@ -839,6 +837,15 @@ country_event = {  # 안씀
 	
 	option = { #
 		name = TRM_event.38.a
+		custom_effect_tooltip = TRM_industries_dynamic_change_tt
+		add_to_variable = { 
+			TRM_industries_dynamic_production_factory_efficiency_gain_factor = 0.1
+			tooltip = production_factory_efficiency_gain_factor_tt
+		}
+		add_to_variable = { 
+			TRM_industries_dynamic_production_factory_max_efficiency_factor = 0.05 
+			tooltip = production_factory_max_efficiency_factor_tt
+		}
 
 	}
 }
@@ -4505,12 +4512,13 @@ country_event = {
 					is_core_of = GEH
 				}
 			}
-			add_resistance = 25
+			add_resistance = 45
 		}
 		set_variable = { TRM_GehennaResistance_speed = 50 }
 		activate_mission = TRM_loop_Gehenna_Resistance
 		hidden_effect = {
 			country_event = { id = TRN_after_war_event.21 hours = 02 }
+			country_event = { id = TRN_after_war_event.25 days = 35 }
 		}
 	}
 }
@@ -4529,20 +4537,21 @@ country_event = {
 		name = TRN_after_war_event.21.a
 		every_owned_state = {
 			limit = {
+				has_resistance = yes
 				OR = {
 					is_core_of = GEM
 					is_core_of = GEH
 				}
 			}
 			add_compliance = 3
-			add_resistance = -3
+			add_resistance = -2
 		}
 		add_political_power = 25
 		hidden_effect = {
 			TRN_gktmal = {
 				unit_leader_event = {
 					id = TRN_after_war_event.22
-					#days = 04
+					days = 03
 				}
 			}
 		}
@@ -4552,6 +4561,7 @@ country_event = {
 		name = TRN_after_war_event.21.b
 		every_owned_state = {
 			limit = {
+				has_resistance = yes
 				OR = {
 					is_core_of = GEM
 					is_core_of = GEH
@@ -4564,7 +4574,7 @@ country_event = {
 			TRN_tmwmal = {
 				unit_leader_event = {
 					id = TRN_after_war_event.23
-					#days = 04
+					days = 03
 				}
 			}
 		}
@@ -4584,7 +4594,9 @@ unit_leader_event = {
 	option = { #
 		name = TRN_after_war_event.22.a
 		add_war_support = 0.005
-		set_country_flag = TRM_hasumi_military_occ
+		hidden_effect = {
+			TRN_gktmal = { set_character_flag = TRM_GEM_governor }
+		}	
 	}
 }
 
@@ -4601,9 +4613,246 @@ unit_leader_event = {
 	option = { #
 		name = TRN_after_war_event.22.a
 		add_war_support = -0.005
-		set_country_flag = TRM_suzumi_military_occ
+		hidden_effect = {
+			TRN_tmwmal = { set_character_flag = TRM_GEM_governor }
+		}
 	}
 }
+
+# 평화와 질서를 위한 구국위원회 
+country_event = { 
+	id = TRN_after_war_event.24
+	title = TRN_after_war_event.24.t
+	desc = TRN_after_war_event.24.desc
+	picture = GFX_event_Himuro_Sena
+	
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	option = { #
+		name = TRN_after_war_event.24.a
+		every_owned_state = {
+			limit = {
+				has_resistance = yes
+				state = 55
+			}
+			add_compliance = 3
+		}
+	}
+}
+
+# 게헨나에서 발생한 폭탄 테러
+country_event = { 
+	id = TRN_after_war_event.25
+	title = TRN_after_war_event.25.t
+	desc = TRN_after_war_event.25.desc
+	picture = GFX_event_none_picture
+	
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	option = { #
+		name = TRN_after_war_event.25.a
+		random_owned_state = {
+			limit = {
+				has_resistance = yes
+				OR = {
+					is_core_of = GEM
+					is_core_of = GEH
+				}
+			}
+			add_resistance = 3
+		}
+	}
+	
+	option = { #
+		name = TRN_after_war_event.25.b
+		add_political_power = -25
+		add_war_support = -0.05
+	}
+}
+
+# 게헨나 지역에서 발생한 전투
+country_event = { 
+	id = TRN_after_war_event.26
+	title = TRN_after_war_event.26.t
+	desc = TRN_after_war_event.26.desc
+	picture = GFX_event_none_picture
+	
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	option = { #
+		name = TRN_after_war_event.26.a
+		every_owned_state = {
+			limit = {
+				has_resistance = yes
+				OR = {
+					is_core_of = GEM
+					is_core_of = GEH
+				}
+			}
+			add_resistance = 7
+		}
+	}
+}
+
+# 게헨나에서 대규모 시위 발생
+country_event = { 
+	id = TRN_after_war_event.27
+	title = TRN_after_war_event.27.t
+	desc = TRN_after_war_event.27.desc
+	picture = GFX_event_none_picture
+	
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	option = { #
+		name = TRN_after_war_event.27.a
+		every_owned_state = {
+			limit = {
+				has_resistance = yes
+				OR = {
+					is_core_of = GEM
+					is_core_of = GEH
+				}
+			}
+			add_compliance = -5
+		}
+	}
+	option = { #
+		name = TRN_after_war_event.27.b
+		add_command_power = -30
+		every_owned_state = {
+			limit = {
+				has_resistance = yes
+				OR = {
+					is_core_of = GEM
+					is_core_of = GEH
+				}
+			}
+			add_resistance = -5
+		}
+	}
+}
+
+# 게헨나 전역에서의 비폭력 저항 운동
+country_event = { 
+	id = TRN_after_war_event.28
+	title = TRN_after_war_event.28.t
+	desc = TRN_after_war_event.28.desc
+	picture = GFX_event_none_picture
+	
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	option = { #
+		name = TRN_after_war_event.28.a
+		add_political_power = -50
+		every_owned_state = {
+			limit = {
+				has_resistance = yes
+				OR = {
+					is_core_of = GEM
+					is_core_of = GEH
+				}
+			}
+			add_compliance = -1
+		}
+	}
+	option = { #
+		name = TRN_after_war_event.28.b
+		add_stability = -0.02
+		every_owned_state = {
+			limit = {
+				has_resistance = yes
+				OR = {
+					is_core_of = GEM
+					is_core_of = GEH
+				}
+			}
+			add_resistance = 5
+		}
+	}
+	option = { #
+		name = TRN_after_war_event.28.c
+		every_owned_state = {
+			limit = {
+				has_resistance = yes
+				OR = {
+					is_core_of = GEM
+					is_core_of = GEH
+				}
+			}
+			add_compliance = -6
+		}
+	}
+}
+
+# 사회주의 선동
+country_event = { 
+	id = TRN_after_war_event.29
+	title = TRN_after_war_event.29.t
+	desc = TRN_after_war_event.29.desc
+	picture = GFX_event_none_picture
+	
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	option = { #
+		name = TRN_after_war_event.29.a
+		add_popularity = {
+			ideology = communism
+			popularity = 0.01
+		}
+		every_owned_state = {
+			limit = {
+				has_resistance = yes
+				OR = {
+					is_core_of = GEM
+					is_core_of = GEH
+				}
+			}
+			random_list = {
+				10 = { add_compliance = -3 }
+				10 = { add_resistance = 7 }
+			}
+		}
+	}
+}
+
+# 군정장관 다침 ㅜㅜ
+unit_leader_event = { 
+	id = TRN_after_war_event.30
+	title = TRN_after_war_event.30.t
+	desc = TRN_after_war_event.30.desc
+	picture = GFX_event_none_picture
+	
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	option = { #
+		name = TRN_after_war_event.30.a
+		every_owned_state = {
+			limit = {
+				has_resistance = yes
+				OR = {
+					is_core_of = GEM
+					is_core_of = GEH
+				}
+			}
+			add_resistance = -5
+		}
+		random_army_leader = {
+			limit = { has_character_flag = TRM_GEM_governor }
+			add_timed_unit_leader_trait = {
+				trait = wounded
+				days = 14
+			}
+		}
+	}
+}
+
 country_event = {  # 디버그 이벤트
 	id = TRM_event.1000
 	title = TRM_event.1000.t
@@ -6352,7 +6601,7 @@ country_event = {
 	id = TRM_event.372
 	title = TRM_event.372.t
 	desc = TRM_event.372.desc
-	picture = GFX_event_trm_event_9
+	picture = GFX_event_Seia_standing
 	fire_only_once = yes 
 	is_triggered_only = yes
 
@@ -8099,24 +8348,142 @@ country_event = { # 트리니티의 개쩌는 사업 아이템!
     fire_only_once = yes
     trigger = {
         tag = TRM
-        has_completed_focus = TRM_naechi
-        has_completed_focus = TRM_oetzi
+		OR = {
+			AND = {
+        		has_completed_focus = TRM_naechi
+        		has_completed_focus = TRM_oetzi
+			}
+			has_completed_focus = TRN_uber_alles
+		}
     }
 
 	option = {
 		name = trnstory.5.a
 	}
 }
-country_event = { # 선전물 배포 - 1 ""
+country_event = { # 슈테틴 항구 사건
 	id = trnstory.6
 	title = trnstory.6.t
 	desc = trnstory.6.desc
-	picture = GFX_report_event_journalists_speech
+	picture = GFX_report_event_japanese_soldiers_01
 	
 	is_triggered_only = yes
     fire_only_once = no
 
 	option = {
 		name = trnstory.6.a
+		hidden_effect = {
+			country_event = {
+				id = trnstory.7 days = 180
+			}
+		}
+	}
+}
+country_event = { # 쾨니히스베르크 - 어여쁜 마을에서의 산보
+	id = trnstory.7
+	title = trnstory.7.t
+	desc = trnstory.7.desc
+	picture = GFX_report_event_japanese_soldiers_01
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trnstory.7.a
+		hidden_effect = {
+			country_event = { 
+				id =  trnstory.8
+				days = 25
+			}
+		}
+	}
+}
+country_event = { # 쾨니히스베르크 - 예나 지금이나 가문 싸움
+	id = trnstory.8
+	title = trnstory.8.t
+	desc = trnstory.8.desc
+	picture = GFX_report_event_japanese_soldiers_01
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trnstory.8.a
+		hidden_effect = {
+			country_event = { 
+				id = trnstory.9
+				days = 180
+			}
+		}
+	}
+}
+country_event = { # 바시스 스콜라 - 가장 우리다운 우리
+	id = trnstory.9
+	title = trnstory.9.t
+	desc = trnstory.9.desc
+	picture = GFX_report_event_japanese_soldiers_01
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trnstory.9.a
+		hidden_effect = {
+			country_event = {
+				id = trnstory.10
+				days = 02
+			}
+		}
+	}
+}
+country_event = { # 바시스 스콜라 - 피, 죽음, 구원
+	id = trnstory.10
+	title = trnstory.10.t
+	desc = trnstory.10.desc
+	picture = GFX_report_event_japanese_soldiers_01
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trnstory.10.a
+		hidden_effect = {
+			country_event = {
+				id = trnstory.11
+				days = 365
+			}
+		}
+	}
+}
+country_event = { # 인생의 굴레
+	id = trnstory.11
+	title = trnstory.11.t
+	desc = trnstory.11.desc
+	picture = GFX_report_event_japanese_soldiers_01
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	immediate = {
+		hidden_effect = { scoped_play_song = RED_DEAD }
+	}
+
+	option = {
+		name = trnstory.11.a
+		
+	}
+}
+country_event = { # 음모론 - 세이아는 살아계시다!
+	id = trnstory.12
+	title = trnstory.12.t
+	desc = trnstory.12.desc
+	picture = GFX_event_Seia_standing
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trnstory.12.a
+		add_stability = -0.005
 	}
 }

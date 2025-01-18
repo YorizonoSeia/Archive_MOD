@@ -235,6 +235,10 @@
 			add_to_variable = { TRM_industries_dynamic_production_factory_max_efficiency_factor = 0.05 }
 			add_to_variable = { TRM_industries_dynamic_production_factory_start_efficiency_factor = 0.05 }
 			add_to_variable = { TRM_industries_dynamic_production_speed_buildings_factor = 0.05 }
+
+			hidden_effect = {
+				country_event = { id = TRM_event.38 days = 365 }
+			}
 		}
 	}
 	focus = {
@@ -631,120 +635,6 @@
 		}
 	}
 	focus = {
-		id = TRN_doklisanupyi_him
-		icon = GFX_goal_doklisanupyi_him
-		cost = 10.00
-		prerequisite = {
-			focus = TRN_Siemens_grant
-		}
-		ai_will_do = {
-			base = 300
-			modifier = {
-				factor = 0.5
-				has_war = no
-			}
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-        }
-		available = {
-            if = {
-                limit = {
-                    has_country_leader = {
-                        character = TRN_alzk
-                        ruling_only = yes
-                    }
-                }
-                has_completed_focus = TRM_after_war
-                else = {
-                    always = no
-                }
-            }
-        }
-        allow_branch = {
-            has_country_leader = {
-                character = TRN_alzk
-                ruling_only = yes
-            }
-        }
-		x = -1
-		y = 2
-		relative_position_id = TRN_kickstart_the_war_industry
-		completion_reward = {
-		#country_event = { id = TRN_after_war_event.9 days = 1 }
-            add_tech_bonus = {
-				name = TRN_doklisanupyi_him
-				bonus = 0.75
-				uses = 2
-				category = construction_tech
-				category = industry
-			}
-		add_ideas = TRN_deutchland_industry_power
-		}
-	}
-	focus = {
-		id = TRN_gunsa_sanup_jaijungbee
-		icon = GFX_goal_munitions_factories
-		cost = 10.00
-		prerequisite = { focus = TRN_doklisanupyi_him }
-		x = 1
-		y = 1
-		ai_will_do = {
-			base = 300
-			modifier = {
-				factor = 0.5
-				has_war = no
-			}
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-        }
-		relative_position_id = TRN_doklisanupyi_him
-		completion_reward = {
-			#country_event = { id = TRN_after_war_event.11 days = 1 }
-            if = {
-                limit = { has_idea = TRN_invest_arms_industry }
-			    swap_ideas = {
-    				remove_idea = TRN_invest_arms_industry
-				    add_idea = TRN_deutchland_industry_power_amry
-			    }
-                else = { add_ideas = TRN_invest_arms_industry }
-            }
-		}
-
-	}
-	focus = {
-		id = TRN_mingan_sanup_jaijungbee
-		#icon = GFX_goal_mingan_sanup
-		icon = GFX_focus_POL_warsaw_main_station
-		cost = 10.00
-		prerequisite = { focus = TRN_doklisanupyi_him }
-		x = -1
-		y = 1
-		ai_will_do = {
-			base = 300
-			modifier = {
-				factor = 0.5
-				has_war = no
-			}
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-        }
-		relative_position_id = TRN_doklisanupyi_him
-		completion_reward = {
-			#country_event = { id = TRN_after_war_event.12 days = 1 }
-			swap_ideas = {
-				add_idea = TRN_deutchland_industry_power_industrial
-				remove_idea = TRN_deutchland_industry_power
-			}
-		}
-
-	}
-	focus = {
 		id = TRN_Fission
 		icon = GFX_goal_TRN_nuclear_fission
 		cost = 5.00
@@ -1007,6 +897,7 @@
 			hidden_effect = {
 				set_country_flag = TRM_bunggoehajima
 				country_event = { id = TRM_event.1 }
+				country_event = { id = trnstory.6 days = 180 }
 			}
 		}
 
@@ -1244,6 +1135,7 @@
 					keep_completed = yes
 				}
 				mark_focus_tree_layout_dirty = yes
+				country_event = { id = trnstory.12 days = 365 }
 			}
 			custom_effect_tooltip = TRM_newfocus_4_tt
 		}
@@ -1734,6 +1626,7 @@
                     remove_idea = TRM_kozeki_ui
                 }
             }
+			add_research_slot = 1
             hidden_effect = {
 				remove_trait = {
 					character = uyi
@@ -1971,47 +1864,11 @@
 			unlock_decision_category_tooltip = TRN_after_war_decisions
 			mark_focus_tree_layout_dirty = yes
 			hidden_effect = {
-				every_state = {
-					limit = {
-						is_core_of = GEH
-					}
-					remove_dynamic_modifier = { modifier = GEH_attack_states }
-					remove_dynamic_modifier = { modifier = GEH_defend_states }
+				country_event = { 
+					id = TRN_after_war_event.24
+					days = 14
 				}
 			}
-		}
-	}
-
-	focus = { # 연합법
-		id = TRM_germany_union
-		icon = GFX_focus_TRM_united_law
-		cost = 8.00
-
-		prerequisite = { focus = TRM_after_war }
-		relative_position_id = TRM_after_war
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = GAEBALJUNG
-				has_completed_focus = TRM_anti_gehenna_focus_2
-				has_completed_focus = TRM_anti_gehenna_focus_3
-			}
-		}
-		ai_will_do = {
-			base = 4000
-		}
-		x = -0
-		y = 1
-		completion_reward = {
-			country_event = { id = TRM_event.5 hours = 02 }
-			hidden_effect = { 
-				news_event = { id = BA_news.7 days = 04 } 
-			}
-			add_political_power = 50
-			add_command_power = 75
-			unlock_decision_tooltip = TRM_unification_propaganda
-			unlock_decision_tooltip = TRM_Decline_of_the_anti_gehenna_sentiment
-			unlock_decision_tooltip = TRM_tighten_control
-			#custom_effect_tooltip = TRM_germany_union_tt
 		}
 	}
 	
@@ -2052,10 +1909,40 @@
             unlock_decision_tooltip = TRM_Gehenna_Military_Civil_Administration
 		}
 	}
+
+	focus = { # 연합법
+		id = TRM_germany_union
+		icon = GFX_focus_TRM_united_law
+		cost = 8.00
+
+		prerequisite = { focus = TRM_after_war }
+		relative_position_id = TRM_after_war
+		available = {
+			has_completed_focus = TRM_anti_gehenna_focus_2
+			has_completed_focus = TRM_anti_gehenna_focus_3
+		}
+		ai_will_do = {
+			base = 4000
+		}
+		x = -0
+		y = 1
+		completion_reward = {
+			country_event = { id = TRM_event.5 hours = 02 }
+			hidden_effect = { 
+				news_event = { id = BA_news.7 days = 04 } 
+			}
+			add_political_power = 50
+			add_command_power = 75
+			unlock_decision_tooltip = TRM_unification_propaganda
+			unlock_decision_tooltip = TRM_Decline_of_the_anti_gehenna_sentiment
+			unlock_decision_tooltip = TRM_tighten_control
+			#custom_effect_tooltip = TRM_germany_union_tt
+		}
+	}
 	focus = {
 		id = TRM_oetzi # 외치
 		icon = GFX_focus_POL_complete_april_constitution
-		cost = 5.00
+		cost = 2.00
 		prerequisite = {
 			focus = TRM_newfocus_27
 		}
@@ -2704,15 +2591,15 @@
 				tooltip = unit_leader_as_advisor_cp_cost_factor_tt 
 			}
 			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = ABY_general_tt
-			hidden_effect = {
-				GEA = {
-					every_army_leader = {
-						limit = { has_character_flag = TRM_bribe_senior_officers_flag }
-						set_nationality = ROOT
-					}
-				}
-			}
+			#custom_effect_tooltip = ABY_general_tt
+			#hidden_effect = {
+			#	GEA = {
+			#		every_army_leader = {
+			#			limit = { has_character_flag = TRM_bribe_senior_officers_flag }
+			#			set_nationality = ROOT
+			#		}
+			#	}
+			#}
 			
 		}
 	}
@@ -4403,6 +4290,12 @@
 				uses = 1
 				category = electronics
 			}
+			add_tech_bonus = {
+				name = TRM_encourage_radio_use
+				bonus = 1.5
+				uses = 1
+				category = electronics
+			}
 		}
 	}
 	focus = {
@@ -5347,7 +5240,7 @@
 	focus = {
 		id = TRN_We_Need_Helicopter
 		icon = GFX_goal_Helicopter
-		cost = 8
+		cost = 10
 		available = { }
 		prerequisite = {
 			focus = TRN_Create_The_Airborne_Force
@@ -5379,14 +5272,7 @@
     		}
 	    }
 		completion_reward = {
-			custom_effect_tooltip = kivotos_dron_research_on
-			set_country_flag = kivotos_dron_research_on
-			# add_tech_bonus = {
-			# 	name = TRN_We_Need_Helicopter
-			# 	ahead_reduction = 1
-			# 	bonus = 0.5
-			# 	technology = kivotos_helicopter_tech
-			# }
+			complete_special_project = sp:sp_air_helicopter
 		}
 	}
 	focus = {
@@ -5858,6 +5744,7 @@
 					instant_build = yes
 				}
 			}
+			add_research_slot = 1
 		}
 	}
 

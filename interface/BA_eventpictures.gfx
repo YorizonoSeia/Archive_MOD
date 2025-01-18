@@ -491,7 +491,7 @@ spriteTypes = {
     }
     spriteType = {
        name = "GFX_trnstory_4"
-       texturefile = "gfx/event_pictures/TRM/trnstory_4.tga"
+       texturefile = "gfx/event_pictures/trnstory_4.tga"
     }
     spriteType = {
       name = "GFX_event_BA_generic_event_13"
@@ -500,6 +500,14 @@ spriteTypes = {
     spriteType = {
        name = "GFX_event_TRM_event_15"
        texturefile = "gfx/event_pictures/TRM/TRM_event_15.tga"
+    }
+    spriteType = {
+       name = "GFX_event_Seia_standing"
+       texturefile = "gfx/event_pictures/TRM/trnstory_12.tga"
+    }
+    spriteType = {
+       name = "GFX_event_Himuro_Sena"
+       texturefile = "gfx/event_pictures/TRM/Himuro_Sena.tga"
     }
     spriteType = {
       name = "GFX_event_BA_Poland_Flag"
