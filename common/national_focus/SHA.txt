@@ -674,7 +674,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = SHA_Shanhaijing_fascism
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = SHA_Shanhaijing_fascism }
 		mutually_exclusive = { }
@@ -704,7 +704,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SHA_Shanhaijing_fascism
-		cost = 10
+		cost = 8
 
 		prerequisite = { focus = SHA_Shanhaijing_fascism }
 		mutually_exclusive = { }
@@ -978,7 +978,7 @@ focus_tree = {
 			trigger = { has_completed_focus = SHA_fascism_friend }
 			x = -1
 		}
-		cost = 8
+		cost = 5
 
 		prerequisite = {
 			focus = SHA_consolidate_industries
@@ -3802,7 +3802,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = SHA_address_the_army
 		search_filters = { }
-		cost = 7
+		cost = 5
 
 		prerequisite = { focus = SHA_address_the_army }
 		mutually_exclusive = { focus = SHA_Central_Military_Commission }
@@ -3966,7 +3966,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = SHA_address_the_army
 		search_filters = { FOCUS_FILTER_ARMY_XP }
-		cost = 7
+		cost = 5
 
 		prerequisite = { focus = SHA_address_the_army }
 		mutually_exclusive = { focus = SHA_Following_doorkeeper_footsteps }
