@@ -17,12 +17,11 @@ TRN_after_war_decisions = {
 	allowed = {
 		tag = TRM
 		NOT = { has_country_flag = ARI_puppet_state }
+		NOT = { has_country_flag = TRM_United_Law_is_active }
 	}
 	visible = {
-		OR = { 
-			has_completed_focus = TRM_after_war
-			has_country_flag = DEBUG_FALG
-		}
+		has_completed_focus = TRM_after_war
+		NOT = { has_country_flag = TRM_United_Law_is_active }
 	}
 	priority = 90
 }

@@ -4669,6 +4669,16 @@ country_event = {
 		name = TRN_after_war_event.25.b
 		add_political_power = -25
 		add_war_support = -0.05
+		random_owned_state = {
+			limit = {
+				has_resistance = yes
+				OR = {
+					is_core_of = GEM
+					is_core_of = GEH
+				}
+			}
+			add_compliance = 3
+		}
 	}
 }
 

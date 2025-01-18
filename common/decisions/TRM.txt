@@ -4101,6 +4101,8 @@ TRN_after_war_decisions = {
 						is_core_of = TRM 
 						state = 61
 						state = 66
+						state = 58
+						state = 909
 					}
 				}
 				controller = {
@@ -4114,9 +4116,9 @@ TRN_after_war_decisions = {
 		days_remove = 14
 		
 		custom_cost_trigger = {
-			command_power > 24.99
+			command_power > 14.99
 		}
-		custom_cost_text = custom_cost_joint_training_exercise
+		custom_cost_text = decision_cost_CP_15
 		
 		fire_only_once = yes
 
@@ -4125,7 +4127,7 @@ TRN_after_war_decisions = {
 		}
         modifier = { civilian_factory_use = 3 }
         complete_effect = {
-			hidden_effect = { add_command_power = 25 }
+			hidden_effect = { add_command_power = -15 }
         }
 		
 		remove_effect = {
@@ -4137,6 +4139,8 @@ TRN_after_war_decisions = {
 						is_core_of = TRM 
 						state = 61
 						state = 66
+						state = 58
+						state = 909
 					}
 				}
 				add_dynamic_modifier = { modifier = TRM_Military_occupation }
@@ -4163,6 +4167,8 @@ TRN_after_war_decisions = {
 						is_core_of = TRM 
 						state = 61
 						state = 66
+						state = 58
+						state = 909
 					}
 				}
 				NOT = { has_dynamic_modifier =  { modifier = TRM_Military_occupation } }
@@ -4376,14 +4382,15 @@ TRN_after_war_decisions = {
 		fire_only_once = yes
 		days_remove = 180
 		ai_will_do = {
-			factor = 2
+			factor = 1
+			modifier = {
+				factor = 1000
+				has_stability > 71
+				has_political_power > 149
+			}
 		}
 		modifier = {
-			political_power_gain = -1
-			stability_weekly = -0.012
-		}
-		complete_effect = {
-			add_stability = -0.07
+			stability_weekly = -0.01
 		}
 		remove_effect = {
 			remove_ideas = TRM_anti_gehenna_idea
@@ -4561,7 +4568,13 @@ TRN_after_war_decisions = {
 
 		timeout_effect = {
 			activate_mission = TRM_loop_Gehenna_Resistance
-			add_to_variable = { TRM_GehennaResistance_speed = 5 }
+			clamp_variable = {
+				var = TRM_GehennaResistance_speed
+				max = 120
+				min = 25
+			}
+			custom_effect_tooltip = TRM_GehennaResistance_Random_Event_tt
+			
 			hidden_effect = {
 				random_list = {
 					1 = { # 다치는 이벤트
@@ -4632,13 +4645,13 @@ TRN_after_war_decisions = {
 		available = {
 			has_completed_focus = TRM_germany_union
 			has_stability > 0.6
+			NOT = { has_idea = TRM_anti_gehenna_idea }
 			GEM = {
 				all_core_state = {
 					OR = {
 						compliance > 75
 						resistance < 5
 						is_core_of = TRM
-						NOT = { is_owned_by = TRM }
 					}
 				}
 			}
@@ -4651,7 +4664,7 @@ TRN_after_war_decisions = {
 		fire_only_once = yes
 
 		ai_will_do = {
-			base = 1000
+			factor = 1000
 		}
         modifier = { }
         complete_effect = {
@@ -4661,10 +4674,13 @@ TRN_after_war_decisions = {
 					OR = {
 						is_core_of = GEM
 						is_core_of = GEH
+						state = 58
+						state = 909
 					}
 				}
 				add_core_of = TRM
 			}
+			set_country_flag = TRM_United_Law_is_active
         }
 	}
 
