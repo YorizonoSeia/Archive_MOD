@@ -55,7 +55,7 @@ HEU_power_balance = {
 			max = 0.7
 			modifier = {
 				non_core_manpower = 0.15
-				research_speed_factor = 0.075
+				research_speed_factor = 0.02
 				compliance_growth = 0.15
 				compliance_growth_on_our_occupied_states = -0.1
 			}
@@ -80,7 +80,7 @@ HEU_power_balance = {
 			max = 1
 			modifier = {
 				non_core_manpower = 0.2
-				research_speed_factor = 0.075
+				research_speed_factor = 0.04
 				compliance_growth = 0.25
 				compliance_growth_on_our_occupied_states = -0.2
 			}
