@@ -4617,7 +4617,7 @@ TRN_after_war_decisions = {
 						}
 					}
 					10 = {
-						effect_tooltip = NO_EFFECT
+						custom_effect_tooltip = NO_EFFECT
 					}
 				}
 			}
