@@ -764,7 +764,7 @@ focus_tree = {
 	focus = {
 		#호치민과의 타협
 		id = FRA_focus_15
-		cost = 5
+		cost = 2
 		x = 5
 		y = 6
 		icon = GFX_goal_generic_dangerous_deal
@@ -5305,7 +5305,7 @@ focus_tree = {
 		#재침투
 		icon = GFX_focus_GER_panzerschiff
 		id = FRA_focus_resistance_13
-		cost = 4
+		cost = 2
 		x = 1
 		y = 2
 		relative_position_id = FRA_focus_resistance_9
@@ -5314,7 +5314,7 @@ focus_tree = {
 			focus = FRA_focus_resistance_3
 		}
 		completion_reward = {
-			#레지스탕스 이벤트 뜰 때마다 안정도 깎아먹기
+			custom_effect_tooltip = FRA_focus_resistance_13_tt
 		}
 	}
 	focus = {
@@ -5327,11 +5327,21 @@ focus_tree = {
 		relative_position_id = FRA_focus_resistance_9
 		prerequisite = {
 			focus = FRA_focus_resistance_6
-		}
-		prerequisite = {
 			focus = FRA_focus_resistance_13
 		}
 		completion_reward = {
+			MIL = {
+				country_event = {
+					id = FRA_prov_event.77
+					days = 2
+				}
+				effect_tooltip = {
+					add_timed_idea = {
+						idea = strikes_3
+						months = 6
+					}
+				}
+			}
 		}
 	}
 	focus = {
@@ -5348,6 +5358,9 @@ focus_tree = {
 		completion_reward = {
 			MIL = {
 				country_event = FRA_prov_event.31
+				effect_tooltip = {
+					add_ideas = FRA_MIL_propagation
+				}
 			}
 		}
 	}
@@ -5365,6 +5378,30 @@ focus_tree = {
 		completion_reward = {
 			MIL = {
 				country_event = FRA_prov_event.132
+				effect_tooltip = {
+					every_owned_state = {
+						random_list = {
+							1 = {
+								damage_building = {
+									type = industrial_complex
+									damage = 1.7
+								}
+							}
+							1 = {
+								damage_building = {
+									type = arms_factory
+									damage = 1.7
+								}
+							}
+							1 = {
+								damage_building = {
+									type = infrastructure
+									damage = 1.7
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 	}
@@ -5396,7 +5433,11 @@ focus_tree = {
 		y = 7
 		prerequisite = {
 			focus = FRA_focus_resistance_10
+			focus = FRA_focus_resistance_8
+		}
+		prerequisite = {
 			focus = FRA_focus_resistance_14
+			focus = FRA_focus_resistance_8
 		}
 		completion_reward = {
 			add_threat = 1

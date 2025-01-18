@@ -94,23 +94,12 @@ BA_highlander = { #하이랜더 철도학원
 			if = {
 				limit = {
 					check_variable = {
-						BA_highlander_invest > 9
+						BA_highlander_invest > 39
 					}
 				}
 				add_offsite_building = {
 					type = industrial_complex
-					level = 1
-				}
-			}
-			else_if = {
-				limit = {
-					check_variable = {
-						BA_highlander_invest > 19
-					}
-				}
-				add_offsite_building = {
-					type = industrial_complex
-					level = 2
+					level = 4
 				}
 			}
 			else_if = {
@@ -127,12 +116,23 @@ BA_highlander = { #하이랜더 철도학원
 			else_if = {
 				limit = {
 					check_variable = {
-						BA_highlander_invest > 39
+						BA_highlander_invest > 19
 					}
 				}
 				add_offsite_building = {
 					type = industrial_complex
-					level = 4
+					level = 2
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						BA_highlander_invest > 9
+					}
+				}
+				add_offsite_building = {
+					type = industrial_complex
+					level = 1
 				}
 			}
 			set_country_flag = BA_nationalized_highlander
