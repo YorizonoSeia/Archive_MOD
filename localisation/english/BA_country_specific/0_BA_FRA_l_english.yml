@@ -1034,8 +1034,10 @@
  FRA_focus_14:0 "인도차이나 투자"
  FRA_focus_14_desc:0 "우리의 식민지 개발엔 바다 건너 아시아에도 적용해야 합니다. 인도차이나반도를 강화하여 부족한 물자를 수급합시다."
  FRA_focus_15:0 "호치민과의 타협"
+ FRA_focus_15_desc: "우리는 더 이상 인도차이나를 유지할 수 없다는 것은 분명해지고 있습니다. 우리는 질서있는 철수를 통해 최대한 이익을 보전한 채로 식민지를 포기할 것입니다."
 
  FRA_focus_new_arm_0: "병종 재건"
+ FRA_focus_new_arm_0_desc: ""
  FRA_focus_new_arm_1: "보병 운용 교리"
  FRA_focus_new_arm_2: "산개 대형"
  FRA_focus_new_arm_3: "탄막 전개"
