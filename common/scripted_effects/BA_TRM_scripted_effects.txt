@@ -2116,13 +2116,15 @@ TRM_anti_geh_emotion_effect = {
 			modifier = TRM_anti_geh_emotion_3
 		}
 		add_dynamic_modifier = {
-			modifier = international_city_4
+			modifier = TRM_anti_geh_emotion_4
 		}
 	}
 	else_if = {
 		limit = {
-			has_dynamic_modifier = { modifier = international_city_4 }
+			has_dynamic_modifier = { modifier = TRM_anti_geh_emotion_4 }
 		}
-		add_compliance = 5
+		remove_dynamic_modifier = {
+			modifier = TRM_anti_geh_emotion_4
+		}
 	}
 }
