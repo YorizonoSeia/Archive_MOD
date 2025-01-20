@@ -147,3 +147,20 @@ HEU_memorial_setting = {
 		max = 100
 	}
 }
+
+HEU_create_militia_template = {
+	if = {
+		limit = { NOT = { has_template = "Benriya Germanische Befreiungsarmee" } }
+		division_template = {
+			name = "Benriya Germanische Befreiungsarmee"
+			division_names_group = HEU_INF_01
+			regiments = {
+				irregular_infantry = { x = 0 y = 0 }
+				irregular_infantry = { x = 0 y = 1 }
+				irregular_infantry = { x = 0 y = 2 }
+				irregular_infantry = { x = 0 y = 3 }
+				irregular_infantry = { x = 1 y = 0 }
+			}
+		}
+	}
+}
