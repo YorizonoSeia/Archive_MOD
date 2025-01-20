@@ -219,7 +219,7 @@
  USA_new_team_marry_desc: "미국으로 넘어오는 몇몇 이계인들은 현지 법의 경계에 걸쳐있는 이주 애매한 존재들입니다. 이들을 법적으로 보호하고, 후일에 생길 혼란을 막기 위해선 이계인들을 위한 특별 법안이 필요합니다."
 
  USA_new_team_anime: "애니메이션 상영"
- USA_new_team_anime_desc: "산해경의 문주, 키사키의 쭉쭉체조가 담긴 영상이 유럽의 남녀노소를 가리지 않고 선풍적인 인기를 끌고 있습니다. 이계인의 고정관념을 풀기 위해서, 이 영상을 상영해야합니다."
+ USA_new_team_anime_desc: "산해경의 문주, 키사키의 쭉쭉체조가 담긴 영상이 남녀노소를 가리지 않고 선풍적인 인기를 끌고 있습니다. 이계인의 고정관념을 풀기 위해서, 이 영상을 상영해야합니다."
 
  USA_new_team_civilwar: "결단"
  USA_new_team_civilwar_desc: "더 나은 미래를 위해 우리는 여태까지 쉽지 않은 결정을 했습니다. 이제는 결단을 내릴 차례입니다. 모든 사람들이 우리를 가리키며 인류를 버린 배신자라고 비난하지만 마지막에는 저희가 옳았다는 것을 알게 될 겁니다."
@@ -234,7 +234,7 @@
  USA_blue_kivotos_desc: "이계인들 사이에선 우리의 정치 사상과 매우 유사한 정치체계가 존재합니다. 이들과 함께하여 신질서에 편승한다면 적어도 이념에 관한 마찰은 존재하지 않을 것입니다."
 
  USA_bad_kivotos: "국민 신질서"
- USA_bad_kivotos_desc: "신질서를 따르기 위해선, 굴욕적일지 몰라도 우리 본래의 이념을 벗어던지고 이들을 마주해야 할지도 모릅니다. 그 이념이 수백년동안 피를 흘려 보존한 아념일지라도요."
+ USA_bad_kivotos_desc: "신질서를 따르기 위해선 우리 본래의 이념을 벗어던지고 이들을 마주해야 할지도 모릅니다. 그 이념이 수백년동안 피를 흘려 보존한 아념일지라도요."
 
  USA_blue_kivotos_MIL: "밀레니엄 따르기"
  USA_blue_kivotos_MIL_desc: "우리, 심지어 같은 이계인들과 비교해도 압도적인 과학 기술을 가진 밀레니엄 사이언스 스쿨과 함께한다면, 미국의 기술력에 관한 전진이 있을 것입니다."
@@ -294,7 +294,7 @@
  USA_bad_kivotos_justice_desc: "정의실현부는 무력이 매우 뛰어난 자치 경찰 단체입니다. 그들과 협력하면 반 국가 세력들을 축출할 수 있을 겁니다."
 
  USA_bad_kivotos_justice_sword: "트리니티의 검"
- USA_bad_kivotos_justice_sword_desc: "트리니티의 검과 방패가 되어줍시다. 트리니티를 위협하는 세력을 모두 제거합시다. 정의실현부와 함께 정의를 실천합시다."
+ USA_bad_kivotos_justice_sword_desc: "트리니티의 검이 되어줍시다. 트리니티를 위협하는 세력을 모두 제거합시다."
 
  USA_bad_kivotos_halo_infantry_2: "'제 3의 길'"
  USA_bad_kivotos_halo_infantry_2_desc: "신질서의 기술을 적용한 새로운 연대를 편성하고, 연합 훈련의 교훈을 접목합시다. 그 누구도 가지 않았던 길을, 우리가 지금 걷고 있습니다!"
@@ -322,8 +322,8 @@
  USA_bad_kivotos_support_Mika: "미카 지원"
  USA_bad_kivotos_support_Mika_desc: "우리는 천사나 다름없는 그녀를 수호하는 기사가 되어야 합니다."
 
- USA_bad_kivotos_Mika_fanclub: "트리니티에 복종"
- USA_bad_kivotos_Mika_fanclub_desc: "되묻지 않고 그저 묵묵히 그녀의 지시에 따르는 것, 그것이 바로 우리의 사명입니다. §R당신이 지시할 수 있는 것은 이제 존재하지 않습니다.§R"
+ USA_bad_kivotos_Mika_fanclub: "미카 친위대 편성"
+ USA_bad_kivotos_Mika_fanclub_desc: "의심하지 않고 묵묵히 그녀의 지시에 따르며, 장애물을 치우는 것. 그것이 바로 우리의 사명입니다."
 
  USA_support_brazil: "남미 지원"
  USA_support_brazil_desc: "브라질의 연금술 기술이라면 신질서 따윈 금방 이길 겁니다."
@@ -351,9 +351,22 @@
  USABA_collapsed_government_authority: "추락한 정부 권위"
  USABA_strengthening_state_authority: "주 권한 확대"
  USABA_secret_currency_issuance: "지하 화폐 발행"
- USABA_return_of_the_giant: "거인의 기상"
+ USABA_return_of_the_giant: "거인의 회복"
  USABA_special_demand_for_war: "전쟁 특수"
  USA_pudding: "푸딩 배급제"
+ together_train: "제 3의 길"
+ why_am_i_fight: "명분 없는 전쟁"
+ old_fast_train: "병귀신속"
+ wakeup_giant: "거인의 기상"
+ USA_GEH_train: "미국의 군사 지도"
+ USA_GEH_train_usa: "선도부 연합 훈련"
+ USA_GEM_train: "게헨나 제병합동"
+ USA_TRM_train: "트리니티 제병합동"
+ USA_iroha_tank: "이로하 전술 도입"
+ USA_nagisa_cannon: "나기사 전술 도입"
+ usa_help_to_new_order: "도와줘요 신질서에몽!"
+ week_faith_for_new_team: "우유부단한 신념"
+
 
  USABA_forced_wake_up_tt: "대공황 해결시 제거:\n§Y2차 대공황§!, §Y대공황§!, §Y느린 회복§!, §Y느린 경제 성장§! 국민정신 미보유"
  USABA_second_great_depression_idea_tt: "2차 대공황 해결시 제거:\n§Y2차 대공황§! 국민정신 미보유"
@@ -419,10 +432,14 @@
 #이벤트
 
  USA_recover_from_2nd_great_depression_tt: "§Y$USA_recover_from_2nd_great_depression_categorie$§!과 관련된 모든 산업 결정들이 비활성화됩니다."
-
+ 
  usa_chroma_event.2.t: "경제 재건 방해됨"
  usa_chroma_event.2.d: "현재 우리 국가가 공격받고 있는 상황에서, 경제 재건을 위한 계획들은 더이상 진행할 수 없습니다. 평화가 다시 찾아올 경우 그 계획을 재개할 수 있을지 모르지만, 지금은 우선 군수품 생산에 집중해야만 합니다."
  usa_chroma_event.2.a: "전쟁특수라도 노려보자고."
+
+ usa_event.1.t: "의회에 올라온 하나의 선언"
+ usa_event.1.d: "이계인이 갑작스레 유럽 대륙을 침공하며, 고통 받는 유럽인들을 억압하고 있습니다. \n\n우리가 여태까지 가만히 있던 것은 그들이 무서워서가 아니라 유럽인, 아니 모든 인류를 확실하게 해방시키기 위함입니다. \n\n자, 우리는 지금껏 인내하며 최적의 상황을 만들었습니다. 이제 해방의 때가 도래한 겁니다!"
+ usa_event.1: "모든 전쟁을 끝내기 위한 전쟁(The war to end war, The war to end all wars)"
 
  usa_event.2.t: "추가적인 경제 위기의 조짐"
  usa_event.2.d: "유럽 시장의 소멸로 인해 미국의 주요 무역회사들이 큰 타격을 입기 시작했습니다. 수출 길이 막히고, 수익이 급감하면서 소규모 투자자들이 연이어 파산하고 있습니다. 이들은 이제 하나둘씩 거리로 내몰리기 시작했고, 그들의 불안은 점점 더 커져가고 있습니다. 경제 위기의 징후가 여기저기에서 포착되며, 전반적인 시장 불안감이 고조되고 있습니다."
@@ -489,6 +506,14 @@
  usa_event.17.d: "[FROM.GetName] 측은 우리의 자비로운 외교 서한에도 불구하고 우리들과의 전쟁할 것을 결심한 모습입니다."
  usa_event.17.a: "예상한 반응이다."
 
+
+ usa_event.19.t: "이로하의 조언"
+ usa_event.19.d: "하아아, 귀찮아... 그렇지만, 그들은 나를 필요로 하니깐..."
+ usa_event.19.a: "그녀의 조언대로!"
+
+ usa_event.20.t: "파티 초대에 승낙한 이부키"
+ usa_event.20.d: "게헨나의 마스코트, 이부키가 우리 대사관의 초청을 받아 파티에 참석했습니다. \n\n어쩜 이렇게 귀여운 생물체가 존재할 수 있을까요? 그녀는 당연하게도 삼엄한 경호를 받으며, 우리의 파티를 즐기는 즐거운 시간을 보냈습니다."
+ usa_event.20.a: "이부키는 귀엽잖아!"
 
 ##########################################################
 ########################전쟁부#############################

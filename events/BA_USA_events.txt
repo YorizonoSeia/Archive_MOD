@@ -308,7 +308,14 @@ country_event = {
 	 option = {
 		name = usa_event.1
         #event = BA_super.21
-		add_war_support = 0.20
+		add_popularity = {
+            ideology = democratic
+	        popularity = 0.2
+        } 
+		add_stability = 0.2
+		add_war_support = 0.4
+		create_faction = USA_NATO_FACTION
+		USA_congress_large_support = yes
 	 }
 }
 
@@ -1167,6 +1174,50 @@ country_event = {
 
 
 
+
+
+
+
+#마코토 이벤트 짤 GFX_event_GEM_MAKOTO_event
+
+
+
+
+country_event = {
+	
+	id = usa_event.19
+	title = usa_event.19.t
+	desc = usa_event.19.d
+	
+	picture = GFX_event_GEM_MAKOTO_event #이로하 짤로 바꿔야 함
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = usa_event.19.a
+		add_ideas = usa_support_iroha
+	}
+}
+
+
+#이부키 파티 초청
+
+country_event = {
+	
+	id = usa_event.20
+	title = usa_event.20.t
+	desc = usa_event.20.d
+	
+	picture = GFX_event_GEM_MAKOTO_event #이부키 짤로 바꿔야 함
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = usa_event.20.a
+		add_political_power = 10
+		add_stability = 0.2
+	}
+}
 
 
  # 신질서 내전
