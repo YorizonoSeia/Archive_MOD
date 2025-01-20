@@ -75,6 +75,9 @@ TRM_historical = {
         TRM_Reorganise_Armament_Production
         TRM_Expand_the_Logistics_Corps
         TRM_encourage_radio_use
+
+        # 연합법 선언
+        TRM_germany_union
         
         # 남부 공세
         TRM_southern_offensive
