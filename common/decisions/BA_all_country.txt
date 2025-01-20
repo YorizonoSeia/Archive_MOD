@@ -989,6 +989,10 @@ BA_kivotos_school_country_category = {
 			FROM = {
 				NOT = { tag = ROOT }
 				has_added_tension_amount > 5
+				is_in_array = {
+					array = global.kivotos_alliance
+					value = THIS
+				}
 			}
 			NOT = { has_global_flag = end_of_the_kivotos_alliance }
 		}

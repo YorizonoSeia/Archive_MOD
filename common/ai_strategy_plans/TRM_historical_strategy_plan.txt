@@ -75,6 +75,9 @@ TRM_historical = {
         TRM_Reorganise_Armament_Production
         TRM_Expand_the_Logistics_Corps
         TRM_encourage_radio_use
+
+        # 연합법 선언
+        TRM_germany_union
         
         # 남부 공세
         TRM_southern_offensive
@@ -93,6 +96,13 @@ TRM_historical = {
         TRN_Standardise_Pilot_Training
         TRN_Transpolar_Flights
         TRN_Expand_The_Aircraft_Industry
+
+        #내정 더 찍기
+        TRN_Siemens_grant
+        TRN_Autobahn
+        TRN_research_slot
+        TRN_railway_focus
+        TRN_railway_gun_focus
         
 	}
 	research = {
