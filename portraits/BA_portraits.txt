@@ -8,6 +8,20 @@ TRM = {
 			"GFX_Portrait_BlueArchive_TRM_Generic_6"
 		}
 	}
+	navy = {
+		male = {
+			"GFX_Portrait_Germany_Generic_navy_1"
+			"GFX_Portrait_Germany_Generic_navy_2"
+			"GFX_Portrait_Germany_Generic_navy_3"
+		}
+		female = {
+			"GFX_Portrait_BlueArchive_TRM_Generic_1"
+			"GFX_Portrait_BlueArchive_TRM_Generic_2"
+			"GFX_Portrait_BlueArchive_TRM_Generic_3"
+			"GFX_Portrait_BlueArchive_TRM_Generic_5"
+			"GFX_Portrait_BlueArchive_TRM_Generic_6"
+		}
+	}
 	political = {
 		communism = {
 			male = { 
@@ -53,6 +67,17 @@ TRM = {
 }
 COU = {
 	army = {
+		female = {
+			"GFX_Portrait_BlueArchive_COU_Generic_1"
+			"GFX_Portrait_BlueArchive_COU_Generic_2"
+		}
+	}
+	navy = {
+		male = {
+			"GFX_Portrait_Germany_Generic_navy_1"
+			"GFX_Portrait_Germany_Generic_navy_2"
+			"GFX_Portrait_Germany_Generic_navy_3"
+		}
 		female = {
 			"GFX_Portrait_BlueArchive_COU_Generic_1"
 			"GFX_Portrait_BlueArchive_COU_Generic_2"
@@ -275,6 +300,18 @@ GEH = { #게헨나 선도부
 			"GFX_Portrait_BlueArchive_GEH_Generic_4"
 		}
 	}
+	navy = {
+		male = {
+			"GFX_Portrait_Germany_Generic_navy_1"
+			"GFX_Portrait_Germany_Generic_navy_2"
+			"GFX_Portrait_Germany_Generic_navy_3"
+		}
+		female = {
+			"GFX_Portrait_BlueArchive_GEH_Generic_2"
+			"GFX_Portrait_BlueArchive_GEH_Generic_3"
+			"GFX_Portrait_BlueArchive_GEH_Generic_4"
+		}
+	}
 	political = {
 		communism = {
 			male = { 
@@ -320,6 +357,18 @@ GEH = { #게헨나 선도부
 }
 GEM = { #게헨나 만마전
 	army = {
+		female = {
+			"GFX_Portrait_BlueArchive_GEH_Generic_1"
+			"GFX_Portrait_BlueArchive_GEH_Generic_2"
+			"GFX_Portrait_BlueArchive_GEH_Generic_3"
+		}
+	}
+	navy = {
+		male = {
+			"GFX_Portrait_Germany_Generic_navy_1"
+			"GFX_Portrait_Germany_Generic_navy_2"
+			"GFX_Portrait_Germany_Generic_navy_3"
+		}
 		female = {
 			"GFX_Portrait_BlueArchive_GEH_Generic_1"
 			"GFX_Portrait_BlueArchive_GEH_Generic_2"
@@ -377,6 +426,17 @@ HEU = { #게헨나 공용
 			"GFX_Portrait_BlueArchive_GEH_Generic_3"
 		}
 	}
+	navy = {
+		male = {
+			"GFX_Portrait_Germany_Generic_navy_1"
+			"GFX_Portrait_Germany_Generic_navy_2"
+			"GFX_Portrait_Germany_Generic_navy_3"
+		}
+		female = {
+			"GFX_Portrait_BlueArchive_GEH_Generic_2"
+			"GFX_Portrait_BlueArchive_GEH_Generic_3"
+		}
+	}
 	political = {
 		communism = {
 			male = { 
@@ -419,6 +479,21 @@ HEU = { #게헨나 공용
 
 SHA = {
 	army = {
+		female = {
+			"GFX_Portrait_BlueArchive_SHA_Generic_1"
+			"GFX_Portrait_BlueArchive_SHA_Generic_2"
+			"GFX_Portrait_BlueArchive_SHA_Generic_3"
+			"GFX_Portrait_BlueArchive_SHA_Generic_4"
+			"GFX_Portrait_BlueArchive_SHA_Generic_5"
+			"GFX_Portrait_BlueArchive_SHA_Generic_6"
+		}
+	}
+	navy = {
+		male = {
+			"GFX_Portrait_Germany_Generic_navy_1"
+			"GFX_Portrait_Germany_Generic_navy_2"
+			"GFX_Portrait_Germany_Generic_navy_3"
+		}
 		female = {
 			"GFX_Portrait_BlueArchive_SHA_Generic_1"
 			"GFX_Portrait_BlueArchive_SHA_Generic_2"
@@ -482,6 +557,20 @@ HYA = {
 			"GFX_Portrait_BlueArchive_HYA_Generic_5"
 		}
 	}
+	navy = {
+		male = {
+			"GFX_Portrait_Germany_Generic_navy_1"
+			"GFX_Portrait_Germany_Generic_navy_2"
+			"GFX_Portrait_Germany_Generic_navy_3"
+		}
+		female = {
+			"GFX_Portrait_BlueArchive_HYA_Generic_1"
+			"GFX_Portrait_BlueArchive_HYA_Generic_2"
+			"GFX_Portrait_BlueArchive_HYA_Generic_3"
+			"GFX_Portrait_BlueArchive_HYA_Generic_4"
+			"GFX_Portrait_BlueArchive_HYA_Generic_5"
+		}
+	}
 	political = {
 		communism = {
 			male = { 
@@ -524,6 +613,29 @@ HYA = {
 
 BAC = {
 	army = {
+		female = {
+			"GFX_Portrait_BlueArchive_HYA_Generic_1"
+			"GFX_Portrait_BlueArchive_HYA_Generic_2"
+			"GFX_Portrait_BlueArchive_HYA_Generic_3"
+			"GFX_Portrait_BlueArchive_HYA_Generic_4"
+			"GFX_Portrait_BlueArchive_HYA_Generic_5"
+		}
+	}
+	army = {
+		female = {
+			"GFX_Portrait_BlueArchive_HYA_Generic_1"
+			"GFX_Portrait_BlueArchive_HYA_Generic_2"
+			"GFX_Portrait_BlueArchive_HYA_Generic_3"
+			"GFX_Portrait_BlueArchive_HYA_Generic_4"
+			"GFX_Portrait_BlueArchive_HYA_Generic_5"
+		}
+	}
+	navy = {
+		male = {
+			"GFX_Portrait_Germany_Generic_navy_1"
+			"GFX_Portrait_Germany_Generic_navy_2"
+			"GFX_Portrait_Germany_Generic_navy_3"
+		}
 		female = {
 			"GFX_Portrait_BlueArchive_HYA_Generic_1"
 			"GFX_Portrait_BlueArchive_HYA_Generic_2"
@@ -582,6 +694,29 @@ SUH = {
 			"GFX_Portrait_BlueArchive_HYA_Generic_5"
 		}
 	}
+	army = {
+		female = {
+			"GFX_Portrait_BlueArchive_HYA_Generic_1"
+			"GFX_Portrait_BlueArchive_HYA_Generic_2"
+			"GFX_Portrait_BlueArchive_HYA_Generic_3"
+			"GFX_Portrait_BlueArchive_HYA_Generic_4"
+			"GFX_Portrait_BlueArchive_HYA_Generic_5"
+		}
+	}
+	navy = {
+		male = {
+			"GFX_Portrait_Germany_Generic_navy_1"
+			"GFX_Portrait_Germany_Generic_navy_2"
+			"GFX_Portrait_Germany_Generic_navy_3"
+		}
+		female = {
+			"GFX_Portrait_BlueArchive_HYA_Generic_1"
+			"GFX_Portrait_BlueArchive_HYA_Generic_2"
+			"GFX_Portrait_BlueArchive_HYA_Generic_3"
+			"GFX_Portrait_BlueArchive_HYA_Generic_4"
+			"GFX_Portrait_BlueArchive_HYA_Generic_5"
+		}
+	}
 	political = {
 		communism = {
 			male = { 
@@ -632,6 +767,29 @@ INK = {
 			"GFX_Portrait_BlueArchive_HYA_Generic_5"
 		}
 	}
+	army = {
+		female = {
+			"GFX_Portrait_BlueArchive_HYA_Generic_1"
+			"GFX_Portrait_BlueArchive_HYA_Generic_2"
+			"GFX_Portrait_BlueArchive_HYA_Generic_3"
+			"GFX_Portrait_BlueArchive_HYA_Generic_4"
+			"GFX_Portrait_BlueArchive_HYA_Generic_5"
+		}
+	}
+	navy = {
+		male = {
+			"GFX_Portrait_Germany_Generic_navy_1"
+			"GFX_Portrait_Germany_Generic_navy_2"
+			"GFX_Portrait_Germany_Generic_navy_3"
+		}
+		female = {
+			"GFX_Portrait_BlueArchive_HYA_Generic_1"
+			"GFX_Portrait_BlueArchive_HYA_Generic_2"
+			"GFX_Portrait_BlueArchive_HYA_Generic_3"
+			"GFX_Portrait_BlueArchive_HYA_Generic_4"
+			"GFX_Portrait_BlueArchive_HYA_Generic_5"
+		}
+	}
 	political = {
 		communism = {
 			male = { 
@@ -674,6 +832,26 @@ INK = {
 
 MIL = {
 	army = {
+		male = {
+			"GFX_Portrait_BlueArchive_MIL_Generic_3"
+			"GFX_Portrait_BlueArchive_MIL_Generic_4"
+			"GFX_Portrait_BlueArchive_MIL_Generic_5"
+		}
+		female = {
+			"GFX_Portrait_BlueArchive_MIL_Generic_1"
+			"GFX_Portrait_BlueArchive_MIL_Generic_2"
+		}
+	}
+	army = {
+		female = {
+			"GFX_Portrait_BlueArchive_HYA_Generic_1"
+			"GFX_Portrait_BlueArchive_HYA_Generic_2"
+			"GFX_Portrait_BlueArchive_HYA_Generic_3"
+			"GFX_Portrait_BlueArchive_HYA_Generic_4"
+			"GFX_Portrait_BlueArchive_HYA_Generic_5"
+		}
+	}
+	navy = {
 		male = {
 			"GFX_Portrait_BlueArchive_MIL_Generic_3"
 			"GFX_Portrait_BlueArchive_MIL_Generic_4"
@@ -778,6 +956,41 @@ SHE = {
 }
 
 KPD = {
+	
+	political = {
+		communism = {
+			male = { 
+				"GFX_Portrait_Europe_Generic_1"
+			}
+			female = {
+				"GFX_Portrait_BlueArchive_KPD_female_Generic_5"
+			}
+		}
+		democratic = {
+			male = {
+				"GFX_Portrait_Europe_Generic_2" 
+			}
+			female = {
+				"GFX_Portrait_BlueArchive_KPD_female_Generic_5"
+			}
+		}
+		fascism = {
+			male = {
+				"GFX_Portrait_Europe_Generic_3" 
+			}
+			female = {
+				"GFX_Portrait_BlueArchive_KPD_female_Generic_5"
+			}
+		}
+		neutrality = {
+			male = {
+				"GFX_Portrait_Europe_Generic_3" 
+			}
+			female = {
+				"GFX_Portrait_BlueArchive_KPD_female_Generic_5"
+			}
+		}
+	}
 	army = {
 		male = {
 			"GFX_Portrait_Soviet_Generic_land_1"
@@ -804,12 +1017,11 @@ KPD = {
 			"GFX_portrait_europe_generic_land_19"
 		}
 		female = {
-			"GFX_Portrait_BlueArchive_KPD_Generic_1"
-			"GFX_Portrait_BlueArchive_KPD_Generic_2"
-			"GFX_Portrait_BlueArchive_KPD_Generic_3"
-			"GFX_Portrait_BlueArchive_KPD_Generic_4"
-			"GFX_Portrait_BlueArchive_KPD_Generic_5"
-			"GFX_Portrait_BlueArchive_KPD_Generic_6"
+			"GFX_Portrait_BlueArchive_KPD_female_Generic_1"
+			"GFX_Portrait_BlueArchive_KPD_female_Generic_2"
+			"GFX_Portrait_BlueArchive_KPD_female_Generic_3"
+			"GFX_Portrait_BlueArchive_KPD_female_Generic_4"
+			"GFX_Portrait_BlueArchive_KPD_female_Generic_5"
 		}
 	}
 	
@@ -821,6 +1033,13 @@ KPD = {
 			"GFX_Portrait_Germany_Generic_navy_1"
 			"GFX_Portrait_Germany_Generic_navy_2"
 			"GFX_Portrait_Germany_Generic_navy_3"
+		}
+		female = {
+			"GFX_Portrait_BlueArchive_KPD_female_Generic_1"
+			"GFX_Portrait_BlueArchive_KPD_female_Generic_2"
+			"GFX_Portrait_BlueArchive_KPD_female_Generic_3"
+			"GFX_Portrait_BlueArchive_KPD_female_Generic_4"
+			"GFX_Portrait_BlueArchive_KPD_female_Generic_5"
 		}
 	}
 }
