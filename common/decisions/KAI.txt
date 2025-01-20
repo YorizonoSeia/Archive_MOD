@@ -196,9 +196,21 @@ KAI_power_of_the_corporate_state = {
 
 		days_remove = 70
 
+		ai_will_do = {
+			base = 5
+			modifier = {
+				factor = 0
+				neutrality > 0.95
+			}
+			modifier = {
+				factor = 4000
+				neutrality < 0.40
+			}
+		}
+
 		modifier = {
 			political_power_cost = 0.10
-			neutrality_drift = 0.05
+			neutrality_drift = 0.02
 			fascism_drift = -0.02
 			communism_drift = -0.02
 			democratic_drift = -0.02
