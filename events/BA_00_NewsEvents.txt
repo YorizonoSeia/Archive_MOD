@@ -3583,6 +3583,9 @@ news_event = {
 		}
 		hidden_effect = {
 			if = {
+				limit = {
+					is_ai = no
+				}
 				scoped_play_song = "USA_The_Old_Order"
 				set_country_flag = {
 					flag = BA_Super_Event_Visible

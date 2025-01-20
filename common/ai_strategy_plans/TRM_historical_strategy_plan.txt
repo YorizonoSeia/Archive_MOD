@@ -93,6 +93,13 @@ TRM_historical = {
         TRN_Standardise_Pilot_Training
         TRN_Transpolar_Flights
         TRN_Expand_The_Aircraft_Industry
+
+        #내정 더 찍기
+        TRN_Siemens_grant
+        TRN_Autobahn
+        TRN_research_slot
+        TRN_railway_focus
+        TRN_railway_gun_focus
         
 	}
 	research = {
