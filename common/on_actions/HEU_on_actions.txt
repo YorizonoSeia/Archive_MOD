@@ -23,4 +23,29 @@ on_actions = {
 			}
 		}
 	}
+
+	
+	#ROOT = 공격하는 쪽
+	#FROM = 방어 측
+	#두 국가가 서로 전쟁을 벌일 때 발동됨(on_war는 한 국가가 다른 국가와 전쟁을 벌일 때 발동되며, 먼저 평화로 가지 않는 한 다른 국가와 전쟁을 벌일 때는 다시 발동되지 않음).
+	on_war_relation_added = {
+		effect = { 
+			if = {
+				limit = {
+					ROOT = { 
+						original_tag = HEU
+						has_completed_focus = HEU_representative_of_the_germanic
+						NOT = { has_country_flag = HEU_germany_war_flag }
+					}
+					FROM = {
+						original_tag = GEM
+					} 
+				} # Don't remove it from Fascist Germany if they start the civil war
+				ROOT = {
+					set_country_flag = HEU_germany_war_flag
+					country_event = { id = HEU_event.225 }
+				}
+			}
+		}
+	}
 }

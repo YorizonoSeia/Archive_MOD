@@ -1828,11 +1828,30 @@ focus_tree = {
 		search_filters = {  }
 
 		completion_reward = {
+			unlock_decision_category_tooltip = HEU_benriya_ally_decision_category
+
 			every_state = {
 				limit = {
 					is_core_of = GEM
 				}
 				add_claim_by = HEU
+				add_contested_owner = HEU
+			}
+			
+			every_state = {
+				limit = {
+					is_core_of = GEH
+				}
+				add_claim_by = HEU
+				add_contested_owner = HEU
+			}
+
+			every_state = {
+				limit = {
+					is_core_of = TRM
+				}
+				add_claim_by = HEU
+				add_contested_owner = HEU
 			}
 			
 			hidden_effect = {
@@ -1841,6 +1860,10 @@ focus_tree = {
 						has_completed_focus = HEU_we_still_hope
 					}
 					country_event = { id = HEU.flavor_event.45 }
+				}
+
+				GEM = { 
+					country_event = { id = HEU_event.224 }
 				}
 			}
 		}
@@ -1864,12 +1887,13 @@ focus_tree = {
 		available = {
 			AND = {
 				country_exists = TRM
-				TRM = {
-					has_country_leader = {
-                        character = TRN_alzk
-                        ruling_only = yes
-					}
-				}
+				#TRM = {
+				#	has_country_leader = {
+                #        character = TRN_alzk
+                #        ruling_only = yes
+				#	}
+				#}
+				NOT = { has_war_with = TRM }
 			}
 		}
 
@@ -2034,7 +2058,7 @@ focus_tree = {
 		}
 
 		available = {
-
+			is_neighbor_of = GEM
 		}	
 
 		bypass = {
@@ -2044,7 +2068,11 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 4
+			factor = 0
+			modifier = {
+				add = 25
+				date > 1939.8.1
+			}
 		}
 
 		cost = 2.00
@@ -2074,7 +2102,7 @@ focus_tree = {
 		}
 
 		available = {
-
+			is_neighbor_of = GEH
 		}	
 
 		bypass = {
@@ -2084,7 +2112,18 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 4
+			factor = 0
+			modifier = {
+				add = 15
+				date > 1939.8.1
+			}
+			#modifier = {
+			#	factor = 0
+			#	AND = {
+			#		country_exists = GEH
+			#		NOT = { has_war_with = GEH }
+			#	}
+			#}
 		}
 
 		cost = 2.00
@@ -2098,12 +2137,6 @@ focus_tree = {
 			create_wargoal = {
 				type = annex_everything
 				target = GEH
-			}
-			every_state = {
-				limit = {
-					is_core_of = GEH
-				}
-				add_claim_by = HEU
 			}
 		}
 	}
@@ -2121,7 +2154,7 @@ focus_tree = {
 		}
 
 		available = {
-
+			is_neighbor_of = TRM
 		}	
 
 		bypass = {
@@ -2131,7 +2164,15 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 4
+			factor = 10
+			modifier = {
+				factor = 0
+				has_war_with = GEM
+			}
+			modifier = {
+				factor = 0
+				has_war_with = GEH
+			}
 		}
 
 		cost = 2.00
@@ -2146,12 +2187,6 @@ focus_tree = {
 			create_wargoal = {
 				type = annex_everything
 				target = TRM
-			}
-			every_state = {
-				limit = {
-					is_core_of = TRM
-				}
-				add_claim_by = HEU
 			}
 		}
 	}

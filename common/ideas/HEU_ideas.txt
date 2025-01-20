@@ -1306,6 +1306,38 @@ ideas = {
 				conscription = 0.03
 			}
 		}
+
+		HEU_legion_pro_lux = {
+			removal_cost = -1
+
+			picture = ETH_conservative_high_command
+				
+			allowed = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			cancel = {
+				OR = {
+					NOT = { country_exists = HEU }
+					HEU = { has_completed_focus = HEU_germany_union }
+				}
+			}
+
+			modifier = {
+				experience_gain_army_factor = 0.15
+				experience_gain_air_factor = 0.15
+				send_volunteer_size = 2
+				air_volunteer_cap = 2
+			}
+			
+			rule = {
+				can_send_volunteers = yes
+			}
+		}
 	}
 	
 	industrial_concern = {

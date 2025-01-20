@@ -203,3 +203,116 @@ HEU_aru_GSC_president_III = {
         value = 100
     }
 }
+
+HEU_we_are_germanic = {
+
+    allowed = {
+        original_tag = HEU
+    }
+
+    enable = {
+        has_completed_focus = HEU_representative_of_the_germanic
+    }
+
+    abort_when_not_enabled = yes
+
+    ai_strategy = {
+        type = consider_weak
+        id = "GEM"
+        value = 100
+    }
+    
+    ai_strategy = {
+        type = alliance
+        id = "GEM"
+        value = -1000
+    }
+    
+    ai_strategy = {
+        type = antagonize
+        id = "GEM"
+        value = 100
+    }
+
+    ai_strategy = {
+        type = consider_weak
+        id = "GEH"
+        value = 100
+    }
+    
+    ai_strategy = {
+        type = alliance
+        id = "GEH"
+        value = -1000
+    }
+    
+    ai_strategy = {
+        type = antagonize
+        id = "GEH"
+        value = 100
+    }
+
+}
+
+HEU_we_are_germanic_II = {
+
+    allowed = {
+        original_tag = HEU
+    }
+
+    enable = {
+        has_completed_focus = HEU_attack_trinity
+    }
+
+    abort_when_not_enabled = yes
+
+    ai_strategy = {
+        type = consider_weak
+        id = "TRM"
+        value = 100
+    }
+    
+    ai_strategy = {
+        type = alliance
+        id = "TRM"
+        value = -1000
+    }
+    
+    ai_strategy = {
+        type = antagonize
+        id = "TRM"
+        value = 100
+    }
+
+}
+
+HEU_befriend_HEU_other = {
+
+    allowed = {
+        NOT = { original_tag = HEU }
+    }
+
+    enable = {
+        has_idea = HEU_legion_pro_lux
+    }
+
+    abort_when_not_enabled = yes
+
+    ai_strategy = {
+        type = support
+        id = "HEU"
+        value = 1000
+    }
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "HEU"
+		value = 1000
+	}
+
+    ai_strategy = {
+        type = befriend
+        id = "HEU"
+        value = 50
+    }
+}

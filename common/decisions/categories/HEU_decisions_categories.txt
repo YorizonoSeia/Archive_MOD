@@ -192,6 +192,8 @@ HEU_benriya_ally_decision_category = { #동맹국 찾기
     } 
 
     icon = GFX_decision_category_intervention_overseas
+
+	picture = GFX_decision_cat_picture_chi_political_support
     
 	visible_when_empty = yes
 }
@@ -213,4 +215,23 @@ HEU_total_assault_kaitenger_decision_category = { #카이텐져 총력전
     icon = GFX_decision_category_border_conflicts
     
 	visible_when_empty = yes
+}
+
+HEU_german_reunification_war_decision_category = { #독일통일전쟁
+    priority = 90
+
+	allowed = {
+		original_tag = HEU
+	}
+
+    visible = {
+        has_completed_focus = HEU_representative_of_the_germanic
+    }
+
+    available = {
+    } 
+
+    icon = GFX_decision_category_border_conflicts
+
+	picture = GFX_decision_cat_picture_unite_germany
 }

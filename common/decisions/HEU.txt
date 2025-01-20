@@ -4068,3 +4068,1011 @@ HEU_total_assault_kaitenger_decision_category = {
 
 
 }
+
+HEU_benriya_ally_decision_category = {
+	
+	HEU_benriya_ally_allies = {
+
+		icon = GFX_decision_generic_military
+
+		available = {
+			CAN = {
+				is_faction_leader = yes
+			}
+			NOT = { has_war_with = CAN }
+			has_completed_focus = HEU_germany_union
+			CAN = { is_puppet = no }
+		}
+
+		visible = {
+			is_puppet = no
+			
+		}
+
+		ai_will_do = { base = 0 } #
+
+		cost = 0
+
+		complete_effect = {
+
+		}
+	}
+	
+	HEU_benriya_ally_roma = {
+
+		icon = GFX_decision_generic_military
+
+		available = {
+			ITA = {
+				is_faction_leader = yes
+			}
+			NOT = { has_war_with = ITA }
+			has_completed_focus = HEU_germany_union
+			OR = {
+				AND = {
+					ROOT = { has_government = fascism }
+					ITA = { has_government = fascism }
+				}
+				AND = {
+					ROOT = { has_government = fascism }
+					ITA = { has_government = neutrality }
+				}
+				AND = {
+					ROOT = { has_government = fascism }
+					ITA = { has_government = democratic }
+				}
+				AND = {
+					ROOT = { has_government = communism }
+					ITA = { has_government = communism }
+				}
+				AND = {
+					ROOT = { has_government = communism }
+					ITA = { has_government = neutrality }
+				}
+				AND = {
+					ROOT = { has_government = communism }
+					ITA = { has_government = democratic }
+				}
+			}
+			ITA = { is_puppet = no }
+		}
+
+		visible = {
+			ITA = {
+				is_faction_leader = yes
+			}
+			is_puppet = no
+		}
+
+		ai_will_do = { base = 0 } #
+
+		cost = 0
+
+		complete_effect = {
+
+		}
+	}
+	
+	HEU_benriya_ally_soviet = {
+
+		icon = GFX_decision_generic_military
+
+		available = {
+			SOV = {
+				is_faction_leader = yes
+			}
+			NOT = { has_war_with = SOV }
+			has_completed_focus = HEU_germany_union
+			SOV = {
+				has_country_leader = {
+					character = SOV_iosif_stalin #오직 스탈린만
+					ruling_only = yes
+				}
+			}
+			has_government = communism
+			SOV = { is_puppet = no }
+		}
+
+		visible = {
+			SOV = {
+				is_faction_leader = yes
+			}
+			is_puppet = no
+		}
+
+		ai_will_do = { base = 0 } #
+
+		cost = 0
+
+		complete_effect = {
+
+		}
+	}
+	
+	HEU_benriya_ally_benelux = {
+
+		icon = GFX_decision_generic_military
+
+		available = {
+			OR = {
+				country_exists = HOL
+				country_exists = BEL
+			}
+			NOT = { has_war_with = HOL }
+			NOT = { has_war_with = BEL }
+			has_completed_focus = HEU_germany_union
+			OR = {		
+				HOL = { is_puppet = no }
+				BEL = { is_puppet = no }
+			}
+		}
+
+		visible = {
+			
+			is_puppet = no
+		}
+
+		ai_will_do = { base = 0 } #
+
+		cost = 0
+
+		complete_effect = {
+
+		}
+	}
+	
+	HEU_benriya_ally_abydos = {
+
+		icon = GFX_decision_generic_military
+
+		available = {
+			country_exists = ABY
+			NOT = { has_war_with = ABY }
+			has_completed_focus = HEU_germany_union
+			NOT = { 
+				ABY = { has_government = democratic }
+			}
+			ABY = { is_puppet = no }
+		}
+
+		visible = {
+			
+			is_puppet = no
+		}
+
+		ai_will_do = { base = 0 } #
+
+		cost = 0
+
+		complete_effect = {
+
+		}
+	}
+
+}
+
+HEU_german_reunification_war_decision_category = {
+
+	HEU_german_wilhelm_II = {
+
+		icon = GFX_decision_generic_political_discourse
+
+		available = {
+
+		}
+
+		ai_will_do = { base = 24 } #
+
+		cost = 50
+
+		complete_effect = {
+			add_war_support = 0.05
+		}
+
+		fire_only_once = yes
+	}
+
+	
+	HEU_german_war_plan = {
+		priority = 1
+
+		icon = GFX_decision_SWI_expand_covert_operations 
+
+		ai_will_do = {
+			base = 25
+		}
+
+		targets = { GEM GEA GEH TRM KPD NSD }
+
+		target_trigger = {
+			FROM = {
+				has_war_with = ROOT
+				exists = yes
+			}
+		}
+
+		target_root_trigger =  {
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+
+		days_remove = 365
+		
+		targeted_modifier = {
+			tag = FROM
+			attack_bonus_against = 0.15
+			defense_bonus_against = 0.05
+		}
+	}
+	
+	HEU_german_negotiations_plan = {
+		priority = 1
+
+		icon = GFX_decision_generic_intelligence_operation 
+
+		ai_will_do = {
+			base = 100
+		}
+
+		targets = { GEK KPD NSD }
+
+		target_trigger = {
+			FROM = {
+				NOT = { has_war_with = ROOT }
+				exists = yes
+				is_neighbor_of = ROOT
+			}
+		}
+
+		target_root_trigger =  {
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+
+		complete_effect = {
+			FROM = { country_event = { id = HEU_event.226 } }
+		}
+	}
+
+	HEU_alliance_with_trinity = {
+		priority = 2
+
+		icon = generic_operation
+
+		available = {
+			has_global_flag = HEU_TRM_alliance
+			NOT = { has_war_wih = TRM }
+			OR = {
+				TRM = {
+					has_war_with = GEM
+				}
+				TRM = {
+					has_war_with = GEH
+				}
+			}
+			ROOT = {
+				NOT = { is_in_faction_with = TRM }
+			}
+		}
+
+		visible = {
+			has_global_flag = HEU_TRM_alliance
+		}
+
+		ai_will_do = { base = 999 } #
+
+		cost = 0
+
+		complete_effect = {
+			if = {
+				limit = {
+					TRM = { is_faction_leader = yes }
+				}
+				TRM = {
+					add_to_faction = HEU
+				}
+				add_to_war = {
+					targeted_alliance = TRM
+					enemy = GEM
+					hostility_reason = asked_to_join
+				}	
+				add_to_war = {
+					targeted_alliance = TRM
+					enemy = GEH
+					hostility_reason = asked_to_join
+				}			
+			}
+			else = {
+				TRM = {
+					create_faction = TRINITY_AXIS_FACTION
+					add_to_faction = HEU
+				}
+
+				add_to_war = {
+					targeted_alliance = TRM
+					enemy = GEM
+					hostility_reason = asked_to_join
+				}	
+				add_to_war = {
+					targeted_alliance = TRM
+					enemy = GEH
+					hostility_reason = asked_to_join
+				}		
+			}
+		}
+
+		fire_only_once = yes
+	}
+	
+	HEU_scavenge_baden = {
+		icon = generic_prepare_civil_war
+		allowed = {
+			original_tag = HEU
+		}
+
+		available = {
+			controls_state = 978
+			stockpile_ratio = {
+				archetype = infantry_equipment
+				ratio < 0.5
+			}
+		}
+		
+		custom_cost_trigger = {
+			command_power > 4.9
+		}
+
+		custom_cost_text = decision_cost_5_cp
+
+		cost = 0
+			
+		highlight_states = {
+			highlight_state_targets = { state = 978 }
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+		days_remove = 15
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -5
+			}
+		}
+
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 600
+				producer = GEM
+			}
+		}
+	}
+	
+	HEU_scavenge_wurttemberg = {
+		icon = generic_prepare_civil_war
+		allowed = {
+			original_tag = HEU
+		}
+
+		available = {
+			controls_state = 50
+			stockpile_ratio = {
+				archetype = infantry_equipment
+				ratio < 0.5
+			}
+		}
+		
+		custom_cost_trigger = {
+			command_power > 4.9
+		}
+
+		custom_cost_text = decision_cost_5_cp
+
+		cost = 0
+			
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 50 
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+		days_remove = 15
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -5
+			}
+		}
+
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 800
+				producer = GEM
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 100
+				producer = GEM
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 100
+				producer = GEM
+			}
+		}
+	}
+	
+	HEU_scavenge_nassau = {
+		icon = generic_prepare_civil_war
+		allowed = {
+			original_tag = HEU
+		}
+
+		available = {
+			controls_state = 55
+			stockpile_ratio = {
+				archetype = infantry_equipment
+				ratio < 0.5
+			}
+		}
+		
+		custom_cost_trigger = {
+			command_power > 4.9
+		}
+
+		custom_cost_text = decision_cost_5_cp
+
+		cost = 0
+			
+		highlight_states = {
+			highlight_state_targets = { state = 55 }
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+		days_remove = 15
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -5
+			}
+		}
+
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 800
+				producer = GEM
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 50
+				producer = GEM
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 50
+				producer = GEM
+			}
+		}
+	}
+	
+	HEU_scavenge_moselland = {
+		icon = generic_prepare_civil_war
+		allowed = {
+			original_tag = HEU
+		}
+
+		available = {
+			controls_state = 987
+			controls_state = 51
+			stockpile_ratio = {
+				archetype = infantry_equipment
+				ratio < 0.5
+			}
+		}
+		
+		custom_cost_trigger = {
+			command_power > 4.9
+		}
+
+		custom_cost_text = decision_cost_5_cp
+
+		cost = 0
+			
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 987 
+				state = 51 
+		}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+		days_remove = 15
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -5
+			}
+		}
+
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 800
+				producer = GEM
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 100
+				producer = GEM
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 100
+				producer = GEM
+			}
+		}
+	}
+	
+	HEU_scavenge_hannover = {
+		icon = generic_prepare_civil_war
+		allowed = {
+			original_tag = HEU
+		}
+
+		available = {
+			controls_state = 59
+			controls_state = 56
+			controls_state = 57
+			stockpile_ratio = {
+				archetype = infantry_equipment
+				ratio < 0.5
+			}
+		}
+		
+		custom_cost_trigger = {
+			command_power > 4.9
+		}
+
+		custom_cost_text = decision_cost_5_cp
+
+		cost = 0
+			
+		highlight_states = {
+			highlight_state_targets = { 
+				state = 56
+				state = 57 
+				state = 59 
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+		days_remove = 15
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -5
+			}
+		}
+
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 1300
+				producer = GEM
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 100
+				producer = GEM
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 100
+				producer = GEM
+			}
+		}
+	}
+	
+	HEU_create_militia_in_southwest_gehenna = {
+		icon = GFX_decision_generic_military
+		allowed = {
+			original_tag = HEU
+		}
+		available = {
+			controls_state = 978
+			controls_state = 50
+		}
+		
+		custom_cost_trigger = {
+			command_power > 4.9
+		}
+
+		custom_cost_text = decision_cost_5_cp
+
+		highlight_states = {
+			highlight_state_targets = { state = 978 }
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+		days_remove = 15
+
+		cancel_trigger = {
+			OR = {
+				NOT = {
+					controls_state = 978
+					controls_state = 50
+				}
+				#has_war = no
+			}
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -5
+			}
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = HEU_mobilise_2_divisions_tt
+			hidden_effect = {
+				HEU_create_militia_template = yes
+				random_controlled_state = {
+					prioritize = { 978 50 }
+					create_unit = {
+						division = "division_template = \"Benriya Germanische Befreiungsarmee\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "division_template = \"Benriya Germanische Befreiungsarmee\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+				}
+			}
+		}
+	}
+	
+	HEU_create_militia_in_souteast_gehenna = {
+		icon = GFX_decision_generic_military
+		allowed = {
+			original_tag = HEU
+		}
+		available = {
+			controls_state = 54
+			controls_state = 52
+		}
+		
+		custom_cost_trigger = {
+			command_power > 4.9
+		}
+
+		custom_cost_text = decision_cost_5_cp
+
+		highlight_states = {
+			highlight_state_targets = { state = 54 }
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+		days_remove = 15
+
+		cancel_trigger = {
+			OR = {
+				NOT = {
+					controls_state = 54
+					controls_state = 52
+				}
+				#has_war = no
+			}
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -5
+			}
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = HEU_mobilise_2_divisions_tt
+			hidden_effect = {
+				HEU_create_militia_template = yes
+				random_controlled_state = {
+					prioritize = { 54 52 }
+					create_unit = {
+						division = "division_template = \"Benriya Germanische Befreiungsarmee\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "division_template = \"Benriya Germanische Befreiungsarmee\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+				}
+			}
+		}
+	}
+	
+	HEU_create_militia_in_northwest_gehenna = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = HEU
+		}
+
+		available = {
+			controls_state = 987
+			controls_state = 51
+		}
+		
+		custom_cost_trigger = {
+			command_power > 4.9
+		}
+
+		custom_cost_text = decision_cost_5_cp
+
+		highlight_states = {
+			highlight_state_targets = { state = 987 }
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+		days_remove = 15
+
+		cancel_trigger = {
+			OR = {
+				NOT = {
+					controls_state = 987
+					controls_state = 51
+				}
+				#has_war = no
+			}
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -5
+			}
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = HEU_mobilise_2_divisions_tt
+			hidden_effect = {
+				HEU_create_militia_template = yes
+				random_controlled_state = {
+					prioritize = { 987 51 }
+					create_unit = {
+						division = "division_template = \"Benriya Germanische Befreiungsarmee\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "division_template = \"Benriya Germanische Befreiungsarmee\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+				}
+			}
+		}
+	}
+	
+	HEU_create_militia_in_northeast_gehenna = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = HEU
+		}
+
+		available = {
+			controls_state = 59
+		}
+		
+		custom_cost_trigger = {
+			command_power > 4.9
+		}
+
+		custom_cost_text = decision_cost_5_cp
+
+		highlight_states = {
+			highlight_state_targets = { state = 59 }
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+		days_remove = 15
+
+		cancel_trigger = {
+			OR = {
+				NOT = {
+					controls_state = 59
+				}
+				#has_war = no
+			}
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -5
+			}
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = HEU_mobilise_2_divisions_tt
+			hidden_effect = {
+				HEU_create_militia_template = yes
+				random_controlled_state = {
+					prioritize = { 59 }
+					create_unit = {
+						division = "division_template = \"Benriya Germanische Befreiungsarmee\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "division_template = \"Benriya Germanische Befreiungsarmee\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+				}
+			}
+		}
+	}
+
+	HEU_ideological_loyalty_spirit_plot = {
+		priority = 2
+
+		icon = GFX_decision_Gehenna_Emblem
+
+		available = {
+			has_government = communism
+			NOT = { has_idea = ideological_loyalty_spirit }
+		}
+
+		visible = {
+			has_government = communism
+		}
+
+		ai_will_do = { base = 100 } #
+
+		fire_only_once = yes
+
+		cost = 15
+
+		complete_effect = {
+			add_ideas = ideological_loyalty_spirit
+		}
+	}
+
+	HEU_ask_international_for_help = {
+		priority = 2
+
+		icon = GFX_decision_Gehenna_Emblem
+
+		available = {
+			has_global_flag = HEU_TRM_alliance_fail
+			OR = {
+				has_war_with = TRM
+				has_war_with = GEH
+				has_war_with = GEM
+			}
+		}
+
+		visible = {
+			has_global_flag = HEU_TRM_alliance_fail
+		}
+
+		ai_will_do = { base = 100 } #
+
+		fire_only_once = yes
+
+		cost = 0
+
+		complete_effect = {
+			if = {
+				limit = { 
+					has_government = communism
+				}
+				if = {
+					limit = {
+						SOV = { has_government = communism }
+					}
+					SOV = { country_event = { id = HEU_event.221 } }
+				}
+				if = {
+					limit = {
+						ITA = { has_government = communism }
+					}
+					ITA = { country_event = { id = HEU_event.221 } }
+				}
+				if = {
+					limit = {
+						RED = { has_government = communism }
+					}
+					RED = { country_event = { id = HEU_event.221 } }
+				}
+			}
+			else_if = {
+				limit = { 
+					has_government = fascism
+				}
+				if = {
+					limit = {
+						SOV = { NOT = { has_government = communism } }
+					}
+					SOV = { country_event = { id = HEU_event.221 } }
+				}
+				if = {
+					limit = {
+						ITA = { NOT = { has_government = communism } }
+					}
+					ITA = { country_event = { id = HEU_event.221 } }
+				}
+				if = {
+					limit = {
+						MIL = { NOT = { has_government = communism } }
+					}
+					MIL = { country_event = { id = HEU_event.221 } }
+				}
+			}
+		}
+	}
+	
+	HEU_west_germanic_unity_declaration = {
+		priority = 2
+
+		icon = GFX_decision_Gehenna_Emblem
+
+		available = {
+			NOT = { has_completed_focus = HEU_germany_union }
+			NOT = { country_exists = GEM }
+			controls_state = 55
+		}
+
+		visible = {
+			NOT = { has_completed_focus = HEU_germany_union }
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = { base = 100 } #
+
+		cost = 0
+
+		complete_effect = {
+			add_war_support = 0.05
+			set_cosmetic_tag = HEU_west_germanic_union
+		}
+	}
+}
