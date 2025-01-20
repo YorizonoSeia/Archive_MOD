@@ -43,6 +43,7 @@ ideas = {
 			}
 		}
 
+
 		USABA_soviet_citi_give_worker_idea = {
 
 			picture = por_iberian_workers_united
@@ -871,5 +872,25 @@ ideas = {
 				modifier_army_sub_unit_category_halo_org_recovery_cap_factor = 0.1
 			}
 	   }
+
+
+	   	usa_help_to_new_order = {
+
+			picture = nkvd_2
+
+			allowed = {
+				original_tag = USA
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			modifier = {
+				send_volunteer_size = 4
+				send_volunteers_tension = -0.20
+			}
+		}
+
   }
 }

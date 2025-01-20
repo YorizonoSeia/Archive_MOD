@@ -4213,6 +4213,9 @@ focus = {
             # give_guarantee = ITA
 			# give_guarantee = ENG
 			# give_guarantee = FRA
+			FRA = {
+				
+			}
 		}
 	}
     
@@ -5147,7 +5150,24 @@ focus = {
 	
 			}
 			completion_reward = {
-				
+				TRM = {
+				    add_timed_idea = {idea = usa_help_to_new_order days = 720}
+				}
+				GEM = {
+				    add_timed_idea = {idea = usa_help_to_new_order days = 720}
+				}
+				GEH = {
+				    add_timed_idea = {idea = usa_help_to_new_order days = 720}
+				}
+				MIL = {
+				    add_timed_idea = {idea = usa_help_to_new_order days = 720}
+				}
+				COU = {
+				    add_timed_idea = {idea = usa_help_to_new_order days = 720}
+				}
+				RED = {
+				    add_timed_idea = {idea = usa_help_to_new_order days = 720}
+				}
 			}
 		}
 
@@ -5181,9 +5201,9 @@ focus = {
 			add_stability = 0.1
 			add_popularity = {
 				ideology = democratic
-				popularity = 0.3
+				popularity = 0.9
 			}
-
+			set_politics = { ruling_party = democratic}
 		}
 	}
     
@@ -5622,9 +5642,11 @@ focus = {
 			add_war_support = 0.2
 			add_stability = -0.1
 			add_popularity = {
-				ideology = democratic
-				popularity = -1
+				ideology = fascism
+				popularity = 0.8
 			}
+
+			set_politics = { ruling_party = fascism}
 		}
 	}
 
@@ -5657,7 +5679,6 @@ focus = {
 				ideology = fascism
 				popularity = 0.25
 			}
-			set_politics = { ruling_party = fascism}
 			news_event = {id = BA_news.115 days = 2}
 
 			}
@@ -5889,6 +5910,12 @@ focus = {
 		}
 		completion_reward = {
             set_technology = { kivotos_artificial_halo = 1 } 
+			add_tech_bonus = {
+			  name = mystic_engineering_bonus
+			  bonus = 1.5
+			  uses = 2
+			  category = mystic_engineering
+		    }
 		}
 	}
 
