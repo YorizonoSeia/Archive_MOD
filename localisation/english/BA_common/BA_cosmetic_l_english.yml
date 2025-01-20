@@ -1346,7 +1346,26 @@
  HEU_GSC: "키보토스 총학생회 혁명위원회"
  HEU_GSC_ADJ: "키보토스 총학생회 혁명위원회"
  HEU_GSC_DEF: "키보토스 총학생회 혁명위원회"
+ 
+ HEU_west_germanic_union: "룩셈부르크 연합공국"
+ HEU_west_germanic_union_ADJ: "룩셈부르크 연합공국"
+ HEU_west_germanic_union_DEF: "룩셈부르크"
+ #68혁명
+ HEU_west_germanic_union_fascism: "흥신소 68 혁명위원회"
+ HEU_west_germanic_union_fascism_DEF: "흥신소 68 혁명위원회"
+ HEU_west_germanic_union_fascism_ADJ: "흥신소 68"
+ HEU_west_germanic_union_communism: "룩셈부르크 연합공국"
+ HEU_west_germanic_union_communism_DEF: "룩셈부르크 연합공국"
+ HEU_west_germanic_union_communism_ADJ: "룩셈부르크"
 
+ HEU_germanic_union: "게르만 연합공국"
+ HEU_germanic_union_ADJ: "게르만 연합공국"
+ HEU_germanic_union_DEF: "게르만"
+ #68혁명
+ HEU_germanic_union_fascism: "게르만 연합공국"
+ HEU_germanic_union_fascism_DEF: "게르만 연합공국"
+ HEU_germanic_union_fascism_ADJ: "게르만"
+ 
  KAP_proclaimed: "학료도시 카필라"
  KAP_proclaimed_ADJ: "학료도시 카필라"
  KAP_proclaimed_DEF: "학료도시 카필라"
