@@ -12,12 +12,12 @@ characters={
 			}
 		}
 		field_marshal = {
-			traits = { politically_connected }
+			traits = { trait_cautious organisational_leader thorough_planner media_personality  politically_connected }
 			skill=5
 			attack_skill=3
 			defense_skill=2
-			planning_skill=2
-			logistics_skill=5
+			planning_skill=3
+			logistics_skill=2
 			desc = TRN_Nagisa_advisor_desc
 			 
 		}
@@ -110,9 +110,9 @@ characters={
 			traits = {  }
 			skill=1
 			attack_skill=1
-			defense_skill=4
-			planning_skill=6
-			logistics_skill=5
+			defense_skill=1
+			planning_skill=4
+			logistics_skill=1
 			desc = TRN_Seia_advisor_desc
             visible = {
                 NOT = { has_country_flag = TRM_event_59_flag }
@@ -573,11 +573,11 @@ characters={
 		}
 		gender = female
 		corps_commander={
-			skill=2
-			attack_skill=2
-			defense_skill=3
-			planning_skill=3
-			logistics_skill=4
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
 			traits = {  }
 			desc = TRN_Kozeki_Ui_advisor_desc
 		}

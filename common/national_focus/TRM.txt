@@ -1392,14 +1392,8 @@
 			}
             custom_effect_tooltip = tooltip_white_line
             unlock_decision_category_tooltip = TRM_Iron_Sword_Operations_Categorie
-			activate_targeted_decision = {
-				target = NSD
-				decision = TRM_add_core_of_state_65
-			}
-			activate_targeted_decision = {
-				target = KPD
-				decision = TRM_add_core_of_state_61
-			}
+			unlock_decision_tooltip = TRM_add_core_of_state_65
+			unlock_decision_tooltip = TRM_add_core_of_state_61
 		}
 	}
 	focus = {
@@ -3409,14 +3403,10 @@
 		}
 		will_lead_to_war_with = SOV
 		ai_will_do = {
-			base = 500
+			base = 20
 			modifier = {
-				factor = 2
-				has_war = yes
-			}
-			modifier = {
-				factor = 0.5
-				has_war = no
+				factor = 3
+				date > 1944.1.1
 			}
 		}
 		prerequisite = { 
@@ -5815,14 +5805,8 @@
             remove_ideas = TRM_great_depression_2
 			add_dynamic_modifier = { modifier = TRN_trinity_uber_alles_idea }
 			custom_effect_tooltip = TRN_tooltip_nagisa_upgrade_idea
-			activate_targeted_decision = {
-				target = NSD
-				decision = TRM_add_core_of_state_65
-			}
-			activate_targeted_decision = {
-				target = KPD
-				decision = TRM_add_core_of_state_61
-			}
+			unlock_decision_tooltip = TRM_add_core_of_state_65
+			unlock_decision_tooltip = TRM_add_core_of_state_61
 		}
 	}
 
