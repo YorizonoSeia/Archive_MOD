@@ -17,6 +17,14 @@ music = {
 		}		
 	}
 }
+music = {
+	song = "maintheme_5"
+	chance = {
+		modifier = {
+			factor = 0.5
+		}		
+	}
+}
 
 # PEACE SONGS ##################
 music = {

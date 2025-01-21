@@ -18,7 +18,7 @@ focus_tree = {
 	focus = { # 남부 도로 재정비
 		id = RED_road_to_south
 		icon = GFX_goal_generic_construction
-		x = -2
+		x = -10
 		y = 0
 		cost = 4
 		ai_will_do = {
@@ -125,7 +125,7 @@ focus_tree = {
 
 		icon = GFX_focus_generic_industry_2
 		prerequisite = { focus = RED_land_research }
-		x = -6
+		x = -3
 		y = 1
 		relative_position_id = RED_land_research
 		cost = 4
@@ -169,7 +169,7 @@ focus_tree = {
 
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = RED_economy_dev_plan }
-		x = -1
+		x = -4
 		y = 1
 		relative_position_id = RED_economy_dev_plan
 		cost = 4
@@ -232,7 +232,7 @@ focus_tree = {
 		dynamic = yes
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = RED_economy_dev_plan }
-		x = 1
+		x = -2
 		y = 1
 		relative_position_id = RED_economy_dev_plan
 		cost = 4
@@ -245,6 +245,9 @@ focus_tree = {
 			OR = {
 				has_completed_focus = RED_puppet_labor_party
 			}
+		}
+		mutually_exclusive = {
+			focus = RED_new_economy_focus_0
 		}
 
 		completion_reward = {
@@ -703,12 +706,305 @@ focus_tree = {
 			remove_ideas = RED_economy_recover_idea_1
 		}
 	}
+
+	focus = { # 모든 수단 동원
+		id = RED_new_economy_focus_0
+		icon = GFX_focus_SOV_organize_wreckers
+		prerequisite = { focus = RED_economy_dev_plan }
+		x = 2
+		y = 1
+		relative_position_id = RED_economy_dev_plan
+		cost = 4
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+				has_completed_focus = RED_dipose_cherino
+			}
+		}
+		mutually_exclusive = {
+			focus = RED_entice_publicworks
+		}
+		completion_reward = {
+		}
+	}
+	focus = { # 완전고용을 향해
+		id = RED_new_economy_focus_1
+		icon = GFX_focus_generic_full_employment
+		prerequisite = { focus = RED_new_economy_focus_0 }
+		x = -1
+		y = 1
+		relative_position_id = RED_new_economy_focus_0
+		cost = 4
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		completion_reward = {
+		}
+	}
+	focus = { # 직장 개인 배치
+		id = RED_new_economy_focus_2
+		icon = GFX_focus_generic_low_cost_housing
+		prerequisite = { focus = RED_new_economy_focus_1 }
+		x = -1
+		y = 1
+		relative_position_id = RED_new_economy_focus_1
+		cost = 4
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		completion_reward = {
+		}
+	}
+	focus = { # 공공근로
+		id = RED_new_economy_focus_3
+		icon = GFX_focus_generic_public_works
+		prerequisite = { focus = RED_new_economy_focus_1 }
+		x = 1
+		y = 1
+		relative_position_id = RED_new_economy_focus_1
+		cost = 4
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		completion_reward = {
+		}
+	}
+	focus = { # 봉사와 헌신
+		id = RED_new_economy_focus_4
+		icon = GFX_focus_generic_workers
+		prerequisite = { focus = RED_new_economy_focus_2 }
+		prerequisite = { focus = RED_new_economy_focus_3 }
+		x = 0
+		y = 2
+		relative_position_id = RED_new_economy_focus_1
+		cost = 4
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		completion_reward = {
+		}
+	}
+	focus = { # 산업 동원
+		id = RED_new_economy_focus_5
+		icon = GFX_focus_SWE_landsverk
+		prerequisite = { focus = RED_new_economy_focus_0 }
+		x = 1
+		y = 1
+		relative_position_id = RED_new_economy_focus_0
+		cost = 4
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		completion_reward = {
+		}
+	}
+	focus = { # 대규모 군축
+		id = RED_new_economy_focus_6
+		icon = GFX_focus_SWE_defense_act
+		prerequisite = { focus = RED_new_economy_focus_5 }
+		x = 1
+		y = 3
+		relative_position_id = RED_new_economy_focus_0
+		cost = 4
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		completion_reward = {
+		}
+	}
+	focus = { # 붉은겨울 재건채권
+		id = RED_new_economy_focus_7
+		icon = GFX_focus_generic_monetary_union
+		prerequisite = { focus = RED_new_economy_focus_0 }
+		x = 3
+		y = 1
+		relative_position_id = RED_new_economy_focus_0
+		cost = 4
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		completion_reward = {
+		}
+	}
+	focus = { # 카이저로부터의 대출
+		id = RED_new_economy_focus_8
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = RED_new_economy_focus_7 }
+		x = 4
+		y = 2
+		relative_position_id = RED_new_economy_focus_0
+		cost = 4
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		completion_reward = {
+		}
+	}
+	focus = { # 통화 정책
+		id = RED_new_economy_focus_9
+		icon = GFX_focus_fra_devalue_the_franc
+		prerequisite = { focus = RED_new_economy_focus_7 }
+		x = 3
+		y = 3
+		relative_position_id = RED_new_economy_focus_0
+		cost = 4
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		completion_reward = {
+		}
+	}
+	focus = { # 무제한 인플레이션
+		id = RED_new_economy_focus_10
+		icon = GFX_focus_generic_economic_recovery
+		prerequisite = { focus = RED_new_economy_focus_9 }
+		x = 2
+		y = 4
+		relative_position_id = RED_new_economy_focus_0
+		cost = 4
+		mutually_exclusive = {
+			focus = RED_new_economy_focus_11
+		}
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		completion_reward = {
+		}
+	}
+	focus = { # 화폐정지
+		id = RED_new_economy_focus_11
+		icon = GFX_focus_GER_integrated_economies
+		prerequisite = { focus = RED_new_economy_focus_9 }
+		x = 4
+		y = 4
+		relative_position_id = RED_new_economy_focus_0
+		cost = 4
+		mutually_exclusive = {
+			focus = RED_new_economy_focus_10
+		}
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		completion_reward = {
+		}
+	}
+	focus = { # 재산 상한제
+		id = RED_new_economy_focus_12
+		icon = GFX_focus_GER_proletarian_dictatorship
+		prerequisite = { focus = RED_new_economy_focus_10 focus = RED_new_economy_focus_11 }
+		x = 3
+		y = 5
+		relative_position_id = RED_new_economy_focus_0
+		cost = 4
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		completion_reward = {
+		}
+	}
+	focus = { # 노동전표 도입
+		id = RED_new_economy_focus_13
+		icon = GFX_focus_GER_legacy_of_the_spartacus_league
+		prerequisite = { focus = RED_new_economy_focus_11 }
+		x = 5
+		y = 5
+		relative_position_id = RED_new_economy_focus_0
+		cost = 4
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		completion_reward = {
+		}
+	}
+	focus = { # 토지개발
+		id = RED_new_economy_focus_14
+		icon = GFX_focus_GER_autarky_ambitions
+		prerequisite = { focus = RED_new_economy_focus_4 }
+		prerequisite = { focus = RED_new_economy_focus_6 }
+		x = 1
+		y = 1
+		relative_position_id = RED_new_economy_focus_4
+		cost = 4
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		completion_reward = {
+		}
+	}
+	focus = { #자원 채굴 집중
+		id = RED_new_economy_focus_15
+		icon = GFX_focus_GER_factories_for_resources
+		prerequisite = { focus = RED_new_economy_focus_14 }
+		x = -2
+		y = 1
+		relative_position_id = RED_new_economy_focus_14
+		cost = 4
+		mutually_exclusive = {
+			focus = RED_new_economy_focus_16
+		}
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		completion_reward = {
+		}
+	}
+	focus = { # 농업 현대화
+		id = RED_new_economy_focus_16
+		icon = GFX_focus_generic_farmland
+		prerequisite = { focus = RED_new_economy_focus_14 }
+		x = 0
+		y = 1
+		mutually_exclusive = {
+			focus = RED_new_economy_focus_15
+		}
+		relative_position_id = RED_new_economy_focus_14
+		cost = 4
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		completion_reward = {
+		}
+	}
+
+
 	focus = { # 현지 산업 개발안
 		id = RED_economy_focus_3
 
 		icon = GFX_focus_generic_treaty
 		prerequisite = { focus = RED_land_research }
-		x = -1
+		x = 7
 		y = 1
 		relative_position_id = RED_land_research
 		cost = 4
@@ -765,7 +1061,7 @@ focus_tree = {
 
 		icon = GFX_goal_TRM_class_collaboration
 		prerequisite = { focus = RED_land_research }
-		x = 1
+		x = 9
 		y = 1
 		relative_position_id = RED_land_research
 		cost = 2
@@ -1554,7 +1850,7 @@ focus_tree = {
 
 		icon = GFX_focus_generic_self_management
 		prerequisite = { focus = RED_land_research }
-		x = 6
+		x = 14
 		y = 1
 		relative_position_id = RED_land_research
 		cost = 2
@@ -7602,8 +7898,6 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = RED_rearming_focus_6
-		}
-		prerequisite = {
 			focus = RED_artillery
 		}
 		available = {
