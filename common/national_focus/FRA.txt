@@ -5237,7 +5237,7 @@ focus_tree = {
 	}
 	focus = {
 		#신중한 접근
-		icon = GFX_goal_FRA_focus_resistance_2
+		icon = GFX_focus_SWI_embrace_rote_drei
 		id = FRA_focus_resistance_3
 		cost = 5
 		x = -2
@@ -5319,7 +5319,7 @@ focus_tree = {
 	}
 	focus = {
 		#총파업
-		icon = GFX_goal_FRA_red_terror
+		icon = GFX_focus_generic_workers_and_farmers_rise
 		id = FRA_focus_resistance_8
 		cost = 4
 		x = 0
