@@ -4273,7 +4273,9 @@ HEU_german_reunification_war_decision_category = {
 	}
 
 	
-	HEU_german_war_plan = {
+	HEU_german_war_plan_GEM = {
+		#name = HEU_german_war_plan
+
 		priority = 1
 
 		icon = GFX_decision_SWI_expand_covert_operations 
@@ -4282,16 +4284,12 @@ HEU_german_reunification_war_decision_category = {
 			base = 25
 		}
 
-		targets = { GEM GEA GEH TRM KPD NSD }
-
-		target_trigger = {
-			FROM = {
-				has_war_with = ROOT
-				exists = yes
-			}
+		available = {
+			has_war_with = GEM
 		}
 
-		target_root_trigger =  {
+		visible = {
+			country_exists = GEM
 		}
 
 		fire_only_once = yes
@@ -4301,11 +4299,109 @@ HEU_german_reunification_war_decision_category = {
 		days_remove = 365
 		
 		targeted_modifier = {
-			tag = FROM
+			tag = GEM
 			attack_bonus_against = 0.15
 			defense_bonus_against = 0.05
 		}
 	}
+
+	HEU_german_war_plan_GEH = {
+		#name = HEU_german_war_plan
+
+		priority = 1
+
+		icon = GFX_decision_SWI_expand_covert_operations 
+
+		ai_will_do = {
+			base = 25
+		}
+
+		available = {
+			has_war_with = GEH
+		}
+
+		visible = {
+			country_exists = GEH
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+
+		days_remove = 365
+		
+		targeted_modifier = {
+			tag = GEH
+			attack_bonus_against = 0.15
+			defense_bonus_against = 0.05
+		}
+	}
+
+	HEU_german_war_plan_TRM = {
+		#name = HEU_german_war_plan
+
+		priority = 1
+
+		icon = GFX_decision_SWI_expand_covert_operations 
+
+		ai_will_do = {
+			base = 25
+		}
+
+		available = {
+			has_war_with = TRM
+		}
+
+		visible = {
+			country_exists = TRM
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+
+		days_remove = 365
+		
+		targeted_modifier = {
+			tag = TRM
+			attack_bonus_against = 0.15
+			defense_bonus_against = 0.05
+		}
+	}
+
+	#HEU_german_war_plan = {
+	#	priority = 1
+#
+	#	icon = GFX_decision_SWI_expand_covert_operations 
+#
+	#	ai_will_do = {
+	#		base = 25
+	#	}
+#
+	#	targets = { GEM GEA GEH TRM KPD NSD }
+#
+	#	target_trigger = {
+	#		FROM = {
+	#			has_war_with = ROOT
+	#			exists = yes
+	#		}
+	#	}
+#
+	#	target_root_trigger =  {
+	#	}
+#
+	#	fire_only_once = yes
+#
+	#	cost = 25
+#
+	#	days_remove = 365
+	#	
+	#	targeted_modifier = {
+	#		tag = FROM
+	#		attack_bonus_against = 0.15
+	#		defense_bonus_against = 0.05
+	#	}
+	#}
 	
 	HEU_german_negotiations_plan = {
 		priority = 1
@@ -4345,7 +4441,7 @@ HEU_german_reunification_war_decision_category = {
 
 		available = {
 			has_global_flag = HEU_TRM_alliance
-			NOT = { has_war_wih = TRM }
+			NOT = { has_war_with = TRM }
 			OR = {
 				TRM = {
 					has_war_with = GEM
@@ -4696,6 +4792,61 @@ HEU_german_reunification_war_decision_category = {
 				type = artillery_equipment
 				amount = 100
 				producer = GEM
+			}
+		}
+	}
+	
+	HEU_create_militia_in_luxembourg = {
+		icon = GFX_decision_generic_nationalism
+		allowed = {
+			original_tag = HEU
+		}
+
+		available = {
+		}
+		
+		custom_cost_trigger = {
+			command_power > 14.9
+		}
+
+		visible = {
+			has_war = yes
+		}
+
+		custom_cost_text = decision_cost_CP_15
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+		days_remove = 15
+
+		cancel_trigger = {
+			has_war = no
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -15
+			}
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = HEU_mobilise_2_divisions_tt
+			hidden_effect = {
+				HEU_create_militia_template = yes
+				random_controlled_state = {
+					prioritize = { 8 }
+					create_unit = {
+						division = "division_template = \"Benriya Germanische Befreiungsarmee\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "division_template = \"Benriya Germanische Befreiungsarmee\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+				}
 			}
 		}
 	}
