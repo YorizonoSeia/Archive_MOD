@@ -671,7 +671,7 @@ ideas = {
 				war_support_weekly = 0.01
 				surrender_limit = 0.2
 			}
-	   }
+	}
 
 
 	   # 푸딩 지급
@@ -762,18 +762,15 @@ ideas = {
 			   research_speed_factor = 0.1
 			}
 	   }
-	 } 
 
 	 #정의부
-
 	    USA_TRM_justice_club = {
             picture = tfv_can_conscription_crisis
 
 			modifier = {
-                 
+               
 			}
 	   }
-
 
 	   #나기사 화력우세(에덴 군사 중점)
 	   USA_nagisa_cannon = {
@@ -926,10 +923,6 @@ ideas = {
 
 			picture = generic_volunteer_expedition_bonus
 
-			allowed = {
-				original_tag = USA
-			}
-
 			allowed_civil_war = {
 				has_government = communism
 			}
@@ -965,9 +958,6 @@ ideas = {
 				stability_factor = 0.1
 				research_speed_factor = 0.2
 				consumer_goods_factor = 0.15
-
 			}
 		}
-
-	}
 }
