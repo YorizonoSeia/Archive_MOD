@@ -287,6 +287,17 @@ ABY_69_rebuild_effect = {
 			69 = {
 				add_core_of = ABY
 			}
+			custom_effect_tooltip = kivotos_halo_add1_tt
+			hidden_effect = {
+				set_variable = { BA_halo_infantry_cap_edit_var = 1 }
+				BA_halo_infantry_cap_edit_effect = yes
+			}
+			random_owned_state = {
+				create_unit = {
+					division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
+					owner = ABY
+				}
+			}
 		}
 		else_if = {
 			limit = {
@@ -447,6 +458,17 @@ ABY_9_rebuild_effect = {
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			9 = {
 				add_core_of = ABY
+			}
+			custom_effect_tooltip = kivotos_halo_add1_tt
+			hidden_effect = {
+				set_variable = { BA_halo_infantry_cap_edit_var = 1 }
+				BA_halo_infantry_cap_edit_effect = yes
+			}
+			random_owned_state = {
+				create_unit = {
+					division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
+					owner = ABY
+				}
 			}
 		}
 		else_if = {
@@ -609,6 +631,17 @@ ABY_74_rebuild_effect = {
 			74 = {
 				add_core_of = ABY
 			}
+			custom_effect_tooltip = kivotos_halo_add1_tt
+			hidden_effect = {
+				set_variable = { BA_halo_infantry_cap_edit_var = 1 }
+				BA_halo_infantry_cap_edit_effect = yes
+			}
+			random_owned_state = {
+				create_unit = {
+					division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
+					owner = ABY
+				}
+			}
 		}
 		else_if = {
 			limit = {
@@ -769,6 +802,17 @@ ABY_72_rebuild_effect = {
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			72 = {
 				add_core_of = ABY
+			}
+			custom_effect_tooltip = kivotos_halo_add1_tt
+			hidden_effect = {
+				set_variable = { BA_halo_infantry_cap_edit_var = 1 }
+				BA_halo_infantry_cap_edit_effect = yes
+			}
+			random_owned_state = {
+				create_unit = {
+					division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
+					owner = ABY
+				}
 			}
 		}
 		else_if = {
@@ -931,6 +975,17 @@ ABY_75_rebuild_effect = {
 			75 = {
 				add_core_of = ABY
 			}
+			custom_effect_tooltip = kivotos_halo_add1_tt
+			hidden_effect = {
+				set_variable = { BA_halo_infantry_cap_edit_var = 1 }
+				BA_halo_infantry_cap_edit_effect = yes
+			}
+			random_owned_state = {
+				create_unit = {
+					division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
+					owner = ABY
+				}
+			}
 		}
 		else_if = {
 			limit = {
@@ -1091,6 +1146,17 @@ ABY_972_rebuild_effect = {
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			972 = {
 				add_core_of = ABY
+			}
+			custom_effect_tooltip = kivotos_halo_add1_tt
+			hidden_effect = {
+				set_variable = { BA_halo_infantry_cap_edit_var = 1 }
+				BA_halo_infantry_cap_edit_effect = yes
+			}
+			random_owned_state = {
+				create_unit = {
+					division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
+					owner = ABY
+				}
 			}
 		}
 		else_if = {
@@ -1253,6 +1319,17 @@ ABY_986_rebuild_effect = {
 			986 = {
 				add_core_of = ABY
 			}
+			custom_effect_tooltip = kivotos_halo_add1_tt
+			hidden_effect = {
+				set_variable = { BA_halo_infantry_cap_edit_var = 1 }
+				BA_halo_infantry_cap_edit_effect = yes
+			}
+			random_owned_state = {
+				create_unit = {
+					division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
+					owner = ABY
+				}
+			}
 		}
 		else_if = {
 			limit = {
@@ -1413,6 +1490,17 @@ ABY_975_rebuild_effect = {
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			975 = {
 				add_core_of = ABY
+			}
+			custom_effect_tooltip = kivotos_halo_add1_tt
+			hidden_effect = {
+				set_variable = { BA_halo_infantry_cap_edit_var = 1 }
+				BA_halo_infantry_cap_edit_effect = yes
+			}
+			random_owned_state = {
+				create_unit = {
+					division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
+					owner = ABY
+				}
 			}
 		}
 		else_if = {
@@ -1575,6 +1663,17 @@ ABY_4_rebuild_effect = {
 			4 = {
 				add_core_of = ABY
 			}
+			custom_effect_tooltip = kivotos_halo_add1_tt
+			hidden_effect = {
+				set_variable = { BA_halo_infantry_cap_edit_var = 1 }
+				BA_halo_infantry_cap_edit_effect = yes
+			}
+			random_owned_state = {
+				create_unit = {
+					division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
+					owner = ABY
+				}
+			}
 		}
 		else_if = {
 			limit = {
@@ -1735,6 +1834,17 @@ ABY_976_rebuild_effect = {
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			976 = {
 				add_core_of = ABY
+			}
+			custom_effect_tooltip = kivotos_halo_add1_tt
+			hidden_effect = {
+				set_variable = { BA_halo_infantry_cap_edit_var = 1 }
+				BA_halo_infantry_cap_edit_effect = yes
+			}
+			random_owned_state = {
+				create_unit = {
+					division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
+					owner = ABY
+				}
 			}
 		}
 		else_if = {
@@ -1897,6 +2007,17 @@ ABY_152_rebuild_effect = {
 			152 = {
 				add_core_of = ABY
 			}
+			custom_effect_tooltip = kivotos_halo_add1_tt
+			hidden_effect = {
+				set_variable = { BA_halo_infantry_cap_edit_var = 1 }
+				BA_halo_infantry_cap_edit_effect = yes
+			}
+			random_owned_state = {
+				create_unit = {
+					division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
+					owner = ABY
+				}
+			}
 		}
 		else_if = {
 			limit = {
@@ -2058,6 +2179,17 @@ ABY_153_rebuild_effect = {
 			153 = {
 				add_core_of = ABY
 			}
+			custom_effect_tooltip = kivotos_halo_add1_tt
+			hidden_effect = {
+				set_variable = { BA_halo_infantry_cap_edit_var = 1 }
+				BA_halo_infantry_cap_edit_effect = yes
+			}
+			random_owned_state = {
+				create_unit = {
+					division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
+					owner = ABY
+				}
+			}
 		}
 		else_if = {
 			limit = {
@@ -2218,6 +2350,17 @@ ABY_848_rebuild_effect = {
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			848 = {
 				add_core_of = ABY
+			}
+			custom_effect_tooltip = kivotos_halo_add1_tt
+			hidden_effect = {
+				set_variable = { BA_halo_infantry_cap_edit_var = 1 }
+				BA_halo_infantry_cap_edit_effect = yes
+			}
+			random_owned_state = {
+				create_unit = {
+					division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
+					owner = ABY
+				}
 			}
 		}
 		else_if = {

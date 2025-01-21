@@ -171,264 +171,264 @@ ABY_balance_of_power_category_3 = {
 			}
 		}
 	}
-	ABY_bop_two_world_unite_on = {
-		priority = 100
-		icon = GFX_decision_eng_propaganda_campaigns
-
-		allowed = {
-			original_tag = ABY
-		}
-
-		ai_will_do = {
-			base = 10
-		}
-
-		visible = {
-			NOT = {has_country_flag = ABY_flag_two_world_unite}
-		}
-
-		cost = 0
-
-		days_remove = 0
-		modifier = {
-		}
-		
-		remove_effect = {
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = ABY_idea_two_0
-					add_idea = ABY_idea_two_1
-				}
-			}
-			hidden_effect = {
-				add_to_variable = {
-					ABY_var_command_power_gain_mult = -0.25
-				}
-				add_to_variable = {
-					ABY_var_army_core_attack_factor = 0.1
-				}
-				add_to_variable = {
-					ABY_var_army_core_defence_factor = 0.1
-				}
-			}
-			set_country_flag = ABY_flag_two_world_unite
-		}
-	}
-	ABY_bop_two_world_unite_off = {
-		priority = 100
-		icon = GFX_decision_eng_propaganda_campaigns
-
-		allowed = {
-			original_tag = ABY
-		}
-
-		ai_will_do = {
-			base = 10
-		}
-
-		visible = {
-			has_country_flag = ABY_flag_two_world_unite
-		}
-
-		cost = 0
-
-		days_remove = 0
-		modifier = {
-		}
-		
-		remove_effect = {
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = ABY_idea_two_0
-					add_idea = ABY_idea_two_2
-				}
-			}
-			hidden_effect = {
-				add_to_variable = {
-					ABY_var_command_power_gain_mult = 0.25
-				}
-				add_to_variable = {
-					ABY_var_army_core_attack_factor = -0.1
-				}
-				add_to_variable = {
-					ABY_var_army_core_defence_factor = -0.1
-				}
-			}
-			clr_country_flag = ABY_flag_two_world_unite
-		}
-	}
-	ABY_bop_aggresive_stratgy_on = {
-		priority = 100
-		icon = GFX_decision_eng_propaganda_campaigns
-
-		allowed = {
-			original_tag = ABY
-		}
-
-		ai_will_do = {
-			base = 10
-		}
-
-		visible = {
-			NOT = {has_country_flag = ABY_flag_aggresive_stratgy}
-		}
-
-		cost = 0
-
-		days_remove = 0
-		modifier = {
-		}
-		
-		remove_effect = {
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = ABY_idea_two_0
-					add_idea = ABY_idea_two_3
-				}
-			}
-			hidden_effect = {
-				add_to_variable = {
-					ABY_var_command_power_gain_mult = -0.15
-				}
-				add_to_variable = {
-					ABY_var_experience_gain_army_factor = 0.15
-				}
-				add_to_variable = {
-					ABY_var_power_balance_daily = 0.001
-				}
-			}
-			set_country_flag = ABY_flag_aggresive_stratgy
-		}
-	}
-	ABY_bop_aggresive_stratgy_off = {
-		priority = 100
-		icon = GFX_decision_eng_propaganda_campaigns
-
-		allowed = {
-			original_tag = ABY
-		}
-
-		ai_will_do = {
-			base = 10
-		}
-
-		visible = {
-			has_country_flag = ABY_flag_aggresive_stratgy
-		}
-
-		cost = 0
-
-		days_remove = 0
-		modifier = {
-		}
-		
-		remove_effect = {
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = ABY_idea_two_0
-					add_idea = ABY_idea_two_4
-				}
-			}
-			hidden_effect = {
-				add_to_variable = {
-					ABY_var_command_power_gain_mult = 0.15
-				}
-				add_to_variable = {
-					ABY_var_experience_gain_army_factor = -0.15
-				}
-				add_to_variable = {
-					ABY_var_power_balance_daily = -0.001
-				}
-			}
-			clr_country_flag = ABY_flag_aggresive_stratgy
-		}
-	}
-	ABY_bop_wnrnjsdml_dnfxkfl_on = {
-		priority = 100
-		icon = GFX_decision_eng_propaganda_campaigns
-
-		allowed = {
-			original_tag = ABY
-		}
-
-		ai_will_do = {
-			base = 10
-		}
-
-		visible = {
-			NOT = {has_country_flag = ABY_flag_wnrnjsdml_dnfxkfl}
-		}
-
-		cost = 0
-
-		days_remove = 0
-		modifier = {
-		}
-		
-		remove_effect = {
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = ABY_idea_two_0
-					add_idea = ABY_idea_two_5
-				}
-			}
-			hidden_effect = {
-				add_to_variable = {
-					ABY_var_compliance_gain = 0.1
-				}
-				add_to_variable = {
-					ABY_var_political_power_cost = 0.25
-				}
-				add_to_variable = {
-					ABY_var_power_balance_daily = -0.001
-				}
-			}
-			set_country_flag = ABY_flag_wnrnjsdml_dnfxkfl
-		}
-	}
-	ABY_bop_wnrnjsdml_dnfxkfl_off = {
-		priority = 100
-		icon = GFX_decision_eng_propaganda_campaigns
-
-		allowed = {
-			original_tag = ABY
-		}
-
-		ai_will_do = {
-			base = 10
-		}
-
-		visible = {
-			has_country_flag = ABY_flag_wnrnjsdml_dnfxkfl
-		}
-
-		cost = 0
-
-		days_remove = 0
-		modifier = {
-		}
-		
-		remove_effect = {
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = ABY_idea_two_0
-					add_idea = ABY_idea_two_6
-				}
-			}
-			hidden_effect = {
-				add_to_variable = {
-					ABY_var_compliance_gain = -0.1
-				}
-				add_to_variable = {
-					ABY_var_political_power_cost = -0.25
-				}
-				add_to_variable = {
-					ABY_var_power_balance_daily = 0.001
-				}
-			}
-			clr_country_flag = ABY_flag_wnrnjsdml_dnfxkfl
-		}
-	}
+	#ABY_bop_two_world_unite_on = {
+	#	priority = 100
+	#	icon = GFX_decision_eng_propaganda_campaigns
+#
+	#	allowed = {
+	#		original_tag = ABY
+	#	}
+#
+	#	ai_will_do = {
+	#		base = 10
+	#	}
+#
+	#	visible = {
+	#		NOT = {has_country_flag = ABY_flag_two_world_unite}
+	#	}
+#
+	#	cost = 0
+#
+	#	days_remove = 0
+	#	modifier = {
+	#	}
+	#	
+	#	remove_effect = {
+	#		effect_tooltip = {
+	#			swap_ideas = {
+	#				remove_idea = ABY_idea_two_0
+	#				add_idea = ABY_idea_two_1
+	#			}
+	#		}
+	#		hidden_effect = {
+	#			add_to_variable = {
+	#				ABY_var_command_power_gain_mult = -0.25
+	#			}
+	#			add_to_variable = {
+	#				ABY_var_army_core_attack_factor = 0.1
+	#			}
+	#			add_to_variable = {
+	#				ABY_var_army_core_defence_factor = 0.1
+	#			}
+	#		}
+	#		set_country_flag = ABY_flag_two_world_unite
+	#	}
+	#}
+	#ABY_bop_two_world_unite_off = {
+	#	priority = 100
+	#	icon = GFX_decision_eng_propaganda_campaigns
+#
+	#	allowed = {
+	#		original_tag = ABY
+	#	}
+#
+	#	ai_will_do = {
+	#		base = 10
+	#	}
+#
+	#	visible = {
+	#		has_country_flag = ABY_flag_two_world_unite
+	#	}
+#
+	#	cost = 0
+#
+	#	days_remove = 0
+	#	modifier = {
+	#	}
+	#	
+	#	remove_effect = {
+	#		effect_tooltip = {
+	#			swap_ideas = {
+	#				remove_idea = ABY_idea_two_0
+	#				add_idea = ABY_idea_two_2
+	#			}
+	#		}
+	#		hidden_effect = {
+	#			add_to_variable = {
+	#				ABY_var_command_power_gain_mult = 0.25
+	#			}
+	#			add_to_variable = {
+	#				ABY_var_army_core_attack_factor = -0.1
+	#			}
+	#			add_to_variable = {
+	#				ABY_var_army_core_defence_factor = -0.1
+	#			}
+	#		}
+	#		clr_country_flag = ABY_flag_two_world_unite
+	#	}
+	#}
+	#ABY_bop_aggresive_stratgy_on = {
+	#	priority = 100
+	#	icon = GFX_decision_eng_propaganda_campaigns
+#
+	#	allowed = {
+	#		original_tag = ABY
+	#	}
+#
+	#	ai_will_do = {
+	#		base = 10
+	#	}
+#
+	#	visible = {
+	#		NOT = {has_country_flag = ABY_flag_aggresive_stratgy}
+	#	}
+#
+	#	cost = 0
+#
+	#	days_remove = 0
+	#	modifier = {
+	#	}
+	#	
+	#	remove_effect = {
+	#		effect_tooltip = {
+	#			swap_ideas = {
+	#				remove_idea = ABY_idea_two_0
+	#				add_idea = ABY_idea_two_3
+	#			}
+	#		}
+	#		hidden_effect = {
+	#			add_to_variable = {
+	#				ABY_var_command_power_gain_mult = -0.15
+	#			}
+	#			add_to_variable = {
+	#				ABY_var_experience_gain_army_factor = 0.15
+	#			}
+	#			add_to_variable = {
+	#				ABY_var_power_balance_daily = 0.001
+	#			}
+	#		}
+	#		set_country_flag = ABY_flag_aggresive_stratgy
+	#	}
+	#}
+	#ABY_bop_aggresive_stratgy_off = {
+	#	priority = 100
+	#	icon = GFX_decision_eng_propaganda_campaigns
+#
+	#	allowed = {
+	#		original_tag = ABY
+	#	}
+#
+	#	ai_will_do = {
+	#		base = 10
+	#	}
+#
+	#	visible = {
+	#		has_country_flag = ABY_flag_aggresive_stratgy
+	#	}
+#
+	#	cost = 0
+#
+	#	days_remove = 0
+	#	modifier = {
+	#	}
+	#	
+	#	remove_effect = {
+	#		effect_tooltip = {
+	#			swap_ideas = {
+	#				remove_idea = ABY_idea_two_0
+	#				add_idea = ABY_idea_two_4
+	#			}
+	#		}
+	#		hidden_effect = {
+	#			add_to_variable = {
+	#				ABY_var_command_power_gain_mult = 0.15
+	#			}
+	#			add_to_variable = {
+	#				ABY_var_experience_gain_army_factor = -0.15
+	#			}
+	#			add_to_variable = {
+	#				ABY_var_power_balance_daily = -0.001
+	#			}
+	#		}
+	#		clr_country_flag = ABY_flag_aggresive_stratgy
+	#	}
+	#}
+	#ABY_bop_wnrnjsdml_dnfxkfl_on = {
+	#	priority = 100
+	#	icon = GFX_decision_eng_propaganda_campaigns
+#
+	#	allowed = {
+	#		original_tag = ABY
+	#	}
+#
+	#	ai_will_do = {
+	#		base = 10
+	#	}
+#
+	#	visible = {
+	#		NOT = {has_country_flag = ABY_flag_wnrnjsdml_dnfxkfl}
+	#	}
+#
+	#	cost = 0
+#
+	#	days_remove = 0
+	#	modifier = {
+	#	}
+	#	
+	#	remove_effect = {
+	#		effect_tooltip = {
+	#			swap_ideas = {
+	#				remove_idea = ABY_idea_two_0
+	#				add_idea = ABY_idea_two_5
+	#			}
+	#		}
+	#		hidden_effect = {
+	#			add_to_variable = {
+	#				ABY_var_compliance_gain = 0.1
+	#			}
+	#			add_to_variable = {
+	#				ABY_var_political_power_cost = 0.25
+	#			}
+	#			add_to_variable = {
+	#				ABY_var_power_balance_daily = -0.001
+	#			}
+	#		}
+	#		set_country_flag = ABY_flag_wnrnjsdml_dnfxkfl
+	#	}
+	#}
+	#ABY_bop_wnrnjsdml_dnfxkfl_off = {
+	#	priority = 100
+	#	icon = GFX_decision_eng_propaganda_campaigns
+#
+	#	allowed = {
+	#		original_tag = ABY
+	#	}
+#
+	#	ai_will_do = {
+	#		base = 10
+	#	}
+#
+	#	visible = {
+	#		has_country_flag = ABY_flag_wnrnjsdml_dnfxkfl
+	#	}
+#
+	#	cost = 0
+#
+	#	days_remove = 0
+	#	modifier = {
+	#	}
+	#	
+	#	remove_effect = {
+	#		effect_tooltip = {
+	#			swap_ideas = {
+	#				remove_idea = ABY_idea_two_0
+	#				add_idea = ABY_idea_two_6
+	#			}
+	#		}
+	#		hidden_effect = {
+	#			add_to_variable = {
+	#				ABY_var_compliance_gain = -0.1
+	#			}
+	#			add_to_variable = {
+	#				ABY_var_political_power_cost = -0.25
+	#			}
+	#			add_to_variable = {
+	#				ABY_var_power_balance_daily = 0.001
+	#			}
+	#		}
+	#		clr_country_flag = ABY_flag_wnrnjsdml_dnfxkfl
+	#	}
+	#}
 	ABY_bop_school_more_money = {
 		priority = 100
 		icon = GFX_decision_eng_propaganda_campaigns

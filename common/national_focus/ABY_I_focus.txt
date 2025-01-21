@@ -681,6 +681,20 @@ focus_tree = {
 				set_variable = { BA_halo_infantry_cap_edit_var = 3 }
 				BA_halo_infantry_cap_edit_effect = yes
 			}
+			random_owned_state = {
+				create_unit = {
+					division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
+					owner = ABY
+				}
+				create_unit = {
+					division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
+					owner = ABY
+				}
+				create_unit = {
+					division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
+					owner = ABY
+				}
+			}
 			custom_effect_tooltip = ABY_flag_czech_unite_tt
 			ABY_9_unite_effect = yes
 			ABY_972_unite_effect = yes
@@ -728,6 +742,20 @@ focus_tree = {
 			hidden_effect = {
 				set_variable = { BA_halo_infantry_cap_edit_var = 3 }
 				BA_halo_infantry_cap_edit_effect = yes
+			}
+			random_owned_state = {
+				create_unit = {
+					division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
+					owner = ABY
+				}
+				create_unit = {
+					division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
+					owner = ABY
+				}
+				create_unit = {
+					division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
+					owner = ABY
+				}
 			}
 			every_state = {
 				limit = {
@@ -782,6 +810,20 @@ focus_tree = {
 				set_variable = { BA_halo_infantry_cap_edit_var = 3 }
 				BA_halo_infantry_cap_edit_effect = yes
 			}
+			random_owned_state = {
+				create_unit = {
+					division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
+					owner = ABY
+				}
+				create_unit = {
+					division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
+					owner = ABY
+				}
+				create_unit = {
+					division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
+					owner = ABY
+				}
+			}
 			every_state = {
 				limit = {
 					OR = {
@@ -832,6 +874,20 @@ focus_tree = {
 			hidden_effect = {
 				set_variable = { BA_halo_infantry_cap_edit_var = 3 }
 				BA_halo_infantry_cap_edit_effect = yes
+			}
+			random_owned_state = {
+				create_unit = {
+					division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
+					owner = ABY
+				}
+				create_unit = {
+					division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
+					owner = ABY
+				}
+				create_unit = {
+					division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
+					owner = ABY
+				}
 			}
 			custom_effect_tooltip = ABY_flag_austria_unite_tt
 			ABY_4_unite_effect = yes
@@ -1419,6 +1475,2285 @@ focus_tree = {
 		}
 		available = {
 			has_country_flag = GAEBALJUNG
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_anti_nazi_resistance  #중점명
+		#icon = GFX_ABY_focus_2
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			focus = ABY_focus_unite_front   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = -14      #좌표
+		y = 1
+		relative_position_id = ABY_focus_great_donau
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_with_kivotos  #중점명
+		#icon = GFX_ABY_focus_2
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 0      #좌표
+		y = 1
+		relative_position_id = ABY_focus_anti_nazi_resistance
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_highlander_volunteer  #중점명
+		#icon = GFX_ABY_focus_2
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 0      #좌표
+		y = 1
+		relative_position_id = ABY_focus_with_kivotos
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_get_rkafltlf  #중점명
+		#icon = GFX_ABY_focus_2
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 0      #좌표
+		y = 1
+		relative_position_id = ABY_focus_highlander_volunteer
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_with_suo  #중점명
+		#icon = GFX_ABY_focus_2
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = -1      #좌표
+		y = 1
+		relative_position_id = ABY_focus_get_rkafltlf
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_no_suo  #중점명
+		#icon = GFX_ABY_focus_2
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 1      #좌표
+		y = 1
+		relative_position_id = ABY_focus_get_rkafltlf
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_unite_loyal  #중점명
+		#icon = GFX_ABY_focus_2
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 10      #좌표
+		y = 1
+		relative_position_id = ABY_focus_no_suo
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_unite_kivotos_resistance  #중점명
+		#icon = GFX_ABY_focus_2
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 1      #좌표
+		y = 1
+		relative_position_id = ABY_focus_unite_loyal
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_great_purge  #중점명
+		#icon = GFX_ABY_focus_2
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 0      #좌표
+		y = 1
+		relative_position_id = ABY_focus_unite_kivotos_resistance
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
+		id = ABY_focus_ocuupied_lands    #중점명
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			  #이전 중점
+		}
+		mutually_exclusive = {
+			    #반대되는 중점
+		}
+		x = 2     #좌표
+		y = 1
+		relative_position_id = ABY_focus_great_purge
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			custom_effect_tooltip = ABY_occupy_tt_1 
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
+		id = ABY_focus_ocuupied_lands_army    #중점명
+		icon = GFX_focus_generic_army_tanks2
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			focus = ABY_focus_ocuupied_lands  #이전 중점
+		}
+		mutually_exclusive = {
+			    #반대되는 중점
+		}
+		x = 0      #좌표
+		y = 1
+		relative_position_id = ABY_focus_ocuupied_lands
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			custom_effect_tooltip = ABY_occupy_tt_4
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
+		id = ABY_focus_ocuupied_lands_industry    #중점명
+		icon = GFX_focus_generic_industry_2
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			focus = ABY_focus_ocuupied_lands_army  #이전 중점
+		}
+		mutually_exclusive = {
+			    #반대되는 중점
+		}
+		x = 0      #좌표
+		y = 1
+		relative_position_id = ABY_focus_ocuupied_lands_army
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			custom_effect_tooltip = ABY_occupy_tt_5
+			#중점 완료시 얻는 보상
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_improve_empireism  #중점명
+		#icon = GFX_ABY_focus_2
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = -1      #좌표
+		y = 1
+		relative_position_id = ABY_focus_unite_loyal
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_wkfurrjstjfwndml  #중점명
+		#icon = GFX_ABY_focus_2
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 0      #좌표
+		y = 1
+		relative_position_id = ABY_focus_improve_empireism
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
+		id = ABY_focus_improve_rnsrnrwndml    #중점명
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			  #이전 중점
+		}
+		mutually_exclusive = {
+			    #반대되는 중점
+		}
+		x = 1     #좌표
+		y = 1
+		relative_position_id = ABY_focus_wkfurrjstjfwndml
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
+		id = ABY_focus_qngkrtodghlwkd    #중점명
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			  #이전 중점
+		}
+		mutually_exclusive = {
+			    #반대되는 중점
+		}
+		x = -1     #좌표
+		y = 1
+		relative_position_id = ABY_focus_wkfurrjstjfwndml
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
+		id = ABY_focus_ryfus    #중점명
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			  #이전 중점
+		}
+		mutually_exclusive = {
+			    #반대되는 중점
+		}
+		x = 1     #좌표
+		y = 1
+		relative_position_id = ABY_focus_improve_rnsrnrwndml
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
+		id = ABY_focus_gkrrnseks    #중점명
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			  #이전 중점
+		}
+		mutually_exclusive = {
+			    #반대되는 중점
+		}
+		x = 0     #좌표
+		y = 1
+		relative_position_id = ABY_focus_ryfus
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
+		id = ABY_focus_kivotos_infantry    #중점명
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			  #이전 중점
+		}
+		mutually_exclusive = {
+			    #반대되는 중점
+		}
+		x = -1     #좌표
+		y = 1
+		relative_position_id = ABY_focus_improve_rnsrnrwndml
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
+		id = ABY_focus_more_myth    #중점명
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			  #이전 중점
+		}
+		mutually_exclusive = {
+			    #반대되는 중점
+		}
+		x = 0     #좌표
+		y = 1
+		relative_position_id = ABY_focus_kivotos_infantry
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
+		id = ABY_focus_abydos_militerism    #중점명
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			  #이전 중점
+		}
+		mutually_exclusive = {
+			    #반대되는 중점
+		}
+		x = 1     #좌표
+		y = 1
+		relative_position_id = ABY_focus_more_myth
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
+		id = ABY_focus_invade_north    #중점명
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			  #이전 중점
+		}
+		mutually_exclusive = {
+			    #반대되는 중점
+		}
+		x = -3     #좌표
+		y = 1
+		relative_position_id = ABY_focus_improve_rnsrnrwndml
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
+		id = ABY_focus_give_highlander    #중점명
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			  #이전 중점
+		}
+		mutually_exclusive = {
+			    #반대되는 중점
+		}
+		x = 1     #좌표
+		y = 2
+		relative_position_id = ABY_focus_invade_north
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
+		id = ABY_focus_highlander_with    #중점명
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			  #이전 중점
+		}
+		mutually_exclusive = {
+			    #반대되는 중점
+		}
+		x = 3     #좌표
+		y = 1
+		relative_position_id = ABY_focus_give_highlander
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
+		id = ABY_focus_talk_silesia    #중점명
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			  #이전 중점
+		}
+		mutually_exclusive = {
+			    #반대되는 중점
+		}
+		x = 2     #좌표
+		y = 1
+		relative_position_id = ABY_focus_highlander_with
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
+		id = ABY_focus_ungerground_talk    #중점명
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			  #이전 중점
+		}
+		mutually_exclusive = {
+			    #반대되는 중점
+		}
+		x = 0     #좌표
+		y = 1
+		relative_position_id = ABY_focus_highlander_with
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
+		id = ABY_focus_unite_with_native    #중점명
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			  #이전 중점
+		}
+		mutually_exclusive = {
+			    #반대되는 중점
+		}
+		x = 0     #좌표
+		y = 1
+		relative_position_id = ABY_focus_ungerground_talk
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
+		id = ABY_focus_no_redwinter    #중점명
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			  #이전 중점
+		}
+		mutually_exclusive = {
+			    #반대되는 중점
+		}
+		x = 0     #좌표
+		y = 1
+		relative_position_id = ABY_focus_unite_with_native
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
+		id = ABY_focus_france_no_aggresive    #중점명
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			  #이전 중점
+		}
+		mutually_exclusive = {
+			    #반대되는 중점
+		}
+		x = -2     #좌표
+		y = 1
+		relative_position_id = ABY_focus_ungerground_talk
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
+		id = ABY_focus_west_wall    #중점명
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			  #이전 중점
+		}
+		mutually_exclusive = {
+			    #반대되는 중점
+		}
+		x = 0     #좌표
+		y = 1
+		relative_position_id = ABY_focus_france_no_aggresive
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
+		id = ABY_focus_give_soviet    #중점명
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			  #이전 중점
+		}
+		mutually_exclusive = {
+			    #반대되는 중점
+		}
+		x = 3     #좌표
+		y = 1
+		relative_position_id = ABY_focus_ungerground_talk
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
+		id = ABY_focus_soviet_no_aggresive    #중점명
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			  #이전 중점
+		}
+		mutually_exclusive = {
+			    #반대되는 중점
+		}
+		x = 0     #좌표
+		y = 1
+		relative_position_id = ABY_focus_give_soviet
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
+		id = ABY_focus_east_wall    #중점명
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			  #이전 중점
+		}
+		mutually_exclusive = {
+			    #반대되는 중점
+		}
+		x = 0     #좌표
+		y = 1
+		relative_position_id = ABY_focus_soviet_no_aggresive
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
+		id = ABY_focus_support_CCC_resistance    #중점명
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			  #이전 중점
+		}
+		mutually_exclusive = {
+			    #반대되는 중점
+		}
+		x = 1     #좌표
+		y = 3
+		relative_position_id = ABY_focus_ungerground_talk
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
+		id = ABY_focus_anti_rkafltlf    #중점명
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			  #이전 중점
+		}
+		mutually_exclusive = {
+			    #반대되는 중점
+		}
+		x = -1     #좌표
+		y = 3
+		relative_position_id = ABY_focus_ungerground_talk
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
+		id = ABY_focus_support_CCC    #중점명
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			  #이전 중점
+		}
+		mutually_exclusive = {
+			    #반대되는 중점
+		}
+		x = 1     #좌표
+		y = 1
+		relative_position_id = ABY_focus_anti_rkafltlf
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
+		id = ABY_focus_great_suo    #중점명
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			  #이전 중점
+		}
+		mutually_exclusive = {
+			    #반대되는 중점
+		}
+		x = -3     #좌표
+		y = 1
+		relative_position_id = ABY_focus_give_highlander
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
+		id = ABY_focus_annex_highlander    #중점명
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			  #이전 중점
+		}
+		mutually_exclusive = {
+			    #반대되는 중점
+		}
+		x = 0     #좌표
+		y = 1
+		relative_position_id = ABY_focus_great_suo
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
+		id = ABY_focus_unite_with_midterian    #중점명
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			  #이전 중점
+		}
+		mutually_exclusive = {
+			    #반대되는 중점
+		}
+		x = 0     #좌표
+		y = 1
+		relative_position_id = ABY_focus_annex_highlander
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
+		id = ABY_focus_liberate_north_africa    #중점명
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			  #이전 중점
+		}
+		mutually_exclusive = {
+			    #반대되는 중점
+		}
+		x = 0     #좌표
+		y = 1
+		relative_position_id = ABY_focus_unite_with_midterian
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
+		id = ABY_focus_extract_suo    #중점명
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			  #이전 중점
+		}
+		mutually_exclusive = {
+			    #반대되는 중점
+		}
+		x = -1     #좌표
+		y = 1
+		relative_position_id = ABY_focus_give_highlander
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
+		id = ABY_focus_2nd_qnrqjf    #중점명
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			  #이전 중점
+		}
+		mutually_exclusive = {
+			    #반대되는 중점
+		}
+		x = 0     #좌표
+		y = 1
+		relative_position_id = ABY_focus_extract_suo
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
+		id = ABY_focus_west_attack    #중점명
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			  #이전 중점
+		}
+		mutually_exclusive = {
+			    #반대되는 중점
+		}
+		x = 0     #좌표
+		y = 1
+		relative_position_id = ABY_focus_2nd_qnrqjf
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
+		id = ABY_focus_to_moscow    #중점명
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			  #이전 중점
+		}
+		mutually_exclusive = {
+			    #반대되는 중점
+		}
+		x = 0     #좌표
+		y = 1
+		relative_position_id = ABY_focus_west_attack
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
+		id = ABY_focus_to_north    #중점명
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			  #이전 중점
+		}
+		mutually_exclusive = {
+			    #반대되는 중점
+		}
+		x = -1     #좌표
+		y = 1
+		relative_position_id = ABY_focus_to_moscow
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
+		id = ABY_focus_remake_territory    #중점명
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			  #이전 중점
+		}
+		mutually_exclusive = {
+			    #반대되는 중점
+		}
+		x = 0     #좌표
+		y = 1
+		relative_position_id = ABY_focus_to_north
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
+		id = ABY_focus_plan_north    #중점명
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			  #이전 중점
+		}
+		mutually_exclusive = {
+			    #반대되는 중점
+		}
+		x = -1     #좌표
+		y = 1
+		relative_position_id = ABY_focus_invade_north
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
+		id = ABY_focus_rhdrurwjs    #중점명
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			  #이전 중점
+		}
+		mutually_exclusive = {
+			    #반대되는 중점
+		}
+		x = 0     #좌표
+		y = 1
+		relative_position_id = ABY_focus_plan_north
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_qhrnjstjsrj  #중점명
+		#icon = GFX_ABY_focus_2
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = -3      #좌표
+		y = 1
+		relative_position_id = ABY_focus_unite_loyal
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_elect_hoshino  #중점명
+		#icon = GFX_ABY_focus_2
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 0      #좌표
+		y = 1
+		relative_position_id = ABY_focus_qhrnjstjsrj
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_nephtys_cooperation_country  #중점명
+		#icon = GFX_ABY_focus_2
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = -1      #좌표
+		y = 1
+		relative_position_id = ABY_focus_no_suo
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_recruit_saint_nephtys  #중점명
+		#icon = GFX_ABY_focus_2
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 0      #좌표
+		y = 1
+		relative_position_id = ABY_focus_nephtys_cooperation_country
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_annex_rothschild  #중점명
+		#icon = GFX_ABY_focus_2
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 0      #좌표
+		y = 2
+		relative_position_id = ABY_focus_recruit_saint_nephtys
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_press_abydos  #중점명
+		#icon = GFX_ABY_focus_2
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 2      #좌표
+		y = 1
+		relative_position_id = ABY_focus_nephtys_cooperation_country
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_internal_divide  #중점명
+		#icon = GFX_ABY_focus_2
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = -1      #좌표
+		y = 1
+		relative_position_id = ABY_focus_press_abydos
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_buy_cornjs  #중점명
+		#icon = GFX_ABY_focus_2
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 1      #좌표
+		y = 1
+		relative_position_id = ABY_focus_press_abydos
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_demend_cornjs  #중점명
+		#icon = GFX_ABY_focus_2
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 0      #좌표
+		y = 1
+		relative_position_id = ABY_focus_buy_cornjs
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
+		id = ABY_focus_cpgbgkrdnjs  #중점명
+		#icon = GFX_ABY_focus_2
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 0      #좌표
+		y = 1
+		relative_position_id = ABY_focus_demend_cornjs
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
+		id = ABY_focus_wjdruddbckr  #중점명
+		#icon = GFX_ABY_focus_2
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = -2      #좌표
+		y = 1
+		relative_position_id = ABY_focus_nephtys_cooperation_country
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
+		id = ABY_focus_fatherland_front_come  #중점명
+		#icon = GFX_ABY_focus_2
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = -1      #좌표
+		y = 1
+		relative_position_id = ABY_focus_wjdruddbckr
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
+		id = ABY_focus_support_new_party  #중점명
+		#icon = GFX_ABY_focus_2
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 1      #좌표
+		y = 1
+		relative_position_id = ABY_focus_wjdruddbckr
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
+		id = ABY_focus_rmarnjswjdcl  #중점명
+		#icon = GFX_ABY_focus_2
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 1      #좌표
+		y = 1
+		relative_position_id = ABY_focus_fatherland_front_come
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
+		id = ABY_focus_annex_jew_money  #중점명
+		#icon = GFX_ABY_focus_2
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 1      #좌표
+		y = 1
+		relative_position_id = ABY_focus_rmarnjswjdcl
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
+		id = ABY_focus_dismiss_fatherland_front  #중점명
+		#icon = GFX_ABY_focus_2
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = -1      #좌표
+		y = 1
+		relative_position_id = ABY_focus_annex_jew_money
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
+		id = ABY_focus_support_highlander  #중점명
+		#icon = GFX_ABY_focus_2
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 3      #좌표
+		y = 1
+		relative_position_id = ABY_focus_rmarnjswjdcl
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
+		id = ABY_focus_get_GEH  #중점명
+		#icon = GFX_ABY_focus_2
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 3      #좌표
+		y = 1
+		relative_position_id = ABY_focus_support_highlander
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
+		id = ABY_focus_annex_czech  #중점명
+		#icon = GFX_ABY_focus_2
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = -3      #좌표
+		y = 1
+		relative_position_id = ABY_focus_rmarnjswjdcl
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
+		id = ABY_focus_dismiss_HYA  #중점명
+		#icon = GFX_ABY_focus_2
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = -5      #좌표
+		y = 1
+		relative_position_id = ABY_focus_rmarnjswjdcl
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	focus = {
+		id = ABY_focus_attack_SHA  #중점명
+		#icon = GFX_ABY_focus_2
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = -4      #좌표
+		y = 2
+		relative_position_id = ABY_focus_rmarnjswjdcl
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_no_nazis  #중점명
+		#icon = GFX_ABY_focus_2
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = -5      #좌표
+		y = 1
+		relative_position_id = ABY_focus_nephtys_cooperation_country
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_press_communism  #중점명
+		#icon = GFX_ABY_focus_2
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = -7      #좌표
+		y = 1
+		relative_position_id = ABY_focus_nephtys_cooperation_country
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_no_german_nationalism  #중점명
+		#icon = GFX_ABY_focus_2
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = -1      #좌표
+		y = 1
+		relative_position_id = ABY_focus_no_nazis
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_no_social_democratic  #중점명
+		#icon = GFX_ABY_focus_2
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = -1      #좌표
+		y = 1
+		relative_position_id = ABY_focus_no_german_nationalism
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_no_czech_social_democratic  #중점명
+		#icon = GFX_ABY_focus_2
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 1      #좌표
+		y = 1
+		relative_position_id = ABY_focus_no_german_nationalism
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_for_vatherland_austria  #중점명
+		#icon = GFX_ABY_focus_2
+ 		cost = 5.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = -12      #좌표
+		y = 1
+		relative_position_id = ABY_focus_no_suo
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
 			#중점 선행조건
 		}
 
@@ -4820,7 +7155,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = ABY_focus_halo_infantry   #반대되는 중점
 		}
-		x = 14      #좌표
+		x = 15      #좌표
 		y = 1
 		relative_position_id = ABY_focus_unite_front
 		bypass = {
@@ -4851,7 +7186,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = ABY_focus_halo_milita   #반대되는 중점
 		}
-		x = 12      #좌표
+		x = 13      #좌표
 		y = 1
 		relative_position_id = ABY_focus_unite_front
 		bypass = {
