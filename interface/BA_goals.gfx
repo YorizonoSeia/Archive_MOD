@@ -149,6 +149,27 @@ spriteTypes = {
 
 	#프로젝트 KV
 	SpriteType = {
+	name = "GFX_goal_focus_KAP_kv26"
+	texturefile = "gfx/interface/goals/KAP/focus_KAP_kv26.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_focus_KAP_kv25"
+	texturefile = "gfx/interface/goals/KAP/focus_KAP_kv25.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_focus_KAP_kv24"
+	texturefile = "gfx/interface/goals/KAP/focus_KAP_kv24.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_focus_KAP_kv23"
+	texturefile = "gfx/interface/goals/KAP/focus_KAP_kv23.dds"			
+	}
+	
+
+	SpriteType = {
 	name = "GFX_goal_focus_KAP_kv22"
 	texturefile = "gfx/interface/goals/KAP/focus_KAP_kv22.dds"			
 	}

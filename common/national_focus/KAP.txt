@@ -852,7 +852,7 @@ focus_tree = {
 
 	focus = {
 		id = KAP_prepare_for_war_with_japan
-		icon = GFX_goal_generic_major_war
+		icon = GFX_goal_focus_KAP_kv23
 		prerequisite = { focus = KAP_the_yanan_base_area }
 		x = -1
 		y = 1
@@ -890,7 +890,7 @@ focus_tree = {
 
 	focus = {
 		id = KAP_government_of_national_defense
-		icon = GFX_focus_CHI_united_front
+		icon = GFX_focus_SWE_lynx_armored_car
 		prerequisite = { focus = KAP_prepare_for_war_with_japan }
 		x = 0
 		y = 1
@@ -921,7 +921,7 @@ focus_tree = {
 
 	focus = {
 		id = KAP_confrontation_with_the_warlords
-		icon = GFX_goal_generic_more_territorial_claims
+		icon = GFX_focus_generic_multi_role_aircraft
 		prerequisite = { focus = KAP_government_of_national_defense }
 		x = 0
 		y = 2
@@ -990,7 +990,7 @@ focus_tree = {
 
 	focus = {
 		id = KAP_revolutionary_military_commission
-		icon = GFX_goal_generic_occupy_states_ongoing_war
+		icon = GFX_focus_generic_cruiser_submarines
 		prerequisite = { focus = KAP_confrontation_with_the_warlords focus = KAP_infiltration }
 		x = 0
 		y = 1
@@ -1587,7 +1587,7 @@ focus_tree = {
 
 	focus = {
 		id = KAP_literacy_programs
-		icon = GFX_focus_generic_socialist_science
+		icon = GFX_goal_focus_KAP_kv24
 		prerequisite = { focus = KAP_land_redistribution }
 		x = -4
 		y = 1
@@ -1619,7 +1619,7 @@ focus_tree = {
 
 	focus = {
 		id = KAP_KAPna_medical_university
-		icon = GFX_focus_research
+		icon = GFX_goal_focus_KAP_kv25
 		prerequisite = { focus = KAP_literacy_programs }
 		x = 0
 		y = 1
@@ -1651,7 +1651,7 @@ focus_tree = {
 
 	focus = {
 		id = KAP_form_the_academy_of_sciences
-		icon = GFX_goal_generic_scientific_exchange
+		icon = GFX_goal_focus_KAP_kv26
 		prerequisite = { focus = KAP_KAPna_medical_university }
 		x = 0
 		y = 2
