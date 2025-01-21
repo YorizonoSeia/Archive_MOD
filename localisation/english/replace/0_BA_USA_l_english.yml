@@ -264,7 +264,7 @@
  USA_bad_kivotos_support_hina_2_desc: "유능한 것은 히나뿐만이 아닙니다. 선도부원들을 초빙하면 내전으로 엉망이 된 본토를 복구할 수 있을 겁니다."
 
  USA_bad_kivotos_GEH_halo_infantry: "선도부 연합 제병합동"
- USA_bad_kivotos_GEH_halo_infantry_desc: "선도부는 히나 개인의 무력에 의존하고 있습니다. 우리와 연합 훈련을 한다면, 그들은 더 이상 히나에 의지하지 않아도 될 겁니다."
+ USA_bad_kivotos_GEH_halo_infantry_desc: "이제 선도부원들은 미합중국 육군과 같이 훈련할 수 있을 정도로 잘 단련되었습니다. 우리와 연합 훈련을 한다면, 서로에게 얻을 것이 많을 겁니다."
  
  USA_bad_kivotos_GEM_tank: "만마전 중전차 도입"
  USA_bad_kivotos_GEM_tank_desc: "우리가 주목해야 할 것은 바로 게헨나의 중전차 대대입니다. 게헨나의 중전차, 토라마루를 벤치마킹해 중전차 설계를 하여 대대적인 군사 개편을 합시다."
@@ -298,6 +298,12 @@
 
  USA_bad_kivotos_halo_infantry_2: "'제 3의 길'"
  USA_bad_kivotos_halo_infantry_2_desc: "신질서의 기술을 적용한 새로운 연대를 편성하고, 연합 훈련의 교훈을 접목합시다. 그 누구도 가지 않았던 길을, 우리가 지금 걷고 있습니다!"
+
+ USA_bad_kivotos_GEH_hina_learn: "사관학교 히나 초청"
+ USA_bad_kivotos_GEH_hina_learn_desc: "선도부는 사실상 히나 한 명의 무력으로 유지되고 있습니다. 그녀를 사관학교에 초청하여 지휘관의 능력을 기릅시다."
+
+ USA_bad_kivotos_GEH_halo_infantry_support: "선도부 군사 지도"
+ USA_bad_kivotos_GEH_halo_infantry_support_desc: "선도부원들의 무력은 저희의 예상보다 훨씬 부족합니다. 그들을 지도하여 기초 체력과 전술을 지도해줍시다."
 
 
 
@@ -359,13 +365,15 @@
  old_fast_train: "병귀신속"
  wakeup_giant: "거인의 기상"
  USA_GEH_train: "미국의 군사 지도"
- USA_GEH_train_usa: "선도부 연합 훈련"
+ USA_GEH_train_usa: "히나의 군사 지도"
  USA_GEM_train: "게헨나 제병합동"
  USA_TRM_train: "트리니티 제병합동"
  USA_iroha_tank: "이로하 전술 도입"
  USA_nagisa_cannon: "나기사 전술 도입"
  usa_help_to_new_order: "도와줘요 신질서에몽!"
  week_faith_for_new_team: "우유부단한 신념"
+ usa_support_iroha: "이로하의 조언"
+ usa_make_GEM_club_lobby: "동아리 로비 제작"
 
 
  USABA_forced_wake_up_tt: "대공황 해결시 제거:\n§Y2차 대공황§!, §Y대공황§!, §Y느린 회복§!, §Y느린 경제 성장§! 국민정신 미보유"

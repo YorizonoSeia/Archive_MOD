@@ -68,8 +68,8 @@ focus_tree = {
 		allow_branch = {
 			is_debug = yes
 		}
-		x = 30
-		y = 20
+		x = 15
+		y = 17
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -4439,8 +4439,10 @@ focus = {
 				RE1 = { exists = no } RE2 = { exists = no } RE3 = { exists = no }
 			}
 			completion_reward = {
-
-
+				   RED = { 				add_timed_idea = {
+					idea = support_north_europe
+					days = 180
+				} }
 				   RE1 = { 				add_timed_idea = {
 					idea = support_north_europe
 					days = 180
@@ -5553,6 +5555,7 @@ focus = {
 				 ideology = neutrality
 				 popularity = 0.1
 			  }
+			  set_technology = { kivotos_halo_recon = 1 }
 		}
 	}
  
@@ -5690,15 +5693,46 @@ focus = {
 			ai_will_do = {
 				factor = 1
 			}
+			offset = {
+			x = 1
+			y = 0
+			trigger = {
+				has_completed_focus = USA_bad_kivotos_support_hina
+			 }
+			}
+			allow_branch = {
+            IF = {
+                limit = {
+                    has_game_rule = {
+                        rule = obsolete_focus_branches_visibility
+                        option = HIDE
+                    }
+                }
+                NOT = {
+                    has_completed_focus = USA_bad_kivotos_support_makoto 
+                }
+            }
+        }
+
 			available_if_capitulated = yes
 			available = {
 				if = { limit = { has_country_flag = USABA_government_official_exile }
 					NOT = { has_country_flag = USABA_government_official_exile }
 				}
 	            NOT = { has_War_with = GEH}
-
 			}
 			completion_reward = {
+				hidden_effect = {
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+					}
+					mark_focus_tree_layout_dirty = yes
+				}
+			}
 			add_popularity = {
 				ideology = fascism
 				popularity = 0.2
@@ -5723,6 +5757,13 @@ focus = {
 			ai_will_do = {
 				factor = 1
 			}
+			offset = {
+			x = 1
+			y = 0
+			trigger = {
+				has_completed_focus = USA_bad_kivotos_support_hina
+			 }
+			}
 			available_if_capitulated = yes
 			available = {
 				if = { limit = { has_country_flag = USABA_government_official_exile }
@@ -5732,7 +5773,8 @@ focus = {
 
 			}
 			completion_reward = {
-	}
+
+	        }
 }
 
         
@@ -5749,6 +5791,26 @@ focus = {
 			ai_will_do = {
 				factor = 1
 			}
+			offset = {
+			x = -1
+			y = 0
+			trigger = {
+				has_completed_focus = USA_bad_kivotos_support_makoto
+			}
+			}
+			allow_branch = {
+              IF = {
+                  limit = {
+                        has_game_rule = {
+                        rule = obsolete_focus_branches_visibility
+                        option = HIDE
+                    }
+                }
+                NOT = {
+                    has_completed_focus = USA_bad_kivotos_support_hina
+                }
+            }
+            }
 			available_if_capitulated = yes
 			available = {
 				if = { limit = { has_country_flag = USABA_government_official_exile }
@@ -5762,17 +5824,29 @@ focus = {
 				ideology = fascism
 				popularity = 0.2
 			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+					}
+					mark_focus_tree_layout_dirty = yes
+				}
 			}
 		}
+	}
+
 
 	focus = {
 		id = USA_bad_kivotos_support_iroha
 		icon = GFX_goal_GEH_manmajun_takeover_problem
 		prerequisite = { focus = USA_bad_kivotos_support_makoto }
 	    mutually_exclusive = { focus = USA_bad_kivotos_support_ibuki }
-		x = 0
-		y = 2
-		relative_position_id = USA_bad_kivotos_GEM
+		x = -1
+		y = 1
+		relative_position_id = USA_bad_kivotos_support_makoto
 		cost = 5
 		ai_will_do = {
 		    factor = 1
@@ -5793,13 +5867,14 @@ focus = {
 		icon = GFX_goal_GEH_IBUKI_goal
 		prerequisite = { focus = USA_bad_kivotos_support_makoto }
 	    mutually_exclusive = { focus = USA_bad_kivotos_support_iroha }
-		x = 2
-		y = 2
-		relative_position_id = USA_bad_kivotos_GEM
+		x = 1
+		y = 1
+		relative_position_id = USA_bad_kivotos_support_makoto
 		cost = 5
 		ai_will_do = {
 		    factor = 1
 		}
+
 		available_if_capitulated = yes
 		available = {
 			if = { limit = { has_country_flag = USABA_government_official_exile }
@@ -5837,13 +5912,6 @@ focus = {
 			
 	}
 }
-
-
-
-
-
-
-
 
 
 
@@ -5906,26 +5974,62 @@ focus = {
 		}
 		completion_reward = {
             set_technology = { kivotos_artificial_halo = 1 } 
-			add_tech_bonus = {
-			  name = mystic_engineering_bonus
-			  bonus = 1.5
-			  uses = 2
-			  category = mystic_engineering
-		    }
+			custom_effect_tooltip = kivotos_research_on
+			set_country_flag = kivotos_research_on
 		}
 	}
 
-	# 선도부 헤일로
+		# 히나에게 배우기
 		focus = {
-		id = USA_bad_kivotos_GEH_halo_infantry
-		icon = GFX_goal_GEH_sundoboo
-		prerequisite = { focus = USA_bad_kivotos_support_hina_2} 
-		x = -4
-		y = 5
-		relative_position_id = USA_bad_kivotos
+		id = USA_bad_kivotos_GEH_hina_learn
+		icon = GFX_goal_GEH_perfect_team_hina
+		prerequisite = { focus = USA_bad_kivotos_support_hina_2}
+		x = -2
+		y = 2
+		relative_position_id = USA_bad_kivotos_support_hina
 		cost = 5
 		ai_will_do = {
 			factor = 10
+		}
+		offset = {
+			x = 1
+			y = 0
+			trigger = {
+				has_completed_focus = USA_bad_kivotos_support_hina
+			 }
+		}
+		available_if_capitulated = yes
+		available = {
+			if = { limit = { has_country_flag = USABA_government_official_exile }
+				NOT = { has_country_flag = USABA_government_official_exile }
+			}
+
+		}
+		completion_reward = {
+			USA = {
+				add_ideas = USA_GEH_train_usa
+			}
+		}
+	}
+
+    #.선도부 헤일로 도와주기
+		focus = {
+		id = USA_bad_kivotos_GEH_halo_infantry_support
+		icon = GFX_goal_Perfect_team_iori_focus
+		prerequisite = { focus = USA_bad_kivotos_support_hina_2} 
+		x = 0
+		y = 2
+		relative_position_id = USA_bad_kivotos_support_hina
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		offset = {
+			x = 1
+			y = 0
+			trigger = {
+				has_completed_focus = USA_bad_kivotos_support_hina
+			 }
 		}
 		available_if_capitulated = yes
 		available = {
@@ -5938,8 +6042,40 @@ focus = {
             GEH = {
 				add_ideas = USA_GEH_train
 			}
-			USA = {
-				add_ideas = USA_GEH_train_usa
+			army_experience = 50
+		}
+	}
+
+	# 선도부 헤일로
+		focus = {
+		id = USA_bad_kivotos_GEH_halo_infantry
+		icon = GFX_goal_GEH_sundoboo
+		prerequisite = { focus = USA_bad_kivotos_GEH_halo_infantry_support}
+		prerequisite = { focus = USA_bad_kivotos_GEH_hina_learn} 
+		x = -1
+		y = 3
+		relative_position_id = USA_bad_kivotos_support_hina
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available_if_capitulated = yes
+		available = {
+			if = { limit = { has_country_flag = USABA_government_official_exile }
+				NOT = { has_country_flag = USABA_government_official_exile }
+			}
+		}
+		offset = {
+			x = 1
+			y = 0
+			trigger = {
+				has_completed_focus = USA_bad_kivotos_support_hina
+			 }
+		}
+		completion_reward = {
+			add_ideas = USA_GEH_final_train
+		    GEH = {
+				add_ideas = USA_GEH_final_train
 			}
 		}
 	}
@@ -5950,9 +6086,9 @@ focus = {
 		icon = GFX_goal_GEH_gloy_of_gehenna
 		prerequisite = { focus = USA_bad_kivotos_support_ibuki focus = USA_bad_kivotos_support_iroha} 
         mutually_exclusive = { focus = USA_bad_kivotos_GEM_halo_infantry }
-		x = -2
-		y = 5
-		relative_position_id = USA_bad_kivotos
+		x = -1
+		y = 3
+		relative_position_id = USA_bad_kivotos_support_makoto
 		cost = 5
 		ai_will_do = {
 			factor = 10
@@ -5976,9 +6112,9 @@ focus = {
 		icon = GFX_goal_GEH_army_flag
 		prerequisite = { focus = USA_bad_kivotos_support_ibuki focus = USA_bad_kivotos_support_iroha} 
         mutually_exclusive = { focus = USA_bad_kivotos_GEM_tank }
-		x = 0
-		y = 5
-		relative_position_id = USA_bad_kivotos
+		x = 1
+		y = 3
+		relative_position_id = USA_bad_kivotos_support_makoto
 		cost = 5
 		ai_will_do = {
 			factor = 10
@@ -6016,7 +6152,6 @@ focus = {
 			if = { limit = { has_country_flag = USABA_government_official_exile }
 				NOT = { has_country_flag = USABA_government_official_exile }
 			}
-
 		}
 		completion_reward = {
             add_ideas = USA_TRM_train
@@ -6103,7 +6238,10 @@ focus = {
 		}
 		available_if_capitulated = no
 		available = {
-
+		}
+		completion_reward = {
+			  add_manpower = 10000
+              add_war_support = 0.1
 		}
 	}
 
@@ -6127,6 +6265,7 @@ focus = {
 	
 			}
 			completion_reward = {
+				add_ideas = USA_support_book_club
 
 		}
 	}
@@ -6148,7 +6287,7 @@ focus = {
 
 		}
 		completion_reward = {
-
+            add_ideas = USA_TRM_justice_club
 		}
 	}
 
@@ -6174,6 +6313,48 @@ focus = {
 			}
 		}
 		completion_reward = {
+			capital_scope = {
+					create_unit = {
+						division = "name = \"German National Army\" division_template = \"German National Army\" start_experience_factor = 0 start_equipment_factor = 1"
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German National Army\" division_template = \"German National Army\" start_experience_factor = 0 start_equipment_factor = 1"
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German National Army\" division_template = \"German National Army\" start_experience_factor = 0 start_equipment_factor = 1"
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German National Army\" division_template = \"German National Army\" start_experience_factor = 0 start_equipment_factor = 1"
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German National Army\" division_template = \"German National Army\" start_experience_factor = 0 start_equipment_factor = 1"
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+										create_unit = {
+						division = "name = \"German National Army\" division_template = \"German National Army\" start_experience_factor = 0 start_equipment_factor = 1"
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German National Army\" division_template = \"German National Army\" start_experience_factor = 0 start_equipment_factor = 1"
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"German National Army\" division_template = \"German National Army\" start_experience_factor = 0 start_equipment_factor = 1"
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
 
 		}
 	}

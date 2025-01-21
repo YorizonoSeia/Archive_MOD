@@ -713,17 +713,34 @@ ideas = {
             picture = tfv_can_conscription_crisis
 
 			modifier = {
-				army_org_regain = 0.1
-				army_org_factor = 0.1
-				#training_time_army_factor = 0.1
+				army_org_regain = 0.10
+				army_org_factor = 0.10
+				army_morale = 0.1
+				max_planning_factor = 0.15
+				training_time_army_factor = 0.1
 			}
 	   }
-
+    # 선도부 미국 버프
 	   	USA_GEH_train_usa = {
             picture = tfv_can_conscription_crisis
 
 			modifier = {
-				army_org_regain = 0.2
+				command_power_gain = 0.1
+				experience_gain_factor = 0.25
+				army_leader_cost_factor = -0.2
+				skill_bonus_factor = 0.15
+				promote_cost_factor = -0.2
+			}
+	   }
+    #선도부 연합 제병합동
+	   	USA_GEH_final_train = {
+            picture = tfv_can_conscription_crisis
+
+			modifier = {
+				army_org_regain = 0.10
+				army_org_factor = 0.10
+				army_strength_factor = 0.1
+				planning_speed = 0.15
 			}
 	   }
 
@@ -731,13 +748,32 @@ ideas = {
 	   # 트리니티 제병합동
 	   USA_TRM_train = {
             picture = SWE_varnplikt
-
 			modifier = {
-				breakthrough_factor = 0.2
+				army_org_regain = 0.15
 				experience_loss_factor = -0.2
-				training_time_army_factor = 0.1
 			}
 	   }
+
+	   USA_support_book_club = {
+            picture = AUS_women_in_academia
+			modifier = {
+			   scientist_research_bonus_factor =  0.15
+               scientist_xp_gain_factor = 0.25
+			   research_speed_factor = 0.1
+			}
+	   }
+	 } 
+
+	 #정의부
+
+	    USA_TRM_justice_club = {
+            picture = tfv_can_conscription_crisis
+
+			modifier = {
+                 
+			}
+	   }
+
 
 	   #나기사 화력우세(에덴 군사 중점)
 	   USA_nagisa_cannon = {
@@ -745,6 +781,7 @@ ideas = {
 
 		modifier = {
            army_artillery_attack_factor = 0.15
+		   rocket_attack_factor = 0.15
 		}
 
 	}
@@ -793,8 +830,8 @@ ideas = {
         picture = generic_artillery_regiments
 
 		 modifier = {
-			 democratic_drift = 0.1
-			 drift_defence_factor = -0.1
+			 democratic_drift = 0.5
+			 drift_defence_factor = -0.3
 		 }
 	  }
 
@@ -803,7 +840,7 @@ ideas = {
 
     # 깨어난 거인 
 	wakeup_giant = {
-        picture = generic_artillery_regiments
+        picture = generic_victors_of_ww1
 
 		modifier = {
 			 political_power_gain = 1.0
@@ -821,7 +858,7 @@ ideas = {
     
 	# 구질서 훈련
     old_fast_train = {
-		picture = generic_artillery_regiments
+		picture = generic_reserve_divisions
         
 		
 		modifier = {
@@ -852,7 +889,7 @@ ideas = {
      
 	 # 명분 없는 전쟁
    	    why_am_i_fight = {
-            picture = generic_disjointed_gov
+            picture = FRA_factory_strikes
             
 			allowed = {
                 tag = USA
@@ -872,7 +909,7 @@ ideas = {
 
         
 		together_train = {
-            picture = tfv_can_conscription_crisis
+            picture = SOV_rehabilitated_military_ns_nsb_ccp_sov_compatibility
 			allowed = {
                 tag = USA
             }
@@ -880,13 +917,14 @@ ideas = {
 				modifier_army_sub_unit_category_halo_attack_factor = 0.15
 				modifier_army_sub_unit_category_halo_defence_factor = 0.15
 				modifier_army_sub_unit_category_halo_org_recovery_cap_factor = 0.1
+				experience_gain_army_factor = 0.1
 			}
 	   }
 
 
 	   	usa_help_to_new_order = {
 
-			picture = nkvd_2
+			picture = generic_volunteer_expedition_bonus
 
 			allowed = {
 				original_tag = USA
@@ -903,7 +941,7 @@ ideas = {
 		}
 
 		usa_support_iroha = {
-			picture = nkvd_2 #이로하로 바꿀 것
+			picture = generic_acquire_tanks #이로하로 바꿀 것
 			allowed = {
 				original_tag = USA
 			}
@@ -916,7 +954,7 @@ ideas = {
 
 
 		usa_make_GEM_club_lobby = {
-			picture = nkvd_2 #게헨나 동아리로 바꿀 것
+			picture = GEH_hot_spring_department_2 #게헨나 동아리로 바꿀 것
 			allowed = {
 				original_tag = USA
 			}
