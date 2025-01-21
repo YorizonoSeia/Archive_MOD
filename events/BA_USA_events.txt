@@ -1220,7 +1220,7 @@ country_event = {
 }
 
 
- # 신질서 내전
+ # 신질서 내전 (OFN 영유권 주장)
 country_event = {
 	id = usa_new_civil_event.1
 	title = usa_new_civil_event.1.t
@@ -1230,18 +1230,12 @@ country_event = {
 	fire_only_once = yes
 	is_triggered_only = yes
 
-	option = { # back down, for now
+	option = {
 		name = usa_new_civil_event.1.a
 		ai_chance = {
 			factor = 1
 		}
-		
-		add_ideas = week_faith_for_new_team
-
-		#add_popularity = {
-		#	ideology = democracy
-		#	popularity = 0.05
-		# }
+		OFN = { add_state_claim = 358} 
 	}
 	
 }

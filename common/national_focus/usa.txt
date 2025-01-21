@@ -4439,22 +4439,30 @@ focus = {
 				RE1 = { exists = no } RE2 = { exists = no } RE3 = { exists = no }
 			}
 			completion_reward = {
-				   RED = { 				add_timed_idea = {
+				RED = { 	
+					add_timed_idea = {
 					idea = support_north_europe
 					days = 180
-				} }
-				   RE1 = { 				add_timed_idea = {
+				   }
+				}
+				RE1 = { 
+					add_timed_idea = {
 					idea = support_north_europe
 					days = 180
-				} }
-                   RE2 = { 				add_timed_idea = {
+				 }
+				}
+                RE2 = { 
+					add_timed_idea = {
 					idea = support_north_europe
 					days = 180
-				} }
-				   RE3 = { 				add_timed_idea = {
+				 }
+				}
+				RE3 = { 
+				    add_timed_idea = {
 					idea = support_north_europe
 					days = 180
-				} }
+				 }
+				}
 			}
 		}
 

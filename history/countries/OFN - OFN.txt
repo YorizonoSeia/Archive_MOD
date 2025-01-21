@@ -1,10 +1,10 @@
-﻿capital = 361
+﻿capital = 358
 
 oob = "USA_1936"
 
 set_research_slots = 3
-set_stability = 0.75
-set_war_support = 0
+set_stability = 0.3
+set_war_support = 0.95
 
 # Starting tech
 set_technology = {
@@ -81,8 +81,9 @@ set_politics = {
 	elections_allowed = yes
 }
 set_popularities = {
-	democratic = 65
-	communism = 35
+	democratic = 70
+	communism = 10
+	neutrality = 20
 }
 
 #create_country_leader = {

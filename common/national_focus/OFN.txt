@@ -1,0 +1,92 @@
+focus_tree = {
+    id = OFN_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = OFN
+		}
+		
+		modifier = {
+			add = 10
+			original_tag = OFN
+		}
+	}
+	continuous_focus_position = { x = 50 y = 2300 }
+	default = no
+
+
+
+    focus = {
+		id = OFN_1
+		icon = GFX_focus_generic_the_giant_wakes
+		x = 3
+		y = 0
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = yes
+		available = {
+
+		}
+		completion_reward = {
+            add_war_support = 0.2
+		}
+	}
+
+
+
+
+
+
+#	focus = {
+#		id = USA_
+#		#icon = GFX_
+#		prerequisite = { focus = }
+#		mutually_exclusive = { focus =  }
+#		x = -3
+#		y = 0
+#		relative_position_id = 
+#
+#		cost = 10
+#
+#		ai_will_do = {
+#			factor = 1
+#		}
+#
+#		available = {
+#
+#		}
+#		
+#		bypass = {
+#
+#		}
+#
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#
+#		complete_tooltip = {
+#
+#		}
+#
+#		completion_reward = {
+#
+#		}
+#	}
+
+
+
+
+
+
+
+
+
+
+
+
+}

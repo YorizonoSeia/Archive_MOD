@@ -812,7 +812,7 @@ ideas = {
         picture = generic_artillery_regiments
         allowed = {
 		 AND = { 
-			  is_in_faction_with = USA
+			  #is_in_faction_with = USA
 			  has_war_with = no
 		 }
 		}
@@ -960,4 +960,5 @@ ideas = {
 				consumer_goods_factor = 0.15
 			}
 		}
+   }
 }
