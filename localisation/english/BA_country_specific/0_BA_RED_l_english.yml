@@ -816,7 +816,11 @@
  RED_generic.7.a: "사기인가?"
  RED_generic.8.t: "[RED.getname]의 상환 거부"
  RED_generic.8.d: "[RED.getname] 측은 우리가 사들인 채권에 대한 상환을 포기하였습니다."
- RED_generic.8.a: "이건 사기야!"
+ RED_generic.8.a: "젠장, 사기야!"
+ RED_generic.9.t: "신용도 급감!"
+ RED_generic.9.d: "우리가 채권 상환을 포기함에 따라 신용은 바닥을 모르고 떨어지고 있으며, 금융, 경제, 산업 전반에 있어서 마비의 공포가 야기되고 있습니다. 우리는 이를 극복할 '극단적'이고 '급진적'인 정책이 반드시 필요합니다."
+ RED_generic.9.a: "젠장!"
+ RED_generic.9_tt: "\n§Y60§!일 내로 중점 §Y무제한 인플레이션§! 또는 §Y화폐 정지§!를 완료하지 않으면 경제가 완전히 무너져내릴 것입니다!"
 
  RED_marina_event.1.t: "피로한 마리나 - 1"
  RED_marina_event.1.d: "\"...\"\n\n\"...보안위원장 동지, 일어나십쇼!\"\n\n 사무국 정기회의에서 깜빡 졸던 이케쿠라 마리나는 화들짝 깨어났다. 사무국 서기장 렌카와 체리노는 마리나에게 주의를 주며 앞서 논하던 안건에 대한 토의를 이었다.\n\n 마리나가 다시 주의깊게 이야기를 듣고 있을 땐, 페로로라는 마스코트를 학원에 영입하자는 터무니 없는 의견이 체리노에 의해 제시되고 비서실장 토모에에 의해 지지받고 있었다. 마리나는 입을 떼 발언하는 대신, 그녀의 흐려지는 시야에 몸을 다시 맡겼다."
@@ -1302,7 +1306,7 @@
  RED_investment_tt: "민간공장 공여: §G+1§!"
  RED_investment_bill_modifier: "재건채권 지불"
  RED_investment_more: "채권 기한 연장"
-
+ RED_land_developing: "토지개발사업"
 
  RED_fake_money: "위조지폐로 인한 경제 파탄"
  RED_fake_money_tt: "\n조건 충족시 제거 : §Y전쟁 중§!이 아님 또는 §Y총동원령§! 보유"
@@ -1520,6 +1524,7 @@
  RED_mission_rebuild_bill_outdate: "다가오는 재건채권 만료"
  RED_mission_rebuild_bill_no_pay_outdate: "다가오는 연장기한 만료"
  RED_no_more_pay: "상환 포기"
+ RED_your_economy_fucked: "경제 마비의 전조"
 
 
 

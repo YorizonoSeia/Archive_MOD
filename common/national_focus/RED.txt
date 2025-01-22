@@ -969,11 +969,20 @@ focus_tree = {
 		relative_position_id = RED_new_economy_focus_0
 		cost = 4
 		available = {
+			has_dynamic_modifier = {
+				modifier = RED_investment_modifier
+			}
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
 		}
 		completion_reward = {
+			KAI = {
+				country_event = {
+					id = RED_generic.1
+					days = 5
+				}
+			}
 		}
 	}
 	focus = { # 통화 정책
@@ -1090,6 +1099,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			add_ideas = RED_land_developing
 		}
 	}
 	focus = { #자원 채굴 집중
@@ -1109,6 +1119,10 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = RED_land_developing
+				add_idea = RED_land_developing_1
+			}
 		}
 	}
 	focus = { # 농업 현대화
@@ -1128,6 +1142,10 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = RED_land_developing
+				add_idea = RED_land_developing_2
+			}
 		}
 	}
 

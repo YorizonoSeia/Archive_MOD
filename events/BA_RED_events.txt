@@ -35,11 +35,42 @@ country_event = {
 			target = RED
 			modifier = RED_invested
 		}
+		trigger = {
+			NOT = {
+				tag = KAI
+			}
+		}
 	}
 	option = { #거절
 		name = RED_generic.1.b
 		RED = {
 			country_event = RED_generic.3
+		}
+	}
+	option = { #퍼주는 카이저
+		name = RED_generic.1.a
+		add_timed_idea = {
+			idea = RED_invest
+			years = 1
+		}
+		trigger = {
+			tag = KAI
+		}
+		ai_chance = {
+			base = 10
+		}
+		RED = {
+			add_to_variable = {
+				RED_invest = 4
+			}
+		}
+		set_country_flag = I_have_invested_RED_flag
+		RED = {
+			country_event = RED_generic.2
+		}
+		add_opinion_modifier = {
+			target = RED
+			modifier = RED_invested
 		}
 	}
 }
@@ -52,7 +83,17 @@ country_event = { #수락 ㄳ
 		name = RED_generic.2.a
 		add_political_power = 5
 		custom_effect_tooltip = RED_investment_modifier_modify
-		custom_effect_tooltip = RED_investment_tt
+		if = {
+			limit = {
+				FROM = {
+					tag = KAI
+				}
+			}
+			custom_effect_tooltip = RED_investment_tt_2
+		}
+		else = {
+			custom_effect_tooltip = RED_investment_tt
+		}
 		FROM = {
 			effect_tooltip = {
 				add_opinion_modifier = {
@@ -180,7 +221,7 @@ country_event = { #돈 갚음
 		}
 	}
 }
-country_event = { #돈 안갚음
+country_event = { #갚는 거 미룸룸
 	id = RED_generic.7
 	title = RED_generic.7.t
 	desc = RED_generic.7.d
@@ -208,6 +249,17 @@ country_event = { #상환 거부
 				modifier = RED_never_pay
 			}
 		}
+	}
+}
+country_event = { #너 곧 좆됨
+	id = RED_generic.9
+	title = RED_generic.9.t
+	desc = RED_generic.9.d
+	is_triggered_only = yes
+	option = { #아오 
+		name = RED_generic.9.a
+		activate_mission = RED_your_economy_fucked
+		custom_effect_tooltip = RED_generic.9_tt
 	}
 }
 

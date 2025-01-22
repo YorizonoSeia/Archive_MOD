@@ -4144,6 +4144,27 @@ RED_debt = {
 			}
 		}
 	}
+	RED_your_economy_fucked = { #경제 마비의 전조
+		days_mission_timeout = 60
+		icon = GFX_decision_generic_wreckers
+		activation = {
+			always = no
+		}
+		available = {
+			OR = {
+				has_completed_focus = RED_new_economy_focus_10
+				has_completed_focus = RED_new_economy_focus_11
+			}
+		}
+		timeout_effect = {
+			every_owned_state = {
+				remove_building = {
+					type = industrial_complex
+					level = 3
+				}
+			}
+		}
+	}
 }
 RED_bop_category = {
 	RED_cherino_become_cleaner = { #미화부장
