@@ -167,46 +167,6 @@ focus_tree = {
 			}
 		}
 	}
-    
-    # 강제 기상
-	focus = {
-		id = USABA_forced_wake_up
-		icon = GFX_focus_CHL_silverworking
-		prerequisite = { focus = USA_continue_the_new_deal focus = USA_reestablish_the_gold_standard}
-		x = 0
-		y = 1
-		relative_position_id = USA_continue_the_new_deal
-
-		cost = 8
-		#ai_will_do = {
-		#	factor = 1
-		#}
-
-		available_if_capitulated = no
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-
-		available = {
-			if = { limit = { has_country_flag = USABA_government_official_exile }
-				NOT = { has_country_flag = USABA_government_official_exile }
-			}
-			if = { limit = { has_country_flag = USABA_government_official_exile }
-				NOT = { has_country_flag = USABA_government_official_exile }
-			}
-			not = { has_completed_focus = USABA_regression_strategy}
-			has_country_flag = USA_2nd_great_depression_4th_flag
-		}
-		bypass = {
-			
-		}
-		search_filters = {FOCUS_FILTER_USA_CONGRESS}
-		completion_reward = {
-			add_ideas = USABA_forced_wake_up
-			add_war_support = -0.05
-			add_stability = -0.1
-            USA_congress_large_opposition = yes
-		}
-	}
 
 
 
@@ -253,11 +213,11 @@ focus_tree = {
 	focus = {
 		id = USA_suspend_the_presecution
 		icon = GFX_focus_generic_diplomatic_treaty
-		x = -7
+		x = -8
 		y = 1
 		prerequisite = { focus = USA_continue_the_new_deal }
 		relative_position_id = USA_continue_the_new_deal
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -318,12 +278,246 @@ focus_tree = {
 		    }
 		}
 	}
+    # 충격 요법
+	focus = {
+	    id = USABA_forced_wake_up
+	    icon = GFX_focus_CHL_silverworking
+		prerequisite = { focus = USA_continue_the_new_deal}
+		x = -12
+		y = 1
+		relative_position_id = USA_continue_the_new_deal
+
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = no
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+		available = {
+			if = { limit = { has_country_flag = USABA_government_official_exile }
+				NOT = { has_country_flag = USABA_government_official_exile }
+			}
+			if = { limit = { has_country_flag = USABA_government_official_exile }
+				NOT = { has_country_flag = USABA_government_official_exile }
+			}
+			not = { has_completed_focus = USABA_regression_strategy}
+			has_country_flag = USA_2nd_great_depression_4th_flag
+		}
+		bypass = {
+			
+		}
+		search_filters = {FOCUS_FILTER_USA_CONGRESS}
+		completion_reward = {
+			add_ideas = USABA_forced_wake_up
+			add_war_support = -0.05
+			add_stability = -0.1
+            USA_congress_large_opposition = yes
+		}
+	}
+
+    # 일자리 강제 고용
+    	focus = {
+	    id = USABA_force_to_give_job
+	    icon = GFX_focus_generic_full_employment
+		prerequisite = { focus = USABA_forced_wake_up}
+		x = -2
+		y = 1
+		relative_position_id = USABA_forced_wake_up
+
+		cost = 8
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = no
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+		available = {
+			if = { limit = { has_country_flag = USABA_government_official_exile }
+				NOT = { has_country_flag = USABA_government_official_exile }
+			}
+			if = { limit = { has_country_flag = USABA_government_official_exile }
+				NOT = { has_country_flag = USABA_government_official_exile }
+			}
+			not = { has_completed_focus = USABA_regression_strategy}
+			has_country_flag = USA_2nd_great_depression_4th_flag
+		}
+		bypass = {
+			
+		}
+		search_filters = {FOCUS_FILTER_USA_CONGRESS}
+		completion_reward = {
+			add_stability = 0.15
+
+		}
+	}
+
+	# 산업 재편성
+
+	focus = {
+	    id = USABA_replace_industry
+	    icon = GFX_focus_SOV_merge_plants
+		prerequisite = { focus = USABA_forced_wake_up}
+		x = 0
+		y = 1
+		relative_position_id = USABA_forced_wake_up
+
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = no
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+		available = {
+			if = { limit = { has_country_flag = USABA_government_official_exile }
+				NOT = { has_country_flag = USABA_government_official_exile }
+			}
+			if = { limit = { has_country_flag = USABA_government_official_exile }
+				NOT = { has_country_flag = USABA_government_official_exile }
+			}
+			OR = {
+				has_government = communism
+				communism > 0.3
+			}
+		}
+		bypass = {
+			
+		}
+		search_filters = {FOCUS_FILTER_USA_CONGRESS}
+		completion_reward = {
+			if = {
+				limit = {
+					communism > 0.3
+					not = { has_government = communism }
+				}
+				USA_congress_medium_opposition = yes
+			}
+			else_if = {
+				limit = {
+					communism < 0.3
+					not = { has_government = communism }
+				}
+				USA_congress_large_opposition = yes
+				add_popularity = {
+					ideology = communism
+					popularity = 0.05
+				}
+			}
+			add_stability = -0.10
+			add_ideas = USABA_replace_industry
+			
+		}
+	}
+
+    # 공인 회사 설립
+		focus = {
+	    id = USABA_establish_government_industry
+	    icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = USABA_replace_industry}
+		x = 0
+		y = 2
+		relative_position_id = USABA_forced_wake_up
+
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = no
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+		available = {
+			if = { limit = { has_country_flag = USABA_government_official_exile }
+				NOT = { has_country_flag = USABA_government_official_exile }
+			}
+			if = { limit = { has_country_flag = USABA_government_official_exile }
+				NOT = { has_country_flag = USABA_government_official_exile }
+			}
+			not = { has_completed_focus = USABA_regression_strategy}
+			has_country_flag = USA_2nd_great_depression_4th_flag
+		}
+		bypass = {
+			
+		}
+		search_filters = {FOCUS_FILTER_USA_CONGRESS}
+		completion_reward = {
+			add_stability = -0.10
+			remove_ideas = second_great_depression
+			USA_congress_large_opposition = yes
+			if = {
+				limit = {
+					has_country_flag = mtg_usa_civil_war_fascists_1
+					not = { has_country_flag = mtg_usa_civil_war_fascists_2 }
+				}
+				country_event = mtg_usa_civil_war_fascists.2
+				custom_effect_tooltip = mtg_usa_civil_war_warning_tt
+			}
+			else_if = {
+				limit = { not = { has_country_flag = mtg_usa_civil_war_fascists_1 } }
+				country_event = mtg_usa_civil_war_fascists.1
+				custom_effect_tooltip = mtg_usa_civil_war_warning_tt
+			}
+
+		}
+	}
+
+
+	    # 배급제
+	focus = {
+	    id = USABA_every_worker_welfare
+	    icon = GFX_SOV_national_specialists_ccp_2d_sov_compatibility
+		prerequisite = { focus = USABA_force_to_give_job}
+		x = -2
+		y = 2
+		relative_position_id = USABA_forced_wake_up
+
+		cost = 5
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = no
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+		available = {
+			if = { limit = { has_country_flag = USABA_government_official_exile }
+				NOT = { has_country_flag = USABA_government_official_exile }
+			}
+			if = { limit = { has_country_flag = USABA_government_official_exile }
+				NOT = { has_country_flag = USABA_government_official_exile }
+			}
+			not = { has_completed_focus = USABA_regression_strategy}
+			has_country_flag = USA_2nd_great_depression_4th_flag
+		}
+		bypass = {
+			
+		}
+		search_filters = {FOCUS_FILTER_USA_CONGRESS}
+		completion_reward = {
+			add_stability = 0.10
+			#USA_congress_midium_opposition = yes
+
+		}
+	}
+
+
+
+
 	focus = {
 		id = USA_desegregate_the_armed_forces
 		icon = GFX_goal_generic_small_arms
-		x = -6
-		y = 1
-		prerequisite = { focus = USA_suspend_the_presecution }
+		x = -2
+		y = 2
+		prerequisite = { focus = USA_union_representation_act }
 		relative_position_id = USA_suspend_the_presecution
 		cost = 10
 
@@ -356,7 +550,7 @@ focus_tree = {
 	focus = {
 		id = USA_full_desegregation
 		icon = GFX_focus_generic_support_the_left_right
-		x = -1
+		x = 0
 		y = 1
 		prerequisite = { focus = USA_desegregate_the_armed_forces }
 		relative_position_id = USA_desegregate_the_armed_forces
@@ -410,9 +604,9 @@ focus_tree = {
 	focus = {
 		id = USA_democratic_socialism
 		icon = GFX_focus_generic_soviet_politics
-		x = 1
-		y = 1
-		prerequisite = { focus = USA_desegregate_the_armed_forces }
+		x = -3
+		y = 12
+		#prerequisite = { focus = USA_desegregate_the_armed_forces }
 		relative_position_id = USA_desegregate_the_armed_forces
 		cost = 10
 
@@ -425,6 +619,7 @@ focus_tree = {
 				NOT = { has_country_flag = USABA_government_official_exile }
 			}
 			communism > 0.35
+			is_debug = yes
 		}
 		
 		bypass = {
@@ -436,29 +631,16 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
-			set_politics = { ruling_party = communism elections_allowed = yes } #good and nice communism has elections
-			add_popularity = { ideology = communism popularity = 0.25 }
-			hidden_effect = {
-				if = {
-					limit = {
-						has_war = no
-						has_country_flag = mtg_usa_civil_war_fascists_2
-						not = {
-							has_country_flag = mucwf4
-						}
-					}
-					country_event = mtg_usa_civil_war_fascists.4
-				}
-			}
+
 		}
 	}
 	focus = {
 		id = USA_liberty_for_the_philippines
 		icon = GFX_goal_generic_alliance
 		x = 0
-		y = 2
-		prerequisite = { focus = USA_democratic_socialism }
-		prerequisite = { focus = USA_full_desegregation }
+		y = 13
+		#prerequisite = { focus = USA_democratic_socialism }
+		#prerequisite = { focus = USA_full_desegregation }
 		relative_position_id = USA_desegregate_the_armed_forces
 		cost = 10
 
@@ -472,6 +654,7 @@ focus_tree = {
 			}
 			has_government = communism
 			country_exists = "PHI"
+			is_debug = yes
 		}
 		
 		bypass = {
@@ -504,10 +687,10 @@ focus_tree = {
 	focus = {
 		id = USA_pacific_decolonisation
 		icon = GFX_goal_generic_national_unity
-		x = 0
+		x = -2
 		y = 3
-		prerequisite = { focus = USA_liberty_for_the_philippines }
-		relative_position_id = USA_desegregate_the_armed_forces
+		prerequisite = { focus = USA_shatter_the_empires }
+		relative_position_id = USA_red_team
 		cost = 10
 
 		ai_will_do = {
@@ -579,11 +762,11 @@ focus_tree = {
 	focus = {
 		id = USA_union_representation_act
 		icon = GFX_focus_usa_union_representation_act
-		x = -3
+		x = -2
 		y = 1
 		prerequisite = { focus = USA_suspend_the_presecution }
 		relative_position_id = USA_suspend_the_presecution
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -645,13 +828,69 @@ focus_tree = {
 			}
 		}
 	}
+
+	# 공산주의 입갤
+
+	focus = {
+		id = USA_be_red
+		icon = GFX_focus_generic_join_comintern
+
+		x = 0
+		y= 2
+
+		prerequisite = { focus = USA_reach_out_to_the_ware_group }
+
+
+		relative_position_id = USA_suspend_the_presecution
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			if = { limit = { has_country_flag = USABA_government_official_exile }
+				NOT = { has_country_flag = USABA_government_official_exile }
+			}
+			communism > 0.35
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+		completion_reward = {
+			set_politics = { ruling_party = communism elections_allowed = no }
+			add_popularity = { ideology = communism popularity = 0.3 }
+				hidden_effect = {
+				if = {
+					limit = {
+						has_war = no
+						has_country_flag = mtg_usa_civil_war_fascists_2
+						not = {
+							has_country_flag = mucwf4
+						}
+					}
+					country_event = mtg_usa_civil_war_fascists.4
+				}
+			}
+		}
+
+	}
+
+
+
+
+
+
 	focus = {
 		id = USA_old_age_pension_act
-		icon = GFX_goal_generic_consumer_goods
-		x = 0
+		icon = GFX_focus_generic_monetary_union
+		x = -2
 		y = 1
-		prerequisite = { focus = USA_union_representation_act }
-		relative_position_id = USA_union_representation_act
+		prerequisite = { focus = USA_wpa }
+		relative_position_id = USA_wpa
 		cost = 10
 
 		ai_will_do = {
@@ -681,11 +920,12 @@ focus_tree = {
 	focus = {
 		id = USA_accumulated_wealth_tax_act
 		icon = GFX_focus_rom_parties_end
-		x = 2
-		y = 1
-		prerequisite = { focus = USA_union_representation_act }
-		relative_position_id = USA_union_representation_act
-		cost = 10
+		x = -1
+		y = 4
+		prerequisite = { focus = USA_worker_management_act }
+		prerequisite = { focus = USA_communal_property_act }
+		relative_position_id = USABA_forced_wake_up
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -734,15 +974,228 @@ focus_tree = {
 			USA_great_depression_level_down = yes
 		}
 	}
+
+
+    # 산업 계획
+		focus = {
+		id = USA_big_industry_plan
+		icon = GFX_SOV_third_five_year_plan_ccp_2d_sov_compatibility
+		x = -1
+		y = 5
+		prerequisite = { focus = USA_accumulated_wealth_tax_act }
+
+		relative_position_id = USABA_forced_wake_up
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			if = { limit = { has_country_flag = USABA_government_official_exile }
+				NOT = { has_country_flag = USABA_government_official_exile }
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		}
+	}
+
+	    # 수정 자본주의
+		focus = {
+		id = USA_modified_capitalism
+		icon = GFX_focus_prc_agrarian_socialism
+		x = -3
+		y = 6
+		prerequisite = { focus = USA_big_industry_plan }
+		mutually_exclusive = { focus = USA_economic_interventionism }
+		mutually_exclusive = { focus = USA_sov_economy_together }
+
+		relative_position_id = USABA_forced_wake_up
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			if = { limit = { has_country_flag = USABA_government_official_exile }
+				NOT = { has_country_flag = USABA_government_official_exile }
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+
+		}
+	}
+
+	    # 국가 자본주의
+		focus = {
+		id = USA_economic_interventionism
+		icon = GFX_focus_DEN_heavy_regulations
+		x = -1
+		y = 6
+		prerequisite = { focus = USA_big_industry_plan }
+		mutually_exclusive = { focus = USA_modified_capitalism }
+		mutually_exclusive = { focus = USA_sov_economy_together }
+
+		relative_position_id = USABA_forced_wake_up
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			if = { limit = { has_country_flag = USABA_government_official_exile }
+				NOT = { has_country_flag = USABA_government_official_exile }
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+
+		}
+	}
+
+
+		# 소련과 경제 협력
+		focus = {
+		id = USA_sov_economy_together
+		icon = GFX_focus_generic_communist_industry
+		x = 1
+		y = 6
+		prerequisite = { focus = USA_big_industry_plan }
+		prerequisite = { focus = USA_us_ussr_economic_cooperation }
+		mutually_exclusive = { focus = USA_modified_capitalism }
+		mutually_exclusive = { focus = USA_economic_interventionism }
+
+		relative_position_id = USABA_forced_wake_up
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			if = { limit = { has_country_flag = USABA_government_official_exile }
+				NOT = { has_country_flag = USABA_government_official_exile }
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+
+		}
+	}
+
+
+	# 마지막 산업
+		focus = {
+		id = USA_final_economic_plan
+		icon = GFX_focus_generic_industry_3
+		x = -1
+		y = 7
+		prerequisite = { focus = USA_modified_capitalism focus = USA_economic_interventionism focus = USA_sov_economy_together}
+
+		relative_position_id = USABA_forced_wake_up
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			if = { limit = { has_country_flag = USABA_government_official_exile }
+				NOT = { has_country_flag = USABA_government_official_exile }
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		}
+	}
+
+
+
+	# 소련과 군 재무장
+		focus = {
+		id = USA_sov_factory_together
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 2
+		y = 7
+		prerequisite = { focus = USA_sov_economy_together }
+		prerequisite = { focus = USA_the_aggresive_comintern}
+
+		relative_position_id = USABA_forced_wake_up
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			if = { limit = { has_country_flag = USABA_government_official_exile }
+				NOT = { has_country_flag = USABA_government_official_exile }
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+		completion_reward = {
+			add_war_support = 0.1
+		}
+	}
+
+
+
+
 	focus = {
 		id = USA_guarantee_the_american_dream
 		icon = GFX_focus_usa_guarantee_the_american_dream
-		x = 0
+		x = -2
 		y = 2
-		#prerequisite = { focus = USA_democratic_socialism }
 		prerequisite = { focus = USA_old_age_pension_act }
-		prerequisite = { focus = USA_accumulated_wealth_tax_act }
-		relative_position_id = USA_union_representation_act
+		relative_position_id = USA_wpa
 		cost = 10
 
 		ai_will_do = {
@@ -766,16 +1219,17 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
 		completion_reward = {
 			add_war_support = 0.1
+			add_stability= 0.15
 		}
 	}
 	focus = {
 		id = USA_worker_management_act
 		icon = GFX_goal_generic_production
-		x = 0
-		y = 1
-		prerequisite = { focus = USA_guarantee_the_american_dream }
-		relative_position_id = USA_guarantee_the_american_dream
-		cost = 10
+		x = -2
+		y = 3
+		prerequisite = { focus = USABA_establish_government_industry}
+		relative_position_id = USABA_forced_wake_up
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -808,18 +1262,14 @@ focus_tree = {
 					communism > 0.3
 					not = { has_government = communism }
 				}
-				USA_congress_medium_opposition = yes
+				USA_congress_small_opposition = yes
 			}
 			else_if = {
 				limit = {
 					communism < 0.3
 					not = { has_government = communism }
 				}
-				USA_congress_large_opposition = yes
-				add_popularity = {
-					ideology = communism
-					popularity = 0.05
-				}
+				USA_congress_medium_opposition = yes
 			}
 			USA_great_depression_level_down = yes
 		}
@@ -827,7 +1277,7 @@ focus_tree = {
 	focus = {
 		id = USA_militia_organization_act
 		icon = GFX_focus_secret_rearmament
-		x = 2
+		x = 0
 		y = 1
 		prerequisite = { focus = USA_guarantee_the_american_dream }
 		relative_position_id = USA_guarantee_the_american_dream
@@ -859,13 +1309,13 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_communal_property_act
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_goal_generic_construct_infrastructure
 		x = 0
-		y = 2
-		prerequisite = { focus = USA_worker_management_act }
-		prerequisite = { focus = USA_militia_organization_act }
-		relative_position_id = USA_guarantee_the_american_dream
-		cost = 10
+		y = 3
+		prerequisite = { focus = USABA_establish_government_industry }
+
+		relative_position_id = USABA_forced_wake_up
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -893,14 +1343,14 @@ focus_tree = {
 					communism > 0.3
 					not = { has_government = communism }
 				}
-				USA_congress_medium_opposition = yes
+				USA_congress_small_opposition = yes
 			}
 			else_if = {
 				limit = {
 					communism < 0.3
 					not = { has_government = communism }
 				}
-				USA_congress_large_opposition = yes
+				USA_congress_medium_opposition = yes
 			}
 			USA_great_depression_level_down = yes
 			unlock_decision_tooltip = { decision = USA_communal_domain show_effect_tooltip = yes }
@@ -912,9 +1362,9 @@ focus_tree = {
 		icon = GFX_goal_generic_intelligence_exchange
 		x = 0
 		y = 3
-		prerequisite = { focus = USA_communal_property_act }
-		relative_position_id = USA_guarantee_the_american_dream
-		cost = 10
+		prerequisite = { focus = USA_be_red }
+		relative_position_id = USA_suspend_the_presecution
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -954,9 +1404,8 @@ focus_tree = {
 		id = USA_reach_out_to_the_ware_group
 		icon = GFX_goal_generic_propaganda
 		x = 0
-		y = 3
+		y = 1
 		prerequisite = { focus = USA_suspend_the_presecution }
-		prerequisite = { focus = USA_agricultural_adjustment_act }
 		relative_position_id = USA_suspend_the_presecution
 		cost = 10
 
@@ -985,11 +1434,10 @@ focus_tree = {
 		completion_reward = {
 			add_popularity = {
 	           ideology = communism
-	           popularity = 0.1
+	           popularity = 0.05
             }
-			add_stability = -0.1
-			add_war_support =-0.05
-			USA_congress_medium_opposition = yes
+			add_political_power = 75
+
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = harry_white
 			custom_effect_tooltip = available_political_advisor
@@ -1001,11 +1449,11 @@ focus_tree = {
 	focus = {
 		id = USA_us_ussr_economic_cooperation
 		icon = GFX_goal_generic_soviet_construction
-		x = 0
+		x = -3
 		y = 5
-		prerequisite = { focus = USA_reach_out_to_the_ware_group }
+		prerequisite = { focus = USA_unholy_alliance }
 		relative_position_id = USA_suspend_the_presecution
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1043,8 +1491,9 @@ focus_tree = {
 	focus = {
 		id = USA_unholy_alliance
 		icon = GFX_focus_chi_mission_to_the_soviet_union
-		prerequisite = { focus = USA_us_ussr_economic_cooperation }
-		mutually_exclusive = { focus = USA_secure_china }
+		prerequisite = { focus = USA_reintegration }
+		mutually_exclusive = { focus = usa_my_way }
+		mutually_exclusive = { focus = USA_bad_kivotos_RED }
 		
 		available = {
 			if = { limit = { has_country_flag = USABA_government_official_exile }
@@ -1053,12 +1502,13 @@ focus_tree = {
 			is_in_faction = no
 			not = { has_war_with = SOU }
 			SOV_comintern_joinable = yes 
+			has_civil_war = no
 		}
 
-		x = 0
-		y = 3
-		relative_position_id = USA_reach_out_to_the_ware_group
-		cost = 10
+		x = -1
+		y = 4
+		relative_position_id = USA_suspend_the_presecution
+		cost = 5
 		#ai_will_do = {
 		#	factor = 1
 		#}
@@ -1073,72 +1523,248 @@ focus_tree = {
 			}
 		}
 	}
+
 	focus = {
-		id = USA_secure_china
-		icon = GFX_focus_chi_cooperation_with_the_communists
-		x = 2
-		y = 3
-		prerequisite = { focus = USA_reach_out_to_the_ware_group }
+		id = usa_my_way
+		icon = GFX_focus_generic_strike_at_democracy3
+		prerequisite = { focus = USA_reintegration }
 		mutually_exclusive = { focus = USA_unholy_alliance }
-		relative_position_id = USA_reach_out_to_the_ware_group
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
+		mutually_exclusive = { focus = USA_bad_kivotos_RED }
 		available = {
 			if = { limit = { has_country_flag = USABA_government_official_exile }
 				NOT = { has_country_flag = USABA_government_official_exile }
 			}
-			not = {
-				has_war_with = event_target:WTT_communist_china
-			}
-			OR = {
-				is_faction_leader = yes
-				event_target:WTT_communist_china = {
-					is_faction_leader = yes
-				}
-			}
+			has_civil_war = no
 		}
-		
-		bypass = {
 
-		}
+		x = 1
+		y = 4
+		relative_position_id = USA_suspend_the_presecution
+		cost = 5
+		#ai_will_do = {
+		#	factor = 1
+		#}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 
 		completion_reward = {
-			if = {
-				limit = {
-					event_target:WTT_communist_china = {
-						is_faction_leader = yes
-					}
-				}
-				event_target:WTT_communist_china = {
-					country_event = generic.2
-				}
-			}
-			else_if = {
-				limit = {
-					is_faction_leader = yes
-				}
-				event_target:WTT_communist_china = {
-					country_event = generic.5
-				}
-			}
+			add_ideas = usa_my_way
+
 		}
 	}
+    
+	# 공산 미국 외교 정책
+	focus = {
+		id = USA_the_comintern
+		icon = GFX_focus_generic_soviet_politics
+		prerequisite = { focus = USA_unholy_alliance focus = usa_my_way focus = USA_bad_kivotos_RED }
+		
+		available = {
+
+		}
+
+		x = 1
+		y = 5
+		relative_position_id = USA_suspend_the_presecution
+		cost = 5
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+            add_political_power = 100
+
+
+		}
+	}
+
+
+    #  공격적 외교
+		focus = {
+		id = USA_the_aggresive_comintern
+		icon = GFX_focus_spr_anarchism_knows_no_borders 	 
+		prerequisite = {focus = USA_the_comintern }
+		mutually_exclusive = { focus = USA_the_union_comintern }
+		
+		available = {
+
+		}
+
+		x = 0
+		y = 6
+		relative_position_id = USA_suspend_the_presecution
+		cost = 5
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = USA_the_aggresive_comintern
+
+		}
+	}
+
+	focus = {
+		id = USA_the_aggresive_comintern_2
+		icon = GFX_focus_spr_crush_the_revolution 	 
+		prerequisite = {focus = USA_the_aggresive_comintern }
+		mutually_exclusive = { focus = USA_the_union_comintern }
+		
+		available = {
+
+		}
+
+		x = 0
+		y = 7
+		relative_position_id = USA_suspend_the_presecution
+		cost = 5
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+
+		}
+	}
+
+
+
+	    #  혁명적 외교
+		focus = {
+		id = USA_the_union_comintern
+		icon = GFX_focus_generic_red_flags
+		prerequisite = {focus = USA_the_comintern }
+		mutually_exclusive = { focus = USA_the_aggresive_comintern }
+		
+		available = {
+
+		}
+
+		x = 2
+		y = 6
+		relative_position_id = USA_suspend_the_presecution
+		cost = 5
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = USA_the_union_comintern
+
+		}
+	}
+
+	focus = {
+		id = USA_the_union_comintern_2
+		icon = GFX_focus_GER_the_peoples_victory
+		prerequisite = {focus = USA_the_union_comintern }
+		
+		available = {
+
+		}
+
+		x = 2
+		y = 7
+		relative_position_id = USA_suspend_the_presecution
+		cost = 5
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+
+		}
+	}
+
+
+
+    # 공산당 동맹 중점(안씀)
+	#	focus = {
+	#	id = USA_secure_china
+	#	icon = GFX_focus_chi_cooperation_with_the_communists
+	#	x = 0
+	#	y = 3
+	#	prerequisite = { focus = USA_be_red }
+	#	mutually_exclusive = { focus = USA_unholy_alliance }
+	#	relative_position_id = USA_reach_out_to_the_ware_group
+	#	cost = 5
+	#	ai_will_do = {
+	#		factor = 1
+	#	}
+	#	available = {
+	#		if = { limit = { has_country_flag = USABA_government_official_exile }
+	#			NOT = { has_country_flag = USABA_government_official_exile }
+	#		}
+	#		not = {
+	#			has_war_with = event_target:WTT_communist_china
+	#		}
+	#		OR = {
+	#			is_faction_leader = yes
+	#			event_target:WTT_communist_china = {
+	#				is_faction_leader = yes
+	#			}
+	#		}
+	#	}
+	#	
+	#	bypass = {
+    #    }
+	#	cancel_if_invalid = yes
+	#	continue_if_invalid = no
+	#	available_if_capitulated = no
+    #
+	#	completion_reward = {
+	#		if = {
+	#			limit = {
+	#				event_target:WTT_communist_china = {
+	#					is_faction_leader = yes
+	#				}
+	#			}
+	#			event_target:WTT_communist_china = {
+	#				country_event = generic.2
+	#			}
+	#		}
+	#		else_if = {
+	#			limit = {
+	#				is_faction_leader = yes
+	#			}
+	#			event_target:WTT_communist_china = {
+	#				country_event = generic.5
+	#			}
+	#		}
+	#	}
+	#}
+
+
 	focus = {
 		id = USA_end_monarchism
 		icon = GFX_focus_rom_abdicate
-		x = 4
+		x = -2
 		y = 1
-		prerequisite = { focus = USA_reach_out_to_the_ware_group }
-		relative_position_id = USA_reach_out_to_the_ware_group
-		cost = 10
+		prerequisite = { focus = USA_red_team }
+		relative_position_id = USA_red_team
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1164,8 +1790,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			USA_congress_large_opposition = yes
-			add_ideas = why_am_i_fight
 			if = {
 				limit = {
 					ENG = {
@@ -1240,11 +1864,11 @@ focus_tree = {
 	focus = {
 		id = USA_shatter_the_empires
 		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
-		x = 4
+		x = -2
 		y = 2
-		prerequisite = { focus = USA_end_monarchism }
-		relative_position_id = USA_reach_out_to_the_ware_group
-		cost = 10
+	    prerequisite = { focus = USA_end_monarchism }
+		relative_position_id = USA_red_team
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1519,7 +2143,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
-			add_stability = 0.15
+			add_stability = 0.1
 			if = {
 				limit = { has_idea = USABA_collapsed_government_authority }
 				remove_ideas = USABA_collapsed_government_authority
@@ -1569,7 +2193,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
-			add_stability = 0.2
+			add_stability = 0.15
 			USA_great_depression_level_down = yes
 			set_country_flag = { flag = USA_great_depression_cooldown value = 1 days = 230 }
 			custom_effect_tooltip = USA_great_depression_cooldown_tt
@@ -1839,6 +2463,42 @@ focus_tree = {
 			}
 		}
 	}
+    
+
+	# 컨테이너벨트 개발
+	focus = {
+		id = USABA_develop_corn_belt
+		icon = GFX_focus_generic_farmland
+		prerequisite = { focus = USA_continue_the_new_deal }
+		x = 0
+		y = 1
+		relative_position_id = USA_continue_the_new_deal
+
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = no
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+		available = {
+			if = { limit = { has_country_flag = USABA_government_official_exile }
+				NOT = { has_country_flag = USABA_government_official_exile }
+			}
+			congress_low_support_trigger = yes
+		}
+		bypass = {
+			
+		}
+		search_filters = {FOCUS_FILTER_USA_CONGRESS}
+		completion_reward = {
+
+		}
+	}
+
+
 	#대규모 구제금융
 	focus = {
 		id = USABA_massive_bailout
@@ -1947,6 +2607,7 @@ focus_tree = {
 			else = {
 				congress_low_support_trigger = yes
 			}
+			not = { has_completed_focus = USABA_replace_industry }
 		}
 		bypass = {
 			
@@ -2016,6 +2677,7 @@ focus_tree = {
 				congress_low_support_trigger = yes
 			}
 			democratic > 0.65
+			not = { has_completed_focus = USABA_replace_industry }
 		}
 		bypass = {
 			
@@ -3403,6 +4065,57 @@ focus_tree = {
 	}
 
 
+	# 전세계 사회주의 혁명
+
+
+		focus = {
+		id = USA_red_team
+		icon = GFX_focus_ETH_callout_to_the_world
+		x = -3
+		y = 6
+		mutually_exclusive = {focus = USA_old_team}
+		mutually_exclusive = {focus = USA_new_team}
+		mutually_exclusive = {focus = USA_soviet_team}
+		mutually_exclusive = {focus = USABA_german_national_protection_law}
+		relative_position_id = USA_desegregate_the_armed_forces
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			if = { limit = { has_country_flag = USABA_government_official_exile }
+				NOT = { has_country_flag = USABA_government_official_exile }
+			}
+			#threat > 0.8
+			has_government = communism
+			has_idea = usa_my_way
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			if = {
+				limit = {
+					"PHI" = {
+						is_subject_of = ROOT
+					}
+				}
+				set_autonomy = { target = "PHI" autonomy_state = autonomy_free }
+			}
+			if = {
+				limit = {
+					is_faction_leader = yes
+				}
+				add_to_faction = "PHI"
+			}
+
+		}
+	}
+
+
 
 
 	# 구질서 수호
@@ -3411,7 +4124,7 @@ focus_tree = {
 		id = USA_old_team
 		icon = GFX_focus_generic_league_of_nations
 		prerequisite = { focus = USABA_american_reindustrialization }
-		mutually_exclusive = { focus = USA_new_team focus = USA_soviet_team focus = USABA_german_national_protection_law }
+		mutually_exclusive = { focus = USA_new_team focus = USA_soviet_team focus = USABA_german_national_protection_law focus = USA_red_team}
 		x = 0
 		y = 1
 		relative_position_id = USABA_american_reindustrialization
@@ -3592,7 +4305,7 @@ focus = {
 		id = USA_fast_train
 		icon = GFX_SOV_an_adaptable_army_ccp_2d_sov_compatibility
 		prerequisite = { focus = USA_arsenal_of_democracy }
-		x = -4
+		x = -2
 		y = 1
 		relative_position_id = USA_arsenal_of_democracy
 		cost = 8
@@ -3604,7 +4317,6 @@ focus = {
 			if = { limit = { has_country_flag = USABA_government_official_exile }
 				NOT = { has_country_flag = USABA_government_official_exile }
 			}
-			has_government = democratic
 		}
 		completion_reward = {
               add_timed_idea = {
@@ -3619,7 +4331,7 @@ focus = {
 	focus = {
 		id = USA_military_construction
 		icon = GFX_goal_generic_build_tank
-		prerequisite = { focus = USA_arsenal_of_democracy }
+		prerequisite = { focus = USA_rubber_reserve_company }
 		
 		available = {
 			if = { limit = { has_country_flag = USABA_government_official_exile }
@@ -3634,9 +4346,9 @@ focus = {
 		continue_if_invalid = yes
 		available_if_capitulated = yes
 
-		x = 2
+		x = 0
 		y = 1
-		relative_position_id = USA_arsenal_of_democracy
+		relative_position_id = USA_rubber_reserve_company
 		cost = 5
 		#ai_will_do = {
 		#	factor = 1
@@ -4038,7 +4750,7 @@ focus = {
 
 		}
 		continue_if_invalid = yes
-		x = 0
+		x = 2
 		y = 1
 		relative_position_id = USA_arsenal_of_democracy
 		cost = 5
@@ -4075,7 +4787,7 @@ focus = {
 		id = USA_wartime_industry
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = USA_the_giant_wakes }
-		x = 0
+		x = 2
 		y = 2
 		relative_position_id = USA_arsenal_of_democracy
 		cost = 10
@@ -4761,7 +5473,7 @@ focus = {
 		id = USA_scientist_haven
 		icon = GFX_focus_research
 		prerequisite = { focus = USA_arsenal_of_democracy }
-		x = -2
+		x = 0
 		y = 1
 		relative_position_id = USA_arsenal_of_democracy
 
@@ -4822,7 +5534,7 @@ focus = {
 		icon = GFX_focus_wonderweapons
 		prerequisite = { focus = USA_scientist_haven }
 		
-		x = -2
+		x = 0
 		y = 2
 		relative_position_id = USA_arsenal_of_democracy
 		cost = 10
@@ -4980,7 +5692,7 @@ focus = {
 		id = USA_new_team
 		icon = GFX_focus_generic_little_entente
 		prerequisite = { focus = USABA_american_reindustrialization }
-		mutually_exclusive = { focus = USA_old_team focus = USA_soviet_team focus = USABA_german_national_protection_law }
+		mutually_exclusive = { focus = USA_old_team focus = USA_soviet_team focus = USABA_german_national_protection_law focus = USA_red_team}
 
 		x = 13
 		y = 1
@@ -5196,7 +5908,6 @@ focus = {
 				NOT = { has_country_flag = USABA_government_official_exile }
 			}
 			has_civil_war = no
-			NOT = { has_war_with = OFN }
 
 		}
 		completion_reward = {
@@ -5411,7 +6122,7 @@ focus = {
 		icon = GFX_goal_TRM_New_fascism_friend
 		prerequisite = { focus = USA_blue_kivotos focus = USA_bad_kivotos}
 
-		x = 0
+		x = 2
 		y = 4
 		relative_position_id = USA_new_team
 		cost = 2
@@ -5626,7 +6337,7 @@ focus = {
 		prerequisite = { focus = USA_new_team_civilwar }
 		mutually_exclusive = { focus = USA_blue_kivotos }
 
-		x = 6
+		x = 8
 		y = 3
 		relative_position_id = USA_new_team
 		cost = 3
@@ -6385,10 +7096,12 @@ focus = {
 	focus = {
 		id = USA_bad_kivotos_RED
 		icon = GFX_focus_chi_mission_to_the_RED
-		prerequisite = { focus = USA_bad_kivotos }
-		x = 7
-		y = 1
-		relative_position_id = USA_bad_kivotos
+		prerequisite = { focus = USA_reintegration }
+		mutually_exclusive = { focus = USA_the_aggresive_comintern }
+		mutually_exclusive = { focus = usa_my_way}
+		x = 3
+		y = 4
+		relative_position_id = USA_suspend_the_presecution
 		cost = 5
 		ai_will_do = {
 			factor = 10
@@ -6398,25 +7111,20 @@ focus = {
 			if = { limit = { has_country_flag = USABA_government_official_exile }
 				NOT = { has_country_flag = USABA_government_official_exile }
 			}
-
+			has_civil_war = no
 		}
 		completion_reward = {
-            add_popularity = {
-				ideology = communism
-				popularity = 0.15
-			}
-			set_politics = { ruling_party = communism elections_allowed = yes }
-			USA_congress_large_opposition = yes
 			news_event = {id = BA_news.117 days = 2}
+			USA_congress_large_opposition = yes
 			# add_ideas = week_faith_for_new_team
 		}
 	}
 
-		focus = {
+	focus = {
 		id = USA_bad_kivotos_RED_pudding
 		icon = GFX_focus_generic_truck
 		prerequisite = { focus = USA_bad_kivotos_RED }
-		x = 0
+		x = 2
 		y = 1
 		relative_position_id = USA_bad_kivotos_RED
 		cost = 5
@@ -6442,7 +7150,7 @@ focus = {
 		id = USA_bad_kivotos_RED_more_pudding
 		icon = GFX_focus_SOV_the_road_of_life
 		prerequisite = { focus = USA_bad_kivotos_RED_pudding }
-		x = 1
+		x = 3
 		y = 2
 		relative_position_id = USA_bad_kivotos_RED
 		cost = 5
@@ -6468,7 +7176,7 @@ focus = {
 		id = USA_bad_kivotos_RED_see_myself
 		icon = GFX_focus_prc_infiltration
 		prerequisite = { focus = USA_bad_kivotos_RED_pudding }
-		x = 0
+		x = 2
 		y = 3
 		relative_position_id = USA_bad_kivotos_RED
 		cost = 5
@@ -11235,7 +11943,7 @@ focus = {
 		id = USA_soviet_team
 		icon = GFX_focus_generic_join_comintern
 		prerequisite = { focus = USABA_soviet_recovery_aid }
-		mutually_exclusive = { focus = USA_old_team focus = USA_new_team focus = USABA_german_national_protection_law }
+		mutually_exclusive = { focus = USA_old_team focus = USA_new_team focus = USABA_german_national_protection_law focus = USA_red_team}
 
 		x = 0
 		y = 3
@@ -11464,7 +12172,7 @@ focus = {
 		id = USABA_german_national_protection_law
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = USABA_german_ethnic_union_in_america }
-		mutually_exclusive = { focus = USA_new_team focus = USA_soviet_team focus = USA_old_team }
+		mutually_exclusive = { focus = USA_new_team focus = USA_soviet_team focus = USA_old_team focus = USA_red_team}
 		x = 0
 		y = 2
 		relative_position_id = USABA_german_ethnic_union_in_america

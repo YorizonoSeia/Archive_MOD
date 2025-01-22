@@ -311,3 +311,30 @@ music = {
     }
 }
 
+music = {
+    song = "If_you_ain_t_been_called_a_red"
+    chance = {
+        factor = 0
+    }
+}
+
+music = {
+    song = "USA_be_sov"
+    chance = {
+        factor = 0
+    }
+}
+
+music = {
+    song = "lenin_speech"
+    chance = {
+        factor = 0
+    }
+}
+
+music = {
+    song = "USA_National_Anthem_But_Red"
+    chance = {
+        factor = 0
+    }
+}

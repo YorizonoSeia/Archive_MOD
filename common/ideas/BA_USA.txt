@@ -299,8 +299,6 @@ ideas = {
 				NOT = {
 					has_idea = second_great_depression
 					has_idea = great_depression
-					has_idea = great_depression_2
-					has_idea = great_depression_3
 				}
 			}
 
@@ -312,8 +310,9 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
+				weekly_manpower = -1200
 				political_power_gain = -0.25
-				consumer_goods_factor = -0.2
+				consumer_goods_factor = -0.15
 				production_speed_buildings_factor = 0.1
 			    custom_modifier_tooltip = USABA_forced_wake_up_tt
 			}
@@ -960,5 +959,54 @@ ideas = {
 				consumer_goods_factor = 0.15
 			}
 		}
+
+
+        #############################################################
+        ######################공산 미국###############################
+        #############################################################
+		USABA_replace_industry = {
+			picture = man_five_year_plan_industry
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+                consumer_goods_factor = -0.2
+			}
+		}
+
+		usa_my_way = {
+			picture = SPR_torchbearers_of_tomorrow
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+                political_power_gain = 1
+				stability_weekly = 0.01
+				party_popularity_stability_factor = 0.2
+			}
+		}
+  
+		USA_the_aggresive_comintern = {
+			picture = SPR_crush_the_revolution
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+                justify_war_goal_time = -0.15
+				puppet_cost_factor = -0.1
+			}
+		}
+
+		USA_the_union_comintern = {
+			picture = SPR_masters_of_our_own_fate
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+                improve_relations_maintain_cost_factor = -0.5
+				enemy_justify_war_goal_time = 0.1
+				faction_trade_opinion_factor = -0.2
+			}
+		}   
    }
 }
