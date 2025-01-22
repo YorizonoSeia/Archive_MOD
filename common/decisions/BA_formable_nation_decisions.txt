@@ -337,6 +337,10 @@ gehenna_unification = {
 					NOT = {
 						OR = {
 							tag = GEM
+							has_cosmetic_tag = HEU_GSC
+							has_cosmetic_tag = HEU_luxembourg
+							has_cosmetic_tag = HEU_west_germanic_union
+							has_cosmetic_tag = HEU_germanic_union
 						}
 					}
 				}
