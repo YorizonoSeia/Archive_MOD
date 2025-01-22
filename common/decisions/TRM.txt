@@ -3468,17 +3468,53 @@ TRN_internal_factions_categories = {
 		}
 	}
 
-	#파벌 후원
-	TRN_pater_add = {
+	#파벌 회담
+	TRN_internal_factions_event_add = {
 		icon = GFX_decision_eng_propaganda_campaigns
-		visible = {
-			has_completed_focus = TRM_newfocus_7
+		available = {
+			has_completed_focus = TRN_uber_alles
+			custom_trigger_tooltip = {
+				tooltip = TRN_internal_factions_slot_doit
+				NOT = {
+					check_variable = { TRM_internal_factions_slot_one_var = -1 }
+					check_variable = { TRM_internal_factions_slot_two_var = -1 }
+					check_variable = { TRM_internal_factions_slot_three_var = -1 }
+				}
+			}
 		}
 		ai_will_do = {
 			base = 0
             modifier = {
                 add = 40
-                has_completed_focus = TRM_newfocus_7
+                has_completed_focus = TRN_uber_alles
+            }
+		}
+		
+		days_remove = 35
+		days_re_enable = 70
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+		}
+	}
+
+	#파벌 후원
+	TRN_pater_add = {
+		icon = GFX_decision_eng_propaganda_campaigns
+		available = {
+			has_completed_focus = TRN_restructuring_of_the_paters
+		}
+		ai_will_do = {
+			base = 0
+            modifier = {
+                add = 40
+                has_completed_focus = TRN_restructuring_of_the_paters
             }
 		}
 		
@@ -3509,7 +3545,7 @@ TRN_internal_factions_categories = {
 	}
 	TRN_filius_add = {
 		icon = GFX_decision_eng_propaganda_campaigns
-		visible = {
+		available = {
 			has_completed_focus = TRN_nagisa_gyehek
 		}
 		ai_will_do = {
@@ -3548,7 +3584,7 @@ TRN_internal_factions_categories = {
 	}
 	TRN_sanctus_add = {
 		icon = GFX_decision_eng_propaganda_campaigns
-		visible = {
+		available = {
 			has_completed_focus = TRN_restoration_of_the_sanctus_faction
 		}
 		ai_will_do = {
@@ -3583,7 +3619,7 @@ TRN_internal_factions_categories = {
 	}
 	TRN_sh_add = {
 		icon = GFX_decision_eng_propaganda_campaigns
-		visible = {
+		available = {
 			has_completed_focus = TRN_Request_assistance_from_Sisterhood
 		}
 		ai_will_do = {
@@ -3618,7 +3654,7 @@ TRN_internal_factions_categories = {
 	}
 	TRN_rk_add = {
 		icon = GFX_decision_eng_propaganda_campaigns
-		visible = {
+		available = {
 			has_completed_focus = TRN_Request_assistance_from_relief_knights
 		}
 		ai_will_do = {

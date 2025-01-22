@@ -5807,6 +5807,7 @@
 			custom_effect_tooltip = TRN_tooltip_nagisa_upgrade_idea
 			unlock_decision_tooltip = TRM_add_core_of_state_65
 			unlock_decision_tooltip = TRM_add_core_of_state_61
+			unlock_decision_tooltip = TRN_internal_factions_event_add
 		}
 	}
 

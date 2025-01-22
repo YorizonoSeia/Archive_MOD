@@ -309,6 +309,7 @@ KSP_annex_cou_decesion_desc: "발키리에 총학생회를 편입시킵니다. �
  TRN_return_to_host_position_tooltip:0 "§Y상투스 분파§!의 §Y영향력§!이 §Y60§!이상"
  TRN_return_to_host_position_tooltip2:0 "§Y상투스 분파§!보다 §Y영향력§!이 높은 파벌 없음"
  TRN_trinitarian_factionalism_tooltip:0 "§Y빈 파벌 슬롯§!이 존재하지 않음."
+ TRN_internal_factions_slot_doit:0 "하나 이상의 §Y파벌§! 존재"
  TRN_Crushing_Pater_tt:0 "§Y파테르 분파§!의 §Y영향력§!이 §Y20§!이하"
  TRM_popularity_del_tt: "§Y해당 파벌의 영향력§!: §Y0§!"
 
@@ -332,6 +333,8 @@ KSP_annex_cou_decesion_desc: "발키리에 총학생회를 편입시킵니다. �
  TRM_philius_faction_tt: "§Y필리우스 분파§! 파벌의 충성도는 §R-30§! 아래로 하락하지 않습니다."
 
 #dc
+ TRN_internal_factions_event_add:0 "티 파티"
+
  TRN_pater_add:0 "파테르 분파 지원"
  TRN_sanctus_add:0 "상투스 분파 지원"
  TRN_filius_add:0 "필리우스 분파 지원"
