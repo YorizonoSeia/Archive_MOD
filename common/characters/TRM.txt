@@ -12,8 +12,8 @@ characters={
 			}
 		}
 		field_marshal = {
-			traits = { trait_cautious organisational_leader thorough_planner media_personality  politically_connected }
-			skill=5
+			traits = { trait_cautious organizer organisational_leader thorough_planner media_personality  politically_connected }
+			skill=3
 			attack_skill=3
 			defense_skill=2
 			planning_skill=3
@@ -162,12 +162,12 @@ characters={
 		}
 		gender = female
 		corps_commander={
-			traits = { front_line_general politically_connected }
+			traits = { front_line_general politically_connected media_personality harsh_leader trait_reckless brilliant_strategist expert_improviser }
 			skill=5
-			attack_skill=4
-			defense_skill=4
+			attack_skill=3
+			defense_skill=2
 			planning_skill=3
-			logistics_skill=3
+			logistics_skill=1
 			desc = TRN_Mika_advisor_desc
 			 
 		}
@@ -229,7 +229,7 @@ characters={
 			}
 		}
 		gender = female
-		field_marshal={
+		corps_commander={
 			traits={ politically_connected }
 			skill=3
 			attack_skill=3
@@ -439,20 +439,12 @@ characters={
 		gender = female
 		corps_commander={
 			traits={ commando }
-			skill=3
-			attack_skill=3
-			defense_skill=2
+			skill=2
+			attack_skill=2
+			defense_skill=1
 			planning_skill=2
-			logistics_skill=2
+			logistics_skill=1
 
-			desc = TRN_Azusa_advisor_desc
-		}
-		navy_leader = {
-			skill = 2
-			attack_skill = 2
-			defense_skill = 2
-			maneuvering_skill = 4
-			coordination_skill = 4
 			desc = TRN_Azusa_advisor_desc
 		}
 		advisor={
@@ -488,10 +480,10 @@ characters={
 		}
 		gender = female
 		corps_commander={
-			skill=3
+			skill=2
 			attack_skill=2
 			defense_skill=3
-			planning_skill=3
+			planning_skill=2
 			logistics_skill=2
 			traits={ infantry_officer  }
 
@@ -529,9 +521,9 @@ characters={
 		}
 		gender = female
 		corps_commander = {
-			skill = 3
-			attack_skill = 3
-			defense_skill = 2
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 1
 			traits = { infantry_officer }
@@ -661,8 +653,8 @@ characters={
 		corps_commander={
 			traits={  }
 			skill=1
-			attack_skill=2
-			defense_skill=2
+			attack_skill=1
+			defense_skill=1
 			planning_skill=1
 			logistics_skill=1
 			desc = TRN_Shimiko_advisor_desc
@@ -695,12 +687,12 @@ characters={
 		}
 		gender = female
 		corps_commander={
-			traits={ infantry_officer }
+			traits={ }
 			skill=2
 			attack_skill=2
-			defense_skill=2
-			planning_skill=1
-			logistics_skill=2
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=1
 			desc = TRN_Kazusa_advisor_desc
 		}
 		country_leader={ 
@@ -758,7 +750,7 @@ characters={
 			defense_skill=5
 			planning_skill=4
 			logistics_skill=3
-			traits={ career_officer infantry_officer front_line_general politically_connected }
+			traits={ media_personality inflexible_strategist media_personality career_officer front_line_general politically_connected }
 			desc = TRN_tsurugi_advisor_desc
 		}
 		advisor={	
@@ -811,11 +803,11 @@ characters={
 		gender = female
 		corps_commander={
 			skill=1
-			attack_skill=2
+			attack_skill=1
 			defense_skill=1
 			planning_skill=2
 			logistics_skill=2
-			traits={ TRN_pervert infantry_officer }
+			traits={ TRN_pervert }
 			desc = TRN_Koharu_advisor_desc
 		}
 	}
@@ -830,20 +822,13 @@ characters={
 		}
 		gender = female
 		corps_commander={
-			traits = { trait_engineer Armor_Officer Panzer_Leader }
-			skill=2
-			attack_skill=3
-			defense_skill=3
-			planning_skill=3
-			logistics_skill=3
-			desc = TRN_Hifumi_advisor_desc
-		}
-		navy_leader ={
+			traits = { Armor_Officer Panzer_Leader }
 			skill=1
-			attack_skill=1
+			attack_skill=2
 			defense_skill=1
-			maneuvering_skill=2
-			coordination_skill=1
+			planning_skill=1
+			logistics_skill=1
+			desc = TRN_Hifumi_advisor_desc
 		}
 		advisor={
 			slot = high_command
@@ -903,8 +888,8 @@ characters={
 		corps_commander={
 			traits={ }
 			skill=1
-			attack_skill=3
-			defense_skill=2
+			attack_skill=1
+			defense_skill=1
 			planning_skill=1
 			logistics_skill=1
 			 
@@ -1017,11 +1002,11 @@ characters={
 		gender = female
 		corps_commander={
 			traits={ TRN_guhogisadan }
-			skill=2
+			skill=1
 			attack_skill=1
-			defense_skill=3
-			planning_skill=2
-			logistics_skill=3
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=1
 			desc = TRN_Serina_advisor_desc
 		}
 	}
@@ -1036,11 +1021,11 @@ characters={
 		gender = female
 		corps_commander={
 			traits={ TRN_guhogisadan }
-			skill=2
+			skill=1
 			attack_skill=1
-			defense_skill=3
-			planning_skill=2
-			logistics_skill=3
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=1
 			desc = TRN_Hanae_advisor_desc
 		}
 	}
@@ -1055,11 +1040,11 @@ characters={
 		gender = female
 		corps_commander={
 			traits={  }
-			skill=2
-			attack_skill=2
-			defense_skill=4
-			planning_skill=3
-			logistics_skill=3
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=1
 			desc = TRN_Hanako_advisor_desc
 		}
 	}
@@ -1074,9 +1059,9 @@ characters={
 		gender = female
 		corps_commander={
 			traits={  }
-			skill=2
+			skill=1
 			attack_skill=1
-			defense_skill=2
+			defense_skill=1
 			planning_skill=1
 			logistics_skill=1
 			desc = TRN_Mari_advisor_desc
@@ -1095,7 +1080,7 @@ characters={
 			traits={  }
 			skill=1
 			attack_skill=1
-			defense_skill=2
+			defense_skill=1
 			planning_skill=1
 			logistics_skill=1
 			desc = TRN_Yoshimi_advisor_desc
@@ -1135,7 +1120,7 @@ characters={
 			traits={  }
 			skill=1
 			attack_skill=1
-			defense_skill=2
+			defense_skill=1
 			planning_skill=1
 			logistics_skill=1
 			desc = TRN_Airi_advisor_desc

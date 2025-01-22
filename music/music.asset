@@ -6,12 +6,6 @@ music = {
 	file = "If_you_ain_t_been_called_a_red.ogg"
 	volume = 0.5
 }
-
-music = {
-	name = "maintheme_7"
-	file = "Can_You_Feel_My_Heart.ogg"
-	volume = 0.5
-}
 music = {
 	name = "maintheme_5"
 	file = "Bocchi_The_Rock.ogg"
