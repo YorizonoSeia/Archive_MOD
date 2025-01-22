@@ -251,10 +251,10 @@ technologies = {
 				set_variable = { ROOT.halo_special_forces_cap = 0 } # 사단 제한, 헤일로 특수부대의 사단 제한과 같아야 함'
 				if = {
 					limit = {
-						has_template = "Halo Infantry Division"
+						has_template = "Halo Special Forces"
 					}
 					delete_unit_template_and_units = {
-						division_template = "Halo Infantry Division"
+						division_template = "Halo Special Forces"
 					}
 				}
 					
