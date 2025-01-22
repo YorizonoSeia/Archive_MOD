@@ -4,7 +4,7 @@
 music = {
 	name = "maintheme"
 	file = "If_you_ain_t_been_called_a_red.ogg"
-	volume = 0.6
+	volume = 0.5
 }
 
 music = {
