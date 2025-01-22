@@ -59,6 +59,15 @@ opinion_modifiers = {
 	RED_anti_soviet = {
 		value = -100
 	}
+	RED_invested = {
+		value = 5
+	}
+	RED_dont_pay = {
+		value = -5
+	}
+	RED_never_pay = {
+		value = -50
+	}
 	ITA_treaty_implementation = {
 		value = 50
 	}

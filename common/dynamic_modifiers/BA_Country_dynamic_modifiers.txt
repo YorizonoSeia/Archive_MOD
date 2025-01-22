@@ -823,6 +823,21 @@ KSP_spread_out_officers = {
 
 #붉은겨울 연방학원
 
+RED_investment_modifier = { #붉은겨울 재건채권
+	enable = { always = yes }
+	icon = GFX_idea_GER_mefo_bills
+	industrial_factory_donations = RED_invest
+}
+RED_investment_bill_modifier = { #붉은겨울 재건채권 상환
+	enable = { always = yes }
+	icon = GFX_idea_ger_mefo_bills_payment
+	civilian_factory_use = RED_invest_pay
+}
+RED_investment_more = { #채권 만료 기한 연장
+	enable = { always = yes }
+	icon = GFX_idea_generic_goods_red_bonus
+	consumer_goods_expected_value = RED_no_pay
+}
 RED_the_office_good_dynamic_modifier = { #사무국
 	enable = { always = yes }
 

@@ -177,6 +177,12 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100
 		}
+		offset = {
+			x = 2
+			trigger = {
+				has_completed_focus = RED_new_economy_focus_0
+			}
+		}
 
 		available = {
    
@@ -241,6 +247,17 @@ focus_tree = {
 				has_country_flag = RED_there_is_coup_flag
 			}
 		}
+		offset = {
+			x = 2
+			trigger = {
+				has_completed_focus = RED_entice_publicworks
+			}
+		}
+		allow_branch = {
+			NOT = {
+				has_completed_focus = RED_new_economy_focus_0
+			}
+		}
 		bypass = {
 			OR = {
 				has_completed_focus = RED_puppet_labor_party
@@ -257,6 +274,13 @@ focus_tree = {
 			}
 			effect_tooltip = {
 				unlock_national_focus = RED_rearming_focus_1
+			}
+			hidden_effect = {
+				load_focus_tree = {
+					tree = RED_focus_tree
+					keep_completed = yes
+				}
+				mark_focus_tree_layout_dirty = yes
 			}
 		}
 	}
@@ -721,10 +745,31 @@ focus_tree = {
 				has_completed_focus = RED_dipose_cherino
 			}
 		}
+		offset = {
+			x = -2
+			trigger = {
+				has_completed_focus = RED_new_economy_focus_0
+			}
+		}
+		allow_branch = {
+			NOT = {
+				has_completed_focus = RED_entice_publicworks
+			}
+		}
 		mutually_exclusive = {
 			focus = RED_entice_publicworks
 		}
 		completion_reward = {
+			custom_effect_tooltip = RED_new_economy_tt
+			upgrade_economy_law = yes
+			hidden_effect = {
+				load_focus_tree = {
+					tree = RED_focus_tree
+					keep_completed = yes
+				}
+				mark_focus_tree_layout_dirty = yes
+			}
+			custom_effect_tooltip = RED_new_economy_focus_0_tt
 		}
 	}
 	focus = { # 완전고용을 향해
@@ -741,6 +786,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			add_ideas = RED_full_employment
 		}
 	}
 	focus = { # 직장 개인 배치
@@ -757,6 +803,10 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = RED_full_employment
+				add_idea = RED_full_employment_1
+			}
 		}
 	}
 	focus = { # 공공근로
@@ -773,6 +823,34 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			141 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			919 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			140 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			913 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
 		}
 	}
 	focus = { # 봉사와 헌신
@@ -790,6 +868,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			unlock_decision_category_tooltip = RED_service_n_dedication
 		}
 	}
 	focus = { # 산업 동원
@@ -806,6 +885,10 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			add_timed_idea = {
+				idea = RED_shock_therapy
+				months = 9
+			}
 		}
 	}
 	focus = { # 대규모 군축
@@ -822,6 +905,10 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			add_timed_idea = {
+				idea = RED_large-scale_disarmament
+				years = 1
+			}
 		}
 	}
 	focus = { # 붉은겨울 재건채권
@@ -837,7 +924,40 @@ focus_tree = {
 				has_country_flag = RED_there_is_coup_flag
 			}
 		}
+		cancelable = no
+		select_effect = {
+			every_other_country = {
+				limit = {
+					Kivotos_school_tag = yes
+				}
+				country_event = {
+					id = RED_generic.1
+					days = 5
+				}
+			}
+			country_event = {
+				id = RED_generic.4
+				days = 12
+			}
+		}
 		completion_reward = {
+			custom_effect_tooltip = tooltip_immediate_effect_upon_focus_start
+			effect_tooltip = {
+				every_other_country = {
+					limit = {
+						Kivotos_school_tag = yes
+					}
+					country_event = {
+						id = RED_generic.1
+						days = 5
+					}
+				}
+			}
+
+			add_dynamic_modifier = {
+				modifier = RED_investment_modifier
+			}
+			activate_mission = RED_mission_rebuild_bill_outdate
 		}
 	}
 	focus = { # 카이저로부터의 대출
@@ -865,11 +985,24 @@ focus_tree = {
 		relative_position_id = RED_new_economy_focus_0
 		cost = 4
 		available = {
-			NOT = {
-				has_country_flag = RED_there_is_coup_flag
-			}
+			always = no
 		}
 		completion_reward = {
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = RED_investment_bill_modifier
+					}
+				}
+				remove_dynamic_modifier = {
+					modifier = RED_investment_bill_modifier
+				}
+			}
+			else = {
+				remove_dynamic_modifier = {
+					modifier = RED_investment_more
+				}
+			}
 		}
 	}
 	focus = { # 무제한 인플레이션
@@ -998,7 +1131,6 @@ focus_tree = {
 		}
 	}
 
-
 	focus = { # 현지 산업 개발안
 		id = RED_economy_focus_3
 
@@ -1008,6 +1140,22 @@ focus_tree = {
 		y = 1
 		relative_position_id = RED_land_research
 		cost = 4
+		offset = {
+			x = -6
+			trigger = {
+				OR = {
+					has_completed_focus = RED_entice_publicworks
+				}
+			}
+		}
+		offset = {
+			x = -2
+			trigger = {
+				OR = {
+					has_completed_focus = RED_new_economy_focus_0
+				}
+			}
+		}
 
 		available = {
    
@@ -1058,13 +1206,28 @@ focus_tree = {
 	}
 	focus = { # 현지 기술관료 등용
 		id = RED_economy_focus_4
-
 		icon = GFX_goal_TRM_class_collaboration
 		prerequisite = { focus = RED_land_research }
 		x = 9
 		y = 1
 		relative_position_id = RED_land_research
 		cost = 2
+		offset = {
+			x = -6
+			trigger = {
+				OR = {
+					has_completed_focus = RED_entice_publicworks
+				}
+			}
+		}
+		offset = {
+			x = -2
+			trigger = {
+				OR = {
+					has_completed_focus = RED_new_economy_focus_0
+				}
+			}
+		}
 
 		available = {
    
@@ -1845,9 +2008,9 @@ focus_tree = {
 			}
 		}
 	}
+
 	focus = { # 붉은겨울 전산국
 		id = RED_club_focus_0
-
 		icon = GFX_focus_generic_self_management
 		prerequisite = { focus = RED_land_research }
 		x = 14
@@ -1856,6 +2019,22 @@ focus_tree = {
 		cost = 2
 		ai_will_do = {
 			base = 300
+		}
+		offset = {
+			x = -6
+			trigger = {
+				OR = {
+					has_completed_focus = RED_entice_publicworks
+				}
+			}
+		}
+		offset = {
+			x = -2
+			trigger = {
+				OR = {
+					has_completed_focus = RED_new_economy_focus_0
+				}
+			}
 		}
 
 		available = {

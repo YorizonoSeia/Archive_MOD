@@ -1,5 +1,47 @@
 ideas = {
+	hidden_ideas = {
+		RED_invest = { #붉은겨울에의 투자
+			modifier = {
+				civilian_factory_use = 1
+			}
+		}
+	}
     country = {
+		RED_large-scale_disarmament = { #대규모 군축
+			picture = generic_improved_industries
+			modifier = {
+				industrial_factory_donations  = 10
+				military_factory_donations = -15
+				
+			}
+		}
+		RED_shock_therapy = { #충격요법
+			picture = generic_economic_crisis
+			modifier = {
+				stability_factor = -0.1
+				production_speed_industrial_complex_factor = 0.15
+			}
+		}
+		RED_full_employment = { #완전고용
+			name = RED_full_employment
+			picture = ARG_construction_guilds
+			modifier = {
+				consumer_goods_expected_value = -0.05
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		RED_full_employment_1 = { #완전고용
+			name = RED_full_employment
+			picture = ARG_construction_guilds
+			modifier = {
+				consumer_goods_expected_value = -0.1
+				production_speed_buildings_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				political_power_factor = -0.05
+			}
+		}
+
 		RED_corruption_4 = { #만연한 부패
 			name = RED_corruption_0
 			picture = ARG_political_corruption_modifier
@@ -193,8 +235,6 @@ ideas = {
 		RED_market_socialism = { #시장사회주의
 			picture = new_economic_policy
 			modifier = {
-				consumer_goods_factor = 0.1
-				production_factory_max_efficiency_factor = -0.05
 				production_factory_efficiency_gain_factor = 0.15
 				production_speed_industrial_complex_factor = 0.05
 				industrial_capacity_factory = 0.075
@@ -205,8 +245,7 @@ ideas = {
 			name = RED_second_AEP
 			picture = new_economic_policy
 			modifier = {
-				consumer_goods_factor = 0.1
-				production_factory_max_efficiency_factor = -0.1
+				production_factory_max_efficiency_factor = -0.05
 				production_factory_efficiency_gain_factor = 0.1
 				production_speed_industrial_complex_factor = 0.1
 				production_speed_arms_factory_factor = -0.025
@@ -218,7 +257,7 @@ ideas = {
 			name = RED_second_AEP
 			picture = new_economic_policy
 			modifier = {
-				consumer_goods_factor = 0.25
+				consumer_goods_factor = 0.05
 				production_factory_max_efficiency_factor = -0.1
 				production_factory_efficiency_gain_factor = 0.1
 				production_speed_industrial_complex_factor = 0.1
@@ -231,8 +270,7 @@ ideas = {
 			name = RED_second_AEP
 			picture = new_economic_policy
 			modifier = {
-				consumer_goods_factor = 0.1
-				production_factory_max_efficiency_factor = -0.1
+				production_factory_max_efficiency_factor = -0.05
 				production_factory_efficiency_gain_factor = 0.1
 				production_speed_industrial_complex_factor = 0.1
 				production_speed_arms_factory_factor = -0.025
@@ -243,7 +281,7 @@ ideas = {
 			name = RED_second_AEP
 			picture = new_economic_policy
 			modifier = {
-				consumer_goods_factor = 0.25
+				consumer_goods_factor = 0.05
 				production_factory_max_efficiency_factor = -0.1
 				production_factory_efficiency_gain_factor = 0.1
 				production_speed_industrial_complex_factor = 0.1
@@ -256,7 +294,7 @@ ideas = {
 			picture = new_economic_policy
 			modifier = {
 				stability_factor = -0.1
-				consumer_goods_factor = 0.25
+				consumer_goods_factor = 0.05
 				production_factory_max_efficiency_factor = -0.1
 				production_factory_efficiency_gain_factor = 0.1
 				production_speed_industrial_complex_factor = 0.1
@@ -269,7 +307,7 @@ ideas = {
 			picture = new_economic_policy
 			modifier = {
 				stability_factor = -0.1
-				consumer_goods_factor = 0.25
+				consumer_goods_factor = 0.05
 				production_factory_max_efficiency_factor = -0.1
 				production_factory_efficiency_gain_factor = 0.1
 				production_speed_industrial_complex_factor = 0.1

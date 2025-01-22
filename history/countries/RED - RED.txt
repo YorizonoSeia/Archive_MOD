@@ -112,6 +112,15 @@ set_variable = {
 set_variable = {
 	RED_war_fighter_sortie_efficiency = 0
 }
+
+#투자
+set_variable = {
+	RED_invest = 0
+}
+set_variable = {
+	RED_no_pay = 0
+}
+
 if = {
 	limit = { has_dlc = "Man the Guns" }
 	set_technology = {

@@ -6,6 +6,210 @@ add_namespace = RED_minori_event
 add_namespace = RED_missions
 add_namespace = RED_missions_char
 add_namespace = RED_marina_event
+add_namespace = RED_generic
+
+country_event = {
+	id = RED_generic.1
+	title = RED_generic.1.t
+	desc = RED_generic.1.d
+	is_triggered_only = yes
+	option = { #수락
+		name = RED_generic.1.a
+		add_timed_idea = {
+			idea = RED_invest
+			years = 1
+		}
+		RED = {
+			add_to_variable = {
+				RED_invest = 1
+			}
+		}
+		set_country_flag = I_have_invested_RED_flag
+		ai_chance = {
+			base = 2
+		}
+		RED = {
+			country_event = RED_generic.2
+		}
+		add_opinion_modifier = {
+			target = RED
+			modifier = RED_invested
+		}
+	}
+	option = { #거절
+		name = RED_generic.1.b
+		RED = {
+			country_event = RED_generic.3
+		}
+	}
+}
+country_event = { #수락 ㄳ
+	id = RED_generic.2
+	title = RED_generic.2.t
+	desc = RED_generic.2.d
+	is_triggered_only = yes
+	option = { #수락
+		name = RED_generic.2.a
+		add_political_power = 5
+		custom_effect_tooltip = RED_investment_modifier_modify
+		custom_effect_tooltip = RED_investment_tt
+		FROM = {
+			effect_tooltip = {
+				add_opinion_modifier = {
+					target = RED
+					modifier = RED_invested
+				}
+			}
+		}
+	}
+}
+country_event = { #거절
+	id = RED_generic.3
+	title = RED_generic.3.t
+	desc = RED_generic.3.d
+	is_triggered_only = yes
+	option = {
+		name = RED_generic.3.a
+	}
+}
+country_event = { #국내 매입 조절
+	id = RED_generic.4
+	title = RED_generic.4.t
+	desc = RED_generic.4.d
+	is_triggered_only = yes
+	option = { #소규모
+		name = RED_generic.4.a
+		custom_effect_tooltip = RED_investment_modifier_modify
+		custom_effect_tooltip = RED_investment_tt_1
+		add_to_variable = {
+			RED_invest = 2
+		}
+	}
+	option = { #적당한 규제
+		name = RED_generic.4.b
+		custom_effect_tooltip = RED_investment_modifier_modify
+		custom_effect_tooltip = RED_investment_tt_2
+		add_to_variable = {
+			RED_invest = 4
+		}
+		add_political_power = -25
+	}
+	option = { #대규모
+		name = RED_generic.4.c
+		custom_effect_tooltip = RED_investment_modifier_modify
+		custom_effect_tooltip = RED_investment_tt_3
+		add_to_variable = {
+			RED_invest = 6
+		}
+		add_political_power = -50
+	}
+}
+country_event = { #재건채권 만료
+	id = RED_generic.5
+	title = RED_generic.5.t
+	desc = RED_generic.5.d
+	is_triggered_only = yes
+	option = { #이제 갚자
+		name = RED_generic.5.a
+		add_dynamic_modifier = {
+			modifier = RED_investment_bill_modifier
+			days = 365
+		}
+		remove_dynamic_modifier = {
+			modifier = RED_investment_modifier
+		}
+	}
+	option = { #나중에 갚자
+		name = RED_generic.5.b
+		add_political_power = -10
+		add_dynamic_modifier = {
+			modifier = RED_investment_more
+			days = 90
+		}
+		ai_chance = {
+			base = 2
+		}
+		every_other_country = {
+			limit = {
+				has_country_flag = I_have_invested_RED_flag
+			}
+			add_opinion_modifier = {
+				target = RED
+				modifier = RED_dont_pay
+			}
+		}
+		activate_mission = RED_mission_rebuild_bill_no_pay_outdate
+	}
+}
+country_event = { #돈 갚음
+	id = RED_generic.6
+	title = RED_generic.6.t
+	desc = RED_generic.6.d
+	is_triggered_only = yes
+	option = { 
+		name = RED_generic.6.a
+		random_owned_controlled_state = {
+			limit = {
+				is_core_of = ROOT
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+			}
+		}
+		random_owned_controlled_state = {
+			limit = {
+				is_core_of = ROOT
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+			}
+		}
+		random_owned_controlled_state = {
+			limit = {
+				is_core_of = ROOT
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+			}
+		}
+	}
+}
+country_event = { #돈 안갚음
+	id = RED_generic.7
+	title = RED_generic.7.t
+	desc = RED_generic.7.d
+	is_triggered_only = yes
+	option = { #아오 
+		name = RED_generic.7.a
+		effect_tooltip = {
+			add_opinion_modifier = {
+				target = RED
+				modifier = RED_dont_pay
+			}
+		}
+	}
+}
+country_event = { #상환 거부
+	id = RED_generic.8
+	title = RED_generic.8.t
+	desc = RED_generic.8.d
+	is_triggered_only = yes
+	option = { #아오 
+		name = RED_generic.8.a
+		effect_tooltip = {
+			add_opinion_modifier = {
+				target = RED
+				modifier = RED_never_pay
+			}
+		}
+	}
+}
 
 country_event = { #피로한 마리나 - 1
 	id = RED_marina_event.1

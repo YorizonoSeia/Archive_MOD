@@ -47,3 +47,8 @@
  war_plan_black: "전쟁 계획 남색"
  war_plan_WIN: "전쟁 계획 청록"
  war_plan_KAI: "전쟁 계획 카키"
+
+ RED_anti_soviet: "반소련"
+ RED_invested: "우리에게 투자함"
+ RED_dont_pay: "상환을 연기함"
+ RED_never_pay: "돈을 갚지 않음"

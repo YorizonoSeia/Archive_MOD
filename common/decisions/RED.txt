@@ -3948,6 +3948,203 @@ RED_population_issue_cat = { #인구문제
 		}
 	}
 }
+
+
+RED_service_n_dedication = { #봉사와 헌신
+	RED_cpr_on_economy = { #경제에의 심폐소생술
+		icon = GFX_decision_generic_merge_plant_materiel
+		cost = 10
+		days_remove = 60
+		modifier = {
+			political_power_cost = 0.05
+		}
+		visible = {
+			OR = {
+				has_idea = RED_doomed_economy_idea_1
+				has_idea = RED_doomed_economy_idea_2
+				has_idea = RED_economy_recover_idea
+				has_idea = RED_economy_recover_idea_1
+			}
+		}
+		remove_effect = {
+			if = {
+				limit = {
+					has_idea = RED_doomed_economy_idea_1
+				}
+				swap_ideas = {
+					remove_idea = RED_doomed_economy_idea_1
+					add_idea = RED_doomed_economy_idea_2
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_doomed_economy_idea_2
+				}
+				swap_ideas = {
+					remove_idea = RED_doomed_economy_idea_2
+					add_idea = RED_economy_recover_idea
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_economy_recover_idea
+				}
+				swap_ideas = {
+					remove_idea = RED_economy_recover_idea
+					add_idea = RED_economy_recover_idea_1
+				}
+			}
+			else = {
+				remove_ideas = RED_economy_recover_idea_1
+			}
+		}
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	RED_no_pain_no_gain = { #무노동, 무임금!
+		icon = GFX_decision_generic_civil_support
+		cost = 10
+		days_remove = 120
+		fire_only_once = yes
+		modifier = {
+			production_speed_buildings_factor = 0.05
+		}
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	RED_get_every_iron = { #고철 수집
+		icon = GFX_decision_steel
+		cost = 10
+		days_remove = 120
+		fire_only_once = yes
+		modifier = {
+			consumer_goods_factor = -0.05
+		}
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	RED_sell_meal = { #농산물 매각
+		icon = GFX_decision_generic_confiscation
+		cost = 10
+		days_remove = 120
+		fire_only_once = yes
+		available = {
+			has_country_flag = RED_population_issue_solved_flag
+		}
+		complete_effect = {
+			add_stability = -0.05
+		}
+		ai_will_do = {
+			base = 1000
+		}
+		modifier = {
+			consumer_goods_factor = -0.05
+		}
+	}
+	RED_no_more_salary = { #임금 동결
+		icon = GFX_decision_hol_attract_foreign_investors
+		cost = 10
+		days_remove = 120
+		fire_only_once = yes
+		complete_effect = {
+			add_war_support = -0.05
+		}
+		ai_will_do = {
+			base = 1000
+		}
+		modifier = {
+			consumer_goods_factor = -0.05
+		}
+	}
+}
+
+RED_debt = {
+	RED_mission_rebuild_bill_outdate = { #재건채권 만료
+		icon = GFX_decision_ger_mefo_bills
+		days_mission_timeout = 365
+		fire_only_once = yes
+		available = {
+			always = no
+		}
+		activation = {
+			always = no
+		}
+		timeout_effect = {
+			country_event = RED_generic.5
+			add_to_variable = {
+				RED_no_pay = 0.1
+			}
+			set_variable = {
+				RED_invest_pay = 2
+			}
+			multiply_variable = {
+				RED_invest_pay = RED_invest
+			}
+		}
+	}
+	RED_mission_rebuild_bill_no_pay_outdate = { #연장기한 만료
+		icon = GFX_decision_ger_mefo_bills
+		days_mission_timeout = 90
+		available = {
+			always = no
+		}
+		activation = {
+			always = no
+		}
+		timeout_effect = {
+			country_event = RED_generic.5
+			add_to_variable = {
+				RED_no_pay = 0.1
+			}
+		}
+	}
+	RED_no_more_pay = { #상환 포기
+		icon = GFX_decision_eng_trade_unions_support
+		available = {
+			OR = {
+				has_dynamic_modifier = {
+					modifier = RED_investment_more
+				}
+				has_dynamic_modifier = {
+					modifier = RED_investment_bill_modifier
+				}
+			}
+		}
+		visible = {
+			OR = {
+				has_dynamic_modifier = {
+					modifier = RED_investment_modifier
+				}
+				has_dynamic_modifier = {
+					modifier = RED_investment_more
+				}
+				has_dynamic_modifier = {
+					modifier = RED_investment_bill_modifier
+				}
+			}
+		}
+		fire_only_once = yes
+		cost = 5
+		complete_effect = {
+			add_political_power = -30
+			add_stability = -0.3
+			add_war_support = -0.1
+			complete_national_focus  = RED_new_economy_focus_9
+			every_other_country = {
+				limit = {
+					has_country_flag = I_have_invested_RED_flag
+				}
+				add_opinion_modifier = {
+					target = RED
+					modifier = RED_never_pay
+				}
+			}
+		}
+	}
+}
 RED_bop_category = {
 	RED_cherino_become_cleaner = { #미화부장
 		icon = GFX_decision_eng_trade_unions_demand
