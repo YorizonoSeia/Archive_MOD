@@ -330,6 +330,14 @@ spriteTypes = {
 		texturefile = "gfx//interface//icon_instagram.dds"
 	}
 	spriteType = {
+		name = "bluesky"
+		texturefile = "gfx/interface/icon_bluesky.dds"
+	}
+	spriteType = {
+		name = "x"
+		texturefile = "gfx/interface/icon_x.dds"
+	}
+	spriteType = {
 		name = "homepage"
 		texturefile = "gfx//interface//icon_homepage.dds"
 		noOfFrames = 1
@@ -1728,7 +1736,7 @@ bitmapfonts = {
 	}
 
 	bitmapfont = {
-		name = "cg_16b"				####### GEKERAL TOOLTIP FONT ########
+		name = "cg_16b"				####### GENERAL TOOLTIP FONT ########
 #		path = "gfx/fonts/cg_16b"
 		fontfiles = {
 			"gfx/fonts/cg_16b"
