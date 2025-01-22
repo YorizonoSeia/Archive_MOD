@@ -6166,43 +6166,28 @@ focus = {
 		}
 	}
 
-
-
-		# 미카 지원
-		focus = {
-			id = USA_bad_kivotos_support_mika
-			icon = GFX_goal_TRN_TRM_newfocus_7
-			prerequisite = { focus = USA_bad_kivotos_TRM}
-			x = 4
-			y = 2
-			relative_position_id = USA_bad_kivotos
-			cost = 3
-			ai_will_do = {
-				factor = 10
+	# 미카 지원
+	focus = {
+		id = USA_bad_kivotos_support_mika
+		icon = GFX_goal_TRN_TRM_newfocus_7
+		prerequisite = { focus = USA_bad_kivotos_TRM}
+		x = 4
+		y = 2
+		relative_position_id = USA_bad_kivotos
+		cost = 3
+		ai_will_do = {
+			factor = 10
+		}
+		available_if_capitulated = yes
+		available = {
+			if = { limit = { has_country_flag = USABA_government_official_exile }
+				NOT = { has_country_flag = USABA_government_official_exile }
 			}
-			available_if_capitulated = yes
-			available = {
-				if = { limit = { has_country_flag = USABA_government_official_exile }
-					NOT = { has_country_flag = USABA_government_official_exile }
-				}
-	
-			}
-			completion_reward = {
+		}
+		completion_reward = {
 			add_war_support = 0.05
 			add_political_power = 60
-						TRM = {custom_effect_tooltip = TRM_pater_loyalty_10_tt
-			set_variable = { TRM_internal_factions_loyalty_target = 0 }
-			set_variable = { TRM_internal_factions_loyalty_var = 15 }
-			TRM_internal_factions_loyalty_add = yes
-
-			custom_effect_tooltip = TRM_pater_popularity_10_tt
-			set_variable = { TRM_internal_factions_popularity_target = 0 }
-			set_variable = { TRM_internal_factions_popularity_var = 15 }
-			TRM_internal_factions_popularity_add = yes
-			USA = {
-				is_in_faction_with = TRM
-			}
-			}
+			TRM = { add_political_power = 200 }
 		}
 	}
 
