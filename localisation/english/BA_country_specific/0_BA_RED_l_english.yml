@@ -1307,6 +1307,11 @@
  RED_investment_bill_modifier: "재건채권 지불"
  RED_investment_more: "채권 기한 연장"
  RED_land_developing: "토지개발사업"
+ RED_no_limit_inflation: "무제한 인플레이션"
+ RED_no_currency: "화폐 폐지의 여파"
+ RED_no_currency_1: "노동전표 도입"
+ RED_property_ceiling: "재산상한제"
+ RED_no_limit_inflation_tt: "\n조건 충족 시 제거: §Y총동원령§! 보유\n"
 
  RED_fake_money: "위조지폐로 인한 경제 파탄"
  RED_fake_money_tt: "\n조건 충족시 제거 : §Y전쟁 중§!이 아님 또는 §Y총동원령§! 보유"

@@ -7,6 +7,36 @@ ideas = {
 		}
 	}
     country = {
+		RED_property_ceiling = {
+			picture = GER_economy_of_conquest
+			modifier = {
+				consumer_goods_expected_value = -0.1
+				stability_weekly = 0.005
+			}
+		}
+		RED_no_currency_1 = { #노동전표 도입
+			picture = SPR_anarchist_society
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_start_efficiency_factor = 0.05
+				line_change_production_efficiency_factor = 0.05
+			}
+		}
+		RED_no_currency = { #화폐 폐지의 여파
+			picture = generic_devalue_currency
+			modifier = {
+				civilian_factory_use = 5
+				stability_weekly = -0.01
+			}
+		}
+		RED_no_limit_inflation = { #무제한 인플레이션
+			picture = chi_hyper_inflation5
+			modifier = {
+				consumer_goods_expected_value = 0.25
+				stability_factor = -0.2
+				custom_modifier_tooltip = RED_no_limit_inflation_tt
+			}
+		}
 		RED_land_developing_2 = { #토지 개발 사업
 			picture = GER_recovering_economy
 			name = RED_land_developing

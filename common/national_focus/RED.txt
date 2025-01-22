@@ -1031,6 +1031,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			add_ideas = RED_no_limit_inflation
 		}
 	}
 	focus = { # 화폐정지
@@ -1050,6 +1051,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			add_ideas = RED_no_currency
 		}
 	}
 	focus = { # 재산 상한제
@@ -1066,6 +1068,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			add_ideas = RED_property_ceiling
 		}
 	}
 	focus = { # 노동전표 도입
@@ -1082,6 +1085,8 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			remove_ideas = RED_no_currency
+			add_ideas = RED_no_currency_1
 		}
 	}
 	focus = { # 토지개발
