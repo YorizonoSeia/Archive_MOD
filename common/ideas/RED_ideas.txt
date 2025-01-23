@@ -28,6 +28,9 @@ ideas = {
 				civilian_factory_use = 5
 				stability_weekly = -0.01
 			}
+			cancel = {
+				has_idea = tot_economic_mobilisation
+			}
 		}
 		RED_no_limit_inflation = { #무제한 인플레이션
 			picture = chi_hyper_inflation5

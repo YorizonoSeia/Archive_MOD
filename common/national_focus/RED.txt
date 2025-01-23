@@ -7533,7 +7533,7 @@ focus_tree = {
 		icon = GFX_goal_panzerwaffe
 		cost = 2
 		x = 24
-		y = 0
+		y = 7
 		available = {
 			has_completed_focus = RED_club_focus_0
 		}
@@ -9008,8 +9008,9 @@ focus_tree = {
 	focus = { #노르웨이 장갑함 재취역
 		id = RED_cruiser_question
 		icon = GFX_goal_generic_build_navy
-		x = 27
+		x = 5
 		y = 1
+		relative_position_id = RED_rearming_focus_0
 		available = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
@@ -9637,8 +9638,9 @@ focus_tree = {
 		icon = GFX_focus_NORDIC_com_airforce
 		cost = 5
 
-		x = 32
+		x = 10
 		y = 1
+		relative_position_id = RED_rearming_focus_0
 
 		available = {
 			NOT = {
@@ -10033,7 +10035,7 @@ focus_tree = {
 			has_war_with = TRM
 		}
 		x = 29
-		y = 8
+		y = 0
 
 		ai_will_do = { factor = 100 }
 
