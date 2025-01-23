@@ -503,6 +503,7 @@ focus_tree = {
 					communism > 0.4
 				}
 				USA_congress_small_support= yes
+			    remove_ideas = USABA_collapsed_government_authority
 				add_stability = 0.15
 				add_popularity = {
 				  ideology = communism

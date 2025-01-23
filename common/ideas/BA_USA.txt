@@ -319,9 +319,6 @@ ideas = {
 			}
         }
 
-
-
-
         USABA_collapsed_government_authority = {
 			picture = generic_disjointed_gov
 			
