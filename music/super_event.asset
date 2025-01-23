@@ -180,7 +180,7 @@ music = {
 music = {
 	name = "USA_be_sov"
 	file = "super_event/USA_be_sov.ogg"
-	volume =  0.80
+	volume =  0.90
 }
 
 music = {

@@ -289,7 +289,7 @@ ideas = {
         
 		# 강제 기상
 		USABA_forced_wake_up = {
-			picture = generic_disjointed_gov
+			picture = tot_economic_mobilisation
 			
 			allowed = {
 				always = no
@@ -306,12 +306,10 @@ ideas = {
 			allowed_civil_war = {
 				always = no
 			}
-
-			removal_cost = -1
 			
 			modifier = {
 				weekly_manpower = -1200
-				political_power_gain = -0.25
+				political_power_gain = -0.5
 				consumer_goods_factor = -0.15
 				production_speed_buildings_factor = 0.1
 			    custom_modifier_tooltip = USABA_forced_wake_up_tt
@@ -971,8 +969,172 @@ ideas = {
 			}
 			modifier = {
                 consumer_goods_factor = -0.2
+				industrial_capacity_factory = -0.4
+				production_speed_industrial_complex_factor = -0.3
+				production_speed_arms_factory_factor = -0.4
+				production_speed_dockyard_factor = -0.4
 			}
 		}
+
+		USABA_second_replace_industry = {
+			picture = POL_disjointed_industry
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				stability_weekly = -0.01
+                consumer_goods_factor = 0.15
+				production_speed_buildings_factor = -0.8
+				industrial_capacity_factory = -0.6
+                production_speed_buildings_factor = -0.15
+				production_speed_industrial_complex_factor = -0.5
+				production_speed_arms_factory_factor = -0.6
+				production_speed_dockyard_factor = -0.6
+			}
+		}
+        
+		# 소비재 
+		USABA_completed_second_replace_industry_1 = {
+			picture = POL_succesful_four_year_plan
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				stability_weekly = -0.005
+                consumer_goods_factor = 0.05
+				production_speed_buildings_factor = -0.6
+				industrial_capacity_factory = -0.4
+                production_speed_buildings_factor = -0.15
+				production_speed_industrial_complex_factor = -0.4
+				production_speed_arms_factory_factor = -0.6
+				production_speed_dockyard_factor = -0.5
+			}
+		}
+
+		# 건설
+
+		USABA_completed_second_replace_industry_2 = {
+			picture = man_five_year_plan_industry
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+                consumer_goods_factor = 0.05
+				production_speed_buildings_factor = -0.15
+				industrial_capacity_factory = -0.25
+                production_speed_buildings_factor = 0.1
+				production_speed_industrial_complex_factor = -0.15
+				production_speed_arms_factory_factor = -0.4
+				production_speed_dockyard_factor = -0.3
+			}
+		}
+
+       # 생산
+		USABA_completed_second_replace_industry_3 = {
+			picture = ARG_economic_reactivation 
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				stability_weekly = 0.01
+				production_speed_buildings_factor = 0.05
+                production_speed_industrial_complex_factor = -0.05
+				production_speed_dockyard_factor = -0.1
+				production_speed_arms_factory_factor = -0.2
+				# 생산 한도 관련 버프 넣을 것
+				production_factory_start_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.1
+	
+			}
+		}
+
+	  # 마지막 전체적으로 개선
+
+	  	USABA_completed_second_replace_industry_4 = {
+			picture = ARG_public_works_investment
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				stability_weekly = 0.015
+                consumer_goods_factor = -0.1
+				industrial_capacity_factory = 0.1
+				production_speed_buildings_factor = 0.15
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_arms_factory_factor = -0.1
+				# 생산 한도 관련 버프 넣을 것
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.15
+			}
+		}
+
+		# 수정 자본주의
+
+		USA_modified_capitalism = {
+			picture = autarkic_economy
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				stability_weekly = 0.02
+                consumer_goods_factor = 0.25
+				industrial_capacity_factory = 0.3
+				production_speed_buildings_factor = 0.2
+				production_speed_industrial_complex_factor = 0.1
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.15
+				production_factory_max_efficiency_factor = 0.2
+			}
+		}
+
+
+        # 국가 개입주의
+		USA_economic_interventionism = {
+			picture = new_economic_policy
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				stability_weekly = 0.005
+				political_power_factor = -0.15
+                consumer_goods_factor = -0.15
+				economy_cost_factor = -0.5
+				industrial_concern_cost_factor = -0.5
+				industrial_capacity_factory = -0.1
+				production_speed_buildings_factor = 0.2
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_start_efficiency_factor = 0.25
+				production_factory_efficiency_gain_factor = 0.25
+			}
+		}
+    
+        # 소련과 경제 개발
+		USA_sov_economy_together = {
+			picture = SOV_stakhanovite_movement
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				stability_weekly = 0.015
+				political_power_factor = 0.05
+                consumer_goods_factor = 0.35
+				industrial_capacity_factory = 0.1
+				production_speed_buildings_factor = 0.3
+				production_speed_industrial_complex_factor = 0.2
+				production_speed_arms_factory_factor = 0.25
+				production_speed_dockyard_factor = 0.25
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.15
+			}
+		}
+    
+
+
+		# 제 3차 재조정
+
 
 		usa_my_way = {
 			picture = SPR_torchbearers_of_tomorrow
@@ -998,7 +1160,7 @@ ideas = {
 		}
 
 		USA_the_union_comintern = {
-			picture = SPR_masters_of_our_own_fate
+			picture = ARG_women_in_industry
 			allowed = {
 				original_tag = USA
 			}

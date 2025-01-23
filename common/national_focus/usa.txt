@@ -518,7 +518,7 @@ focus_tree = {
 					communism > 0.4
 				}
 				USA_congress_small_support= yes
-				add_stability = 0.2
+				add_stability = 0.15
 				add_popularity = {
 				  ideology = communism
 				  popularity = 0.1
@@ -1024,7 +1024,6 @@ focus_tree = {
 			if = { limit = { has_country_flag = USABA_government_official_exile }
 				NOT = { has_country_flag = USABA_government_official_exile }
 			}
-			num_of_civilian_factories > 140
 		}
 		
 		bypass = {
@@ -1035,8 +1034,15 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-		}
+			swap_ideas = {
+                remove_idea = USABA_replace_industry
+				add_idea = USABA_second_replace_industry
+            }
+			hidden_effect = {
+				country_event = { id = usa_event.21 days = 90}
+			}
 	}
+}
 
 	    # 수정 자본주의
 		focus = {
@@ -1059,6 +1065,11 @@ focus_tree = {
 			if = { limit = { has_country_flag = USABA_government_official_exile }
 				NOT = { has_country_flag = USABA_government_official_exile }
 			}
+			NOT = { 
+				has_idea = USABA_completed_second_replace_industry_1
+				has_idea = USABA_completed_second_replace_industry_2
+				has_idea = USABA_completed_second_replace_industry_3
+			}
 		}
 		
 		bypass = {
@@ -1069,7 +1080,10 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-
+		  swap_ideas = {
+            remove_idea = USABA_completed_second_replace_industry_4
+			add_idea = USA_modified_capitalism
+          }
 		}
 	}
 
@@ -1094,7 +1108,12 @@ focus_tree = {
 			if = { limit = { has_country_flag = USABA_government_official_exile }
 				NOT = { has_country_flag = USABA_government_official_exile }
 			}
-		}
+			NOT = { 
+				has_idea = USABA_completed_second_replace_industry_1
+				has_idea = USABA_completed_second_replace_industry_2
+				has_idea = USABA_completed_second_replace_industry_3
+			}
+		 }
 		
 		bypass = {
 
@@ -1104,6 +1123,10 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
+		   swap_ideas = {
+            remove_idea = USABA_completed_second_replace_industry_4
+			add_idea = USA_economic_interventionism
+          }
 
 		}
 	}
@@ -1131,6 +1154,11 @@ focus_tree = {
 			if = { limit = { has_country_flag = USABA_government_official_exile }
 				NOT = { has_country_flag = USABA_government_official_exile }
 			}
+			NOT = { 
+				has_idea = USABA_completed_second_replace_industry_1
+				has_idea = USABA_completed_second_replace_industry_2
+				has_idea = USABA_completed_second_replace_industry_3
+			}
 		}
 		
 		bypass = {
@@ -1142,6 +1170,10 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			swap_ideas = {
+            remove_idea = USABA_completed_second_replace_industry_4
+			add_idea = USA_sov_economy_together
+            }
 
 		}
 	}
@@ -1166,7 +1198,6 @@ focus_tree = {
 			if = { limit = { has_country_flag = USABA_government_official_exile }
 				NOT = { has_country_flag = USABA_government_official_exile }
 			}
-			num_of_civilian_factories > 160
 		}
 		
 		bypass = {
@@ -12128,6 +12159,7 @@ focus = {
 					}
 					country_event = mtg_usa_civil_war_fascists.4
 				}
+				play_song = "USA_be_sov"
 			}
 			set_cosmetic_tag = USABA_soviet
 		}

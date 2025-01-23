@@ -445,8 +445,13 @@
  usa_support_iroha: "이로하의 조언"
  usa_make_GEM_club_lobby: "동아리 로비 제작"
 
+ USABA_second_replace_industry: "2차 산업 재조정"
+ USABA_completed_second_replace_industry_1: "난관을 겪는 2차 산업 재조정"
+ USABA_completed_second_replace_industry_2: "정리 중인 2차 산업 재조정"
+ USABA_completed_second_replace_industry_3: "성장 중인 2차 산업 재조정"
+ USABA_completed_second_replace_industry_4: "해결된 2차 산업 재조정"
 
- USABA_forced_wake_up_tt: "대공황 해결시 제거:\n§Y2차 대공황§!, §Y대공황§!, §Y느린 회복§!, §Y느린 경제 성장§! 국민정신 미보유"
+ USABA_forced_wake_up_tt: "대공황 해결시 제거:\n§Y2차 대공황§!, §Y대공황§! 국민정신 미보유"
  USABA_second_great_depression_idea_tt: "2차 대공황 해결시 제거:\n§Y2차 대공황§! 국민정신 미보유"
 
  
@@ -592,6 +597,25 @@
  usa_event.20.t: "파티 초대에 승낙한 이부키"
  usa_event.20.d: "게헨나의 마스코트, 이부키가 우리 대사관의 초청을 받아 파티에 참석했습니다. \n\n어쩜 이렇게 귀여운 생물체가 존재할 수 있을까요? 그녀는 당연하게도 삼엄한 경호를 받으며, 우리의 파티를 즐기는 즐거운 시간을 보냈습니다."
  usa_event.20.a: "이부키는 귀엽잖아!"
+
+ usa_event.21.t: "소비재 문제를 해결한 산업"
+ usa_event.21.d: "대공황이 끝난 뒤, 이제는 과잉 생산이 되는 소비재 산업을 대규모 조정했습니다."
+ usa_event.21.a: "이제 시작일 뿐이다."
+
+ usa_event.22.t: "건설 문제를 해결한 산업"
+ usa_event.22.d: "대공황이 끝난 뒤, 처리하지 못한 자본가들의 땅 문제를 정리하고 건설 산업을 재가동했습니다."
+ usa_event.22.a: "점점 진척이 보이는군."
+
+ usa_event.23.t: "생산 문제를 해결한 산업"
+ usa_event.23.d: "대공황이 끝난 뒤, 효율적인 고용 정책을 펼쳐 실업자 강제 고용으로 발생한 문제를 해결했습니다."
+ usa_event.23.a: "슬슬 끝이 보이는군!"
+
+ usa_event.24.t: "모든 문제를 해결한 산업"
+ usa_event.24.d: "급진적인 산업 개혁의 부작용을 모두 해결했습니다. 이제 길거리에는 실업자와 노숙자 대신 행복한 부모와 아이들이 보이기 시작합니다."
+ usa_event.24.a: "드디어!!!"
+
+
+
 
 ##########################################################
 ########################전쟁부#############################

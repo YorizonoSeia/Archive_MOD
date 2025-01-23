@@ -1219,6 +1219,98 @@ country_event = {
 	}
 }
 
+ # 2차 재조정 산업 디버프 해결_1
+country_event = {
+	id = usa_event.21
+	title = usa_event.21.t
+	desc = usa_event.21.d
+	
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = usa_event.21.a
+		swap_ideas = {
+            remove_idea = USABA_second_replace_industry
+			add_idea = USABA_completed_second_replace_industry_1
+        }
+		hidden_effect = {
+			hidden_effect = {
+				country_event = { id = usa_event.22 days = 150}
+			}
+		}
+	}
+}
+
+ # 2차 재조정 산업 디버프 해결_2
+country_event = {
+	id = usa_event.22
+	title = usa_event.22.t
+	desc = usa_event.22.d
+	
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = usa_event.22.a
+		swap_ideas = {
+            remove_idea = USABA_completed_second_replace_industry_1
+			add_idea = USABA_completed_second_replace_industry_2
+        }
+		hidden_effect = {
+			hidden_effect = {
+				country_event = { id = usa_event.23 days = 120}
+			}
+		}
+	}
+}
+
+ # 2차 재조정 산업 디버프 해결_3
+country_event = {
+	id = usa_event.23
+	title = usa_event.23.t
+	desc = usa_event.23.d
+	
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = usa_event.23.a
+		swap_ideas = {
+            remove_idea = USABA_completed_second_replace_industry_2
+			add_idea = USABA_completed_second_replace_industry_3
+        }
+		hidden_effect = {
+			hidden_effect = {
+				country_event = { id = usa_event.24 days = 100}
+			}
+		}
+	}
+}
+
+# 마지막 2차 재조정 디버프 해결
+
+country_event = {
+	id = usa_event.24
+	title = usa_event.24.t
+	desc = usa_event.24.d
+	
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = usa_event.24ㅂ.a
+		swap_ideas = {
+            remove_idea = USABA_completed_second_replace_industry_3
+			add_idea = USABA_completed_second_replace_industry_4
+        }
+	}
+}
+
 
  # 신질서 내전 (OFN 영유권 주장)
 country_event = {
