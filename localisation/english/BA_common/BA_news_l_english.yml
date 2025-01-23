@@ -869,7 +869,12 @@ BA_news.93.b:0 "믿을 수 없는 일이 벌어졌다."
  #Soyez réalistes, demandez l'impossible.
  sup_68_revolutions_NAME: "- 프랑스 68 혁명 슬로건"
  sup_68_revolutions_REMARK: "금지하는 것을 금지하라!"
- 
+  
+ sup_com_aru_german_reunification: "연합법 시행"
+ sup_com_aru_german_reunification_QUOTE: "아직 작전이 시작하지도 않았는데\n벌써 실패할 때부터 걱정하는 거야?"
+ sup_com_aru_german_reunification_QUOTE_NAME: "- 리쿠하치마 아루"
+ sup_com_aru_german_reunification_REMARK: "그래서, 결과는 성공이었니?"
+
  #아리우스 이벤트#
  ARI_all_blood.t:0 "'모든 피는 평등하다' 연설"
  ARI_all_blood.desc:0 "학생 여러분! 우리의 과거를 되돌아봅시다. 우리가 베아트리체의 탄압에 있었던 시절보다, 더 과거를 기억해봅시다. 만약 당시 학생회장이 진짜 '고귀한' 피의 소유자였다면, 우리가 그 탄압에 빠졌겠습니까? 우리가 그 압제에 신음했겠습니까? 또한, 고귀한 피의 소유자들이 베아트리체의 통치에 저항한 기록이 있습니까? 그들 또한 베아트리체의 부역자들이였고, 또한 그들은 그 이전에도 분교의 혼란을 진압하려는 그 어떤 의지도 내보이지 않았습니다. 그렇기에, 오늘날. 고귀한 피의 권리가 전교 학생들에게 부여되니, 모든 피가 고귀함을, 모두가 잊지 않길 바랍니다."
