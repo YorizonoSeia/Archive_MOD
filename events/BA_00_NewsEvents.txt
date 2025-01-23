@@ -4431,14 +4431,19 @@ news_event = { # 미국의 붉은겨울 따르기
         trigger = {
 				tag = USA
         }
+		hidden_effect = {
+		 scoped_play_song = "USA_The_New_Order"
+	    }
     }
     option = {
         name = BA_news.117.b
         trigger = {
 				tag = RED
         }
+		hidden_effect = {
+		 scoped_play_song = "USA_The_New_Order"
+	    }
     }
-
 
     option = {
         name = BA_news.117.c
@@ -4450,6 +4455,9 @@ news_event = { # 미국의 붉은겨울 따르기
 				  }	  
 			 }
         }
+		hidden_effect = {
+		  scoped_play_song = "USA_The_New_Order"
+	    }
     }
 }
 
@@ -4522,6 +4530,96 @@ news_event = { # 프랑스의 인도차이나 철수
         trigger = {
 			has_government = communism
         }
+    }
+}
+
+
+news_event = { # 사악한 동맹이라니!
+    id = BA_news.120
+    title = BA_news.120.t
+    desc = BA_news.120.d
+    picture = GFX_news_event_generic_handshake
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        name = BA_news.120.a
+        trigger = {
+			tag = USA
+        }
+		hidden_effect = {
+		 scoped_play_song = "USA_National_Anthem_But_Red"
+	    }
+    }
+    option = {
+        name = BA_news.120.b
+        trigger = {
+           tag = SOV
+        }
+		hidden_effect = {
+		 scoped_play_song = "USA_National_Anthem_But_Red"
+	   }
+    }
+    option = {
+        name = BA_news.120.c
+        trigger = {
+			NOT = {
+				tag = USA
+				tag = SOV
+			}
+        }
+		hidden_effect = {
+		scoped_play_song = "USA_National_Anthem_But_Red"
+	}
+    }
+}
+
+news_event = { # 미국이야말로 진정한 노동자의 나라!!
+    id = BA_news.121
+    title = BA_news.121.t
+    desc = BA_news.121.d
+    picture = GFX_news_event_king_speech
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        name = BA_news.121.a
+        trigger = {
+			tag = USA
+        }
+		hidden_effect = {
+		 scoped_play_song = "lenin_speech"
+		 add_ideas = usa_my_way
+	    }
+    }
+    option = {
+        name = BA_news.121.b
+        trigger = {
+		   AND = {
+			 tag = USA
+             has_government = communism
+		   }
+        }
+		hidden_effect = {
+		 scoped_play_song = "lenin_speech"
+	   }
+    }
+    option = {
+        name = BA_news.121.c
+        trigger = {
+			AND = {
+				tag = USA
+				AND = {
+			       tag = USA
+                   has_government = communism
+		        }
+			}
+        }
+		hidden_effect = {
+		scoped_play_song = "lenin_speech"
+	}
     }
 }
 

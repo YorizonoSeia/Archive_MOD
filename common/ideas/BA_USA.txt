@@ -980,7 +980,7 @@ ideas = {
 				original_tag = USA
 			}
 			modifier = {
-                political_power_gain = 1
+                political_power_gain = 0.5
 				stability_weekly = 0.01
 				party_popularity_stability_factor = 0.2
 			}

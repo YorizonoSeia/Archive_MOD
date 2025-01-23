@@ -12,6 +12,8 @@
  USA_work_with_the_bund_desc: "독일 망명자들에 대한 확실한 구분과 적절한 지원은 독일계 미국인들에게 우리의 입장을 말해줄 것입니다. 그들에게 호의를 품었다고 확실히 해둡시다."
  war_plan_black: "전쟁 계획 남색"
 
+ USA_wartime_industry: "신속한 재무장"
+ USA_wartime_industry_desc: "우리는 민간 산업을 지켜냈지만, 전시 산업은 그러지 못했습니다. 반 키보토스 정서가 팽팽한 지금이 바로 전시 산업을 신속히 키울 때입니다."
 
 
 
@@ -105,9 +107,21 @@
 ######################신규 중점들######################
 ######################################################
 
+ USA_fast_train: "군대 개혁"
+ USA_fast_train_desc: "과도한 군축으로 인하여 군대의 양과 질 모두 떨어지는 심각한 상황이 놓여져 있습니다. 우리는 무능한 지휘관을 해임하고, 효율적인 군사 프로그램을 만들어 훈련 수준을 높일 겁니다."
+
+
  USA_army_of_the_united_states_propaganda: "미합중국 육군 열병식"
  USA_army_of_the_united_states_propaganda_desc: "대공황의 극복을 찬사하며, 미국 육군의 열병식을 개최하고 추후 미국 육군의 재무장 비용을 의회로부터 얻어내기 위한 여러 로비를 시작할 것입니다."
+ 
 
+
+
+
+
+ ##################################
+ ###########공산 미국##############
+ #################################
  USABA_forced_wake_up: "충격 요법"
  USABA_forced_wake_up_desc: "일시적으로 대규모의 공장을 강제적으로 가동하고, 몇 가지 산업 부문을 조정할 것입니다. 이는 굉장한 반발을 불러오겠지만, 경제를 잠시 동안 활성화 시킬 수 있을 것입니다."
  
@@ -116,9 +130,6 @@
 
  USABA_every_worker_welfare: "노동자 배급제 실시"
  USABA_every_worker_welfare_desc: "노동자들은 열악한 환경에서 일하며, 쥐꼬리만한 임금을 받고 있습니다. 임시 방편으로 쓰고 있는 전략은 근미래에 파업으로 이어질 것입니다. 이 사태를 예방합시다."
-
- USA_add_dog: "은색 군단 초청"
- USA_add_dog_desc: "미국 내에 영향력을 확대해가고 있는 파시스트 운동들을 정식으로 정부에 초청하여 위기 상황에 같이 대응하는 힘을 확보할 것입니다."
  
  USABA_replace_industry: "산업 재조정"
  USABA_replace_industry_desc: "우리는 부족한 식량과 생필품을 생산하기 위해 여러 산업을 대규모 재편성할 겁니다. 비록 몇몇 자본가들이 반대를 하겠지만 이건 대공황 극복을 위한 꼭 필요한 조치입니다."
@@ -126,7 +137,56 @@
  USABA_establish_government_industry: "대규모 공기업 설립"
  USABA_establish_government_industry_desc: "2차 대공황은 대전이로 인한 유럽 시장 파괴 때문에 발생했습니다. 파멸적인 과잉 공급를 해결하기 위해서는 기업에 관한 국가의 개입이 필수불가피합니다."
 
+ USA_bad_kivotos_RED: "붉은겨울 따르기"
+ USA_bad_kivotos_RED_desc: "매우 황당하고 멍청한 선택 같지만, 의외로 좋은 선택일 지도 모릅니다..."
 
+ USA_be_red: "공산당 집권"
+ USA_be_red_desc: "민주당은 2차 대공황에 잘 대처하지 못했습니다. 효과적으로 2차 대공황을 해결한 우리 공산당만이 정부를 이끌 자격이 있습니다."
+
+ USA_big_industry_plan: "제 2차 산업 재조정"
+ USA_big_industry_plan_desc: "임시방편으로 만든 산업 체계을 효율적으로 다시 재조정해야 합니다. 일시적으로 혼란과 문제를 야기할 수 있지만, 이것은 근미래에 더 높은 효율을 낼 것입니다."
+
+ USA_final_economic_plan: "제 3차 산업 재조정"
+ USA_final_economic_plan_desc: "우리는 2차 산업 재조정이 성공적으로 달성한 것을 목도했습니다. 이제 마지막으로, 새로운 경제 이념을 가지고 산업을 재편성할 것입니다."
+
+ USA_the_aggresive_comintern_2: "반파시스트 정책"
+ USA_the_aggresive_comintern_2_desc: "유럽은 대전이로 인해 파시즘이 대두하고 노동자의 핍박이 이어지고 있습니다. 우리는 노동자를 억압하는 파시스트 국가들을 근절해야 합니다."
+
+ USA_the_union_comintern_2: "혁명 지원"
+ USA_the_union_comintern_2_desc: "대다수 국가들의 노동자들이 억압을 받으며 생활하고 있습니다. 우리는 그들이 억압에 맞서 혁명을 일으키도록 지원해야 합니다."
+
+ usa_my_way: "우리만의 길"
+ usa_my_way_desc: "마르크스-레닌주의는 독재자들에 의해 변형되고, 왜곡되어 있습니다. 우리는 공산주의를 표방하는 독재 국가와 달리, 진정으로 노동자를 위한 유토피아 국가가 될 것입니다."
+
+ USA_the_comintern: "외교 정책 논의"
+ USA_the_comintern_desc: "우리만의 문제를 해결하는 사이, 국제 정세가 격변하여 전망을 알 수가 없습니다. 우리는 국내를 벗어나 대외를 보는 눈을 가져야 합니다."
+
+ USA_the_aggresive_comintern: "공격적 안보 정책"
+ USA_the_aggresive_comintern_desc: "혼란스러운 국제 정세를 바로 잡기 위해선 공격적인 외교 정책이 필요합니다."
+
+ USA_the_union_comintern: "유화적 안보 정책"
+ USA_the_union_comintern_desc: "꼬일 대로 꼬인 국제 정세를 힘으로 푼다면 더욱 큰 문제가 발생하기 마련입니다. 우리는 유화적으로 이 문제를 다가가야 합니다."
+
+ USA_modified_capitalism: "수정 자본주의"
+ USA_modified_capitalism_desc: "국가는 경제에 손 놓고 바라만 보지 말아야 하며, 간섭 역시 최소한으로 해야 합니다. 이 전략은 자본주의의 모순을 완화시킬 수 있을 겁니다."
+
+ USA_economic_interventionism: "국가 개입주의"
+ USA_economic_interventionism_desc: "이제는 국가가 필요한 산업에만 개입하는 것이 아니라, 모든 산업에 개입하여 공급과 수요를 맞춰야 합니다. 이 전략은 무분별한 공급을 막아 대공황 같은 최악의 사태를 방지할 수 있을 겁니다."
+
+ USA_sov_economy_together: "미국-소련 합동 산업 개발"
+ USA_sov_economy_together_desc: "소련은 5개년 계획으로 공업화를 성공적으로 이끌었지만 그 대가로 농업이 초토화 되었습니다. 양국이 합동하여 산업 개발을 한다면 서로에게 좋은 영향만 줄 수 있을 겁니다."
+
+ USA_sov_factory_together: "미국-소련 합동 군비 개발"
+ USA_sov_factory_together_desc: "우리는 소련과의 민간 산업 개발을 넘어, 군수 산업까지 협업하여 개발할 것입니다. 이는 몇 년간 진행했었던 군축을 효과적으로 해결할 수 있을 겁니다."
+
+ USA_red_team: "예상치 못한 선택지"
+ USA_red_team_desc: "유럽인이든, 이계인이든, 심지어 우리들조차 이 선택지를 예상하지 못 했을 것입니다. 하지만 유일하게 예상할 수 있는 건, 저들은 패배하고 우리가 이긴다는 것입니다."
+
+
+
+
+ USA_add_dog: "은색 군단 초청"
+ USA_add_dog_desc: "미국 내에 영향력을 확대해가고 있는 파시스트 운동들을 정식으로 정부에 초청하여 위기 상황에 같이 대응하는 힘을 확보할 것입니다."
 
  USABA_fireside_chats: "노변 담화의 지속"
  USABA_fireside_chats_desc: "노변 담화는 1933년부터 프랭클린 D. 루즈벨트 대통령이 진행한 일련의 저녁 라디오 연설입니다. 수백만명의 국민들에게 대공황으로부터의 회복, 비상 사태의 공포에 대해 친숙하게 이야기하던 라디오는 이제 두번째 대공황의 극복에 대해서도 이야기할 것입니다."
@@ -163,9 +223,6 @@
  USABA_american_reindustrialization: "아메리카 재산업화"
  USABA_american_reindustrialization_desc: "미국 경제를 다시 일으키기 위해, 우리는 대규모 재산업화 정책을 추진할 것입니다. 제조업을 중심으로 경제 구조를 재편성하고, 새로운 경제 부흥을 이끌어낼 것입니다. 이는 미국의 경제적 재도약을 위한 필수적인 단계입니다."
  USABA_american_reindustrialization_desc_cst: "미국의 산업 재건을 위한 일련의 결정들을 해금합니다."
- 
- USA_devil_team: "예상치도 못한 선택지"
- USA_devil_team_desc: "이 루트 가면 바보"
 
  USA_devil_economy: "미소 경제 협력"
  USA_devil_economy_desc: "바닐라 돚거함"
@@ -249,7 +306,7 @@
  USA_new_team_help_desc: "우리의 진심을 보이기 위해 같은 가족끼리 총을 겨누기까지 했습니다. 이제 우리가 그들의 진심을 확인할 차례입니다."
 
  USA_blue_kivotos: "민주 신질서"
- USA_blue_kivotos_desc: "이계인들 사이에선 우리의 정치 사상과 매우 유사한 정치체계가 존재합니다. 이들과 함께하여 신질서에 편승한다면 적어도 이념에 관한 마찰은 존재하지 않을 것입니다."
+ USA_blue_kivotos_desc: "이계인들 사이에선 우리의 정치 사상과 매우 유사한 정치 체계가 존재합니다. 이들과 함께하여 신질서에 편승한다면 이념에 관한 마찰은 존재하지 않을 것입니다."
 
  USA_bad_kivotos: "국민 신질서"
  USA_bad_kivotos_desc: "신질서를 따르기 위해선 우리 본래의 이념을 벗어던지고 이들을 마주해야 할지도 모릅니다. 그 이념이 수백년동안 피를 흘려 보존한 아념일지라도요."
@@ -261,7 +318,7 @@
  USA_bad_kivotos_Eden_desc: "평화와 공존이 불가능할 것 같은 두 국가가 서로 손을 잡았습니다. 현재로써 이계인들의 국가중 이보다 강한 연합이 존재하지 않기에, 우린 이들이 주도하는 질서에 편승하여 국력을 보존할 것입니다."
 
  USA_bad_kivotos_COU: "총학생회 따르기"
- USA_bad_kivotos_COU_desc: "총학생회는 이계인들의 국가중 가장 높은 권한을 가지고 있던 컨트롤 타워같은 국가였습니다. 우린 이들의 재건을 도와 우호적인 관계를 다지며 다른 이계인들의 국가에 개입할 수 있는 권한을 얻어내야합니다."
+ USA_bad_kivotos_COU_desc: "총학생회는 이계인들의 국가 중 가장 높은 권한을 가진 국가였습니다. 우린 이들의 재건을 도와 우호적인 관계를 다지며 다른 이계인들의 국가에 개입할 수 있는 권한을 얻어내야합니다."
 
  USA_bad_kivotos_GEM: "게헨나 따르기"
  USA_bad_kivotos_GEM_desc: "예로부터 세상은 약육강식의 법칙으로 흘려갔습니다. 이 사실을 진작 알고 있으며, 이 법칙을 따르는 게헨나에 동참해야 합니다."
@@ -306,7 +363,7 @@
  USA_bad_kivotos_support_TRM_club_desc: "트리니티 도서부는 매우 규모가 크고, 엄격한 동아리입니다. 우리는 트리니티와 정식으로 조약을 맺어 그 곳의 지식을 공유할 겁니다."
 
  USA_bad_kivotos_TRM_halo_infantry: "트리니티 제병합동"
- USA_bad_kivotos_TRM_halo_infantry_desc: "트리니티 학생들은 대체로 얌전한 편이지만, 그들의 군사력은 높은 수준입니다. 특히 아군 지원에 출중하며, 우리는 그 능력에 집중하여 함께 제병합동을 할 겁니다."
+ USA_bad_kivotos_TRM_halo_infantry_desc: "트리니티 학생들은 대체로 얌전한 편이지만, 그들의 군사력은 높은 수준입니다. 우리는 아군 지원에 출중한 능력에 특히 집중하여 함께 제병합동을 할 겁니다."
 
  USA_bad_kivotos_justice: "정의실현부와 협력"
  USA_bad_kivotos_justice_desc: "정의실현부는 무력이 매우 뛰어난 자치 경찰 단체입니다. 그들과 협력하면 반 국가 세력들을 축출할 수 있을 겁니다."
@@ -322,11 +379,6 @@
 
  USA_bad_kivotos_GEH_halo_infantry_support: "선도부 군사 지도"
  USA_bad_kivotos_GEH_halo_infantry_support_desc: "선도부원들의 무력은 저희의 예상보다 훨씬 부족합니다. 그들을 지도하여 기초 체력과 전술을 지도해줍시다."
-
-
-
- USA_bad_kivotos_RED: "붉은겨울 따르기"
- USA_bad_kivotos_RED_desc: "매우 황당하고 멍청한 선택 같지만, 의외로 좋은 선택일 지도 모릅니다..."
 
  USA_blue_kivotos_MIL2: "미국-밀레니엄 주둔군 조약"
  USA_blue_kivotos_MIL2_desc: "그들의 골칫거리인 빨갱이 레지스탕스를 모두 쓸어버립시다."
@@ -360,36 +412,6 @@
 
  USA_attack_SHA: "중부 유럽 해방"
  USA_attack_SHA_desc: "중부 유럽에 아직 이계인이 있습니다. 우리는 아무리 약한 국가라도 해방해야 하는 의무를 지니고 있습니다."
-
-
- #공산 미국
-
- usa_my_way: "우리만의 길"
- usa_my_way_desc: "마르크스-레닌주의는 독재자들에 의해 변형되고, 왜곡되어 있습니다. 우리는 공산주의를 표방하는 독재 국가와 달리, 진정으로 노동자를 위한 유토피아 국가가 될 것입니다."
-
- USA_the_comintern: "외교 정책 논의"
- USA_the_comintern_desc: "우리만의 문제를 해결하는 사이, 국제 정세가 격변하여 전망을 알 수가 없습니다. 우리는 국내를 벗어나 대외를 보는 눈을 가져야 합니다."
-
- USA_the_aggresive_comintern: "공격적 안보 정책"
- USA_the_aggresive_comintern_desc: "혼란스러운 국제 정세를 바로 잡기 위해선 공격적인 외교 정책이 필요합니다."
-
- USA_the_union_comintern: "유화적 안보 정책"
- USA_the_union_comintern_desc: "꼬일 대로 꼬인 국제 정세를 힘으로 푼다면 더욱 큰 문제가 발생하기 마련입니다. 우리는 유화적으로 이 문제를 다가가야 합니다."
-
- USA_modified_capitalism: "수정 자본주의"
- USA_modified_capitalism_desc: "국가는 경제에 손 놓고 바라만 보지 말아야 하며, 간섭 역시 최소한으로 해야 합니다. 이 전략은 자본주의의 모순을 완화시킬 수 있을 겁니다."
-
- USA_economic_interventionism: "국가 개입주의"
- USA_economic_interventionism_desc: "이제는 국가가 필요한 산업에만 개입하는 것이 아니라, 모든 산업에 개입하여 공급과 수요를 맞춰야 합니다. 이 전략은 무분별한 공급을 막아 대공황 같은 최악의 사태를 방지할 수 있을 겁니다."
-
- USA_sov_economy_together: "미국-소련 합동 산업 개발"
- USA_sov_economy_together_desc: "소련은 5개년 계획으로 공업화를 성공적으로 이끌었지만 그 대가로 농업이 초토화 되었습니다. 양국이 합동하여 산업 개발을 한다면 서로에게 좋은 영향만 줄 수 있을 겁니다."
-
- USA_sov_factory_together: "미국-소련 합동 군비 개발"
- USA_sov_factory_together_desc: "우리는 소련과의 민간 산업 개발을 넘어, 군수 산업까지 협업하여 개발할 것입니다. 이는 몇 년간 진행했었던 군축을 효과적으로 해결할 수 있을 겁니다."
-
- USA_red_team: "예상치 못한 선택지"
- USA_red_team_desc: "유럽인이든, 이계인이든, 심지어 우리들조차 이 선택지를 예상하지 못 했을 것입니다. 하지만 유일하게 예상할 수 있는 건, 저들은 패배하고 우리가 이긴다는 것입니다."
 
 #######################################################
 #######################2차 대공황#######################
