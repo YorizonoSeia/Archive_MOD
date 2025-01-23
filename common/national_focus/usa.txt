@@ -240,7 +240,7 @@ focus_tree = {
 			if = { limit = { has_country_flag = USABA_government_official_exile }
 				NOT = { has_country_flag = USABA_government_official_exile }
 			}
-
+			has_country_flag = USA_2nd_great_depression_4th_flag
 		}
 		
 		bypass = {
@@ -261,21 +261,7 @@ focus_tree = {
 				ideology = democratic
 				popularity = -0.1
 			}
-			custom_effect_tooltip = available_political_advisor
-		    show_ideas_tooltip = earl_browder
-		    if = {
-		    	limit = {
-		    		is_ai = yes
-		    		OR = {
-						has_country_flag = USA_AI_RANDOM_COMMUNIST
-						has_game_rule = {
-							rule = USA_ai_behavior
-							option = COMMUNIST
-						}
-					}
-		    	}
-		    	add_ideas = earl_browder
-		    }
+		    add_ideas = earl_browder
 		}
 	}
     # 충격 요법
@@ -475,7 +461,6 @@ focus_tree = {
 				country_event = mtg_usa_civil_war_fascists.1
 				custom_effect_tooltip = mtg_usa_civil_war_warning_tt
 			}
-
 		}
 	}
 
@@ -881,7 +866,8 @@ focus_tree = {
 			if = { limit = { has_country_flag = USABA_government_official_exile }
 				NOT = { has_country_flag = USABA_government_official_exile }
 			}
-			communism > 0.35
+			communism > 0.4
+			NOT = { has_idea = second_great_depression }
 		}
 		bypass = {
 
@@ -892,7 +878,7 @@ focus_tree = {
 		completion_reward = {
 			set_politics = { ruling_party = communism elections_allowed = no }
 			add_popularity = { ideology = communism popularity = 0.3 }
-				hidden_effect = {
+			hidden_effect = {
 				if = {
 					limit = {
 						has_war = no
@@ -970,6 +956,7 @@ focus_tree = {
 				has_government = communism
 			}
 			congress_high_support_trigger = yes
+			
 		}
 		
 		bypass = {
@@ -1001,6 +988,10 @@ focus_tree = {
 				}
 			}
 			USA_great_depression_level_down = yes
+			unlock_decision_category_tooltip = USA_recover_from_2nd_great_depression_categorie
+			hidden_effect = {
+				activate_mission = USA_recover_from_2nd_great_depression_failure_mission
+			}
 		}
 	}
 
@@ -1066,6 +1057,7 @@ focus_tree = {
 				NOT = { has_country_flag = USABA_government_official_exile }
 			}
 			NOT = { 
+				has_idea = USABA_second_replace_industry
 				has_idea = USABA_completed_second_replace_industry_1
 				has_idea = USABA_completed_second_replace_industry_2
 				has_idea = USABA_completed_second_replace_industry_3
@@ -1109,6 +1101,7 @@ focus_tree = {
 				NOT = { has_country_flag = USABA_government_official_exile }
 			}
 			NOT = { 
+				has_idea = USABA_second_replace_industry
 				has_idea = USABA_completed_second_replace_industry_1
 				has_idea = USABA_completed_second_replace_industry_2
 				has_idea = USABA_completed_second_replace_industry_3
@@ -1155,6 +1148,7 @@ focus_tree = {
 				NOT = { has_country_flag = USABA_government_official_exile }
 			}
 			NOT = { 
+				has_idea = USABA_second_replace_industry
 				has_idea = USABA_completed_second_replace_industry_1
 				has_idea = USABA_completed_second_replace_industry_2
 				has_idea = USABA_completed_second_replace_industry_3
@@ -1450,6 +1444,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
+			add_political_power = 150
 			unlock_decision_tooltip = { decision = USA_readmit_state show_effect_tooltip = yes }
 			USA_congress_medium_support = yes
 		}
@@ -1498,7 +1493,7 @@ focus_tree = {
 	           ideology = communism
 	           popularity = 0.05
             }
-			add_political_power = 75
+			add_political_power = 100
 
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = harry_white
@@ -1564,7 +1559,7 @@ focus_tree = {
 			is_in_faction = no
 			not = { has_war_with = SOU }
 			SOV_comintern_joinable = yes 
-			has_civil_war = no
+			NOT = { has_war = yes }
 		}
 
 		x = -1
@@ -1626,7 +1621,7 @@ focus_tree = {
 				NOT = { has_country_flag = USABA_government_official_exile }
 			}
 			is_in_faction = no
-			has_civil_war = no
+			NOT = { has_war = yes }
 		}
 
 		x = 1
@@ -1669,7 +1664,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-            add_political_power = 100
+            add_political_power = 200
 
 
 		}
@@ -7272,7 +7267,7 @@ focus = {
 			}
 			is_in_faction = no
 			not = { has_war_with = RED } 
-			has_civil_war = no
+			NOT = { has_war = yes }
 		}
 		completion_reward = {
 			news_event = {id = BA_news.117 hours = 6}
