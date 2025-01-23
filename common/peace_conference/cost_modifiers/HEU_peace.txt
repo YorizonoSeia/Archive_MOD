@@ -1,0 +1,60 @@
+# Scripted cost modifiers for peace actions.
+# See documentation.info file for more detailed scripting information.
+
+peace_action_modifiers = {
+
+    HEU_free_gehenna_region = { # 반게헨나 루트 게헨나 정복
+        category = events_or_focuses
+        peace_action_type = { take_states }
+        enable = {
+            ROOT = {
+                original_tag = HEU
+                has_completed_focus = HEU_representative_of_the_germanic
+            }
+            ROOT.FROM.FROM.FROM = {
+                OR = {
+                    is_core_of = GEH
+                    is_core_of = GEM
+					is_core_of = GEK
+					is_core_of = GER
+                }
+            }
+        }
+        cost_multiplier = 0.75
+    }
+    
+    HEU_free_trinity_region = { # 반게헨나 루트 트리니티 정복 (자꾸 소련이 에덴을 먹어서 루트가 막힘...)
+        category = events_or_focuses
+        peace_action_type = { take_states }
+        enable = {
+            ROOT = {
+                original_tag = HEU
+                has_completed_focus = HEU_representative_of_the_germanic
+            }
+            ROOT.FROM.FROM.FROM = {
+                is_core_of = TRM
+            }
+        }
+        cost_multiplier = 0.25
+    }
+
+    HEU_free_GSC_region = { # 친게헨나 루트 샬레총학생회발키리 정복
+        category = events_or_focuses
+        peace_action_type = { take_states }
+        enable = {
+            ROOT = {
+                original_tag = HEU
+                has_completed_focus = HEU_general_student_council_aru
+            }
+            ROOT.FROM.FROM.FROM = {
+                OR = {
+                    is_core_of = KSP
+                    is_core_of = COU
+					is_core_of = SHE
+                }
+            }
+        }
+        cost_multiplier = 0.75
+    }
+
+}

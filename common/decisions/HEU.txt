@@ -402,100 +402,167 @@ HEU_aru_persona_decision_category = {
 		timeout_effect = {
 			custom_effect_tooltip = HEU_aru_persona_random_events_tt
 			hidden_effect = {
-				random_list = {
-					1 = {
-						country_event = { id = HEU.persona_event.100 }
+				if = {
+					limit = { 
+						AND = {
+							NOT = { has_country_leader_with_trait = HEU_aru_depression_1 }
+							NOT = { has_country_leader_with_trait = HEU_aru_depression_2 }
+						}
 					}
-					1 = {
-						country_event = { id = HEU.persona_event.101 }
+					random_list = {
+						1 = {
+							country_event = { id = HEU.persona_event.100 }
+						}
+						1 = {
+							country_event = { id = HEU.persona_event.101 }
+						}
+						1 = {
+							country_event = { id = HEU.persona_event.102 }
+						}
+						1 = {
+							country_event = { id = HEU.persona_event.103 }
+						}
+						1 = {
+							country_event = { id = HEU.persona_event.104 }
+						}
+						1 = {
+							country_event = { id = HEU.persona_event.105 }
+						}
+						1 = {
+							country_event = { id = HEU.persona_event.106 }
+						}
+						1 = {
+							country_event = { id = HEU.persona_event.107 }
+						}
+						1 = {
+							country_event = { id = HEU.persona_event.108 }
+						}
+						1 = {
+							country_event = { id = HEU.persona_event.109 }
+						}
+						1 = {
+							country_event = { id = HEU.persona_event.110 }
+						}
+						1 = {
+							country_event = { id = HEU.persona_event.111 }
+						}
+						1 = {
+							country_event = { id = HEU.persona_event.112 }
+						}
+						1 = {
+							country_event = { id = HEU.persona_event.113 }
+						}
+						1 = {
+							country_event = { id = HEU.persona_event.114 }
+						}
+						1 = {
+							country_event = { id = HEU.persona_event.115 }
+						}
+						1 = {
+							country_event = { id = HEU.persona_event.116 }
+						}
+						1 = {
+							country_event = { id = HEU.persona_event.117 }
+						}
+						1 = {
+							country_event = { id = HEU.persona_event.118 }
+						}
+						1 = {
+							country_event = { id = HEU.persona_event.119 }
+						}
+						1 = {
+							country_event = { id = HEU.persona_event.120 }
+						}
+						1 = {
+							country_event = { id = HEU.persona_event.121 }
+						}
+						1 = {
+							country_event = { id = HEU.persona_event.122 }
+						}
+						1 = {
+							country_event = { id = HEU.persona_event.123 }
+						}
+						1 = {
+							country_event = { id = HEU.persona_event.124 }
+						}
+						1 = {
+							country_event = { id = HEU.persona_event.125 }
+						}
+						1 = {
+							country_event = { id = HEU.persona_event.126 }
+						}
+						1 = {
+							country_event = { id = HEU.persona_event.127 }
+						}
+						1 = {
+							country_event = { id = HEU.persona_event.128 }
+						}
+						1 = {
+							country_event = { id = HEU.persona_event.129 }
+						}
 					}
-					1 = {
-						country_event = { id = HEU.persona_event.102 }
-					}
-					1 = {
-						country_event = { id = HEU.persona_event.103 }
-					}
-					1 = {
-						country_event = { id = HEU.persona_event.104 }
-					}
-					1 = {
-						country_event = { id = HEU.persona_event.105 }
-					}
-					1 = {
-						country_event = { id = HEU.persona_event.106 }
-					}
-					1 = {
-						country_event = { id = HEU.persona_event.107 }
-					}
-					1 = {
-						country_event = { id = HEU.persona_event.108 }
-					}
-					1 = {
-						country_event = { id = HEU.persona_event.109 }
-					}
-					1 = {
-						country_event = { id = HEU.persona_event.110 }
-					}
-					1 = {
-						country_event = { id = HEU.persona_event.111 }
-					}
-					1 = {
-						country_event = { id = HEU.persona_event.112 }
-					}
-					1 = {
-						country_event = { id = HEU.persona_event.113 }
-					}
-					1 = {
-						country_event = { id = HEU.persona_event.114 }
-					}
-					1 = {
-						country_event = { id = HEU.persona_event.115 }
-					}
-					1 = {
-						country_event = { id = HEU.persona_event.116 }
-					}
-					1 = {
-						country_event = { id = HEU.persona_event.117 }
-					}
-					1 = {
-						country_event = { id = HEU.persona_event.118 }
-					}
-					1 = {
-						country_event = { id = HEU.persona_event.119 }
-					}
-					1 = {
-						country_event = { id = HEU.persona_event.120 }
-					}
-					1 = {
-						country_event = { id = HEU.persona_event.121 }
-					}
-					1 = {
-						country_event = { id = HEU.persona_event.122 }
-					}
-					1 = {
-						country_event = { id = HEU.persona_event.123 }
-					}
-					1 = {
-						country_event = { id = HEU.persona_event.124 }
-					}
-					1 = {
-						country_event = { id = HEU.persona_event.125 }
-					}
-					1 = {
-						country_event = { id = HEU.persona_event.126 }
-					}
-					1 = {
-						country_event = { id = HEU.persona_event.127 }
-					}
-					1 = {
-						country_event = { id = HEU.persona_event.128 }
-					}
-					1 = {
-						country_event = { id = HEU.persona_event.129 }
+				}
+				else = {
+					random_list = {
+						1 = {
+							country_event = { id = HEU.persona_event.1000 }
+						}
+						1 = {
+							country_event = { id = HEU.persona_event.1001 }
+						}
+						1 = {
+							country_event = { id = HEU.persona_event.1002 }
+						}
+						1 = {
+							country_event = { id = HEU.persona_event.1003 }
+						}
+						1 = {
+							country_event = { id = HEU.persona_event.1004 }
+						}
+						1 = {
+							country_event = { id = HEU.persona_event.1005 }
+						}
+						1 = {
+							country_event = { id = HEU.persona_event.1006 }
+						}
+						1 = {
+							country_event = { id = HEU.persona_event.1007 }
+						}
+						1 = {
+							country_event = { id = HEU.persona_event.1008 }
+						}
+						1 = {
+							country_event = { id = HEU.persona_event.1009 }
+						}
 					}
 				}
 
 				activate_mission = HEU_aru_persona_random_events
+			}
+		}
+	}
+	
+	HEU_aru_persona_armed_ver = {
+
+		visible = {
+			OR = {
+				has_country_leader_with_trait = HEU_aru_depression_1
+				has_country_leader_with_trait = HEU_aru_depression_2
+			}
+		}
+
+		ai_will_do = { 
+			base = 0
+		}
+		
+		fire_only_once = yes
+		cost = 5
+
+		complete_effect = {
+			HEU_aru = {
+				add_trait = {
+					add_trait = { trait = front_line_general }
+				}
 			}
 		}
 	}
@@ -5123,6 +5190,9 @@ HEU_german_reunification_war_decision_category = {
 
 		complete_effect = {
 			add_ideas = ideological_loyalty_spirit
+			hidden_effect = {
+				country_event = { id = HEU.flavor_event.49 }
+			}
 		}
 	}
 
@@ -5201,18 +5271,18 @@ HEU_german_reunification_war_decision_category = {
 	}
 	
 	HEU_west_germanic_unity_declaration = {
-		priority = 2
+		priority = 10
 
 		icon = GFX_decision_Gehenna_Emblem
 
 		available = {
-			NOT = { has_completed_focus = HEU_germany_union }
-			NOT = { country_exists = GEM }
+			#NOT = { has_completed_focus = HEU_germany_union }
+			#NOT = { country_exists = GEM }
 			controls_state = 55
 		}
 
 		visible = {
-			NOT = { has_completed_focus = HEU_germany_union }
+			#NOT = { has_completed_focus = HEU_germany_union }
 		}
 
 		fire_only_once = yes
@@ -5224,6 +5294,27 @@ HEU_german_reunification_war_decision_category = {
 		complete_effect = {
 			add_war_support = 0.05
 			set_cosmetic_tag = HEU_west_germanic_union
+			add_state_core = 56
+			add_state_core = 59
+			add_state_core = 57
+			add_state_core = 55
+			add_state_core = 51
+			add_state_core = 978
+			add_state_core = 987
+			add_state_core = 990
+			add_state_core = 42
+			add_state_core = 50
+			add_state_core = 52
+			add_state_core = 53
+			add_state_core = 54
+			set_global_flag = HEU_victory_west_germanic_union
+			country_event = { id = HEU_event.229 }
+			hidden_effect = {
+				country_event = { id = HEU.flavor_event.51 days = 7 }
+				country_event = { id = HEU.flavor_event.52 days = 14 }
+				country_event = { id = HEU.flavor_event.53 days = 21 }
+				country_event = { id = HEU.flavor_event.46 days = 30 }
+			}
 		}
 	}
 }

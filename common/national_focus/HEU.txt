@@ -1056,7 +1056,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_completed_focus = HEU_germany_union
+			has_country_flag = HEU_aru_true_leader
 		}
 
 		ai_will_do = {
@@ -1065,13 +1065,14 @@ focus_tree = {
 
 		search_filters = {  }
 
-		cost = 10.00
+		cost = 8.00
 
 		x = -2
 		y = 5
 
-		available = {
-
+		select_effect = {
+			country_event = { id = HEU_event.243 }
+			country_event = { id = HEU_event.244 days = 7 }
 		}
 
 		bypass = {
@@ -1079,7 +1080,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			custom_effect_tooltip = HEU_pro_people_route_ending_tt
+			hidden_effect = {
+				country_event = { id = HEU_event.245 }
+			}
 		}
 	}
 
@@ -1801,6 +1805,12 @@ focus_tree = {
 			}
 
 			custom_effect_tooltip = aru_despair_1_tt
+
+			hidden_effect = {
+				news_event = {
+					id = HEU_news.17
+				}
+			}
 		}
 	}
 
@@ -2194,19 +2204,15 @@ focus_tree = {
 	focus = {
 		id = HEU_germany_union
 		icon = GFX_goal_TRN_eden_pacts_letsgo
-		cost = 8.00
+		cost = 3.00
 
 		relative_position_id = HEU_doubt_pandemonium_society
 
 		prerequisite = { focus = HEU_attack_trinity }
 
 		available = {
-			AND = {
-				NOT = { country_exists = TRM }
-				NOT = { country_exists = GEH }
-				NOT = { country_exists = GEM }
-			}
-			controls_state = 64
+			owns_state = 64
+			has_cosmetic_tag = HEU_west_germanic_union
 		}
 
 		ai_will_do = {
@@ -2219,6 +2225,9 @@ focus_tree = {
 		completion_reward = {
 			#add_threat = 5
 			custom_effect_tooltip = aru_despair_3_tt
+			hidden_effect = {
+				country_event = { id = HEU_event.230 }
+			}
 		}
 
 	}
@@ -3841,6 +3850,22 @@ focus_tree = {
 					amount = 14
 				}
 			}
+			random_core_state = {
+				limit = {
+					is_controlled_by = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
@@ -3861,19 +3886,26 @@ focus_tree = {
 
 		search_filters = {  }
 
-		cost = 8.00
+		cost = 5.00
 
 		x = 1
 		y = 3
 
 		available = {
-			has_completed_focus = HEU_germany_union
+			has_completed_focus = HEU_question_of_succession_law
+		}
+
+		select_effect = {
+			country_event = { id = HEU.flavor_event.54 days = 7 }
+			country_event = { id = HEU.flavor_event.55 days = 14 }
+			country_event = { id = HEU.flavor_event.56 days = 21 }
+			country_event = { id = HEU.flavor_event.57 days = 28 }
 		}
 
 		search_filters = {  }
 
 		completion_reward = {
-
+			country_event = { id = HEU.flavor_event.60 }
 		}
 	}
 	
