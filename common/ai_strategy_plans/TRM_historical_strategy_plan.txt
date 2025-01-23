@@ -20,7 +20,7 @@ TRM_historical = {
         TRM_newfocus_1
         TRM_newfocus_3
         TRM_newfocus_4
-        TRM_localization
+        TRN_kickstart_the_civilian_industry # 중공업/ 산업 중점
 
         #미카 중점으로
         TRM_newfocus_7
@@ -46,7 +46,6 @@ TRM_historical = {
         TRM_Trinity_socialism 
         
         #산업 중점
-        TRN_kickstart_the_civilian_industry
         TRN_german_company_acceptance
         TRN_KRUPP_steel
         
