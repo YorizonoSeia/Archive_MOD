@@ -2538,12 +2538,16 @@ leader_traits = {
 
 	HEU_aru_depression_1 = { # 우울증
 		random = no
-		stability_factor = -0.05
+		stability_factor = -0.15
+		political_power_gain = -0.1
+		custom_modifier_tooltip = HEU_aru_depression_tt
 	}
 
 	HEU_aru_depression_2 = { # 우울증
 		random = no
-		stability_factor = -0.15
+		stability_factor = -0.30
+		political_power_gain = -0.2
+		custom_modifier_tooltip = HEU_aru_depression_tt
 	}
 
 	HEU_aru_chroma_1 = { # 중상
@@ -2577,6 +2581,17 @@ leader_traits = {
 		defensive_war_stability_factor = 0.05
 		non_core_manpower = 0.05
 		resistance_damage_to_garrison = -0.15
+	}
+	
+	HEU_grand_prince_of_luxembourg = { # 룩셈부르크인의 여대공
+		random = no
+		sprite = 13
+		stability_factor = 0.15
+		surrender_limit = 0.1
+		production_lack_of_resource_penalty_factor = -0.1
+		democratic_acceptance = 10
+		fascism_acceptance = 10
+		neutrality_acceptance = 10
 	}
 
 	##아리우스##
