@@ -241,6 +241,7 @@ focus_tree = {
 				NOT = { has_country_flag = USABA_government_official_exile }
 			}
 			has_country_flag = USA_2nd_great_depression_4th_flag
+			NOT = { has_completed_focus = USA_new_team }
 		}
 		
 		bypass = {
@@ -6086,6 +6087,7 @@ focus = {
 			threat > 0.99
 			congress_high_support_trigger = yes
 			is_in_faction = no
+			NOT = { has_completed_focus = USA_suspend_the_presecution }
 		}
 		completion_reward = {
 			USA_congress_large_opposition = yes
