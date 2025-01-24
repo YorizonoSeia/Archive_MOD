@@ -4946,7 +4946,7 @@ country_event = { #대독일국 부활을 위해
 	}
 
 	fire_only_once = yes
-	
+
 	mean_time_to_happen = {
 		days = 7
 	}
@@ -6320,7 +6320,7 @@ news_event = {
 						is_ai = no
 				}
 				scoped_play_song = "BA_protests_of_1968"
-				set_global_flag = {
+				set_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 25
 					days = 15
@@ -6340,7 +6340,7 @@ news_event = {
 						is_ai = no
 				}
 				scoped_play_song = "BA_protests_of_1968"
-				set_global_flag = {
+				set_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 25
 					days = 15
