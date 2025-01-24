@@ -4,7 +4,9 @@ add_namespace = TRN_faction_event
 add_namespace = TRN_collapse_event
 add_namespace = TRMDIP
 add_namespace = TRM_ironsword_event
+
 add_namespace = trnstory
+add_namespace = trinity
 country_event = {
 	id = TRM_event.1
 	title = TRM_event.1.t
@@ -8268,6 +8270,20 @@ country_event = {
 		
 		clr_global_flag = TRN_faction_event_2_flag
 	}
+}
+country_event = { # 티파티 통제
+	id = trinity.1
+	title = trinity.1.t
+	desc = trinity.1.desc
+	picture = GFX_report_event_soviet_purge_speech
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trinity.1.a
+       
+    }
 }
 country_event = {
 	id = trnstory.0

@@ -56,6 +56,10 @@ spriteTypes = {
 		name = "GFX_focus_TRM_united_law"
 		texturefile = "gfx/interface/goals/TRN/TRM_united_law.tga"			
 	}
+	SpriteType = {
+		name = "GFX_focus_TRN_control_tea_party"
+		texturefile = "gfx/interface/goals/TRN/TRN_control_tea_party.tga"			
+	}
 
 	SpriteType = {
 		name = "GFX_focus_BLM_gang_thugs_war_focus"

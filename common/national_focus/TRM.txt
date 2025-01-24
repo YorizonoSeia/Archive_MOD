@@ -170,11 +170,12 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = TRN_seia_tootip
+			custom_effect_tooltip = tooltip_white_line
+			swap_ideas = {
+				remove_idea = TRM_safe_trinity
+				add_idea = TRM_great_depression
+			}
 			hidden_effect = {
-				swap_ideas = {
-					remove_idea = TRM_safe_trinity
-					add_idea = TRM_great_depression
-				}
 				add_trait = {
 					character = TRN_tpdldk
 					slot = political_advisor
@@ -6698,6 +6699,43 @@ focus_tree = {
 					owner = TRM
 				}
 			}
+		}
+	}
+}
+
+focus_tree = {
+	id = Trinity_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 100
+			tag = TGH
+		}
+	}
+	continuous_focus_position = { x = 0 y = 2300 }
+
+	
+	focus = { # 티파티 통제
+		id = TRN_control_tea_party
+		icon = GFX_focus_TRN_control_tea_party
+		cost = 5
+
+		x = 5
+		y = 0
+
+		allow_branch = {  }
+		available = {
+			NOT = { has_idea = TRM_safe_trinity }
+			has_country_leader = {
+				character = TRN_alzk
+				ruling_only = yes
+			}
+		}
+		ai_will_do = {
+
+		}
+		completion_reward = {
+			country_event = trinity.1
 		}
 	}
 }
