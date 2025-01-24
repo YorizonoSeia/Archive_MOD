@@ -416,11 +416,11 @@ ideas = {
 			}
 			
 			TRM_justice_task_force = { # 정의실현부
-			allowed = {
-				always = no
-			}
-			modifier = {
-				stability_factor = 0.1
+				allowed = {
+					always = no
+				}
+				modifier = {
+					stability_factor = 0.1
 				}
 			}
 			TRM_justice_task_force_2 = { # 친위대

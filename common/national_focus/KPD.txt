@@ -958,11 +958,12 @@ focus_tree = {
 				remove_idea = KPD_economic_vacuum
 				add_idea = KPD_factory_councils
 			}
-			hidden_effect = {
-				country_event = { id = KPD_event.14 days = 95 }
-				country_event = { id = KPD_event.15 days = 190 }
-				country_event = { id = KPD_event.16 days = 285 }
-			}
+			custom_effect_tooltip = KPD_establishment_of_factory_councils_1_tt
+			country_event = { id = KPD_event.14 days = 95 }
+			custom_effect_tooltip = KPD_establishment_of_factory_councils_2_tt
+			country_event = { id = KPD_event.15 days = 190 }
+			custom_effect_tooltip = KPD_establishment_of_factory_councils_3_tt
+			country_event = { id = KPD_event.16 days = 285 }
 		}
 	}
 }

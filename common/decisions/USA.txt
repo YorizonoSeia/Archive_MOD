@@ -4553,6 +4553,38 @@ political_actions = {
 			country_event = usa_chroma_event.4
 		}
 	}
+	USABA_halo_formation_disbandment = {
+		icon = GFX_decision_generic_prepare_civil_war
+
+		allowed = { original_tag = USA }
+
+		visible = {
+			has_completed_focus = USA_bad_kivotos_halo_infantry_division
+			has_template = "NEO US army"
+		}
+
+		available = {
+			has_tech = kivotos_infantry_weapons
+		}
+
+		ai_will_do = {
+			factor = 4000
+		}
+
+		cost = 25
+
+		remove_effect = {
+			delete_unit_template_and_units = {
+				division_template = "NEO US army"
+				disband = yes
+			}
+			set_variable = {
+				BA_halo_infantry_cap_edit_var = 4
+				tooltip = kivotos_halo_add_tt
+			}
+			hidden_effect = { BA_halo_infantry_cap_edit_effect = yes }
+		}
+	}
 }
 
 

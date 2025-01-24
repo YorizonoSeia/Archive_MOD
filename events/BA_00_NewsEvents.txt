@@ -3689,24 +3689,12 @@ news_event = {
 		name = BA_news.97.a
 		trigger = {
 			OR = {
-		        TAG = USA
-		 }
-	    }
+				TAG = USA
+			}
+		}
 		hidden_effect = {
-	     	scoped_play_song = "USA_The_New_Order"
-		    #declare_war_on = {
-			#	target = OFN
-			#	type = annex_everything
-			#}
-		    start_civil_war = {
-            ideology = neutrality
-            size = 0.6
-            capital = 358
-            states = { 
-               357 358 360 359 261 393 378 385 379
-            }
-        } 
-	  }
+			scoped_play_song = "USA_The_New_Order"
+		}
 	}
 
 	option = { # 키보토스 반응
@@ -3731,9 +3719,6 @@ news_event = {
 				TAG = INK
 			}
 		}
-	hidden_effect = {
-		scoped_play_song = "USA_The_New_Order"
-	}
 	}
 
 

@@ -134,20 +134,31 @@
  USABA_replace_industry: "산업 재조정"
  USABA_replace_industry_desc: "우리는 부족한 식량과 생필품을 생산하기 위해 여러 산업을 대규모 재편성할 겁니다. 비록 몇몇 자본가들이 반대를 하겠지만 이건 대공황 극복을 위한 꼭 필요한 조치입니다."
 
- USABA_establish_government_industry: "대규모 공기업 설립"
+ USABA_establish_government_industry: "기업 내 인민위원 파견"
  USABA_establish_government_industry_desc: "2차 대공황은 대전이로 인한 유럽 시장 파괴 때문에 발생했습니다. 파멸적인 과잉 공급를 해결하기 위해서는 기업에 관한 국가의 개입이 필수불가피합니다."
 
  USA_bad_kivotos_RED: "붉은겨울 따르기"
  USA_bad_kivotos_RED_desc: "매우 황당하고 멍청한 선택 같지만, 의외로 좋은 선택일 지도 모릅니다..."
+
+ USA_bad_kivotos_RED_pudding: "붉은겨울제 푸딩 수입"
+ USA_bad_kivotos_RED_pudding_desc: "붉은겨울 연방학원의 가장 훌륭한 트레이드마크중 하나인, 연방학원산 푸딩을 수입하여 전국에 배포할 것입니다."
+
+ USA_bad_kivotos_RED_more_pudding: "푸딩 자국화"
+ USA_bad_kivotos_RED_more_pudding_desc: "연방학원제 푸딩은 훌륭하나, 너무 먼 거리에서 수송해오는 나머지 많은 운송비가 발생하고 있습니다. 우리는 자국 내 푸딩 생산 공장을 설립하여 붉은겨울 연방학원의 푸딩을 전국에 확대 배급할 것입니다."
 
  USA_be_red: "공산당 집권"
  USA_be_red_desc: "민주당은 2차 대공황에 잘 대처하지 못했습니다. 효과적으로 2차 대공황을 해결한 우리 공산당만이 정부를 이끌 자격이 있습니다."
 
  USA_big_industry_plan: "제 2차 산업 재조정"
  USA_big_industry_plan_desc: "임시방편으로 만든 산업 체계을 효율적으로 다시 재조정해야 합니다. 일시적으로 혼란과 문제를 야기할 수 있지만, 이것은 근미래에 더 높은 효율을 낼 것입니다."
+ USA_big_industry_plan_1_tt: "\n중점 완료 이후 90일 후:"
+ USA_big_industry_plan_2_tt: "\n중점 완료 이후 180일 후:"
+ USA_big_industry_plan_3_tt: "\n중점 완료 이후 270일 후:"
+ USA_big_industry_plan_4_tt: "\n중점 완료 이후 360일 후:"
 
  USA_final_economic_plan: "제 3차 산업 재조정"
  USA_final_economic_plan_desc: "우리는 2차 산업 재조정이 성공적으로 달성한 것을 목도했습니다. 이제 마지막으로, 새로운 경제 이념을 가지고 산업을 재편성할 것입니다."
+ USA_final_economic_plan_tt: "제 2차 산업 재조정 이후 완료한 중점의 갈래에 따라 국민정신이 개선됩니다."
 
  USA_the_aggresive_comintern_2: "반파시스트 정책"
  USA_the_aggresive_comintern_2_desc: "유럽은 대전이로 인해 파시즘이 대두하고 노동자의 핍박이 이어지고 있습니다. 우리는 노동자를 억압하는 파시스트 국가들을 근절해야 합니다."
@@ -440,10 +451,12 @@
  USA_TRM_train: "트리니티 제병합동"
  USA_iroha_tank: "이로하 전술 도입"
  USA_nagisa_cannon: "나기사 전술 도입"
- usa_help_to_new_order: "도와줘요 신질서에몽!"
+ usa_help_to_new_order: "미합중국의 의용군 요청!"
  week_faith_for_new_team: "우유부단한 신념"
  usa_support_iroha: "이로하의 조언"
  usa_make_GEM_club_lobby: "동아리 로비 제작"
+ USA_TRM_justice_club: "미합중국 정의실현부"
+ USA_support_book_club: "미합중국 도서부"
 
  USABA_second_replace_industry: "2차 산업 재조정"
  USABA_completed_second_replace_industry_1: "난관을 겪는 2차 산업 재조정"
@@ -511,6 +524,8 @@
 
  USABA_recover_from_2nd_great_depression_ing_flag: "다른 §Y재건 작업§!이 진행중이지 않음"
  USA_recover_from_2nd_great_depression_stop_flag: "§Y전시 경제§!가 시행됨"
+
+ USABA_halo_formation_disbandment: "비정규 헤일로 보병 병합"
 
 #이벤트
 

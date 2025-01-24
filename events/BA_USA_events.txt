@@ -1235,11 +1235,6 @@ country_event = {
             remove_idea = USABA_second_replace_industry
 			add_idea = USABA_completed_second_replace_industry_1
         }
-		hidden_effect = {
-			hidden_effect = {
-				country_event = { id = usa_event.22 days = 150}
-			}
-		}
 	}
 }
 
@@ -1259,11 +1254,6 @@ country_event = {
             remove_idea = USABA_completed_second_replace_industry_1
 			add_idea = USABA_completed_second_replace_industry_2
         }
-		hidden_effect = {
-			hidden_effect = {
-				country_event = { id = usa_event.23 days = 120}
-			}
-		}
 	}
 }
 
@@ -1283,11 +1273,6 @@ country_event = {
             remove_idea = USABA_completed_second_replace_industry_2
 			add_idea = USABA_completed_second_replace_industry_3
         }
-		hidden_effect = {
-			hidden_effect = {
-				country_event = { id = usa_event.24 days = 100}
-			}
-		}
 	}
 }
 

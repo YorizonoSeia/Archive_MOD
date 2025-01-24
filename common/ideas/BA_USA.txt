@@ -618,11 +618,11 @@ ideas = {
               stability_weekly = 0.001
 			  stability_factor = 0.05
  	        }
-       }
+      	}
 
 
-	   # 우유부단한 신념
-	   week_faith_for_new_team = {
+		# 우유부단한 신념
+		week_faith_for_new_team = {
             picture = generic_disjointed_gov
             
 			allowed = {
@@ -644,13 +644,13 @@ ideas = {
 				surrender_limit = -0.4
 
 			}
-	   }
+	   	}
 
 
 
-    # 구질서 수호 반란 미국 국민정신 
+   	 	# 구질서 수호 반란 미국 국민정신 
 
-	 strong_faith_for_old_team = {
+		strong_faith_for_old_team = {
             picture = generic_fascism_banned
             
 			allowed = {
@@ -668,12 +668,12 @@ ideas = {
 				war_support_weekly = 0.01
 				surrender_limit = 0.2
 			}
-	}
+		}
 
 
-	   # 푸딩 지급
+		   # 푸딩 지급
 
-	   	 USA_pudding = {
+	   	USA_pudding = {
             picture = generic_disjointed_gov
             
 			allowed = {
@@ -688,11 +688,11 @@ ideas = {
 				stability_factor = -0.1
 	   			stability_weekly = 0.0030
 			}
-	   }	
+	  	 }	
 
-	   # 게헨나 제병합동
+	   	# 게헨나 제병합동
 
-	   USA_GEM_train = {
+	   	USA_GEM_train = {
             picture = tfv_can_conscription_crisis
 
 			modifier = {
@@ -702,9 +702,9 @@ ideas = {
 				army_org_regain = -0.1
 				training_time_army_factor = -0.1
 			}
-	   }
+	   	}
      
-	  # 선도부 제병합동
+	  	# 선도부 제병합동
 
 	   	USA_GEH_train = {
             picture = tfv_can_conscription_crisis
@@ -716,10 +716,10 @@ ideas = {
 				max_planning_factor = 0.15
 				training_time_army_factor = 0.1
 			}
-	   }
-    # 선도부 미국 버프
-	   	USA_GEH_train_usa = {
-            picture = tfv_can_conscription_crisis
+	  	}
+		# 선도부 미국 버프
+		USA_GEH_train_usa = {
+			picture = tfv_can_conscription_crisis
 
 			modifier = {
 				command_power_gain = 0.1
@@ -728,8 +728,8 @@ ideas = {
 				skill_bonus_factor = 0.15
 				promote_cost_factor = -0.2
 			}
-	   }
-    #선도부 연합 제병합동
+		}
+    	#선도부 연합 제병합동
 	   	USA_GEH_final_train = {
             picture = tfv_can_conscription_crisis
 
@@ -739,68 +739,81 @@ ideas = {
 				army_strength_factor = 0.1
 				planning_speed = 0.15
 			}
-	   }
+	 	}
 
        
-	   # 트리니티 제병합동
-	   USA_TRM_train = {
-            picture = SWE_varnplikt
-			modifier = {
-				army_org_regain = 0.15
-				experience_loss_factor = -0.2
-			}
-	   }
+	   	# 트리니티 제병합동
+		USA_TRM_train = {
+				picture = SWE_varnplikt
+				modifier = {
+					army_org_regain = 0.15
+					experience_loss_factor = -0.2
+				}
+		}
 
-	   USA_support_book_club = {
-            picture = AUS_women_in_academia
-			modifier = {
-			   scientist_research_bonus_factor =  0.15
-               scientist_xp_gain_factor = 0.25
-			   research_speed_factor = 0.1
-			}
-	   }
+		USA_support_book_club = {
+				picture = AUS_women_in_academia
+				modifier = {
+				scientist_research_bonus_factor =  0.15
+				scientist_xp_gain_factor = 0.25
+				research_speed_factor = 0.1
+				}
+		}
 
-	 #정의부
+		#정의부
 	    USA_TRM_justice_club = {
-            picture = tfv_can_conscription_crisis
+            picture = GFX_idea_TRM_justice_task_force
 
 			modifier = {
-               
+				army_attack_factor = 0.05
+               	non_core_manpower = 0.05
 			}
-	   }
+	   	}
 
-	   #나기사 화력우세(에덴 군사 중점)
-	   USA_nagisa_cannon = {
-        picture = generic_artillery_regiments
+	    USA_TRM_justice_club_2 = {
+            picture = TRM_justice_task_force_2
+			name = USA_TRM_justice_club
 
-		modifier = {
-           army_artillery_attack_factor = 0.15
-		   rocket_attack_factor = 0.15
+			modifier = {
+				army_attack_factor = 0.10
+				army_defence_factor = 0.05
+				army_morale_factor = -0.05
+               	non_core_manpower = 0.05
+				resistance_target = -0.05
+			}
+	   	}
+
+	   	#나기사 화력우세(에덴 군사 중점)
+		USA_nagisa_cannon = {
+			picture = generic_artillery_regiments
+
+			modifier = {
+				army_artillery_attack_factor = 0.15
+				rocket_attack_factor = 0.15
+			}
 		}
 
-	}
+		# 이로하 기동전(에덴 군사 중점)
 
-	# 이로하 기동전(에덴 군사 중점)
+		USA_iroha_tank = {
+			picture = generic_acquire_tanks
 
-       USA_iroha_tank = {
-        picture = generic_acquire_tanks
-
-		modifier = {
-           #army_armor_attack_factor = 0.1
-           #army_armor_defence_factor = 0.05
-		   #army_armor_speed_factor = 0.1
-		}
-		equipment_bonus = {
+			modifier = {
+			#army_armor_attack_factor = 0.1
+			#army_armor_defence_factor = 0.05
+			#army_armor_speed_factor = 0.1
+			}
+			equipment_bonus = {
 				heavy_tank_chassis = {
-				soft_attack = 0.1
-				hard_attack = 0.1
-				build_cost_ic = -0.1
-				breakthrough = 0.15
-				defense = 0.05
-				instant = yes
-		 }
+					soft_attack = 0.1
+					hard_attack = 0.1
+					build_cost_ic = -0.1
+					breakthrough = 0.15
+					defense = 0.05
+					instant = yes
+				}
+			}
 		}
-	   }
 		
 
 
@@ -921,12 +934,16 @@ ideas = {
 			picture = generic_volunteer_expedition_bonus
 
 			allowed_civil_war = {
-				has_government = communism
+				always = yes
+			}
+
+			cancel = {
+				NOT = { USA = { has_war_with = OFN } }
 			}
 
 			modifier = {
 				send_volunteer_size = 4
-				send_volunteers_tension = -0.20
+				send_volunteers_tension = -1.00
 			}
 		}
 
@@ -968,11 +985,12 @@ ideas = {
 				original_tag = USA
 			}
 			modifier = {
-                consumer_goods_factor = -0.2
+                consumer_goods_factor = -0.25
 				industrial_capacity_factory = -0.4
-				production_speed_industrial_complex_factor = -0.3
-				production_speed_arms_factory_factor = -0.4
-				production_speed_dockyard_factor = -0.4
+				industrial_capacity_dockyard = -0.4
+				production_speed_industrial_complex_factor = -0.8
+				production_speed_arms_factory_factor = -0.2
+				production_speed_dockyard_factor = -0.2
 			}
 		}
 
@@ -982,14 +1000,12 @@ ideas = {
 				original_tag = USA
 			}
 			modifier = {
-				stability_weekly = -0.01
-                consumer_goods_factor = 0.15
-				production_speed_buildings_factor = -0.8
-				industrial_capacity_factory = -0.6
-                production_speed_buildings_factor = -0.15
-				production_speed_industrial_complex_factor = -0.5
-				production_speed_arms_factory_factor = -0.6
-				production_speed_dockyard_factor = -0.6
+				stability_weekly = -0.005
+                consumer_goods_factor = 0.05
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
+                production_speed_buildings_factor = -0.10
+				production_speed_industrial_complex_factor = -0.30
 			}
 		}
         
@@ -1000,14 +1016,11 @@ ideas = {
 				original_tag = USA
 			}
 			modifier = {
-				stability_weekly = -0.005
-                consumer_goods_factor = 0.05
-				production_speed_buildings_factor = -0.6
-				industrial_capacity_factory = -0.4
-                production_speed_buildings_factor = -0.15
-				production_speed_industrial_complex_factor = -0.4
-				production_speed_arms_factory_factor = -0.6
-				production_speed_dockyard_factor = -0.5
+				stability_weekly = -0.002
+                consumer_goods_factor = 0.10
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
+				production_speed_industrial_complex_factor = -0.10
 			}
 		}
 
@@ -1019,13 +1032,10 @@ ideas = {
 				original_tag = USA
 			}
 			modifier = {
-                consumer_goods_factor = 0.05
-				production_speed_buildings_factor = -0.15
-				industrial_capacity_factory = -0.25
-                production_speed_buildings_factor = 0.1
-				production_speed_industrial_complex_factor = -0.15
-				production_speed_arms_factory_factor = -0.4
-				production_speed_dockyard_factor = -0.3
+                consumer_goods_factor = 0.15
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
+				production_speed_industrial_complex_factor = -0.10
 			}
 		}
 
@@ -1036,15 +1046,8 @@ ideas = {
 				original_tag = USA
 			}
 			modifier = {
-				stability_weekly = 0.01
-				production_speed_buildings_factor = 0.05
-                production_speed_industrial_complex_factor = -0.05
-				production_speed_dockyard_factor = -0.1
-				production_speed_arms_factory_factor = -0.2
-				# 생산 한도 관련 버프 넣을 것
-				production_factory_start_efficiency_factor = 0.05
-				production_factory_efficiency_gain_factor = 0.1
-	
+                consumer_goods_factor = 0.20
+				production_speed_industrial_complex_factor = -0.10
 			}
 		}
 
@@ -1056,15 +1059,7 @@ ideas = {
 				original_tag = USA
 			}
 			modifier = {
-				stability_weekly = 0.015
-                consumer_goods_factor = -0.1
-				industrial_capacity_factory = 0.1
-				production_speed_buildings_factor = 0.15
-				production_speed_industrial_complex_factor = 0.05
-				production_speed_arms_factory_factor = -0.1
-				# 생산 한도 관련 버프 넣을 것
-				production_factory_start_efficiency_factor = 0.1
-				production_factory_efficiency_gain_factor = 0.15
+                consumer_goods_factor = 0.25
 			}
 		}
 
@@ -1076,14 +1071,12 @@ ideas = {
 				original_tag = USA
 			}
 			modifier = {
-				stability_weekly = 0.02
-                consumer_goods_factor = 0.25
-				industrial_capacity_factory = 0.3
-				production_speed_buildings_factor = 0.2
+                consumer_goods_factor = 0.10
+				production_speed_buildings_factor = 0.05
 				production_speed_industrial_complex_factor = 0.1
-				production_factory_start_efficiency_factor = 0.1
-				production_factory_efficiency_gain_factor = 0.15
-				production_factory_max_efficiency_factor = 0.2
+				production_factory_start_efficiency_factor = 0.03
+				production_factory_efficiency_gain_factor = 0.07
+				production_factory_max_efficiency_factor = 0.05
 			}
 		}
 
@@ -1095,19 +1088,15 @@ ideas = {
 				original_tag = USA
 			}
 			modifier = {
-				stability_weekly = 0.005
 				political_power_factor = -0.15
-                consumer_goods_factor = -0.15
-				economy_cost_factor = -0.5
-				industrial_concern_cost_factor = -0.5
-				industrial_capacity_factory = -0.1
-				production_speed_buildings_factor = 0.2
-				production_speed_industrial_complex_factor = 0.1
-				production_speed_arms_factory_factor = 0.1
-				production_speed_dockyard_factor = 0.1
-				production_factory_efficiency_gain_factor = 0.1
-				production_factory_start_efficiency_factor = 0.25
-				production_factory_efficiency_gain_factor = 0.25
+                consumer_goods_factor = -0.25
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_speed_industrial_complex_factor = -0.10
+				production_factory_start_efficiency_factor = 0.10
+				production_factory_efficiency_gain_factor = -0.03
+				economy_cost_factor = -0.25
+				industrial_concern_cost_factor = -0.25
 			}
 		}
     
@@ -1118,16 +1107,65 @@ ideas = {
 				original_tag = USA
 			}
 			modifier = {
-				stability_weekly = 0.015
 				political_power_factor = 0.05
-                consumer_goods_factor = 0.35
-				industrial_capacity_factory = 0.1
-				production_speed_buildings_factor = 0.3
-				production_speed_industrial_complex_factor = 0.2
-				production_speed_arms_factory_factor = 0.25
-				production_speed_dockyard_factor = 0.25
+                consumer_goods_factor = -0.05
+				production_speed_industrial_complex_factor = -0.05
+				production_speed_arms_factory_factor = 0.10
+				production_speed_dockyard_factor = 0.10
+			}
+		}
+
+		# 수정 자본주의
+
+		USA_modified_capitalism_2 = {
+			picture = autarkic_economy
+			name = USA_modified_capitalism
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+                consumer_goods_factor = 0.10
+				production_speed_buildings_factor = 0.10
+				production_speed_industrial_complex_factor = 0.1
 				production_factory_start_efficiency_factor = 0.1
-				production_factory_efficiency_gain_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.10
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+
+
+        # 국가 개입주의
+		USA_economic_interventionism_2 = {
+			picture = new_economic_policy
+			name = USA_economic_interventionism
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				political_power_factor = -0.08
+                consumer_goods_factor = -0.25
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_speed_industrial_complex_factor = -0.05
+				production_factory_start_efficiency_factor = 0.10
+				economy_cost_factor = -0.25
+				industrial_concern_cost_factor = -0.25
+			}
+		}
+    
+        # 소련과 경제 개발
+		USA_sov_economy_together_2 = {
+			picture = SOV_stakhanovite_movement
+			name = USA_sov_economy_together
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				political_power_factor = 0.05
+                consumer_goods_factor = -0.10
+				production_speed_industrial_complex_factor = -0.05
+				production_speed_arms_factory_factor = 0.15
+				production_speed_dockyard_factor = 0.15
 			}
 		}
     
