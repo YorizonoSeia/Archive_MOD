@@ -82,6 +82,8 @@ GEH_state_government = {
 GEH_defend_states = { # 주 모디파이어
 	enable = { always = yes }
 
+	remove_trigger = { NOT = { is_owned_by = GEH } }
+
 	icon = GFX_modifiers_SOV_defend_moscow
 	
 	recruitable_population_factor = 0.25
@@ -93,6 +95,8 @@ GEH_attack_states = { # 주 모디파이어
 	enable = { always = yes }
 
 	icon = GFX_modifiers_SOV_defend_moscow
+	
+	remove_trigger = { NOT = { is_owned_by = GEH } }
 	
 	army_core_attack_factor = 0.15
 	local_factories = -1

@@ -6743,7 +6743,7 @@ focus_tree = {
 		ai_will_do = { base = 40 }
 		icon = GFX_focus_generic_military_industry
 		x = 21
-		y = 0
+		y = 1
 		offset = {
 			trigger = { has_completed_focus = TRM_newfocus_7 }
 			x = 3
