@@ -123,6 +123,20 @@ USA_decolonisation = {
 		priority = 75
 	}
 	USA_rising_exiled_germans = {
+	
+		on_map_area = {
+			target_array = controlled_states
+			name = USA_rising_exiled_germans_state
+			zoom = 393
+			target_trigger = {
+				FROM = {
+					has_dynamic_modifier = {
+						modifier = USA_rising_exiled_germans_state
+					}
+				}
+			}
+		}
+
 		allowed = {
 			original_tag = USA
 		}

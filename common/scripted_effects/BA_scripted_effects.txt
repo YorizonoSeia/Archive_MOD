@@ -2735,3 +2735,60 @@ USABA_debug_effect4 = {
 		}
 	}
 }
+
+USABA_debug_effect5 = {
+	if = {
+		limit = {
+			check_variable = {
+				var_USA_rising_exiled_germans_2st < 4
+			}
+		}
+		add_to_variable = {
+			var_USA_rising_exiled_germans_2st = 1
+		}
+		random_owned_state = {
+			limit = { 
+				any_neighbor_state = {
+					has_dynamic_modifier = {
+						modifier = USA_rising_exiled_germans_state
+					}
+				} 
+				NOT = {
+					has_dynamic_modifier = {
+						modifier = USA_rising_exiled_germans_state
+					}
+				}
+				is_core_of = ROOT
+			}
+			add_dynamic_modifier = {
+				modifier = USA_rising_exiled_germans_state
+			}
+			save_global_event_target_as = USA_rising_exiled_germans_2st
+		}
+		country_event = usa_event.13
+		activate_mission = USA_rising_exiled_germans_2st
+	}
+	else = {
+		random_owned_state = {
+			limit = { 
+				any_neighbor_state = {
+					has_dynamic_modifier = {
+						modifier = USA_rising_exiled_germans_state
+					}
+				} 
+				NOT = {
+					has_dynamic_modifier = {
+						modifier = USA_rising_exiled_germans_state
+					}
+				}
+				is_core_of = ROOT
+			}
+			add_dynamic_modifier = {
+				modifier = USA_rising_exiled_germans_state
+			}
+			save_global_event_target_as = USA_rising_exiled_germans_2st
+		}
+		country_event = usa_event.14
+		activate_mission = USA_rising_exiled_germans_3st
+	}
+}

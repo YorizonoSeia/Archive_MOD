@@ -988,6 +988,22 @@ country_event = {
 				modifier = USA_rising_exiled_germans_state
 			}
 		}
+		if = {
+			limit = {
+				NOT = {
+					any_state = {
+						has_dynamic_modifier = {
+							modifier = USA_rising_exiled_germans_state
+						}
+					}
+				}
+			}
+			capital_scope = {
+				add_dynamic_modifier = {
+					modifier = USA_rising_exiled_germans_state
+				}
+			}
+		}
 	}
 }
 country_event = {
@@ -1307,14 +1323,54 @@ country_event = {
 	fire_only_once = yes
 	is_triggered_only = yes
 
+	immediate = {
+		hidden_effect = {
+			every_core_state = {
+				add_core_of = OFN
+			}
+			every_owned_state = {
+			   limit = {
+				   OR = {
+					   state = 357
+					   state = 358
+					   state = 360
+					   state = 359
+					   state = 261
+					   state = 393
+					   state = 378
+					   state = 385
+					   state = 379
+				   }
+			   }
+			   transfer_state_to = OFN
+			   remove_core_of = ROOT
+			   add_claim_by = ROOT
+		   	}
+			USA = {
+				transfer_units_fraction = {
+					target = OFN
+					target_organization = 1
+					source_organization = 1
+					size = 0.60
+					stockpile_ratio = 0.30
+					army_ratio = 0.60
+					navy_ratio = 0.60
+					air_ratio = 0.60
+					keep_unit_leaders_trigger = {
+						always = yes 
+					}
+				}
+			}
+		}
+	}
+
 	option = {
 		name = usa_new_civil_event.1.a
 		ai_chance = {
 			factor = 1
 		}
-		OFN = { add_state_claim = 358} 
+		declare_war_on = { target = OFN type = annex_everything }
 	}
-	
 }
 
 

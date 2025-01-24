@@ -6202,6 +6202,7 @@ focus = {
 
 		}
 		completion_reward = {
+			add_political_power = 100
 			USA_congress_medium_opposition = yes    
 		}
 	}
@@ -6220,7 +6221,7 @@ focus = {
 		x = 0
 		y = 2
 		relative_position_id = USA_new_team
-		cost = 1
+		cost = 2
 		ai_will_do = {
 			factor = 1
 		}
@@ -6232,38 +6233,8 @@ focus = {
 			add_threat = 15
 			country_event = { id = BA_news.97 days = 3 }
 			
-	 		every_owned_state = {
-				limit = {
-					OR = {
-						state = 357
-						state = 358
-						state = 360
-						state = 359
-						state = 261
-						state = 393
-						state = 378
-						state = 385
-						state = 379
-					}
-				}
-				transfer_state_to = OFN
-			}
-			OFN = { declare_war_on = { target = USA type = annex_everything } }
-			USA = {
-				transfer_units_fraction = {
-					target = OFN
-					target_organization = 1
-					source_organization = 1
-					size = 0.60
-					stockpile_ratio = 0.30
-					army_ratio = 0.60
-					navy_ratio = 0.60
-					air_ratio = 0.60
-					keep_unit_leaders_trigger = {
-						always = yes 
-					}
-				}
-			}
+			custom_effect_tooltip = USA_new_team_civilwar_tt
+			country_event = { id = usa_new_civil_event.1 hours = 8 }
 		}
 	}
 
@@ -6389,8 +6360,7 @@ focus = {
 			if = { limit = { has_country_flag = USABA_government_official_exile }
 				NOT = { has_country_flag = USABA_government_official_exile }
 			}
-			has_civil_war = no
-
+			NOT = { has_war_with = OFN }
 		}
 		completion_reward = {
 			add_stability = 0.1
@@ -6831,8 +6801,7 @@ focus = {
 			if = { limit = { has_country_flag = USABA_government_official_exile }
 				NOT = { has_country_flag = USABA_government_official_exile}
 			}
-			has_civil_war = no
-
+			NOT = { has_war_with = OFN }
 		}
 		completion_reward = {
 			add_war_support = 0.2
