@@ -286,7 +286,7 @@ ideas = {
 				political_power_gain = 1.5
 				stability_weekly = 0.01
 				consumer_goods_factor = -0.1
-				custom_modifier_tooltip = USABA_second_great_depression_idea_tt
+				custom_modifier_tooltip = USABA_secret_currency_issuance_tt
 			}
         }
         
