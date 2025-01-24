@@ -1715,6 +1715,20 @@ unit_leader_event = { #민권법 공개 토론회
 
 	option = { 
 		name = HEU_event.151.a 
+		if = {
+			limit = {
+				is_debug = no
+			}
+			custom_effect_tooltip = HEU_no_anti_gehenna_fascism_tt
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_skip_one_line_tt
+			subtract_from_variable = { 
+				var = benriya_debate^1
+				# 다미엔 지지율
+				value = 10
+			}
+		}
+
 		custom_effect_tooltip = HEU_event.151.a.tt
 		custom_effect_tooltip = generic_skip_one_line_tt
 		custom_effect_tooltip = HEU_debate_wisdom_tt
@@ -1753,6 +1767,20 @@ unit_leader_event = { #민권법 공개 토론회
 
 	option = { 
 		name = HEU_event.151.b
+		if = {
+			limit = {
+				is_debug = no
+			}
+			custom_effect_tooltip = HEU_no_anti_gehenna_fascism_tt
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_skip_one_line_tt
+			subtract_from_variable = { 
+				var = benriya_debate^1
+				# 다미엔 지지율
+				value = 10
+			}
+		}
+
 		custom_effect_tooltip = HEU_event.151.b.tt
 		custom_effect_tooltip = generic_skip_one_line_tt
 		custom_effect_tooltip = HEU_debate_charisma_tt
@@ -1798,9 +1826,14 @@ unit_leader_event = { #민권법 공개 토론회
 
 	option = { 
 		name = HEU_event.151.c
+		trigger = {
+			is_debug = yes
+		}
+
 		ai_chance = {
 			base = 0
 		}
+
 		custom_effect_tooltip = HEU_event.151.c.tt
 		custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -2780,6 +2813,12 @@ country_event = { #일시적 동맹의 끝
 		has_global_flag = HEU_TRM_alliance
 	}
 
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 7
+	}
+
 	option = { 
 		name = HEU_event.212.a 
 		ai_chance = {
@@ -3549,6 +3588,20 @@ country_event = { #1일 1선 (공산루트 엔딩)
 	option = { 
 		name = HEU_event.246.a 
 		custom_effect_tooltip = HEU_game_victory_tt
+	}
+}
+
+country_event = { #연방생도당 창당식
+	id = HEU_event.247
+	title = HEU_event.247.t
+	desc = HEU_event.247.desc
+
+	picture = GFX_report_event_Problem_Solver_68
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.247.a 
 	}
 }
 
@@ -4821,29 +4874,8 @@ country_event = { #크로노스 언론 인터뷰
 	option = { 
 		name = HEU.flavor_event.57.b
 		hidden_effect = {
-			country_event = { id = HEU.flavor_event.57 days = 30 }
-		}
-	}
-}
-
-country_event = { #조제프 베슈 총리의 개인 편지
-	id = HEU.flavor_event.57
-	title = HEU.flavor_event.57.t
-	desc = HEU.flavor_event.57.desc
-	picture = GFX_report_event_luxembourg_city
-    is_triggered_only = yes
-
-	option = { 
-		name = HEU.flavor_event.57.a 
-
-	}
-
-	option = { 
-		name = HEU.flavor_event.57.b
-		hidden_effect = {
 			country_event = { id = HEU.flavor_event.58 days = 30 }
 		}
-
 	}
 }
 
@@ -4888,7 +4920,6 @@ country_event = { #연방생도당의 제안
 	}
 }
 
-
 country_event = { #모두와 화해
 	id = HEU.flavor_event.60
 	title = HEU.flavor_event.60.t
@@ -4899,6 +4930,33 @@ country_event = { #모두와 화해
 	option = { 
 		name = HEU.flavor_event.60.a 
 		add_stability = 0.1
+	}
+}
+
+country_event = { #대독일국 부활을 위해
+	id = HEU.flavor_event.61
+	title = HEU.flavor_event.61.t
+	desc = HEU.flavor_event.61.desc
+	picture = GFX_report_event_german_troops
+
+	trigger = {
+		original_tag = HEU
+		controls_state = 52
+		has_completed_focus = HEU_representative_of_the_germanic
+	}
+
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	option = { 
+		name = HEU.flavor_event.61.a
+		add_popularity = {
+			ideology = fascism
+			popularity = -0.01
+		}
 	}
 }
 
@@ -6499,7 +6557,7 @@ news_event = {
 	}
 }
 
-# 만마전의 룩셈부르크 망명
+# 리쿠하치마 아루의 결혼식
 news_event = {
 	id = HEU_news.13
 	title = HEU_news.13.t
@@ -6796,7 +6854,26 @@ news_event = {
 news_event = {
 	id = HEU_news.21
 	title = HEU_news.21.t
-	desc = HEU_news.21.desc
+
+	desc = {
+		text = HEU_news.21.desc.a
+		trigger = { 
+			has_dynamic_modifier = {
+				modifier = HEU_luxembourgism_idea
+			} 
+		}
+		
+	}
+
+	desc = {
+		text = HEU_news.21.desc.b
+		trigger = { 
+			has_dynamic_modifier = {
+				modifier = HEU_rikuhachimaism_idea
+			} 
+		}
+	}
+
 	picture = GFX_event_BA_news_16
 	
 	major = yes
@@ -6821,6 +6898,61 @@ news_event = {
 		name = HEU_news.21.c
 		trigger = {
 			Kivotos_tag = no
+		}
+	}
+}
+
+# 리쿠하치마 아루의 결혼식
+news_event = {
+	id = HEU_news.23
+	title = HEU_news.23.t
+
+	desc = { 
+		text = HEU_news.23.desc.a
+		trigger = {
+			has_completed_focus = HEU_rikuhachimaism_focus_kayoko
+		}
+	}
+
+	desc = { 
+		text = HEU_news.23.desc.b
+		trigger = {
+			has_completed_focus = HEU_rikuhachimaism_focus_mutsuki
+		}
+	}
+
+	desc = { 
+		text = HEU_news.23.desc.c
+		trigger = {
+			has_completed_focus = HEU_rikuhachimaism_focus_haruka
+		}
+	}
+
+	picture = GFX_event_news_aru
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = HEU_news.23.a
+		trigger = {
+			tag = HEU
+		}
+	}
+
+	option = {
+		name = HEU_news.23.b
+		trigger = {
+			Kivotos_tag = yes
+			NOT = { tag = HEU }
+		}
+	}
+
+	option = {
+		name = HEU_news.23.c
+		trigger = {
+			NOT = { Kivotos_tag = yes }
+			NOT = { tag = HEU }
 		}
 	}
 }
