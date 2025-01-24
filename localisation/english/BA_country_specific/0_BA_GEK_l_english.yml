@@ -376,7 +376,7 @@
  GEK_popular_front_spd_focus_1: "독일 사회민주당:\n 재분배 정책"
  GEK_popular_front_DStP_focus_0: "독일 국가당:\n 급진민주당 포섭"
  GEK_popular_front_bvp_focus_0: "바이에른 인민당:\n 바이에른에서의 양보"
- GEK_popular_front_vgp_focus_0: "통합 게헨나:\n 이계관리청장 양보"
+ GEK_popular_front_vgp_focus_0: "통합 게헨나:\n 이계관리청 양보"
  
 
 
@@ -555,6 +555,11 @@
  #전쟁해군 툴팁
  GEK_get_halo_infantry_tt:0 "§Y오디세이 해양학원§! 학생들을 사용할 수 있습니다."
  #전쟁해군 이벤트
+ GEK_demo_event.1.t: "자유시간"
+ GEK_demo_event.1.d: "선거가 실시됐습니다."
+ GEK_demo_event.1.a: "인민전선이 다수를 차지하였다."
+ GEK_demo_event.1.b: "흑백적 연정이 승리했다."
+
  GEK_event.1.t:0 "수상한 함선 나포"
  GEK_event.1.desc:0 "우리가 가진 정보로는 알지 못하는 소속의 함선이 고틀란드 주변을 항해하다 우리 해군에 의해 나포되었습니다. 이들을 심문한 결과 이들의 머리에 달린 헤일로와 자신들을 오디세이 해양학원이라 부르는 걸 보면 저 키보토스와 같은 소속인 듯합니다."
  GEK_event.1.a:0 "징집해라."

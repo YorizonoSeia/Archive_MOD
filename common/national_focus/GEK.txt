@@ -974,8 +974,8 @@ focus_tree = {
 		icon = GFX_focus_POL_complete_april_constitution
 		available = {
 			OR = {
-				has_idea = GEK_legitimacy_weimar_2
 				has_idea = GEK_legitimacy_weimar_1
+				has_idea = GEK_legitimacy_weimar
 			}
 			has_war = no
 		}
@@ -994,6 +994,15 @@ focus_tree = {
 		y = 3
 		cost = 2
 		completion_reward = {
+			if = {
+				limit = {
+					has_idea = GEK_solidarity_across_ideology
+				}
+				remove_ideas = GEK_solidarity_across_ideology
+			}
+			else = {
+				remove_ideas = GEK_solidarity_across_ideology_1
+			}
 		}
 	}
 	focus = { #독일중앙당과의 협력
@@ -1702,9 +1711,21 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = -50
 			add_war_support = -0.15
-			GEK_enhance_spd = yes
-			GEK_enhance_spd = yes
-			GEK_enhance_spd = yes
+			if = {
+				limit = {
+					has_idea = GEK_legitimacy_weimar
+				}
+				swap_ideas = {
+					remove_idea = GEK_legitimacy_weimar
+					add_idea = GEK_legitimacy_weimar_1
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = GEK_legitimacy_weimar_1
+					add_idea = GEK_legitimacy_weimar_2
+				}
+			}
 		}
 	}
 	focus = { #1919년의 유산
@@ -1742,14 +1763,17 @@ focus_tree = {
 			focus = GEK_RM_dzp_focus_5
 		}
 		available = {
-			has_country_flag = GAEBALJUNG
 		}
 		relative_position_id = GEK_RM_spd_focus_4
 		x = 3
 		y = 1
 		cost = 2
 		completion_reward = {
-
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.1
+			}
+			add_political_power = 30
 		}
 	}
 	focus = { #자유 선거
@@ -1764,16 +1788,17 @@ focus_tree = {
 		relative_position_id = GEK_RM_spd_focus_4
 		x = 2
 		y = 2
-		cost = 2
+		cost = 5
 		completion_reward = {
-			GEK_enhance_spd = yes
-			GEK_enhance_spd = yes
-			GEK_enhance_spd = yes
+			country_event = {
+				id = GEK_demo_event.1
+				days = 3
+			}
 		}
 	}
 	focus = { #재건된 인민전선
 		id = GEK_popular_front_focus_0
-		icon = GFX_focus_ARG_defense_and_democracy
+		icon = GFX_focus_generic_social_democracy
 		prerequisite = {
 			focus = GEK_weimar_focus_3
 		}
@@ -1785,11 +1810,16 @@ focus_tree = {
 		y = 1
 		cost = 2
 		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+			add_stability = 0.05
 		}
 	}
 	focus = { #통일전선 결속
 		id = GEK_popular_front_focus_1
-		icon = GFX_focus_ARG_defense_and_democracy
+		icon = GFX_focus_focus_fra_liberte_egalite_solidarite
 		prerequisite = {
 			focus = GEK_popular_front_focus_0
 		}
@@ -1852,7 +1882,7 @@ focus_tree = {
 		completion_reward = {
 		}
 	}
-	focus = { #통합 게헨나: 이계관리청장 양보
+	focus = { #통합 게헨나: 이계관리청 양보
 		id = GEK_popular_front_vgp_focus_0
 		icon = GFX_goal_GEH_Pax_Gehennia
 		prerequisite = {
@@ -1867,7 +1897,7 @@ focus_tree = {
 	}
 	focus = { #산업 우선
 		id = GEK_popular_front_focus_2
-		icon = GFX_focus_ARG_defense_and_democracy
+		icon = GFX_focus_generic_industry_1
 		prerequisite = {
 			focus = GEK_reaction_focus_0
 			focus = GEK_popular_front_focus_0
@@ -1884,7 +1914,7 @@ focus_tree = {
 	}
 	focus = { #무역 협정
 		id = GEK_popular_front_focus_3
-		icon = GFX_focus_ARG_defense_and_democracy
+		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = {
 			focus = GEK_popular_front_focus_2
 		}
@@ -1897,7 +1927,7 @@ focus_tree = {
 	}
 	focus = { #기업 보조금
 		id = GEK_popular_front_focus_4
-		icon = GFX_focus_ARG_defense_and_democracy
+		icon = GFX_focus_DEN_no_regulations
 		prerequisite = {
 			focus = GEK_popular_front_focus_2
 		}
@@ -1910,7 +1940,7 @@ focus_tree = {
 	}
 	focus = { #자유로운 대학 기풍
 		id = GEK_popular_front_focus_5
-		icon = GFX_focus_ARG_defense_and_democracy
+		icon = GFX_focus_generic_university_3
 		prerequisite = {
 			focus = GEK_popular_front_focus_2
 			focus = GEK_reaction_focus_1
@@ -1924,7 +1954,7 @@ focus_tree = {
 	}
 	focus = { #정부 구체화
 		id = GEK_popular_front_focus_6
-		icon = GFX_focus_ARG_defense_and_democracy
+		icon = GFX_focus_generic_self_management
 		prerequisite = {
 			focus = GEK_popular_front_focus_2
 			focus = GEK_reaction_focus_1
@@ -1938,7 +1968,7 @@ focus_tree = {
 	}
 	focus = { #공화국 수호
 		id = GEK_popular_front_focus_7
-		icon = GFX_focus_ARG_defense_and_democracy
+		icon = GFX_focus_GER_tend_to_the_future
 		prerequisite = {
 			focus = GEK_popular_front_focus_6
 		}
@@ -1958,7 +1988,7 @@ focus_tree = {
 	}
 	focus = { #입헌군주제 타협안
 		id = GEK_popular_front_focus_8
-		icon = GFX_focus_ARG_defense_and_democracy
+		icon = GFX_focus_GER_monarchy_compromise
 		prerequisite = {
 			focus = GEK_popular_front_focus_6
 		}
@@ -1975,7 +2005,7 @@ focus_tree = {
 	}
 	focus = { #흑백적 연정
 		id = GEK_reaction_focus_0
-		icon = GFX_focus_ARG_defense_and_democracy
+		icon = GFX_focus_GER_appease_the_wehrmacht
 		prerequisite = {
 			focus = GEK_weimar_focus_3
 		}
@@ -1987,11 +2017,16 @@ focus_tree = {
 		y = 1
 		cost = 2
 		completion_reward = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+			add_stability = 0.05
 		}
 	}
 	focus = { #국방 우선
 		id = GEK_reaction_focus_1
-		icon = GFX_focus_ARG_defense_and_democracy
+		icon = GFX_goal_generic_defence
 		prerequisite = {
 			focus = GEK_reaction_focus_0
 			focus = GEK_popular_front_focus_0
@@ -2008,7 +2043,7 @@ focus_tree = {
 	}
 	focus = { #군산복합체
 		id = GEK_reaction_focus_2
-		icon = GFX_focus_ARG_defense_and_democracy
+		icon = GFX_goal_munitions_factories
 		prerequisite = {
 			focus = GEK_reaction_focus_1
 			focus = GEK_popular_front_focus_2
@@ -2022,7 +2057,7 @@ focus_tree = {
 	}
 	focus = { #전시경제청
 		id = GEK_reaction_focus_3
-		icon = GFX_focus_ARG_defense_and_democracy
+		icon = GFX_focus_DEN_heavy_regulations
 		prerequisite = {
 			focus = GEK_reaction_focus_1
 		}
@@ -2035,7 +2070,7 @@ focus_tree = {
 	}
 	focus = { #국방국가
 		id = GEK_reaction_focus_4
-		icon = GFX_focus_ARG_defense_and_democracy
+		icon = GFX_focus_BEL_national_redoubt_at_antwerp
 		prerequisite = {
 			focus = GEK_reaction_focus_1
 		}
@@ -2048,7 +2083,7 @@ focus_tree = {
 	}
 	focus = { #카이저라이히 재건
 		id = GEK_reaction_focus_5
-		icon = GFX_focus_ARG_defense_and_democracy
+		icon = GFX_focus_ger_revive_kaiserreich
 		prerequisite = {
 			focus = GEK_popular_front_focus_6
 		}
