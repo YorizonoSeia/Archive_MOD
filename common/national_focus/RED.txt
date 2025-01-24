@@ -742,7 +742,6 @@ focus_tree = {
 		available = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
-				has_completed_focus = RED_dipose_cherino
 			}
 		}
 		offset = {
@@ -2399,7 +2398,18 @@ focus_tree = {
 				set_variable = { BA_halo_infantry_cap_edit_var = 3 }
 				BA_halo_infantry_cap_edit_effect = yes
 			}
-			add_manpower = 15000
+			if = {
+				limit = {
+					controls_state = 141
+				}
+				141 = {
+					create_unit = {
+						division = "division_template = \"Halo Infantry Division\" start_experience_factor = 1 start_equipment_factor = 1.0"
+						owner = ROOT
+						count = 3
+					}
+				}
+			}
 		}
 	}
 	focus = { # 급양부 재건
@@ -8200,356 +8210,12 @@ focus_tree = {
 			add_to_variable = { RED_prepare_of_arms = 1}
 		}
 	}
-	focus = { #군산학 협동
-		id = RED_army_production_improve
-
-		icon = GFX_goal_munitions_factories
-		x = -7
-		y = 1
-		cost = 4
-		relative_position_id = RED_rearming_focus_0
-		ai_will_do = {
-			factor = 1
-		}
-		prerequisite = {
-			focus = RED_rearming_focus_0
-		}
-		available = {
-			NOT = {
-				has_country_flag = RED_there_is_coup_flag
-			}
-			has_completed_focus = RED_future_production_line
-		}
-
-		completion_reward = {
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-			custom_effect_tooltip = RED_advance_publicwork_tt
-			custom_effect_tooltip = RED_army_production_improve_tt
-			add_to_variable = {
-				RED_labor_party_dynamic_modifier_iresearch_speed_factor = 0.025
-			}
-		}
-	}
-
-	focus = { #기계공학의 발전
-		id = RED_mechanical_engineering_dev
-
-		icon = GFX_goal_generic_production2
-		prerequisite = { focus = RED_telegram_technology }
-		x = 2
-		y = 2
-		relative_position_id = RED_army_production_improve
-		cost = 4
-
-		available = {
-			NOT = {
-				has_country_flag = RED_there_is_coup_flag
-			}
-		}
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = RED_mechanical_engineering_dev_name
-				bonus = 1
-				uses = 2
-				category = motorized_equipment
-				category = infantry_weapons
-			}
-		}
-	}
-
-	focus = { #통신 기술
-		id = RED_telegram_technology
-
-		icon = GFX_focus_SWE_radiotjanst
-		prerequisite = { focus = RED_army_production_improve }
-		x = 1
-		y = 1
-		relative_position_id = RED_army_production_improve
-		cost = 4
-
-		available = {
-			NOT = {
-				has_country_flag = RED_there_is_coup_flag
-			}
-		}
-
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 1
-				uses = 2
-				category = radar_tech
-			}
-		}
-	}
-
-	focus = { #붉은겨울의 포병
-		id = RED_artillery
-
-		icon = GFX_goal_generic_army_artillery
-		prerequisite = { focus = RED_the_means_to_wage_war }
-		x = -2
-		y = 2
-		relative_position_id = RED_army_production_improve
-		cost = 4
-
-		available = {
-			NOT = {
-				has_country_flag = RED_there_is_coup_flag
-			}
-		}
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = RED_artillery_tech_bonus_name
-				bonus = 0.75
-				uses = 3
-				ahead_reduction = 2
-				category = artillery
-			}
-		}
-	}
-
-	focus = { #완전무장
-		id = RED_full_armament
-
-		icon = GFX_focus_generic_combined_arms
-		prerequisite = { focus = RED_telegram_technology focus = RED_the_means_to_wage_war }
-		x = 0
-		y = 2
-		relative_position_id = RED_army_production_improve
-		cost = 4
-
-		available = {
-			NOT = {
-				has_country_flag = RED_there_is_coup_flag
-			}
-		
-		}
-
-		completion_reward = {
-			add_to_variable = { RED_winter_army_breakthrough_factor = 0.05 }
-			add_to_variable = { RED_winter_army_army_artillery_defence_factor = 0.05 }
-			
-			add_equipment_to_stockpile = {
-				type = infantry_equipment
-				amount = 3000
-			}
-
-			add_equipment_to_stockpile = {
-				type = support_equipment
-				amount = 1500
-			}
-
-			add_equipment_to_stockpile = {
-				type = artillery_equipment
-				amount = 500
-			}
-
-			random_owned_controlled_state = {
-				if = {
-					limit = {
-						free_building_slots = {
-							building = arms_factory
-							size > 0
-							include_locked = yes
-						}
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = arms_factory
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-		}
-	}
-
-	focus = { #지원장비 연구
-		id = RED_the_means_to_wage_war
-
-		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = RED_army_production_improve }
-		x = -1
-		y = 1
-		relative_position_id = RED_army_production_improve
-		cost = 4
-
-		available = {
-			NOT = {
-				has_country_flag = RED_there_is_coup_flag
-			}
-		
-
-		}
-
-		completion_reward = {
-			set_variable = { RED_labor_party_dynamic_modifier_materiel_manufacturer_cost_factor = -0.25 }
-
-			add_tech_bonus = {
-				name = RED_the_means_to_wage_war_tech_bonus_name
-				bonus = 0.75
-				uses = 5
-				category = support_tech
-			}
-		}
-	}
-
-	focus = { #전차의 우월성
-		id = RED_superior_war_machines
-
-		icon = GFX_focus_generic_tank_production
-		prerequisite = { focus = RED_mechanical_engineering_dev }
-		x = 3
-		y = 1
-		relative_position_id = RED_artillery
-		cost = 4
-
-		available = {
-			NOT = {
-				has_country_flag = RED_there_is_coup_flag
-			}
-		
-			if = {
-				limit = {
-					has_dlc = "No Step Back"
-				}
-				has_tech = improved_medium_tank_chassis
-			}
-			else = {
-				has_tech = improved_medium_tank
-			}
-			has_tech = artillery3
-		}
-
-		completion_reward = {
-			set_variable = { RED_labor_party_dynamic_modifier_tank_manufacturer_cost_factor = -0.25 }
-
-			if = {
-				limit = {
-					has_dlc = "No Step Back"
-				}
-				set_technology = {
-					advanced_medium_tank_chassis = 1
-					artillery4 = 1
-				}
-				#R-54 tank template
-				create_equipment_variant = {
-					name = "R-54"
-					type = medium_tank_chassis_3
-					parent_version = 0
-					modules = {
-						main_armament_slot = tank_medium_cannon_2
-						turret_type_slot = tank_medium_three_man_tank_turret
-						suspension_type_slot = tank_torsion_bar_suspension
-						armor_type_slot = tank_cast_armor
-						engine_type_slot = tank_diesel_engine
-						special_type_slot_1 = additional_machine_guns
-					}
-					upgrades = {
-						tank_nsb_engine_upgrade = 16
-						tank_nsb_armor_upgrade = 7
-					}
-					icon = "GFX_SOV_improved_medium_tank_medium"
-				}
-			}
-			else = {
-				set_technology = {
-					advanced_medium_tank = 1
-					artillery4 = 1
-				}
-			}
-		}
-	}
-
-	focus = { #전차 파괴자
-		id = RED_tank_destroyer
-
-		icon = GFX_goal_generic_army_tanks
-		prerequisite = { focus = RED_artillery }
-		x = 0
-		y = 2
-		relative_position_id = RED_the_means_to_wage_war
-		cost = 4
-
-		available = {
-			NOT = {
-				has_country_flag = RED_there_is_coup_flag
-			}
-		
-			if = {
-				limit = {
-					has_dlc = "No Step Back"
-				}
-				has_tech = improved_medium_tank_chassis
-				has_tech = radio
-			}
-			else = {
-				has_tech = improved_medium_tank
-			}
-			has_tech = antitank3
-		}
-
-		completion_reward = {
-			add_to_variable = { RED_labor_party_dynamic_modifier_land_equipment_upgrade_xp_cost = -0.1 }
-
-			if = {
-				limit = {
-					has_dlc = "No Step Back"
-				}
-				set_technology = {
-					advanced_medium_tank_chassis = 1
-					antitank4 = 1
-				}
-				#CH-122 tank template (AT)
-				if = {
-					limit = {
-						has_tech = antitank4
-					}
-					create_equipment_variant = {
-						name = "CH-122"
-						type = medium_tank_destroyer_chassis_3
-						parent_version = 0
-						modules = {
-							main_armament_slot = tank_high_velocity_cannon_2
-							turret_type_slot = tank_medium_fixed_superstructure_turret
-							suspension_type_slot = tank_christie_suspension
-							armor_type_slot = tank_welded_armor
-							engine_type_slot = tank_diesel_engine
-							special_type_slot_1 = sloped_armor
-							special_type_slot_2 = tank_radio_2
-						}
-						upgrades = {
-							tank_nsb_engine_upgrade = 12
-							tank_nsb_armor_upgrade = 4
-						}
-						icon = "GFX_SOV_advanced_medium_td_medium"
-					}
-				}
-			}
-			else = {
-				set_technology = {
-					advanced_medium_td = 1
-					antitank4 = 1
-				}
-			}		
-		}
-	}
-
 	focus = { #동원 강화
 		id = RED_strengthen_the_mobilization_plan
 		icon = GFX_focus_generic_manpower
-		x = 5
-		y = 0
-		relative_position_id = RED_army_production_improve
+		x = -4
+		y = 1
+		relative_position_id = RED_rearming_focus_0
 		cost = 4
 		prerequisite = {
 			focus = RED_rearming_focus_0
@@ -8571,14 +8237,64 @@ focus_tree = {
 			add_dynamic_modifier = { modifier = RED_winter_army_dynamic_modifier }
 		}
 	}
+	focus = { #규율
+		id = RED_restore_cossack_units
+		icon = GFX_focus_generic_military_mission
+		prerequisite = { focus = RED_strengthen_the_mobilization_plan }
+		x = -2
+		y = 1
+		relative_position_id = RED_strengthen_the_mobilization_plan
+		cost = 4
+		mutually_exclusive = {
+			focus = RED_cohesion_first
+		}
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = RED_winterarmy_advance_tt
+			custom_effect_tooltip = RED_restore_cossack_units_tt
+			add_to_variable = { RED_winter_army_modifier_army_sub_unit_infantry_speed_factor = 0.05 }
+			add_to_variable = { RED_winter_army_army_infantry_attack_factor = 0.05 }
+		}
+	}
+	focus = { #열의
+		id = RED_cohesion_first
+		icon = GFX_focus_focus_fra_revolution_utmost
+		prerequisite = { focus = RED_strengthen_the_mobilization_plan }
+		x = 3
+		y = 1
+		relative_position_id = RED_strengthen_the_mobilization_plan
+		cost = 4
+		mutually_exclusive = {
+			focus = RED_restore_cossack_units
+		}
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		
+			
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = RED_winterarmy_advance_tt
+			custom_effect_tooltip = RED_cohesion_first_tt
+			add_to_variable = { RED_winter_army_army_morale_factor = 0.05 }
+			add_to_variable = { RED_winter_army_training_time_factor = 0.1 }
+		}
+	}
 
 	focus = { #전쟁공학
 		id = RED_military_engineering
 		icon = GFX_focus_generic_socialist_science
-		prerequisite = { focus = RED_tank_destroyer focus = RED_superior_war_machines }
+		prerequisite = { focus = RED_restore_cossack_units focus = RED_cohesion_first }
 		x = 0
-		y = 4
-		relative_position_id = RED_army_production_improve
+		y = 1
+		relative_position_id = RED_cohesion_first
 		cost = 5
 
 		available = {
@@ -8599,7 +8315,7 @@ focus_tree = {
 		id = RED_baltic_forts
 		icon = GFX_focus_SWE_lynx_armored_car
 		prerequisite = { focus = RED_military_engineering }
-		x = -3
+		x = -1
 		y = 1
 		relative_position_id = RED_military_engineering
 		cost = 5
@@ -8653,8 +8369,8 @@ focus_tree = {
 		id = RED_defend_the_east_line
 		icon = GFX_goal_generic_navy_carrier
 		prerequisite = { focus = RED_military_engineering }
-		x = -1
-		y = 1
+		x = -0
+		y = 2
 		relative_position_id = RED_military_engineering
 		cost = 5
 
@@ -8723,48 +8439,231 @@ focus_tree = {
 		}
 	}
 
-	focus = { #눈길을 지나서
-		id = RED_through_the_road_of_snow
-		icon = GFX_focus_SOV_the_road_of_life
-		prerequisite = { focus = RED_military_engineering }
-		x = 3
-		y = 1
-		relative_position_id = RED_military_engineering
-		cost = 5
-
-		available = {
-			NOT = {
-				has_country_flag = RED_there_is_coup_flag
-			}
-		
-		}
-
-		completion_reward = {
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = RED_war_engineering
-					add_idea = RED_through_the_road_of_snow_idea
-				}
-			}
-			add_to_variable = {
-				RED_war_winter_attrition_factor = -0.15
-			}
-			add_to_variable = {
-				RED_war_out_of_supply_factor = -0.1
-			}
-			add_to_variable = {
-				RED_war_supply_node_range = 0.1
-			}
-		}
-	}
-
-	focus = {
-		id = RED_restore_cossack_units
-		icon = GFX_focus_NORDIC_com_army
-		prerequisite = { focus = RED_strengthen_the_mobilization_plan }
+	focus = { #전문 장교
+		id = RED_army_focus_1
+		icon = GFX_SOV_strengthen_the_mobilization_plan_ccp_2d_sov_compatibility
 		x = -1
 		y = 1
-		relative_position_id = RED_strengthen_the_mobilization_plan
+		cost = 4
+		relative_position_id = RED_restore_cossack_units
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = RED_restore_cossack_units
+		}
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+
+		completion_reward = {
+			add_to_variable = {
+				RED_winter_army_conscription_factor  = -0.05
+			}
+			add_to_variable = {
+				RED_winter_army_planning_speed_factor = 0.1
+			}
+			custom_effect_tooltip = RED_winterarmy_advance_tt
+			custom_effect_tooltip = RED_army_focus_1_tt
+		}
+	}
+	focus = { #보급 우선
+		id = RED_army_focus_2
+		icon = GFX_focus_generic_reinforcing_the_supply_network
+		x = -1
+		y = 4
+		cost = 4
+		relative_position_id = RED_restore_cossack_units
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = RED_army_focus_1
+		}
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+
+		completion_reward = {
+			add_to_variable = {
+				RED_winter_army_supply_factor = 0.1
+			}
+			custom_effect_tooltip = RED_winterarmy_advance_tt
+			custom_effect_tooltip = RED_army_focus_2_tt
+		}
+	}
+	focus = { #중앙 통제
+		id = RED_army_focus_5
+		icon = GFX_focus_GER_proletarian_dictatorship
+		x = -1
+		y = 5
+		cost = 4
+		relative_position_id = RED_restore_cossack_units
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = RED_army_focus_2
+		}
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+
+		completion_reward = {
+			add_to_variable = {
+				RED_winter_army_max_planning_factor = 0.1
+			}
+			custom_effect_tooltip = RED_winterarmy_advance_tt
+			custom_effect_tooltip = RED_army_focus_5_tt
+
+		}
+	}
+
+	focus = { #병사평의회
+		id = RED_army_focus_3
+		icon = GFX_focus_GER_proletarian_solidarity
+		x = 2
+		y = 1
+		cost = 4
+		relative_position_id = RED_cohesion_first
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = RED_cohesion_first
+		}
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+
+		completion_reward = {
+		}
+	}
+	focus = { #대군 운용
+		id = RED_army_focus_4
+		icon = GFX_focus_SOV_builder_of_the_red_army
+		x = 2
+		y = 3
+		cost = 4
+		relative_position_id = RED_cohesion_first
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = RED_army_focus_3
+		}
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+
+		completion_reward = {
+		}
+	}
+	focus = { #민병대 전개
+		id = RED_army_focus_6
+		icon = GFX_focus_generic_spur_communist_revolutions
+		x = 1
+		y = 4
+		cost = 4
+		relative_position_id = RED_cohesion_first
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = RED_army_focus_4
+		}
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+
+		completion_reward = {
+		}
+	}
+	focus = { #민주집중제 원리
+		id = RED_army_focus_7
+		icon = GFX_focus_generic_soviet_politics
+		x = 2
+		y = 5
+		cost = 4
+		relative_position_id = RED_cohesion_first
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = RED_army_focus_4
+		}
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+
+		completion_reward = {
+		}
+	}
+	focus = { #군산학 협동
+		id = RED_army_production_improve
+		icon = GFX_goal_munitions_factories
+		x = 3
+		y = 1
+		cost = 4
+		relative_position_id = RED_restore_cossack_units
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = RED_restore_cossack_units
+			focus = RED_cohesion_first
+		}
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+			has_completed_focus = RED_future_production_line
+			NOT = {
+				has_completed_focus = RED_new_economy_focus_0
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = RED_advance_publicwork_tt
+			custom_effect_tooltip = RED_army_production_improve_tt
+			add_to_variable = {
+				RED_labor_party_dynamic_modifier_iresearch_speed_factor = 0.025
+			}
+		}
+	}
+
+
+
+	focus = { #완전무장
+		id = RED_full_armament
+
+		icon = GFX_focus_generic_combined_arms
+		prerequisite = { focus = RED_army_production_improve }
+		x = 0
+		y = 2
+		relative_position_id = RED_army_production_improve
 		cost = 4
 
 		available = {
@@ -8772,24 +8671,189 @@ focus_tree = {
 				has_country_flag = RED_there_is_coup_flag
 			}
 		
-			
 		}
 
 		completion_reward = {
 			custom_effect_tooltip = RED_winterarmy_advance_tt
-			custom_effect_tooltip = RED_restore_cossack_units_tt
-			add_to_variable = { RED_winter_army_modifier_army_sub_unit_infantry_speed_factor = 0.05 }
-			add_to_variable = { RED_winter_army_army_infantry_attack_factor = 0.05 }
+			custom_effect_tooltip = RED_full_armament_tt
+			add_to_variable = { RED_winter_army_breakthrough_factor = 0.05 }
+			add_to_variable = { RED_winter_army_army_artillery_defence_factor = 0.05 }
+			
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 3000
+			}
+
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 1500
+			}
+
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 500
+			}
+
+			random_owned_controlled_state = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
 		}
 	}
 
-	focus = {
-		id = RED_cohesion_first
-		icon = GFX_focus_secret_rearmament
-		prerequisite = { focus = RED_strengthen_the_mobilization_plan }
+	focus = { #지원장비 연구
+		id = RED_the_means_to_wage_war
+
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = RED_restore_cossack_units focus = RED_cohesion_first }
 		x = 1
 		y = 1
-		relative_position_id = RED_strengthen_the_mobilization_plan
+		relative_position_id = RED_restore_cossack_units
+		cost = 4
+
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+
+		completion_reward = {
+			set_variable = { RED_labor_party_dynamic_modifier_materiel_manufacturer_cost_factor = -0.25 }
+
+			add_tech_bonus = {
+				name = RED_the_means_to_wage_war_tech_bonus_name
+				bonus = 0.75
+				uses = 2
+				category = support_tech
+			}
+		}
+	}
+	focus = { #통신 기술
+		id = RED_telegram_technology
+
+		icon = GFX_focus_SWE_radiotjanst
+		prerequisite = { focus = RED_restore_cossack_units focus = RED_cohesion_first }
+		x = 0
+		y = 2
+		relative_position_id = RED_restore_cossack_units
+		cost = 4
+
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = radar_tech
+			}
+		}
+	}
+	focus = { #전차 파괴자
+		id = RED_tank_destroyer
+
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = RED_the_means_to_wage_war  }
+		prerequisite = {
+			focus = RED_telegram_technology
+		}
+		x = 0
+		y = 2
+		relative_position_id = RED_the_means_to_wage_war
+		cost = 4
+
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				category = cat_anti_tank
+				bonus = 0.5
+				uses = 2
+			}	
+		}
+	}
+
+
+	focus = { #붉은겨울의 포병
+		id = RED_artillery
+
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = RED_restore_cossack_units focus = RED_cohesion_first }
+		x = -3
+		y = 1
+		relative_position_id = RED_restore_cossack_units
+		cost = 4
+
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = RED_artillery_tech_bonus_name
+				bonus = 0.75
+				uses = 3
+				ahead_reduction = 2
+				category = artillery
+			}
+		}
+	}
+	focus = { #기계공학의 발전
+		id = RED_mechanical_engineering_dev
+
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = RED_restore_cossack_units focus = RED_cohesion_first }
+		x = -2
+		y = 2
+		relative_position_id = RED_restore_cossack_units
+		cost = 4
+
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = RED_mechanical_engineering_dev_name
+				bonus = 1
+				uses = 2
+				category = motorized_equipment
+				category = infantry_weapons
+			}
+		}
+	}
+	focus = { #전차의 우월성
+		id = RED_superior_war_machines
+
+		icon = GFX_focus_generic_tank_production
+		prerequisite = { focus = RED_mechanical_engineering_dev }
+		x = 0
+		y = 1
+		relative_position_id = RED_mechanical_engineering_dev
 		cost = 4
 
 		available = {
@@ -8797,49 +8861,92 @@ focus_tree = {
 				has_country_flag = RED_there_is_coup_flag
 			}
 		
-			
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
+				}
+				has_tech = improved_medium_tank_chassis
+			}
+			else = {
+				has_tech = improved_medium_tank
+			}
+			has_tech = artillery3
 		}
 
 		completion_reward = {
-			custom_effect_tooltip = RED_winterarmy_advance_tt
-			custom_effect_tooltip = RED_cohesion_first_tt
-			add_to_variable = { RED_winter_army_army_morale_factor = 0.05 }
-			add_to_variable = { RED_winter_army_training_time_factor = 0.1 }
+			set_variable = { RED_labor_party_dynamic_modifier_tank_manufacturer_cost_factor = -0.25 }
+
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
+				}
+				set_technology = {
+					advanced_medium_tank_chassis = 1
+					artillery4 = 1
+				}
+				#R-54 tank template
+				create_equipment_variant = {
+					name = "R-54"
+					type = medium_tank_chassis_3
+					parent_version = 0
+					modules = {
+						main_armament_slot = tank_medium_cannon_2
+						turret_type_slot = tank_medium_three_man_tank_turret
+						suspension_type_slot = tank_torsion_bar_suspension
+						armor_type_slot = tank_cast_armor
+						engine_type_slot = tank_diesel_engine
+						special_type_slot_1 = additional_machine_guns
+					}
+					upgrades = {
+						tank_nsb_engine_upgrade = 16
+						tank_nsb_armor_upgrade = 7
+					}
+					icon = "GFX_SOV_improved_medium_tank_medium"
+				}
+			}
+			else = {
+				set_technology = {
+					advanced_medium_tank = 1
+					artillery4 = 1
+				}
+			}
 		}
 	}
+
+
 
 	focus = {
 		id = RED_rehabilitated_military
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = RED_restore_cossack_units focus = RED_cohesion_first }
-		x = 0
+		x = 2
 		y = 2
-		relative_position_id = RED_strengthen_the_mobilization_plan
+		relative_position_id = RED_restore_cossack_units
 		cost = 4
-
 		available = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-		
-			
 		}
-
 		bypass = {
 			NOT = { has_idea = RED_doomed_army_idea }
 		}
 
 		completion_reward = {
-			remove_ideas = RED_doomed_army_idea
+			swap_ideas = {
+				remove_idea = RED_doomed_army_idea
+				add_idea = RED_doomed_army_idea_1
+			}
 		}
 	}
 
-	focus = {
-		id = RED_military_reorganization
-		icon = GFX_focus_generic_military_mission
+
+	focus = { #새로운 세계의 군대
+		id = RED_penal_battalions
+		icon = GFX_focus_SOV_mobilization_plan
 		prerequisite = { focus = RED_rehabilitated_military }
-		x = -2
-		y = 1
+		x = 0
+		y = 2
 		relative_position_id = RED_rehabilitated_military
 		cost = 4
 
@@ -8847,33 +8954,28 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-		
-
+			OR = {
+				has_war = yes
+				has_completed_focus = RED_army_focus_5
+				has_completed_focus = RED_army_focus_7
+			}
 		}
-
 		completion_reward = {
-			add_to_variable = { RED_labor_party_dynamic_modifier_unit_infantry_design_cost_factor = -0.1 }
-			add_to_variable = { RED_unit_artillery_brigade_design_cost_factor = -0.1 }
-
-			army_experience = 50
-			add_command_power = 25
+			remove_ideas = RED_doomed_army_idea_1
 		}
 	}
-
 	focus = {
 		id = RED_an_adaptable_army
 		icon = GFX_focus_prc_infiltration
-		prerequisite = { focus = RED_rehabilitated_military }
-		x = 2
-		y = 1
+		prerequisite = { focus = RED_penal_battalions }
+		x = 1
+		y = 3
 		relative_position_id = RED_rehabilitated_military
 		cost = 4
-
 		available = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-		
 
 		}
 
@@ -8887,50 +8989,12 @@ focus_tree = {
 	}
 
 	focus = {
-		id = RED_penal_battalions
-		icon = GFX_focus_SOV_penal_battalions
-		prerequisite = { focus = RED_rehabilitated_military }
-		x = 0
-		y = 1
-		relative_position_id = RED_rehabilitated_military
-		cost = 4
-
-		available = {
-			NOT = {
-				has_country_flag = RED_there_is_coup_flag
-			}
-		
-			has_war = yes
-		}
-
-		completion_reward = {
-			custom_effect_tooltip = kivotos_halo_add3_tt
-			hidden_effect = {
-				set_variable = { BA_halo_infantry_cap_edit_var = 3 }
-				BA_halo_infantry_cap_edit_effect = yes
-			}
-			if = {
-				limit = {
-					controls_state = 141
-				}
-				141 = {
-					create_unit = {
-						division = "division_template = \"Halo Infantry Division\" start_experience_factor = 1 start_equipment_factor = 1.0"
-						owner = ROOT
-						count = 3
-					}
-				}
-			}
-		}
-	}
-
-	focus = {
 		id = RED_shock_troops
 		icon = GFX_focus_generic_total_war
-		prerequisite = { focus = RED_an_adaptable_army }
-		x = -1
-		y = 1
-		relative_position_id = RED_an_adaptable_army
+		prerequisite = { focus = RED_penal_battalions }
+		x = 3
+		y = 3
+		relative_position_id = RED_rehabilitated_military
 		cost = 4
 
 		available = {
@@ -8954,10 +9018,10 @@ focus_tree = {
 	focus = {
 		id = RED_trench_exp
 		icon = GFX_goal_generic_position_armies
-		prerequisite = { focus = RED_military_reorganization }
-		x = 1
-		y = 1
-		relative_position_id = RED_military_reorganization
+		prerequisite = { focus = RED_penal_battalions }
+		x = -1
+		y = 3
+		relative_position_id = RED_rehabilitated_military
 		cost = 4
 
 		available = {
@@ -8974,33 +9038,6 @@ focus_tree = {
 			add_to_variable = { RED_winter_army_cas_damage_reduction = 0.05 }
 			add_to_variable = { RED_winter_army_max_dig_in = 5 }
 			add_to_variable = { RED_winter_army_dig_in_speed_factor = 0.05 }
-		}
-	}
-
-	focus = {
-		id = RED_the_glory_of_the_red_army
-		icon = GFX_focus_SOV_the_glory_of_the_red_army_communism
-		prerequisite = { focus = RED_trench_exp }
-		prerequisite = { focus = RED_shock_troops }
-		x = 1
-		y = 1
-		relative_position_id = RED_trench_exp
-		cost = 4
-
-		available = {
-			NOT = {
-				has_country_flag = RED_there_is_coup_flag
-			}
-		
-			
-		}
-
-		completion_reward = {
-			custom_effect_tooltip = RED_winterarmy_advance_tt
-			custom_effect_tooltip = RED_the_glory_of_the_red_army_tt
-			add_to_variable = { RED_winter_army_special_forces_cap = 0.10 }
-			add_to_variable = { RED_winter_army_land_doctrine_cost_factor = -0.10 }
-			army_experience = 100
 		}
 	}
 
@@ -11046,6 +11083,42 @@ focus_tree = {
 					modifier = RED_bunker_modifier
 					days = 360
 				}
+			}
+		}
+	}
+	focus = { #눈길을 지나
+		id = RED_through_the_road_of_snow
+		icon = GFX_focus_SOV_the_road_of_life
+		prerequisite = { focus = RED_revolution_war_focus_16 }
+		relative_position_id = RED_revolution_war_focus_0
+		x = 6
+		y = 2
+		cost = 5
+
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+			has_dynamic_modifier = {
+				modifier = RED_war_engineering_modifier
+			}
+		}
+
+		completion_reward = {
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = RED_war_engineering
+					add_idea = RED_through_the_road_of_snow_idea
+				}
+			}
+			add_to_variable = {
+				RED_war_winter_attrition_factor = -0.15
+			}
+			add_to_variable = {
+				RED_war_out_of_supply_factor = -0.1
+			}
+			add_to_variable = {
+				RED_war_supply_node_range = 0.1
 			}
 		}
 	}

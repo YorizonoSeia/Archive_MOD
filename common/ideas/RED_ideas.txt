@@ -866,6 +866,24 @@ ideas = {
 				non_core_manpower = 0.05
 			}
 		}
+		RED_doomed_army_idea_1 = { # 난잡한 군대
+			name = RED_doomed_army_idea
+
+			picture = generic_army_problems
+			removal_cost = -1
+
+			allowed = {
+				always = yes
+			}
+
+			modifier = {
+				army_attack_factor = -0.05
+				army_defence_factor = -0.05
+				army_speed_factor = -0.05
+				army_org_factor = -0.05
+				army_org_regain = -0.05
+			}
+		}
 		RED_doomed_army_idea = { # 난잡한 군대
 			name = RED_doomed_army_idea
 
