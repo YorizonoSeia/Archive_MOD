@@ -1325,9 +1325,6 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			every_core_state = {
-				add_core_of = OFN
-			}
 			every_owned_state = {
 			   limit = {
 				   OR = {
@@ -1342,6 +1339,7 @@ country_event = {
 					   state = 379
 				   }
 			   }
+			   add_core_of = OFN
 			   transfer_state_to = OFN
 			   remove_core_of = ROOT
 			   add_claim_by = ROOT
