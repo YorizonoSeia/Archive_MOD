@@ -1304,7 +1304,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = usa_event.24ㅂ.a
+		name = usa_event.24.a
 		swap_ideas = {
             remove_idea = USABA_completed_second_replace_industry_3
 			add_idea = USABA_completed_second_replace_industry_4
@@ -1325,10 +1325,11 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			every_owned_state = {
+			every_state = {
 			   limit = {
 				   OR = {
 					   state = 357
+					   state = 377
 					   state = 358
 					   state = 360
 					   state = 359
@@ -1337,13 +1338,31 @@ country_event = {
 					   state = 378
 					   state = 385
 					   state = 379
+					   state = 650
+					   state = 463
+					   state = 631
+					   state = 629
+					   state = 630
+					   state = 632
+					   state = 638
+					   state = 642
+					   state = 727
+					   state = 686
+					   state = 376
+					   state = 380
+					   state = 375
 				   }
 			   }
 			   add_core_of = OFN
 			   transfer_state_to = OFN
-			   remove_core_of = ROOT
-			   add_claim_by = ROOT
+			   add_claim_by = USA
 		   	}
+		    every_state = {
+               limit = { is_owned_by = usa }
+               add_claim_by = OFN
+			   add_claim_by = USA
+            }
+ 
 			USA = {
 				transfer_units_fraction = {
 					target = OFN
@@ -1355,7 +1374,7 @@ country_event = {
 					navy_ratio = 0.60
 					air_ratio = 0.60
 					keep_unit_leaders_trigger = {
-						always = yes 
+						always = no
 					}
 				}
 			}
@@ -1368,6 +1387,7 @@ country_event = {
 			factor = 1
 		}
 		declare_war_on = { target = OFN type = annex_everything }
+		news_event = { id = BA_news.122 days = 1 }
 	}
 }
 

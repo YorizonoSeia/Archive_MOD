@@ -654,7 +654,8 @@ ideas = {
             picture = generic_fascism_banned
             
 			allowed = {
-                tag = USA
+                tag = OFN
+				tag = USA
             }
 
             allowed_civil_war = {
@@ -850,7 +851,7 @@ ideas = {
         picture = generic_victors_of_ww1
 
 		modifier = {
-			 political_power_gain = 1.0
+			political_power_gain = 1.0
 			war_support_factor = 0.1
 			stability_weekly = 0.02
 			war_support_weekly = 0.02

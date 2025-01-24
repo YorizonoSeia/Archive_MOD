@@ -6231,10 +6231,11 @@ focus = {
 		}
 		completion_reward = {
 			add_threat = 15
-			country_event = { id = BA_news.97 days = 3 }
-			
+			country_event = { id = BA_news.97 days = 1 }
 			custom_effect_tooltip = USA_new_team_civilwar_tt
-			country_event = { id = usa_new_civil_event.1 hours = 8 }
+			hidden_effect = {
+			  country_event = { id = usa_new_civil_event.1 days = 3 }
+			}
 		}
 	}
 

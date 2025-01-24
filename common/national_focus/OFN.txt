@@ -8,7 +8,6 @@ focus_tree = {
 			add = 10
 			tag = OFN
 		}
-		
 		modifier = {
 			add = 10
 			original_tag = OFN
@@ -21,8 +20,8 @@ focus_tree = {
 
     focus = {
 		id = OFN_1
-		icon = GFX_focus_generic_the_giant_wakes
-		x = 3
+		icon = GFX_focus_POL_complete_april_constitution
+		x = 8
 		y = 0
 		cost = 10
 		ai_will_do = {
@@ -33,7 +32,167 @@ focus_tree = {
 
 		}
 		completion_reward = {
-            add_war_support = 0.2
+           add_political_power = 200
+		}
+	}
+
+   # 군사 중점
+	focus = {
+		id = OFN_focus_military
+		icon = GFX_goal_rhineland
+		x = -4
+		y = 1
+		prerequisite = {focus = OFN_1}
+		relative_position_id = OFN_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = yes
+		available = {
+
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = OFN_emergency_recruit
+		icon = GFX_goal_generic_military_sphere
+		x = -4
+		y = 1
+		prerequisite = {focus = OFN_focus_military}
+		relative_position_id = OFN_focus_military
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = no
+		available = {
+
+		}
+		completion_reward = {
+			add_manpower = 100000
+			
+		}
+	}
+
+	focus = {
+		id = OFN_defend_from_usa
+		icon = GFX_goal_generic_defence
+		x = -2
+		y = 1
+		prerequisite = {focus = OFN_focus_military}
+		relative_position_id = OFN_focus_military
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = yes
+		available = {
+
+		}
+		completion_reward = {
+			add_ideas = OFN_defend_from_usa
+		}
+	}
+
+
+	focus = {
+		id = OFN_focus_diplomacy
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 4
+		y = 1
+		prerequisite = {focus = OFN_1}
+		relative_position_id = OFN_1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = yes
+		available = {
+
+		}
+		completion_reward = {
+				ENG = {
+					add_ai_strategy = {
+						type = send_volunteers_desire
+						id = ROOT
+						value = 200
+					}
+					add_ai_strategy = {
+						type = support
+						id = ROOT
+						value = 200
+					}
+				    add_timed_idea = { idea = OFN_help_to_old_order days = 720 }
+				}
+				FRA = {
+					add_ai_strategy = {
+						type = send_volunteers_desire
+						id = ROOT
+						value = 200
+					}
+					add_ai_strategy = {
+						type = support
+						id = ROOT
+						value = 200
+					}
+				    add_timed_idea = { idea = OFN_help_to_old_order days = 720 }
+				}
+				ITA = {
+					add_ai_strategy = {
+						type = send_volunteers_desire
+						id = ROOT
+						value = 200
+					}
+					add_ai_strategy = {
+						type = support
+						id = ROOT
+						value = 200
+					}
+				    add_timed_idea = { idea = OFN_help_to_old_order days = 720 }
+				}
+				SOV = {
+					add_ai_strategy = {
+						type = send_volunteers_desire
+						id = ROOT
+						value = 200
+					}
+					add_ai_strategy = {
+						type = support
+						id = ROOT
+						value = 200
+					}
+				    add_timed_idea = { idea = OFN_help_to_old_order days = 720 }
+				}
+				GEK = {
+					add_ai_strategy = {
+						type = send_volunteers_desire
+						id = ROOT
+						value = 200
+					}
+					add_ai_strategy = {
+						type = support
+						id = ROOT
+						value = 200
+					}
+				    add_timed_idea = { idea = OFN_help_to_old_order days = 720 }
+				}
+				BRA = {
+					add_ai_strategy = {
+						type = send_volunteers_desire
+						id = ROOT
+						value = 200
+					}
+					add_ai_strategy = {
+						type = support
+						id = ROOT
+						value = 200
+					}
+				    add_timed_idea = { idea = OFN_help_to_old_order days = 720 }
+				}
 		}
 	}
 
@@ -42,41 +201,47 @@ focus_tree = {
 
 
 
-#	focus = {
-#		id = USA_
-#		#icon = GFX_
-#		prerequisite = { focus = }
-#		mutually_exclusive = { focus =  }
-#		x = -3
-#		y = 0
-#		relative_position_id = 
-#
-#		cost = 10
-#
-#		ai_will_do = {
-#			factor = 1
-#		}
-#
-#		available = {
-#
-#		}
-#		
-#		bypass = {
-#
-#		}
-#
-#		cancel_if_invalid = yes
-#		continue_if_invalid = no
-#		available_if_capitulated = no
-#
-#		complete_tooltip = {
-#
-#		}
-#
-#		completion_reward = {
-#
-#		}
-#	}
+
+	focus = {
+		id = OFN_attack_usa
+		icon = GFX_focus_generic_the_giant_wakes
+		x = 0
+		y = 3
+		prerequisite = {focus = OFN_1}
+		relative_position_id = OFN_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = yes
+		available = {
+
+		}
+		completion_reward = {
+			add_ideas = strong_faith_for_old_team
+		}
+	}
+
+
+	focus = {
+		id = OFN_give_ideas
+		icon = GFX_goal_generic_propaganda
+		x = 0
+		y = 4
+		prerequisite = {focus = OFN_attack_usa}
+		relative_position_id = OFN_1
+		cost = 20
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = yes
+		available = {
+
+		}
+		completion_reward = {
+			USA = { add_ideas = why_am_i_fight }
+		}
+	}
 
 
 
@@ -88,5 +253,26 @@ focus_tree = {
 
 
 
+
+
+
+    # 자유의 등불!
+	focus = {
+		id = OFN_finally_win
+		icon = GFX_focus_generic_democratic_europe
+		x = 1
+		y = 0
+		cost = 1
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = no
+		available = {
+			NOT= {has_war_with = USA }
+		}
+		completion_reward = {
+			create_faction = NATO
+		}
+	}
 
 }
