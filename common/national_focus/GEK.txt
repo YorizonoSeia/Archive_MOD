@@ -1735,6 +1735,9 @@ focus_tree = {
 			focus = GEK_RM_spd_focus_4
 			focus = GEK_RM_dzp_focus_5
 		}
+		available = {
+			has_idea = GEK_legitimacy_weimar_2
+		}
 		relative_position_id = GEK_RM_spd_focus_4
 		x = 1
 		y = 1

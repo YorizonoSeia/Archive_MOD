@@ -4,6 +4,7 @@ music = {
 	name = "maintheme"
 	file = "underground.ogg"
 	volume = 0.45
+}
 music = {
 	name = "maintheme_5"
 	file = "Bocchi_The_Rock.ogg"

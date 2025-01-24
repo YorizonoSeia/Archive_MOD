@@ -50,7 +50,6 @@ focus_tree = {
 			add_political_power = 120
 			add_stability = -0.2
 			hidden_effect = {
-				set_country_flag = TRM_bunggoehajima
 				country_event = { id = TRM_event.1 }
 				country_event = { id = trnstory.6 days = 180 }
 			}
@@ -576,30 +575,12 @@ focus_tree = {
 		relative_position_id = TRM_naechi
 		completion_reward = {
             add_political_power = 150
-			effect_tooltip = {
-			TRN_Carl_Schmitt = {
-				add_advisor_role = {
-					advisor={
-						slot = political_advisor
-						idea_token = hjalmar_schacht
-						cost = 75
-						traits = { TRN_constitutional_theory  }
-                        ai_will_do = { base = 4000 }
-					}
-				}
-			}
-			TRM_hans_zehrer = {
-				add_advisor_role = {
-					advisor = {
-						slot = political_advisor
-						idea_token = GER_hans_zehrer
-						cost = 75
-						traits = { KR_schleicher_mouthpiece }
-                        ai_will_do = { base = 4000 }
-					}
-				}
-			}
-			}
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = TRN_Carl_Schmitt_idea
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = TRM_hans_zehrer_idea
             hidden_effect = {
 			    #country_event = { id = TRM_event.99 days = 10 }
 			    country_event = { id = TRN_after_war_event.1 days = 20 }
@@ -864,19 +845,8 @@ focus_tree = {
 				remove_idea = TRN_Inefficient_bureaucracy_2
 				add_idea = TRN_Inefficient_bureaucracy_3
 			}
-			effect_tooltip = {
-				TRM_Fritz_Todt = {
-					add_advisor_role = {
-						advisor={
-							slot = political_advisor
-							idea_token = hjalmar_schacht
-							cost = 75
-							traits = { TRN_fritz_todt_economist  }
-                        	ai_will_do = { base = 4000 }
-						}
-					}
-				}
-			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = TRM_Fritz_Todt_idea
 		}
 	}
 	focus = {

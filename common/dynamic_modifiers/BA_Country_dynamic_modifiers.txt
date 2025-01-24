@@ -879,6 +879,10 @@ RED_winter_army_dynamic_modifier = { # 겨울군대
 	training_time_factor = RED_winter_army_training_time_factor
 	modifier_army_sub_unit_infantry_speed_factor = RED_winter_army_modifier_army_sub_unit_infantry_speed_factor
 	supply_consumption_factor = RED_winter_army_supply_consumption_factor
+	supply_factor = RED_winter_army_supply_factor
+	planning_speed = RED_winter_army_planning_speed_factor
+    max_planning_factor = RED_winter_army_max_planning_factor
+
 	mobilization_speed = RED_winter_army_mobilization_speed
 	conscription_factor = RED_winter_army_conscription_factor
 	breakthrough_factor = RED_winter_army_breakthrough_factor
