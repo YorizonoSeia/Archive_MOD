@@ -4943,7 +4943,7 @@ focus_tree = {
 
 	focus = {
 		id = TRN_the_situation_of_the_trinity
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_focus_TRN_control_tea_party
 		x = 0
 		y = 8
 		cost = 5

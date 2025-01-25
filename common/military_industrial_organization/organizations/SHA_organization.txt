@@ -1,0 +1,81 @@
+
+# 총기 설계사
+SHA_infantry_equipment_organization = {
+	include = generic_infantry_equipment_organization
+	icon = GFX_Shanhaijing_MIO_rifle
+	allowed = { tag = SHA }
+
+	available = {
+		FROM = { has_completed_focus = SHA_Equipment_Development_Department }
+	}
+}
+# 전차 설계사
+SHA_tank_equipment_organization = {
+	include = generic_tank_refurbishment_plant_organization
+	icon = GFX_Shanhaijing_MIO_tank
+	allowed = { tag = SHA }
+
+	available = {
+		
+	}
+
+	add_trait = { 
+		token = SHA_mio_trait_merge_plant_breakthrough
+		name = SHA_mio_trait_No1
+		#icon = GFX_generic_mio_department_icon_facilities
+		icon = GFX_generic_mio_department_icon_tank_heavy_tank_at
+		special_trait_background = yes
+
+		position = { x=9 y=1 }
+		
+		visible = {
+			FROM = { original_tag = SHA }
+		}
+
+		available = { #Three FROM blocs to provide two different check marks in the UI
+			FROM = {
+				has_completed_focus = SHA_Mortar_Development_Department
+			}
+		}
+
+		on_complete = {
+
+		}
+		
+		limit_to_equipment_type = { armor }
+
+		equipment_bonus = {
+			soft_attack = 0.07
+		}
+	}
+
+	add_trait = { 
+		token = SHA_mio_trait_merge_plant_factory_output
+		name = SHA_mio_trait_No2
+		#icon = GFX_generic_mio_department_icon_facilities
+		icon = GFX_generic_mio_department_icon_tank_general_line_efficiency
+		special_trait_background = yes
+
+		position = { x=9 y=2 }
+		
+		visible = {
+			FROM = { original_tag = SHA }
+		}
+
+		available = { #Three FROM blocs to provide two different check marks in the UI
+			FROM = {
+				has_completed_focus = SHA_Mortar_Development_Department
+			}
+		}
+
+		on_complete = {
+
+		}
+		
+		limit_to_equipment_type = { armor }
+
+		production_bonus = {
+			production_capacity_factor = 0.06
+		}
+	}
+}

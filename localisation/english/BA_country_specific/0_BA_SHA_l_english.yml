@@ -733,6 +733,12 @@
  SHA_professional_camouflage_desc: ""
 
  SHA_military_production: "현대화 전쟁"
+ SHA_military_production_desc: ""
+ SHA_Equipment_Development_Department: "[SHA.GetAdjective] 장비개발부 설립"
+ SHA_Equipment_Development_Department_desc: ""
+ SHA_steyr_arms_MnA: "슈타이어 조병창 합병"
+ SHA_motorization_accelerate: "차량화 가속"
+ SHA_Mortar_Development_Department: "박격포개발부"
 
  # 정치
  SHA_Austrian_oppression_continues: "오스트리아 탄압 지속"
@@ -778,8 +784,8 @@
 
  SHA_Expansion_of_military_factories: "군수공장 확충"
  SHA_Expansion_of_military_factories_desc: ""
- SHA_Abolition_of_national_isolation_policy: "쇄국정책 폐지"
- SHA_Abolition_of_national_isolation_policy_desc: "산해경의 쇄국정책은 국가 발전을 저해하는 주요 요인으로, 이제는 폐지해야 할 때입니다. 특히 연단방이 연구에 필요한 재료를 제대로 공급받지 못하고 있는 현실은 쇄국정책의 한계를 여실히 보여줍니다. 쇄국으로 인해 얻은 이익은 사실상 존재하지 않았으며, 오히려 외부와의 교류 단절로 인해 학문적, 기술적 발전이 정체되고 있습니다. 쇄국정책을 유지할 명분은 더 이상 설득력을 가지지 못하고 있습니다."
+ SHA_podium_room_expansion: "연단방 확장"
+ SHA_podium_room_expansion_desc: "확장하면 좋습니다."
  
  SHA_fascism_friend: "[TRM.GetAdjective]의 지원 모색"
  SHA_fascism_friend_desc: ""
@@ -906,6 +912,13 @@
  SHA_military_change: "§Y$SHA_Shanhaijin_Army$§! 변동치"
 
  SHA_Hyakkiyako_governor: "백귀야행 총독부"
+
+ # 설계국
+ SHA_infantry_equipment_organization: "국가병기공업"
+ SHA_tank_equipment_organization: "국가북방공업"
+ # 설계국 특성
+ SHA_mio_trait_No1: "화력 증대"
+ SHA_mio_trait_No2: "생산량 증대"
 
  # 이벤트
  shafas.1.t: "경극부의 쿠데타!"

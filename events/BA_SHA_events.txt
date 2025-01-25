@@ -163,6 +163,7 @@ unit_leader_event = {
 
 	option = {
 		name = shafas.7.a
+		add_dynamic_modifier = { modifier = SHA_Shanhaijin_Army }
 	}
 }
 

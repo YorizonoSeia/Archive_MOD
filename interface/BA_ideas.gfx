@@ -1,5 +1,13 @@
 spriteTypes = {
 	spriteType = {
+		name = "GFX_Shanhaijing_MIO_tank"
+		texturefile = "gfx/interface/ideas/SHA/MIO_산해경전차부.tga"
+	}
+	spriteType = {
+		name = "GFX_Shanhaijing_MIO_rifle"
+		texturefile = "gfx/interface/ideas/SHA/MIO_산해경조병창.tga"
+	}
+	spriteType = {
 		name = "GFX_idea_USABA_fascism_idea"
 		texturefile = "gfx/interface/ideas/USABA_fascism_idea.tga"
 	}
