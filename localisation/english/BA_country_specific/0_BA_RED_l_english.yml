@@ -646,11 +646,15 @@
  RED_army_focus_2: "보급 우선"
  RED_army_focus_2_tt: "보급 효율: §G+10%§!"
  RED_army_focus_3: "병사평의회"
+ RED_army_focus_3_tt: "최대 계획 변동치: §R-10.0%§!\n계획 수립 속도: §R-10.0%§!"
  RED_army_focus_4: "대군 운용"
+ RED_army_focus_4_tt: "소속군 전장 너비: §G-10.0%§!"
  RED_army_focus_5: "중앙 통제"
- RED_army_focus_5_tt: "최대 계획 변동치: §G+10.0%§"
+ RED_army_focus_5_tt: "최대 계획 변동치: §G+10.0%§!"
  RED_army_focus_6: "민병대 전개"
+ RED_army_focus_6_tt: "헤일로 민병 방어: §G+5.00%§!"
  RED_army_focus_7: "민주집중제 원리"
+ RED_army_focus_7_tt: "보병사단 방어어: §G+5.00%§!"
 
  
 #공군 중점

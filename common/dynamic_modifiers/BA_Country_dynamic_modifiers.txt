@@ -882,6 +882,8 @@ RED_winter_army_dynamic_modifier = { # 겨울군대
 	supply_factor = RED_winter_army_supply_factor
 	planning_speed = RED_winter_army_planning_speed_factor
     max_planning_factor = RED_winter_army_max_planning_factor
+	combat_width_factor = RED_winter_army_combat_width_factor
+	modifier_army_sub_unit_halo_militia_defence_factor = RED_winter_army_modifier_army_sub_unit_halo_militia_defence_factor
 
 	mobilization_speed = RED_winter_army_mobilization_speed
 	conscription_factor = RED_winter_army_conscription_factor

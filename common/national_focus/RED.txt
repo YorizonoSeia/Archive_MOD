@@ -8545,6 +8545,13 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = RED_winterarmy_advance_tt
+			custom_effect_tooltip = RED_shock_troops_tt
+			custom_effect_tooltip = RED_army_focus_3_tt
+			add_to_variable = { RED_winter_army_army_org_factor = 0.05 }
+			add_to_variable = { RED_winter_army_army_morale_factor = 0.05 }
+			add_to_variable = { RED_winter_army_max_planning_factor = -0.1 }
+			add_to_variable = { RED_winter_army_planning_speed_factor = -0.1 }
 		}
 	}
 	focus = { #대군 운용
@@ -8567,6 +8574,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = RED_winterarmy_advance_tt
+			custom_effect_tooltip = RED_army_focus_4_tt
+			add_to_variable = { RED_winter_army_combat_width_factor = -0.1 }
 		}
 	}
 	focus = { #민병대 전개
@@ -8586,9 +8596,26 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
+			has_war = yes
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = RED_winterarmy_advance_tt
+			custom_effect_tooltip = RED_army_focus_6_tt
+			add_to_variable = { RED_winter_army_modifier_army_sub_unit_halo_militia_defence_factor = 0.05 }
+			capital_scope = {
+				RED = {
+					add_to_variable = {
+						RED.halo_militia_cap = 6
+					}
+					set_division_template_cap = {  division_template = "Redwinter Garde populaire" division_cap = ROOT.halo_militia_cap }
+				}
+				create_unit = {
+					division = "name = \"Regional Defense Division\" division_template = \"Redwinter Garde populaire\" start_experience_factor = 0.1 start_equipment_factor = 1"
+					owner = RED
+					count = 6
+				}
+			}
 		}
 	}
 	focus = { #민주집중제 원리
@@ -8611,6 +8638,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = RED_winterarmy_advance_tt
+			custom_effect_tooltip = RED_army_focus_7_tt
+			add_to_variable = { RED_winter_army_army_infantry_defence_factor = 0.05 }
 		}
 	}
 	focus = { #군산학 협동
@@ -10334,6 +10364,7 @@ focus_tree = {
 				limit = {
 					is_owned_by = RED
 					is_core_of = RED
+					infrastructure > 2
 					NOT = {
 						state = 914
 					}
