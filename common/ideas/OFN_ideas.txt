@@ -1,33 +1,30 @@
 ideas = {
- country = {
+	country = {
+		OFN_defend_from_usa = {
 
-    OFN_defend_from_usa = {
+			picture = GER_attack_usa
 
-	 picture = GER_attack_usa
-
-	modifier = {
-        USA = {
-        army_defend_factor = 0.15
-        }
-	 }
-    }
-
-    OFN_help_to_old_order= {
-
-		picture = generic_volunteer_expedition_bonus
-
-		allowed_civil_war = {
-			always = yes
+			modifier = {
+				army_defend_factor = 0.15
+			}
 		}
 
-		cancel = {
-			NOT = { OFN = { has_war_with = USA } }
-		}
+		OFN_help_to_old_order= {
 
-		modifier = {
-			send_volunteer_size = 4
-			send_volunteers_tension = -1.00
+			picture = generic_volunteer_expedition_bonus
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			cancel = {
+				NOT = { OFN = { has_war_with = USA } }
+			}
+
+			modifier = {
+				send_volunteer_size = 4
+				send_volunteers_tension = -1.00
+			}
 		}
-		}
-    }
+	}
 }
