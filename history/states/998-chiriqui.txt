@@ -1,0 +1,23 @@
+
+state = {
+    id = 998
+    name = "STATE_998"
+    manpower = 91000
+
+    state_category = town
+
+    history = {
+        owner = PAN
+        buildings = {
+            infrastructure = 1
+        }
+        add_core_of = PAN
+        victory_points = {
+            4611 1
+        }
+    }
+    provinces = {
+        4611 
+    }
+    local_supplies=0.0 
+}
