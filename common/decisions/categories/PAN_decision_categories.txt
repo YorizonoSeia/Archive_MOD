@@ -1,0 +1,10 @@
+PAN_election_decision = {
+    priority = 700
+    icon = GFX_decision_CHL_mapuche_liberate_hawaii
+    allowed = {
+        original_tag = PAN
+    }
+    available = {
+        has_war = no
+    }   
+}

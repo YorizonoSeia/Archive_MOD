@@ -1,0 +1,131 @@
+focus_tree = {
+    id = PAN_focus_tree
+    country = {
+        factor = 0
+        modifier = {
+            add = 10
+            tag = PAN 
+        }
+    }
+
+    focus = { #서광
+        id = PAN_west_light
+        icon = GFX_focus_URG_colorados
+        x = 15
+        y = 0 
+        cost = 5
+
+        completion_reward = {
+            add_political_power = 50
+        }
+    }
+
+    focus = { #다가오는 선거일
+        id = PAN_upcoming_eleciotn_day
+        icon = GFX_focus_generic_social_democracy
+        x = 15
+        y = 1
+        cost = 5
+
+        prerequisite = {
+            focus = PAN_west_light
+        }
+
+        completion_reward = { #차후에 효과 추가 예정
+            add_political_power = 50
+        }
+    }
+    
+    focus = { #국민연합과 함께
+        id = PAN_with_National_Coalition
+        icon = GFX_focus_SWI_helvetic_junta
+        x = 16
+        y = 2
+        cost = 5
+
+        prerequisite = {
+            focus = PAN_upcoming_eleciotn_day
+        }
+
+        completion_reward = { #차후에 효과 추가 예정
+            add_political_power = 50
+        }
+    }
+
+    focus = { #인민전선과 함께
+        id = PAN_with_Popular_Front
+        icon = GFX_focus_GER_integrate_volkskommissariats
+        x = 14
+        y = 2
+        cost = 5
+
+        prerequisite = {
+            focus = PAN_upcoming_eleciotn_day
+        }
+        mutually_exclusive = {
+            focus = PAN_with_National_Coalition
+        }
+
+        completion_reward = {
+            add_political_power = 50
+        }
+    }
+
+    focus = { #투표소 확보
+        id = PAN_Securing_polling_places
+        icon = GFX_focus_SWE_hygienic_housing
+        x = 13
+        y = 3
+        cost = 5
+
+        prerequisite = {
+            focus = PAN_with_Popular_Front
+            focus = PAN_with_National_Coalition
+        }
+
+        completion_reward = {
+            add_political_power = 50
+        }
+    }
+
+    focus = { #투표 독려
+        id = PAN_Encourage_voting
+        icon = GFX_focus_SWE_form_rfsu
+        x = 15
+        y = 3
+        cost = 5
+        prerequisite = {
+            focus = PAN_with_Popular_Front
+            focus = PAN_with_National_Coalition
+        }
+    }
+    focus = { #비헌법적 부패 척결
+        id = PAN_Fighting_unconstitutional_corruption
+        icon = GFX_focus_BEL_government_resigns
+        x = 17
+        y = 3
+        cost = 5
+        prerequisite = {
+            focus = PAN_with_Popular_Front
+            focus = PAN_with_National_Coalition
+        }
+    }
+
+    focus = { #선거!
+        id = PAN_FOR_DEMOCRACY
+        icon = GFX_focus_NOR_continue_nygaardsvold_government
+        x = 15
+        y = 4
+        prerequisite = {
+            focus = PAN_Encourage_voting
+        }
+        prerequisite = {
+            focus = PAN_Fighting_unconstitutional_corruption
+        }
+        prerequisite = {
+            focus = PAN_Securing_polling_places
+        }
+        cost = 5
+    }
+
+}

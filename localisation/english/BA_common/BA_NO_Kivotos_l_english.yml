@@ -902,9 +902,25 @@
  BA_Trinity_Basilica_2: "단치히\n바실리카"
 
  ####WELCOME TO THE PANAMA!####
+
+ #중점
+ PAN_west_light: "서광"
+ PAN_upcoming_eleciotn_day: "다가오는 선거일"
+ PAN_with_National_Coalition: "국민연합과 함께"
+ PAN_with_Popular_Front: "인민전선과 함께"
+ PAN_Securing_polling_places: "투표소 확보"
+ PAN_Encourage_voting: "투표 독려"
+ PAN_Fighting_unconstitutional_corruption: "비헌법적 부패 척결"
+ PAN_FOR_DEMOCRACY: "선거!"
+ PAN_FOR_DEMOCRACY_desc: "그 날이 왔소! 다들 투표하러 갑세다!"
+
+ #국민정신
+
  PAN_americanarmy_fuck: "미국의 꼭두각시"
  PAN_weak_army: "취약한 국방"
  PAN_canel_unha: "운하 딜레마"
+
+ #커스텀 툴팁
 
  PAN_canel_dilema_tt: "§Y파나마 운하가 미국에 귀속되어 있는 한, 운하는 우리에게 장기적이고 지속적인 문제를 제공할 것입니다!§Y"
 
