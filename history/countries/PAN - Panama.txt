@@ -30,6 +30,12 @@ recruit_character = PAN_victor_pareja
 recruit_character = PAN_nicolas_ardito_barletta
 recruit_character = PAN_jose_pezet
 
+add_ideas = {
+	PAN_americanarmy_fuck
+ 	PAN_weak_army
+	PAN_canel_unha
+}
+
 
 set_country_flag = monroe_doctrine
 set_war_support = 0.1
@@ -94,9 +100,13 @@ set_politics = {
 
 set_party_name = {
 	ideology = democratic 
-	long_name = PANLIBERLPARTY
-	name = Liberal_party
-
+	long_name = PAN_PANLIBERLPARTY
+	name = PAN_Liberal_party
+}
+set_party_name = {
+	ideology = neutrality 
+	long_name = PAN_AMERICAN_MILITARY
+	name = PAN_america_a
 }
 set_popularities = {
 	democratic = 76

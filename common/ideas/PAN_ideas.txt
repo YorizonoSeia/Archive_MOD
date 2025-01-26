@@ -1,0 +1,37 @@
+ideas = {
+    country = {
+        PAN_americanarmy_fuck = { #미국의 꼭두각시
+            picture = NOR_complacent_cabinet_ns
+            allowed = { always = no }
+            modifier = {
+                neutrality_drift = 0.05
+                stability_factor = -0.05
+                war_support_factor = -0.05
+                generate_wargoal_tension = 2
+                political_power_cost = 0.003
+            }
+        }
+        PAN_weak_army = { #취약한 국방
+            picture = SWE_wargames
+            allowed = { always = no }
+            modifier = {
+                army_attack_factor = -0.15
+                army_defence_factor = -0.15
+                army_org_factor = -0.2
+                army_org_regain = -0.1
+                planning_speed = -0.3
+                army_speed_factor = -0.2
+                army_strength_factor = -0.2
+            }
+        }
+        PAN_canel_unha = { #운하 딜레마
+            picture = DEN_danske_stalvalsevaerket_ns
+            allowed = { always = yes }
+            modifier = {
+                stability_factor = -0.05
+                custom_modifier_tooltip = PAN_canel_dilema_tt
+            }
+        }
+
+    }
+}
