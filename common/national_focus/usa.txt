@@ -801,10 +801,6 @@ focus_tree = {
 				}
 			}
 			USA_great_depression_level_down = yes
-			unlock_decision_category_tooltip = USA_recover_from_2nd_great_depression_categorie
-			hidden_effect = {
-				activate_mission = USA_recover_from_2nd_great_depression_failure_mission
-			}
 		}
 	}
 
@@ -2302,7 +2298,7 @@ focus_tree = {
 			NOT = { has_idea_with_trait = communist_revolutionary }
 		}
 		bypass = {
-			
+			NOT = { has_idea = second_great_depression }
 		}
 		search_filters = {FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
@@ -2380,13 +2376,14 @@ focus_tree = {
 				NOT = { has_country_flag = USABA_government_official_exile }
 			}
 			congress_low_support_trigger = yes
+			NOT = { has_country_flag = USA_2nd_great_depression_4th_end_of_agriculture_endflag }
 		}
 		bypass = {
 			
 		}
 		search_filters = {FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
-
+			add_ideas = USABA_famine_safe
 		}
 	}
 
@@ -2416,7 +2413,7 @@ focus_tree = {
 			congress_low_support_trigger = yes
 		}
 		bypass = {
-			
+			NOT = { has_idea = second_great_depression }
 		}
 		search_filters = {FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
@@ -2449,7 +2446,7 @@ focus_tree = {
 			congress_low_support_trigger = yes
 		}
 		bypass = {
-			
+			NOT = { has_idea = second_great_depression }
 		}
 		search_filters = {FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
@@ -2502,7 +2499,7 @@ focus_tree = {
 			not = { has_completed_focus = USABA_replace_industry }
 		}
 		bypass = {
-			
+			NOT = { has_idea = second_great_depression }
 		}
 		search_filters = {FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
@@ -2572,7 +2569,7 @@ focus_tree = {
 			not = { has_completed_focus = USABA_replace_industry }
 		}
 		bypass = {
-			
+			NOT = { has_idea = second_great_depression }
 		}
 		search_filters = {FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
@@ -2603,6 +2600,7 @@ focus_tree = {
 				NOT = { has_country_flag = USABA_government_official_exile }
 			}
 			congress_low_support_trigger = yes
+			has_idea = second_great_depression
 		}
 		bypass = {
 			
@@ -2638,6 +2636,7 @@ focus_tree = {
 			if = { limit = { has_country_flag = USABA_government_official_exile }
 				NOT = { has_country_flag = USABA_government_official_exile }
 			}
+			has_idea = second_great_depression
 		}
 		bypass = {
 			
@@ -2670,6 +2669,7 @@ focus_tree = {
 				NOT = { has_country_flag = USABA_government_official_exile }
 			}
 			congress_low_support_trigger = yes
+			has_idea = second_great_depression
 		}
 		bypass = {
 			
@@ -2906,7 +2906,7 @@ focus_tree = {
 			congress_low_support_trigger = yes
 		}
 		bypass = {
-			
+			NOT = { has_idea = second_great_depression }
 		}
 		search_filters = {FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {

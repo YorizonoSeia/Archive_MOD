@@ -1301,6 +1301,10 @@ characters={
 			}
 			available = {
 				has_completed_focus = USABA_maintenance_of_isolation_policy
+				OR = {
+					has_government = fascism
+					has_government = democratic
+				}
 			}
 			traits = {
 				USABA_charles_lindbergh_trait

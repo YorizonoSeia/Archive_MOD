@@ -3447,6 +3447,7 @@ USA_2nd_great_depression_activated_categorie = {
 			}
 		}
 		timeout_effect = {
+			set_country_flag = USA_2nd_great_depression_4th_end_of_agriculture_endflag
 			add_ideas = USABA_famine
 			add_days_mission_timeout = {
 				mission = USA_2nd_great_depression_4th
@@ -3979,6 +3980,7 @@ USA_recover_from_2nd_great_depression_categorie = {
 			NOT = { has_country_flag = USA_recover_from_2nd_great_depression_rebuild_war_flan_flag }
 		}
 		visible = {
+			NOT = { has_country_flag = USABA_agriculture_rebuild_start }
 			has_completed_focus = USABA_american_reindustrialization
 			OR = {
 				has_idea = USABA_famine

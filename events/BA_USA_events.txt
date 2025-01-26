@@ -1313,6 +1313,28 @@ country_event = {
 }
 
 
+# 식량 비축법
+
+country_event = {
+	id = usa_event.25
+	title = usa_event.25.t
+	desc = usa_event.25.d
+	
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = usa_event.25.a
+		swap_ideas = {
+			remove_idea = USABA_famine
+			add_idea = USABA_famine_1
+		}
+		set_country_flag = USABA_agriculture_rebuild_start
+	}
+}
+
+
  # 신질서 내전 (OFN 영유권 주장)
 country_event = {
 	id = usa_new_civil_event.1

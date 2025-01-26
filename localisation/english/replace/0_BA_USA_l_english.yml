@@ -202,6 +202,10 @@
  USABA_fireside_chats: "노변 담화의 지속"
  USABA_fireside_chats_desc: "노변 담화는 1933년부터 프랭클린 D. 루즈벨트 대통령이 진행한 일련의 저녁 라디오 연설입니다. 수백만명의 국민들에게 대공황으로부터의 회복, 비상 사태의 공포에 대해 친숙하게 이야기하던 라디오는 이제 두번째 대공황의 극복에 대해서도 이야기할 것입니다."
 
+ USABA_develop_corn_belt: "비상 식량 비축법"
+ USABA_develop_corn_belt_desc: "미합중국의 콘벨트를 구성하던 대규모의 농업 기업들의 부도 위기가 현실화됨에 따라, 우리는 비상시국에 맞게 식량을 미리 확보하여, 추후 발생할 식량 위기에 대응해야 합니다."
+ USA_2nd_great_depression_4th_end_of_agriculture_endflag: "농업 기업들의 부도"
+
  USABA_maintenance_of_isolation_policy: "고립주의 유지"
  USABA_maintenance_of_isolation_policy_desc: "미국은 외부 세계의 혼란과 위기로부터 거리를 두고, 자국의 문제에 집중할 것입니다. 국제 분쟁에는 개입하지 않고, 경제 회복과 내부 안정을 최우선으로 삼을 것입니다. 외부의 영향을 최소화함으로써, 미국은 스스로를 보호하고 경제적 자립을 이루려 합니다."
  USABA_maintenance_of_isolation_policy_desc_cst: "§g미국의 경제적 자립을 위한 계획의 밑준비가 시작됩니다.§!"
@@ -431,6 +435,8 @@
 
 #국민정신
  second_great_depression: "2차 대공황"
+ USABA_famine_safe: "식량 비축법"
+ USABA_famine_safe_tt: "식량 부족 사태 발생 시 변화:\n§Y식량 부족 사태§! 국민정신 보유"
  USABA_famine: "식량 부족 사태"
  USABA_famine_1: "기근으로부터의 회복"
  USABA_famine_2: "부활한 콘벨트"
@@ -630,6 +636,11 @@
  usa_event.24.t: "모든 문제를 해결한 산업"
  usa_event.24.d: "급진적인 산업 개혁의 부작용을 모두 해결했습니다. 이제 길거리에는 실업자와 노숙자 대신 행복한 부모와 아이들이 보이기 시작합니다."
  usa_event.24.a: "드디어!!!"
+
+ usa_event.25.t: "식량 비축법의 시행"
+ usa_event.25.d: "농업 기업들의 부도가 현실화함에 따라, 우리는 식량 비축법에 따라 비축한 식량을 시장에 풀 필요가 있습니다.\n\n식량 비축법이 발행될 당시, 미합중국의 시민들은 대통령의 정책에 의문을 표했지만. 이제는 혜안을 알아보게 될 것입니다."
+ usa_event.25.a: "훌륭해."
+
 
 
 
