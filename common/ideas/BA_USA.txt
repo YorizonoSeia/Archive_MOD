@@ -275,16 +275,14 @@ ideas = {
 				NOT = {
 					has_idea = second_great_depression
 					has_idea = great_depression
-					has_idea = great_depression_2
-					has_idea = great_depression_3
 				}
 			}
 
 			removal_cost = -1
 			
 			modifier = {
-				political_power_gain = 1.5
-				stability_weekly = 0.01
+				political_power_gain = 0.25
+				stability_weekly = 0.005
 				consumer_goods_factor = -0.1
 				custom_modifier_tooltip = USABA_secret_currency_issuance_tt
 			}
