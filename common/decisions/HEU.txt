@@ -4219,7 +4219,7 @@ HEU_benriya_ally_decision_category = {
 						is_faction_leader = yes
 					}
 					NOT = { has_war_with = CAN }
-					has_global_flag = HEU_victory_west_germanic_union
+					has_completed_focus = HEU_germany_union
 					CAN = { is_puppet = no }
 				}
 				AND = {
@@ -4227,7 +4227,7 @@ HEU_benriya_ally_decision_category = {
 						is_faction_leader = yes
 					}
 					NOT = { has_war_with = USA }
-					has_global_flag = HEU_victory_west_germanic_union
+					has_completed_focus = HEU_germany_union
 					USA = { is_puppet = no }
 				}
 			}
@@ -4250,7 +4250,6 @@ HEU_benriya_ally_decision_category = {
 							is_faction_leader = yes
 						}
 						NOT = { has_war_with = CAN }
-						has_global_flag = HEU_victory_west_germanic_union
 						CAN = { is_puppet = no }
 					}
 				}
@@ -4266,60 +4265,60 @@ HEU_benriya_ally_decision_category = {
 		}
 	}
 	
-	HEU_benriya_ally_roma = {
-
-		icon = GFX_decision_generic_military
-
-		available = {
-			ITA = {
-				is_faction_leader = yes
-			}
-			NOT = { has_war_with = ITA }
-			has_completed_focus = HEU_germany_union
-			OR = {
-				AND = {
-					ROOT = { has_government = fascism }
-					ITA = { has_government = fascism }
-				}
-				AND = {
-					ROOT = { has_government = fascism }
-					ITA = { has_government = neutrality }
-				}
-				AND = {
-					ROOT = { has_government = fascism }
-					ITA = { has_government = democratic }
-				}
-				AND = {
-					ROOT = { has_government = communism }
-					ITA = { has_government = communism }
-				}
-				AND = {
-					ROOT = { has_government = communism }
-					ITA = { has_government = neutrality }
-				}
-				AND = {
-					ROOT = { has_government = communism }
-					ITA = { has_government = democratic }
-				}
-			}
-			ITA = { is_puppet = no }
-		}
-
-		visible = {
-			ITA = {
-				is_faction_leader = yes
-			}
-			is_puppet = no
-		}
-
-		ai_will_do = { base = 20 } #
-
-		cost = 0
-
-		complete_effect = {
-
-		}
-	}
+#	HEU_benriya_ally_roma = {
+#
+#		icon = GFX_decision_generic_military
+#
+#		available = {
+#			ITA = {
+#				is_faction_leader = yes
+#			}
+#			NOT = { has_war_with = ITA }
+#			has_completed_focus = HEU_germany_union
+#			OR = {
+#				AND = {
+#					ROOT = { has_government = fascism }
+#					ITA = { has_government = fascism }
+#				}
+#				AND = {
+#					ROOT = { has_government = fascism }
+#					ITA = { has_government = neutrality }
+#				}
+#				AND = {
+#					ROOT = { has_government = fascism }
+#					ITA = { has_government = democratic }
+#				}
+#				AND = {
+#					ROOT = { has_government = communism }
+#					ITA = { has_government = communism }
+#				}
+#				AND = {
+#					ROOT = { has_government = communism }
+#					ITA = { has_government = neutrality }
+#				}
+#				AND = {
+#					ROOT = { has_government = communism }
+#					ITA = { has_government = democratic }
+#				}
+#			}
+#			ITA = { is_puppet = no }
+#		}
+#
+#		visible = {
+#			ITA = {
+#				is_faction_leader = yes
+#			}
+#			is_puppet = no
+#		}
+#
+#		ai_will_do = { base = 20 } #
+#
+#		cost = 0
+#
+#		complete_effect = {
+#
+#		}
+#	}
 	
 	HEU_benriya_ally_soviet = {
 
@@ -4330,7 +4329,7 @@ HEU_benriya_ally_decision_category = {
 				is_faction_leader = yes
 			}
 			NOT = { has_war_with = SOV }
-			has_global_flag = HEU_victory_west_germanic_union
+			has_completed_focus = HEU_germany_union
 			SOV = {
 				has_country_leader = {
 					character = SOV_iosif_stalin #오직 스탈린만
@@ -4370,7 +4369,7 @@ HEU_benriya_ally_decision_category = {
 			}
 			NOT = { has_war_with = HOL }
 			NOT = { has_war_with = BEL }
-			has_global_flag = HEU_victory_west_germanic_union
+			has_completed_focus = HEU_germany_union
 			OR = {		
 				HOL = { is_puppet = no }
 				BEL = { is_puppet = no }
@@ -4417,7 +4416,7 @@ HEU_benriya_ally_decision_category = {
 		available = {
 			country_exists = ABY
 			NOT = { has_war_with = ABY }
-			has_global_flag = HEU_victory_west_germanic_union
+			has_completed_focus = HEU_germany_union
 			NOT = { 
 				ABY = { has_government = democratic }
 			}
