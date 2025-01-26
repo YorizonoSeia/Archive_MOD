@@ -2920,7 +2920,6 @@ focus_tree = {
 			congress_low_support_trigger = yes
 		}
 		bypass = {
-			NOT = { has_idea = second_great_depression }
 		}
 		search_filters = {FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
