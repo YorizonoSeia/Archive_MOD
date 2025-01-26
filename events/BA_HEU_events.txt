@@ -3979,6 +3979,57 @@ country_event = { #국가 가톨릭 혁명회 창설
 	}
 }
 
+country_event = { #트리니티와의 전쟁
+	id = HEU_event.255
+	title = HEU_event.255.t
+	desc = HEU_event.255.desc
+	picture = GFX_report_event_kayoko_onikata
+
+    fire_only_once = yes
+
+	trigger = {
+		original_tag = HEU
+		has_war_with = TRM
+		has_global_flag = HEU_victory_west_germanic_union
+	}
+	
+	mean_time_to_happen = {
+		days = 3
+	}
+
+	option = { 
+		name = HEU_event.255.a 
+		ai_chance = {
+			base = 10
+		}
+
+		hidden_effect = {
+			country_event = { id = HEU_event.256 hours = 4 }
+
+			news_event = {
+				id = HEU_news.24
+			}
+		}
+	}
+}
+
+country_event = { #울지 마
+	id = HEU_event.256
+	title = HEU_event.256.t
+	desc = HEU_event.256.desc
+	picture = GFX_report_event_haruka_igusa
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.256.a 
+		ai_chance = {
+			base = 10
+		}
+
+	}
+}
+
 country_event = { #룩셈부르크 대공국의 멸망
 	id = HEU_event.2000
 	title = HEU_event.2000.t
@@ -7389,6 +7440,58 @@ news_event = {
 		trigger = {
 			NOT = { Kivotos_tag = yes }
 			NOT = { tag = HEU }
+		}
+	}
+}
+
+# 룩셈부르크-트리니티 전쟁
+news_event = {
+	id = HEU_news.24
+	title = HEU_news.24.t
+
+	desc = {
+		text = HEU_news.24.desc.a
+		trigger = { 
+			has_dynamic_modifier = {
+				modifier = HEU_luxembourgism_idea
+			} 
+		}
+		
+	}
+
+	desc = {
+		text = HEU_news.24.desc.b
+		trigger = { 
+			has_dynamic_modifier = {
+				modifier = HEU_rikuhachimaism_idea
+			} 
+		}
+	}
+
+	picture = GFX_news_event_soldiers_marching
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = HEU_news.24.a
+		trigger = {
+			tag = HEU
+		}
+	}
+
+	option = {
+		name = HEU_news.24.b
+		trigger = {
+			NOT = { tag = HEU }
+			Kivotos_tag = yes
+		}
+	}
+
+	option = {
+		name = HEU_news.24.c
+		trigger = {
+			Kivotos_tag = no
 		}
 	}
 }
