@@ -249,6 +249,15 @@ HEU_parties_modifier_effect = {
 		var = HEU_left_party_stability_factor
 		value = 0.2
 	}
+
+	set_variable = {
+		var = HEU_right_and_left_party_stability_factor
+		value = HEU_right_party_stability_factor
+	}
+	subtract_from_variable = {
+		var = HEU_right_and_left_party_stability_factor
+		value = HEU_left_party_stability_factor
+	}
 }
 
 # 흥신소 정당 조정

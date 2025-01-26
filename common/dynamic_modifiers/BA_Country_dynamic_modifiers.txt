@@ -2093,7 +2093,7 @@ HEU_abgeordnetenkammer_dynamic_modifier = {
 
 	#우파당
 	production_speed_industrial_complex_factor = HEU_right_party_industrial_complex_var
-	stability_factor = HEU_right_party_stability_factor
+	#stability_factor = HEU_right_party_stability_factor
 
 	#급진자유당
 	production_factory_max_efficiency_factor  = HEU_centre_party_production_factory_max_efficiency_factor
@@ -2101,7 +2101,9 @@ HEU_abgeordnetenkammer_dynamic_modifier = {
 
 	#공산당
 	industrial_capacity_factory = HEU_left_party_industrial_capacity_factory
-	stability_factor = HEU_left_party_stability_factor
+	
+	#우파당 빼기 공산당 안정도
+	stability_factor = HEU_right_and_left_party_stability_factor
 }
 
 USABA_german_ch_idea = { #독일인 대표 위원회
