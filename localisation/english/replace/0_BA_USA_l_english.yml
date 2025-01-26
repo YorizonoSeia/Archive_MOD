@@ -475,6 +475,9 @@
  USABA_second_great_depression_idea_tt: "2차 대공황 해결시 제거:\n§Y2차 대공황§! 국민정신 미보유"
  USABA_secret_currency_issuance_tt: "대공황 해결시 제거:\n§Y2차 대공황§!, §Y대공황§! 국민정신 미보유"
 
+ USABA_american_reindustrialization_trigger_flag_tt: "§Y아메리카 재산업화§! 중점을 완료할 수 있게 됩니다."
+ USABA_american_reindustrialization_trigger_flag: "§Y산업 재건§!의 준비가 완료됨"
+
  
 
 #디시전
@@ -534,6 +537,8 @@
  USA_recover_from_2nd_great_depression_stop_flag: "§Y전시 경제§!가 시행됨"
 
  USABA_halo_formation_disbandment: "비정규 헤일로 보병 병합"
+
+ USABA_readmit_state: "소비에트 수립"
 
 #이벤트
 
