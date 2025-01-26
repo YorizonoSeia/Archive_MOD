@@ -175,7 +175,7 @@ focus_tree = {
 		id = USABA_fireside_chats
 		icon = GFX_focus_SWE_radiotjanst
 		prerequisite = { focus = USA_continue_the_new_deal }
-		x = -2
+		x = -1
 		y = 1
 		relative_position_id = USA_continue_the_new_deal
 
@@ -1330,10 +1330,16 @@ focus_tree = {
 			if = { limit = { has_country_flag = USABA_government_official_exile }
 				NOT = { has_country_flag = USABA_government_official_exile }
 			}
+			is_subject = no
 			is_in_faction = no
 			not = { has_war_with = SOU }
 			SOV_comintern_joinable = yes 
 			NOT = { has_war = yes }
+		}
+
+		bypass = {
+			is_in_faction_with = SOU
+			SOU = { has_government = communism }
 		}
 
 		x = -1
@@ -1393,6 +1399,7 @@ focus_tree = {
 			if = { limit = { has_country_flag = USABA_government_official_exile }
 				NOT = { has_country_flag = USABA_government_official_exile }
 			}
+			is_subject = no
 			is_in_faction = no
 			NOT = { has_war = yes }
 		}
@@ -1434,10 +1441,17 @@ focus_tree = {
 			if = { limit = { has_country_flag = USABA_government_official_exile }
 				NOT = { has_country_flag = USABA_government_official_exile }
 			}
+			is_subject = no
 			is_in_faction = no
 			not = { has_war_with = RED } 
 			NOT = { has_war = yes }
 		}
+
+		bypass = {
+			is_in_faction_with = RED
+			RED = { has_government = communism }
+		}
+
 		completion_reward = {
 			news_event = {id = BA_news.117 hours = 6}
 			USA_congress_large_opposition = yes
@@ -2357,8 +2371,8 @@ focus_tree = {
 	focus = {
 		id = USABA_develop_corn_belt
 		icon = GFX_focus_generic_farmland
-		prerequisite = { focus = USA_continue_the_new_deal }
-		x = 0
+		prerequisite = { focus = USA_continue_the_new_deal focus = USA_reestablish_the_gold_standard }
+		x = 4
 		y = 1
 		relative_position_id = USA_continue_the_new_deal
 
@@ -7862,42 +7876,6 @@ focus = {
 			}
 		}
 	}
-    
-	# 전시 선전
-
-	focus = {
-		id = USA_add_war_propaganda
-		icon = GFX_goal_generic_propaganda
-		prerequisite = { focus = USA_continue_the_new_deal focus = USA_reestablish_the_gold_standard }
-		available = {
-			if = { limit = { has_country_flag = USABA_government_official_exile }
-				NOT = { has_country_flag = USABA_government_official_exile }
-			}
-		}
-		bypass = {
-			
-		}
-
-		available_if_capitulated = yes
-		relative_position_id = USA_reestablish_the_gold_standard
-		continue_if_invalid = yes
-		x = 0
-		y = 1
-		cost = 5
-		completion_reward = {
-			add_war_support = 0.1
-			if = {
-				limit = {
-					has_war_support < 0.4
-				}
-				USA_congress_small_opposition = yes
-			}
-		}
-}
-
-
-
-
 
 	focus = {
 		id = USA_adjusted_compensation_act
