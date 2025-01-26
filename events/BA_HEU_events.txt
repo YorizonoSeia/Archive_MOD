@@ -1481,6 +1481,7 @@ country_event = { #밀레니엄제 의안
 			set_character_flag = HEU_aru_one_eyed
 			set_character_flag = HEU_aru_good_artificial_eye
 		}
+		custom_effect_tooltip = HEU_aru_attacked_open_tt
 	}
 	
 }
@@ -1505,6 +1506,7 @@ country_event = { #평범한 의안
 		HEU_aru = {
 			set_character_flag = HEU_aru_one_eyed
 		}
+		custom_effect_tooltip = HEU_aru_attacked_open_tt
 	}
 	
 }
@@ -2875,6 +2877,152 @@ country_event = { #카이텐져의 귀환
 	}
 }
 
+country_event = { #[FROM.GetName]의 동맹 제안
+	id = HEU_event.216
+	title = HEU_event.216.t
+	desc = HEU_event.216.desc
+	picture = GFX_report_event_generic_conference
+
+    is_triggered_only = yes
+
+	option = {
+		name = HEU_event.216.a 
+		ai_chance = {
+			base = 100
+		}
+
+		set_global_flag = HEU_join_allied
+		add_to_faction = HEU
+
+		HEU = {
+			country_event = { id = HEU_event.252 }
+		}
+	}
+
+	option = {
+		name = HEU_event.216.b
+		ai_chance = {
+			base = 0
+		}
+
+		HEU = {
+			country_event = { id = HEU_event.253 }
+		}
+	}
+}
+
+country_event = { #베네룩스 동맹의 제안
+	id = HEU_event.217
+	title = HEU_event.217.t
+	desc = HEU_event.217.desc
+	picture = GFX_report_event_generic_conference
+
+    is_triggered_only = yes
+
+	option = {
+		name = HEU_event.217.a 
+		ai_chance = {
+			base = 100
+		}
+
+		set_global_flag = HEU_join_benelux
+
+		if = {
+			limit = { 
+				HEU = {
+					is_faction_leader = no
+				}
+			}
+			HEU = { create_faction = HEU_faction_benelux }
+		}
+
+		HEU = {
+			add_to_faction = ROOT
+		}
+	}
+
+	option = {
+		name = HEU_event.217.b
+		ai_chance = {
+			base = 0
+		}
+
+		HEU = {
+			country_event = { id = HEU_event.253 }
+		}
+	}
+}
+
+country_event = { #[FROM.GetName]의 코민테른 가입 제안
+	id = HEU_event.218
+	title = HEU_event.218.t
+	desc = HEU_event.218.desc
+	picture = GFX_report_event_generic_conference
+
+    is_triggered_only = yes
+
+	option = {
+		name = HEU_event.218.a 
+		ai_chance = {
+			base = 100
+		}
+
+		set_global_flag = HEU_join_comintern
+		add_to_faction = HEU
+	}
+
+	option = {
+		name = HEU_event.218.b
+		ai_chance = {
+			base = 0
+		}
+		
+
+		HEU = {
+			country_event = { id = HEU_event.253 }
+		}
+	}
+}
+
+country_event = { #[FROM.GetName]의 동맹 가입 제안
+	id = HEU_event.219
+	title = HEU_event.219.t
+	desc = HEU_event.219.desc
+	picture = GFX_report_event_generic_conference
+
+    is_triggered_only = yes
+
+	option = {
+		name = HEU_event.219.a 
+		ai_chance = {
+			base = 100
+		}
+
+		set_global_flag = HEU_join_abydos
+		
+		if = {
+			limit = { 
+				is_faction_leader = no
+			}
+			create_faction = HEU_faction_abydos
+		}
+
+		add_to_faction = HEU
+
+	}
+
+	option = {
+		name = HEU_event.219.b
+		ai_chance = {
+			base = 0
+		}
+
+		HEU = {
+			country_event = { id = HEU_event.253 }
+		}
+	}
+}
+
 country_event = { #[FROM.GetName]의 지원 요청
 	id = HEU_event.221
 	title = HEU_event.221.t
@@ -3308,7 +3456,7 @@ country_event = { #리쿠하치마 아루의 마지막 인사
 
 		HEU_aru = {
 			add_trait = {
-				add_trait = { trait = unconscious }
+				trait = unconscious
 			}
 			unit_leader_event = { id = HEU_event.233 hours = 2 }
 		}
@@ -3382,7 +3530,7 @@ unit_leader_event = { #빈 집의 모험 - 페이즈 4
     is_triggered_only = yes
 
 	option = { 
-		name = HEU_event.236.a 
+		name = HEU_event.237.a 
 		
 		HEU_aru = {
 			unit_leader_event = { id = HEU_event.238 }
@@ -3431,6 +3579,11 @@ country_event = { #병실에서
 		#remove_country_leader_trait = HEU_aru_depression_2
 		set_country_leader_description = {
 			desc = HEU_aru_communist_leader_happy_ending_desc
+		}
+
+		add_timed_idea = {
+			idea = HEU_healing_depression
+			days = 600
 		}
 
 		hidden_effect = {
@@ -3605,6 +3758,201 @@ country_event = { #연방생도당 창당식
 	}
 }
 
+country_event = { #키보토스계와의 만남
+	id = HEU_event.248
+	title = HEU_event.248.t
+	desc = HEU_event.248.desc
+
+	picture = GFX_report_event_aru_rikuhachima_dress
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.248.a 
+		add_popularity = {
+			ideology = communism
+			popularity = 0.03
+		}
+	}
+}
+
+country_event = { #키보토스계와의 만남
+	id = HEU_event.249
+	title = HEU_event.249.t
+	desc = HEU_event.249.desc
+
+	picture = GFX_report_event_luxembourg_city
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.249.a 
+
+	}
+}
+
+country_event = { #반지
+	id = HEU_event.250
+	title = HEU_event.250.t
+
+	desc = { 
+		text = HEU_event.250.desc.a
+		trigger = {
+			has_completed_focus = HEU_rikuhachimaism_focus_kayoko
+		}
+	}
+
+	desc = { 
+		text = HEU_event.250.desc.b
+		trigger = {
+			has_completed_focus = HEU_rikuhachimaism_focus_mutsuki
+		}
+	}
+
+	desc = { 
+		text = HEU_event.250.desc.c
+		trigger = {
+			has_completed_focus = HEU_rikuhachimaism_focus_haruka
+		}
+	}
+
+	picture = GFX_report_event_Problem_Solver_68
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.250.a 
+
+		if = {
+			limit = {
+				has_completed_focus = HEU_rikuhachimaism_focus_kayoko
+			}
+			HEU_zkdyzh = {
+				set_character_name = HEU_kayoko_rikuhachima
+				set_character_flag = HEU_aru_bride
+			}
+		}
+		
+		if = {
+			limit = {
+				has_completed_focus = HEU_rikuhachimaism_focus_mutsuki
+			}
+			HEU_ancmzl = {
+				set_character_name = HEU_mutsuki_rikuhachima
+				set_character_flag = HEU_aru_bride
+			}
+		}
+		
+		if = {
+			limit = {
+				has_completed_focus = HEU_rikuhachimaism_focus_haruka
+			}
+			HEU_gkfnzk = {
+				set_character_name = HEU_haruka_rikuhachima
+				set_character_flag = HEU_aru_bride
+			}
+		}
+
+		hidden_effect = {
+			news_event = { id = HEU_news.23 hours = 3 }
+		}
+	}
+}
+
+country_event = { #세상은 변하고 있다
+	id = HEU_event.251
+	title = HEU_event.251.t
+	desc = HEU_event.251.desc
+
+	picture = GFX_report_event_luxembourg_city
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.251.a 
+
+	}
+	
+	option = { 
+		name = HEU_event.251.b
+		add_political_power = -10
+		set_country_flag = aru_yuri_flag
+	}
+}
+
+country_event = { #[FROM.GetName] 측과의 동맹 성공
+	id = HEU_event.252
+	title = HEU_event.252.t
+	desc = HEU_event.252.desc
+	picture = GFX_report_event_generic_conference
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.252.a 
+		ai_chance = {
+			base = 10
+		}
+
+	}
+}
+
+country_event = { #[FROM.GetName] 측과의 협상 결렬
+	id = HEU_event.253
+	title = HEU_event.253.t
+	desc = HEU_event.253.desc
+	picture = GFX_report_event_generic_conference
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.253.a 
+		ai_chance = {
+			base = 10
+		}
+
+	}
+}
+
+country_event = { #국가 가톨릭 혁명회 창설
+	id = HEU_event.254
+	title = HEU_event.254.t
+	desc = HEU_event.254.desc
+
+	picture = GFX_report_event_generic_conference
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.254.a 
+		set_temp_variable = { 
+			var = HEU_abgeordnetenkammer_centre_temp
+			value = 0.1
+		}
+		HEU_add_influence_centre_party = yes
+	}
+
+	option = { 
+		name = HEU_event.254.b
+		set_temp_variable = { 
+			var = HEU_abgeordnetenkammer_left_temp
+			value = 0.1
+		} 
+		HEU_add_influence_left_party = yes
+	}
+
+	option = { 
+		name = HEU_event.254.c 
+		add_stability = -0.05
+		set_country_flag = catholic_yuri_flag
+		
+		custom_effect_tooltip = HEU_modify_luxembourgism_intro
+		add_to_variable = {
+			HEU_aru_var_research_speed_factor = 0.02
+			tooltip = research_speed_factor_tt
+		}
+	}
+}
+
 country_event = { #룩셈부르크 대공국의 멸망
 	id = HEU_event.2000
 	title = HEU_event.2000.t
@@ -3758,7 +4106,7 @@ country_event = { #룩셈부르크 대공국의 멸망
 			retire_character = HEU_zkdyzh
 			retire_character = HEU_ancmzl
 			retire_character = HEU_gkfnzk
-			retire_character = HEU_emile_speller
+			#retire_character = HEU_emile_speller
 			set_cosmetic_tag = HEU_luxembourg
 		}
 	}
@@ -4873,6 +5221,13 @@ country_event = { #크로노스 언론 인터뷰
 
 	option = { 
 		name = HEU.flavor_event.57.b
+		trigger = {
+			AND = {
+				has_country_flag = aru_yuri_flag
+				has_country_flag = catholic_yuri_flag
+			}
+		}
+
 		hidden_effect = {
 			country_event = { id = HEU.flavor_event.58 days = 30 }
 		}
@@ -4893,6 +5248,7 @@ country_event = { #조제프 베슈 총리의 개인 편지
 
 	option = { 
 		name = HEU.flavor_event.58.b
+		add_stability = -0.03
 		hidden_effect = {
 			country_event = { id = HEU.flavor_event.59 days = 30 }
 		}
@@ -4956,6 +5312,60 @@ country_event = { #대독일국 부활을 위해
 		add_popularity = {
 			ideology = fascism
 			popularity = -0.01
+		}
+	}
+}
+
+country_event = { #군부 쿠데타
+	id = HEU.flavor_event.62
+	title = HEU.flavor_event.62.t
+	desc = HEU.flavor_event.62.desc
+	picture = GFX_report_event_german_volunteers
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.flavor_event.62.a
+		add_war_support = 0.02
+		add_command_power = 10
+	}
+}
+
+country_event = { #게르만 민족통일
+	id = HEU.flavor_event.63
+	title = HEU.flavor_event.63.t
+	desc = HEU.flavor_event.63.desc
+	picture = GFX_report_event_german_troops
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.flavor_event.63.a
+	}
+}
+
+country_event = { #에밀 슈펠러의 의심
+	id = HEU.flavor_event.64
+	title = HEU.flavor_event.64.t
+	desc = HEU.flavor_event.64.desc
+	picture = GFX_report_event_generic_conference
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.flavor_event.64.a
+	}
+}
+
+country_event = { #룩셈부르크의 첫 인터넷 사이트
+	id = HEU.flavor_event.65
+	title = HEU.flavor_event.65.t
+	desc = HEU.flavor_event.65.desc
+	picture = GFX_report_event_generic_conference
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.flavor_event.65.a
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.01
 		}
 	}
 }

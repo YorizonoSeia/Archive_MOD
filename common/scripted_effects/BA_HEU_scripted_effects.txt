@@ -164,3 +164,742 @@ HEU_create_militia_template = {
 		}
 	}
 }
+
+HEU_parties_modifier_effect = {
+	#연방생도당 효과 적용
+	set_variable = {
+		var = HEU_kivotos_party_war_support_factor
+		value = HEU_abgeordnetenkammer^0 #연방생도당
+	}
+	multiply_variable = {
+		var = HEU_kivotos_party_war_support_factor
+		value = 0.3
+	}
+	set_variable = {
+		var = HEU_kivotos_party_drift_defence_factor
+		value = 0 #연방생도당
+	}
+	subtract_from_variable = {
+		var = HEU_kivotos_party_drift_defence_factor
+		value = HEU_abgeordnetenkammer^0 #우파당
+	}
+	multiply_variable = {
+		var = HEU_kivotos_party_drift_defence_factor
+		value = 0.2
+	}
+
+	#우파당
+	set_variable = {
+		var = HEU_right_party_industrial_complex_var
+		value = 0 #우파당
+	}
+	subtract_from_variable = {
+		var = HEU_right_party_industrial_complex_var
+		value = HEU_abgeordnetenkammer^1 #우파당
+	}
+	multiply_variable = {
+		var = HEU_right_party_industrial_complex_var
+		value = 0.2
+	}
+	set_variable = {
+		var = HEU_right_party_stability_factor
+		value = HEU_abgeordnetenkammer^1 #우파당
+	}
+	multiply_variable = {
+		var = HEU_right_party_stability_factor
+		value = 0.2
+	}
+
+	#급진자유당
+	set_variable = {
+		var = HEU_centre_party_production_factory_max_efficiency_factor
+		value = HEU_abgeordnetenkammer^2 #급진자유당
+	}
+	multiply_variable = {
+		var = HEU_centre_party_production_factory_max_efficiency_factor
+		value = 0.2
+	}
+	set_variable = {
+		var = HEU_centre_party_consumer_goods_factor
+		value = HEU_abgeordnetenkammer^2 #급진자유당
+	}
+	multiply_variable = {
+		var = HEU_centre_party_consumer_goods_factor
+		value = 0.3
+	}
+
+	#공산당
+	set_variable = {
+		var = HEU_left_party_industrial_capacity_factory
+		value = HEU_abgeordnetenkammer^3 #공산당
+	}
+	multiply_variable = {
+		var = HEU_left_party_industrial_capacity_factory
+		value = 0.3
+	}
+	set_variable = {
+		var = HEU_left_party_stability_factor
+		value = 0 #공산당
+	}
+	subtract_from_variable = {
+		var = HEU_left_party_stability_factor
+		value = HEU_abgeordnetenkammer^3 #우파당
+	}
+	multiply_variable = {
+		var = HEU_left_party_stability_factor
+		value = 0.2
+	}
+}
+
+# 흥신소 정당 조정
+HEU_parties_setting_system = {
+	if = {
+		limit = {
+			check_variable = {
+				target = 1
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = HEU_add_rikuhachima_faction
+			}
+			divide_temp_variable = {
+				HEU_abgeordnetenkammer_kivotos_temp = 2
+			}
+			multiply_temp_variable = {
+				HEU_abgeordnetenkammer_kivotos_temp = -1
+			}
+			add_to_variable = {
+				HEU_abgeordnetenkammer^2 = HEU_abgeordnetenkammer_kivotos_temp
+			}
+			add_to_variable = {
+				HEU_abgeordnetenkammer^3 = HEU_abgeordnetenkammer_kivotos_temp
+			}
+		}
+		else = {
+			divide_temp_variable = {
+				HEU_abgeordnetenkammer_right_temp = 2
+			}
+			multiply_temp_variable = {
+				HEU_abgeordnetenkammer_right_temp = -1
+			}
+			add_to_variable = {
+				HEU_abgeordnetenkammer^2 = HEU_abgeordnetenkammer_right_temp
+			}
+			add_to_variable = {
+				HEU_abgeordnetenkammer^3 = HEU_abgeordnetenkammer_right_temp
+			}
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				target = 2
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = HEU_add_rikuhachima_faction
+			}
+			divide_temp_variable = {
+				HEU_abgeordnetenkammer_kivotos_temp = 2
+			}
+			multiply_temp_variable = {
+				HEU_abgeordnetenkammer_kivotos_temp = -1
+			}
+			add_to_variable = {
+				HEU_abgeordnetenkammer^2 = HEU_abgeordnetenkammer_kivotos_temp
+			}
+			add_to_variable = {
+				HEU_abgeordnetenkammer^3 = HEU_abgeordnetenkammer_kivotos_temp
+			}
+		}
+		else = {
+			divide_temp_variable = {
+				HEU_abgeordnetenkammer_right_temp = 2
+			}
+			multiply_temp_variable = {
+				HEU_abgeordnetenkammer_right_temp = -1
+			}
+			add_to_variable = {
+				HEU_abgeordnetenkammer^2 = HEU_abgeordnetenkammer_right_temp
+			}
+			add_to_variable = {
+				HEU_abgeordnetenkammer^3 = HEU_abgeordnetenkammer_right_temp
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				target = 3
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = HEU_add_rikuhachima_faction
+			}
+			divide_temp_variable = {
+				HEU_abgeordnetenkammer_centre_temp = 2
+			}
+			multiply_temp_variable = {
+				HEU_abgeordnetenkammer_centre_temp = -1
+			}
+			add_to_variable = {
+				HEU_abgeordnetenkammer^0 = HEU_abgeordnetenkammer_centre_temp
+			}
+			add_to_variable = {
+				HEU_abgeordnetenkammer^3 = HEU_abgeordnetenkammer_centre_temp
+			}
+		}
+		else = {
+			divide_temp_variable = {
+				HEU_abgeordnetenkammer_centre_temp = 2
+			}
+			multiply_temp_variable = {
+				HEU_abgeordnetenkammer_centre_temp = -1
+			}
+			add_to_variable = {
+				HEU_abgeordnetenkammer^1 = HEU_abgeordnetenkammer_centre_temp
+			}
+			add_to_variable = {
+				HEU_abgeordnetenkammer^3 = HEU_abgeordnetenkammer_centre_temp
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				target = 4
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = HEU_add_rikuhachima_faction
+			}
+			divide_temp_variable = {
+				HEU_abgeordnetenkammer_left_temp = 2
+			}
+			multiply_temp_variable = {
+				HEU_abgeordnetenkammer_left_temp = -1
+			}
+			add_to_variable = {
+				HEU_abgeordnetenkammer^0 = HEU_abgeordnetenkammer_left_temp
+			}
+			add_to_variable = {
+				HEU_abgeordnetenkammer^2 = HEU_abgeordnetenkammer_left_temp
+			}
+		}
+		else = {
+			divide_temp_variable = {
+				HEU_abgeordnetenkammer_left_temp = 2
+			}
+			multiply_temp_variable = {
+				HEU_abgeordnetenkammer_left_temp = -1
+			}
+			add_to_variable = {
+				HEU_abgeordnetenkammer^1 = HEU_abgeordnetenkammer_left_temp
+			}
+			add_to_variable = {
+				HEU_abgeordnetenkammer^2 = HEU_abgeordnetenkammer_left_temp
+			}
+		}
+	}
+	set_temp_variable = {
+		total_popularity = 0
+	}
+	clamp_variable = {
+		var = HEU_abgeordnetenkammer^0
+		min = 0
+		max = 1
+	}
+	add_to_temp_variable = {
+		total_popularity = HEU_abgeordnetenkammer^0
+	}
+	clamp_variable = {
+		var = HEU_abgeordnetenkammer^1
+		min = 0
+		max = 1
+	}
+	add_to_temp_variable = {
+		total_popularity = HEU_abgeordnetenkammer^1
+	}
+	clamp_variable = {
+		var = HEU_abgeordnetenkammer^2
+		min = 0
+		max = 1
+	}
+	add_to_temp_variable = {
+		total_popularity = HEU_abgeordnetenkammer^2
+	}
+	clamp_variable = {
+		var = HEU_abgeordnetenkammer^3
+		min = 0
+		max = 1
+	}
+	add_to_temp_variable = {
+		total_popularity = HEU_abgeordnetenkammer^3
+	}
+	if = {
+		limit = {
+			check_variable = {
+				total_popularity > 1
+			}
+		}
+		subtract_from_temp_variable = {
+			total_popularity = 1
+		}
+		hidden_effect = {
+			random_list = {
+				10 = {
+					modifier = {
+						factor = 0
+						OR = {
+							check_variable = {
+								target_var_temp = 1
+							}
+							check_variable = {
+								HEU_abgeordnetenkammer^0 < total_popularity
+							}
+							has_country_flag = HEU_add_rikuhachima_faction
+						}
+					}
+					modifier = {
+						factor = 2
+						check_variable = {
+							HEU_abgeordnetenkammer^0 > HEU_abgeordnetenkammer^1
+						}
+						check_variable = {
+							HEU_abgeordnetenkammer^0 > HEU_abgeordnetenkammer^2
+						}
+						check_variable = {
+							HEU_abgeordnetenkammer^0 > HEU_abgeordnetenkammer^3
+						}
+					}
+					subtract_from_variable = {
+						HEU_abgeordnetenkammer^0 = total_popularity
+					}
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						OR = {
+							check_variable = {
+								target_var_temp = 2
+							}
+							check_variable = {
+								HEU_abgeordnetenkammer^1 < total_popularity
+							}
+						}
+					}
+					modifier = {
+						factor = 2
+						check_variable = {
+							HEU_abgeordnetenkammer^1 > HEU_abgeordnetenkammer^0
+						}
+						check_variable = {
+							HEU_abgeordnetenkammer^1 > HEU_abgeordnetenkammer^2
+						}
+						check_variable = {
+							HEU_abgeordnetenkammer^1 > HEU_abgeordnetenkammer^3
+						}
+					}
+					subtract_from_variable = {
+						HEU_abgeordnetenkammer^1 = total_popularity
+					}
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						OR = {
+							check_variable = {
+								target_var_temp = 3
+							}
+							check_variable = {
+								HEU_abgeordnetenkammer^2 < total_popularity
+							}
+						}
+					}
+					modifier = {
+						factor = 2
+						check_variable = {
+							HEU_abgeordnetenkammer^2 > HEU_abgeordnetenkammer^0
+						}
+						check_variable = {
+							HEU_abgeordnetenkammer^2 > HEU_abgeordnetenkammer^1
+						}
+						check_variable = {
+							HEU_abgeordnetenkammer^2 > HEU_abgeordnetenkammer^3
+						}
+					}
+					subtract_from_variable = {
+						HEU_abgeordnetenkammer^2 = total_popularity
+					}
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						OR = {
+							check_variable = {
+								target_var_temp = 4
+							}
+							check_variable = {
+								HEU_abgeordnetenkammer^3 < total_popularity
+							}
+						}
+					}
+					modifier = {
+						factor = 2
+						check_variable = {
+							HEU_abgeordnetenkammer^3 > HEU_abgeordnetenkammer^0
+						}
+						check_variable = {
+							HEU_abgeordnetenkammer^3 > HEU_abgeordnetenkammer^1
+						}
+						check_variable = {
+							HEU_abgeordnetenkammer^3 > HEU_abgeordnetenkammer^2
+						}
+					}
+					subtract_from_variable = {
+						HEU_abgeordnetenkammer^3 = total_popularity
+					}
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				total_popularity < 1
+			}
+		}
+		subtract_from_temp_variable = {
+			total_popularity = 1
+		}
+		multiply_temp_variable = {
+			total_popularity = -1
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = HEU_add_rikuhachima_faction
+				}
+				random_list = {
+					10 = {
+						modifier = {
+							factor = 0
+							check_variable = {
+								target_var_temp = 1
+							}
+						}
+						modifier = {
+							factor = 2
+							check_variable = {
+								HEU_abgeordnetenkammer^0 < HEU_abgeordnetenkammer^2
+							}
+							check_variable = {
+								HEU_abgeordnetenkammer^0 < HEU_abgeordnetenkammer^3
+							}
+						}
+						add_to_variable = {
+							HEU_abgeordnetenkammer^0 = total_popularity
+						}
+					}
+					10 = {
+						modifier = {
+							factor = 0
+							check_variable = {
+								target_var_temp = 3
+							}
+						}
+						modifier = {
+							factor = 2
+							check_variable = {
+								HEU_abgeordnetenkammer^2 < HEU_abgeordnetenkammer^0
+							}
+							check_variable = {
+								HEU_abgeordnetenkammer^2 < HEU_abgeordnetenkammer^3
+							}
+						}
+						add_to_variable = {
+							HEU_abgeordnetenkammer^2 = total_popularity
+						}
+					}
+					10 = {
+						modifier = {
+							factor = 0
+							check_variable = {
+								target_var_temp = 4
+							}
+						}
+						modifier = {
+							factor = 2
+							check_variable = {
+								HEU_abgeordnetenkammer^3 < HEU_abgeordnetenkammer^0
+							}
+							check_variable = {
+								HEU_abgeordnetenkammer^3 < HEU_abgeordnetenkammer^2
+							}
+						}
+						add_to_variable = {
+							HEU_abgeordnetenkammer^3 = total_popularity
+						}
+					}
+				}
+			}
+			else = {
+				random_list = {
+					10 = {
+						modifier = {
+							factor = 0
+							check_variable = {
+								target_var_temp = 2
+							}
+						}
+						modifier = {
+							factor = 2
+							check_variable = {
+								HEU_abgeordnetenkammer^1 < HEU_abgeordnetenkammer^2
+							}
+							check_variable = {
+								HEU_abgeordnetenkammer^1 < HEU_abgeordnetenkammer^3
+							}
+						}
+						add_to_variable = {
+							HEU_abgeordnetenkammer^1 = total_popularity
+						}
+					}
+					10 = {
+						modifier = {
+							factor = 0
+							check_variable = {
+								target_var_temp = 3
+							}
+						}
+						modifier = {
+							factor = 2
+							check_variable = {
+								HEU_abgeordnetenkammer^2 < HEU_abgeordnetenkammer^1
+							}
+							check_variable = {
+								HEU_abgeordnetenkammer^2 < HEU_abgeordnetenkammer^3
+							}
+						}
+						add_to_variable = {
+							HEU_abgeordnetenkammer^2 = total_popularity
+						}
+					}
+					10 = {
+						modifier = {
+							factor = 0
+							check_variable = {
+								target_var_temp = 4
+							}
+						}
+						modifier = {
+							factor = 2
+							check_variable = {
+								HEU_abgeordnetenkammer^3 < HEU_abgeordnetenkammer^1
+							}
+							check_variable = {
+								HEU_abgeordnetenkammer^3 < HEU_abgeordnetenkammer^2
+							}
+						}
+						add_to_variable = {
+							HEU_abgeordnetenkammer^3 = total_popularity
+						}
+					}
+				}
+			}
+		}
+	}
+	HEU_parties_modifier_effect = yes
+}
+
+HEU_add_influence_kivotos_party = {
+	custom_effect_tooltip = HEU_add_influence_kivotos_party_tt
+	set_temp_variable = {
+		target = 1
+	}
+	add_to_variable = {
+		var = HEU_abgeordnetenkammer^0
+		value = HEU_abgeordnetenkammer_kivotos_temp
+	}
+	HEU_parties_setting_system = yes
+}
+
+HEU_add_influence_right_party = {
+	custom_effect_tooltip = HEU_add_influence_right_party_tt
+	set_temp_variable = {
+		target = 2
+	}
+	add_to_variable = {
+		var = HEU_abgeordnetenkammer^1
+		value = HEU_abgeordnetenkammer_right_temp
+	}
+	HEU_parties_setting_system = yes
+}
+
+HEU_add_influence_centre_party = {
+	custom_effect_tooltip = HEU_add_influence_centre_party_tt
+	set_temp_variable = {
+		target = 3
+	}
+	add_to_variable = {
+		var = HEU_abgeordnetenkammer^2
+		value = HEU_abgeordnetenkammer_centre_temp
+	}
+	HEU_parties_setting_system = yes
+}
+
+HEU_add_influence_left_party = {
+	custom_effect_tooltip = HEU_add_influence_left_party_tt
+	set_temp_variable = {
+		target = 4
+	}
+	add_to_variable = {
+		var = HEU_abgeordnetenkammer^3
+		value = HEU_abgeordnetenkammer_left_temp
+	}
+	HEU_parties_setting_system = yes
+}
+
+add_kivotos_party_effect = {
+
+	set_temp_variable = {
+		total_popularity = 0
+	}
+	clamp_variable = {
+		var = HEU_abgeordnetenkammer^0
+		min = 0
+		max = 1
+	}
+	add_to_temp_variable = {
+		total_popularity = HEU_abgeordnetenkammer^0
+	}
+	clamp_variable = {
+		var = HEU_abgeordnetenkammer^1
+		min = 0
+		max = 1
+	}
+	add_to_temp_variable = {
+		total_popularity = HEU_abgeordnetenkammer^1
+	}
+	clamp_variable = {
+		var = HEU_abgeordnetenkammer^2
+		min = 0
+		max = 1
+	}
+	add_to_temp_variable = {
+		total_popularity = HEU_abgeordnetenkammer^2
+	}
+	clamp_variable = {
+		var = HEU_abgeordnetenkammer^3
+		min = 0
+		max = 1
+	}
+	add_to_temp_variable = {
+		total_popularity = HEU_abgeordnetenkammer^3
+	}
+
+	while_loop_effect = {
+		limit = { 
+			#check_variable = { total_popularity < 1.01 } 
+			check_variable = { moving_point > 0 } 
+		}
+		random_list = {
+			1 = {
+				modifier = {
+					factor = 0
+					check_variable = {
+						HEU_abgeordnetenkammer^2 < 0.01
+					}
+				}
+				subtract_from_temp_variable = { HEU_abgeordnetenkammer^2 = 0.01 }
+				add_to_variable = { HEU_abgeordnetenkammer^0 = 0.01 }
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					check_variable = {
+						HEU_abgeordnetenkammer^3 < 0.01
+					}
+				}
+				subtract_from_temp_variable = { HEU_abgeordnetenkammer^3 = 0.01 }
+				add_to_variable = { HEU_abgeordnetenkammer^0 = 0.01 }
+			}
+		}
+		subtract_from_temp_variable = { moving_point = 0.01 }
+	}
+	HEU_parties_modifier_effect = yes
+}
+
+add_right_party_effect = {
+
+	set_temp_variable = {
+		total_popularity = 0
+	}
+	clamp_variable = {
+		var = HEU_abgeordnetenkammer^0
+		min = 0
+		max = 1
+	}
+	add_to_temp_variable = {
+		total_popularity = HEU_abgeordnetenkammer^0
+	}
+	clamp_variable = {
+		var = HEU_abgeordnetenkammer^1
+		min = 0
+		max = 1
+	}
+	add_to_temp_variable = {
+		total_popularity = HEU_abgeordnetenkammer^1
+	}
+	clamp_variable = {
+		var = HEU_abgeordnetenkammer^2
+		min = 0
+		max = 1
+	}
+	add_to_temp_variable = {
+		total_popularity = HEU_abgeordnetenkammer^2
+	}
+	clamp_variable = {
+		var = HEU_abgeordnetenkammer^3
+		min = 0
+		max = 1
+	}
+	add_to_temp_variable = {
+		total_popularity = HEU_abgeordnetenkammer^3
+	}
+
+	while_loop_effect = {
+		limit = { 
+			check_variable = { total_popularity < 1 } 
+			check_variable = { moving_point > 0 } 
+		}
+		random_list = {
+			1 = {
+				modifier = {
+					factor = 0
+					check_variable = {
+						HEU_abgeordnetenkammer^2 < 0.01
+					}
+				}
+				subtract_from_temp_variable = { HEU_abgeordnetenkammer^2 = 0.01 }
+				add_to_variable = { HEU_abgeordnetenkammer^1 = 0.01 }
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					check_variable = {
+						HEU_abgeordnetenkammer^3 < 0.01
+					}
+				}
+				subtract_from_temp_variable = { HEU_abgeordnetenkammer^3 = 0.01 }
+				add_to_variable = { HEU_abgeordnetenkammer^1 = 0.01 }
+			}
+		}
+		subtract_from_temp_variable = { moving_point = 0.01 }
+	}
+	HEU_parties_modifier_effect = yes
+}

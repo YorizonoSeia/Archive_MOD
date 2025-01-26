@@ -1170,7 +1170,7 @@ ideas = {
 		
 		HEU_stasi = { #슈타지
 
-			picture = GFX_idea_generic_spy_intel
+			picture = generic_spy_intel
 
 			allowed = {
 				original_tag = HEU
@@ -1217,7 +1217,7 @@ ideas = {
 		HEU_way_to_forgiveness_1 = { #추모공원 성공 (현지인 지지 <5)
 			name = HEU_way_to_forgiveness
 
-			picture = BEL_legacy_of_the_great_war
+			picture = BEL_scars_of_ww1
 
 			allowed = {
 				original_tag = HEU
@@ -1239,7 +1239,7 @@ ideas = {
 		HEU_way_to_forgiveness_2 = { #추모공원 성공 (현지인 지지 6)
 			name = HEU_way_to_forgiveness
 
-			picture = BEL_legacy_of_the_great_war
+			picture = BEL_scars_of_ww1
 
 			allowed = {
 				original_tag = HEU
@@ -1262,7 +1262,7 @@ ideas = {
 		HEU_way_to_forgiveness_3 = { #추모공원 성공 (현지인 지지 7-8)
 			name = HEU_way_to_forgiveness
 
-			picture = BEL_legacy_of_the_great_war
+			picture = BEL_scars_of_ww1
 
 			allowed = {
 				original_tag = HEU
@@ -1286,7 +1286,7 @@ ideas = {
 		HEU_way_to_forgiveness_4 = { #추모공원 성공 (현지인 지지 9 이상)
 			name = HEU_way_to_forgiveness
 
-			picture = BEL_legacy_of_the_great_war
+			picture = BEL_scars_of_ww1
 
 			allowed = {
 				original_tag = HEU
@@ -1336,6 +1336,26 @@ ideas = {
 			
 			rule = {
 				can_send_volunteers = yes
+			}
+		}
+		
+		HEU_healing_depression = {
+
+			picture = generic_democratic_opposition
+
+			allowed = {
+				original_tag = HEU
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.1
 			}
 		}
 	}

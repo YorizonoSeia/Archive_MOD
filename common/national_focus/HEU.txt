@@ -145,9 +145,12 @@ focus_tree = {
 			focus = HEU_watch_right_wing_party
 		}
 
-
 		ai_will_do = {
-			factor = 10
+			factor = 7
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes 
+			}
 		}
 
 		select_effect = {
@@ -160,10 +163,7 @@ focus_tree = {
 		y = 1
 
 		available = { 
-            custom_trigger_tooltip = {
-                tooltip = THIS_IS_WIP_TT
-			    has_country_flag = GAEBALJUNG
-            }
+
 		}
 
 		bypass = {
@@ -472,6 +472,10 @@ focus_tree = {
 
 			hidden_effect = {
 
+				add_dynamic_modifier = {
+					modifier = HEU_abgeordnetenkammer_dynamic_modifier
+				}
+
 				if = {
 					limit = {
 						HEU_aru = {
@@ -509,6 +513,7 @@ focus_tree = {
 				country_event = { id = HEU.flavor_event.35 days = 30 random_days = 30 }
 				country_event = { id = HEU.flavor_event.37 days = 60 random_days = 30 }
 				country_event = { id = HEU.flavor_event.39 days = 21 random_days = 14 }
+				country_event = { id = HEU.flavor_event.65 days = 60 random_days = 60 }
 			}
 		}
 	}
@@ -541,6 +546,12 @@ focus_tree = {
 			add_research_slot = 1
 			HEU_bop_medium_increase_effect = yes
 			country_event = { id = HEU.flavor_event.38 }
+			
+			set_temp_variable = { 
+				var = HEU_abgeordnetenkammer_left_temp
+				value = 0.05
+			} 
+			HEU_add_influence_left_party = yes
 		}
 	}
 	
@@ -635,6 +646,28 @@ focus_tree = {
 			factor = 10
 		}
 
+		available = {
+            custom_trigger_tooltip = {
+                tooltip = HEU_aru_health_2_tt
+			    HEU_aru = {
+					NOT = { has_trait = unconscious }
+				}
+            }
+		}
+
+		bypass = {
+
+		}
+
+		cancel = {
+            custom_trigger_tooltip = {
+                tooltip = HEU_aru_health_tt
+			    HEU_aru = {
+					has_trait = unconscious
+				}
+            }
+		}
+
 		search_filters = {  }
 
 		cost = 5.00
@@ -645,6 +678,8 @@ focus_tree = {
 		search_filters = {  }
 
 		completion_reward = {
+			country_event = { id = HEU_event.254 }
+
 		    set_rule = { can_generate_female_aces = yes }
 			
 			custom_effect_tooltip = HEU_modify_luxembourgism_intro
@@ -695,6 +730,10 @@ focus_tree = {
 			add_to_variable = {
 				HEU_aru_var_non_core_manpower = 0.01
 				tooltip = non_core_manpower_factor_tt
+			}
+			
+			hidden_effect = {
+				country_event = { id = HEU_event.249 }
 			}
 		}
 	}
@@ -802,11 +841,25 @@ focus_tree = {
 		y = 1
 
 		available = {
-
+            custom_trigger_tooltip = {
+                tooltip = HEU_aru_health_2_tt
+			    HEU_aru = {
+					NOT = { has_trait = unconscious }
+				}
+            }
 		}
 
 		bypass = {
 
+		}
+
+		cancel = {
+            custom_trigger_tooltip = {
+                tooltip = HEU_aru_health_tt
+			    HEU_aru = {
+					has_trait = unconscious
+				}
+            }
 		}
 
 		completion_reward = {
@@ -814,6 +867,10 @@ focus_tree = {
 			add_to_variable = {
 				HEU_aru_var_communism_drift = 0.05
 				tooltip = communism_drift_factor_tt
+			}
+
+			hidden_effect = {
+				country_event = { id = HEU_event.248 }
 			}
 		}
 	}
@@ -846,11 +903,24 @@ focus_tree = {
 		y = 1
 
 		available = {
-
+            custom_trigger_tooltip = {
+                tooltip = HEU_aru_health_2_tt
+			    HEU_aru = {
+					NOT = { has_trait = unconscious }
+				}
+            }
 		}
 
 		bypass = {
 
+		}
+		cancel = {
+            custom_trigger_tooltip = {
+                tooltip = HEU_aru_health_tt
+			    HEU_aru = {
+					has_trait = unconscious
+				}
+            }
 		}
 
 		completion_reward = {
@@ -892,11 +962,24 @@ focus_tree = {
 		y = 1
 
 		available = {
-
+            custom_trigger_tooltip = {
+                tooltip = HEU_aru_health_2_tt
+			    HEU_aru = {
+					NOT = { has_trait = unconscious }
+				}
+            }
 		}
 
 		bypass = {
 
+		}
+		cancel = {
+            custom_trigger_tooltip = {
+                tooltip = HEU_aru_health_tt
+			    HEU_aru = {
+					has_trait = unconscious
+				}
+            }
 		}
 
 		completion_reward = {
@@ -939,11 +1022,24 @@ focus_tree = {
 		y = 2
 
 		available = {
-
+            custom_trigger_tooltip = {
+                tooltip = HEU_aru_health_2_tt
+			    HEU_aru = {
+					NOT = { has_trait = unconscious }
+				}
+            }
 		}
 
 		bypass = {
 
+		}
+		cancel = {
+            custom_trigger_tooltip = {
+                tooltip = HEU_aru_health_tt
+			    HEU_aru = {
+					has_trait = unconscious
+				}
+            }
 		}
 
 		completion_reward = {
@@ -983,11 +1079,24 @@ focus_tree = {
 		y = 3
 
 		available = {
-
+            custom_trigger_tooltip = {
+                tooltip = HEU_aru_health_2_tt
+			    HEU_aru = {
+					NOT = { has_trait = unconscious }
+				}
+            }
 		}
 
 		bypass = {
 
+		}
+		cancel = {
+            custom_trigger_tooltip = {
+                tooltip = HEU_aru_health_tt
+			    HEU_aru = {
+					has_trait = unconscious
+				}
+            }
 		}
 
 		completion_reward = {
@@ -1001,6 +1110,10 @@ focus_tree = {
 			add_to_variable = {
 				HEU_aru_var_non_core_manpower = 0.02
 				tooltip = non_core_manpower_factor_tt
+			}
+
+			hidden_effect = {
+				country_event = { id = HEU_event.251 }
 			}
 		}
 	}
@@ -1032,15 +1145,56 @@ focus_tree = {
 		y = 4
 
 		available = {
-
+            custom_trigger_tooltip = {
+                tooltip = HEU_aru_health_2_tt
+			    HEU_aru = {
+					NOT = { has_trait = unconscious }
+				}
+            }
 		}
 
 		bypass = {
 
 		}
 
+		cancel = {
+            custom_trigger_tooltip = {
+                tooltip = HEU_aru_health_tt
+			    HEU_aru = {
+					has_trait = unconscious
+				}
+            }
+		}
+
 		completion_reward = {
 
+			custom_effect_tooltip = HEU_for_you_3_tt
+
+			hidden_effect = {
+
+				add_to_variable = {
+					HEU_abgeordnetenkammer^2 = HEU_abgeordnetenkammer^1
+				}
+				
+				set_variable = {
+					HEU_abgeordnetenkammer^1 = 0
+				}
+	
+				HEU_parties_modifier_effect = yes
+				
+				country_event = { id = HEU_event.247 }
+				set_party_name = {
+					ideology = communism
+					long_name = HEU_grand_coalition_party_long_2
+					name = HEU_grand_coalition_party 
+				}
+				#HEU_parties_modifier_effect = yes
+			}
+			
+			add_research_slot = 1
+
+			set_country_flag = HEU_banish_right
+			set_country_flag = HEU_add_rikuhachima_faction
 		}
 	}
 
@@ -1117,10 +1271,10 @@ focus_tree = {
 		y = 2
 
 		available = {
-			#is_power_balance_in_range = {
-			#	id = HEU_power_balance
-			#	range < HEU_hard_boiled_side_low
-			#}
+            custom_trigger_tooltip = {
+                tooltip = THIS_IS_WIP_TT
+			    has_country_flag = GAEBALJUNG
+            }
 		}
 
 		bypass = {
@@ -1420,6 +1574,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = HEU_progressive_conservatism
+			add_research_slot = 1
 		}
 	}
 
@@ -1514,6 +1669,7 @@ focus_tree = {
 				tooltip = conscription_factor_tt
 			}
 
+			add_research_slot = 1
 		}
 	}
 
@@ -1870,6 +2026,9 @@ focus_tree = {
 						has_completed_focus = HEU_we_still_hope
 					}
 					country_event = { id = HEU.flavor_event.45 }
+					country_event = { id = HEU.flavor_event.62 days = 14 }
+					country_event = { id = HEU.flavor_event.63 days = 28 }
+					country_event = { id = HEU.flavor_event.64 days = 42 }
 				}
 
 				GEM = { 
@@ -2168,8 +2327,11 @@ focus_tree = {
 		}	
 
 		bypass = {
-			TRM = {
-				exists = no
+			OR = {
+				TRM = {
+					exists = no
+				}
+				has_war_with = TRM
 			}
 		}
 
@@ -3859,10 +4021,26 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 3
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_core_state = {
+				limit = {
+					is_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
 					instant_build = yes
 				}
 			}

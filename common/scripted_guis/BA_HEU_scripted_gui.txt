@@ -15,40 +15,32 @@ scripted_gui = {
 		}
 
 		triggers = {
-			benriya_right_text_1_visible = {
+			benriya_right_text_visible = {
 				NOT = {
 					HEU = {
 						has_country_flag = HEU_banish_right
 					}
 				}
 			}
-			benriya_right_text_2_visible = {
+			benriya_kivotos_text_visible = {
 				HEU = {
 					has_country_flag = HEU_add_rikuhachima_faction
 				}
 			}
-			benriya_centre_text_1_visible = {
+
+			benriya_centre_text_visible = {
 				NOT = {
 					HEU = {
 						has_country_flag = HEU_banish_centre
 					}
 				}
 			}
-			benriya_centre_text_2_visible = {
-				HEU = {
-					has_country_flag = HEU_add_rikuhachima_faction
-				}
-			}
-			benriya_left_text_1_visible = {
+
+			benriya_left_text_visible = {
 				NOT = {
 					HEU = {
 						has_country_flag = HEU_banish_left
 					}
-				}
-			}
-			benriya_left_text_2_visible = {
-				HEU = {
-					has_country_flag = HEU_add_rikuhachima_faction
 				}
 			}
 		}
