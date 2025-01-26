@@ -2939,6 +2939,10 @@ country_event = { #베네룩스 동맹의 제안
 		HEU = {
 			add_to_faction = ROOT
 		}
+
+		HEU = {
+			country_event = { id = HEU_event.252 }
+		}
 	}
 
 	option = {
@@ -2969,6 +2973,10 @@ country_event = { #[FROM.GetName]의 코민테른 가입 제안
 
 		set_global_flag = HEU_join_comintern
 		add_to_faction = HEU
+
+		HEU = {
+			country_event = { id = HEU_event.252 }
+		}
 	}
 
 	option = {
@@ -3008,6 +3016,10 @@ country_event = { #[FROM.GetName]의 동맹 가입 제안
 		}
 
 		add_to_faction = HEU
+
+		HEU = {
+			country_event = { id = HEU_event.252 }
+		}
 
 	}
 
@@ -3069,7 +3081,21 @@ country_event = { #[FROM.GetName]의 지원
 		ai_chance = {
 			base = 10
 		}
-
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 1000
+			producer = FROM
+		}
+		add_equipment_to_stockpile = {
+			type = support_equipment
+			amount = 500
+			producer = FROM
+		}
+		add_equipment_to_stockpile = {
+			type = artillery_equipment
+			amount = 100
+			producer = FROM
+		}
 	}
 }
 

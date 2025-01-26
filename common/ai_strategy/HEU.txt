@@ -316,3 +316,434 @@ HEU_befriend_HEU_other = {
         value = 50
     }
 }
+
+HEU_befriend_HEU_USA_CAN_A = {
+
+    allowed = {
+        OR = {
+            original_tag = USA
+            original_tag = CAN
+        }
+    }
+
+    enable = {
+        AND = {
+            has_global_flag = HEU_join_allied
+            is_in_faction_with = HEU
+        }
+    }
+
+    abort_when_not_enabled = yes
+
+    ai_strategy = {
+        type = alliance
+        id = "HEU"
+        value = 1000
+    }
+
+    ai_strategy = {
+        type = befriend
+        id = "HEU"
+        value = 20
+    }
+
+    ai_strategy = {
+        type = protect
+        id = "HEU"
+        value = 200
+    }
+
+    ai_strategy = {
+        type = support
+        id = "HEU"
+        value = 100
+    }
+}
+
+HEU_befriend_HEU_USA_CAN_B = {
+
+    allowed = {
+        original_tag = HEU
+    }
+
+    enable = {
+        OR = {
+            AND = {
+                has_global_flag = HEU_join_allied
+                is_in_faction_with = CAN
+            }
+            AND = {
+                has_global_flag = HEU_join_allied
+                is_in_faction_with = USA
+            }
+        }
+    }
+
+    abort_when_not_enabled = yes
+
+    ai_strategy = {
+        type = alliance
+        id = "CAN"
+        value = 1000
+    }
+
+    ai_strategy = {
+        type = befriend
+        id = "CAN"
+        value = 20
+    }
+
+    ai_strategy = {
+        type = alliance
+        id = "USA"
+        value = 1000
+    }
+
+    ai_strategy = {
+        type = befriend
+        id = "USA"
+        value = 20
+    }
+
+}
+
+HEU_befriend_HEU_ITA_A = {
+
+    allowed = {
+        original_tag = ITA
+    }
+
+    enable = {
+        AND = {
+            has_global_flag = HEU_join_rome
+            is_in_faction_with = HEU
+        }
+    }
+
+    abort_when_not_enabled = yes
+
+    ai_strategy = {
+        type = alliance
+        id = "HEU"
+        value = 1000
+    }
+
+    ai_strategy = {
+        type = befriend
+        id = "HEU"
+        value = 20
+    }
+
+    ai_strategy = {
+        type = protect
+        id = "HEU"
+        value = 200
+    }
+
+    ai_strategy = {
+        type = support
+        id = "HEU"
+        value = 100
+    }
+}
+
+HEU_befriend_HEU_ITA_B = {
+
+    allowed = {
+        original_tag = HEU
+    }
+
+    enable = {
+        AND = {
+            has_global_flag = HEU_join_rome
+            is_in_faction_with = ITA
+        }
+    }
+
+    abort_when_not_enabled = yes
+
+    ai_strategy = {
+        type = alliance
+        id = "ITA"
+        value = 1000
+    }
+
+    ai_strategy = {
+        type = befriend
+        id = "ITA"
+        value = 20
+    }
+
+}
+
+HEU_befriend_HEU_SOV_A = {
+
+    allowed = {
+        original_tag = SOV
+    }
+
+    enable = {
+        AND = {
+            has_global_flag = HEU_join_comintern
+            is_in_faction_with = HEU
+        }
+    }
+
+    abort_when_not_enabled = yes
+
+    ai_strategy = {
+        type = alliance
+        id = "HEU"
+        value = 1000
+    }
+
+    ai_strategy = {
+        type = befriend
+        id = "HEU"
+        value = 20
+    }
+
+    ai_strategy = {
+        type = protect
+        id = "HEU"
+        value = 200
+    }
+
+    ai_strategy = {
+        type = support
+        id = "HEU"
+        value = 100
+    }
+}
+
+HEU_befriend_HEU_SOV_B = {
+
+    allowed = {
+        original_tag = HEU
+    }
+
+    enable = {
+        AND = {
+            has_global_flag = HEU_join_comintern
+            is_in_faction_with = SOV
+        }
+    }
+
+    abort_when_not_enabled = yes
+
+    ai_strategy = {
+        type = alliance
+        id = "SOV"
+        value = 1000
+    }
+
+    ai_strategy = {
+        type = befriend
+        id = "SOV"
+        value = 20
+    }
+
+}
+
+HEU_befriend_HEU_benelux_A = {
+
+    allowed = {
+        OR = {
+            original_tag = HOL
+            original_tag = BEL
+        }
+    }
+
+    enable = {
+        AND = {
+            has_global_flag = HEU_join_benelux
+            is_in_faction_with = HEU
+        }
+    }
+
+    abort_when_not_enabled = yes
+
+    ai_strategy = {
+        type = alliance
+        id = "HEU"
+        value = 1000
+    }
+
+    ai_strategy = {
+        type = befriend
+        id = "HEU"
+        value = 20
+    }
+
+    ai_strategy = {
+        type = protect
+        id = "HEU"
+        value = 200
+    }
+
+    ai_strategy = {
+        type = support
+        id = "HEU"
+        value = 100
+    }
+}
+
+HEU_befriend_HEU_ABY_A = {
+
+    allowed = {
+        original_tag = ABY
+    }
+
+    enable = {
+        AND = {
+            has_global_flag = HEU_join_abydos
+            is_in_faction_with = HEU
+        }
+    }
+
+    abort_when_not_enabled = yes
+
+    ai_strategy = {
+        type = alliance
+        id = "HEU"
+        value = 1000
+    }
+
+    ai_strategy = {
+        type = befriend
+        id = "HEU"
+        value = 20
+    }
+
+    ai_strategy = {
+        type = protect
+        id = "HEU"
+        value = 200
+    }
+
+    ai_strategy = {
+        type = support
+        id = "HEU"
+        value = 100
+    }
+}
+
+HEU_befriend_HEU_ABY_B = {
+
+    allowed = {
+        original_tag = HEU
+    }
+
+    enable = {
+        AND = {
+            has_global_flag = HEU_join_abydos
+            is_in_faction_with = ABY
+        }
+    }
+
+    abort_when_not_enabled = yes
+
+    ai_strategy = {
+        type = alliance
+        id = "ABY"
+        value = 1000
+    }
+
+    ai_strategy = {
+        type = befriend
+        id = "ABY"
+        value = 20
+    }
+
+}
+
+HEU_befriend_HEU_benelux_B = {
+
+    allowed = {
+        original_tag = HEU
+    }
+
+    enable = {
+        OR = {
+            AND = {
+                has_global_flag = HEU_join_benelux
+                is_in_faction_with = HOL
+            }
+            AND = {
+                has_global_flag = HEU_join_benelux
+                is_in_faction_with = BEL
+            }
+        }
+    }
+
+    abort_when_not_enabled = yes
+
+    ai_strategy = {
+        type = alliance
+        id = "HOL"
+        value = 1000
+    }
+
+    ai_strategy = {
+        type = befriend
+        id = "HOL"
+        value = 20
+    }
+
+    ai_strategy = {
+        type = alliance
+        id = "BEL"
+        value = 1000
+    }
+
+    ai_strategy = {
+        type = befriend
+        id = "BEL"
+        value = 20
+    }
+
+}
+
+HEU_historical_befriend_benelux_A = {
+
+    allowed = {
+        original_tag = BEL
+    }
+
+    enable = {
+        NOT = {
+            has_war_with = HEU
+        }
+    }
+
+    abort_when_not_enabled = yes
+
+    ai_strategy = {
+        type = befriend
+        id = "HEU"
+        value = 20
+    }
+
+}
+
+HEU_historical_befriend_benelux_B = {
+
+    allowed = {
+        original_tag = HOL
+    }
+
+    enable = {
+        NOT = {
+            has_war_with = HEU
+        }
+    }
+
+    abort_when_not_enabled = yes
+
+    ai_strategy = {
+        type = befriend
+        id = "HEU"
+        value = 20
+    }
+
+}
