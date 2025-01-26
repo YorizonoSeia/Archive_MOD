@@ -375,6 +375,35 @@ ideas = {
 				production_speed_buildings_factor = -0.05
 			}
         }
+        USABA_famine_safe = {
+			picture = raj_risk_of_famine
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {
+				has_idea = USABA_famine
+			}
+
+			on_remove = {
+				if = { 
+					limit = {  }
+					country_event = usa_event.25
+				}
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+                political_power_cost = 0.10
+				custom_modifier_tooltip = USABA_famine_safe_tt
+			}
+        }
         USABA_famine = {
 			picture = raj_risk_of_famine
 			

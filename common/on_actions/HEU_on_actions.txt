@@ -1,4 +1,26 @@
 on_actions = {
+
+	on_startup = {
+		effect = {
+			every_country = {
+				if = {
+					limit = { tag = HEU }
+
+					#룩셈부르크 의회
+					set_variable = { HEU_abgeordnetenkammer^0 = 0 } #연방생도당
+					set_variable = { HEU_abgeordnetenkammer^1 = 0.6 } #우파당
+					set_variable = { HEU_abgeordnetenkammer^2 = 0.3 } #급진자유당
+					set_variable = { HEU_abgeordnetenkammer^3 = 0.1 } #공산당
+					add_to_array = { HEU_council_factions = HEU_abgeordnetenkammer^0 }
+					add_to_array = { HEU_council_factions = HEU_abgeordnetenkammer^1 }
+					add_to_array = { HEU_council_factions = HEU_abgeordnetenkammer^2 }
+					add_to_array = { HEU_council_factions = HEU_abgeordnetenkammer^3 }
+					HEU_parties_modifier_effect = yes
+				}
+			}
+		}
+	}
+
 	on_puppet = {
 		effect = {
 			if = {

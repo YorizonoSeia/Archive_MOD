@@ -1143,4 +1143,34 @@ BA_storyarchive_openui_effects = {
 			story_archive_national_array = 2
 		}
 	}
+	if = {
+		# HEU 스토리 아카이브
+		# 조건에 맞춰서 array를 추가해주세요.
+		limit = {
+			original_tag = HEU
+			NOT = {
+				check_variable = {
+					story_archive_national_array^1 = 2
+				}
+			}
+		}
+		add_to_array = {
+			story_archive_national_array = 2
+		}
+	}
+	if = {
+		# HEU 스토리 아카이브
+		# 조건에 맞춰서 array를 추가해주세요.
+		limit = {
+			original_tag = HEU
+			NOT = {
+				check_variable = {
+					story_archive_national_array^2 = 2
+				}
+			}
+		}
+		add_to_array = {
+			story_archive_national_array = 2
+		}
+	}
 }

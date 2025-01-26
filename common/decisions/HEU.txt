@@ -549,6 +549,7 @@ HEU_aru_persona_decision_category = {
 				has_country_leader_with_trait = HEU_aru_depression_1
 				has_country_leader_with_trait = HEU_aru_depression_2
 			}
+			has_war = yes
 		}
 
 		ai_will_do = { 
@@ -2954,6 +2955,75 @@ HEU_problem_solver_68_decision_category = { #흥신소 68
 
 		fire_only_once = yes
 	}
+	
+	HEU_com_problem_solver_68_aru_proposal_mutsuki = {
+		icon = GFX_decision_Gehenna_Emblem
+
+		available = {
+		}
+		
+		visible = {
+			has_country_flag = HEU_hidden_communism_aru_marriage
+			has_completed_focus = HEU_rikuhachimaism_focus_5_2
+			has_completed_focus = HEU_rikuhachimaism_focus_mutsuki
+		}
+
+		ai_will_do = { base = 0 }
+
+		cost = 0
+
+		complete_effect = {
+			country_event = { id = HEU_event.250 }
+		}
+
+		fire_only_once = yes
+	}
+	
+	HEU_com_problem_solver_68_aru_proposal_kayoko = {
+		icon = GFX_decision_Gehenna_Emblem
+
+		available = {
+		}
+		
+		visible = {
+			has_country_flag = HEU_hidden_communism_aru_marriage
+			has_completed_focus = HEU_rikuhachimaism_focus_5_2
+			has_completed_focus = HEU_rikuhachimaism_focus_kayoko
+		}
+
+		ai_will_do = { base = 0 }
+
+		cost = 0
+
+		complete_effect = {
+			country_event = { id = HEU_event.250 }
+		}
+
+		fire_only_once = yes
+	}
+	
+	HEU_com_problem_solver_68_aru_proposal_haruka = {
+		icon = GFX_decision_Gehenna_Emblem
+
+		available = {
+		}
+		
+		visible = {
+			has_country_flag = HEU_hidden_communism_aru_marriage
+			has_completed_focus = HEU_rikuhachimaism_focus_5_2
+			has_completed_focus = HEU_rikuhachimaism_focus_haruka
+		}
+
+		ai_will_do = { base = 0 }
+
+		cost = 0
+
+		complete_effect = {
+			country_event = { id = HEU_event.250 }
+		}
+
+		fire_only_once = yes
+	}
 }
 
 HEU_aru_GSC_annex_decision_category = {
@@ -4143,12 +4213,24 @@ HEU_benriya_ally_decision_category = {
 		icon = GFX_decision_generic_military
 
 		available = {
-			CAN = {
-				is_faction_leader = yes
+			OR = {
+				AND = {
+					CAN = {
+						is_faction_leader = yes
+					}
+					NOT = { has_war_with = CAN }
+					has_global_flag = HEU_victory_west_germanic_union
+					CAN = { is_puppet = no }
+				}
+				AND = {
+					USA = {
+						is_faction_leader = yes
+					}
+					NOT = { has_war_with = USA }
+					has_global_flag = HEU_victory_west_germanic_union
+					USA = { is_puppet = no }
+				}
 			}
-			NOT = { has_war_with = CAN }
-			has_completed_focus = HEU_germany_union
-			CAN = { is_puppet = no }
 		}
 
 		visible = {
@@ -4156,12 +4238,31 @@ HEU_benriya_ally_decision_category = {
 			
 		}
 
-		ai_will_do = { base = 0 } #
+		ai_will_do = { base = 10 } #
 
 		cost = 0
 
 		complete_effect = {
-
+			if = {
+				limit = {
+					AND = {
+						CAN = {
+							is_faction_leader = yes
+						}
+						NOT = { has_war_with = CAN }
+						has_global_flag = HEU_victory_west_germanic_union
+						CAN = { is_puppet = no }
+					}
+				}
+				CAN = {
+					country_event = { id = HEU_event.216 }
+				}
+			}
+			else = {
+				USA = {
+					country_event = { id = HEU_event.218 }
+				}
+			}
 		}
 	}
 	
@@ -4211,7 +4312,7 @@ HEU_benriya_ally_decision_category = {
 			is_puppet = no
 		}
 
-		ai_will_do = { base = 0 } #
+		ai_will_do = { base = 20 } #
 
 		cost = 0
 
@@ -4229,7 +4330,7 @@ HEU_benriya_ally_decision_category = {
 				is_faction_leader = yes
 			}
 			NOT = { has_war_with = SOV }
-			has_completed_focus = HEU_germany_union
+			has_global_flag = HEU_victory_west_germanic_union
 			SOV = {
 				has_country_leader = {
 					character = SOV_iosif_stalin #오직 스탈린만
@@ -4247,12 +4348,14 @@ HEU_benriya_ally_decision_category = {
 			is_puppet = no
 		}
 
-		ai_will_do = { base = 0 } #
+		ai_will_do = { base = 30 } #
 
 		cost = 0
 
 		complete_effect = {
-
+			SOV = {
+				country_event = { id = HEU_event.218 }
+			}
 		}
 	}
 	
@@ -4267,7 +4370,7 @@ HEU_benriya_ally_decision_category = {
 			}
 			NOT = { has_war_with = HOL }
 			NOT = { has_war_with = BEL }
-			has_completed_focus = HEU_germany_union
+			has_global_flag = HEU_victory_west_germanic_union
 			OR = {		
 				HOL = { is_puppet = no }
 				BEL = { is_puppet = no }
@@ -4284,7 +4387,26 @@ HEU_benriya_ally_decision_category = {
 		cost = 0
 
 		complete_effect = {
-
+			if = {
+				limit = {
+					country_exists = HOL
+					NOT = { has_war_with = HOL }
+					HOL = { is_puppet = no }
+				}
+				HOL = {
+					country_event = { id = HEU_event.217 }
+				}
+			}
+			if = {
+				limit = {
+					country_exists = BEL
+					NOT = { has_war_with = BEL }
+					BEL = { is_puppet = no }
+				}
+				BEL = {
+					country_event = { id = HEU_event.217 }
+				}
+			}
 		}
 	}
 	
@@ -4295,7 +4417,7 @@ HEU_benriya_ally_decision_category = {
 		available = {
 			country_exists = ABY
 			NOT = { has_war_with = ABY }
-			has_completed_focus = HEU_germany_union
+			has_global_flag = HEU_victory_west_germanic_union
 			NOT = { 
 				ABY = { has_government = democratic }
 			}
@@ -4307,12 +4429,14 @@ HEU_benriya_ally_decision_category = {
 			is_puppet = no
 		}
 
-		ai_will_do = { base = 0 } #
+		ai_will_do = { base = 10 } #
 
 		cost = 0
 
 		complete_effect = {
-
+			ABY = {
+				country_event = { id = HEU_event.219 }
+			}
 		}
 	}
 
@@ -5315,6 +5439,655 @@ HEU_german_reunification_war_decision_category = {
 				country_event = { id = HEU.flavor_event.53 days = 21 }
 				country_event = { id = HEU.flavor_event.46 days = 30 }
 			}
+		}
+	}
+	
+	HEU_german_annex_core_elsass_lothringen_states = {
+		priority = 1
+
+		icon = GFX_decision_generic_nationalism
+
+		available = {
+			controls_state = 28
+			controls_state = 988
+		}
+
+		visible = {
+
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = { base = 100 } #
+
+		cost = 0
+
+		complete_effect = {
+			add_war_support = 0.03
+			add_state_core = 28
+			add_state_core = 988
+		}
+	}
+	
+	HEU_german_annex_core_holstein_states = {
+		priority = 1
+
+		icon = GFX_decision_generic_nationalism
+
+		available = {
+			controls_state = 909
+			controls_state = 58
+		}
+
+		visible = {
+
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = { base = 100 } #
+
+		cost = 0
+
+		complete_effect = {
+			add_war_support = 0.03
+			add_state_core = 909
+			add_state_core = 58
+		}
+	}
+	
+	HEU_german_annex_core_danzig_states = {
+		priority = 1
+
+		icon = GFX_decision_generic_nationalism
+
+		available = {
+			controls_state = 85
+		}
+
+		visible = {
+			NOT = { 85 = { is_core_of = HEU } }
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = { base = 100 } #
+
+		cost = 0
+
+		complete_effect = {
+			add_war_support = 0.03
+			add_state_core = 85
+		}
+	}
+
+}
+
+HEU_abgeordnetenkammer_decision_category = {
+
+#	HEU_abgeordnetenkammer_parties_modifier_effect = {
+#
+#		icon = GFX_decision_generic_train
+#
+#		visible = {
+#			is_debug = yes
+#		}
+#
+#		ai_will_do = { base = 0 } #
+#
+#		cost = 0
+#
+#		complete_effect = {
+#			HEU_parties_modifier_effect = yes
+#		}
+#
+#	}
+#
+#	HEU_abgeordnetenkammer_parties_modifier_setting_A_effect = {
+#
+#		icon = GFX_decision_generic_train
+#
+#		visible = {
+#			is_debug = yes
+#		}
+#
+#		ai_will_do = { base = 0 } #
+#
+#		cost = 0
+#
+#		complete_effect = {
+#			set_variable = { HEU_abgeordnetenkammer^0 = 0 } #연방생도당
+#			set_variable = { HEU_abgeordnetenkammer^1 = 0.4 } #우파당
+#			set_variable = { HEU_abgeordnetenkammer^2 = 0.4 } #급진자유당
+#			set_variable = { HEU_abgeordnetenkammer^3 = 0.2 } #공산당
+#			HEU_parties_modifier_effect = yes
+#		}
+#
+#	}
+#
+#	HEU_abgeordnetenkammer_parties_modifier_setting_B_effect = {
+#
+#		icon = GFX_decision_generic_train
+#
+#		visible = {
+#			is_debug = yes
+#		}
+#
+#		ai_will_do = { base = 0 } #
+#
+#		cost = 0
+#
+#		complete_effect = {
+#			set_variable = { HEU_abgeordnetenkammer^0 = 0 } #연방생도당
+#			set_variable = { HEU_abgeordnetenkammer^1 = 0.6 } #우파당
+#			set_variable = { HEU_abgeordnetenkammer^2 = 0.3 } #급진자유당
+#			set_variable = { HEU_abgeordnetenkammer^3 = 0.1 } #공산당
+#			HEU_parties_modifier_effect = yes
+#		}
+#
+#	}
+#
+#	HEU_abgeordnetenkammer_parties_modifier_add_kivotos_effect = {
+#
+#		icon = GFX_decision_generic_train
+#
+#		visible = {
+#			is_debug = yes
+#		}
+#
+#		ai_will_do = { base = 0 } #
+#
+#		cost = 0
+#
+#		complete_effect = {
+#			set_temp_variable = { 
+#				var = HEU_abgeordnetenkammer_kivotos_temp
+#				value = 0.05
+#			}
+#			HEU_add_influence_kivotos_party = yes
+#		}
+#
+#	}
+#
+#	HEU_abgeordnetenkammer_parties_modifier_add_right_effect = {
+#
+#		icon = GFX_decision_generic_train
+#
+#		visible = {
+#			is_debug = yes
+#		}
+#
+#		ai_will_do = { base = 0 } #
+#
+#		cost = 0
+#
+#		complete_effect = {
+#			set_temp_variable = { 
+#				var = HEU_abgeordnetenkammer_right_temp
+#				value = 0.05
+#			} #연방생도당
+#			HEU_add_influence_right_party = yes
+#		}
+#
+#	}
+#
+#	HEU_abgeordnetenkammer_parties_modifier_add_centre_effect = {
+#
+#		icon = GFX_decision_generic_train
+#
+#		visible = {
+#			is_debug = yes
+#		}
+#
+#		ai_will_do = { base = 0 } #
+#
+#		cost = 0
+#
+#		complete_effect = {
+#			set_temp_variable = { 
+#				var = HEU_abgeordnetenkammer_centre_temp
+#				value = 0.05
+#			} #연방생도당
+#			HEU_add_influence_centre_party = yes
+#		}
+#
+#	}
+#
+#	HEU_abgeordnetenkammer_parties_modifier_add_left_effect = {
+#
+#		icon = GFX_decision_generic_train
+#
+#		visible = {
+#			is_debug = yes
+#		}
+#
+#		ai_will_do = { base = 0 } #
+#
+#		cost = 0
+#
+#		complete_effect = {
+#			set_temp_variable = { 
+#				var = HEU_abgeordnetenkammer_left_temp
+#				value = 0.05
+#			} 
+#			HEU_add_influence_left_party = yes
+#		}
+#
+#	}
+
+	HEU_abgeordnetenkammer_promotion_kivotos_party = {
+
+		icon = GFX_decision_SWI_swiss_democratic_tradition_campaign
+
+		visible = {
+			has_country_flag = HEU_add_rikuhachima_faction
+		}
+
+		ai_will_do = { 
+			base = 0
+			modifier = {
+				add = 15
+				check_variable = { HEU_abgeordnetenkammer^0 < 0.3 }
+			}
+			modifier = {
+				add = 10
+				has_political_power > 200
+			}
+		}
+
+		cost = 25
+		
+		days_remove = 21
+
+		remove_effect = {
+			set_temp_variable = { 
+				var = HEU_abgeordnetenkammer_kivotos_temp
+				value = 0.05
+			}
+			HEU_add_influence_kivotos_party = yes
+		}
+
+		complete_effect = {
+
+		}
+
+	}
+
+	HEU_abgeordnetenkammer_promotion_right_party = {
+
+		icon = GFX_decision_SWI_swiss_democratic_tradition_campaign
+
+		visible = {
+			NOT = { has_country_flag = HEU_add_rikuhachima_faction }
+		}
+
+		ai_will_do = { 
+			base = 0
+			modifier = {
+				add = 15
+				check_variable = { HEU_abgeordnetenkammer^1 < 0.3 }
+			}
+			modifier = {
+				add = 10
+				has_political_power > 200
+			}
+		}
+
+		cost = 25
+		
+		days_remove = 21
+
+		remove_effect = {
+			set_temp_variable = { 
+				var = HEU_abgeordnetenkammer_right_temp
+				value = 0.05
+			}
+			HEU_add_influence_right_party = yes
+		}
+
+		complete_effect = {
+
+		}
+
+	}
+
+	HEU_abgeordnetenkammer_promotion_centre_party = {
+
+		icon = GFX_decision_SWI_swiss_democratic_tradition_campaign
+
+		visible = {
+
+		}
+
+		ai_will_do = { 
+			base = 0
+			modifier = {
+				add = 15
+				check_variable = { HEU_abgeordnetenkammer^2 < 0.3 }
+			}
+			modifier = {
+				add = 10
+				has_political_power > 200
+			}
+		}
+
+		cost = 25
+		
+		days_remove = 21
+
+		remove_effect = {
+			set_temp_variable = { 
+				var = HEU_abgeordnetenkammer_centre_temp
+				value = 0.05
+			}
+			HEU_add_influence_centre_party = yes
+		}
+
+		complete_effect = {
+
+		}
+
+	}
+
+	HEU_abgeordnetenkammer_promotion_left_party = {
+
+		icon = GFX_decision_SWI_swiss_democratic_tradition_campaign
+
+		visible = {
+
+		}
+
+		ai_will_do = { 
+			base = 0
+			modifier = {
+				add = 15
+				check_variable = { HEU_abgeordnetenkammer^3 < 0.3 }
+			}
+			modifier = {
+				add = 10
+				has_political_power > 200
+			}
+		}
+
+		cost = 25
+		
+		days_remove = 21
+
+		remove_effect = {
+			set_temp_variable = { 
+				var = HEU_abgeordnetenkammer_left_temp
+				value = 0.05
+			} 
+			HEU_add_influence_left_party = yes
+		}
+
+		complete_effect = {
+
+		}
+
+	}
+
+	HEU_abgeordnetenkammer_skill_1_kivotos_party = {
+
+		icon = GFX_decision_generic_operation
+
+		visible = {
+			check_variable = { HEU_abgeordnetenkammer^0 > 0.2 }
+		}
+
+		ai_will_do = { 
+			base = 0
+			modifier = {
+				add = 10
+				has_political_power > 200
+			}
+		}
+
+		cost = 75
+		
+		days_remove = 100
+
+		remove_effect = {
+
+		}
+
+		complete_effect = {
+
+		}
+
+		modifier = {
+			political_power_factor = 0.15
+			compliance_gain = 0.01
+		}
+	}
+
+	HEU_abgeordnetenkammer_skill_1_right_party = {
+
+		icon = GFX_decision_generic_nationalism
+
+		visible = {
+			check_variable = { HEU_abgeordnetenkammer^1 > 0.2 }
+		}
+
+		available = {
+			has_stability < 1
+		}
+
+		ai_will_do = { 
+			base = 0
+			modifier = {
+				add = 10
+				has_political_power > 200
+			}
+		}
+
+		cost = 75
+		
+		days_remove = 100
+
+		remove_effect = {
+
+		}
+
+		complete_effect = {
+
+		}
+
+		modifier = {
+			stability_weekly_factor = 0.003
+		}
+	}
+
+	HEU_abgeordnetenkammer_skill_1_centre_party = {
+
+		icon = GFX_decision_generic_electricity
+
+		visible = {
+			check_variable = { HEU_abgeordnetenkammer^2 > 0.2 }
+		}
+
+		ai_will_do = { 
+			base = 0
+			modifier = {
+				add = 10
+				has_political_power > 200
+			}
+		}
+
+		cost = 75
+		
+		days_remove = 100
+
+		remove_effect = {
+
+		}
+
+		complete_effect = {
+
+		}
+
+		modifier = {
+			production_speed_buildings_factor = 0.05
+			production_factory_max_efficiency_factor = 0.05
+		}
+	}
+
+	HEU_abgeordnetenkammer_skill_1_left_party = {
+
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		visible = {
+			check_variable = { HEU_abgeordnetenkammer^3 > 0.2 }
+		}
+
+		ai_will_do = { 
+			base = 0
+			modifier = {
+				add = 10
+				has_political_power > 200
+			}
+		}
+
+		available = {
+			has_war = yes
+		}
+
+		cost = 75
+		
+		days_remove = 100
+
+		remove_effect = {
+
+		}
+
+		complete_effect = {
+
+		}
+
+		modifier = {
+			weekly_manpower = 500
+		}
+	}
+
+	HEU_abgeordnetenkammer_random_party = {
+		icon = GFX_decision_SWI_no_elected_president 
+
+		priority = 80
+
+		allowed = {
+
+		}
+
+		visible = {
+			always = yes
+		}
+
+		is_good = yes
+
+		available = { hidden_trigger = { always = no } }
+
+
+		activation = {
+			has_completed_focus = HEU_we_still_hope
+		}
+
+		days_mission_timeout = 120
+
+		timeout_effect = {
+			
+			random_list = {
+				10 = {
+					modifier = {
+						factor = 0
+						NOT = { has_country_flag = HEU_add_rikuhachima_faction }
+					}
+					modifier = {
+						factor = 0
+						check_variable = { HEU_abgeordnetenkammer^0 > 0.5 }
+					}
+					set_temp_variable = { 
+						var = HEU_abgeordnetenkammer_kivotos_temp
+						value = 0.05
+					}
+					HEU_add_influence_kivotos_party = yes
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						has_country_flag = HEU_add_rikuhachima_faction
+					}
+					modifier = {
+						factor = 0
+						check_variable = { HEU_abgeordnetenkammer^1 > 0.5 }
+					}
+					set_temp_variable = { 
+						var = HEU_abgeordnetenkammer_right_temp
+						value = 0.05
+					}
+					HEU_add_influence_right_party = yes
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						check_variable = { HEU_abgeordnetenkammer^2 > 0.5 }
+					}
+					set_temp_variable = { 
+						var = HEU_abgeordnetenkammer_centre_temp
+						value = 0.05
+					}
+					HEU_add_influence_centre_party = yes
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						check_variable = { HEU_abgeordnetenkammer^3 > 0.5 }
+					}
+					set_temp_variable = { 
+						var = HEU_abgeordnetenkammer_left_temp
+						value = 0.05
+					} 
+					HEU_add_influence_left_party = yes
+				}
+			}
+
+			activate_mission = HEU_abgeordnetenkammer_random_party
+		}
+	}
+}
+
+HEU_story_archive = {
+	HEU_show_story_archive_gui = {
+		icon = generic_operation
+		allowed = {
+			OR = {
+				original_tag = HEU
+			}
+		}
+
+		visible = {
+			ROOT = {
+				check_variable = {
+					story_archive = 0
+				}
+			}
+		}
+
+		available = {
+		}
+ 
+		complete_effect = {
+			ROOT = {
+				set_variable = {
+					story_archive = 1			
+				}
+			}
+			BA_storyarchive_openui_effects = yes
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 0
 		}
 	}
 }

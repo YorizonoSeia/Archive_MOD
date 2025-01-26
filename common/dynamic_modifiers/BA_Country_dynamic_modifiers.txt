@@ -2082,6 +2082,28 @@ HEU_luxembourg_army_dynamic_modifier = { # 룩셈부르크군
 	breakthrough_factor = HEU_luxembourg_army_breakthrough_factor
 }
 
+HEU_abgeordnetenkammer_dynamic_modifier = {
+	enable = {
+		always = yes
+	}
+
+	#연방생도당
+	war_support_factor = HEU_kivotos_party_war_support_factor
+	drift_defence_factor = HEU_kivotos_party_drift_defence_factor
+
+	#우파당
+	production_speed_industrial_complex_factor = HEU_right_party_industrial_complex_var
+	stability_factor = HEU_right_party_stability_factor
+
+	#급진자유당
+	production_factory_max_efficiency_factor  = HEU_centre_party_production_factory_max_efficiency_factor
+	consumer_goods_factor  = HEU_centre_party_consumer_goods_factor
+
+	#공산당
+	industrial_capacity_factory = HEU_left_party_industrial_capacity_factory
+	stability_factor = HEU_left_party_stability_factor
+}
+
 USABA_german_ch_idea = { #독일인 대표 위원회
 	enable = { always = yes }
 
