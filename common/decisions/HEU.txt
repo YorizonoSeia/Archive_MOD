@@ -6048,8 +6048,10 @@ HEU_abgeordnetenkammer_decision_category = {
 					HEU_add_influence_left_party = yes
 				}
 			}
-
-			activate_mission = HEU_abgeordnetenkammer_random_party
+			
+			hidden_effect = {
+				activate_mission = HEU_abgeordnetenkammer_random_party
+			}
 		}
 	}
 }
