@@ -1424,7 +1424,7 @@ technologies = {
 		}
 	}
 
-    ###Cavalry
+    ###Hako
 
 	special_forces_cavalry = {
 		doctrine_name = "CAVALRY_DOCTRINE"
@@ -1435,9 +1435,9 @@ technologies = {
 		#xor = { special_forces_marines special_forces_paratroopers special_forces_mountaineers }
 
 		force_use_small_tech_layout = yes
-		halo_special_forces_special_forces_contribution_factor = -0.25
 		halo_special_forces = {
 			supply_consumption = -0.02
+			soft_attack = 0.05
 		}
 
 		folder = {
@@ -1745,7 +1745,7 @@ technologies = {
 		xp_unlock_cost = 60
 		
 		force_use_small_tech_layout = yes
-		halo_special_forces_special_forces_contribution_factor = -0.25
+		special_forces_cap = 0.10
 		halo_special_forces = {
 			soft_attack = 0.15
 			breakthrough = 0.15
