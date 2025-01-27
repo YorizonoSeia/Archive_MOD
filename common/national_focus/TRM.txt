@@ -1338,7 +1338,7 @@ focus_tree = {
 				set_cosmetic_tag = GER_greater_german_reich
 				every_state = {
 					limit = { BA_is_GER_core = yes  }
-					add_core_of = ROOT
+					add_claim_by = ROOT
 				}
 				every_state = {
 					limit = {
@@ -6715,15 +6715,12 @@ focus_tree = {
 	continuous_focus_position = { x = 0 y = 2300 }
 
 	
-	focus = { # 티파티 통제
+	focus = {
 		id = TRN_control_tea_party
 		icon = GFX_focus_TRN_control_tea_party
-		cost = 5
-
 		x = 5
 		y = 0
-
-		allow_branch = {  }
+		cost = 5
 		available = {
 			NOT = { has_idea = TRM_safe_trinity }
 			has_country_leader = {
@@ -6736,6 +6733,121 @@ focus_tree = {
 		}
 		completion_reward = {
 			country_event = trinity.1
+		}
+	}
+	focus = {
+		id = TRN_Mika_basic_law
+		icon = GFX_focus_TRN_MisonoMika
+		prerequisite = { focus = TRN_control_tea_party }
+		x = 0
+		y = 1
+		relative_position_id = TRN_control_tea_party
+		cost = 5
+
+		available = {
+			has_country_leader = {
+				character = TRN_alzk
+				ruling_only = yes
+			}
+		}
+		ai_will_do = {
+
+		}
+		select_effect = {
+			country_event = trinity.3
+		}
+		completion_reward = {
+			country_event = trinity.4
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = TRN_Justice_Task_Force_on_leash
+		icon = GFX_focus_TRN_Ministry_of_Justice_on_leash
+		prerequisite = { focus = TRN_Mika_basic_law }
+		x = 1
+		y = 1
+		relative_position_id = TRN_Mika_basic_law
+		cost = 5
+
+		available = {
+			has_government = fascism
+		}
+		ai_will_do = {
+
+		}
+		completion_reward = {
+			TRM = {
+				every_unit_leader = {
+					limit = {
+						OR = {
+							is_character = TRN_cmfnrl
+							is_character = TRN_gktmal
+						}
+					}
+					add_timed_unit_leader_trait = {
+						trait = reassigned 
+						days = 180
+					}
+					add_timed_unit_leader_trait = {
+						trait = disgruntled 
+						days = 180
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = TRN_security_department
+		icon = GFX_focus_generic_secret_service_agency
+		prerequisite = { focus = TRN_Mika_basic_law }
+		x = -1
+		y = 1
+		relative_position_id = TRN_Mika_basic_law
+		cost = 5
+
+		available = {
+			has_government = fascism
+		}
+		ai_will_do = {
+
+		}
+		completion_reward = {
+			if = {
+				limit = { has_intelligence_agency = no }
+				create_intelligence_agency = yes
+			}
+			else = {
+				gain_random_agency_upgrade = yes
+			}
+			add_ideas = TRM_reorganize_secret_services
+		}
+	}
+	focus = {
+		id = TRN_declare_trinity_order_state
+		icon = GFX_focus_TRN_declare_trinity_order_state
+		prerequisite = { focus = TRN_security_department }
+		prerequisite = { focus = TRN_Justice_Task_Force_on_leash }
+		x = -1
+		y = 1
+		relative_position_id = TRN_Justice_Task_Force_on_leash
+		cost = 5
+
+		available = {
+			has_government = fascism
+		}
+		ai_will_do = {
+
+		}
+		completion_reward = {
+			set_cosmetic_tag = TRINITY_REICH
+			add_political_power = 100
+			
+			set_country_leader_ideology = pater_nazism
+			set_rule = { can_create_factions = yes }
+			add_country_leader_trait = TRN_mika_trait_1
+			
+			news_event = { id = BA_news.3 days = 3 }
 		}
 	}
 }

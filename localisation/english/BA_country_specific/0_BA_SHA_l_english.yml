@@ -917,8 +917,8 @@
  SHA_infantry_equipment_organization: "국가병기공업"
  SHA_tank_equipment_organization: "국가북방공업"
  # 설계국 특성
- SHA_mio_trait_No1: "화력 증대"
- SHA_mio_trait_No2: "생산량 증대"
+ SHA_mio_trait_No1: "아 이름을 뭘로 지어야 하지"
+ SHA_mio_trait_No2: "조립식 설계"
 
  # 이벤트
  shafas.1.t: "경극부의 쿠데타!"

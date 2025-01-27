@@ -179,14 +179,19 @@ news_event = { #미카의 집권
 	major = yes
 	
 	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = { 
+			TRM = { add_threat = 5 }
+		}
+	}
 	
 	option = {
 		name = BA_news.3.a
-		add_threat = 5
 		hidden_effect = {
 			if = {
 				limit = {
-						is_ai = no
+					is_ai = no
 				}
 				scoped_play_song = "BA_night_on_bald_mountain"
 				set_country_flag = {

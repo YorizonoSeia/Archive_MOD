@@ -8,6 +8,34 @@ SHA_infantry_equipment_organization = {
 	available = {
 		FROM = { has_completed_focus = SHA_Equipment_Development_Department }
 	}
+
+	add_trait = { 
+		token = SHA_mio_trait_merge_plant_soft_attack
+		name = SHA_mio_trait_No1
+		#icon = GFX_generic_mio_department_icon_facilities
+		icon = GFX_generic_mio_department_icon_infantry_line_efficiency
+		special_trait_background = yes
+
+		position = { x=0 y=0 }
+		
+		visible = {
+			FROM = { original_tag = SHA }
+		}
+
+		available = { #Three FROM blocs to provide two different check marks in the UI
+			FROM = {
+				has_completed_focus = SHA_Mortar_Development_Department
+			}
+		}
+
+		on_complete = {
+
+		}
+
+		equipment_bonus = {
+			soft_attack = 0.07
+		}
+	}
 }
 # 전차 설계사
 SHA_tank_equipment_organization = {
