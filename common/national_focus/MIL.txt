@@ -1209,6 +1209,9 @@ focus_tree = {
 		relative_position_id = MIL_expansion_of_financial_industry
 		completion_reward = {
 			country_event = MIL_minister_appointment_event.2
+			hidden_effect = {
+				set_cosmetic_tag = MIL_RIGHT
+			}
 		}	
 	}
 		
@@ -3592,14 +3595,6 @@ focus_tree = {
 				}
 			}
 			else = {
-				if = {
-					limit = {
-						not = { has_tech = ship_hull_super_heavy }
-					}
-					set_technology = {
-						ship_hull_super_heavy = 1
-					}
-				}
 				create_equipment_variant = {
 					name = "Super Millenium Class"
 					type = ship_hull_super_heavy_1
