@@ -2722,6 +2722,11 @@ focus_tree = {
 					add_idea = MIL_interventionism_idea
 				}
 			}
+			effect_tooltip = {
+				set_rule = {
+					can_join_factions = yes
+				}
+			}
 			custom_effect_tooltip = MIL_preemptive_intervention_1_tt
 		}	
 	}
@@ -2729,7 +2734,7 @@ focus_tree = {
 	focus = { # 전쟁 준비
 		id = MIL_preemptive_intervention_2
 		icon = GFX_goal_generic_major_war
-		cost = 10.00
+		cost = 5.00
 		prerequisite = { focus = MIL_preemptive_intervention_1 }
 		x = -2
 		y = 1
@@ -2791,6 +2796,7 @@ focus_tree = {
 				limit = {
 					NOT = { has_idea = war_economy }
 					NOT = { has_idea = tot_economic_mobilisation }
+					NOT = { has_idea = MIL_automation_economy }
 				}
 				add_ideas = war_economy
 			}
@@ -2823,6 +2829,7 @@ focus_tree = {
 				is_major = yes
 				has_war_with = ROOT
 			}
+			surrender_progress > 0
 		}
 		x = 0
 		y = 2
@@ -2831,6 +2838,7 @@ focus_tree = {
 			if = {
 				limit = {
 					NOT = { has_idea = tot_economic_mobilisation }
+					NOT = { has_idea = MIL_automation_economy }
 				}
 				add_ideas = tot_economic_mobilisation
 			}
@@ -2869,7 +2877,7 @@ focus_tree = {
 	focus = { # 파시즘의 위협 우선시
 		id = MIL_preemptive_intervention_6
 		icon = GFX_focus_focus_fra_fascist_threat
-		cost = 10.00
+		cost = 5.00
 		prerequisite = { focus = MIL_preemptive_intervention_5 }
 		mutually_exclusive = { focus = MIL_preemptive_intervention_7 }
 		available = {
@@ -3035,7 +3043,7 @@ focus_tree = {
 	focus = { # 급진 학원 견제
 		id = MIL_preemptive_intervention_7
 		icon = GFX_focus_generic_reorient_production
-		cost = 10.00
+		cost = 5.00
 		prerequisite = { focus = MIL_preemptive_intervention_5 }
 		mutually_exclusive = { focus = MIL_preemptive_intervention_6 }
 		x = 1
@@ -3162,7 +3170,7 @@ focus_tree = {
 	focus = { # 예방 전쟁
 		id = MIL_preemptive_intervention_8
 		icon = GFX_focus_SWE_let_fly_all_guns
-		cost = 10.00
+		cost = 5.00
 		prerequisite = { focus = MIL_preemptive_intervention_6 focus = MIL_preemptive_intervention_7 }
 		available = {
 			if = { limit = { has_completed_focus = MIL_preemptive_intervention_6 }
@@ -4561,6 +4569,8 @@ focus_tree = {
 				has_completed_focus = MIL_rebuilt_school1
 				has_completed_focus = MIL_rebuilt_school2
 			}
+			
+		has_country_flag = GAEBALJUNG
 		}
 		mutually_exclusive = { focus = MIL_preemptive_intervention_1 }
 		prerequisite = { focus = MIL_universal_education focus = MIL_talent_selection_system }
@@ -6831,8 +6841,13 @@ focus_tree = {
 		y = 1
 		relative_position_id = MIL_big_sister
 		completion_reward = {
-			custom_effect_tooltip = MIL_central_control_network_tt
-			add_to_variable = { MIL_conflict_event_var = 20 }
+			if = {
+				limit = {
+					has_idea = MIL_seeds_of_conflict
+				}
+				custom_effect_tooltip = MIL_central_control_network_tt
+				add_to_variable = { MIL_conflict_event_var = 20 }
+			}
 			add_political_power = 50
 		}	
 	}
@@ -6905,7 +6920,6 @@ focus_tree = {
 			}
 			add_political_power = 120
 			add_stability = 0.10
-			custom_effect_tooltip = MIL_K_incarcerated_tt
 		}	
 	}
 		
@@ -6941,8 +6955,13 @@ focus_tree = {
 		y = 1
 		relative_position_id = MIL_central_control_network
 		completion_reward = {
-			custom_effect_tooltip = MIL_central_control_network_tt
-			add_to_variable = { MIL_conflict_event_var = 20 }
+			if = {
+				limit = {
+					has_idea = MIL_seeds_of_conflict
+				}
+				custom_effect_tooltip = MIL_central_control_network_tt
+				add_to_variable = { MIL_conflict_event_var = 20 }
+			}
 			set_country_flag = MIL_internet_censorship_flag
 			add_political_power = 50
 			add_power_balance_value = {
@@ -7096,8 +7115,13 @@ focus_tree = {
 				}
 				mark_focus_tree_layout_dirty = yes
 			}
-			custom_effect_tooltip = MIL_central_control_network_tt
-			add_to_variable = { MIL_conflict_event_var = 20 }
+			if = {
+				limit = {
+					has_idea = MIL_seeds_of_conflict
+				}
+				custom_effect_tooltip = MIL_central_control_network_tt
+				add_to_variable = { MIL_conflict_event_var = 20 }
+			}
 		}
 	}
 		
@@ -7767,15 +7791,10 @@ focus_tree = {
 		y = 1
 		relative_position_id = MIL_HayaseYuuka
 		completion_reward = {
-			custom_effect_tooltip = MIL_thorough_administrative_surveillance_tt
-			add_to_variable = { MIL_semina_idea_political_power_factor = -0.10 }
-			add_to_variable = { MIL_semina_idea_consumer_goods_factor = -0.05 }
-			custom_effect_tooltip = enter_tt
-			if = {
-				limit = {
-					has_idea = MIL_seeds_of_conflict
-				}
-				remove_ideas = MIL_seeds_of_conflict
+			custom_effect_tooltip = MIL_semina_modf_tt
+			add_to_variable = {
+				MIL_semina_idea_consumer_goods_factor = -0.05
+				tooltip = consumer_goods_factor_tt
 			}
 		}
 	}
@@ -7999,7 +8018,7 @@ focus_tree = {
 	focus = { # 재정 긴축
 		id = MIL_fiscal_austerity
 		icon = GFX_goal_generic_forceful_treaty
-		cost = 10.00
+		cost = 5.00
 		prerequisite = { focus = MIL_HayaseYuuka }
 		x = 0
 		y = 1
@@ -8026,15 +8045,20 @@ focus_tree = {
 			add_to_variable = { MIL_semina_idea_production_speed_buildings_factor = 0.05 }
 			add_to_variable = { MIL_semina_idea_global_building_slots_factor = 0.05 }
 			custom_effect_tooltip = enter_tt
-			custom_effect_tooltip = MIL_central_control_network_tt
-			add_to_variable = { MIL_conflict_event_var = 20 }
+			if = {
+				limit = {
+					has_idea = MIL_seeds_of_conflict
+				}
+				custom_effect_tooltip = MIL_central_control_network_tt
+				add_to_variable = { MIL_conflict_event_var = 20 }
+			}
 		}
 	}
 		
 	focus = { # 행정 통합
 		id = MIL_central_administrative_system
 		icon = GFX_focus_SOV_merge_plants
-		cost = 10.00
+		cost = 5.00
 		prerequisite = { focus = MIL_control_seminar focus = MIL_accounting_transparency }
 		offset = {
 			trigger = {
@@ -8045,10 +8069,54 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = MIL_accounting_transparency
+		complete_tooltip = {
+			custom_effect_tooltip = MIL_semina_modf_tt
+			add_to_variable = {
+				MIL_semina_idea_global_building_slots_factor = 0.05
+				tooltip = global_building_slots_factor_tt
+			}
+			add_to_variable = {
+				MIL_semina_idea_consumer_goods_factor = -0.05
+				tooltip = consumer_goods_factor_tt
+			}
+			random_owned_controlled_state = {
+				limit = {
+					has_state_flag = MIL_central_administrative_system_2AF
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
 		completion_reward = {
-			custom_effect_tooltip = MIL_central_administrative_system_tt
-			add_to_variable = { MIL_semina_idea_global_building_slots_factor = 0.05 }
-			add_to_variable = { MIL_semina_idea_consumer_goods_factor = -0.02 }
+			custom_effect_tooltip = MIL_semina_modf_tt
+			add_to_variable = {
+				MIL_semina_idea_global_building_slots_factor = 0.05
+				tooltip = global_building_slots_factor_tt
+			}
+			add_to_variable = {
+				MIL_semina_idea_consumer_goods_factor = -0.05
+				tooltip = consumer_goods_factor_tt
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = MIL_central_administrative_system_2AF
+			}
 		}
 	}
 		
@@ -8062,9 +8130,15 @@ focus_tree = {
 		y = 1
 		relative_position_id = MIL_central_administrative_system
 		completion_reward = {
-			custom_effect_tooltip = MIL_centralization_tt
-			add_to_variable = { MIL_semina_idea_global_building_slots_factor = 0.05 }
-			add_to_variable = { MIL_semina_idea_consumer_goods_factor = -0.03 }
+			custom_effect_tooltip = MIL_semina_modf_tt
+			add_to_variable = {
+				MIL_semina_idea_global_building_slots_factor = 0.05
+				tooltip = global_building_slots_factor_tt
+			}
+			add_to_variable = {
+				MIL_semina_idea_consumer_goods_factor = -0.05
+				tooltip = consumer_goods_factor_tt
+			}
 		}
 	}
 		
@@ -8078,9 +8152,15 @@ focus_tree = {
 		y = 1
 		relative_position_id = MIL_central_administrative_system
 		completion_reward = {
-			custom_effect_tooltip = MIL_accounting_first_tt
-			add_to_variable = { MIL_semina_idea_political_power_factor = 0.05 }
-			add_to_variable = { MIL_semina_idea_consumer_goods_factor = -0.08 }
+			custom_effect_tooltip = MIL_semina_modf_tt
+			add_to_variable = {
+				MIL_semina_idea_political_power_factor = 0.05
+				tooltip = political_power_factor_tt
+			}
+			add_to_variable = {
+				MIL_semina_idea_consumer_goods_factor = -0.10
+				tooltip = consumer_goods_factor_tt
+			}
 		}
 	}
 		
@@ -8237,8 +8317,13 @@ focus_tree = {
 		y = 2
 		relative_position_id = MIL_seminar_expansion
 		completion_reward = {
-			custom_effect_tooltip = MIL_central_control_network_tt
-			add_to_variable = { MIL_conflict_event_var = 20 }
+			if = {
+				limit = {
+					has_idea = MIL_seeds_of_conflict
+				}
+				custom_effect_tooltip = MIL_central_control_network_tt
+				add_to_variable = { MIL_conflict_event_var = 20 }
+			}
 			add_stability = 0.05
 		}
 	}
@@ -8283,8 +8368,13 @@ focus_tree = {
 		relative_position_id = MIL_club_balance_adjustment
 		completion_reward = {
 			add_political_power = 25
-			custom_effect_tooltip = MIL_central_control_network_tt
-			add_to_variable = { MIL_conflict_event_var = 20 }
+			if = {
+				limit = {
+					has_idea = MIL_seeds_of_conflict
+				}
+				custom_effect_tooltip = MIL_central_control_network_tt
+				add_to_variable = { MIL_conflict_event_var = 20 }
+			}
 			custom_effect_tooltip = MIL_remove_Veritas_tt
 			add_to_variable = { MIL_semina_idea_political_power_factor = 0.05 }
 			add_to_variable = { MIL_semina_idea_political_advisor_cost_factor = -0.10 }

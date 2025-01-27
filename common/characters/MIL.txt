@@ -90,12 +90,6 @@ characters={
 				original_tag = MIL
 			}
 			available = {
-				NOT = {
-					has_country_leader = {
-						character = MIL_Noa
-						ruling_only = yes
-					}
-				}
                 MIL_has_semina = yes
 			}
 			traits = {
@@ -142,12 +136,6 @@ characters={
 					has_character_flag = MIL_wanted_flag
 					has_character_flag = MIL_imprisoned_flag
 				}
-				NOT = {
-					has_country_leader = {
-						character = MIL_Koyuki
-						ruling_only = yes
-					}
-				}
                 MIL_has_semina = yes
 			}
 			traits = {
@@ -191,12 +179,6 @@ characters={
 				original_tag = MIL
 			}
 			available = {
-				NOT = {
-					has_country_leader = {
-						character = MIL_dbdnzk
-						ruling_only = yes
-					}
-				}
                 MIL_has_semina = yes
 			}
 			traits = {
