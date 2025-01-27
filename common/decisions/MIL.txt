@@ -3213,6 +3213,7 @@ MIL_defensive_war = {
 				NOT = {
 					has_dynamic_modifier = {
 						modifier = MIL_repurposed_factory
+						scope = MIL
 					}
 					has_dynamic_modifier = {
 						modifier = MIL_unmanned_turret_ground
