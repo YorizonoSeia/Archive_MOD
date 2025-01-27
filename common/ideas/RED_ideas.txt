@@ -1449,6 +1449,8 @@ ideas = {
 				stability_factor = -0.15
 				war_support_factor = -0.30
 				surrender_limit = -0.15
+
+				custom_modifier_tooltip = RED_threat_of_coup_tt
 			}
 			on_remove = {
 				if = {

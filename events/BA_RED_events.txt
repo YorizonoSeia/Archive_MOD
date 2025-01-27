@@ -4026,18 +4026,18 @@ country_event = { #산업 호황
 					1 = {
 						complete_national_focus = RED_economy_focus_3
 						modifier = {
-							add = -1
+							factor = 0
 							has_completed_focus = RED_economy_focus_3
 						}
 					}
 					1 = {
 						complete_national_focus = RED_economy_focus_5
 						modifier = {
-							add = -1
+							factor = 0
 							has_completed_focus = RED_economy_focus_5
 						}
 						modifier = {
-							add = -1
+							factor = 0
 							NOT = {
 								has_completed_focus = RED_economy_focus_3
 							}
@@ -4046,11 +4046,11 @@ country_event = { #산업 호황
 					1 = {
 						complete_national_focus = RED_economy_focus_6
 						modifier = {
-							add = -1
+							factor = 0
 							has_completed_focus = RED_economy_focus_6
 						}
 						modifier = {
-							add = -1
+							factor = 0
 							NOT = {
 								has_completed_focus = RED_economy_focus_5
 							}
@@ -4059,11 +4059,11 @@ country_event = { #산업 호황
 					1 = {
 						complete_national_focus = RED_economy_focus_7
 						modifier = {
-							add = -1
+							factor = 0
 							has_completed_focus = RED_economy_focus_7
 						}
 						modifier = {
-							add = -1
+							factor = 0
 							NOT = {
 								has_completed_focus = RED_economy_focus_5
 							}
@@ -4072,11 +4072,11 @@ country_event = { #산업 호황
 					1 = {
 						complete_national_focus = RED_economy_focus_8
 						modifier = {
-							add = -1
+							factor = 0
 							has_completed_focus = RED_economy_focus_8
 						}
 						modifier = {
-							add = -1
+							factor = 0
 							NOT = {
 								has_completed_focus = RED_economy_focus_3
 							}
@@ -4085,11 +4085,11 @@ country_event = { #산업 호황
 					1 = {
 						complete_national_focus = RED_economy_focus_11
 						modifier = {
-							add = -1
+							factor = 0
 							has_completed_focus = RED_economy_focus_11
 						}
 						modifier = {
-							add = -1
+							factor = 0
 							NOT = {
 								has_completed_focus = RED_economy_focus_3
 							}
@@ -4098,11 +4098,11 @@ country_event = { #산업 호황
 					1 = {
 						complete_national_focus = RED_economy_focus_12
 						modifier = {
-							add = -1
+							factor = 0
 							has_completed_focus = RED_economy_focus_12
 						}
 						modifier = {
-							add = -1
+							factor = 0
 							NOT = {
 								has_completed_focus = RED_economy_focus_11
 							}
@@ -4111,11 +4111,11 @@ country_event = { #산업 호황
 					1 = {
 						complete_national_focus = RED_economy_focus_13
 						modifier = {
-							add = -1
+							factor = 0
 							has_completed_focus = RED_economy_focus_13
 						}
 						modifier = {
-							add = -1
+							factor = 0
 							NOT = {
 								has_completed_focus = RED_economy_focus_11
 							}
@@ -4124,11 +4124,11 @@ country_event = { #산업 호황
 					1 = {
 						complete_national_focus = RED_economy_focus_9
 						modifier = {
-							add = -1
+							factor = 0
 							has_completed_focus = RED_economy_focus_9
 						}
 						modifier = {
-							add = -1
+							factor = 0
 							OR = {
 								has_completed_focus = RED_the_threats_abound
 								has_completed_focus = RED_trotsky_s_world_revolution
@@ -4138,17 +4138,17 @@ country_event = { #산업 호황
 					1 = {
 						complete_national_focus = RED_economy_focus_10
 						modifier = {
-							add = -1
+							factor = 0
 							has_completed_focus = RED_economy_focus_10
 						}
 						modifier = {
-							add = -1
+							factor = 0
 							NOT = {
 								has_completed_focus = RED_economy_focus_9
 							}
 						}
 						modifier = {
-							add = -1
+							factor = 0
 							OR = {
 								NOT = {
 									has_completed_focus = RED_economy_focus_8
@@ -4162,11 +4162,11 @@ country_event = { #산업 호황
 					1 = {
 						complete_national_focus = RED_economy_focus_18
 						modifier = {
-							add = -1
+							factor = 0
 							has_completed_focus = RED_economy_focus_18
 						}
 						modifier = {
-							add = -1
+							factor = 0
 							OR = {
 								NOT = {
 									has_completed_focus = RED_economy_focus_7
@@ -4202,18 +4202,18 @@ country_event = { #산업 호황
 					1 = {
 						complete_national_focus = RED_economy_focus_3
 						modifier = {
-							add = -1
+							factor = 0
 							has_completed_focus = RED_economy_focus_3
 						}
 					}
 					1 = {
 						complete_national_focus = RED_economy_focus_5
 						modifier = {
-							add = -1
+							factor = 0
 							has_completed_focus = RED_economy_focus_5
 						}
 						modifier = {
-							add = -1
+							factor = 0
 							NOT = {
 								has_completed_focus = RED_economy_focus_3
 							}
@@ -4222,11 +4222,11 @@ country_event = { #산업 호황
 					1 = {
 						complete_national_focus = RED_economy_focus_6
 						modifier = {
-							add = -1
+							factor = 0
 							has_completed_focus = RED_economy_focus_6
 						}
 						modifier = {
-							add = -1
+							factor = 0
 							NOT = {
 								has_completed_focus = RED_economy_focus_5
 							}
@@ -4235,11 +4235,11 @@ country_event = { #산업 호황
 					1 = {
 						complete_national_focus = RED_economy_focus_7
 						modifier = {
-							add = -1
+							factor = 0
 							has_completed_focus = RED_economy_focus_7
 						}
 						modifier = {
-							add = -1
+							factor = 0
 							NOT = {
 								has_completed_focus = RED_economy_focus_5
 							}
@@ -4248,11 +4248,11 @@ country_event = { #산업 호황
 					1 = {
 						complete_national_focus = RED_economy_focus_8
 						modifier = {
-							add = -1
+							factor = 0
 							has_completed_focus = RED_economy_focus_8
 						}
 						modifier = {
-							add = -1
+							factor = 0
 							NOT = {
 								has_completed_focus = RED_economy_focus_3
 							}
@@ -4261,11 +4261,11 @@ country_event = { #산업 호황
 					1 = {
 						complete_national_focus = RED_economy_focus_11
 						modifier = {
-							add = -1
+							factor = 0
 							has_completed_focus = RED_economy_focus_11
 						}
 						modifier = {
-							add = -1
+							factor = 0
 							NOT = {
 								has_completed_focus = RED_economy_focus_3
 							}
@@ -4274,11 +4274,11 @@ country_event = { #산업 호황
 					1 = {
 						complete_national_focus = RED_economy_focus_12
 						modifier = {
-							add = -1
+							factor = 0
 							has_completed_focus = RED_economy_focus_12
 						}
 						modifier = {
-							add = -1
+							factor = 0
 							NOT = {
 								has_completed_focus = RED_economy_focus_11
 							}
@@ -4287,11 +4287,11 @@ country_event = { #산업 호황
 					1 = {
 						complete_national_focus = RED_economy_focus_13
 						modifier = {
-							add = -1
+							factor = 0
 							has_completed_focus = RED_economy_focus_13
 						}
 						modifier = {
-							add = -1
+							factor = 0
 							NOT = {
 								has_completed_focus = RED_economy_focus_11
 							}
@@ -4300,11 +4300,11 @@ country_event = { #산업 호황
 					1 = {
 						complete_national_focus = RED_economy_focus_9
 						modifier = {
-							add = -1
+							factor = 0
 							has_completed_focus = RED_economy_focus_9
 						}
 						modifier = {
-							add = -1
+							factor = 0
 							OR = {
 								has_completed_focus = RED_the_threats_abound
 								has_completed_focus = RED_trotsky_s_world_revolution
@@ -4314,17 +4314,17 @@ country_event = { #산업 호황
 					1 = {
 						complete_national_focus = RED_economy_focus_10
 						modifier = {
-							add = -1
+							factor = 0
 							has_completed_focus = RED_economy_focus_10
 						}
 						modifier = {
-							add = -1
+							factor = 0
 							NOT = {
 								has_completed_focus = RED_economy_focus_9
 							}
 						}
 						modifier = {
-							add = -1
+							factor = 0
 							OR = {
 								NOT = {
 									has_completed_focus = RED_economy_focus_8
@@ -4338,11 +4338,11 @@ country_event = { #산업 호황
 					1 = {
 						complete_national_focus = RED_economy_focus_18
 						modifier = {
-							add = -1
+							factor = 0
 							has_completed_focus = RED_economy_focus_18
 						}
 						modifier = {
-							add = -1
+							factor = 0
 							OR = {
 								NOT = {
 									has_completed_focus = RED_economy_focus_7
@@ -4378,18 +4378,18 @@ country_event = { #산업 호황
 					1 = {
 						complete_national_focus = RED_economy_focus_3
 						modifier = {
-							add = -1
+							factor = 0
 							has_completed_focus = RED_economy_focus_3
 						}
 					}
 					1 = {
 						complete_national_focus = RED_economy_focus_5
 						modifier = {
-							add = -1
+							factor = 0
 							has_completed_focus = RED_economy_focus_5
 						}
 						modifier = {
-							add = -1
+							factor = 0
 							NOT = {
 								has_completed_focus = RED_economy_focus_3
 							}
@@ -4398,11 +4398,11 @@ country_event = { #산업 호황
 					1 = {
 						complete_national_focus = RED_economy_focus_6
 						modifier = {
-							add = -1
+							factor = 0
 							has_completed_focus = RED_economy_focus_6
 						}
 						modifier = {
-							add = -1
+							factor = 0
 							NOT = {
 								has_completed_focus = RED_economy_focus_5
 							}
@@ -4411,11 +4411,11 @@ country_event = { #산업 호황
 					1 = {
 						complete_national_focus = RED_economy_focus_7
 						modifier = {
-							add = -1
+							factor = 0
 							has_completed_focus = RED_economy_focus_7
 						}
 						modifier = {
-							add = -1
+							factor = 0
 							NOT = {
 								has_completed_focus = RED_economy_focus_5
 							}
@@ -4424,11 +4424,11 @@ country_event = { #산업 호황
 					1 = {
 						complete_national_focus = RED_economy_focus_8
 						modifier = {
-							add = -1
+							factor = 0
 							has_completed_focus = RED_economy_focus_8
 						}
 						modifier = {
-							add = -1
+							factor = 0
 							NOT = {
 								has_completed_focus = RED_economy_focus_3
 							}
@@ -4437,11 +4437,11 @@ country_event = { #산업 호황
 					1 = {
 						complete_national_focus = RED_economy_focus_11
 						modifier = {
-							add = -1
+							factor = 0
 							has_completed_focus = RED_economy_focus_11
 						}
 						modifier = {
-							add = -1
+							factor = 0
 							NOT = {
 								has_completed_focus = RED_economy_focus_3
 							}
@@ -4450,11 +4450,11 @@ country_event = { #산업 호황
 					1 = {
 						complete_national_focus = RED_economy_focus_12
 						modifier = {
-							add = -1
+							factor = 0
 							has_completed_focus = RED_economy_focus_12
 						}
 						modifier = {
-							add = -1
+							factor = 0
 							NOT = {
 								has_completed_focus = RED_economy_focus_11
 							}
@@ -4463,11 +4463,11 @@ country_event = { #산업 호황
 					1 = {
 						complete_national_focus = RED_economy_focus_13
 						modifier = {
-							add = -1
+							factor = 0
 							has_completed_focus = RED_economy_focus_13
 						}
 						modifier = {
-							add = -1
+							factor = 0
 							NOT = {
 								has_completed_focus = RED_economy_focus_11
 							}
@@ -4476,11 +4476,11 @@ country_event = { #산업 호황
 					1 = {
 						complete_national_focus = RED_economy_focus_9
 						modifier = {
-							add = -1
+							factor = 0
 							has_completed_focus = RED_economy_focus_9
 						}
 						modifier = {
-							add = -1
+							factor = 0
 							OR = {
 								has_completed_focus = RED_the_threats_abound
 								has_completed_focus = RED_trotsky_s_world_revolution
@@ -4490,17 +4490,17 @@ country_event = { #산업 호황
 					1 = {
 						complete_national_focus = RED_economy_focus_10
 						modifier = {
-							add = -1
+							factor = 0
 							has_completed_focus = RED_economy_focus_10
 						}
 						modifier = {
-							add = -1
+							factor = 0
 							NOT = {
 								has_completed_focus = RED_economy_focus_9
 							}
 						}
 						modifier = {
-							add = -1
+							factor = 0
 							OR = {
 								NOT = {
 									has_completed_focus = RED_economy_focus_8
@@ -4514,11 +4514,11 @@ country_event = { #산업 호황
 					1 = {
 						complete_national_focus = RED_economy_focus_18
 						modifier = {
-							add = -1
+							factor = 0
 							has_completed_focus = RED_economy_focus_18
 						}
 						modifier = {
-							add = -1
+							factor = 0
 							OR = {
 								NOT = {
 									has_completed_focus = RED_economy_focus_7

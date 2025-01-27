@@ -1,3 +1,2 @@
 RED_bop_category = {
-	
 }
