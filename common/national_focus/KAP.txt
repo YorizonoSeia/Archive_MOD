@@ -1284,7 +1284,9 @@ focus_tree = {
 		x = 4
 		y = 1
 		relative_position_id = KAP_revolutionary_military_commission
-
+		allow_branch = {
+		has_country_flag =   KAP_revolutionary_military_commission      
+		}
 		cost = 10
 
 		ai_will_do = {
