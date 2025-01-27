@@ -57,6 +57,10 @@
  BA_halo_infantry_ban_effect_tt:0 "§R더이상 헤일로 보병을 생산할 수 없습니다.§!"
  BA_puppet_on_action_effect_tt:0 "§R더이상 헤일로 보병을 생산할 수 없습니다. 종주국의 헤일로 보병 편제 제한이 2 증가합니다.§!"
 
+ kivotos_halo_special_forces_add1_tt: "£GFX_unit_halo_special_forces_icon_small §C헤일로 특수부대§!의 §Y편제 제한§!: §G+1§!"
+ kivotos_halo_special_forces_add2_tt: "£GFX_unit_halo_special_forces_icon_small §C헤일로 특수부대§!의 §Y편제 제한§!: §G+2§!"
+ kivotos_halo_special_forces_add3_tt: "£GFX_unit_halo_special_forces_icon_small §C헤일로 특수부대§!의 §Y편제 제한§!: §G+3§!"
+
  kivotos_halo_add_tt: "£GFX_unit_halo_infantry_icon_small §C헤일로 보병§!의 §Y편제 제한§!: $RIGHT|+=0$"
  kivotos_halo_add1_tt: "£GFX_unit_halo_infantry_icon_small §C헤일로 보병§!의 §Y편제 제한§!: §G+1§!"
  kivotos_halo_add2_tt: "£GFX_unit_halo_infantry_icon_small §C헤일로 보병§!의 §Y편제 제한§!: §G+2§!"

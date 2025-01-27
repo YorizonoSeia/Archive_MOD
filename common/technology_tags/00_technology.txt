@@ -109,6 +109,7 @@ technology_categories = {
 	cat_mountaineers_doctrine
 	cat_marines_doctrine
 	cat_paratroopers_doctrine
+	cat_halo_doctrine
 	naval_armor
 	naval_artillery
 	helicopter_tech

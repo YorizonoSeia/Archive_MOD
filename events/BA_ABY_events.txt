@@ -1256,11 +1256,14 @@ country_event = {
 		ai_chance = { factor = 50 }
 		add_stability = -0.05
 		add_political_power = -50
-		69 = {
-			create_unit = {
-				division = "name = \"ABYDOS National Brigade\" division_template = \"ABYDOS National Brigade\" start_experience_factor = 0 start_equipment_factor = 1"
-				owner = ABY
-			}
+		add_manpower = 10000
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 500
+		}
+		add_equipment_to_stockpile = {
+			type = kivotos_infantry_equipment
+			amount = 250
 		}
 	}
 }

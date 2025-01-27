@@ -164,6 +164,7 @@ sub_units = {
 		group = infantry
 		
 		categories = {
+			category_halo_special_forces
 			category_halo
 			category_front_line
 			category_light_infantry
