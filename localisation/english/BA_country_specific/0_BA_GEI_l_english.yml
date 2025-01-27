@@ -372,6 +372,8 @@ GEI_the_colour_daa_idea:0 "§0해체§!, §1분석§!, §2적응§!"
  GEI_expand_decagrammaton_corps:0 "데카그라마톤 군단 확충"
  GEI_expand_decagrammaton_corps_desc:0 "더 많은 데카그라마톤 부대를 운용할 수 있게 됩니다."
 
+ GEI_mind_controll_dec:0 "무차별 감염 확산"
+
  GEI_establish_door_network:0 "차원문 네트워크 구축"
  GEI_establish_door_network_desc:0 "전략적인 차원문 네트워크를 구축합니다."
 

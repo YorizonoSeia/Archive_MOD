@@ -1038,6 +1038,38 @@ GEI_decagrammaton_development = {
 }
 
 GEI_dimensional_door_operations = {
+	GEI_mind_controll_dec = {
+        icon = generic_prepare_civil_war
+        
+        available = {
+			any_enemy_country = {
+				NOT = { has_country_flag = GEI_mind_controll_dec_flag }
+			}
+        }
+        
+        visible = {
+        }
+        
+        remove_effect = {
+            every_enemy_country = {
+                limit = { NOT = { has_country_flag = GEI_mind_controll_dec_flag } }
+                country_event = {
+                    id = GEI_event.17
+                    hours = 6
+                }
+                set_country_flag = GEI_mind_controll_dec_flag
+            }
+        }
+
+        ai_will_do = {
+            base = 4000
+            modifier = {
+                factor = 0
+                NOT = { has_war = yes }
+            }
+        }
+    }
+
 	GEI_establish_door_network = {
         icon = generic_prepare_civil_war
         

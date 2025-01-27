@@ -376,21 +376,7 @@ country_event = {
 	
     is_triggered_only = yes
 	
-	immediate = { 
-		every_country = {
-			limit = {
-				is_ally_with = ROOT
-			}
-			add_to_war = {
-				targeted_alliance = PREV
-				enemy = FROM 
-				hostility_reason = asked_to_join
-			}
-		}
-		add_timed_idea = {
-			idea = GEI_light_shining_on_me
-			days = 70
-		}
+	immediate = {
 		if = {
 			limit = {
 				NOT = {
@@ -459,8 +445,12 @@ country_event = {
 		}
 	}
 	option = {
-		add_stability = -0.05
 		name = GEI_event.17.a
+		add_stability = -0.05
+		add_timed_idea = {
+			idea = GEI_light_shining_on_me
+			days = 70
+		}
 	}
 }
 country_event = {
