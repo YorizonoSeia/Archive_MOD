@@ -4881,7 +4881,7 @@ country_event = {
 		ai_chance = {
 			base = 100
 			modifier = {
-				base = -1000
+				add = -1000
 				GEM = {
 					any_core_state = {
 						is_owned_by = ROOT
@@ -4894,7 +4894,7 @@ country_event = {
 			country_event = { id = TRN_after_war_event.41 days = 01 }
 			custom_effect_tooltip = tooltip_white_line
 			effect_tooltip = {
-				FORM = { 
+				FROM = { 
 					add_opinion_modifier = { target = ROOT modifier = medium_increase } 
 				}
 				every_state = {
@@ -4916,7 +4916,7 @@ country_event = {
 		ai_chance = {
 			base = 50
 			modifier = {
-				base = 1000
+				add = 100
 				GEM = {
 					any_core_state = {
 						is_owned_by = ROOT
@@ -4929,7 +4929,7 @@ country_event = {
 			country_event = { id = TRN_after_war_event.42 days = 01 }
 			custom_effect_tooltip = tooltip_white_line
 			effect_tooltip = {
-				FORM = { 
+				FROM = { 
 					add_opinion_modifier = { target = ROOT modifier = medium_decrease } 
 				}
 				if = {

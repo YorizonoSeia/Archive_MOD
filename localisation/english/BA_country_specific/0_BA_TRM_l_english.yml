@@ -1520,6 +1520,7 @@
  TRM_Decline_of_the_anti_gehenna_sentiment: "반게헨나 정서 약화"
  TRM_wargoal_FRM: "마지노선 돌파"
  TRM_Recapture_of_Gehenna: "[FROM.getname] 공격"
+ TRM_give_me_gehenna_state: "[FROM.GetAdjective]측의 게헨나 영토 요구"
  TRM_state_government_takeover: "$GEM_state_government_takeover$"
  TRM_loop_Gehenna_Resistance: "게헨나 학생저항연합 활동"
  TRM_GehennaResistance_Random_Event_tt: "\n$TRM_loop_Gehenna_Resistance$으로 인한 §Y무작위 사건들이 발생§!합니다!"
