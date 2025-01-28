@@ -1575,7 +1575,18 @@ country_event = {
 country_event = {
     id = MIL_event.21
     title = MIL_event.21.t
-    desc = MIL_event.21.d
+	desc = {
+		text = MIL_event.21.d1
+		trigger = {
+			has_country_flag = MIL_AL1S_1flag
+        }
+	}
+	desc = {
+		text = MIL_event.21.d2
+		trigger = {
+			has_country_flag = MIL_AL1S_2flag
+        }
+	}
     picture = GFX_event_MIL_AL_1S_event
     
     fire_only_once = yes
