@@ -32,7 +32,7 @@ focus_tree = {
 		available = {
 			has_country_flag = {
 				flag = FRM_focus_2_flag
-				days > 180
+				days > 1080
 			}
 		}
 		completion_reward = {
