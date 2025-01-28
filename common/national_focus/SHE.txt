@@ -2971,6 +2971,12 @@ focus_tree = {
 						FOCUS_FILTER_ANNEXATION
 					
 		}
+		ai_will_do = {
+			modifier = {
+				date < 1945.1.1
+				factor = 0
+			}
+		}
 		available = { has_army_manpower = { size > 199999 } }
 		prerequisite = { focus = SHE_jeonjaenggyehoeg  }
 		completion_reward = {
@@ -2993,6 +2999,13 @@ focus_tree = {
 					
 		}
 		prerequisite = { focus = SHE_jeonjaenggyehoeg  }
+
+		ai_will_do = {
+			modifier = {
+				date < 1943.1.1
+				factor = 0
+			}
+		}
 		completion_reward = {
 			every_country = {
 				limit = {
