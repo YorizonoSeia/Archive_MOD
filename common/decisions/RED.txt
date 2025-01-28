@@ -4089,7 +4089,10 @@ RED_debt = {
 		icon = GFX_decision_ger_mefo_bills
 		days_mission_timeout = 90
 		available = {
-			always = no
+			OR = {
+				has_completed_focus = RED_new_economy_focus_10
+				has_completed_focus = RED_new_economy_focus_11
+			}
 		}
 		activation = {
 			always = no
@@ -4142,6 +4145,10 @@ RED_debt = {
 					modifier = RED_never_pay
 				}
 			}
+			country_event = {
+				id = RED_generic.9
+				days = 2
+			}
 		}
 	}
 	RED_your_economy_fucked = { #경제 마비의 전조
@@ -4169,6 +4176,13 @@ RED_debt = {
 RED_bop_category = {
 	RED_cherino_become_cleaner = { #미화부장
 		icon = GFX_decision_eng_trade_unions_demand
+		visible = {
+			RED_cherino = {
+				NOT = {
+					has_trait = RED_cherino_cleaner
+				}
+			}
+		}
 		complete_effect = {
 			RED_cherino = {
 				add_country_leader_trait = RED_cherino_cleaner
@@ -4182,6 +4196,13 @@ RED_bop_category = {
 	}
 	RED_cherino_become_meal = { #급식부장
 		icon = GFX_decision_eng_trade_unions_demand
+		visible = {
+			RED_cherino = {
+				NOT = {
+					has_trait = RED_cherino_meal
+				}
+			}
+		}
 		complete_effect = {
 			RED_cherino = {
 				add_country_leader_trait = RED_cherino_meal
@@ -4195,6 +4216,13 @@ RED_bop_category = {
 	}
 	RED_cherino_become_prefect = { #선도부장
 		icon = GFX_decision_eng_trade_unions_demand
+		visible = {
+			RED_cherino = {
+				NOT = {
+					has_trait = RED_cherino_prefect
+				}
+			}
+		}
 		complete_effect = {
 			RED_cherino = {
 				add_country_leader_trait = RED_cherino_prefect
@@ -4208,6 +4236,13 @@ RED_bop_category = {
 	}
 	RED_cherino_become_gym = { #체육부장
 		icon = GFX_decision_eng_trade_unions_demand
+		visible = {
+			RED_cherino = {
+				NOT = {
+					has_trait = RED_cherino_gym
+				}
+			}
+		}
 		complete_effect = {
 			RED_cherino = {
 				add_country_leader_trait = RED_cherino_gym

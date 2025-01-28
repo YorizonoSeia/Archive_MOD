@@ -1050,7 +1050,11 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			add_ideas = RED_no_currency
+			add_timed_idea = {
+				idea = RED_no_currency
+				years = 1
+				months = 6
+			}
 		}
 	}
 	focus = { # 재산 상한제
@@ -1084,8 +1088,11 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			remove_ideas = RED_no_currency
 			add_ideas = RED_no_currency_1
+			modify_timed_idea = {
+				idea = RED_no_currency
+				months = -6
+			}
 		}
 	}
 	focus = { # 토지개발
@@ -8263,7 +8270,7 @@ focus_tree = {
 	}
 	focus = { #열의
 		id = RED_cohesion_first
-		icon = GFX_focus_focus_fra_revolution_utmost
+		icon = GFX_focus_GER_the_peoples_victory
 		prerequisite = { focus = RED_strengthen_the_mobilization_plan }
 		x = 3
 		y = 1
@@ -8285,6 +8292,7 @@ focus_tree = {
 			custom_effect_tooltip = RED_cohesion_first_tt
 			add_to_variable = { RED_winter_army_army_morale_factor = 0.05 }
 			add_to_variable = { RED_winter_army_training_time_factor = 0.1 }
+			add_to_variable = { RED_winter_army_mobilization_speed = 0.05 }
 		}
 	}
 
@@ -8550,8 +8558,8 @@ focus_tree = {
 			custom_effect_tooltip = RED_army_focus_3_tt
 			add_to_variable = { RED_winter_army_army_org_factor = 0.05 }
 			add_to_variable = { RED_winter_army_army_morale_factor = 0.05 }
-			add_to_variable = { RED_winter_army_max_planning_factor = -0.1 }
-			add_to_variable = { RED_winter_army_planning_speed_factor = -0.1 }
+			add_to_variable = { RED_winter_army_max_planning_factor = -0.05 }
+			add_to_variable = { RED_winter_army_planning_speed_factor = -0.05 }
 		}
 	}
 	focus = { #대군 운용

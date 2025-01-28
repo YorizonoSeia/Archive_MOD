@@ -326,6 +326,7 @@ country_event = { #게헨나 항복 이벤트
 		original_tag = TRM
 		has_government = fascism
         has_completed_focus = TRM_war_with_gehenna
+		NOT = { has_global_flag = TRINITY_WON_THE_GEHENNA }
         TRM = {
             count_triggers = {
                 amount = 3
@@ -4853,7 +4854,7 @@ unit_leader_event = {
 					is_core_of = GEH
 				}
 			}
-			add_resistance = -5
+			add_resistance = 3
 		}
 		random_army_leader = {
 			limit = { has_character_flag = TRM_GEM_governor }
@@ -4862,6 +4863,133 @@ unit_leader_event = {
 				days = 14
 			}
 		}
+	}
+}
+
+# 좋은 말로 할때 게헨나 영토를 반환하세요
+country_event = { 
+	id = TRN_after_war_event.40
+	title = TRN_after_war_event.40.t
+	desc = TRN_after_war_event.40.desc
+	picture = GFX_event_none_picture
+	
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	option = { # 네 반환할게요.. ㅜㅜㅜ
+		name = TRN_after_war_event.40.a
+		ai_chance = {
+			base = 100
+			modifier = {
+				add = -1000
+				GEM = {
+					any_core_state = {
+						is_owned_by = ROOT
+						is_core_of = ROOT
+					}
+				}
+			}
+		}
+		FROM = {
+			country_event = { id = TRN_after_war_event.41 days = 01 }
+			custom_effect_tooltip = tooltip_white_line
+			effect_tooltip = {
+				FROM = { 
+					add_opinion_modifier = { target = ROOT modifier = medium_increase } 
+				}
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = GEM
+							is_core_of = GEH
+						}
+						is_owned_by = ROOT
+					}
+				}
+				transfer_state_to = FROM
+			}
+		}
+	}
+	
+	option = { # 제 땅인데? 꺼지셈 ㅋㅋ
+		name = TRN_after_war_event.40.b
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 100
+				GEM = {
+					any_core_state = {
+						is_owned_by = ROOT
+						is_core_of = ROOT
+					}
+				}
+			}
+		}
+		FROM = {
+			country_event = { id = TRN_after_war_event.42 days = 01 }
+			custom_effect_tooltip = tooltip_white_line
+			effect_tooltip = {
+				FROM = { 
+					add_opinion_modifier = { target = ROOT modifier = medium_decrease } 
+				}
+				if = {
+					limit = {
+						FROM = { is_faction_leader = yes }
+						ROOT = { is_in_faction_with = FROM }
+					}
+					FROM = { remove_from_faction = ROOT }
+				}
+				create_wargoal = {
+					target = ROOT
+					type = annex_everything
+				}
+			}
+		}
+	}
+}
+
+# 땅 반환을 해주면 관계도가 오르고 게헨나 땅을 받아옴!
+country_event = { 
+	id = TRN_after_war_event.41
+	title = TRN_after_war_event.41.t
+	desc = TRN_after_war_event.41.desc
+	picture = GFX_event_none_picture
+	
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	option = { #
+		name = TRN_after_war_event.41.a
+		every_state = {
+			limit = {
+				OR = {
+					is_core_of = GEM
+					is_core_of = GEH
+				}
+				is_owned_by = FROM
+			}
+			transfer_state_to = ROOT
+		}
+		add_opinion_modifier = { target = FROM modifier = medium_increase }
+	}
+}
+# 땅 반환 해주지 않는다면 관계도 하락하고 전쟁목표가 생김
+country_event = { 
+	id = TRN_after_war_event.42
+	title = TRN_after_war_event.42.t
+	desc = TRN_after_war_event.42.desc
+	picture = GFX_event_none_picture
+	
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	option = { #
+		name = TRN_after_war_event.42.a
+		create_wargoal = {
+			target = FROM
+			type = annex_everything
+		}
+		add_opinion_modifier = { target = FROM modifier = medium_decrease }
 	}
 }
 
@@ -8282,7 +8410,137 @@ country_event = { # 티파티 통제
 
 	option = {
 		name = trinity.1.a
+		remove_trait = {
+			character = TRN_skrltk
+			slot = political_advisor
+			trait = b_cjstkdmldusgkq
+		}
+    }
+}
+country_event = { # 바시스 스콜라 시위
+	id = trinity.2
+	title = trinity.2.t
+	desc = trinity.2.desc
+	picture = GFX_report_event_iww_demonstration
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trinity.2.a
+		ai_chance = {
+			base = 10
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = -0.03
+		}
+    }
+	option = {
+		name = trinity.2.b
+		add_stability = -0.05
        
+    }
+}
+country_event = { # 트리니티 헌법법
+	id = trinity.3
+	title = trinity.3.t
+	desc = trinity.3.desc
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trinity.3.a
+		add_political_power = 50
+		hidden_effect = {
+			country_event = { id = trinity.5 days =08 } # 마지막 자유 연설
+		}
+    }
+}
+country_event = { # 트리니티 헌법
+	id = trinity.4
+	title = trinity.4.t
+	desc = trinity.4.desc
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trinity.4.a
+
+    }
+}
+country_event = { # 마지막 자유 발언
+	id = trinity.5
+	title = trinity.5.t
+	desc = trinity.5.desc
+	picture = GFX_report_event_soviet_purge_speech
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trinity.5.a
+
+    }
+}
+country_event = { # 2달 전
+	id = trinity.6
+	title = trinity.6.t
+	desc = trinity.6.desc
+	picture = GFX_report_event_spain_civil_war_volunteers_02
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trinity.6.a
+		country_event = { id = trinity.7 days = 04 } # 호스트 선출
+    }
+}
+country_event = { # 호스트 선출
+	id = trinity.7
+	title = trinity.7.t
+	desc = trinity.7.desc
+	picture = GFX_report_event_generic_communist_congress
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trinity.7.a
+		country_event = { id = trinity.8 days = 04 }
+    }
+}
+country_event = { # 다락방의 공주님
+	id = trinity.8
+	title = trinity.8.t
+	desc = trinity.8.desc
+	picture = GFX_event_Mika_memories
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trinity.8.a
+	
+    }
+}
+country_event = { # 가슴에 3발
+	id = trinity.9
+	title = trinity.9.t
+	desc = trinity.9.desc
+	picture = GFX_report_event_generic_communist_congress
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trinity.9.a
+	
     }
 }
 country_event = {

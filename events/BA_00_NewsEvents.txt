@@ -179,14 +179,19 @@ news_event = { #미카의 집권
 	major = yes
 	
 	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = { 
+			TRM = { add_threat = 5 }
+		}
+	}
 	
 	option = {
 		name = BA_news.3.a
-		add_threat = 5
 		hidden_effect = {
 			if = {
 				limit = {
-						is_ai = no
+					is_ai = no
 				}
 				scoped_play_song = "BA_night_on_bald_mountain"
 				set_country_flag = {
@@ -3598,55 +3603,18 @@ news_event = {
 	}
 
     option = { # 키보토스 반응
-	name = BA_news.96.b
-	trigger = {
-		OR = {
-			TAG = GEI
-			TAG = ARI
-			TAG = RED
-			TAG = KAI
-			TAG = MIL
-			TAG = TRM
-			TAG = GEH
-			TAG = GEM
-			TAG = BLM
-			TAG = KSP
-			TAG = HEU
-			TAG = ABY
-			TAG = HYA
-			TAG = SHA
-			TAG = BAC
-			TAG = SUH
-			TAG = INK
-		}
-	}
-	hidden_effect = {
-		if = {
-			scoped_play_song = "USA_The_Old_Order"
-			set_country_flag = {
-				flag = BA_Super_Event_Visible
-				value = 21
-				days = 15
-			}
-		}
-	}
-}
-
-    option = {  # 지구 국가 반응
-	name = BA_news.96.c
-	trigger = {
-		NOT = {
+		name = BA_news.96.b
+		trigger = {
 			OR = {
-				TAG = SHE
 				TAG = GEI
 				TAG = ARI
 				TAG = RED
 				TAG = KAI
 				TAG = MIL
+				TAG = TRM
 				TAG = GEH
 				TAG = GEM
-				TAG = TRM
-				TAG = SRT
+				TAG = BLM
 				TAG = KSP
 				TAG = HEU
 				TAG = ABY
@@ -3655,12 +3623,13 @@ news_event = {
 				TAG = BAC
 				TAG = SUH
 				TAG = INK
-				TAG = USA
 			}
 		}
- 	}
 		hidden_effect = {
 			if = {
+				limit = {
+					is_ai = no
+				}
 				scoped_play_song = "USA_The_Old_Order"
 				set_country_flag = {
 					flag = BA_Super_Event_Visible
@@ -3669,7 +3638,49 @@ news_event = {
 				}
 			}
 		}
- }
+	}
+
+    option = {  # 지구 국가 반응
+		name = BA_news.96.c
+		trigger = {
+			NOT = {
+				OR = {
+					TAG = SHE
+					TAG = GEI
+					TAG = ARI
+					TAG = RED
+					TAG = KAI
+					TAG = MIL
+					TAG = GEH
+					TAG = GEM
+					TAG = TRM
+					TAG = SRT
+					TAG = KSP
+					TAG = HEU
+					TAG = ABY
+					TAG = HYA
+					TAG = SHA
+					TAG = BAC
+					TAG = SUH
+					TAG = INK
+					TAG = USA
+				}
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					is_ai = no
+				}
+				scoped_play_song = "USA_The_Old_Order"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 21
+					days = 15
+				}
+			}
+		}
+	}
 }
 
 

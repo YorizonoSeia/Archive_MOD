@@ -10,11 +10,21 @@ country_event = {
 	
 	option = { 
 		name = SHE_event.1.a
+		ai_chance = {
+			base = 10
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
 		set_country_flag = kivotos_appeasement
 		custom_effect_tooltip = kivotos_appeasement_tt
 	}
 	option = { 
 		name = SHE_event.1.b
+		ai_chance = {
+			base = 10
+		}
 		set_country_flag = kivotos_hardline
 		custom_effect_tooltip = kivotos_hardline_tt
 	}

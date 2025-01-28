@@ -60,6 +60,18 @@ spriteTypes = {
 		name = "GFX_focus_TRN_control_tea_party"
 		texturefile = "gfx/interface/goals/TRN/TRN_control_tea_party.tga"			
 	}
+	SpriteType = {
+		name = "GFX_focus_TRN_MisonoMika"
+		texturefile = "gfx/interface/goals/TRN/TRN_MisonoMika.tga"			
+	}
+	SpriteType = {
+		name = "GFX_focus_TRN_Ministry_of_Justice_on_leash"
+		texturefile = "gfx/interface/goals/TRN/TRN_Ministry_of_Justice_on_leash.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_TRN_declare_trinity_order_state"
+		texturefile = "gfx/interface/goals/TRN/TRN_declare_trinity_order_state.tga"
+	}
 
 	SpriteType = {
 		name = "GFX_focus_BLM_gang_thugs_war_focus"

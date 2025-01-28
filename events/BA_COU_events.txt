@@ -247,6 +247,15 @@ country_event = { #전쟁 남
 		ai_chance = {
 			base = 10
 			modifier = {
+				original_tag = SHE
+				is_historical_focus_on = yes
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+				factor = 0
+			}
+			modifier = {
 				has_government = democratic
 				factor = 1.3
 			}

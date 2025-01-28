@@ -819,25 +819,6 @@ on_actions = {
 		effect = {
 			if = {
 				limit = {
-					has_country_flag = The_Colour_country_flag
-				}
-				every_country = {
-					limit = {
-						is_ally_with = FROM
-					}
-					add_to_war = {
-						targeted_alliance = PREV
-						enemy = ROOT
-						hostility_reason = asked_to_join
-					}
-					country_event = {
-						id = GEI_event.17
-						hours = 6
-					}
-				}
-			}
-			if = {
-				limit = {
 					original_tag = JAP
 					has_government = neutrality
 					NOT = { has_global_flag = BA_japan_28_flag }

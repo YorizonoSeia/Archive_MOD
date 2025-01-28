@@ -510,6 +510,10 @@ spriteTypes = {
        texturefile = "gfx/event_pictures/TRM/Himuro_Sena.tga"
     }
     spriteType = {
+       name = "GFX_event_Mika_memories"
+       texturefile = "gfx/event_pictures/TRM/Mika_memories.tga"
+    }
+    spriteType = {
       name = "GFX_event_BA_Poland_Flag"
        texturefile = "gfx/event_pictures/Poland_Flag.tga"
     } 

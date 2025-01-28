@@ -73,7 +73,13 @@ political_actions = {
 		icon = GFX_decision_eng_trade_unions_support
 	 	priority = 9999
         fire_only_once = yes
-	 	ai_will_do = { base = 10 }
+	 	ai_will_do = { 
+			base = 1
+			modifier = {
+				factor = 999
+				is_historical_focus_on = no
+			}
+		}
 		available = {
 			TRM = { has_completed_focus = TRM_war_with_the_ussr }
 			surrender_progress > 0.70

@@ -555,7 +555,7 @@
  #전쟁해군 툴팁
  GEK_get_halo_infantry_tt:0 "§Y오디세이 해양학원§! 학생들을 사용할 수 있습니다."
  #전쟁해군 이벤트
- GEK_demo_event.1.t: "자유시간"
+ GEK_demo_event.1.t: "자유선거"
  GEK_demo_event.1.d: "선거가 실시됐습니다."
  GEK_demo_event.1.a: "인민전선이 다수를 차지하였다."
  GEK_demo_event.1.b: "흑백적 연정이 승리했다."

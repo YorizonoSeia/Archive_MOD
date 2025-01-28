@@ -12,3 +12,29 @@ KAI_none_aliy_trm = {
 		value = -200
 	}
 }
+TRM_kai_has_war_gei_none_join_war = {
+	allowed = {
+		original_tag = TRM
+	}
+	enable = {
+		has_government = fascism
+	}
+	abort = {
+		OR = {
+			date > 1943.01.01
+			KAI = { is_ai = no }
+		}
+	}
+	ai_strategy = {
+		type = diplo_action_acceptance
+		id = KAI
+		target = call_allies
+		value = -200
+	}
+	ai_strategy = {
+		type = diplo_action_desire
+		id = KAI
+		value = -99999
+		target = join_allies
+	}
+}
