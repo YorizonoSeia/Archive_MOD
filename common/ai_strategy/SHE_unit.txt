@@ -73,13 +73,15 @@ SHE_cut_trm_team = {
 		original_tag = SHE
 	}
 	enable = {
-		KAI = { is_in_faction_with = TRM }
+		always = yes
 	}
-	abort_when_not_enabled = yes
+	abort = {
+		is_in_faction_with = KAI
+	}
 
     ai_strategy = {
         type = alliance
-        id = "TRM"
-        value = -200
+        id = "KAI"
+        value = -500
     }
 }
